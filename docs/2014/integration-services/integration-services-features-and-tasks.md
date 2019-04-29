@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cb4eb52fe100dfe44f4008e22818880fe61b246
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892282"
 ---
 # <a name="integration-services-features-and-tasks"></a>Fonctionnalités et tâches Integration Services
   Trouver des informations que tout le monde-concepteur, développeur, analyste ou administrateur-a besoin pour créer et développer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages. Apprenez ensuite à intégrer ces packages dans vos applications et sites Web.  

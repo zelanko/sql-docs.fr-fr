@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927074"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
   La sécurité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est constituée de plusieurs couches qui fournissent un environnement de sécurité complet et souple. Ces couches de sécurité incluent l’utilisation de signatures numériques, de propriétés de package, de rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et d’autorisations de système d’exploitation. La plupart de ces fonctionnalités de sécurité se répartissent dans les catégories suivantes : identité et contrôle d'accès.  

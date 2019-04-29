@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890392"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Éditeur de destination OLE DB (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination OLE DB** pour définir les options de gestion des erreurs.  

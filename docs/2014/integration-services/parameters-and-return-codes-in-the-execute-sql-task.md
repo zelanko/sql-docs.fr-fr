@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e09e00b4c5dcaf355b5a7691413ed2f8f972d5a6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890190"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Paramètres et codes de retour dans la tâche d'exécution SQL
   Les instructions SQL et les procédures stockées utilisent fréquemment des paramètres de types `input`, `output` et des codes de retour. Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la tâche d'exécution SQL prend en charge les types de paramètres `Input`, `Output` et `ReturnValue`. Vous utilisez le type `Input` pour les paramètres d'entrée, `Output` pour les paramètres de sortie et `ReturnValue` pour les codes de retour.  

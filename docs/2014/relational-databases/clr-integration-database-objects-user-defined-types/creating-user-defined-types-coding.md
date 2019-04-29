@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919936"
 ---
 # <a name="coding-user-defined-types"></a>Codage de types définis par l'utilisateur
   Lorsque vous codez votre définition de type défini par l'utilisateur (UDT, User-Defined Type), vous devez implémenter différentes fonctionnalités, selon que vous implémentez le type défini par l'utilisateur comme classe ou comme structure, et selon les options de format et de sérialisation que vous avez choisies.  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>Comparaison de IS NULL et de IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL et. IsNull  
  Considérez une table qui contient le schéma Points(id int, location Point), où `Point` est un type défini par l'utilisateur CLR, et les requêtes suivantes :  
   
 ```  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La classe `Microsoft.SqlServer.Server.SqlMethodAttribute` fournit des attributs personnalisés pouvant être utilisés pour marquer des définitions de méthode afin de spécifier le déterminisme, pour le comportement d'appel Null, et de spécifier si une méthode est un mutateur. Les valeurs par défaut de ces propriétés sont assumées et l'attribut personnalisé est utilisé uniquement lorsqu'une valeur non définie par défaut est exigée.  
   
 > [!NOTE]  
->  La classe `SqlMethodAttribute` hérite de la classe `SqlFunctionAttribute` ; par conséquent, `SqlMethodAttribute` hérite des champs `FillRowMethodName` et `TableDefinition` de `SqlFunctionAttribute`. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le `IEnumerable` retourner le type est déclenché lors de l’exécution avec le message suivant : « méthode, propriété ou champ «\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
+>  La classe `SqlMethodAttribute` hérite de la classe `SqlFunctionAttribute` ; par conséquent, `SqlMethodAttribute` hérite des champs `FillRowMethodName` et `TableDefinition` de `SqlFunctionAttribute`. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le `IEnumerable` retourner le type est déclenché lors de l’exécution avec le message suivant : « Méthode, propriété ou le champ '\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
   
  Le tableau suivant décrit quelques-unes des propriétés `Microsoft.SqlServer.Server.SqlMethodAttribute` pertinentes qui peuvent être utilisées dans les méthodes UDT et répertorie leurs valeurs par défaut.  
   
@@ -551,16 +551,16 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Indique si la fonction implique l'accès aux données utilisateur stockées dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est `DataAccessKind``None`.  
   
  IsDeterministic  
- Indique si la fonction produit les mêmes valeurs de sortie étant donné les mêmes valeurs d'entrée et le même état de la base de données. Valeur par défaut est `false`.  
+ Indique si la fonction produit les mêmes valeurs de sortie étant donné les mêmes valeurs d'entrée et le même état de la base de données. La valeur par défaut est `false`.  
   
  IsMutator  
- Indique si la méthode provoque une modification d'état dans l'instance de type défini par l'utilisateur. Valeur par défaut est `false`.  
+ Indique si la méthode provoque une modification d'état dans l'instance de type défini par l'utilisateur. La valeur par défaut est `false`.  
   
  IsPrecise  
- Indique si la fonction implique des calculs imprécis, tels que des opérations à virgule flottante. Valeur par défaut est `false`.  
+ Indique si la fonction implique des calculs imprécis, tels que des opérations à virgule flottante. La valeur par défaut est `false`.  
   
  OnNullCall  
- Indique si la méthode est appelée lorsque des arguments d'entrée de référence nulle sont spécifiés. Valeur par défaut est `true`.  
+ Indique si la méthode est appelée lorsque des arguments d'entrée de référence nulle sont spécifiés. La valeur par défaut est `true`.  
   
 ### <a name="example"></a>Exemple  
  La propriété `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` vous permet de marquer une méthode qui autorise une modification de l'état d'une instance d'un type défini par l'utilisateur. [!INCLUDE[tsql](../../includes/tsql-md.md)] ne vous permet pas de définir deux propriétés de type défini par l'utilisateur dans la clause SET d'une instruction UPDATE. Toutefois, vous pouvez avoir une méthode marquée comme mutateur qui modifie les deux membres.  

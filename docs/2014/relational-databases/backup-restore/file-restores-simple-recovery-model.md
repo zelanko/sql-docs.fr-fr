@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921817"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauration de fichiers (mode de récupération simple)
   Cette rubrique ne concerne que les bases de données en mode simple contenant au moins un groupe de fichiers secondaire en lecture seule.  
@@ -46,7 +46,7 @@ ms.locfileid: "54126899"
      Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Si vous souhaitez que la base de données soit hors connexion pour une restauration de fichiers, mettez-la hors connexion avant de démarrer la séquence de restauration en exécutant le code suivant [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) instruction : ALTER DATABASE *database_name* SET OFFLINE.  
+    >  Si vous voulez que la base de données soit hors connexion pour une restauration de fichiers, mettez celle-ci hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
   
 
   
@@ -76,9 +76,9 @@ ms.locfileid: "54126899"
   
 ### <a name="examples"></a>Exemples  
   
--   [Exemple : Restauration en ligne d’un fichier en lecture seule &#40;mode de récupération Simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemple : Restauration hors ligne du boîtier principal et un autre groupe de fichiers &#40;mode de récupération complète&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Exemple : restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers &#40;mode de restauration complète&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54126899"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarde et restauration : Interopérabilité et Coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Sauvegardes différentielles &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Sauvegardes de fichiers complètes &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](backup-overview-sql-server.md)   

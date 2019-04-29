@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896040"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Développement d'une interface utilisateur pour un gestionnaire de connexions personnalisé
   Après avoir remplacé l'implémentation des propriétés et méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées, vous pouvez créer une interface utilisateur personnalisée pour votre gestionnaire de connexions. Si vous ne créez pas d'interface utilisateur personnalisée, les utilisateurs peuvent configurer votre gestionnaire de connexions uniquement en utilisant la fenêtre Propriétés.  

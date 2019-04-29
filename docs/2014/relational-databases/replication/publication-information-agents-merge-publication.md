@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 46a2e9e332899c8d48fb762e153a926c99bb9e61
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021761"
 ---
 # <a name="publication-information-agents-merge-publication"></a>Informations de publication, Agents (Publication de fusion)
   L'onglet **Agents** contient des informations résumées sur l'Agent d'instantané de la publication sélectionnée.  
@@ -25,13 +25,13 @@ ms.locfileid: "54124029"
 ## <a name="options"></a>Options  
  Pour plus d'informations et en savoir plus sur les tâches associées à l'Agent d'instantané, cliquez avec le bouton droit de la souris sur l'Agent, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Tri**: Trier sur une ou plusieurs colonnes dans le **trier les colonnes** boîte de dialogue.  
+-   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
   
--   **Choisissez les colonnes à afficher**: Sélectionner les colonnes à afficher et l’ordre dans lequel les afficher dans le **choisir les colonnes** boîte de dialogue.  
+-   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtre**: Filtrer des lignes dans la grille en fonction des valeurs de colonne dans la **paramètres de filtre** boîte de dialogue.  
+-   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
--   **Effacer le filtre**: Effacer des paramètres de filtre pour la grille.  
+-   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54124029"
 -   Terminé  
   
  **Agent**  
- L'Agent d'instantané. Il s'agit du seul Agent associé à une publication de fusion. L'Agent de fusion est associé aux abonnements à cette publication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ L'Agent d'instantané. Il s'agit du seul Agent associé à une publication de fusion. L'Agent de fusion est associé aux abonnements à cette publication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Dernière heure de début**  
  Heure du dernier démarrage de l'Agent.  

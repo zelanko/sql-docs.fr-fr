@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892396"
 ---
 # <a name="developer39s-guide-integration-services"></a>Développeur&#39;s Guide (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un modèle objet entièrement réécrit, auquel ont été ajoutées de nombreuses fonctionnalités, afin d'offrir un outil convivial, souple et puissant pour étendre et programmer des packages. Les développeurs peuvent étendre et programmer pratiquement tous les aspects des packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab94977bcd3bf5a9b0b26ac7be76cb67d58e0755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913985"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
     
@@ -30,7 +30,7 @@ ms.locfileid: "48135509"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Texte du message|Les transactions suivantes doivent accéder aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif selon isolement Snapshot : les transactions RepeatableRead, les transactions Serializable et les transactions qui accèdent aux tables qui ne sont pas optimisées en mémoire selon l'isolement RepeatableRead ou Serializable.|  
+|Texte du message|Les transactions suivantes doivent accéder à des tables mémoire optimisées et à des procédures stockées compilées en mode natif dans un isolement d’instantané : transactions RepeatableRead, transactions Serializable et transactions qui accèdent aux tables non mémoire optimisées dans l’isolement RepeatableRead ou Serializable.|  
   
 ## <a name="explanation"></a>Explication  
  Des restrictions s'appliquent à l'utilisateur pour des niveaux d'isolement plus élevés, entre des transactions sur disque et des transactions XTP.  

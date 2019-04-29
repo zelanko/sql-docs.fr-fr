@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014721"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,18 +32,18 @@ ms.locfileid: "51660568"
   
 |Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|Néant|non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
-|DRIVER|Néant|non|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom du pilote ODBC Native Client est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
+|DSN|N/A|Non|Nom de la source de données retournée par **SQLDataSources**. Le mot clé DSN ne peut pas être utilisé si le mot clé DRIVER est utilisé.|  
+|DRIVER|N/A|Non|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nom du pilote ODBC Native Client est {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Le mot clé DRIVER ne peut pas être utilisé si le mot clé DSN est utilisé.|  
   
 ## <a name="level-2"></a>Niveau 2  
   
 |Mot clé|Liste retournée ?|Facultatif ?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Oui|non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
-|UID|non|Oui|ID de connexion d'utilisateur.|  
-|PWD|non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
-|APP|non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
-|WSID|non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
+|SERVER|Oui|Non|Nom du serveur sur le réseau sur lequel la source de données réside. Le terme « local » peut être entré en tant que serveur, auquel cas une copie locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisée, même lorsqu'il s'agit d'une version hors réseau.|  
+|UID|Non|Oui|ID de connexion d'utilisateur.|  
+|PWD|Non|Oui (dépend de l'utilisateur)|Mot de passe spécifié par l'utilisateur.|  
+|APP|Non|Oui|Nom de l’application qui appelle **SQLBrowseConnect**.|  
+|WSID|Non|Oui|ID de station de travail. En général, il s'agit du nom réseau de l'ordinateur sur lequel l'application s'exécute.|  
   
 ## <a name="level-3"></a>Niveau 3  
   

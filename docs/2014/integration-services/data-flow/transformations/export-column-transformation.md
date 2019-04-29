@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900155"
 ---
 # <a name="export-column-transformation"></a>Transformation d'exportation de colonne
   La transformation d'exportation de colonne lit des données dans un flux de données puis les insère dans un fichier. Par exemple, si le flux de données contient des informations sur les produits, telles qu'une image de chaque produit, vous pouvez utiliser la transformation d'exportation de colonne pour enregistrer les images dans des fichiers.  
@@ -55,7 +55,7 @@ ms.locfileid: "58379170"
     > [!NOTE]  
     >  Une marque d'ordre d'octet n'est écrite que lorsque les données ne sont pas ajoutées à un fichier existant et qu'elles sont du type de données DT_NTEXT.  
   
- La transformation utilise des paires de colonnes d'entrée : une colonne contient un nom de fichier, l'autre comporte des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md).  
+ La transformation utilise des paires de colonnes d’entrée : Une colonne contient un nom de fichier et l’autre colonne contient des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../integration-services-data-types.md).  
   
  Cette transformation a une entrée, une sortie et une sortie d'erreur.  
   

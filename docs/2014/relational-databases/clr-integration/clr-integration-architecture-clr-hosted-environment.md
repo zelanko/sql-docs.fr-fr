@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922563"
 ---
 # <a name="clr-hosted-environment"></a>Environnement hébergé CLR
   Le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework est un environnement qui exécute de nombreux langages de programmation modernes, y compris [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic et [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. Le CLR propose une mémoire récupérée par le garbage collector, un threading préemptif, des services de métadonnées (réflexion de type), la vérifiabilité du code et la sécurité d'accès du code. Le CLR utilise les métadonnées pour rechercher et charger des classes, placer des instances en mémoire, résoudre des appels de méthode, générer un code natif, appliquer la sécurité et définir les limites du contexte d'exécution.  
@@ -100,7 +100,7 @@ ms.locfileid: "48129152"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Comment SQL Server et le CLR fonctionnent-ils ensemble ?  
  Cette section explique comment [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intègre le threading, la planification, la synchronisation et les modèles de gestion de la mémoire de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du CLR. En particulier, cette section examine l'intégration du point de vue de l'évolutivité, de la fiabilité et des objectifs en matière de sécurité. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agit essentiellement comme un système d'exploitation pour le CLR lorsque celui-ci est hébergé au sein de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le CLR appelle les routines de bas niveau implémentées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le threading, la planification, la synchronisation et la gestion de la mémoire. Ce sont les mêmes primitives que le reste du moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise. Cette approche fournit plusieurs avantages en termes d'évolutivité, de fiabilité et de sécurité.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Évolutivité : threading, planification et synchronisation courants  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Évolutivité : Common threading, la planification et synchronisation  
  Le CLR appelle des API [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour créer des threads, à la fois pour exécuter le code utilisateur et pour sa propre utilisation interne. Afin de synchroniser plusieurs threads, le CLR appelle des objets de synchronisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cela permet au planificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de planifier d'autres tâches lorsqu'un thread attend un objet de synchronisation. Par exemple, lorsque le CLR lance le garbage collection, tous ses threads attendent que le garbage collection se termine. Comme les threads du CLR et les objets de synchronisation qu'ils attendent sont connus du planificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut planifier des threads qui exécutent d'autres tâches de base de données n'impliquant pas le CLR. Cela permet également à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de détecter les blocages qui impliquent des verrous pris par les objets de synchronisation du CLR et d'employer des techniques traditionnelles de suppression des blocages.  
   
  Le code managé s'exécute de façon préemptive dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le planificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la capacité de détecter et d'arrêter les threads qui n'ont pas été soumis pendant une période significative. La capacité à accrocher des threads du CLR aux threads [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique que le planificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut identifier des threads « fugitifs » dans le CLR et gérer leur priorité. De tels threads fugitifs sont suspendus et placés en arrière dans la file d'attente. Les threads identifiés à plusieurs reprises comme des threads fugitifs ne sont pas autorisés à s'exécuter pendant un intervalle de temps donné afin que les autres travaux en cours puissent s'exécuter.  
@@ -108,24 +108,24 @@ ms.locfileid: "48129152"
 > [!NOTE]  
 >  Le code managé de longue durée qui accède aux données ou alloue suffisamment de mémoire pour déclencher le garbage collection sera soumis automatiquement. Un code managé de longue durée qui n'accède pas aux données ou n'alloue pas suffisamment de mémoire managée pour déclencher le garbage collection doit être soumis explicitement en appelant la fonction System.Thread.Sleep() du .NET Framework.  
   
-###### <a name="scalability-common-memory-management"></a>Évolutivité : gestion de la mémoire courante  
+###### <a name="scalability-common-memory-management"></a>Évolutivité : Gestion de la mémoire courants  
  Le CLR appelle des primitives [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour allouer et libérer sa mémoire. Comme la mémoire utilisée par le CLR est comptabilisée dans l'utilisation de la mémoire totale du système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut rester dans ses limites de mémoire configurées et garantir que le CLR et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne rivalisent pas l'un avec l'autre pour la mémoire. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut également rejeter les demandes de mémoire CLR lorsque la mémoire système est contrainte, et demander au CLR de réduire son utilisation de la mémoire lorsque d'autres tâches ont besoin de mémoire.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Fiabilité : domaines d'application et exceptions irrécupérables  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Fiabilité : Domaines d’application et exceptions irrécupérables  
  Lorsqu'un code managé dans les API du .NET Framework rencontre des exceptions critiques, telles qu'une mémoire insuffisante ou un dépassement de capacité de la pile, il n'est pas toujours possible de récupérer après de tels échecs et de garantir une sémantique cohérente et correcte pour leur implémentation. Ces API déclenchent une exception d'abandon de thread en réponse à ces échecs.  
   
  En cas d'hébergement dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de tels abandons de thread sont gérés comme suit : le CLR détecte tout état partagé dans le domaine d'application dans lequel l'abandon de thread se produit. Le CLR accomplit cela en vérifiant la présence d'objets de synchronisation. S'il existe un état partagé dans le domaine d'application, le domaine d'application lui-même est déchargé. Le déchargement du domaine d'application arrête les transactions de base de données qui sont actuellement en cours d'exécution dans ce domaine d'application. Comme la présence d'un état partagé peut élargir l'impact de telles exceptions critiques aux sessions utilisateur autres que celle qui déclenche l'exception, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le CLR ont pris des mesures pour réduire la probabilité d'un état partagé. Pour plus d'informations, consultez la documentation sur le .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Sécurité : jeux d'autorisations  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l'auteur de l'assembly peut spécifier trois jeux d'autorisations au choix pour cet assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+###### <a name="security-permission-sets"></a>Sécurité : Jeux d’autorisations  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont chargés dans la base de données, l’auteur de l’assembly peut spécifier un des trois jeux d’autorisations pour cet assembly : SAFE, EXTERNAL_ACCESS et UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Jeu d'autorisations|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Sécurité d’accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Illimité|  
 |Restrictions du modèle de programmation|Oui|Oui|Aucune restriction|  
-|Vérifiabilité requise|Oui|Oui|non|  
-|Possibilité d'appeler du code natif|non|non|Oui|  
+|Vérifiabilité requise|Oui|Oui|Non|  
+|Possibilité d'appeler du code natif|Non|Non|Oui|  
   
  SAFE est le mode le plus fiable et sécurisé avec des restrictions associées quant au modèle de programmation autorisé. Les assemblys SAFE bénéficient d'autorisations suffisantes pour s'exécuter, effectuer des calculs et avoir accès à la base de données locale. Les assemblys SAFE doivent être de type sécurisé vérifié et ne sont pas autorisés à appeler du code non managé.  
   

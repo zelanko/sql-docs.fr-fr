@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891055"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Étape 2 : Activation et configuration des configurations de package
   Au cours de cette tâche, vous allez convertir le projet en modèle de déploiement de package et activer les configurations du package à l'aide de l'Assistant Configuration de package. Vous allez utiliser cet Assistant pour générer un fichier de configuration XML qui contient les paramètres de configuration de la propriété `Directory` du conteneur de boucles Foreach. La valeur de la propriété Directory est fournie par la nouvelle variable de niveau package que vous pouvez mettre à jour au moment de l'exécution. De plus, vous allez remplir un nouveau dossier de données exemple à utiliser au cours du test.  

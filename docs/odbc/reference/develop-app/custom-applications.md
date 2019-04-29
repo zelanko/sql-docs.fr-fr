@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042525"
 ---
 # <a name="custom-applications"></a>Applications personnalisées
 En règle générale, des applications personnalisées effectuent une tâche spécifique pour certains SGBD. Par exemple, une application peut récupérer des données à partir d’un SGBD unique et générer un rapport, ou il peut transférer des données entre plusieurs SGBD. Ce que ces applications ont en commun est que ces SGBD est connues avant l’écriture de l’application et est peu susceptibles de changer pendant la durée de vie de l’application.  

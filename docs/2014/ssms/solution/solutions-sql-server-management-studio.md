@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064896"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Solutions (SQL Server Management Studio)
   Une solution [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une collection d'un ou plusieurs projets connexes. Les projets sont des conteneurs que les développeurs utilisent pour organiser des fichiers associés, tels que des ensembles de scripts d'administration couramment utilisés.  

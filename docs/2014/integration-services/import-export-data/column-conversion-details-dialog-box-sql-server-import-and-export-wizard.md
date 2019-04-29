@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893168"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Boîte de dialogue Détails de la conversion de colonne (Assistant Importation et Exportation SQL Server)
   Utilisez le **colonne Détails de la Conversion** boîte de dialogue pour passer en revue les informations de conversion détaillées concernant une colonne individuelle. Ces informations de conversion incluent notamment le type de données de la colonne au niveau de la source et de la destination, ainsi que la conversion à laquelle l'Assistant procèdera. Cette page répertorie également les fichiers de mappage de type de données que l'Assistant utilise pour déterminer les conversions de type de données requises. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe ces fichiers de mappage de type de données au cours de l'installation.  

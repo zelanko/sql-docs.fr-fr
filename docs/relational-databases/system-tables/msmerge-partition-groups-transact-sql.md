@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911248"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le **MSmerge_partition_groups** table stocke une ligne pour chaque partition précalculée dans une base de données. Outre les colonnes répertoriées, une colonne est ajoutée à cette table pour chaque fonction utilisée dans un filtre de lignes paramétrable. Par exemple, une colonne nommée **HOST_NAME_FN** est ajouté à la table si un filtre utilise le [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (fonction). Une ligne est stockée pour chaque jeu unique de valeurs de fonction synchronisées avec ce serveur de publication. Plusieurs abonnés qui synchronisent avec exactement la même valeur pour toutes ces fonctions partageront la même ligne dans cette table et auront dès lors tous le même ID de partition. Cette table est stockée dans la base de données de publication.  
+  Le **MSmerge_partition_groups** table stocke une ligne pour chaque partition précalculée dans une base de données. Outre les colonnes répertoriées, une colonne est ajoutée à cette table pour chaque fonction utilisée dans un filtre de lignes paramétrable. Par exemple, une colonne nommée **HOST_NAME_FN** est ajouté à la table si un filtre utilise le [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) (fonction). Une ligne est stockée pour chaque jeu unique de valeurs de fonction synchronisées avec ce serveur de publication. Deux ou plusieurs abonnés qui synchronisent avec exactement la même valeur pour toutes ces fonctions partageront la même ligne dans cette table et par conséquent partagent tous le même id de partition. Cette table est stockée dans la base de données de publication.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

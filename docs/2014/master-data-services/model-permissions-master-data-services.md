@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a1d5b43b83102f822b64fdd5e4ebdc416f1de593
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923469"
 ---
 # <a name="model-permissions-master-data-services"></a>Autorisations de modèle (Master Data Services)
   Les autorisations de modèle s'appliquent à l'ensemble des entités, attributs, groupes d'attributs, hiérarchies dérivées, hiérarchies explicites et collections qui existent dans le modèle. Les autorisations affectées au modèle peuvent être remplacées pour tout objet individuel.  
@@ -26,7 +26,7 @@ ms.locfileid: "52809621"
 > [!NOTE]  
 >  Si l'utilisateur est administrateur de modèle, le modèle est affiché dans toutes les zones fonctionnelles de l'interface utilisateur. Sinon, le modèle est affiché uniquement dans la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Dans **Explorer**, le modèle est affiché, mais l’utilisateur ne peut pas ajouter ou supprimer des membres et ne peut pas mettre à jour les valeurs d’attribut, les appartenances de hiérarchie ou les appartenances à la collection.|  
 |**Update**|Dans **Explorer**, le modèle est affiché et l’utilisateur peut ajouter et supprimer des membres, peut mettre à jour les valeurs d’attribut, les appartenances de hiérarchie et les appartenances à la collection.|  

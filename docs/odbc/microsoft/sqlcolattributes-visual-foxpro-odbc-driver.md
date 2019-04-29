@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e34929315d3a3548799bc605dbb8f3c4a2f665d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928164"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (pilote ODBC Visual FoxPro)
 > [!NOTE]  
 >  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Prise en charge : Complète  
   
  Conformité d’API ODBC : Niveau principal  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47820054"
   
 |*fDescType*|Commentaire|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|Retourne FALSE : Visual FoxPro comporte aucun champ de compteur.|  
+|SQL_COLUMN_AUTO_INCREMENT|Retourne la valeur FALSE : Visual FoxPro comporte aucun champ de compteur.|  
 |SQL_COLUMN_CASE_SENSITIVE|Retourne toujours la valeur TRUE si le type de colonne est le caractère.|  
 |SQL_COLUMN_LABEL|Retourne le nom de colonne, qui est également renvoyé par SQL_COLUMN_NAME.|  
 |SQL_COLUMN_MONEY|Retourne la valeur TRUE si le type de colonne est monétaire (représenté par un « Y » dans le langage Visual FoxPro).|  

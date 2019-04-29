@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022474"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Références à des champs Globals et Users prédéfinis (Générateur de rapports et SSRS)
   La collection de champs prédéfinis, qui inclut à la fois les collections `Globals` et `User`, représente les valeurs globales fournies par Reporting Services lorsqu'un rapport est traité. La collection `Globals` fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection `User` fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020855"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Ajouter et modifier une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter une ligne à votre rapport lorsque vous souhaitez qu'un élément graphique sépare des sections du rapport. Vous pouvez personnaliser l'apparence de la ligne en modifiant des propriétés telles que la couleur ou le style. Par exemple, vous pouvez incorporer les couleurs de la société dans le rapport.  

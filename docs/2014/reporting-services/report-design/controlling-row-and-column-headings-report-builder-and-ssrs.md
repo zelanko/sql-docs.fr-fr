@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f844db8f44e501ef373de73d0b0676730877db62
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021144"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>Contrôle des en-têtes de ligne et de colonne (Générateur de rapports et SSRS)
   Une région de données de table, de matrice ou de liste peut s'étendre sur plusieurs pages horizontalement ou verticalement. Vous pouvez spécifier s'il convient de répéter des en-têtes de lignes ou de colonnes sur chaque page. Dans un convertisseur interactif, tel que le Gestionnaire de rapports ou l'aperçu de rapport, vous pouvez également spécifier si les en-têtes de lignes ou de colonnes doivent être figés pour être toujours visibles lorsque vous faites défiler un rapport horizontalement ou verticalement. Dans une table ou matrice, la première ligne contient habituellement des en-têtes de colonnes qui étiquettent des données dans chaque colonne ; la première colonne contient habituellement des en-têtes de lignes qui étiquettent les données dans chaque ligne. Pour les groupes imbriqués, vous pouvez répéter le jeu initial d'en-têtes de lignes et de colonnes qui contiennent des étiquettes de groupe. Par défaut, une région de données de liste n'inclut pas d'en-têtes.  

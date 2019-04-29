@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047165"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,20 +68,20 @@ sp_depends [ @objname = ] '<object>'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar (257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
+|**nom**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
 |**type**|**nvarchar(16)**|Type de l’élément.|  
-|**mise à jour**|**nvarchar(7)**|Indique si l'élément est mis à jour.|  
-|**sélectionné**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
+|**updated**|**nvarchar(7)**|Indique si l'élément est mis à jour.|  
+|**selected**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
 |**column**|**sysname**|Colonne ou paramètre sur lequel repose la dépendance.|  
   
  Le jeu de résultats suivant affiche les objets qui dépendent de  *\<objet >*.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar (257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
+|**nom**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
 |**type**|**nvarchar(16)**|Type de l’élément.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

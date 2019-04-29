@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015931"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission (classe d'événements)
   La classe d’événements **Audit Object Derived Permission** enregistre chaque émission d’une commande CREATE, ALTER ou DROP pour un objet spécifié. Cet événement ne survient que si l'objet n'a ni autorisations, ni propriétaires directement associés.  

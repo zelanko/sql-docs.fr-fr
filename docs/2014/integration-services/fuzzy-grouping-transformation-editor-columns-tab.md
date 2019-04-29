@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc69475a26bde2045c06429462b5de306c4f932f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893244"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Éditeur de transformation de regroupement approximatif (onglet Colonnes)
   L'onglet **Colonnes** de la boîte de dialogue **Éditeur de transformation de regroupement approximatif** permet de spécifier les colonnes utilisées pour regrouper les lignes comportant des doublons.  

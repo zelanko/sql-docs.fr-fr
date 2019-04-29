@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927224"
 ---
 # <a name="system-variables"></a>Variables système
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble de variables système qui stockent des informations sur le package en cours d'exécution et ses objets. Ces variables peuvent être utilisées dans des expressions et des propriétés d'expressions afin de personnaliser des packages, des conteneurs, des tâches et des gestionnaires d'événements.  
@@ -34,7 +34,7 @@ ms.locfileid: "58391257"
 |Variable système|Type de données|Description|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Gestionnaire d'un objet d'événement Windows que la tâche peut signaler pour indiquer que la tâche doit interrompre son exécution.|  
-|`ContainerStartTime`|DateTime|Heure de démarrage du conteneur.|  
+|`ContainerStartTime`|Datetime|Heure de démarrage du conteneur.|  
 |**CreationDate**|DateTime|Date de création du package.|  
 |`CreatorComputerName`|String|Ordinateur sur lequel le package a été créé.|  
 |**CreatorName**|String|Nom de la personne qui a créé le package.|  
@@ -47,7 +47,7 @@ ms.locfileid: "58391257"
 |**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
 |**PackageID**|String|Identificateur unique du package.|  
 |**PackageName**|String|Nom du package.|  
-|**StartTime**|DateTime|Heure de début d'exécution du package.|  
+|**StartTime**|Datetime|Heure de début d'exécution du package.|  
 |`ServerExecutionID`|Int64|ID d'exécution du package exécuté sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> La valeur par défaut est zéro. La valeur est modifiée uniquement si le package est exécuté par ISServerExec sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Lorsqu'il existe un package enfant, la valeur est passée du package parent au package enfant.|  
 |**UserName**|String|Compte de l'utilisateur qui a démarré le package. Le nom d'utilisateur est qualifié par le nom de domaine.|  
 |**VersionBuild**|Int32|Version du package.|  
@@ -89,7 +89,7 @@ ms.locfileid: "58391257"
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |`ProgressCountLow`|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la variable `Propagate` est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|`Propagate`|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : La valeur de la `Propagate` variable est ignorée lors de la validation du package.<br /><br /> Si vous affectez la valeur `Propagate` à `False` dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |`SourceDescription`|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |`SourceID`|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  

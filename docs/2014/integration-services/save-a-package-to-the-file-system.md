@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 87aabe302817a8d71a5a92058004b6e92dd95b2c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889262"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Enregistrer un package dans le système de fichiers
   Cette procédure décrit comment enregistrer un package existant dans le système de fichier sous forme de fichier .dtsx.  

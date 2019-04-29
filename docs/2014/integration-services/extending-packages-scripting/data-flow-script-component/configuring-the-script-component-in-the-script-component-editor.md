@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894813"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
   Avant d’écrire du code personnalisé dans le composant Script, vous devez sélectionner le type de composant de flux de données que vous souhaitez créer (source, transformation ou destination), puis configurer les métadonnées et propriétés du composant dans l’**Éditeur de transformation de script**.  

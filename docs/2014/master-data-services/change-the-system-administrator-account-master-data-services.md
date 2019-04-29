@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925857"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>Modifier le compte de l'administrateur système (Master Data Services)
   Vous pouvez modifier le compte d’utilisateur qui est désigné comme le [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] administrateur système.  

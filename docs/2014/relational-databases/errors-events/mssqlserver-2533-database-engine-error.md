@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b1882c04d4aacd76b59cb952781205edac84012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914817"
 ---
 # <a name="mssqlserver2533"></a>MSSQLSERVER_2533
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074436"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_PAGE_WAS_NOT_SEEN|  
-|Texte du message|Erreur de table : la page P_ID assignée à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) n'a pas été affichée. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
+|Texte du message|Erreur de table, La Page P_ID assignée à l’objet ID O_ID, ID d’index I_ID, ID de partition PN_ID, unité d’allocation ID A_ID (type TYPE) n’est pas visible. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
   
 ## <a name="explanation"></a>Explication  
  Une page est allouée à l’ID d’unité d’allocation *A_ID*, mais cet ID d’unité d’allocation ne figure pas dans l’en-tête de la page. L'en-tête a un ID d'unité d'allocation différent. Si l'ID d'unité d'allocation de l'en-tête de la page n'est pas un objet valide, la page peut avoir une erreur de correspondance MSSQLEngine_2534.  

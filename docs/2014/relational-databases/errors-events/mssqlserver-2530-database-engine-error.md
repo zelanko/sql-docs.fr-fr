@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914570"
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
     
@@ -46,7 +46,7 @@ ms.locfileid: "48215489"
 2.  Réexécutez l'instruction DBCC.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Activer les index et contraintes](../indexes/enable-indexes-and-constraints.md)   
+ [Activer des index et des contraintes](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)  

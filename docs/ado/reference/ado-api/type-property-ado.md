@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910848"
 ---
 # <a name="type-property-ado"></a>Type, propriété (ADO)
 Indique le type de données ou de type opérationnel d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md), [champ](../../../ado/reference/ado-api/field-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
@@ -44,5 +44,5 @@ Indique le type de données ou de type opérationnel d’un [paramètre](../../.
 ## <a name="see-also"></a>Voir aussi  
  [Exemple de propriété de type (objet Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Exemple de propriété de type (propriété) (VC ++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
- [RecordType, propriété (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
+ [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

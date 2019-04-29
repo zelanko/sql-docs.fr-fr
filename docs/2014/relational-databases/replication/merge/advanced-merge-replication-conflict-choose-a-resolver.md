@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931628"
 ---
 # <a name="choose-a-resolver"></a>Choisir un résolveur
   Lors du choix d'un résolveur, considérez l'importance de la résolution des conflits dans votre application et si vous pouvez utiliser l'outil de résolution des conflits par défaut basé sur les priorités ou si vous devez utiliser un résolveur d'articles.  

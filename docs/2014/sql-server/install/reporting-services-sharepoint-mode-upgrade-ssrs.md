@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fe7c3f16f608d0f6e890be74cd5ae48ec4d1a121
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913201"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Mise à niveau en mode SharePoint de Reporting Services (SSRS)
   Utilisez la page **Mode SharePoint de Reporting Services** pour confirmer la mise à niveau de toutes les fonctionnalités partagées. Le mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est une fonctionnalité partagée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sera mis à niveau avec toutes les autres fonctionnalités partagées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge la mise à jour d'une seule fonctionnalité partagée. Toutes les fonctionnalités partagées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont mises à niveau à la fois.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910463"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en association avec une ouverture [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
@@ -58,24 +58,24 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
   
 |Nom de colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|adVarWChar|En lecture seule. Indique l’URL de la ressource.|  
-|RESOURCE_PARENTNAME|adVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
-|RESOURCE_ABSOLUTEPARSENAME|adVarWChar|En lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
-|PROPRIÉTÉ RESOURCE_ISHIDDEN|adBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
-|RESOURCE_ISREADONLY|adBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte pour la lecture.|  
-|RESOURCE_CONTENTTYPE|adVarWChar|Indique l’utilisation probable du document-par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
-|RESOURCE_CONTENTCLASS|adVarWChar|Indique le type MIME du document, indiquant le format comme «`text/html`».|  
-|RESOURCE_CONTENTLANGUAGE|adVarWChar|Indique la langue dans laquelle le contenu est stocké.|  
+|RESOURCE_PARSENAME|AdVarWChar|En lecture seule. Indique l’URL de la ressource.|  
+|RESOURCE_PARENTNAME|AdVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|En lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
+|RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
+|RESOURCE_ISREADONLY|AdBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte pour la lecture.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indique l’utilisation probable du document-par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format comme «`text/html`».|  
+|RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indique la langue dans laquelle le contenu est stocké.|  
 |RESOURCE_CREATIONTIME|adFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de que la ressource a été créée. L’heure est signalée dans le format de temps universel coordonné (UTC).|  
-|RESOURCE_LASTACCESSTIME|adFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernier accès à la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
-|RESOURCE_LASTWRITETIME|adFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernière écriture de la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernier accès à la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|En lecture seule. Indique une structure FILETIME qui contient l’heure de dernière écriture de la ressource. L’heure est au format UTC. Les membres FILETIME sont zéro si le fournisseur ne prend pas en charge ce membre de temps.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|En lecture seule. Indique la taille du flux de valeur par défaut de la ressource, en octets.|  
-|RESOURCE_ISCOLLECTION|adBoolean|En lecture seule. True si la ressource est une collection, comme un répertoire. False si la ressource est un fichier simple.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut être une collection ou un fichier simple.|  
-|DEFAULT_DOCUMENT|adVarWChar|En lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|En lecture seule. True si la ressource est une collection, comme un répertoire. False si la ressource est un fichier simple.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut être une collection ou un fichier simple.|  
+|DEFAULT_DOCUMENT|AdVarWChar|En lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
 |CHAPTERED_CHILDREN|adChapter|En lecture seule. Facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
-|RESOURCE_DISPLAYNAME|adVarWChar|En lecture seule. Indique le nom complet de la ressource.|  
-|RESOURCE_ISROOT|adBoolean|En lecture seule. True si la ressource est la racine d’une collection ou un document structuré.|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|En lecture seule. Indique le nom complet de la ressource.|  
+|RESOURCE_ISROOT|AdBoolean|En lecture seule. True si la ressource est la racine d’une collection ou un document structuré.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

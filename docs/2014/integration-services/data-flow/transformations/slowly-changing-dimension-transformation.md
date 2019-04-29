@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900200"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
   La transformation de dimension à variation lente coordonne la mise à jour et l'insertion d'enregistrements dans des tables de dimension d'entrepôts de données. Par exemple, vous pouvez utiliser cette transformation pour configurer les sorties de la transformation qui insèrent et mettent à jour des enregistrements dans la table DimProduct de la base de données [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] à l’aide des données de la table Production.Products de la base de données OLTP AdventureWorks.  
@@ -46,7 +46,7 @@ ms.locfileid: "58388240"
   
 -   Les modifications « modification d'attribut » remplacent les enregistrements existants. Ce type de modification est équivalent à une modification de Type 1. La transformation de dimension à variation lente dirige ces lignes vers une sortie nommée **Sortie de mises à jour d’attribut de validation**.  
   
--   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de dimension à variation lente dirige ces lignes vers deux sorties : **Sortie d’insertions d’attribut d’historique** et **nouvelle sortie**.  
+-   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de Dimension à variation lente dirige ces lignes vers deux sorties : **Sortie d'insertions d'attribut d'historique** et **Nouvelle sortie**.  
   
 -   Les modifications « attribut fixe » indiquent que la valeur de colonne ne doit pas changer. La transformation de dimension à variation lente détecte les modifications et peut diriger les lignes modifiées vers une sortie nommée **Sortie d’attribut fixe**.  
   

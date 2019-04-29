@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061527"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>Exemple de diagnostic d’un pilote basé sur des fichiers
 Un pilote basé sur fichier agit comme un pilote ODBC et comme une source de données. Il peut donc générer des erreurs et avertissements à la fois en tant que composant dans une connexion ODBC et comme une source de données. Étant donné que c’est également le composant qui sert d’interface avec le Gestionnaire de pilotes, il met en forme et retourne les arguments pour **SQLGetDiagRec**.  

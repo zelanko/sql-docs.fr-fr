@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027906"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel et Mode, propriétés-exemple (VC ++)
 Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **Mode de connexion est exclusif**  
 **Transaction est isolé**  
 **Guide de la disponibilité Executive de base de données - entreprise**  
-**À la cuisine avec des ordinateurs : clandestine bilans - entreprise**  
+**À la cuisine avec des ordinateurs : Bilans clandestine - entreprise**  
 **Vous pouvez combattre les contraintes de l’ordinateur ! -entreprise**  
 **Une discussion sur les ordinateurs - entreprise**  
 **Silicon Valley gastronomique traite - mod_cook**  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **Mais elle est adaptée à l’utilisateur ? -popular_comp**  
 **Secrets de la Silicon Valley - popular_comp**  
 **Étiquette NET - popular_comp**  
-**Allergiques au ordinateur et Non-allergiques au personnes : Variations de comportement - self_help**  
+**Ordinateur des personnes Phobic et Non allergiques au : Variations de comportement - self_help**  
 **Est donc la ? -self_help**  
 **Durée de vie sans craindre - self_help**  
-**Prolongée privation de données : Quatre études de cas - self_help**  
+**Prolonge la privation de données : Quatre études de cas - self_help**  
 **Sécurité émotionnelle : Un nouvel algorithme - self_help**  
-**Ail Oignons et Leeks : cuire les Secrets de la Méditerranée - cui_traditio**  
+**Oignons, Leeks et ail : Secrets de la Méditerranée - cui_traditio la cuisine**  
 **Cinquante années dans Buckingham Palace cuisines - cui_traditio**  
 **Sushi, tout le monde ? -cui_traditio**   
 ## <a name="see-also"></a>Voir aussi  

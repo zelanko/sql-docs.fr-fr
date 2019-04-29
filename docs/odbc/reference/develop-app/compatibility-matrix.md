@@ -20,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026566"
 ---
 # <a name="compatibility-matrix"></a>Matrice de compatibilité
 Le tableau suivant décrit la compatibilité des types d’applications et des pilotes définis précédemment dans cette section.  
   
-|Type d'application<br /><br /> et version|ODBC 32 bits<br /><br /> 2.*x* pilote|ODBC 3. *x*<br /><br /> Pilote|Pilotes ODBC 3.8|ISO et conforme Open groupe pilote|  
+|Type d'application<br /><br /> et version|ODBC 32 bits<br /><br /> 2.*x* pilote|ODBC 3.*x*<br /><br /> Pilote|Pilotes ODBC 3.8|ISO et conforme Open groupe pilote|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |application 16 bits, n’importe quelle version|Compatible|Compatible|Compatible|Compatible|  
 |2 pure. *x* application|Compatible|Compatible|Compatible|Non compatible avec [3]|  
-|2 pure. *x* recompiler l’application|Compatible|Compatible avec [1]|Compatible avec [1]|Non compatible avec [3]|  
-|2 pure. *x* application Unicode|Compatible|Compatible avec [1]|Compatible avec [1]|Non compatible avec [3]|  
-|Application pure Open Group et conforme à ISO|Non compatible|Compatible avec [2]|Compatible avec [2]|Compatible avec [2]|  
+|2 pure. *x* recompiler l’application|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
+|2 pure. *x* application Unicode|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
+|Application pure Open Group et conforme à ISO|Non compatible|Compatible[2]|Compatible[2]|Compatible[2]|  
 |Application 3.0 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
 |Application 3.5 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
 |Pure application 3,8 (ou version ultérieure)|Non compatible avec [5]|Non compatible avec [5]|Compatible|Non compatible avec [4]|  

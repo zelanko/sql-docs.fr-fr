@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017179"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Didacticiel sur l'exploration de données intermédiaire (Analysis Services - Exploration de données)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit un environnement intégré pour créer et utiliser des modèles d’exploration de données. Vous pouvez facilement créer une liaison avec des sources de données, créer et tester plusieurs modèles sur les mêmes données et déployer des modèles à utiliser dans des analyses prédictives.  

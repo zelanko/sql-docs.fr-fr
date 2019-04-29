@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df810e28070c797cb24aa3faa308b5419c877139
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914698"
 ---
 # <a name="mssqlserver2518"></a>MSSQLSERVER_2518
     
@@ -30,7 +30,7 @@ ms.locfileid: "48213159"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_NO_EXPRESSION_EVAL_CLR_DISABLED|  
-|Texte du message|ID d'objet O_ID (objet « O_NAME ») : impossible de vérifier les colonnes calculées et les types définis par l'utilisateur pour cet objet, parce que le CLR (Common Language Runtime) est désactivé.|  
+|Texte du message|ID d’objet O_ID (objet « O_NAME ») : Colonnes calculées et les types définis par l’utilisateur ne peut pas être extrait pour cet objet, car le common language runtime (CLR) est désactivé.|  
   
 ## <a name="explanation"></a>Explication  
  Ce message présenté à titre d'information indique que le processeur de requêtes n'a pas pu fournir à DBCC un objet interne autorisant l'évaluation des colonnes calculées et des types définis par l'utilisateur CLR (Common Language Runtime). Ce problème est survenu parce que l'une des colonnes impliquait le CLR ; or ce dernier n'est pas activé. L'objet interne couvre toutes les colonnes. Par conséquent, l'impossibilité d'évaluer une seule colonne empêche la création de l'objet interne. Cela signifie qu'il sera impossible de vérifier si les colonnes calculées sont correctes ou de les utiliser lorsque DBCC vérifiera la cohérence entre les index et les tables de base.  

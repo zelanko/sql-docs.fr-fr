@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f46fbc99145f9a372a2c1bf5d40919b87c782454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021678"
 ---
 # <a name="publication-properties-articles"></a>Propriétés de la publication, Articles
   La page **Articles** de la boîte de dialogue **Propriétés de la publication** reprend les informations sur les articles contenus dans une publication, vous permet d'ajouter ou de supprimer des articles de publications existantes, ainsi que de modifier les propriétés des articles et le filtrage s'appuyant sur des colonnes.  

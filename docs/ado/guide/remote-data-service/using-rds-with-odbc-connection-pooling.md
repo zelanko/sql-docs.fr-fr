@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7fbc75772a48b4990ebbc31877a3f7a95b442087
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955751"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Utilisation de RDS avec le regroupement de connexions ODBC
 Si vous utilisez une source de données ODBC, vous pouvez utiliser la connexion pooling (option) dans Internet Information Services (IIS) pour bénéficier d’une gestion de la charge client hautes performances. Le regroupement de connexions est un gestionnaire de ressources pour les connexions, maintient l’état ouvert sur les connexions fréquemment utilisées.  

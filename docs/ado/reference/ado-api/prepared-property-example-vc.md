@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027996"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared, exemple de propriété (VC++)
 Cet exemple montre la [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propriété en ouvrant deux [commande](../../../ado/reference/ado-api/command-object-ado.md) objets - un préparé et l’autre ne pas préparée.  

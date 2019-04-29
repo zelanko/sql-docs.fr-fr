@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919168"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restrictions applicables aux connexions normales et contextuelles
   Cette rubrique traite des restrictions associées à l’exécution de code dans le [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] processus via des connexions normales et contextuelles.  
@@ -47,7 +47,7 @@ ms.locfileid: "48163319"
 ## <a name="restrictions-on-regular-connections"></a>Restrictions applicables aux connexions normales  
  Lorsque vous développez votre application, prenez en considération les restrictions suivantes qui s'appliquent aux connexions normales :  
   
--   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L'inclusion de « async=true » dans la chaîne de connexion d'une commande, suivie de l'exécution de cette commande, lève l'exception `System.NotSupportedException`. Le message suivant apparaît : « Le traitement asynchrone n'est pas pris en charge en cas d'exécution à l'intérieur du processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ».  
+-   L'exécution de commande asynchrone contre des serveurs internes n'est pas prise en charge. L'inclusion de « async=true » dans la chaîne de connexion d'une commande, suivie de l'exécution de cette commande, lève l'exception `System.NotSupportedException`. Ce message s’affiche : « Traitement asynchrone n’est pas pris en charge lors de l’exécution à l’intérieur de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] processus. »  
   
 -   L'objet `SqlDependency` n'est pas pris en charge.  
   

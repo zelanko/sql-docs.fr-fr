@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ce2b4a14d78c4e855c4af1d8b5fdd972b1d28c27
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898328"
 ---
 # <a name="data-truncation-ssis"></a>Troncation de données (SSIS)
   Une expression peut accidentellement tronquer des données. La troncation peut se produire dans les circonstances suivantes :  

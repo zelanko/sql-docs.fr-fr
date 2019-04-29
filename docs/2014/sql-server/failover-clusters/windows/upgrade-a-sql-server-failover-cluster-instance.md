@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a8d5f04808582bd56c106adce0df2c1f66aa77
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913694"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster"></a>Mettre à niveau un cluster de basculement SQL Server
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge la mise à niveau du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] et d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à partir des clusters de basculement [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] séparément sur tous les nœuds de cluster de basculement.  

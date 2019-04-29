@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889255"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Sélectionner les packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionnez les packages** pour sélectionner les packages à mettre à niveau. Cette page répertorie les packages qui sont stockés dans l'emplacement spécifié sur la page **Sélectionner l'emplacement source** de l'Assistant.  

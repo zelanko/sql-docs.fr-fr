@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035281"
 ---
 # <a name="choosing-a-network-protocol"></a>Choix d'un protocole réseau
   Pour se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , un protocole réseau doit être activé. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut traiter les demandes sur plusieurs protocoles en même temps. Les clients se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un seul protocole. Si le programme client ne connaît pas le protocole sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute, configurez le client pour qu'il essaie plusieurs protocoles en séquence. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet d'activer, de désactiver et de configurer des protocoles réseau.  

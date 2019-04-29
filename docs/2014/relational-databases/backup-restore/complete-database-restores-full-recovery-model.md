@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb523d8e9b1dbbb136475d0aa739491935f755ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922154"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
   Lors d'une restauration complète de base de données, le but est de restaurer la totalité de la base de données. L'ensemble de la base de données est hors ligne pendant la durée de la restauration. Avant qu'une partie quelconque de la base de données ne puisse être mise en ligne, toutes les données sont récupérées dans un état cohérent où toutes les parties de la base de données sont chronologiquement synchronisées et aucune transaction non validée n'existe.  
@@ -85,7 +85,7 @@ ms.locfileid: "48188329"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu'au point de défaillance (Transact-SQL)  
+###  <a name="ExampleToPoFTsql"></a> Exemple : récupération jusqu’au point de défaillance (Transact-SQL)  
  L'exemple [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant indique les principales options d'une séquence de restauration qui restaure la base de données jusqu'au point de défaillance. L'exemple crée une sauvegarde de la fin du journal de la base de données. Ensuite, il restaure une sauvegarde complète de base de données et une sauvegarde de fichier journal, puis restaure la sauvegarde de la fin du journal. L'exemple récupère la base de données dans une dernière étape séparée.  
   
 > [!NOTE]  

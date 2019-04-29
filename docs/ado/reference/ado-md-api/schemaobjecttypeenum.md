@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44559731867f2c2c1cd4ba397e5558c540e65f48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033226"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Spécifie le type d’objet à être récupéré par le [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) (méthode).  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|Un [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) objet.|  
 |**adObjectTypeHierarchy**|2|Un [hiérarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objet.|  

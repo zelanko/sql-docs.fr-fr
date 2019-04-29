@@ -13,11 +13,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3aeb3065f9c032585dd4c445cecdd1e7c148b007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62943168"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "47763207"
   
  Par exemple, il est possible que les applications utilisateur qui contrôlent les tâches de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être simplifiées pour répondre aux besoins de nouveaux utilisateurs et pour réduire les coûts de formation. Vous devez peut-être créer des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées ou créer une application de création et de contrôle du rendement des index. Une application SMO peut également être utilisée pour inclure de façon transparente le matériel ou les logiciels tiers dans l'application de gestion de base de données.  
   
- Étant donné que SMO est compatible avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, vous pouvez facilement gérer un environnement multiversion.  
+ Dans la mesure où SMO est compatible avec [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, il vous est facile de gérer un environnement multiversion.  
   
  Fonctionnalités de SMO sont les suivantes :  
   
 -   Modèle objet mis en cache et création d'instance d'objet optimisée. Les objets sont chargés uniquement lorsqu'ils sont spécifiquement référencés. Les propriétés de l'objet ne sont que partiellement chargées à la création de l'objet. Les objets et propriétés restants sont chargées lorsqu'ils sont directement référencés.  
   
--   Exécution groupée des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les instructions sont groupées pour améliorer les performances réseau.  
+-   Exécution groupée des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les instructions sont groupées pour améliorer les performances réseau.  
   
--   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Autorise la capture de toute opération dans un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
+-   Capture des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] . Autorise la capture de toute opération dans un script. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilise cette fonctionnalité pour écrire une opération au lieu de l'exécuter immédiatement.  
   
 -   Gestion des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le fournisseur WMI. Les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être démarrés, arrêtés et suspendus par programme.  
   
@@ -42,33 +42,33 @@ ms.locfileid: "47763207"
   
 -   Utilisation de noms de ressource uniques (URN). Un URN vous permet de créer des instances d'objets SMO et de les référencer.  
   
- SMO représente également de nombreux composants et fonctionnalités introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sous la forme de nouveaux objets ou propriétés. Ces nouveaux composants et fonctionnalités sont les suivants :  
+ SMO représente également de nombreux composants et fonctionnalités introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]sous la forme de nouveaux objets ou propriétés. Ces nouveaux composants et fonctionnalités sont les suivants :  
   
 -   Partitionnement d'index et de table pour le stockage des données sur un schéma de partition. Pour plus d’informations, consultez [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
--   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d’informations, consultez [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
+-   Points de terminaison HTTP pour la gestions des requêtes SOAP. Pour plus d'informations, consultez [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md).  
   
--   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d’informations, consultez [Utilisation du niveau d’isolement d’instantané](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
+-   Isolement d'instantané et contrôle de version de ligne pour plus de concurrence. Pour plus d'informations, consultez [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md).  
   
 -   La collection de schémas XML, les index XML et le type de données XML permettent la validation et le stockage des données XML. Pour plus d’informations, consultez [Collections de schémas XML &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) et [à l’aide des schémas XML](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
 -   Bases de données d'instantanés pour la création de copies en lecture seule de bases de données.  
   
--   Prise en charge de la communication basée sur des messages par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d’informations, consultez [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   Prise en charge de la communication basée sur des messages par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d'informations, consultez [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
--   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [synonymes &#40;moteur de base de données&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
+-   Prise en charge des synonymes pour les noms d'objets multiples de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [synonymes &#40;moteur de base de données&#41;](../../relational-databases/synonyms/synonyms-database-engine.md).  
   
--   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md).  
+-   La gestion de la messagerie de base de données vous permet de créer des serveurs, des profils et des comptes de messagerie électronique dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
--   Prise en charge des serveurs inscrits pour l'inscription des informations de connexion. Pour plus d’informations, consultez [inscrire les serveurs](../../tools/sql-server-management-studio/register-servers.md).  
+-   Prise en charge des serveurs inscrits pour l'inscription des informations de connexion. Pour plus d'informations, consultez [Register Servers](../../tools/sql-server-management-studio/register-servers.md).  
   
--   Traçage et relecture des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md), et [événements étendus](../../relational-databases/extended-events/extended-events.md).  
+-   Traçage et relecture des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md), [SQL Trace](../../relational-databases/sql-trace/sql-trace.md), [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)et [Extended Events](../../relational-databases/extended-events/extended-events.md).  
   
--   Prise en charge des certificats et des clés pour le contrôle de sécurité. Pour plus d’informations, consultez [hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md).  
+-   Prise en charge des certificats et des clés pour le contrôle de sécurité. Pour plus d'informations, consultez [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
 -   Déclencheurs DDL pour l'ajout de fonctionnalités lorsque des événements DDL se produisent. Pour plus d'informations, consultez [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md).  
   
- L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté comme un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assembly. Cela signifie que le common language runtime à partir de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] version 2.0 doit être installée avant d’utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les assemblys se trouvent dans C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
+ L'espace de noms SMO est <xref:Microsoft.SqlServer.Management.Smo>. SMO est implémenté en tant qu'assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Cela signifie que le CLR (Common Language Runtime) de la version 2.0 de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être installée avant d'utiliser les objets SMO. Les assembly SMO sont installés par défaut dans le Global Assembly Cache (GAC) avec l'option de Kit de développement logiciel (SDK) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les assemblys se trouvent dans C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\. Pour plus d’informations, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] documentation.  
   
 ## <a name="smo-classes"></a>Classes SMO  
  Les classes SMO incluent deux catégories : les classes d'instance et les classes utilitaires.  
@@ -106,7 +106,7 @@ ms.locfileid: "47763207"
   
  **Fournisseur WMI**  
   
- Les objets du fournisseur WMI sont encapsulés par SMO. Le programmeur SMO dispose ainsi d'un modèle objet simple fort similaire aux classes SMO, sans qu'il ait besoin de comprendre le modèle de programmation représenté par l'espace de noms et les détails du fournisseur WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fournisseur WMI vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les alias, de même que les bibliothèques réseau client et serveur.  
+ Les objets du fournisseur WMI sont encapsulés par SMO. Le programmeur SMO dispose ainsi d'un modèle objet simple fort similaire aux classes SMO, sans qu'il ait besoin de comprendre le modèle de programmation représenté par l'espace de noms et les détails du fournisseur WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le fournisseur WMI vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les alias, de même que les bibliothèques réseau client et serveur.  
   
  **Création de scripts**  
   
@@ -141,7 +141,7 @@ ms.locfileid: "47763207"
   
  Le partitionnement des tables et des index vous permet de gérer les données dispersées dans des tables et des index de groupes de fichiers. Cette nouvelle fonctionnalité est représentée par les objets SMO.  
   
- **Points de terminaison**  
+ **EndPoints**  
   
  Les demandes SOAP et les demandes de mise en miroir de base de données sont gérées par des points de terminaison à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   

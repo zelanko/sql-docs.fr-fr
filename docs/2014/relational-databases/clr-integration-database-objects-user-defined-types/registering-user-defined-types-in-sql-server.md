@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919949"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Inscription des types définis par l'utilisateur dans SQL Server
   Pour pouvoir utiliser un type défini par l’utilisateur (UDT) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez l’inscrire. L'inscription d'un UDT comprend l'inscription de l'assembly et la création du type dans la base de données dans laquelle vous souhaitez l'utiliser. La portée des UDT se limite à une seule base de données. Ils ne peuvent pas être utilisés dans plusieurs bases de données à moins d'inscrire le même assembly et UDT dans chaque base de données. Une fois l'assembly de l'UDT inscrit et le type créé, vous pouvez utiliser l'UDT dans [!INCLUDE[tsql](../../includes/tsql-md.md)] et dans le code client. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](clr-user-defined-types.md).  
@@ -177,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Numéro identifiant chaque objet, le premier objet associé à une donnée **assembly_id** possède la valeur 1. S’il existe plusieurs objets associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.  
   
- **Contenu**  
+ **content**  
  Représentation hexadécimale de l'assembly ou du fichier.  
   
  Vous pouvez utiliser la fonction CAST ou CONVERT pour convertir le contenu de la **contenu** colonne en texte lisible. La requête suivante convertit le contenu du fichier Point.cs en texte lisible, en utilisant le nom indiqué dans la clause WHERE pour limiter le jeu de résultats à une ligne unique.  

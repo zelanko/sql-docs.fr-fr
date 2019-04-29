@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8009dcd369327941004fe220782c38d5602b4dc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900301"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Étendre un dataset à l'aide de la transformation de jointure de fusion
   Pour pouvoir ajouter et configurer une transformation de jointure de fusion, le package doit inclure au moins une tâche de flux de données et deux composants de flux de données qui fournissent des entrées à la transformation de jointure de fusion.  

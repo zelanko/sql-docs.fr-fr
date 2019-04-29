@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896105"
 ---
 # <a name="coding-a-custom-task"></a>Codage d'une tâche personnalisée
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea6582aacefc7c17450e59689bec29c260a38d07
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926821"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Éditeur de transformation d'extraction de terme (onglet Avancé)
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’extraction de terme** pour définir les propriétés de l’extraction, telles que la fréquence et la longueur, et indiquer si les mots ou les phrases doivent être extraits.  
@@ -41,7 +41,7 @@ ms.locfileid: "58385037"
  Indique que le score correspond à la fréquence du terme.  
   
  **TFIDF**  
- Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d'un terme T = (fréquence de T) * log( (#lignes en entrée) / (#lignes ayant T))  
+ Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes et Inverse Document Frequency, défini comme : TFIDF d’un terme T = (fréquence de T) * log ((#rows en entrée) / (#rows ayant T))  
   
  **Seuil de fréquence**  
  Définissez le nombre d'occurrences d'un mot ou d'une expression avant son extraction. La valeur par défaut est 2.  
@@ -50,7 +50,7 @@ ms.locfileid: "58385037"
  Définissez la longueur maximale d'une expression en nombre de mots. Cette option affecte uniquement les expressions nominales. La valeur par défaut est 12.  
   
  **Utiliser l'extraction de terme respectant la casse**  
- Indiquez si l'extraction doit respecter la casse. La valeur par défaut est `False`.  
+ Indiquez si l'extraction doit respecter la casse. La valeur par défaut est `False`.  
   
  **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  

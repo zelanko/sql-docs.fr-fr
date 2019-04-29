@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889302"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
   Le clustering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas recommandé, car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas un service cluster ou prenant en charge les clusters. De plus, il ne prend pas en charge le basculement d’un nœud de cluster à un autre. Par conséquent, dans un environnement cluster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit être installé et démarré en tant que service autonome sur chaque nœud du cluster.  

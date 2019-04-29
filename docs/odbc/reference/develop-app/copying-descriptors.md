@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042755"
 ---
 # <a name="copying-descriptors"></a>Copie de descripteurs
 Le **SQLCopyDesc** fonction est appelée pour copier les champs d’un descripteur vers un autre descripteur. Les champs peuvent être copiés uniquement à un descripteur d’application ou un périphérique intégré, mais pas à un IRD. Les champs peuvent être copiés à partir de n’importe quel type de descripteur. Seuls les champs qui sont définis pour les descripteurs de la source et la cible sont copiés. **SQLCopyDesc** ne copie pas le champ SQL_DESC_ALLOC_TYPE, étant donné que le type d’allocation d’un descripteur ne peut pas être modifié. Champs copiés remplacent les champs existants.  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71438a61dcaec201d0b3ae21eb7e27d979029204
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046354"
 ---
 # <a name="installing-sql-server-native-client"></a>Installation de SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 est installé quand vous installez [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Il n'y a pas de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client. Pour plus d’informations, consultez [What ' s New in SQL Server Native Client](../sql-server-native-client.md). Vous pouvez également obtenir sqlncli.msi à partir de la page web de SQL Server 2012 Feature Pack. Pour télécharger la version la plus récente de SQL Server Native Client, accédez à [Microsoft ?? SQL Server ?? 2012 SP2 Feature Pack](https://www.microsoft.com/en-us/download/details.aspx?id=43339). Si une version précédente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client antérieure à SQL Server 2012 est également installée sur l'ordinateur, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 sera installé côte à côte avec la version antérieure.  

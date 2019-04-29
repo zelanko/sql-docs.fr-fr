@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044154"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change, classe d’événements
   La classe d’événements **Server Memory Change** intervient quand l’utilisation de la mémoire de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a augmenté ou diminué, soit de 1 mégaoctet (Mo), soit de 5 % de la taille maximale de la mémoire du serveur, la plus élevée de ces deux valeurs étant retenue.  

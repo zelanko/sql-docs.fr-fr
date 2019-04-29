@@ -1,5 +1,5 @@
 ---
-title: Sys.sysfiles (Transact-SQL) | Microsoft Docs
+title: sys.sysfiles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047141"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "47721501"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|Numéro unique d'identification de fichier pour chaque base de données.|  
-|**GroupID**|**smallint**|Numéro d'identification du groupe de fichiers.|  
+|**groupid**|**smallint**|Numéro d'identification du groupe de fichiers.|  
 |**size**|**Int**|Taille du fichier, en pages de 8 Ko.|  
-|**MaxSize**|**Int**|Taille maximale du fichier, en pages de 8 Ko.<br /><br /> 0 = Croissance nulle.<br /><br /> -1 = Le fichier peut croître tant que le disque n'est pas saturé.<br /><br /> 268435456 = Le fichier journal peut croître pour atteindre une taille maximale de 2 To.<br /><br /> Remarque : Les bases de données qui sont mis à niveau avec une taille de fichier journal illimitée signalera -1 pour la taille maximale du fichier journal.|  
-|**Croissance**|**Int**|Taille de croissance de la base de données. Peut être le nombre de pages ou le pourcentage de taille de fichier, en fonction de la valeur de **état**.<br /><br /> 0 = Croissance nulle.|  
+|**maxsize**|**Int**|Taille maximale du fichier, en pages de 8 Ko.<br /><br /> 0 = Croissance nulle.<br /><br /> -1 = Le fichier peut croître tant que le disque n'est pas saturé.<br /><br /> 268435456 = Le fichier journal peut croître pour atteindre une taille maximale de 2 To.<br /><br /> Remarque : Bases de données qui sont mis à niveau avec une taille de fichier journal illimitée signalera -1 pour la taille maximale du fichier journal.|  
+|**growth**|**Int**|Taille de croissance de la base de données. Peut être le nombre de pages ou le pourcentage de taille de fichier, en fonction de la valeur de **état**.<br /><br /> 0 = Croissance nulle.|  
 |**status**|**Int**|Bits d’état pour le **croissance** valeur en mégaoctets (Mo) ou kilo-octets (Ko).<br /><br /> 0x2 = Fichier disque.<br /><br /> 0x40 = Fichier journal.<br /><br /> 0x100000 = Croissance. Cette valeur est un pourcentage et non le nombre de pages.|  
-|**performances optimisées**|**Int**|Réservé.|  
+|**perf**|**Int**|Réservé.|  
 |**nom**|**sysname**|Nom logique du fichier.|  
 |**filename**|**nvarchar(260)**|Nom de l'unité physique. Inclut le chemin d'accès complet du fichier.|  
   

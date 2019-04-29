@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8de45556d3c19ee8460b33e7f07ceb485b37597
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917115"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
   Cette page vous permet d'afficher les groupes de fichiers existants ou d'ajouter un nouveau groupe de fichiers à la base de données sélectionnée. Il existe trois types de groupes de fichiers : les groupes de fichiers de *ligne* , les groupes de fichiers de données FILESTREAM et les groupes de fichiers optimisés en mémoire.  

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919960"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Utilisation de types définis par l'utilisateur dans SQL Server
   Vous pouvez accéder à des fonctionnalités de type défini par l’utilisateur (UDT) dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la [!INCLUDE[tsql](../../includes/tsql-md.md)] langage à l’aide de syntaxe de requête classique. Les types UDT peuvent être utilisés dans la définition d'objets de base de données, tels que les variables dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)], dans les fonctions et les procédures stockées, et comme arguments dans les fonctions et les procédures stockées.  

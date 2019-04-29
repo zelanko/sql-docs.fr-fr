@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922120"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   Cette rubrique présente le composant de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La sauvegarde de votre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est essentielle pour protéger vos données. Cette discussion couvre les types de sauvegardes et les restrictions liées aux sauvegardes. La rubrique présente également les unités et les supports de sauvegarde de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "48049395"
   
  **Types de sauvegardes**  
   
- [Sauvegarde de copie uniquement](copy-only-backups-sql-server.md)  
+ [copy-only backup](copy-only-backups-sql-server.md)  
  Sauvegarde d'utilisation particulière qui est indépendante de la séquence normale des sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  sauvegarde de données  
@@ -156,7 +156,7 @@ ms.locfileid: "48049395"
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Pour créer une sauvegarde**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48049395"
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](back-up-and-restore-of-sql-server-databases.md)   

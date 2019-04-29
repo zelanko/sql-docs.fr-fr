@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027848"
 ---
 # <a name="positionenum"></a>PositionEnum
 Spécifie la position actuelle du pointeur d’enregistrement au sein d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|Indique que le pointeur d’enregistrement actuel est de type BOF (autrement dit, le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriété est **True**).|  
 |**adPosEOF**|-3|Indique que le pointeur d’enregistrement actuel est de type EOF (autrement dit, le [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriété est **True**).|  

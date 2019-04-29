@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042512"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : Chargement d'une définition de rapport à partir du serveur de rapports
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : Charger une définition de rapport à partir du serveur de rapports
   Après avoir créé votre projet et généré les classes à partir du schéma RDL, vous êtes prêt à charger une définition du rapport depuis le serveur de rapports.  
   
 ### <a name="to-load-a-report-definition"></a>Pour charger une définition de rapport  
@@ -97,7 +97,7 @@ ms.locfileid: "56025640"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez [leçon 4 : Mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez la [leçon 4 : Mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

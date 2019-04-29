@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62893030"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurer la destination du fichier plat (Assistant Importation et Exportation SQL Server)
   Utilisez le **configurer la Destination de fichier plat** page pour spécifier les options de mise en forme pour le fichier plat de destination et de prévisualiser les résultats avant de continuer.  

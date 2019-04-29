@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018367"
 ---
 # <a name="outer-join-escape-sequence"></a>Séquence d’échappement pour les jointures externes
 ODBC utilise les séquences d’échappement pour les jointures externes. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -36,17 +36,17 @@ ODBC utilise les séquences d’échappement pour les jointures externes. La syn
   
  *ODBC-ÉCHAP-initiateur* JO *jointure externe ODBC ÉCHAP-marque de fin*  
   
- *jointure externe* :: = *nom de la table* [*nom de corrélation*] {gauche &#124; droite &#124; complète}  
+ *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
   
  JOINTURE externe {*nom de la table* [*nom de corrélation*] &#124; *jointure externe*} ON  
   
- *recherche-*  
+ *search-*  
   
  *condition*  
   
  *nom de corrélation* :: = *nom défini par l’utilisateur*  
   
- *ODBC-ÉCHAP-initiateur* :: = {}  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   

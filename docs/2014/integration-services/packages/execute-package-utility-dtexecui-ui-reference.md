@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890196"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Référence de l'interface utilisateur de l'utilitaire d'exécution de package (DtExecUI)
   Utilisez l' **Utilitaire d'exécution de package** pour exécuter des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire exécute les packages stockés à l’un des trois emplacements suivants : la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers. Cette interface utilisateur, qui peut être ouverte à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou en tapant `dtexecui` à l’invite de commandes, est une alternative à l’exécution des packages à l’aide de la **DTExec** outil d’invite de commandes.  

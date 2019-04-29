@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916619"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
   Vous pouvez utiliser l' **Assistant Générer et publier des scripts** pour publier une base de données entière ou des objets de base de données individuels sur un fournisseur d'hébergement Web.  

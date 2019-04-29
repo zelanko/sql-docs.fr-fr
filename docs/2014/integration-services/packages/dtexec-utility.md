@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890201"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   Le `dtexec` utilitaire d’invite de commandes est utilisé pour configurer et exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. L'utilitaire `dtexec` fournit un accès à toutes les fonctions de configuration et d'exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. Le `dtexec` utilitaire vous permet de charger des packages à partir de ces sources : le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, un fichier de projet .ispac, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, le [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store et le système de fichiers.  

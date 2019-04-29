@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042642"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Test de la précision à l'aide de graphiques de courbes d'élévation (Didacticiel sur l'exploration de données de base)
   Sur le **graphique de précision d’exploration de données** onglet du Concepteur d’exploration de données, vous pouvez calculer le degré chacun de vos modèles effectue des prédictions et comparer les résultats de chaque modèle directement sur les résultats des autres modèles. Cette méthode de comparaison est appelée un *graphique de courbes d’élévation*. En général, la précision prédictive d'un modèle d'exploration de données se mesure par la finesse ou la précision de classification. Pour ce didacticiel, nous utiliserons le graphique de courbes d'élévation uniquement.  

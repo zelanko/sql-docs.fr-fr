@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60a93e4add862a1dca67e329a15fb575ad9a1292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026536"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,10 +56,10 @@ sys.dm_fts_index_keywords_by_document
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*database_name*»)  
+ db_id('*database_name*')  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l'ID de la base de données, que sys.dm_fts_index_keywords_by_document utilise pour rechercher la base de données spécifiée. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.  
   
- object_id («*table_name*»)  
+ object_id('*table_name*')  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -81,7 +81,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   Nombre de fois qu'un mot clé apparaît dans l'index de recherche en texte intégral entier, à savoir :  
   
-     ([Somme](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) où **mot clé**=*keyword_value* )  
+     ([SUM](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) WHERE **keyword**=*keyword_value* )  
   
 -   Nombre de fois qu'un mot clé apparaît dans une ligne ou un document donné.  
   
@@ -111,7 +111,7 @@ GO
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT sur les colonnes couvertes par l'index de recherche en texte intégral et les autorisations CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Exemples  

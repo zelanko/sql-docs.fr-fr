@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921954"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
   Cette rubrique explique comment gérer la table **suspect_pages** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La table **suspect_pages** est conçue pour gérer les informations sur les pages suspectes et aide à déterminer si une restauration est nécessaire ou non. La table [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) réside dans la [base de données msdb](../databases/msdb-database.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "48053499"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

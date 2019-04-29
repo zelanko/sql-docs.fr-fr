@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917663"
 ---
 # <a name="database-features"></a>Fonctionnalités de base de données
   Cette section contient les fonctionnalités et les tâches associées aux bases de données, aux objets de base de données, aux types de données, ainsi que les mécanismes pour utiliser ou pour gérer des données.  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891788"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : Ajout et configuration d'un Gestionnaire de connexions de fichiers plats
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : Ajout et configuration d’un Gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Vous devez créer un nouveau gestionnaire de connexions de fichiers plats pour chaque format de fichier utilisé. Étant donné que ce didacticiel extrait des données à partir de plusieurs fichiers plats qui ont exactement le même format de données, il vous faudra ajouter et configurer un seul gestionnaire de connexions de fichiers plats uniquement pour votre package.  

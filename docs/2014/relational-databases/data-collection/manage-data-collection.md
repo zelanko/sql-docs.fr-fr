@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918571"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
   Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures stockées et fonctions pour gérer différents aspects de la collecte de données, telles que l’activation ou désactivation de la collecte de données, modification d’une collection jeu configuration ou la consultation des données dans l’entrepôt de données de gestion .  

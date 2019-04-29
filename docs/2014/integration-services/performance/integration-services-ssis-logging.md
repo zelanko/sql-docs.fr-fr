@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889800"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
@@ -62,7 +62,7 @@ ms.locfileid: "58394308"
   
  Le tableau suivant énumère les ProgID et ClassID des modules fournisseurs d'informations inclus dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ainsi que l'emplacement des journaux dans lesquels les modules fournisseurs d'informations écrivent.  
   
-|Module fournisseur d'informations|ProgID|ClassID|Emplacement|  
+|Module fournisseur d'informations|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Fichier texte|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier texte.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Le gestionnaire de connexions de fichiers utilisé par le module fournisseur d'informations spécifie le chemin d'accès du fichier utilisé par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
@@ -92,11 +92,11 @@ ms.locfileid: "58394308"
   
 |Élément|Description|  
 |-------------|-----------------|  
-|Ordinateur|Le nom de l'ordinateur sur lequel l'événement du journal est survenu.|  
+|Computer|Le nom de l'ordinateur sur lequel l'événement du journal est survenu.|  
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
-|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
+|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : Exécution d’un package unique peut créer des entrées de journal avec des valeurs différentes pour l’élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
 |MessageText|Un message associé à l'entrée de journal.|  
 |DataBytes|Un tableau d'octets spécifique à l'entrée du journal. La signification de ce champ varie en fonction de l'entrée du journal.|  
   
@@ -147,7 +147,7 @@ ms.locfileid: "58394308"
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à un des fournisseurs de journaux suivants : Fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](../enable-package-logging-in-sql-server-data-tools.md).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](../configure-logging-by-using-a-saved-configuration-file.md).  
   

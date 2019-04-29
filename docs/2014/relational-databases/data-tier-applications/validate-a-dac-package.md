@@ -18,18 +18,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917864"
 ---
 # <a name="validate-a-dac-package"></a>Valider un package DAC
   Il est conseillé d'examiner le contenu d'un package DAC avant de le déployer en production et de valider les actions de mise à niveau avant de mettre à niveau une DAC existante. Ceci tout particulièrement lors du déploiement de packages qui n'ont pas été développés dans votre organisation.  
   
-1.  **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
+1.  **Avant de commencer :**  [Prérequis](#Prerequisites)  
   
-2.  **Pour mettre à niveau une DAC, à l’aide de :**  [Afficher le contenu d’une DAC](#ViewDACContents), [afficher les modifications de base de données](#ViewDBChanges), [afficher les Actions de mise à niveau](#ViewUpgradeActions), [comparer des DAC](#CompareDACs)  
+2.  **Pour mettre à niveau une DAC à l’aide de** :  [Afficher le contenu d’une DAC](#ViewDACContents), [Afficher les modifications de base de données](#ViewDBChanges), [Afficher les actions de mise à niveau](#ViewUpgradeActions), [Comparer les DAC](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d’utiliser une DAC provenant d’une source inconnue ou non approuvée, déployez-la sur une instance de test isolée de [!INCLUDE[ssDE](../../includes/ssde-md.md)], exécutez [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code (par exemple les procédures stockées ou tout autre code défini par l’utilisateur) contenu dans la base de données.  

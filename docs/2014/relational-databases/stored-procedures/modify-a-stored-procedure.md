@@ -15,19 +15,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015880"
 ---
 # <a name="modify-a-stored-procedure"></a>Modifier une procédure stockée
     
 ##  <a name="Top"></a> Cette rubrique explique comment modifier une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour modifier une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour modifier une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48110479"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER PROCEDURE sur la procédure.  
   
 ##  <a name="Procedures"></a> Pour modifier une procédure stockée  

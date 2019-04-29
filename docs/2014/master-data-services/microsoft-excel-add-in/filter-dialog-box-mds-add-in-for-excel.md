@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923820"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Boîte de dialogue Filtrer (Complément MDS pour Excel)
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], utilisez la boîte de dialogue **Filtre** pour limiter la liste des données managées MDS avant de les charger dans Excel.  
@@ -31,7 +31,7 @@ ms.locfileid: "52784591"
 |Hiérarchie explicite|Si vous avez choisi le type d’attribut **Consolidé**, choisissez la hiérarchie à laquelle appartiennent les membres consolidés. Pour plus d’informations, consultez [Hiérarchies explicites &#40;Master Data Services&#41;](../explicit-hierarchies-master-data-services.md).|  
 |Groupes d'attributs|Les groupes d'attributs permettent de regrouper des sous-ensembles d'attributs. Choisissez un groupe d'attributs si vous souhaitez afficher un sous-ensemble d'attributs disponibles. Pour plus d’informations sur les groupes d’attributs, consultez [Groupes d’attributs &#40;Master Data Services&#41;](../attribute-groups-master-data-services.md).|  
 |Tout sélectionner|Cliquez pour sélectionner tous les attributs affichés dans la liste.|  
-|Effacer tout|Cliquez pour effacer les attributs sélectionnés affichés dans la liste.<br /><br /> Remarque : Vous ne pouvez pas effacer **Nom** et **Code**.|  
+|Effacer tout|Cliquez pour effacer les attributs sélectionnés affichés dans la liste.<br /><br /> Remarque : Vous ne pouvez pas effacer **Nom** et **Code**.|  
 |Flèche haut|Cliquez pour déplacer l'attribut sélectionné vers le haut dans la liste. L'ordre de haut en bas correspond à l'ordre de gauche à droite selon lequel les colonnes sont affichées dans la feuille de calcul.|  
 |Flèche Bas|Cliquez déplacer l'attribut sélectionné vers le bas dans la liste. L'ordre de haut en bas correspond à l'ordre de gauche à droite selon lequel les colonnes sont affichées dans la feuille de calcul.|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52784591"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n’est répertorié, les attributs n’ont pas été ajoutés.<br /><br /> Remarque : Vous pouvez filtrer par les attributs que vous ne prévoyez pas à afficher dans la feuille de calcul.|  
+|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n’est répertorié, les attributs n’ont pas été ajoutés.<br /><br /> Remarque : Vous pouvez filtrer par les attributs que vous ne prévoyez pas à afficher dans la feuille de calcul.|  
 |Opérateur|Affiche les opérateurs qui correspondent au type d'attribut sélectionné. Pour plus d’informations, consultez [Opérateurs de filtre &#40;Master Data Services&#41;](../filter-operators-master-data-services.md).|  
 |Critères|Critères qui doivent servir de filtre.|  
 |Résumé de la mise à jour|Si vous utilisez de grands datasets, cliquez pour mettre à jour la section **Résumé** avec les informations relatives à la quantité de données qui seront chargées.|  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889362"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
   Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] packages et [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] packages au format de package pour la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

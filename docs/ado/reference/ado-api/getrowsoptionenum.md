@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20c2f0027d82f55d1a8fc9bc58cf3331b92da116
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028006"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 Spécifie le nombre d’enregistrements à récupérer à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|Récupère le reste des enregistrements dans la **Recordset**, à partir de la position actuelle ou d’un signet spécifié par le *Démarrer* paramètre de la [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) (méthode).|  
   

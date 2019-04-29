@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9b0e16279615bf102c916793439d440211939839
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025407"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "56013760"
 |time|**datetime**|Heure (UTC) par incréments d'heures.|  
 |database_name|**nvarchar**|Nom de la base de données utilisateur.|  
 |sku|**nvarchar**|Nom de la SKU. Les valeurs possibles sont les suivantes :<br /><br /> Web<br /><br /> Business<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**Int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
+|usage_in_seconds|**Int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
 |storage_in_megabytes|**decimal**|Taille de stockage maximale pour l'heure, y compris les données de la base de données, index, procédures stockées et métadonnées.|  
   
 ## <a name="permissions"></a>Autorisations  

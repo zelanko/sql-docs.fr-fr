@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62895508"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulation d'une sortie d'erreur pour le composant Script
   Bien qu'il soit impossible de configurer directement une sortie en tant que sortie d'erreur dans le composant Script à des fins de gestion automatique des lignes d'erreur, vous pouvez reproduire les fonctionnalités d'une sortie d'erreur intégrée en créant une sortie supplémentaire et en utilisant une logique conditionnelle dans votre script afin de diriger des lignes vers cette sortie, le cas échéant. Vous pouvez imiter le comportement d'une sortie d'erreur intégrée en ajoutant deux colonnes de sortie supplémentaires pour recevoir le numéro d'erreur et l'ID de la colonne dans laquelle une erreur s'est produite.  

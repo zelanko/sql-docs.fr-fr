@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924937"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Connexions, utilisateurs et rôles de base de données (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] comprend des connexions, des utilisateurs et des rôles installés automatiquement sur l'instance de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] qui héberge la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Ces connexions, utilisateurs et rôles ne doivent pas être modifiés.  

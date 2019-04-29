@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d8cb4bb7aec53ebc28a91cc36add1ae810b08d44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911843"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetStrValue (classe SqlServiceAdvancedProperty)
   Définit la valeur de chaîne d'une propriété.  
@@ -47,7 +47,7 @@ StrValue
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*strValue*|Valeur de chaîne qui spécifie la valeur de la propriété avancée.|  
+|*StrValue*|Valeur de chaîne qui spécifie la valeur de la propriété avancée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

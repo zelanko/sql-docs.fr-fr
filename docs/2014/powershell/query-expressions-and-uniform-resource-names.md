@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d92557b37cac982a70d5b3203472c40a2fd72ce4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922882"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
   Les modèles SMO ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) et les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent deux types de chaînes d’expression semblables aux expressions XPath. Les expressions de requête sont des chaînes qui spécifient un jeu de critères permettant d'énumérer un ou plusieurs objets dans une hiérarchie de modèle objet. Un nom de ressource unique (URN) est un type spécifique de chaîne d'expression de requête qui identifie de façon unique un objet particulier.  
@@ -122,7 +122,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>b. Énumération d'objets à l'aide de contains  
+### <a name="b-enumerating-objects-using-contains"></a>B. Énumération d'objets à l'aide de contains  
  Cette expression de requête énumère toutes les bases de données qui ne respectent pas la casse et dont le nom comporte le caractère « m ».  
   
 ```  

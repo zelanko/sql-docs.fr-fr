@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab419055687e7715e71005f2d231300269c2868f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910879"
 ---
 # <a name="type-property-example-field-vb"></a>Type, exemple de propriété (objet Field) (VB)
 Cet exemple montre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété en affichant le nom de la constante qui correspond à la valeur de la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété de tous les le [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le ***Employés*** table. La fonction FieldType est requise pour exécuter cette procédure.  

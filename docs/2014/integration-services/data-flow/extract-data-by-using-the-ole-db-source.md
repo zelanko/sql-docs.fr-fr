@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8303cc8e30a9099a11a43cc2b4bfac341873a044
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902605"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraire des données à l'aide de la source OLE DB
   Pour pouvoir ajouter et configurer une source OLE DB, le package doit inclure au moins une tâche de flux de données.  

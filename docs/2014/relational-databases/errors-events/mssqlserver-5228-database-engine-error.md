@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dfbfa64cb61332591fadef874b8c73da3ce1e7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913748"
 ---
 # <a name="mssqlserver5228"></a>MSSQLSERVER_5228
     
@@ -30,7 +30,7 @@ ms.locfileid: "48150940"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_ANTIMATTER_COLUMN_DETECTED|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE), page PG_ID, ligne R_ID. DBCC a détecté un nettoyage incomplet lié à une opération de construction d'index en ligne. (La valeur de la colonne « antimatière » est VALUE.)|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, partition ID PN_ID, unité d’allocation ID A_ID (type TYPE), page PG_ID, ligne R_ID. DBCC a détecté un nettoyage incomplet lié à une opération de construction d'index en ligne. (La valeur de la colonne « antimatière » est VALUE.)|  
   
 ## <a name="explanation"></a>Explication  
  Une construction d’index en ligne non terminée a été détectée pour l’objet *O_ID*, l’index *I_ID* et la partition *PN_ID*. Cela se traduit par la présence d’une colonne antimatière sur la ligne *R_ID*. Une colonne antimatière est utilisée pour réconcilier des enregistrements provenant de plusieurs sources lors de la construction d'un index en ligne. Le message d'erreur indique également la valeur de la colonne antimatière.  

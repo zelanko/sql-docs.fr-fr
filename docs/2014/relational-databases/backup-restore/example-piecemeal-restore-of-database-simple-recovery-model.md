@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : restauration fragmentaire d’une base de données (Mode de restauration simple) | Microsoft Docs'
+title: 'Exemple : Restauration fragmentaire d’une base de données (mode de récupération Simple) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c2e44148d1cd250e575b46f83b7d801d40fc47b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921607"
 ---
-# <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>Exemple : restauration fragmentaire d'une base de données (mode de récupération simple)
+# <a name="example-piecemeal-restore-of-database-simple-recovery-model"></a>Exemple : Restauration fragmentaire d’une base de données (mode de récupération simple)
   Une séquence de restauration fragmentaire restaure et récupère une base de données par étapes au niveau des groupes de fichiers, en commençant par le groupe de fichiers primaire et tous les groupes de fichiers secondaires en lecture-écriture.  
   
  Dans cet exemple, la base de données `adb` est restaurée sur un nouvel ordinateur après un problème grave. La base de données utilise le mode de récupération simple. Avant le sinistre, tous les groupes de fichiers sont en ligne. Les groupes de fichiers `A` et `C` sont en lecture-écriture, et le groupe de fichiers `B` est en lecture seule. Le groupe de fichiers `B` est passé en lecture seule avant la sauvegarde partielle la plus récente qui contient le groupe de fichiers principal et les groupes de fichiers secondaires en lecture-écriture, `A` et `C`. Après le passage du groupe de fichiers `B` en lecture seule, une sauvegarde de fichiers séparée du groupe de fichiers `B` a été effectuée.  
@@ -50,17 +50,17 @@ ms.locfileid: "48229629"
   
 ## <a name="additional-examples"></a>Autres exemples  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;Mode de récupération simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture/écriture &#40;mode de récupération complète&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de récupération complète&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Restauration en ligne &#40;SQL Server&#41;](online-restore-sql-server.md)   

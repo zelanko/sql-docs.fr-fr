@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919292"
 ---
 # <a name="assembly-properties-general-page"></a>Propriétés de l'assembly (page Général)
   Cette page vous permet d'afficher et de modifier les propriétés de l'assembly.  
@@ -30,7 +30,7 @@ ms.locfileid: "48103269"
  Tapez le nom du propriétaire ou le nom du schéma, ou effectuez votre sélection dans la liste.  
   
  **Jeu d’autorisations**  
- Définissez le niveau de sécurité pour l'assembly. Trois niveaux de sécurité sont fournis : **Sûr**, **Accès externe**et accès **Illimité** .  
+ Définissez le niveau de sécurité pour l'assembly. Trois niveaux de sécurité sont fournis : **Safe**, **accès externe**, et **Unsafe** accès.  
   
  **Chemin d’accès à l’assembly**  
  Tapez le chemin d'accès du fichier d'assembly.  

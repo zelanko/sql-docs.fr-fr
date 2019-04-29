@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58f946f89691a6e26ba4402166b8ad725e7a977c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925053"
 ---
 # <a name="deploying-models-master-data-services"></a>Déploiement de modèles (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un package est un fichier XML qui contient une structure de modèle déployable et, éventuellement, les données du modèle. Utilisez les packages de modèle pour déplacer des copies de modèles d'un environnement MDS vers un autre, ou pour créer de nouveaux modèles dans votre environnement MDS existant.  
@@ -29,11 +29,11 @@ ms.locfileid: "52761781"
 ## <a name="tools-for-deploying-models"></a>Outils pour déployer des modèles  
  Pour utiliser les packages de modèles, vous pouvez opter pour l'un des trois outils, selon vos besoins.  
   
--   **Outil MDSModelDeploy**: Pour créer et déployer des données et des objets de modèle, utilisez l’outil MDSModelDeploy.exe. Si vous avez sélectionné le chemin d’accès par défaut lors de l’installation de MDS, cet outil se trouve sur *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Outil MDSModelDeploy** : pour créer et déployer des objets de modèle et des données, utilisez l’outil MDSModelDeploy.exe. Si vous avez sélectionné le chemin d’accès par défaut lors de l’installation de MDS, cet outil se trouve sur *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
--   **Assistant Déploiement de modèle**: Pour créer et déployer des packages de la structure du modèle uniquement, utilisez l’Assistant dans le [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] application web. Vous ne pouvez pas utiliser cet Assistant pour déployer des données.  
+-   **Assistant Déploiement de modèle** : pour créer et déployer des packages de la structure de modèle uniquement, utilisez l’Assistant dans l’application web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. Vous ne pouvez pas utiliser cet Assistant pour déployer des données.  
   
--   **Éditeur de modèle de Package**: Pour modifier un package de modèle, utilisez ModelPackageEditor.exe qui lance l’Assistant éditeur de Package de modèle. Vous utilisez cet Assistant pour modifier un package créé par l'outil MDSModelDeploy ou l'Assistant Déploiement de modèle. Si vous avez sélectionné le chemin d’accès par défaut lors de l’installation de MDS, cet outil se trouve sur *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
+-   **Éditeur de package de modèle** : pour modifier un package de modèle, utilisez l’outil ModelPackageEditor.exe qui lance l’Assistant Éditeur de package de modèle. Vous utilisez cet Assistant pour modifier un package créé par l'outil MDSModelDeploy ou l'Assistant Déploiement de modèle. Si vous avez sélectionné le chemin d’accès par défaut lors de l’installation de MDS, cet outil se trouve sur *lecteur*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration.  
   
 > [!IMPORTANT]  
 >  Vous pouvez utiliser MDSDeployModel pour créer un modèle, créer un clone d'un modèle ou mettre à jour un modèle existant et ses données. Si vous utilisez l'outil MDSModelDeploy pour mettre à jour un modèle existant et ses données et que le package ne contient pas une entité, un attribut ou un membre existant dans le modèle de destination, MDSModelDeploy ne supprime pas cette entité, cet attribut ou ce membre du modèle.  

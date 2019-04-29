@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920665"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Déplacer une base de données compatible FILESTREAM
   Cette rubrique montre comment déplacer une base de données compatible FILESTREAM.  

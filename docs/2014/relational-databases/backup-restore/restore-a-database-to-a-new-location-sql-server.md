@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a50004cfb39b93ecd0c144fb0d92d37545c83ee
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921180"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurer une base de données à un nouvel emplacement (SQL Server)
   Cette rubrique explique comment restaurer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à un nouvel emplacement, et éventuellement renommer la base de données, dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez déplacer une base de données vers un nouveau chemin d'accès au répertoire ou créer une copie d'une base de données sur la même instance de serveur ou sur une instance différente.  

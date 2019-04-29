@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910887"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Propriétés dynamiques du recordset dans XML
 Les propriétés spécifiques au fournisseur Recordset suivantes (provenant du moteur de curseur Client) sont actuellement conservées au format XML :  
   
 -   Resynchronisation de la mise à jour  
   
--   Table unique  
+-   table unique  
   
 -   Schéma unique  
   

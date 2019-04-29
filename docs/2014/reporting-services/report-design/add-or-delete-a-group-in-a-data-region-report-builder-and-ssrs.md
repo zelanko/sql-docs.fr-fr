@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 827221a60598a6a9f4179a86783c05512072f5b0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020754"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans une région de données (Générateur de rapports et SSRS)
   Vous pouvez ajouter un groupe à une région de données pour organiser les données selon une valeur spécifique ou un ensemble d'expressions à des fins d'affichage et de calculs. Un groupe porte un nom et possède une expression qui identifient les données d'un dataset qui appartient à ce groupe. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  

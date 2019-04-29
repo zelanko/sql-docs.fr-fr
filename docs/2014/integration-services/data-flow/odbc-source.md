@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901104"
 ---
 # <a name="odbc-source"></a>Source ODBC
   La source ODBC extrait les données d'une base de données compatible ODBC à l'aide d'une table de base de données, d'une vue ou d'une instruction SQL.  
@@ -37,9 +37,9 @@ ms.locfileid: "58382075"
 ## <a name="error-handling"></a>Gestion des erreurs  
  La source ODBC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: Le numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
+-   **Code d'erreur** : Numéro qui correspond à l’erreur actuelle.Numéro qui correspond à l’erreur actuelle. Consultez la documentation de la base de données ODBC que vous utilisez pour obtenir une liste d'erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
   
--   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : Colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   Colonnes de données de sortie standard.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "58382075"
 ## <a name="extract-options"></a>Options d'extraction  
  La source ODBC s’exécute en mode **Lot** ou **Ligne par ligne** . Le mode utilisé est déterminé par la propriété **FetchMethod** . La liste suivante décrit les différents modes.  
   
--   **Batch**: Le composant tente d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
+-   **Lot** : les composants tentent d’utiliser la méthode de récupération la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs ODBC modernes, il s’agit de SQLFetchScroll avec une liaison de table (où la taille de la table est déterminée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
--   **Ligne par ligne**: Le composant utilise SQLFetch pour extraire les lignes une par une.  
+-   **Ligne par ligne** : le composant utilise SQLFetch pour extraire les lignes une par une.  
   
  Pour plus d’informations sur la propriété **FetchMethod** , consultez [Propriétés personnalisées des sources ODBC](odbc-source-custom-properties.md).  
   

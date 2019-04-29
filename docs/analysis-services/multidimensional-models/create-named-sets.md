@@ -1,5 +1,5 @@
 ---
-title: Créer des jeux nommés | Documents Microsoft
+title: Créer des jeux nommés | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020064"
 ---
 # <a name="create-named-sets"></a>Créer des jeux nommés
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34021576"
  Vous pouvez copier ou faire glisser des composants de cube depuis l’onglet **Métadonnées** du volet **Outils de calcul** vers la zone **Expression** du volet **Éditeur de formulaire de jeu nommé** . Vous pouvez copier ou faire glisser des fonctions depuis l’onglet **Fonctions** du volet **Outils de calcul** vers la zone **Expression** du volet **Éditeur de formulaire de jeu nommé** .  
   
 > [!IMPORTANT]  
->  Si vous créez l’expression d’ensemble en spécifiant explicitement dans le jeu de membres, placez la liste des membres dans une paire d’accolades ({}).  
+>  Si vous créez l’expression de jeu en spécifiant explicitement les membres dans le jeu, placez la liste des membres dans une paire d’accolades ({}).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Calculs dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 648b389adf8af04e0a59365efe8be7108a265435
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927205"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de messages d'erreur** pour donner un nom et une description à la tâche de transfert de messages d'erreur. La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations sur cette tâche, consultez [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  

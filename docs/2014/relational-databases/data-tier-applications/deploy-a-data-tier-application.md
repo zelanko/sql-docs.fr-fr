@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918184"
 ---
 # <a name="deploy-a-data-tier-application"></a>Déployer une application de la couche Données
   Vous pouvez déployer une application de la couche Données (DAC) sur une instance existante du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l'aide d'un Assistant ou d'un script PowerShell. Le processus de déploiement inscrit une instance DAC en stockant la définition de la DAC dans la base de données système **msdb** (**master** dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crée une base de données, puis remplit la base de données avec tous les objets de base de données définis dans la DAC.  
@@ -60,7 +60,7 @@ ms.locfileid: "52529546"
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Une DAC ne peut être déployée que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions ayant le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi déployer une DAC. Le déploiement d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles loginmanager ou serveradmin. Le déploiement d'une DAC sans connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles dbmanager ou serveradmin.  
   
 ##  <a name="UsingDeployDACWizard"></a> À l’aide de l’Assistant déployer une couche de données Application  

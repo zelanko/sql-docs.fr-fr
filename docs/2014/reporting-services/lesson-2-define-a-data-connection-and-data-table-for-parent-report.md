@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6b7e6e38ca10cf23179872ddc3ff4476bc3657d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063295"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : Définir une connexion de données et une table de données pour le rapport parent
   Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport parent. Dans ce didacticiel, la connexion de données doit s'établir avec la base de données AdventureWorks2008. Vous avez également la possibilité de vous connecter à la base de données AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>Pour définir une connexion de données et une table de données en ajoutant un dataset (pour le rapport parent)  

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88fe39b5be43082ffc9648814eccf5384585f2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920499"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Accéder aux données FILESTREAM avec Transact-SQL
   Cette rubrique explique comment utiliser les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE et DELETE pour gérer des données FILESTREAM.  
@@ -26,7 +26,7 @@ ms.locfileid: "48061039"
 >  Les exemples de cette rubrique nécessitent la base de données compatible FILESTREAM et la table qui sont créées dans [Créer une base de données compatible FILESTREAM](create-a-filestream-enabled-database.md) et [Créer une table pour le stockage de données FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Insertion d'une ligne qui contient des données FILESTREAM  
- Pour ajouter une ligne à une table prenant en charge les données FILESTREAM, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Lorsque vous insérez des données dans une colonne FILESTREAM, vous pouvez insérer la valeur NULL ou un `varbinary(max)` valeur.  
+ Pour ajouter une ligne à une table prenant en charge les données FILESTREAM, utilisez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Lorsque vous insérez des données dans une colonne FILESTREAM, vous pouvez insérer une valeur NULL ou `varbinary(max)`.  
   
 ### <a name="inserting-null"></a>Insertion de NULL  
  L'exemple suivant montre comment insérer `NULL`. Lorsque la valeur FILESTREAM est `NULL`, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne crée pas de fichier dans le système de fichiers.  

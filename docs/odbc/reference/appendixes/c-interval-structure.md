@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026590"
 ---
 # <a name="c-interval-structure"></a>Structure d’intervalle C
 Chacun des types de données d’intervalle C répertoriées dans le [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) section utilise la même structure pour contenir les données d’intervalle. Lorsque **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** est appelée, le pilote retourne les données dans la structure SQL_INTERVAL_STRUCT, utilise la valeur qui a été spécifiée par le application pour les types de données C (dans l’appel à **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**) pour interpréter le contenu de SQL_INTERVAL_STRUCT et remplit la *interval_type* champ de la structure avec le *enum* valeur correspondant au type C. Notez que les pilotes ne lisent pas les *interval_type* champ pour déterminer le type de l’intervalle ; ils récupèrent la valeur du champ de descripteur SQL_DESC_CONCISE_TYPE. Lors de la structure est utilisée pour les données de paramètre, le pilote utilise la valeur spécifiée par l’application dans le champ SQL_DESC_CONCISE_TYPE du descripteur APD interpréter le contenu de SQL_INTERVAL_STRUCT, même si l’application définit la valeur de la  *interval_type* champ à une valeur différente.  

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 7450810f45d81dd1530699677a80a052840ed867
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127596"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
   Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (`child`, `parent`, `attribute` ou `self`) possède un type de nœud principal. Pour le `attribute` axe, le type de nœud principal est  **\<attribut >**. Pour le `parent`, `child`, et `self` axes, le type de nœud principal est  **\<élément >**.  

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel SSIS : Déploiement de Packages | Microsoft Docs'
+title: 'Tutoriel SSIS : Déploiement de Packages | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899007"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>Didacticiel SSIS : Déploiement des packages
+# <a name="ssis-tutorial-deploying-packages"></a>Tutoriel SSIS : Déploiement des packages
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose des outils qui simplifient le déploiement des packages vers un autre ordinateur. Ces outils de déploiement gèrent aussi les dépendances, telles que les configurations et les fichiers dont les packages ont besoin. Dans ce didacticiel, vous allez apprendre à utiliser ces outils pour installer des packages et leurs dépendances sur un ordinateur cible.  
   
  Pour commencer, vous allez effectuer les tâches de préparation du déploiement. Vous allez créer un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et ajouter des packages et des fichiers de données existants au projet. Vous n'allez pas créer de nouveaux packages entièrement ; en revanche, vous allez travailler uniquement avec des packages finalisés et créés spécialement pour ce didacticiel. Vous n'allez pas modifier les fonctionnalités des packages de ce didacticiel ; cependant, une fois que les packages sont ajoutés au projet, il vous sera peut-être utile d'ouvrir les packages dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] et d'examiner le contenu de chaque package. Cette opération vous permet d'obtenir des informations sur les dépendances de package telles que les fichiers journaux et d'autres fonctionnalités intéressantes des packages.  
@@ -46,7 +46,7 @@ ms.locfileid: "58379717"
  Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.  
   
 ## <a name="requirements"></a>Configuration requise  
- Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce didacticiel, il est peut-être intéressant d'achever d'abord les didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivants : [Exécuter le serveur SQL Server Assistant Importation et exportation](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [didacticiel SSIS : Création d’un Package ETL Simple](../integration-services/ssis-how-to-create-an-etl-package.md).  
+ Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre base [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] concepts que vous allez mettre en œuvre dans ce didacticiel, il peut s’avérer utile pour tout d’abord effectuer les opérations suivantes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] didacticiels : [Exécuter le serveur SQL Server Assistant Importation et exportation](import-export-data/start-the-sql-server-import-and-export-wizard.md) et [didacticiel SSIS : Création d’un Package ETL Simple](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Ordinateur source.** Les composants suivants doivent être installés sur l'ordinateur sur lequel vous allez créer l'application de déploiement :  
   
@@ -72,7 +72,7 @@ ms.locfileid: "58379717"
   
  Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.  
   
- **Durée estimée pour effectuer ce didacticiel :** 2 heures  
+ **Durée estimée pour effectuer ce tutoriel :** 2 heures  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
  [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  

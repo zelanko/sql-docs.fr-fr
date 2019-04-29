@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902428"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
   Pour pouvoir ajouter et configurer une destination OLE DB, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -42,7 +42,7 @@ ms.locfileid: "58376717"
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue - chargement rapide** sélectionnez une table ou vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **conserver les valeurs null**, **Table lock**, **contrainte de validation**, **lignes par lot**, ou **maximale taille de validation d’insertion**.  
+    -   **Table ou vue – chargement rapide** : sélectionnez une table ou une vue dans la base de données contenant les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs Null**, **Verrou de table**, **Vérifier les contraintes**, **Lignes par lot** ou **Taille maximale de validation d’insertion**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   

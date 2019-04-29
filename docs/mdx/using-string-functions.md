@@ -1,5 +1,5 @@
 ---
-title: À l’aide de fonctions de chaîne | Documents Microsoft
+title: À l’aide des fonctions de chaîne | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62928155"
 ---
 # <a name="using-string-functions"></a>Utilisation des fonctions de chaîne
 
 
   Vous pouvez utiliser des fonctions de chaîne sur tous les objets ou presque de la syntaxe MDX (Multidimensional Expressions). Dans les procédures stockées, les fonctions de chaîne sont principalement utilisées pour convertir l'objet en représentation sous forme de chaîne. Les fonctions de chaîne permettent également d'évaluer une expression de chaîne sur un objet afin de retourner une valeur.  
   
- Les fonctions de chaîne plus couramment utilisées sont **nom** et **Uniquename**. Ces fonctions retournent respectivement le nom et le nom unique d'un objet. Essentiellement, elles sont utilisées lors du débogage des calculs pour découvrir quel membre une fonction retourne.  
+ Les fonctions de chaîne plus largement utilisées sont **nom** et **Uniquename**. Ces fonctions retournent respectivement le nom et le nom unique d'un objet. Essentiellement, elles sont utilisées lors du débogage des calculs pour découvrir quel membre une fonction retourne.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple des requêtes suivant montre comment utiliser ces fonctions :  
@@ -102,8 +102,8 @@ ms.locfileid: "34743824"
 >  Le **StrToMember** et **StrToSet** fonctions doivent être utilisées avec précaution. Elles peuvent entraîner des performances médiocres de requête si elles sont utilisées dans des définitions de calcul.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générer &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Nom &#40;MDX&#41;](../mdx/name-mdx.md)   
+ [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [À l’aide de procédures stockées &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   

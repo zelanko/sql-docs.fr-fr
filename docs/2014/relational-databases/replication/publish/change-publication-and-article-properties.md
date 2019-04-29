@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021318"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
   Quand une publication a été créée, la plupart des propriétés de la publication et des articles peuvent être modifiées, mais certaines nécessitent que l'instantané soit régénéré et/ou que les abonnements soient réinitialisés. Cette rubrique contient des informations sur toutes les propriétés qui requièrent l'une de ces actions ou les deux si elles sont modifiées.  
@@ -93,7 +93,7 @@ ms.locfileid: "54135809"
 |Modifier le propriétaire de la table de destination.|**sp_changemergearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de réplication Forum aux questions](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [FAQ sur l’administration de la réplication](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Créer et appliquer un instantané](../create-and-apply-the-snapshot.md)   
  [Réinitialiser des abonnements](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

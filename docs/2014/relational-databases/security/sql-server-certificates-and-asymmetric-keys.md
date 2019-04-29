@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025803"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificats et clés asymétriques SQL Server
   Le chiffrement à clé publique (PKI) est une forme de confidentialité des messages dans laquelle un utilisateur crée une clé *publique* et une clé *privée* . La clé privée est gardée secrète, alors que la clé publique peut être distribuée aux autres. Bien que les clés soient liées mathématiquement, la clé privée ne peut pas être dérivée facilement de la clé publique. La clé publique est utilisée pour chiffrer les données et la clé privée pour les déchiffrer. Un message chiffré à l'aide de la clé publique peut être déchiffré uniquement à l'aide de la clé privée appropriée. Comme il existe deux clés différentes, ces clés sont *asymétriques*.  
@@ -66,7 +66,7 @@ ms.locfileid: "48125109"
   
 |||  
 |-|-|  
-|Outil|Fonction|  
+|Tool|Objectif|  
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crée des certificats.|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crée des noms forts pour les clés symétriques.|  
   

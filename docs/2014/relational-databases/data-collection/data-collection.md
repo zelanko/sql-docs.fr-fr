@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd38517c80eb5a1eca697bbc1705880132f4ea62
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919049"
 ---
 # <a name="data-collection"></a>Collecte de données
   Le collecteur de données est un composant de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui recueille différents jeux de données. La collecte de données peut s'exécuter de façon constante ou selon une planification définie par l'utilisateur. Le collecteur de données stocke les données recueillies dans une base de données relationnelle appelée entrepôt de données de gestion.  

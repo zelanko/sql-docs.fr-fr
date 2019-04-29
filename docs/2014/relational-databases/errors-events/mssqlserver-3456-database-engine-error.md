@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914287"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141189"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|REC_REDOLSNMISMATCH|  
-|Texte du message|Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : numéro de séquence d'enregistrement = %S_LSN, type = %ld. Journal : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.|  
+|Texte du message|Impossible de rétablir l'enregistrement du journal %S_LSN, pour l'ID de transaction %S_XID, à la page %S_PGID, base de données '%.*ls' (ID de base de données %d). Page : LSN = %S_LSN, type = %ld. Journal : OpCode = %ld, contexte %ld, PrevPageLSN : %S_LSN. Effectuez une restauration à partir d'une sauvegarde de la base de données ou réparez la base de données.|  
   
 ## <a name="explanation"></a>Explication  
  L'opération de restauration n'a pas pu rétablir le journal des transactions. Cette erreur a placé la base de données dans l'état SUSPECT. Le groupe de fichiers primaire et éventuellement d'autres groupes de fichiers sont suspects et peut-être endommagés. La base de données ne peut pas être récupérée au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est par conséquent pas disponible. Une action est requise de la part de l'utilisateur pour résoudre le problème.  

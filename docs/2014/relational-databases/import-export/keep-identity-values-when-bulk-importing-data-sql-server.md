@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064580"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Conserver des valeurs d'identité lors de l'importation de données en bloc (SQL Server)
   Les fichiers de données contenant des valeurs d'identité peuvent être importés en bloc dans une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, les valeurs de la colonne d'identité du fichier de données importé sont ignorées et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte automatiquement des valeurs uniques. Ces valeurs uniques reposent sur les valeurs de départ et d'incrément spécifiées lors de la création de la table.  
@@ -30,7 +30,7 @@ ms.locfileid: "48159629"
   
 |Command|Qualificateur de conservation d'identité|Type de qualificateur|  
 |-------------|------------------------------|--------------------|  
-|`bcp`|**-E**|Commutateur|  
+|`bcp`|**-E**|Basculer|  
 |BULK INSERT|KEEPIDENTITY|Argument|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Indicateur de table|  
   
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Pour plus d’informations sur la création d’un fichier de format, consultez [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Utilisation de bcp et conservation des valeurs d'identité  
- Cet exemple montre comment conserver les valeurs d'identité dans le cadre d'une importation de données en bloc avec la commande `bcp`. Le `bcp` commande utilise le fichier de format `myDepartment-f-n-x.Xml`et contient les commutateurs suivants :  
+ Cet exemple montre comment conserver les valeurs d'identité dans le cadre d'une importation de données en bloc avec la commande `bcp`. La commande `bcp`, qui utilise le fichier de format `myDepartment-f-n-x.Xml`, contient les commutateurs suivants :  
   
 |Qualificateurs|Description|  
 |----------------|-----------------|  

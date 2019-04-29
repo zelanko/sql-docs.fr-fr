@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021060"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Publier des données sur Internet à l'aide d'un réseau privé virtuel
   La technologie des réseaux privés virtuels (VPN, Virtual Private Network) permet aux utilisateurs qui travaillent à domicile, dans des succursales, sur des clients distants et dans d'autres sociétés de se connecter à un réseau d'entreprise via Internet, tout en préservant des communications sécurisées. Les utilisateurs peuvent recourir à l'authentification Windows comme s'ils faisaient partie d'un réseau local (LAN, Local Area Network). Tous les types de réplication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent répliquer des données sur un réseau privé virtuel, mais vous pouvez envisager d'utiliser la synchronisation Web si vous utilisez la réplication de fusion car la synchronisation Web élimine le besoin d'utiliser un réseau privé virtuel. Pour plus d’informations, consultez [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  

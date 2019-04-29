@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920686"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Sauvegardes du journal des transactions (SQL Server)
   Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions. Cette rubrique décrit la sauvegarde du journal des transactions d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

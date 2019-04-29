@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921794"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
   En général, toutes les données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont restaurées avant que la base de données ne soit récupérée. Toutefois, une opération de restauration peut récupérer une base de données sans réellement restaurer une sauvegarde, par exemple lors de la récupération d'un fichier en lecture seule qui est cohérent avec la base de données. Il s’agit d’une *restauration avec récupération uniquement*. Lorsque des données hors ligne sont déjà cohérentes avec la base de données et doivent uniquement être rendues disponibles, une restauration avec récupération uniquement termine la récupération de la base de données et met les données en ligne.  
@@ -76,15 +76,15 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Exemples de finalisation d'un scénario de restauration fragmentaire à l'aide d'une restauration avec récupération uniquement  
  **Mode de récupération simple**  
   
--   [Exemple : Restauration fragmentaire d’une base de données &#40;mode de récupération Simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de récupération simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Exemple : Restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération Simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement &#40;mode de récupération simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **Mode de restauration complète**  
   
--   [Exemple : Restauration fragmentaire d’une base de données &#40;mode de récupération complète&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire d’une base de données &#40;mode de restauration complète&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Exemple : Restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Exemple : restauration fragmentaire de quelques groupes de fichiers &#40;mode de récupération complète&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   

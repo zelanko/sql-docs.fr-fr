@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919021"
 ---
 # <a name="debugging-clr-database-objects"></a>Débogage d'objets de base de données CLR
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le débogage d'objets [!INCLUDE[tsql](../../../includes/tsql-md.md)] et CLR dans la base de données. Les principaux atouts du débogage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont la facilité d'installation et d'utilisation, et l'intégration du débogueur SQL Server avec le débogueur Microsoft Visual Studio. En outre, le débogage fonctionne sur plusieurs langages. Les utilisateurs peuvent effectuer de façon transparente un pas à pas détaillé dans les objets CLR à partir de [!INCLUDE[tsql](../../../includes/tsql-md.md)] et vice versa. Le débogueur Transact-SQL dans SQL Server Management Studio ne peut pas être utilisé pour déboguer des objets de base de données managés, mais vous pouvez déboguer les objets en utilisant les débogueurs de Visual Studio. Le débogage d'objets de base de données managés dans Visual Studio prend en charge toutes les fonctionnalités de débogage classiques, par exemple, les instructions "step into" et "step over" dans les routines qui s'exécutent sur le serveur. Les débogueurs peuvent définir des points d'arrêt, inspecter la pile des appels, inspecter les variables et modifier des valeurs de variables en cours de débogage. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le débogage ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  

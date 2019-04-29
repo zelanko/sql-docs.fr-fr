@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061487"
 ---
 # <a name="freeing-descriptors"></a>Libération des descripteurs
 Descripteurs alloués explicitement peuvent être soit libérée explicitement, en appelant **SQLFreeHandle** avec *HandleType* de SQL_HANDLE_DESC, ou implicitement, lorsque la connexion est libéré. Quand un descripteur explicitement alloué est libéré, tous les descripteurs d’instruction à laquelle le descripteur libéré appliqué automatiquement rétablir les descripteurs alloués implicitement pour eux.  

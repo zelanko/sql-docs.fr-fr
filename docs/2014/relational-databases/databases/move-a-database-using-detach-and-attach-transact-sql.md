@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917085"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
   Cette rubrique explique comment déplacer une base de données détachée vers un autre emplacement puis la rattacher à la même instance de serveur ou à une instance différente dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, nous vous recommandons de déplacer les bases de données à l'aide de la procédure de déplacement planifié ALTER DATABASE, plutôt qu'à l'aide de la méthode de détachement et d'attachement. Pour plus d’informations, consultez [Déplacer des bases de données utilisateur](move-user-databases.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "54136099"
     GO  
     ```  
   
-2.  À l’aide de la méthode de votre choix, copiez les fichiers de base de données (dventureworks208r2_data.mdf et AdventureWorks208R2_log) pour : C:\MySQLServer\AdventureWorks208R2_Data.mdf et C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivement.  
+2.  À l’aide de la méthode de votre choix, copiez les fichiers de base de données (AdventureWorks208R2_Data.mdf et AdventureWorks208R2_log) aux emplacements C:\MySQLServer\AdventureWorks208R2_Data.mdf et C:\MySQLServer\AdventureWorks208R2_Log.ldf, respectivement.  
   
     > [!IMPORTANT]  
     >  Dans le cas d'une base de données de production, placez la base de données et le journal des transactions sur des disques distincts.  

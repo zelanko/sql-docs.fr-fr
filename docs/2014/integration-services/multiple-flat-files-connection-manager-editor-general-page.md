@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d1932d314e8d2c1eb48526d87246da2051bc3b5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890554"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** pour sélectionner un groupe de fichiers ayant le même format de données et pour spécifier leur format de données. Une connexion de fichiers plats multiples permet à un package de se connecter à un groupe de fichiers texte ayant le même format.  

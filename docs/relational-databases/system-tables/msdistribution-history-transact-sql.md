@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903668"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52817321"
 |**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
 |**duration**|**Int**|Durée, en secondes, de la session de message.|  
-|**Commentaires**|**nvarchar(4000)**|Texte du message.|  
+|**comments**|**nvarchar(4000)**|Texte du message.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de la dernière transaction réalisée.|  
 |**current_delivery_rate**|**float**|Nombre moyen de commandes transmises par seconde depuis la dernière entrée de commande dans l'historique.|  
 |**current_delivery_latency**|**Int**|Temps de latence entre l'entrée de la commande dans la base de données de distribution et son application à l'abonné depuis la dernière entrée dans l'historique. En millisecondes.|  
@@ -49,7 +49,7 @@ ms.locfileid: "52817321"
 |**delivery_rate**|**float**|Moyenne des commandes transmises par seconde.|  
 |**delivery_latency**|**Int**|Temps de latence entre l'entrée de la commande dans la base de données de distribution et son application à l'abonné. En millisecondes.|  
 |**total_delivered_commands**|**bigint**|Nombre total de commandes transmises depuis la création de l'abonnement.|  
-|**ID_erreur**|**Int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
+|**error_id**|**Int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
 |**updateable_row**|**bit**|La valeur **1** si la ligne d’historique peut être remplacée.|  
 |**timestamp**|**timestamp**|Colonne timestamp de cette table|  
   

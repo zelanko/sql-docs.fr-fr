@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918119"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
   Une application de la couche Données (DAC) peut être analysée à partir de l’ **Explorateur de l’utilitaire** et de l’ **Explorateur d’objets** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), avec les vues et les tables système. De plus, tous les objets dans la base de données contenue dans la DAC peuvent être analysés à l'aide des techniques d'analyse de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et de base de données standard.  

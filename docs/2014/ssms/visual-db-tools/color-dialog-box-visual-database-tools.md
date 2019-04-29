@@ -1,8 +1,9 @@
 ---
 title: Couleur, boîte de dialogue (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -13,53 +14,53 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936694"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Boîte de dialogue Couleur (Visual Database Tools)
-  La **boîte de dialogue Couleur** retourne la valeur RVB d'une couleur sélectionnée par l'utilisateur. L'utilisateur peut faire son choix dans un jeu de couleurs de base déterminé par le pilote d'affichage ou dans un jeu de couleurs personnalisées. Sélectionnez une couleur parmi les couleurs de base ou créez des couleurs personnalisées. Définissez les couleurs en cliquant sur la matrice des couleurs ou en renseignant les zones **Teinte**, **Sat**, **Lum**, **Rouge**, **Vert**et **Bleu** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+La **boîte de dialogue Couleur** retourne la valeur RVB d'une couleur sélectionnée par l'utilisateur. L'utilisateur peut faire son choix dans un jeu de couleurs de base déterminé par le pilote d'affichage ou dans un jeu de couleurs personnalisées. Sélectionnez une couleur parmi les couleurs de base ou créez des couleurs personnalisées. Définissez les couleurs en cliquant sur la matrice des couleurs ou en renseignant les zones **Teinte**, **Sat**, **Lum**, **Rouge**, **Vert**et **Bleu** .  
   
 ## <a name="options"></a>Options  
- **Couleurs de base**  
- Couleurs prédéterminées définies par le pilote d'affichage.  
+**Couleurs de base**  
+Couleurs prédéterminées définies par le pilote d'affichage.  
   
- **Couleurs personnalisées**  
- Couleurs ajoutées à l’aide du bouton **Ajouter aux couleurs personnalisées** .  
+**Couleurs personnalisées**  
+Couleurs ajoutées à l’aide du bouton **Ajouter aux couleurs personnalisées** .  
   
- **Définir les couleurs personnalisées**  
- Développe la boîte de dialogue pour afficher la zone des couleurs personnalisées.  
+**Définir les couleurs personnalisées**  
+Développe la boîte de dialogue pour afficher la zone des couleurs personnalisées.  
   
- Matrice des couleurs  
- La matrice des couleurs affiche la palette de couleurs. Pour définir une couleur personnalisée, cliquez à l'endroit de votre choix dans la matrice. Modifiez la teinte en déplaçant le pointeur à l'horizontale. Modifiez la saturation en déplaçant le pointeur à la verticale.  
+Matrice des couleurs  
+La matrice des couleurs affiche la palette de couleurs. Pour définir une couleur personnalisée, cliquez à l'endroit de votre choix dans la matrice. Modifiez la teinte en déplaçant le pointeur à l'horizontale. Modifiez la saturation en déplaçant le pointeur à la verticale.  
   
- Barre de luminosité  
- Faites glisser le curseur pour modifier la luminosité (clarté ou obscurité relatives) d'une couleur. La valeur numérique correspondante s'affiche dans **Lum**.  
+Barre de luminosité  
+Faites glisser le curseur pour modifier la luminosité (clarté ou obscurité relatives) d'une couleur. La valeur numérique correspondante s'affiche dans **Lum**.  
   
- **Color**  
- Affiche la couleur actuellement sélectionnée.  
+**Color**  
+Affiche la couleur actuellement sélectionnée.  
   
- **Teinte**  
- Valeur de la teinte de la couleur sélectionnée.  
+**Teinte**  
+Valeur de la teinte de la couleur sélectionnée.  
   
- **Sat**  
- Valeur de saturation de la couleur sélectionnée.  
+**Sat**  
+Valeur de saturation de la couleur sélectionnée.  
   
- **Lum**  
- Luminosité (clarté ou obscurité) de la couleur sélectionnée.  
+**Lum**  
+Luminosité (clarté ou obscurité) de la couleur sélectionnée.  
   
- **Rouge**  
- Valeur numérique du composant rouge, comprise entre 0 et 255  
+**Rouge**  
+Valeur numérique du composant rouge, comprise entre 0 et 255  
   
- **Vert**  
- Valeur numérique du composant vert, comprise entre 0 et 255  
+**Vert**  
+Valeur numérique du composant vert, comprise entre 0 et 255  
   
- **Bleu**  
- Valeur numérique du composant bleu, comprise entre 0 et 255  
+**Bleu**  
+Valeur numérique du composant bleu, comprise entre 0 et 255  
   
- **Ajouter aux couleurs personnalisées**  
- Cliquez ici pour ajouter la couleur à la zone Couleurs personnalisées.  
-  
+**Ajouter aux couleurs personnalisées**  
+Cliquez ici pour ajouter la couleur à la zone Couleurs personnalisées.  
   

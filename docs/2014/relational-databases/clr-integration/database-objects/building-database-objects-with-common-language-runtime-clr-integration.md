@@ -18,13 +18,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919252"
 ---
-# <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Création d'objets de base de données avec intégration du Common Language Runtime (CLR)
+# <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
   Vous pouvez créer des objets de base de données à l’aide de la [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est appelé « routine CLR ». Ces routines incluent :  
   
 -   Fonctions scalaires définies par l'utilisateur (fonctions UDF scalaires)  

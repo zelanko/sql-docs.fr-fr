@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019339"
 ---
-# <a name="tables---partition-representation"></a>Tables - représentation d’une Partition
+# <a name="tables---partition-representation"></a>Tables - Représentation d’une partition
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   À des fins opérationnelles, une table peut être divisée en différents sous-ensembles de lignes qui une fois combinés forment la table ; chacun de ces sous-ensembles est une partition de la table.  
   

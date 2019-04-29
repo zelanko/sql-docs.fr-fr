@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917963"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
   La messagerie de base de données est une solution d'entreprise qui permet l'envoi de messages électroniques à partir du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  
@@ -41,25 +41,25 @@ ms.locfileid: "52787971"
   
 ### <a name="scalability"></a>Extensibilité  
   
--   Remise à l’arrière-plan : La messagerie de base de données assure la remise à l'arrière-plan ou asynchrone du courrier électronique. Lorsque vous appelez **sp_send_dbmail** pour envoyer un message, la messagerie de base de données ajoute une demande dans une file d’attente [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La procédure stockée est immédiatement retournée. Le composant de messagerie externe reçoit la demande et transmet le courrier électronique.  
+-   Remise à l’arrière-plan : Messagerie de base de données fournit des informations générales, ou la remise asynchrone. Lorsque vous appelez **sp_send_dbmail** pour envoyer un message, la messagerie de base de données ajoute une demande dans une file d’attente [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La procédure stockée est immédiatement retournée. Le composant de messagerie externe reçoit la demande et transmet le courrier électronique.  
   
--   Plusieurs profils : La messagerie de base de données vous permet de créer plusieurs profils dans une même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également choisir le profil que la messagerie de base de données utilise lorsque vous envoyez un message.  
+-   Plusieurs profils : Base de données vous permet de créer plusieurs profils dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance. Vous pouvez également choisir le profil que la messagerie de base de données utilise lorsque vous envoyez un message.  
   
 -   Plusieurs comptes : Chaque profil peut contenir plusieurs comptes de basculement. Vous pouvez configurer différents profils avec différents comptes afin de distribuer le courrier électronique vers plusieurs serveurs de messagerie.  
   
--   compatibilité 64 bits : La messagerie de base de données est entièrement compatible avec les installations 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   compatibilité 64 bits : Messagerie de base de données est entièrement pris en charge sur les installations 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Sécurité  
   
--   Désactivé par défaut : Pour réduire la zone de surface de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées de la messagerie de base de données sont désactivées par défaut.  
+-   Désactivé par défaut : Pour réduire la surface d’exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées de la messagerie de base de données sont désactivées par défaut.  
   
 -   Sécurité de la messagerie : pour envoyer un message de messagerie de base de données, vous devez être membre du rôle de base de données **DatabaseMailUserRole** de la base de données **msdb** .  
   
--   Sécurité des profils : La messagerie de base de données garantit la sécurité des profils de messagerie. Vous choisissez les utilisateurs ou les groupes de la base de données **msdb** qui ont accès à un profil de messagerie de base de données. Vous pouvez autoriser cet accès à certains utilisateurs en particulier, ou à tous les utilisateurs de **msdb**. Un profil privé limite l'accès à une liste d'utilisateurs. Un profil public autorise l'accès à tous les utilisateurs d'une base de données.  
+-   Sécurité des profils : Messagerie de base de données garantit la sécurité pour les profils de messagerie. Vous choisissez les utilisateurs ou les groupes de la base de données **msdb** qui ont accès à un profil de messagerie de base de données. Vous pouvez autoriser cet accès à certains utilisateurs en particulier, ou à tous les utilisateurs de **msdb**. Un profil privé limite l'accès à une liste d'utilisateurs. Un profil public autorise l'accès à tous les utilisateurs d'une base de données.  
   
--   Administrateur de taille de pièce jointe : La messagerie de base de données limite la taille des fichiers joints (limite configurable). Vous pouvez modifier cette limite en utilisant la procédure stockée [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
+-   Administrateur de taille de pièce jointe : Messagerie de base de données impose une limite configurable sur la taille de fichier de pièce jointe. Vous pouvez modifier cette limite en utilisant la procédure stockée [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
   
--   Extensions de fichiers interdites : La messagerie de base de données maintient une liste d'extensions de fichiers interdites. Les utilisateurs ne peuvent pas joindre de fichiers dont l'extension figure dans la liste. Vous pouvez modifier cette liste en utilisant sysmail_configure_sp.  
+-   Extensions de fichiers interdites : Messagerie de base de données maintient une liste des extensions de fichiers interdites. Les utilisateurs ne peuvent pas joindre de fichiers dont l'extension figure dans la liste. Vous pouvez modifier cette liste en utilisant sysmail_configure_sp.  
   
 -   La messagerie de base de données s'exécute sous le compte de service du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour attacher un fichier provenant d'un dossier dans un message électronique, le compte du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être autorisé à accéder au dossier dans lequel se trouve le fichier.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52787971"
   
 -   Audit : Messagerie de base de données conserve des copies des messages et des pièces jointes envoyées le **msdb** base de données. Vous pouvez facilement contrôler l'utilisation de la messagerie et consulter les messages conservés.  
   
--   Prise en charge au format HTML : La messagerie de base de données vous permet d'envoyer des messages au format HTML.  
+-   Prise en charge au format HTML : Messagerie de base de données permet d’envoyer des messages électroniques au format HTML.  
   
 
   

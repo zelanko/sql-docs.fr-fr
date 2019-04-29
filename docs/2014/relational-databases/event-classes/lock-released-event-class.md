@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf04a73d2ecc100ae5e9b41b5807aa25b05ba32a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023841"
 ---
 # <a name="lockreleased-event-class"></a>Classe d'événements Lock:Released
   La classe d'événements Lock:Released indique qu'un verrou sur une ressource (une page par exemple) a été débloqué.  
   
  Les classes d'événements Lock:Acquired et Lock:Released permettent de contrôler à quel moment des objets sont verrouillés, le type des verrous établis et la durée de maintien des verrous. Les verrous maintenus pendant de longues périodes peuvent causer des contentions et doivent être examinés. Par exemple, une application peut acquérir des verrous sur les lignes d'une table puis attendre la saisie de l'utilisateur. La saisie de l'utilisateur pouvant prendre du temps pour se produire, les verrous risquent de bloquer d'autres utilisateurs. Dans ce cas, l'application doit être modifiée pour effectuer des demandes de verrous uniquement lorsque cela est nécessaire et ne pas demander une saisie de l'utilisateur après avoir acquis des verrous.  
   
-## <a name="lock-released-event-class-data-columns"></a>Colonnes de la classe d'événements Lock:Released  
+## <a name="lock-released-event-class-data-columns"></a>Verrou : Colonnes de données classe d’événements de publication  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3058b01fe34f1edcb20f1d5aa701122417e6ac32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924819"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Supprimer un attribut (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez un attribut lorsque vous souhaitez supprimer définitivement l’attribut et toutes les valeurs d’attribut associées.  

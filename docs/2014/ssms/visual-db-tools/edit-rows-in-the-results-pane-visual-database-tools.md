@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028352"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Modifier les lignes dans le volet Résultats (Visual Database Tools)
   Dans la plupart des cas, vous pouvez modifier les données dans le [volet Résultats](visual-database-tools.md). Pour plus d’informations sur la modification de données, consultez [Règles relatives à la mise à jour des résultats &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) et [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md).  

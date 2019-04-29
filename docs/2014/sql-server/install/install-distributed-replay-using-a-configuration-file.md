@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ba661a0a00931f52aa7d38cc8d96730c685fa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913537"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Installer Distributed Replay à l'aide d'un fichier de configuration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de générer un fichier de configuration basé sur les entrées utilisateur et les entrées système par défaut. Si vous spécifiez que vous souhaitez que les outils d'administration soient installés, vous pouvez utiliser le fichier de configuration pour déployer les trois composants Distributed Replay (outil d'administration, Distributed Replay Controller et Distributed Replay Client). Il prend en charge l'installation, la réparation et la désinstallation des composants Distributed Replay.  

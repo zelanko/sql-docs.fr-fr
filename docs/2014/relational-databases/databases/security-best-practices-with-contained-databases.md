@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916757"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
   Les bases de données autonomes présentent quelques menaces originales que les administrateurs du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] doivent connaître et limiter. La plupart de ces menaces sont liées au processus d’authentification `USER WITH PASSWORD`, qui déplace la limite de l’authentification du niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers celui de la base de données.  

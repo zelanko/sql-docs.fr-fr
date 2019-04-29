@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dab5e88df4808a31218270938766660da27bc2c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926168"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Générer automatiquement les valeurs des attributs autres que Code (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], générez automatiquement les valeurs des valeurs d’attribut d’une entité quand vous souhaitez qu’un entier soit attribué automatiquement comme valeur chaque fois que les règles d’entreprise sont appliquées.  

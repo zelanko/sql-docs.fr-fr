@@ -24,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce09e2c607600273f5b5778251c3c58fdf57f9dc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016928"
 ---
 # <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  

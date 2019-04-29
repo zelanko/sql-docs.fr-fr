@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910441"
 ---
 # <a name="recordset-positioning"></a>Positionnement dans un recordset
 Utilisez le **AbsolutePosition** propriété pour accéder à un enregistrement, en fonction de sa position ordinale dans la **Recordset** objet, ou pour déterminer la position ordinale de l’enregistrement actif. Le fournisseur doit prendre en charge les fonctionnalités requises pour cette propriété doit être disponible.  

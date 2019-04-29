@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028176"
 ---
 # <a name="find-method-example-vc"></a>Find, exemple de méthode (VC++)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [trouver](../../../ado/reference/ado-api/find-method-ado.md) méthode pour localiser et compter le nombre de titres de fonctions dans le **Pubs** base de données. L’exemple suppose que le fournisseur sous-jacent ne prend pas en charge des fonctionnalités similaires.  

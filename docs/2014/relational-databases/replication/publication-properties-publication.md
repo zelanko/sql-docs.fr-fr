@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022454"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Propriétés de Publication de réplication SQL Server 
   Cette section fournit des informations sur toutes les pages de la **propriétés de la Publication** boîte de dialogue. 
@@ -47,7 +47,7 @@ ms.locfileid: "54128379"
  Type de la publication (en lecture seule).  
   
  **Expiration de l'abonnement**  
- Sélectionnez l'une des options d'expiration d'abonnement : **Abonnements n’expirent jamais** ou **abonnements expirent**, avec une période explicite (**intervalle**).  
+ Sélectionnez une des options d’expiration d’abonnement : **Les abonnements n’expirent jamais** ou **Les abonnements expirent** avec une période explicite (**Intervalle**).  
   
  Pour les publications d'instantané et transactionnelles, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'accepter la valeur par défaut **Les abonnements n'expirent jamais**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54128379"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. En cliquant sur **ajouter** pour une fusion de publication des trois choix s’affiche : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   

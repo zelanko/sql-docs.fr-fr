@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027926"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Spécifie le niveau d’isolation des transactions pour un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
-|**: adXactUnspecified**|-1|Indique que le fournisseur utilise un niveau d’isolation différent que le nombre spécifié, mais que le niveau ne peut pas être déterminé.|  
+|**adXactUnspecified**|-1|Indique que le fournisseur utilise un niveau d’isolation différent que le nombre spécifié, mais que le niveau ne peut pas être déterminé.|  
 |**adXactChaos**|16|Indique que les modifications en attente de transactions d’isolation plus grande ne peuvent pas être remplacés.|  
 |**adXactBrowse**|256|Indique qu’à partir d’une seule transaction vous pouvez visualiser les modifications non validées dans d’autres transactions.|  
 |**adXactReadUncommitted**|256|Identique à **à adXactBrowse**.|  

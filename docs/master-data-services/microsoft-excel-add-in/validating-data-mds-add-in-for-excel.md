@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62905030"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validation des données (Complément MDS pour Excel)
 
@@ -64,6 +64,6 @@ ms.locfileid: "52418550"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Vue d’ensemble : importation de données à partir d’Excel &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Vue d’ensemble : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

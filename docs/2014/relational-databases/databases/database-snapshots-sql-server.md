@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917142"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
   Une capture instantanée de base de données est une vue statique en lecture seule d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (la *base de données source*). Au moment de sa création, l'instantané de base de données est cohérent au niveau transactionnel avec la base de données source. Un instantané de base de données réside toujours sur la même instance de serveur que sa base de données source. Lorsque la base de données source est mise à jour, l'instantané de base de données est mis à jour. Par conséquent, plus l'existence d'un instantané de base de données est longue, plus la probabilité qu'il épuise son espace disque disponible est élevée.  

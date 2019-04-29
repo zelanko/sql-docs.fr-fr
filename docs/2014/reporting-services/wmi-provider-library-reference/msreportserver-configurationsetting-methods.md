@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2e9abd4e72182bb649eb608a2f7a7e2bef7044f9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020296"
 ---
 # <a name="msreportserverconfigurationsetting-methods"></a>Méthodes MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting du Fournisseur WMI Report Server fournit les méthodes publiques suivantes.  

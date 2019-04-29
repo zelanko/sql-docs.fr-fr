@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927117"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Assistant Mise à niveau de packages SSIS
   Utilisez l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] pour migrer les packages développés dans [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] et [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] vers le format de package utilisé par la version actuelle d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

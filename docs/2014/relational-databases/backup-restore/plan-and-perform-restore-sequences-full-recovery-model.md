@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 08898d4c7a324a97fc0e44ef45b15dba90d42a1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921846"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
   Cette rubrique explique comment planifier et effectuer une séquence de restauration pour les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent habituellement le mode de restauration complète. Une *séquence de restauration* est une séquence contenant une ou plusieurs instructions [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) . En règle générale, une séquence de restauration initialise le contenu de la base de données, des fichiers et/ou des pages en cours de restauration (phase de copie des données), restaure les transactions journalisées (phase de restauration par progression) et annule les transactions non validées (phase de restauration).  

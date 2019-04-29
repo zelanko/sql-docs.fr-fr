@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a9d7fe2f1f65f0a698e727e5bad6df392c91546
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898074"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
   Une expression est une combinaison de symboles (identificateurs, littéraux, fonctions et opérateurs) qui génère une seule valeur de données. Les expressions simples peuvent être une constante unique, une variable ou une fonction. Généralement, les expressions sont complexes, car elles utilisent plusieurs opérateurs et fonctions, et référencent plusieurs colonnes et variables. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser des expressions pour définir des conditions dans les instructions CASE, créer et mettre à jour des valeurs dans des colonnes de données, mettre à jour ou remplir des propriétés au moment de l’exécution, définir des contraintes dans des contraintes de précédence et fournir les expressions utilisées par le conteneur de boucles For.  

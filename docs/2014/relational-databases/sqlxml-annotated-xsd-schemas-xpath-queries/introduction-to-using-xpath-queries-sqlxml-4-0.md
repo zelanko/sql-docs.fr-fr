@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127707"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
   Une requête XPath (XML Path Language) peut être spécifiée dans le cadre d'une URL ou dans un modèle. Le schéma de mappage détermine la structure de ce fragment résultant et les valeurs sont extraites de la base de données. Ce processus est conceptuellement semblable à la création de vues à l'aide de l'instruction CREATE VIEW et à l'écriture de requêtes SQL dans ces vues.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753371"
   
  Lorsque vous spécifiez des requêtes XPath dans un modèle, notez le comportement suivant :  
   
--   XPath peut contenir des caractères tels que < ou & qui ont des significations spéciales en XML (et le modèle est un document XML). Vous devez échapper ces caractères à l'aide de l'encodage & XML ou spécifier le code XPath dans l'URL.  
+-   XPath peut contenir des caractères tels que < ou & qui ont des significations spéciales en XML (et le modèle est un document XML). Vous devez échapper ces caractères à l’aide de XML &-encodage, ou spécifier le XPath dans l’URL.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des requêtes XPath dans SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

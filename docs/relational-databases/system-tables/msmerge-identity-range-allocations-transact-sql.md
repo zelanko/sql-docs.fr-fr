@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910176"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52809691"
 |**publication**|**nvarchar(128)**|Nom de la publication.|  
 |**article**|**nvarchar(128)**|Le nom de l’article.|  
 |**subscriber** (Abonné)|**nvarchar(128)**|Nom de l'Abonné.|  
-|**bd_abonné**|**nvarchar(128)**|Le nom de la base de données d’abonnement.|  
+|**subscriber_db**|**nvarchar(128)**|Le nom de la base de données d’abonnement.|  
 |**is_pub_range**|**bit**|Indique si la plage d'identité est affectée à un serveur de publication.|  
 |**ranges_allocated**|**tinyint**|Nombre de plages d'identité affectées.|  
 |**range_begin**|**numeric(38)**|Valeur de départ de la plage.|  

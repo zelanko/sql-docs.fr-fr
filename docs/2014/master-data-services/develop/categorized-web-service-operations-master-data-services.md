@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e3e0d205cba04fd0d45249eb2b1915310f98d6a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924829"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Opérations de service Web par catégorie (Master Data Services)
   Le service Web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] contient un jeu complet d'événements qui vous permettent d'écrire du code pour contrôler toutes les fonctionnalités que [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] traite via son interface utilisateur. Les opérations de service Web sont définies par le biais de l'interface <xref:Microsoft.MasterDataServices.IService> et sont implémentées en tant que méthodes de la classe <xref:Microsoft.MasterDataServices.ServiceClient>. Cette rubrique regroupe les opérations de service Web en catégories conceptuelles pour vous aider à comprendre comment utiliser l'API du service Web.  

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7e529850f1d6e476004409a3484f0627446bc24
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889336"
 ---
 # <a name="save-a-copy-of-a-package"></a>Enregistrer une copie d'un package
   Cette procédure décrit comment enregistrer une copie d’un package dans le système de fichiers, dans le magasin de packages ou dans la base de données **msdb** dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Lorsque vous spécifiez un emplacement dans lequel enregistrer la copie du package, vous pouvez également mettre à jour le nom de celui-ci.  

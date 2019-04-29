@@ -26,11 +26,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899932"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  

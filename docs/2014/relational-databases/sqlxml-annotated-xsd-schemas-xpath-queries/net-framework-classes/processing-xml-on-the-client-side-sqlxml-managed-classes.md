@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 04981dfdf69240bfd576e040142e1325519a7944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127573"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>traitement du XML côté client (classes managées SQLXML)
   Cet exemple illustre l’utilisation de la propriété ClientSideXml. L'application exécute une procédure stockée sur le serveur. Le résultat de la procédure stockée (un ensemble de lignes à deux colonnes) est traité sur le côté client pour produire un document XML.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023893"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started, classe d’événements
   La classe d’événements **FT:Crawl Started** indique qu’une analyse de texte intégral (remplissage) a démarré. Utilisez cette classe d'événements pour vérifier si une demande d'analyse est actuellement sélectionnée par des tâches de travail.  

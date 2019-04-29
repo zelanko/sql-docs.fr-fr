@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c592964e5da7503c39b97db1f332a9420a1b53f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033723"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Définir un flux en cas de réussite ou d'échec de l'étape de travail
   Lors de la création de travaux de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez spécifier l'action que doit effectuer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si un échec survient pendant l'exécution du travail. Déterminez l'action que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit effectuer en cas de réussite ou d'échec de chaque étape de travail. Procédez ensuite comme suit pour définir le déroulement logique des actions de l'étape de travail en utilisant l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

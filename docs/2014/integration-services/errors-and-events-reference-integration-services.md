@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899447"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guide de référence des erreurs et des événements (Integration Services)
   Cette section de la documentation contient des informations sur plusieurs erreurs et événements liés à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les informations sur les causes et les solutions sont incluses pour les messages d'erreur.  

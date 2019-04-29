@@ -11,16 +11,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923915"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Chargement de données (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous devez charger des données à partir du référentiel MDS dans une feuille de calcul Excel active avant de pouvoir travailler avec lui. Lorsque vous avez terminé de manipuler les données, publiez-les dans le référentiel MDS afin que d'autres utilisateurs puissent les utiliser.  
   
- Les données que vous pouvez charger sont celles auxquelles vous avez l'autorisation d'accéder. Les autorisations d'accès aux données sont définies dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou par programme.  
+ Les données que vous pouvez charger sont celles auquelles vous avez l'autorisation d'accéder. Les autorisations d'accès aux données sont définies dans l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou par programme.  
   
  Lorsque vous chargez un grand nombre de données, vous pouvez définir des avertissements qui s'affichent lorsque le chargement risque d'être très long. Pour cela, dans le groupe **Options** , cliquez sur **Paramètres**. Sous l’onglet **Données** , sélectionnez **Afficher l’avertissement de filtrage pour les jeux de données volumineux**.  
   

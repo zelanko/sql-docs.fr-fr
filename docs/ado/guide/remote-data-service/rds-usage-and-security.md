@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929847"
 ---
 # <a name="rds-usage-and-security"></a>Utilisation et sécurité de RDS
 Utilisez les informations de cette section pour configurer votre serveur et utiliser rapidement des services Bureau à distance. Cette section inclut des étapes de configuration spécifiques que vous devrez peut-être prendre lors de l’implémentation des services Bureau à distance, décrit certaines des relations entre les services Bureau à distance et d’autres technologies clées, et vous aide à identifier les solutions aux problèmes que vous pouvez rencontrer lorsque vous configurez un Solution de services Bureau à distance.  

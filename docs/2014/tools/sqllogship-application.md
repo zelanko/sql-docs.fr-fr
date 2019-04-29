@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035061"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
   L’application **sqllogship** effectue une opération de sauvegarde, de copie ou de restauration, ainsi que les tâches de nettoyage associées pour une configuration d’envoi de journaux. L'opération a lieu sur une instance spécifique de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour une base de données spécifique.  
@@ -52,7 +52,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Les fichiers de sauvegarde du répertoire de destination créés après le point de restauration le plus récent sont restaurés dans la ou les bases de données secondaires. L'application **sqllogship** nettoie ensuite les anciens fichiers de sauvegarde en fonction de la durée de rétention des fichiers. Puis, l'application enregistre l'historique de l'opération de restauration sur le serveur secondaire et le serveur moniteur. Enfin, l’application exécute **sp_cleanup_log_shipping_history**qui nettoie les anciennes informations d’historique en fonction de la période de rétention.  
   
- **-verboselevel** _niveau_  
+ **-verboselevel** _level_  
  Spécifie le niveau des messages ajoutés à l'historique d'envoi des journaux. *level* est l'un des entiers suivants :  
   
 |level|Description|  

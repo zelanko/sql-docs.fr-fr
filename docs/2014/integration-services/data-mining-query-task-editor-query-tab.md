@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899813"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
   Utilisez l’onglet **Requête** de la boîte de dialogue **Tâche de requête d’exploration de données** pour créer des requêtes de prédiction basées sur un modèle d’exploration de données. Dans cette boîte de dialogue, vous pouvez également lier des paramètres et des ensembles de résultats à des variables.  
@@ -46,7 +46,7 @@ ms.locfileid: "58377227"
  **Générer une nouvelle requête**  
  Créez la requête d'exploration de données en utilisant un outil graphique.  
   
- **Rubriques connexes :** [Requête d’exploration de données](control-flow/data-mining-query.md)  
+ **Rubriques connexes :** [Requête d'exploration de données](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
  **Nom du paramètre**  

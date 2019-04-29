@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3aba02dfe34f91b12a98f4d557bdb2dc516b1b1f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042465"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Déploiement d'une solution de modèle multidimensionnel
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l'ordre de leur avantage : automatisation AMO (Analysis Management Objects), XMLA, Assistant Déploiement, Utilitaire de déploiement, Assistant Synchronisation, Sauvegarde et Restauration.  
+  Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l’ordre de leur avantage : Automatisation AMO, XMLA, Assistant de déploiement, utilitaire de déploiement, synchronisez l’Assistant, sauvegarde et restauration.  
   
  Cette rubrique comprend les sections suivantes :  
   

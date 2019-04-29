@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903312"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "52775421"
 |**validation_level**|**Int**|Type de validation à réaliser sur l'abonnement. Le niveau de validation spécifié peut prendre l'une des valeurs suivantes :<br /><br /> **0** ne = aucune validation.<br /><br /> **1** = validation du nombre de lignes uniquement.<br /><br /> **2** = validation du nombre de lignes et somme de contrôle.<br /><br /> **3** = nombre de lignes et de validation de somme de contrôle binaire.|  
 |**resync_gen**|**bigint**|Numéro de génération utilisé pour la resynchronisation de l'abonnement. La valeur **-1** indique que l’abonnement n’est pas marquée pour resynchronisation.|  
 |**login_name**|**sysname**|Nom de l'utilisateur qui a créé l'abonnement.|  
-|**Nom d’hôte**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
-|**merge_jobid**|**binary (16)**|Identificateur du travail de fusion pour cet abonnement.|  
+|**hostname**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
+|**merge_jobid**|**binary(16)**|Identificateur du travail de fusion pour cet abonnement.|  
 |**sync_info**|**Int**|Interne-usage uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  

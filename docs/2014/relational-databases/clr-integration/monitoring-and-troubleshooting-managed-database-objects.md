@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918932"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Surveillance et dépannage des objets de base de données managés
   Cette rubrique fournit des informations sur les outils à l'aide desquels vous pouvez surveiller et dépanner des objets de base de données et des assemblys managés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -57,8 +57,8 @@ ms.locfileid: "48090649"
   
 |Vue de catalogue|Description|  
 |------------------|-----------------|  
-|[Sys.Assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)|Retourne des informations sur des assemblys inscrits dans une base de données.|  
-|[Sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)|Identifie des assemblys qui référencent d'autres assemblys.|  
+|[sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)|Retourne des informations sur des assemblys inscrits dans une base de données.|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)|Identifie des assemblys qui référencent d'autres assemblys.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)|Retourne des informations sur chaque fonction, procédure stockée et déclencheur définis dans un assembly.|  
 |[sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|Retourne des informations sur les fichiers d'assembly inscrits dans la base de données.|  
 |[sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|Identifie les types définis par l'utilisateur (UDT) définis par un assembly.|  
@@ -75,9 +75,9 @@ ms.locfileid: "48090649"
 |Vue de gestion dynamique|Description|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql)|Fournit des informations sur chaque domaine d'application sur le serveur.|  
-|[Sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql)|Identifie chaque assembly managé inscrit sur le serveur.|  
-|[Sys.dm_clr_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql)|Retourne des informations sur le CLR hébergé.|  
-|[Sys.dm_clr_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql)|Identifie toutes les tâches du CLR en cours d'exécution.|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql)|Identifie chaque assembly managé inscrit sur le serveur.|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql)|Retourne des informations sur le CLR hébergé.|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql)|Identifie toutes les tâches du CLR en cours d'exécution.|  
 |[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql)|Retourne des informations sur les plans d'exécution de requêtes mis en cache par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour une exécution plus rapide des requêtes.|  
 |[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql)|Retourne les statistiques sur les performances des agrégats pour les plans de requêtes mis en cache.|  
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql)|Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  

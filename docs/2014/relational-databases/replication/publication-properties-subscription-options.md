@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c630646aa81ebaeccf49f729299394419b7099a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021703"
 ---
 # <a name="publication-properties-subscription-options"></a>Propriétés de la publication, Options d'abonnement
   La page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** vous permet d'afficher et de définir les propriétés de niveau de publication associées aux abonnements. Les propriétés sont regroupées selon les catégories suivantes :  

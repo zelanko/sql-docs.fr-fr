@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Préparation à la création de l’application de déploiement | Microsoft Docs'
+title: 'Leçon 1 : Préparation à la création du bundle de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e4695575aba2e43435c4e26d5a47ccb2cfa39d6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891916"
 ---
-# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Leçon 1 : Préparation à la création de l'application de déploiement
+# <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Leçon 1 : Préparation à la création de l’application de déploiement
   Au cours de cette leçon, vous allez créer les dossiers de travail et les variables d'environnement qui prennent en charge le didacticiel, créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ajouter plusieurs packages et leurs fichiers de prise en charge au projet et implémenter les configurations dans des packages.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déploie des packages sur la base d’un projet. Par conséquent, la première étape de création de l’application de déploiement consiste à rassembler tous les packages et les dépendances de package dans un seul projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Il est souvent utile d'inclure d'autres informations dans les packages déployés : par exemple, vous allez aussi ajouter au projet un fichier Lisezmoi qui fournit la documentation de base pour ce groupe de packages.  
@@ -31,18 +31,18 @@ ms.locfileid: "58387777"
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
  Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Création de dossiers et des Variables d’environnement de travail](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [Étape 1 : Création des variables d'environnement et des dossiers de travail](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 -   [Étape 2 : Création du projet de déploiement](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [Étape 3 : Ajout de Packages et autres fichiers](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [Étape 3 : Ajout de packages et autres fichiers](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [Étape 4 : Ajout de Configurations de Package](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [Étape 4 : Ajout de configurations au package](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 -   [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
- [Étape 1 : Création de dossiers et des Variables d’environnement de travail](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+ [Étape 1 : Création des variables d'environnement et des dossiers de travail](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 ![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919632"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Possibilité de valeur Null et comparaisons logiques de trois valeurs
   Si vous avez une bonne connaissance des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous trouverez une sémantique et une précision semblables dans l'espace de noms `System.Data.SqlTypes` dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Il existe toutefois certaines différences, dont les principales sont décrites dans cette rubrique.  

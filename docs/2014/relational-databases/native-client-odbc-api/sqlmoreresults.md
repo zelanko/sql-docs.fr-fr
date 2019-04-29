@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046724"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permet à l'application de récupérer plusieurs jeux de lignes de résultat. Une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT contenant une clause COMPUTE, ou un lot soumis d'instructions ODBC ou [!INCLUDE[tsql](../../includes/tsql-md.md)] , entraîne la génération de plusieurs jeux de résultats par le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas la création d'un curseur côté serveur pour traiter les résultats. Par conséquent, le développeur doit s'assurer que l'instruction ODBC bloque. Il doit consommer les données retournées ou annuler l'instruction ODBC avant de traiter les données des autres instructions actives sur la connexion.  

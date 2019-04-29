@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923137"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Chevauchement des autorisations d'accès (Master Data Services)
   Les autorisations d'un utilisateur sont basées sur les :  
@@ -50,7 +50,7 @@ ms.locfileid: "52799261"
   
  Groupe 2 a **en lecture seule** autorisation sur l’entité Product.  
   
- Résultat : Autorisation effective de l’utilisateur est **mise à jour** sur l’entité Product.  
+ Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur l’entité Product.  
   
 ## <a name="example-2"></a>Exemple 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799261"
   
  Groupe 2 a l'autorisation **Refuser** sur l'entité Product.  
   
- Résultat : Autorisation effective de l’utilisateur est **Deny** sur l’entité Product.  
+ Résultat : l’autorisation effective de l’utilisateur est **Refuser** sur l’entité Product.  
   
 ## <a name="example-3"></a>Exemple 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,7 +76,7 @@ ms.locfileid: "52799261"
   
  Groupe 2 a **en lecture seule** autorisation à un groupe de membres dans un nœud de hiérarchie.  
   
- Résultat : Autorisation effective de l’utilisateur est **mise à jour** aux membres.  
+ Résultat : l’autorisation effective de l’utilisateur est **Mise à jour** sur les membres.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   

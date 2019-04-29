@@ -1,6 +1,6 @@
 ---
-title: Éléments de langage T-SQL - Parallel Data Warehouse | Documents Microsoft
-description: Éléments de langage T-SQL pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW).
+title: Éléments de langage T-SQL - Parallel Data Warehouse | Microsoft Docs
+description: Éléments de langage T-SQL pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035000"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Éléments de langage T-SQL pour Parallel Data Warehouse
-Éléments de langage T-SQL pour un système de plateforme analyse (APS) SQL Server Parallel Data Warehouse (PDW).
+Éléments de langage T-SQL pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="core-elements"></a>Éléments fondamentaux
-* [conventions de syntaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-* [règles d’affectation des noms d’objet](../relational-databases/databases/database-identifiers.md)
-* [Mots clés réservés](../t-sql/language-elements/reserved-keywords-transact-sql.md)
-* [Classements](https://msdn.microsoft.com/library/ff848763.aspx)
-* [Commentaires](../t-sql/language-elements/comment-transact-sql.md)
+* [Conventions de syntaxe](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+* [règles d’affectation de noms d’objet](../relational-databases/databases/database-identifiers.md)
+* [mots clés réservés](../t-sql/language-elements/reserved-keywords-transact-sql.md)
+* [collations](https://msdn.microsoft.com/library/ff848763.aspx)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Types de données](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
@@ -34,7 +34,7 @@ ms.locfileid: "31539569"
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>Contrôle de flux, les variables et les lots
+## <a name="batches-control-of-flow-and-variables"></a>Lots, de flux de contrôle et les variables
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -60,7 +60,7 @@ ms.locfileid: "31539569"
 * [< (Inférieur à)](../t-sql/language-elements/less-than-transact-sql.md)
 * [> = (grand ou égal à)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (inférieur ou égal à)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [<> (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [<> (Non égal à)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
 * [\!= (Différent de)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
@@ -69,12 +69,12 @@ ms.locfileid: "31539569"
 * [N’EST PAS](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [- ou -](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Opérateurs de bits
 * [& (AND au niveau du bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
 * [| (OR au niveau du bit)](../t-sql/language-elements/bitwise-or-transact-sql.md)
-* [^ (Opérateur de bits OR exclusive)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
+* [^ (Opérateur de bits OR exclusif)](../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md)
 * [~ (NOT au niveau du bit)](../t-sql/language-elements/bitwise-not-transact-sql.md)
 * [^= (OR exclusif au niveau du bit EQUALS)](../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)
 * [&= (OR au niveau du bit EQUALS)](../t-sql/language-elements/bitwise-or-equals-transact-sql.md)
@@ -102,7 +102,7 @@ ms.locfileid: "31539569"
 * [CHECKSUM](../t-sql/functions/checksum-transact-sql.md)
 * [COALESCE](../t-sql/language-elements/coalesce-transact-sql.md)
 * [COL_NAME](../t-sql/functions/col-name-transact-sql.md)
-* [COMMANDE COLLATIONPROPERTY](../t-sql/functions/collation-functions-collationproperty-transact-sql.md)
+* [COLLATIONPROPERTY](../t-sql/functions/collation-functions-collationproperty-transact-sql.md)
 * [CONCAT](../t-sql/functions/concat-transact-sql.md)
 * [COS](../t-sql/functions/cos-transact-sql.md)
 * [COT](../t-sql/functions/cot-transact-sql.md)
@@ -163,8 +163,8 @@ ms.locfileid: "31539569"
 * [OBJECT_NAME](../t-sql/functions/object-name-transact-sql.md)
 * [OBJECTPROPERTY](../t-sql/functions/objectproperty-transact-sql.md)
 * [OIBJECTPROPERTYEX](../t-sql/functions/objectpropertyex-transact-sql.md)
-* [Fonctions scalaires ODBCS](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
-* [La clause OVER](../t-sql/queries/select-over-clause-transact-sql.md)
+* [Fonctions scalaires odbcs](../t-sql/functions/odbc-scalar-functions-transact-sql.md)
+* [Clause OVER](../t-sql/queries/select-over-clause-transact-sql.md)
 * [PARSENAME](../t-sql/functions/parsename-transact-sql.md)
 * [PATINDEX](../t-sql/functions/patindex-transact-sql.md)
 * [PERCENTILE_CONT](../t-sql/functions/percentile-cont-transact-sql.md)
@@ -266,13 +266,13 @@ ms.locfileid: "31539569"
 * [SET DATEFIRST](../t-sql/statements/set-datefirst-transact-sql.md)
 * [SET DATEFORMAT](../t-sql/statements/set-dateformat-transact-sql.md)
 * [SET FMTONLY](../t-sql/statements/set-fmtonly-transact-sql.md)
-* [JEU DE IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
+* [ENSEMBLE IMPLICIT_TRANSACITONS](../t-sql/statements/set-implicit-transactions-transact-sql.md)
 * [SET LOCK_TIMEOUT](../t-sql/statements/set-lock-timeout-transact-sql.md)
-* [JEU DE NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
+* [ENSEMBLE NUMBERIC_ROUNDABORT](../t-sql/statements/set-numeric-roundabort-transact-sql.md)
 * [SET QUOTED_IDENTIFIER](../t-sql/statements/set-quoted-identifier-transact-sql.md)
 * [SET ROWCOUNT](../t-sql/statements/set-rowcount-transact-sql.md)
 * [SET TEXTSIZE](../t-sql/statements/set-textsize-transact-sql.md)
-* [SET TRANSACTION ISOLATION LEVEL.](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
+* [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Étapes suivantes

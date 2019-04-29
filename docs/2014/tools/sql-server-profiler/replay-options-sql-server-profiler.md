@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025741"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Options de relecture (SQL Server Profiler)
   Avant de relire une trace capturée avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], spécifiez les options de relecture dans la boîte de dialogue **Configuration de la relecture** . Pour accéder à cette boîte de dialogue, ouvrez le fichier ou la table de trace de relecture dans [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puis cliquez sur **Démarrer** dans le menu **Relire**. Pour savoir quelles autorisations sont nécessaires pour relire une trace, consultez [Autorisations nécessaires pour exécuter SQL Server Profiler](sql-server-profiler.md).  

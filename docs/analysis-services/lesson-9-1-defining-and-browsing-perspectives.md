@@ -1,5 +1,5 @@
 ---
-title: Définition et exploration de Perspectives | Documents Microsoft
+title: Définition et exploration de Perspectives | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017391"
 ---
-# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Leçon 9-1-Définition et exploration de Perspectives
+# <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Leçon 9-1 : définition et exploration de Perspectives
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  
@@ -40,7 +40,7 @@ Dans les tâches de cette rubrique, vous allez définir plusieurs perspectives d
   
     Une nouvelle perspective apparaît dans la colonne **Nom de perspective** avec le nom de perspective par défaut de **Perspective**, comme le montre l’image suivante. Observez que les cases à cocher de tous les objets sont activées ; cette perspective est identique à la perspective par défaut de ce cube jusqu'à ce que vous désactiviez la case à cocher d'un objet.  
   
-    ![Nouvelle perspective dans la colonne nom de Perspective](../analysis-services/media/l9-perspectives-2.gif "nouvelle perspective dans la colonne nom de Perspective")  
+    ![Nouvelle perspective dans la colonne de nom de Perspective](../analysis-services/media/l9-perspectives-2.gif "nouvelle perspective dans la colonne de nom de Perspective")  
   
 3.  Remplacez le nom de la perspective par **Internet Sales**.  
   
@@ -171,7 +171,7 @@ Dans les tâches de cette rubrique, vous allez définir plusieurs perspectives d
   
 4.  L'analyse dans Excel vous invite à choisir la perspective à utiliser pour parcourir le modèle dans Excel, comme le montre l'image suivante.  
   
-    ![Objets de la perspective Internet Sales](../analysis-services/media/l9-perspectives-3.gif "objets pour la perspective Internet Sales")  
+    ![Objets pour la perspective Internet Sales](../analysis-services/media/l9-perspectives-3.gif "objets pour la perspective ventes sur Internet")  
   
 5.  Sinon, vous pouvez ouvrir Excel à partir du menu Démarrer de Windows, définir une connexion à la base de données Analysis Services Tutorial sur localhost, et choisir une perspective l'Assistant Connexion de données, comme le montre l'image suivante.  
   

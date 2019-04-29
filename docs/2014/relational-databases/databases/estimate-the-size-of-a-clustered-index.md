@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916817"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
   Vous pouvez estimer la quantité d'espace nécessaire au stockage des données d'un index cluster en procédant comme suit :  
@@ -39,7 +39,7 @@ ms.locfileid: "48140789"
   
 3.  Faites la somme des valeurs calculées.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48140789"
      Les octets ajoutés à ***Max_Var_Size*** servent à assurer le suivi de chaque colonne variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de ***Max_Var_Size*** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
-    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colonnes aboutissant à la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
+    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
      En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à ***Variable_Data_Size*** .  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48140789"
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
 ## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
- Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
+ Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
   
 1.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable de la clé d'index et calculez l'espace nécessaire à leur stockage :  
   
@@ -143,7 +143,7 @@ ms.locfileid: "48140789"
   
      Ces modifications supposent que toutes ces valeurs ne seront pas uniques.  
   
-3.  Calculez la taille de null bitmap :  
+3.  Calculez la taille de null bitmap :  
   
      En présence de colonnes autorisant des valeurs Null dans la clé d'index, une partie de la ligne d'index est réservée à la bitmap Null. Calculez sa taille :  
   
@@ -185,9 +185,9 @@ ms.locfileid: "48140789"
   
      où 1 <= Level <= ***Non-leaf_Levels***  
   
-     Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
+     Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
   
-     ***Non-leaf_Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Non-leaf_Levels***  = 1 + log25 (1000 / 25) = 3  
   
      ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui est le nombre de pages décrit dans l’exemple.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "48140789"
   
 -   Valeurs LOB  
   
-     L’algorithme pour déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
+     L'algorithme permettant de déterminer avec exactitude la quantité d'espace qui sera utilisée pour stocker les valeurs des types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` et `image` est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
   
 -   Compression  
   
@@ -228,7 +228,7 @@ ms.locfileid: "48140789"
  [Créer des index cluster](../indexes/create-clustered-indexes.md)   
  [Créez des index non-cluster](../indexes/create-nonclustered-indexes.md)   
  [Estimer la taille d'un index non-cluster](estimate-the-size-of-a-nonclustered-index.md)   
- [Estimer la taille d'un segment de mémoire](estimate-the-size-of-a-heap.md)   
+ [Estimer la taille d’un segment de mémoire](estimate-the-size-of-a-heap.md)   
  [Estimer la taille d'une base de données](estimate-the-size-of-a-database.md)  
   
   

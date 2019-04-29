@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911358"
 ---
 # <a name="preparing-and-executing-commands"></a>Préparation et l’exécution de commandes
 Les commandes sont émises pour un fournisseur des instructions pour effectuer certaines opérations sur la source de données sous-jacente. Une instruction SQL, par exemple, est une commande au fournisseur de données Microsoft SQL. Dans ADO, les commandes sont généralement représentées par **commande** objets, bien que des commandes simples peuvent également être émis via **connexion** ou **Recordset** objets.  

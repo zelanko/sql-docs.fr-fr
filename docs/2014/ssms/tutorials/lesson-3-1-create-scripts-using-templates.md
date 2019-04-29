@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913551"
 ---
 # <a name="create-scripts-using-templates"></a>Créer des scripts au moyen de modèles
   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit un grand nombre de modèles de scripts contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] pour la plupart des tâches courantes. Ces modèles contiennent des paramètres pour les valeurs fournies par les utilisateurs, telles que les noms des tables. À l'aide de ces paramètres, vous pouvez taper un nom une fois puis le copier automatiquement partout où cela est nécessaire dans le script. Vous pouvez écrire vos propres modèles personnalisés pour prendre en compte les scripts que vous écrivez souvent. Vous pouvez également réorganiser l'arborescence des modèles, déplacer des modèles ou créer de nouveaux dossiers pour y stocker des modèles. Au cours de cet exercice, vous allez utiliser un modèle pour créer une base de données en spécifiant un modèle de classement.  

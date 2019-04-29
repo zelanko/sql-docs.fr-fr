@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ed44f70a49c1cf221a9ef74b19030512273b1480
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017975"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
 ## <a name="properties"></a>Properties  
  Consultez [Arguments et les propriétés d’Index Spatial de procédures stockées](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit être assigné un rôle PUBLIC pour accéder à la procédure. Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
 ## <a name="remarks"></a>Notes  
@@ -74,7 +74,7 @@ select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
  La zone englobante d’un **geography** est le monde entier.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées d’Index spatial](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

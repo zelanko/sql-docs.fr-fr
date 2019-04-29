@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 83319e8eb1fe692bc55b764445ac155d9e1ad38d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920993"
 ---
 # <a name="restore-a-database-to-the-point-of-failure-under-the-full-recovery-model-transact-sql"></a>Restaurer une base de données jusqu'au point d'échec en mode de récupération complète (Transact-SQL)
   Cette rubrique explique comment restaurer jusqu'au point d'échec. Cette rubrique s'applique uniquement aux bases de données employant les modes de restauration complète ou de récupération utilisant les journaux de transactions.  

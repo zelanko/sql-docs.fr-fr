@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021629"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Publication (réplication d'égal à égal)
   La page **Publication** contient les publications transactionnelles activées pour la réplication d'égal à égal. Les publications sont activées dans la page **Options d'abonnement** de la boîte de dialogue **Propriétés de la publication** .  

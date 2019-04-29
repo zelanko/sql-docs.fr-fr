@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032920"
 ---
 # <a name="rules-for-conversions"></a>Règles pour les conversions
 Les règles dans cette section s’appliquent pour les conversions impliquant des littéraux numériques. Dans le cadre de ces règles, les termes suivants sont définis :  
   
--   *Affectation de Store :* lors de l’envoi des données dans une colonne de table dans une base de données. Cela se produit pendant les appels aux **SQLExecute**, **SQLExecDirect**, et **SQLSetPos**. Lors de l’attribution de magasin, « target » fait référence à une colonne de base de données, et « source » fait référence à des données dans les mémoires tampons d’application.  
+-   *Affectation de Store :* Lors de l’envoi des données dans une colonne de table dans une base de données. Cela se produit pendant les appels aux **SQLExecute**, **SQLExecDirect**, et **SQLSetPos**. Lors de l’attribution de magasin, « target » fait référence à une colonne de base de données, et « source » fait référence à des données dans les mémoires tampons d’application.  
   
--   *Affectation de récupération :* lors de la récupération des données à partir de la base de données dans des tampons de l’application. Cela se produit pendant les appels aux **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, et **SQLSetPos**. Lors de l’attribution de la récupération, « target » fait référence aux mémoires tampons de l’application et « source » fait référence à la colonne de base de données.  
+-   *Affectation de la récupération :* Lorsque vous récupérez des données à partir de la base de données dans des tampons de l’application. Cela se produit pendant les appels aux **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, et **SQLSetPos**. Lors de l’attribution de la récupération, « target » fait référence aux mémoires tampons de l’application et « source » fait référence à la colonne de base de données.  
   
--   *CS :* la valeur dans la source du caractère.  
+-   *CS :* La valeur dans la source du caractère.  
   
--   *NT :* la valeur dans la cible numérique.  
+-   *NT :* La valeur dans la cible numérique.  
   
--   *NS :* la valeur dans la source de type numérique.  
+-   *NS :* La valeur dans la source de type numérique.  
   
--   *CT :* la valeur dans la cible de caractère.  
+-   *CT :* La valeur dans la cible de caractère.  
   
 -   Précision d’un littéral numérique exact : le nombre de chiffres qu’il contient.  
   
@@ -76,7 +76,7 @@ Les règles dans cette section s’appliquent pour les conversions impliquant de
   
     -   Si NS est inférieur à 0, puis que vous laissez Y être le résultat de :  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124;&#124; YP  
   
          où «&#124;&#124;» est l’opérateur de concaténation de chaîne.  
   

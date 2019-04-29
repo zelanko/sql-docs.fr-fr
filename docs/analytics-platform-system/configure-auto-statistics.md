@@ -11,11 +11,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
 ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057062"
 ---
 # <a name="configure-auto-statistics"></a>Configurer automatiquement les statistiques
 
@@ -32,7 +32,7 @@ Automatique des statistiques sont des statistiques de l’optimiseur de requête
 Automatique des statistiques inclut les trois paramètres suivants : 
 
 ### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-Lorsque l’option de statistiques de création automatique AUTO_CREATE_STATISTICS est activée, l’optimiseur de requête crée des statistiques sur des colonnes individuelles du prédicat de requête, en fonction des besoins améliorer les estimations de cardinalité pour le plan de requête. Ces statistiques de colonne unique sont créées sur les colonnes où ne figure pas déjà un histogramme au niveau d'un objet de statistiques existant.
+Quand l’option de création automatique de statistiques AUTO_CREATE_STATISTICS est activée, l’optimiseur de requête crée les statistiques nécessaires sur les colonnes individuelles du prédicat de requête pour améliorer les estimations de cardinalité pour le plan de requête. Ces statistiques de colonne unique sont créées sur les colonnes où ne figure pas déjà un histogramme au niveau d'un objet de statistiques existant.
 
 ### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
 Lorsque l'option de mise à jour automatique des statistiques AUTO_UPDATE_STATISTICS est activée, l'optimiseur de requête détermine si les statistiques sont obsolètes et les met éventuellement à jour lorsqu'elles sont utilisées par une requête. Les statistiques deviennent obsolètes si des opérations d’insertion, de mise à jour, de suppression ou de fusion changent la distribution des données dans la table ou la vue indexée. L'optimiseur de requête détermine si les statistiques sont obsolètes en comptant le nombre de modifications de données depuis la dernière mise à jour des statistiques et en comparant le nombre de modifications à un seuil. Ce seuil est basé sur le nombre de lignes contenues dans la table ou la vue indexée.

@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898897"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
   Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la propriété `LoggingMode`, vous devez utiliser la valeur numérique 2 à la place du nom convivial Désactivé.  
@@ -587,7 +587,7 @@ ms.locfileid: "58386567"
 |Nom convivial dans DTSLoggingMode|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Activé|1|  
+|Enabled|1|  
 |Désactivé|2|  
   
  `TransactionOption` Jeu de propriétés à l’aide de valeurs à partir de la `DTSTransactionOption` énumération.  

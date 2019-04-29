@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62892657"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -193,7 +193,7 @@ ms.locfileid: "58394587"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|Le chemin d'accès du package spécifié ne contient pas de nom de package. Ceci se produit lorsque le chemin d'accès ne contient pas au moins une barre oblique inverse ou une barre oblique.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|Le dossier « %1 » est introuvable.|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|En essayant de rechercher un dossier sur SQL, une erreur OLE DB s'est produite avec le code d'erreur 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Le module fournisseur d'informations SSIS n'a pas réussi à ouvrir le journal. Code d’erreur : 0x%1!8.8X !.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Le module fournisseur d'informations SSIS n'a pas réussi à ouvrir le journal. Code d’erreur : 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Échec de l'obtention de la collection ConnectionInfos avec l'erreur 0x%1!8.8X! « %2 ». Cette erreur se produit lorsque l'appel à IDTSApplication100::get_ConnectionInfos échoue.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Blocage détecté lors de la tentative de verrouillage de variables. Les verrous ne peuvent être obtenus à l'issue de 16 tentatives. Le délai d'attente des verrous a expiré.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|La collection Variables n'a pas été retournée de VariableDispenser. L'opération qui a été tentée n'est autorisée que sur les collections distribuées.|  
@@ -375,7 +375,7 @@ ms.locfileid: "58394587"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Erreur 0x%1!8.8X! lors de la préparation du chargement du package. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|La méthode Validate a échoué sur la tâche et a retourné le code d'erreur 0x%1!8.8X! (%2). La méthode Validate doit réussir et indiquer le résultat à l'aide d'un paramètre de sortie.|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|La méthode Execute sur la tâche a retourné le code d'erreur 0x%1!8.8X! (%2). La méthode Execute doit réussir et indiquer le résultat à l'aide d'un paramètre de sortie.|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Une erreur s’est produite sur la tâche « %1 » : 0x%2!8.8x ! lors de l'extraction des dépendances. Le runtime extrayait les dépendances de la collection de dépendances de la tâche, lorsque l'erreur s'est produite. La tâche a peut-être implémenté de manière incorrecte une des interfaces de dépendance.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Une erreur s'est produite sur la tâche « %1 » : 0x%2!8.8X! lors de l'extraction des dépendances. Le runtime extrayait les dépendances de la collection de dépendances de la tâche, lorsque l'erreur s'est produite. La tâche a peut-être implémenté de manière incorrecte une des interfaces de dépendance.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Des erreurs se sont produites au cours de la validation de la tâche.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|Le format de la chaîne de connexion n'est pas valide. Il doit consister en un ou plusieurs composants de la forme X=Y, séparés par des points-virgules. Cette erreur se produit lorsqu'une chaîne de connexion avec zéro composant est définie sur le gestionnaire de connexions de la base de données.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Les composants de la chaîne de connexion ne peuvent pas contenir des points-virgules sans guillemets. Si la valeur doit contenir un point-virgule, ajoutez des guillemets de chaque côté de la valeur. Cette erreur se produit lorsque les valeurs de la chaîne de connexion contiennent des points-virgules sans guillemets, telle que la propriété InitialCatalog.|  
@@ -568,7 +568,7 @@ ms.locfileid: "58394587"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|Le langage de script spécifié n'est pas valide.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Le point d'entrée est introuvable.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|Le langage de script n'est pas spécifié. Vérifiez qu'un langage de script valide est spécifié.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisation de l’interface utilisateur : La tâche est null.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisation de l'interface utilisateur : la tâche est Null.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|L'interface utilisateur de la tâche de script est initialisée avec une tâche incorrecte.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|Aucun destinataire n'est spécifié.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|Le serveur SMTP (Simple Mail Transfer Protocol) n'est pas spécifié. Indiquez un nom ou une adresse IP valide pour le serveur SMTP.|  
@@ -789,7 +789,7 @@ ms.locfileid: "58394587"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Au moins un fichier source doit être indiqué.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Impossible de trouver le fichier « %1 » dans la base de données source « %2 ».|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|L'opération demandée n'est pas autorisée sur les systèmes conformes à la norme U.S. FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Possibles de cet échec : Problèmes avec la requête, propriété « ResultSet » non définie correctement, paramètres non définis correctement ou connexion non établie correctement.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Causes possibles de l’échec : problèmes liés à la requête, propriété « ResultSet » mal définie, paramètres mal définis ou connexion mal établie.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erreur lors de la lecture des noms des procédures stockées dans le fichier XML.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nœud de données non valide pour la tâche de transfert de procédures stockées.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|La connexion « %1 » n'est pas de type « SMOServer ».|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "58394587"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|La valeur %1!d! spécifiée pour le paramètre d'échelle de la fonction NULL avec le type de données %2 est hors limites. L'échelle doit être comprise entre %3!d! et %4!d!. L'échelle ne doit pas dépasser la précision et ne doit pas être négative.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|La valeur %1!d! spécifiée pour le paramètre de longueur de la fonction « NULL » avec le type de données %2 est négative et n'est pas valide. La longueur doit être positive.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Impossible d'affecter une valeur négative à %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de colonne doit être une des opérations suivantes :  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de la colonne doit être l'un des suivants :  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Impossible de rattacher « %1 ». Supprimez le chemin d'accès, ajoutez-en un nouveau, puis attachez-le.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|La fonction « %1!s! » nécessite %2!d! paramètres et non pas %3!d! paramètre. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|La fonction « %1!s! » nécessite %2!d! paramètre, et non pas %3!d! paramètres. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
@@ -1236,15 +1236,15 @@ ms.locfileid: "58394587"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|La transformation de recherche a reçu une demande d'annulation de l'utilisateur.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Le traitement de données de type caractère ou de données d'objets BLOB (Binary Large Object) a été interrompu parce que la limite de 4 Go a été atteinte.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|Impossible de charger le composant de pipeline managé « %1 ».  L'exception était : %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d’erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : Le Gestionnaire de connexions Excel n’est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n’est disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d'erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : le Gestionnaire de connexions Excel n'est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n'est disponible.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|Le fichier cache est endommagé ou n'a pas été créé à l'aide du gestionnaire de connexions du cache.  Fournissez un fichier cache valide.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|La commande SQL n'a pas été définie correctement. Vérifiez la propriété SQLCommand.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Des informations sur l'objet de l'erreur sont disponibles.  Source : code d’erreur « %1 » : 0x%2!8.8x !  Description : « %3 ».|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Des informations sur l'objet de l'erreur sont disponibles.  Source : « %1 » code d'erreur : 0x%2!8.8X!  Description : « %3 ».|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Impossible d'accéder aux connexions acquises.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|Le nombre de colonnes est incorrect.|  
 |0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|La colonne « %1 » est introuvable dans la source de données.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Un enregistrement OLE DB est disponible.  Source : « %1 » Hresult : 0x%2!8.8x !  Description : « %3 ».|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Code d'erreur SSIS DTS_E_OLEDBERROR.  Une erreur OLE DB s'est produite. Code d’erreur : 0x%1!8.8X !.|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Un enregistrement OLE DB est disponible.  Source : « %1 » Hresult : 0x%2!8.8X!  Description : « %3 ».|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Code d'erreur SSIS DTS_E_OLEDBERROR.  Une erreur OLE DB s'est produite. Code d’erreur : 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|Le composant est déjà connecté. Déconnectez-le avant d'essayer de le connecter.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|La valeur de la propriété « %1 » est incorrecte.|  
 |0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Impossible d'ouvrir le fichier de données « %1 ».|  
@@ -1686,7 +1686,7 @@ ms.locfileid: "58394587"
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|Le type de données de la colonne « %1 » ne peut pas être mappé comme spécifié.|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|La version (%1) de l'index de correspondance déjà existant « %2 » n'est pas prise en charge. La version attendue est « %3 ». Cette erreur se produit si la version qui a persisté dans les métadonnées de l'index ne correspond pas à la version pour laquelle le code actuel a été conçu. Résolvez cette erreur en recréant l'index à l'aide de la version actuelle du code.|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|La table « %1 » ne semble pas constituer un index valide de correspondance avant génération. Cette erreur se produit lorsque l'enregistrement des métadonnées ne peut pas être chargé à partir de l'index avant génération spécifié.|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Impossible de lire l'index de correspondance avant génération « %1 ».  Code d’erreur OLEDB : 0x%2!8.8X !.|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Impossible de lire l'index de correspondance avant génération « %1 ».  Code d'erreur OLEDB : 0x%2!8.8X!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|Aucune colonne d'entrée ne comporte une jointure valide vers une colonne de table de référence.  Vérifiez qu'il existe au moins une jointure définie à l'aide des propriétés de la colonne d'entrée JoinToReferenceColumn et JoinType.|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|L'index de correspondance déjà existant « %1 » n'a pas été créé à l'origine avec des informations de correspondance approximative pour la colonne « %2 ».  Il doit être recréé pour inclure ces informations. Cette erreur se produit lorsque l'index a été créé avec une colonne qui n'est pas une colonne de jonction approximative.|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|Le nom « %1 » attribué à la propriété « %2 » n'est pas un nom d'identificateur SQL valide. Cette erreur se produit si le nom de la propriété n'est pas conforme aux spécifications d'un nom d'identificateur SQL valide.|  
@@ -1991,8 +1991,8 @@ ms.locfileid: "58394587"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Échec d'une validation.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec des fichiers ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit. Code d’erreur : 0x%1!8.8X !.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d’erreur : 0x%1!8.8X !.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit. Code d’erreur : 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d’erreur : 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|La colonne de cache, « %1 », est mappée à plusieurs colonnes. Supprimez les mappages de colonne dupliqués.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Le %1 n'est pas mappé à une colonne de cache valide.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossible de mapper la colonne d'entrée « %1 » et la colonne de cache « %2 », car les types de données ne correspondent pas.|  
@@ -2036,7 +2036,7 @@ ms.locfileid: "58394587"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|Le format de l'entrée de configuration « %1 » est incorrect. Ceci peut se produire en raison d'un séparateur absent ou d'erreurs de format, comme un séparateur de tableaux non valide.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de collection de variables parentes.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Échec de l'importation du fichier de configuration : « %1 ».|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de variable parente. Code d’erreur : 0x%2!8.8X !.|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de variable parente. Code d’erreur : 0x%2!8.8X!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|Le fichier de configuration était vide et ne contenait aucune entrée de configuration.|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|Le type de configuration de la configuration « %1 » n'est pas valide. Ceci peut se produire lorsqu'une tentative est effectuée pour définir la propriété du type d'un objet de configuration sur un type de configuration non valide.|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|Le type de configuration de la configuration du Registre est introuvable dans la clé « %1 ». Ajoutez une valeur appelée ConfigType à la clé de Registre et donnez-lui une valeur de chaîne de « Variable », « Property », « ConnectionManager », « LoggingProvider » ou « ForEachEnumerator ».|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "58394587"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|La valeur « %1 » du composant %2 est introuvable. Impossible de trouver la valeur CurrentVersion du composant. Cette erreur se produit si le composant n'a pas défini ses informations de Registre pour contenir une valeur CurrentVersion dans la section DTSInfo. Ce message apparaît au cours du développement du composant ou lorsque le composant est utilisé dans un package, si le composant n'est pas correctement enregistré.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Le gestionnaire de tampons n'a pas pu obtenir un nom de fichier temporaire.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Le gestionnaire de tampons n'a pas pu créer un fichier temporaire dans le chemin d'accès « %1 ». Ce chemin ne sera plus utilisé pour le stockage temporaire.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warning: Mémoire partagée globale pour communiquer avec les DLL ; de performance n’a pas pu être ouvrir compteurs de performances de flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Avertissement : impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Une ligne partielle a été trouvée à la fin du fichier.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|La fin du fichier de données a été atteinte au cours de la lecture des lignes d'en-tête. Assurez-vous que le séparateur de lignes d'en-tête et que le nombre de lignes d'en-tête à ignorer sont corrects.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Impossible de récupérer les infos de la page de codes de la colonne à partir du fournisseur OLE DB.  Si le composant prend en charge la propriété « %1 », la page de codes de cette propriété sera utilisée.  Modifiez la valeur de la propriété si les valeurs de la page de codes de la chaîne actuelle sont incorrectes.  Si le composant ne prend pas en charge la propriété, la page de codes provenant de l'ID des paramètres régionaux du composant sera utilisée.|  

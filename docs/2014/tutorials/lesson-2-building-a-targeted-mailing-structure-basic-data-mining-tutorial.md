@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931509"
 ---
-# <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Leçon 2 : Création d'une structure de publipostage ciblé (Didacticiel sur l'exploration de données de base)
+# <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Leçon 2 : Création d’une Structure de publipostage ciblé (didacticiel d’exploration de données de base)
   Le service marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] souhaite augmenter les ventes en destinant à des clients spécifiques une campagne de publipostage. La base de données de l'entreprise contient une liste des clients passés et une liste des nouveaux clients potentiels. En étudiant les attributs des clients antérieurs, l’entreprise espère révéler des modèles qu’ils peuvent alors appliquer aux clients potentiels. Par exemple, ils peuvent utiliser les tendances passées pour prédire quels clients potentiels sont plus susceptibles d’acheter un vélo dans [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], ou créer des segments de clients de futures campagnes marketing.  
   
  Dans cette leçon, vous allez utiliser le **Assistant exploration de données** pour créer la structure de publipostage ciblée. Une fois les tâches de cette leçon complétées, vous aurez une structure d'exploration de données avec un modèle unique. En raison des nombreuses étapes et concepts importants impliqués dans la création d'une structure, nous avons réparti ce processus dans les trois tâches suivantes :  

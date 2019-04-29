@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e91f82595c8e4f6fe07969960959a12464bf53a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033401"
 ---
 # <a name="recordstatusenum"></a>RecordStatusEnum
 Spécifie le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) d’un enregistrement en ce qui concerne les mises à jour par lots et d’autres opérations en bloc.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adRecCanceled**|0x100|Indique que l’enregistrement n'a pas été enregistré, car l’opération a été annulée.|  
 |**adRecCantRelease**|0x400|Indique que le nouvel enregistrement n'a pas été enregistré car l’enregistrement existant a été verrouillé.|  

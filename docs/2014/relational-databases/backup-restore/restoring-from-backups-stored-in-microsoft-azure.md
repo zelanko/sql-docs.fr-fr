@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 549efcd796d9cef721995b48fc5e7b3cc02403a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920642"
 ---
 # <a name="restoring-from-backups-stored-in-windows-azure"></a>Restauration à partir des sauvegardes stockées dans Windows Azure
   Cette rubrique présente les éléments à prendre en considération lorsque vous restaurez une base de données à l'aide d'une sauvegarde stockée dans le service de stockage d'objets Blob Windows Azure. Ceci s'applique aux sauvegardes créées à l'aide de la sauvegarde SQL Server vers l'URL ou par la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "53354415"
   
  Pour réduire les durées de restauration, il est recommandé d'utiliser des sauvegardes compressées.  Pour des tailles de sauvegarde de plus de 25 Go, utilisez l’ [utilitaire AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) pour un téléchargement sur le disque local, puis effectuez la restauration. Pour connaître les bonnes pratiques et obtenir des recommandations, consultez [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
- Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal est placé dans le répertoire du journal et est nommé en utilisant le format : BackupToUrl -\<nom_instance >-\<dbname > - action -\<PID >. journal. Le fichier journal contient des informations sur chaque aller-retour dans le stockage Windows Azure, y compris le délai d'attente qui peut être utile lors du diagnostic de problèmes.  
+ Vous pouvez également activer l'indicateur de trace 3051 lors de la restauration afin de générer un journal détaillé. Ce fichier journal est placé dans le répertoire du journal et est nommé en utilisant le format : BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log. Le fichier journal contient des informations sur chaque aller-retour dans le stockage Windows Azure, y compris le délai d'attente qui peut être utile lors du diagnostic de problèmes.  
   
 ### <a name="topics-on-performing-restore-operations"></a>Rubriques relatives aux procédures des opérations de restauration  
   

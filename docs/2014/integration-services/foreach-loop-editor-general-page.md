@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894077"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle Foreach** pour décrire et attribuer un nom à un conteneur de boucle Foreach qui utilise un énumérateur précis afin de répéter un flux de travail pour chaque membre d'une collection.  

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 74f8834ef29e4b5a1cf2b3988585f771cb9d1f1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016290"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Application d'une transformation XSL (fournisseur SQLXMLOLEDB)
   Dans cet exemple d'application ADO, une requête SQL est exécutée et le langage XSLT est appliqué au résultat. La définition de la propriété ClientSideXML sur True applique le traitement de l’ensemble de lignes du côté client. Le dialecte de commande a pour valeur {5d531cb2-e6ed-11d2-b252-00c04f681b71} car la requête SQL est spécifiée dans un modèle et que ce dialecte doit être spécifié lors de l'exécution d'un modèle. La propriété xsl Spécifie le fichier XSL à utiliser pour appliquer la transformation. La valeur de propriété de chemin d’accès de Base est utilisée pour rechercher le fichier XSL. Si vous spécifiez un chemin d’accès dans la valeur de la propriété xsl, le chemin d’accès est relatif le chemin d’accès qui est spécifié dans la propriété de chemin d’accès de Base.  

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891587"
 ---
-# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test de la leçon 3 du package du didacticiel
+# <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test du package du tutoriel de la leçon 3
   Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  
   
 ## <a name="checking-the-package-layout"></a>Vérification de la disposition du package  

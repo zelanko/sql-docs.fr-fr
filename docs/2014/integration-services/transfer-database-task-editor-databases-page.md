@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 05a7b731ff6befc293b4779eb604ae15d04c0cb8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927212"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Éditeur de tâche de transfert de bases de données (page Bases de données)
   Utilisez la page **Bases de données** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** pour spécifier les propriétés des bases de données source et de destination concernées par la tâche de transfert de bases de données. La tâche de transfert de bases de données copie ou déplace une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette tâche peut également servir à copier une base de données sur le même serveur. Pour plus d’informations sur cette tâche, consultez [Tâche de transfert de bases de données](control-flow/transfer-database-task.md).  

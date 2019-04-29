@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_1205 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 1205 (Database Engine error)
 ms.assetid: 9fe3f67c-df3c-4642-a3a4-ccc0e138b632
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef8a59c98bc6669a13b5a4ffeb516b4063db23c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915893"
 ---
 # <a name="mssqlserver1205"></a>MSSQLSERVER_1205
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Détails  
   
 |||  
@@ -33,7 +34,7 @@ ms.locfileid: "48092179"
 |Texte du message|La transaction (ID de processus %d) a été bloquée sur les ressources %.*ls par un autre processus et a été choisie comme victime. Relancez la transaction.|  
   
 ## <a name="explanation"></a>Explication  
- L'accès aux ressources s'effectue dans un ordre conflictuel sur des transactions distinctes, ce qui cause un interblocage. Exemple :  
+L'accès aux ressources s'effectue dans un ordre conflictuel sur des transactions distinctes, ce qui cause un interblocage. Exemple :  
   
 -   Transaction1 met à jour **Table1.Row1**, tandis que Transaction2 met à jour **Table2.Row2**.  
   
@@ -43,11 +44,10 @@ ms.locfileid: "48092179"
   
 -   Un blocage survient car Transaction1 attend que Transaction2 se termine, alors que Transaction2 attend que Transaction1 se termine.  
   
- Le système détectera ce blocage et choisira l'une des transactions impliquées comme 'victime' et émettra ce message, tout en annulant la transaction de la victime.  
+Le système détectera ce blocage et choisira l'une des transactions impliquées comme 'victime' et émettra ce message, tout en annulant la transaction de la victime.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Exécutez de nouveau la transaction. Vous pouvez également réviser l'application pour éviter les blocages. La transaction qui a été choisie comme victime peut être retentée et réussira probablement, en fonction des opérations qui sont exécutées simultanément.  
+Exécutez de nouveau la transaction. Vous pouvez également réviser l'application pour éviter les blocages. La transaction qui a été choisie comme victime peut être retentée et réussira probablement, en fonction des opérations qui sont exécutées simultanément.  
   
- Pour empêcher ou éviter l’apparition de blocages, faites en sorte que toutes les transactions accèdent aux lignes dans le même ordre (**Table1**, puis **Table2**) ; de cette manière, bien qu’un blocage puisse survenir, aucun interblocage ne se produira.  
-  
+Pour empêcher ou éviter l’apparition de blocages, faites en sorte que toutes les transactions accèdent aux lignes dans le même ordre (**Table1**, puis **Table2**) ; de cette manière, bien qu’un blocage puisse survenir, aucun interblocage ne se produira.  
   

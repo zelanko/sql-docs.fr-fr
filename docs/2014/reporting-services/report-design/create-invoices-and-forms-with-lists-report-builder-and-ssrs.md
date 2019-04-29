@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020782"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listes (Générateur de rapports et SSRS)
   Une région de données de liste est répétée pour chaque groupe ou ligne du dataset du rapport. Une liste peut être utilisée pour créer des formulaires ou des rapports de forme libre, tels que des factures, ou associés à d'autres régions de données. Vous pouvez définir des listes contenant n'importe quel nombre d'éléments de rapport. Une liste peut être imbriquée dans une autre pour fournir plusieurs groupes de données.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127877"
 ---
 # <a name="select---sql-command"></a>SELECT, commande SQL
 Récupère les données à partir d’une ou plusieurs tables.  
@@ -48,7 +48,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  Un *sous-requête*, fait référence dans les arguments suivants, est une instruction SELECT dans une instruction SELECT et doivent être placés entre parenthèses. Vous pouvez avoir jusqu'à deux sous-requêtes au même niveau (non imbriqué) dans la clause WHERE. (Voir la section des arguments). Sous-requêtes peuvent contenir plusieurs conditions de jointure.  
   
- [Tous les &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*] [, [*Alias*.] *Select_Item* [AS *Column_Name*]...]  
+ [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
  La clause SELECT spécifie les champs, les constantes et les expressions qui sont affichées dans les résultats de requête.  
   
  Par défaut, tous les affiche toutes les lignes dans les résultats de requête.  
@@ -97,7 +97,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  Spécifie l’en-tête pour une colonne dans la sortie de requête. Cela est utile quand *Select_Item* est une expression ou contient un champ (fonction) et que vous souhaitez donner un nom explicite à la colonne. *Column_Name* peut être une expression, mais ne peut pas contenir de caractères (par exemple, les espaces) qui ne sont pas autorisées dans les noms de champ de table.  
   
- À partir de [*DatabaseName*!] *Table* [*Local_Alias*] [, [*DatabaseName*!] *Table* [*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  Répertorie les tables qui contiennent les données que la requête récupère. Si aucune table n’est ouvert, Visual FoxPro affiche le **ouvrir** afin que vous pouvez spécifier l’emplacement du fichier de boîte de dialogue. Une fois qu’il a été ouvert, la table reste ouverte après que la requête est terminée.  
   
  *DatabaseName*! Spécifie le nom d’une base de données autre que celui spécifié avec la source de données. Vous devez inclure le nom de la base de données qui contient la table si la base de données n’est pas spécifié avec la source de données. Inclure le séparateur de point d’exclamation ( !) après le nom de la base de données et avant le nom de table.  
@@ -195,7 +195,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- Cette condition de filtre recherche chaque champ qui correspond à *cExpression*. Vous pouvez utiliser le signe de pourcentage (%) et des caractères génériques de trait de soulignement (_) dans le cadre de *cExpression*. Le trait de soulignement représente un seul caractère inconnu dans la chaîne.  
+ Cette condition de filtre recherche chaque champ qui correspond à *cExpression*. Vous pouvez utiliser le symbole de pourcentage (%) et des caractères génériques de trait de soulignement (_) dans le cadre de *cExpression*. Le trait de soulignement représente un seul caractère inconnu dans la chaîne.  
   
  GROUP BY *GroupColumn* [, *GroupColumn* ...]  
  Groupes de lignes dans la requête en fonction des valeurs dans une ou plusieurs colonnes. *GroupColumn* peut prendre l’une des opérations suivantes :  
@@ -259,7 +259,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  Les espaces réservés doivent être du même type que les champs qu’ils représentent. Si le champ est un type de date, l’espace réservé doit être {/ /}. Si le champ est un champ de texte, l’espace réservé doit être une chaîne vide ( » »).  
   
- ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
  Trie les résultats de requête basés sur les données dans une ou plusieurs colonnes. Chaque *Order_Item* doit correspondre à une colonne dans les résultats de requête et peut prendre l’une des opérations suivantes :  
   
 -   Un champ dans une table de départ qui est également un élément sélectionné dans la clause SELECT principal (pas dans une sous-requête).  

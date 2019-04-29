@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896514"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (Différent de) (expression SSIS)
   Effectue une comparaison pour déterminer si deux expressions de types de données compatibles sont différentes. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
@@ -52,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  Les comparaisons de chaîne respectent la casse, les accents, le jeu de caractères Kana et la largeur.  
   
--   **Date, heure ou Date/heure** à la fois *expression1* et *expression2* doit correspondre à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
@@ -81,7 +81,7 @@ expression1 != expression2
   
 -   **Binaire** : *expression1* et *expression2* doivent toutes deux s’évaluer au type de données DT_BYTES.  
   
--   **Objet BLOB** à la fois *expression1* et *expression2* doit correspondre au même type de données de grand objet BLOB (Binary Block) : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
+-   **BLOB** : *expression1* et *expression2* doivent toutes deux correspondre au même type de données BLOB (Binary Large Object Block) : DT_TEXT, DT_NTEXT ou DT_IMAGE.  
   
  Pour plus d'informations sur les types de données, consultez [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   

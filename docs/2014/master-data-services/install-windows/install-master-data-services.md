@@ -11,27 +11,27 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924146"
 ---
 # <a name="install-master-data-services"></a>Installer Master Data Services
   Le flux de travail suivant donne une vue d’ensemble de l’installation et de la configuration de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] L’installation est un processus en trois parties :  
   
--   [Tâches de pré-installation](#preinstall): Vérifier la configuration système requise avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+-   [Tâches de pré-installation](#preinstall) : Vérifier la configuration système requise avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 -   [Opérations d’installation](#install): Installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le programme d’installation ou de l’invite de commandes.  
   
--   [Tâches de post-installation](#postinstall): Ouvrez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour effectuer des opérations de post-installation. Créez et configurez la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et les services Web, et déployez un exemple de modèle.  
+-   [Tâches de post-installation](#postinstall) : Ouvrez [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] pour effectuer des opérations de post-installation. Créez et configurez la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et les services Web, et déployez un exemple de modèle.  
   
 ##  <a name="preinstall"></a> Tâches de pré-installation  
   
 |Action|Détails|Rubriques connexes|  
 |------------|-------------|--------------------|  
 |Vérifier la configuration requise pour l'installation|L'ordinateur sur lequel vous exécutez le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir la configuration minimale requise pour :<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> L'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et les services Web.<br /><br /> La base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , si vous hébergez la base de données sur le même ordinateur que l'application Web.<br /><br /> Notez que vous pouvez séparer l’ordinateur serveur web et l’ordinateur du serveur de base de données en exécutant le programme d’installation sur uniquement l’ordinateur de serveur web et en créant le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] base de données sur un ordinateur distant qui exécute une version prise en charge et l’édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Configuration requise pour l’application web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [Configuration requise pour la base de données &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
-|Configurer les rôles, les services de rôle et les fonctionnalités requis|Avant d'exécuter le programme d'installation, configurez l'ordinateur avec les rôles, les services de rôle et les fonctionnalités Windows requis.<br /><br /> Remarque : Bien que vous puissiez exécuter ultérieurement cette étape dans le flux de travail, il est utile de procéder à cette configuration avant d'exécuter le programme d'installation, afin de pouvoir effectuer les tâches de configuration Web immédiatement après.|[Configuration requise pour l’application web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
+|Configurer les rôles, les services de rôle et les fonctionnalités requis|Avant d'exécuter le programme d'installation, configurez l'ordinateur avec les rôles, les services de rôle et les fonctionnalités Windows requis.<br /><br /> Remarque : Bien que vous puissiez exécuter cette étape ultérieurement dans le flux de travail, il est utile de configurer cela avant d’exécuter le programme d’installation afin que vous pouvez effectuer les tâches de configuration web immédiatement après l’installation.|[Configuration requise pour l’application web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
 |Déterminer le prise en charge linguistique|Déterminez la langue que vous souhaitez installer et exécuter dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Déploiements multilingues et globaux &#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Opérations d'installation  

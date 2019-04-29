@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924721"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilise des règles d'entreprise pour créer des solutions de flux de travail de base, comme la mise à jour et la validation automatique des données et l'envoi de notifications par courrier électronique, en fonction des conditions que vous spécifiez. Lorsque vous avez besoin de traitements plus complexes que ceux fournis par ces actions de flux de travail intégrées, utilisez un flux de travail personnalisé. Un flux de travail personnalisé est un assembly .NET. que vous créez. Lorsque votre assembly de flux de travail est appelé, votre code peut exécuter n'importe quelle action requise par votre situation. Par exemple, si votre flux de travail nécessite le traitement d'événements complexes, tels que des approbations multicouches ou des arbres de décision compliqués, vous pouvez configurer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour démarrer un flux de travail personnalisé qui analyse les données et détermine où les transmettre pour l'approbation.  
@@ -34,7 +34,7 @@ ms.locfileid: "52750941"
 5.  Les services d'intégration de flux de travail MDS de SQL Server acheminent les données vers votre assembly de gestionnaire de flux de travail.  
   
 > [!NOTE]  
->  Remarque : Service d’intégration du flux de travail MDS SQL Server est destiné à déclencher des processus simples. Si votre code personnalisé requiert un traitement complexe, effectuez votre traitement dans un thread distinct ou à l'extérieur du processus de flux de travail.  
+>  Remarque : Service d’intégration du flux de travail MDS SQL Server est destiné à déclencher des processus simples. Si votre code personnalisé requiert un traitement complexe, effectuez votre traitement dans un thread distinct ou à l'extérieur du processus de flux de travail.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurer des services Master Data pour les flux de travail personnalisés  
  La création d'un flux de travail personnalisé requiert l'écriture d'un code personnalisé et la configuration de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour passer les données de flux de travail à votre gestionnaire de flux de travail. Procédez comme suit pour activer un traitement de flux de travail personnalisé :  
@@ -60,7 +60,7 @@ ms.locfileid: "52750941"
   
 3.  Ajoutez « using Microsoft.MasterDataServices.Core.Workflow; » à votre fichier de code C#.  
   
-4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit être semblable à : « public class WorkflowTester : IWorkflowTypeExtender ».  
+4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit être semblable à : « public class WorkflowTester : IWorkflowTypeExtender'.  
   
 5.  Implémentez l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. La méthode <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> est appelée par le service d'intégration de flux de travail MDS de SQL Server pour démarrer votre flux de travail.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "52750941"
   
 1.  Utilisez le composant logiciel enfichable Services pour arrêter le service.  
   
-2.  Ouvrez une invite de commandes, naviguez jusqu'à l’emplacement du service et exécuter le service en mode console en entrant : Microsoft.MasterDataServices.Workflow.exe-console.  
+2.  Ouvrez une invite de commandes, naviguez jusqu'à l’emplacement du service et exécuter le service en mode console en entrant : Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  Dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], mettez à jour votre membre et appliquez à nouveau les règles d'entreprise. Les journaux détaillés sont affichés dans la fenêtre de la console.  
   

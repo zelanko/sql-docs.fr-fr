@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916873"
 ---
 # <a name="estimate-the-size-of-a-table"></a>Estimer la taille d'une table
   Vous pouvez procéder de la manière suivante pour estimer l'espace nécessaire au stockage des données dans une table :  

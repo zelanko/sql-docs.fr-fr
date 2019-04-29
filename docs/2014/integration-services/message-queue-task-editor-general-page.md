@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890415"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
@@ -43,7 +43,7 @@ ms.locfileid: "58375857"
  **MSMQConnection**  
  Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md), [Éditeur du Gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
  Spécifiez si la tâche MSMQ envoie ou reçoit des messages. Si vous sélectionnez l’option **Envoyer un message**, la page Envoyer est répertoriée dans le volet gauche de la boîte de dialogue ; si vous sélectionnez l’option **Recevoir un message**, la page Recevoir est répertoriée. Par défaut, cette valeur est définie sur **Envoyer un message**.  

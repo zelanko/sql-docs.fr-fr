@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922194"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
   Au cours d’une opération de sauvegarde sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les données sauvegardées (la *sauvegarde*) sont écrites sur une unité de sauvegarde physique. Cette unité de sauvegarde physique est activée dès l'écriture de la première sauvegarde dans un jeu de supports. Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports.  
@@ -110,7 +110,7 @@ RESTORE DATABASE AdventureWorks2012
 ```  
   
 ###  <a name="BackupFileDiskPath"></a> En spécifiant le chemin d’accès d’un fichier de sauvegarde de disque  
- Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le numéro de l’instance du serveur. Par conséquent, pour l'instance du serveur par défaut, le répertoire de sauvegarde par défaut est le suivant : C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\Backup.  
+ Lorsque vous spécifiez un fichier de sauvegarde, entrez son chemin d'accès complet et le nom du fichier. Si vous spécifiez uniquement le nom du fichier ou un chemin d'accès relatif au moment de la sauvegarde d'un fichier, celui-ci est copié dans le répertoire de sauvegarde par défaut. Ce répertoire de sauvegarde par défaut est C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup, où *n* est le numéro de l’instance du serveur. Par conséquent, pour l’instance de serveur par défaut, le répertoire de sauvegarde par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup.  
   
  Pour éviter toute ambiguïté, en particulier dans les scripts, il est recommandé de spécifier explicitement le chemin d'accès du répertoire de sauvegarde dans chaque clause DISK. Cependant, cette exigence prend moins d'importance si vous utilisez l'Éditeur de requête. Dans ce cas, si vous êtes certain que le fichier de sauvegarde réside dans le répertoire de sauvegarde par défaut, vous pouvez omettre le chemin d'accès d'une clause DISK. Par exemple, l'instruction `BACKUP` suivante sauvegarde la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans le répertoire de sauvegarde par défaut.  
   
@@ -207,7 +207,7 @@ GO
 ###  <a name="OpenTapes"></a> Gestion de bandes ouvertes  
  Pour afficher une liste des périphériques à bandes ouverts et l’état des demandes de montage, interrogez la vue de gestion dynamique [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) . Cette vue affiche toutes les bandes ouvertes. Elle inclut les bandes en cours d'utilisation provisoirement inactives et en attente de la prochaine opération BACKUP ou RESTORE.  
   
- Si une bande a, accidentellement, été laissée ouverte, le moyen le plus rapide de la libérer consiste à utiliser la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _nom_unité_sauvegarde_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
+ Si une bande a été laissée ouverte, le moyen le plus rapide pour libérer de la bande est à l’aide de la commande suivante : RESTORE REWINDONLY FROM TAPE **=** _nom_unité_sauvegarde_. Pour plus d’informations, consultez [RESTORE REWINDONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql).  
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Utilisation du service de Stockage Blob Windows Azure  
  Les sauvegardes SQL Server peuvent être écrites dans le service de stockage d'objets blob Windows Azure.  Pour plus d'informations sur l'utilisation du service de stockage d'objets blob Windows Azure pour les sauvegardes, consultez [Sauvegarde et restauration SQL Server avec le service de Stockage Blob Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  

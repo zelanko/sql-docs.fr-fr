@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061858"
 ---
 # <a name="sqldescribecol-function"></a>Fonction SQLDescribeCol
 **Conformité**  
@@ -51,7 +51,7 @@ SQLRETURN SQLDescribeCol(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *ColumnNumber*  
@@ -86,11 +86,11 @@ SQLRETURN SQLDescribeCol(
  *NullablePtr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner une valeur qui indique si la colonne autorise des valeurs NULL. Cette valeur est lue à partir du champ SQL_DESC_NULLABLE de l’IRD. Les valeurs possibles sont les suivantes :  
   
- SQL_NO_NULLS : La colonne n'accepte pas les valeurs NULL.  
+ SQL_NO_NULLS : La colonne n’autorise pas les valeurs NULL.  
   
  SQL_NULLABLE : La colonne autorise des valeurs NULL.  
   
- SQL_NULLABLE_UNKNOWN : Le pilote ne peut pas déterminer si la colonne autorise des valeurs NULL.  
+ SQL_NULLABLE_UNKNOWN: Le pilote ne peut pas déterminer si la colonne autorise des valeurs NULL.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  

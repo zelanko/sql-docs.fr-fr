@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022496"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
   Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  
@@ -27,7 +27,7 @@ ms.locfileid: "48054732"
 > [!NOTE]  
 >  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, le moteur d'indexation et de recherche en texte intégral réside dans le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , plutôt que dans un service séparé. L'intégration du Moteur d'indexation et de recherche en texte intégral dans le Moteur de base de données permet une simplification de la gestion de l'indexation et de la recherche en texte intégral, ainsi qu'une amélioration de l'optimisation des requêtes mixtes et des performances globales.  
   
- Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur des colonnes de type `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml`, `varbinary`, et `varbinary(max)` peuvent être indexées pour recherche en texte intégral. Création d’un index de recherche en texte intégral sur une colonne dont les données de type est `varbinary`, `varbinary(max)`, `image`, ou `xml` nécessite que vous spécifiez une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
+ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur des colonnes de type `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, ,`xml`, `varbinary`, et `varbinary(max)` peut être indexé pour la recherche en texte intégral. Lorsque vous créez un index de recherche en texte intégral sur une colonne de type de données `varbinary`, `varbinary(max)`, `image`, ou `xml`, vous devez spécifier une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
   
  Le processus de création et de gestion d’un index de recherche en texte intégral est appelé *alimentation* (également appelé *analyse*). Il existe trois types d'alimentation de l'index de recherche en texte intégral : l'alimentation complète, l'alimentation basée sur le suivi des modifications et l'alimentation incrémentielle basée sur l'horodateur. Pour plus d’informations, consultez [Alimenter des index de recherche en texte intégral](populate-full-text-indexes.md).  
   

@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917591"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Créer un travail d'Agent SQL Server pour archiver les messages et les journaux d'événements de la messagerie de base de données
   Des copies des messages de la messagerie de base de données et de leurs pièces jointes sont conservées dans les tables **msdb** avec le journal d'événements de la messagerie de base de données. Il peut être utile d'archiver périodiquement les messages et les événements dont vous n'avez plus besoin afin de réduire la taille des tables. Les procédures suivantes permettent de créer un travail de l'Agent SQL Server pour automatiser le processus.  
   
 -   **Avant de commencer :**  , [Conditions préalables](#Prerequisites), [Recommandations](#Recommendations), [Autorisations](#Permissions)  
   
--   **Pour archiver la messagerie de base de données des messages et journaux à l’aide de :**  [Agent SQL Server](#Process_Overview)  
+-   **Pour archiver les messages et les journaux Database Mail à l’aide de :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54124229"
  Dans votre environnement de production, vous pouvez ajouter des fonctionnalités supplémentaires de vérification des erreurs et faire envoyer un message électronique aux opérateurs en cas d'échec du travail.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Vous devez être membre du rôle serveur fixe **sysadmin** pour pouvoir exécuter les procédures stockées décrites dans cette rubrique.  
   
   

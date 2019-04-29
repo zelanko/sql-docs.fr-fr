@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76625dc956ff36788f52c5da4106b7ac5eb8c2ab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62896165"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Connexion à des sources de données dans une tâche personnalisée
   Les tâches se connectent à des sources de données externes pour extraire ou enregistrer des données à l'aide d'un gestionnaire de connexions. Au moment de la conception, un gestionnaire de connexions représente une connexion logique et décrit des informations clés telles que le nom du serveur et des propriétés d'authentification. Au moment de l'exécution, les tâches appellent la méthode <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> du gestionnaire de connexions pour établir la connexion physique à la source de données.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60c4c4d364f9c07e9ca241dd357535f7f7acb42d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046685"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les rapports de pilote ODBC Native Client définie de la colonne USERTYPE supplémentaire dans le résultat de `SQLGetTypeInfo`. USERTYPE signale la définition de type de données de bibliothèque de bases de données et est utile aux développeurs qui déplacent des applications de bibliothèque de bases de données existantes vers ODBC.  
@@ -46,7 +46,7 @@ ms.locfileid: "53373671"
  `SQLGetTypeInfo` prend en charge les grands types CLR définis par l'utilisateur. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetTypeInfo, fonction](https://go.microsoft.com/fwlink/?LinkId=59356)   
+ [SQLGetTypeInfo Function](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

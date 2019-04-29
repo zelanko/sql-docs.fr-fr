@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903665"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "52775391"
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Le numéro de publication, qui est stocké dans **sysmergepublications**.|  
 |**tablenick**|**Int**|Surnom de la table publiée.|  
-|**ROWGUID**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
 |**partition_id**|**Int**|ID de la partition à laquelle la ligne appartient. La valeur est -1 si la modification de ligne s’applique à tous les abonnés.|  
-|**génération**|**bigint**|Valeur de la génération dans laquelle la modification de partition s'est produite.|  
-|**raison**|**tinyint**|Interne-usage uniquement.|  
+|**generation**|**bigint**|Valeur de la génération dans laquelle la modification de partition s'est produite.|  
+|**reason**|**tinyint**|Interne-usage uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

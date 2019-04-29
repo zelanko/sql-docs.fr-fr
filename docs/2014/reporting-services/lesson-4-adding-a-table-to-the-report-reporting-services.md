@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6255750df935fd3112f0e3b41941983a4882a0b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063402"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajouter une table au rapport (Reporting Services)
   Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Pour créer une mise en page de rapport, faites glisser les régions de données, les zones de texte, les images et autres éléments que vous souhaitez inclure dans un rapport vers l'aire de conception.  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54099964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015648"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
   Vous pouvez afficher les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les objets de statistiques incluent un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Pour plus d’informations sur les histogrammes et les vecteurs de densité, consultez [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql).  
@@ -41,7 +41,7 @@ ms.locfileid: "54099964"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour afficher l’objet des statistiques, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "54099964"
      Spécifie le nom de l'objet de base de données dans lequel les statistiques sont stockées.  
   
      **Statistiques de l’INDEX statistics_name**  
-     Cette zone de texte affiche les propriétés retournées par l'objet de statistiques. Ces propriétés sont divisées en trois sections : En-tête de statistiques, vecteur de densité et histogramme.  
+     Cette zone de texte affiche les propriétés retournées par l'objet de statistiques. Ces propriétés sont divisées en trois sections : En-tête des statistiques, vecteur de densité et histogramme.  
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats de l'en-tête de statistiques.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "54099964"
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats du vecteur de densité.  
   
      **Toutes les densités**  
-     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B), et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B) les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5).  
+     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l’objet de statistiques contient les colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A, B) et (A, B, C). Avec le préfixe (A, B, C), chacune de ces listes est une liste de valeurs distinctes : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). L’utilisation du préfixe (A, B) les mêmes valeurs de colonne ont ces listes de valeurs distinctes : (3, 5), (4, 4) et (4, 5).  
   
      **Longueur moyenne**  
      Longueur moyenne, en octets, pour le stockage d'une liste des valeurs de colonnes pour le préfixe de colonne. Par exemple, si les valeurs dans la liste (3, 5, 6) nécessitent 4 octets chacune, la longueur est égale à 12 octets.  

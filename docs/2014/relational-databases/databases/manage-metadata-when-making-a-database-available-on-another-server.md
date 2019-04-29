@@ -35,11 +35,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917343"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Gérer les métadonnées lors de la mise à disposition d'une base de données sur une autre instance de serveur (SQL Server)
   Cette rubrique concerne les situations suivantes :  
@@ -134,7 +134,7 @@ ms.locfileid: "52785991"
   
  Pour permettre le déchiffrement automatique de la clé principale de base de données sur une instance de serveur, une copie de cette clé est chiffrée à l'aide de la clé principale du service. Cette copie chiffrée est stockée dans la base de données et dans la base **master**. En général, la copie stockée dans **master** est mise à jour sans avertissement chaque fois que la clé principale est modifiée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente tout d'abord de déchiffrer la clé principale de base de données avec la clé principale de service de l'instance. Si ce déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification. Une clé principale qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction OPEN MASTER KEY et d'un mot de passe.  
   
- Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l'instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='***mot de passe***'**. Nous vous recommandons d'activer le déchiffrement automatique de la clé principale de la base de données en exécutant l'instruction suivante : ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Lorsqu'une base de données chiffrée est copiée, restaurée ou attachée à une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une copie de la clé principale de la base de données chiffrée par la clé principale du service n'est pas stockée dans la base **master** sur l'instance du serveur de destination. Sur l'instance du serveur de destination, vous devez ouvrir la clé principale de la base de données. Pour ouvrir la clé principale, exécutez l’instruction suivante : OPEN MASTER KEY DECRYPTION BY PASSWORD **='***mot de passe***'**. Nous vous recommandons de puis activer le déchiffrement automatique de la clé principale de base de données en exécutant l’instruction suivante : ALTER MASTER KEY ADD CHIFFREMENT PAR CLÉ PRINCIPALE DU SERVICE. Cette instruction ALTER MASTER KEY fournit à l'instance du serveur une copie de la clé principale de la base de données qui est chiffrée à l'aide de la clé principale du service. Pour plus d’informations, consultez [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
@@ -280,7 +280,7 @@ ms.locfileid: "52785991"
   
  [&#91;Haut&#93;](#information_entities_and_objects)  
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a> Autorisations  
  Les types d'autorisations suivants peuvent être affectés par la mise à disponibilité d'une base de données sur une autre instance de serveur.  
   
 -   Autorisations GRANT, REVOKE ou DENY sur les objets système  

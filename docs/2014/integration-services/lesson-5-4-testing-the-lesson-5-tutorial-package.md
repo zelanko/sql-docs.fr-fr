@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890941"
 ---
-# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Étape 4 : Test de la leçon 5 du Package du didacticiel
+# <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Étape 4 : Test du package du tutoriel de la leçon 5
   Au moment de l'exécution, votre package récupère la valeur de la propriété `Directory` à partir d'une variable mise à jour à l'exécution au lieu d'utiliser le nom du répertoire d'origine spécifié lors de la création du package. La valeur de cette variable est remplie par le fichier SSISTutorial.dtsConfig.  
   
  Pour vérifier si le package met à jour la propriété Directory avec la nouvelle valeur lors de l'exécution, exécutez tout simplement le package. Étant donné que seuls trois fichiers de données exemple ont été copiés dans le nouveau répertoire, le flux de données ne sera exécuté que trois fois au lieu de parcourir les 14 fichiers du dossier d'origine.  

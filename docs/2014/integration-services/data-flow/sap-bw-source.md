@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62901067"
 ---
 # <a name="sap-bw-source"></a>Source SAP BW
   La source SAP BW est le composant source de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW. Ainsi, la source SAP BW extrait des données d'un système SAP Netweaver BW version 7 et met ces données à la disposition du flux de données dans un package [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

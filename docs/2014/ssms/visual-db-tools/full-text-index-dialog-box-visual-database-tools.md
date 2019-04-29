@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028409"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
   Cette boîte de dialogue permet de créer un index de texte intégral si vous souhaitez effectuer des recherches en texte intégral sur les colonnes de type texte de vos tables de base de données. Un index de texte intégral se base sur un index normal ; vous devez donc d'abord le créer. L'index normal doit être créé sur une colonne unique, non null ; il est conseillé de choisir une colonne contenant des petites valeurs plutôt que des grandes.  
@@ -63,7 +63,7 @@ ms.locfileid: "52822743"
  Indique si vous pouvez actuellement exécuter une recherche en texte intégral à l'aide de cet index de texte intégral.  
   
  **Paramètre du suivi des modifications**  
- Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
+ Décrit l’état de suivi des modifications pour cet index : Manuel, Auto ou inactif.  
   
  **Analyse terminée**  
  Indique si l'analyse la plus récente est terminée. Si cette propriété a la valeur Non, une analyse est actuellement en cours.  
@@ -87,7 +87,7 @@ ms.locfileid: "52822743"
  Affiche la date et l'heure de démarrage de la prochaine analyse.  
   
  **Type de l'analyse actuelle ou de la dernière analyse**  
- Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
+ Affiche le type de l’analyse actuelle ou plus récente : Complète, incrémentielle, mise à jour ou Propagation automatique.  
   
  **Nom d'index unique**  
  Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19db106c43007259754bace7f0e9d2938ad9cf1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022096"
 ---
 # <a name="non-sql-server-publishers"></a>Serveurs de publications non-SQL Server
   La publication de données provenant de sources non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet de regrouper des données dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut s'abonner à des données transactionnelles ou à des données d'instantané à partir d'une base de données Oracle. Pour plus d’informations sur la publication à partir d’Oracle, consultez [Présentation de la publication Oracle](oracle-publishing-overview.md).  

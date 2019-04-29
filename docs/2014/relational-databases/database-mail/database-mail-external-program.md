@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6c617e4f7c069a869935fa4ed83d28c02d0b0b9a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917640"
 ---
 # <a name="database-mail-external-program"></a>Programme externe de la messagerie de base de données
   L’exécutable externe de la messagerie de base de données est **DatabaseMail.exe**, situé dans le **répertoire MSSQL\Binn** de l’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La messagerie de base de données utilise l'activation Service Broker pour démarrer le programme externe lorsque des messages électroniques doivent être traités. La messagerie de base de données démarre une instance du programme externe. Le programme externe s'exécute dans le contexte de sécurité du compte de services pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Définir l’écriture différée de Partition | Documents Microsoft
+title: Définir l’écriture différée de Partition | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 844aad81d49f16718cb795f443c3d8101e2ff771
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020094"
 ---
 # <a name="set-partition-writeback"></a>Définir l'écriture différée de partition
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

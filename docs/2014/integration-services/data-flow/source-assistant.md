@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900798"
 ---
 # <a name="source-assistant"></a>Assistant source
   Le composant Assistant Source permet de créer un composant source et un gestionnaire de connexions. Le composant se trouve dans la section **Favoris** de la boîte à outils SSIS.  

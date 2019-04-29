@@ -23,11 +23,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025530"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "56015551"
    </Schema>   
 ```  
   
-### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
+### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
  Les éléments du schéma peuvent être liés. Le  **\<SQL : Relationship >** élément spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
   
  Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >**:  

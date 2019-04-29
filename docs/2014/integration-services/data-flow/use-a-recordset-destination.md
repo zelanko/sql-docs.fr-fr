@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62899995"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
   La destination d'ensemble d'enregistrements n'enregistre pas les données sur une source de données externe. Elle enregistre les données en mémoire dans un ensemble d'enregistrements stocké dans une variable de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de type `Object`. Une fois que la destination d'ensemble d'enregistrements a sauvegardé les données, vous devez en général utiliser un conteneur de boucles Foreach avec l'énumérateur ADO Foreach pour traiter une par une les lignes de l'ensemble d'enregistrements. L'énumérateur ADO Foreach enregistre la valeur de chaque colonne de la ligne actuelle dans une variable de package distincte. Ensuite, les tâches que vous configurez à l'intérieur du conteneur de boucles Foreach lisent les valeurs contenues dans ces variables et effectuent certaines actions sur ces valeurs.  

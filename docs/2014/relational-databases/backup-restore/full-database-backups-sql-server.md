@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922045"
 ---
 # <a name="full-database-backups-sql-server"></a>Sauvegardes complètes de bases de données (SQL Server)
   Une sauvegarde complète de base de données permet de sauvegarder l'intégralité d'une base de données. Ce type de sauvegarde comprend une partie du journal des transactions afin que toute la base de données puisse être récupérée après la restauration d'une sauvegarde complète de la base de données. Les sauvegardes complètes de base de données représentent la base de données à l'issue de l'opération de sauvegarde.  

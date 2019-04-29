@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5d3d7b109e46330e6cce2703ac07c2e3f20f550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027616"
 ---
 # <a name="state-property-example-vc"></a>State, exemple de propriété (VC++)
 Cet exemple utilise le [état](../../../ado/reference/ado-api/state-property-ado.md) propriété pour afficher un message alors que les connexions asynchrones s’ouvrent et exécutent des commandes asynchrones.  

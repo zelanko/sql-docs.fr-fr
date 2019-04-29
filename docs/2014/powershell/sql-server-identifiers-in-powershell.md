@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922844"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificateurs SQL Server dans PowerShell
   Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell utilise les identificateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans les chemins Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Les identificateurs peuvent contenir des caractères que Windows PowerShell ne prend pas en charge dans les chemins. Vous devez placer ces caractères dans une séquence d’échappement ou leur appliquer un codage spécial lors de l’utilisation des identificateurs dans les chemins Windows PowerShell.  

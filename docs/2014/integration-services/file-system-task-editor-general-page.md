@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b010d4c532db61d65fb312cdf9b02a1684332c3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894520"
 ---
 # <a name="file-system-task-editor-general-page"></a>Éditeur de tâche de système de fichiers (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de système de fichiers** pour configurer l'opération de système de fichiers qu'exécute la tâche.  
@@ -70,8 +70,8 @@ ms.locfileid: "58377277"
 |**Supprimer le contenu du répertoire**|Supprimer le contenu d'un répertoire. Cette valeur affiche les options dynamiques d'une source.|  
 |**Supprimer le fichier**|Supprimer un fichier. Cette valeur affiche les options dynamiques d'une source.|  
 |**Déplacer le répertoire**|Déplacer un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une destination.|  
-|**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous déplacez un fichier, n'incluez pas de nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
-|**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
+|**Déplacer le fichier**|Déplacer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous déplacez un fichier, n'incluez pas de nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
+|**Renommer le fichier**|Renommer un fichier. Cette valeur affiche les options dynamiques d'une source et d'une destination.<br /><br /> Remarque : Lorsque vous renommez un fichier, incluez le nouveau nom de fichier dans le chemin d'accès au répertoire que vous fournissez comme destination.|  
 |**Définir les attributs**|Définir les attributs d'un fichier ou d'un répertoire. Cette valeur affiche les options dynamiques d'une source et d'une opération.|  
   
  `IsSourcePathVariable`  
@@ -88,13 +88,13 @@ ms.locfileid: "58377277"
  **DestinationVariable**  
  Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>Options dynamiques IsSourcePathVariable  
   
@@ -102,13 +102,13 @@ ms.locfileid: "58377277"
  **SourceVariable**  
  Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>Options dynamiques d'opération  
   

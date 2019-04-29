@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890843"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>Étape 3 : Test du Package de la leçon 6
+# <a name="step-3-testing-the-lesson-6-package"></a>Étape 3 : Test du package de la leçon 6
   Au moment de l'exécution, votre package obtient la valeur de la propriété Directory à partir du paramètre VarFolderName.  
   
  Pour vérifier si le package met à jour la propriété Directory avec la nouvelle valeur lors de l'exécution, exécutez tout simplement le package. Étant donné que seuls trois fichiers de données exemple ont été copiés dans le nouveau répertoire, le flux de données ne sera exécuté que trois fois au lieu de parcourir les 14 fichiers du dossier d'origine.  
