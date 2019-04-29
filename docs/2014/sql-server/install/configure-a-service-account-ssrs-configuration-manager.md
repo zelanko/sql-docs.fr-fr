@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033609"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurer un compte de service (Gestionnaire de configuration de SSRS)
   Dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], le service Web Report Server, le Gestionnaire de rapports et l'application de traitement en arrière-plan s'exécutent au sein d'un même service. Le compte sous lequel le service s'exécute est défini pendant l'installation lorsque vous spécifiez le compte dans la page Identité du service, mais vous pouvez utiliser l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si vous souhaitez utiliser un autre compte ou mettre à jour le mot de passe.  
@@ -65,9 +65,9 @@ ms.locfileid: "48136375"
 -   Les erreurs de réservation d'URL peuvent se produire lorsque vous mettez à jour le compte de service. Chaque réservation d'URL comporte un descripteur de sécurité incluant une liste de contrôle d'accès discrétionnaire (DACL) qui accorde l'autorisation au compte de service d'accepter les demandes sur l'URL. Lorsque vous mettez à jour le compte, l'URL doit être recréée pour mettre à jour la liste DACL avec les nouvelles informations de compte. Si la réservation d'URL ne peut pas être recréée et que vous savez que le compte est valide, essayez de redémarrer l'ordinateur. Si l'erreur persiste, essayez d'utiliser un autre compte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Compte de service &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

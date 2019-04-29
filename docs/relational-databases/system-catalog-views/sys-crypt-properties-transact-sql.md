@@ -1,5 +1,5 @@
 ---
-title: Sys.crypt_properties (Transact-SQL) | Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049736"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47805437"
 |**class**|**tinyint**|Identifie la classe de l'élément sur lequel la propriété est définie.<br /><br /> 1 = Objet ou colonne<br /> 5 = Assembly|  
 |**class_desc**|**nvarchar(60)**|Description de la classe de l'élément sur lequel la propriété est définie.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**Int**|ID de l'élément sur lequel la propriété est définie, interprété en fonction de la classe|  
-|**Empreinte numérique**|**varbinary(32)**|Utilisation du hachage SHA-1 du certificat ou de la clé asymétrique.|  
-|**crypt_type**|**char (4)**|Type de chiffrement.<br /><br /> SPVC = Chiffrement par clé privée de certificat<br /><br /> SPVA = Chiffrement par clé privée asymétrique<br /><br /> CPVC = Signature de compteur par clé privée de certificat<br /><br /> CPVA = Signature de compteur par clé asymétrique|  
+|**thumbprint**|**varbinary(32)**|Utilisation du hachage SHA-1 du certificat ou de la clé asymétrique.|  
+|**crypt_type**|**char(4)**|Type de chiffrement.<br /><br /> SPVC = Chiffrement par clé privée de certificat<br /><br /> SPVA = Chiffrement par clé privée asymétrique<br /><br /> CPVC = Signature de compteur par clé privée de certificat<br /><br /> CPVA = Signature de compteur par clé asymétrique|  
 |**crypt_type_desc**|**nvarchar(60)**|Description du type de chiffrement.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bits signés ou chiffrés.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057587"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Gestionnaire de configurations de Reporting Services (mode natif)
   Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif. Si vous avez installé un serveur de rapports à l'aide de l'option d'installation de fichiers uniquement, vous devez utiliser le gestionnaire de configuration pour configurer le serveur avant de pouvoir vous en servir. Si vous avez installé un serveur de rapports à l'aide de l'option d'installation de configuration par défaut, vous pouvez utiliser le gestionnaire de configuration pour vérifier ou modifier les paramètres spécifiés au cours de l'installation. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut servir à configurer une instance de serveur de rapports locale ou distante.  
@@ -39,10 +39,10 @@ ms.locfileid: "48209789"
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  Décrit comment configurer les URL qui servent à accéder au service Web Report Server et au Gestionnaire de rapports.  
   
- [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  Décrit le mode de création d'une base de données du serveur de rapports, tel qu'il est exigé pour le stockage des objets et des métadonnées de serveur.  
   
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Décrit le mode de modification de la chaîne de connexion utilisée par le serveur de rapports pour se connecter à la base de données du serveur de rapports.  
   
  [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "48209789"
  Fournit des instructions, étape par étape, pour les tâches les plus courantes.  
   
  [Rubriques d’aide F1 Gestionnaire de Configuration de Reporting Services &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Fournit des rubriques d’aide pour les pages dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] outil de Configuration.  
+ Fournit des rubriques d'aide sur les pages de l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Dans cette rubrique :**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48209789"
   
 -   Configurer le compte de service Report Server. Le compte est initialement configuré au cours de l'installation et il est modifiable par le biais du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si vous voulez mettre le mot de passe à jour ou utiliser un compte différent.  
   
--   Créer et configurer des URL. Le serveur de rapports et le Gestionnaire de rapports sont [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] applications accédées via les URL. L'URL du serveur de rapports offre un accès aux points de terminaison SOAP du serveur de rapports, tandis que l'URL du Gestionnaire de rapports s'utilise pour ouvrir le Gestionnaire de rapports. Vous pouvez configurer une URL unique ou plusieurs URL pour chaque application.  
+-   Créer et configurer des URL. Le serveur de rapports et le Gestionnaire de rapports sont des applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] accessibles via des URL. L'URL du serveur de rapports offre un accès aux points de terminaison SOAP du serveur de rapports, tandis que l'URL du Gestionnaire de rapports s'utilise pour ouvrir le Gestionnaire de rapports. Vous pouvez configurer une URL unique ou plusieurs URL pour chaque application.  
   
 -   Créer et configurer la base de données du serveur de rapports. Le serveur de rapports est un serveur sans état qui utilise une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. Vous pouvez utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer et configurer une connexion à la base de données du serveur de rapports. Vous avez également la possibilité de sélectionner une base de données existante qui contient déjà le contenu que vous souhaitez utiliser.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48209789"
  Vous ne pouvez pas utiliser le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer le contenu du serveur de rapports, activer des fonctionnalités supplémentaires ou accorder l'accès au serveur. Le déploiement complet requiert que vous utilisiez également [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pour activer des fonctionnalités supplémentaires ou modifier des valeurs par défaut, ainsi que le Gestionnaire de rapports pour accorder aux utilisateurs l'accès au serveur.  
   
 ##  <a name="bkmk_requirements"></a> Spécifications  
- Le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager est spécifique à la version. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installé avec cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être utilisé pour configurer une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous exécutez des versions anciennes et récentes d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] côte à côte sur le même ordinateur, vous devez utiliser le gestionnaire de configuration Reporting Services fourni avec chaque version pour configurer chaque instance.  
+ Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est spécifique à la version. Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installé avec cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être utilisé pour configurer une version antérieure de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous exécutez des versions anciennes et récentes d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] côte à côte sur le même ordinateur, vous devez utiliser le gestionnaire de configuration Reporting Services fourni avec chaque version pour configurer chaque instance.  
   
  Pour utiliser le gestionnairel de configuration d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez respecter les conditions suivantes :  
   
@@ -113,13 +113,13 @@ ms.locfileid: "48209789"
   
     -   Dans l'écran de démarrage de Windows, tapez **Reporting** et cliquez sur **Gestionnaire de configuration de Reporting Services** dans les résultats de la recherche.  
   
-    -   Cliquez sur **Démarrer**, pointez sur **tous les programmes**, pointez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis pointez sur **outils de Configuration**.  
+    -   Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], puis sur **Outils de configuration**.  
   
-         Si vous souhaitez configurer une instance de serveur de rapports à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ouvrez le dossier de programme pour cette version. Par exemple, pointez sur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] au lieu de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] pour ouvrir les outils de configuration pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] composants serveur.  
+         Si vous souhaitez configurer une instance de serveur de rapports à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ouvrez le dossier de programme pour cette version. Par exemple, pointez sur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] au lieu de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] pour ouvrir les outils de configuration pour les composants serveur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
          Cliquez sur **Gestionnaire de configuration de Reporting Services**.  
   
-2.  La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Cliquez sur **Se connecter**.  
+2.  La boîte de dialogue **Connexion de la configuration de Report Server** s'affiche pour que vous spécifiiez l'instance de serveur de rapports à configurer. Cliquer sur **Se connecter**.  
   
 3.  Dans **Nom du serveur**, spécifiez le nom de l'ordinateur sur lequel est installée l'instance de serveur de rapports. Le nom de l'ordinateur local apparaît par défaut, mais vous pouvez taper le nom d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante si vous souhaitez vous connecter à un serveur de rapports installé sur un ordinateur distant.  
   
@@ -127,12 +127,12 @@ ms.locfileid: "48209789"
   
 5.  Dans **Report Server Dansstance**, sélectionnez l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous souhaitez configurer. Seules les instances de serveur de rapports pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent dans la liste. Vous ne pouvez pas configurer d'instances de versions antérieures de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-6.  Cliquez sur **Se connecter**.  
+6.  Cliquer sur **Se connecter**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

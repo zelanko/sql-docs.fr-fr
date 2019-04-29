@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022504"
 ---
 # <a name="create-a-publication"></a>Créer une publication
   Cette rubrique explique comment créer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -45,7 +45,7 @@ ms.locfileid: "53365965"
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , «, \, /, \< , >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>**, qui est disponible dans la page **Articles** de l’Assistant.  
+-   Les noms de publications et d’articles ne peuvent pas contenir les caractères suivants : % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si les objets de la base de données contiennent l’un de ces caractères, et si vous voulez les répliquer, vous devez spécifier un nom d’article différent du nom de l’objet dans la boîte de dialogue **Propriétés de l’article - \<Article>**, qui est disponible dans la page **Articles** de l’Assistant.  
   
 ###  <a name="Security"></a> Sécurité  
  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  

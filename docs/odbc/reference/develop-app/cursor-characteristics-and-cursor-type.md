@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043824"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Caractéristiques et types de curseurs
 Une application peut spécifier les caractéristiques d’un curseur au lieu de spécifier le type de curseur (avant uniquement, statique, commandé par keyset ou dynamique). Pour ce faire, l’application sélectionne la sensibilité et capacité de défilement du curseur (en définissant l’attribut d’instruction SQL_ATTR_CURSOR_SCROLLABLE) (en définissant l’attribut d’instruction SQL_ATTR_CURSOR_SENSITIVITY) avant d’ouvrir le curseur sur l’instruction handle. Le pilote choisit ensuite le type de curseur qui fournit plus efficacement les caractéristiques de l’application demandée.  
@@ -46,7 +46,7 @@ Une application peut spécifier les caractéristiques d’un curseur au lieu de 
 |SQL_ATTR_CURSOR_SENSITIVITY avec la valeur SQL_INSENSITIVE|SQL_ATTR_CONCURRENCY à SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE à SQL_CURSOR_STATIC.|  
 |SQL_ATTR_CURSOR_SENSITIVITY SQL_SENSITIVE|SQL_ATTR_CONCURRENCY aux SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER, SQL_CONCUR_VALUES, tel que spécifié par le pilote. Il n’est jamais défini sur la valeur SQL_CONCUR_READ_ONLY.<br /><br /> SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN ou type SQL_CURSOR_DYNAMIC, tel que spécifié par le pilote.|  
 |SQL_ATTR_CURSOR_SENSITIVITY à SQL_UNSPECIFIED|SQL_ATTR_CONCURRENCY aux SQL_CONCUR_READ_ONLY, SQL_CONCUR_LOCK, SQL_CONCUR_ROWVER, SQL_CONCUR_VALUES, tel que spécifié par le pilote.<br /><br /> SQL_ATTR_CURSOR_TYPE SQL_CURSOR_FORWARD_ONLY, SQL_CURSOR_STATIC, SQL_CURSOR_KEYSET_DRIVEN ou type SQL_CURSOR_DYNAMIC, tel que spécifié par le pilote.|  
-|SQL_ATTR_CURSOR_TYPE de type SQL_CURSOR_DYNAMIC|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_CURSOR_SENSITIVITY SQL_SENSITIVE. (Mais uniquement si SQL_ATTR_CONCURRENCY n’est pas égal à la valeur SQL_CONCUR_READ_ONLY. Les curseurs dynamiques modifiables sont toujours sensibles aux modifications qui ont été apportées dans leur propre transaction.)|  
+|SQL_ATTR_CURSOR_TYPE to SQL_CURSOR_DYNAMIC|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_CURSOR_SENSITIVITY SQL_SENSITIVE. (Mais uniquement si SQL_ATTR_CONCURRENCY n’est pas égal à la valeur SQL_CONCUR_READ_ONLY. Les curseurs dynamiques modifiables sont toujours sensibles aux modifications qui ont été apportées dans leur propre transaction.)|  
 |SQL_ATTR_CURSOR_TYPE à SQL_CURSOR_FORWARD_ONLY|SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED ou SQL_SENSITIVE (critères définis par le pilote, si SQL_ATTR_CONCURRENCY n’est pas SQL_CONCUR_READ_ONLY).|  
 |SQL_ATTR_CURSOR_TYPE à SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE à la valeur SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY avec la valeur SQL_INSENSITIVE (si SQL_ATTR_CONCURRENCY est SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED ou SQL_SENSITIVE (si SQL_ATTR_CONCURRENCY n’est pas SQL_CONCUR_READ_ONLY).|

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 6 : Les modifications sont envoyées au serveur (didacticiel RDS) | Microsoft Docs'
+title: 'Étape 6 : Les modifications sont envoyées au serveur (didacticiel RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bfeb9ad607fc35c055e025fcc67435323d3143e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955716"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Étape 6 : Les changements sont envoyés au serveur (tutoriel RDS)
 Si le **Recordset** objet est modifié, toutes les modifications (autrement dit, les lignes qui sont ajoutées, modifiées ou supprimées) peuvent être envoyées sur le serveur.  

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046282"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Utilisation des fichiers bibliothèques et de l'en-tête SQL Server Native Client
   Les fichiers bibliothèque et d'en-tête [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client sont installés avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Lors du développement d'une application, il importe de copier et d'installer tous les fichiers requis pour le développement sur votre environnement de développement. Pour plus d’informations sur l’installation et la redistribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consultez [l’installation de SQL Server Native Client](installing-sql-server-native-client.md).  

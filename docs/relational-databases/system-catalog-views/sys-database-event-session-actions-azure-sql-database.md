@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da64525978a5655df1832d70959929d6221c9a7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936310"
 ---
 # <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "47595527"
   
 ||  
 |-|  
-|**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
+|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "47595527"
 |package|**sysname**|Nom du package d'événement qui contient l'événement. Autorise la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

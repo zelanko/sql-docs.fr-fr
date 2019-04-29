@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acb2a812f2e3c29a56916c671d76d91c676272d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049495"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurer les paramètres de propriété HealthCheckTimeout
   Le paramètre HealthCheckTimeout est utilisé pour spécifier le temps, en millisecondes, pendant lequel la DLL de ressource SQL Server doit attendre les informations retournées par la procédure stockée [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) avant de déclarer l'instance de cluster de basculement (FCI) AlwaysOn comme sans réponse. Les modifications apportées aux paramètres de délai d'attente entrent immédiatement en vigueur et ne requièrent pas de redémarrage de la ressource SQL Server.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#Limits), [sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Limits), [sécurité](#Security)  
   
 -   **Pour configurer le paramètre HeathCheckTimeout, utilisez :**  [PowerShell](#PowerShellProcedure), [Gestionnaire du Cluster de basculement](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53359612"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite les autorisations ALTER SETTINGS et VIEW SERVER STATE.  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  

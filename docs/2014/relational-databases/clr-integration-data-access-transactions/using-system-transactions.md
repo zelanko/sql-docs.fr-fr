@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919536"
 ---
 # <a name="using-systemtransactions"></a>Utilisation de System.Transactions
   L'espace de noms `System.Transactions` fournit une infrastructure de transaction qui s'intègre entièrement à ADO.NET et au CLR (Common Language Runtime) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La classe `System.Transactions.TransactionScope` crée un bloc de code transactionnel en inscrivant implicitement les connexions dans une transaction distribuée. Vous devez appeler la méthode `Complete` à la fin du bloc de code marqué par `TransactionScope`. La méthode `Dispose` est appelée lorsque l'exécution du programme laisse un bloc de code, ce qui provoque une interruption de la transaction si la méthode `Complete` n'est pas appelée. Si une exception a été levée qui provoque l'abandon de l'étendue par le code, la transaction est considérée comme supprimée.  

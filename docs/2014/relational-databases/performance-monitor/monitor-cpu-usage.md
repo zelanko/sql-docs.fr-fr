@@ -1,8 +1,9 @@
 ---
 title: Surveiller l’utilisation de l’UC | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
@@ -19,17 +20,18 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032097"
 ---
 # <a name="monitor-cpu-usage"></a>Surveiller l'utilisation de l'UC
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Surveillez régulièrement une instance Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin de déterminer si les taux d'utilisation de l'unité centrale restent dans des limites normales. Un taux d'utilisation de l'unité centrale régulièrement élevé peut mettre en évidence le besoin d'une mise à niveau de celle-ci ou d'un ajout de plusieurs processeurs. Sinon, si une application sollicite constamment l'unité centrale, cela implique un paramétrage incorrect ou une conception médiocre de cette dernière. En optimisant l'application vous réduirez l'utilisation de l'unité centrale.  
   
  Une bonne manière de déterminer ce besoin consiste à utiliser le compteur **Processeur : % Temps processeur** du Moniteur système. Ce compteur surveille le temps nécessaire à l'unité centrale pour traiter un thread inactif. Une valeur régulièrement comprise entre 80 et 90 % peut indiquer un besoin de mise à niveau de l'unité centrale ou d'ajout de processeurs. Dans le cas de systèmes multiprocesseurs, surveillez une instance séparée de ce compteur pour chaque processeur. Cette valeur représente la somme du temps processeur pour un processeur spécifique. Pour déterminer la moyenne pour tous les processeurs, utilisez plutôt le compteur **Système : % temps total processeur** .  
@@ -47,7 +49,7 @@ ms.locfileid: "52747701"
   
      Indique en pourcentage le temps consacré par le processeur aux processus utilisateur tels que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Système : Longueur de file d’attente du processeur**  
+-   **Système : Longueur de la file du processeur**  
   
      Indique le nombre de threads en attente de temps processeur. Un encombrement du processeur survient quand les threads d'un processus demandent plus de cycles processeur qu'il n'y en a de disponibles. Si de nombreux processus essaient d'utiliser le temps du processeur, vous devez peut-être installer un processeur plus rapide. Si vous avez un système multiprocesseur, vous pouvez ajouter un processeur.  
   

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065701"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
   Intégrés `hierarchyid` type de données rend plus facile de stocker et interroger des données hiérarchiques. `hierarchyid` est optimisé pour représenter les arborescences, qui sont du type de données hiérarchiques le plus courant.  
@@ -525,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de méthodes de type de données hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Didacticiel : À l’aide du Type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutoriel : À l’aide du Type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

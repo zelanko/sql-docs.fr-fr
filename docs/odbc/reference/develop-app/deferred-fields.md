@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049871"
 ---
 # <a name="deferred-fields"></a>Champs différés
 Les valeurs de *différée champs* ne sont pas utilisés quand elles sont définies, mais le pilote enregistre les adresses des variables pour un effet différé. Pour un descripteur de paramètre d’application, le pilote utilise le contenu des variables au moment de l’appel à **SQLExecDirect** ou **SQLExecute**. Pour un descripteur de ligne d’application, le pilote utilise le contenu des variables au moment de l’extraction.  

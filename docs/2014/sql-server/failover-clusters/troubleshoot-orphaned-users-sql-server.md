@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035661"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Dépanner des utilisateurs orphelins (SQL Server)
   Pour se connecter à une instance de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un principal doit posséder une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. Cette connexion est utilisée dans le processus d'authentification chargé de vérifier que le principal est autorisé à se connecter à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions sur une instance de serveur sont visibles dans le **sys.server_principals** vue de catalogue et le **sys.syslogins** affichage de compatibilité.  
@@ -100,6 +100,6 @@ GO;
  [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
  [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
  [sys.sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [Sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+ [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

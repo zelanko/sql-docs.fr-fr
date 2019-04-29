@@ -11,20 +11,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049335"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Afficher et lire le journal de diagnostic de l'instance de cluster de basculement
   Toutes les erreurs et tous les événements d'avertissements critiques pour la DLL de ressource SQL Server sont écrits dans le journal des événements Windows. Un journal en cours des informations de diagnostic spécifiques de SQL Server est capturé par la procédure stockée système [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) ; il est écrit dans les fichiers journaux de diagnostics du cluster de basculement de SQL Server (également appelés journaux *SQLDIAG*).  
   
--   **Avant de commencer :**  [Recommandations](#Recommendations), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Recommandations](#Recommendations), [sécurité](#Security)  
   
--   **Pour afficher le journal de diagnostics, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher le journal de Diagnostic à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Pour configurer les paramètres du journal de diagnostics, à l’aide de :** [Transact-SQL](#TsqlConfigure)  
+-   **Pour les paramètres de journal de Diagnostic à configurer, à l’aide de :** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48098779"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  L’autorisation VIEW SERVER STATE est exigée pour exécuter **fn_xe_file_target_read_file**.  
   
  Ouvrez SQL Server Management Studio en tant qu'administrateur  

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046963"
 ---
 # <a name="aggregate-functions---min"></a>Fonctions d’agrégation : min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ WHERE ProductModelID=7
   
 -   La requête récupère également l'identificateur et le nom du modèle de produit.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name              Result  

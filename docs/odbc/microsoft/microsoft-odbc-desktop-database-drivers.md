@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045951"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Pilotes Microsoft ODBC pour les bases de données de poste de travail
 ODBC est une API qui utilise le langage SQL (Structured Query) comme langue d’accès de base de données. Vous pouvez accéder à un large éventail de systèmes de gestion de base de données (SGBD) avec le même code de source ODBC directement incorporé dans le code source d’une application. Avec les pilotes de base de données Microsoft ODBC Desktop, un utilisateur d’une application compatible ODBC peut ouvrir, la requête et mettre à jour une base de données de bureau via l’interface ODBC.  
@@ -38,7 +38,7 @@ ODBC est une API qui utilise le langage SQL (Structured Query) comme langue d’
   
 -   dBASE  
   
--   Texte  
+-   Text  
   
  Consultez [pilote ODBC Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) pour obtenir une documentation détaillée sur le pilote ODBC de® Microsoft Visual FoxPro.  
   

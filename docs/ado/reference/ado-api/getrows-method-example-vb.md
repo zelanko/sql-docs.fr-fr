@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027939"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows, exemple de méthode (VB)
 Cet exemple utilise le [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) méthode pour récupérer un nombre spécifié de lignes à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et remplir un tableau avec les données résultantes. Le **GetRows** méthode retournera inférieur au nombre souhaité de lignes dans deux cas : soit if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a été atteint, ou si **GetRows** tenté de récupérer un enregistrement qui a été supprimé par un autre utilisateur. La fonction retourne **False** uniquement si le deuxième cas se produit. La fonction GetRowsOK est requise pour exécuter cette procédure.  

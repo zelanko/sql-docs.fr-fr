@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062666"
 ---
 # <a name="the-field-object"></a>Field, objet
 Chaque **champ** objet correspond généralement à une colonne dans une table de base de données. Toutefois, un **champ** peut également représenter un pointeur vers un autre **Recordset**, appelé un chapitre. Exceptions, telles que les colonnes de chapitres, seront abordées plus loin dans ce guide.  

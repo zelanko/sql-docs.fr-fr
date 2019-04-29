@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918959"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
   Les classements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent les règles de tri et les propriétés de respect de la casse et des accents pour vos données. Les classements utilisés avec les types de données character, tels que `char` et `varchar`, déterminent la page de codes et les caractères correspondants qui peuvent être représentés pour ce type de données. Que vous installiez une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restauriez une sauvegarde de base de données ou connectiez un serveur à des bases de données clientes, il est important que vous compreniez les besoins en termes de paramètres régionaux, ordre de tri et respect de la casse et des accents des données avec lesquelles vous travaillez. Pour répertorier les classements disponibles sur votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -53,7 +53,7 @@ ms.locfileid: "53377869"
 |------------|-----------------|  
 |Respecter la casse (_CS)|Fait la distinction entre les majuscules et les minuscules. Si cette option est activée, les minuscules sont triées avant leurs équivalents majuscules. Si cette option n'est pas sélectionnée, le classement ne respecte pas la casse. Dans ce cas, SQL Server considère que les versions en majuscules et en minuscules des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect de la casse en spécifiant _CI.|  
 |Respecter les accents (_AS)|Fait la distinction entre les caractères accentués et non accentués. Par exemple, « un 'n’est pas égal à « ??? ». Si cette option n'est pas sélectionnée, le classement ne respecte pas les accents. Dans ce cas, SQL Server considère que les versions accentuées et non accentuées des lettres sont identiques dans les opérations de tri. Vous pouvez explicitement sélectionner le non-respect des accents en spécifiant _AI.|  
-|Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, SQL Server considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|  
+|Respecter le jeu de caractères Kana (_KS)|Fait la distinction entre les deux types de caractères japonais kana : Hiragana et Katakana. Si cette option n'est pas sélectionnée, le classement ne respecte pas les caractères Kana. Dans ce cas, SQL Server considère que les caractères Hiragana et Katakana sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect du jeu de caractères Kana.|  
 |Respecter la largeur (_WS)|Fait la différence entre les caractères pleine largeur et demi-largeur. Si cette option n'est pas sélectionnée, SQL Server considère que la représentation pleine largeur et demi-largeur d'un même caractère sont identiques dans les opérations de tri. L'omission de cette option est le seul moyen de spécifier le non-respect de la largeur.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les ensembles de classement suivants :  
@@ -219,6 +219,6 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ## <a name="see-also"></a>Voir aussi  
  [Classements de base de données autonome](../databases/contained-database-collations.md)   
  [Choisir une langue lors de la création d’un index de recherche en texte intégral](../search/choose-a-language-when-creating-a-full-text-index.md)   
- [Sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
+ [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

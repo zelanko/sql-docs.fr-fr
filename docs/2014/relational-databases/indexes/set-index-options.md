@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036190"
 ---
 # <a name="set-index-options"></a>Définir les options d'index
   Cette rubrique explique comment modifier les propriétés d'un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,11 +53,11 @@ ms.locfileid: "54130189"
   
 -   Les options suivantes sont immédiatement appliquées à l’index à l’aide de la clause SET de l’instruction ALTER INDEX : ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY et STATISTICS_NORECOMPUTE.  
   
--   Les options suivantes peuvent être définies lorsque vous reconstruisez un index à l’aide de ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING : Alors que PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP et DROP_EXISTING (CREATE INDEX uniquement).  
+-   Les options suivantes peuvent toutefois être définies lorsque vous reconstruisez un index à l’aide de l’instruction ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING : PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP et DROP_EXISTING (CREATE INDEX uniquement).  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

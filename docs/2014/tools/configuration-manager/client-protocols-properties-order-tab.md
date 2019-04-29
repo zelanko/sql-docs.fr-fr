@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044176"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propriétés de protocoles clients (onglet Ordre)
   La page **Ordre** de la boîte de dialogue **Propriétés de protocoles clients** vous permet d’afficher et d’activer les protocoles clients.  

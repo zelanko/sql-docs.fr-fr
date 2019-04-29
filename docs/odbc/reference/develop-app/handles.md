@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061439"
 ---
 # <a name="handles"></a>Poignées
 Handles sont opaques, 32 bits des valeurs qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, connexion, instruction ou descripteur. Lorsque l’application appelle **SQLAllocHandle**, le Gestionnaire de pilotes ou le pilote crée un nouvel élément du type spécifié et retourne son handle à l’application. Ultérieurement l’application utilise le handle pour identifier cet élément lors de l’appel de fonctions ODBC. Le Gestionnaire de pilotes et le pilote utilisent le handle pour localiser des informations sur l’élément.  
@@ -78,7 +78,7 @@ SQLCloseCursor(hstmtOrder);
   
  Ensuite, lorsque l’application appelle **SQLExecute** pour générer le jeu de résultats des numéros de ligne d’une commande particulière, il passe le handle de même. Le pilote utilise le handle pour récupérer l’identificateur du plan d’accès de la structure. Il envoie l’identificateur à la source de données pour lui indiquer le plan d’exécution.  
   
- ODBC comporte deux niveaux de handles : les poignées de gestionnaire de pilotes et les poignées de pilote. L’application utilise des handles de gestionnaire de pilotes lors de l’appel de fonctions ODBC parce qu’il appelle ces fonctions dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes utilise ce handle pour trouver le handle de pilote correspondant et le handle de pilote lors de l’appel de la fonction dans le pilote. Pour obtenir un exemple d’utilisation de pilote et les handles de gestionnaire de pilotes, consultez [rôle du Gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
+ ODBC comporte deux niveaux de handles : Poignées de gestionnaire de pilotes et les poignées de pilote. L’application utilise des handles de gestionnaire de pilotes lors de l’appel de fonctions ODBC parce qu’il appelle ces fonctions dans le Gestionnaire de pilotes. Le Gestionnaire de pilotes utilise ce handle pour trouver le handle de pilote correspondant et le handle de pilote lors de l’appel de la fonction dans le pilote. Pour obtenir un exemple d’utilisation de pilote et les handles de gestionnaire de pilotes, consultez [rôle du Gestionnaire de pilotes dans le processus de connexion](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md).  
   
  Qu’il n’y a deux niveaux de handles est un artefact de l’architecture ODBC ; dans la plupart des cas, il n’est pas approprié à l’application ou le pilote. Bien qu’il n’existe généralement aucune raison pour ce faire, il est possible de l’application déterminer les handles de pilote en appelant **SQLGetInfo**.  
   

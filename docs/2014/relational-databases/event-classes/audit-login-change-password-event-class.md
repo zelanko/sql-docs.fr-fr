@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c59357d402cd12d73fecc91c4f40a6ca0ec32b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938879"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password (classe d'événements)
   La classe d’événements **Audit Login Change Password** intervient dès qu’un utilisateur change son mot de passe de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

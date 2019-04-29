@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027516"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer PolyBase pour accéder aux données externes dans le stockage Blob Azure
 
@@ -32,7 +32,7 @@ L’article explique comment utiliser PolyBase sur une instance de SQL Server po
 
 Tout d’abord, configurez les points d’accès pour utiliser le stockage Blob Azure.
 
-1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec 'connectivité hadoop' la valeur est un fournisseur de stockage Blob Azure. Pour rechercher la valeur pour les fournisseurs, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Exécutez [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) avec 'connectivité hadoop' la valeur est un fournisseur de stockage Blob Azure. Pour trouver la valeur pour les fournisseurs, consultez [Configuration de la connectivité PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -51,7 +51,7 @@ Tout d’abord, configurez les points d’accès pour utiliser le stockage Blob 
 
 Pour interroger les données dans votre stockage Blob Azure, vous devez définir une table externe à utiliser dans les requêtes Transact-SQL. Les étapes suivantes décrivent comment configurer la table externe.
 
-1. Créer une clé principale de la base de données. Il est nécessaire pour chiffrer le secret des informations d’identification.
+1. Créez une clé principale sur la base de données. Il est nécessaire pour chiffrer le secret des informations d’identification.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Créer une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Créez une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
    );  
    ```
 
-1. Créer un format de fichier externe avec [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Créez un format de fichier externe avec [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Créer une table externe pointant vers les données stockées dans le stockage Azure avec [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Dans cet exemple, les données externes contiennent des données de capteur de véhicules.
+1. Créez une table externe pointant vers les données stockées dans Stockage Azure avec [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Dans cet exemple, les données externes contiennent des données provenant de capteurs sur des voitures.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
    );  
    ```
 
-1. Créer des statistiques sur une table externe.
+1. Créez des statistiques sur une table externe.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +117,10 @@ Pour interroger les données dans votre stockage Blob Azure, vous devez définir
 PolyBase est approprié pour trois fonctions :  
   
 - Requêtes ad hoc sur les tables externes.  
-- L’importation de données.  
+- Importation de données.  
 - Exportation de données.  
 
-Les requêtes suivantes fournissent un exemple avec des données de capteur de voiture fictif.
+Les requêtes suivantes fournissent un exemple avec des données fictives provenant de capteurs sur des voitures.
 
 ### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
 
@@ -179,5 +179,5 @@ Dans SQL Server Data Tools, les tables externes sont affichées dans un dossier 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur PolyBase, consultez le [What ' s PolyBase ?](../relational-databases/polybase/polybase-guide.md). 
+Pour plus d’informations sur PolyBase, consultez [Qu’est-ce que PolyBase ?](../relational-databases/polybase/polybase-guide.md). 
 

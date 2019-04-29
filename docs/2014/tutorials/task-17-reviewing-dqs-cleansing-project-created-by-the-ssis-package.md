@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 17 : Examen de nettoyage DQS projet créé par le package SSIS | Microsoft Docs'
+title: 'Tâche 17 : Examen de nettoyage DQS projet créé par le package SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057844"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tâche 17 : Examiner le projet de nettoyage DQS créé par le package SSIS
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tâche 17 : Examen du projet de nettoyage DQS créé par le package SSIS
   Dans cette tâche, vous allez ouvrir le projet DQS créé par le package SSIS dans le client DQS, vous allez examiner les résultats du processus de nettoyage, et vous allez éventuellement effectuer un nettoyage interactif, puis exporter les résultats.  
   
 1.  Lancez **Data Quality Client**.  
@@ -26,7 +26,7 @@ ms.locfileid: "56024440"
   
 3.  Trier la liste selon **l’heure de début de l’activité** pour afficher le dernier enregistrement.  
   
-4.  Notez que le nom du projet s'affiche au format suivant : **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
+4.  Notez que vous voyez un nom du projet dans le format suivant : **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
   
      ![Projet de nettoyage DQS créé par le Package SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "projet de nettoyage DQS créé par le Package SSIS")  
   

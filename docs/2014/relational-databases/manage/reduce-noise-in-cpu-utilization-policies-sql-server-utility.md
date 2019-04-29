@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ce41c287105f97ce4a9cc0ce92facf9919f7ad33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035769"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Réduire le bruit dans les stratégies d'utilisation du processeur (Utilitaire SQL Server)
   Utilisez les stratégies suivantes pour limiter le bruit lors de la création de rapports, ainsi que les violations indésirables, dans les stratégies d'utilisation des ressources de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

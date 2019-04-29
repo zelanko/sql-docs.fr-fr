@@ -17,37 +17,37 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045481"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Fonctions numériques (pilote ODBC Visual FoxPro)
 Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
-|ABS *(positions numeric_exp)*||  
-|ACOS *(exp_float)*||  
-|ASIN *(exp_float)*||  
+|ABS *(numeric_exp)*||  
+|ACOS *(float_exp)*||  
+|ASIN *(float_exp)*||  
 |ATAN *(exp_float)*||  
-|ATAN2 *(exp_float1, exp_float2)*|ATN2 (*exp_float1, exp_float2*)|  
+|ATAN2 *(exp_float1, exp_float2)*|ATN2 (*float_exp1, float_exp2*)|  
 |CEILING *(positions numeric_exp)*||  
-|COS *(exp_float)*||  
-|COT *(exp_float)*||  
-|DEGRÉS *(positions numeric_exp)*|RTOD *(positions numeric_exp)*|  
-|EXP *(exp_float)*||  
-|FLOOR *(positions numeric_exp)*||  
+|COS *(float_exp)*||  
+|COT *(float_exp)*||  
+|DEGRÉS *(positions numeric_exp)*|RTOD *(numeric_exp)*|  
+|EXP *(float_exp)*||  
+|FLOOR *(numeric_exp)*||  
 |JOURNAL *(exp_float)*||  
-|LOG10 *(exp_float)*||  
+|LOG10 *(float_exp)*||  
 |MOD *(exp_entier1, exp_entier2)*||  
-|PI *)*||  
-|RADIANS *(positions numeric_exp)*|DTOR *(positions numeric_exp)*|  
+|PI *( )*||  
+|RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |ROUND *(positions numeric_exp integer_exp)*||  
-|CONNEXION *(positions numeric_exp)*||  
-|SIN *(exp_float)*||  
+|SIGN *(numeric_exp)*||  
+|SIN *(float_exp)*||  
 |SQRT *(exp_float)*||  
 |TAN *(exp_float)*||  
   

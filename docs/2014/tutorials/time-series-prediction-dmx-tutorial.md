@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044180"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Didacticiel DMX sur la prédiction de série chronologique
   Dans ce didacticiel, vous allez apprendre à créer une structure d'exploration de données de série chronologique, à créer trois modèles d'exploration de données de série chronologique personnalisés, puis à élaborer des prédictions à l'aide de ces modèles.  

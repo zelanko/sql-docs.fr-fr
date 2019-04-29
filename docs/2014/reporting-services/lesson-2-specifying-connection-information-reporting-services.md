@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064090"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécifier des informations de connexion (Reporting Services)
   Après avoir ajouté un rapport au projet Didacticiel, vous devez définir une *source de données*, qui sont des informations de connexion que le rapport utilise pour accéder aux données à partir d’une base de données relationnelle, d’une base de données multidimensionnelle ou d’une autre ressource.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046261"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d’informations sur la prise en charge améliorée de FILESTREAM, consultez [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "48068279"
   
  Il est également possible d'accéder et de mettre à jour des colonnes FILESTREAM à l'aide d'API de système de fichiers Windows.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Prise en charge FILESTREAM &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   

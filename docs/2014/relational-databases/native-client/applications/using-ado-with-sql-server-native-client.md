@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f862807f0ca273e4058263efee6ac326a74103e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046336"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Utilisation d'ADO avec SQL Server Native Client
   Pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] tels que des jeux de résultats actifs multiples (MARS), les notifications de requête, les types définis par l’utilisateur (UDT) ou au nouveau **xml** type de données, les applications existantes qui utilisent les contrôles ActiveX Data Objects (ADO) doit utiliser le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client en tant que leur fournisseur d’accès aux données.  

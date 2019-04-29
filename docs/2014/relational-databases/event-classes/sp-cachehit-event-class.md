@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050947"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit, classe d'événements
   La classe d'événements SP:CacheHit indique qu'une procédure stockée se trouve dans le cache du plan.  
@@ -34,7 +34,7 @@ ms.locfileid: "52816551"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |EventClass|`int`|Type d’événement = 38|27|Non|  
 |EventSequence|`int`|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|EventSubClass|`int`|Types de sous-classe d’événements.<br /><br /> 1 = accès au contexte de l’exécution : Un plan d'exécution libre a été trouvé dans le cache du plan.<br /><br /> 2 = au plan de calcul : Un plan compilé a été trouvé dans le cache du plan.|21|Oui|  
+|EventSubClass|`int`|Types de sous-classe d’événements.<br /><br /> 1 = accès au contexte de l’exécution : Un plan d’exécution libre a été trouvé dans le cache du plan.<br /><br /> 2 = au plan de calcul : Un plan compilé a été trouvé dans le cache du plan.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  

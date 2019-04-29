@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064724"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes Hyperion Essbase (Générateur de rapports)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique permettant de générer des requêtes MDX (Multidimensional Expression) pour une source de données [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . Le Concepteur de requêtes graphique MDX comporte deux modes : Mode Création et le mode de requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres d'un cube défini sur la source de données pour créer une requête MDX qui récupère des données lors du traitement du rapport.  

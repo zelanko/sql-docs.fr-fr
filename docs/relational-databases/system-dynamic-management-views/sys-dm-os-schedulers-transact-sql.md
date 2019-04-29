@@ -1,5 +1,5 @@
 ---
-title: Sys.DM_OS_SCHEDULERS (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 99a456ee0b2159c7cfebfbb1ac2dff2468c2cdd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62939697"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "47625847"
 |parent_node_id|**Int**|Identificateur du nœud auquel le planificateur appartient. On parle également de nœud parent. Il s'agit d'un nœud NUMA (Nonuniform Memory Access). N'accepte pas la valeur NULL.|  
 |scheduler_id|**Int**|ID du planificateur. Tous les planificateurs utilisés pour exécuter des requêtes régulières ont des numéros d'identificateur inférieurs à 1 048 576. Les planificateurs qui sont identifiés par un numéro supérieur ou égal à 1 048 576 sont utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple le planificateur de connexions administrateur dédiées. N'accepte pas la valeur NULL.|  
 |cpu_id|**smallint**|ID de l'UC assigné au planificateur.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> **Remarque :** 255 n’indique pas aucune affinité comme elle le faisait [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Consultez [sys.dm_os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) pour plus d’informations supplémentaires d’affinités.|  
-|status|**nvarchar(60)**|Indique l'état du planificateur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> -MASQUÉ EN LIGNE<br />-MASQUÉ EN MODE HORS CONNEXION<br />-VISIBLE EN LIGNE<br />-VISIBLE EN MODE HORS CONNEXION<br />-EN LIGNE VISIBLE (DAC)<br />-HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Planificateurs masqués sont utilisés pour traiter les demandes qui sont internes à la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
+|status|**nvarchar(60)**|Indique l'état du planificateur. Peut avoir l'une des valeurs suivantes :<br /><br /> -MASQUÉ EN LIGNE<br />-MASQUÉ EN MODE HORS CONNEXION<br />-VISIBLE EN LIGNE<br />-VISIBLE EN MODE HORS CONNEXION<br />-EN LIGNE VISIBLE (DAC)<br />-   HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Planificateurs masqués sont utilisés pour traiter les demandes qui sont internes à la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour utiliser uniquement certains des processeurs disponibles sur le serveur, cette configuration peut indiquer que certains planificateurs sont associés à des processeurs non inclus dans le masque d'affinité. Dans ce cas, cette colonne retourne la valeur 0. Cette valeur signifie que le planificateur n'est pas utilisé pour traiter des requêtes ou des lots.<br /><br /> N'accepte pas la valeur NULL.|  
 |is_idle|**bit**|1 = Le planificateur est inactif. Aucun processus de travail n'est actuellement en cours d'exécution. N'accepte pas la valeur NULL.|  
 |preemptive_switches_count|**Int**|Nombre de fois où les processus de travail opérant sur ce planificateur sont passés en mode préemptif.<br /><br /> Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.|  
-|context_switches_count|**Int**|Nombre de changements de contexte ayant eu lieu sur ce planificateur. N'accepte pas la valeur NULL.<br /><br /> Pour permettre à d'autres processus de travail de s'exécuter, le processus de travail en cours doit abandonner le contrôle du planificateur ou changer de contexte.<br /><br /> **Remarque :** si un processus de travail abandonne le planificateur et les place dans la file d’attente exécutable et puis trouve aucun autre processus, le processus de travail se sélectionne lui-même. Dans ce cas, context_switches_count n'est pas mis à jour, mais yield_count l'est.|  
+|context_switches_count|**Int**|Nombre de changements de contexte ayant eu lieu sur ce planificateur. N'accepte pas la valeur NULL.<br /><br /> Pour permettre à d'autres processus de travail de s'exécuter, le processus de travail en cours doit abandonner le contrôle du planificateur ou changer de contexte.<br /><br /> **Remarque :** Si un processus de travail abandonne le planificateur et les place dans la file d’attente exécutable et puis trouve aucun autre processus, le processus de travail se sélectionne lui-même. Dans ce cas, context_switches_count n'est pas mis à jour, mais yield_count l'est.|  
 |idle_switches_count|**Int**|Nombre de fois où le planificateur a attendu un événement quand il était inactif. Cette colonne est similaire à context_switches_count. N'accepte pas la valeur NULL.|  
 |current_tasks_count|**Int**|Nombre de tâches actuellement associées au planificateur. Il s'agit des tâches suivantes :<br /><br /> -Les tâches qui sont en attente d’un processus de travail pour les exécuter.<br />-Les tâches qui sont actuellement en attente ou en cours d’exécution (en état SUSPENDED ou RUNNABLE).<br /><br /> Lorsqu'une tâche est terminée, ce nombre est décrémenté. N'accepte pas la valeur NULL.|  
 |runnable_tasks_count|**Int**|Nombre de processus de travail, auxquels des tâches sont affectées, qui attendent d'être planifiés sur la file d'attente exécutable. N'accepte pas la valeur NULL.|  
@@ -64,7 +64,7 @@ ms.locfileid: "47625847"
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expose le quantum de planificateur utilisé par SQLOS.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -125,7 +125,7 @@ active_workers_count work_queue_count
   
  Le résultat de la requête fournit les informations suivantes :  
   
--   Les planificateurs sont au nombre de cinq. Deux planificateurs possèdent une valeur d'ID inférieure à 1 048 576. Les planificateurs possédant une valeur d'ID supérieure ou égale à 1 048 576 sont qualifiés de planificateurs masqués. Le planificateur `255` représente la connexion administrateur dédiée (DAC). Il existe un planificateur DAC par instance. Les moniteurs de ressources qui coordonnent la sollicitation de la mémoire utilisent le planificateur `257` et le planificateur `258`, un par nœud NUMA.  
+-   Les planificateurs sont au nombre de cinq. Deux planificateurs possèdent un ID de la valeur < 1048576. Planificateurs avec l’ID > = 1048576are planificateurs masqués. Le planificateur `255` représente la connexion administrateur dédiée (DAC). Il existe un planificateur DAC par instance. Les moniteurs de ressources qui coordonnent la sollicitation de la mémoire utilisent le planificateur `257` et le planificateur `258`, un par nœud NUMA.  
   
 -   Le résultat présente 23 tâches actives. Ces tâches incluent les demandes utilisateur qui ont été démarrées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en plus des tâches de gestion des ressources. RESOURCE MONITOR (une par nœud NUMA), LAZY WRITER (une par nœud NUMA), LOCK MONITOR, CHECKPOINT et LOG WRITER sont des exemples de tâches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926310"
 ---
 # <a name="attributes-master-data-services"></a>Attributs (Master Data Services)
   Les attributs sont des objets contenus dans des entités [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Les valeurs d'attribut décrivent les membres de l'entité. Un attribut peut être utilisé pour décrire un membre feuille, un membre consolidé ou une collection.  
@@ -58,7 +58,7 @@ ms.locfileid: "52748061"
 -   Il peut arriver qu’une valeur n’effectue pas *d’aller-retour* si un nombre à virgule flottante est utilisé. Une valeur est dite d'aller-retour lorsqu'une opération convertit un nombre à virgule flottante d'origine sous une autre forme, lorsque l'opération inverse retransforme la forme convertie en un nombre à virgule flottante et lorsque le dernier chiffre du nombre à virgule flottante est égal au chiffre du nombre à virgule flottante d'origine. L'aller-retour peut échouer parce qu'un ou plusieurs chiffres de droite sont perdus ou ont changé au cours d'une conversion.  
   
 ## <a name="attribute-examples"></a>Exemples d'attributs  
- Dans l’exemple suivant, l’entité a les attributs : Nom de Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
+ Dans l’exemple suivant, l’entité comporte les attributs ci-dessous : Name, Code, Subcategory, StandardCost, ListPrice et FilePhoto. Ces attributs décrivent les membres. Chaque membre est représenté par une ligne unique de valeurs d'attribut.  
   
  ![Table de l’entité Bike Product](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Table de l’entité Bike Product")  
   

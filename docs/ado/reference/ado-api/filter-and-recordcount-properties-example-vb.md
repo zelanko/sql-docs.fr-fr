@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028093"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount, exemple de propriétés (VB)
 Cet exemple montre comment ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans le ***Pubs*** base de données. Il utilise ensuite le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour limiter le nombre d’enregistrements visibles aux éditeurs d’un pays/une région particulière. Le **RecordCount** propriété est utilisée pour afficher la différence entre les jeux d’enregistrements filtrés et non filtrés.  

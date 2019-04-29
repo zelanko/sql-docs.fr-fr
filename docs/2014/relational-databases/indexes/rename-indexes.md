@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 744e7a10c9c4dcd776d58b6234749f2be5aa1479
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036212"
 ---
 # <a name="rename-indexes"></a>Renommer des index
   Cette rubrique explique comment renommer un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le changement du nom d'un index remplace le nom actuel de l'index par le nouveau nom fourni. Le nom spécifié doit être unique dans la table ou la vue. Par exemple, deux tables peuvent contenir un index nommé **XPK_1**, mais la même table ne peut pas avoir deux index nommés **XPK_1**. Vous ne pouvez pas créer un index dont le nom est le même qu'un index désactivé existant. Le changement du nom d'un index ne provoque pas sa reconstruction.  

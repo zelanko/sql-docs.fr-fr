@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062845"
 ---
 # <a name="shape-commands-in-general"></a>Généralités sur les commandes SHAPE
 Mise en forme des données définit les colonnes d’une forme **Recordset**, les relations entre les entités représentées par les colonnes et la façon dont le **Recordset** est rempli avec des données.  

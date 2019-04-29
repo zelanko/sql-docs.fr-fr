@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c468ec3cf52526192893458055cde857aeaa864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067475"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Copie en bloc de données Text et Image
   Grandes **texte**, **ntext**, et **image** les valeurs sont copiées à l’aide de la [bcp_moretext](../native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) (fonction). Vous codez [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour le **texte**, **ntext**, ou **image** colonne avec un *pData* pointeur la valeur Valeur NULL indiquant que les données doivent être fournies avec **bcp_moretext**. Il est important de spécifier la longueur exacte des données fournies pour chaque **texte**, **ntext**, ou **image** colonne dans chaque ligne copiées en bloc. Si la longueur des données pour une colonne est différente de la longueur de la colonne spécifiée dans [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), utilisez [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) pour définir la longueur de la valeur appropriée. Un [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) envoie tous les non -**texte**, non-**ntext**et non-**image** données ; vous appelez ensuite **bcp_moretext** pour envoyer la **texte**, **ntext**, ou **image** données dans des unités distinctes. Les fonctions de copie en bloc déterminent que toutes les données a été envoyé pour actuel **texte**, **ntext**, ou **image** colonne lors de la somme des longueurs de données envoyées via **bcp_moretext** est égal à la longueur spécifiée dans la dernière version **bcp_collen** ou **bcp_bind**.  

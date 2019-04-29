@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022554"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Considérations sur l'administration des serveurs de publication Oracle
   Quand un serveur de publication Oracle est configuré et que les mécanismes de suivi des modifications de la réplication sont en place, les administrateurs du système de base de données Oracle peuvent continuer à utiliser les utilitaires de base de données standard d'Oracle et à effectuer des tâches courantes d'administration du système. Cependant, il faut être attentif aux effets que peuvent avoir certaines tâches d'administration sur les données publiées.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e40c50f93973b7c3c80cdf5dbca831d531a68d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062213"
 ---
 # <a name="xquery-static-type-event-class"></a>XQuery Static Type, classe d’événements
   La classe d'événements XQuery Static Type se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une expression XQuery. Cette classe d'événements fournit le type statique de l'expression XQuery.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57cab8512adb2f0377c932fbeb0140f1482ae454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922910"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>Encoder et décoder des identificateurs SQL Server
   Les identificateurs délimités SQL Server contiennent parfois des caractères non pris en charge dans les chemins d'accès Windows PowerShell. Vous pouvez spécifier ces caractères en encodant leurs valeurs hexadécimales.  
@@ -34,7 +34,7 @@ ms.locfileid: "52753151"
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
-|**Caractère**|\|/|:|%|\<|>|*|?|[|]|&#124;|  
+|**Caractère**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**Encodage hexadécimal**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
 ##  <a name="EncodeIdent"></a> Encodage d'un identificateur  

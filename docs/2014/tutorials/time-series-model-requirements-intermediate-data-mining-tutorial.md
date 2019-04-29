@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043050"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
   Lorsque vous préparez des données afin de les utiliser dans un modèle de prévision, vous devez veiller à ce qu'elles contiennent une colonne pouvant être utilisée pour identifier les étapes dans la série chronologique. Cette colonne sera désignée comme colonne `Key Time`. Puisqu'il s'agit d'une clé, la colonne doit contenir des valeurs numériques uniques.  

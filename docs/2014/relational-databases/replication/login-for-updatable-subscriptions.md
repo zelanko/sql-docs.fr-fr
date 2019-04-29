@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058095"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Nom de connexion pour les abonnements pouvant être mis à jour
   Si vous avez sélectionné **répliquer** sur le **Updatable Subscriptions** page de cet Assistant, vous devez spécifier un compte sur l’abonné sous lequel les connexions au serveur de publication sont effectuées pour la mise à jour immédiate abonnements. Les connexions sont utilisées par les déclencheurs qui s'exécutent pour l'abonné et propagent les modifications sur le serveur de publication. Ce compte est requis même si vous avez sélectionné **modifications en file d’attente et valider dès que possible** sur le **Updatable Subscriptions** page, car par défaut, l’Assistant Nouvel abonnement configure la mise à jour en file d’attente avec la possibilité de basculer vers une mise à jour immédiate si nécessaire.  

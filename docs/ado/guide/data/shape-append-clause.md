@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062855"
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de la commande SHAPE
 La clause APPEND de commande shape ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres qui font référence à un enfant **Recordset**.  
@@ -34,7 +34,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Description  
  Les parties de cette clause sont les suivantes :  
   
- *commande parent*  
+ *parent-command*  
  Zéro ou un des éléments suivants (vous pouvez omettre le *parent-command* complètement) :  
   
 -   Une commande fournisseur entre accolades («{}») qui retourne un **Recordset** objet. La commande est émise au fournisseur de données sous-jacent et sa syntaxe dépend de la configuration requise de ce fournisseur. Ce sera généralement le langage SQL, bien qu’ADO ne nécessite pas de n’importe quel langage de requête spécifique.  
@@ -43,7 +43,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias du parent*  
+ *parent-alias*  
  Alias facultatif qui fait référence au parent **Recordset**.  
   
  *column-list*  
@@ -75,7 +75,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias-enfant*  
+ *child-alias*  
  Un alias qui fait référence à l’enfant **Recordset**.  
   
  *parent-column*  
@@ -87,7 +87,7 @@ SHAPE [parent-command [[AS] parent-alias]]
  *param-number*  
  Consultez [fonctionnement des commandes paramétrées](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias du chapitre*  
+ *chapter-alias*  
  Un alias qui fait référence à la colonne de chapitre ajoutée au parent.  
   
 > [!NOTE]

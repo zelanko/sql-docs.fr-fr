@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049437"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administration et maintenance de l'instance de cluster de basculement
-  Tâches de maintenance telles que l’ajout ou la suppression de nœuds dans une existante AlwaysOn Cluster Instance (basculement) sont accomplies à l’aide de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programme d’installation. D'autres tâches d'administration telles que la modification d'une ressource d'adresse IP et la récupération de certains scénarios FCI sont accomplies à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement, qui est le composant logiciel enfichable de gestion du service de clustering de basculement Windows Server (WSFC).  
+  Les tâches de maintenance telles que l'ajout ou la suppression de nœuds dans une instance de cluster de basculement AlwaysOn (FCI) existante sont accomplies à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. D'autres tâches d'administration telles que la modification d'une ressource d'adresse IP et la récupération de certains scénarios FCI sont accomplies à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement, qui est le composant logiciel enfichable de gestion du service de clustering de basculement Windows Server (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Conservation d'une instance de cluster de basculement  
  Après avoir installé une FCI, vous pouvez la changer ou la réparer au moyen du programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez ajouter des nœuds supplémentaires à une FCI, exécuter une FCI comme une instance indépendante, ou supprimer un nœud d'une configuration de FCI.  
@@ -57,7 +57,7 @@ ms.locfileid: "48110539"
 |Description de la tâche|Lien de rubrique|  
 |----------------------|----------------|  
 |Explique comment ajouter des dépendances à une ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ajouter des dépendances à une ressource SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos est un protocole d'authentification de réseau conçu pour fournir une authentification renforcée pour applications client/serveur. Kerberos fournit une base d'interopérabilité et permet d'améliorer la sécurité de l'authentification réseau à l'échelle de l'entreprise. Vous pouvez utiliser l’authentification Kerberos avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instances autonomes ou avec des fci AlwaysOn.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos est un protocole d'authentification de réseau conçu pour fournir une authentification renforcée pour applications client/serveur. Kerberos fournit une base d'interopérabilité et permet d'améliorer la sécurité de l'authentification réseau à l'échelle de l'entreprise. Vous pouvez utiliser l'authentification Kerberos avec des instances autonomes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou avec des FCI AlwaysOn.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Fournit des liens vers un contenu qui explique comment activer l'authentification Kerberos||  
 |Décrit la procédure utilisée pour effectuer une récupération suite à échec d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Récupérer à partir d'une défaillance d'instance de cluster de basculement](recover-from-failover-cluster-instance-failure.md)|  
 |Décrit la procédure utilisée pour modifier la ressource d'adresse IP d'une instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modifier l'adresse IP d'une instance de cluster de basculement](change-the-ip-address-of-a-failover-cluster-instance.md)|  

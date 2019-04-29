@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127613"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
   Un prédicat filtre un élément node-set par rapport à un axe (semblable à une clause WHERE dans une instruction SELECT). Le prédicat est spécifié entre crochets. Pour chaque nœud de l'élément node-set à filtrer, l'expression de prédicat est évaluée avec ce nœud en tant que nœud de contexte et avec le nombre de nœuds de l'élément node-set en tant que taille de contexte. Si l'expression de prédicat prend la valeur TRUE pour ce nœud, ce dernier est inclus dans l'élément node-set obtenu.  

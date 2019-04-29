@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040825"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de sauvegarde pour Parallel Data Warehouse
 Cet article décrit comment configurer un système de Windows non-appliance comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans Analytique Platform System (APS) et Parallel Data Warehouse (PDW).  
@@ -40,7 +40,7 @@ La configuration système requise pour le serveur de sauvegarde dépend presque 
   
 Utilisez le [feuille de planification de capacité sauvegarde serveur](backup-capacity-planning-worksheet.md) pour aider à déterminer vos besoins en capacité.  
   
-## <a name="Step2"></a>Étape 2 : Obtenir le serveur de sauvegarde  
+## <a name="Step2"></a>Étape 2 : Acquérir le serveur de sauvegarde  
 Maintenant que vous comprenez mieux vos besoins en capacité, vous pouvez planifier les serveurs et les composants réseau dont vous aurez besoin d’acheter ou mettre en service. Incorporer la liste suivante des exigences de votre plan d’achat, puis acheter votre serveur ou configurer un serveur existant.  
   
 ### <a name="software-requirements"></a>Configuration logicielle requise  
@@ -61,7 +61,7 @@ Bien que non obligatoire, InfiniBand est le type de connexion recommandée pour 
   
 3.  Acheter 2 câbles FDR InfiniBand pour une carte de port double ou 1 câble FDR InfiniBand pour une carte de port unique. Les câbles FDR InfiniBand se connectera le chargement du serveur au réseau InfiniBand appliance. La longueur du câble dépend de la distance entre le serveur de chargement et les commutateurs InfiniBand du matériel, en fonction de votre environnement.  
   
-## <a name="Step3"></a>Étape 3 : Connecter le serveur aux réseaux InfiniBand  
+## <a name="Step3"></a>Étape 3 : Connectez le serveur aux réseaux InfiniBand  
 Suivez ces étapes pour connecter le serveur de chargement pour le réseau InfiniBand. Si le serveur n’utilise pas le réseau InfiniBand, ignorez cette étape.  
   
 1.  Le serveur de rack suffisamment à l’appliance afin que vous pouvez vous connecter au réseau InfiniBand appliance.  
@@ -122,7 +122,7 @@ Pour plus d'informations, consultez :
   
 -   [BASE DE DONNÉES DE SAUVEGARDE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avis de sécurité  
 Le serveur de sauvegarde n’est pas joint au domaine privé pour l’appliance. Il se trouve dans votre propre réseau, et il n’existe aucune relation d’approbation entre votre propre domaine et privé appliance.  
@@ -147,7 +147,7 @@ Pour répertorier toutes les informations d’identification réseau stockées d
 Opérations sur le serveur de chargement peuvent utiliser un chemin d’accès UNC pour extraire les données à partir de l’extérieur du réseau interne approuvé. Une personne malveillante sur le réseau ou avec la possibilité pour influencer la résolution de noms peut intercepter ou modifier des données envoyées à l’empaquetage. Cela pose un risque de divulgation d’informations et de falsification. Pour aider à atténuer le risque de falsification :
 
 - Demander la signature sur la connexion. 
-- Sur le serveur de chargement, définissez l’option de stratégie de groupe suivante dans Security Settings\Local Policies\Security Options : client réseau Microsoft : communications signées numériquement (toujours) : activé.  
+- Sur le serveur de chargement, définissez l’option de stratégie de groupe suivante dans Security Settings\Local Policies\Security Options :  Client réseau Microsoft : Communications signées numériquement (toujours) : activé.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Sauvegarde et restauration](backup-and-restore-overview.md)  

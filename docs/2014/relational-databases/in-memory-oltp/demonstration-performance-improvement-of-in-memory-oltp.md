@@ -11,13 +11,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071784"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : optimisation des performances de l'OLTP en mémoire
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Démonstration : Optimisation des performances de l'OLTP en mémoire
   Cet exemple illustre les améliorations des performances obtenues avec l'OLTP en mémoire en comparant les différences des temps de réponse lors de l'exécution d'une requête Transact-SQL identique sur des tables optimisées en mémoire et des tables sur disque classiques. En outre, une procédure stockée compilée en mode natif est également créée (selon la même requête), puis exécutée pour montrer que vous obtenez généralement les meilleurs temps de réponse lors de l'interrogation d'une table optimisée en mémoire avec une procédure stockée compilée en mode natif. Cet exemple ne montre qu'un aspect des améliorations des performances lors de l'accès aux données dans des tables optimisées en mémoire : l'efficacité de l'accès aux données lors de l'exécution d'insertions. Cet échantillon est monothread et ne tire pas profit des avantages de concurrence de l'OLTP en mémoire. Une charge de travail utilisant la concurrence aura des gains de performance supérieurs.  
   
 > [!NOTE]  

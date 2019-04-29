@@ -1,5 +1,5 @@
 ---
-title: Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence | Documents Microsoft
+title: Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d3659fd80d09f5f0b5ec17301606b23810df3fe
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043184"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34026916"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Affichage de l'amélioration Time Intelligence  
  Dans la page finale de l’Assistant Business Intelligence, vous pouvez voir les modifications qui vont être apportées à la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En ajoutant l'amélioration Time Intelligence, l'Assistant modifiera la dimension de temps sélectionnée, la vue de source de données correspondante et le cube correspondant comme cela est décrit dans le tableau suivant.  
   
-|Objet|Modifier|  
+|Object|Modifier|  
 |------------|------------|  
 |Dimension de temps|Ajoute un attribut pour chaque calcul (ou vue).|  
 |Vue de source de données|Ajoute une colonne calculée dans la table de temps pour chaque attribut ajouté à la dimension de temps.|  

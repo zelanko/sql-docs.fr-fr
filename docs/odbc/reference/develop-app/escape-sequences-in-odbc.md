@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942972"
 ---
 # <a name="escape-sequences-in-odbc"></a>Séquences d’échappement dans ODBC
 Un nombre de fonctionnalités de langage, tels que les jointures externes et des appels de fonctions scalaires, est généralement implémenté par les SGBD. Toutefois, les syntaxes pour ces fonctionnalités ont tendance à être propres au SGBD, même lorsque les syntaxes standards sont définis par les divers organismes de normalisation. Pour cette raison, ODBC définit des séquences d’échappement qui contiennent des syntaxes standards pour les fonctionnalités de langage suivantes :  

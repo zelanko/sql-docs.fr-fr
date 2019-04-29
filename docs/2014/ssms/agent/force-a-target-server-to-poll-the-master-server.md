@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044054"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forcer l'interrogation d'un serveur maître par un serveur cible
   Cette rubrique explique comment forcer l'interrogation du serveur maître par un serveur cible. Le serveur cible doit être un serveur inscrit sur le serveur maître.  
@@ -30,7 +30,7 @@ ms.locfileid: "52764211"
 > [!NOTE]  
 >  Si le serveur maître est accessible lorsque le serveur cible tente de charger l'état du travail, ce dernier est mis en attente dans le spouleur jusqu'à ce que le serveur maître soit accessible.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#Restrictions), [sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
 -   **Pour forcer un serveur cible à interroger le serveur principal, à l’aide de :**  [SQL Server Management Studio](#SSMS)  
   

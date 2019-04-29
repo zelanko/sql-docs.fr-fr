@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 690c82c020f509e7dec816ca64a11dc2828ad4cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019329"
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Tables - Représentation d’un indicateur de performance clé
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -221,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemple AMO2Tabular  
- Pour savoir comment utiliser AMO pour créer et manipuler des représentations d'indicateur de performance clé, consultez le code source de l'exemple Objets AMO vers objets tabulaires ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour comprendre comment utiliser AMO pour créer et manipuler l’indicateur de Performance clé des représentations, consultez le code source de la AMO pour exemple sous forme de tableau ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

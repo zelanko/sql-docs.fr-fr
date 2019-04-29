@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049460"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de sous-réseaux multiples SQL Server (SQL Server)
   Un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est une configuration dans laquelle chaque nœud de cluster de basculement est connecté à un sous-réseau différent ou à un ensemble différent de sous-réseaux. Ces sous-réseaux peuvent se trouver au même emplacement ou dans des sites géographiquement dispersés. En cas de clustering dans des sites géographiquement dispersés, on utilise parfois le terme « clusters étendus ». Comme tous les nœuds ne peuvent pas accéder à un stockage partagé, les données doivent être répliquées entre le stockage des données sur les sous-réseaux multiples. Avec la réplication de données, il existe plusieurs copies des données disponibles. Par conséquent, un cluster de basculement de sous-réseaux multiples fournit une solution de récupération d'urgence en plus d'une haute disponibilité.  

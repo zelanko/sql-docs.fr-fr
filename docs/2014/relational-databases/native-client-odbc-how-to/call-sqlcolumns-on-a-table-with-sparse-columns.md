@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db2f6550d252e9ede6ddfbf39f460af563f2b20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126202"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>Appeler SQLColumns sur une table avec des colonnes éparses
   Cet exemple montre comment appeler SQLColumns dans une table contenant des colonnes éparses définies en utilisant ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046161"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
   Pour définir des recherches en texte intégral, les requêtes de texte intégral de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent les prédicats de texte intégral (CONTAINS et FREETEXT) et les fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE). Ces derniers prennent en charge la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] enrichie qui accepte divers formulaires de termes de requête. Pour écrire des requêtes de texte intégral, vous devez apprendre quand et comment utiliser ces prédicats et ces fonctions.  
@@ -66,7 +66,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>b. Utilisation de FREETEXT pour rechercher des mots contenant les valeurs de caractère spécifiées  
+#### <a name="b-using-freetext-to-search-for-words-containing-specified-character-values"></a>B. Utilisation de FREETEXT pour rechercher des mots contenant les valeurs de caractère spécifiées  
  L'exemple suivant recherche tous les documents contenant les mots liés à « vital », « safety » et « components ».  
   
 ```  
@@ -101,7 +101,7 @@ GO
   
  CONTAINSTABLE est utile pour les mêmes types de correspondance que CONTAINS, et FREETEXTTABLE est utile pour les mêmes types de correspondance que FREETEXT. Pour plus d’informations, consultez [Vue d’ensemble des prédicats de texte intégral (CONTAINS et FREETEXT)](#OV_ft_predicates), plus haut dans cette rubrique. Lors de l'exécution de requêtes utilisant les fonctions CONTAINSTABLE et FREETEXTTABLE, vous devez joindre de manière explicite les lignes retournées aux lignes de la table de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- En général, le résultat des fonctions CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Cette colonne, qui est présente dans toutes les tables activées pour la recherche en texte intégral, garantit l’unicité des lignes de la table (*colonne clé***unique*). Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](../indexes/indexes.md).  
+ En général, le résultat des fonctions CONTAINSTABLE ou FREETEXTTABLE doit être joint avec la table de base. Dans ce cas-là, vous devez connaître le nom de la colonne clé unique. Cette colonne, qui est présente dans toutes les tables activées pour la recherche en texte intégral, garantit l’unicité des lignes de la table (*colonne clé**unique*). Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](../indexes/indexes.md).  
   
  
   
@@ -129,7 +129,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### <a name="b-using-freetexttable"></a>b. Utilisation de FREETEXTTABLE  
+#### <a name="b-using-freetexttable"></a>B. Utilisation de FREETEXTTABLE  
  L'exemple ci-après étend une requête FREETEXTTABLE afin de retourner en premier les lignes dont le niveau de classement est le plus élevé et d'ajouter le classement de chaque ligne à la liste de sélection. Pour spécifier la requête, il faut savoir que **ProductDescriptionID** est la colonne clé unique pour le `ProductDescription` table.  
   
 ```  

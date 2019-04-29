@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067692"
 ---
 # <a name="network-protocols-and-network-libraries"></a>Protocoles réseau et bibliothèques réseau
   Un serveur peut être à l'écoute ou contrôler plusieurs protocoles réseau simultanément. Cependant, chaque protocole doit être configuré. Lorsqu'un protocole spécifique n'est pas configuré, le serveur ne peut pas se placer à l'écoute de ce protocole. Après l'installation, vous pouvez modifier ces configurations de protocole avec le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7eade67861f20e744dc2ea706f4bc96304f30ae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936408"
 ---
 # <a name="object-already-exists"></a>L'objet existe déjà
   L'objet que vous essayez d'enregistrer porte le même nom qu'un objet qui se trouve déjà dans la base de données. Choisissez un autre nom et continuez.  

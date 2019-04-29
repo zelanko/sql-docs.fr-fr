@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063015"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connexion ADO et événements de jeu d’enregistrements
 Deux objets ADO peuvent déclencher des événements : le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet et le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Le **ConnectionEvent** famille se rapporte aux opérations sur le **connexion** objet et le **RecordsetEvent** famille se rapporte aux opérations sur le  **Jeu d’enregistrements** objet.

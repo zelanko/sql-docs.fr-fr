@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 60923181e553fe0fb5cb35de2201718e2a155d79
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019214"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Ouvrir des projets Integration Services dans Data Quality Client
 
@@ -39,7 +39,7 @@ ms.locfileid: "56041550"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour ouvrir un projet Integration Services.  
   
   
@@ -64,7 +64,7 @@ ms.locfileid: "56041550"
 6.  Après l'exportation des données, cliquez sur **Terminer** pour fermer le projet Integration Services.  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation de nettoyage DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Projets Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

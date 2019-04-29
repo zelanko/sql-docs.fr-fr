@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917726"
 ---
 # <a name="create-a-database-mail-account"></a>Créer un compte de messagerie de base de données
   Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer un compte de messagerie de base de données.  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
+-   **Avant de commencer :**  [Prérequis](#Prerequisites)  
   
--   **Pour créer un base de données compte de messagerie à l’aide :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer un base de données compte de messagerie à l’aide :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **Suivi :**  [Étapes suivantes pour configurer la messagerie de base de données](#FollowUp)  
   

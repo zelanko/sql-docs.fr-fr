@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033623"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
   Vous pouvez créer des statistiques d'optimisation de requête sur une ou plusieurs colonnes d'une table ou d'une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour la plupart des requêtes, l'optimiseur de requête génère déjà les statistiques utiles à un plan de requête de haute qualité ; dans certains cas, vous devez créer des statistiques supplémentaires.  
@@ -54,7 +54,7 @@ ms.locfileid: "54133469"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite que l’utilisateur soit le propriétaire de la table ou de la vue indexée ou qu’il soit membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: BEGIN Tran Completed, classe d’événements | Microsoft Docs"
+title: 'TM : BEGIN Tran Completed, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061227"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>Classe d'événements TM: TM: Begin Tran Completed
-  Le Gestionnaire de transactions : Begin Tran Completed indique qu'une demande BEGIN TRANSACTION a été effectuée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
+# <a name="tm-begin-tran-completed-event-class"></a>TM : Begin Tran Completed (classe d'événements)
+  Le Gestionnaire de transactions : Classe d’événements Begin Tran Completed indique qu’une demande BEGIN TRANSACTION est terminée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
   
-## <a name="tm-begin-tran-completed-event-class-data-columns"></a>Classe d'événements TM: BEGIN Tran terminée des colonnes de données classe d’événements  
+## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM : BEGIN Tran terminée des colonnes de données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

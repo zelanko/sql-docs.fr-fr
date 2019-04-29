@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034936"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instructions T-SQL pour Parallel Data Warehouse
 Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -24,8 +24,8 @@ Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Serve
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [MODIFIER LE SCHÉMA](../t-sql/statements/alter-schema-transact-sql.md)
-* [MODIFICATION DE LA TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [CRÉER DES INDEX COLUMNSTORE](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CRÉER LA BASE DE DONNÉES INFORMATIONS D’IDENTIFICATION](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CRÉER LA SOURCE DE DONNÉES EXTERNE](../t-sql/statements/create-external-data-source-transact-sql.md)
@@ -85,7 +85,7 @@ Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Serve
 * [Subqueries](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Instructions de sécurité
-* Autorisations : [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [RÉVOQUER](../t-sql/statements/revoke-transact-sql.md)
+* Autorisations : [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [MODIFIER LA CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -95,16 +95,16 @@ Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Serve
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
-* [CRÉER LE CERTIFICAT](../t-sql/statements/create-certificate-transact-sql.md)
+* [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 * [CRÉER LA CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [CRÉER UNE CONNEXION](../t-sql/statements/create-login-transact-sql.md)
-* [CRÉER UNE CLÉ PRINCIPALE](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CRÉER LE RÔLE](../t-sql/statements/create-role-transact-sql.md)
 * [CRÉER UTILISATEUR](../t-sql/statements/create-user-transact-sql.md)
 * [SUPPRIMER LE CERTIFICAT](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
-* [SUPPRIMER LA CLÉ PRINCIPALE](../t-sql/statements/drop-master-key-transact-sql.md)
+* [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [DROP ROLE](../t-sql/statements/drop-role-transact-sql.md)
 * [SUPPRIMEZ L’UTILISATEUR](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: Calculé la représentation sous forme de mesure (tabulaire) | Documents Microsoft
+title: Calculé représentation (tabulaire) d’une mesure | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019284"
 ---
-# <a name="tables---calculated-measure-representation"></a>Tables - représentation sous forme de mesure calculée
+# <a name="tables---calculated-measure-representation"></a>Tables - Représentation d’une mesure calculée
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Une mesure calculée est une expression DAX nommée évaluée chaque fois qu'elle est utilisée.  
   

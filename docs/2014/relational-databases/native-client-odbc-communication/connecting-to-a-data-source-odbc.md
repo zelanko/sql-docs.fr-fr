@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075180"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Connexion à une source de données (ODBC)
   Après avoir alloué des handles d'environnement et de connexion et avoir défini tous les attributs de connexion, l'application se connecte à la source de données ou au pilote. Trois fonctions vous permettent de vous connecter :  

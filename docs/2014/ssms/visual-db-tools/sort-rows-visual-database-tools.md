@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049148"
 ---
 # <a name="sort-rows-visual-database-tools"></a>Trier des lignes (Visual Database Tools)
   Il est possible de choisir l'ordre des lignes qui apparaîtront dans le résultat d'une requête. C'est-à-dire que vous pouvez indiquer dans quelle colonne, ou dans quel ensemble de colonnes, les valeurs seront triées pour déterminer l'ordre d'affichage des lignes dans le jeu de résultats.  

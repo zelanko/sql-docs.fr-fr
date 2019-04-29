@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046903"
 ---
 # <a name="aggregate-functions---count"></a>Fonctions d’agrégation : count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ WHERE Production.ProductModel.ProductModelID=7
   
 -   Le **espace de noms** mot clé dans [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md) définit un préfixe d’espace de noms. Le préfixe est ensuite utilisé dans le corps XQuery.  
   
--   La requête construit le document XML qui comprend l'élément <`NoOfWorkStations`>.  
+-   La requête construit le document XML qui comprend le <`NoOfWorkStations`> élément.  
   
 -   Le **count()** fonctionner dans le corps XQuery détermine le nombre de <`Location`> éléments.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID   Name                 WorkCtrCount       
@@ -92,7 +92,7 @@ FROM Production.ProductModel
 WHERE Production.ProductModel.ProductModelID= 7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <NoOfWorkStations ProductModelID="7"   
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID    Name            WorkCtrCount  

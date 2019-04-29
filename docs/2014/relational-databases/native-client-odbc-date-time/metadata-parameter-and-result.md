@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032340"
 ---
 # <a name="parameter-and-result-metadata"></a>Métadonnées de paramètres et de résultats
   Cette rubrique décrit ce qui est retourné dans les champs de descripteur de paramètre d'implémentation (IPD) et de descripteur de ligne d'implémentation (IRD) pour les types de données de date et d'heure.  
@@ -25,7 +25,7 @@ ms.locfileid: "52410036"
 ## <a name="information-returned-in-ipd-fields"></a>Informations retournées dans les champs IPD  
  Les informations suivantes sont retournées dans les champs IPD :  
   
-|Type de paramètre|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de paramètre|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -71,7 +71,7 @@ ms.locfileid: "52410036"
 ## <a name="information-returned-in-ird-fields"></a>Informations retournées dans les champs IRD  
  Les informations suivantes sont retournées dans les champs IRD :  
   
-|Type de colonne|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type de colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

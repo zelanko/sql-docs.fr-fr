@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2435a3e28fa4b217159ee84582dc1c10c6cc0324
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060058"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimer un rapport (Reporting Services en mode SharePoint)
   Pour un serveur de rapports qui s'exécute en mode SharePoint, il existe trois manières d'imprimer un rapport à partir d'une application Web SharePoint :  

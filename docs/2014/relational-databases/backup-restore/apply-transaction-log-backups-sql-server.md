@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922931"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
   Cette rubrique concerne uniquement le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -41,11 +41,11 @@ ms.locfileid: "48169389"
 ##  <a name="Requirements"></a> Configuration requise pour restaurer les sauvegardes de journaux de Transaction  
  Pour appliquer une sauvegarde du journal des transactions, les conditions suivantes doivent être remplies :  
   
--   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  
+-   **Sauvegardes de journal en nombre suffisant pour une séquence de restauration :** Vous devez disposer de suffisamment d'enregistrements de journal sauvegardés pour exécuter une séquence de restauration. Les sauvegardes de journal nécessaires, notamment la [sauvegarde de la fin du journal](tail-log-backups-sql-server.md) le cas échéant, doivent être disponibles avant le début de la séquence de restauration.  
   
--   **Ordre de restauration correct :**  La sauvegarde différentielle ou la sauvegarde complète de base de données effectuée juste avant doit d'abord être restaurée. Puis, tous les journaux de transactions créés après cette sauvegarde complète ou différentielle de base de données doivent être restaurés dans l'ordre chronologique. Si une sauvegarde du journal des transactions dans cette séquence de journaux de transactions consécutifs est perdue ou endommagée, vous ne pouvez restaurer que les journaux des transactions antérieurs au journal des transactions manquant.  
+-   **Ordre de restauration correct :**  La sauvegarde différentielle ou la sauvegarde complète de base de données effectuée juste avant doit d'abord être restaurée. Puis, tous les journaux de transactions créés après cette sauvegarde complète ou différentielle de base de données doivent être restaurés dans l'ordre chronologique. Si une sauvegarde du journal des transactions dans cette séquence de journaux de transactions consécutifs est perdue ou endommagée, vous ne pouvez restaurer que les journaux des transactions antérieurs au journal des transactions manquant.  
   
--   **Base de données pas encore récupérée :**  La base de données ne peut pas être récupérée tant que le dernier journal des transactions n'a pas été appliqué. Si vous récupérez la base de données après avoir restauré l'une des sauvegardes du journal des transactions intermédiaires, c'est-à-dire avant la fin de la séquence de journaux de transactions consécutifs, vous ne pouvez pas restaurer la base de données au-delà de ce point sans redémarrer toute la séquence de restauration, en commençant par la sauvegarde complète de base de données.  
+-   **Base de données pas encore récupérée :**  La base de données ne peut pas être récupérée tant que le dernier journal des transactions n'a pas été appliqué. Si vous récupérez la base de données après avoir restauré l'une des sauvegardes du journal des transactions intermédiaires, c'est-à-dire avant la fin de la séquence de journaux de transactions consécutifs, vous ne pouvez pas restaurer la base de données au-delà de ce point sans redémarrer toute la séquence de restauration, en commençant par la sauvegarde complète de base de données.  
   
     > [!TIP]  
     >  Il est recommandé de restaurer toutes les sauvegardes des journaux (RESTORE LOG *nom_base_de_données* WITH NORECOVERY). Ensuite, après la restauration de la dernière sauvegarde du journal, récupérez la base de données dans une opération séparée (RESTORE DATABASE *nom_base_de_données* WITH RECOVERY).  
@@ -75,13 +75,13 @@ ms.locfileid: "48169389"
   
  Pour restaurer la base de données à son état à 21:45 (point d'échec), les autres procédures suivantes peuvent être utilisées :  
   
- **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
+ **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
   
 2.  Ne restaurez pas la sauvegarde complète de base de données de 18h00. Restaurez plutôt la sauvegarde complète de base de données la plus récente de 18h00, puis appliquez la sauvegarde du journal de 20h00 et la sauvegarde de la fin du journal.  
   
- **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
+ **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
   
 > [!NOTE]  
 >  Cette autre solution est utile si un problème vous empêche d'utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  

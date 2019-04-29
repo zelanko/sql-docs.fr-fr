@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: Save Tran Completed, classe d’événements | Microsoft Docs"
+title: 'TM : Save Tran Completed, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061271"
 ---
-# <a name="tm-save-tran-completed-event-class"></a>Classe d'événements TM: Save Tran Completed
+# <a name="tm-save-tran-completed-event-class"></a>TM : Save Tran Completed (classe d'événements)
   Le Gestionnaire de transactions : Save Tran Completed classe d’événements indique qu’une demande SAVE TRANSACTION est terminée. La demande a été envoyée à partir du client via l'interface de gestion des transactions.  
   
-## <a name="tm-save-tran-completed-event-class-data-columns"></a>Classe d'événements TM: Save Tran terminé colonnes données classe d’événements  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM : Save Tran terminé colonnes données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

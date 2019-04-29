@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061607"
 ---
 # <a name="features-to-watch-for"></a>Fonctionnalités à considérer avec attention
 Cette section décrit un certain nombre de fonctionnalités qui application adoptent souvent les développeurs pour reçoivent. En fait, ces fonctionnalités varient largement prise en charge et la manière de prise en charge entre les SGBD ; Échec pour qu’il est susceptible de causer des problèmes dans les applications interopérables.  
   
- Cette section ne répertorie pas toutes les fonctionnalités dont les développeurs d’applications ont besoin à prendre en compte. Pour plus d’informations, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) fonction descriptions, [annexe c : grammaire de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonction.  
+ Cette section ne répertorie pas toutes les fonctionnalités dont les développeurs d’applications ont besoin à prendre en compte. Pour plus d’informations, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), et [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) fonction descriptions, [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)et les sections de ce manuel qui décrivent chaque fonction.  
   
  Cette section contient les rubriques suivantes.  
   

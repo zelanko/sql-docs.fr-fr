@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 013df1f64ab3d19869f5ca18121610fc0e960e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070941"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery et Clear, exemple de méthodes (VC ++)
 Cet exemple montre la **Execute** exécution à partir de la méthode un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Il utilise également le [Requery](../../../ado/reference/ado-api/requery-method.md) méthode pour récupérer les données actuelles dans un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et le [effacer](../../../ado/reference/ado-api/clear-method-ado.md) méthode pour effacer le contenu de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Les fonctions ExecuteCommand et PrintOutput sont requises pour exécuter cet exemple.  

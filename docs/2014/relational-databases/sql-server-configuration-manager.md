@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 123f0fcececee98826bf70b929a9857bbaff32dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044454"
 ---
 # <a name="sql-server-configuration-manager"></a>Gestionnaire de configuration SQL Server
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est un outil qui permet de gérer les services associés à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], de configurer les protocoles réseau utilisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]et de gérer la configuration de la connectivité réseau à partir des ordinateurs clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Le Gestionnaire de configuration est un composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console), accessible à partir du menu Démarrer ou qui peut être ajouté dans tout autre affichage [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console. [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console (mmc.exe) utilise le fichier SQLServerManager10.msc du dossier Windows System32 pour ouvrir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager.  

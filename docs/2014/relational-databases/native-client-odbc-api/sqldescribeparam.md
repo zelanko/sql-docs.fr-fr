@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067725"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   Pour décrire les paramètres d’une instruction SQL, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client génère et exécute un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction SELECT lorsque SQLDescribeParam est appelée sur un handle d’instruction ODBC préparé. Les métadonnées du jeu de résultats déterminent les caractéristiques des paramètres dans l'instruction préparée. SQLDescribeParam peut retourner tout code d’erreur SQLExecute ou SQLExecDirect peut retourner.  
@@ -75,7 +75,7 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
   
 ||*DataTypePtr*|*ParameterSizePtr*|*DecimalDigitsPtr*|  
 |-|-------------------|------------------------|------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP|23|3|  
+|datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  

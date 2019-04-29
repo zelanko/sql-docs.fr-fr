@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 705b1a8438e4d8d4d193c30d0237467ea977abda
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049496"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>Configurer les paramètres de propriété FailureConditionLevel
   Utilisez la propriété FailureConditionLevel pour définir les conditions de basculement ou de redémarrage de l'instance de cluster de basculement (FCI) AlwaysOn. Les modifications de cette propriété sont appliquées immédiatement sans nécessiter le redémarrage du service WSFC (cluster de basculement Windows Server) ou de la ressource FCI.  
@@ -31,7 +31,7 @@ ms.locfileid: "53375001"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite les autorisations ALTER SETTINGS et VIEW SERVER STATE.  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067666"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Vous pouvez utiliser `SQLColAttribute` pour récupérer un attribut d’une colonne de jeu de résultats pour les instructions ODBC préparées ou exécutées. Appel `SQLColAttribute` sur des instructions préparées génère un aller-retour vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client reçoit des données de colonne de jeu de résultats dans le cadre de l’exécution des instructions, ainsi, l’appel `SQLColAttribute` après l’achèvement de **SQLExecute** ou **SQLExecDirect** est pas impliquer un aller-retour sur le serveur.  

@@ -20,18 +20,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032837"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des applications
 Un ODBC 3 *.x* application fonctionne via le ODBC 3 *.x* Gestionnaire de pilotes fonctionnera par rapport à une API ODBC 2. *x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliquée des fonctionnalités et des changements de comportement, toutefois, affectent-elles la façon qui le ODBC 3. *x* application fonctionne sur un ODBC 2. *x* pilote. Lorsque vous travaillez avec un ODBC 2. *x* pilote, le Gestionnaire de pilotes mappe le suivantes ODBC 3. *x* fonctions qui ont remplacé un ou plusieurs ODBC 2. *x* les fonctions, en le correspondantes ODBC 2. *x* fonctions.  
   
 |ODBC 3. *x* (fonction)|ODBC 2. *x* (fonction)|  
 |-------------------------|-------------------------|  
-|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, ou **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
@@ -98,7 +98,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
 1.  Si *FieldIdentifier* est une des opérations suivantes :  
   
-     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX ou SQL_DESC_LOCAL_TYPE_NAME  
+     SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH, SQL_DESC_OCTET_LENGTH, SQL_DESC_UNNAMED, SQL_DESC_BASE_COLUMN_NAME, SQL_DESC_LITERAL_PREFIX, SQL_DESC_LITERAL_SUFFIX, or SQL_DESC_LOCAL_TYPE_NAME  
   
      le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY091 (identificateur de champ de descripteur non valide). Aucune autre règle de cette section s’appliquent.  
   
@@ -417,7 +417,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
  Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLColAttribute** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilote retourne la *FieldIdentifier* valeurs répertoriées dans le tableau suivant.  
   
-|*FieldIdentifier*|Valeur|  
+|*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|  
@@ -442,21 +442,21 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_TABLE_NAME|"" (chaîne vide)|  
 |SQL_DESC_TYPE|SQL_BINARY|  
 |SQL_DESC_TYPE_NAME|"" (chaîne vide)|  
-|SQL_DESC_UNNAMED|VALEUR SQL_UNNAMED|  
+|SQL_DESC_UNNAMED|SQL_UNNAMED|  
 |SQL_DESC_UNSIGNED|SQL_FALSE|  
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLDescribeCol** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilotes retourne les valeurs répertoriées dans le tableau suivant.  
   
-|Buffer|Valeur|  
+|Buffer|Value|  
 |------------|-----------|  
 |ColumnName|"" (chaîne vide)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote effectue l’appel suivant à **SQLGetData** pour récupérer un signet :  

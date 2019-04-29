@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020464"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
   Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  

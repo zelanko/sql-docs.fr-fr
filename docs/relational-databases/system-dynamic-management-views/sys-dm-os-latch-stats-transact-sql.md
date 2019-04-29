@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_latch_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb61a77aca509393143d4abae98af0a9efb5e888
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047998"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52407146"
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nom de la classe de verrou interne.|  
 |waiting_requests_count|**bigint**|Nombre d'attentes pour les verrous internes de cette classe. Ce compteur est incrémenté au début d'une attente de verrou interne.|  
-|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou interne et à la fin de l'attente.|  
+|wait_time_ms|**bigint**|Temps d'attente total sur les verrous internes de cette classe, en millisecondes.<br /><br /> **Remarque :** Cette colonne est mise à jour toutes les cinq minutes pendant une attente de verrou et à la fin de l’attente.|  
 |max_wait_time_ms|**bigint**|Durée maximum d'attente d'un objet de mémoire sur ce verrou interne. Si cette valeur est anormalement élevée, cela peut indiquer un blocage interne.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   

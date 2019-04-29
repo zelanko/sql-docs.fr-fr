@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3e191d71741f59aab749099d45dd2c197a8c86f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63059451"
 ---
 # <a name="adomdnet-server-programming"></a>Programmation du serveur ADOMD.NET
   Les composants serveur d’ADOMD.NET résident dans le **Microsoft.AnalysisServices.AdomdServer** espace de noms (dans msmgdsrv.dll). Ces composants de serveur vous permet de créer des fonctions MDX (Multidimensional Expressions) personnalisées et des procédures stockées qui sont exécutées sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les objets serveur permettent d'interroger les cubes et les modèles d'exploration de données et d'évaluer des expressions dans un contexte donné. La création de fonctions personnalisées et de procédures stockées offrent les avantages d'une exécution rapide, d'un déploiement centralisé et d'une facilité de maintenance améliorée.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127989"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Messages d’erreur (pilote ODBC Visual FoxPro)
 Lorsqu’une erreur se produit, le pilote de Visual FoxPro retourne les informations suivantes :  
@@ -43,14 +43,14 @@ Lorsqu’une erreur se produit, le pilote de Visual FoxPro retourne les informat
 ## <a name="syntax"></a>Syntaxe  
  Messages d’erreur ont le format suivant :  
   
- **[** *fournisseur* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  Les préfixes de crochets ([]) identifient la source de l’erreur, tel que défini dans le tableau suivant.  
   
-|Source de données|Prefix|Valeur|  
+|Source de données|Prefix|Value|  
 |-----------------|------------|-----------|  
-|Gestionnaire de pilote|[fournisseur]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gestionnaire de pilotes ODBC]<br />Néant|  
-|Pilote Visual FoxPro|fournisseur]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Pilote ODBC Visual FoxPro]<br />Néant|  
+|Gestionnaire de pilote|[vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gestionnaire de pilotes ODBC]<br />N/A|  
+|Pilote Visual FoxPro|vendor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Pilote ODBC Visual FoxPro]<br />N/A|  
   
  Par exemple, si le pilote ODBC Visual FoxPro n’a pas trouvé le fichier employee.dbf, elle peut retourner le message d’erreur suivant :  
   

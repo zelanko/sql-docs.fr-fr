@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7af3d096d9e58b1cb75e2d7cab15988183578fdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046462"
 ---
 # <a name="dropping-a-sql-server-table"></a>Suppression d'une table SQL Server
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client expose la **ITableDefinition::DropTable** (fonction). Cela permet aux consommateurs de supprimer un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table à partir d’une base de données.  

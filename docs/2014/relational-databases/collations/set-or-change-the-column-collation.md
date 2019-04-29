@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918970"
 ---
 # <a name="set-or-change-the-column-collation"></a>Définir ou changer le classement des colonnes
   Vous pouvez remplacer le classement de la base de données pour les données `char`, `varchar`, `text`, `nchar`, `nvarchar` et `ntext` en spécifiant un classement différent pour une colonne spécifique d'une table et en utilisant l'un des éléments suivants :  
@@ -87,7 +87,7 @@ GO
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- Étant donné que **tempdb** utilise le classement du serveur par défaut et `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur : « Impossible de résoudre le conflit de classement entre « Latin1_General_CI_AS_KS_WS » et « Estonian_CS_AS » dans l'opération Égal à. »  
+ Étant donné que **tempdb** utilise le classement du serveur par défaut et `TestPermTab.Col1` utilise un autre classement, SQL Server affiche l’erreur : « Impossible de résoudre un conflit de classement entre « Latin1_General_CI_AS_KS_WS » et « Chinese_simplified_pinyin_100_ci_as » dans égal à l’opération ».  
   
  Pour éviter l'erreur, vous pouvez utiliser une des solutions suivantes :  
   

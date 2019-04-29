@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065106"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messages des erreurs natives du pilote ODBC Visual FoxPro
 Les tableaux suivants répertorient les messages d’erreur natifs pour le pilote ODBC Visual FoxPro.  
@@ -280,7 +280,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
   
 |||  
 |-|-|  
-|802|SQL : Ne peut pas localiser la table.|  
+|802|SQL : Impossible de localiser la table.|  
 |872|Trop de colonnes.|  
 |879|Aucune clé primaire.|  
 |884|L’unicité des index *valeur* est violée.|  
@@ -297,7 +297,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |902|Échec de l’évaluateur d’expression.|  
 |903|Chaîne est trop longue pour tenir.|  
 |904|** ou ^ erreur de domaine.|  
-|905|LOG() : Zéro ou négatif utilisé comme argument.|  
+|905|LOG(): Zéro ou négatif utilisé comme argument.|  
 |906|L’argument de SQRT() ne peut pas être négatif.|  
 |912|Opération non valide pour un champ général.|  
 |914|Numéro de page de codes n’est pas valide.|  

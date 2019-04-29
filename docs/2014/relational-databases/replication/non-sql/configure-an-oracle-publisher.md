@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022591"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
   Les publications provenant des serveurs de publication Oracle sont créées de la même façon que les publications d'instantané et les publications transactionnelles standard. Toutefois, pour créer une publication provenant d'un serveur de publication Oracle, vous devez préalablement effectuer les étapes ci-après (les étapes un, trois et quatre sont décrites en détail dans cette rubrique).  
@@ -122,7 +122,7 @@ ms.locfileid: "52804442"
 > [!NOTE]  
 >  Un serveur de publication Oracle ne peut pas porter le même nom que son serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou que les serveurs de publication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisant le même serveur de distribution.  
   
- Lorsque vous identifiez la base de données Oracle en tant que serveur de publication, vous devez choisir une option de publication Oracle : Complète (Complete) ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
+ Lorsque vous identifiez la base de données Oracle en tant qu’éditeur, vous devez choisir une option de publication Oracle : Complète ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
   
  Lorsque le serveur de publication Oracle a été identifié sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la réplication crée un serveur lié portant le même nom que le service TNS de la base de données Oracle. Ce serveur lié ne peut être utilisé que par la réplication. Si vous devez vous connecter au serveur de publication Oracle par l’intermédiaire d’une connexion de serveur lié, créez un autre nom de service TNS puis utilisez ce nom lors de l’appel de [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   

@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_26014 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 26014 (Database Engine error)
 ms.assetid: e2b0dfc7-0681-4e5d-8875-1d5f63534086
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: edebfb36a1693f2a7d6a94d7c006d80e2bb27683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62914622"
 ---
 # <a name="mssqlserver26014"></a>MSSQLSERVER_26014
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Détails  
   
 |||  
@@ -33,9 +34,9 @@ ms.locfileid: "48151569"
 |Texte du message|Impossible de charger un certificat spécifié par l'utilisateur [Cert Hash(sha1) "%hs"]. Le serveur n'acceptera pas de connexion. Vérifiez que ce certificat est installé correctement. Consultez "Configuration du certificat en vue de son utilisation par SSL" dans la documentation en ligne.|  
   
 ## <a name="explanation"></a>Explication  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a essayé de charger le certificat nommé dans le message, mais l’opération a échoué. Ce problème doit être résolu pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puisse utiliser ce certificat.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a essayé de charger le certificat nommé dans le message, mais l’opération a échoué. Ce problème doit être résolu pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puisse utiliser ce certificat.  
   
- Cette erreur peut avoir plusieurs causes :  
+Cette erreur peut avoir plusieurs causes :  
   
 -   Le certificat peut avoir été déplacé ou supprimé.  
   
@@ -44,6 +45,5 @@ ms.locfileid: "48151569"
 -   Le certificat a peut-être expiré.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Assurez-vous que le certificat nommé dans le message existe sur le système, qu'il est accessible et qu'il est toujours valide.  
-  
+Assurez-vous que le certificat nommé dans le message existe sur le système, qu'il est accessible et qu'il est toujours valide.  
   

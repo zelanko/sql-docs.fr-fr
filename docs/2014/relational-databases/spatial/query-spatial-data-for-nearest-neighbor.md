@@ -10,11 +10,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c7a32f277378f48ffd61cce141f8fe7074c8204e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025812"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Interroger des données spatiales au sujet du plus proche voisin
   Une requête courante utilisée avec les données spatiales est la requête Plus proche voisin. Les requêtes Plus proche voisin sont utilisées pour trouver les objets spatiaux les plus proches d'un objet spatial spécifique. Par exemple, le localisateur de magasin d'un site Web doit souvent trouver les magasins les plus proches de l'emplacement d'un client.  
@@ -52,7 +52,7 @@ SELECT TOP ( number )
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>Requête Plus proche voisin et index spatiaux  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les clauses `TOP` et `ORDER BY` sont utilisées pour effectuer une requête Plus proche voisin sur les colonnes de données spatiales. La clause `ORDER BY` contient un appel à la méthode `STDistance()` pour le type de données de colonne spatial. La clause `TOP` indique le nombre d'objets à retourner pour la requête.  
   
- Les conditions suivantes doivent être respectées pour qu'une requête Plus proche voisin utilise un index spatial :  
+ Les conditions suivantes doivent être respectées pour qu'une requête Plus proche voisin utilise un index spatial :  
   
 1.  Un index spatial doit être présent sur l'une des colonnes spatiales et la méthode `STDistance()` doit utiliser cette colonne dans les clauses `WHERE` et `ORDER BY`.  
   

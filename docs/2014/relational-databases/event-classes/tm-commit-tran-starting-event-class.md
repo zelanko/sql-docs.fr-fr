@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: COMMIT Tran Starting, classe d’événements | Microsoft Docs"
+title: 'TM : COMMIT Tran Starting, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061351"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>Classe d'événements TM: Classe d'événements Commit Tran Starting
-  Le Gestionnaire de transactions : Commit Tran Starting indique qu'une demande COMMIT TRANSACTION est en cours de démarrage. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction sera démarrée une fois la transaction actuelle validée.  
+# <a name="tm-commit-tran-starting-event-class"></a>TM : Commit Tran Starting (classe d'événements)
+  Le Gestionnaire de transactions : COMMIT Tran Starting, classe d’événements indique qu’une demande COMMIT TRANSACTION commence. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction sera démarrée une fois la transaction actuelle validée.  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Classe d'événements TM: COMMIT Tran Starting des colonnes de données classe d’événements  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM : COMMIT Tran Starting des colonnes de données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021654"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Informations de publication, Avertissements (Publication d'instantané, SQL Server 2005 et versions ultérieures)
   L'onglet **Avertissements** est disponible pour les serveurs de distribution qui exécutent [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures. L'onglet **Avertissements** vous permet d'effectuer les tâches suivantes selon la publication sélectionnée :  

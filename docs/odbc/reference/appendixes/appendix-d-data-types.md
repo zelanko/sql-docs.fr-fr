@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026768"
 ---
 # <a name="appendix-d-data-types"></a>Annexe D : Types de données
 ODBC définit deux ensembles de types de données : Types de données SQL et les types de données C. Types de données SQL indiquent le type de données des données stockées au niveau de la source de données. Types de données C indiquent le type de données des données stockées dans les mémoires tampons d’application.  

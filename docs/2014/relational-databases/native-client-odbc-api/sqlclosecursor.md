@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da7d6541f7bf31920519cc7462bdfd24a5f6dc0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067685"
 ---
 # <a name="sqlclosecursor"></a>SQLCloseCursor
   **SQLCloseCursor** remplace [SQLFreeStmt](sqlfreestmt.md) avec un *Option* valeur de SQL_CLOSE. À réception de **SQLCloseCursor**, le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client les lignes de jeu de résultats en attente. Notez que les liaisons de colonnes et de paramètres de l'instruction (s'il en existe) ne sont pas modifiés par **SQLCloseCursor**.  

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065337"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
   La base de données du serveur de rapports offre un espace de stockage pour une ou plusieurs instances du serveur de rapports. Comme le schéma de base de données du serveur de rapports peut changer à chaque nouvelle version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], il est nécessaire que la version de la base de données corresponde à la version de l'instance du serveur de rapports que vous utilisez. Dans la plupart des cas, une base de données du serveur de rapports peut être mise à niveau automatiquement sans aucune intervention de votre part.  

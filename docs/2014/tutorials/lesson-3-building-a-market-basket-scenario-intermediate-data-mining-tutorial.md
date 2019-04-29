@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042785"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Leçon 3 : Génération d’un scénario de panier d’achat (didacticiel d’exploration de données intermédiaire)
   Le service marketing de la société [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] souhaite améliorer son site Web pour promouvoir la vente croisée. Dans le cadre de la mise à jour du site, il veut pouvoir prédire les produits que les clients sont susceptibles d'acheter en fonction des produits déjà présents dans leurs paniers d'achat en ligne. Le service marketing souhaite également mieux comprendre le comportement d'achat des clients, afin de pouvoir concevoir le site Web de façon à ce que les articles susceptibles d'être achetés ensemble apparaissent ensemble. Il a appris que l'exploration de données est particulièrement utile pour ce type d' *analyse du panier d'achat* et vous demandé de développer un modèle d'exploration de données.  

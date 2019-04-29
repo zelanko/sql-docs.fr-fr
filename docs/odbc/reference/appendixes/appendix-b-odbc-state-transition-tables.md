@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026904"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Annexe B : Tableaux des transitions d’état ODBC
 Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des transitions de l’environnement, connexion, instruction et les États de descripteur. L’état de l’environnement, une connexion, une instruction ou une descripteur détermine généralement lorsque les fonctions qui utilisent le type correspondant de handle (environnement, connexion, instruction ou descripteur) peuvent être appelées. Les États de l’environnement, connexion, l’instruction et descripteur se chevauchent à peu près comme indiqué dans les illustrations suivantes. Par exemple, le chevauchement exact de connexion indique C5 et C6 instruction États et que s1 via S12 donnée dépend de la source, dans la mesure où les transactions commencent à des moments différents sur différentes sources de données, et dépend de l’état de descripteur D1i (implicitement allouée descripteur) sur l’état de l’instruction à laquelle le descripteur est associé, tout état D1e (explicitement allouée descripteur) est indépendante de l’état de n’importe quelle instruction. Pour obtenir une description de chaque état, consultez [Transitions d’environnement](../../../odbc/reference/appendixes/environment-transitions.md), [connexion Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Transitions d’instruction](../../../odbc/reference/appendixes/statement-transitions.md), et [Transitions de descripteur ](../../../odbc/reference/appendixes/descriptor-transitions.md), plus loin dans cette annexe.  
@@ -67,7 +67,7 @@ Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des 
 |d|Besoin de données. La fonction retournée SQL_NEED_DATA.|  
 |e|Erreur. La fonction a renvoyé SQL_ERROR.|  
 |i|Ligne non valide. Le curseur a été positionné sur une ligne dans le résultat de jeu et soit la ligne avaient été supprimées ou une erreur s’est produite dans une opération sur la ligne. Si le tableau d’état de ligne existe, la valeur dans le tableau d’état de ligne pour la ligne a été SQL_ROW_DELETED ou SQL_ROW_ERROR. (Le tableau d’état de ligne est indiqué par l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR.)|  
-|NF|Introuvable. La fonction a retourné SQL_NO_DATA. Cela ne s’applique pas quand **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** retourne SQL_NO_DATA après l’exécution d’une recherche mettre à jour ou supprimer l’instruction.|  
+|nf|Introuvable. La fonction a retourné SQL_NO_DATA. Cela ne s’applique pas quand **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** retourne SQL_NO_DATA après l’exécution d’une recherche mettre à jour ou supprimer l’instruction.|  
 |np|Pas préparée. L’instruction n’a pas été préparée.|  
 |nr|Aucun résultat. L’instruction ne sera pas ou n’avez pas créé un jeu de résultats.|  
 |o|Autre fonction. Une autre fonction s’exécutait en mode asynchrone.|  

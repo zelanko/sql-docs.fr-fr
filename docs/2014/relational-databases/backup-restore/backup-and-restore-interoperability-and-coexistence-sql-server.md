@@ -1,5 +1,5 @@
 ---
-title: 'Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server) | Microsoft Docs'
+title: 'Sauvegarde et restauration : Interopérabilité et Coexistence (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922434"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et coexistence (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sauvegarde et restauration : Interopérabilité et Coexistence (SQL Server)
   Cette rubrique comprend des observations sur la sauvegarde et la restauration pour plusieurs fonctionnalités de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Ces fonctionnalités concernent : la restauration de fichiers et le démarrage de bases de données, la restauration et la désactivation en ligne d'index, la mise en miroir de bases de données, la restauration fragmentaire et les index de recherche en texte intégral.  
   
  **Dans cette rubrique :**  
@@ -114,7 +114,7 @@ ms.locfileid: "48155569"
 ##  <a name="FileBnRandCompression"></a> Sauvegarde et restauration de fichiers et compression  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la compression des données du système de fichiers NTFS pour les groupes de fichiers et les bases de données en lecture seule.  
   
- La restauration des fichiers dans un groupe de fichiers en lecture seule est prise en charge sur les fichiers compressés NTFS. La sauvegarde et la restauration de ces groupes de fichiers fonctionne pour l'essentiel de la même manière que pour n'importe quel groupe de fichiers en lecture seule, à quelques exceptions près :  
+ La restauration des fichiers dans un groupe de fichiers en lecture seule est prise en charge sur les fichiers compressés NTFS. La sauvegarde et la restauration de ces groupes de fichiers fonctionne pour l'essentiel de la même manière que pour n'importe quel groupe de fichiers en lecture seule, à quelques exceptions près :  
   
 -   La restauration d'un fichier en lecture-écriture (y compris le fichier primaire et les fichiers journaux d'une base de données en lecture-écriture) vers un volume compressé échoue et génère une erreur.  
   

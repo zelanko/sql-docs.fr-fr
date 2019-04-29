@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063035"
 ---
 # <a name="ado-run-time-errors"></a>Erreurs d’exécution ADO
 Erreurs ADO sont signalées à votre programme en tant qu’erreurs d’exécution. Vous pouvez utiliser le mécanisme d’interception des erreurs de votre langage de programmation pour intercepter et de les gérer. Par exemple, dans Visual Basic, utilisez la **en cas d’erreur** instruction. Dans Visual C++, cela dépend de la méthode que vous utilisez pour accéder aux bibliothèques ADO. Avec #import, utilisez un **try-catch** bloc. Sinon, les programmeurs C++ doivent extraire explicitement l’objet d’erreur en appelant **GetErrorInfo**. La procédure sub Visual Basic suivante illustre la récupération d’une erreur ADO :

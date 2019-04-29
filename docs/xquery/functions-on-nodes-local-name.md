@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936440"
 ---
 # <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds : local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Utilisation de local-name sans argument dans un prédicat  
- La requête suivante porte sur la colonne Instructions, typée **xml** colonne, de la table ProductModel. L'expression retourne tous les enfants de l'élément <`root`> dont la partie locale de QName est « Location ». Le **dépourvue** fonction n’est spécifié dans le prédicat et il n’a aucun argument, le nœud de contexte est utilisé par la fonction.  
+ La requête suivante porte sur la colonne Instructions, typée **xml** colonne, de la table ProductModel. L’expression retourne tous les éléments enfants de la <`root`> élément dont la partie nom local de QName est « Location ». Le **dépourvue** fonction n’est spécifié dans le prédicat et il n’a aucun argument, le nœud de contexte est utilisé par la fonction.  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La requête retourne tous les enfants <`Location`> de l'élément <`root`>.  
+ La requête retourne tous les <`Location`> éléments enfants de la <`root`> élément.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions sur les nœuds](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

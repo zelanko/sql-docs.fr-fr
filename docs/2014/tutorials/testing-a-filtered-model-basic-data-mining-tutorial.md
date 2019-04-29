@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044094"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Test d'un modèle filtré (Didacticiel sur l'exploration de données de base)
   Maintenant que vous avez déterminé que le `TM_Decision_Tree` modèle est le plus précis, vous allez personnaliser le modèle pour mieux répondre aux besoins de le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campagne de publipostage ciblée. Plus précisément, le service marketing souhaite savoir s'il existe des différences entre les clients hommes et femmes. Les informations les aideront à décider quels magazines utiliser à des fins publicitaires et quels produits présenter dans leurs publipostages.  

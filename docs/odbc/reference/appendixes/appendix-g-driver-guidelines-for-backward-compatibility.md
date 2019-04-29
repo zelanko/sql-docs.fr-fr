@@ -1,5 +1,5 @@
 ---
-title: 'Annexe g : Conseils sur les pilotes pour la compatibilité descendante | Microsoft Docs'
+title: 'Annexe G : Conseils sur les pilotes pour la compatibilité descendante | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026634"
 ---
-# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Annexe g : Conseils sur les pilotes pour la compatibilité descendante
+# <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Annexe G : Conseils sur les pilotes pour la compatibilité descendante
 Cette annexe fournit des informations pour les writers de pilote travaillant sur ODBC 3. *x* pilotes devant prendre en charge d’ODBC 2. *x* applications. Pour plus d’informations sur la compatibilité descendante, consultez [la compatibilité descendante et conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
  Cette section contient les rubriques suivantes.  

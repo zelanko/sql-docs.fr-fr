@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062417"
 ---
 # <a name="gateways-diagnostic-example"></a>Exemple de diagnostic des passerelles
 Dans une architecture de la passerelle, un pilote envoie des demandes à une passerelle qui prend en charge ODBC. La passerelle envoie les demandes à un SGBD. Étant donné que c’est le composant qui sert d’interface avec le Gestionnaire de pilotes, le pilote met en forme et retourne les arguments pour **SQLGetDiagRec**.  

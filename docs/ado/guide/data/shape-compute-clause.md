@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062815"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constituées d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation sur l’enfant **Recordset** précédemment finies ou **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans facultatif par clause.  
@@ -36,7 +36,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Description  
  Les parties de cette clause sont les suivantes :  
   
- *commande enfant*  
+ *child-command*  
  Se compose d’une des opérations suivantes :  
   
 -   Une commande de requête entre accolades («{}») qui retourne un enfant **Recordset** objet. La commande est émise au fournisseur de données sous-jacent et sa syntaxe dépend de la configuration requise de ce fournisseur. Ce sera généralement le langage SQL, bien qu’ADO ne nécessite pas de n’importe quel langage de requête spécifique.  
@@ -47,7 +47,7 @@ SHAPE child-command [AS] child-alias
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *alias-enfant*  
+ *child-alias*  
  Alias utilisé pour faire référence à la **Recordset** retourné par la *commande enfant.* Le *enfant-alias* est requis dans la liste des colonnes dans la clause COMPUTE et définit la relation entre parent et enfant **Recordset** objets.  
   
  *appended-column-list*  
@@ -105,7 +105,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|Somme (rs. Remplissage)|rs|État|  
+|SUM (rs.Population)|rs|État|  
 |---------------------------|--------|-----------|  
 |1,300,000|Référence à Enfant1|CA|  
 |1,200,000|Référence à Enfant2|WA|  

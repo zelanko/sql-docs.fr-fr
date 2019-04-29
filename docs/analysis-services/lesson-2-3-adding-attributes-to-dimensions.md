@@ -1,5 +1,5 @@
 ---
-title: Ajout d’attributs aux Dimensions | Documents Microsoft
+title: Ajout d’attributs aux Dimensions | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046001"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Leçon 2-3-Ajout d’attributs aux Dimensions
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Leçon 2-3 : ajout d’attributs aux Dimensions
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Une fois les dimensions définies, vous pouvez les remplir avec les attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
@@ -124,10 +124,10 @@ Dans cette tâche, vous utiliserez le Concepteur de dimensions pour ajouter des 
 5.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Vérification des propriétés de la Dimension et de Cube](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Vérification des propriétés de cube et de dimension](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Dimension Attribute Properties Reference](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Référence des propriétés d'attribut de dimension](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049482"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forcer un cluster WSFC à démarrer sans quorum
   Cette rubrique explique comment forcer un nœud de cluster de clustering de basculement Windows Server (WSFC) à démarrer sans quorum.  Cela peut être nécessaire dans les scénarios de récupération d'urgence et de sous-réseaux multiples pour récupérer des données et pour rétablir entièrement la haute disponibilité pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : après avoir forcé le cluster à démarrer sans quorum  
+##  <a name="FollowUp"></a> Suivi : Après avoir forcé le Cluster à démarrer sans Quorum  
   
 -   Vous devez réévaluer et reconfigurer les valeurs NodeWeight pour construire correctement un nouveau quorum avant de mettre en ligne d'autres nœuds. Sinon, le cluster peut de nouveau se trouver hors connexion.  
   

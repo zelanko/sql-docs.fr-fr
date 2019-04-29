@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065759"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
   Le format caractère est recommandé pour l'exportation en bloc de données dans un fichier texte qui doit être utilisé dans un autre programme, ou pour l'importation en bloc de données à partir d'un fichier texte généré par un autre programme.  
@@ -40,9 +40,9 @@ ms.locfileid: "48078439"
     |Exporter|Convertit les données en représentation caractère. Si la demande est faite explicitement, les données sont converties vers la page de codes demandée pour les colonnes de caractères. Si aucune page de codes n'est spécifiée, les données de caractères sont converties à l'aide de la page de codes OEM de l'ordinateur client.|  
     |Importer|Convertit les données de caractères en représentation native si nécessaire, puis traduit les données de caractères de la page de codes du client vers la page de codes des colonnes cibles.|  
   
--   Pour éviter la perte de caractères étendus pendant la conversion, utilisez le format de caractères Unicode ou spécifiez une page de codes.  
+-   Pour éviter la perte de caractères étendus pendant la conversion, utilisez le format de caractères Unicode ou spécifiez une page de codes.  
   
--   Les données `sql_variant` stockées dans un fichier au format caractère sont enregistrées sans métadonnées. Chaque valeur de données est convertie en `char` format, selon les règles de conversion implicite de données. Importées dans une colonne `sql_variant`, les données sont importées au format `char`. Lors de l’importation dans une colonne avec un type de données autre que `sql_variant`, les données sont converties à partir de `char` à l’aide d’une conversion implicite. Pour plus d’informations sur la conversion de données, consultez [Conversion de types de données &#40;moteur de base de données&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
+-   Les données `sql_variant` stockées dans un fichier au format caractère sont enregistrées sans métadonnées. Chaque valeur de données est convertie au format `char` suivant les règles de conversion implicite des données. Importées dans une colonne `sql_variant`, les données sont importées au format `char`. Importées dans une colonne dont le type de données est différent de `sql_variant`, les données sont converties à partir du format `char` à l'aide de la conversion implicite. Pour plus d’informations sur la conversion de données, consultez [Conversion de types de données &#40;moteur de base de données&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 -   Le **bcp** utilitaire exportations `money` valeurs sous forme de fichiers de données au format caractère avec quatre chiffres après la virgule décimale et sans symboles de groupement des chiffres tels que des virgules de séparation. Par exemple, une colonne `money` contenant la valeur 1 234 567,123456 est exportée en bloc dans un fichier en tant que chaîne de caractères 1234567,1235.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48078439"
  Les exemples ci-après indiquent comment exporter en bloc des données caractères à l’aide de l’utilitaire **bcp** et comment importer en bloc les mêmes données à l’aide de l’instruction BULK INSERT.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Les exemples nécessitent la création d'une table **myTestCharData** dans l'exemple de base de données **AdventureWorks** d'après le schéma **dbo** . Avant de commencer, vous devez créer cette base de données. Pour créer cette table, dans SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] éditeur de requête, exécutez :  
+ Les exemples nécessitent la création d'une table **myTestCharData** dans l'exemple de base de données **AdventureWorks** d'après le schéma **dbo** . Avant de commencer, vous devez créer cette base de données. Pour ce faire, dans l'éditeur de requête SQL [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
 ```  
 USE AdventureWorks;  
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Qualificateurs|Description|  
 |----------------|-----------------|  
 |**-c**|Spécifie le format caractère.|  
-|**-t** `,`|Virgule (`,`) servant d'indicateur de fin de champ.<br /><br /> Remarque : la marque de fin de champ par défaut correspond au caractère de tabulation (\t). Pour plus d’informations, consultez [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Virgule (`,`) servant d'indicateur de fin de champ.<br /><br /> Remarque : La marque de fin de champ par défaut est le caractère de tabulation (\t). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.|  
   
  L'exemple suivant exporte en bloc les données au format caractère de la table `myTestCharData` dans un nouveau fichier de données nommé `myTestCharData-c.Dat`, qui utilise la virgule (,) comme marque de fin de champ. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  

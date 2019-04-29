@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919658"
 ---
 # <a name="user-defined-type-requirements"></a>Configuration requise pour les types définis par l'utilisateur
   Vous devez prendre plusieurs décisions de conception importantes lors de la création d’un type défini par l’utilisateur (UDT) doit être installé dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour la plupart des types définis par l'utilisateur, il est recommandé de créer un type défini par l'utilisateur sous forme de structure mais il est également possible de le créer sous forme de classe. La définition de l'UDT doit être conforme aux spécifications de création d'UDT afin de pouvoir l'enregistrer avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -112,7 +112,7 @@ ms.locfileid: "49120096"
  Indique si toutes les instances de cet UDT ont la même longueur.  
   
  `MaxByteSize`  
- Taille maximale de l'instance, en octets. Vous devez spécifier `MaxByteSize` avec le format de sérialisation `UserDefined`. Pour un type défini par l'utilisateur assorti d'une sérialisation définie par l'utilisateur, `MaxByteSize` fait référence à la taille totale du type défini par l'utilisateur dans sa forme sérialisée, telle que définie par l'utilisateur. La valeur de `MaxByteSize` doit figurer dans une plage de 1 à 8 000 ou être définie sur -1 pour indiquer que la taille de l'UDT est supérieure à 8 000 octets (la taille totale ne peut pas dépasser la taille d'objet LOB maximale). Imaginez un type défini par l'utilisateur assorti d'une propriété d'une chaîne de 10 caractères (`System.Char`). Lorsque l'UDT est sérialisé à l'aide de BinaryWriter, la taille totale de la chaîne sérialisée est de 22 octets : 2 octets par caractère Unicode UTF-16, multipliés par le nombre maximal de caractères, plus 2 octets de contrôle de la charge mémoire générée par la sérialisation d'un flux binaire. Ainsi, pour déterminer la valeur de `MaxByteSize`, il convient de prendre en compte la taille totale du type défini par l'utilisateur (UDT) sérialisé : la taille des données sérialisées sous forme binaire, plus la charge mémoire générée par la sérialisation.  
+ Taille maximale de l'instance, en octets. Vous devez spécifier `MaxByteSize` avec le format de sérialisation `UserDefined`. Pour un type défini par l'utilisateur assorti d'une sérialisation définie par l'utilisateur, `MaxByteSize` fait référence à la taille totale du type défini par l'utilisateur dans sa forme sérialisée, telle que définie par l'utilisateur. La valeur de `MaxByteSize` doit figurer dans une plage de 1 à 8 000 ou être définie sur -1 pour indiquer que la taille de l'UDT est supérieure à 8 000 octets (la taille totale ne peut pas dépasser la taille d'objet LOB maximale). Imaginez un type défini par l'utilisateur assorti d'une propriété d'une chaîne de 10 caractères (`System.Char`). Lorsque l’UDT est sérialisé à l’aide de BinaryWriter, la taille totale de la chaîne sérialisée est de 22 octets : 2 octets par caractère Unicode UTF-16, multiplié par le nombre maximal de caractères de plus de contrôle 2 octets de surcharge induite par la sérialisation d’un flux binaire. Ainsi, pour déterminer la valeur de `MaxByteSize`, il convient de prendre en compte la taille totale du type défini par l'utilisateur (UDT) sérialisé : la taille des données sérialisées sous forme binaire, plus la charge mémoire générée par la sérialisation.  
   
  `ValidationMethodName`  
  Nom de la méthode utilisée pour valider des instances du type défini par l'utilisateur.  
@@ -140,9 +140,9 @@ ms.locfileid: "49120096"
   
 -   Inférieur à (\<)  
   
--   Supérieur ou égal à (>=)  
+-   Supérieur ou égal à (> =)  
   
--   Inférieur ou égal à (<=)  
+-   Inférieur ou égal à (< =)  
   
 ### <a name="implementing-nullability"></a>Implémentation de la possibilité de valeur NULL  
  En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les types définis par l'utilisateur (UDT) chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont compatibles avec la valeur NULL mais, pour que l'UDT puisse reconnaître une valeur NULL, la classe doit implémenter l'interface `INullable`. Pour plus d’informations et un exemple montrant comment implémenter la possibilité de valeur NULL dans un UDT, consultez [Coding User-Defined Types](creating-user-defined-types-coding.md).  

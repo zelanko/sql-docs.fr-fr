@@ -1,5 +1,5 @@
 ---
-title: Exemples de DiffGrams (SQLXML 4.0) | Microsoft Docs
+title: DiffGram Examples (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127724"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
   Cette rubrique contient des exemples de DiffGrams qui réalisent des opérations d'insertion, de mise à jour et de suppression dans la base de données. Avant d'utiliser les exemples, notez les points suivants :  
@@ -141,7 +141,7 @@ ms.locfileid: "52804531"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>b. Insertion d'un enregistrement à l'aide d'un DiffGram  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. Insertion d'un enregistrement à l'aide d'un DiffGram  
  Dans cet exemple, le DiffGram insère un enregistrement dans la table Cust et un enregistrement dans la table Ord.  
   
 ```  

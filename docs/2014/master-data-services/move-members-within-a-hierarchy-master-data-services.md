@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 96f3c1232f1124ef5f2cd9e77d89fa06607392c7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923436"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Déplacer des membres au sein d'une hiérarchie (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], déplacez les membres au sein d'une hiérarchie pour modifier leur emplacement ou l'affectation du parent.  

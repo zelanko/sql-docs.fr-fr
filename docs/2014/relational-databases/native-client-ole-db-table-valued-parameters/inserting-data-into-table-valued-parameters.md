@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71cd369568d8fc66764345038568818a551f9fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046594"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertion de données dans des paramètres table
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur Native Client OLE DB prend en charge deux modèles pour le consommateur spécifier les données pour les lignes de paramètre table valued : un modèle d’émission et d’un modèle d’extraction. Pour obtenir un exemple illustrant le modèle de tirage (pull) des données, consultez [Exemples de programmation de données SQL Server](http://msftdpprodsamples.codeplex.com/).  

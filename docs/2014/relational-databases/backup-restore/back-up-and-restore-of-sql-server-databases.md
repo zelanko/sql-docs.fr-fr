@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96eab9a3b388c8cb68203dce22e8bd1abc013e4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922935"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sauvegarde et restauration des bases de données SQL Server
   Cette rubrique décrit les avantages de la sauvegarde des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les termes de sauvegarde et de restauration de base, et présente les stratégies de sauvegarde et de restauration pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ainsi que les questions de sécurité pour la sauvegarde et la restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

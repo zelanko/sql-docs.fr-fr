@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0ddc29ca163d17a812c14251c60b512828a5b3e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890169"
 ---
 # <a name="path-properties"></a>Propriétés du chemin d'accès
   Les objets de flux de données dans le modèle d’objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont des propriétés communes et des propriétés personnalisées au niveau du composant, des entrées et sorties, et des colonnes d’entrée et colonnes de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  

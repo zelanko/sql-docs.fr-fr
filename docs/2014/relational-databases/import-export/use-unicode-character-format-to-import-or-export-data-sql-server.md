@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065758"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère Unicode pour importer ou exporter des données (SQL Server)
   Le format caractère Unicode est recommandé pour le transfert en bloc de données entre plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un fichier de données qui contient des caractères étendus ou DBCS. Le format de données caractère Unicode permet d'exporter des données depuis un serveur à l'aide d'une page de codes différente de celle utilisée par le client qui effectue l'opération. Dans ces cas, l'utilisation du format caractère Unicode présente les avantages suivants :  
@@ -32,9 +32,9 @@ ms.locfileid: "48191769"
 > [!IMPORTANT]  
 >  Pour qu'un fichier de format fonctionne avec un fichier de données de caractères Unicode, tous les champs d'entrée doivent être des chaînes de texte Unicode (autrement dit, des chaînes Unicode de taille fixe ou terminées par un caractère).  
   
- Le `sql_variant` les données qui sont stockées dans un fichier de données au format caractère Unicode fonctionnent de la même façon qu’il fonctionne dans un fichier de données de format de caractère, à ceci près que les données sont stockées en tant que `nchar` au lieu de `char` données. Pour plus d’informations sur le format caractère, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
+ Les données `sql_variant` stockées dans un fichier de données de format caractère Unicode fonctionnent comme dans un fichier de données de format caractère, à la différence que les données sont stockées en tant que données `nchar` et non pas `char`. Pour plus d’informations sur le format caractère, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  
   
- Pour utiliser une marque de fin de champ ou de ligne autre que la valeur par défaut qui est fourni avec le format caractère Unicode, consultez [spécifier un champ et fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
+ Pour utiliser un indicateur de fin de champ ou de ligne autre que l’indicateur par défaut du format caractère Unicode, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Options de commande du format caractère Unicode  
  Vous pouvez importer des données au format caractère Unicode dans une table à l’aide de la commande **bcp**, BULK INSERT ou INSERT... SELECT \* FROM OPENROWSET(BULK...). Si vous utilisez une commande **bcp** ou une instruction BULK INSERT, vous pouvez spécifier le format de données dans la ligne de commande. Pour une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), vous devez spécifier le format de données dans un fichier de format.  
@@ -55,7 +55,7 @@ ms.locfileid: "48191769"
  Les exemples suivants montrent comment exporter en bloc des données de caractères Unicode à l’aide de la commande **bcp** et importer en bloc les mêmes données à l’aide de l’instruction BULK INSERT.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Les exemples nécessitent une table nommée `myTestUniCharData` table créée dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données exemple sous le `dbo` schéma. Avant de commencer, vous devez créer cette base de données. Pour créer cette table, dans l'éditeur de requêtes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
+ Une table nommée `myTestUniCharData` doit être créée dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sous le schéma `dbo` . Avant de commencer, vous devez créer cette base de données. Pour créer cette table, dans l'éditeur de requêtes [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,10 +84,10 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |Qualificateurs|Description|  
 |----------------|-----------------|  
 |**-w**|Spécifie le format caractère Unicode.|  
-|**-t** `,`|Virgule (`,`) servant d'indicateur de fin de champ.<br /><br /> Remarque : La marque de fin de champ par défaut est le caractère Unicode (\t). Pour plus d’informations, consultez [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Virgule (`,`) servant d'indicateur de fin de champ.<br /><br /> Remarque : La marque de fin de champ par défaut est le caractère Unicode (\t). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.|  
   
- L'exemple suivant exporte en bloc des données au format de caractères Unicode à partir de la table `myTestUniCharData` dans un nouveau fichier de données nommé `myTestUniCharData-w.Dat` qui utilise la virgule (`,`) comme marque de fin de champ. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
+ L'exemple suivant exporte en bloc des données au format de caractères Unicode à partir de la table `myTestUniCharData` dans un nouveau fichier de données nommé `myTestUniCharData-w.Dat` qui utilise la virgule (`,`) comme marque de fin de champ. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
   
 ```  
 bcp AdventureWorks2012..myTestUniCharData out C:\myTestUniCharData-w.Dat -w -t, -T  
@@ -128,6 +128,6 @@ GO
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Types de données &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Prise en charge d'Unicode et du classement](../collations/collation-and-unicode-support.md)  
+ [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md)  
   
   

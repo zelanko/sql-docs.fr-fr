@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061237"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, classe d'événements
   La classe d’événements SQL:StmtRecompile indique des recompilations au niveau de l’instruction provoquées par tous les types de lots : procédures stockées, déclencheurs, lots ad hoc et requêtes. Les requêtes peuvent être envoyées avec sp_executesql, SQL dynamique, des méthodes Prepare, des méthodes Execute ou des interfaces analogues. La classe d’événements SQL:StmtRecompile doit être utilisée à la place de la classe d’événements SP:Recompile.  

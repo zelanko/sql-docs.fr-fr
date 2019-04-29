@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067511"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
   Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez apportées à un diagramme de base de données, vous pouvez enregistrer une table ou un groupe de tables spécifique.  

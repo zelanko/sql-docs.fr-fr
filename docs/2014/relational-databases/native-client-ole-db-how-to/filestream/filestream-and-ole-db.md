@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cadab8c51000270d218bea890d2c4e7077daae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938647"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream et OLE DB
-  Cette section contient quatre exemples qui illustrent l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB avec la fonctionnalité Filestream :  
+  Cette section contient quatre exemples qui illustrent l'utilisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB avec la fonctionnalité Filestream :  
   
 -   [Lire une colonne FILESTREAM dans un fichier avec IBCPSession (OLE DB) &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   

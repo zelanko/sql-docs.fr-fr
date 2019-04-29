@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66deae3833a738075259928855881f87b64ef0dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028110"
 ---
 # <a name="flush-method-ado"></a>Flush, méthode (ADO)
 Force le contenu de la [Stream](../../../ado/reference/ado-api/stream-object-ado.md) restants dans la mémoire tampon de ADO à l’objet sous-jacent auquel le **Stream** est associé.  

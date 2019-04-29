@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045522"
 ---
 # <a name="other-driver-architectures"></a>Autres architectures de pilote
 Certains pilotes ODBC ne sont pas strictement conformes à l’architecture décrite précédemment. Cela peut être parce que les pilotes de remplir des fonctions autres que ceux d’un pilote ODBC traditionnel ou ne sont pas des pilotes dans le sens normal.  

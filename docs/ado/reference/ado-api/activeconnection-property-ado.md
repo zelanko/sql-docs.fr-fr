@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065537"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection, propriété (ADO)
 Indique à laquelle [connexion](../../../ado/reference/ado-api/connection-object-ado.md) spécifié de l’objet [commande](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), ou [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet appartient actuellement.  
@@ -60,7 +60,7 @@ Indique à laquelle [connexion](../../../ado/reference/ado-api/connection-object
 > [!NOTE]
 >  **Utilisation de Service de données à distance** lorsqu’il est utilisé sur une côté client **Recordset** de l’objet, cette propriété peut être définie qu’une chaîne de connexion ou (dans Microsoft Visual Basic ou Visual Basic, Scripting Edition) pour *Nothing* .  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Enregistrement  
  Cette propriété est en lecture/écriture lors de la **enregistrement** objet est fermé et peut contenir une chaîne de connexion ou une référence à une ouverture **connexion** objet. Cette propriété est en lecture seule lorsque le **enregistrement** objet est ouvert et contient une référence à une ouverture **connexion** objet.  
   
  Un **connexion** objet est créé implicitement lorsque la **enregistrement** objet est ouverte à partir d’une URL. Ouvrez le **enregistrement** avec un existant, ouvrez **connexion** objet en affectant le **connexion** de l’objet à cette propriété, ou à l’aide de la **connexion** objet en tant que paramètre dans le [Open](../../../ado/reference/ado-api/open-method-ado-record.md) appel de méthode. Si le **enregistrement** est ouverte à partir d’un existant **enregistrement** ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), puis il est automatiquement associé **enregistrement** ou  **Jeu d’enregistrements** l’objet **connexion** objet.  

@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062775"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste de champs
+# <a name="step-3-populate-the-fields-list-box"></a>Étape 3 : Remplir la zone de liste des champs
 Pour remplir la zone de liste de champs, insérez le code suivant dans le Gestionnaire d’événements Click de `lstMain`:  
   
 ```  
@@ -59,5 +59,5 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Étape 4 : Remplir la zone de texte Détails](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
+ [Étape 4 : Remplir la zone de texte Détails](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

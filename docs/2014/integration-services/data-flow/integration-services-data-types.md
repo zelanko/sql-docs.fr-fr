@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902438"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
@@ -227,7 +227,7 @@ ms.locfileid: "58382060"
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
@@ -248,7 +248,7 @@ ms.locfileid: "58382060"
 |DT_WSTR|nchar, nvarchar, sql_variant, xml|char, varchar, nchar, nvarchar, sql_variant, xml|LongText|CHAR, ROWID, VARCHAR2, NVARCHAR2, NCHAR|GRAPHIC, VARGRAPHIC|GRAPHIC, VARGRAPHIC|  
 |DT_IMAGE|image|image|LongBinary|LONG RAW, BLOB, LOBLOCATOR, BFILE, VARGRAPHIC, LONG VARGRAPHIC, défini par l'utilisateur|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA|CHAR () FOR BIT DATA, VARCHAR () FOR BIT DATA, BLOB|  
 |DT_NTEXT|ntext|text, ntext||LONG, CLOB, NCLOB, NVARCHAR, TEXT|LONG VARCHAR, NCHAR, NVARCHAR, TEXT|LONG VARCHAR, DBCLOB, NCHAR, NVARCHAR, TEXT|  
-|DT_TEXT|texte||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
+|DT_TEXT|text||||LONG VARCHAR FOR BIT DATA|LONG VARCHAR FOR BIT DATA, CLOB|  
   
  Pour plus d’informations sur le mappage des types de données dans le flux de données, consultez [Utilisation de types de données dans le flux de données](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   

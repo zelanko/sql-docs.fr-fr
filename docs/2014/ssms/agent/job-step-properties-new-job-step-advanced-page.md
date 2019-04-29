@@ -1,5 +1,5 @@
 ---
-title: 'Propriétés d’étape de travail : Nouvelle étape du travail (Page avancé) | Microsoft Docs'
+title: 'Propriétés de l’étape du travail : Nouvelle étape du travail (Page avancé) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62937193"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriétés d’étape de travail : Nouvelle étape du travail (Page avancé)
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Propriétés de l’étape du travail : Nouvelle étape du travail (page Avancé)
   Utilisez cette page pour afficher et modifier les propriétés d'une étape de travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="options"></a>Options  

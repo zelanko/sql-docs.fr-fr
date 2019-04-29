@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046413"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
   Il existe plusieurs différences entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC (Microsoft Data Access Components). Notez qu'à compter de Windows Vista, MDAC prend le nom de « Windows DAC » (Windows Data Access Components). Même si ces deux solutions fournissent aux données natives un accès aux bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client a été spécialement conçu pour exposer les nouvelles fonctionnalités de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], tout en restant compatible avec les versions antérieures.  
@@ -108,7 +108,7 @@ ms.locfileid: "52541924"
   
 -   Avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction entraîne une transaction doit être démarré immédiatement. Avec MDAC le démarrage de transaction est différé jusqu'à ce que l'application exécute une instruction qui requiert une transaction en mode de transaction implicite. Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql).  
   
--   Vous pouvez rencontrer des erreurs lors de l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote de Client natif avec System.Data.Odbc pour accéder à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordinateur du serveur qui expose de nouveaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-types de données spécifiques ou de fonctionnalités. System.Data.Odbc fournit une implémentation ODBC générique et par la suite n’expose pas les extensions ou les fonctionnalités spécifiques du fournisseur. (Le pilote de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est mis à jour pour prendre en charge les fonctionnalités les plus récentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode natif.) Pour contourner ce problème, vous pouvez rétablir MDAC ou migrer vers System.Data.SqlClient.  
+-   Vous pouvez rencontrer des erreurs lors de l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote de Client natif avec System.Data.Odbc pour accéder à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordinateur du serveur qui expose de nouveaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-types de données spécifiques ou de fonctionnalités. System.Data.Odbc fournit une implémentation ODBC générique et par la suite n’expose pas les extensions ou les fonctionnalités spécifiques du fournisseur. (Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote Native Client est mis à jour pour prendre en charge en mode natif de la dernière version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonctionnalités.) Pour contourner ce problème, vous pouvez rétablir MDAC ou migrer vers System.Data.SqlClient.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC prennent en charge l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne, mais seul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l'isolation de la transaction d'instantané. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
   

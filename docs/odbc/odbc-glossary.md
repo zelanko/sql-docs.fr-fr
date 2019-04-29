@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057781"
 ---
 # <a name="odbc-glossary"></a>Glossaire ODBC
 ## <a name="a"></a>A  
@@ -38,7 +38,7 @@ ms.locfileid: "47693947"
  **API**  
  Interface de programmation d’application. Un ensemble de routines qu’une application utilise pour demander et exécuter des services de niveau inférieur. L’API ODBC est composé des fonctions ODBC.  
   
- **Application**  
+ **application**  
  Un programme exécutable qui appelle des fonctions de l’API ODBC.  
   
  **descripteur de paramètre d’application (APD)**  
@@ -50,7 +50,7 @@ ms.locfileid: "47693947"
  **ARD**  
  *Consultez* descripteur de ligne d’application (ARD).  
   
- **mode de validation automatique**  
+ **auto-commit mode**  
  Mode de validation de transaction dans laquelle les transactions sont validées immédiatement après leur exécution.  
   
 ## <a name="b"></a>B  
@@ -60,7 +60,7 @@ ms.locfileid: "47693947"
  **Objet binaire volumineux (BLOB)**  
  Toutes les données binaires sur un certain nombre d’octets, tels que 255. En général beaucoup plus de temps. Ce type de données est généralement envoyé au et récupérée à partir de la source de données dans les parties. Également appelé *données de type long*.  
   
- **Liaison**  
+ **binding**  
  Sous forme verbale, le fait d’associer une colonne dans un jeu de résultats ou un paramètre dans une instruction SQL avec une variable d’application. Comme un nom, l’association.  
   
  **décalage de la liaison**  
@@ -69,7 +69,7 @@ ms.locfileid: "47693947"
  **curseur de bloc**  
  Un curseur capable d’extraire plusieurs lignes de données à la fois.  
   
- **mémoire tampon**  
+ **buffer**  
  Un morceau de mémoire de l’application utilisée pour passer des données entre l’application et le pilote. Mémoires tampons sont souvent inventées par paires : un *tampon de données* et un *tampon de longueur de données*.  
   
  **byte**  
@@ -88,16 +88,16 @@ ms.locfileid: "47693947"
  **INTERFACE CLI**  
  *Consultez* API.  
   
- **client/serveur**  
+ **client/server**  
  Une stratégie d’accès de base de données dans lequel un ou plusieurs clients accéder aux données via un serveur. Les clients implémentent généralement l’interface utilisateur, tandis que les contrôles serveur de base de données access.  
   
  **column**  
  Le conteneur pour un élément d’information dans une ligne unique. Également appelé *champ*.  
   
- **Validation**  
+ **commit**  
  Pour apporter les modifications dans une transaction permanente.  
   
- **Accès concurrentiel**  
+ **concurrency**  
  La capacité de plusieurs transactions à accéder aux mêmes données en même temps.  
   
  **Niveau de conformité**  
@@ -146,7 +146,7 @@ ms.locfileid: "47693947"
  **Moteur de base de données**  
  Le logiciel dans un SGBD qui analyse et exécute des instructions SQL et accède aux données physiques.  
   
- **SGBD**  
+ **DBMS**  
  Système de gestion de base de données. Couche logicielle entre la base de données physique et l'utilisateur. Le SGBD (système de gestion de base de données) gère tous les accès à la base de données.  
   
  **Pilote de SGBD**  
@@ -158,19 +158,19 @@ ms.locfileid: "47693947"
  **identificateur délimité**  
  Un identificateur qui est placé entre guillemets identificateur afin qu’il peut contenir des caractères spéciaux ou à des mots clés (également appelé un identificateur entre guillemets).  
   
- **Descripteur**  
+ **descriptor**  
  Une structure de données qui conserve des informations sur les données de la colonne ou de paramètres dynamiques. La représentation physique du descripteur n’est pas définie ; applications obtenir un accès direct à un descripteur uniquement en manipulant des ses champs en appelant les fonctions ODBC avec le handle du descripteur.  
   
  **base de données de bureau**  
  Un SGBD est conçu pour s’exécuter sur un ordinateur personnel. En règle générale, ces SGBD ne fournit pas d’un moteur de base de données autonome et doit être accessible via un pilote basé sur fichier. Les moteurs de ces pilotes ont réduit généralement la prise en charge pour SQL et les transactions. Par exemple, dBASE, Paradox, Btrieve ou Microsoft® FoxPro.  
   
- **Diagnostic**  
+ **diagnostic**  
  Un enregistrement contenant les informations de diagnostic sur la dernière fonction appelée et utilisé un handle spécifique. Les enregistrements de diagnostic sont associés de l’environnement, connexion, l’instruction et handles de descripteur.  
   
  **DML**  
  Langage de Manipulation de données. Instructions SQL qui manipulent, par opposition à définir des données. Par exemple, **insérer**, **mise à jour**, **supprimer**, et **sélectionnez**.  
   
- **Pilote**  
+ **driver**  
  Une bibliothèque de routine qui expose les fonctions de l’API ODBC. Les pilotes sont spécifiques à un système SGBD unique.  
   
  **Gestionnaire de pilotes**  
@@ -189,7 +189,7 @@ ms.locfileid: "47693947"
  **Embedded SQL**  
  Les instructions SQL qui sont incluses directement dans un programme écrit dans un autre langage, tels que les anciennes applications COBOL ou C. ODBC n’utilise pas embedded SQL. *Voir aussi* SQL statique *et* SQL dynamique.  
   
- **Environnement**  
+ **environment**  
  Un contexte global d’accès aux données ; associé à l’environnement est toute information qui est globale par nature, telles qu’une liste de toutes les connexions dans cet environnement.  
   
  **handle d’environnement**  
@@ -205,7 +205,7 @@ ms.locfileid: "47693947"
  **curseur FAT**  
  *Consultez* curseur de bloc.  
   
- **Extraction**  
+ **fetch**  
  Pour récupérer une ou plusieurs lignes à partir d’un jeu de résultats.  
   
  **field**  
@@ -243,7 +243,7 @@ ms.locfileid: "47693947"
  **niveau de conformité d’interface**  
  Le niveau de l’interface ODBC 3.7 pris en charge par un pilote ; peut être Core, niveau 1 ou niveau 2.  
   
- **Interopérabilité**  
+ **interoperability**  
  La capacité d’une application à utiliser le même code lors de l’accès aux données dans différents SGBD.  
   
  **IPD**  
@@ -256,14 +256,14 @@ ms.locfileid: "47693947"
  Commission électrotechnique d’organisation/International normes internationales. L’API ODBC est basé sur l’Interface de niveau d’appel de norme ISO/IEC.  
   
 ## <a name="j"></a>J  
- **jointure**  
+ **join**  
  Une opération dans une base de données relationnelle qui lie les lignes de deux ou plusieurs tables en faisant correspondre les valeurs dans les colonnes spécifiées.  
   
 ## <a name="k"></a>K  
- **Clé**  
+ **key**  
  Une ou plusieurs colonnes dont les valeurs identifient une ligne. *Voir aussi* clé étrangère *et* clé primaire.  
   
- **Jeu de clés**  
+ **keyset**  
  Un jeu de clés utilisé par un curseur mixte ou commandé par keyset pour récupérer à nouveau les lignes.  
   
  **curseur keyset**  
@@ -273,7 +273,7 @@ ms.locfileid: "47693947"
  **literal**  
  Représentation sous forme de caractère de la valeur réelle des données dans une instruction SQL.  
   
- **Verrouillage**  
+ **locking**  
  Le processus par lequel un SGBD limite l’accès à une ligne dans un environnement multi-utilisateur. Le SGBD généralement définit un bit sur une ligne ou de la page physique qui contient une ligne qui indique la ligne ou page est verrouillée.  
   
  **données de type long**  
@@ -286,7 +286,7 @@ ms.locfileid: "47693947"
  **Mode de validation manuelle**  
  Un mode de validation de transaction dans laquelle des transactions doivent être validées explicitement en appelant **SQLTransact**.  
   
- **Métadonnées**  
+ **metadata**  
  Données qui décrivent un paramètre dans une instruction SQL ou une colonne dans un jeu de résultats. Par exemple, le type de données, longueur d’octet et de précision d’un paramètre.  
   
  **pilotes à plusieurs niveaux**  
@@ -346,7 +346,7 @@ ms.locfileid: "47693947"
  **instruction positionnée delete**  
  Une instruction SQL utilisée pour supprimer la ligne actuelle.  
   
- **Préparer**  
+ **prepare**  
  Pour compiler une instruction SQL. Un plan d’accès est créé en préparant une instruction SQL.  
   
  **Clé primaire**  
@@ -359,20 +359,20 @@ ms.locfileid: "47693947"
  Un argument dans un appel de procédure, la valeur retournée par une procédure ou une colonne dans un jeu de résultats créé par une procédure.  
   
 ## <a name="q"></a>Q  
- **Qualificateur de nom**  
+ **qualifier**  
  Une base de données qui contient une ou plusieurs tables.  
   
- **Requête**  
+ **query**  
  Une instruction SQL. Parfois utilisé pour désigner un **sélectionnez** instruction.  
   
  **identificateur entre guillemets**  
  Un identificateur qui est placé entre guillemets identificateur afin qu’il peut contenir des caractères spéciaux ou à des mots clés (également appelés dans SQL-92 comme un identificateur délimité).  
   
 ## <a name="r"></a>R  
- **base**  
+ **radix**  
  La base d’un système de nombre. Généralement de 2 ou 10.  
   
- **Enregistrement**  
+ **record**  
  *Consultez* ligne.  
   
  **jeu de résultats**  
@@ -384,7 +384,7 @@ ms.locfileid: "47693947"
  **restaurer**  
  Pour retourner les valeurs modifiées par une transaction à leur état d’origine.  
   
- **Ligne**  
+ **row**  
  Un ensemble de colonnes associées qui décrivent une entité spécifique. Également appelé un *enregistrement*.  
   
  **descripteur de ligne**  
@@ -396,14 +396,14 @@ ms.locfileid: "47693947"
  **tableau d’état de ligne**  
  Tableau qui contient l’état d’une ligne après un appel à **SQLFetch**, **SQLFetchScroll**, ou **SQLSetPos**.  
   
- **Ensemble de lignes**  
+ **rowset**  
  L’ensemble de lignes retournées dans une seule extraction par un curseur de bloc.  
   
  **mémoires tampons d’ensemble de lignes**  
  Les mémoires tampons liées aux colonnes d’un jeu de résultats et dans laquelle les données pour un ensemble de lignes sont retournées.  
   
 ## <a name="s"></a>S  
- **TROUS**  
+ **SAG**  
  *Consultez* groupe d’accès SQL (trous).  
   
  **Fonction scalaire**  
@@ -415,7 +415,7 @@ ms.locfileid: "47693947"
  **curseur de défilement**  
  Un curseur que vous pouvez vous déplacer vers l’avant ou vers l’arrière dans le jeu de résultats.  
   
- **Sérialisation**  
+ **serializability**  
  Indique si deux transactions s’exécutant simultanément un résultat qui est identique à l’exécution de série (ou séquentielle) de ces transactions. Les transactions sont tenues de garantir l’intégrité de base de données.  
   
  **base de données de serveur**  
@@ -473,17 +473,17 @@ ms.locfileid: "47693947"
  **table**  
  Une collection de lignes.  
   
- **« Thunking »**  
+ **thunking**  
  La conversion de 16 bits résout les adresses 32 bits, ou inversement, lorsque les applications 16 bits sont utilisées avec les pilotes ODBC 32 bits.  
   
- **Transaction**  
+ **transaction**  
  Une unité atomique de travail. Le travail dans une transaction doit être effectué dans son ensemble ; Si une partie de la transaction échoue, la transaction entière échoue.  
   
  **Isolation des transactions**  
  Action de l’isolation des transactions entre les effets de toutes les autres transactions.  
   
  **Niveau d’isolation de transaction**  
- Une mesure de la manière dont une transaction est isolée. Il existe cinq niveaux d’isolation de transaction : Read Uncommitted, Read Committed, Repeatable Read, Serializable et le contrôle de version.  
+ Une mesure de la manière dont une transaction est isolée. Il existe cinq niveaux d’isolation de transaction : Lecture non validée, lecture validée, lecture renouvelée, sérialisable et le contrôle de version.  
   
  **DLL de conversion**  
  Une DLL utilisé pour convertir des données à partir d’un jeu de caractères à un autre.  
@@ -491,7 +491,7 @@ ms.locfileid: "47693947"
  **DLL d’installation du traducteur**  
  Une DLL qui contient les fonctions d’installation et de configuration spécifiques au traducteur.  
   
- **validation en deux phases**  
+ **two-phase commit**  
  Le processus de validation d’une transaction distribuée en deux phases. Dans la première phase, le processeur de transaction vérifie que toutes les parties de la transaction peuvent être validés. Dans la deuxième phase, toutes les parties de la transaction sont validées. Si n’importe quelle partie de la transaction indique dans la première phase, qu’il ne peut pas être validé, la deuxième phase n’a pas lieu. ODBC ne prend pas en charge les validations en deux phases.  
   
  **Indicateur de type**  

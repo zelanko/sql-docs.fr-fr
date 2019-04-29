@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922260"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
   Cette rubrique explique comment créer une sauvegarde de base de données complète dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou de PowerShell.  

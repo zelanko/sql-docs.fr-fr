@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127255"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implémentation des pilotes pour les bases de données de poste de travail
 Vous trouverez des instructions et notes techniques sur la façon d’implémenter et configurer les pilotes de base de données Microsoft ODBC Desktop dans l’aide en ligne d’administrateur de sources de données ODBC. Ce fichier est accessible pendant les routines d’installation de pilote à partir de la [administrateur de sources de données Microsoft ODBC](../../odbc/admin/odbc-data-source-administrator.md).  

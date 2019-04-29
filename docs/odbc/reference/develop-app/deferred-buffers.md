@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049885"
 ---
 # <a name="deferred-buffers"></a>Mémoires tampons différées
 Un *tampon différée* est celle dont la valeur est utilisée à un moment *après* elle est spécifiée dans un appel de fonction. Par exemple, **SQLBindParameter** sert à associer, ou *lier,* un tampon de données avec un paramètre dans une instruction SQL. L’application spécifie le numéro du paramètre et transmet l’adresse, la longueur d’octet et le type de la mémoire tampon. Le pilote enregistre ces informations mais n’examine pas le contenu de la mémoire tampon. Plus tard, lorsque l’application s’exécute l’instruction, le pilote récupère les informations et l’utilise pour récupérer les données de paramètre et les envoyer à la source de données. Par conséquent, l’entrée de données dans la mémoire tampon est différée. Mémoires tampons différées sont spécifiés dans une fonction et utilisés dans un autre, il est une erreur de programmation d’application pour libérer une mémoire tampon différée, tandis que le pilote attend toujours qu’elle existe ; Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), plus loin dans cette section.  

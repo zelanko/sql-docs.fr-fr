@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065617"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modification des tables à mémoire optimisée
   L'exécution d'opérations ALTER sur les tables mémoire optimisées n'est pas prise en charge. Cela comprend les opérations telles que la modification du nombre de compartiments, l'ajout ou la suppression d'un index et l'ajout ou la suppression d'une colonne. Cette rubrique fournit des instructions pour mettre à jour des tables mémoire optimisées.  

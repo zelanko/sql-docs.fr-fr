@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069697"
 ---
 # <a name="odbc-core-subkey"></a>Sous-clé des composants principaux ODBC
 La valeur sous la sous-clé ODBC Core donne le décompte d’utilisation pour les composants principaux (Gestionnaire de pilotes, bibliothèque de curseurs, DLL d’installation et ainsi de suite). Le format de cette valeur est illustré dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*nombre*|  
   

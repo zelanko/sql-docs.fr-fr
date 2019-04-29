@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: afaadf62c38c318c759be1c452ff0953ba19c7d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065281"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 Spécifie si le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthode est suivie par implicite [Resync](../../../ado/reference/ado-api/resync-method.md) opération de la méthode et dans ce cas, la portée de cette opération.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|Appelle **Resync** avec la valeur combinée de tous les autres membres ADCPROP_UPDATERESYNC_ENUM.|  
 |**adResyncAutoIncrement**|1|Valeur par défaut. Tente de récupérer la nouvelle valeur d’identité pour les colonnes qui sont automatiquement incrémentées ou générées par la source de données, telles que les champs à numérotation automatique du Jet de Microsoft ou des colonnes d’identité de Microsoft SQL Server.|  

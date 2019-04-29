@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23d25be8de243cab1e6620bb48c9568b96599a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046211"
 ---
 # <a name="date-and-time-improvements"></a>Améliorations des types de données date et heure
   Cette rubrique décrit la prise en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client des types de données de date et d'heure ajoutés à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  

@@ -1,23 +1,26 @@
 ---
 title: NS$&lt;nom_service&gt; propriétés (onglet Service) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049605"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propriétés de NS$&lt;service name&gt; (onglet Service)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Ce service est le service [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Les valeurs des propriétés en gris clair ne peuvent pas être modifiées à l'aide de cette application.  
   
 ## <a name="options"></a>Options  
@@ -45,11 +48,11 @@ ms.locfileid: "52757661"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : Ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuelle : Ce service ne démarre pas automatiquement lorsque l’ordinateur démarre. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : Ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : Ce service ne peut pas être démarré.  
   
  **État**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé.  

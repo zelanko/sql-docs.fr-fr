@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054789"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installation d’Analysis Services en mode Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52527749"
   
 9. Si une autre page **Règles de support du programme d'installation**s'affiche, examinez les avertissements, puis cliquez sur **Suivant**.  
   
-     **Remarque :** le Pare-feu Windows étant activé, un avertissement s'affiche indiquant qu'il faut ouvrir les ports pour activer l'accès à distance.  
+     **Remarque :** Étant donné que le pare-feu Windows est activé, vous voyez un avertissement pour ouvrir des ports pour permettre l’accès à distance.  
   
 10. Dans la page **Rôle d'installation** , sélectionnez **Installation de fonctionnalités SQL Server**  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527749"
   
 3.  Connectez-vous à l’instance Analysis Services, par exemple **[nom serveur]\POWERPIVOT**. Si vous vous connectez à l'instance, vous avez vérifié que le service s'exécute.  
   
-##  <a name="bkmk_config"></a> Étape 2 : Configurer l'intégration SharePoint pour Analysis Services de base  
+##  <a name="bkmk_config"></a> Étape 2 : Configurer l’intégration de SharePoint de base pour Analysis Services  
  Les étapes suivantes décrivent les modifications de configuration nécessaires pour que vous puissiez interagir avec des modèles de données avancés Excel dans une bibliothèque de documents SharePoint. Effectuez ces étapes après avoir installé SharePoint et SQL Server Analysis Services.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -215,10 +215,10 @@ ms.locfileid: "52527749"
   
     ```  
   
-##  <a name="bkmk_verify"></a> Étape 3 : Vérifier l'intégration  
+##  <a name="bkmk_verify"></a> Étape 3 : Vérifier l’intégration  
  Les étapes suivantes vous guident tout au long des processus de création et de téléchargement d'un classeur pour vérifier l'intégration d'Analysis Services. Vous aurez besoin d'une base de données SQL Server pour terminer les étapes.  
   
-1.  **Remarque :** si vous disposez déjà d'un classeur avancé avec des segments ou des filtres, téléchargez-le dans votre bibliothèque de documents SharePoint et vérifiez que vous pouvez interagir avec les segments et les filtres à partir de la vue de la bibliothèque de documents.  
+1.  **Remarque :** Si vous disposez déjà d’un classeur avancé avec des segments ou filtres, vous pouvez télécharger sur votre bibliothèque de documents SharePoint et vérifiez que vous êtes en mesure d’interagir avec les segments et les filtres à partir de la vue bibliothèque de documents.  
   
 2.  Démarrez un nouveau classeur dans Excel.  
   

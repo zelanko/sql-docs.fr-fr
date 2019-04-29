@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac94543b0c3d4957cdd3eb95d80c33fc5443c546
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057789"
 ---
 # <a name="log-reader-agent"></a>l'Agent de lecture du journal ;
   La boîte de dialogue **Agent de lecture du journal** affiche des informations détaillées sur l'Agent de lecture du journal, notamment l'état, l'historique, les messages d'information et messages d'erreur.  

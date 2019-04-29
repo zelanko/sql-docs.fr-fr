@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062407"
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Conformité**  
@@ -62,7 +62,7 @@ SQLRETURN SQLDriverConnect(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Handle de connexion*  
+ *ConnectionHandle*  
  [Entrée] Handle de connexion.  
   
  *WindowHandle*  
@@ -88,7 +88,7 @@ SQLRETURN SQLDriverConnect(
  *DriverCompletion*  
  [Entrée] Indicateur qui indique si le Gestionnaire de pilotes ou le pilote doit demander les informations de connexion plus :  
   
- SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, SQL_DRIVER_COMPLETE_REQUIRED ou SQL_DRIVER_NOPROMPT.  
+ SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE,  SQL_DRIVER_COMPLETE_REQUIRED, or SQL_DRIVER_NOPROMPT.  
   
  (Pour plus d’informations, consultez « Commentaires ».)  
   
@@ -102,7 +102,7 @@ SQLRETURN SQLDriverConnect(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne droite tronquées|La mémoire tampon \* *OutConnectionString* n’est pas suffisamment grande pour retourner la chaîne de connexion complète, donc la chaîne de connexion a été tronquée. La longueur de la chaîne de connexion non tronqué est retournée dans **StringLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01 S 00|Attribut de chaîne de connexion non valide|Un mot clé d’attribut non valide a été spécifié dans la chaîne de connexion (*InConnectionString*), mais le pilote n’a pas pu vous connecter à la source de données. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S00|Attribut de chaîne de connexion non valide|Un mot clé d’attribut non valide a été spécifié dans la chaîne de connexion (*InConnectionString*), mais le pilote n’a pas pu vous connecter à la source de données. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S02|Valeur d’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée vers lequel pointée le *ValuePtr* argument dans **SQLSetConnectAttr** et remplacé une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S08|Erreur durant l’enregistrement du fichier DSN|La chaîne dans  *\*InConnectionString* contenait un **FILEDSN** mot clé, mais le fichier .dsn n’a pas été enregistré. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S09|Mot clé non valide|(DM) dans la chaîne de  *\*InConnectionString* contenait un **SAVEFILE** mot clé mais pas un **pilote** ou un **FILEDSN** mot clé. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
@@ -145,15 +145,15 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Commentaires  
  Une chaîne de connexion présente la syntaxe suivante :  
   
- *chaîne de connexion* :: = *une chaîne vide*[ ;] &#124; *attribut*[ ;] &#124; *attribut*; *chaîne de connexion*  
+ *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *une chaîne vide* :: =*attribut* :: = *mot clé de l’attribut*=*attribut-valeur* &#124; pilote = [{}] *valeur d’attribut*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
  *mot clé de l’attribut* :: = DSN &#124; UID &#124; PWD &#124; *-défini-attribut-mot clé driver*  
   
  *attribute-value* ::= *character-string*  
   
- *défini-attribut-mot clé Driver* :: = *identificateur*  
+ *driver-defined-attribute-keyword* ::= *identifier*  
   
  où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces.  
   

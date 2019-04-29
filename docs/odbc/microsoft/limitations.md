@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9901d2169876930a41956338bb216c1282f7bc71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026843"
 ---
 # <a name="limitations"></a>Limitations
 Cette section décrit les limitations des pilotes de base de données de bureau ODBC en ce qui concerne les rubriques suivantes :  
@@ -38,11 +38,11 @@ Cette section décrit les limitations des pilotes de base de données de bureau 
 ||[SELECT, instruction](../../odbc/microsoft/select-statement-limitations.md)|[Clause FROM](../../odbc/microsoft/from-clause-limitations.md)|  
 ||[UPDATE, instruction](../../odbc/microsoft/update-statement-limitations.md)|[Clause HAVING](../../odbc/microsoft/having-clause-limitations.md)|  
 |||[Prédicat LIKE](../../odbc/microsoft/like-predicate-limitations.md)|  
-|||[NON NULL](../../odbc/microsoft/not-null-limitations.md)|  
+|||[NOT NULL](../../odbc/microsoft/not-null-limitations.md)|  
 |||[Clause ORDER BY](../../odbc/microsoft/order-by-clause-limitations.md)|  
 |||[Nom de la table](../../odbc/microsoft/table-name-limitations.md)|  
 |||[Références de table](../../odbc/microsoft/table-references-limitations.md)|  
 |||[Vues](../../odbc/microsoft/views-limitations.md)|  
 |||[OÙ Clause](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[OÙ CURRENT OF, Clause](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
-|||[Chaîne](../../odbc/microsoft/string-limitations.md)|
+|||[String](../../odbc/microsoft/string-limitations.md)|

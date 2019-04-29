@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062257"
 ---
 # <a name="sqlendtran-function"></a>Fonction SQLEndTran
 **Conformité**  
@@ -70,7 +70,7 @@ SQLRETURN SQLEndTran(
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connexion non ouverte|(DM) le *HandleType* a été SQL_HANDLE_DBC et le *gérer* n’était pas dans un état connecté.|  
 |08007|Échec de la connexion au cours de la transaction|Le *HandleType* a été SQL_HANDLE_DBC et associé à la connexion le *gérer* a échoué pendant l’exécution de la fonction, et il ne peut pas être déterminé si demandé  **VALIDER** ou **ROLLBACK** s’est produite avant la défaillance.|  
-|25 S 01|État de transaction inconnu|Un ou plusieurs de ces connexions dans *gérer* n’a pas pu terminer la transaction avec le résultat spécifié, et le résultat est inconnu.|  
+|25S01|État de transaction inconnu|Un ou plusieurs de ces connexions dans *gérer* n’a pas pu terminer la transaction avec le résultat spécifié, et le résultat est inconnu.|  
 |25S02|Transaction est toujours active|Le pilote n’a pas pu garantit que tout le travail dans la transaction globale pu être effectué de manière atomique, et la transaction est toujours active.|  
 |25S03|Restauration de transaction|Le pilote n’était pas en mesure de garantir que tout le travail dans la transaction globale pu être effectué de manière atomique et fonctionnent tous de la transaction active dans *gérer* a été restaurée.|  
 |40001|Échec de la sérialisation|La transaction a été annulée en raison d’un blocage de ressource avec une autre transaction.|  
@@ -134,9 +134,9 @@ SQLRETURN SQLEndTran(
   
     -   25S03 : Restauration de transaction  
   
-    -   40001 : Échec de la sérialisation  
+    -   40001: Échec de la sérialisation  
   
-    -   40002 : contrainte d’intégrité  
+    -   40002: contrainte d’intégrité  
   
     -   HYC00 : Fonctionnalité optionnelle non implémentée  
   

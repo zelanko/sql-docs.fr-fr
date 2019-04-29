@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046151"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
   La création et la maintenance d’un index de recherche en texte intégral impliquent le remplissage de l’index à l’aide d’un processus appelé *alimentation* (également appelé *analyse*).  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>b. Exécution d'une alimentation complète sur une table  
+### <a name="b-running-a-full-population-on-table"></a>B. Exécution d'une alimentation complète sur une table  
  L'exemple ci-après exécute une alimentation complète sur la table `Production.Document` de l'exemple de base de données `AdventureWorks` .  
   
 ```  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Résolution des erreurs dans une alimentation de texte intégral (analyse)  
  Lorsqu'une erreur se produit durant une analyse, la fonction d'analyse de la recherche en texte intégral crée et conserve un journal de l'analyse sous forme de fichier texte. Chaque journal de l'analyse correspond à un catalogue de texte intégral particulier. Par les journaux d’analyse par défaut pour une instance donnée, dans ce cas, la première instance, se trouvent dans %ProgramFiles%\Microsoft SQL Server\MSSQL12. Dossier MSSQLSERVER\MSSQL\LOG. Le fichier journal de l'analyse respecte le modèle de dénomination suivant :  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. JOURNAUX [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  ID d'une base de données. <`dbid`> est un à cinq chiffres nombre commençant par des zéros non significatifs.  

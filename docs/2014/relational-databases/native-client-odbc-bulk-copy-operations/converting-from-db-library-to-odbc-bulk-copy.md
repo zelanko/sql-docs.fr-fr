@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067622"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversion à partir de la bibliothèque de bases de données vers une copie en bloc ODBC
   Conversion d’un programme de copie en bloc DB-Library pour ODBC est facile, car la majeure partie copier les fonctions prises en charge par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client sont similaires pour les fonctions de copie en bloc DB-Library, avec les exceptions suivantes :  

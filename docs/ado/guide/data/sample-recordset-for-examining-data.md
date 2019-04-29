@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bfae67a14fb312f1b396cfc60f69e8cbe8babdf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063085"
 ---
 # <a name="sample-recordset-for-examining-data"></a>Exemple de recordset pour l’examen des données
 Tout d’abord, examinons le **Recordset** de l’objet renvoyé à l’aide de la requête SQL suivante, exécutée sur les données d’exemple Northwind base dans Microsoft SQL Server.  
@@ -36,7 +36,7 @@ WHERE CategoryID = 7
 |---------------|-----------------|---------------|  
 |7|Poires secs organiques d’oncle Bob|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle choucroute|45.6000|  
+|28|Rssle Sauerkraut|45.6000|  
 |51|Manjimup pommes en poudre|53.0000|  
 |74|Longlife Tofu|10.0000|  
   

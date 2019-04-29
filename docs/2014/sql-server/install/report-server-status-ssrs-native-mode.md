@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057949"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>État du serveur de rapports (SSRS en mode natif)
   Utilisez cette page pour afficher les informations sur l'instance du serveur de rapports à laquelle vous êtes connecté. Cette page est la page de démarrage pour la configuration du serveur de rapports. Des pages supplémentaires sont disponibles pour configurer les URL, le compte de service, la base de données du serveur de rapports, la remise des messages électroniques du serveur de rapports, le déploiement avec montée en puissance parallèle et les clés de chiffrement.  

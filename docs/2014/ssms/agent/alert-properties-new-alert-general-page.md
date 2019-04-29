@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062145"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Alerte de propriétés de nouvelle alerte (Page Général)
   Utilisez cette page pour afficher et modifier les propriétés générales des alertes de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

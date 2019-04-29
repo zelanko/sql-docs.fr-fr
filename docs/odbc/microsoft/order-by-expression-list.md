@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c6be518211edb07251ff9234b095f3d3dde248b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024270"
 ---
 # <a name="order-by-expression-list"></a>ORDER BY, liste d’expressions
 Expressions peuvent être utilisées dans la clause ORDER BY. Par exemple, dans les clauses suivantes, la table est triée par trois expressions clées : a + b, c + d et e.  

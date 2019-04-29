@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042875"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la série chronologique Structure et modèles
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la structure et des modèles de série chronologique
   Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction pour traiter la série chronologique, structures d’exploration de données et que vous avez créé des modèles d’exploration de données.  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Vous devez toujours traiter un modèle et une structure d'exploration de données au moment où vous les créez. Si vous spécifiez la structure d'exploration de données lors de l'utilisation de l'instruction INSERT INTO, l'instruction traite la structure et tous ses modèles d'exploration de données associés.  

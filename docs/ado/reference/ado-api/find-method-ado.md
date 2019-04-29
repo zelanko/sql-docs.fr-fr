@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028134"
 ---
 # <a name="find-method-ado"></a>Find, méthode (ADO)
 Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne répondant aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de ligne de début et de décalage à partir de la ligne initiale peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement est trouvé ; Sinon, la position est définie à la fin (ou le début) de la **Recordset**.  

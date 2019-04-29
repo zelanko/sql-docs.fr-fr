@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63041146"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "47712509"
 |**audit_file_path**|**nvarchar (256)**|Chemin d'accès complet et nom de fichier de la cible de fichier d'audit utilisée actuellement. Rempli uniquement pour les fichiers d'audit.|  
 |**audit_file_size**|**bigint**|Taille approximative du fichier d'audit, en octets. Rempli uniquement pour les fichiers d'audit.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les principaux doivent avoir **VIEW SERVER STATE** et **sélectionnez** autorisations.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

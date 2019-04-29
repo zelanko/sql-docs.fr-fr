@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b559003c3ee58e1220c1714e4ab26403cfdf11f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922960"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Charger les assemblys SMO dans Windows PowerShell
   Cette rubrique décrit comment charger les assemblys SMO (SQL Server Management Object) dans des scripts Windows PowerShell qui n'utilisent pas le fournisseur SQL Server PowerShell.  

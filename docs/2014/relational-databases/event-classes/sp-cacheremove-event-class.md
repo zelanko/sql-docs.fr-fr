@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058085"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove, classe d'événements
   La classe d'événements SP:CacheRemove indique que la procédure stockée a été supprimée du cache de plan.  

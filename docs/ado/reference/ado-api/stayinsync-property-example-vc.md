@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062607"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync, exemple de propriété (VC++)
 Cet exemple montre comment la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriété facilite l’accès aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)

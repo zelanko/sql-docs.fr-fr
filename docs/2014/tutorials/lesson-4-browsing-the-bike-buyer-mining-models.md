@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070887"
 ---
-# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer
+# <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer
   Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu dans l’arbre de décision et clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : Ajout de modèles d’exploration de la structure d’exploration de données prédictive](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) ensemble de lignes de schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  

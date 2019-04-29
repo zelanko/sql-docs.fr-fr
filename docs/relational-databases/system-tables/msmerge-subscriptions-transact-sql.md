@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5341eae935d9c97eb7ff0ae6b71b21bba3d986e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026490"
 ---
 # <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52811792"
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**publication_id**|**Int**|ID de la publication.|  
 |**subscriber_id**|**smallint**|L’ID de l’abonné.|  
-|**bd_abonné**|**sysname**|Le nom de la base de données d’abonnement.|  
+|**subscriber_db**|**sysname**|Le nom de la base de données d’abonnement.|  
 |**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**sync_type**|**tinyint**|Type de synchronisation :<br /><br /> 1 = Automatique.<br /><br /> 2 = Pas de synchronisation.|  
 |**status**|**tinyint**|L’état de l’abonnement.|  

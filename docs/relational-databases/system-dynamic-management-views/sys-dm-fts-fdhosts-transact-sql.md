@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_fdhosts (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_fdhosts (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: faa79f48a4f3b8ac70984c3b02c8863d7d37e8ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026718"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47608538"
 |**max_thread**|**Int**|Nombre maximal de threads dans l'hôte de démon de filtre.|  
 |**batch_count**|**Int**|Nombre des lots traités dans l'hôte de démon de filtre.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

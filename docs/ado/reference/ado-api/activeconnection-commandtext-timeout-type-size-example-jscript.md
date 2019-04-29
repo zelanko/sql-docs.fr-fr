@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 204b39f91e12970d3e853f21926e9dc34de0a0f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065353"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, la taille et Direction, propriétés-exemple (JScript)
 Cet exemple utilise le [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), et [Direction](../../../ado/reference/ado-api/direction-property.md) propriétés pour exécuter une procédure stockée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ActiveConnectionJS.asp**.  

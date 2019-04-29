@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061002"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Se connecter à Sybase (SybaseToSQL)
 Utilisez le **se connecter à Sybase** boîte de dialogue se connecter à l’instance de Sybase Adaptive Server Enterprise (ASE) que vous souhaitez migrer.  
@@ -73,7 +73,7 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |Nom du pilote|Pilote|  
     |Nom du serveur|Serveur|  
     |Nom d'utilisateur|UID|  
-    |Mot de passe|PWD|  
+    |Mot de passe|Pwd|  
     |Numéro de port|d’|  
   
     Pour Sybase ASE 12,5 ou 15, un exemple de chaîne de connexion est le suivant :  
@@ -86,7 +86,7 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |-----------|-----------------------------|  
     |Nom du serveur|Serveur|  
     |Nom d'utilisateur|UID|  
-    |Mot de passe|PWD|  
+    |Mot de passe|Pwd|  
     |Numéro de port|d’|  
   
     Un exemple de la chaîne de connexion pour le fournisseur ADO.NET est comme suit :  

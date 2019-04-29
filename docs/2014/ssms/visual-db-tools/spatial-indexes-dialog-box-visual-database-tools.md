@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00c5e0017b8d81eaea6960f016e40dbc381e69e8
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049133"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
   Utilisez la boîte de dialogue **Index spatiaux** pour créer des index pour les colonnes du type de données **géométrie** or **géographie** (*colonnes spatiales*), qui ne peuvent pas être indexées à l'aide de la boîte de dialogue **Index/Clés** . Chaque colonne spatiale peut avoir plusieurs index spatiaux, mais ils doivent être créés un par un.  

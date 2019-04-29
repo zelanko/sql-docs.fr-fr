@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063065"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>Réorganiser les colonnes de sortie (Visual Database Tools)
   L'ordre dans lequel vous ajoutez des colonnes de données à une requête Select détermine l'ordre d'affichage de ces colonnes dans les résultats. La première colonne que vous ajoutez à la requête s'affiche à l'extrême gauche des résultats, la deuxième colonne à côté et ainsi de suite.  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032003"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Ouvrir le Moniteur d'activité (SQL Server Management Studio)
   Cette rubrique décrit la façon d'ouvrir le Moniteur d'activité pour obtenir des informations sur les processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la façon dont ces processus affectent l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elle explique également comment définir l'intervalle d'actualisation du Moniteur d'activité.  
@@ -42,7 +42,7 @@ ms.locfileid: "52755511"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour afficher le Moniteur d'activité, un utilisateur doit disposer de l'autorisation VIEW SERVER STATE. Pour afficher la section E/S du fichier de données du Moniteur d'activité, vous devez disposer de l'autorisation CREATE DATABASE, ALTER ANY DATABASE ou VIEW ANY DEFINITION en plus de VIEW SERVER STATE.  
   
  Pour pouvoir mettre fin (KILL) à un processus, un utilisateur doit être membre des rôles serveur fixe sysadmin ou processadmin.  

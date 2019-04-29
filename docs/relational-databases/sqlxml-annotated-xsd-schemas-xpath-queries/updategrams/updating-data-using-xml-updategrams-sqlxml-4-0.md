@@ -29,11 +29,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0e352c6423230e7a921b019c6b02c40bf61bc538
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025224"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "56033607"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
  Dans cet exemple, le code de mise à jour (updategram) effectue deux mises à jour sur la table HumanResources.Shift de la base de données AdventureWorks :  
   
 -   Il modifie le nom de l'équipe de jour d'origine qui commence à 7 h 09 en remplaçant « Day » par « Early Morning ».  

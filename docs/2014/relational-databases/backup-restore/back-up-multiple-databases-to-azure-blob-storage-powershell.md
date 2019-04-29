@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922573"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>Utiliser PowerShell pour sauvegarder plusieurs bases de données dans le service de Stockage Blob Windows Azure
   Cette rubrique fournit des exemples de script pouvant être utilisés pour automatiser les sauvegardes dans le service Stockage Blob Microsoft Azure à l'aide d'applets de commande PowerShell.  
@@ -49,7 +49,7 @@ ms.locfileid: "52519544"
   
  Voici quelques observations concernant les exemples de script :  
   
-1.  **Navigation dans les chemins d’accès de SQL Server PowerShell :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d’accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
+1.  **Parcours des chemins SQL Server PowerShell :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
   
 2.  `Get-ChildItem` applet de commande : Les informations retournées par la `Get-ChildItem` dépend de l’emplacement dans un chemin d’accès PowerShell SQL Server. Par exemple, si l'emplacement est au niveau de l'ordinateur, cette applet de commande retourne toutes les instances du moteur de base de données SQL Server installées sur l'ordinateur. Si l'emplacement est au niveau de l'objet, tel que des bases de données, cette applet de commande retourne une liste d'objets de base de données.  Par défaut, l'applet de commande `Get-ChildItem` ne retourne pas d'objets système.  Pour afficher les objets système, utilisez le paramètre -Force.  
   

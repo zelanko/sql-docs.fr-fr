@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea60aef999f871f28e21839ce0d7808aad0727b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053061"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Showplan XML Statistics Profile (classe d'événements)
   La classe d'événements Showplan XML Statistics Profile se produit lorsque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SQL. Incluez la classe d'événements Showplan XML Statististics Profile pour identifier les opérateurs Showplan sur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

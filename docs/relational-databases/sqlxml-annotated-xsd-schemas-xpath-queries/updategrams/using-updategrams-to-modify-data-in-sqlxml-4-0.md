@@ -27,11 +27,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df86cae9fe4fd132393b6c882977156bd5c0ff45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025320"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilisation de codes de mise à jour (updategrams) pour modifier des données dans SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

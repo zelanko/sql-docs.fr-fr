@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022429"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script pour l'attribution d'autorisations Oracle
   Le script fourni dans cette rubrique est utilisé lors de la configuration d'une base de données Oracle qui publiera des données à l'aide de la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce script est également disponible dans le répertoire suivant après l’installation : *\<lecteur>*:\\\Program Files\Microsoft SQL Server\\*\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Pour plus d’informations sur la configuration de la base de données Oracle, consultez [Configurer un serveur de publication Oracle](configure-an-oracle-publisher.md).  

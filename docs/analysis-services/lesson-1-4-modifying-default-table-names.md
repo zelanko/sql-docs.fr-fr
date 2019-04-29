@@ -1,5 +1,5 @@
 ---
-title: Modification des noms de Table par défaut | Documents Microsoft
+title: Modification des noms de Table par défaut | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053124"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>Leçon 1-4 - modification des noms de Table par défaut
+# <a name="lesson-1-4---modifying-default-table-names"></a>Leçon 1-4 : modification des noms de Table par défaut
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Vous pouvez modifier la valeur de la propriété **FriendlyName** des objets de la vue de source de données pour en faciliter l'utilisation et la compréhension.  

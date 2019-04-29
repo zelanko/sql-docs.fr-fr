@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ff2a744f68cf6152330179eb8dcab1f33911914
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046604"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Lorsque des tableaux de valeurs de paramètre sont liés pour l’exécution des instructions, `SQLRowCount` retourne SQL_ERROR si une ligne de valeurs de paramètre génère une condition d’erreur dans l’exécution des instructions. Aucune valeur n'est retournée via l'argument *RowCountPtr* de la fonction.  
@@ -31,7 +31,7 @@ ms.locfileid: "53354742"
  Quand un [!INCLUDE[tsql](../../includes/tsql-md.md)] une instruction INSERT, UPDATE, DELETE ou MERGE avec une clause OUTPUT est exécutée, SQLRowCount ne retourne pas le nombre de lignes affectées tant que toutes les lignes du jeu de résultats généré par la clause OUTPUT ont été consommées. Pour consommer ces lignes, vous devez appeler SQLFetch ou SQLFetchScroll. SQLResultCols retourne -1 tant que toutes les lignes de résultat ont été consommées. SQLFetch ou SQLFetchScroll retourne SQL_NO_DATA, l’application doit appeler SQLRowCount pour déterminer le nombre de lignes affectées avant l’appel de SQLMoreResults pour atteindre le résultat suivant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLRowCount, fonction](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount Function](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

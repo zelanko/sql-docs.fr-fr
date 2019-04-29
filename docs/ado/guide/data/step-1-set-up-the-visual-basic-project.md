@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Configurer le projet Visual Basic | Microsoft Docs'
+title: 'Étape 1 : Configurer le projet Visual Basic | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062805"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>Étape 1 : Configurer le projet Visual Basic
+# <a name="step-1-set-up-the-visual-basic-project"></a>Étape 1 : Configurer le projet Visual Basic
 Dans ce scénario, il est supposé que vous avez Microsoft Visual Basic 6.0, ADO 2.5 ou version ultérieure et le fournisseur Microsoft OLE DB pour la publication Internet installé sur votre système. Vous commencez par créer un nouveau projet et puis ajouter des contrôles au formulaire par défaut dans le projet.  
   
 ### <a name="to-create-an-ado-project"></a>Pour créer un projet ADO :  
@@ -39,4 +39,4 @@ Dans ce scénario, il est supposé que vous avez Microsoft Visual Basic 6.0, ADO
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

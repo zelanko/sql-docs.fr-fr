@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065263"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Spécifie les champs qui peuvent être utilisés pour détecter les conflits pendant une mise à jour optimiste d’une ligne de la source de données avec un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
  Utilisez ces constantes avec la **Recordset** »**les critères de mise à jour**» propriété dynamique, qui est référencée dans le [Index des propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) et documentées dans la [ Le Service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|Détecte les conflits si n’importe quelle colonne de la ligne de source de données a été modifiée.|  
 |**adCriteriaKey**|0|Détecte les conflits si la colonne de clé des données de ligne source a été modifié, ce qui signifie que la ligne a été supprimée.|  

@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 07147f530cf9860514ad6fb830205d14361d539f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033532"
 ---
 # <a name="large-clr-user-defined-types"></a>Types CLR volumineux définis par l'utilisateur
   Dans SQL Server 2005, les types définis par l'utilisateur (UDT) dans le CLR (Common Language Runtime) se limitaient à une taille de 8 000 octets. Cette limite n'est plus d'actualité dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et versions ultérieures. Les types CLR définis par l'utilisateur sont désormais traités de la même manière que les objets LOB. Ainsi, les types définis par l'utilisateur dont la taille est inférieure ou égale à 8 000 octets adoptent le même comportement que dans SQL Server 2005 mais les types définis par l'utilisateur plus volumineux sont pris en charge et affichent une taille « illimitée ».  
   
  Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;OLE DB&#41; ](../ole-db/large-clr-user-defined-types-ole-db.md) et [Large CLR User-Defined Types &#40;ODBC&#41;](../odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="use-cases"></a>Cas d'usage  
+## <a name="use-cases"></a>Cas d’usage  
  Pour ODBC, la prise en charge des types définis par l'utilisateur volumineux incluent la possibilité de transmettre des valeurs UDT en fragments sous forme de paramètres de données en cours d'exécution. Pour cela, vous devez utiliser SQLPutData.  
   
  Pour OLE DB, la prise en charge des types définis par l’utilisateur volumineux offre la possibilité de diffuser des valeurs UDT vers et depuis le serveur au moyen d’une liaison ISequentialStream.  

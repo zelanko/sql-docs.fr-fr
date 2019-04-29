@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925314"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Créer un membre consolidé (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre consolidé lorsque vous souhaitez un nœud parent pour une hiérarchie explicite. Les membres consolidés peuvent avoir leurs propres attributs. Ils sont utilisés pour le regroupement. Comme indiqué dans l'exemple suivant, les membres consolidés peuvent être utilisés pour les groupes de comptes qui ont des comptes sous eux.  

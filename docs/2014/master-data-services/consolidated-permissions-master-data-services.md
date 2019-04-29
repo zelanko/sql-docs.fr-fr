@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 91c00dc638369d46986ee3757a6d889ed5a1439f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925411"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Autorisations consolidées (services de données de référence)
   Les autorisations consolidées s'appliquent aux valeurs d'attribut pour tous les membres consolidés d'une entité.  
@@ -34,7 +34,7 @@ ms.locfileid: "56042900"
   
 -   Les autorisations attribuées à **Nom** et **Code** ne sont pas appliquées.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres consolidés sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
 |**Update**|Les membres consolidés sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.|  
@@ -43,11 +43,11 @@ ms.locfileid: "56042900"
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec uniquement des autorisations d'attribut ne peuvent pas ajouter ni supprimer des membres.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
 |**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
-|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l'accès aux attributs Name et Code.|  
+|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   

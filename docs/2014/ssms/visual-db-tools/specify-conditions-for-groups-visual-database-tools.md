@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc0f9319e4d598548111b44b1a10542773a7daa4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049143"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>Spécifier des conditions pour des groupes (Visual Database Tools)
   Vous pouvez limiter les groupes qui apparaissent dans une requête en spécifiant une condition qui s’applique à l’ensemble des groupes (une clause HAVING). Après regroupement et agrégation des données, les conditions de la clause HAVING sont appliquées. Seuls les groupes qui répondent aux conditions apparaissent dans la requête.  

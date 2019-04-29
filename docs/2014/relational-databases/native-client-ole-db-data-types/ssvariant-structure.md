@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff6e37986378a66d94dc113c4e3fe072fe3c077f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062497"
 ---
 # <a name="ssvariant-structure"></a>Structure SSVARIANT
   La structure `SSVARIANT`, qui est définie dans sqlncli.h, correspond à une valeur DBTYPE_SQLVARIANT dans le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -54,7 +54,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
 |Membre|Indicateur de type OLE DB|Type de données OLE DB C|Valeur vt|Commentaires|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Spécifie le type de valeur contenu dans la structure `SSVARIANT`.|  
+|vt|SSVARTYPE|||Spécifie le type de valeur contenu dans la structure `SSVARIANT`.|  
 |bTinyIntVal|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|Prend en charge le type de données `tinyint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |sShortIntVal|DBTYPE_I2|`SHORT`|`VT_SS_I2`|Prend en charge le type de données `smallint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |lIntVal|DBTYPE_I4|`LONG`|`VT_SS_I4`|Prend en charge le type de données `int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067716"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` Retourne SQL_SUCCESS qu’il existe des valeurs ou non le *CatalogName*, *TableName*, ou *ColumnName* paramètres. **SQLFetch** retourne SQL_NO_DATA lorsque des valeurs non valides sont utilisées dans ces paramètres.  

@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918818"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurer l'entrepôt de données de gestion (SQL Server Management Studio)
   Cette rubrique explique comment configurer l'entrepôt de données de gestion pour prendre en charge le stockage des données sur une instance unique ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui utilisent le collecteur de données. Ces instances peuvent se trouver sur le même serveur ou sur différents serveurs. Cette rubrique fournit également des descriptions de l'interface utilisateur pour la boîte de dialogue [Assistant Configuration de l'entrepôt de gestion des données](#Wizard) . Pour plus d'informations sur la configuration d'un collecteur de données, consultez [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  

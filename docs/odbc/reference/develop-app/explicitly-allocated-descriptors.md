@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fbec69e0d984d843abc2b8754e111a1199c79a5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049788"
 ---
 # <a name="explicitly-allocated-descriptors"></a>Descripteurs alloués explicitement
 Une application peut allouer explicitement un descripteur d’application sur une connexion à tout moment, qu'il est connecté à la base de données. En spécifiant ce handle de descripteur comme un attribut d’une instruction gérer à l’aide de **SQLSetStmtAttr**, l’application dirige le pilote à utiliser ce descripteur à la place le correspondantes alloués implicitement application descripteurs. L’application ne peut pas spécifier de descripteurs d’implémentation alternative.  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073844"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Création et gestion du stockage des objets mémoire optimisés
   Le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] est intégré dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce qui vous permet d’avoir des tables optimisées en mémoire et des tables sur disque (traditionnelles) dans la même base de données. Toutefois, la structure de stockage des tables optimisées en mémoire est différente de celle des tables sur disque.  

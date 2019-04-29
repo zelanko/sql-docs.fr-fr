@@ -1,5 +1,5 @@
 ---
-title: UnknownMember (MDX) | Documents Microsoft
+title: UnknownMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065042"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
 
@@ -33,7 +33,7 @@ Hierarchy_Expression.UnknownMember
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
  *Hierarchy_Expression*  
@@ -44,13 +44,13 @@ Hierarchy_Expression.UnknownMember
   
 -   Au niveau supérieur des hiérarchies d'attribut qui ne sont pas agrégées.  
   
--   Au premier niveau en dessous du **tous les** niveau pour les hiérarchies naturelles.  
+-   Le premier niveau ci-dessous le **tous les** niveau pour les hiérarchies naturelles.  
   
 -   À n'importe quel niveau pour les hiérarchies non naturelles.  
   
  Si une expression de membre est spécifiée, le **UnknownMember** fonction retourne l’enfant du membre inconnu du membre spécifié. Si le membre spécifié n'existe pas, la fonction retourne la valeur NULL.  
   
- Si une expression de hiérarchie est spécifiée, la **UnknownMember** fonction retourne le membre inconnu au niveau supérieur s’il en existe.  
+ Si une expression de hiérarchie est spécifiée, le **UnknownMember** fonction retourne le membre inconnu au niveau supérieur s’il en existe.  
   
  Si le membre inconnu n’existe pas sur le niveau ou le membre, le **UnknownMember** fonction crée un membre null.  
   
@@ -81,6 +81,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

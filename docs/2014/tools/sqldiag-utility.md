@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035418"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (utilitaire)
   L’utilitaire **SQLdiag** est un utilitaire de collecte de données de diagnostic, conçu pour un usage général. Il est possible de l’exécuter en tant qu’application console ou service. Vous pouvez utiliser **SQLdiag** pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et depuis d’autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. **SQLdiag** a été conçu pour accélérer et simplifier la collecte d’informations de diagnostic pour les services d’assistance de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -111,7 +111,7 @@ ms.locfileid: "53590253"
 > [!NOTE]  
 >  **SQLdiag** n’ajoute pas la sortie au dossier de sortie actif quand il démarre. Il peut uniquement remplacer le dossier de sortie par défaut (option 1) ou renommer le dossier (option 2), puis enregistrer la sortie dans le nouveau dossier de sortie par défaut nommé SQLDIAG.  
   
- **/M** _machine1_ [ *machine2 ** machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  Remplace les ordinateurs spécifiés dans le fichier de configuration. Par défaut, le fichier de configuration est SQLDiag.Xml ou est défini avec le paramètre **/I** . Lorsque vous spécifiez plusieurs ordinateurs, séparez chaque nom d'ordinateur avec un espace.  
   
  Le paramètre *@machinelistfile* spécifie un nom de fichier de liste d'ordinateurs à stocker dans le fichier de configuration.  
@@ -151,7 +151,7 @@ ms.locfileid: "53590253"
   
  Notez que **SQLdiag** utilise l’heure locale sur l’ordinateur sur lequel l’utilitaire s’exécute.  
   
- **/A** _Nom_application_sqldiag_  
+ **/A** _SQLdiag_application_name_  
  Permet d’exécuter plusieurs instances de l’utilitaire **SQLdiag[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur la même instance** .  
   
  Chaque *nom_application_SQLdiag* identifie une instance différente de **SQLdiag**. Il n’existe aucune relation entre une instance *nom_application_SQLdiag* et un nom d’instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

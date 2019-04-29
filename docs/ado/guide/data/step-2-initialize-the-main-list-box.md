@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062795"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Étape 2 : Initialiser la zone de liste principale
 Pour déclarer des objets globaux d’enregistrement et le jeu d’enregistrements, insérez le code suivant dans (général) (déclarations) pour Form1 :  
@@ -53,4 +53,4 @@ End Sub
 ## <a name="see-also"></a>Voir aussi  
  [Scénario de publication Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Étape 1 : Configurer le projet Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Étape 3 : Remplir la zone de liste de champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Étape 3 : Remplir la zone de liste de champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047222"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Voici un exemple de résultat défini sur Windows :
  
  |host_platform |host_distribution |host_release |host_service_pack_level |host_sku |os_language_version |
  |----- |----- |----- |----- |----- |----- |
- |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
+ |Windows   |Windows Server 2012 R2 Standard    |6.3    |   |7  |1033 |  
 
 Voici un exemple jeu de résultats sur Linux :
  

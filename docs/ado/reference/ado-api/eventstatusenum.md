@@ -1,5 +1,5 @@
 ---
-title: Il ne | Microsoft Docs
+title: EventStatusEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070863"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Spécifie l’état actuel de l’exécution d’un événement.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|Demande l’annulation de l’opération qui a provoqué l’événement se produise.|  
 |**adStatusCantDeny**|3|Indique que l’opération ne peut pas demander l’annulation de l’opération en attente.|  

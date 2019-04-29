@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019232"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -158,7 +158,7 @@ SQL Server gère les valeurs Null et les espaces différemment du moteur xVeloci
   
 `EXAMPLE: LOG(blank())`  
   
-Les mêmes limitations s'appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
+Les mêmes limitations s’appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
   
 Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
   
@@ -190,9 +190,9 @@ Les formules dans un modèle tabulaire en mémoire sont soumises aux mêmes limi
   
 En général, étant donné que les plages de dates acceptées sont différentes pour Excel et SQL Server, les résultats peuvent être garantis pour correspondre uniquement lorsque les dates sont dans la plage de dates commune, qui compris les dates suivantes :  
   
--   Première date : 1er mars 1990  
+-   Date la plus ancienne : 1er mars 1990  
   
--   Dernière date : 31 décembre 9999  
+-   Date la plus récente : Le 31 décembre 9999  
   
 Si les dates utilisées dans les formules n'appartiennent pas à cette plage, la formule génère une erreur ou les résultats ne correspondent pas.  
   
@@ -251,7 +251,7 @@ En mode DirectQuery, si le résultat d’une opération arithmétique est de typ
   
 -   Minimum : -922337203685477,5808  
   
--   Maximum :  922337203685477.5807  
+-   Maximum : 922337203685477.5807  
   
 **Combinaison de types de données Currency et REAL**  
 EXEMPLE : `Currency sample 1`  

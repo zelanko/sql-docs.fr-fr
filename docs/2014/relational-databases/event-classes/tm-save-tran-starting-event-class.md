@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: Save Tran Starting, classe d’événements | Microsoft Docs"
+title: 'TM : Save Tran Starting, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b33f4a2d85f2613b238c9bd9b2e59415784b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061339"
 ---
-# <a name="tm-save-tran-starting-event-class"></a>Classe d'événements TM: Save Tran Starting, classe d’événements
-  Le Gestionnaire de transactions : Save Tran Starting indique qu'une requête SAVE TRANSACTION démarre. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions.  
+# <a name="tm-save-tran-starting-event-class"></a>TM : Save Tran Starting (classe d'événements)
+  Le Gestionnaire de transactions : Save Tran Starting la classe d’événements indique qu’une requête SAVE TRANSACTION démarre. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions.  
   
-## <a name="tm-save-tran-starting-event-class-data-columns"></a>Classe d'événements TM: Save Tran Starting  
+## <a name="tm-save-tran-starting-event-class-data-columns"></a>TM : Save Tran Starting des colonnes de données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

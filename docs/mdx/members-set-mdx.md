@@ -1,5 +1,5 @@
 ---
-title: Members (Set) (MDX) | Documents Microsoft
+title: Members (Set) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd4fe92c064f4665a4b397e47a45ae5bde50f39
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048445"
 ---
 # <a name="members-set-mdx"></a>Members (Set) (MDX)
 
@@ -40,9 +40,9 @@ Level_Expression.Members
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
 ## <a name="remarks"></a>Notes  
- Si une expression de hiérarchie est spécifiée, la **Members (Set)** fonction retourne le jeu de tous les membres dans la hiérarchie spécifiée, sans les membres calculés. Pour obtenir le jeu de tous les membres, calculée ou dans le cas contraire, une hiérarchie utilisent les [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) (fonction)  
+ Si une expression de hiérarchie est spécifiée, le **Members (Set)** fonction retourne le jeu de tous les membres dans la hiérarchie spécifiée, sans les membres calculés. Pour obtenir le jeu de tous les membres, calculée ou dans le cas contraire, sur une hiérarchie utilisent les [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) (fonction)  
   
- Si une expression de niveau est spécifiée, la **Members (Set)** fonction retourne le jeu de tous les membres dans le niveau spécifié.  
+ Si une expression de niveau est spécifiée, le **Members (Set)** fonction retourne le jeu de tous les membres du niveau spécifié.  
   
 > [!IMPORTANT]  
 >  Lorsqu'une dimension contient uniquement une hiérarchie visible unique, cette hiérarchie peut être désignée soit par le nom de dimension, soit par le nom de la hiérarchie, puisque le nom de dimension dans ce scénario est résolu à son unique hiérarchie visible. Par exemple, Measures.Members est une expression MDX valide parce qu'elle est résolue à la seule hiérarchie de la dimension de mesures.  
@@ -71,7 +71,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

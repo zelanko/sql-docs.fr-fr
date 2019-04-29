@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9df56209254696a538cf8640685c5675af3b9858
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913304"
 ---
 # <a name="mssqlserver7984"></a>MSSQLSERVER_7984
     
@@ -30,7 +30,7 @@ ms.locfileid: "48161709"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|Texte du message|Pré-vérifications de table système : ID d'objet O_ID. La page P_ID possède un type de page PAGETYPE. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
+|Texte du message|Pré-vérifications de table système : ID d’objet O_ID. La page P_ID possède un type de page PAGETYPE. Vérifiez l'instruction qui s'est arrêtée en raison d'une erreur irréparable.|  
   
 ## <a name="explanation"></a>Explication  
  Une page avec un type autre que DATA_PAGE a été trouvée dans le niveau de données de l'objet spécifié. Cette erreur est générée au cours de la première phase des vérifications de la commande DBCC CHECKDB. Au cours de cette phase, DBCC CHECKDB effectue des vérifications primitives sur les pages de données des tables de base système critiques.  

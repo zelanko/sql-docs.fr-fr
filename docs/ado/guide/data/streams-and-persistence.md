@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062627"
 ---
 # <a name="streams-and-persistence"></a>Flux et persistance
 Le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [enregistrer](../../../ado/reference/ado-api/save-method.md) magasins (méthode), ou *persiste*, un **Recordset** dans un fichier et le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)méthode restaure le **Recordset** à partir de ce fichier.  
@@ -76,7 +76,7 @@ strRst = stm.ReadText(adReadAll)
 ...  
 ```  
   
-## <a name="scenario-3"></a>Scénario 3  
+## <a name="scenario-3"></a>Scénario 3  
  Cet exemple de code montre la persistance de code ASP un **Recordset** au format XML directement à la **réponse** objet :  
   
 ```  

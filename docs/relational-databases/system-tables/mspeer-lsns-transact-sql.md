@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026744"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52796171"
 |-----------------|---------------|-----------------|  
 |**id**|**Int**|Identifie un numéro de séquence d'enregistrement d'égal à égal.|  
 |**last_updated**|**datetime**|Le **datetime** à laquelle la dernière mise à jour de la ligne a été effectuée.|  
-|**donneur d’ordre**|**sysname**|Nom du serveur de publication à l'origine de la transaction|  
+|**originator**|**sysname**|Nom du serveur de publication à l'origine de la transaction|  
 |**originator_db**|**sysname**|Nom de la base de données d'où provient la transaction|  
 |**originator_publication**|**sysname**|Nom de la publication d'où provient la transaction|  
 |**originator_publication_id**|**Int**|Identificateur de la publication d'où provient la transaction|  

@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91765f0572d8c880f7505948f7756b373fe28f62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042125"
 ---
 # <a name="cursors"></a>Curseurs
-Une application extrait les données avec un *curseur*. Un curseur est différent à partir d’un jeu de résultats : un jeu de résultats est l’ensemble de lignes qui correspond aux critères de recherche spécifique, tandis qu’un curseur est le logiciel qui retourne les lignes à l’application. Le nom *curseur,* tel qu’il s’applique aux bases de données, provient probablement à partir du curseur clignotant, appelé sur un ordinateur Terminal Server. Comme ce curseur indique la position actuelle sur l’écran et où les mots typés apparaissent suivants, un curseur sur un jeu de résultats indique la position actuelle dans le jeu de résultats et quelle ligne sera ensuite retournée.  
+Une application extrait les données avec un *curseur*. Un curseur est différent à partir d’un jeu de résultats : Un jeu de résultats est l’ensemble de lignes qui correspond aux critères de recherche spécifique, tandis qu’un curseur est le logiciel qui retourne les lignes à l’application. Le nom *curseur,* tel qu’il s’applique aux bases de données, provient probablement à partir du curseur clignotant, appelé sur un ordinateur Terminal Server. Comme ce curseur indique la position actuelle sur l’écran et où les mots typés apparaissent suivants, un curseur sur un jeu de résultats indique la position actuelle dans le jeu de résultats et quelle ligne sera ensuite retournée.  
   
  Le modèle de curseur dans ODBC est basé sur le modèle de curseur dans embedded SQL. Une différence notable entre ces modèles est que les curseurs de façon sont ouverts. Dans embedded SQL, un curseur doit être explicitement déclaré et ouverts avant de pouvoir être utilisé. Dans ODBC, un curseur est implicitement ouvert lorsqu’une instruction qui crée un jeu de résultats est exécutée. Lorsque le curseur est ouvert, il est positionné avant la première ligne du jeu de résultats. Dans embedded SQL et ODBC, un curseur doit être fermé une fois que l’application a fini de l’utiliser.  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063095"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Fonctions d’agrégation, fonction CALC et mot clé NEW
 Mise en forme des données prend en charge les fonctions suivantes. Est le nom attribué au chapitre contenant la colonne doit être utilisée dans le *alias-chapitre*.  

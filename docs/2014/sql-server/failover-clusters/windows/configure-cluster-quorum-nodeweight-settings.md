@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: efd73d5b433deeb21b1f3469882a3f0e5dbe7c2b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049522"
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurer les paramètres NodeWeight pour un quorum de cluster
   Cette rubrique explique comment configurer les paramètres NodeWeight pour un nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [sécurité](#Security)  
+-   **Avant de commencer :**  [Prérequis](#Prerequisites), [Sécurité](#Security)  
   
 -   **Pour afficher les paramètres NodeWeight du quorum avec :** [À l’aide de Powershell](#PowerShellProcedure), [à l’aide de Cluster.exe](#CommandPromptProcedure)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "53349884"
 > [!IMPORTANT]  
 >  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036) : Un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n’a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Si ce correctif logiciel n'est pas installé, les exemples de cette rubrique retournent des valeurs vides ou NULL pour NodeWeight.  

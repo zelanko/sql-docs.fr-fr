@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062677"
 ---
 # <a name="catalog-example-vb"></a>Exemple avec Catalog (VB)
 Ce projet Visual Basic crée un nouveau cube à l’aide de MDX. Ensuite, il décrit la structure d’un cube dans un document Microsoft Word.  

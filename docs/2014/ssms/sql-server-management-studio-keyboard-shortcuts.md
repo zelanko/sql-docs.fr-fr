@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127052"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] propose deux schémas de clavier. Par défaut, il utilise le schéma [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] avec les raccourcis clavier basés sur [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offre également un schéma de clavier semblable au schéma standard de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Pour modifier le schéma de clavier ou ajouter d'autres raccourcis clavier, cliquez dans le menu **Outils** sur **Options**. Sélectionnez le schéma de clavier désiré dans la page **Environnement**, **Clavier** .  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63036214"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Spécifier un facteur de remplissage pour un index
   Cette rubrique explique ce qu'est le facteur de remplissage et comment spécifier une valeur de facteur de remplissage sur un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "54100714"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

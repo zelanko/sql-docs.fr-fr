@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5020b0d9dc509aff629347582ef1782d1262ceb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020429"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Créer un groupe de hiérarchies récursives (Générateur de rapports et SSRS)
   Un groupe de hiérarchies récursives organise les données d'un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques, tels que la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d'organisation.  

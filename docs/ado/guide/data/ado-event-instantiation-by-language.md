@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 131e889847625dea825ca48ca30bf801046d229c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062995"
 ---
 # <a name="ado-event-instantiation-by-language"></a>Instanciation des événements ADO par langage
 Chaque langage de programmation crée des instances d’événements ADO différemment. Tous les exemples suivants créent un **ConnectComplete** Gestionnaire d’événements.  

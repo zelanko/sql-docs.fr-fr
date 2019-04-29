@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ca25b7c537c333d6bc9eb7745ea2ec6ad6055c4b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920027"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
   Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
@@ -31,7 +31,7 @@ ms.locfileid: "58536501"
 |Obtenir un chemin d'accès UNC absolu ou relatif pour un fichier ou répertoire d'un FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|  
 |Obtenir la valeur d'ID de localisateur de chemin d'accès pour le fichier ou le répertoire spécifié d'un FileTable, en spécifiant le chemin d'accès.|[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Comment : Utiliser des chemins d'accès relatifs pour du code portable  
+##  <a name="BestPracticeRelativePaths"></a> Comment : Utiliser des chemins d’accès relatifs pour du Code Portable  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant les fonctions [FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql) et [GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql) ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction `GetFileNamespacePath` retourne le chemin d'accès relatif du fichier sous le chemin d'accès racine de la base de données.  
   
 ```sql  

@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 687193b79cdf0bee179062bb40bd49b23ada60d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025894"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) offre plusieurs options configurables pour authentifier les utilisateurs et les applications clientes sur le serveur de rapports. Par défaut, le serveur de rapports utilise l'authentification intégrée Windows et suppose des relations approuvées dans lesquelles le client et les ressources réseau sont dans le même domaine ou dans un domaine approuvé. Selon la topologie de votre réseau et les besoins de votre organisation, vous pouvez personnaliser le protocole d’authentification utilisé pour l’authentification intégrée de Windows, utiliser l’authentification de base ou une extension personnalisée d’authentification basée sur les formulaires que vous fournissez. Chacun de ces types d'authentification peut être activé ou désactivé individuellement. Vous pouvez activer plusieurs types d’authentification si vous voulez que le serveur de rapports accepte des demandes de plusieurs types.  

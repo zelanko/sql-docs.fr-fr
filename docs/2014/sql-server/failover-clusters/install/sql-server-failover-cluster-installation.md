@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067645"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installation d'un cluster de basculement SQL Server
   Pour installer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez créer et configurer une instance de cluster de basculement en exécutant le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -50,7 +50,7 @@ ms.locfileid: "52815731"
   
 2.  Sur chaque nœud à ajouter au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez le programme d'installation en utilisant la fonctionnalité d'ajout de nœud pour ajouter le nœud correspondant.  
   
-##### <a name="option-2-advancedenterprise-installation"></a>Option 2 : Installation avancée/entreprise  
+##### <a name="option-2-advancedenterprise-installation"></a>Option n°2 : Installation avancée/entreprise  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise d’un cluster de basculement comprend deux étapes :  
   
 1.  Sur chaque nœud devant faire partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez le programme d'installation en utilisant la fonctionnalité de préparation de cluster de basculement. Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  

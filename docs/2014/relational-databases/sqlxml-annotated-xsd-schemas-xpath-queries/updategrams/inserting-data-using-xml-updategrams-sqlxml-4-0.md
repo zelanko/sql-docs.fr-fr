@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060298"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Une mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le  **\<après >** bloc mais ne pas dans le correspondantes  **\<avant >** bloc. Dans ce cas, la mise à jour insère l’enregistrement dans le  **\<après >** bloc dans la base de données.  
@@ -156,7 +156,7 @@ ms.locfileid: "53365851"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Insertion de plusieurs enregistrements à l'aide d'un code de mise à jour  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertion de plusieurs enregistrements à l'aide d'un code de mise à jour  
  Ce code de mise à jour ajoute deux nouveaux enregistrements de décalage à la table HumanResources.Shift. Mise à jour ne spécifie pas le paramètre facultatif  **\<avant >** bloc.  
   
 ```  

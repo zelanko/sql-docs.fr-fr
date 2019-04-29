@@ -1,5 +1,5 @@
 ---
-title: 'Envoyer les mises à jour : méthode UpdateBatch | Microsoft Docs'
+title: 'Envoi des mises à jour : Méthode UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062875"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Envoi des mises à jour : méthode UpdateBatch
+# <a name="sending-the-updates-updatebatch-method"></a>Envoi des mises à jour : UpdateBatch, méthode
 Le code suivant, un jeu d’enregistrements s’ouvre en mode batch, en définissant la propriété LockType adLockBatchOptimistic et CursorLocation adUseClient. Il ajoute deux nouveaux enregistrements et modifie la valeur d’un champ dans un enregistrement existant, en enregistrant les valeurs d’origine et appelle ensuite la méthode UpdateBatch pour renvoyer les modifications apportées à la source de données.  
   
 ## <a name="remarks"></a>Notes  

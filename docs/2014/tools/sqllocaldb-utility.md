@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035398"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitaire SqlLocalDB
   Utilisez le `SqlLocalDB` utilitaire pour créer une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. Le `SqlLocalDB` utilitaire (SqlLocalDB.exe) est un outil de ligne de commande simple pour permettre aux utilisateurs et aux développeurs de créer et gérer une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. Pour plus d’informations sur l’utilisation **LocalDB**, consultez [SQL Server 2014 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
@@ -88,7 +88,7 @@ SqlLocalDB.exe
 SqlLocalDB.exe create "DEPARTMENT" 12.0 -s  
 ```  
   
-### <a name="b-working-with-a-shared-instance-of-localdb"></a>b. Utilisation d'une instance partagée de LocalDB  
+### <a name="b-working-with-a-shared-instance-of-localdb"></a>B. Utilisation d'une instance partagée de LocalDB  
  Ouvrez une invite de commandes en utilisant des autorisations d'administrateur.  
   
 ```  

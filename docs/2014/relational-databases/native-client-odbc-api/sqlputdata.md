@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046624"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Les restrictions suivantes s’appliquent lors de l’utilisation de SQLPutData pour envoyer plus de 65 535 octets de données (pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 4. 21 a) ou 400 Ko de données (pour SQL Server version 6.0 ou ultérieure) pour un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) ou SQL_LONGVARBINARY (`image`) colonne :  

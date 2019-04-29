@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: Promote Tran Completed, classe d’événements | Microsoft Docs"
+title: 'TM : Promote Tran Completed, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 029b077b034d7b022ea1e27832624df86decb547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061302"
 ---
-# <a name="tm-promote-tran-completed-event-class"></a>Classe d'événements TM: Promote Tran Completed
-  Le Gestionnaire de transactions : Promote Tran Completed indique qu'une requête PROMOTE TRANSACTION s'est terminée. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions.  
+# <a name="tm-promote-tran-completed-event-class"></a>TM : Promote Tran Completed (classe d'événements)
+  Le Gestionnaire de transactions : Promote Tran Completed, classe d’événements indique qu’une demande PROMOTE TRANSACTION est terminée. La requête est envoyée depuis le client par le biais de l'interface de gestion des transactions.  
   
-## <a name="tm-promote-tran-completed-event-class-data-columns"></a>Classe d'événements TM: Promote Tran terminée des colonnes de données classe d’événements  
+## <a name="tm-promote-tran-completed-event-class-data-columns"></a>TM : Promote Tran terminée des colonnes de données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

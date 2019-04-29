@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048966"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Démarrage de l'utilitaire de ligne de commande dta et paramétrage d'une charge de travail
   Au cours de cette tâche, vous allez démarrer l’utilitaire **dta** et afficher son aide, puis vous allez l’utiliser afin de paramétrer une charge de travail à partir de l’invite de commandes. La charge de travail utilisée est la charge, MyScript.sql, que vous avez créée dans l’exercice sur l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données : [Paramétrage d’une charge de travail](lesson-1-1-tuning-a-workload.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "48171109"
   
 3.  Lorsque l'Assistant Paramétrage du moteur de base de données a terminé de paramétrer la charge de travail, il affiche un message signalant que votre session de paramétrage s'est terminée avec succès. Vous pouvez afficher les résultats du paramétrage. Pour cela, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour ouvrir les fichiers MySession2OutputScript.sql et RMySession2Output.xml. Une autre méthode consiste à ouvrir la session de paramétrage MySession2 dans l’interface de l’Assistant Paramétrage du moteur de base de données et à afficher les recommandations et les rapports en procédant comme aux exercices [Affichage des recommandations pour le paramétrage](lesson-1-2-viewing-tuning-recommendations.md) et [Affichage des rapports de paramétrage](lesson-1-3-viewing-tuning-reports.md).  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Vous avez correctement paramétré une charge de travail simple à partir de l’invite de commandes en utilisant l’utilitaire **dta** . Cet outil fournit de nombreuses autres options de paramétrage. Pour plus d’informations, consultez l’aide de cet outil (**dta -?**) et la rubrique [Utilitaire dta](dta-utility.md) .  
   
 ## <a name="after-you-finish-this-tutorial"></a>Fin du didacticiel  
@@ -63,7 +63,7 @@ ms.locfileid: "48171109"
   
 -   [Utilitaire dta](dta-utility.md) : cette rubrique propose des documents de référence sur l’utilitaire en ligne de commande et le fichier XML facultatif que vous pouvez utiliser pour contrôler le fonctionnement de l’utilitaire.  
   
- Pour revenir au début de ce didacticiel, consultez [Didacticiel : Assistant Paramétrage du moteur de base de données](tutorial-database-engine-tuning-advisor.md).  
+ Pour revenir au début du didacticiel, consultez [didacticiel : Assistant Paramétrage du moteur de base de données](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiels sur le moteur de base de données](../../relational-databases/database-engine-tutorials.md)  

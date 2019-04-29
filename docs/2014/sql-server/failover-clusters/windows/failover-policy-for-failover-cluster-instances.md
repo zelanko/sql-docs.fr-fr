@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050080"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
   Dans une instance de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , un seul nœud peut posséder le groupe de ressources de cluster de basculement Windows Server (WSFC) à un moment donné. Les demandes des clients sont servies par ce nœud dans la FCI. En cas d'échec et d'un redémarrage infructueux, la propriété du groupe est déplacée vers un autre nœud WSFC dans la FCI. Ce processus s'appelle le basculement. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] augmente la fiabilité de la détection de pannes et fournit une stratégie de basculement flexible.  

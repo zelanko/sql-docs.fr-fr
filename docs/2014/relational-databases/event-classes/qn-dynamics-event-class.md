@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035699"
 ---
 # <a name="qndynamics-event-class"></a>Classe d'événements QN:Dynamics
   La classe d'événements QN:Dynamics fournit des informations sur l'activité d'arrière-plan que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] effectue pour la prise en charge des notifications de requête. Dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)], un thread d’arrière-plan surveille les délais d’abonnement, les abonnements en attente à déclencher et la destruction de la table de paramètres.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365871"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d'événement = 202|27|Non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|Non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Horloge exécution démarrée : Indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a démarré.<br /><br /> Horloge exécuter terminé : Indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a pris fin.<br /><br /> Tâche de nettoyage maître démarré : Indique le moment auquel démarre le nettoyage (garbage collection) destiné à supprimer les données d'abonnement aux notifications de requête expirées.<br /><br /> Fin de la tâche de nettoyage maître : Indique le moment auquel se termine le nettoyage (garbage collection) destiné à supprimer les données d'abonnement aux notifications de requête expirées.<br /><br /> Tâche de nettoyage maître ignoré : Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Horloge exécution démarrée : Indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a démarré.<br /><br /> Horloge exécuter terminé : Indique que le thread d’arrière-plan dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] que planifications tables de paramètres expirés pour le nettoyage a pris fin.<br /><br /> Tâche de nettoyage maître démarré : Indique au démarrage de nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Fin de la tâche de nettoyage maître : Indique quand se termine le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.<br /><br /> Tâche de nettoyage maître ignoré : Indique que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’a pas effectué le nettoyage (garbage collection) pour supprimer les données d’abonnement de notification de requête expirées.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057533"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Configurer un serveur pour exécuter la stratégie Désactivé par défaut
   Vous disposez désormais d'une stratégie nommée Désactivé par défaut. Dans cette tâche, vous allez vérifier si votre serveur est conforme aux spécifications de cette stratégie.  
@@ -44,6 +44,6 @@ ms.locfileid: "48147879"
 10. Fermez les boîtes de dialogue **Vue détaillée des résultats** et **Évaluer les stratégies** .  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Leçon 2 : Créer et appliquer une stratégie de standards de nommage](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

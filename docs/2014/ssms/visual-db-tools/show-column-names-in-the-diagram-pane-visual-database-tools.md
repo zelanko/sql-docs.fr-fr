@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067485"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Afficher les noms des colonnes dans le volet Schéma (Visual Database Tools)
   Vous pouvez choisir de masquer ou d’afficher les noms des colonnes des tables dans le **volet Schéma** du Concepteur de requêtes et de vues.  

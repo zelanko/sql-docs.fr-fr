@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cc3ae7c4c39517f40b49d2ddd98ccdc397ee345
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021820"
 ---
 # <a name="publication-information-all-subscriptions-transactional-publication"></a>Informations de publication, Tous les abonnements (Publication transactionnelle)
   L'onglet **Tous les abonnements** contient des informations sur tous les abonnements à la publication transactionnelle sélectionnée.  
@@ -25,13 +25,13 @@ ms.locfileid: "54134219"
 ## <a name="options"></a>Options  
  Pour plus d'informations et en savoir plus sur les tâches associées à un abonnement, cliquez avec le bouton droit de la souris sur la ligne de l'abonnement, puis cliquez sur une option dans le menu contextuel. Pour modifier la façon dont la grille affiche les données, cliquez avec le bouton droit sur la grille, puis cliquez sur l'une des options suivantes :  
   
--   **Tri**: Trier sur une ou plusieurs colonnes dans le **trier les colonnes** boîte de dialogue.  
+-   **Trier** : cette option vous permet d’effectuer un tri sur une ou plusieurs colonnes dans la boîte de dialogue **Trier les colonnes**.  
   
--   **Choisissez les colonnes à afficher**: Sélectionner les colonnes à afficher et l’ordre dans lequel les afficher dans le **choisir les colonnes** boîte de dialogue.  
+-   **Choisir les colonnes à afficher** : cette option vous permet de sélectionner les colonnes à afficher et l’ordre d’affichage dans la boîte de dialogue **Choisir les colonnes**.  
   
--   **Filtre**: Filtrer des lignes dans la grille en fonction des valeurs de colonne dans la **paramètres de filtre** boîte de dialogue.  
+-   **Filtrer** : cette option vous permet de filtrer les lignes dans la grille selon les valeurs de colonne dans la boîte de dialogue **Paramètres du filtre**.  
   
--   **Effacer le filtre**: Effacer des paramètres de filtre pour la grille.  
+-   **Effacer le filtre** : cette option vous permet d’effacer tous les paramètres du filtre pour la grille.  
   
  Les paramètres du filtre sont spécifiques à chaque grille. La sélection et le tri des colonnes sont appliqués à toutes les grilles du même type, par exemple la grille de publications pour chaque serveur de publication.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54134219"
  Les valeurs d'état **Critique pour les performances** et **Expire bientôt/Expiré** s'affichent uniquement si des seuils sont définis. Pour plus d’informations sur les mesures de performances et sur la définition des seuils, consultez [Analyser les performances avec le Moniteur de réplication](monitor/monitor-performance-with-replication-monitor.md) et [Définir des seuils et des avertissements dans le Moniteur de réplication](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Abonnement**  
- Nom de chaque abonnement au format : *NomAbonné : Nombasedonnéesabonnements*.  
+ Le nom de chaque abonnement, sous la forme : *NomAbonné : SubscriptionDatabaseName*.  
   
  **Performances**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. La valeur de performance de chaque abonnement est basée sur les dernières mesures relevées par le Moniteur de réplication et n'affecte pas les performances historiques. Les performances sont mesurées pour les abonnements aux publications ayant des seuils définis. Si des seuils de performances ne sont pas définis pour une publication, cette colonne contient **Non activé**. Les valeurs possibles sont les suivantes :  

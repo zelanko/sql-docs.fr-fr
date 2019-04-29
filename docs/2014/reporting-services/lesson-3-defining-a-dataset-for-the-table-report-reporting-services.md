@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f57ec59753e7539107c652d60f7a00959f95cbb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065427"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un jeu de données destiné à un rapport de table (Reporting Services)
   Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Les datasets contiennent un pointeur qui renvoient à la source des données, la requête que doit utiliser le rapport ainsi que des champs et variables calculées.  
@@ -74,6 +74,6 @@ ms.locfileid: "59932485"
 ## <a name="see-also"></a>Voir aussi  
  [Interroger des outils de conception dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Type de connexion SQL Server &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutoriel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

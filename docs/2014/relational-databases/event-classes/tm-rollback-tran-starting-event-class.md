@@ -1,5 +1,5 @@
 ---
-title: "Classe d'événements TM: ROLLBACK Tran Starting, classe d’événements | Microsoft Docs"
+title: 'TM : ROLLBACK Tran Starting, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061251"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>Classe d'événements TM: Classe d'événements Rollback Tran Starting
+# <a name="tm-rollback-tran-starting-event-class"></a>TM : Rollback Tran Starting (classe d'événements)
   Le Gestionnaire de transactions : Classe d’événements ROLLBACK Tran Starting indique qu’une demande ROLLBACK TRANSACTION commence. Le client envoie la demande par le biais de l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction va être démarrée après l'annulation de la transaction en cours.  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>Classe d'événements TM: ROLLBACK Tran Starting des colonnes de données classe d’événements  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM : ROLLBACK Tran Starting des colonnes de données classe d’événements  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
