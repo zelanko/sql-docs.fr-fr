@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   Le type doit avoir au moins un index. Comme pour les tables mémoire optimisées, vous pouvez utiliser des index de hachage et non cluster.  
   
-     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
+     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d’informations, consultez [déterminer le nombre de compartiments Correct pour les index de hachage](../relational-databases/indexes/indexes.md).  
   
 -   Les restrictions de type de données et de contrainte sur les tables mémoire optimisées s'appliquent également aux types de table mémoire optimisée. Par exemple, dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , les contraintes par défaut sont prises en charge, mais les contraintes de validation ne le sont pas.  
   

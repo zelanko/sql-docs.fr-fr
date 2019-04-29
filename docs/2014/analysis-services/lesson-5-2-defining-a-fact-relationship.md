@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b66614a40176a0c6ee0ac4b0b9283fc0415ecc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728664"
 ---
 # <a name="defining-a-fact-relationship"></a>Définition d'une relation de faits
   Les utilisateurs souhaitent parfois pouvoir dimensionner des mesures par élément de données se trouvant dans la table de faits ou exécuter des requêtes sur la table de faits pour obtenir des informations spécifiques connexes supplémentaires, telles que des numéros de factures ou de bons de commande associés à des ventes spécifiques. Quand vous définissez une dimension basée sur un élément de table de faits de ce type, la dimension est appelée *dimension de fait*. Les dimensions de fait sont aussi appelées dimensions dégénérées. Les dimensions de fait servent à regrouper des lignes connexes de la table de faits, par exemple toutes les lignes concernant un numéro de facture particulier. Bien qu'il soit possible de stocker cette information dans une table de dimensions distincte dans la base de données relationnelles, la création d'une table de dimensions distincte pour cette information n'offre aucun avantage, car la table de dimensions augmente à la même vitesse que la table de faits et le seul résultat obtenu est la duplication des données et une plus grande complexité, ce qui est inutile.  
@@ -66,7 +66,7 @@ ms.locfileid: "52530676"
   
 14. Dans le **attributs** volet du Concepteur de dimensions pour la **Internet Sales Order Details** dimension, sélectionnez **Sales Order Number**, puis modifiez le  **Nom** propriété dans la fenêtre des propriétés `Item Description.`  
   
-15. Dans le **NameColumn** propriété de cellule, cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue Colonne de nom , sélectionnez Product dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
+15. Dans le **NameColumn** propriété de cellule, cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue **Colonne de nom** , sélectionnez **Product** dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
   
 16. Ajoutez l’attribut **Sales Order Number** à la dimension. Pour cela, faites glisser la colonne **SalesOrderNumber** de la table **InternetSales** du volet **Vue de source de données** vers le volet **Attributs** .  
   

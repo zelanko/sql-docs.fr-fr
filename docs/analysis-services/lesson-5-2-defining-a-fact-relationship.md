@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3133c92dd5bf9b8aeae01b69393d2874fd9afa24
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752684"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Leçon 5-2 : définition d’une relation de faits
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +66,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter une nouvelle dimensio
   
 14. Dans le volet **Attributs** du Concepteur de dimensions pour la dimension **Internet Sales Order Details** , sélectionnez **Sales Order Number**, puis remplacez la propriété **Name** dans la fenêtre Propriétés par **Item Description**.  
   
-15. Dans le **NameColumn** propriété de cellule, cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue Colonne de nom , sélectionnez Product dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
+15. Dans le **NameColumn** propriété de cellule, cliquez sur le bouton Parcourir **(...)** . Dans la boîte de dialogue **Colonne de nom** , sélectionnez **Product** dans la liste **Table source** , sélectionnez **EnglishProductName** comme **Colonne source**, puis cliquez sur **OK**.  
   
 16. Ajoutez l’attribut **Sales Order Number** à la dimension. Pour cela, faites glisser la colonne **SalesOrderNumber** de la table **InternetSales** du volet **Vue de source de données** vers le volet **Attributs** .  
   

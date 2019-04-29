@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782382"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
   Cette rubrique explique comment avoir à nouveau accès à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en tant qu’administrateur système. Un administrateur système peut perdre l'accès à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'une des raisons suivantes :  
@@ -61,7 +61,7 @@ ms.locfileid: "52641560"
 5.  Sur le **paramètres de démarrage** sous l’onglet le **spécifier un paramètre de démarrage** , tapez `-m` puis cliquez sur `Add`. (Il s'agit d'un trait d'union suivi d'un m minuscule)  
   
     > [!NOTE]  
-    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Veillez à ne pas modifier les paramètres existants. Tout en bas, ajoutez un nouveau paramètre `;-m`, puis cliquez sur `OK`. (Il s'agit d'un point-virgule, suivi d'un trait d'union et d'un m minuscule.)  
+    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Veillez à ne pas modifier les paramètres existants. Tout en bas, ajoutez un nouveau paramètre `;-m`, puis cliquez sur `OK`. (Il s'agit d'un point-virgule, suivi d'un trait d'union et d'un m minuscule.)  
   
 6.  Cliquez sur `OK`et après le message de redémarrage, le bouton droit sur votre serveur, puis cliquez sur **redémarrer**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641560"
 11. Sur le **paramètres de démarrage** sous l’onglet le **paramètres existants** boîte, sélectionnez `-m` puis cliquez sur `Remove`.  
   
     > [!NOTE]  
-    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimer le `;-m` que vous avez ajouté précédemment, puis cliquez sur `OK`.  
+    >  Certaines versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'ont pas d'onglet **Paramètres de démarrage** . Dans ce cas, sous l’onglet **Avancé** , double-cliquez sur **Paramètres de démarrage**. Les paramètres s'ouvrent dans une fenêtre très petite. Supprimer le `;-m` que vous avez ajouté précédemment, puis cliquez sur `OK`.  
   
 12. Cliquez avec le bouton droit sur le nom de votre serveur, puis cliquez sur **Redémarrer**.  
   

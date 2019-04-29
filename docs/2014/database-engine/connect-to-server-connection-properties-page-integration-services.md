@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755241"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Se connecter au serveur (page Propriétés de connexion) Integration Services
-  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou d’inscription de [!INCLUDE[ssIS](../includes/ssis-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription de [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+  Utilisez cet onglet pour afficher ou spécifier les options de connexion à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou d’dansscription de [!INCLUDE[ssIS](../includes/ssis-md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** s’affichent uniquement dans cette boîte de dialogue lors d’une connexion. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription de [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 ## <a name="options"></a>Options  
  **Numéro de port**  

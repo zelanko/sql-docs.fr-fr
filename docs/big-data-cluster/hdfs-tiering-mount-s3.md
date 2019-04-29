@@ -1,5 +1,5 @@
 ---
-title: Monter S3 pour la hiérarchisation HDFS
+title: S3 de montage de la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
 description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe S3 dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: nelgson
@@ -10,12 +10,12 @@ ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd4a5fc600a937b5cc29ea4356a7cc2eb14966b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
+ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317118"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64330597"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -30,7 +30,7 @@ Les sections suivantes fournissent un exemple de configuration HDFS la hiérarch
 - Créer et charger des données dans un compartiment S3 
   - Charger un fichier CSV ou Parquet des fichiers à votre compartiment S3. Il s’agit de données HDFS externes qui seront montées à HDFS du cluster de données volumineuses.
 
-## <a name="access-keys"></a>Clés d'accès
+## <a name="access-keys"></a>Touches d’accès rapide
 
 1. Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux.
 
@@ -42,7 +42,7 @@ Les sections suivantes fournissent un exemple de configuration HDFS la hiérarch
    ```
 
    > [!TIP]
-   > Pour plus d’informations sur la création de S3 clés d’accès (`<s3-access-key>`), consultez [clés d’accès S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
+   > Pour plus d’informations sur la création de clés d’accès S3, consultez [clés d’accès S3](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys).
 
 ## <a id="mount"></a> Montage du stockage HDFS à distance
 
