@@ -1,5 +1,5 @@
 ---
-title: Les fonctions VBA dans MDX et DAX | Documents Microsoft
+title: Fonctions VBA dans MDX et DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251549"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 
 
-  Ce document contient une référence croisée de toutes les fonctions VBA disponibles dans [Visual Basic pour Applications fonctions](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) qui sont pris en charge dans MDX ; en outre, la liste inclut une remarque lorsqu’il existe une équivalence fonctionnelle avec le langage DAX .  
+  Ce document contient une référence croisée de toutes les fonctions VBA disponibles dans [Visual Basic pour Applications fonctions](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) qui sont pris en charge dans une expression MDX ; en outre, la liste inclut une remarque lorsqu’il existe une équivalence fonctionnelle avec le langage DAX .  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Référence des fonctions Visual Basic for Applications (VBA)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34743888"
 |CVar|MDX uniquement||  
 |CVErr|Non pris en charge||  
 |Date|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la fonction DATE (année, mois, jour), utilisé pour générer une valeur de type date des arguments fournis|  
-|AjDate|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la DATEADD (\<dates >, < number_of_intervals >,\<intervalle >) fonction, utilisée pour décaler les dates donnés en un nombre d’intervalles donnés|  
+|AjDate|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la DATEADD (\<dates >, < number_of_intervals >,\<intervalle >) fonction, utilisée pour décaler les dates données par un nombre d’intervalles donnés|  
 |DateDiff]|MDX uniquement||  
 |PartDate|MDX uniquement||  
 |SérieDate|MDX uniquement||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743888"
 |FileAttr|Non pris en charge||  
 |DateHeureFich|Non pris en charge||  
 |LongFich|Non pris en charge||  
-|Filtrer|Non pris en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments fournis<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou une expression des arguments fournis|  
+|Filtrer|Non pris en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu résultant du filtrage d’un jeu spécifié selon une condition de recherche des arguments fournis<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; le filtre (\<table >,\<filtre >) fonction retourne une table qui représente un sous-ensemble d’une autre table ou expression des arguments fournis|  
 |Fix|MDX uniquement||  
 |Format (Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|Non pris en charge||  
@@ -148,7 +148,7 @@ ms.locfileid: "34743888"
 |ConvChaîne|MDX uniquement||  
 |Chaîne]|MDX uniquement||  
 |StrReverse|Non pris en charge||  
-|Commutateur|MDX uniquement||  
+|Basculer|MDX uniquement||  
 |SYD|MDX uniquement||  
 |Onglet|Non pris en charge||  
 |Tan|MDX uniquement||  
@@ -156,7 +156,7 @@ ms.locfileid: "34743888"
 |Minuterie|MDX uniquement||  
 |SérieHeure|MDX uniquement||  
 |VHeure|DAX, MDX||  
-|La fonction Trim]|DAX, MDX||  
+|Trim]|DAX, MDX||  
 |TypeName|MDX uniquement||  
 |UBound|Non pris en charge||  
 |UCase|MDX uniquement||  

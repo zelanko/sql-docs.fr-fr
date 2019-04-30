@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239948"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue et UnderlyingValue, exemple de propriétés (VC ++)
 Cet exemple montre la [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) et [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriétés en affichant un message si les données sous-jacentes d’un enregistrement a changé pendant un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mise à jour par lots.  
@@ -196,27 +196,27 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Données a changé !**  
-**ID du titre : PS1372**  
+**ID de titre : PS1372**  
 **Valeur actuelle : self_help**   
 **Valeur d’origine : psychologie**   
 **Valeur sous-jacente : la sociologie**   
 **Données a changé !**  
-**ID du titre : PS2091**  
+**ID de titre : PS2091**  
 **Valeur actuelle : self_help**   
 **Valeur d’origine : psychologie**   
 **Valeur sous-jacente : la sociologie**   
 **Données a changé !**  
-**ID du titre : PS2106**  
+**ID de titre : PS2106**  
 **Valeur actuelle : self_help**   
 **Valeur d’origine : psychologie**   
 **Valeur sous-jacente : la sociologie**   
 **Données a changé !**  
-**ID du titre : PS3333**  
+**ID de titre : PS3333**  
 **Valeur actuelle : self_help**   
 **Valeur d’origine : psychologie**   
 **Valeur sous-jacente : la sociologie**   
 **Données a changé !**  
-**ID du titre : PS7777**  
+**ID de titre : PS7777**  
 **Valeur actuelle : self_help**   
 **Valeur d’origine : psychologie**   
 **Valeur sous-jacente : la sociologie**    

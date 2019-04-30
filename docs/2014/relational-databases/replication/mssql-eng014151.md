@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f292841c227db26f1c518b2eaef896f7ce3570c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191456"
 ---
 # <a name="mssqleng014151"></a>MSSQL_ENG014151
     
@@ -40,7 +40,7 @@ ms.locfileid: "54134619"
   
 -   Redémarrez l'Agent en échec pour voir s'il s'exécutera sans erreur. Pour plus d’informations, consultez [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) et [Concepts des exécutables de l’agent de réplication](concepts/replication-agent-executables-concepts.md).  
   
--   Vérifiez dans l'historique de l'Agent et des travaux si d'autres erreurs se sont produites vers la même heure. Pour plus d’informations sur l’affichage des détails d’erreur et d’état de l’agent dans le moniteur de réplication, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   Vérifiez dans l'historique de l'Agent et des travaux si d'autres erreurs se sont produites vers la même heure. Pour obtenir des informations sur l’affichage de l’état de l’agent et des détails de l’erreur dans le moniteur de réplication, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Vérifiez que la connectivité de base fonctionne entre les ordinateurs auxquels accède l'Agent, puis connectez-vous à chaque ordinateur avec un utilitaire tel que [sqlcmd Utility](../../tools/sqlcmd-utility.md). Lors de la connexion, utilisez le même compte que celui qu'utilise l'Agent pour se connecter. Pour plus d'informations sur les autorisations requises pour chaque compte d'Agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   

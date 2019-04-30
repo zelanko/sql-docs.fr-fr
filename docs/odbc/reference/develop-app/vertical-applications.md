@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208440"
 ---
 # <a name="vertical-applications"></a>Applications verticales
 Applications verticales effectuent généralement une tâche bien définie par rapport à un système SGBD unique. Par exemple, une application de saisie de commandes suit les commandes dans une société. Ce que ces types d’applications ont en commun est que le schéma de base de données est généralement conçu par le développeur d’applications et l’application pourrait fonctionner avec un nombre de SGBD différents, il fonctionne avec un système SGBD unique pour un seul client.  

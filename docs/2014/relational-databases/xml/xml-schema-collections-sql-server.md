@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193039"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
   Comme décrit dans la rubrique, [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server fournit un stockage natif des données XML via la `xml` type de données. Vous pouvez éventuellement associer des schémas XSD à une variable ou une colonne de `xml` type grâce à une collection de schémas XML. La collection de schémas XML stocke les schémas XML importés et peut ensuite servir à :  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186129"
 ---
 # <a name="sqlprocedures-function"></a>Fonction SQLProcedures
 **Conformité**  
@@ -49,10 +49,10 @@ SQLRETURN SQLProcedures(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
- *Nom de catalogue*  
+ *CatalogName*  
  [Entrée] Catalogue de la procédure. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, une chaîne vide (« ») indique les tables qui n’ont pas de catalogues. *CatalogName* ne peut pas contenir un modèle de recherche de chaîne.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_TRUE, *CatalogName* est traité comme un identificateur et ses cas n’est pas significatif. S’il s’agit de SQL_FALSE, *CatalogName* est un argument ordinaire ; il est traité littéralement, et sa casse est significatif. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -130,12 +130,12 @@ SQLRETURN SQLProcedures(
 |-----------------|-------------------|---------------|--------------|  
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Identificateur du catalogue de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de catalogues.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Identificateur de schéma de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de schémas.|  
-|NOM_PROCÉDURE (ODBC 2.0)|3|Varchar non NULL|Identificateur de la procédure.|  
+|PROCEDURE_NAME (ODBC 2.0)|3|Varchar non NULL|Identificateur de la procédure.|  
 |NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
 |NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
 |NUM_RESULT_SETS (ODBC 2.0)|6|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
 |REMARQUES (ODBC 2.0)|7|Varchar|Une description de la procédure.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Définit le type de procédure :<br /><br /> SQL_PT_UNKNOWN : Il est impossible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE : L’objet retourné est une procédure ; Autrement dit, il n’a pas une valeur de retour.<br /><br /> SQL_PT_FUNCTION : L’objet retourné est une fonction ; Autrement dit, il a une valeur de retour.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Définit le type de procédure :<br /><br /> SQL_PT_UNKNOWN: Il est impossible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE: L’objet retourné est une procédure ; Autrement dit, il n’a pas une valeur de retour.<br /><br /> SQL_PT_FUNCTION: L’objet retourné est une fonction ; Autrement dit, il a une valeur de retour.|  
   
  Le *SchemaName* et *ProcName* arguments acceptent des modèles de recherche. Pour plus d’informations sur les modèles de recherche valides, consultez [Arguments de valeur de modèle](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

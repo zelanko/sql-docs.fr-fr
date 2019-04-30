@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6c2e057c542e6b3c0d9ff475b697efb7bea51b6
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225454"
 ---
 # <a name="find-and-replace"></a>Rechercher et remplacer
   Utilisez la boîte de dialogue **Rechercher et remplacer** pour rechercher du texte dans un fichier et éventuellement le remplacer. En fonction de la manière dont vous ouvrez la boîte de dialogue **Rechercher et remplacer** , vous pouvez accéder à plusieurs versions de cette même boîte de dialogue proposant des options légèrement différentes. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Recherche rapide** pour ouvrir la boîte de dialogue avec les options de recherche, mais sans les options de remplacement. Dans le menu **Edition** , pointez sur **Rechercher et remplacer**, puis cliquez sur **Remplacement rapide** pour ouvrir la boîte de dialogue avec les options de recherche et les options de remplacement.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240151"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
   Vous pouvez ouvrir un document dans un ou plusieurs éditeurs en cliquant sur **Ouvrir** dans le menu **Fichier**, puis en cliquant sur **Fichier**. Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le fichier, cliquez sur la flèche **Ouvrir** , puis cliquez sur **Ouvrir avec**. Dans la boîte de dialogue **Ouvrir avec** , dans la liste **Sélectionnez le programme à ouvrir** , cliquez sur le programme de votre choix, puis cliquez sur **Ouvrir**.  

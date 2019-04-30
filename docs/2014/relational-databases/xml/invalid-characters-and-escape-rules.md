@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241196"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caractères non valides et règles d'échappement
   Cette rubrique décrit comment les caractères XML non valides sont contrôlés par la clause FOR XML, et répertorie les règles d'échappement pour les caractères qui ne sont pas valides dans les noms XML.  

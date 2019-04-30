@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) | Documents Microsoft
+title: AddCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201618"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -33,7 +33,7 @@ AddCalculatedMembers(Set_Expression)
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, MDX exclut les membres calculés lorsqu'il résout des fonctions Set. Le **AddCalculatedMembers** fonction examine l’expression d’ensemble spécifiée dans *Set_Expression,* et inclut des membres calculés qui sont des frères des membres contenus dans l’étendue de cette expression d’ensemble.  
+ Par défaut, MDX exclut les membres calculés lorsqu'il résout des fonctions Set. Le **AddCalculatedMembers** fonction examine l’expression de jeu spécifiée dans *Set_Expression,* et inclut des membres calculés qui sont des frères des membres contenus dans la portée de cet ensemble expression.  
   
 > [!NOTE]  
 >  Cette fonction ne peut être utilisée qu'avec des expressions d'ensemble unidimensionnelles.  
@@ -61,6 +61,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

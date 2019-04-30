@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89fc6d86437583503b2fd962bf86c1c9ff6d75f5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216207"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Fonction Min (Générateur de rapports et SSRS)
   Retourne la valeur minimale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée.  

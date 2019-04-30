@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224607"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Exploration des modèles d'analyse de panier (Didacticiel intermédiaire sur l'exploration de données)
   Maintenant que vous avez créé le `Association` modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Ce didacticiel vous guide dans l'utilisation de la visionneuse pour explorer les relations entre des éléments. La visionneuse vous aide à consulter d'un coup d'œil les produits qui tendent à apparaître ensemble et avoir une idée générale des nouvelles tendances.  
   
- La Visionneuse d'associations [!INCLUDE[msCoName](../includes/msconame-md.md)] contient trois onglets : **Règles**, **jeux d’éléments**, et **réseau de dépendances**. Comme chaque onglet révèle une vue légèrement différente des données, lorsque vous explorez un modèle, vous basculez en général entre les différents volets plusieurs fois pour obtenir des éclaircissements.  
+ Le [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’associations contient trois onglets : **Règles**, **jeux d’éléments**, et **réseau de dépendances**. Comme chaque onglet révèle une vue légèrement différente des données, lorsque vous explorez un modèle, vous basculez en général entre les différents volets plusieurs fois pour obtenir des éclaircissements.  
   
 -   [Onglet réseau de dépendances](#bkmk_DepNet)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "56035300"
   
  Une ligne qui connecte deux éléments indique qu'il est probable que ces éléments apparaissent ensemble dans une transaction. En d'autres termes, il est probable que les clients achètent ces éléments ensemble. Le curseur est associé à la probabilité de la règle. Déplacez le curseur vers le haut ou le bas pour éliminer les associations faibles, c'est à dire les règles avec une faible probabilité.  
   
- Le graphique du réseau de dépendances affiche des règles par couple qui peuvent être représentées logiquement sous la forme A->B, ce qui signifie que si le Produit A est acheté, le Produit B est un achat probable. Le graphique ne peut pas afficher de règles de type AB->C. Si vous déplacez le curseur pour afficher toutes les règles sans toutefois pouvoir afficher une ligne dans le graphique, cela signifie qu'aucune règle par couple ne correspond aux critères des paramètres de l'algorithme.  
+ Le réseau de dépendances montre les règles par couple qui peuvent être représentées logiquement comme A -> B, ce qui signifie que si le produit A est acheté, puis produit B est probable. Le graphique ne peut pas afficher les règles de type AB -> C. Si vous déplacez le curseur pour afficher toutes les règles sans toutefois pouvoir afficher une ligne dans le graphique, cela signifie qu'aucune règle par couple ne correspond aux critères des paramètres de l'algorithme.  
   
  Vous pouvez rechercher également des nœuds par nom en tapant les premières lettres du nom d'attribut. Pour plus d’informations, consultez [Boîte de dialogue Rechercher un nœud &#40;visionneuse de modèle d’exploration de données&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
   

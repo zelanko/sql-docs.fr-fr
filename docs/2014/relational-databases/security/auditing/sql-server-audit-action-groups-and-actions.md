@@ -22,14 +22,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238133"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
-  La fonctionnalité Audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’effectuer l’audit d’événements et de groupes d’événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](sql-server-audit-database-engine.md).  
+  La fonctionnalité Audit de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet d’effectuer l’audit d’événements et de groupes d’événements au niveau du serveur et au niveau de la base de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont constitués de zéro ou plusieurs éléments d'action d'audit. Ces éléments d'action d'audit peuvent être un groupe d'actions, tel que Server_Object_Change_Group, ou des actions individuelles telles que des opérations SELECT sur une table.  
   
@@ -80,8 +80,8 @@ ms.locfileid: "48222989"
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Cet événement est déclenché chaque fois qu'une base de données est créée, modifiée ou supprimée. Équivaut à la [classe d’événements Audit Database Management](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données. Équivalent à la classe d'événements Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Équivaut à la [classe d’événements Audit Database Mirroring Login](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat.<br /><br /> Cet événement est déclenché pour tout accès à toute base de données. **Remarque :** cela pourrait endommager les enregistrements d’audit volumineux. <br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. **Remarque :** pourraient s’ensuivre de très grandes quantités d’enregistrements d’audit. <br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat.<br /><br /> Cet événement est déclenché pour tout accès à toute base de données. **Remarque :**  Cela peut générer des enregistrements d’audit volumineux. <br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. **Remarque :**  Cela peut entraîner de très grandes quantités d’enregistrements d’audit. <br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsqu'une modification de propriétaire pour des objets dans l'étendue de la base de données a lieu. Cet événement est déclenché pour toute modification de propriétaire d'objet dans une base de données sur le serveur. Équivaut à la [classe d’événements Audit Database Object Take Ownership](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction GRANT, REVOKE ou DENY a été émise pour des objets de base de données, tels que des assemblys et des schémas. Cet événement est déclenché pour toute modification d'autorisation d'objet pour une base de données sur le serveur. Équivaut à la [classe d’événements Audit Database Object GDR](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Cet événement est déclenché lorsque des opérations dans une base de données, telles qu'un point de contrôle ou une notification de requête d'abonnement, se produisent. Cet événement est déclenché sur toute opération de base de données sur toute base de données. Équivaut à la [classe d’événements Audit Database Operation](../../event-classes/audit-database-operation-event-class.md).|  

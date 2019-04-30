@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 14 : Ajout de tâche d’exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS | Microsoft Docs'
+title: 'Tâche 14 : Ajout de tâche d’exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf0a02e973d046f3dff2b2df95327cf38e88443c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222727"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d'une tâche d'exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
-  Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres requis : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Consultez [procédure stockée intermédiaire](https://msdn.microsoft.com/library/hh231028.aspx) rubrique pour plus d’informations.  
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tâche 14 : Ajout d’une tâche d’exécution SQL au flux de contrôle pour exécuter la procédure stockée pour MDS
+  Après le chargement des données dans les tables intermédiaires de MDS, vous allez exécuter une procédure stockée associée à ces tables pour charger les données des tables intermédiaires vers les tables appropriées dans la base de données MDS. Cette procédure stockée nécessite deux paramètres obligatoires que vous devez passer : LogFlag et VersionName. LogFlag spécifie si les transactions sont journalisées pendant le processus intermédiaire et VersionName représente la version du modèle. Consultez [procédure stockée intermédiaire](https://msdn.microsoft.com/library/hh231028.aspx) rubrique pour plus d’informations.  
   
  Dans cette tâche, vous allez ajouter la tâche d'exécution SQL au flux de contrôle pour appeler la procédure stockée et charger les données intermédiaires dans les tables MDS appropriées.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "56027970"
   
 5.  À l’aide de la **Variables** fenêtre, ajoutez deux nouvelles variables avec les paramètres suivants. Si vous ne voyez pas le **Variables** fenêtre, cliquez sur **SSIS** sur la barre de menus et cliquez sur **Variables**.  
   
-    |Créer une vue d’abonnement|Type de données|Value|  
+    |Nom|Type de données|Value|  
     |----------|---------------|-----------|  
     |LogFlag|Int32|1|  
     |VersionName|String|VERSION_1|  

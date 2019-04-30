@@ -1,5 +1,5 @@
 ---
-title: LastPeriods (MDX) | Documents Microsoft
+title: LastPeriods (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58e94b5128760dfd1d179ecad3cae7bbf065ee10
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205299"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 
@@ -32,15 +32,15 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Index*  
  Expression numérique valide qui spécifie un nombre de périodes.  
   
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
- Si le nombre de périodes spécifié est positif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre qui est en retard *Index* -1 à partir de l’expression de membre spécifié et se termine par le membre spécifié. Le nombre de membres retournés par la fonction est égal à *Index*.  
+ Si le nombre de périodes spécifié est positif, le **LastPeriods** fonction retourne un jeu de membres qui commencent par le membre qui arrive en dernier *Index* -1 à partir de l’expression de membre spécifié et se termine par le membre spécifié. Le nombre de membres retournés par la fonction est égal à *Index*.  
   
- Si le nombre de périodes spécifié est négatif, le **LastPeriods** fonction retourne un jeu de membres qui commence par le membre spécifié et se termine par le membre arrivant en premier (- *Index* - 1) à partir du membre spécifié. Le nombre de membres retournés par la fonction est égal à la valeur absolue de *Index*.  
+ Si le nombre de périodes spécifié est négatif, le **LastPeriods** fonction retourne un jeu de membres qui commencent par le membre spécifié et se termine par le membre arrivant en premier (- *Index* - 1) à partir du spécifié membre. Le nombre de membres retournés par la fonction est égal à la valeur absolue de *Index*.  
   
- Si le nombre de périodes spécifié est égal à zéro, le **LastPeriods** fonction retourne le jeu vide. Contrairement à la **Lag** fonction, qui retourne le membre spécifié si 0 est spécifié.  
+ Si le nombre de périodes spécifié est égal à zéro, le **LastPeriods** fonction retourne le jeu vide. Contrairement à la **Lag** (fonction), qui retourne le membre spécifié si 0 est spécifié.  
   
  Si un membre n’est pas spécifié, le **LastPeriods** fonction utilise **Time.CurrentMember**. Si aucune dimension n'est marquée en tant que dimension Time, la fonction analyse et s'exécute sans erreur mais provoque une erreur de cellule dans l'application cliente.  
   
@@ -67,6 +67,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

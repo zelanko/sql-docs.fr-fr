@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc8f2ee894416d8e290fe9e1a54b6123664b3c7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242399"
 ---
-# <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale et Precision, propriétés, exemple (VB)
+# <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale et Precision, exemple de propriétés (VB)
 Cet exemple utilise le [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [précision](../../../ado/reference/ado-api/precision-property-ado.md) propriétés pour afficher l’échelle numérique et la précision des champs dans le ***remises*** table de la  ***Pubs*** base de données.  
   
 ```  

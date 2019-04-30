@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240334"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Spécifie les options pour l’ouverture une [enregistrement](../../../ado/reference/ado-api/record-object-ado.md). Ces valeurs peuvent être combinées à l’aide d’ou.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Indique au fournisseur que les champs associés le **enregistrement** ne doivent pas être récupérée au départ, mais peut être extrait à la première tentative d’accéder au champ. Le comportement par défaut, indiqué par l’absence de cet indicateur, consiste à récupérer tous les **enregistrement** champs d’objet.|  
 |**adDelayFetchStream**|0x4000|Indique au fournisseur qui le flux par défaut associé le **enregistrement** ne doivent pas être récupéré initialement. Le comportement par défaut, indiqué par l’absence de cet indicateur, consiste à récupérer le flux par défaut associé à la **enregistrement** objet.|  

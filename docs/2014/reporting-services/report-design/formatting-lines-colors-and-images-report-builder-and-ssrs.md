@@ -25,11 +25,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225053"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Mise en forme des lignes, couleurs et images (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous donne la possibilité de mettre en forme des lignes, des couleurs, des régions de données, des images ainsi que d'autres éléments de rapport.  

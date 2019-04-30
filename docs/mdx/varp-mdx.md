@@ -1,5 +1,5 @@
 ---
-title: VarP (MDX) | Documents Microsoft
+title: VarP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc1e6276de9a03af9800b9e242d54130c4241732
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251485"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
@@ -32,7 +32,7 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
@@ -41,6 +41,6 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  Le **VarP** fonction utilise le remplissage biaisée formule lors de la [Var](../mdx/var-mdx.md) fonction utilise la formule de remplissage non biaisée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

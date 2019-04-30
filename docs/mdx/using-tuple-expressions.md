@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Expressions de Tuple | Documents Microsoft
+title: À l’aide d’Expressions de Tuple | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251500"
 ---
 # <a name="using-tuple-expressions"></a>Utilisation d'expressions de tuple
 
@@ -26,7 +26,7 @@ ms.locfileid: "34743688"
   
  L'expression complète d'un identificateur de tuple est constituée d'un ou plusieurs membres spécifiés explicitement, entourés de parenthèses :  
   
- (*Cet argument* [,*cet argument* ...])  
+ (*Member_expression* [,*Member_expression* ...])  
   
  Un tuple peut être complet, contenir des membres implicites ou contenir un membre unique.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34743688"
   
 -   Si la hiérarchie référencée implicitement possède un membre par défaut, celui-ci est ajouté au tuple.  
   
--   Si la hiérarchie référencée implicitement ne possède aucun membre par défaut, le **(tous)** membre de la hiérarchie par défaut est utilisé.  
+-   Si la hiérarchie référencée implicitement ne possède aucun membre par défaut, le **(All)** membre de la hiérarchie par défaut est utilisé.  
   
 -   Si la hiérarchie référencée implicitement ne possède aucun membre par défaut, le premier membre du niveau le plus élevé de la hiérarchie est utilisé.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "34743688"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

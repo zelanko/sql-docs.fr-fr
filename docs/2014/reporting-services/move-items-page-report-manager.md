@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188440"
 ---
 # <a name="move-items-page-report-manager"></a>Page Déplacer les éléments (Gestionnaire de rapports)
   La page Déplacer les éléments vous permet de déplacer un rapport, un dossier ou un autre élément vers un nouvel emplacement sur le serveur de rapports. Vous pouvez taper le chemin d'accès au nouvel emplacement ou utiliser l'arborescence pour naviguer jusqu'à un nouvel emplacement dans l'espace de noms du serveur de rapports. Vous pouvez déplacer uniquement les éléments que vous êtes autorisé à déplacer et qui sont stockés sur le serveur de rapports actuel.  

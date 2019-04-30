@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188358"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : Modifier la Page de planification (Gestionnaire de rapports)
   La page Nouvelle planification / Modifier la planification permet de créer une planification pour un rapport. Les planifications sont utilisées avec des abonnements. Elles permettent en outre d'actualiser des rapports mis en cache et de créer des instantanés en tant qu'éléments autonomes ou dans un historique de rapport.  

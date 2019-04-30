@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232846"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifier des opérateurs de jointure (Visual Database Tools)
   Par défaut, le [Concepteur de requêtes et de vues](visual-database-tools.md) joint les tables à l’aide d’un signe égal (une équijointure), qui met en correspondance des valeurs dans les deux colonnes de jointure. Si vous le souhaitez, vous pouvez modifier l'opérateur utilisé pour comparer des valeurs dans les colonnes de jointure.  

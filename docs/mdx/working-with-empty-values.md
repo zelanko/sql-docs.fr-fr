@@ -1,5 +1,5 @@
 ---
-title: Utilisation des valeurs vides | Documents Microsoft
+title: Utilisation des valeurs vides | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251444"
 ---
 # <a name="working-with-empty-values"></a>Manipulation de valeurs vides
 
@@ -49,13 +49,13 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 -   Le [IsEmpty](../mdx/isempty-mdx.md) fonction renvoie **TRUE** si et seulement si la cellule identifiée par le tuple spécifié dans la fonction est vide. Sinon, la fonction retourne **FALSE**.  
   
     > [!NOTE]  
-    >  Le **IsEmpty** fonction ne peut pas déterminer si une expression de membre retourne une valeur null. Pour déterminer si un membre null est retourné à partir d’une expression, utilisez la [IS](../mdx/is-mdx.md)opérateur.  
+    >  Le **IsEmpty** fonction ne peut pas déterminer si une expression de membre retourne une valeur null. Pour déterminer si un membre null est retourné à partir d’une expression, utilisez le [IS](../mdx/is-mdx.md)opérateur.  
   
 -   lorsque la valeur de cellule vide est l'opérande d'un opérateur numérique quelconque (+, -, *, /), elle est considérée comme le chiffre zéro si l'autre opérande est une valeur non vide. Si les deux opérandes sont vides, l'opérateur numérique retourne la valeur de cellule vide ;  
   
 -   lorsque la valeur de cellule vide est l'opérande de l'opérateur de concaténation de chaîne (+), elle est considérée comme une chaîne vide si l'autre opérande est une valeur non vide. Si les deux opérandes sont vides, l'opérateur de concaténation de chaîne retourne la valeur de cellule vide ;  
   
--   lorsque la valeur de cellule vide est un opérande d'un opérateur de comparaison quelconque (=, <>, > =, \<=, >, <), la valeur de cellule vide est considérée comme un zéro ou une chaîne vide, selon si le type de données de l’autre opérande est numérique ou chaîne, respectivement. Si les deux opérandes sont vides, ils sont considérés comme le chiffre zéro ;  
+-   lorsque la valeur de cellule vide est un opérande d'un opérateur de comparaison quelconque (=, <>, > =, \<=, >, <), la valeur de cellule vide est considérée comme un zéro ou une chaîne vide, selon que le type de données de l’autre opérande est numérique ou chaîne, respectivement. Si les deux opérandes sont vides, ils sont considérés comme le chiffre zéro ;  
   
 -   lors d'un classement de valeurs numériques, la valeur de cellule vide occupe la même position que le chiffre zéro. S'ils sont tous deux présents, la valeur de cellule vide se place avant le chiffre zéro ;  
   
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>Traitement des valeurs vides dans les instructions et cubes MDX  
  Dans les instructions MDX (Multidimensional Expressions), vous pouvez rechercher les valeurs vides, puis effectuer certains calculs sur les cellules contenant des données valides (c'est-à-dire non vides). L'élimination de valeurs vides lors des calculs peut s'avérer importante pour certains calculs (tels que les moyennes) risquant d'être faussés par la présence de valeurs de cellule vides.  
   
- Si les valeurs vides sont stockées dans vos données de table de faits sous-jacentes, par défaut, elles seront converties en zéro lorsque le cube est traité. Vous pouvez utiliser la **traitement Null** option sur une mesure pour contrôler si les faits null sont converties en 0, convertie en une valeur vide, ou même lève une erreur lors du traitement. Si vous ne souhaitez pas que les valeurs de cellule vides apparaissent dans vos résultats de requête, vous devez créer des requêtes, des membres calculés ou des instructions de script MDX qui éliminent les valeurs vides ou les remplacent par une autre valeur.  
+ Si les valeurs vides sont stockées dans vos données de table de faits sous-jacentes, par défaut, elles seront converties en zéro lorsque le cube est traité. Vous pouvez utiliser la **traitement Null** option sur une mesure pour contrôler si les faits null sont converties en 0, converti en une valeur vide, ou même lève une erreur lors du traitement. Si vous ne souhaitez pas que les valeurs de cellule vides apparaissent dans vos résultats de requête, vous devez créer des requêtes, des membres calculés ou des instructions de script MDX qui éliminent les valeurs vides ou les remplacent par une autre valeur.  
   
  Pour supprimer des lignes ou des colonnes vides dans une requête, vous pouvez utiliser l'instruction NON EMPTY avant la définition de l'ensemble des axes. Par exemple, la requête suivante retourne seulement la catégorie de produit Vélos parce que c'est la seule catégorie ayant fait l'objet de ventes dans l'année civile 2001 :  
   
@@ -144,7 +144,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Wtd (MDX) | Documents Microsoft
+title: Wtd (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251533"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 
@@ -29,18 +29,18 @@ Wtd( [ Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
  Si une expression de membre n’est pas spécifiée, la valeur par défaut est le membre actuel de la première hiérarchie avec un niveau de type semaines dans la première dimension de type Time (**Time.CurrentMember**) dans le groupe de mesures.  
   
- Le **Wtd** fonction est un raccourci pour la [PeriodsToDate](../mdx/periodstodate-mdx.md) fonction où le niveau est défini sur *semaines*. Ce qui signifie que `Wtd(Member_Expression)` est équivalent à `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
+ Le **Wtd** fonction est un raccourci pour le [PeriodsToDate](../mdx/periodstodate-mdx.md) fonction où le niveau est défini sur *semaines*. Ce qui signifie que `Wtd(Member_Expression)` est équivalent à `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

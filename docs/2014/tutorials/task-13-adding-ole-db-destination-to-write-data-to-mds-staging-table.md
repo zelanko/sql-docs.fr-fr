@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 13 : Ajout de Destination OLE DB pour écrire des données dans la Table intermédiaire MDS | Microsoft Docs'
+title: 'Tâche 13 : Ajout de Destination OLE DB pour écrire des données dans la Table intermédiaire MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222585"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d'une destination OLE DB pour écrire des données dans une table intermédiaire MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d’une destination OLE DB pour écrire des données dans une table intermédiaire MDS
   Maintenant que vous avez ajouté **ImportType** et **BatchTag** valeurs à tous les enregistrements, vous êtes prêt à les transmettre à MDS pour l’environnement intermédiaire. Dans cette tâche, vous utilisez la Destination OLE DB pour écrire les données dans **stg.supplier_Leaf** table intermédiaire.  
   
 1.  Faites glisser **Destination OLE DB** à partir de **autres Destinations** section dans le **boîte à outils SSIS** à la **de flux de données** onglet et déposez-le sous  **Ajouter les colonnes requises par MDS**.  

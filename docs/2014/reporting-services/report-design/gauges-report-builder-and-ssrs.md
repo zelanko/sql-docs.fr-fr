@@ -160,11 +160,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225112"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   La région de données de jauge est une région de données unidimensionnelle qui affiche une valeur unique dans votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Vous pouvez créer au sein d'un panneau de jauge unique plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  

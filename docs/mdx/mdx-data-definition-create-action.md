@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233627"
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - CREATE ACTION
 
@@ -86,7 +86,7 @@ FOR
 |**URL**|La chaîne d'action retournée est une URL qui doit être ouverte dans un navigateur Internet.<br /><br /> Remarque : Si cette action ne commence pas par `https://` ou `https://`, l’action n’est pas disponible dans le navigateur, sauf si **SafetyOptions** a la valeur **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La chaîne d'action retournée est un script HTML. Cette chaîne doit être enregistrée dans un fichier, qui devra être rendu à l'aide d'un navigateur Internet. Dans ce cas, un script entier peut être exécuté en tant que partie du fichier HTML généré.|  
 |**INSTRUCTION**|La chaîne d’action retournée est une instruction qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande sur la chaîne et en appelant le **ICommand::Execute**(méthode). Si la commande échoue, un message d'erreur est retourné.|  
-|**JEU DE DONNÉES**|La chaîne d’action retournée est une instruction MDX qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande sur la chaîne et en appelant le **ICommand::Execute** (méthode). L’interface demandée ID (IID) doit être **IDataset**. Cette commande réussit si un dataset a été créé. L'application cliente doit autoriser l'utilisateur à parcourir le dataset retourné.|  
+|**DATASET**|La chaîne d’action retournée est une instruction MDX qui doit être exécutée en définissant le **ICommand::SetText** méthode d’un objet de commande sur la chaîne et en appelant le **ICommand::Execute** (méthode). L’interface demandée ID (IID) doit être **IDataset**. Cette commande réussit si un dataset a été créé. L'application cliente doit autoriser l'utilisateur à parcourir le dataset retourné.|  
 |**ENSEMBLE DE LIGNES**|Semblable à **DATASET**, mais au lieu de demander un IID de **IDataset**, l’application cliente doit demander un IID de **IRowset**. Cette commande réussit si un ensemble de lignes a été créé. L'application cliente doit autoriser l'utilisateur à parcourir l'ensemble de lignes retourné.|  
 |**LIGNE DE COMMANDE**|L'application cliente doit exécuter la chaîne d'action. Cette chaîne est une ligne de commande.|  
 |**PROPRIÉTAIRE**|Une application cliente ne doit pas afficher ni exécuter l'action, à moins d'avoir une connaissance personnalisée, non générique, de cette action spécifique. Les actions propriétaires ne sont pas retournées à l’application cliente, sauf si l’application cliente demande explicitement en définissant la restriction appropriée sur le **APPLICATION_NAME**.|  
@@ -104,7 +104,7 @@ FOR
  Chaque action est définie pour un cube spécifique et possède un nom unique dans ce cube. Une action peut avoir l'une des étendues répertoriées dans le tableau ci-après.  
   
  Étendue de cube   
- Pour les actions indépendantes de dimensions, membres ou cellules spécifiques ; par exemple : « Lancer l'émulation de terminaux pour un système de production AS/400 ».  
+ Pour les actions indépendantes de dimensions, membres ou cellules spécifiques ; par exemple : « Lancer l’émulation de terminal pour AS / 400 système de production ».  
   
  Étendue de dimension   
  Cette action s'applique à une dimension spécifique. Elle ne dépend pas d'une sélection spécifique de niveaux ou de membres.  

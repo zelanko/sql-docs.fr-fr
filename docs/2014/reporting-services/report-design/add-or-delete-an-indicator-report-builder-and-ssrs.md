@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3bea101bf16376ffc02699dc700f500f08f7222
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207226"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Ajouter ou supprimer un indicateur (Générateur de rapports et SSRS)
   Les indicateurs sont des jauges minimales qui communiquent en un coup d'œil l'état d'une valeur de donnée unique. Pour plus d’informations les concernant, consultez [Indicateurs &#40;Générateur de rapports et SSRS&#41;](indicators-report-builder-and-ssrs.md).  

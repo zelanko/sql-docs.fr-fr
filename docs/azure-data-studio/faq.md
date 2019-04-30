@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238295"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -153,7 +153,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 |Requête de plusieurs serveur||Oui|
 |Gestion basée sur des stratégies||Oui|
 |PolyBase||Oui|
-|Magasin de requêtes||Oui|
+|Magasin des requêtes||Oui|
 |Serveurs inscrits||Oui|
 |REPLICATION||Oui|
 |Gestion de la sécurité||Oui|

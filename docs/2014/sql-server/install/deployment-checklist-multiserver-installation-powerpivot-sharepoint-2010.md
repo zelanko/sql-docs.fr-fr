@@ -12,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237918"
 ---
-# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Liste de vérification de déploiement : Installation de plusieurs serveur de PowerPivot pour SharePoint 2010
+# <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Liste de vérification de déploiement : installation à plusieurs serveurs de PowerPivot pour SharePoint 2010
   Cette liste de vérification vous guide tout au long des étapes d’ajout de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint à une batterie SharePoint 2010 à trois niveaux qui vous accumulez d’à partir de zéro. Une batterie de serveurs à trois niveaux comprend un niveau de base de données, un niveau applicatif et un niveau Web. Ajout de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à cette topologie nécessite que vous exécutez le programme d’installation de SQL Server pour installer [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sur la couche application. Les fichiers programme PowerPivot sont ajoutés à la couche web, mais uniquement comme une tâche consécutive à l’installation lorsque vous la déployer solution d’application web. Bien que le déploiement comporte des étapes, il n'y a pas d'étape d'installation distincte à effectuer sur la couche Web ou la couche de données. Est la seule étape d’installation dont vous avez besoin pour effectuer l’installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] sur les serveurs d’applications.  
   
 ||  
@@ -227,7 +227,7 @@ ms.locfileid: "53350543"
  Vous pouvez définir une limite maximale sur la quantité d'espace disque utilisée pour les fichiers de données PowerPivot qui sont mis en cache sur disque. L'option par défaut consiste à utiliser tout l'espace disque disponible. Pour obtenir des instructions sur la façon de limiter l’utilisation de l’espace disque, consultez [utilisation de l’espace disque configurer &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md).  
   
 ####  <a name="Upload"></a> Augmenter la taille maximale de téléchargement de fichiers pour les Applications Web SharePoint  
- Étant donné que les classeurs PowerPivot peuvent être volumineux, vous pouvez augmenter la taille maximale de téléchargement de fichier. Il existe deux paramètres de taille de fichier à configurer : Taille maximale du téléchargement pour l'application web et Taille maximale du classeur dans Excel Services. La taille de fichier maximale définie doit avoir la même valeur dans les deux applications. Pour obtenir des instructions, consultez [configurer une taille de téléchargement de fichier maximale &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
+ Étant donné que les classeurs PowerPivot peuvent être volumineux, vous pouvez augmenter la taille maximale de téléchargement de fichier. Il existe deux paramètres de taille de fichier à configurer : Taille maximale du téléchargement de l’application web et la taille maximale de classeur dans Excel Services. La taille de fichier maximale définie doit avoir la même valeur dans les deux applications. Pour obtenir des instructions, consultez [configurer une taille de téléchargement de fichier maximale &#40;PowerPivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).  
   
 #### <a name="grant-sharepoint-permissions-to-workbook-users"></a>Accorder des autorisations SharePoint aux utilisateurs des classeurs  
  Les utilisateurs ont besoin d'autorisations SharePoint pour pouvoir publier ou consulter des classeurs. Veillez à accorder **vue** autorisations aux utilisateurs qui doivent consulter des classeurs publiés et **Contribute** autorisations aux utilisateurs qui publient ou gèrent des classeurs. Vous devez être administrateur de collection de sites pour pouvoir accorder des autorisations.  

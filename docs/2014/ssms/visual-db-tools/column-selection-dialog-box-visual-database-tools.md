@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 70d6cc06b0e53754c22e6a8233f529b03c8e4371
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224643"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>Boîte de dialogue Sélectionner les colonnes (Visual Database Tools)
   Vous permet de modifier la vue personnalisée des tables dans le diagramme de base de données. La vue personnalisée montre uniquement les propriétés des colonnes identifiées par l'utilisateur.  

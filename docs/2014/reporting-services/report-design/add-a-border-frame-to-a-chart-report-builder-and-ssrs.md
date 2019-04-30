@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a15dbae1d2192c31165e04fb21ada9d0807d591e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185961"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
   Pour donner un impact plus visuel à un graphique, envisagez d'utiliser un cadre de bordure autour de l'extérieur du graphique. Vous pouvez sélectionner un cadre de bordure à l'aide de la boîte de dialogue **Propriétés du graphique** ou du volet Propriétés. Les cadres de bordure de graphique ne peuvent être appliqués à aucune autre région de données.  

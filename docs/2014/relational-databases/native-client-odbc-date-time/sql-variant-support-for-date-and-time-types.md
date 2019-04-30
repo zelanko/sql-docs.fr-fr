@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215961"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>Prise en charge de sql_variant pour les types Date et Time
   Cette rubrique décrit la façon dont le type de données `sql_variant` prend en charge les fonctionnalités de date et heure améliorées.  
@@ -26,7 +26,7 @@ ms.locfileid: "48150821"
   
  Les nouveaux types SQL_SS_TIME2 et SQL_SS_TIMESTAMPOFFSET peuvent être définis à SQLColAttribute. SQL_CA_SS_VARIANT_SQL_TYPE peut être retourné par SQLGetDescField.  
   
- Pour les colonnes de résultats, le pilote effectue une conversion de la variante vers les types date/heure. Pour plus d’informations, consultez [Conversions à partir de SQL vers C](datetime-data-type-conversions-from-sql-to-c.md). Lors de la liaison à SQL_C_BINARY, la longueur de la mémoire tampon doit être assez grande pour recevoir le struct qui correspond au type SQL.  
+ Pour les colonnes de résultats, le pilote effectue une conversion de la variante vers les types date/heure. Pour plus d’informations, consultez [Conversions à partir de SQL vers C](datetime-data-type-conversions-from-sql-to-c.md). Lors de la liaison à SQL_C_BINARY, la longueur de la mémoire tampon doit être suffisamment grande pour recevoir le struct qui correspond au type SQL.  
   
  Pour les paramètres SQL_SS_TIME2 et SQL_SS_TIMESTAMPOFFSET, le pilote convertit les valeurs C en valeurs `sql_variant`, comme décrit dans le tableau ci-dessous. Si un paramètre est lié en tant que SQL_C_BINARY et que le type de serveur est SQL_SS_VARIANT, il est traité comme une valeur binaire à moins que l'application n'ait défini SQL_CA_SS_VARIANT_SQL_TYPE sur un autre type SQL. Dans ce cas, SQL_CA_SS_VARIANT_SQL_TYPE est prioritaire ; autrement dit, si SQL_CA_SS_VARIANT_SQL_TYPE est défini, il substitue le comportement par défaut consistant à déduire le type SQL variant du type C.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48150821"
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE n'est pas défini.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Mise à l’échelle est définie à SQL_DESC_PRECISION (le *DecimalDigits* paramètre de `SQLBindParameter`).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Mise à l’échelle est définie à SQL_DESC_PRECISION (le *DecimalDigits* paramètre de `SQLBindParameter`).|  
-|SQL_C_TYPE_DATE|Date|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
+|SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE est ignoré.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Mise à l’échelle est définie à SQL_DESC_PRECISION (le *DecimalDigits* paramètre de `SQLBindParameter`).|  
 |SQL_C_NUMERIC|Décimal|Précision est définie à SQL_DESC_PRECISION (le *ColumnSize* paramètre de `SQLBindParameter`).<br /><br /> Mise à l’échelle est définie à SQL_DESC_SCALE (le *DecimalDigits* paramètre de SQLBindParameter).|  

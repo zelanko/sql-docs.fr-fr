@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (pilote Paradox) | Microsoft Docs
+title: SQLDriverConnect (Paradox Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238379"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (pilote Paradox)
 > [!NOTE]  
@@ -40,4 +40,4 @@ ms.locfileid: "47654757"
   
 |Pilote|Mots clés requis|Exemple|  
 |------------|-----------------------|-------------|  
-|Paradox|Pilote, DriverID|Driver = {Microsoft Paradox Driver (*.db)} ; DBQ = c:\temp ; DriverID = 26|
+|Paradox|Pilote, DriverID|Driver={Microsoft Paradox Driver (*.db )}; DBQ=c:\temp;DriverID=26|

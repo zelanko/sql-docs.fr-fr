@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1d3e8051c246c6ec5c29df4fc49fd0f242852354
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223131"
 ---
 # <a name="site-settings-page-report-manager"></a>Page Paramètres du site (Gestionnaire de rapports)
   Utilisez la page Paramètres du site pour modifier le titre de l'application, définir des valeurs par défaut à l'échelle du serveur pour les limites de l'historique de rapport et les valeurs du délai d'exécution du traitement du rapport, gérer les attributions de rôle au niveau du système et gérer les planifications partagées. Vous devez disposer des autorisations de gestionnaire de contenu et d'administrateur système pour consulter cette page.  

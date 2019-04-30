@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213372"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec Integration Services à Parallel Data Warehouse
 Fournit des informations de référence et de déploiement pour le chargement de données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS).  
@@ -115,7 +115,7 @@ SQL Server PDW ne prend pas en charge les types de données Integration Services
   
 Pour charger les colonnes qui contiennent ces types de données dans SQL Server PDW, vous devez ajouter une transformation de Conversion de données en amont du flux de données pour convertir les données à un type de données compatible.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Pour exécuter un package de charge d’Integration Services, vous devez :  
   
 -   Autorisation de la charge sur la base de données.  
@@ -218,9 +218,9 @@ Spécifiez la destination pour le flux de données.
   
 5.  Remplissez les informations relatives à la base de données de serveur, d’utilisateur, de mot de passe et de destination avec les informations spécifiques à votre appliance. (Les exemples sont présentés ci-dessous). Cliquez ensuite sur **OK**.  
   
-    Pour les connexions InfiniBand, **nom du serveur**: entrez < nom du matériel >-SQLCTL01, 17001.  
+    Pour les connexions InfiniBand, **nom du serveur**: Entrez < nom du matériel >-SQLCTL01, 17001.  
   
-    Pour les connexions Ethernet, **nom du serveur**: entrez l’adresse IP du cluster de nœud de contrôle, virgules, le port 17001. Par exemple, 10.192.63.134,17001.  
+    Pour les connexions Ethernet, **nom du serveur**: Entrez l’adresse IP du cluster de nœud de contrôle, virgules, le port 17001. Par exemple, 10.192.63.134,17001.  
   
     **Utilisateur :**`user1`  
   
@@ -250,7 +250,7 @@ Exécuter le package sur votre ordinateur Integration Services.
 [Créer une tâche de script qui utilise l’adaptateur de destination SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [Conception et implémentation de Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Didacticiel : Création d’un Package de base à l’aide d’un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Tutoriel : Création d’un Package de base à l’aide d’un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Mise en route (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Exemple de génération dynamique de Package](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [Conception de vos Packages SSIS pour le parallélisme (vidéo liée à SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  

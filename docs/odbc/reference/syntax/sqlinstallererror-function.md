@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242326"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError, fonction
 **Conformité**  
@@ -66,7 +66,7 @@ RETCODE SQLInstallerError(
  [Sortie] Pointeur vers le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans *lpszErrorMsg*. Si le nombre d’octets à retourner est supérieur ou égal à *cbErrorMsgMax*, le texte de message d’erreur dans *lpszErrorMsg* est tronqué à *cbErrorMsgMax* moins le octets de caractère de fin de la valeur null. Le *pcbErrorMsg* argument peut être un pointeur null.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA ou SQL_ERROR.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, or SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  **SQLInstallerError** ne valide pas les valeurs d’erreur pour lui-même. **SQLInstallerError** retourne SQL_NO_DATA lorsqu’il est impossible de récupérer les informations d’erreur (auquel cas *pfErrorCode* n’est pas défini). Si **SQLInstallerError** ne peut pas accéder aux valeurs d’erreur pour une raison quelconque qui doit normalement retourner SQL_ERROR, **SQLInstallerError** retourne SQL_ERROR, mais ne valide pas les valeurs d’erreur. Si vous ne connaissez pas la longueur de la chaîne d’avertissement (*lpszErrorMsg*), vous pouvez définir *lpszErrorMsg* à la valeur NULL et appeler **SQLInstallerError**. **SQLInstallerError** sera puis retourner la longueur de la chaîne d’avertissement dans *cbErrorMsgMax*. Si la mémoire tampon pour le message d’erreur est trop courte, **SQLInstallerError** retourne SQL_SUCCESS_WITH_INFO et retourne le bon *pfErrorCode* valeur **SQLInstallerError**.  

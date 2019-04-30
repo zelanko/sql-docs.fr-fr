@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 12 : Découverte des connaissances (découverte des connaissances) | Microsoft Docs'
+title: 'Tâche 12 : Découverte des connaissances (découverte des connaissances) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223452"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances (découverte des connaissances)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tâche 12 : Découverte des connaissances
   Dans cette tâche, vous allez effectuer la **découverte des connaissances** activité sur **ID du fournisseur** et **Supplier Name** domaines. Dans ce scénario, le processus de découverte des connaissances importe principalement des valeurs pour ces deux domaines.  
   
  Dans ce didacticiel, vous avez commencé à créer une base de connaissances de toutes pièces. Vous pouvez également créer une base de connaissances au moyen d'une activité de découverte des connaissances. Lorsque vous cliquez sur **créer une Base de connaissances** dans la page principale, le client DQS pointe vers une page avec **gestion des domaines** activité sélectionnée pour l’activité. Vous pouvez modifier le **activité** à **découverte des connaissances** et puis dans la page suivante vous pouvez créer des domaines dans le cadre du processus de découverte de connaissances. Consultez [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) pour plus d’informations.  

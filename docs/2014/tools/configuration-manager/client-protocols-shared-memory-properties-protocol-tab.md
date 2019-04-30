@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192917"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Protocoles clients - Propriétés de Mémoire partagée (onglet Protocole)
   Dans le Gestionnaire de configuration [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez l'onglet **Protocole** de la boîte de dialogue **Propriétés de Mémoire partagée** pour visualiser ou modifier la mémoire partagée. Pour plus d'informations sur les chaînes de connexion, consultez [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  

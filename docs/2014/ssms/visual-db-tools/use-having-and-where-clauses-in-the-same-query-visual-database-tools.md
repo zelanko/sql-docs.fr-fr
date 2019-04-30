@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7aafcd72eff1d21dfe02c8957496398d327cf38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204632"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>Utiliser les clauses HAVING et WHERE dans la même requête (Visual Database Tools)
   Il peut arriver que vous souhaitiez exclure des lignes individuelles de groupes (à l'aide d'une clause WHERE) avant d'appliquer une condition aux groupes dans leur ensemble (à l'aide d'une clause HAVING).  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015c52194ce17e70a25bfe627aaf6822acda3ce3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205011"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>Prise en charge de FOR XML pour le type de données XML
   Si une requête FOR XML spécifie une colonne de type `xml` dans la clause SELECT, les valeurs de la colonne sont mappées comme éléments dans le code XML retourné, que vous spécifiiez ou non la directive ELEMENTS. Toute déclaration XML dans la colonne de type `xml` n'est pas sérialisée.  

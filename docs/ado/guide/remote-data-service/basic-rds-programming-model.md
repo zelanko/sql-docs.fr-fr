@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214805"
 ---
 # <a name="basic-rds-programming-model"></a>Modèle de programmation RDS de base
 > [!IMPORTANT]
 >  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- RDS est destiné aux applications qui existent dans l’environnement suivant : une application cliente spécifie un programme qui s’exécute sur un serveur et les paramètres requis pour retourner les informations souhaitées. Le programme appelé sur le serveur accède à la source de données spécifié, récupère les informations, éventuellement traite les données, puis retourne les informations obtenues pour votre application cliente dans un formulaire qu’il peut facilement utiliser. Services Bureau à distance fournit les moyens d’effectuer la séquence d’actions suivante :  
+ RDS est destiné aux applications qui existent dans l’environnement suivant : Une application cliente spécifie un programme qui s’exécute sur un serveur et les paramètres requis pour retourner les informations souhaitées. Le programme appelé sur le serveur accède à la source de données spécifié, récupère les informations, éventuellement traite les données, puis retourne les informations obtenues pour votre application cliente dans un formulaire qu’il peut facilement utiliser. Services Bureau à distance fournit les moyens d’effectuer la séquence d’actions suivante :  
   
 -   Spécifiez le programme à appeler sur le serveur et obtenir un moyen pour y faire référence à partir du client. (Cette référence est parfois appelé un *proxy*. Il représente le programme de serveur distant. L’application cliente « appelle » le proxy comme s’il s’agissait d’un programme local, mais elle appelle en fait le programme de serveur distant.)  
   

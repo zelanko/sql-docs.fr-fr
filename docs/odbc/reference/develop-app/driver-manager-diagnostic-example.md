@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238043"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Exemple de diagnostic du gestionnaire de pilotes
 Le Gestionnaire de pilotes peut également générer des messages de diagnostic. Par exemple, si une application a passé une option direction non valide pour **SQLDataSources**, le Gestionnaire de pilotes peut mettre en forme et retourner les valeurs suivantes à partir de **SQLGetDiagRec**:  

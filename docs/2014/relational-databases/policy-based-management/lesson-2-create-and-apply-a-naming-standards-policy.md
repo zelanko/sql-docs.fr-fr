@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206951"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
   Certains types de stratégies de la Gestion basée sur des stratégies peuvent créer des déclencheurs afin d'appliquer la future conformité avec la stratégie. Dans cette leçon, vous allez créer une stratégie qui applique une norme d'affectation de noms pour des tables. Ensuite, vous allez tester la stratégie en essayant de créer une table qui enfreint la stratégie.  

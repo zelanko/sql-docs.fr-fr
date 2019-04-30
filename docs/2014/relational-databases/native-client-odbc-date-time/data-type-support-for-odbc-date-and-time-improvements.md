@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206996"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations date/heure (ODBC)
   Cette rubrique fournit des informations sur les types ODBC qui prennent en charge les types des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date et time.  
@@ -32,9 +32,9 @@ ms.locfileid: "48052699"
   
  Le tableau ci-dessous correspond au mappage complet de type serveur. Remarquez que certaines cellules contiennent deux entrées ; dans ces cas, la première est la valeur ODBC 3.0 et la seconde la valeur ODBC 2.0.  
   
-|Type de données SQL Server|Type de données SQL|Valeur|  
+|Type de données SQL Server|Type de données SQL|Value|  
 |--------------------------|-------------------|-----------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql.h)<br /><br /> 9 (sqlext.h)|  
 |Time|SQL_SS_TIME2|-154 (SQLNCLI.h)|  
@@ -52,16 +52,16 @@ ms.locfileid: "48052699"
   
  Lorsque la liaison SQL_C_BINARY est spécifiée, la vérification de l'alignement est effectuée et une erreur signalée en cas d'alignement incorrect. Dans le cas de cette erreur, SQLSTATE a la valeur IM016, avec le message « Alignement des structures non valide ».  
   
-## <a name="data-formats-strings-and-literals"></a>Formats de données : chaînes et littéraux  
+## <a name="data-formats-strings-and-literals"></a>Formats de données : Chaînes et littéraux  
  Le tableau suivant représente les mappages entre les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les types de données ODBC et les littéraux de chaîne ODBC.  
   
 |Type de données SQL Server|Type de données ODBC|Format de chaîne pour les conversions clientes|  
 |--------------------------|--------------------|------------------------------------------|  
-|DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
+|Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge jusqu'à trois chiffres de fractions de seconde pour le type Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh:hh:ss'<br /><br /> Ce type de données possède une précision d'une minute. Le composant des secondes sera égal à zéro en sortie et arrondi par le serveur en entrée.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-jj'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-jj hh : mm : [.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'aaaa-mm-jj hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Le cas échéant, les fractions de seconde peuvent être spécifiées à l'aide de sept chiffres au plus.|  
   
  Il n'y a pas de modifications aux séquences d'échappement ODBC pour les littéraux de type date/time.  
@@ -76,7 +76,7 @@ ms.locfileid: "48052699"
   
  Actuellement, le pilote autorise un espace supplémentaire autour des caractères de ponctuation et l'espace entre l'heure et le décalage horaire est facultatif. Toutefois, il se peut qu'il en aille différemment dans une version ultérieure ; les applications ne doivent pas s'appuyer sur le comportement actuel.  
   
-## <a name="data-formats-data-structures"></a>Formats de données : structures de données  
+## <a name="data-formats-data-structures"></a>Formats de données : Structures de données  
  Dans les structures décrites ci-après, ODBC spécifie les contraintes suivantes, extraites du calendrier grégorien :  
   
 -   La plage des mois s'étend de 1 à 12.  

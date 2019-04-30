@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d41a1150a2562779f233454ae32949310cde600e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191769"
 ---
 # <a name="securing-rds-applications"></a>Sécurisation des applications RDS
 Cette rubrique fournit des informations de sécurité de RDS.  
@@ -42,6 +42,6 @@ Cette rubrique fournit des informations de sécurité de RDS.
  Par conséquent, le mode d’authentification stimulation/réponse de Windows NT IIS permet des pages HTML doit être créé sans que l’utilisateur en cours explicitement invité à entrer les informations d’ID et mot de passe utilisateur nécessaires pour vous connecter à la base de données. Si l’authentification de base IIS étaient utilisée, alors cela aussi est requis.  
   
 ## <a name="password-authentication"></a>Authentification de mot de passe  
- Services Bureau à distance peut communiquer avec un serveur Web IIS en cours d’exécution dans l’un des trois modes d’authentification de mot de passe : anonyme, de base, ou l’authentification stimulation/réponse NT (appelée l’authentification Windows intégrée dans Windows 2000). Ces paramètres définissent comment de contrôle de l’accès par son intermédiaire, comme demander qu’un ordinateur client ont des privilèges d’accès explicites sur le serveur Web de NT d’un serveur Web.
+ Services Bureau à distance peut communiquer avec un serveur Web IIS en cours d’exécution dans l’un des trois modes d’authentification de mot de passe : Authentification anonyme, Basic ou stimulation/réponse NT (appelée l’authentification Windows intégrée dans Windows 2000). Ces paramètres définissent comment de contrôle de l’accès par son intermédiaire, comme demander qu’un ordinateur client ont des privilèges d’accès explicites sur le serveur Web de NT d’un serveur Web.
 
 

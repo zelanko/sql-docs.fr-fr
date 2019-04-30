@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241289"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
   Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   Pour utiliser un encodage explicite, utilisez le type `varbinary()`, qui n'a aucune interaction avec les pages de codes, ou utilisez un type chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécifiant explicitement un encodage  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécification implicite d’un encodage  
  Supposez que vous avez un document XML, vcdoc, stocké au format `varchar(max)`, qui ne comporte aucune déclaration XML explicite. L'instruction ci-dessous permet d'ajouter une déclaration XML mentionnant l'encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au format `varbinary(max)` de façon à conserver la représentation en octets, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  

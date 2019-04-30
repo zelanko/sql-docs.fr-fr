@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231105"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de chargement pour Parallel Data Warehouse
 Cet article décrit comment obtenir et configurer un serveur de chargement comme un système de Windows non-appliance pour l’envoi des chargements de données à Parallel Data Warehouse (PDW).  
@@ -37,7 +37,7 @@ Le système de chargement peut être conçu comme un ou plusieurs serveurs de ch
   
 La configuration système requise pour un serveur de chargement dépend presque entièrement votre propre charge de travail. Utilisez le [le chargement des feuille de planification de capacité de serveur](loading-server-capacity-planning-worksheet.md) pour aider à déterminer vos besoins en capacité.  
   
-## <a name="Step2"></a>Étape 2 : Obtenir le Sserveur  
+## <a name="Step2"></a>Étape 2 : Acquérir le Sserveur  
 Maintenant que vous comprenez mieux vos besoins en capacité, vous pouvez planifier les serveurs et les composants réseau dont vous aurez besoin d’acheter ou mettre en service. Incorporer la liste suivante des exigences de votre plan d’achat, puis acheter votre serveur ou configurer un serveur existant.  
   
 ### <a name="R"></a>Configuration logicielle requise  
@@ -60,7 +60,7 @@ Pour préparer une connexion de Windows Server 2012 ou Windows Server 2012 R2 In
   
 3.  Acheter 2 câbles FDR InfiniBand pour une carte de port double ou 1 câble FDR InfiniBand pour une carte de port unique. Les câbles FDR InfiniBand se connectera le chargement du serveur au réseau InfiniBand appliance. La longueur du câble dépend de la distance entre le serveur de chargement et les commutateurs InfiniBand du matériel, en fonction de votre environnement.  
   
-## <a name="Step3"></a>Étape 3 : Connecter le serveur aux réseaux InfiniBand  
+## <a name="Step3"></a>Étape 3 : Connectez le serveur aux réseaux InfiniBand  
 Suivez ces étapes pour connecter le serveur de chargement pour le réseau InfiniBand. Si le serveur n’utilise pas le réseau InfiniBand, ignorez cette étape.  
   
 1.  Le serveur de rack suffisamment à l’appliance afin que vous pouvez vous connecter au réseau InfiniBand appliance.  
@@ -107,7 +107,7 @@ Pour réduire les risques de sécurité avec vos données, nous vous conseillons
   
 -   Désigner un utilisateur PDW qui dispose des autorisations pour charger des données. Selon vos besoins de sécurité, vous pourriez avoir un utilisateur spécifique par base de données.  
   
--   Opérations sur le serveur de chargement peuvent accepter un chemin d’accès UNC à partir de laquelle pour extraire les données à partir de l’extérieur du réseau interne approuvé. Et une personne malveillante sur le réseau ou avec la possibilité pour influencer la résolution de noms peut intercepter ou de modifier les données envoyées à l’ordinateur SQL Server PDW. Cela pose un risque de divulgation d’informations et de falsification. Falsification doit être atténuée par exiger la signature sur la connexion. Pour atténuer ce risque, définissez l’option de stratégie de groupe suivante **Security Settings\Local Policies\Security Options** sur le serveur de chargement : **client réseau Microsoft : communications signées numériquement (toujours) : Activé**  
+-   Opérations sur le serveur de chargement peuvent accepter un chemin d’accès UNC à partir de laquelle pour extraire les données à partir de l’extérieur du réseau interne approuvé. Et une personne malveillante sur le réseau ou avec la possibilité pour influencer la résolution de noms peut intercepter ou de modifier les données envoyées à l’ordinateur SQL Server PDW. Cela pose un risque de divulgation d’informations et de falsification. Falsification doit être atténuée par exiger la signature sur la connexion. Pour atténuer ce risque, définissez l’option de stratégie de groupe suivante **Security Settings\Local Policies\Security Options** sur le serveur de chargement :  **Client réseau Microsoft : Communications signées numériquement (toujours) : Activé**  
   
 -   Désactivez l’initialisation instantanée des fichiers sur Windows Server 2012 et au-delà. Il s’agit d’un compromis entre performances et la sécurité, comme indiqué dans la section performances. Vous devez décider ce qui convient le mieux en fonction de vos exigences de sécurité.  
   

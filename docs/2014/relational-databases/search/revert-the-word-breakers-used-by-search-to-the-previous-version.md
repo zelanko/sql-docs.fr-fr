@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238436"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe et active une version des analyseurs lexicaux et des générateurs de formes dérivées pour toutes les langues prises en charge par la recherche en texte intégral à l’exception du coréen. Cette rubrique décrit comment passer de cette version de ces composants à la version précédente, ou de la version précédente à la nouvelle version.  
@@ -152,9 +152,9 @@ ms.locfileid: "48186445"
     > [!WARNING]  
     >  Cette modification affecte toutes les langues qui utilisent NaturalLanguage6.dll dans la version actuelle et la version précédente.  
   
-5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
-6.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
+6.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
     1.  Ajoutez une nouvelle clé avec la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48186445"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées précédent figurant dans le tableau.  
   
-7.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+7.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Racine_instance\>\MSSearch\Language\\< clé_langue >**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 8.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -181,9 +181,9 @@ ms.locfileid: "48186445"
     > [!WARNING]  
     >  Cette modification affecte toutes les langues qui utilisent NaturalLanguage6.dll dans la version actuelle et la version précédente.  
   
-3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
-4.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
+4.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
     1.  Ajoutez une nouvelle clé avec la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "48186445"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées actuel figurant dans le tableau.  
   
-5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Racine_instance\>\MSSearch\Language\\< clé_langue >**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 6.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48186445"
 |CLSID précédent|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
  **Japonais (jpn), LCID 1041**  
   
@@ -240,7 +240,7 @@ ms.locfileid: "48186445"
 |CLSID précédent|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
  **Russe (rus), LCID 1049**  
   
@@ -249,7 +249,7 @@ ms.locfileid: "48186445"
 |CLSID précédent|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Langues pour lesquelles ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll  
  Pour les langues dans le tableau suivant, les noms de fichier des analyseurs lexicaux et des générateurs de formes dérivées précédents sont différents des noms de fichier des nouvelles versions. Ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll. Vous n'êtes pas obligé de remplacer des fichiers, et ce car le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn. Toutefois, vous devez modifier un ensemble d'entrées de Registre pour spécifier la version précédente ou la version actuelle des composants.  
@@ -273,9 +273,9 @@ ms.locfileid: "48186445"
   
 1.  Ne supprimez pas les fichiers pour la version actuelle des composants du dossier Binn.  
   
-2.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+2.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
-3.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
+3.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
     1.  Ajoutez une nouvelle clé avec la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "48186445"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées précédent figurant dans le tableau.  
   
-4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Racine_instance\>\MSSearch\Language\\< clé_langue >**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 5.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -297,9 +297,9 @@ ms.locfileid: "48186445"
   
 1.  Ne supprimez pas les fichiers pour la version précédente des composants du dossier Binn.  
   
-2.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+2.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
-3.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
+3.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées pour la langue sélectionnée :  
   
     1.  Ajoutez une nouvelle clé avec la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "48186445"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées actuel figurant dans le tableau.  
   
-4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft SQL Server\\< Racine_instance\>\MSSearch\Language\\< clé_langue >**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 5.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   

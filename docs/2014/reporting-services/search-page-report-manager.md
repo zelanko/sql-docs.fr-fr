@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237705"
 ---
 # <a name="search-page-report-manager"></a>Page Rechercher (Gestionnaire de rapports)
   La page Résultats de la recherche vous permet d'afficher les résultats d'une recherche spécifiée pour un rapport, un rapport lié, un modèle de rapport, une source de données partagée, un dossier ou une ressource. Les résultats de la recherche sont répertoriés par ordre alphabétique. Vous pouvez les trier par type, nom ou description.  

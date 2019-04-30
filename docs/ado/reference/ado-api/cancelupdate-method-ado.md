@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241172"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate, méthode (ADO)
 Annule toutes les modifications apportées à la ligne actuelle ou nouvelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, avant d’appeler le [mise à jour ](../../../ado/reference/ado-api/update-method.md) (méthode).  
@@ -42,7 +42,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  Si vous êtes en mode édition et que vous souhaitez déplacer l’enregistrement en cours (par exemple, en utilisant le [déplacer](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), ou [fermer](../../../ado/reference/ado-api/close-method-ado.md) méthodes), vous pouvez utiliser  **CancelUpdate** pour annuler les modifications en attente. Vous devrez peut-être effectuer cette opération si la mise à jour ne peut pas être publiée dans la source de données. Par exemple, une tentative de suppression qui échoue en raison de violations d’intégrité référentielle laisse le **Recordset** en mode édition après un appel à [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md).  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Enregistrement  
  Le **CancelUpdate** méthode annule tout en attente les insertions ou les suppressions de [champ](../../../ado/reference/ado-api/field-object.md) des objets et en attente de mises à jour des champs existants et rétablit leurs valeurs d’origine. Le [état](../../../ado/reference/ado-api/status-property-ado-recordset.md) propriété de tous les champs dans le **champs** collection a la valeur **adFieldOK**.  
   
 ## <a name="applies-to"></a>S'applique à  

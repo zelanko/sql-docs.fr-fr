@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 4 (facultatif) : Combinaison, la correspondance et publier un nouvel ensemble de données | Microsoft Docs'
+title: 'Tâche 4 (facultatif) : Combinaison, la correspondance et publier un nouvel ensemble de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250088"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combiner, mettre en correspondance et publier un nouvel ensemble de données
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combinaison, mise en correspondance et publication d’un nouvel ensemble de données
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile pour comparer les nouvelles données aux données qui sont déjà managées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou incorrectes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Consultez [correspondance de qualité de données dans le complément MDS pour Excel](https://msdn.microsoft.com/library/hh548681.aspx) et [combiner des données](https://msdn.microsoft.com/library/hh548680.aspx) rubriques pour plus d’informations.  
   
 1.  Lancez une nouvelle instance de **Excel**. Cliquez sur **Démarrer**, pointez sur **exécuter**, type **Excel**, puis cliquez sur **OK**.  
@@ -30,7 +30,7 @@ ms.locfileid: "56014275"
   
 4.  Vous devez voir le **Explorateur de données Master** volet à droite. Si vous ne voyez pas l’Explorateur de données principale, cliquez sur **afficher l’Explorateur** bouton sur le ruban.  
   
-5.  Dans le **Explorateur de données de référence** fenêtre, sélectionnez **fournisseurs** dans la liste déroulante pour le **modèle**. Vous remarquerez que le modèle a une entité : **Fournisseur**.  
+5.  Dans le **Explorateur de données de référence** fenêtre, sélectionnez **fournisseurs** dans la liste déroulante pour le **modèle**. Vous devez voir que le modèle a une entité : **Fournisseur**.  
   
      ![Excel - fenêtre de l’Explorateur de données Master](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - fenêtre de l’Explorateur de données Master")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56014275"
   
 25. Cliquez sur **OK**.  
   
-26. Le processus de correspondance doit identifier un doublon pour le fournisseur avec le **Code : S1**.  
+26. Le processus de correspondance doit identifier un doublon pour le fournisseur avec **Code : S1**.  
   
      ![Excel - résultats de correspondance](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - résultats de correspondance")  
   

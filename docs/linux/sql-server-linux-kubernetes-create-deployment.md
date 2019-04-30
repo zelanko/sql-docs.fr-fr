@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231148"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Créer un script de déploiement pour SQL Server groupe de disponibilité AlwaysOn
 
@@ -64,7 +64,7 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 Les exemples suivants montrent comment exécuter `deploy-ag.py`.
 
-### <a name="help"></a>Aide
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help
@@ -129,7 +129,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  Mot de passe SA. Par défaut = 'SAPassword2018'
+  Mot de passe SA. Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240212"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   Tous les programmes de résolution COM fournis avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gèrent les conflits de mise à jour, et lorsque cela est indiqué, ils gèrent également les conflits d'insertion et de suppression. Ils gèrent tous le suivi des colonnes et la plupart gèrent également le suivi des lignes. Ces programmes de résolution ainsi que tous les programmes de résolution COM déclarent les types de conflit qu'ils peuvent gérer. Ainsi, l'Agent de fusion utilise le programme de résolution par défaut pour tous les autres types de conflit.  
@@ -29,7 +29,7 @@ ms.locfileid: "52766412"
   
  Le tableau suivant décrit les attributs des programmes de résolution spécifiques.  
   
-|Créer une vue d’abonnement|Entrée requise|Description|Commentaires|  
+|Nom|Entrée requise|Description|Commentaires|  
 |----------|--------------------|-----------------|--------------|  
 |Outil de résolution des conflits d'addition[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne à totaliser. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs des colonnes spécifiées prennent la valeur représentant la somme des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
 |Outil de résolution des conflits de moyenne[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne dont la moyenne doit être établie. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs de colonnes résultantes représentent la moyenne des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  

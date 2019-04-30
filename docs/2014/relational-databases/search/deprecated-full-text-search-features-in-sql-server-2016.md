@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218212"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Fonctionnalités de la recherche en texte intégral déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de la recherche en texte intégral déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -48,7 +48,7 @@ ms.locfileid: "52799767"
   
 |Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |------------------------|-----------------|------------------|----------------|  
-|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,...*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,...*n*] )<br /><br /> [,\<distance > [,\<ordre >]]<br /><br /> }<br /><br /> )<br /><br /> \<distance > :: = {*entier* &#124; **MAX**}<br /><br /> \<commande > :: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|Opérateur NEAR générique CONTAINS et CONTAINSTABLE :<br /><br /> {<terme_simple> &#124; <terme_préfixe>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<terme_simple> &#124; <terme_préfixe>} } [...*n*]<br /><br /> }|Opérateur NEAR personnalisé :<br /><br /> NEAR(<br /><br /> {   {<terme_simple> &#124; <terme_préfixe>} [ ,...*n* ]<br /><br /> &#124; ( {<terme_simple> &#124; <terme_préfixe>} [,...*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |Option CREATE FULLTEXT CATALOG :<br /><br /> IN PATH '*chemin_racine*'<br /><br /> ON FILEGROUP *filegroup*|Aucun.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Aucun.*|237<br /><br /> Aucun.<sup>*</sup>|  
 |Propriété DATABASEPROPERTYEX : IsFullTextEnabled|Aucun.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Option sp_detach_db :<br /><br /> [ @keepfulltextindexfile = ] '*conserver_fichier_index_recherche_en_texte-intégral*'|Aucun.|sp_detach_db @keepfulltextindexfile|226|  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199943"
 ---
 # <a name="web-server-information"></a>Informations sur le serveur Web
   Les informations sur le serveur Web sont nécessaires pour pouvoir utiliser l'option de synchronisation Web pour la réplication de fusion. Pour obtenir des informations sur la configuration de la synchronisation Web, consultez [Configurer la synchronisation Web](configure-web-synchronization.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "52805841"
  Spécifiez le type d'authentification à utiliser pour la connexion au serveur Web. Il est recommandé d'utiliser l'authentification de base pour les connexions au serveur IIS avec SSL (Secure Sockets Layer). Si vous sélectionnez I'authentification de base, entrez la connexion et le mot de passe à utiliser pour se connecter de l'Abonné au serveur IIS.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
  [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md)   
  [Abonnés non-SQL Server](non-sql/non-sql-server-subscribers.md)   
  [S’abonner aux Publications](subscribe-to-publications.md)   

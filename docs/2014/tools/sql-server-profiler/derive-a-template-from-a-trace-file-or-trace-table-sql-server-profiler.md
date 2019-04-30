@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184266"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>Dériver un modèle à partir d'un fichier de trace ou d'une table de trace (SQL Server Profiler)
   Cette rubrique explique comment créer un modèle de trace à partir d'un fichier ou d'une table de trace existant, à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

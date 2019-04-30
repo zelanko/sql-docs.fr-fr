@@ -1,5 +1,5 @@
 ---
-title: 'C en SQL : horodatage | Microsoft Docs'
+title: 'C en SQL : Timestamp | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241432"
 ---
-# <a name="c-to-sql-timestamp"></a>C en SQL : horodatage
+# <a name="c-to-sql-timestamp"></a>C en SQL : Horodateur
 L’identificateur pour le type de données ODBC C timestamp est :  
   
  SQL_C_TYPE_TIMESTAMP  
@@ -34,7 +34,7 @@ L’identificateur pour le type de données ODBC C timestamp est :
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> 19 < = longueur d’octet de colonne < longueur d’octet de caractère<br /><br /> Colonne de longueur d’octet < 19<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> 19 < = longueur de colonne caractère < longueur des données de caractères<br /><br /> Colonne de longueur < 19 caractères<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
 |SQL_TYPE_DATE|Champs d’heure sont égales à zéro<br /><br /> Champs d’heure sont différentes de zéro<br /><br /> Valeur de données ne contient pas une date valide|n/a<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Champs de fractions de seconde sont égales à zéro [a]<br /><br /> Champs de fractions de seconde sont différentes de zéro [a]<br /><br /> Valeur de données ne contient-elle pas une heure valide|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Champs de fractions de seconde sont égales à zéro [a]<br /><br /> Fractional seconds fields are nonzero[a]<br /><br /> Valeur de données ne contient-elle pas une heure valide|n/a<br /><br /> 22008<br /><br /> 22007|  
 |SQL_TYPE_TIMESTAMP|Champs de fractions de secondes ne sont pas tronqués.<br /><br /> Champs de fractions de seconde sont tronquées<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22008<br /><br /> 22007|  
   
  [a] la date, les champs de la structure d’horodatage sont ignorés.  

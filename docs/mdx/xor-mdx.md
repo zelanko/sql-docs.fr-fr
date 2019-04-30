@@ -1,5 +1,5 @@
 ---
-title: XOR (MDX) | Documents Microsoft
+title: XOR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251488"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -37,10 +37,10 @@ Expression1 XOR Expression2
  Expression MDX valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Valeur booléenne qui retourne **true** si un seul et unique argument prend la valeur **true**; sinon, **false**.  
+ Une valeur booléenne qui retourne **true** si un seul et unique argument prend la valeur **true**; sinon, **false**.  
   
 ## <a name="remarks"></a>Notes  
- Le **XOR** opérateur traite les deux paramètres comme des valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue l’exclusion logique. Le tableau suivant illustre comment la **XOR** opérateur effectue l’exclusion logique.  
+ Le **XOR** opérateur traite les deux paramètres en tant que valeurs booléennes (zéro, 0, comme **false**; sinon, **true**) avant que l’opérateur effectue l’exclusion logique. Le tableau suivant illustre comment la **XOR** opérateur effectue l’exclusion logique.  
   
 |*Expression1*|*Expression2*|Valeur de retour|  
 |-------------------|-------------------|------------------|  

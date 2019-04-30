@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232079"
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
 Un SGBD classique permet aux utilisateurs de stocker, accéder et modifier des données d’une façon organisée et efficace. À l’origine, les utilisateurs de SGBD ont été les programmeurs. L’accès aux données stockées exigeaient l’écriture d’un programme dans un langage de programmation tels que COBOL. Bien que ces programmes ont été écrits souvent à présenter une interface conviviale à un utilisateur non technique, l’accès aux données elles-mêmes requis les services d’un programmeur expérimenté. Accès aisé aux données n’était pas pratique.  
   
- Les utilisateurs n’étaient pas entièrement satisfaits de cette situation. Pendant qu’ils pourraient accéder aux données, il est souvent nécessaire de convaincre un programmeur de SGBD pour écrire un logiciel spécial. Par exemple, si un service des ventes pour voir le total des ventes du mois précédent par chacun de ses commerciaux et vouliez ces informations classées dans l’ordre selon la longueur de chaque représentant du service de l’entreprise, il avait deux possibilités : soit un programme il existait déjà autorisé les informations accessibles exactement de cette manière, ou le service ne se pose un programmeur pour écrire un programme de ce type. Dans de nombreux cas, il s’agissait de plus de travail qu’il valait la peine, et il a toujours été une solution coûteuse pour des requêtes à usage unique ou ad hoc. Comme le plus grand d’utilisateurs souhaitait accéder facilement, ce problème a augmenté de plus en plus grandes.  
+ Les utilisateurs n’étaient pas entièrement satisfaits de cette situation. Pendant qu’ils pourraient accéder aux données, il est souvent nécessaire de convaincre un programmeur de SGBD pour écrire un logiciel spécial. Par exemple, si un service des ventes pour voir le total des ventes du mois précédent par chacun de ses commerciaux et vouliez ces informations classées dans l’ordre selon la longueur de chaque représentant du service de l’entreprise, il avait deux possibilités : Un programme existait déjà autorisés les informations accessibles exactement de cette manière, ou le service ne se pose un programmeur pour écrire un programme de ce type. Dans de nombreux cas, il s’agissait de plus de travail qu’il valait la peine, et il a toujours été une solution coûteuse pour des requêtes à usage unique ou ad hoc. Comme le plus grand d’utilisateurs souhaitait accéder facilement, ce problème a augmenté de plus en plus grandes.  
   
  Permettre aux utilisateurs d’accéder aux données sur une base ad hoc requis en leur donnant une langue dans laquelle exprimer leurs demandes. Une demande unique à une base de données est définie en tant que requête ; ces langages sont appelé un langage de requête. Nombreux langages de requête ont été développés à cet effet, mais un d’eux est devenu le plus courant : Structured Query Language, inventé IBM dans les années 1970. Il est plus communément appelée par son acronyme, SQL et est prononcé à la fois en tant que « ess-cue-ell » et « suite ». SQL est devenu un ANSI standard en 1986 et un fichier ISO standard en 1987 ; Il est utilisé aujourd'hui dans des nombreux systèmes de gestion de base de données.  
   

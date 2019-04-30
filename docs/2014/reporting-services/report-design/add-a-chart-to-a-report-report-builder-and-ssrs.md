@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206924"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Ajouter un graphique à un rapport (Générateur de rapports et SSRS)
   Lorsque vous souhaitez résumer des données sous un format visuel, utilisez une région de données de graphique. Il est important de choisir un type de graphique approprié au type des données que vous présentez. Cela affecte l'interprétation des données lorsqu'elles sont transformées en graphique. Pour plus d’informations, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
@@ -71,9 +71,9 @@ ms.locfileid: "59961155"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Didacticiel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
- [Didacticiel : Ajouter un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Didacticiel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
- [Didacticiel : Ajouter un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
+ [Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutoriel : Ajouter un graphique à barres à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198042)   
+ [Tutoriel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutoriel : Ajouter un graphique à secteurs à un rapport (Concepteur de rapports)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

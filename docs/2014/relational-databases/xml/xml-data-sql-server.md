@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232370"
 ---
 # <a name="xml-data-sql-server"></a>Données XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue une puissante plateforme de développement d’applications d’une grande richesse pour la gestion des données semi-structurées. La prise en charge de XML est intégrée à tous les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sous-entend :  

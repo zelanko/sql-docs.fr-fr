@@ -1,5 +1,5 @@
 ---
-title: Hierarchize (MDX) | Documents Microsoft
+title: Hierarchize (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224906"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize (MDX)
 
@@ -40,7 +40,7 @@ Hierarchize(Set_Expression [ , POST ] )
 -   Si **POST** est spécifié, le **Hierarchize** fonction trie les membres d’un niveau à l’aide d’un ordre post-naturel. En d'autres termes, les membres enfants précèdent leurs parents.  
   
 ## <a name="example"></a>Exemple  
- L'exemple ci-dessous remonte d'un niveau vers le membre Canada. Le **Hierarchize** fonction est utilisée pour organiser les membres du jeu spécifié dans l’ordre hiérarchique, ce qui est requis par le **DrillUpMember** (fonction).  
+ L'exemple ci-dessous remonte d'un niveau vers le membre Canada. Le **Hierarchize** fonction est utilisée pour organiser les membres de jeu spécifié dans l’ordre hiérarchique, ce qui est requis par le **DrillUpMember** (fonction).  
   
 ```  
 SELECT DrillUpMember   
@@ -59,7 +59,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les neuf premiers mois de 2003 contenus dans le `Date` dimension, à partir de la **Adventure Works** cube. Le **PeriodsToDate** fonction définit les tuples dans le jeu sur lequel la fonction Aggregate opère. Le **Hierarchize** fonction organise les membres du jeu spécifié de membres à partir de la dimension Product dans l’ordre hiérarchique.  
+ L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les neuf premiers mois de 2003 contenus dans le `Date` dimension, à partir de la **Adventure Works** cube. Le **PeriodsToDate** fonction définit les tuples dans le jeu auquel s’applique la fonction d’agrégation. Le **Hierarchize** fonction organise les membres du jeu spécifié de membres à partir de la dimension Product dans l’ordre hiérarchique.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS Count  
@@ -87,6 +87,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

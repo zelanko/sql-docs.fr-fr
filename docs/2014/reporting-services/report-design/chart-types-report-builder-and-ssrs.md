@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6b0523bad560c2ca84396562a46d52a91fe0cb8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185652"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Types de graphiques (Générateur de rapports et SSRS)
   Il est important de choisir un type de graphique approprié au type des données que vous présentez. Cela déterminera l'interprétation des données lorsqu'elles sont transformées en graphique. Par exemple, si votre dataset contient de nombreux points de données relatifs à la taille du graphique, il être préférable d'utiliser un graphique en aires, en courbes ou en nuage de points. Pour une description de la préparation de vos données selon le type de graphique sélectionné, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  

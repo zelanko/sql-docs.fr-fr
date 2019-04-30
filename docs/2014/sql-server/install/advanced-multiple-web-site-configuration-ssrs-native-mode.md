@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226013"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuration avancée de plusieurs sites Web (SSRS en mode natif)
   Utilisez cette boîte de dialogue pour créer et gérer les URL permettant d'accéder à un serveur de rapports ou au Gestionnaire de rapports. La boîte de dialogue **Configuration de site Web multiple avancée** est utilisée pour créer des URL supplémentaires, des URL personnalisées qui incluent un nom d'en-tête de l'hôte ou spécifier une adresse IP au format IPv4 ou IPv6.  
@@ -27,7 +27,7 @@ ms.locfileid: "48185369"
   
  La création de plusieurs URLS est utile si vous souhaitez configurer les différents moyens d'accéder à un serveur de rapports. Par exemple, l'accès au serveur de rapports via une connexion intranet et extranet requiert en général que vous ayez une URL différente pour chaque type de connexion.  
   
- Pour ouvrir le **Configuration de Site Web Multiple avancée** boîte de dialogue, cliquez sur **avancé** sur le **URL du Service Web** ou **URL du Gestionnaire de rapports**page dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Une fois la boîte de dialogue **Configuration de site Web multiple avancée** ouverte, vous pouvez cliquer sur **Ajoutez** ou sur **Modifier** pour définir de nouvelles URL ou modifier ou supprimer les URL existantes.  
+ Pour ouvrir la boîte de dialogue **Configuration de site Web multiple avancée** , cliquez sur **Avancé** dans l' **URL du service Web** ou sur la page **URL du Gestionnaire de rapports** dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une fois la boîte de dialogue **Configuration de site Web multiple avancée** ouverte, vous pouvez cliquer sur **Ajoutez** ou sur **Modifier** pour définir de nouvelles URL ou modifier ou supprimer les URL existantes.  
   
  Cliquez sur **OK** pour enregistrer vos modifications. Si vous ajoutez ou supprimez des URL, mais en revanche fermez la boîte de dialogue sans cliquer d'abord sur **OK**, vos modifications seront perdues.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48185369"
  Supprimez une entrée URL de la liste.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

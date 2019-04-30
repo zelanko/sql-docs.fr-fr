@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242677"
 ---
 # <a name="create-and-manage-role-assignments"></a>Créer et gérer des attributions de rôles
   Une *attribution de rôle* est une stratégie de sécurité qui détermine si un utilisateur ou un groupe peut accéder à un élément de serveur de rapports spécifique ou effectuer une opération. Elle se compose d'un seul nom de compte d'utilisateur ou de groupe et d'une ou de plusieurs définitions de rôles.  

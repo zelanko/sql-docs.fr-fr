@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 : Définir une stratégie de correspondance | Microsoft Docs'
+title: 'Tâche 1 : Définir une stratégie de correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222787"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d'une stratégie de correspondance
+# <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d’une stratégie de correspondance
   Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Nom du fournisseur** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec **similarité** la valeur **30 %**.  
   
 1.  Dans la page principale de **Client DQS**, cliquez sur **flèche droite** regard **fournisseurs** connaissances de base, puis sélectionnez **stratégie de correspondance**.  

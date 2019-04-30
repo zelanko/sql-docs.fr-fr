@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215597"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectangles et lignes (Générateur de rapports et SSRS)
   Les rectangles et les lignes permettent de créer des effets visuels dans un rapport. Vous pouvez afficher des propriétés sur ces éléments de rapports à partir de la section Bordure sous l'onglet Dossier de base, puis définir d'autres propriétés à l'aide du volet Propriétés. Vous pouvez ajouter des fonctionnalités, telles qu'une couleur ou une image d'arrière-plan, une info-bulle ou un signet, à un rectangle.  

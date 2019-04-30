@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228895"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtrage de valeurs à l'aide des annotations sql:limit-field et sql:limit-value (SQLXML 4.0)
   Vous pouvez limiter les lignes qui sont retournées à partir d'une requête de base de données et d'après une valeur de limitation. Les annotations `sql:limit-field` et `sql:limit-value` sont utilisées pour identifier la colonne de base de données qui contient les valeurs de limitation et spécifier une valeur de limitation spécifique à utiliser pour filtrer les données retournées.  
@@ -163,7 +163,7 @@ ms.locfileid: "52804461"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>b. Limitation des résultats en fonction d'une valeur de remise de type de données real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>B. Limitation des résultats en fonction d'une valeur de remise de type de données real  
  Dans cet exemple, une base de données contient deux tables :  
   
 -   Orders (OrderID)  

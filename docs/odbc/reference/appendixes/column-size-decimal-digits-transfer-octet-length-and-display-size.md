@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213306"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Taille de colonne, des chiffres décimaux, longueur en octets du transfert et taille - ODBC d’affichage
 Types de données sont caractérisent par leur taille de colonne (ou paramètre), de chiffres décimaux, de longueur et taille d’affichage. Les fonctions ODBC suivantes retournent ces attributs pour un paramètre dans une instruction SQL ou pour un type de données SQL sur une source de données. Chaque fonction ODBC retourne un ensemble différent de ces attributs, comme suit :  

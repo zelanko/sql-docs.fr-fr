@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242316"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx, fonction
 **Conformité**  
@@ -70,7 +70,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [Sortie] Nombre total d’octets à retourner dans *lpszPathOut*. Si le nombre d’octets à retourner est supérieur ou égal à *cbPathOutMax*, le chemin de sortie dans *lpszPathOut* est tronqué à *pcbPathOutMax* moins le caractère du caractère nul de terminaison. Le *pcbPathOut* argument peut être un pointeur null.  
   
- *fréquents*  
+ *fRequest*  
  [Entrée] Type de requête. *fréquents* doit contenir l’une des valeurs suivantes :  
   
  ODBC_INSTALL_INQUIRY : Savoir où un traducteur peut être installé.  

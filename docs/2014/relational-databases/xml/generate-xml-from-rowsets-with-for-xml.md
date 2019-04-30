@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204983"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Générer du code XML à partir d'ensembles de lignes avec FOR XML
   Vous pouvez générer un `xml` instance de type de données à partir d’un ensemble de lignes à l’aide de FOR XML avec la nouvelle **TYPE** directive.  
@@ -26,7 +26,7 @@ ms.locfileid: "58529061"
   
  La nouvelle directive **FOR XML TYPE** permet de créer, avec une syntaxe SQL, des vues XML en lecture seule des données relationnelles. La vue peut être interrogée par des instructions SQL et le langage XQuery intégré, comme le montre l'exemple suivant. Vous pouvez également faire référence à ces vues SQL dans les procédures stockées.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemple : Type de données xml SQL vue retour générée.  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Exemple : Vue SQL retournant un type de données XML généré  
  La définition de la vue SQL suivante crée une vue XML d'une colonne relationnelle, pk, et extrait les auteurs des livres d'une colonne XML :  
   
 ```  

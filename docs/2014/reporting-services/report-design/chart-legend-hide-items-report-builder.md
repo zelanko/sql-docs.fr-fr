@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185595"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Masquer des éléments de légende dans le graphique (Générateur de rapports et SSRS)
   Par défaut, toute série ajoutée à un graphique qui n'est pas à base de formes sera ajoutée en tant qu'élément à la légende. Pour les graphiques à secteurs, en anneau, en entonnoir et en pyramide, toute série ajoutée au graphique ajoutera des points de données individuels à la légende.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da63965c867c56572956ca5400a4b9dcc1281abf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214840"
 ---
 # <a name="address-book-data-binding-object"></a>Objet de liaison de données de l’application Carnet d’adresses
 L’application de carnet d’adresses utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet pour lier des données à partir de la base de données SQL Server à un objet visuel (dans ce cas, un tableau DHTML) dans la page de l’application client HTML. La logique du programme VBScript pilotée par événements utilise le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) à :  
@@ -53,7 +53,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|***IDENTIFICATEUR DE CLASSE***|Un nombre unique de 128 bits qui identifie le type d’objet incorporé dans le système. Cet identificateur est conservé dans le Registre système de l’ordinateur local. (Pour les ID de classe de la **RDS. DataControl** d’objets, consultez [RDS. DataControl, objet](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
+|***CLASSID***|Un nombre unique de 128 bits qui identifie le type d’objet incorporé dans le système. Cet identificateur est conservé dans le Registre système de l’ordinateur local. (Pour les ID de classe de la **RDS. DataControl** d’objets, consultez [RDS. DataControl, objet](../../../ado/reference/rds-api/datacontrol-object-rds.md).)|  
 |***ID***|Définit un identificateur de document à l’échelle pour l’objet incorporé est utilisé pour l’identifier dans le code.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. Paramètres de la balise de DataControl  
@@ -61,7 +61,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|[SERVEUR](../../../ado/reference/rds-api/server-property-rds.md)|Si vous utilisez HTTP, la valeur est le nom de l’ordinateur serveur précédé par `https://`.|  
+|[SERVER](../../../ado/reference/rds-api/server-property-rds.md)|Si vous utilisez HTTP, la valeur est le nom de l’ordinateur serveur précédé par `https://`.|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|Fournit les informations de connexion nécessaires pour le **RDS. DataControl** pour se connecter à SQL Server.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|Définit ou retourne la chaîne de requête utilisée pour récupérer le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   

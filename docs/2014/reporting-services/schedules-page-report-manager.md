@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237837"
 ---
 # <a name="schedules-page-report-manager"></a>Page Planifications (Gestionnaire de rapports)
   La page Planifications vous permet de créer, modifier, supprimer, suspendre ou reprendre des planifications partagées. Une planification partagée est une planification nommée que vous créez et gérez séparément à partir des rapports, des abonnements et des autres processus qui utilisent des informations de planification. Les utilisateurs peuvent sélectionner les planifications partagées que vous leur fournissez.  

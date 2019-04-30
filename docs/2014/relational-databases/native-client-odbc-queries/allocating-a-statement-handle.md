@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200251"
 ---
 # <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction
   Pour qu'une application puisse exécuter une instruction, elle doit allouer un descripteur d'instruction. Pour ce faire appel **SQLAllocHandle** avec la *HandleType* paramètre défini à SQL_HANDLE_STMT et *InputHandle* pointant vers un handle de connexion.  

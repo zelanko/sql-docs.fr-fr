@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3128dee728cbb2e9eda6e87232675558fe9413e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188508"
 ---
 # <a name="new-data-source-page-report-manager"></a>Page Nouvelle source de données (Gestionnaire de rapports)
   La page Nouvelle source de données vous permet de créer un élément de source de données partagée. Une source de données partagée définit une connexion à une source de données externe. À l'aide d'une source de données partagée, vous pouvez créer et gérer les paramètres de connexion à la source de données séparément des rapports, modèles et abonnements pilotés par les données qui utilisent la source de données.  

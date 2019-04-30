@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198250"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG, commande
 Supprime une ou plusieurs balises à partir d’un fichier d’index composé (.cdx).  
@@ -34,7 +34,7 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]]...  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
  Spécifie une balise à supprimer à partir d’un fichier d’index composés. Vous pouvez supprimer plusieurs balises avec une balise à supprimer en incluant une liste de noms de balises séparées par des virgules. Si deux ou plusieurs balises portant le même nom existent dans les fichiers d’index ouvert, vous pouvez supprimer une balise à partir d’un fichier d’index spécifique en incluant de *CDXFileName*.  
   
  Tous les [OF *CDXFileName*]  

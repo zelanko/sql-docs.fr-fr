@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4520e01f26435811c26b3f5c213b4e8b7e00c63
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217818"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Annuler les travaux du serveur de rapports (Management Studio)
   Utilisez la boîte de dialogue **Annuler les travaux du serveur de rapports** pour afficher ou annuler les rapports en cours. Cette boîte de dialogue affiche tous les travaux qui sont en cours d'exécution sur le serveur de rapports. Bien que vous ne puissiez pas suspendre ni redémarrer des travaux en cours de traitement, vous pouvez annuler tous les travaux ou des travaux individuels si leur exécution est trop longue.  

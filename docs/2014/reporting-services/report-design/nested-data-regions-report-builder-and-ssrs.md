@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b35399504c840d81573366401ea8f4978f47f58
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209117"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Régions de données imbriquées (Générateur de rapports et SSRS)
   En règle générale, vous pouvez imbriquer une région de données (par exemple un graphique) dans une autre région de données (par exemple une matrice) pour afficher des synthèses de données de façon concise ou pour proposer une représentation visuelle, ainsi qu'un tableau ou une matrice.  
@@ -90,7 +90,7 @@ ms.locfileid: "59938835"
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
- [Didacticiel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

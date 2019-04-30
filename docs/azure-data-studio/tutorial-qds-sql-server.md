@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Activer le widget cinq exemples de requêtes les plus lentes'
+title: 'Tutoriel : Activer le widget cinq exemples de requêtes les plus lentes'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget d’exemple requêtes les plus lentes cinq sur le tableau de bord de base de données.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 491e66ecc8b0dfb3024a2beb59cfefd3f8e0d28f
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239630"
 ---
-# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Didacticiel : Ajouter le *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
+# <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutoriel : Ajouter le *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
 
 Ce didacticiel illustre le processus d’ajout d’un des [!INCLUDE[name-sos](../includes/name-sos-short.md)]de widgets exemples intégrés pour le *tableau de bord de base de données* pour afficher rapidement les requêtes les plus lentes cinq une base de données. Vous allez également apprendre à afficher les détails des requêtes lentes et plans de requête à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]de fonctionnalités. Au cours de ce didacticiel, vous découvrez comment :
 

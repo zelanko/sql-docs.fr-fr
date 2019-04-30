@@ -1,5 +1,5 @@
 ---
-title: IsLeaf (MDX) | Documents Microsoft
+title: IsLeaf (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13b609d0abb7d032828dca78b185652ad138977b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224548"
 ---
 # <a name="isleaf-mdx"></a>IsLeaf (MDX)
 
@@ -29,7 +29,7 @@ IsLeaf(Member_Expression)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
@@ -49,6 +49,6 @@ IsLeaf(Member_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

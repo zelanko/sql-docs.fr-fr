@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Activer le widget de tableau espace utilisation exemple insight'
+title: 'Tutoriel : Activer le widget de tableau espace utilisation exemple insight'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment activer le widget d’insight exemple de table espace l’utilisation du tableau de bord de base de données Azure Data Studio.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebd3b1af1bc9b342ad6b2d33596e69b487888ced
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239511"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Didacticiel : Activer la table espace utilisation exemple insight widget à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutoriel : Activer la table espace utilisation exemple insight widget à l’aide [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Ce didacticiel montre comment activer un widget d’un aperçu du tableau de bord de base de données, en fournissant une vue d’un coup de œil sur l’utilisation de l’espace pour toutes les tables dans une base de données. Au cours de ce didacticiel, vous découvrez comment :
 

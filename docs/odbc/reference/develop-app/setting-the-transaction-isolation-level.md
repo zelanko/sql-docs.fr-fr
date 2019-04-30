@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 37b575f9e208b5a1b7fa03b170b74633da149c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237875"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Définition du niveau d’isolation des transactions
 Pour définir le niveau d’isolation de transaction, une application utilise l’attribut de connexion de SQL_ATTR_TXN_ISOLATION. Si la source de données ne prend pas en charge le niveau d’isolation demandé, le pilote ou une source de données peut définir un niveau plus élevé. Pour déterminer quelles isolation des transactions niveaux d’une source de données prend en charge et le niveau d’isolation par défaut est, une application appelle **SQLGetInfo** avec les options SQL_TXN_ISOLATION_OPTION et SQL_DEFAULT_TXN_ISOLATION, respectivement.  

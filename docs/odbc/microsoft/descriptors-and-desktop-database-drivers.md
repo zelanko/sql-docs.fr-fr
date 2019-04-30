@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240389"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descripteurs et pilotes pour les bases de données de poste de travail
 Un descripteur est une structure de données qui conserve des informations sur les données de la colonne ou de paramètres dynamiques. **SQLGetDescField** peut être utilisée pour récupérer les descripteurs prises en charge répertoriées ci-dessous. Descripteurs de paramètre d’implémentation (IPD) ne sont pas renseignées automatiquement, car **SQLDescribeParam** n’est pas pris en charge. Champs de descripteur qui ne sont pas disponibles via Jet (par exemple, SQL_DESC_BASE_TABLE_NAME) ne sont pas également pris en charge.  

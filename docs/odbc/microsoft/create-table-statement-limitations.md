@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232209"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE, instruction - limitations
 Lorsque le Microsoft Access, Microsoft Excel ou Paradoxdriver est utilisé et la longueur d’une colonne de texte ou binaire n’est pas spécifiée (ou est spécifiée en tant que 0), la longueur de colonne est définie sur 255.  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185642"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Didacticiel DMX Market Basket
   Dans ce didacticiel, vous allez apprendre à créer et explorer des modèles d'exploration de données, ou à en effectuer l'apprentissage, à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles d'exploration pour établir des prédictions décrivant les produits susceptibles d'être achetés simultanément.  
@@ -45,7 +45,7 @@ ms.locfileid: "56027518"
   
  L'objectif de ce didacticiel est de fournir des requêtes DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d'informations, consultez :** [Solutions d'exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d'informations, consultez :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
  Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. Le *structure d’exploration de* est une structure de données qui définit le domaine de données à partir de laquelle les modèles d’exploration de données sont créés. Une structure d’exploration de données unique peut contenir plusieurs *les modèles d’exploration de données* qui partagent le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  

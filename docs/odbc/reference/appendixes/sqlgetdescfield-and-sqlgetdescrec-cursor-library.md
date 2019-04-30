@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188755"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField et SQLGetDescRec (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "47765017"
   
  La bibliothèque de curseurs exécute **SQLGetDescRec** pour retourner les métadonnées pour les colonnes à signets. La bibliothèque de curseurs exécute **SQLGetDescField** pour retourner les mêmes champs retournés par **SQLGetDescRec**, qui sont SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ LONGUEUR, SQL_DESC_PRECISION, SQL_DESC_SCALE et SQL_DESC_NULLABLE. Par souci de cohérence, **SQLGetDescField** retourne également la définition de SQL_DESC_UNNAMED.  
   
- La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner les champs de la valeur des éléments suivants sont définis pour la liaison de colonnes à signets : SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR, et SQL_DESC_LENGTH.  
+ La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner les champs de la valeur des éléments suivants sont définis pour la liaison de colonnes à signets : SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR, and SQL_DESC_LENGTH.  
   
  La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour n’importe quelle ligne, pas seulement la ligne du signet.  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239803"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel, exemple de méthode (VB)
 Cet exemple utilise le [Annuler](../../../ado/reference/ado-api/cancel-method-ado.md) méthode pour annuler une commande s’exécutant sur un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet si la connexion est occupée.  

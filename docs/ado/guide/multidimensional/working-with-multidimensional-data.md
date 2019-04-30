@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222494"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilisation de données multidimensionnelles
 Un *cellset* est le résultat d’une requête sur des données multidimensionnelles. Il se compose d’une collection d’axes, généralement pas plus de quatre axes et généralement deux ou trois. Un *axe* est une collection de membres à partir d’une ou plusieurs dimensions, ce qui permet de rechercher ou de filtrer des valeurs spécifiques dans un cube.  

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l’aide de complément MDS pour Excel | Microsoft Docs'
+title: 'Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l’aide de complément MDS pour Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250223"
 ---
-# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l'aide du complément MDS pour Excel
+# <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>Tâche 2 : Téléchargement des données des fournisseurs vers MDS à l’aide du complément MDS pour Excel
   Dans cette tâche, vous publiez les données nettoyées des fournisseurs à **MDS** à l’aide de la **complément MDS pour Excel**. Vous créez une entité nommée **fournisseur** dans le **fournisseurs** modèle que vous avez créé dans la leçon précédente. L'entité aura un attribut pour chaque colonne dans le fichier Excel. Les attributs de Code et le nom de l’entité fournisseur correspondent à la **SupplierID** et **Supplier Name** colonnes dans Excel.  
   
 1.  Ouvrez **nettoyées et mises en correspondance de Suppliers.xls** dans **Excel**.  

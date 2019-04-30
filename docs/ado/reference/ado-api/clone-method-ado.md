@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4768c0f01c38ef72735f3577c4d581c019b4595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239736"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
 Crée un doublon [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet depuis une **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.  
@@ -70,17 +70,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Événement|Déclenché dans clones ?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|non|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|non|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|non|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Non|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Non|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Non|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|non|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|non|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
 |[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
 |[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|non|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|non|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

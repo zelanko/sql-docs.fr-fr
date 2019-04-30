@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d65b7f31010aeb768f7b04c06753f185d3cc792f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232045"
 ---
 # <a name="configdsn-function"></a>ConfigDSN, fonction
 **Conformité**  
@@ -49,12 +49,12 @@ BOOL ConfigDSN(
  *hwndParent*  
  [Entrée] Handle de fenêtre parente. La fonction n’affichera pas les boîtes de dialogue si le handle est null.  
   
- *fréquents*  
+ *fRequest*  
  [Entrée] Type de requête. Le *fréquents* argument doit contenir l’une des valeurs suivantes :  
   
  ODBC_ADD_DSN : Ajouter une nouvelle source de données.  
   
- ODBC_CONFIG_DSN : Configurer (modifier) une source de données existante.  
+ ODBC_CONFIG_DSN: Configurer (modifier) une source de données existante.  
   
  ODBC_REMOVE_DSN : Supprimer une source de données existante.  
   
