@@ -1,5 +1,5 @@
 ---
-title: 'SQL pour c : Intervalles de jours-heures | Microsoft Docs'
+title: 'SQL à C : Intervalles de jours-heures | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270429"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>SQL pour c : Intervalles de jours-heures
+# <a name="sql-to-c-day-time-intervals"></a>SQL à C : Intervalles de jours-heures
 
 Les identificateurs pour les types de données SQL ODBC intervalle de jours-heures sont les suivantes :
 

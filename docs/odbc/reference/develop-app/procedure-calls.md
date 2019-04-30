@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284575"
 ---
 # <a name="procedure-calls"></a>Appels de procédure
 Un *procédure* est un objet exécutable stocké sur la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées. La séquence d’échappement pour appeler une procédure est  
@@ -28,7 +28,7 @@ Un *procédure* est un objet exécutable stocké sur la source de données. Gén
   
  où *nom de la procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure.  
   
- Pour plus d’informations sur la séquence d’échappement de l’appel de procédure, consultez [séquence d’échappement de Call procédure](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) dans l’annexe c : SQL grammaire.  
+ Pour plus d’informations sur la séquence d’échappement de l’appel de procédure, consultez [séquence d’échappement de Call procédure](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) dans l’annexe c : Grammaire SQL.  
   
  Une procédure peut avoir zéro, un ou plusieurs paramètres. Elle peut également retourner une valeur, comme indiqué par le marqueur de paramètre facultatif **? =** au début de la syntaxe. Si *paramètre* est une entrée ou un paramètre d’entrée/sortie, il peut être un littéral ou un marqueur de paramètre. Toutefois, applications interopérables doivent toujours utiliser des marqueurs de paramètres, car certaines sources de données n’acceptent pas les valeurs de paramètre literal. Si *paramètre* est un paramètre de sortie, il doit être un marqueur de paramètre. Marqueurs de paramètres doivent être liés avec **SQLBindParameter** avant l’appel de procédure instruction est exécutée.  
   

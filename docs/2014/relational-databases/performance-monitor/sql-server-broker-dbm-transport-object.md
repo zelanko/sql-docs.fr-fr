@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250727"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, Broker et Objet DBM Transport
   L’objet de performance **Broker / DBM Transport** contient des compteurs de performances qui recueillent des informations concernant l’activité réseau relative à Service Broker et à la mise en miroir de bases de données. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  

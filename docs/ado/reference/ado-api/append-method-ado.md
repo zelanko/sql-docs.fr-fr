@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249030"
 ---
 # <a name="append-method-ado"></a>Append, méthode (ADO)
 Ajoute un objet à une collection. Si la collection est [champs](../../../ado/reference/ado-api/fields-collection-ado.md), un nouveau [champ](../../../ado/reference/ado-api/field-object.md) objet peut être créé avant d’être ajoutée à la collection.  
@@ -38,7 +38,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collection*  
  Un objet de collection.  
   
- *Champs*  
+ *fields*  
  Un **champs** collection.  
   
  *object*  
@@ -79,7 +79,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  Une erreur d’exécution se produit si le **Append** méthode est appelée sur le **champs** collection ouvert **Recordset**, ou sur un **Recordset** où les [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriété a été définie. Vous pouvez uniquement ajouter des champs à un **Recordset** qui n’est pas ouvert et n’a pas encore été connecté à une source de données. C’est généralement le cas lorsqu’un **Recordset** objet est créé avec le [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) méthode ou assigné à une variable objet.  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Enregistrement  
  Une erreur d’exécution ne produira pas si le **Append** méthode est appelée sur le **champs** collection ouvert **enregistrement**. Le nouveau champ est ajouté à la **champs** collection de la **enregistrement** objet. Si le **enregistrement** a été dérivé un **Recordset**, le nouveau champ n’apparaîtra pas dans le **champs** collection de la **Recordset** objet.  
   
  Un champ inexistant peut être créé et ajouté à la **champs** collection en affectant une valeur à l’objet de champ comme s’il existait déjà dans la collection. Cette affectation déclenche la création automatique et l’ajout de la **champ** objet, puis l’attribution seront terminée.  

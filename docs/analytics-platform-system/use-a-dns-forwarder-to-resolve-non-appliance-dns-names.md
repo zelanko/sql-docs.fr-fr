@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243787"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utiliser un redirecteur DNS pour résoudre les noms DNS de Non-Appliance d’Analytique Platform System
 Un redirecteur DNS peut être configuré sur les nœuds de Services de domaine Active Directory (**_appliance\_domaine_-AD01** et  **_appliance\_ domaine_-AD02**) de votre appliance Analytique Platform System pour autoriser les scripts et les applications logicielles pour accéder aux serveurs externes.  

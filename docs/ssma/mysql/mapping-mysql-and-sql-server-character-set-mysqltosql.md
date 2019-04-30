@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312370"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des jeux de caractères MySQL et SQL Server (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
@@ -56,11 +56,11 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
 >   
 > Celles-ci sont les suivantes :  
 >   
-> 1.  **S’appliquent :** applique les modifications apportées par l’utilisateur est activée uniquement lorsque le mappage de jeu de caractères est modifié et pas encore enregistré.  
-> 2.  **Annuler :** annule les modifications apportées par l’utilisateur. Le bouton est activé lorsque le mappage de jeu de caractères est modifiée, mais pas enregistré.  
-> 3.  **Réinitialiser les valeurs par défaut :** réinitialise tous les mappages de valeurs par défaut.  
+> 1.  **S’appliquent :** Applique les modifications apportées par l’utilisateur est activée uniquement lorsque le mappage de jeu de caractères est modifié et pas encore enregistré.  
+> 2.  **Annuler :** Annule les modifications apportées par l’utilisateur. Le bouton est activé lorsque le mappage de jeu de caractères est modifiée, mais pas enregistré.  
+> 3.  **Réinitialiser les valeurs par défaut :** Réinitialise tous les mappages de valeurs par défaut.  
   
-1.  **On racine au niveau du nœud de métadonnées :** grille de mappage de jeu de caractères contient la grille de jeu de caractères avec une colonne distincte pour chaque jeu de caractères. Les colonnes de la grille sont :  
+1.  **Sur le niveau de nœud de métadonnées de racine :**  Grille de mappage de jeu de caractères contient la grille de jeu de caractères avec une colonne distincte pour chaque jeu de caractères. Les colonnes de la grille sont :  
   
     1.  La première colonne de la grille nommée **nom Charset** contient le nom du jeu de caractères.  
   
@@ -80,44 +80,44 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
     ||||  
     |-|-|-|  
     |**Nom du jeu de caractères**|**Description du jeu de caractères**|**Type de jeu de caractères cible (par défaut)**|  
-    |Big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (valeur par défaut)|  
+    |big5|Chinois traditionnel Big5|NCHAR/NVARCHAR (valeur par défaut)|  
     |dec8|DEC West Europe|CHAR/VARCHAR (valeur par défaut)|  
-    |CP850|Europe de l’ouest de déni de service|CHAR/VARCHAR (valeur par défaut)|  
+    |cp850|Europe de l’ouest de déni de service|CHAR/VARCHAR (valeur par défaut)|  
     |hp8|HP West Europe|CHAR/VARCHAR (valeur par défaut)|  
     |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (valeur par défaut)|  
     |Latin 1|Europe de l’ouest cp1252|CHAR/VARCHAR (valeur par défaut)|  
-    |Latin2|Europe centrale ISO 8859-2|CHAR/VARCHAR (valeur par défaut)|  
+    |latin2|Europe centrale ISO 8859-2|CHAR/VARCHAR (valeur par défaut)|  
     |swe7|7 bits suédois|CHAR/VARCHAR (valeur par défaut)|  
-    |ASCII|US ASCII|CHAR/VARCHAR (valeur par défaut)|  
+    |ascii|US ASCII|CHAR/VARCHAR (valeur par défaut)|  
     |ujis|EUC-JP japonais|NCHAR/NVARCHAR (valeur par défaut)|  
     |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (valeur par défaut)|  
     |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (valeur par défaut)|  
-    |TIS620|TIS620 thaï|CHAR/VARCHAR (valeur par défaut)|  
+    |tis620|TIS620 Thai|CHAR/VARCHAR (valeur par défaut)|  
     |eucKR|Coréen EUC-KR|NCHAR/NVARCHAR (valeur par défaut)|  
     |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (valeur par défaut)|  
     |gb2312|GB2312 Chinois simplifié|NCHAR/NVARCHAR (valeur par défaut)|  
     |Grec|ISO 8859-7 grec|CHAR/VARCHAR (valeur par défaut)|  
     |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (valeur par défaut)|  
-    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (valeur par défaut)|  
+    |gbk|Chinois simplifié de GBK|NCHAR/NVARCHAR (valeur par défaut)|  
     |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (valeur par défaut)|  
     |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (valeur par défaut)|  
-    |UTF-8|UTF-8 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
-    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
+    |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
+    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
     |cp866|Russe de déni de service|CHAR/VARCHAR (valeur par défaut)|  
     |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (valeur par défaut)|  
     |macce|Europe centrale Mac|CHAR/VARCHAR (valeur par défaut)|  
     |MacRoman|Europe de l’ouest Mac|CHAR/VARCHAR (valeur par défaut)|  
     |cp852|Déni de service Central européenne|CHAR/VARCHAR (valeur par défaut)|  
     |latin7|ISO 8859-13 Baltique|CHAR/VARCHAR (valeur par défaut)|  
-    |CP 1251|Windows cyrillique|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1251|Windows Cyrillic|CHAR/VARCHAR (valeur par défaut)|  
     |CP 1256|Arabe de Windows|CHAR/VARCHAR (valeur par défaut)|  
-    |CP 1257|Windows Baltique|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1257|Windows Baltic|CHAR/VARCHAR (valeur par défaut)|  
     |binary|Jeu de caractères binaires pseudo|CHAR/VARCHAR (valeur par défaut)|  
     |geostd8|GEOSTD8 géorgien|CHAR/VARCHAR (valeur par défaut)|  
     |cp932|SJIS pour le japonais de Windows|NCHAR/NVARCHAR (valeur par défaut)|  
     |eucjpms|UJIS pour le japonais de Windows|NCHAR/NVARCHAR (valeur par défaut)|  
   
-2.  **Sur la base de données, de catégorie ou de niveaux de nœuds d’objet :** sur le niveau de base de données, catégorie ou les nœuds d’objet, grille de mappage de jeu de caractères contient les mêmes lignes que celle de niveau de métadonnées du nœud racine, reportages. :  
+2.  **Sur la base de données, de catégorie ou de niveaux de nœuds d’objet :** Sur le niveau de base de données, catégorie ou les nœuds d’objet, grille de mappage de jeu de caractères contient les mêmes lignes que celle de niveau de métadonnées du nœud racine, reportages. :  
   
     1.  La première colonne de la grille intitulée, **définir un nom de caractère** contient le nom du jeu de caractères.  
   

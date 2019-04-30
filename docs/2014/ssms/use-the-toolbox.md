@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280669"
 ---
 # <a name="use-the-toolbox"></a>Utiliser la boîte à outils
   Vous pouvez sélectionner et faire glisser des éléments, du texte et des contrôles à partir de la boîte à outils vers des formulaires, des pages et des générateurs, puis faire glisser ces éléments à partir de ces sources de nouveau vers la boîte à outils pour une utilisation ultérieure. Par exemple, dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , vous pouvez faire glisser une tâche vers un plan de maintenance.  

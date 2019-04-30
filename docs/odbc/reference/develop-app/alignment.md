@@ -1,5 +1,5 @@
 ---
-title: Alignement | Microsoft Docs
+title: Alignment | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287425"
 ---
-# <a name="alignment"></a>Alignment
+# <a name="alignment"></a>Alignement
 Les problèmes d’alignement dans une application ODBC sont généralement pas de différence entre elles se trouvent dans n’importe quel autre application. Autrement dit, la plupart des applications ODBC ont peu ou pas des problèmes avec l’alignement. Les pénalités pour aligner ne pas les adresses varient selon le matériel et le système d’exploitation et peuvent être aussi mineure que légèrement les performances ou comme majeures comme une erreur d’exécution irrécupérable. Par conséquent, les applications ODBC et les applications ODBC portables en particulier, prudence aligner correctement les données.  
   
  Un exemple de lorsque les applications ODBC rencontrent des problèmes d’alignement est lorsqu’ils allouer un grand bloc de mémoire et lier les différentes parties de cette mémoire pour les colonnes dans un jeu de résultats. Il s’agit probablement de se produire lorsqu’une application générique doit déterminer la forme d’un jeu de résultats au moment de l’exécution et allouer et lier de mémoire en conséquence.  

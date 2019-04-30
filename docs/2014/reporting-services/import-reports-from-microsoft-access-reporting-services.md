@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4bbf7c60159453aeeb1b4b5ae3b939875ee30395
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260927"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importer des rapports depuis Microsoft Access (Reporting Services)
   Dans le Concepteur de rapports, vous pouvez importer des rapports à partir d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] base de données Access ou un projet. Microsoft Access 2002 (ou version ultérieure) doit être installé sur le même ordinateur que le Concepteur de rapports.  

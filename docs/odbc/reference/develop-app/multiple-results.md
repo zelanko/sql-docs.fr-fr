@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254166"
 ---
 # <a name="multiple-results"></a>Résultats multiples
 Un *résultat* est un élément retourné par la source de données après une instruction est exécutée. ODBC comporte deux types de résultats : jeux de résultats et des nombres de lignes. *Nombres de lignes* sont le nombre de lignes affectées par une mise à jour, supprimer, ou instruction insert. Lots, décrit dans [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), peut générer plusieurs résultats.  
@@ -31,8 +31,8 @@ Un *résultat* est un élément retourné par la source de données après une i
   
 |Type de lot|Nombre de lignes|Jeux de résultats|  
 |----------------|----------------|-----------------|  
-|Traitement explicite|SQL_BATCH_ROW_COUNT [a]|--[b].|  
-|Procédure|SQL_BATCH_ROW_COUNT [a]|--[b].|  
+|Traitement explicite|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|Procédure|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Tableaux de paramètres|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] ligne génératrice de nombre d’instructions dans un lot peuvent être pris en charge, mais le retour du nombre de lignes non pris en charge. L’option SQL_BATCH_SUPPORT dans **SQLGetInfo** indique si les instructions de génération de nombre de lignes sont autorisées par lots ; l’option SQL_BATCH_ROW_COUNTS indique si ces nombres de lignes sont retournées à l’application.  

@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294369"
 ---
-# <a name="c-to-sql-date"></a>C en SQL : date
+# <a name="c-to-sql-date"></a>C en SQL : Date
 L’identificateur pour le type de données ODBC C date est :  
   
  SQL_C_TYPE_DATE  

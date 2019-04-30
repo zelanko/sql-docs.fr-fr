@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification de la Directive ELEMENT | Microsoft Docs'
+title: 'Exemple : Spécification de la directive ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287152"
 ---
 # <a name="example-specifying-the-element-directive"></a>Exemple : Spécification de la directive ELEMENT
   Cette directive extrait des informations sur les employés et génère des données XML centrées sur l'élément, comme illustré par le code suivant :  

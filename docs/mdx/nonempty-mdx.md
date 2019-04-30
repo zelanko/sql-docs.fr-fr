@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) | Documents Microsoft
+title: NonEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278520"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -45,7 +45,7 @@ NONEMPTY(set_expression1 [,set_expression2])
 >  La valeur non vide est une caractéristique des cellules référencées par les tuples, et non des tuples eux-mêmes.  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante montre un exemple simple de **NonEmpty**, renvoyer tous les clients qui avaient une valeur non null pour le montant des ventes sur Internet sur le 1er juillet 2001 :  
+ La requête suivante montre un exemple simple de **NonEmpty**, retournant tous les clients qui avaient une valeur non null pour le montant des ventes sur Internet sur le 1er juillet 2001 :  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +61,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- L’exemple suivant retourne le jeu de tuples contenant les clients et les dates d’achat, à l’aide de la **filtre** (fonction) et le **NonEmpty** fonctions pour trouver la dernière date à laquelle chaque client a effectué un achat :  
+ L’exemple suivant retourne le jeu de tuples contenant les clients et les dates d’achat, à l’aide de la **filtre** (fonction) et le **NonEmpty** fonctions pour rechercher la dernière date à laquelle chaque client a effectué un achat :  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -89,9 +89,9 @@ NONEMPTY(set_expression1 [,set_expression2])
   
 ## <a name="see-also"></a>Voir aussi  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [Filtre &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

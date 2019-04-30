@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287153"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilité des applications et des pilotes
 Pilote et les applications ODBC se répartissent en plusieurs catégories en plus de leur version. Certaines de ces applications sont incompatibles avec certains pilotes ; dans d’autres cas, le type de l’application ou le pilote peut avoir une incidence sur les problèmes de compatibilité descendante entre eux.  

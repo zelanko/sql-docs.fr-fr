@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77be473f189d8574ebde74215569e700e80725b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253513"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>Supprimer des colonnes des résultats d'une requête (Visual Database Tools)
   Si vous utilisez une colonne dans la requête Select mais que vous ne souhaitez pas l'afficher dans le jeu de résultats (autrement dit, si vous ne souhaitez pas que la colonne figure dans la liste de sélection de la requête), vous pouvez la supprimer du résultat. Une fois la colonne supprimée du résultat de la requête, vous pouvez continuer à l'utiliser dans des critères de recherche ou en tant que champ de tri.  

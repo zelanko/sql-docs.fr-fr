@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281918"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entrées de Registre pour les sources de données
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "47692917"
   
  ODBC  
   
- Fichier ODBC.ini  
+ Odbc.ini  
   
  HKEY_CURRENT_USER  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47692917"
   
  ODBC  
   
- Fichier ODBC.ini  
+ Odbc.ini  
   
  Clé utilisée varie selon que la source de données est un *source de données système,* qui est disponible pour tous les utilisateurs, ou un *source de données utilisateur,* qui est disponible uniquement pour l’utilisateur actuel. Sources de données système sont stockés dans l’arborescence HKEY_LOCAL_MACHINE et sources de données utilisateur sont stockés dans l’arborescence de HKEY_CURRENT_USER. Dans tous les autres égards, les sources de données système et des sources de données utilisateur sont identiques.  
   

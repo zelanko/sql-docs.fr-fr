@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dff9c41c13b37c223bdbf127eb44b1c83cda88ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298767"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>Paramètres globaux (fenêtre de sortie) (DB2ToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de SSMA.  

@@ -1,5 +1,5 @@
 ---
-title: À l’aide des fonctions membres | Documents Microsoft
+title: À l’aide des fonctions membres | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251591"
 ---
 # <a name="using-member-functions"></a>Utilisation de fonctions de membre
 
 
   Une fonction de membre est une fonction MDX (Multidimensional Expressions) qui retourne un membre. Les fonctions de membre, comme les fonctions de tuple et les fonctions de définition, sont essentielles à la négociation des structures multidimensionnelles de la syntaxe MDX (Multidimensional Expressions) présentes dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- De nombreuses fonctions de membre dans MDX, la plus importante est la **CurrentMember** fonction, qui est utilisée pour déterminer le membre actuel sur une hiérarchie. La requête suivante illustre comment l’utiliser, ainsi que les **Parent**, **ancêtre**, et **Prevmember** fonctions :  
+ De nombreuses fonctions de membre dans MDX, la plus importante est la **CurrentMember** (fonction), qui est utilisée pour déterminer le membre actuel sur une hiérarchie. La requête suivante illustre comment l’utiliser, ainsi que la **Parent**, **ancêtre**, et **Prevmember** fonctions :  
   
  `WITH`  
   

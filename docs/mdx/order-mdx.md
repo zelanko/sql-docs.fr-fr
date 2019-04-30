@@ -1,5 +1,5 @@
 ---
-title: Commande (MDX) | Documents Microsoft
+title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277847"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -39,19 +39,19 @@ Order(Set_Expression, String_Expression
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement à une expression MDX (Multidimensional Expressions) valide des coordonnées des cellules qui retournent un nombre exprimé sous forme de chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Le **ordre** fonction peut être hiérarchique (comme spécifié à l’aide de la **ASC** ou **DESC** indicateur) ou non hiérarchique (comme spécifié à l’aide de la **BASC** ou **BDESC** indicateur ; le **B** « hiérarchie »). Si **ASC** ou **DESC** est spécifié, le **commande** fonction réorganise d’abord les membres en fonction de leur position dans la hiérarchie et puis elle ordonne chaque niveau. Si **BASC** ou **BDESC** est spécifié, le **commande** fonction organise les membres du jeu, indépendamment de la hiérarchie. Aucun indicateur n’est spécifié, **ASC** est la valeur par défaut.  
+ Le **ordre** fonction peut être hiérarchique (comme spécifié à l’aide de la **ASC** ou **DESC** indicateur) ou non hiérarchique (comme spécifié à l’aide de la **BASC**  ou **BDESC** indicateur ; le **B** « hiérarchie »). Si **ASC** ou **DESC** est spécifié, le **ordre** fonction réorganise les membres en fonction de leur position dans la hiérarchie d’abord, puis elle ordonne chaque niveau. Si **BASC** ou **BDESC** est spécifié, le **ordre** fonction réorganise les membres du jeu sans tenir compte de la hiérarchie. Aucun indicateur n’est spécifié, **ASC** est la valeur par défaut.  
   
- Si le **commande** fonction est utilisée avec un jeu où deux ou plusieurs hiérarchies sont joints entre eux et le **DESC** indicateur est utilisé, seuls les membres de la dernière hiérarchie dans le jeu sont triés. Il s'agit là d'une différence par rapport à Analysis Services 2000 où toutes les hiérarchies du jeu étaient triées.  
+ Si le **ordre** fonction est utilisée avec un jeu où deux ou plusieurs hiérarchies sont joints entre eux et le **DESC** indicateur est utilisé, seuls les membres de la dernière hiérarchie dans le jeu sont triés. Il s'agit là d'une différence par rapport à Analysis Services 2000 où toutes les hiérarchies du jeu étaient triées.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant renvoie, à partir de la **Adventure Works** de cube, le nombre de commandes du revendeur pour tous les trimestres calendaires à partir de la hiérarchie de calendrier sur la dimension Date. Le **commande** fonction réorganise le jeu pour l’axe des lignes. Le **commande** fonction trie le jeu par `[Reseller Order Count]` décroissant hiérarchique telle que déterminée par la `[Calendar]` hiérarchie.  
+ L’exemple suivant renvoie, à partir de la **Adventure Works** de cube, le nombre de commandes du revendeur pour tous les trimestres calendaires à partir de la hiérarchie de calendrier sur la dimension Date. Le **ordre** fonction réorganise le jeu pour l’axe des lignes. Le **ordre** fonction trie le jeu par `[Reseller Order Count]` décroissant hiérarchique telle que déterminée par la `[Calendar]` hiérarchie.  
   
  `SELECT`  
   
@@ -69,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Notez dans cet exemple, lorsque le **DESC** indicateur est remplacée par **BDESC**, la hiérarchie est interrompue et la liste de trimestres calendaires est retournée sans tenir compte de la hiérarchie :  
+ Notez que dans cet exemple, lorsque le **DESC** indicateur est remplacée par **BDESC**, la hiérarchie est interrompue et la liste de trimestres calendaires est retournée sans tenir compte pour la hiérarchie :  
   
  `SELECT`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- L’exemple suivant utilise le **rang** fonction pour classer les membres de la hiérarchie City, en fonction de la mesure Reseller Sales Amount, puis les affiche dans l’ordre de classement. À l’aide de la **commande** de fonction à la première commande le jeu de membres de la hiérarchie de la ville, le tri est effectué en une seule fois et suivi d’une analyse linéaire avant d’être présenté dans l’ordre de tri.  
+ L’exemple suivant utilise le **rang** fonction pour classer les membres de la hiérarchie City, selon la mesure Reseller Sales Amount et les affiche ensuite dans l’ordre de classement. À l’aide de la **ordre** de fonction à la première commande le jeu de membres de la hiérarchie City, le tri est effectué une seule fois et suivi par une analyse linéaire avant d’être présenté dans l’ordre de tri.  
   
 ```  
 WITH   
@@ -127,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant retourne le nombre de produits dans le jeu qui sont uniques, à l’aide de la **commande** fonction pour classer les tuples non vides avant d’utiliser le **filtre** (fonction). Le **CurrentOrdinal** fonction est utilisée pour comparer et éliminer les liens.  
+ L’exemple suivant retourne le nombre de produits dans le jeu qui sont uniques, à l’aide de la **ordre** fonction pour classer les tuples non vides avant d’utiliser le **filtre** (fonction). Le **CurrentOrdinal** fonction est utilisée pour comparer et éliminer les liens.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -161,7 +161,7 @@ SELECT {[Measures].[PrdTies]} ON 0
 FROM [Adventure Works]  
 ```  
   
- Pour comprendre comment les **DESC** indicateur fonctionne avec les jeux de tuples, envisagez d’abord les résultats de la requête suivante :  
+ Pour comprendre comment la **DESC** indicateur fonctionne avec les jeux de tuples, commencez par étudier les résultats de la requête suivante :  
   
 ```  
   
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- Sur l'axe des lignes, vous pouvez voir que les groupes du secteur de vente ont été classés par ordre décroissant par Montant des taxes, comme suit : Amérique du Nord, Europe, Pacifique, NA. Voir maintenant que se passe-t-il si nous jointure croisée du jeu de groupes du secteur de vente avec le jeu de sous-catégories de produits et appliquer le **commande** fonctionnent de la même façon, comme suit :  
+ Sur l’axe des lignes, vous pouvez voir que les groupes du secteur de vente ont été classés par ordre décroissant par montant des taxes, comme suit : Amérique du Nord, Europe, Pacifique, NA. Recevez à présent que se passe-t-il si nous crossjoin l’ensemble de groupes du secteur de vente avec le jeu de sous-catégories de produits et appliquer le **ordre** fonctionnent de la même façon, comme suit :  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- Alors que le jeu de sous-catégories de produits a été trié par ordre décroissant, hiérarchique, les groupes du secteur de vente ne sont plus triés et s'affichent dans l'ordre dans lequel ils apparaissent dans la hiérarchie : Europe, NA, Amérique du Nord et Pacifique. Cela vient du fait que seule la dernière hiérarchie du jeu de tuples, sous-catégories de produits, est triée. Pour reproduire le comportement d’Analysis Services 2000, utilisez une série d’imbriqués **générer** fonctions pour trier chaque jeu avant sa jointure croisée, par exemple :  
+ Tandis que l’ensemble des sous-catégories de produits a été commandé, hiérarchique par ordre décroissant, les groupes du secteur de vente ne sont plus triés et s’affichent dans l’ordre de qu'apparition sur la hiérarchie : Europe, NA, Amérique du Nord et Pacifique. Cela vient du fait que seule la dernière hiérarchie du jeu de tuples, sous-catégories de produits, est triée. Pour reproduire le comportement d’Analysis Services 2000, utilisez une série d’imbriqués **générer** fonctions trier chaque jeu avant sa jointure croisée, par exemple :  
   
 ```  
   
@@ -212,6 +212,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

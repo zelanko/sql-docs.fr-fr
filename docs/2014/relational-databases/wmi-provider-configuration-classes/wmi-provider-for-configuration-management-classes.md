@@ -20,11 +20,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b83388ff3be4c8cfdfec72968230f957358b1960
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288421"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Fournisseur WMI pour les classes de gestion de la configuration
   Le fournisseur WMI (Windows Management Instrumentation) pour la gestion de la configuration fournit des fonctionnalités pour les classes suivantes :  

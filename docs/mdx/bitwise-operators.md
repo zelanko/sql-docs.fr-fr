@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de bits | Documents Microsoft
+title: Opérateurs de bits | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284943"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 
@@ -28,7 +28,7 @@ ms.locfileid: "34739418"
 |[AND](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
 |[IS](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
 |[NOT](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
-|[OU](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
+|[OR](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
 |[XOR](../mdx/xor-mdx.md)|Effectue une exclusion logique sur deux expressions numériques.|  
   
 ## <a name="see-also"></a>Voir aussi  

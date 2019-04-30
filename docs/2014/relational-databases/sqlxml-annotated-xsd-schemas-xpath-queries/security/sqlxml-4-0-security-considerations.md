@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bcaff1509a08cc14ffb0d5ce267607b75a942229
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268596"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Considérations relatives à la sécurité SQLXML 4.0
   Cette section fournit des informations sur les éléments relatifs à la sécurité à prendre en compte pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281060"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. Les packages et marshale données proxy pour le stub côté serveur pour les communications avec l’objet métier envoyer des demandes et les données sur Internet. Pour les objets de composant in-process, aucun proxy ne sont utilisés, un pointeur vers l’objet est fourni.  
@@ -30,7 +30,7 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. L
 ## <a name="syntax"></a>Syntaxe  
  Service de données distant prend en charge les protocoles suivants : HTTP, HTTPS (HTTP sur Secure Socket Layer), DCOM et in-process.  
   
-|Protocole|Syntaxe|  
+|Protocol|Syntaxe|  
 |--------------|------------|  
 |HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
 |HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  

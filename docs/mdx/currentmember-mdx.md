@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) | Documents Microsoft
+title: CurrentMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248889"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -39,7 +39,7 @@ Hierarchy_Expression.CurrentMember
 >  Lorsqu'une dimension contient uniquement une hiérarchie visible unique, cette hiérarchie peut être désignée soit par le nom de dimension, soit par le nom de la hiérarchie, puisque le nom de dimension est résolu à son unique hiérarchie visible. Par exemple, `Measures.CurrentMember` est une expression MDX valide parce qu'elle est résolue à la seule hiérarchie de la dimension de mesures.  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante illustre comment **Currentmember** peut être utilisé pour rechercher le membre actuel dans les hiérarchies sur des colonnes, lignes et axe de secteur :  
+ La requête suivante illustre comment **Currentmember** peut être utilisé pour rechercher le membre actuel à partir de hiérarchies sur des colonnes, lignes et axe de secteur :  
   
  `WITH MEMBER MEASURES.CURRENTDATE AS`  
   
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur d’autres hiérarchies sur la même dimension qui ne sont pas utilisés sur un axe peut également changer ; Ce comportement est appelé 'auto-existe', et vous trouverez plus de détails dans [Concepts clés dans MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
+ Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur les autres hiérarchies sur la même dimension qui ne sont pas utilisés sur un axe peut également modifier ; Ce comportement est appelé 'auto-existe', et vous trouverez plus de détails dans [Concepts clés dans MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** est très important pour effectuer des calculs prenant en compte le contexte de la requête, ils sont utilisés dans. L’exemple suivant retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie et par modèle, à partir de la **Adventure Works** cube. Le **CurrentMember** fonction identifie le produit dont la quantité de commande doit être utilisée lors du calcul.  
+ **CurrentMember** est très important pour effectuer des calculs prenant en compte le contexte de la requête, ils sont utilisés dans. L’exemple suivant retourne la quantité commandée de chaque produit et le pourcentage des quantités commandées par catégorie et modèle, à partir de la **Adventure Works** cube. Le **CurrentMember** fonction identifie le produit dont la quantité de commande doit être utilisée lors du calcul.  
   
 ```  
 WITH   
@@ -118,6 +118,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

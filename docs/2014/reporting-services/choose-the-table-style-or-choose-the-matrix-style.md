@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266087"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Choisir le style du tableau ou Choisir le style de la matrice
   Utilisez ces pages de l'Assistant Rapport pour sélectionner les styles de texte et de ligne du rapport. La liste des styles est basée sur un modèle configurable. Concepteur de rapports fournit les modèles initiaux suivants : Ardoise, forêt, entreprise, gras, océan et générique.  

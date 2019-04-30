@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259243"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute, fonction
 **Conformité**  
@@ -43,7 +43,7 @@ SQLRETURN SQLExecute(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
 ## <a name="returns"></a>Valeur renvoyée  
@@ -61,11 +61,11 @@ SQLRETURN SQLExecute(
 |01006|Privilège non révoqué|L’instruction préparée associée à la *au paramètre StatementHandle* a été un **RÉVOQUER** instruction et l’utilisateur ne disposait pas le privilège spécifié. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01007|Privilège non accordé|L’instruction préparée associée à la *au paramètre StatementHandle* a été un **GRANT** instruction et l’utilisateur n’ont pas reçu le privilège spécifié.|  
 |01S02|Valeur d’option modifiée|Un attribut d’instruction spécifiée non valide en raison de conditions de travail d’implémentation, donc une valeur similaire a été remplacée temporairement. (**SQLGetStmtAttr** peut être appelée pour déterminer quelle est la valeur substituée temporairement.) La valeur de remplacement n’est valide pour le *au paramètre StatementHandle* jusqu'à ce que le curseur est fermé, à quel point l’attribut d’instruction reprend sa valeur précédente. Les attributs d’instruction qui peuvent être modifiés sont : SQL_ATTR_CONCURRENCY SQL_ATTR_CURSOR_TYPE, SQL_ATTR_KEYSET_SIZE, SQL_ATTR_MAX_LENGTH, SQL_ATTR_MAX_ROWS, SQL_ATTR_QUERY_TIMEOUT et SQL_ATTR_SIMULATE_CURSOR. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01 S 07|Troncation fractionnelle|Les données retournées pour une entrée/sortie ou paramètre de sortie a été tronqué de sorte que la partie fractionnaire d’un type de données numériques ont été tronquée ou la partie fractionnaire du composant de temps un intervalle de temps, timestamp ou du type de données a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S07|Troncation fractionnelle|Les données retournées pour une entrée/sortie ou paramètre de sortie a été tronqué de sorte que la partie fractionnaire d’un type de données numériques ont été tronquée ou la partie fractionnaire du composant de temps un intervalle de temps, timestamp ou du type de données a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07002|Champ COUNT incorrect|Le nombre de paramètres spécifiés dans **SQLBindParameter** était inférieur au nombre de paramètres dans l’instruction SQL contenue dans \* *StatementText*.<br /><br /> **SQLBindParameter** a été appelé avec *ParameterValuePtr* un pointeur null, la valeur *StrLen_or_IndPtr* ne pas la valeur SQL_NULL_DATA ou SQL_DATA_AT_EXEC, et *InputOutputType*  ne pas la valeur SQL_PARAM_OUTPUT, afin que le nombre de paramètres spécifié dans **SQLBindParameter** a été supérieur au nombre de paramètres dans l’instruction SQL contenue dans **StatementText* .|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données identifiée par le *ValueType* argument dans **SQLBindParameter** pour le paramètre dépendant n’a pas pu être converti au type de données identifié par le *ParameterType*argument dans **SQLBindParameter**.<br /><br /> La valeur de données retournée pour un paramètre lié comme SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT pas pu être convertie au type de données identifié par le *ValueType* argument dans **SQLBindParameter**.<br /><br /> (Si les valeurs de données pour une ou plusieurs lignes n’a pas pu être converties, mais une ou plusieurs lignes ont été retournés avec succès, cette fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07007|Violation de valeur de paramètre restreint|Le type de paramètre SQL_PARAM_INPUT_OUTPUT_STREAM est utilisé uniquement pour un paramètre qui envoie et reçoit des données en parties. Un tampon d’entrée dépendant n’est pas autorisé pour ce type de paramètre.<br /><br /> Cette erreur se produit lorsque le type de paramètre est SQL_PARAM_INPUT_OUTPUT et lorsque le \* *StrLen_or_IndPtr* spécifié dans **SQLBindParameter** n’est pas égal à SQL_NULL_DATA, SQL_DEFAULT_ PARAM, SQL_LEN_DATA_AT_EXEC(len) ou SQL_DATA_AT_EXEC.|  
-|07 S 01|Utilisation non valide du paramètre par défaut|Un paramètre défini avec **SQLBindParameter**, a été SQL_DEFAULT_PARAM, et le paramètre correspondant n’est pas un paramètre pour un appel de procédure canonique ODBC.|  
+|07S01|Utilisation non valide du paramètre par défaut|Un paramètre défini avec **SQLBindParameter**, a été SQL_DEFAULT_PARAM, et le paramètre correspondant n’est pas un paramètre pour un appel de procédure canonique ODBC.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
 |21S02|Degré de la table dérivée ne correspond pas à la liste des colonnes|L’instruction préparée associée à la *au paramètre StatementHandle* contenus un **CREATE VIEW** instruction et la liste de colonnes non qualifiés (le nombre de colonnes spécifié pour l’affichage dans le  *identificateur de colonne* arguments de l’instruction SQL) contenait plus de noms que le nombre de colonnes dans la table dérivée définie par le *spécification de requête* argument de l’instruction SQL.|  
 |22001|Données String, troncation à droite|L’attribution d’un caractère ou d’une valeur binaire à une colonne a entraîné la troncation de non vides (caractère) ou d’octets ou caractères (binaires) non null.|  

@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248348"
 ---
 # <a name="establishing-a-connection"></a>Établissement d’une connexion
-Après l’allocation de handles d’environnement et de connexion et en définissant les attributs de connexion, l’application est prête à se connecter à la source de données ou le pilote. Il existe trois fonctions différentes, l’application peut utiliser pour ce faire : **SQLConnect** (niveau de conformité d’interface de base), **SQLDriverConnect** (Core), et **SQLBrowseConnect**(Niveau 1). Chacun des trois est conçu pour être utilisé dans un autre scénario. Avant de vous connecter, l’application peut déterminer laquelle de ces fonctions est prise en charge avec le **ConnectFunctions** mot clé retournée par **SQLDrivers**.  
+Après l’allocation de handles d’environnement et de connexion et en définissant les attributs de connexion, l’application est prête à se connecter à la source de données ou le pilote. Il existe trois fonctions différentes, que l’application peut utiliser pour ce faire : **SQLConnect** (niveau de conformité d’interface de base), **SQLDriverConnect** (Core), et **SQLBrowseConnect** (niveau 1). Chacun des trois est conçu pour être utilisé dans un autre scénario. Avant de vous connecter, l’application peut déterminer laquelle de ces fonctions est prise en charge avec le **ConnectFunctions** mot clé retournée par **SQLDrivers**.  
   
 > [!NOTE]  
 >  Certains pilotes de limitent le nombre de connexions actives, qu'elles prennent en charge. Une application appelle **SQLGetInfo** avec l’option SQL_MAX_DRIVER_CONNECTIONS pour déterminer le nombre de connexions actif un pilote spécifique prend en charge.  

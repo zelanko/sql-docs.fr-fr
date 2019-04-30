@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273617"
 ---
 # <a name="native-error"></a>Erreur native
 Codes d’erreur natif positifs sont générées par les pilotes de base de données de bureau. Codes d’erreur négatifs sont générés par Microsoft Jet. Pour plus d’informations, consultez le *-Guide du programmeur moteur Microsoft Jet de base de données*.

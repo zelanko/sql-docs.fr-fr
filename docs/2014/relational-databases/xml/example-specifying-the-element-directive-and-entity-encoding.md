@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécifiant la Directive ELEMENT et codage d’entité | Microsoft Docs'
+title: 'Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287239"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité
   Cet exemple illustre la différence entre les directives **ELEMENT** et **XML** . La directive **ELEMENT** décompose les données en entités, contrairement à la directive **XML** . L’élément \<Summary> reçoit des données XML, `<Summary>This is summary description</Summary>`, dans la requête.  

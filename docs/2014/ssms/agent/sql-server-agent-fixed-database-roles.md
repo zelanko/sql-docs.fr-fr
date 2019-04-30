@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245993"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède les rôles fixes de base de données **msdb** suivants, qui permettent aux administrateurs de contrôler plus précisément l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Les rôles sont classés ci-après selon leurs privilèges d'accès, du moins privilégié au plus privilégié :  
@@ -56,7 +56,7 @@ ms.locfileid: "52773771"
 |Afficher les propriétés|Non|Oui|Oui|Non|  
 |Exécuter/arrêter/démarrer|Non applicable|Oui|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Ne <sup>4</sup>|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non<sup>4</sup>|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Oui|Non applicable|  
   
  <sup>1</sup> ne pouvez pas modifier l’appartenance des travaux.  
@@ -84,7 +84,7 @@ ms.locfileid: "52773771"
 |Modifier les propriétés|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
 |Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|Non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Ne <sup>4</sup>|Non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non<sup>4</sup>|Non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
  <sup>1</sup> ne pouvez pas modifier l’appartenance des travaux.  

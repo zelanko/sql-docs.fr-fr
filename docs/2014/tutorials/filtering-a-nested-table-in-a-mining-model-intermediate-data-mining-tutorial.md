@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267479"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrage d'une table imbriquée dans un modèle d'exploration de données (Didacticiel sur l'exploration de données intermédiaire)
   Après avoir créé et exploré le modèle, vous décidez de vous concentrer sur un sous-ensemble des données des clients. Par exemple, vous pouvez souhaiter analyser uniquement les paniers qui contiennent un article spécifique ou les caractéristiques démographiques des clients qui n'ont rien acheté pendant une certaine période.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de filtrer les données utilisées dans un modèle d'exploration de données. Cette fonctionnalité est utile, car vous n’avez pas besoin configurer une nouvelle vue de source de données à utiliser des données différentes. Dans le didacticiel sur l'exploration de données de base, vous avez appris à filtrer des données provenant d'une table plate en appliquant des conditions à la table de cas. Au cours de cette tâche, vous allez créer un filtre qui s'applique à une table imbriquée.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Filtres sur des tables imbriquées ou des tables de cas  
+## <a name="filters-on-nested-vs-case-tables"></a>Filtres sur les tables imbriquées ou. Tables de cas  
  Si votre vue de source de données contient une table de cas et une table imbriquée, à l'instar de la vue de source de données utilisée dans le modèle Association, vous pouvez effectuer un filtrage sur les valeurs de la table de cas, sur la présence ou l'absence d'une valeur dans la table imbriquée ou sur une combinaison des deux.  
   
  Au cours de cette tâche, vous allez d'abord effectuer une copie du modèle Association, puis ajouter les attributs IncomeGroup et Region au nouveau modèle associé, afin de pouvoir filtrer ces attributs dans la table de cas.  

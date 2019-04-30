@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e7109a6f1b88cf7639b2fc823ce0c5f14d05002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280793"
 ---
 # <a name="odbc-translators-subkey"></a>Sous-clé de convertisseurs ODBC
 Les valeurs sous la sous-clé ODBC traducteurs répertorient les convertisseurs installés. Le format de ces valeurs est illustré dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|*traducteur-desc*|REG_SZ|**installé**|  
+|*translator-desc*|REG_SZ|**Installed**|  
   
  Le *translator-desc* nom est défini par le développeur du traducteur.  
   

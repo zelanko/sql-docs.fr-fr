@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245959"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Exécution du Conseiller de mise à niveau (interface utilisateur)
   Vous pouvez exécuter le Conseiller de mise à niveau pour analyser des composants locaux ou distants à tout moment pendant la planification de la mise à niveau. Conseiller de mise à niveau génère un rapport pour chaque composant et l’instance qui est analysé.  
@@ -48,7 +48,7 @@ ms.locfileid: "48176105"
   
 6.  Générer un rapport sur les problèmes de mise à niveau.  
   
- Pour plus d’informations sur l’Assistant analyse du Conseiller de mise à niveau, consultez [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Pour plus d’informations sur l’Assistant analyse du Conseiller de mise à niveau, consultez [Comment : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
  Pour plus d’informations spécifiques qui est requis pour chaque étape, consultez [sur l’Interface utilisateur Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
@@ -69,14 +69,14 @@ ms.locfileid: "48176105"
   
  Pour obtenir des instructions pas à pas sur l'utilisation de la visionneuse de rapports, consultez les rubriques suivantes :  
   
--   [Guide pratique pour afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Procédure : Afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Guide pratique pour filtrer des rapports](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Procédure : Rapports de filtre](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
--   [Guide pratique pour exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)  
+-   [Procédure : Exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Référence de l’Interface utilisateur Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

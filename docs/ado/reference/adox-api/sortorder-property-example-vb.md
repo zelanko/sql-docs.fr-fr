@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281570"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
 Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne de pays dans le **employés** table, puis affiche les enregistrements. Puis le code ajoute un index décroissant à la colonne de pays dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  

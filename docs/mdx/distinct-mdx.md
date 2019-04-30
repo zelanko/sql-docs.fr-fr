@@ -1,5 +1,5 @@
 ---
-title: Distinct (MDX) | Documents Microsoft
+title: Distinct (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248253"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 
@@ -33,7 +33,7 @@ Distinct(Set_Expression)
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Si le **Distinct** fonction recherche des doublons de tuples dans le jeu spécifié, la fonction conserve uniquement la première instance du tuple dupliqué tout en conservant l’ordre du jeu.  
+ Si le **Distinct** fonction trouve des tuples dupliqués dans le jeu spécifié, la fonction conserve uniquement la première instance du tuple dupliqué tout en conservant l’ordre du jeu.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple de requête suivant illustre comment utiliser la fonction Distinct avec un jeu nommé, et comment l'utiliser avec la fonction Count pour rechercher le nombre de tuples distincts dans un jeu :  
@@ -61,6 +61,6 @@ Distinct(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

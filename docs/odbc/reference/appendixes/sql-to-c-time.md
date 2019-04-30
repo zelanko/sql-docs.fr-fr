@@ -1,5 +1,5 @@
 ---
-title: 'SQL en c : heure | Microsoft Docs'
+title: 'SQL à C : Time | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259603"
 ---
-# <a name="sql-to-c-time"></a>SQL en C : heure
+# <a name="sql-to-c-time"></a>SQL à C : Time
 L’identificateur de l’heure est de type de données ODBC SQL :  
   
  SQL_TYPE_TIME  
@@ -31,11 +31,11 @@ L’identificateur de l’heure est de type de données ODBC SQL :
   
 |Identificateur de type C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longueur d’octet de caractère<br /><br /> *9* <= *BufferLength* < = longueur d’octet de caractère<br /><br /> *BufferLength* < 9|data<br /><br /> Données tronquées [a]<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > longueur des caractères<br /><br /> *9* <= *BufferLength* < = longueur de caractère<br /><br /> *BufferLength* < 9|data<br /><br /> Données tronquées [a]<br /><br /> Indéfini|Longueur des données en caractères<br /><br /> Longueur des données en caractères<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|data<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|Aucun [b]|data|6 [d]|n/a|  
-|SQL_C_TYPE_TIMESTAMP|Aucun [b]|Données [c]|16 [d]|n/a|  
+|SQL_C_CHAR|*BufferLength* > longueur d’octet de caractère<br /><br /> *9* <= *BufferLength* < = longueur d’octet de caractère<br /><br /> *BufferLength* < 9|Données<br /><br /> Données tronquées [a]<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > longueur des caractères<br /><br /> *9* <= *BufferLength* < = longueur de caractère<br /><br /> *BufferLength* < 9|Données<br /><br /> Données tronquées [a]<br /><br /> Indéfini|Longueur des données en caractères<br /><br /> Longueur des données en caractères<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|Aucun [b]|Données|6[d]|n/a|  
+|SQL_C_TYPE_TIMESTAMP|Aucun [b]|Données [c]|16[d]|n/a|  
   
  [a] les fractions de secondes du temps sont tronqués.  
   

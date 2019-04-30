@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283677"
 ---
 # <a name="server-element-for-configuration-dta"></a>Server, élément pour les configurations (Assistant Paramétrage de base de données)
   Contient les informations d'identification du serveur sur lequel vous souhaitez que l'Assistant Paramétrage du moteur de base de données évalue la configuration hypothétique (spécifiée par l'élément `Configuration`).  

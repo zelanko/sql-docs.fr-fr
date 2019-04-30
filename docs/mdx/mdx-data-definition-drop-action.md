@@ -1,5 +1,5 @@
 ---
-title: Instruction DROP ACTION (MDX) | Documents Microsoft
+title: Instruction DROP ACTION (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47eaad9a13966abd1d08b0121fdd9c0a64a7438
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285059"
 ---
-# <a name="mdx-data-definition---drop-action"></a>Définition de données MDX - ACTION DROP
+# <a name="mdx-data-definition---drop-action"></a>Définition de données MDX - DROP ACTION
 
 
   Supprime une action spécifiée d'un cube spécifié.  
@@ -38,6 +38,6 @@ DROP ACTION CURRENTCUBE | Cube_Name
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction CREATE ACTION &#40;MDX&#41;](../mdx/mdx-data-definition-create-action.md)   
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

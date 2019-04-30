@@ -1,5 +1,5 @@
 ---
-title: Nombre (Dimension) (MDX) | Documents Microsoft
+title: Count (Dimension) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6ee8fe09f7a840d32511d3a208a4621612ee9939
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285044"
 ---
 # <a name="count-dimension-mdx"></a>Count (Dimension) (MDX)
 
@@ -43,8 +43,8 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [Nombre &#40;Tuple&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Nombre &#40;des niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Nombre &#40;définir&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Nombre &#40;niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

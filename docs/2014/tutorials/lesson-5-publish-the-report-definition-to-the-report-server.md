@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272870"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Leçon 5 : Publication de la définition du rapport sur le serveur de rapports
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>Leçon 5 : Publier la définition du rapport sur le serveur de rapports
   La dernière étape de la mise à jour de la définition du rapport consiste à la republier sur le serveur de rapports.  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>Pour publier le rapport sur le catalogue de rapports  
@@ -77,7 +77,7 @@ ms.locfileid: "56033619"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez compiler et exécuter le `SampleRDLSchema` application. Consultez [Leçon 6 : Exécutez l’Application du schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
+ Dans la leçon suivante, vous allez compiler et exécuter le `SampleRDLSchema` application. Voir [Leçon 6 : Exécutez l’Application du schéma RDL &#40;VB-C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

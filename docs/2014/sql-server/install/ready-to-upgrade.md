@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da72910ede108d01664cdf4f2e51462f0bdd1e85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294384"
 ---
 # <a name="ready-to-upgrade"></a>Prêt pour la mise à niveau
   Utilisez la page **Prêt pour la mise à niveau** pour afficher les options spécifiées pour cette mise à niveau.  

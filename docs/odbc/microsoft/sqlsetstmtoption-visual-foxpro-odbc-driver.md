@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d7bcecfbd880f53d1067fd68202b62c34fce398
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305821"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (pilote ODBC Visual FoxPro)
 > [!NOTE]  
 >  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Prise en charge : Complète  
   
  Conformité d’API ODBC : Niveau 1  
   
@@ -32,18 +32,18 @@ ms.locfileid: "47854394"
   
 |*fOption*|Valeurs autorisées|Commentaires|  
 |---------------|--------------------|--------------|  
-|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|Si vous tentez de définir cela *fOption*, le pilote retourne l’erreur : « Non compatibles avec le pilote ». Visual FoxPro ne prend pas en charge l’exécution asynchrone.|  
+|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|Si vous tentez de définir cela *fOption*, le pilote retourne l’erreur : « Pilotes non compatibles avec ». Visual FoxPro ne prend pas en charge l’exécution asynchrone.|  
 |SQL_BIND_TYPE|SQL_BIND_BY_COLUMN ou une valeur de 32 bits indiquant la longueur de la structure ou une instance d’une mémoire tampon dans les résultats colonnes seront liés.||  
 |SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|Le pilote n’autorise pas SQL_CONCUR_ROWVER, car Visual FoxPro n’a pas de version de la ligne en fonction des horodatages.|  
 |SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|Le pilote n’autorise pas SQL_CURSOR_KEYSET_DRIVEN ou type SQL_CURSOR_DYNAMIC ; consultez [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) pour plus d’informations.|  
-|SQL_KEYSET_SIZE|Erreur : « pilotes non compatibles avec le »|Visual FoxPro ne prend pas en charge le modèle de curseur keyset.|  
+|SQL_KEYSET_SIZE|Erreur : « Non compatibles avec le pilote »|Visual FoxPro ne prend pas en charge le modèle de curseur keyset.|  
 |SQL_MAX_LENGTH|0|Si vous tentez de définir cela *fOption* valeur, le pilote retourne l’erreur « Non compatibles avec le pilote ».|  
 |SQL_MAX_ROWS|0|Si vous tentez de définir cela *fOption* valeur, le pilote retourne l’erreur « Non compatibles avec le pilote ».|  
 |SQL_NOSCAN|SQL_NOSCAN_OFF||  
 |SQL_QUERY_TIMEOUT|0|Si vous tentez de définir cela *fOption* valeur, le pilote retourne l’erreur « Non compatibles avec le pilote ».|  
 |SQL_RETRIEVE_DATA|SQL_RD_ON, SQL_RD_OFF||  
 |SQL_ROWSET_SIZE|1 à 4 294 967 296||  
-|SQL_SIMULATE_CURSOR|Erreur : « pilotes non compatibles avec le »||  
+|SQL_SIMULATE_CURSOR|Erreur : « Non compatibles avec le pilote »||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   
  Pour plus d’informations, consultez [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md) dans le *de référence du programmeur ODBC*.

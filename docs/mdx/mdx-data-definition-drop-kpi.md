@@ -1,5 +1,5 @@
 ---
-title: Instruction DROP KPI (MDX) | Documents Microsoft
+title: Instruction DROP KPI (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 336eebbc8bcc98ec684faaaa1092b511cf95f100
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248241"
 ---
 # <a name="mdx-data-definition---drop-kpi"></a>Définition de données MDX - DROP KPI
 
@@ -32,11 +32,11 @@ DROP KPI CURRENTCUBE | Cube_Name.KPI_Name
  *Cube_Name*  
  Chaîne valide qui spécifie le nom du cube.  
   
- *Nom_icp*  
+ *KPI_Name*  
  Chaîne valide qui spécifie le nom du KPI à supprimer.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction CREATE KPI &#40;MDX&#41;](../mdx/mdx-data-definition-create-kpi.md)   
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

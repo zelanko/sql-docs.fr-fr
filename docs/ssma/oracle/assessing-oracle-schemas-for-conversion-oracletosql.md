@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288463"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Évaluation des schémas Oracle pour la conversion (OracleToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez déterminer comment complexe sera la migration et combien de temps l’opération prendra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui seront converties correctement. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  
@@ -37,7 +37,7 @@ Lorsqu’il crée ce rapport d’évaluation, SSMA convertit les objets de base 
   
     SSMA affiche la progression dans la barre d’état en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également des messages dans le volet de sortie.  
   
-    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Oracle : fenêtre de rapport d’évaluation s’affiche.  
+    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Oracle : Fenêtre de rapport d’évaluation s’affiche.  
   
 ## <a name="using-assessment-reports"></a>À l’aide de rapports d’évaluation  
 La fenêtre de rapport d’évaluation contient trois volets :  

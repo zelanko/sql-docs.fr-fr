@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Créer une extension'
+title: 'Tutoriel : Créer une extension'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment créer une extension pour ajouter des fonctionnalités personnalisées pour Azure Data Studio.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: kevcunnane
 ms.author: kcunnane
 manager: craigg
 ms.openlocfilehash: 8389cbad7e5124c1c20c2e076df34fc97306d8ef
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309439"
 ---
-# <a name="tutorial-create-an-azure-data-studio-extension"></a>Didacticiel : Créer une extension d’Azure Data Studio
+# <a name="tutorial-create-an-azure-data-studio-extension"></a>Tutoriel : Créer une extension d’Azure Data Studio
 
 Ce didacticiel montre comment créer une nouvelle extension Azure Data Studio. L’extension crée les combinaisons de touches courantes de SSMS dans Azure Data Studio.
 

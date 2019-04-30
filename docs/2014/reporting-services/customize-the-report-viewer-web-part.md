@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63264829"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personnaliser le composant WebPart Visionneuse de rapports
   Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s'exécutent sur un serveur de rapports configuré pour l'intégration SharePoint. Les rapports consultables comprennent des fichiers de définition de rapport (.rdl) et des rapports Générateur de rapports. Les rapports s'ouvrent automatiquement dans le composant WebPart de visionneuse de rapports dans une nouvelle page, mais vous pouvez aussi ajouter un composant WebPart de visionneuse de rapports à une page ou un site Web existant ou si vous souhaitez qu'un rapport particulier soit toujours visible sur cette page.  

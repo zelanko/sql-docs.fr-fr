@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fdc0a6ee75b2d08b06d440a4d9dd6da48a6b6b7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266359"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la série calculée, Marqueurs (Générateur de rapports et SSRS)
   Sélectionnez **Marqueurs** dans la boîte de dialogue **Propriétés de la série calculée** pour définir le mode d'affichage des marqueurs sur chaque point de données d'une série. Les marqueurs ne sont disponibles que pour certains types de graphique. Les types de graphique suivants prennent en charge les marqueurs : Zone, barre, colonne, ligne, polaire et à nuages de points. Pour plus d’informations sur les fonctionnalités des graphiques, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  

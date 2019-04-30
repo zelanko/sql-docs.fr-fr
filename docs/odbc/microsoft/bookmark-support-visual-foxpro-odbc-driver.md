@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73c8d816cb4a2c2b0a3bbecb4d34a022a98e9525
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301793"
 ---
 # <a name="bookmark-support-visual-foxpro-odbc-driver"></a>Prise en charge des signets (pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro prend en charge les signets simples. Lorsque vous appelez [SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md) avec la SQL_BOOKMARK_PERSISTENCE *InfoType*, la valeur de retour est SQL_BP_SCROLL.  

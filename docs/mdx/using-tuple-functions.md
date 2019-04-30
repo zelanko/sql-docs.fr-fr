@@ -1,5 +1,5 @@
 ---
-title: À l’aide des fonctions de Tuple | Documents Microsoft
+title: À l’aide des fonctions de Tuple | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251636"
 ---
 # <a name="using-tuple-functions"></a>Utilisation de fonctions de tuple
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743820"
   
  Les fonctions de tuple, comme les fonctions de membre et les fonctions de définition, sont essentielles à la négociation des structures multidimensionnelles présentes dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Il existe trois fonctions tuple dans MDX, [actuel &#40;MDX&#41;](../mdx/current-mdx.md), [élément &#40;Tuple&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) et [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). L'exemple de requête suivant montre comment les utiliser :  
+ Il existe trois fonctions de tuple dans MDX, [actuel &#40;MDX&#41;](../mdx/current-mdx.md), [élément &#40;Tuple&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) et [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). L'exemple de requête suivant montre comment les utiliser :  
   
  `WITH`  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34743820"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [À l’aide des fonctions membres](../mdx/using-member-functions.md)   
+ [À l’aide de fonctions membres](../mdx/using-member-functions.md)   
  [Utilisation de fonctions de jeu](../mdx/using-set-functions.md)  
   
   

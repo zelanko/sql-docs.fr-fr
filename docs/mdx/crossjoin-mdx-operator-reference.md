@@ -1,5 +1,5 @@
 ---
-title: '* (Crossjoin) (MDX) | Documents Microsoft'
+title: '* (Crossjoin) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 132b237fd8baa9c50dc254b02d90ed95d7159a0c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249622"
 ---
 # <a name="crossjoin----mdx-operator-reference"></a>Crossjoin - référence des opérateurs MDX
 
@@ -36,7 +36,7 @@ Set_Expression * Set_Expression
  Jeu contenant le produit croisé des deux paramètres spécifiés.  
   
 ## <a name="remarks"></a>Notes  
- Le  **\* (Crossjoin)** opérateur est fonctionnellement équivalente à la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).  
+ Le  **\* (Crossjoin)** opérateur est fonctionnellement équivalent à la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'utilisation de cet opérateur.  

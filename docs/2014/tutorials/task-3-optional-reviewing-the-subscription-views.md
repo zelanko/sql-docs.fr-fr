@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 3 (facultatif) : Examiner les vues d’abonnement | Microsoft Docs'
+title: 'Tâche 3 (facultatif) : Examiner les vues d’abonnement | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249997"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tâche 3 (facultatif) : Examiner les vues d'abonnement
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Tâche 3 (facultatif) : Examiner les vues d’abonnement
   Dans cette tâche, vous allez vérifier que les vues SQL sont créées à l'aide de SQL Server Management Studio.  
   
 1.  Lancez **SQL Server Management Studio**. Cliquez sur le **Démarrer** bouton, cliquez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, puis cliquez sur **SQL Server Management Studio**.  

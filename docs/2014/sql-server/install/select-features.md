@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 808588f20a4d94fa3be885ee79853362071f7768
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270086"
 ---
 # <a name="select-features"></a>Sélectionner les composants
   Utilisez la page Sélection de composant pour sélectionner les composants et fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mettre à jour.  

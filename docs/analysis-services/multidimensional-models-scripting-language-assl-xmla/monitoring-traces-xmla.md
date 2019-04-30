@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261628"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
   Vous pouvez utiliser la [s’abonner](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le **s’abonner** commande retourne les résultats d’une trace en tant qu’un ensemble de lignes.  
@@ -31,9 +31,9 @@ ms.locfileid: "50145745"
 |------------|---------------|-----------------|  
 |EventClass|Entier|Classe d'événements de l'événement reçu par la trace.|  
 |EventSubclass|Entier long|Sous-classe d'événements de l'événement reçu par la trace.|  
-|CurrentTime|DATETIME|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|DATETIME|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|DATETIME|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
+|CurrentTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|Datetime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
 |Duration|Entier long|Durée totale (en millisecondes) de l'événement.|  
 |CPUTime|Entier long|Temps processeur total (en millisecondes) écoulé pour l'événement.|  
 |JobID|Entier long|Identificateur de travail du processus.|  
@@ -48,8 +48,8 @@ ms.locfileid: "50145745"
 |ObjectReference|String|Représentation XML de la référence de l'objet spécifié dans ObjectName.|  
 |NestLevel|Entier|Niveau de la transaction pour laquelle l'événement s'est produit.|  
 |NumSegments|Entier long|Nombre de segments de données affectés ou atteints par la commande pour laquelle l'événement s'est produit.|  
-|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> <br /><br /> 0 : réussite<br /><br /> <br /><br /> 1 : informations<br /><br /> <br /><br /> 2 : avertissement<br /><br /> <br /><br /> 3 : erreur|  
-|Réussi|Booléen|Indique si une commande a abouti ou échoué.|  
+|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> <br /><br /> 0 : Opération réussie<br /><br /> <br /><br /> 1: Informations<br /><br /> <br /><br /> 2: Warning<br /><br /> <br /><br /> 3: Error|  
+|Opération réussie|Booléen|Indique si une commande a abouti ou échoué.|  
 |Error|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
 |ConnectionID|String|Identificateur de la connexion pour laquelle l'événement s'est produit.|  
 |DatabaseName|String|Nom de la base de données pour laquelle l'événement s'est produit.|  

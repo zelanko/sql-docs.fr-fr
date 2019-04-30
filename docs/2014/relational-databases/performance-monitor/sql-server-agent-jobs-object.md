@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5bd37ab434dbefbb01862f1004ca62e673df0453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251028"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server Agent, objet Jobs
   L'objet de performances **Jobs** de SQL Server Agent contient des compteurs qui fournissent des informations sur les travaux de SQL Server Agent. Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
  Le tableau ci-dessous contient les compteurs **SQLAgent:Jobs** .  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Travaux actifs**|Nombre de travaux en cours d'exécution.|  
 |**Travaux non réussis**|Nombre de travaux qui se sont terminés par un échec.|  

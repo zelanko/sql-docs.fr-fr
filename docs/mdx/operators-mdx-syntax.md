@@ -1,5 +1,5 @@
 ---
-title: Opérateurs (syntaxe MDX) | Documents Microsoft
+title: Opérateurs (syntaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277603"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
 
@@ -47,7 +47,7 @@ ms.locfileid: "34742748"
  Si vous utilisez plusieurs opérateurs, l'ordre dans lequel la syntaxe MDX les évalue est important. De même, l'utilisateur des opérateurs peut exiger la conversion d'un type de données en un autre avant que les opérateurs puissent être évalués.  
   
 ## <a name="evaluating-complex-expressions"></a>Évaluation d'expressions complexes  
- Vous pouvez créer une expression en utilisant des opérateurs pour combiner plusieurs expressions plus petites. Dans ces expressions complexes, la syntaxe MDX évalue les opérateurs de commande basée sur la définition de priorité des opérateurs utilisée par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX exécute des opérateurs avec une priorité plus élevée avant d’effectuer des opérateurs avec une priorité inférieure.  
+ Vous pouvez créer une expression en utilisant des opérateurs pour combiner plusieurs expressions plus petites. Dans ces expressions complexes, MDX évalue les opérateurs dans l’ordre basé sur la définition de priorité des opérateurs utilisée par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. MDX exécute opérateurs avec une priorité plus élevée avant d’effectuer des opérateurs avec une priorité inférieure.  
   
 ### <a name="understanding-operator-precedence"></a>Description de la priorité des opérateurs  
  La liste suivante présente les opérateurs par ordre de priorité décroissant. Les opérateurs contenus dans la même ligne ont une priorité équivalente et sont évalués de gauche à droite sauf contrainte due à la présence de parenthèses :  
@@ -78,7 +78,7 @@ ms.locfileid: "34742748"
   
 -   - ou -  
   
- Pour plus d’informations sur les opérateurs dans la syntaxe MDX, consultez [référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
+ Pour plus d’informations sur les opérateurs dans une expression MDX, consultez [référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Détermination de résultats  
  Lorsque vous combinez des expressions simples pour constituer une expression complexe, les règles des opérateurs combinées à celles de priorité des types de données déterminent le type de données de la valeur obtenue.  
@@ -92,11 +92,11 @@ ms.locfileid: "34742748"
   
 |Type d'origine|Type exigé|Conversion|  
 |-------------------|-----------------|----------------|  
-|Level|Définissez|\<niveau > .members|  
-|Hierarchy|Membre|\<hiérarchie > .defaultmember|  
+|Level|Définissez|\<level>.members|  
+|Hierarchy|Membre|\<hierarchy>.defaultmember|  
 |Membre|Tuple|(\<Membre >)|  
-|Tuple|Membre|\<Tuple > .item(0)|  
-|Tuple|Scalaire|\<Tuple > .value|  
+|Tuple|Membre|\<tuple>.item(0)|  
+|Tuple|Scalaire|\<tuple>.value|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 322c5a5afcd7c5d82982a86cb9398e66bb248c5d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277248"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Tâche 5 : Définition des relations basées sur des termes
   Dans cette tâche, vous définissez quelques relations de base de termes pour les valeurs pour le **Supplier Name** domaine. Une relation de base de termes vous permet d’apporter une correction pour un terme qui fait partie d’une valeur dans un domaine. Plusieurs valeurs qui sont identiques à l'exception de l'orthographe d'une partie commune peuvent ainsi être considérées comme synonymes identiques. Par exemple, **Inc.** peut être corrigé par **Incorporated**. DQS utilise ces relations lors des processus de découverte des connaissances, de nettoyage, ou de mise en correspondance. Consultez [en fonction du terme de créer des Relations](https://msdn.microsoft.com/library/hh510404.aspx) pour plus d’informations.  

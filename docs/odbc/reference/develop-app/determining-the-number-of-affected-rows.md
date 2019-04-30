@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262099"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Détermination du nombre de lignes affectées
 Une fois une application met à jour, supprime ou insère des lignes, elle peut appeler **SQLRowCount** pour déterminer combien de lignes ont été affectés. **SQLRowCount** retourne cette valeur déterminant si les lignes ont été mis à jour, supprimées ou insérées en exécutant un **mise à jour**, **supprimer**, ou **insérer** instruction, en exécutant un positionnées mettre à jour ou supprimer l’instruction ou en appelant **SQLSetPos**.  

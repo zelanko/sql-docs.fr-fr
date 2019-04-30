@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248842"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 Le **ADORecordConstruction**interface est utilisée pour construire une ADO **enregistrement** objet à partir d’un OLE DB **ligne** objet dans une application C/C++.  
@@ -71,7 +71,7 @@ Le **ADORecordConstruction**interface est utilisée pour construire une ADO **en
   
  ADO **enregistrement** objet peut également être créé à partir du conteneur de OLE DB **ligne** objet.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Version :** ADO 2.0 et versions ultérieur  
   
  **Bibliothèque :** msado15.dll  

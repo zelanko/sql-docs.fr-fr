@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 50b5630b3ee200f0eda402b62acc14ba458ebb84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268530"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Utilisation du chargement en masse SQLXML dans l'environnement .NET
   Cette rubrique explique comment exploiter la fonctionnalité de chargement en masse XML dans l'environnement .NET. Pour obtenir des informations détaillées sur le chargement en masse XML, consultez [effectuant charge de XML des données en bloc &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  

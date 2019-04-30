@@ -1,5 +1,5 @@
 ---
-title: Index de Collection (ADOX) | Microsoft Docs
+title: Indexes Collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1ef6a456a6a1903364c996e87c54cebee1fedb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280651"
 ---
 # <a name="indexes-collection-adox"></a>Indexes, collection (ADOX)
 Contient tous les [Index](../../../ado/reference/adox-api/index-object-adox.md) objets d’une table.  

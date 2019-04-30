@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253168"
 ---
 # <a name="storage-system-input-output-time-out"></a>Délai d’attente d’entrée-sortie du système de stockage
   Cette règle recherche l'ID d'événement 9 dans le journal des événements système. Ce message indique qu'un délai d'expiration d'E/S s'est produit dans le système de stockage.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258859"
 ---
 # <a name="sqlconfigdatasource-function"></a>Fonction SQLConfigDataSource
 **Conformité**  
@@ -51,12 +51,12 @@ BOOL SQLConfigDataSource(
  *hwndParent*  
  [Entrée] Handle de fenêtre parente. La fonction n’affichera pas les boîtes de dialogue si le handle est null.  
   
- *fréquents*  
+ *fRequest*  
  [Entrée] Type de requête. Le *fréquents* argument doit contenir l’une des valeurs suivantes :  
   
  ODBC_ADD_DSN : Ajouter une nouvelle source de données utilisateur.  
   
- ODBC_CONFIG_DSN : Configurer (modifier) une source de données utilisateur existante.  
+ ODBC_CONFIG_DSN: Configurer (modifier) une source de données utilisateur existante.  
   
  ODBC_REMOVE_DSN : Supprimer une source de données utilisateur existante.  
   
@@ -98,7 +98,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** mappe le DSN système *fréquents*s pour la source de données utilisateur *fréquents*s (ODBC_ADD_SYS_DSN à ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN et ODBC_REMOVE_SYS_ Source de données à ODBC_REMOVE_DSN). Pour distinguer les utilisateurs et les sources de données système, **SQLConfigDataSource** définit le programme d’installation en mode de configuration selon le tableau suivant. Avant de retourner, **SQLConfigDataSource** BOTHDSN rétablit le mode de configuration. **ConfigDSN** (implémenté par les pilotes) doit appeler **SQLWriteDSNToIni** et **SQLWritePrivateProfileString** pour prendre en charge d’un DSN système. Pour plus d’informations, consultez [ConfigDSN, fonction](../../../odbc/reference/syntax/configdsn-function.md).  
   
-|*fréquents*|Mode de configuration|  
+|*fRequest*|Mode de configuration|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  

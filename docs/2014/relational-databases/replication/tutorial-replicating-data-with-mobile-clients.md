@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Réplication de données avec des Clients mobiles | Microsoft Docs'
+title: 'Tutoriel : Réplication de données avec des Clients mobiles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255397"
 ---
-# <a name="tutorial-replicating-data-with-mobile-clients"></a>Didacticiel : Réplication de données avec des clients mobiles
+# <a name="tutorial-replicating-data-with-mobile-clients"></a>Tutoriel : Réplication de données avec des clients mobiles
   La réplication constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. À l'aide des Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication. Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
  Dans ce didacticiel, vous allez utiliser la réplication de fusion pour publier des données à partir d'une base de données centrale vers un ou plusieurs utilisateurs mobiles afin que chaque utilisateur obtienne un sous-ensemble des données filtré de façon unique. La première leçon montre comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer une publication. Les leçons suivantes expliquent comment créer et synchroniser un abonnement.  
   
 ## <a name="requirements"></a>Configuration requise  
- Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais dont l'expérience en matière de réplication est limitée. Avant de commencer ce didacticiel, vous devez effectuer [didacticiel : Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
+ Ce didacticiel est destiné aux utilisateurs qui sont familiers des opérations essentielles de base de données, mais dont l'expérience en matière de réplication est limitée. Avant de commencer ce tutoriel, vous devez effectuer le [Tutoriel : Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
  Pour utiliser ce didacticiel, les composants suivants doivent être installés sur votre système :  
   
@@ -46,11 +46,11 @@ ms.locfileid: "52750971"
 > [!NOTE]  
 >  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l'Abonné à l'aide d'un identifiant de connexion membre du rôle serveur fixe sysadmin.  
   
- **Durée estimée pour effectuer le didacticiel : 30 minutes.**  
+ **Durée estimée pour effectuer ce didacticiel : 30 minutes.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
   
--   [Leçon 1 : Publication de données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md)  
+-   [Leçon 1 : Publication de données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md)  
   
 -   [Leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md)  
   

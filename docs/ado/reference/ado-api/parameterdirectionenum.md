@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314833"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, à la fois une entrée et un paramètre de sortie, ou la valeur de retour d’une procédure stockée.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Valeur par défaut. Indique que le paramètre représente un paramètre d’entrée.|  
 |**adParamInputOutput**|3|Indique que le paramètre représente un paramètre d’entrée et de sortie.|  

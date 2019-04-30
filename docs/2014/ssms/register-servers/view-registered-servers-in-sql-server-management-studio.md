@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7581046ac53ec6c687ce01d8bb15cf2e33feb67c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242774"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>Afficher des serveurs inscrits dans SQL Server Management Studio
   Cette rubrique explique comment afficher les serveurs inscrits dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: PrevMember (MDX) | Documents Microsoft
+title: PrevMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278042"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
@@ -29,14 +29,14 @@ Member_Expression.PrevMember
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
  Le **PrevMember** fonction retourne le membre précédent dans le même niveau que le membre spécifié.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre une requête simple qui utilise le **PrevMember** fonction pour afficher le nom du membre immédiatement avant le membre actuel sur l’axe des lignes :  
+ L’exemple suivant montre une requête simple qui utilise le **PrevMember** (fonction) pour afficher le nom du membre immédiatement avant le membre actuel sur l’axe des lignes :  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -77,6 +77,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

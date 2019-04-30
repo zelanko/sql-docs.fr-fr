@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280923"
 ---
 # <a name="sql-data-types"></a>Types de données SQL
 Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement ces types de données SQL qui définit le SGBD associé. Plus d’informations sur la façon dont un pilote mappe les types DBMS SQL pour les identificateurs de type SQL définie par ODBC et comment un pilote mappe les types de DBMS SQL à ses propres identificateurs de type spécifiques au pilote SQL est retourné via un appel à **SQLGetTypeInfo**. Un pilote retourne également les types de données SQL lorsque vous décrivez les types de données des colonnes et des paramètres via des appels aux **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, et **SQLSpecialColumns**.  
@@ -35,7 +35,7 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
   
  Le tableau suivant répertorie les identificateurs de type SQL valides pour tous les types de données SQL. Le tableau répertorie également le nom et la description du type de données correspondant à partir de SQL-92 (le cas échéant).  
   
-|Identificateur de type SQL [1]|Type de données SQL<br /><br /> Type [2]|Description de type classique|  
+|Identificateur de type SQL [1]|Type de données SQL<br /><br /> type[2]|Description de type classique|  
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR (*n*)|Chaîne de longueur fixe de caractères *n*.|  
 |SQL_VARCHAR|VARCHAR (*n*)|Chaîne de caractères de longueur variable avec une longueur de chaîne maximale *n*.|  
@@ -45,35 +45,35 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Données Unicode de longueur variable. Longueur maximale est de dépend de la source de données|  
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Signé, une valeur numérique exacte avec une précision d’au moins *p* et mise à l’échelle *s.* (La précision maximale est définie par le pilote). (1 < = *p* < = 15 ; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRIQUE (*p*,*s*)|Signé, une valeur numérique exacte avec une précision *p* et mise à l’échelle *s* (1 < = *p* < = 15 ; *s* <= *p*). [ 4]|  
-|SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle 0 (signée :-32 768 et < = *n* < = 32 767, non signé :  0 < = *n* < = 65 535) [3].|  
-|SQL_INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle 0 (signée : -2 [31] < = *n* < = 2 [31] - 1, non signée :  0 < = *n* < = 2 [32] - 1) [3].|  
+|SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle 0 (signée :-32 768 et < = *n* < = 32 767, non signé :  0 <= *n* <= 65,535)[3].|  
+|SQL_INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle 0 (signée : -2 [31] < = *n* < = 2 [31] - 1, non signée :  0 <= *n* <= 2[32] - 1)[3].|  
 |SQL_REAL|real|Signé, une valeur numérique approximative avec une précision binaire de 24 (zéro ou valeur absolue 10 [-38] à 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Signé, au moins une valeur numérique approximative avec une précision binaire de *p*. (La précision maximale est définie par le pilote). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Signé, une valeur numérique approximative avec une précision binaire de 53 (zéro ou valeur absolue 10 [-308] à 10[308]).|  
 |SQL_BIT|BIT|Données binaires de bit unique. [8]|  
-|SQL_TINYINT|TINYINT|Valeur numérique exacte avec une précision de 3 et une échelle 0 (signée : -128 < = *n* < = 127, non signée :  0 < = *n* < = 255) [3].|  
+|SQL_TINYINT|TINYINT|Valeur numérique exacte avec une précision de 3 et une échelle 0 (signée : -128 < = *n* < = 127, non signée :  0 <= *n* <= 255)[3].|  
 |SQL_BIGINT|bigint|Valeur numérique exacte avec une précision de 19 (signée) ou 20 (si non signée) et une échelle 0 (signée : -2 [63] < = *n* < = 2 [63] - 1, non signée : 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|BINAIRE (*n*)|Données binaires de longueur fixe *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Données binaires de longueur variable de longueur maximale *n*. La valeur maximale est définie par l’utilisateur. [9]|  
 |SQL_LONGVARBINARY|LONGS VARBINARY|Données binaires de longueur variable. Longueur maximale est dépend de la source de données. [9]|  
-|SQL_TYPE_DATE [6]|DATE|Year, month et champs de la journée, conforme aux règles du calendrier grégorien. (Consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), plus loin dans cette annexe.)|  
-|SQL_TYPE_TIME [6]|HEURE (*p*)|Heure, minute et secondes champs, avec les valeurs valides pour les heures de 00 à 23, les valeurs valides pour les minutes de 00 à 59 et les valeurs valides pour les secondes de 00 à 61. Précision *p* indique la précision en secondes.|  
-|SQL_TYPE_TIMESTAMP [6]|HORODATEUR (*p*)|Year, month, day, heure, minute et secondes champs, avec les valeurs valides sont définis pour les types de données DATE et d’heure.|  
+|SQL_TYPE_DATE[6]|DATE|Year, month et champs de la journée, conforme aux règles du calendrier grégorien. (Consultez [contraintes du calendrier grégorien](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), plus loin dans cette annexe.)|  
+|SQL_TYPE_TIME[6]|HEURE (*p*)|Heure, minute et secondes champs, avec les valeurs valides pour les heures de 00 à 23, les valeurs valides pour les minutes de 00 à 59 et les valeurs valides pour les secondes de 00 à 61. Précision *p* indique la précision en secondes.|  
+|SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|Year, month, day, heure, minute et secondes champs, avec les valeurs valides sont définis pour les types de données DATE et d’heure.|  
 |SQL_TYPE_UTCDATETIME|UTCDATETIME|Champs année, mois, jour, heure, minute, seconde, utchour et utcminute. Les champs utchour et utcminute ont la précision de 1/10 microsecondes.|  
 |SQL_TYPE_UTCTIME|UTCTIME|Champs heure, minute, seconde, utchour et utcminute. Les champs utchour et utcminute ont la précision de 1/10 microsecondes...|  
-|SQL_INTERVAL_MONTH [7]|MOIS de l’intervalle (*p*)|Nombre de mois entre deux dates ; *p* est la précision interval.|  
-|SQL_INTERVAL_YEAR [7]|INTERVAL YEAR (*p*)|Nombre d’années entre deux dates ; *p* est la précision interval.|  
-|SQL_INTERVAL_YEAR_TO_MONTH [7]|INTERVAL YEAR (*p*) au mois|Nombre d’années et mois entre deux dates ; *p* est la précision interval.|  
-|SQL_INTERVAL_DAY [7]|JOURS d’intervalle (*p*)|Nombre de jours entre deux dates ; *p* est la précision interval.|  
-|SQL_INTERVAL_HOUR [7]|HEURE d’intervalle (*p*)|Nombre d’heures entre deux dates/heures ; *p* est la précision interval.|  
-|SQL_INTERVAL_MINUTE [7]|MINUTES d’intervalle (*p*)|Nombre de minutes entre deux dates/heures ; *p* est la précision interval.|  
-|SQL_INTERVAL_SECOND [7]|INTERVALLE de deuxième (*p*,*q*)|Nombre de secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
-|SQL_INTERVAL_DAY_TO_HOUR [7]|JOURS d’intervalle (*p*) à l’heure|Nombre de jours/heures entre deux dates/heures ; *p* est la précision interval.|  
-|SQL_INTERVAL_DAY_TO_MINUTE [7]|JOURS d’intervalle (*p*) à la MINUTE|Nombre de jours/heures/minutes entre deux dates/heures ; *p* est la précision interval.|  
-|SQL_INTERVAL_DAY_TO_SECOND [7]|JOURS d’intervalle (*p*) à la seconde (*q*)|Nombre de jours/heures/minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
-|SQL_INTERVAL_HOUR_TO_MINUTE [7]|HEURE d’intervalle (*p*) à la MINUTE|Nombre d’heures/minutes entre deux dates/heures ; *p* est la précision interval.|  
-|SQL_INTERVAL_HOUR_TO_SECOND [7]|HEURE d’intervalle (*p*) à la seconde (*q*)|Nombre d’heures/minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
-|SQL_INTERVAL_MINUTE_TO_SECOND [7]|MINUTES d’intervalle (*p*) à la seconde (*q*)|Nombre de minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
+|SQL_INTERVAL_MONTH[7]|MOIS de l’intervalle (*p*)|Nombre de mois entre deux dates ; *p* est la précision interval.|  
+|SQL_INTERVAL_YEAR[7]|INTERVAL YEAR (*p*)|Nombre d’années entre deux dates ; *p* est la précision interval.|  
+|SQL_INTERVAL_YEAR_TO_MONTH[7]|INTERVAL YEAR (*p*) au mois|Nombre d’années et mois entre deux dates ; *p* est la précision interval.|  
+|SQL_INTERVAL_DAY[7]|JOURS d’intervalle (*p*)|Nombre de jours entre deux dates ; *p* est la précision interval.|  
+|SQL_INTERVAL_HOUR[7]|HEURE d’intervalle (*p*)|Nombre d’heures entre deux dates/heures ; *p* est la précision interval.|  
+|SQL_INTERVAL_MINUTE[7]|MINUTES d’intervalle (*p*)|Nombre de minutes entre deux dates/heures ; *p* est la précision interval.|  
+|SQL_INTERVAL_SECOND[7]|INTERVALLE de deuxième (*p*,*q*)|Nombre de secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
+|SQL_INTERVAL_DAY_TO_HOUR[7]|JOURS d’intervalle (*p*) à l’heure|Nombre de jours/heures entre deux dates/heures ; *p* est la précision interval.|  
+|SQL_INTERVAL_DAY_TO_MINUTE[7]|JOURS d’intervalle (*p*) à la MINUTE|Nombre de jours/heures/minutes entre deux dates/heures ; *p* est la précision interval.|  
+|SQL_INTERVAL_DAY_TO_SECOND[7]|JOURS d’intervalle (*p*) à la seconde (*q*)|Nombre de jours/heures/minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
+|SQL_INTERVAL_HOUR_TO_MINUTE[7]|HEURE d’intervalle (*p*) à la MINUTE|Nombre d’heures/minutes entre deux dates/heures ; *p* est la précision interval.|  
+|SQL_INTERVAL_HOUR_TO_SECOND[7]|HEURE d’intervalle (*p*) à la seconde (*q*)|Nombre d’heures/minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
+|SQL_INTERVAL_MINUTE_TO_SECOND[7]|MINUTES d’intervalle (*p*) à la seconde (*q*)|Nombre de minutes/secondes entre deux dates/heures ; *p* est l’intervalle de la précision de début et *q* est la précision de secondes d’intervalle.|  
 |SQL_GUID|GUID|GUID de longueur fixe.|  
   
  [1] c’est la valeur retournée dans la colonne DATA_TYPE par un appel à **SQLGetTypeInfo**.  

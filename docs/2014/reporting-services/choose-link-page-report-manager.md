@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59965475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266055"
 ---
 # <a name="choose-link-page-report-manager"></a>Page Choisir un lien (Gestionnaire de rapports)
   La page Choisir un lien vous permet de choisir un autre rapport sur lequel baser le rapport lié qui est actuellement sélectionné. Les rapports liés sont basés sur d'autres rapports qui sont déjà publiés sur le serveur de rapports. Un rapport lié utilise la mise en page et les données du rapport de base, mais a des pages de propriétés séparées afin que vous puissiez personnaliser les propriétés de paramètres, les paramètres de sécurité, le nom, la description et l'emplacement.  

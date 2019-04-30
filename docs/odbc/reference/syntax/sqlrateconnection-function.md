@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262495"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection, fonction
 **Conformité**  
@@ -48,7 +48,7 @@ SQLRETURN  SQLRateConnection(
  *fRequiredTransactionEnlistment*  
  [Entrée] Si la valeur est TRUE, réutilisation de la connexion existante *hCandidateConnection* pour la nouvelle demande de connexion (*hRequest*) nécessite une inscription supplémentaire.  
   
- *ID transaction*  
+ *transId*  
  [Entrée] Si *fRequiredTransactionEnlistment* a la valeur TRUE, *ID transaction* représente la transaction DTC figurant à la demande. Si *fRequiredTransactionEnlistment* est FALSE, *ID transaction* sera ignoré.  
   
  *pRating*  

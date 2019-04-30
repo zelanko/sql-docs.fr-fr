@@ -1,5 +1,5 @@
 ---
-title: 'SQL pour c : Intervalles d’années-mois | Microsoft Docs'
+title: 'SQL à C : Intervalles d’années-mois | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259576"
 ---
-# <a name="sql-to-c-year-month-intervals"></a>SQL pour c : Intervalles d’années-mois
+# <a name="sql-to-c-year-month-intervals"></a>SQL à C : Intervalles d’années-mois
 
 Les identificateurs pour les types de données SQL ODBC intervalle année-mois sont les suivantes :
 

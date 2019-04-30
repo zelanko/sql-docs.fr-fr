@@ -1,5 +1,5 @@
 ---
-title: FetchProgress, événement (ADO) | Microsoft Docs
+title: FetchProgress Event (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258964"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress, événement (ADO)
 Le **FetchProgress**événement est régulièrement appelé pendant une longue opération asynchrone pour signaler le nombre de lignes déjà extraites dans le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

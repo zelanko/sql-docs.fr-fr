@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254140"
 ---
 # <a name="return-codes-odbc"></a>Codes de retour dans ODBC
 Chaque fonction ODBC retourne un code, connu sous le nom son *code de retour,* qui indique la réussite ou l’échec de la fonction globale. La logique du programme repose en général sur des codes de retour.  
@@ -51,6 +51,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|Fonction s’est terminée avec succès, éventuellement avec une erreur non fatale (avertissement). L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires.|  
 |SQL_ERROR|Échec de la fonction. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Le contenu de tous les arguments à la fonction de sortie n’est pas défini.|  
 |SQL_INVALID_HANDLE|Fonction a échoué en raison d’un handle d’environnement, connexion, instruction ou descripteur non valide. Cela indique une erreur de programmation. Aucune information supplémentaire n’est disponible à partir de **SQLGetDiagRec** ou **SQLGetDiagField**. Ce code est renvoyé uniquement lorsque le handle est un pointeur null ou le type est incorrect, par exemple lorsqu’un descripteur d’instruction est passé pour un argument qui nécessite un handle de connexion.|  
-|SQL_NO_DATA|Plus aucune donnée n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements d’état définies par le pilote dans la classe 02xxx peuvent être renvoyés. **Remarque :** dans ODBC 2. *x*, cela retourne le code s’appelait SQL_NO_DATA_FOUND.|  
+|SQL_NO_DATA|Plus aucune donnée n’était disponible. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires. Un ou plusieurs enregistrements d’état définies par le pilote dans la classe 02xxx peuvent être renvoyés. **Remarque :**  Dans ODBC 2. *x*, cela retourne le code s’appelait SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Plus de données est nécessaire, par exemple lorsque les données de paramètre sont envoyées au moment de l’exécution ou les informations de connexion supplémentaires sont nécessaires. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|  
 |SQL_STILL_EXECUTING|Une fonction qui a été démarrée en mode asynchrone est en cours d’exécution. L’application appelle **SQLGetDiagRec** ou **SQLGetDiagField** pour récupérer des informations supplémentaires, le cas échéant.|

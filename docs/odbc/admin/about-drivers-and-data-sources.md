@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294453"
 ---
 # <a name="about-drivers-and-data-sources"></a>À propos des pilotes et des sources de données
 *Pilotes* sont les composants qui traitent les demandes d’ODBC et retournent des données à l’application. Si nécessaire, pilotes de modifier la requête d’une application dans un formulaire qui est interprété par la source de données. Vous devez utiliser le programme d’installation du pilote pour ajouter ou supprimer un pilote à partir de votre ordinateur.  

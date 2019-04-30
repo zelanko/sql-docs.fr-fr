@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250589"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
   L'Agent d'instantané de réplication est un fichier exécutable qui prépare les fichiers d'instantané contenant les schémas ainsi que les données des tables et des objets de base de données publiés, stocke les fichiers dans le dossier d'instantanés, et enregistre les travaux de synchronisation dans la base de données de distribution.  
@@ -87,7 +87,7 @@ ms.locfileid: "54132279"
  **-70Subscribers**  
  Doit être utilisé si des Abonnés exécutent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version 7.0.  
   
- **-BcpBatchSize** _bcp_ \_ *batch* \_ *taille*  
+ **-BcpBatchSize** _taille_\_ *lot*\_ *bcp*  
  Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l’Agent de distribution ne journalise un message de progression **bcp** . Lorsque vous effectuez une opération **bcp out** , une taille de lot fixe de 1000 est utilisée. La valeur 0 indique qu'aucune journalisation de message n'est autorisée.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132279"
 |**2**|Tous les messages d'erreur et tous les messages du rapport de progression sont imprimés, ce qui peut s'avérer utile lors du débogage.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Paramètre facultatif qui spécifie si les objets de table sont prérécupérés et mis en cache.  Le comportement par défaut consiste à prérécupérer certaines propriétés de la table à l’aide du composant SMO suivant un calcul interne.  Ce paramètre peut être utile dans les scénarios où SMO prefetch opération prend beaucoup plus à exécuter. S’il n’est pas utilisé, cette décision est prise à l’exécution en fonction du pourcentage de tables ajoutées comme articles à la publication.  
+ Paramètre facultatif qui spécifie si les objets de table sont prérécupérés et mis en cache.  Le comportement par défaut consiste à prérécupérer certaines propriétés de la table à l’aide du composant SMO suivant un calcul interne.  Ce paramètre peut être utile dans les scénarios où l’opération de prérécupération SMO est considérablement plus longue. S’il n’est pas utilisé, cette décision est prise à l’exécution en fonction du pourcentage de tables ajoutées comme articles à la publication.  
   
 |Valeur OutputVerboseLevel|Description|  
 |------------------------------|-----------------|  

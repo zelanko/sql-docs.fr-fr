@@ -1,5 +1,5 @@
 ---
-title: Dimension (MDX) | Documents Microsoft
+title: Dimension (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248217"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 
@@ -43,11 +43,11 @@ Member_Expression.Dimension
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ### <a name="examples"></a>Exemples  
- L’exemple suivant utilise le **Dimension** fonction, conjointement avec la **nom** pour retourner le nom de la hiérarchie du membre spécifié.  
+ L’exemple suivant utilise le **Dimension** fonction, conjointement avec le **nom** (fonction), pour retourner le nom de la hiérarchie du membre spécifié.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Name  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant utilise le **Dimension** fonction, conjointement avec la **membres** et **nombre** fonctions, pour retourner le nombre de membres dans la hiérarchie contenant le membre spécifié.  
+ L’exemple suivant utilise le **Dimension** fonction, conjointement avec le **membres** et **nombre** fonctions pour retourner le nombre de membres dans la hiérarchie contenant le membre spécifié.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -72,10 +72,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Nombre &#40;des niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Nombre &#40;définir&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Niveaux &#40;MDX&#41;](../mdx/levels-mdx.md)   
+ [Nombre &#40;niveaux de hiérarchie&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Levels &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [Membres &#40;définir&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

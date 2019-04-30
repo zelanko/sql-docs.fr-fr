@@ -1,5 +1,5 @@
 ---
-title: CustomData (MDX) | Documents Microsoft
+title: CustomData (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 172915d99b231490cbdca24f70d1d38da27a1d3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248322"
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 
 
-  Retourne la valeur de la **CustomData** la propriété de chaîne de connexion s’il est défini ; sinon, **null**.  
+  Retourne la valeur de la **CustomData** la propriété de chaîne de connexion si défini ; sinon, **null**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -29,7 +29,7 @@ CustomData()
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Le **CustomData** fonction peut récupérer le **CustomData** propriété de chaîne de connexion et passer un paramètre à utiliser par les fonctions MDX (Multidimensional Expressions) et les instructions, telles que de configuration [UserName (MDX)](../mdx/username-mdx.md) et [instruction CALL (MDX)](../mdx/mdx-data-manipulation-call.md). Par exemple, cette fonction peut être utilisée dans une expression de la sécurité dynamique pour sélectionner les membres du jeu autorisé/refusé pour la valeur de chaîne dans le **CustomData** propriété de chaîne de connexion.  
+ Le **CustomData** fonction peut récupérer le **CustomData** propriété de chaîne de connexion et passer un paramètre utilisable par les fonctions MDX (Multidimensional Expressions) et les instructions, telles que de configuration [UserName (MDX)](../mdx/username-mdx.md) et [instruction CALL (MDX)](../mdx/mdx-data-manipulation-call.md). Par exemple, cette fonction peut être utilisée dans une expression de la sécurité dynamique pour sélectionner les membres du jeu autorisé/refusé pour la valeur de chaîne dans le **CustomData** propriété chaîne de connexion.  
   
 ## <a name="example"></a>Exemple  
  La requête suivante affiche la valeur retournée par la **CustomData** fonction dans une mesure calculée :  
@@ -42,6 +42,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

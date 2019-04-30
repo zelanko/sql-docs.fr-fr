@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278536"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Boîte de dialogue Propriétés du point de vue de la carte, Optimisation
   Sélectionnez **Optimisation** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour contrôler la résolution appliquée lors de l'affichage d'une carte dans un rapport.  

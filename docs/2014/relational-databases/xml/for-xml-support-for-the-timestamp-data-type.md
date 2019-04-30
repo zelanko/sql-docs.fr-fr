@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287678"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Prise en charge de FOR XML pour le type de données timestamp
   En cas de transformation FOR XML, les valeurs de type **timestamp** sont traitées comme des données de type **varbinary(8)** et seront toujours encodées en base 64. Le cas échéant, le schéma XSD ou XDR prend en compte ce type.  

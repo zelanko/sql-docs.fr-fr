@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE SESSION CUBE (MDX) | Documents Microsoft
+title: Instruction CREATE SESSION CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248202"
 ---
-# <a name="mdx-data-definition---create-session-cube"></a>Définition de données MDX - créer un CUBE de SESSION
+# <a name="mdx-data-definition---create-session-cube"></a>Définition de données MDX - CREATE SESSION CUBE
 
 
   Crée et remplit un cube de session à partir d'un cube serveur existant. Le cube de session est visible uniquement dans la session active ; vous ne pouvez pas le parcourir ou l'interroger à partir d'une autre session. Le cube de session est implicitement supprimé à la fermeture de la session.  
@@ -102,7 +102,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Nom de la dimension dans le cube de session.  
   
- À partir de \<dim clause from >  
+ À partir de \<dim à partir de la clause >  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
  NOT_RELATED_TO_FACTS  
@@ -200,7 +200,7 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instruction CREATE GLOBAL CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

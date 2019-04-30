@@ -1,5 +1,5 @@
 ---
-title: DistinctCount (MDX) | Documents Microsoft
+title: DistinctCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f0235f14366667dbce21af92cf0418bb6fa1e0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248210"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
 
@@ -33,7 +33,7 @@ DistinctCount(Set_Expression)
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Le **DistinctCount** fonction équivaut à `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+ Le **DistinctCount** fonction est équivalente à `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
   
 ## <a name="examples"></a>Exemples  
  La requête suivante montre comment utiliser la fonction DistinctCount :  
@@ -63,7 +63,7 @@ DistinctCount(Set_Expression)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Nombre &#40;définir&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

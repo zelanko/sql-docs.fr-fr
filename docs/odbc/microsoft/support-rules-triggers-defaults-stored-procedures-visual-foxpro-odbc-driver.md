@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269857"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées (pilote ODBC Visual FoxPro)
 Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeurs par défaut ou des procédures stockées qui utilisent le pilote ODBC Visual FoxPro. Toutefois, votre application peut interagir avec les règles existantes, des déclencheurs, des valeurs par défaut ou des procédures stockées comme elle insère, met à jour ou supprime des données Visual FoxPro stockées dans une base de données.  
@@ -146,7 +146,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
   
 ||||  
 |-|-|-|  
-|IDXCOLLATE (fonction))|IF... Commande ENDIF|IIF (fonction))|  
+|IDXCOLLATE (fonction))|IF ... Commande ENDIF|IIF (fonction))|  
 |INDBC (fonction))|INDEX, commande|LISTE (fonction))|  
 |Commande INSERT-SQL|INT (fonction))|ISALPHA (fonction))|  
 |ISBLANK (fonction))|ISDIGIT (fonction))|ISEXCLUSIVE (fonction))|  
@@ -202,7 +202,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
 |Commande de paramètres|Fonction principale)|Commande de privé|  
 |PI (fonction))|PROGRAMME (fonction))|Fonction appropriée)|  
 |Commande de procédure|Fonction va)||  
-|Commande publique|() PADL &#124; () PADR &#124; PADC () fonctions||  
+|Commande publique|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
   
 ## <a name="r"></a>R  
   
@@ -221,7 +221,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
   
 ||||  
 |-|-|-|  
-|L’ANALYSE... Commande ENDSCAN|Commande de nuage de points|S (fonction))|  
+|SCAN ... Commande ENDSCAN|Commande de nuage de points|S (fonction))|  
 |SECONDES (fonction))|Commande de recherche|SEEK (fonction))|  
 |Sélectionnez la commande|Sélectionnez () (fonction)|Commande SELECT-SQL|  
 |SET BLOCKSIZE, commande|SET CARRY, commande|SET siècle, commande|  

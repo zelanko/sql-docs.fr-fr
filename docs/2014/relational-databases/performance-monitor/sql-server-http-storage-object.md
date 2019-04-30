@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250541"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
   L’objet de performance **SQLServer:HTTP_STORAGE_OBJECT** est constitué de compteurs de performances qui surveillent le compte Microsoft Azure Storage. À l’aide de [fichiers de données SQL Server dans Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) fonctionnalité, vous pouvez stocker des fichiers de base de données dans des objets BLOB de stockage Windows Azure. Cet objet de performance traite chaque compte de stockage Windows Azure en tant que lecteur différent.  

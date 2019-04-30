@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273393"
 ---
 # <a name="usage-counting"></a>Nombre d’utilisations
 > [!NOTE]  
@@ -60,9 +60,9 @@ ms.locfileid: "47664627"
   
  Le format de la valeur de nombre de l’utilisation de fichier est affiché dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|*chemin d’accès complet*|REG_DWORD|*nombre*|  
+|*full-path*|REG_DWORD|*nombre*|  
   
  Par exemple, supposons qu’un pilote pour Informix utilise les fichiers Infrmx32.dll et Infrmx32.hlp et supposons que ce pilote a été installé à deux reprises. Les valeurs sous la sous-clé SharedDlls pour le pilote Informix se présente comme suit :  
   

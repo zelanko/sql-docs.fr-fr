@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 9 : Création d’une hiérarchie dérivée à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 9 : Création d’une hiérarchie dérivée à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262420"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tâche 9 : Création d'une hiérarchie dérivée à l'aide de Master Data Manager
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tâche 9 : Création d’une hiérarchie dérivée à l’aide de Master Data Manager
   Dans cette tâche, vous allez créer une hiérarchie dérivée à l'aide de Master Data Manager. Cette hiérarchie dérivée est dérivée des relations d’attributs basés sur un domaine entre la **fournisseur** et **état** entités.  
   
 1.  Basculez vers la page principale de **Master Data Manager** en cliquant sur **SQL Server 2012 Master Data Services** en haut de la page.  

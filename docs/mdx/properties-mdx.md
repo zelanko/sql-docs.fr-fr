@@ -1,5 +1,5 @@
 ---
-title: Propriétés (MDX) | Documents Microsoft
+title: Propriétés (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278453"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -29,16 +29,16 @@ Member_Expression.Properties(Property_Name [, TYPED])
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
- *Property_name*  
+ *Property_Name*  
  Expression de chaîne valide du nom d'une propriété de membre.  
   
 ## <a name="remarks"></a>Notes  
- Le **propriétés** fonction retourne la valeur du membre spécifié pour la propriété de membre spécifié. La propriété de membre peut être une des propriétés de membre intrinsèques, tels que **nom**, **ID**, **clé**, ou **légende**, ou il peut être une propriété de membre définies par l’utilisateur. Pour plus d’informations, consultez [des propriétés de membre intrinsèques &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) et [propriétés de membre définies par l’utilisateur &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Le **propriétés** fonction retourne la valeur du membre spécifié pour la propriété de membre spécifié. La propriété de membre peut être une des propriétés de membre intrinsèques, tel que **nom**, **ID**, **clé**, ou **légende**, ou il peut être un propriété de membre définies par l’utilisateur. Pour plus d’informations, consultez [propriétés de membre intrinsèques &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) et [propriétés de membre définies par l’utilisateur &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
- Par défaut, la valeur est définie comme une chaîne. Si **TYPÉ** est spécifié, la valeur de retour est fortement typée.  
+ Par défaut, la valeur est définie comme une chaîne. Si **typés** est spécifié, la valeur de retour est fortement typée.  
   
 -   Si le type de propriété est intrinsèque, la fonction retourne le type d'origine du membre.  
   
@@ -106,7 +106,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide des propriétés de membre &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilisation des propriétés de membre &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

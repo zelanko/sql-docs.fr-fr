@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2186cd3718241aa9d145de99da9e59360b0a6418
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242970"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Propriété FlagName (classe ClientSettingsGeneralFlag)
   Obtient le nom de l'indicateur.  

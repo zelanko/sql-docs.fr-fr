@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273147"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
   Les performances de l'indexation de texte intégral et des requêtes de texte intégral sont influencées par les ressources matérielles telles que la mémoire, la vitesse du disque et de l'UC ainsi que l'architecture de l'ordinateur.  
@@ -105,7 +105,7 @@ ms.locfileid: "54128611"
   
  La quantité de mémoire consommée (en octets) par l'hôte de démon de filtre peut être estimée approximativement à l'aide de la formule suivante :  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  Les valeurs par défaut des variables contenues dans la formule précédente sont les suivantes :  
   

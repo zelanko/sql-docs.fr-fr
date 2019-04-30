@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255749"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Boîte de dialogue Choisir la table cible pour Insert Values (Visual Database Tools)
   Cette boîte de dialogue permet de spécifier la table à mettre à jour avec une requête INSERT VALUES. Elle apparaît si plusieurs tables sont affichées dans le volet **Schéma** quand vous modifiez le type d’une requête pour en faire une requête INSERT VALUES.  

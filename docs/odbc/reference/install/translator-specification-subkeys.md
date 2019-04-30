@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272943"
 ---
 # <a name="translator-specification-subkeys"></a>Sous-clés de spécification de convertisseur
 Chaque convertisseur répertorié dans la sous-clé de convertisseurs de ODBC a une sous-clé de son propre. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé ODBC traducteurs. Les valeurs sous cette sous-clé répertorient les chemins complets du traducteur et le programme d’installation de traducteur DLL et le décompte d’utilisation. Les formats des valeurs sont comme indiqué dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|Convertisseur|REG_SZ|*chemin de DLL de traduction*|  
-|Programme d'installation|REG_SZ|*le programme d’installation-DLL-path*|  
+|Convertisseur|REG_SZ|*translator-DLL-path*|  
+|Installation|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*nombre*|  
   
  Pour plus d’informations sur les compteurs d’utilisation, consultez [nombre d’utilisations](../../../odbc/reference/install/usage-counting.md) plus haut dans cette section.  

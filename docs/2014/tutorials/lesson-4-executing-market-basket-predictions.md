@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312111"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Leçon 4 : Exécution de prédictions Market Basket
   Dans cette leçon, vous allez utiliser l’instruction DMX `SELECT` instruction pour créer des prédictions basées sur l’association des modèles que vous avez créé dans [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Une requête de prédiction est créée en utilisant l'instruction DMX `SELECT` et en ajoutant une clause `PREDICTION JOIN` Pour plus d’informations sur la syntaxe d’une jointure de prédiction, consultez [SELECT FROM &#60;modèle&#62; jointure de prédiction &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  

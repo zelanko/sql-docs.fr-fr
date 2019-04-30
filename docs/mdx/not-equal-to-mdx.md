@@ -1,5 +1,5 @@
 ---
-title: '&lt;&gt; (Différent de) (MDX) | Documents Microsoft'
+title: '&lt;&gt; (Différent de) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ac3241e7d6acd8ba883cdd59f9410f4a0fd9187d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277514"
 ---
 # <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (Différent de) (MDX)
 
@@ -35,7 +35,7 @@ MDX_Expression <> MDX_Expression
 ## <a name="return-value"></a>Valeur de retour  
  Valeur booléenne basée sur les conditions suivantes :  
   
--   **true** si les deux paramètres sont non null et que le premier paramètre n’est pas égal au deuxième paramètre.  
+-   **true** si les deux paramètres sont non null et que le premier paramètre n’est pas égal au second paramètre.  
   
 -   **false** si les deux paramètres sont non null et que le premier paramètre est égal au second paramètre.  
   

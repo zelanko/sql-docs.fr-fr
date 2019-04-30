@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 829b8df79c726e047576de0e845f2e3f5543352f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298332"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>GetPermissions et SetPermissions, exemples de méthodes (VC++)
 Cet exemple montre la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes. Le code suivant donne un accès complet à la table Orders pour l’utilisateur administrateur.  

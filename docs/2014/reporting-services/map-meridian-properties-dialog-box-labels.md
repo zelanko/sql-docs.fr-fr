@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278618"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des méridiens de la carte, Étiquettes
   Utilisez le **MapMeridian propriétés** la boîte de dialogue options d’étiquette pour le quadrillage vertical de la carte. Un méridien représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre d'affichage :  

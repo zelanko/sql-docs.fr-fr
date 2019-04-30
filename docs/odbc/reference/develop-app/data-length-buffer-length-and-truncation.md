@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267746"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Longueur des données, longueur de la mémoire tampon et troncation
 Le *longueur des données* est la longueur en octets des données tel qu’il est stocké dans la mémoire tampon de données de l’application, pas lorsqu’elles sont stockées dans la source de données. Cette distinction est importante, car les données sont souvent stockées dans différents types dans la mémoire tampon de données que dans la source de données. Par conséquent, pour les données envoyées à la source de données, c’est la longueur en octets des données avant la conversion en type de la source de données. Pour les données récupérées à partir de la source de données, il s’agit la longueur d’octet des données après la conversion vers le type de données de la mémoire tampon et avant toute troncation est effectuée.  

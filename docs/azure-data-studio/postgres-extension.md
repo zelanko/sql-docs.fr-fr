@@ -1,5 +1,5 @@
 ---
-title: Extension de PostgreSQL (version préliminaire)
+title: Extension PostgreSQL (préversion)
 titleSuffix: Azure Data Studio
 description: Extension de PostgreSQL (version préliminaire) pour Azure Data Studio
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252833"
 ---
-# <a name="postgresql-extension-preview"></a>Extension de PostgreSQL (version préliminaire)
+# <a name="postgresql-extension-preview"></a>Extension PostgreSQL (préversion)
 
 L’extension de PostgreSQL (version préliminaire) vous permet de se connecter à, interroger et développer pour Postgres grâce aux fonctionnalités de Studio de données Azure. 
 

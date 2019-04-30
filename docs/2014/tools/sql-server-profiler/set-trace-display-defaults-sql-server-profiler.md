@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31dd441af6e46784b928006fe45b726f4c59f0c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267379"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>Définir l'affichage par défaut des traces (SQL Server Profiler)
   Cette rubrique décrit comment définir les options des outils qui définissent le type, la taille et le style des polices utilisées par [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour afficher les traces dans la fenêtre de trace. Vous pouvez également spécifier à [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] d'afficher toutes les dates et heures selon les paramètres régionaux configurés pour votre système d'exploitation.  

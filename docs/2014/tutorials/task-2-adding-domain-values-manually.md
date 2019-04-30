@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Ajout de valeurs de domaine manuellement | Microsoft Docs'
+title: 'Tâche 2 : Ajout de valeurs de domaine manuellement | Microsoft Docs'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244690"
 ---
-# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
+# <a name="task-2-adding-domain-values-manually"></a>Tâche 2 : Ajout de valeurs de domaine manuellement
   Dans cette tâche, vous ajoutez une valeur pour le **pays** domaine manuellement. Consultez [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) rubrique pour plus d’informations sur les champs de cette page.  
   
 1.  Cliquez sur **pays** domaine dans le **liste des domaines**.  

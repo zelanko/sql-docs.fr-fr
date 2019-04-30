@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ec3e854d72f28646ba556d09514b6646dbb3e60c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298819"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2013"></a>Installer le mode SharePoint de Reporting Services pour SharePoint 2013
   Les procédures de cette rubrique constituent un guide d'installation sur un serveur unique de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint. La rubrique peut également être utilisée pour des procédures individuelles dans le cadre de la mise à jour d'une installation existante, par exemple, pour créer une application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -41,11 +41,11 @@ ms.locfileid: "53359841"
   
 -   [Étape 1 : Installer le serveur de rapports Reporting Services en mode SharePoint](#bkmk_install_SSRS)  
   
--   [Étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services](#bkmk_install_SSRS_sharedservice)  
+-   [Étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services](#bkmk_install_SSRS_sharedservice)  
   
--   [Étape 3 : Créer une Application de Service Reporting Services](#bkmk_create_serrviceapplication)  
+-   [Étape 3 : Créer une Application de Service Reporting Services](#bkmk_create_serrviceapplication)  
   
--   [Étape 4 : Activer la fonctionnalité de Collection de sites Power View.](#bkmk_powerview)  
+-   [Étape 4 : Activer la fonctionnalité de Collection de sites Power View.](#bkmk_powerview)  
   
 -   [Script de Windows PowerShell pour les étapes 1 à 4](#bkmk_full_script)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53359841"
   
      Pour des raisons de sécurité, il est recommandé que les comptes d'administrateur de la batterie de serveurs SharePoint ne soient pas également des comptes d'administrateurs locaux du système d'exploitation. Si vous ajoutez un compte d'administrateur de batterie de serveurs au groupe des administrateurs locaux dans le cadre du processus d'installation, nous vous recommandons de supprimer le compte du groupe des administrateurs locaux une fois l'installation terminée.  
   
-##  <a name="bkmk_install_SSRS"></a> Étape 1 : Installez un serveur de rapports Reporting Services en mode SharePoint  
+##  <a name="bkmk_install_SSRS"></a> Étape 1 : Installer le serveur de rapports Reporting Services en mode SharePoint  
  Cette étape installe un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. En fonction des éléments déjà installés sur votre ordinateur, il est possible que certaines pages d'installation décrites dans les étapes suivantes ne s'affichent pas.  
   
 1.  Exécutez l'Assistant Installation de SQL Server (Setup.exe).  
@@ -161,7 +161,7 @@ ms.locfileid: "53359841"
   
 20. L'installation prend plusieurs minutes. Vous verrez la page **Terminé** avec les fonctionnalités répertoriées et l'état de chaque fonctionnalité. Une boîte de dialogue d'informations peut s'afficher indiquant que l'ordinateur doit être redémarré.  
   
-##  <a name="bkmk_install_SSRS_sharedservice"></a> Étape 2 : Inscrivez et démarrez le service SharePoint Reporting Services  
+##  <a name="bkmk_install_SSRS_sharedservice"></a> Étape 2 : Inscrire et démarrer le Service SharePoint de Reporting Services  
  ![Contenu relatif à PowerShell](../../../2014/reporting-services/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")  
   
 > [!NOTE]  
@@ -222,7 +222,7 @@ ms.locfileid: "53359841"
     > [!NOTE]  
     >  Si le service Reporting Services reste à l’état **Démarrage** et ne passe pas à **Démarré**, vérifiez que le service « Administration SharePoint 2013 » est démarré dans le Gestionnaire de serveur Windows.  
   
-##  <a name="bkmk_create_serrviceapplication"></a> Étape 3 : Créez une nouvelle application de service Reporting Services  
+##  <a name="bkmk_create_serrviceapplication"></a> Étape 3 : Créer une Application de Service Reporting Services  
  Cette section fournit les étapes pour créer une application de service et une description des propriétés, si vous consultez une application de service existante.  
   
 1.  Dans l'Administration centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service**.  
@@ -258,7 +258,7 @@ ms.locfileid: "53359841"
   
 -   Rubrique [Pour créer une application de service Reporting Services à l’aide de PowerShell](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp).  
   
-##  <a name="bkmk_powerview"></a> Étape 4 : Activez la fonctionnalité de collection de sites Power View.  
+##  <a name="bkmk_powerview"></a> Étape 4 : Activer la fonctionnalité de Collection de sites Power View.  
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] est une fonctionnalité du complément [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint qui permet la collection de sites. Elle est activée automatiquement pour les collections de sites racine et celles créés après l'installation de la macro complémentaire [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous envisagez d'utiliser [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], vous devez vérifier que la fonctionnalité est activée.  
   
  Si vous installez le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint après l'installation du produit SharePoint Server, la fonctionnalité d'intégration du serveur de rapports et la fonctionnalité d'intégration Power View sont uniquement activées pour les collections de sites racine. Pour les autres collections de sites, activez manuellement les fonctionnalités.  

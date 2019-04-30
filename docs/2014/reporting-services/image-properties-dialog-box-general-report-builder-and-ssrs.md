@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ceed76c33537178d259c78c0ae1acb7cd77e8b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260658"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'image, Général (Générateur de rapports et SSRS)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de l’image** pour ajouter une image, changer le nom par défaut de l’image et ajouter le texte de l’info-bulle.  

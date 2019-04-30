@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281939"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
 Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. Le **connecter** section indique les exceptions à ce comportement. Par exemple, si tous les **connecter** sections sont absents ou vides, puis par défaut aucune connexion n’a pu être établie.  
@@ -57,7 +57,7 @@ connectionString
 |Élément|Description|  
 |----------|-----------------|  
 |**Se connecter**|Une chaîne littérale qui indique qu’il est une entrée de chaîne de connexion.|  
-|**_ConnectionString_**|Chaîne qui remplace la chaîne de connexion client global.|  
+|**_connectionString_**|Chaîne qui remplace la chaîne de connexion client global.|  
 |**Accès**|Une chaîne littérale qui indique qu’il est une entrée d’accès.|  
 |**_accessRight_**|L’un des droits d’accès suivants :<br /><br /> -   **NoAccess** -utilisateur ne peut pas accéder à la source de données.<br />-   **ReadOnly** -l’utilisateur peut lire la source de données.<br />-   **Lecture/écriture** -utilisateur capable de lire ou écrire dans la source de données.|  
   

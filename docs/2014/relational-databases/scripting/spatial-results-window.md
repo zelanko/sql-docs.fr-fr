@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 626f125fff9b0dfb21e617166817fbc618f082a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278713"
 ---
 # <a name="spatial-results-window"></a>Fenêtre Résultats spatiaux
   La fenêtre **Résultats spatiaux** propose des outils de mappage visuel permettant d'afficher des données spatiales. Pour afficher des résultats spatiaux, vos résultats de requête doivent inclure une colonne spatiale avec des données géométriques ou géographiques.  
@@ -34,7 +34,7 @@ ms.locfileid: "48092869"
  Cette option n'est pas disponible lorsque des instances de point seulement sont retournées dans une requête.  
   
  **Sélectionner la projection**  
- Affichez les données géographiques selon l'une des quatre projections proposées : équirectangulaire, de Mercator, de Robinson ou de Bonne.  
+ Affichez les données géographiques dans un des quatre projections : Équirectangulaire, de Mercator, de Robinson ou de Bonne.  
   
  Cette option n'est pas disponible pour les données géométriques.  
   

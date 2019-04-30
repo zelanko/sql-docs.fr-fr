@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 82b89246d6289d0b19ee97e68e94f77d7cb30a77
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244986"
 ---
 # <a name="setstringvalue-method-clientnetworkprotocolproperty-class"></a>Méthode SetStringValue (classe ClientNetworkProtocolProperty)
   Définit la valeur de chaîne de la propriété actuelle référencée par la valeur de la [propriété PropertyIdx (classe ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -47,7 +47,7 @@ StrValue
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*strValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
+|*StrValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur `uint32`, égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

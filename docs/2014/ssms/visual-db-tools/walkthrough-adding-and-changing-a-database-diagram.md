@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273734"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
   Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
@@ -44,7 +44,7 @@ ms.locfileid: "52822623"
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-     Si la base de données n'a pas les objets nécessaires pour créer des schémas, le message suivant s'affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant apparaît : **Cette base de données n’a pas une ou plusieurs des objets de prise en charge requis pour utiliser la fonctionnalité de schémas de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
   
      La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52822623"
   
 2.  Dans le **choisir un nom** boîte de dialogue, cliquez sur **OK** pour accepter le nom par défaut `Table1`.  
   
-     Une nouvelle grille de table s'affiche avec trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
+     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
   
 3.  Ajoutez les informations suivantes pour `Table1`:  
   

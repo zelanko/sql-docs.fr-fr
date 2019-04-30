@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288518"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone de connexion et les opérations de l’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération est terminée, ce qui permet le thread d’application effectuer d’autres tâches. Dans le Kit de développement Windows 7 pour les opérations de connexion, ou l’instruction asynchrone, une application déterminé que l’opération asynchrone a été terminée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter dans le Kit de développement logiciel Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -327,9 +327,9 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Les attributs de connexion SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE et SQL_ATTR_ASYNC_DBC_EVENT déterminent que ODBC s’exécute en mode asynchrone et que ODBC Active le mode de notification pour un handle de connexion. Les attributs d’instruction SQL_ATTR_ASYNC_ENABLE et SQL_ATTR_ASYNC_STMT_EVENT déterminent que ODBC s’exécute en mode asynchrone et que ODBC Active le mode de notification pour un descripteur d’instruction.  
   
-|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
+|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Activer|non null|Notification asynchrone|  
+|Activer|non-null|Notification asynchrone|  
 |Activer|Null|D’interrogation asynchrone|  
 |Disable|n'importe laquelle|Synchrone|  
   

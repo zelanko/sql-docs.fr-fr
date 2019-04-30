@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66c28295b4b2678903d0fe7115b724db419edd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301943"
 ---
 # <a name="aggregate-function-limitations"></a>Limitations des fonctions d’agrégation
 Une fonction d’agrégation et une référence de colonne de non agrégation ne peut pas être utilisés en tant qu’arguments à une seule instruction SQL.

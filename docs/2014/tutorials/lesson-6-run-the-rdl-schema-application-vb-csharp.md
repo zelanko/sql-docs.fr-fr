@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254506"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Leçon 6 : Exécutez l’Application du schéma RDL (VB -C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] offre deux méthodes pour créer et exécuter une application console à partir de l'environnement de développement intégré (IDE) :  

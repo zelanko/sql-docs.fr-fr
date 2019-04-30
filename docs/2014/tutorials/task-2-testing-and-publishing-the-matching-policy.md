@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Test et publication de la stratégie de correspondance | Microsoft Docs'
+title: 'Tâche 2 : Test et publication de la stratégie de correspondance | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250303"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
   Dans cette tâche, vous testez et publiez le **supprimer les fournisseurs en double** stratégie de correspondance.  
   
 1.  Dans le **résultats de correspondance** , cliquez sur **Démarrer** pour tester la stratégie dans son ensemble. Dans ce cas, vous disposez d'une seule règle dans la stratégie, par conséquent, les résultats du test de la règle et du test de la stratégie devraient être identiques.  
   
 2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement qui a un **vert** icône associé est un doublon de l’enregistrement pivot qui le précède. Voici deux exemples :  
   
-    1.  L'enregistrement **ID d'enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
+    1.  L’enregistrement avec **ID d’enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
   
     2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93 % car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et **Supplier Name** colonnes, mais des valeurs différentes pour le **ContactEmailAddress** colonne.  
   
-    3.  Faites défiler la liste pour afficher les deux enregistrements avec les ID : **1000051** et **1000052**. Enregistrement **1000052** est considéré comme une correspondance avec un score **91 %** , car les deux enregistrements ont les mêmes valeurs pour le **SupplierID** et  **ContactEmailAddress** colonnes, mais des valeurs différentes pour le **Supplier Name** colonne.  
+    3.  Faites défiler vers le bas de la liste pour afficher les deux enregistrements avec les ID : **1000051** et **1000052**. Enregistrement **1000052** est considéré comme une correspondance avec un score **91 %** , car les deux enregistrements ont les mêmes valeurs pour le **SupplierID** et  **ContactEmailAddress** colonnes, mais des valeurs différentes pour le **Supplier Name** colonne.  
   
      ![Définition de stratégie - résultats de la stratégie](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "définition de stratégie - résultats de la stratégie")  
   

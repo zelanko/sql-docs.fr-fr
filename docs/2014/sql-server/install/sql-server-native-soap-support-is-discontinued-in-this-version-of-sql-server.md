@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9c3af432ac614a11bb6321af87e28f9675f806a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267553"
 ---
 # <a name="sql-server-native-soap-support-is-discontinued-in-this-version-of-sql-server"></a>La fonctionnalité de prise en charge native du protocole SOAP par SQL Server n'est plus disponible dans cette version de SQL Server.
   Le Conseiller de mise à niveau a détecté l'utilisation des services Web XML natifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

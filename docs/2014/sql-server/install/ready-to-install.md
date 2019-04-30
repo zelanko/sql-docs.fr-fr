@@ -17,14 +17,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276090"
 ---
 # <a name="ready-to-install"></a>Prêt pour l'installation
-  La page Prêt pour l'installation fournit un résumé des fonctionnalités qui doivent être installées ou modifiées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  La page Prêt pour l'installation fournit un résumé des fonctionnalités qui doivent être installées ou modifiées par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  La page affiche les options suivantes :  
@@ -36,6 +36,6 @@ ms.locfileid: "48126787"
 -   Pour quitter le programme d'installation, cliquez sur **Annuler**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
+ [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

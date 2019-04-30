@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309377"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extension de SQL Server Import (version préliminaire)
 

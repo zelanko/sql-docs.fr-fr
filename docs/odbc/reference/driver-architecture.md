@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254237"
 ---
 # <a name="driver-architecture"></a>Architecture des pilotes
 Architecture du pilote se divise en deux catégories, selon les instructions SQL de processus logiciel :  

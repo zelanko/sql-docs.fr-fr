@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259317"
 ---
 # <a name="sqlfreestmt-function"></a>Fonction SQLFreeStmt
 **Conformité**  
@@ -44,7 +44,7 @@ SQLRETURN SQLFreeStmt(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction  
   
  *Option*  
@@ -56,7 +56,7 @@ SQLRETURN SQLFreeStmt(
   
  SQL_UNBIND : Définit le champ SQL_DESC_COUNT de la ARD 0, libérant toutes les mémoires tampons de colonne lié par **SQLBindCol** pour la donnée *au paramètre StatementHandle*. Cela ne dissocie le signet de colonne ; Pour ce faire, le champ SQL_DESC_DATA_PTR de la ARD pour la colonne de signet a la valeur NULL. Notez que si cette opération est effectuée sur un descripteur explicitement alloué qui est partagé par plusieurs instructions, l’opération affecte les liaisons de toutes les instructions qui partagent le descripteur. Pour plus d’informations, consultez [vue d’ensemble de récupération des résultats (de base)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
- SQL_RESET_PARAMS : Définit le champ SQL_DESC_COUNT du descripteur APD sur 0, libérant toutes les mémoires tampons de paramètres définis par **SQLBindParameter** pour la donnée *au paramètre StatementHandle*. Si cette opération est effectuée sur un descripteur explicitement alloué qui est partagé par plusieurs instructions, cette opération affecte les liaisons de toutes les instructions qui partagent le descripteur. Pour plus d’informations, consultez [Binding Parameters](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
+ SQL_RESET_PARAMS: Définit le champ SQL_DESC_COUNT du descripteur APD sur 0, libérant toutes les mémoires tampons de paramètres définis par **SQLBindParameter** pour la donnée *au paramètre StatementHandle*. Si cette opération est effectuée sur un descripteur explicitement alloué qui est partagé par plusieurs instructions, cette opération affecte les liaisons de toutes les instructions qui partagent le descripteur. Pour plus d’informations, consultez [Binding Parameters](../../../odbc/reference/develop-app/binding-parameters-odbc.md).  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  

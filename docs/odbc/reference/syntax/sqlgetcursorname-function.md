@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258833"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName Function
 **Conformité**  
@@ -46,10 +46,10 @@ SQLRETURN SQLGetCursorName(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
- *cursorName*  
+ *CursorName*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nom du curseur.  
   
  Si *CursorName* est NULL, *NameLengthPtr* retournera toujours le nombre total de caractères (sans le caractère de fin de la valeur null pour les données de type caractère) disponibles à renvoyer dans la mémoire tampon vers laquelle pointée *CursorName*.  

@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4fece6307ff005031e7ab770b14bd5fbca541d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308799"
 ---
-# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemple de Code ADOX : NumericScale et Precision, exemples de propriétés (VB)
+# <a name="adox-code-example-numericscale-and-precision-properties-example-vb"></a>Exemple de code ADOX : NumericScale et Precision, exemple de propriétés (VB)
 Cet exemple montre la [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) et [précision](../../../ado/reference/adox-api/precision-property-adox.md) propriétés de la [colonne](../../../ado/reference/adox-api/column-object-adox.md) objet. Ce code affiche leur valeur pour le **Order Details** table de la *Northwind* base de données.  
   
 ```  

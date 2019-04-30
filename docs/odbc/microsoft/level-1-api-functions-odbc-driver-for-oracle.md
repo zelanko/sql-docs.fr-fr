@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262231"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau 1 (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829417"
 |**SQLGetTypeInfo**|Retourne des informations sur les types de données pris en charge par une source de données. Le pilote retourne les informations dans un jeu de résultats SQL.|  
 |**SQLParamData**|Utilisé conjointement avec **SQLPutData** pour spécifier les données de paramètre au moment de l’exécution d’instruction.|  
 |**SQLPutData**|Permet à une application envoyer des données pour un paramètre ou une colonne pour le pilote au moment de l’exécution d’instruction.|  
-|**SQLSetConnectOption**|Fournit l’accès aux options qui régissent les aspects de la connexion. Cette fonction est partiellement disponible : le pilote prend en charge toutes les valeurs pour le *fOption* argument mais ne prend ne pas en charge certaines *vParam* valeurs pour le *fOption* argument [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [Options connecter](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Fournit l’accès aux options qui régissent les aspects de la connexion. Cette fonction est partiellement prises en charge : Le pilote prend en charge toutes les valeurs pour le *fOption* argument mais ne prend ne pas en charge certaines *vParam* valeurs pour le *fOption* argument [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [Options connecter](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Définit les options relatives à un descripteur d’instruction, *hstmt*. Pour plus d’informations, consultez [Options d’instruction](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Récupère l’ensemble optimal de colonnes qui identifie de façon unique une ligne dans la table.|  
 |**SQLStatistics**|Récupère une liste des statistiques sur une seule table index et les noms de balise, associés à la table. Le pilote retourne les informations comme jeu de résultats.|  

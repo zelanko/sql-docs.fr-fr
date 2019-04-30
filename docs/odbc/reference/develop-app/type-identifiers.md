@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305666"
 ---
 # <a name="type-identifiers"></a>Identificateurs de types
 Pour décrire les types de données SQL et C, ODBC définit deux ensembles de *tapez identificateurs*. Un identificateur de type décrit le type d’une colonne SQL ou une mémoire tampon C. Il s’agit une **#define** valeur et est généralement passée comme argument de fonction ou retournées dans les métadonnées.  

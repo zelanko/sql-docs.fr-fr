@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88898800b2d24bcf6af7f421dc3ae6e91f123728
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279010"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Boîte de dialogue Propriétés des points incorporés de la carte, Marqueur
   Sélectionnez **Marqueur** dans la boîte de dialogue **Propriétés des points incorporés** pour modifier les options de type et de taille de marqueur pour les éléments cartographiques suivants :  

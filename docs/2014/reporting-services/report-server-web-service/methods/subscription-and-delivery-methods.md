@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6ae92a6abd5c25b9ab1236a2b5b11429d210cba
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283912"
 ---
 # <a name="subscription-and-delivery-methods"></a>Méthodes d'abonnement et de remise
   Vous pouvez utiliser ces méthodes pour créer et générer des abonnements et des éléments de catalogue.  

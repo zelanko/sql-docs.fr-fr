@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266820"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
   Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vous utilisez un navigateur Web pour afficher les rapports et exécuter le Gestionnaire de rapports. Certains navigateurs ne prennent pas en charge toutes les fonctionnalités de rapport. Cette rubrique décrit la prise en charge et la configuration requise pour les fonctionnalités de gestion du Gestionnaire de rapports, l'affichage de rapports, les contrôles de la visionneuse de rapports dans Visual Studio. Elle résume également la disponibilité des fonctionnalités pour les navigateurs pris en charge, les conditions requises pour l'authentification et les conditions requises pour les scripts.  

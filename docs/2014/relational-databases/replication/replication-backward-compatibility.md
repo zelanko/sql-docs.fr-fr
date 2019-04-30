@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250490"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilité descendante de la réplication
   Les rubriques de la section consacrée à la compatibilité descendante décrivent les changements de comportement entre les différentes versions de la réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il est important de comprendre la compatibilité descendante si vous effectuez une mise à niveau ou si vous avez plusieurs versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une topologie de réplication.  

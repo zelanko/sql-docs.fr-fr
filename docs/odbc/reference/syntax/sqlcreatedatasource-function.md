@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259493"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource, fonction
 **Conformité**  
- Version introduite : ODBC VERSION 2.0  
+ Version introduite : ODBC 2.0  
   
  **Résumé**  
  **SQLCreateDataSource** affiche une boîte de dialogue avec laquelle l’utilisateur peut ajouter une source de données.  
@@ -44,7 +44,7 @@ BOOL SQLCreateDataSource(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *HWND*  
+ *hwnd*  
  [Entrée] Handle de fenêtre parente.  
   
  *lpszDS*  

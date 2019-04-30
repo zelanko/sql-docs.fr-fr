@@ -1,5 +1,5 @@
 ---
-title: En cours (MDX) | Documents Microsoft
+title: Current (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249665"
 ---
 # <a name="current-mdx"></a>Current (MDX)
 
@@ -35,7 +35,7 @@ Set_Expression.Current
 ## <a name="remarks"></a>Notes  
  À chaque étape d'une itération, le tuple utilisé est le tuple actif. Le **actuel** fonction retourne ce tuple. Cette fonction est valide uniquement lors d'une itération sur un jeu.  
   
- Incluent des fonctions MDX qui itèrent au sein d’un ensemble le [générer](../mdx/generate-mdx.md) (fonction).  
+ Incluent des fonctions MDX qui parcourir un ensemble la [générer](../mdx/generate-mdx.md) (fonction).  
   
 > [!NOTE]  
 >  Cette fonction agit uniquement avec des jeux nommés, soit par le biais d'un alias spécifique, soit en définissant un jeu nommé.  
@@ -68,6 +68,6 @@ Set_Expression.Current
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

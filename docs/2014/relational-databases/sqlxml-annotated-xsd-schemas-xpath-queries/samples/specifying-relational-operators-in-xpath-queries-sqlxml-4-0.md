@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268611"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs de relation dans les requêtes XPath (SQLXML 4.0)
   Les exemples suivants montrent comment les opérateurs de relation sont spécifiés dans les requêtes XPath. Les requêtes XPath de ces exemples sont spécifiées par rapport au schéma de mappage contenu dans SampleSchema1.xml. Pour plus d’informations sur cet exemple de schéma, consultez [exemple de schéma XSD annoté pour les exemples XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "52804436"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
  Cette requête retourne tous les  **\<ordre >** éléments enfants du nœud de contexte qui ont un **SalesPersonID** attribut la valeur est inférieure à 270 :  
   
 ```  
@@ -92,7 +92,7 @@ ms.locfileid: "52804436"
 ```  
   
 > [!NOTE]  
->  Lorsque cette requête est spécifiée dans un modèle, le caractère < doit être encodé sous forme d'entité < car il a une signification spéciale dans un document XML. Dans un modèle, utilisez `<` pour spécifier le caractère <.  
+>  Lorsque cette requête est spécifiée dans un modèle, le < caractère doit être encodée, car le < caractère a une signification spéciale dans un document XML. Dans un modèle, utilisez `<` pour spécifier le < caractère.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   

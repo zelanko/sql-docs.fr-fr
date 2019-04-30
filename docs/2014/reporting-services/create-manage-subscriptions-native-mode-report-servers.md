@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265440"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   Cette section contient des rubriques sur le traitement, la supervision et le contrôle des abonnements. La gestion des abonnements varie selon qu'il s'agit d'abonnements standard ou pilotés par les données. Les abonnements standard sont généralement gérés par les utilisateurs qui en sont également les propriétaires. En revanche, les abonnements pilotés par les données sont généralement créés par un administrateur de serveur de rapports, qui en assure également la maintenance.  

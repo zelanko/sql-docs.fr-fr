@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298880"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Paramètres de Migration de données (DB2ToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51681077"
   
 Il existe deux boutons présents reportages. :  
   
--   **Appliquer :** cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
+-   **S’appliquent :** Cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
   
--   **Annuler :** cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
+-   **Annuler :** Cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de données DB2 vers SQL Server](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  

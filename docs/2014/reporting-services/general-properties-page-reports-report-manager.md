@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260820"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Page Propriétés générales, Rapports (Gestionnaire de rapports)
   La page Propriétés générales des rapports vous permet de renommer, supprimer, déplacer ou remplacer la définition de rapport. Vous pouvez également utiliser cette page pour créer un rapport lié. Des informations détaillées sur l'utilisateur qui a créé et modifié le rapport, et la date des modifications sont affichées dans la partie supérieure de la page.  

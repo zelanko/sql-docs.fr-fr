@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305769"
 ---
 # <a name="unicode-data"></a>Données Unicode
 Types de données SQL Unicode sont fournis pour décrire les données qui se trouvent au format Unicode en mode natif sur le SGBD. Un type de données Unicode de C est fourni pour permettre à une application lier des données dans une mémoire tampon Unicode. Le Gestionnaire de pilotes peuvent convertir des données d’un type Unicode C (SQL_C_WCHAR) pour le rendre fonction avec un pilote ANSI.  

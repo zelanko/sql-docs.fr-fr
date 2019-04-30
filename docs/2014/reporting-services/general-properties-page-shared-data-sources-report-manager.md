@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261097"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Page Propriétés générales, Sources de données partagées (Gestionnaire de rapports)
   La page Propriétés générales vous permet d'afficher ou de modifier les propriétés d'un élément de source de données partagée. Toutes les modifications que vous apportez aux propriétés sont prises en compte pour tous les rapports qui font référence à l'élément lorsque vous cliquez sur **Appliquer**.  

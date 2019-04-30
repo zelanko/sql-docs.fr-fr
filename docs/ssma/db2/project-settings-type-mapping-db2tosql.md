@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270007"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres du projet (mappage de Type) (DB2ToSQL)
 La page mappage de Type de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit les types de données DB2 dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données.  
@@ -61,7 +61,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |binary_integer|INT|  
 |objet BLOB|varbinary(max)|  
 |boolean|bit|  
@@ -70,7 +70,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |caractère|varchar(max)|  
 |character varying|varchar(max)|  
 |CLOB|varchar(max)|  
-|Date|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
 |Décimal|float [53]|  
 |double précision|float [53]|  
@@ -79,7 +79,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |entier|INT|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw [\*... 8000]<sup>\*</sup>|varbinary [\*]|  
+|long raw [\*... 8000]<sup>\*</sup>|varbinary[\*]|  
 |long raw [8001..\*]<sup>\*</sup>|varbinary(max)|  
 |national char|nvarchar(max)|  
 |national char varying|nvarchar(max)|  
@@ -87,15 +87,15 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |variable de caractères nationaux<sup>\*\*</sup>|nvarchar(max)|  
 |variable de caractères nationaux<sup>\*</sup>|nvarchar(max)|  
 |NCHAR|nvarchar(max)|  
-|NCLOB|nvarchar(max)|  
+|nclob|nvarchar(max)|  
 |nombre|float [53]|  
-|NUMERIC|float [53]|  
-|NVARCHAR2|nvarchar(max)|  
+|numeric|float [53]|  
+|nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
 |brut|varbinary(max)|  
 |REAL|float [53]|  
 |ID de ligne|UNIQUEIDENTIFIER|  
-|Signtype|SMALLINT|  
+|signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
 |chaîne|varchar(max)|  
 |TIMESTAMP|datetime2|  
@@ -103,8 +103,8 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |horodateur avec fuseau horaire|datetimeoffset|  
 |UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
-|VARCHAR2|varchar(max)|  
-|XmlType|xml|  
+|varchar2|varchar(max)|  
+|xmltype|Xml|  
   
 <sup>\*</sup> S’applique pour retourner la valeur le mappage de type uniquement.  
   
@@ -117,153 +117,153 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |objet BLOB|varbinary(max)|  
 |char|char|  
-|char varying [\*... \*]|varchar [\*]|  
-|Char [\*... \*]|Char [\*]|  
+|char varying [\*... \*]|varchar[\*]|  
+|char[\*..\*]|char[\*]|  
 |caractère|char|  
-|variable de caractère [\*... \*]|varchar [\*]|  
-|caractère [\*... \*]|Char [\*]|  
+|variable de caractère [\*... \*]|varchar[\*]|  
+|caractère [\*... \*]|char[\*]|  
 |CLOB|varchar(max)|  
-|Date|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
-|DEC [\*... \*]|DEC [\*] [0]|  
-|DEC [\*... \*][\*.. \*]|DEC [\*] [\*]|  
+|dec[\*..\*]|dec[\*][0]|  
+|dec[\*..\*][\*..\*]|dec[\*][\*]|  
 |Décimal|decimal[38][0]|  
-|Decimal [\*... \*]|Decimal [\*] [0]|  
-|Decimal [\*... \*][\*.. \*]|Decimal [\*] [\*]|  
+|decimal[\*..\*]|decimal[\*][0]|  
+|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
 |double précision|float [53]|  
 |FLOAT|float [53]|  
-|float [\*... 53]|float [\*]|  
+|float [\*... 53]|float[\*]|  
 |float [54..\*]|float [53]|  
 |INT|INT|  
 |entier|INT|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw [\*... 8000]|varbinary [\*]|  
+|long raw [\*... 8000]|varbinary[\*]|  
 |long raw [8001..\*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|long [\*... 8000]|varchar [\*]|  
-|long [8001..\*]|varchar(max)|  
+|long [\*... 8000]|varchar[\*]|  
+|long[8001..\*]|varchar(max)|  
 |national char|NCHAR|  
-|national char varying [\*... \*]|nvarchar [\*]|  
-|national char [\*... \*]|NCHAR [\*]|  
+|national char varying [\*... \*]|nvarchar[\*]|  
+|national char [\*... \*]|nchar[\*]|  
 |caractères nationaux|NCHAR|  
-|variable de caractères nationaux [\*... \*]|nvarchar [\*]|  
-|les caractères nationaux [\*... \*]|NCHAR [\*]|  
+|variable de caractères nationaux [\*... \*]|nvarchar[\*]|  
+|les caractères nationaux [\*... \*]|nchar[\*]|  
 |NCHAR|NCHAR|  
-|NCHAR [\*]|NCHAR [\*]|  
-|NCLOB|nvarchar(max)|  
+|nchar[\*]|nchar[\*]|  
+|nclob|nvarchar(max)|  
 |nombre|float [53]|  
-|nombre [\*... \*]|numérique [\*]|  
-|nombre [\*... \*][\*.. \*]|numérique [\*] [\*]|  
-|NUMERIC|NUMERIC|  
-|numérique [\*... \*]|numérique [\*]|  
-|numérique [\*... \*][\*.. \*]|numérique [\*] [\*]|  
-|NVARCHAR2 [\*... \*]|nvarchar [\*]|  
-|brut [\*... \*]|varbinary [\*]|  
+|nombre [\*... \*]|numeric[\*]|  
+|nombre [\*... \*][\*.. \*]|numeric[\*][\*]|  
+|numeric|numeric|  
+|numérique [\*... \*]|numeric[\*]|  
+|numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
+|nvarchar2[\*..\*]|nvarchar[\*]|  
+|raw[\*..\*]|varbinary[\*]|  
 |REAL|float [53]|  
 |ID de ligne|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
-|horodateur avec fuseau horaire local [\*... \*]|DateTimeOffset [\*]|  
+|horodateur avec fuseau horaire local [\*... \*]|datetimeoffset[\*]|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire [\*... \*]|DateTimeOffset [\*]|  
-|horodatage [\*... \*]|datetime2 [\*]|  
+|horodateur avec fuseau horaire [\*... \*]|datetimeoffset[\*]|  
+|horodatage [\*... \*]|datetime2[\*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [\*... \*]|UNIQUEIDENTIFIER|  
-|varchar [\*... \*]|varchar [\*]|  
-|VARCHAR2 [\*... \*]|varchar [\*]|  
-|XmlType|xml|  
+|urowid[\*..\*]|UNIQUEIDENTIFIER|  
+|varchar[\*..\*]|varchar[\*]|  
+|varchar2[\*..\*]|varchar[\*]|  
+|Xmltype|Xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mappage de Type de Variable locale par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les variables locales.  
   
 |DB2 Type de données|Par défaut [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Type de données|  
 |-----------------|-------------------------------------------------------------------------|  
-|BFILE|varbinary(max)|  
+|Bfile|varbinary(max)|  
 |binary_double|float [53]|  
-|BINARY_FLOAT|float [53]|  
+|binary_float|float [53]|  
 |binary_interger|INT|  
 |Objet blob|varbinary(max)|  
 |Booléen|bit|  
 |Char|char|  
-|char varying [\*... 8000]|varchar [\*]|  
+|char varying [\*... 8000]|varchar[\*]|  
 |char varying [8001..\*]|varchar(max)|  
-|Char [\*... 8000]|Char [\*]|  
-|Char [8001..\*]|varchar(max)|  
+|Char [\*... 8000]|char[\*]|  
+|char[8001..\*]|varchar(max)|  
 |Caractère|char|  
-|variable de caractère [\*... 8000]|varchar [\*]|  
+|variable de caractère [\*... 8000]|varchar[\*]|  
 |variable de caractère [8001..\*]|varchar(max)|  
-|caractère [\*... 8000]|Char [\*]|  
+|caractère [\*... 8000]|char[\*]|  
 |caractère [8001..\*]|varchar(max)|  
 |CLOB|varchar(max)|  
-|Date|datetime2[0]|  
+|date|datetime2[0]|  
 |dec|dec[38][0]|  
-|DEC [\*... \*]|DEC [\*] [0]|  
-|DEC [\*... \*][\*.. \*]|DEC [\*] [\*]|  
+|dec[\*..\*]|dec[\*][0]|  
+|dec[\*..\*][\*..\*]|dec[\*][\*]|  
 |Décimal|decimal[38][0]|  
-|Decimal [\*... \*]|Decimal [\*] [0]|  
-|Decimal [\*... \*][\*.. \*]|Decimal [\*] [\*]|  
+|decimal[\*..\*]|decimal[\*][0]|  
+|decimal[\*..\*][\*..\*]|decimal[\*][\*]|  
 |double précision|float [53]|  
 |float|float [53]|  
-|float [\*... 53]|float [\*]|  
+|float [\*... 53]|float[\*]|  
 |float [54..\*]|float [53]|  
 |Int|INT|  
 |Entier|INT|  
-|entier [\*... \*]|numérique [\*] [0]|  
+|entier [\*... \*]|numeric[\*][0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
-|long raw [\*... 8000]|varbinary [\*]|  
+|long raw [\*... 8000]|varbinary[\*]|  
 |long raw [8001..\*]|varbinary(max)|  
 |national char|NCHAR|  
-|national char varying [\*... 4000]|nvarchar [\*]|  
+|national char varying [\*... 4000]|nvarchar[\*]|  
 |national char varying [4001..\*]|nvarchar(max)|  
-|national char [\*... 4000]|NCHAR [\*]|  
+|national char [\*... 4000]|nchar[\*]|  
 |national char [4001..\*]|nvarchar(max)|  
 |caractères nationaux|NCHAR|  
-|les caractères nationaux [\*... 4000]|nvarchar [\*]|  
+|les caractères nationaux [\*... 4000]|nvarchar[\*]|  
 |les caractères nationaux [4001..\*]|nvarchar(max)|  
-|variable de caractères nationaux [\*... 4000]|nvarchar [\*]|  
+|variable de caractères nationaux [\*... 4000]|nvarchar[\*]|  
 |variable de caractères nationaux [4001..\*]|nvarchar(max)|  
 |Nchar|NCHAR|  
-|NCHAR [\*... 4000]|NCHAR [\*]|  
-|NCHAR [4001..\*]|nvarchar(max)|  
-|NCHAR varying [\*... 4000]|nvarchar [\*]|  
+|nchar[\*..4000]|nchar[\*]|  
+|nchar[4001..\*]|nvarchar(max)|  
+|NCHAR varying [\*... 4000]|nvarchar[\*]|  
 |NCHAR varying [4001..\*]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |Number|float [53]|  
-|nombre [\*... \*]|numérique [\*]|  
-|nombre [\*... \*][\*.. \*]|numérique [\*] [\*]|  
-|Numérique|numérique [38] [0]|  
-|numérique [\*... \*]|numérique [\*]|  
-|numérique [\*... \*][\*.. \*]|numérique [\*] [\*]|  
-|NVARCHAR2 [\*... 4000]|nvarchar [\*]|  
-|NVARCHAR2 [4001..\*]|nvarchar(max)|  
+|nombre [\*... \*]|numeric[\*]|  
+|nombre [\*... \*][\*.. \*]|numeric[\*][\*]|  
+|Numeric|numérique [38] [0]|  
+|numérique [\*... \*]|numeric[\*]|  
+|numeric[\*..\*][\*..\*]|numeric[\*][\*]|  
+|nvarchar2[\*..4000]|nvarchar[\*]|  
+|nvarchar2[4001..\*]|nvarchar(max)|  
 |pls_integer|INT|  
-|brut [\*... 8000]|varbinary [\*]|  
+|brut [\*... 8000]|varbinary[\*]|  
 |brut [8001..\*]|varbinary(max)|  
 |Real|float [53]|  
-|ID de ligne|UNIQUEIDENTIFIER|  
+|Rowid|UNIQUEIDENTIFIER|  
 |Signtype|SMALLINT|  
 |Smallint|SMALLINT|  
-|chaîne [\*... 8000]|varchar [\*]|  
+|chaîne [\*... 8000]|varchar[\*]|  
 |chaîne [8001..\*]|varchar(max)|  
 |TIMESTAMP|datetime2|  
 |horodateur avec fuseau horaire local|datetimeoffset|  
 |horodateur avec fuseau horaire|datetimeoffset|  
-|horodateur avec fuseau horaire local [\*... \*]|DateTimeOffset [\*]|  
-|horodateur avec fuseau horaire [\*... \*]|DateTimeOffset [\*]|  
-|horodatage [\*... \*]|datetime2 [\*]|  
+|horodateur avec fuseau horaire local [\*... \*]|datetimeoffset[\*]|  
+|horodateur avec fuseau horaire [\*... \*]|datetimeoffset[\*]|  
+|horodatage [\*... \*]|datetime2[\*]|  
 |UROWID|UNIQUEIDENTIFIER|  
-|UROWID [\*... \*]|UNIQUEIDENTIFIER|  
-|varchar [\*... 8000]|varchar [\*]|  
-|varchar [8001..\*]|varchar(max)|  
-|VARCHAR2 [\*... 8000]|varchar [\*]|  
-|VARCHAR2 [8001..\*]|varcha(max)|  
-|XmlType|xml|  
+|urowid[\*..\*]|UNIQUEIDENTIFIER|  
+|varchar[\*..8000]|varchar[\*]|  
+|varchar[8001..\*]|varchar(max)|  
+|VARCHAR2 [\*... 8000]|varchar[\*]|  
+|varchar2[8001..\*]|varcha(max)|  
+|Xmltype|Xml|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Référence de l’Interface utilisateur &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

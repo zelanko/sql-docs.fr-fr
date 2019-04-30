@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276141"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Surveillance de l’appliance pour l’Analytique Platform System
 Ce guide de surveillance appliance décrit les outils et les tâches de surveillance de l’appliance Analytique Platform System.  

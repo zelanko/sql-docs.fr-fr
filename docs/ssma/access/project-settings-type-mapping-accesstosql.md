@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299132"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de Type) (AccessToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md).  
@@ -44,7 +44,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
   
 |Type de données Access|Type de données de SQL Server|  
 |--------------------|------------------------|  
-|**binaire [\*... \*]**|**varbinary[\*]**|  
+|**binary[\*..\*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**currency**|**money**|  
@@ -53,12 +53,12 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**entier**|**smallint**|  
-|**Long**|**Int**|  
-|**LONGBINARY**|**varbinary(max)**|  
-|**Mémo**|**nvarchar(max)**|  
+|**long**|**Int**|  
+|**longbinary**|**varbinary(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**Mémo** : pour Access 97|**varchar(max)**|  
-|**Unique**|**real**|  
-|**texte [\*... \*]**|**nvarchar[\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
 |**texte [\*... \*]** : pour Access 97|**varchar[\*]**|  
   
 **Ajouter**  
