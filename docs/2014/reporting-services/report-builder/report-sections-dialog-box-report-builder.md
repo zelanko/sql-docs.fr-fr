@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a24b4a4dd0ffe0c4b4ba988460e10f6bf832766e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155565"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Boîte de dialogue Sections de rapport (Générateur de rapports)
   Lorsque vous ouvrez un rapport, le Générateur de rapports vérifie que le rapport contient un seul élément **\<Section>** RDL (Report Definition Language). L’ouverture d’un rapport avec plusieurs éléments **\<Section>** n’est pas prise en charge.  

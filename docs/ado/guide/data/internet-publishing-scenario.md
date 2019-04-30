@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161499"
 ---
 # <a name="internet-publishing-scenario"></a>Scénario de publication Internet
 Cet exemple de code montre comment utiliser ADO avec le fournisseur Microsoft OLE DB pour la publication Internet. Dans ce scénario, vous allez créer une application Visual Basic qui utilise **Recordset**, **enregistrement**, et **Stream** objets pour afficher le contenu des ressources publiées avec le fournisseur de publications Internet.  
   
  Les étapes suivantes sont nécessaires pour créer ce scénario :  
   
--   [Étape 1 : Configurer le projet Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
+-   [Étape 1 : Configurer le projet Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
--   [Étape 3 : Remplir la zone de liste des champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
+-   [Étape 3 : Remplir la zone de liste de champs](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [Étape 4 : Remplir la zone de texte Détails](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [Étape 4 : Remplir la zone de texte Détails](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

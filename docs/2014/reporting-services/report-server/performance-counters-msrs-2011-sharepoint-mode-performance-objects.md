@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77ce77a2c42944a881942d4ee953183a68f5bbd6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191184"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-sharepoint-mode-and-msrs-2014-windows-service-sharepoint-mode-performance-objects-sharepoint-mode"></a>Compteurs de performance du service Web MSRS 2014 en mode SharePoint et des objets de performance du service Windows MSRS 2014 en mode SharePoint (mode SharePoint)
   Cette rubrique décrit les compteurs de performance pour les objets de performance `MSRS 2014 Web Service SharePoint Mode` et `MSRS 2014 Windows Service SharePoint Mode` qui font partie d'un déploiement [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] en mode SharePoint.  

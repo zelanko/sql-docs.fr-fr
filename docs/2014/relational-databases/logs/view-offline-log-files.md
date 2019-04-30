@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144595"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
   Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez consulter les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une instance locale ou distante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'instance cible est hors connexion ou ne peut pas démarrer.  
@@ -45,7 +45,7 @@ ms.locfileid: "52818249"
   
 -   [Classe SqlErrorLogFile](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (cette rubrique indique comment récupérer des informations concernant tous les fichiers journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> Autorisations  
  Pour vous connecter à un fichier journal hors connexion, vous devez disposer des autorisations suivantes sur les ordinateurs local et distant :  
   
 -   Accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement12** . Par défaut, tout le monde dispose de l'accès en lecture via l'autorisation Activer le compte. Pour plus d'informations, consultez la procédure « Pour vérifier les autorisations WMI », plus loin dans cette section.  

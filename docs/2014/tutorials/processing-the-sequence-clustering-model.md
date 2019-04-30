@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188143"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Traitement du modèle Sequence Clustering
   Une fois que vous avez créé une structure d'exploration de données, vous devez déployer les modifications que vous avez apportées sur la solution d'exploration de données, puis traiter la structure. À l'issue du traitement de la nouvelle structure et du modèle d'exploration de données, vous pouvez parcourir le modèle d'exploration de données.  

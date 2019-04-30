@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143655"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insérer des extraits de code d'entourage (surround-with) Transact-SQL
   Un extrait de code d'entourage est un modèle pouvant servir de point de départ lors de l'intégration d'un jeu d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un bloc BEGIN, IF ou WHILE.  

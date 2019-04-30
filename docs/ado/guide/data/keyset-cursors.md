@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161649"
 ---
 # <a name="keyset-cursors"></a>Curseurs de jeu de clés
-Le curseur de jeu de clés fournit des fonctionnalités entre un statique et un curseur dynamique dans sa capacité à détecter les modifications. À un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs de lignes dans le jeu de résultats.  
+Le curseur de jeu de clés fournit des fonctionnalités entre un statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes dans le jeu de résultats.  
   
- Curseurs sont contrôlées par un ensemble d’identificateurs uniques (clés) appelé jeu de clés. Les clés sont créées à partir d'un ensemble de colonnes qui identifient uniquement les lignes de l'ensemble de résultats. Le jeu de clés est l’ensemble de valeurs de clés à partir de toutes les lignes retournées par l’instruction de requête.  
+ Les curseurs de jeux de clés sont gérés par un ensemble d’identificateurs uniques (clés) appelé jeu de clés. Les clés sont créées à partir d'un ensemble de colonnes qui identifient uniquement les lignes de l'ensemble de résultats. Le jeu de clés est l’ensemble des valeurs de clés de toutes les lignes retournées par l’instruction de requête.  
   
- Avec les curseurs, une clé est générée et enregistrée pour chaque ligne du curseur et stockée sur la station de travail cliente ou sur le serveur. Lorsque vous accédez à chaque ligne, la clé stockée est utilisée pour extraire les valeurs de données actuelles de la source de données. Dans un curseur keyset, l’appartenance au jeu de résultats est figée lorsque le jeu de clés est pleine. Par la suite, ajouts ou mises à jour affectant l’appartenance ne sont pas une partie du résultat défini jusqu'à ce qu’il est rouvert.  
+ Avec les curseurs de jeux de clés, une clé est générée et enregistrée pour chaque ligne du curseur et stockée sur la station de travail cliente ou sur le serveur. Quand vous accédez à chaque ligne, la clé stockée est utilisée pour extraire les valeurs de données actuelles de la source de données. Dans un curseur de jeux de clés, l’appartenance au jeu de résultats est figée quand le jeu de clés est plein. Par la suite, les ajouts ou mises à jour affectant l’appartenance ne font partie du jeu de résultats qu’une fois celui-ci rouvert.  
   
- Modifications apportées aux valeurs de données (effectuées par le propriétaire du jeu de clés ou d’autres processus) sont visibles lorsque l’utilisateur fait défiler le jeu de résultats. Les insertions effectuées en dehors du curseur (par d’autres processus) sont visibles uniquement si le curseur est fermé et rouvert. Les insertions effectuées à l’intérieur du curseur sont visibles à la fin du jeu de résultats.  
+ Modifications apportées aux valeurs de données (effectuées par le propriétaire du jeu de clés ou d’autres processus) sont visibles lorsque l’utilisateur fait défiler le jeu de résultats. Les insertions effectuées en dehors du curseur (par d’autres processus) sont visibles uniquement si le curseur est fermé puis rouvert. Les insertions effectuées à partir de l’intérieur du curseur sont visibles à la fin du jeu de résultats.  
   
  Lorsqu’un curseur keyset tente de récupérer une ligne qui a été supprimée, la ligne apparaît comme un « trou » dans le jeu de résultats. La clé pour la ligne existe dans le jeu de clés, mais la ligne n’existe plus dans le jeu de résultats. Si les valeurs de clé dans une ligne sont mis à jour, la ligne est considérée comme supprimée, puis inséré, par conséquent, ces lignes apparaissent également sous forme de trous dans le jeu de résultats. Pendant un curseur keyset peut toujours détecter les lignes supprimées par d’autres processus, il peut éventuellement supprimer les clés des lignes, qu'il se supprime lui-même. Curseurs que cela ne peut pas détecter leurs propres suppressions car la preuve a été supprimée.  
   

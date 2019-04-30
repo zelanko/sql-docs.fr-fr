@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149600"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importer le Pack d’administration SCOM - Analytique Platform System
 Suivez ces étapes pour importer les packs d’administration de System Center Operations Manager (SCOM) pour Analytique Platform System (APS). Les packs d’administration sont requises pour analyser les Parallel Data Warehouse à partir de SCOM. 

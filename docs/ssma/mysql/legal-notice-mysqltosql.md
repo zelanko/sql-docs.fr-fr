@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 12b945d4f9e320cba6a143893b306a9fc11da675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192378"
 ---
 # <a name="legal-notice-mysqltosql"></a>Mentions légales (MySQLToSql)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
   
 Un exemple présenté dans cette documentation sert principalement à illustrer un concept ou l’utilisation raisonnable d’une instruction ou d’une clause particulière. La plupart des exemples ne reprennent pas la totalité du code normalement utilisé dans un système en production puisque certaines parties de la validation des données et de la gestion des erreurs sont retirées pour mettre l’accent sur un concept ou une instruction particulière. Aucun support technique n’est disponible pour ces exemples, ni pour le code source fourni.  
   
-Sauf mention contraire, les exemples de sociétés, d’organisations, de produits, de noms de domaine, d’adresses de messagerie, de personnes, de lieux et d’événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L’utilisateur est tenu d’observer la réglementation relative aux droits d’auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
+Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L’utilisateur est tenu d’observer la réglementation relative aux droits d’auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   

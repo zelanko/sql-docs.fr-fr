@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181102"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Spécifie l’état de modification d’un enregistrement.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|Indique qu’aucune opération de modification n’est en cours.|  
 |**adEditInProgress**|1|Indique que les données dans l’enregistrement actif ont été modifiées mais ne pas enregistrées.|  

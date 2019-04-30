@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154998"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est un environnement intégré pour la gestion de votre infrastructure SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] fournit des outils permettant de configurer, de surveiller et d'administrer les instances de SQL Server. Il fournit également des outils permettant de déployer, de surveiller et de mettre à niveau les composants de la couche Données, comme les bases de données et les entrepôts de données utilisés par vos applications, et de créer des requêtes et des scripts.  
@@ -36,7 +36,7 @@ ms.locfileid: "52812351"
 |Décrit comment utiliser les éditeurs de langage de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer et déboguer des requêtes et des scripts de manière interactive.|[Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutoriel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
+ [Tutoriel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

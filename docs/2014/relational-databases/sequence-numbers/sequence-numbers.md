@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184405"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
   Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande. Les séquences, contrairement aux colonnes d'identité, ne sont pas associées à des tables. Une application fait référence à un objet séquence pour recevoir sa valeur suivante. La relation entre les séquences et les tables est contrôlée par l'application. Les applications utilisateur peuvent référencer un objet séquence et coordonner les clés des valeurs entre plusieurs lignes et tables.  
@@ -126,7 +126,7 @@ GO
   
  `3        Brake   1`  
   
-### <a name="b-calling-next-value-for-before-inserting-a-row"></a>b. Appel de la fonction NEXT VALUE FOR avant d'insérer une ligne  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>B. Appel de la fonction NEXT VALUE FOR avant d'insérer une ligne  
  À l'aide de la table `Orders` créée dans l'exemple A, l'exemple suivant déclare une variable nommée `@nextID`, puis utilise la fonction NEXT VALUE FOR pour affecter à la variable le numéro séquentiel disponible suivant. L'application est censée effectuer un traitement de la commande, tel que fournir au client un numéro `OrderID` de commande potentielle, puis valider la commande. Quelle que soit la durée du traitement ou quel que soit le nombre de commandes supplémentaires ajoutées au cours du processus, le numéro d'origine est conservé pour être utilisé par cette connexion. Enfin, l'instruction `INSERT` ajoute la commande à la table `Orders` .  
   
 ```  

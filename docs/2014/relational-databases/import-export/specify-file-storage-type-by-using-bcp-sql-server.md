@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155826"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
-  Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Données peuvent être exportées vers un fichier de données en tant que son type de table de base de données (format natif), dans sa représentation sous forme de caractères (format caractères) ou en tant que n’importe quel type de données où la conversion implicite est prise en charge ; par exemple, en copiant un `smallint` comme un `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
+  Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données au type de table de base de données (format natif), dans sa représentation caractères (format caractères) ou tout type de données pour lesquelles la conversion implicite est prise en charge ; par exemple, en copiant un type de données `smallint` comme `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Invite bcp pour le type de stockage de fichier  
  Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  
@@ -35,9 +35,9 @@ ms.locfileid: "48048439"
   
 -   Pour exporter en bloc des données d’une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format de stockage le plus compact possible (format de données natif), vous devez accepter les types de stockage de fichier par défaut fournis par l’utilitaire **bcp**. Pour la liste des types de stockage de fichier natifs, consultez la section « Types de stockage de fichier natifs » plus loin dans cette rubrique.  
   
--   Pour exporter des données en bloc à partir d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format caractère, spécifiez `char` comme type de stockage de fichier pour toutes les colonnes dans la table.  
+-   Pour exporter en bloc des données d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données au format caractère, spécifiez le paramètre `char` comme type de stockage de fichier pour toutes les colonnes de la table.  
   
--   Pour importer en bloc des données à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un fichier de données, spécifiez le type de stockage de fichier en tant que `char` pour les types stockés dans un caractère de format et, pour les données stockées dans un format de type de données natif, spécifiez un des types de stockage de fichiers, comme il convient :  
+-   Pour importer en bloc des données dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un fichier de données, spécifiez le type de stockage de fichier `char` pour les types stockés au format caractère et, pour les données stockées dans le format de type de données natif, spécifiez l'un des types de stockage de fichier appropriés :  
   
     |type de stockage de fichier|Entrer sur la ligne de commande|  
     |-----------------------|-----------------------------|  
@@ -120,7 +120,7 @@ ms.locfileid: "48048439"
   
 -   Si vous entrez un type de stockage de fichier qui représente une conversion implicite non valide, **bcp** échoue ; par exemple, bien que vous puissiez spécifier `int` pour `smallint` données, si vous spécifiez `smallint` pour `int` données, erreurs de dépassement se produisent.  
   
--   Lorsque des types de données tels que `float`, `money`, `datetime`, ou `int` sont stockés en tant que leurs types de base de données, les données sont écrites dans le fichier de données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du format natif.  
+-   Lorsque des types de données autres que des caractères tels que `float`, `money`, `datetime` ou `int` sont stockés avec leurs types de base de données, les données sont écrites dans le fichier de données au format natif de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  

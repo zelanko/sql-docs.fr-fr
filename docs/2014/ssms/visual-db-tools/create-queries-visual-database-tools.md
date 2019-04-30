@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184301"
 ---
 # <a name="create-queries-visual-database-tools"></a>Créer des requêtes (Visual Database Tools)
   Les requêtes vous permettent de récupérer des données des tables et vues contenues dans votre base de données. Vous pouvez créer et utiliser des requêtes dans le **Concepteur de requêtes et de vues**, qui se compose de quatre volets : le [volet Schéma](visual-database-tools.md), le [volet SQL](sql-pane-visual-database-tools.md), le [volet Critères](criteria-pane-visual-database-tools.md)et le [volet Résultats](results-pane-visual-database-tools.md).  

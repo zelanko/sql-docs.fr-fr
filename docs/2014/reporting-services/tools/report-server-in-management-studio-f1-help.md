@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9876003e57a69b8a1eacddaa3e41b681c806e7f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200988"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Aide du serveur de rapports dans Management Studio accessible par la touche F1
   Cette section contient des rubriques sur les boîtes de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] qui peuvent servir à gérer les serveurs de rapports.  

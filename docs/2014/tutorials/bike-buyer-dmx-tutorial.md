@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140544"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Didacticiel DMX Bike Buyer
   Dans ce didacticiel, vous allez apprendre à créer, assimiler et explorer des modèles d'exploration de données à l'aide du langage de requête DMX (Data Mining Extensions). Vous utiliserez ensuite ces modèles pour créer des tâches de prédiction déterminant si un client envisage ou non d'acheter un vélo.  
@@ -49,7 +49,7 @@ ms.locfileid: "56025250"
   
  Le langage de requête DMX (Data Mining Extensions) fourni par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permet de créer et d'utiliser des modèles d'exploration de données. L'algorithme MDT ( [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees) permet de créer des modèles que vous pouvez utiliser pour prévoir les intentions d'achat de vélo d'une personne. Le modèle obtenu permet d'exploiter un seul client ou un ensemble de clients en guise de données. L'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering permet de créer des groupes de clients sur la base de caractéristiques communes. L'objectif de ce didacticiel est de fournir des scripts DMX à utiliser dans l'application personnalisée.  
   
- **Pour plus d'informations, consultez :** [Solutions d'exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Pour plus d'informations, consultez :** [Solutions d’exploration de données](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Structure et modèles d'exploration de données  
  Avant de créer des instructions DMX, il est primordial de comprendre les objets principaux auxquels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fait appel pour créer des modèles d'exploration de données. La structure d'exploration de données est une structure de données qui définit le domaine de données à partir duquel les modèles d'exploration de données sont créés. Une structure d'exploration de données unique peut contenir plusieurs de ces modèles partageant le même domaine. Un modèle d'exploration applique un algorithme de modèle d'exploration aux données qui sont représentées par une structure d'exploration de données.  

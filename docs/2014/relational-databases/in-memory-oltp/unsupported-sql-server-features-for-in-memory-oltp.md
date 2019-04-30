@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157241"
 ---
 # <a name="supported-sql-server-features"></a>Fonctionnalités SQL Server prises en charge
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont prises en charge, et celles qui ne le sont pas, avec les objets mémoire optimisés.  
@@ -63,7 +63,7 @@ ms.locfileid: "53375031"
   
 -   Intégration à AlwaysOn : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit plusieurs options permettant de garantir un haut niveau de disponibilité pour un serveur ou une base de données, y compris AlwaysOn. Pour plus d’informations, consultez [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
--   Copie des journaux de transaction : La copie des journaux de transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'envoyer automatiquement les sauvegardes du journal des transactions à partir d'une base de données primaire sur une instance du serveur principal vers une ou plusieurs bases de données secondaires sur des instances distinctes du serveur secondaire. Pour plus d’informations, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
+-   Envoi de journaux : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Envoi de journaux permet d’envoyer automatiquement des sauvegardes de fichier journal à partir d’une base de données primaire sur une instance de serveur principal à un ou plusieurs bases de données secondaires sur des instances distinctes du serveur secondaire. Pour plus d’informations, consultez [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
 -   La réplication transactionnelle vers des tables mémoire optimisées sur les abonnés est prise en charge avec certaines restrictions. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "53375031"
 |Compression de données pour les tables à mémoire optimisée.|Vous pouvez utiliser la fonctionnalité de compression de données pour compresser les données dans une base de données et réduire la taille de la base de données. Pour plus d'informations, consultez [Data Compression](../data-compression/data-compression.md).|  
 |Partitionnement des tables et des index HASH mémoire optimisés.|Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Pour plus d’informations, consultez [Tables et index partitionnés](../partitions/partitioned-tables-and-indexes.md).|  
 |Chiffrement transparent des données (TDE) sur le groupe de fichiers mémoire optimisé d'une base de données.|Le chiffrement transparent des données (TDE, Transparent Data Encryption) effectue le chiffrement et le déchiffrement des E/S en temps réel des fichiers de données et des fichiers journaux. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> Le chiffrement transparent des données (TDE) peut être activé sur une base de données contenant des objets de l'OLTP en mémoire. Les enregistrements de journal de l'OLTP en mémoire sont chiffrés si le chiffrement transparent des données (TDE) est activé. Les fichiers de point de contrôle des tables durables ne sont pas chiffrés, même si le chiffrement transparent des données (TDE) est activé sur la base de données.|  
-|REPLICATION|Les configurations de réplication autres que la réplication transactionnelle vers des tables mémoire optimisées sur les abonnés sont incompatibles avec des tables ou des vues qui référencent des tables mémoire optimisées. Réplication à l’aide de sync_mode = 'database snapshot' n’est pas pris en charge s’il existe un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Réplication|Les configurations de réplication autres que la réplication transactionnelle vers des tables mémoire optimisées sur les abonnés sont incompatibles avec des tables ou des vues qui référencent des tables mémoire optimisées. Réplication à l’aide de sync_mode = 'database snapshot' n’est pas pris en charge s’il existe un groupe de fichiers mémoire optimisé. Pour plus d’informations, consultez [Abonnés à la réplication de tables optimisées en mémoire](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |MARS (Multiple Active Result Sets)|Multiple Active Result Sets (MARS) n'est pas pris en charge avec les tables mémoire optimisées. Cette erreur peut également indiquer l'utilisation d'un serveur lié. Un serveur lié peut utiliser MARS. Les serveurs liés ne sont pas pris en charge avec les tables mémoire optimisées. À la place, connectez-vous directement au serveur et à la base de données qui héberge les tables mémoire optimisées.|  
 |Mise en miroir|La mise en miroir de bases de données est une solution permettant d'accroître la disponibilité d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Reconstruire le journal|La reconstruction du journal, via un attachement ou ALTER DATABASE, n'est pas prise en charge pour les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  

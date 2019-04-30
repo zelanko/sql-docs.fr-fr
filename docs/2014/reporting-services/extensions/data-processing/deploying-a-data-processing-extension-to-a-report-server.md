@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164065"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procédure : Déployer une Extension de traitement des données à un serveur de rapports
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procédure : déployer une extension pour le traitement des données sur un serveur de rapports
   Les serveurs de rapports utilisent les extensions de traitement des données pour extraire, puis traiter les données qui figurent dans les rapports rendus. Vous devez déployer l'assembly d'extension utilisé pour le traitement des données sur un serveur de rapports, et ce sous la forme d'un assembly privé. Vous devez également créer une entrée dans le fichier de configuration du serveur de rapports, à savoir dans le fichier dénommé RSReportServer.config.  
   
 ## <a name="procedures"></a>Procédures  

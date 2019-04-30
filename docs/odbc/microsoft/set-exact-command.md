@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159343"
 ---
 # <a name="set-exact-command"></a>SET EXACT, commande
 Spécifie les règles de comparaison de deux chaînes de longueurs différentes.  
@@ -58,12 +58,12 @@ SET EXACT ON | OFF
 |« abc » = « ab »|Correspondance|Aucune correspondance|Aucune correspondance|  
 |« abc » = « ab_ »|Aucune correspondance|Aucune correspondance|Aucune correspondance|  
 |« ab » = « ab_ »|Aucune correspondance|Correspondance|Aucune correspondance|  
-|« ab_ » = « ab »|Correspondance|Correspondance|Aucune correspondance|  
+|"ab_" = "ab"|Correspondance|Correspondance|Aucune correspondance|  
 |« » = « ab »|Aucune correspondance|Aucune correspondance|Aucune correspondance|  
 |« ab » = « »|Correspondance|Aucune correspondance|Aucune correspondance|  
 |"__" = ""|Correspondance|Correspondance|Aucune correspondance|  
 |"" = "___"|Aucune correspondance|Correspondance|Aucune correspondance|  
-|TRIM("___") = « »|Correspondance|Correspondance|Correspondance|  
+|TRIM("___") = ""|Correspondance|Correspondance|Correspondance|  
 |« « = TRIM("___")|Correspondance|Correspondance|Correspondance|  
   
 ## <a name="see-also"></a>Voir aussi  

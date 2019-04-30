@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158020"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
   Nouveauté de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], l' [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] peut améliorer significativement les performances d'application de base de données OLTP. L'[!INCLUDE[hek_2](../../../includes/hek-2-md.md)] est un moteur de base de données optimisé en mémoire intégré au moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qui est optimisé pour OLTP.  

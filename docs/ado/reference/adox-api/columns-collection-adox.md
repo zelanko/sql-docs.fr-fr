@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cd13809703c14022b6e2a1e7dbb87716c4778c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184003"
 ---
 # <a name="columns-collection-adox"></a>Columns, collection (ADOX)
 Contient tous les [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets d’une table, un index ou une clé.  

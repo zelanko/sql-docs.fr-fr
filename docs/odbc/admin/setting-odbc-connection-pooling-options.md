@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198541"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Définition des options de mise en pools des connexions ODBC
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions que vous n’avez pas besoin d’être rétablies à chaque utilisation. Vous pouvez utiliser la **le regroupement de connexions** onglet de la **administrateur de sources de données ODBC** boîte de dialogue pour activer et désactiver l’analyse des performances. Double-cliquez sur un nom de pilote pour définir la période de délai d’attente de connexion.  

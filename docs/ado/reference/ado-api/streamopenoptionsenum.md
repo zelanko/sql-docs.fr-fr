@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180743"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Spécifie les options pour l’ouverture une [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet. Les valeurs peuvent être combinées avec une opération OR.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|Ouvre le **Stream** objet en mode asynchrone.|  
 |**adOpenStreamFromRecord**|4|Identifie le contenu de la *Source* paramètre soit déjà ouvert [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet. Le comportement par défaut consiste à traiter *Source* comme une URL qui pointe directement vers un nœud dans une structure arborescente. Le flux par défaut associé à ce nœud est ouvert.|  

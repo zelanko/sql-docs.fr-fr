@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190238"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802445"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Options de configuration pour la définition à : dans un message  
+##  <a name="bkmk_setting_TO_field"></a> Options de configuration pour la définition à : Champ dans un Message  
  Les abonnements définis par l'utilisateur qui sont créés en fonction des autorisations accordées par la tâche **Gérer les abonnements individuels** contiennent un nom d'utilisateur prédéfini qui repose sur le compte d'utilisateur de domaine. Lorsque l'utilisateur crée l'abonnement, le nom du destinataire dans le champ **À :** est configuré automatiquement à l'adresse de la personne qui crée l'abonnement, au moyen du compte d'utilisateur de domaine.  
   
  Si vous utilisez un redirecteur ou un serveur SMTP qui utilise des comptes de messagerie différents du compte d'utilisateur de domaine, la remise des rapports échouera lorsque le serveur SMTP tentera de remettre le rapport à cet utilisateur.  
@@ -180,15 +180,15 @@ ms.locfileid: "56802445"
   
 2.  Ouvrez le fichier RSReportServer.config dans un éditeur de texte.  
   
-3.  Vérifiez que <`UrlRoot`> est paramétré à l'adresse URL du serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
+3.  Vérifiez que <`UrlRoot`> est définie sur l’adresse URL de serveur de rapports. Cette valeur est définie lorsque vous configurez le serveur de rapports et elle devrait normalement être déjà définie. Si elle n'est pas définie, tapez l'adresse URL du serveur de rapports.  
   
-4.  Dans la section Remise, recherchez <`ReportServerEmail`>.  
+4.  Dans la section remise, recherchez <`ReportServerEmail`>.  
   
 5.  Dans <`SMTPServer`>, tapez le nom du serveur SMTP. Il peut s'agir d'une adresse IP, du nom UNC d'un ordinateur sur l'intranet de votre entreprise ou d'un nom de domaine complet.  
   
-6.  Vérifiez que <`SendUsing`> a la valeur 2. Si la valeur est différente, le serveur de rapports n'est pas configuré pour utiliser un service SMTP distant.  
+6.  Vérifiez que <`SendUsing`> est défini sur 2. Si la valeur est différente, le serveur de rapports n'est pas configuré pour utiliser un service SMTP distant.  
   
-7.  Dans <`From`>, tapez le nom d'un compte qui a l'autorisation d'envoyer des messages électroniques à partir du serveur SMTP.  
+7.  Dans <`From`>, tapez le nom d’un compte qui a l’autorisation d’envoyer des messages électroniques à partir du serveur SMTP.  
   
 8.  Enregistrez le fichier.  
   

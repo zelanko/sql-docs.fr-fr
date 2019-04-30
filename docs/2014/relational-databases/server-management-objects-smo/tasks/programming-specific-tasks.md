@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158712"
 ---
 # <a name="programming-specific-tasks"></a>Programmation de tâches spécifiques
   La programmation de tâches spécifiques à l'aide d'objets SMO inclut des sujets complexes requis uniquement par les programmes ayant une fonction spécifique, par exemple la sauvegarde, l'analyse des statistiques, la réplication, la gestion des objets d'instance et la définition d'options de configuration.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187130"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Utilisation de projets SSMA (SybaseToSQL)
 Pour migrer des bases de données Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous créez tout d’abord un projet SSMA. Le projet est un fichier qui contient des métadonnées sur les bases de données ASE que vous souhaitez migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, les métadonnées sur l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure qui reçoit les objets migrés et les données, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure informations de connexion et les paramètres du projet.  
@@ -75,7 +75,7 @@ Pour migrer des données à partir de bases de données ASE [!INCLUDE[ssNoVersio
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Base de données SQL Azure  
+    -   Azure SQL DB  
   
 Puis cliquez sur **OK**.  
   
@@ -97,7 +97,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées à ce stade, ne sélectionnez pas les cases à cocher.  
   
-    2.  Cliquez sur le **enregistrer** bouton.  
+    2.  Cliquez sur le bouton **Enregistrer**.  
   
         SSMA analysera les schémas Sybase ASE et enregistrer les métadonnées dans le fichier projet.  
   

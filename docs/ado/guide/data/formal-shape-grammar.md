@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161418"
 ---
 # <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
 Il s’agit de la grammaire formelle pour la création de n’importe quelle commande de la forme :  
@@ -42,30 +42,30 @@ Il s’agit de la grammaire formelle pour la création de n’importe quelle com
   
 |Terme|Définition|  
 |----------|----------------|  
-|\<la commande Shape >|FORME [\<table-exp > [[AS] \<alias >]] [\<forme-action >]|  
-|\<table-exp >|{\<texte de commande fournisseur >}&#124;<br /><br /> (\<la commande shape >)&#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<nom entre guillemets >|  
-|\<action de la forme >|APPEND \<liste de champs d’un alias >&#124;<br /><br /> CALCUL \<liste de champs d’un alias > [BY \<liste de champs >]|  
-|\<liste de champs d’un alias >|\<champ d’un alias > [, \<champ alias... >]|  
-|\<champ d’un alias >|\<champ-exp > [[AS] \<alias >]|  
-|\<field-exp>|(\<exp de relation >)&#124;<br /><br /> \<exp calculée >&#124;<br /><br /> \<agrégat-exp >&#124;<br /><br /> \<nouveau exp >|  
-|< relation_exp >|\<table-exp > [[AS] \<alias >]<br /><br /> RELATE \<relation-cond-list >|  
-|\<relation-cond-list>|\<cond-relation > [, \<cond-relation >...]|  
-|\<cond-relation >|\<nom de champ > TO \<enfant-ref >|  
-|\<enfant-ref >|\<nom de champ >&#124;<br /><br /> PARAMÈTRE \<-ref param >|  
-|\<ref-param >|\<numéro >|  
-|\<field-list>|\<nom de champ > [, \<-nom du champ >]|  
-|\<aggregate-exp>|Somme (\<qualified-champ-name >)&#124;<br /><br /> AVG (\<qualified-champ-name >)&#124;<br /><br /> MIN (\<qualified-champ-name >)&#124;<br /><br /> MAX (\<qualified-champ-name >)&#124;<br /><br /> NOMBRE (\<alias qualifié > &#124; \<nom qualifié >)&#124;<br /><br /> STDEV (\<qualified-champ-name >)&#124;<br /><br /> N’importe quel (\<qualified-champ-name >)|  
-|\<exp calculée >|CALC (\<expression >)|  
-|\<nom de champ qualifié >|\<alias >. [\<alias >...] \<-nom du champ >|  
-|\<alias >|\<nom entre guillemets >|  
-|\<nom de champ >|\<nom entre guillemets > [[AS] \<alias >]|  
-|\<nom entre guillemets >|«\<chaîne > »&#124;<br /><br /> '\<chaîne >'&#124;<br /><br /> [\<chaîne >]&#124;<br /><br /> \<Nom >|  
-|\<nom qualifié >|alias [.alias...]|  
-|\<Nom >|alpha [alpha &#124; chiffre &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<numéro >|chiffre [chiffre...]|  
-|\<nouveau exp >|NOUVELLE \<type de champ > [(\<nombre > [, \<nombre >])]|  
+|\<shape-command>|FORME [\<table-exp > [[AS] \<alias >]] [\<forme-action >]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|APPEND \<liste de champs d’un alias >&#124;<br /><br /> CALCUL \<liste de champs d’un alias > [BY \<liste de champs >]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp > [[AS] \<alias >]<br /><br /> RELATE \<relation-cond-list >|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<nom de champ > TO \<enfant-ref >|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARAMÈTRE \<-ref param >|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|Somme (\<qualified-champ-name >)&#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV (\<qualified-champ-name >)&#124;<br /><br /> N’importe quel (\<qualified-champ-name >)|  
+|\<calculated-exp>|CALC (\<expression >)|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|alias [.alias...]|  
+|\<name>|alpha [alpha &#124; chiffre &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<number>|chiffre [chiffre...]|  
+|\<new-exp>|NOUVELLE \<type de champ > [(\<nombre > [, \<nombre >])]|  
 |\<field-type>|Un type de données OLE DB ou ADO.|  
-|\<chaîne >|Unicode-char [caractères unicode...]|  
+|\<string>|Unicode-char [caractères unicode...]|  
 |\<expression>|Une expression Visual Basic pour Applications dont les opérandes sont d’autres colonnes non calculées dans la même ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  

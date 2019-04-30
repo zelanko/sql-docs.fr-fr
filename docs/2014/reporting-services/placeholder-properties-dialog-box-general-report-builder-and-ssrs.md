@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188198"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'espace réservé, Général (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Propriétés de l'espace réservé** pour modifier les options de valeur, d'info-bulle et de balise d'un espace réservé dans une zone de texte.  

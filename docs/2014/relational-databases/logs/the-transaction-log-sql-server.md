@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144615"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
   Chaque base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède un journal des transactions qui enregistre toutes les transactions et les modifications apportées par chacune d'entre elles. Le journal des transactions doit être vidé régulièrement pour éviter qu'il ne soit saturé. Toutefois, certains facteurs peuvent retarder la troncation du journal. Par conséquent, il est important de surveiller la taille du journal. Certaines opérations peuvent faire l'objet d'une journalisation minimale afin de réduire leur impact sur la taille des journaux de transactions.  
@@ -93,7 +93,7 @@ ms.locfileid: "52807011"
 |12|-|Usage interne uniquement|  
 |13|OLDEST_PAGE|Si une base de données est configurée pour utiliser des points de contrôle indirects, la page la plus ancienne dans la base de données peut être plus ancienne que le LSN du point de contrôle. Dans ce cas, la page la plus ancienne peut retarder la troncation du journal. (Tous les modes de récupération)<br /><br /> Pour plus d’informations sur les points de contrôle indirects, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|Cette valeur n'est pas utilisée actuellement.|  
-|16|XTP_CHECKPOINT|Quand une base de données possède un groupe de fichiers à mémoire optimisée, aucune troncation du journal des transactions ne peut avoir lieu avant le déclenchement du point de contrôle automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (ce qui se produit chaque fois que le journal croît de 512 Mo).<br /><br /> Remarque : Pour tronquer le journal des transactions avant qu’il n’atteigne 512 Mo, exécutez manuellement la commande Checkpoint sur la base de données en question.|  
+|16|XTP_CHECKPOINT|Quand une base de données possède un groupe de fichiers à mémoire optimisée, aucune troncation du journal des transactions ne peut avoir lieu avant le déclenchement du point de contrôle automatique [!INCLUDE[hek_2](../../includes/hek-2-md.md)] (ce qui se produit chaque fois que le journal croît de 512 Mo).<br /><br /> Remarque : Pour tronquer le journal des transactions avant de 512 Mo, déclencher la commande Checkpoint manuellement par rapport à la base de données en question.|  
   
 ##  <a name="MinimallyLogged"></a> Opérations qui peuvent être consignées  
  La*journalisation minimale* implique de ne journaliser que les informations obligatoires pour pouvoir récupérer la transaction sans prendre en charge la récupération jusqu’à une date et heure. Cette rubrique identifie les opérations qui sont journalisées au minimum en mode de récupération utilisant les journaux de transactions (ainsi qu'en mode de récupération simple, sauf lorsqu'une sauvegarde est en cours).  

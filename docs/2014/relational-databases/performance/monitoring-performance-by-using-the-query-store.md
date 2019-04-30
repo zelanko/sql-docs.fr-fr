@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150778"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Analyse des performances à l'aide du magasin de requêtes
   La fonctionnalité de magasin de requêtes fournit aux administrateurs de bases de données des informations sur le choix de plan de requête et les performances. Elle simplifie la résolution des problèmes de performances en vous permettant de trouver rapidement les différences de performances provoquées par un changement de plan de requête. La fonctionnalité capture automatiquement l'historique des requêtes, des plans et des statistiques d'exécution et les conserve à des fins de consultation. Elle sépare les données en périodes, ce qui vous permet de voir les modèles d'utilisation de base de données et de comprendre à quel moment le changement de plan de requête a eu lieu sur le serveur. Le magasin de requêtes peut être configuré à l'aide de l'option [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .  
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>Utilisation de la fonctionnalité de régression des requêtes  
  Après avoir activé le Magasin des requêtes, actualisez la partie de la base de données du volet de l'Explorateur d'objets pour ajouter la section **Magasin des requêtes** .  
   
- ![Query Store](../../database-engine/media/querystore.PNG "Query Store")  
+ ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
  Sélectionnez **Requêtes en régression**pour ouvrir le volet **Requêtes en régression** dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. Le volet Requêtes en régression affiche les requêtes et les plans du magasin de requêtes. Les listes déroulantes situées en haut vous permettent de sélectionner les requêtes selon différents critères. Sélectionnez un plan pour afficher le plan de requête sous forme graphique. Des boutons permettent d'afficher la requête source, de forcer un plan de requête et d’annuler son application forcée, ainsi que d'actualiser l'affichage.  
   

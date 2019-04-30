@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0994c4ee4c96e5ed9c373ec4bdc94b02ccddff7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156258"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -38,7 +38,7 @@ Chaque section de cet article décrit un composant d’ADO.
   
  Comme ADO, ADO MD utilise un fournisseur OLE DB sous-jacent pour accéder aux données. Pour travailler avec ADO MD, le fournisseur doit être un fournisseur de données multidimensionnelles (MDP) comme défini par la spécification OLE DB pour OLAP. Fournisseurs MDP présente des données dans des vues multidimensionnelles par opposition aux fournisseurs de données tabulaires (TDP) qui présentent les données sous forme de tableaux. Reportez-vous à la documentation de votre fournisseur OLE DB pour OLAP pour des informations plus détaillées sur la syntaxe spécifique et les comportements pris en charge par votre fournisseur.  
   
-## <a name="rds"></a>SERVICES BUREAU À DISTANCE  
+## <a name="rds"></a>RDS  
  Service de données à distance (RDS) est une fonctionnalité d’ADO, avec lequel vous pouvez déplacer des données à partir d’un serveur vers une application cliente ou d’une page Web, manipuler les données sur le client et retourner des mises à jour sur le serveur dans un seul aller-retour.  
   
 > [!IMPORTANT]

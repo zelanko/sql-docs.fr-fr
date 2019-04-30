@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156607"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Générateur de rapports dans SQL Server 2014
   Le Générateur de rapports est un environnement de création de rapports destiné aux utilisateurs professionnels qui préfèrent travailler dans l'environnement [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez soit afficher un aperçu de vos rapports dans le Générateur de rapports, soit les publier sur un serveur de rapports ou un serveur de rapports en mode intégré SharePoint, pour permettre à d'autres utilisateurs de les exécuter.  
@@ -79,7 +79,7 @@ ms.locfileid: "59948265"
  [Nouveautés du Générateur de rapports pour SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Décrit les nouvelles fonctionnalités de cette version du Générateur de rapports, notamment les cartes.  
   
- [Didacticiel : Créer un rapport de graphique rapide en mode hors connexion](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutoriel : Créer un rapport de graphique rapide en mode hors connexion](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Ce didacticiel présente le Générateur de rapports et les Assistants disponibles pour vous aider à créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
   
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md)  

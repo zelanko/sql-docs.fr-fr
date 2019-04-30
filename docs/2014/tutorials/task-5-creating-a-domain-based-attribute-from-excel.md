@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143070"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Créer un attribut basé sur un domaine à partir d'Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel
   Dans cette tâche, vous convertissez le **état** attribut de la **fournisseur** entité en tant qu’un **attribut basé sur un domaine**. Après avoir configuré l’attribut d’état pour être basés sur un domaine et le publier dans MDS, une nouvelle entité appelée **état** va être créé sur le serveur MDS avec toutes les valeurs dans la colonne et le **état** attribut de la **Fournisseur** entité sera remplie avec les valeurs à partir de la **état** entité. À présent, le **fournisseurs** modèle doit avoir deux entités : **Fournisseur** et **état** où le **état** attribut de la **fournisseur** entité est un attribut basé sur le domaine qui dépend de **état** entité.  
   
 1.  Basculez vers **Excel** fenêtre a **Cleansed and Matched Suppliers.xlsx** ouvrir.  

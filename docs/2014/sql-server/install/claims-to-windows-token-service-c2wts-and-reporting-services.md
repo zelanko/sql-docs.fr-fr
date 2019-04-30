@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0f6443f8015d3b2a4c94c9470a35a5b1433691d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206447"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
   Les revendications SharePoint vers Windows Token Service (c2WTS) est nécessaire avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mode SharePoint si vous souhaitez utiliser l’authentification windows pour les Sources de données qui sont en dehors de la batterie de serveurs SharePoint. Ceci s'applique même si les utilisateurs accèdent aux sources de données à l'aide de l'authentification Windows, car la communication entre le serveur Web frontal (WFE) et le service partagé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se fera toujours via l'authentification basée sur les revendications.  
@@ -41,7 +41,7 @@ ms.locfileid: "53354356"
 ## <a name="prerequisites"></a>Prérequis  
   
 > [!NOTE]  
->  Remarque : certaines étapes de configuration peuvent changer, ou peuvent ne pas fonctionner dans certaines topologies de batteries de serveurs. Par exemple, l’installation d’un serveur ne prend pas en charge les services C2WTS Windows Identity Foundation. C’est pourquoi les scénarios de délégation de jetons Windows ne sont pas possibles avec cette configuration de batterie de serveurs.  
+>  Remarque : Certaines étapes de configuration peuvent changer ou peut ne pas fonctionnent dans certaines topologies de batterie de serveurs. Par exemple, l’installation d’un serveur ne prend pas en charge les services C2WTS Windows Identity Foundation. C’est pourquoi les scénarios de délégation de jetons Windows ne sont pas possibles avec cette configuration de batterie de serveurs.  
   
 ### <a name="basic-steps-needed-to-configure-c2wts"></a>Étapes de base nécessaires pour configurer C2WTS  
   
@@ -72,7 +72,7 @@ ms.locfileid: "53354356"
   
      c2WTS requiert que les identités « appelants » explicitement répertoriées dans le fichier de configuration, **c2wtshost.exe.config**. c2WTS n’accepte pas les demandes à partir de tous les utilisateurs authentifiés dans le système, sauf si elle est configurée pour le faire. Dans ce cas, l’appelant est le groupe Windows WSS_WPG. Le fichier c2wtshost.exe.confi est enregistré à l'emplacement suivant :  
   
-     **\Program Files\Windows identité Foundation\v3.5\c2wtshost.exe.config**  
+     **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
      L'exemple suivant montre le fichier de configuration :  
   

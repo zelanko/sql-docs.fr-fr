@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2effb3900e4277d82edee70439628c8adc837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181320"
 ---
 # <a name="numeric-literals"></a>Littéraux numériques
 Littéraux numériques sont utilisés lorsque les valeurs de données numériques sont stockées dans les chaînes de caractères. Pour la conversion de données SQL numériques en une chaîne SQL_C_CHAR ou de conversion de données numériques de C sur une chaîne SQL_CHAR ou SQL_VARCHAR, la syntaxe littérale numérique permet de spécifier ce qui est stocké dans la cible. Pour une conversion de numérique stocké sous forme de chaîne de données numérique SQL SQL_C_CHAR ou numérique stocké sous forme de chaîne à des données numériques C SQL_CHAR, cette syntaxe est utilisée pour valider ce qui est stocké dans la source.  
   
- Littéraux numériques doivent être conformes à la syntaxe définie dans la section [syntaxe littérale numérique](../../../odbc/reference/appendixes/numeric-literal-syntax.md) dans l’annexe c : SQL grammaire.  
+ Littéraux numériques doivent être conformes à la syntaxe définie dans la section [syntaxe littérale numérique](../../../odbc/reference/appendixes/numeric-literal-syntax.md) dans l’annexe c : Grammaire SQL.  
   
  Cette section contient les rubriques suivantes.  
   

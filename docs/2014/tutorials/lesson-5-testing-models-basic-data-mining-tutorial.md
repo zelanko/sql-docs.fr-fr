@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185427"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Leçon 5 : Test des modèles (didacticiel d’exploration de données de base)
   Maintenant que vous avez traité le modèle à l'aide du jeu d'apprentissage du scénario de publipostage ciblé, vous allez tester vos modèles par rapport au jeu de test. La validation est une étape importante du processus d'exploration de données. Il est important de savoir si vos modèles d'exploration de données pour le publipostage ciblé sont efficaces sur des données réelles avant de les déployer dans un environnement de production.  

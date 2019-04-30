@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161853"
 ---
 # <a name="indexes"></a>Index
   La table suivante répertorie les types d'index disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et propose des liens correspondants pour plus d'informations.  
@@ -34,7 +34,7 @@ ms.locfileid: "48101159"
 |Index sur les colonnes calculées|Index sur une colonne dérivée de la valeur d'une ou de plusieurs autres colonnes, ou certaines entrées déterministes.|[Index sur les colonnes calculées](indexes-on-computed-columns.md)|  
 |Filtré|Index non cluster optimisé, convenant tout particulièrement aux requêtes qui effectuent des sélections dans un sous-ensemble précis de données. Il utilise un prédicat de filtre pour indexer une partie des lignes de la table. Un index filtré bien conçu peut améliorer les performances des requêtes, réduire les coûts de maintenance des index et réduire les coûts de stockage des index par rapport aux index de table entière.|[Créer des index filtrés](create-filtered-indexes.md)|  
 |Spatial|Un index spatial permet d’effectuer plus efficacement certaines opérations sur des objets spatiaux (*données spatiales*) dans une colonne du type de données **géométrie** . L'index spatial réduit le nombre d'objets sur lesquels des opérations spatiales relativement coûteuses doivent être appliquées.|[Vue d'ensemble des index spatiaux](../spatial/spatial-indexes-overview.md)|  
-|XML|Une représentation fragmentée et permanente, des objets binaires XML volumineux (BLOB) dans le `xml` colonne de type de données.|[Index XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|Représentation fragmentée et permanente des objets binaires XML de taille importante (BLOB) dans la colonne de type de données `xml`.|[Index XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |Texte intégral|Type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral Microsoft pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet de prendre en charge efficacement toute recherche de mot sophistiqué dans des chaînes de données caractères.|[Alimenter des index de recherche en texte intégral](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Tâches associées  

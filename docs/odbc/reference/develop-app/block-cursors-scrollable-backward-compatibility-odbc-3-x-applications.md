@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0bc45169a3c5eee2e23f581a66d5232c22e89b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199263"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Curseurs de bloc, curseurs avec défilement et compatibilité descendante pour les applications ODBC 3.x
 L’existence des deux **SQLFetchScroll** et **SQLExtendedFetch** représente la première clear Fractionner dans ODBC entre l’Interface API (Application Programming), qui est l’ensemble de fonctions le les appels de l’application et l’Interface de fournisseur de Service (SPI), qui est l’ensemble de fonctions le pilote implémente. Cette distinction est nécessaire pour équilibrer le fait dans ODBC 3. *x*, qui utilise **SQLFetchScroll**, pour s’aligner avec les normes et être compatible avec ODBC 2. *x*, qui utilise **SQLExtendedFetch**.  
   
  Le 3 ODBC *.x* API, qui est l’ensemble de l’application appelle les fonctions, inclut **SQLFetchScroll** et les attributs d’instruction. Le 3 ODBC *.x* SPI, qui est l’ensemble de fonctions, le pilote implémente, inclut **SQLFetchScroll**, **SQLExtendedFetch**et les attributs d’instruction. Comme ODBC n’applique pas formellement cette distinction entre l’API et le SPI, il est possible pour ODBC 3 *.x* applications d’appeler **SQLExtendedFetch** et les attributs d’instruction. Toutefois, il n’existe aucune raison pour ODBC 3 *.x* applications pour ce faire. Pour plus d’informations sur les API et SPI, reportez-vous à l’introduction [Architecture ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Pour plus d’informations sur la façon la ODBC 3. *x* Gestionnaire de pilotes mappe des appels à ODBC 2. *x* et ODBC 3. *x* des pilotes et les fonctions et l’instruction attributs un ODBC 3. *x* pilote doit implémenter pour le bloc et de curseurs avec défilement, consultez [ce que le pilote fait](../../../odbc/reference/appendixes/what-the-driver-does.md) dans la section annexe g : pilote instructions pour la compatibilité descendante.  
+ Pour plus d’informations sur la façon la ODBC 3. *x* Gestionnaire de pilotes mappe des appels à ODBC 2. *x* et ODBC 3. *x* des pilotes et les fonctions et l’instruction attributs un ODBC 3. *x* pilote doit implémenter pour le bloc et de curseurs avec défilement, consultez [ce que le pilote fait](../../../odbc/reference/appendixes/what-the-driver-does.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
   
  Le tableau suivant récapitule les fonctions d’attributs et d’instruction une ODBC 3. *x* application doit utiliser avec bloc et de curseurs avec défilement. Il répertorie également les modifications entre ODBC 2. *x* et ODBC 3. *x* dans cette zone que ODBC 3. *x* applications doivent connaître pour être compatible avec ODBC 2. *x* pilotes.  
   

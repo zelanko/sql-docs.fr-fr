@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199608"
 ---
 # <a name="binding-parameters-odbc"></a>Liaison de paramètres dans ODBC
 Chaque paramètre dans une instruction SQL doit être associé, ou *lié,* à une variable dans l’application avant que l’instruction est exécutée. Lorsque l’application lie une variable à un paramètre, il décrit cette variable - adresse, type de données C et ainsi de suite - au pilote. Elle décrit également le paramètre lui-même - type de données SQL, précision et ainsi de suite. Le pilote stocke ces informations dans la structure, il tient à jour pour cette instruction et utilise les informations pour extraire la valeur de la variable lorsque l’instruction est exécutée.  

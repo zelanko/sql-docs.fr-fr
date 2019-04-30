@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157964"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
   Si vous créez un nouveau [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table mémoire optimisée ou migrez une table existante basée sur disque à une table optimisée en mémoire, il est important d’estimer avec justesse les besoins en mémoire de chaque table, vous pouvez configurer le serveur avec suffisamment de façon mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
@@ -115,7 +115,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Pour plus d’informations sur le fonctionnement des index de hachage dans les tables optimisées en mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , consultez [Index de hachage](../../database-engine/hash-indexes.md).  
   
- **Remarque :** vous ne pouvez pas modifier la taille du tableau d'index de hachage à la volée. Pour modifier la taille du tableau d'index de hachage, vous devez supprimer la table, modifier la valeur bucket_count et recréer la table.  
+ **Remarque :** Vous ne pouvez pas modifier la taille de tableau des index de hachage à la volée. Pour modifier la taille du tableau d'index de hachage, vous devez supprimer la table, modifier la valeur bucket_count et recréer la table.  
   
  **Définition de la taille de tableau des index de hachage**  
   

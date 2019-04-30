@@ -1,5 +1,5 @@
 ---
-title: AVG (MDX) | Documents Microsoft
+title: Avg (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181697"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -32,23 +32,23 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
- Si un jeu de tuples vides ou un jeu vide est spécifié, le **Avg** fonction retourne une valeur vide.  
+ Si un jeu de tuples vides ou un ensemble vide est spécifié, le **Avg** fonction retourne une valeur vide.  
   
- Le **Avg** calcule la moyenne des valeurs non vides des cellules dans le jeu spécifié en calculant la somme des valeurs d’abord toutes les cellules dans le jeu spécifié, puis en divisant cette somme par le nombre de cellules non vides dans le jeu spécifié.  
+ Le **Avg** fonction calcule la moyenne des valeurs non vides des cellules dans le jeu spécifié en calculant la somme des valeurs d’abord toutes les cellules dans le jeu spécifié, puis en divisant cette somme par le nombre de cellules non vides dans le jeu spécifié.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ignore les valeurs NULL lors du calcul de la valeur moyenne dans un jeu de nombres.  
   
- Si une expression numérique spécifique (en général une mesure) n’est pas spécifiée, le **Avg** fonction calcule la moyenne de chaque mesure dans le contexte de requête actuel. Si une mesure spécifique est fournie, le **Avg** fonction évalue d’abord la mesure dans le jeu, puis calcule la moyenne en fonction de la mesure spécifiée.  
+ Si aucune expression numérique spécifique (en général une mesure) n’est pas spécifiée, le **Avg** fonction calcule la moyenne de chaque mesure dans le contexte de requête actuel. Si une mesure spécifique est fournie, le **Avg** fonction évalue d’abord la mesure sur le jeu, et ensuite la fonction calcule la moyenne en se basant sur la mesure spécifiée.  
   
 > [!NOTE]  
->  Lorsque vous utilisez la **CurrentMember** fonction dans une instruction de membre calculé, vous devez spécifier une expression numérique, car aucune mesure par défaut n’existe pour la coordonnée actuelle dans ce contexte de requête.  
+>  Lorsque vous utilisez le **CurrentMember** fonction dans une instruction de membre calculé, vous devez spécifier une expression numérique, car aucune mesure par défaut n’existe pour la coordonnée actuelle dans ce contexte de requête.  
   
- Pour forcer l’inclusion de cellules vides, l’application doit utiliser le [CoalesceEmpty](../mdx/coalesceempty-mdx.md) de fonction, ou spécifiez une valide *Numeric_Expression* qui fournit une valeur de zéro (0) pour les valeurs vides. Pour plus d'informations sur les cellules vides, consultez la documentation OLE DB.  
+ Pour forcer l’inclusion des cellules vides, l’application doit utiliser le [CoalesceEmpty](../mdx/coalesceempty-mdx.md) fonction, ou spécifiez une valeur valide *Numeric_Expression* qui fournit une valeur de zéro (0) pour les valeurs vides. Pour plus d'informations sur les cellules vides, consultez la documentation OLE DB.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne la moyenne pour une mesure sur un jeu spécifié. Remarquez que la mesure spécifiée peut être soit la mesure par défaut pour les membres du jeu spécifié ou une mesure spécifiée.  
@@ -81,7 +81,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
   
  `WHERE ([Geography].[Geography].[NW Region Avg])`  
   
- L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003 dans le **Adventure Works** cube. Le **Avg** calcule la moyenne de l’ensemble de jours qui sont contenus dans chaque mois de la `[Ship Date].[Fiscal Time]` hiérarchie. La première version du calcul montre le comportement par défaut d'Avg en excluant de la moyenne les jours qui n'ont pas enregistré de ventes, la deuxième version montre comment inclure les jours sans ventes dans la moyenne.  
+ L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003 dans le **Adventure Works** cube. Le **Avg** fonction calcule la moyenne de l’ensemble de jours qui sont contenus dans chaque mois de la `[Ship Date].[Fiscal Time]` hiérarchie. La première version du calcul montre le comportement par défaut d'Avg en excluant de la moyenne les jours qui n'ont pas enregistré de ventes, la deuxième version montre comment inclure les jours sans ventes dans la moyenne.  
   
  `WITH MEMBER Measures.[Avg Gross Profit Margin] AS`  
   
@@ -146,6 +146,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187928"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuration de la visibilité des métadonnées
   La visibilité des métadonnées est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Par exemple, la requête suivante retourne une ligne si l'utilisateur bénéficie d'une autorisation telle que SELECT ou INSERT sur la table `myTable`.  

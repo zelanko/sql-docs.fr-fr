@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201182"
 ---
 # <a name="report-designer-f1-help"></a>Aide sur le Concepteur de rapports via la touche F1
   Cette section fournit la touche F1 pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Assistants Concepteur de rapports, des vues et des boîtes de dialogue. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  

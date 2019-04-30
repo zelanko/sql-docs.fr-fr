@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 408d6a3bfdd2618931ceefa5d6d82ad6ab581485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198961"
 ---
 # <a name="repair-powerpivot-for-sharepoint"></a>Réparer PowerPivot pour SharePoint
   Vous pouvez utiliser l'Outil de configuration PowerPivot pour réparer une installation existante de PowerPivot pour SharePoint. L'outil lit les paramètres de configuration d'une instance locale de PowerPivot pour SharePoint et propose des actions permettant de reconfigurer un paramètre incohérent avec une installation de PowerPivot pour SharePoint. Par exemple, si vous arrêtez un service ou retirez une solution, l'outil propose de démarrer le service et de déployer la solution.  

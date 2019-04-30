@@ -1,5 +1,5 @@
 ---
-title: Stddev (MDX) | Documents Microsoft
+title: Stddev (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eaff66b442748b61a508e103918244d244fa5de9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149449"
 ---
 # <a name="stddev-mdx"></a>Stddev (MDX)
 
@@ -22,6 +22,6 @@ ms.locfileid: "34742858"
   Alias de la [Stdev](../mdx/stdev-mdx.md) (fonction).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

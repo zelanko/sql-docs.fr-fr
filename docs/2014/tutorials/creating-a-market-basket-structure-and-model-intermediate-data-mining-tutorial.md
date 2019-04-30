@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190835"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de panier d'achat (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez créé une vue de source de données, vous allez utiliser l'Assistant Exploration de données pour créer une structure d'exploration de données. Au cours de cette tâche, vous allez créer une structure d'exploration de données et un modèle d'exploration de données basés sur l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
@@ -55,11 +55,11 @@ ms.locfileid: "56019450"
   
     |Colonnes|Type de contenu|Type de données|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discret|Texte|  
-    |Numéro de commande|Touche|Texte|  
-    |Région|Discret|Texte|  
+    |IncomeGroup|Discret|Text|  
+    |Numéro de commande|Touche|Text|  
+    |Région|Discret|Text|  
     |vAssocSeqLineItems|||  
-    |Modèle|Touche|Texte|  
+    |Modèle|Touche|Text|  
   
 12. Sur le **créer le test défini** page, la valeur par défaut pour l’option **pourcentage des données de test** 30 pour cent. Modifier ce paramètre pour **0**. Cliquer sur **Suivant**.  
   

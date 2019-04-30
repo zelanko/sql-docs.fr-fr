@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815e4105ca65b6bcdaa36de0554b9f6e0d3b478a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190763"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Les alias de colonne dans la clause ORDER BY ne peuvent pas avoir un alias de table pour préfixe
   Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, les alias de colonne dans la clause ORDER BY ne peuvent pas avoir l'alias de table pour préfixe.  

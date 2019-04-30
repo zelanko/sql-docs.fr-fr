@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Préparation du serveur pour la réplication | Microsoft Docs'
+title: 'Tutoriel : Préparation du serveur pour la réplication | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199070"
 ---
-# <a name="tutorial-preparing-the-server-for-replication"></a>Didacticiel : Préparation du serveur à la réplication
+# <a name="tutorial-preparing-the-server-for-replication"></a>Tutoriel : Préparation du serveur à la réplication
   Il importe de prévoir la sécurité avant de configurer la topologie de réplication. Ce didacticiel vous explique comment sécuriser au mieux une topologie de réplication et configurer la distribution, première étape de la réplication des données. Ce didacticiel doit être effectué avant les autres didacticiels.  
   
 > [!NOTE]  
@@ -35,15 +35,15 @@ ms.locfileid: "54125379"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour des raisons de sécurité, les exemples de bases de données ne sont pas installés par défaut.  
   
- **Durée estimée pour effectuer le didacticiel : 30 minutes.**  
+ **Durée estimée pour effectuer ce didacticiel : 30 minutes.**  
   
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
   
--   [Leçon 1 : Windows de création de comptes pour la réplication](lesson-1-creating-windows-accounts-for-replication.md)  
+-   [Leçon 1 : Windows de création de comptes pour la réplication](lesson-1-creating-windows-accounts-for-replication.md)  
   
 -   [Leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md)  
   
--   [Leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md)  
+-   [Leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md)  
   
  [Démarrer le didacticiel](lesson-1-creating-windows-accounts-for-replication.md)  
   

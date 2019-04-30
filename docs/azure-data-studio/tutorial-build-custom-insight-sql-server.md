@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Générer un widget d’analyse personnalisée'
+title: 'Tutoriel : Générer un widget d’analyse personnalisée'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel montre comment créer des widgets d’analyse personnalisées et ajoutez-les à la base de données et serveur des tableaux de bord dans Azure Data Studio.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157039"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Didacticiel : Générer un widget d’analyse personnalisée
+# <a name="tutorial-build-a-custom-insight-widget"></a>Tutoriel : Générer un widget d’analyse personnalisée
 
 Ce didacticiel montre comment utiliser vos propres requêtes insight pour créer des widgets d’analyse personnalisés.
 

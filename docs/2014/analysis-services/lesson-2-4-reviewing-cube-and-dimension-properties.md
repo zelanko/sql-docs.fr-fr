@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729295"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Vérification des propriétés de cube et de dimension
   Après avoir défini un cube, vous pouvez examiner les résultats en utilisant le Concepteur de cube. Dans la tâche suivante, vous examinez la structure du cube dans le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
@@ -35,7 +35,7 @@ ms.locfileid: "48196269"
   
 4.  Dans le volet **Dimensions** de l'onglet **Structure de cube** , développez **Customer**, puis cliquez sur **Edit Customer** pour ouvrir la dimension dans le Concepteur de dimensions.  
   
-     Le Concepteur de dimensions contient ces onglets : **Structure de dimension**, **Relations d'attributs**, **Traductions**et **Navigateur**. Notez que l'onglet **Structure de dimension** comporte trois volets : **Attributs**, **Hiérarchies et niveaux**et **Vue de source de données**. Les attributs que la dimension contient apparaissent dans le volet **Attributs** . Pour plus d’informations, consultez [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [les hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md).  
+     Concepteur de dimensions contient ces onglets : **Structure de dimension**, **relations d’attributs**, **traductions**, et **navigateur**. Notez que le **Structure de Dimension** onglet comporte trois volets : **Attributs**, **hiérarchies**, et **vue de Source de données**. Les attributs que la dimension contient apparaissent dans le volet **Attributs** . Pour plus d’informations, consultez [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [les hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Pour basculer vers le Concepteur de cube, cliquez avec le bouton droit sur le cube **Analysis Services Tutorial** dans le nœud **Cubes** de l’Explorateur de solutions, puis cliquez sur **Concepteur de vues**.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "48196269"
  [Déploiement d’un projet Analysis Services](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Explorer les données d’une dimension dans le Concepteur de dimensions](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
+ [Explorer les données d'une dimension dans le Concepteur de dimensions](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

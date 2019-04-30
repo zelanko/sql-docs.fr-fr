@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158004"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
   L'outil de génération de rapports sur les performances des transactions (voir [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) vous indique quelles tables de votre base de données tireront parti de l'utilisation de la fonctionnalité OLTP en mémoire. Après avoir identifié une table que vous souhaitez déplacer pour utiliser l'OLTP en mémoire, utilisez le Conseiller d'optimisation de la mémoire pour vous aider à migrer la table de base de données sur disque vers l'OLTP en mémoire.  

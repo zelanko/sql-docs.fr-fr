@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148913"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Applications et pilotes conformes aux normes
-Une application conforme aux normes ou le pilote est celui qui est conforme à la spécification d’IAO groupe Open « Data Management : SQL au niveau de l’appel Interface (CLI) » et la norme ISO/IEC 9075-3:1995 Interface de niveau d’appel (E) (SQL/CLI).  
+Une application conforme aux normes ou le pilote est celui qui est conforme à la spécification d’IAO groupe Open « gestion des données : Interface de niveau d’appel SQL (CLI) » et la norme ISO/IEC 9075-Interface de niveau d’appel 3:1995 (E) (SQL/CLI).  
   
  ODBC 3 *.x* garantit les fonctionnalités suivantes :  
   
@@ -37,7 +37,7 @@ Une application conforme aux normes ou le pilote est celui qui est conforme à l
   
 -   Si une application conforme aux normes appelle **SQLAllocEnv** (qui peut se produire car **SQLAllocEnv** est une fonction valide dans l’Open Group et ISO CLI), l’appel est mappé à  **SQLAllocHandleStd** au moment de la compilation. Par conséquent, au moment de l’exécution, l’application appelle **SQLAllocHandleStd**. Au cours de traitement de cet appel, le Gestionnaire de pilotes définit l’attribut d’environnement SQL_ATTR_ODBC_VERSION à SQL_OV_ODBC3. Un appel à **SQLAllocHandleStd** équivaut à un appel à **SQLAllocHandle** avec un *HandleType* de SQL_HANDLE_ENV et un appel à **SQLSetEnvAttr** à la valeur SQL_ATTR_ODBC_VERSION SQL_OV_ODBC3.  
   
--   Si une application conforme aux normes appelle **SQLBindParam** (qui peut se produire car **SQLBindParam** est une fonction valide dans l’Open Group et ISO CLI), les 3 ODBC *.x* Gestionnaire de pilotes mappe l’appel à l’appel équivalent dans **SQLBindParameter**. (Consultez [SQLBindParam, mappage](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) dans la section annexe g : pilote instructions pour la compatibilité descendante.)  
+-   Si une application conforme aux normes appelle **SQLBindParam** (qui peut se produire car **SQLBindParam** est une fonction valide dans l’Open Group et ISO CLI), les 3 ODBC *.x* Gestionnaire de pilotes mappe l’appel à l’appel équivalent dans **SQLBindParameter**. (Consultez [SQLBindParam, mappage](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) dans l’annexe g : Pilote des instructions pour la compatibilité descendante.)  
   
 -   Pour s’aligner avec la CLI ISO, les 3 ODBC *.x* fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Une application conforme aux normes peut utiliser ces alias au lieu du 3 ODBC *.x* types d’informations. Pour plus d’informations, consultez la rubrique suivante, [fichiers d’en-tête](../../../odbc/reference/develop-app/header-files.md).  
   

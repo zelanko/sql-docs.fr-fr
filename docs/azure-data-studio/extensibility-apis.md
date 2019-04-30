@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180218"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité Data Studio Azure
 
@@ -65,7 +65,7 @@ credentials: {
 
 
 ### <a name="top-level-functions"></a>Fonctions de niveau supérieur
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir un nœud de l’Explorateur d’objets correspondant à la connexion donnée et le chemin d’accès. Si aucun chemin d’accès n’est fourni, il retourne le nœud de niveau supérieur pour la connexion donnée. Si cela signifie qu’il n’y a aucun nœud à l’emplacement donné, elle retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le serveur principal de Service des outils SQL et qu’il est difficile à construire manuellement. Futures améliorations d’API vous permettra d’obtenir les nœuds en fonction des métadonnées que vous fournissez relatives au nœud, telles que le nom, type et le schéma.
+- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir un nœud de l’Explorateur d’objets correspondant à la connexion donnée et le chemin d’accès. Si aucun chemin d’accès n’est fourni, il retourne le nœud de niveau supérieur pour la connexion donnée. Si cela signifie qu’il n’y a aucun nœud à l’emplacement donné, elle retourne `undefined`. Remarque : Le `nodePath` pour un objet est généré par le serveur principal de Service des outils SQL et qu’il est difficile à construire manuellement. Futures améliorations d’API vous permettra d’obtenir les nœuds en fonction des métadonnées que vous fournissez relatives au nœud, telles que le nom, type et le schéma.
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir tous les nœuds de connexion de l’Explorateur d’objets actifs.
 

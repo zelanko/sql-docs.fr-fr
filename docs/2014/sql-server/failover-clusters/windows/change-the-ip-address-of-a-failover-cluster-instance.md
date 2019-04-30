@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049619"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Modifier l'adresse IP d'une instance de cluster de basculement
   Cette rubrique explique comment modifier la ressource d'adresse IP d'une instance de cluster de basculement (FCI) AlwaysOn à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Avant de commencer, consultez la rubrique [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Avant l’installation du clustering de basculement [dans la documentation en ligne de](../install/before-installing-failover-clustering.md).  
+ Avant de commencer, consultez les rubriques suivantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rubrique de la documentation en ligne : [Before Installing Failover Clustering](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour maintenir ou mettre à jour une FCI, vous devez être un administrateur local et disposer des autorisations requises pour vous connecter en tant que service sur tous les nœuds de la FCI.  
   
 ##  <a name="WSFC"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  

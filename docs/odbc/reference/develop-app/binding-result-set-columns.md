@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199275"
 ---
 # <a name="binding-result-set-columns"></a>Liaison des colonnes d’un ensemble de résultats
 Les applications peuvent lier en tant que colonnes autant ou aussi peu du jeu de résultats lorsqu’ils le souhaitent, y compris aucune colonne de la liaison du tout. Quand une ligne de données est récupérée, le pilote retourne les données pour les colonnes liées à l’application. Indique si l’application lie toutes les colonnes du jeu de résultats dépend de l’application. Par exemple, les applications qui génèrent les rapports généralement ont un format fixe ; de telles applications créer un jeu de résultats contenant toutes les colonnes utilisées dans le rapport et ensuite lier et récupérer les données pour l’ensemble de ces colonnes. Applications qui affichent des écrans complet de données parfois autorisent l’utilisateur de choisir les colonnes à afficher ; de telles applications créent un jeu de résultats contenant toutes les colonnes choix, mais lier et l’utilisateur peut récupérer les données pour les colonnes choisies par l’utilisateur.  

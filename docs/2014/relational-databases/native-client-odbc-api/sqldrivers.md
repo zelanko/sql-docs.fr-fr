@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192333"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   Le Gestionnaire de pilote ODBC retourne toutes les chaînes de spécification d'attribut **SQLDrivers** . Pour plus d'informations sur la définition de la valeur et de la chaîne d'attribut, consultez le [Centre Accès aux Données et Stockage](https://go.microsoft.com/fwlink/?LinkId=4173)ou le [Guide de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) en ligne.  

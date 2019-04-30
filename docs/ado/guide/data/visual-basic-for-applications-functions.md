@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15ac62cd4c379d51bc537f0cdf83942bc334fdbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184884"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Fonctions Visual Basic pour Applications
 Le suivant fonctions Visual Basic pour Applications utilisables dans les expressions de calcul de mise en forme des données :  
@@ -29,8 +29,8 @@ Le suivant fonctions Visual Basic pour Applications utilisables dans les express
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CMonnaie|  
-|CDate|CDbl|Chr|Chr|ChrW|Caract$|  
-|Chr$|CEnt|CLong|Cos|CSmpl|CChaîne|  
+|CDate|CDbl|Chr|ChrB|ChrW|Caract$|  
+|ChrB$|CEnt|CLong|Cos|CSmpl|CChaîne|  
 |CVar|CVDate|CVErr|Date|Date$|AjDate|  
 |DiffDate|PartDate|SérieDate|ValDate|Jour|DDB|  
 |Error|Error$|Exp|Fix|Format|Format$|  

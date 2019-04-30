@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130206"
 ---
 # <a name="persisting-data"></a>Persistance des données
 Informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré la nécessité pour les applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO a ajouté la prise en charge pour ce en donnant au développeur la possibilité d’enregistrer un curseur client **Recordset** sur le disque et recharger ultérieurement.  

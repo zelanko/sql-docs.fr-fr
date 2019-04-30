@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 (Facultatif) : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 2 (facultatif) : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198884"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tâche 2 (Facultatif) : Création d'une vue d'abonnement MDS à l'aide de Master Data Manager
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tâche 2 (facultatif) : Création d’une vue d’abonnement MDS à l’aide de Master Data Manager
   Dans cette tâche, vous créez une vue d’abonnement pour exposer le **fournisseur** entité dans le **fournisseurs** modèle pour d’autres applications. Vous n'allez pas utiliser cette vue dans cette version du didacticiel.  
   
 1.  Basculez vers la page principale de **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)) en cliquant sur **SQL Server 2012 Master Data Services** en haut.  

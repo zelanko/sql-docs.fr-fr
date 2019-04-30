@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199283"
 ---
 # <a name="block-cursors"></a>Curseurs de bloc
 De nombreuses applications passent beaucoup de temps à amener les données sur le réseau. Partie de ce temps est passé en fait acheminer les données sur le réseau et partie de celui-ci est passé sur réseau de surcharge, telles que l’appel lancé par le pilote pour demander une ligne de données. L’heure de ce dernier peut être réduit si l’application effectue une utilisation efficace de *bloc,* ou *fat,* *curseurs,* qui peut retourner plusieurs lignes à la fois.  

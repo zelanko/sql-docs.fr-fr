@@ -11,30 +11,30 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156774"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bonnes pratiques pour appeler des procédures stockées compilées en mode natif
   Les procédures stockées compilées en mode natif sont les suivantes :  
   
 -   utilisées en général dans les parties ayant un impact sur les performances d'une application ;  
   
--   exécutées fréquemment ;  
+-   exécutées fréquemment ;  
   
 -   réputées très rapides.  
   
  L'avantage lié à l'utilisation d'une procédure stockée compilée en mode natif augmente avec le nombre de lignes et la quantité de logique qui est traitée par la procédure. Par exemple, une procédure stockée compilée en mode natif présentera de meilleures performances si elle utilise un ou plusieurs des éléments suivants :  
   
--   agrégation ;  
+-   agrégation ;  
   
 -   jointures de boucles imbriquées ;  
   
 -   opérations de sélection, insertion, mise à jour et suppression en plusieurs instructions ;  
   
--   expressions complexes ;  
+-   expressions complexes ;  
   
 -   logique procédurale, par exemple des instructions conditionnelles et des boucles.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48048529"
   
  L'utilisation de paramètres nommés (inefficaces) avec des procédures stockées compilées en mode natif peut être détectée par le XEvent `hekaton_slow_parameter_passing`, avec `reason=named_parameters`.  
   
- De même, vous pouvez détecter l’utilisation de types incompatibles dans le même XEvent `hekaton_slow_parameter_passing`, avec `reason=parameter_conversion`.  
+ De même, vous pouvez détecter l'utilisation de types incompatibles dans le même XEvent `hekaton_slow_parameter_passing`, avec `reason=parameter_conversion`.  
   
  Étant donné que vous devez implémenter la logique de nouvelle tentative lors de l'utilisation des tables mémoire optimisées (dans de nombreux scénarios), et que vous devrez contourner certaines limitations de fonctionnalités, vous pouvez créer une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétée par wrapper. Pour obtenir un exemple, consultez [instructions pour la logique de nouvelle tentative pour les Transactions sur les Tables optimisées en mémoire](memory-optimized-tables.md).  
   

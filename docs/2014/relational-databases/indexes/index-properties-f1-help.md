@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161907"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
   Les sections de cette rubrique font référence aux différentes propriétés d'index disponibles au moyen des boîtes de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "48084700"
  Affiche le nom de l'index. Ce champ est en lecture seule pour un index existant. Permet de taper le nom de l'index, si vous en créez un nouveau.  
   
  **Type d'index**  
- Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **Non cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **Columnstore cluster**ou **Columnstore non cluster**.  
+ Indique le type d'index. Pour les nouveaux index, indique le type d'index sélectionné lors de l'ouverture de la boîte de dialogue. Les index peuvent être : **Cluster**, **non-cluster**, **XML primaire**, **XML secondaire**, **Spatial**, **en cluster ColumnStore**, ou **Columnstore non cluster**.  
   
  **Remarque** Un seul index cluster est autorisé pour chaque table. Un seul index columnstore optimisé en mémoire xVelocity est autorisé pour chaque table.  
   
@@ -199,7 +199,7 @@ ms.locfileid: "48084700"
  Indique le schéma de pavage de l'index. Les schémas de pavage pris en charge se présentent comme suit.  
   
  **Grille géométrique**  
- Spécifie le schéma de pavage de grille géométrique qui s’applique à une colonne de la `geometry` type de données.  
+ Spécifie le schéma de pavage de la grille géométrique qui s'applique à une colonne du type de données `geometry`.  
   
  **Grille automatique géométrique**  
  Cette option est activée pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand le niveau de compatibilité de la base de données a la valeur 110 ou une valeur supérieure.  

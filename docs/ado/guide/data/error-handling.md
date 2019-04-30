@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d8f96b28a15258df4b7d093ce14f227f28ad9b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161745"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ADO utilise différentes méthodes pour avertir une application d’erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et la façon dont votre application est notifiée. Il conclut en proposant des suggestions sur la façon de gérer ces erreurs.  

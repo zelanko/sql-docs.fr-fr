@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200387"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Rubriques de procédures relatives à l'exécution de requêtes (ODBC)
   L'exécution d'une instruction SQL dans une application ODBC requiert l'allocation d'un descripteur d'instruction, la définition d'attributs d'instruction, et la préparation et l'exécution de l'instruction SQL.  

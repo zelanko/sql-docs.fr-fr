@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10d6d79587051b78f212c5fbe4a9d866ee0c75e0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143971"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Désinstaller la version autonome du Générateur de rapports (Générateur de rapports)
   Vous pouvez désinstaller la version autonome du Générateur de rapports à partir du Panneau de configuration ou de la ligne de commande. Vous ne pouvez pas désinstaller la version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] du Générateur de rapports sans désinstaller [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].  

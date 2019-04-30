@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186331"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilation d’un programme Embedded SQL
 Comme un programme SQL incorporé contient une combinaison d’instructions de langage SQL et l’hôte, il ne peut être envoyé directement à un compilateur pour le langage hôte. Au lieu de cela, il est compilé dans un processus en plusieurs étapes. Bien que ce processus varie d’un produit, les étapes sont à peu près les mêmes pour tous les produits.  

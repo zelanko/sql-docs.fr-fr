@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200577"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Métadonnées de paramètres table supplémentaires
   Pour récupérer les métadonnées pour un paramètre table, une application appelle SQLProcedureColumns. Pour un paramètre table, SQLProcedureColumns renvoie une seule ligne. Deux autres [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-des colonnes spécifiques, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME, ont été ajoutés pour fournir des informations de schéma et de catalogue pour les types de table associés aux paramètres table. En conformité avec la spécification ODBC, SS_TYPE_CATALOG_NAME et SS_TYPE_SCHEMA_NAME apparaissent avant toutes les colonnes spécifiques aux pilotes ajoutées dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et après toutes les colonnes mandatées par ODBC lui-même.  

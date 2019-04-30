@@ -1,5 +1,5 @@
 ---
-title: Instruction CASE (MDX) | Documents Microsoft
+title: Instruction CASE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb53db11e9c7ec816299d1541d27e962ab8650df
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181596"
 ---
 # <a name="case-statement-mdx"></a>Instruction CASE (MDX)
 
@@ -48,8 +48,8 @@ END
  *input_expression*  
  Expression MDX (Multidimensional Expressions) résolue en valeur scalaire.  
   
- *Il peut s’agir*  
- A spécifié une valeur scalaire par rapport à laquelle le *il peut s’agir* est évaluée, lorsqu’elle prend la valeur est true, retourne la valeur scalaire de la *else_result_expression*.  
+ *when_expression*  
+ A spécifié une valeur scalaire par rapport à laquelle le *input_expression* est évaluée, lorsqu’elle prend la valeur est true, retourne la valeur scalaire de la *else_result_expression*.  
   
  *when_true_result_expression*  
  Valeur scalaire retournée lorsque la clause WHEN prend la valeur True.  
@@ -64,9 +64,9 @@ END
  S'il n'existe aucune clause ELSE et si toutes les clauses WHEN prennent la valeur false, le résultat est une cellule vide.  
   
 ## <a name="simple-case-expression"></a>Expression CASE simple  
- La syntaxe MDX évalue une expression case simple en résolvant le *il peut s’agir* à une valeur scalaire. Cette valeur scalaire est ensuite comparée à la valeur scalaire de la *il peut s’agir*. Si les deux valeurs scalaires correspondent, l’instruction CASE retourne la valeur de la *when_true_expression*. Si aucune correspondance n'est relevée, la clause WHEN suivante est évaluée. Si toutes les clauses WHEN prennent la valeur false, la valeur de *else_result_expression* à partir de la clause ELSE, le cas échéant, est retourné.  
+ MDX évalue une expression case simple en résolvant le *input_expression* à une valeur scalaire. Cette valeur scalaire est ensuite comparée à la valeur scalaire de la *when_expression*. Si les deux valeurs scalaires correspondent, l’instruction CASE retourne la valeur de la *when_true_expression*. Si aucune correspondance n'est relevée, la clause WHEN suivante est évaluée. Si toutes les clauses WHEN prennent la valeur false, la valeur de *else_result_expression* à partir de la clause ELSE, le cas échéant, est retournée.  
   
- Dans l'exemple ci-dessous, la mesure Reseller Order Count (nombre de commandes du revendeur) est évaluée par rapport à plusieurs clauses WHEN et retourne un résultat fondé sur la valeur de la mesure Reseller Order Count pour chaque année. Pour les valeurs de mesure Reseller Order Count qui ne correspondent pas à une valeur scalaire spécifiée dans un *il peut s’agir* dans la clause WHEN, la valeur scalaire de la *else_result_expression* est retourné.  
+ Dans l'exemple ci-dessous, la mesure Reseller Order Count (nombre de commandes du revendeur) est évaluée par rapport à plusieurs clauses WHEN et retourne un résultat fondé sur la valeur de la mesure Reseller Order Count pour chaque année. Pour les valeurs de mesure Reseller Order Count qui ne correspondent pas à une valeur scalaire spécifiée dans un *when_expression* dans la clause WHEN, la valeur scalaire de la *else_result_expression* est retourné.  
   
 ```  
 WITH MEMBER [Measures].x AS   
@@ -89,7 +89,7 @@ WHERE [Measures].x
 ## <a name="searched-case-expression"></a>Expression CASE recherchée  
  Pour procéder à des évaluations plus complexes à l'aide de l'expression CASE, optez pour l'expression CASE recherchée. Cette variante de l'expression de recherche vous permet d'évaluer si une expression d'entrée s'inscrit dans une plage de valeurs. MDX évalue les clauses WHEN dans l'ordre de leur apparition dans l'instruction CASE.  
   
- Dans l’exemple suivant, la mesure Reseller Order Count est évaluée par rapport à l’élément spécifié *Boolean_expression* pour chacune des nombreuses clauses WHEN. Un résultat basé sur la valeur de la mesure Reseller Order Count pour chaque année est retourné. Du fait que les clauses WHEN sont évaluées dans l'ordre dans lequel elles apparaissent, toutes les valeurs supérieures à 6 peuvent aisément être affectées à la valeur « VERY LARGE » sans avoir à spécifier explicitement chaque valeur. Pour les valeurs de mesure Reseller Order Count qui ne sont pas spécifiés dans la clause WHEN, la valeur scalaire de la *else_result_expression* est retourné.  
+ Dans l’exemple suivant, la mesure Reseller Order Count est évaluée par rapport à spécifié *Boolean_expression* pour chacune des nombreuses clauses WHEN. Un résultat basé sur la valeur de la mesure Reseller Order Count pour chaque année est retourné. Du fait que les clauses WHEN sont évaluées dans l'ordre dans lequel elles apparaissent, toutes les valeurs supérieures à 6 peuvent aisément être affectées à la valeur « VERY LARGE » sans avoir à spécifier explicitement chaque valeur. Pour les valeurs de mesure Reseller Order Count qui ne sont pas spécifiés dans la clause WHEN, la valeur scalaire de la *else_result_expression* est retourné.  
   
 ```  
 WITH MEMBER [Measures].x AS   

@@ -1,5 +1,5 @@
 ---
-title: CalculationPassValue (MDX) | Documents Microsoft
+title: CalculationPassValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181627"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -32,7 +32,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *String_Expression*  
@@ -42,10 +42,10 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Expression numérique valide qui précise le numéro du test de calcul.  
   
  ABSOLUTE  
- Une valeur d’indicateur accès qui spécifie que la *Pass_Value* paramètre contient l’index de base zéro de la passe de calcul. ABSOLUTE est la valeur d'indicateur d'accès par défaut si aucune valeur de ce type n'est spécifiée.  
+ Une valeur d’indicateur accès qui spécifie que le *Pass_Value* paramètre contient l’index de base zéro du test de calcul. ABSOLUTE est la valeur d'indicateur d'accès par défaut si aucune valeur de ce type n'est spécifiée.  
   
  RELATIVE  
- Une valeur d’indicateur accès qui spécifie que la *Pass_Value* paramètre contient un décalage relatif au test de calcul du calcul déclencheur. Si le décalage se résout à un index de test de calcul inférieur à 0, le test de calcul 0 est utilisé et aucune erreur ne survient.  
+ Une valeur d’indicateur accès qui spécifie que le *Pass_Value* paramètre contient un décalage relatif au test de calcul du calcul déclencheur. Si le décalage se résout à un index de test de calcul inférieur à 0, le test de calcul 0 est utilisé et aucune erreur ne survient.  
   
  ALL  
  Lorsque vous définissez cet indicateur, toutes les valeurs sont NULL, sauf les valeurs chargées par le moteur de stockage. Si l'indicateur n'est pas défini, les valeurs sont agrégées sans qu'aucun calcul ne soit appliqué.  
@@ -58,11 +58,11 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
  Avec une résolution automatique de la récursivité dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], cette fonction a peu utilisation pratique.  
   
 > [!NOTE]  
->  Seuls les administrateurs peuvent utiliser le **CalculationPassValue** fonction dans un script MDX. Une erreur se produit si un script MDX contenant cette fonction est exécuté dans le contexte d'un rôle qui ne dispose pas des droits d'administrateur.  
+>  Seuls les administrateurs peuvent utiliser le **CalculationPassValue** fonction au sein d’un script MDX. Une erreur se produit si un script MDX contenant cette fonction est exécuté dans le contexte d'un rôle qui ne dispose pas des droits d'administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)   
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

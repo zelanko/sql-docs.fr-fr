@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188916"
 ---
 # <a name="interval-data-type-length"></a>Longueur des types de données d’intervalle
 Les règles suivantes sont utilisées pour déterminer la longueur d’un type de données d’intervalle en caractères. Durée est exprimée en nombre de caractères. Le nombre d’octets varie selon le jeu de caractères. La longueur inclut les valeurs suivantes ajoutés ensemble :  

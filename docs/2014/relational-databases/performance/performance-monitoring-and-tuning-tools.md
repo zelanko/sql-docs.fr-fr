@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150835"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Outils d'analyse et de paramétrage des performances
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un ensemble complet d'outils permettant de surveiller les événements de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de paramétrer la structure physique de la base de données. Le choix de l'outil dépend du type de surveillance ou de paramétrage à effectuer et des événements spécifiques à contrôler.  

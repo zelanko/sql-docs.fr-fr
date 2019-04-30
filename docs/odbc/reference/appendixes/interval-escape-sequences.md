@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81481db74d973da0e54bc6bf9e70550fa3cc0c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188887"
 ---
 # <a name="interval-escape-sequences"></a>Séquences d’échappement des intervalles
 ODBC utilise les séquences d’échappement pour les littéraux d’intervalle. La syntaxe de cette séquence d’échappement est comme suit :  
   
- {*littéral d’intervalle*}  
+ {*interval-literal*}  
   
  Pour connaître la syntaxe BNF de *littéral d’intervalle*, consultez le [syntaxe de littéral d’intervalle](../../../odbc/reference/appendixes/interval-literal-syntax.md) section plus loin dans cette annexe.  
   

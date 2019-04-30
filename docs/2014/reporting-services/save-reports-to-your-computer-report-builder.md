@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190220"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer des définitions de rapport sur votre ordinateur. Toutefois, lorsque des définitions sont enregistrées sur votre ordinateur, les autres utilisateurs ne peuvent pas consulter les rapports. Par ailleurs, les rapports qui font référence aux sources de données partagées ou qui stockent en externe des éléments de rapport, tels que des images et des sous-rapports, peuvent ne pas s'exécuter. Il est recommandé d'enregistrer des rapports sur un serveur de rapports ou un site SharePoint.  

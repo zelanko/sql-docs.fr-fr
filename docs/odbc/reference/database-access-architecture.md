@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186275"
 ---
 # <a name="database-access-architecture"></a>Architecture de l’accès aux bases de données
 L’une des questions dans le développement d’ODBC a été quelle partie de l’architecture d’accès de base de données afin de normaliser. Les interfaces de programmation SQL décrit dans la section précédente - embedded SQL, les modules SQL et CLI - est uniquement une partie de cette architecture. En fait, étant donné que ODBC a été principalement destiné à se connecter les applications basées sur les ordinateur personnel et ses grands systèmes SGBD, comportait également un nombre de composants réseau, certains d'entre eux peuvent être normalisé.  

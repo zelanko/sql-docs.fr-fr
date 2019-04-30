@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155717"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
   Cette rubrique contient une liste des fonctionnalités prises en charge pour les procédures stockées compilées en mode natif ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)) :  
@@ -81,19 +81,19 @@ ms.locfileid: "58527141"
 ##  <a name="bfncsp"></a> Fonctions intégrées dans les procédures stockées compilées en mode natif  
  Les fonctions suivantes sont prises en charge dans les contraintes par défaut sur les tables optimisées en mémoire et dans les procédures stockées compilées en mode natif.  
   
--   Fonctions mathématiques : ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE et TAN  
+-   Fonctions mathématiques : ACOS, ASIN, ATAN, ATN2, COS, COT, degrés, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE et TAN  
   
--   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et YEAR.  
+-   Fonctions de date : CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME et année.  
   
 -   Fonctions de chaîne : LEN, LTRIM, RTRIM et SUBSTRING  
   
--   Fonction d'identité : SCOPE_IDENTITY  
+-   Fonction d’identité : SCOPE_IDENTITY  
   
 -   Fonctions NULL : ISNULL  
   
--   Fonctions Uniqueidentifier : NEWID et NEWSEQUENTIALID  
+-   Fonctions uniqueidentifier : NEWID et NEWSEQUENTIALID  
   
--   Fonctions d'erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
+-   Fonctions d’erreur : ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY et ERROR_STATE  
   
 -   Conversions : CAST et CONVERT. Les conversions entre des chaînes de caractères Unicode et non-Unicode (n(var)char et (var)char) ne sont pas prises en charge.  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527141"
 ##  <a name="los"></a> Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
   
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8192 lignes, un message d'erreur est généré : **Msg 41398, niveau 16, état 1, procédure  *\<Nom_procédure >*, ligne  *\<lineNumber >* l’opérateur TOP peut retourner un maximum de 8 192 lignes ;  *\<nombre >* a été demandée.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, vous obtenez le message d’erreur : **Msg 41398, niveau 16, état 1, procédure  *\<Nom_procédure >*, ligne  *\<lineNumber >* l’opérateur TOP peut retourner un maximum de 8 192 lignes ;  *\<nombre >* a été demandée.**  
   
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
   
  Si vous n'utilisez pas de clause ORDER BY, utilisez une valeur entière avec l'opérateur TOP.  
   
- Exemple avec TOP N = 8192 : Compiles  
+ Exemple avec TOP N = 8192 : Compile  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Exemple avec TOP N > 8192 : Fails to compile.  
+ Exemple avec TOP N > 8192 : La compilation échoue.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  La limitation de 8192 lignes s'applique uniquement à `TOP N` où `N` est une constante, comme dans les exemples précédents.  Si `N` doit être supérieur à 8192, vous pouvez affecter la valeur à une variable et utiliser cette variable avec `TOP`.  
   
- Exemple à l'aide d'une variable : Compiles  
+ Exemple d’utilisation d’une variable : Compile  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitations sur les lignes retournées :** Il existe deux cas de figure qui peuvent potentiellement réduire le nombre de lignes retournées par l'opérateur TOP :  
+ **Limitations sur les lignes retournées :** Il existe deux cas où qui peuvent potentiellement réduire le nombre de lignes qui peuvent être retournées par l’opérateur TOP :  
   
 -   L'utilisation de JOINs dans la requête.  L'impact de JOINs sur une limitation dépend du plan de requête.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c327dc55420cc89f5e76b6fae7822fad3a4e95f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136114"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
@@ -35,7 +35,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
 ## <a name="remarks"></a>Notes  
  Le **StrToValue** fonction retourne la valeur numérique spécifiée par l’expression MDX. Le **StrToValue** fonction est généralement utilisée avec les fonctions définies par l’utilisateur pour retourner une expression MDX à partir d’une fonction externe vers une instruction MDX qui peut être résolue en une seule cellule.  
   
--   En cas d'utilisation de l'indicateur CONSTRAINED, l'expression MDX doit contenir uniquement une valeur scalaire. L'indicateur CONSTRAINED est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une expression MDX qui ne peut être directement résolue à une valeur scalaire est fournie, l'erreur suivante s'affiche : « Les restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOVALUE n'ont pas été respectées. »  
+-   En cas d'utilisation de l'indicateur CONSTRAINED, l'expression MDX doit contenir uniquement une valeur scalaire. L'indicateur CONSTRAINED est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une expression MDX est fournie n’est pas peut être directement résolue à une valeur scalaire, l’erreur suivante s’affiche : « Les restrictions imposées par le CONSTRAINED indicateur dans la fonction STRTOVALUE n’ont pas été respectées. »  
   
 -   Si l'indicateur CONSTRAINED n'est pas utilisé, l'expression MDX (Multidimensional Expressions) peut être aussi complexe que vous le souhaitez tant qu'elle est résolue à une expression MDX qui retourne une cellule unique.  
   

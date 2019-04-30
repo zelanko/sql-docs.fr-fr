@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186305"
 ---
 # <a name="dbms-based-drivers"></a>Pilotes basés sur le SGDB
 Pilotes basés sur SGBD sont utilisées avec des sources de données telles que Oracle ou SQL Server qui fournissent un moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accéder aux données physiques via le moteur autonome ; Autrement dit, ils soumettez les instructions SQL à et récupérer les résultats à partir du moteur.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15d64d7b25abe5f67ba00e207f8f46c820aacd4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161763"
 ---
 # <a name="getting-data"></a>Obtention de données
 [Principes de base ADO](../../../ado/guide/data/ado-fundamentals.md)et le [HelloData](../../../ado/guide/data/hellodata-a-simple-ado-application.md) exemple introduit en particulier, les quatre opérations principales impliquées dans la création d’une application ADO : obtention de données, examinez les données, modification des données et la mise à jour des données. Cette section décrit l’obtention de données plus en détail.  

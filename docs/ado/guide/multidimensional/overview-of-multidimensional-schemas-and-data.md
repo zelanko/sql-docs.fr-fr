@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194907"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Vue d’ensemble des données et des schémas multidimensionnels
 ## <a name="understanding-multidimensional-schemas"></a>Présentation des schémas multidimensionnels  
@@ -32,12 +32,12 @@ ms.locfileid: "51350413"
   
  Un *membre* est un élément de données dans une dimension. En règle générale, vous créez une légende ou décrivez une mesure de la base de données à l’aide de membres.  
   
- Les cubes sont représentés par [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objets dans ADO MD. Dimensions, hiérarchies, niveaux et membres sont également représentés par leurs objets ADO MD : [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hiérarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md), et [ Membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Les cubes sont représentés par [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objets dans ADO MD. Dimensions, hiérarchies, niveaux et membres sont également représentés par leurs objets ADO MD correspondants : [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hiérarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md), et [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensions  
  Les dimensions d’un cube dépendent de vos entités métier et les types de données à modéliser dans la base de données. En règle générale, chaque dimension est un point d’entrée indépendante ou d’un mécanisme de sélection des données.  
   
- Par exemple, un cube contenant des données de ventes a le des cinq dimensions suivantes : vendeur, géographie, heure, produits et mesures. La dimension de mesures contient des valeurs de données de ventes réelles, tandis que les autres dimensions constituent des manières de classer et regrouper les valeurs de données de ventes.  
+ Par exemple, un cube contenant des données de ventes a le des cinq dimensions suivantes : Vendeur, géographie, heure, produits et mesures. La dimension de mesures contient des valeurs de données de ventes réelles, tandis que les autres dimensions constituent des manières de classer et regrouper les valeurs de données de ventes.  
   
  La dimension Geography comprend l’ensemble suivant de membres :  
   
@@ -82,7 +82,7 @@ Hamburg, Munich, Stuttgart}
   
  Les membres peuvent être consolidées dans une ou plusieurs hiérarchies par dimension. Envisagez une dimension de temps où il existe deux façons pour cumuler au niveau de l’année à partir du niveau de jours :  
   
- Cet exemple illustre également une autre caractéristique : certains membres du niveau semaine de la hiérarchie année-semaine n’apparaissent pas dans n’importe quel niveau de la hiérarchie année-trimestre. Par conséquent, une hiérarchie ne devez pas inclure tous les membres d’une dimension.  
+ Cet exemple illustre également une autre caractéristique : Certains membres du niveau semaine de la hiérarchie année-semaine n’apparaissent pas dans n’importe quel niveau de la hiérarchie année-trimestre. Par conséquent, une hiérarchie ne devez pas inclure tous les membres d’une dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Modèle objet ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   

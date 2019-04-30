@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073914"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit deux fonctionnalités qui suivent les modifications apportées aux données d'une base de données : [Capture de données modifiées](#Capture) et [Suivi des modifications](#Tracking). Ces fonctionnalités permettent aux applications de déterminer les modifications de DML (opérations d’insertion, de mise à jour et de suppression) apportées aux tables utilisateur dans une base de données. La capture de données modifiées et le suivi des modifications peuvent être activés sur la même base de données ; aucune attention particulière n'est requise. Pour les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que prennent en charge des modifications capture de données et le suivi des modifications, consultez [fonctionnalités prises en charge par les éditions de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "53351704"
   
 -   [Centre de développement Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation pour [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique « Comment : Utilisez SQL Server suivi des modifications » contient des exemples de code et de plus d’informations détaillées.  
+     Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation pour [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique « Guide pratique pour utiliser le suivi des modifications SQL Server » contient des informations détaillées et des exemples de code.  
   
   
 ## <a name="related-tasks-required"></a>Tâches associées (obligatoires)  

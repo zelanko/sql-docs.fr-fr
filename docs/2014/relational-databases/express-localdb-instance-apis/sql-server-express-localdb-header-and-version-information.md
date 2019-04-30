@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128697"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>En-tête et informations de version SQL Server Express LocalDB
   Il n'y a aucun fichier d'en-tête distinct pour l'API de l'instance de base de données locale SQL Server Express (LocalDB) ; les signatures de la fonction et les codes d'erreur de LocalDB sont définis dans le fichier d'en-tête SQL Server Native Client (sqlncli.h). Pour utiliser l'API d'instance de LocalDB, vous devez inclure le fichier d'en-tête sqlncli.h dans votre projet.  
@@ -25,9 +25,9 @@ ms.locfileid: "52795351"
 ## <a name="localdb-versioning"></a>Contrôle de version de LocalDB  
  L'installation de LocalDB utilise un jeu unique de binaires par version principale de SQL Server. Ces versions de LocalDB sont conservées et des correctifs de logiciel sont appliqués indépendamment. Cela signifie que l'utilisateur doit spécifier la version de base de LocalDB (autrement dit, la version principale de SQL Server) qu'il utilisera. La version est spécifiée dans le format de la version standard défini par le .NET Framework **System.Version** classe :  
   
- *[.Build.revision]]*  
+ *major.minor[.build[.revision]]*  
   
- Les deux premiers nombres dans la chaîne de version (*majeure* et *mineure*) sont obligatoires. Les deux derniers nombres dans la chaîne de version (*build* et *révision*) sont facultatifs et la valeur par défaut zéro si l’utilisateur les omet. Cela signifie que si l'utilisateur ne spécifie que « 12.2 » comme numéro de version de LocalDB, le numéro de version sera traité comme si « 12.2.0.0 » avait été spécifié.  
+ Les deux premiers nombres dans la chaîne de version (*majeure* et *mineure*) sont obligatoires. Les deux derniers nombres dans la chaîne de version (*build* et *révision*) sont facultatifs et la valeur par défaut zéro si l’utilisateur les omet. Cela signifie que si l’utilisateur ne spécifie que « 12.2 » comme le numéro de version de base de données locale, il est considéré comme si l’utilisateur spécifié « 12.2.0.0 » avait été.  
   
  La version pour l'installation de LocalDB est définie dans la clé de Registre MSSQLServer\CurrentVersion sous la clé de Registre de l'instance de SQL Server, par exemple :  
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140626"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
   Avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage du consommateur.  
@@ -45,7 +45,7 @@ ms.locfileid: "48159190"
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément *pObject* de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément *pObject* de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   

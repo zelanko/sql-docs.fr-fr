@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f1c5bbfd2e2fbf91fd9e91acafe0bc72d006d3f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132747"
 ---
 # <a name="sqlgettranslator-function"></a>SQLGetTranslator, fonction
 **Conformité**  
- Version introduite : ODBC VERSION 2.0  
+ Version introduite : ODBC 2.0  
   
  **Résumé**  
  **SQLGetTranslator** affiche une boîte de dialogue à partir de laquelle un utilisateur peut sélectionner un traducteur.  
@@ -53,7 +53,7 @@ BOOL SQLGetTranslator(
  *hwndParent*  
  [Entrée] Handle de fenêtre parente.  
   
- *Caractère*  
+ *lpszName*  
  [Entrée/sortie] Nom de la traduction à partir des informations système.  
   
  *cbNameMax*  

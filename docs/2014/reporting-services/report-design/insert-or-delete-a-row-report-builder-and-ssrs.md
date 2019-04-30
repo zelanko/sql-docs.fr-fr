@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40ab945f5eadbf1e1e876e37e921626719755a8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209388"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Insérer ou supprimer une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter ou supprimer des lignes dans une région de données de tableau matriciel. Cette région peut être une table, une matrice ou une liste. Les procédures suivantes ne s'appliquent pas aux régions de données de graphique ou de jauge.  

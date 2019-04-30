@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155738"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   La fenêtre du mode création de dataset partagé vous aide à créer une requête de dataset que vous pouvez partager avec d'autres utilisateurs. La fenêtre vous permet de sélectionner une source de données partagée, de spécifier des propriétés pour le dataset partagé et de créer une requête dans le concepteur de requêtes.  

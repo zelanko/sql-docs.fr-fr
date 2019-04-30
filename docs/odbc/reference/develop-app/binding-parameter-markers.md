@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199393"
 ---
 # <a name="binding-parameter-markers"></a>Liaison de marqueurs de paramètre
 L’application lie les paramètres en appelant **SQLBindParameter**. **SQLBindParameter** lie un paramètre à la fois. Avec elle, l’application spécifie les éléments suivants :  
@@ -28,7 +28,7 @@ L’application lie les paramètres en appelant **SQLBindParameter**. **SQLBindP
   
 -   Le type de paramètre (entrée, entrée/sortie ou de sortie). À l’exception des paramètres dans les appels de procédure, tous les paramètres sont des paramètres d’entrée. Pour plus d’informations, consultez [paramètres de procédure](../../../odbc/reference/develop-app/procedure-parameters.md), plus loin dans cette section.  
   
--   Le C type, l’adresse et octets longueur des données de la variable liée au paramètre. Le pilote doit être en mesure de convertir les données à partir du type de données C au type de données SQL ou une erreur est retournée. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) annexe d : Types de données.  
+-   Le C type, l’adresse et octets longueur des données de la variable liée au paramètre. Le pilote doit être en mesure de convertir les données à partir du type de données C au type de données SQL ou une erreur est retournée. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) dans l’annexe d : Types de données.  
   
 -   Le type de données SQL, la précision et l’échelle du paramètre lui-même.  
   

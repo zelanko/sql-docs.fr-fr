@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188225"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Traitement de modèles dans la structure de publipostage ciblé (Didacticiel sur l'exploration de données de base)
   Avant de pouvoir consulter ou utiliser les modèles d'exploration de données que vous avez créés, vous devez déployer le projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et traiter la structure d'exploration de données et les modèles d'exploration de données.  

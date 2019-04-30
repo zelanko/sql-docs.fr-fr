@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164669"
 ---
 # <a name="error-page-report-manager"></a>Page Erreur (Gestionnaire de rapports)
   La page Erreur vous permet d'afficher des informations détaillées sur une condition d'erreur. Les erreurs basée sur session ou serveur apparaissent sur cette page. Les erreurs de validation qui sont liées à des contrôles de page s'affichent en ligne en regard du contrôle.  

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 2 : Mappage des colonnes Excel aux domaines DQS | Microsoft Docs'
+title: 'Tâche 2 : Mappage des colonnes Excel aux domaines DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198857"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tâche 2 : Mappage de colonnes d'Excel aux domaines DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tâche 2 : Mappage de colonnes d’Excel aux domaines DQS
     
 1.  Dans la page **Mapper** , sélectionnez **Fichier Excel** pour **Source de données**.  
   

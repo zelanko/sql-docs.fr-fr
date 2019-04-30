@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199082"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Récupération des paramètres de sortie à l’aide de SQLGetData
 Avant d’ODBC 3.8, une application peut récupérer uniquement les paramètres de sortie d’une requête avec une mémoire tampon de sortie lié. Toutefois, il est difficile à allouer un tampon de très grand lorsque la taille de la valeur du paramètre est très important (par exemple, il s’agit d’une grande image). ODBC 3.8 introduit une nouvelle façon de récupérer les paramètres de sortie dans les parties. Une application peut désormais appeler **SQLGetData** avec une petite mémoire tampon plusieurs fois afin de récupérer une valeur de paramètre élevée. Cela est similaire à la récupération des données de la colonne de grande taille.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a532c253ea2204fa3636c24c503cbefd3fa6311
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127810"
 ---
 # <a name="using-operating-system-authentication"></a>Utilisation de l’authentification du système d’exploitation
 > [!IMPORTANT]  
@@ -27,9 +27,9 @@ ms.locfileid: "47686497"
   
  L’authentification du système d’exploitation Oracle s’appuie sur le système d’exploitation sous-jacent pour contrôler l’accès aux comptes de base de données. Les utilisateurs ne doivent pas entrer un mot de passe lors de l’utilisation de ce type de connexion.  
   
- Pour tirer parti de cette fonctionnalité, spécifiez « / » en tant que l’ID d’utilisateur et ne spécifiez pas un mot de passe lors de la connexion à l’aide de la connexion d’API : [SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md), [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md), ou [ SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md).  
+ Pour tirer parti de cette fonctionnalité, spécifiez « / » en tant que l’ID d’utilisateur et ne spécifiez pas un mot de passe lors de la connexion à l’aide de l’API de connexion suivante : [SQLBrowseConnect](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md), [SQLConnect](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md), ou [SQLDriverConnect](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md).  
   
- Utilisent de bases de données Oracle SQL * Net Services d’authentification pour authentifier les utilisateurs qui sont connectés. Ce service fonctionne bien si les utilisateurs sont connectés à Oracle via SQLPlus ; Toutefois, lorsque l’utilisateur connecté est un service tel qu’Internet Information Services, l’authentification échoue. Il s’agit d’une limitation connue de SQL\*authentification Net et génère l’erreur suivante : « [Microsoft] [pilote ODBC pour Oracle] [Oracle] ORA-12641 : Impossible d’initialiser TNS:authentication service. »  
+ Utilisent de bases de données Oracle SQL * Net Services d’authentification pour authentifier les utilisateurs qui sont connectés. Ce service fonctionne bien si les utilisateurs sont connectés à Oracle via SQLPlus ; Toutefois, lorsque l’utilisateur connecté est un service tel qu’Internet Information Services, l’authentification échoue. Il s’agit d’une limitation connue de SQL\*authentification Net et génère l’erreur suivante : « [Microsoft] [pilote ODBC pour Oracle] [Oracle] ORA-12641 : Service de TNS:Authentication initialisation a échoué. »  
   
  Vous pouvez corriger ce problème en modifiant le fichier Sqlnet.ora. Ce fichier de configuration est généralement stocké dans le sous-répertoire Network\Admin du répertoire racine Oracle. Ajoutez la ligne suivante à Sqlnet.ora :  
   

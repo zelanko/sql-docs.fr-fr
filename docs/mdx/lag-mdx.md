@@ -1,5 +1,5 @@
 ---
-title: Lag (MDX) | Documents Microsoft
+title: Lag (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3c5479aa3ce855b554f34f72c5c86aa86eb04b9f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205825"
 ---
 # <a name="lag-mdx"></a>Lag (MDX)
 
@@ -29,7 +29,7 @@ Member_Expression.Lag(Index)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
  *Index*  
@@ -44,7 +44,7 @@ Member_Expression.Lag(Index)
   
  `Lag(1)` équivaut à la [PrevMember](../mdx/prevmember-mdx.md) (fonction). `Lag(-1)` équivaut à la [NextMember](../mdx/nextmember-mdx.md) (fonction).  
   
- Le **Lag** fonction est similaire à la [entraîner](../mdx/lead-mdx.md) de fonction, à ceci près que le **entraîner** fonction recherche dans la direction opposée à la **Lag** (fonction). Ce qui signifie que `Lag(n)` est équivalent à `Lead(-n)`.  
+ Le **Lag** fonction est similaire à la [entraîner](../mdx/lead-mdx.md) fonctionner, à ceci près que le **entraîner** fonction recherche dans la direction opposée à la **Lag** fonction. Ce qui signifie que `Lag(n)` est équivalent à `Lead(-n)`.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-après retourne la valeur du mois de décembre 2001 :  
@@ -64,6 +64,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

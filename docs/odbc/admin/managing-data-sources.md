@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198756"
 ---
 # <a name="managing-data-sources"></a>Gestion des sources de données
 Une fois que vous avez installé un pilote ODBC programme du pilote d’installation, vous pouvez définir une ou plusieurs sources de données pour celui-ci. Le nom de source de données (DSN) doit fournir une description unique de données ; par exemple, *paie* ou *comptes fournisseurs*. Les sources de données utilisateur et système qui sont définis pour tous les installés actuellement les pilotes sont répertoriées dans le **DSN utilisateur** ou **DSN système** onglets de la **administrateur de sources de données ODBC**boîte de dialogue. Les sources de données de fichier dans un répertoire donné sont répertoriées dans le **fichier DSN** onglet ; le répertoire à afficher est entré dans le **Regarder dans** zone le **fichier DSN** onglet.  

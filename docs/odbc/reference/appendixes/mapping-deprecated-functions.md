@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181317"
 ---
 # <a name="mapping-deprecated-functions"></a>Mappage des fonctions dépréciées
 Cette section décrit les fonctions déconseillées comment sont mappés par le ODBC 3 *.x* Gestionnaire de pilotes afin de garantir la compatibilité descendante de ODBC 3 *.x* pilotes qui sont utilisés avec ODBC 2. *x* applications. Le Gestionnaire de pilotes effectue ce mappage, quel que soit la version de l’application. Étant donné que chacun des ODBC 2. *x* fonctions dans la liste suivante est mappée à le correspondantes ODBC 3 *.x* fonction lorsqu’elle est appelée dans un ODBC 3 *.x* pilote, le 3 ODBC *.x*pilote ne doit pas implémenter d’ODBC 2. *x* fonctions.  

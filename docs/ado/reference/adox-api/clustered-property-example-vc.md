@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184014"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered, exemple de propriété (VC++)
 Cet exemple montre la [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propriété d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne gèrent pas les index ordonnés en clusters, cet exemple retournera **False** pour le **Clustered** propriété de tous les index dans le *Northwind* base de données.  

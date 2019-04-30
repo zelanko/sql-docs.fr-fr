@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9a265979af780b1df3eedf18c14fd822a2983b1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136186"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
   Les expressions régulières sont une notation souple et concise pour rechercher et remplacer des modèles de texte. Un ensemble spécifique d'expressions régulières peut être utilisé dans le champ **Rechercher** de la boîte de dialogue [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
   
 #### <a name="to-find-using-regular-expressions"></a>Pour effectuer une recherche à l'aide d'expressions régulières  
   
-1.  Pour activer l’utilisation des expressions régulières dans le **rechercher** champ pendant **recherche rapide**, **rechercher dans les fichiers**, **remplacement rapide**, ou  **Remplacer dans les fichiers** opérations, sélectionnez le **utilisation** sous **Options de recherche** et choisissez **expressions régulières**.  
+1.  Pour pouvoir utiliser des expressions régulières dans le champ **Rechercher** pendant des opérations **Recherche rapide**, **Rechercher dans les fichiers**, **Remplacement rapide**ou **Remplacer dans les fichiers**, sélectionnez l’option **Utiliser** sous **Options de recherche**, puis choisissez **Expressions régulières**.  
   
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53328312"
 |----------------|------------|-----------------|  
 |Zéro ou plusieurs occurrences au minimum|@|Représente zéro ou plusieurs occurrences de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
 |Une ou plusieurs occurrences au minimum|#|Représente au moins une occurrence de l'expression précédente, en faisant correspondre le moins de caractères possible.|  
-|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9] ^ 4 correspond à n’importe quelle séquence à quatre chiffres.|  
+|Répétition n fois|^n|Représente n occurrences de l'expression précédente. Par exemple, [0-9]^4 représente toute séquence à quatre chiffres.|  
 |Regroupement|()|Regroupe une sous-expression.|  
 |Énième texte avec balises|\n|Dans une expression **Rechercher ou Remplacer** , recherche la concordance du texte correspondant à la énième expression avec balises, où n désigne un chiffre compris entre 1 et 9.<br /><br /> Dans une expression **Remplacer** , \0 insère le texte correspondant à l’expression entière.|  
 |Champ justifié à droite|\\(w,n)|Dans une expression **Remplacer** , aligne à droite la énième expression avec balises dans un champ comportant au moins *w* caractères.|  
@@ -122,7 +122,7 @@ ms.locfileid: "53328312"
 |Expression|Syntaxe|Description|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Représente n'importe quel caractère. Par exemple, :Alar retourne des mots comme « Par », « partie » ou « épargne ».|  
-|Numérique|:Nu|Représente n'importe quel nombre ou chiffre.|  
+|Numeric|:Nu|Représente n'importe quel nombre ou chiffre.|  
 |Ponctuation|:Pu|Représente n'importe quel signe de ponctuation tel que ?, @, ', etc.|  
 |Espace blanc|:Wh|Représente n'importe quel type d'espace blanc, y compris les espaces typographiques et idéographiques.|  
 |Bidirectionnel|:Bi|Représente les caractères d'un script se lisant de droite à gauche (langue arabe ou hébraïque).|  

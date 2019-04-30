@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140468"
 ---
 # <a name="fetching-rows"></a>Extraction de lignes
   L’interface **IRowset** est l’interface de base des ensembles de lignes. L’interface **IRowset** fournit des méthodes pour récupérer (fetch) les lignes séquentiellement, obtenir les données de ces lignes et gérer les lignes. Les consommateurs utilisent les méthodes de l’interface **IRowset** pour toutes les opérations de base des ensembles de lignes. Ces opérations incluent l'extraction et la libération des lignes, ainsi que l'obtention des valeurs des colonnes.  

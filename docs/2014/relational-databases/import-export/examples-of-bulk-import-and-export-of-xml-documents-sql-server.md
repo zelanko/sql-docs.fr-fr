@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9d573faebbbfcaf8a501a80aa093584af7fa0307
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140481"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d'importation et d'exportation en bloc de documents XML (SQL Server)
     
@@ -46,7 +46,7 @@ ms.locfileid: "52515853"
   
 -   A. [L’importation de données XML comme un flux d’octets binaires en bloc](#binary_byte_stream)  
   
--   b. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
+-   B. [L’importation de données XML dans une ligne existante en bloc](#existing_row)  
   
 -   C. [Importation des données XML à partir d’un fichier qui contient une DTD en bloc](#file_contains_dtd)  
   
