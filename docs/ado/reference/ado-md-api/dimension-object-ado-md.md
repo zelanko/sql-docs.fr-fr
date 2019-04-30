@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225782"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension, objet (ADO MD)
 Représente une des dimensions d’un cube multidimensionnel, contenant une ou plusieurs hiérarchies de membres.  
@@ -39,11 +39,11 @@ Représente une des dimensions d’un cube multidimensionnel, contenant une ou p
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  
-|Hiérarchie par défaut|Le nom unique de la hiérarchie par défaut.|  
+|DefaultHierarchy|Le nom unique de la hiérarchie par défaut.|  
 |Description|Description explicite du cube.|  
 |DimensionCaption|Étiquette ou légende associée à la dimension.|  
 |DimensionCardinality|Le nombre de membres dans la dimension.|  

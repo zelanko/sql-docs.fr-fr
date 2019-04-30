@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193263"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
   Comme décrit dans [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), le mode AUTO retourne des résultats de requête en tant qu’éléments XML imbriqués. Cela ne permet pas de contrôler de façon précise la forme du document XML généré à partir du résultat d'une requête. Les requêtes au mode AUTO sont utiles pour générer des hiérarchies simples. Toutefois, [Utiliser le mode EXPLICIT avec FOR XML](use-explicit-mode-with-for-xml.md) et [Utiliser le mode PATH avec FOR XML](use-path-mode-with-for-xml.md) fournissent davantage de contrôle et de souplesse pour déterminer la forme du XML à partir d’un résultat de requête.  
@@ -136,7 +136,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Exemples : Utilisation du Mode AUTO](examples-using-auto-mode.md)  
+-   [Exemples : Utilisation du mode AUTO](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
