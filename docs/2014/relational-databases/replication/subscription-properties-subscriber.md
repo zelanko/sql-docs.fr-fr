@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250272"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propriétés de l’abonnement réplication SQL Server 
 Cette section fournit des informations sur le **propriétés de l’abonnement** boîte de dialogue. 
@@ -43,7 +43,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>Options de serveur de publication pour les abonnements transactionnels  
+### <a name="publisher-options-for-transactional-subscriptions"></a>Options du serveur de publication pour les abonnements transactionnels  
  **Empêcher le bouclage de la transaction**  
  Détermine si l'Agent de distribution retourne à l'Abonné les transactions créées sur ce dernier. Cette option est utilisée pour la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
   
@@ -52,7 +52,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -110,7 +110,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  

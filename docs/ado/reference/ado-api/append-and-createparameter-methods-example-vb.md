@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248367"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append et CreateParameter, exemple de méthodes (VB)
 Cet exemple utilise le [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthodes pour exécuter une procédure stockée avec un paramètre d’entrée.  
@@ -124,5 +124,5 @@ End Sub
  [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63282109"
 ---
 # <a name="create-a-new-solution"></a>Créer une solution
   Lorsque vous créez un projet, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crée une solution qui le contient. Vous ne pouvez ouvrir qu'une seule solution à la fois. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne vous autorise pas à créer des dossiers dans les projets. Pour organiser votre travail, créez plusieurs projets.  

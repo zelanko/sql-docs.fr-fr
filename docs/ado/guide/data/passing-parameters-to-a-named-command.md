@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302365"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passage de paramètres à une commande nommée
 Tout comme le résultat de la commande est transmis en tant qu’un *out* variable de la commande nommée, les paramètres pour une commande paramétrable peut été transmis en tant que *dans* variables à la commande nommée.  

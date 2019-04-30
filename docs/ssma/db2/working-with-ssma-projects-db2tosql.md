@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244655"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
 Pour migrer des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous créez tout d’abord un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -76,7 +76,7 @@ Pour migrer des données à partir de bases de données DB2 [!INCLUDE[ssNoVersio
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Base de données SQL Azure  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>Personnalisation des paramètres de projet  
 Outre la définition des paramètres de projet par défaut qui s’appliquent à tous les nouveaux projets SSMA, vous pouvez personnaliser les paramètres pour chaque projet. Pour plus d’informations, consultez [définition des Options de projet &#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md) et rubriques connexes.  
@@ -96,7 +96,7 @@ Lorsque vous enregistrez un projet, SSMA conserve les paramètres du projet et �
   
         L’enregistrement des métadonnées peut prendre plusieurs minutes. Si vous ne souhaitez pas enregistrer les métadonnées, ne sélectionnez pas les cases à cocher.  
   
-    2.  Cliquez sur le **enregistrer** bouton.  
+    2.  Cliquez sur le bouton **Enregistrer**.  
   
         SSMA analysera les schémas DB2 et enregistrer les métadonnées dans le fichier projet.  
   

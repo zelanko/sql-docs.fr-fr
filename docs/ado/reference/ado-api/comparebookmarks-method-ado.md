@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315974"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks, méthode (ADO)
 Compare deux signets et retourne une indication de leurs valeurs relatives.  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO expose en tant qu’un **Variant**. Par exemple, les signets de SQL Server sont de type DBTYPE_R8 (**Double**). ADO expose ce type comme un **Variant** avec un sous-type de **Double**.  
   
- Lorsque vous comparez des signets, ADO ne tente pas de n’importe quel type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison se produit. Si les signets passés à la **CompareBookmarks** méthode sont stockées dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivante : « Arguments sont de type incorrect, sont en dehors des limites acceptables ou sont en conflit entre eux. »  
+ Lorsque vous comparez des signets, ADO ne tente pas de n’importe quel type de contrainte. Les valeurs sont simplement transmises au fournisseur où la comparaison se produit. Si les signets passés à la **CompareBookmarks** méthode sont stockées dans des variables de types différents, il peut générer l’erreur d’incompatibilité de type suivante : « Arguments sont de type incorrect, sont en dehors des limites acceptables ou sont en conflit avec eux. »  
   
  Signet qui n’est pas valide ou mal formée provoque une erreur.  
   

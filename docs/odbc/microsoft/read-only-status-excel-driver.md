@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17425e76814a8397b9d2e6167248f35e52ac6cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316736"
 ---
 # <a name="read-only-status-excel-driver"></a>État En lecture seule (pilote Excel)
 Lorsque le pilote Microsoft Excel est utilisé, les tables de source de données sont ouverts en lecture seule par défaut et peuvent être ouvert par un seul utilisateur à la fois. Même si les tables ont un état en lecture seule, toutefois, applications peuvent effectuer les insertions et mises à jour pour les tables de Microsoft Excel.  

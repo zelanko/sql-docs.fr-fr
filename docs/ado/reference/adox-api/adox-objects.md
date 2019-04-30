@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309184"
 ---
 # <a name="adox-objects"></a>Objets ADOX
 ## <a name="adox-object-summary"></a>Liste des objets ADOX  
@@ -34,7 +34,7 @@ ms.locfileid: "47772296"
 |[Procédure](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris les colonnes, les index et les clés.|  
 |[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
-|[Afficher](../../../ado/reference/adox-api/view-object-adox.md)|Représente un ensemble filtré d’enregistrements ou une table virtuelle.|  
+|[Affichage](../../../ado/reference/adox-api/view-object-adox.md)|Représente un ensemble filtré d’enregistrements ou une table virtuelle.|  
   
  Les relations entre ces objets sont illustrées dans le [modèle objet ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

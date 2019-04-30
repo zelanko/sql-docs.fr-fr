@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905bc30afff4af0ffc74363b93f95732f4760f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254178"
 ---
 # <a name="mixed-cursors"></a>Curseurs mixtes
 Un curseur mixte est une combinaison d’un curseur keyset et un curseur dynamique. Il est utilisé lorsque le jeu de résultats est trop volumineux pour être raisonnablement enregistré clés pour le jeu de résultats entier. Curseurs mixtes sont implémentées en créant un jeu de clés est plus petit que le jeu de résultats complet mais supérieure à l’ensemble de lignes.  
   
- Tant que l’application utilise le défilement dans le jeu de clés, le comportement est commandé par keyset. Lorsque l’application fait défiler le jeu de clés à l’extérieur, le comportement est dynamique : le curseur, extrait les lignes demandées et crée un nouveau jeu de clés. Une fois le nouveau jeu de clés est créé, le comportement revient à keyset dans ce jeu de clés.  
+ Tant que l’application utilise le défilement dans le jeu de clés, le comportement est commandé par keyset. Lorsque l’application fait défiler le jeu de clés à l’extérieur, le comportement est dynamique : Le curseur extrait les lignes demandées et crée un nouveau jeu de clés. Une fois le nouveau jeu de clés est créé, le comportement revient à keyset dans ce jeu de clés.  
   
  Par exemple, un jeu de résultats a 1 000 lignes et utilise un curseur mixte avec une taille de jeu de clés de 100 et une taille d’ensemble de lignes de 10. Lorsque le premier ensemble de lignes est atteinte, le curseur crée un jeu de clés constituée des clés pour les 100 premières lignes. Elle retourne ensuite les 10 premières lignes, comme demandé.  
   

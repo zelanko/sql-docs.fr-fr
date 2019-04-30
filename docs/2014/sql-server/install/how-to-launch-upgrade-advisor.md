@@ -1,5 +1,5 @@
 ---
-title: 'Comment : lancer le Conseiller de mise à niveau | Microsoft Docs'
+title: 'Procédure : Lancer le Conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295123"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Procédure : lancer le Conseiller de mise à niveau
   Le Conseiller de mise à niveau fournit une console centrale qui vous permet de lancer l'Assistant Analyse du Conseiller de mise à niveau et la visionneuse de rapports du Conseiller de mise à niveau. Cette rubrique décrit comment lancer le Conseiller de mise à niveau.  

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315284"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Définition de données MDX - ALTER CUBE
 
 
-  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce blog : [création d’une Application de l’écriture différée avec Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce blog : [Création d’une Application de l’écriture différée avec Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Notez que les écritures différées de dimensions simultanées peuvent provoquer un blocage : la première écriture différée est bloquée par une validation en raison du verrou partagé conservé par la deuxième écriture différée. Aucune erreur n'est générée dans ce cas, mais aucune des deux d'opération ne peut progresser. Les deux opérations expirent et les modifications sont supprimées.  
   
@@ -92,13 +92,13 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expression de chaîne valide fournissant le nom du parent du nouveau membre de dimension, sauf si le membre de dimension est créé à la racine.  
   
- *Nom de membre*  
+ *MemberName*  
  Expression de chaîne valide qui spécifie le nom d'un membre.  
   
  *É chec*  
  Expression scalaire valide qui définit la valeur de clé du nouveau membre de dimension.  
   
- *Property_name*  
+ *Property_Name*  
  Identificateur MDX (Multidimensional Expressions) valide représentant une propriété de membre.  
   
  *Property_Value*  
@@ -140,7 +140,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Expression de chaîne valide qui fournit le nom du nouveau parent du membre de dimension déplacé.  
   
- *Nom de membre*  
+ *MemberName*  
  Expression de chaîne valide qui spécifie le nom d'un membre.  
   
  Unsigned_*entier*  
@@ -152,7 +152,7 @@ CELL CALCULATION Calculation_Name
  La clause UPDATE DIMENSION MEMBER vous permet de modifier les propriétés d'un membre ainsi que la formule de membre personnalisée associée à un membre.  
   
 ### <a name="arguments"></a>Arguments  
- *Nom de membre*  
+ *MemberName*  
  Expression de chaîne valide qui spécifie le nom d'un membre.  
   
  *MDX_Expression*  

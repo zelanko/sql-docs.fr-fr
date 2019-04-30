@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b61e20eb3c79680cacbcfe25136ddd1208c985f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63279039"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Leçon 7 : Ajouter une action d’extraction dans le rapport parent
   Après avoir ajouté un contrôle ReportViewer à l'application de site Web, l'étape suivante consiste à ajouter une action d'extraction dans le rapport parent.  

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301293"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Spécifie comment un fournisseur doit exécuter une commande.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|Indique que la commande doit s’exécuter de façon asynchrone.<br /><br /> Cette valeur ne peut pas être combinée avec la [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valeur **adCmdTableDirect**.|  
 |**adAsyncFetch**|0x20|Indique que les lignes restantes après la quantité spécifiée dans le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété doit-elle être récupérée de manière asynchrone.|  

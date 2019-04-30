@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a97f50030d123181b1b3c0d2a5fda59a0005188
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312852"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Problèmes de mise à niveau de la fonction de recherche en texte intégral
   Les rubriques de cette section décrivent les problèmes de la fonction de recherche en texte intégral qui peuvent affecter votre mise à niveau. Les rubriques décrivent les mesures que vous pouvez prendre pour atténuer l’effet de ces modifications sur votre environnement.  

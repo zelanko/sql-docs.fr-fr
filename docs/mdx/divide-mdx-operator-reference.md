@@ -1,5 +1,5 @@
 ---
-title: (Division) (MDX) | Documents Microsoft
+title: (Divide) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248174"
 ---
 # <a name="divide---mdx-operator-reference"></a>Division - référence des opérateurs MDX
 
@@ -29,17 +29,17 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *dividende*  
+ *Dividend*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
- *diviseur*  
+ *Diviseur*  
  Expression MDX valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Valeur dont le type de données du paramètre possède la priorité la plus élevée.  
   
 ## <a name="remarks"></a>Notes  
- La valeur réelle retournée par le **/ (division)** opérateur représente le quotient de la première expression divisée par la seconde expression.  
+ La valeur réelle retournée par la **/ (diviser)** opérateur représente le quotient de la première expression divisée par la seconde expression.  
   
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si *diviseur* prend une valeur null, l’opérateur génère une erreur. Si les deux *diviseur* et *dividende* évaluer à une valeur null, l’opérateur retourne une valeur null.  
   

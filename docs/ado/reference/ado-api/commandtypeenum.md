@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316281"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Spécifie comment un argument de commande doit être interprété.  
   
  Il est important de valider fournie par l’utilisateur *CommandString* valeurs pour éviter de donner aux utilisateurs d’application la possibilité d’injecter des commandes potentiellement dangereuses pour ADO exécuter.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Ne spécifiez pas l’argument de type de commande.|  
 |**adCmdText**|1|Prend la valeur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) une définition textuelle d’une commande ou une procédure stockée à appeler.|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313475"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Pilotes ODBC fournis par Microsoft
 *Pilotes* sont des bibliothèques qui implémentent les fonctions de l’API ODBC. Chaque pilote est spécifique à un système de gestion de base de données (SGBD). Dans la plupart des cas, les pilotes exposent les fonctionnalités du SGBD sous-jacent ; ils ne sont pas requis pour implémenter des fonctionnalités non prises en charge par le SGBD. Pilotes d’effectuer des tâches spécifiques et peuvent être classés en deux catégories : basée sur des SGBD et fichier. Pour plus d’informations sur l’architecture de pilote et de pilotes, consultez [pilotes](../../odbc/reference/drivers.md).  

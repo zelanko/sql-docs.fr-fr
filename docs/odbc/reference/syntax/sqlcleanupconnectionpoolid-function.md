@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252747"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID, fonction
 **Conformité**  
- Version introduite : ODBC normes 3,81 conformité : ODBC  
+ Version introduite : Conformité aux normes 3,81 ODBC : ODBC  
   
  **Résumé**  
  **SQLCleanupConnectionPoolID** informe un pilote qui a un ID de pool a été dépassé. Un pool d’ID peut le délai d’attente chaque fois que toutes les connexions dans un pool associé à cet ID de pool ont été a expiré. Consultez [le regroupement dans le Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) pour plus d’informations sur le délai de connexion.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa9b979ed90ffcc5df73968fd784b31bc044282a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281210"
 ---
 # <a name="views-delete-method-example-vb"></a>Views, exemple de méthode Delete (VB)
 Le code suivant montre comment utiliser le [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) méthode pour supprimer une vue à partir du catalogue.  

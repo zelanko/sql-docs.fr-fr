@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262259"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect, fonction
 **Conformité**  
@@ -39,7 +39,7 @@ SQLRETURN  SQLPoolConnect(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Pas*  
+ *hDbc*  
  [Entrée] Le handle de connexion.  
   
  *hDbcInfoToken*  
@@ -57,7 +57,7 @@ SQLRETURN  SQLPoolConnect(
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (sans le caractère de fin de la valeur null) disponibles à renvoyer dans \* *wszOutConnectString*. Si le nombre de caractères à retourner est supérieur ou égal à *cchConnectStringBuffer*, la fin de chaîne de connexion dans \* *wszOutConnectString* est tronqué à *cchConnectStringBuffer* moins la longueur d’un caractère du caractère nul de terminaison.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or, SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  Semblable à [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) pour tout d’entrée d’une erreur de validation, à ceci près que le Gestionnaire de pilotes utilisera un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **gérer** de *hDbcInfoToken*.  

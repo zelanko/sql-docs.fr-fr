@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258962"
 ---
 # <a name="sqlgetdata-function"></a>Fonction SQLGetData
 **Conformité**  
@@ -48,7 +48,7 @@ SQLRETURN SQLGetData(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *Col_or_Param_Num*  
@@ -100,7 +100,7 @@ SQLRETURN SQLGetData(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne droite tronquées|Toutes les données pour la colonne spécifiée, *Col_or_Param_Num*, puissent être récupérées dans un seul appel à la fonction. SQL_NO_TOTAL ou la longueur des données restantes dans la colonne spécifiée avant l’appel actuel à **SQLGetData** est retourné dans \* *StrLen_or_IndPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> Pour plus d’informations sur l’utilisation de plusieurs appels à **SQLGetData** pour une seule colonne, consultez « Commentaires ».|  
-|01 S 07|Troncation fractionnelle|Les données retournées pour une ou plusieurs colonnes ont été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S07|Troncation fractionnelle|Les données retournées pour une ou plusieurs colonnes ont été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données d’une colonne dans le jeu de résultats ne peut pas être convertie au type de données C spécifié par l’argument *TargetType*.|  
 |07009|Index de descripteur non valide|La valeur spécifiée pour l’argument *Col_or_Param_Num* était égale à 0, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS était définie sur SQL_UB_OFF.<br /><br /> La valeur spécifiée pour l’argument *Col_or_Param_Num* a été supérieur au nombre de colonnes dans le jeu de résultats.<br /><br /> Le *Col_or_Param_Num* valeur n’est pas égale à la position ordinale du paramètre qui est disponible.<br /><br /> (DM) la colonne spécifiée a été liée. Cette description ne s’applique pas aux pilotes qui retournent SQL_GD_BOUND masque de bits pour l’option SQL_GETDATA_EXTENSIONS dans **SQLGetInfo**.<br /><br /> (DM) le nombre de la colonne spécifiée était inférieur ou égal au nombre de la colonne dépendante la plus élevée. Cette description ne s’applique pas aux pilotes qui retournent SQL_GD_ANY_COLUMN masque de bits pour l’option SQL_GETDATA_EXTENSIONS dans **SQLGetInfo**.<br /><br /> (DM) l’application a déjà appelé **SQLGetData** pour la ligne actuelle ; le nombre de la colonne spécifiée dans l’appel actuel est inférieur au nombre de la colonne spécifiée dans l’appel précédent ; et le pilote ne retourne pas le SQL_ Masque de bits GD_ANY_ORDER pour l’option SQL_GETDATA_EXTENSIONS dans **SQLGetInfo**.<br /><br /> (DM) le *TargetType* SQL_ARD_TYPE, a été l’argument et le *Col_or_Param_Num* Échec de l’enregistrement de descripteur dans la ARD la vérification de cohérence.<br /><br /> (DM) le *TargetType* argument était SQL_ARD_TYPE, et la valeur dans le champ SQL_DESC_COUNT de la ARD était inférieure à la *Col_or_Param_Num* argument.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  

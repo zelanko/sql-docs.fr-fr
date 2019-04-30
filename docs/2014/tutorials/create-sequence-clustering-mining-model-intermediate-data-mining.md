@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273480"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
   La première étape pour créer un modèle d'exploration de données Sequence Clustering est d'utiliser l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données et un modèle d'exploration de données selon l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering).  
@@ -71,12 +71,12 @@ ms.locfileid: "56039351"
   
     |Tables/Colonnes|Type de contenu|Type de données|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discret|Texte|  
-    |OrderNumber|Touche|Texte|  
-    |Région|Discret|Texte|  
+    |IncomeGroup|Discret|Text|  
+    |OrderNumber|Touche|Text|  
+    |Région|Discret|Text|  
     |vAssocSeqLineItems|||  
     |Numéro de ligne|Séquence clé|Long|  
-    |Modèle|Discret|Texte|  
+    |Modèle|Discret|Text|  
   
 9. Sur le **créer un jeu de test** , changez le **pourcentage des données de test** sur 20, puis cliquez sur **suivant**.  
   

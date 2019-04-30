@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e8f0d245da2bde9763a1b940f8253d4c81fe903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288288"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes, exemple de méthode Append (VB)
 Le code suivant montre comment créer un nouvel index. L’index est sur deux colonnes de la table.  

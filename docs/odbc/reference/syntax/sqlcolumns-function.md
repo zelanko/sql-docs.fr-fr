@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51b14014853e0ccb91293097fd3aa81c1edcb2ae
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259352"
 ---
 # <a name="sqlcolumns-function"></a>Fonction SQLColumns
 **Conformité**  
@@ -51,10 +51,10 @@ SQLRETURN SQLColumns(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
- *Nom de catalogue*  
+ *CatalogName*  
  [Entrée] Nom du catalogue. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, une chaîne vide (« ») indique les tables qui n’ont pas de catalogues. *CatalogName* ne peut pas contenir un modèle de recherche de chaîne.  
   
 > [!NOTE]  
@@ -170,13 +170,13 @@ SQLRETURN SQLColumns(
 |BUFFER_LENGTH (ODBC 1.0)|8|Entier|La longueur en octets des données transférées sur une opération de SQLGetData, SQLFetch ou SQLFetchScroll si SQL_C_DEFAULT est spécifié. Pour les données numériques, cette taille peut différer de la taille des données stockées sur la source de données. Cette valeur peut différer de la colonne COLUMN_SIZE pour les données caractères. Pour plus d’informations sur la longueur, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) dans l’annexe d : Types de données.|  
 |DECIMAL_DIGITS (ODBC 1.0)|9|Smallint|Le nombre total de chiffres significatifs à droite de la virgule décimale. Pour SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP, cette colonne contient le nombre de chiffres dans le composant fractions de secondes. Pour les autres types de données, il s’agit des chiffres décimaux de la colonne sur la source de données. Pour les types de données d’intervalle qui contiennent un composant d’heure, cette colonne contient le nombre de chiffres à droite de la virgule décimale (en fractions de seconde). Pour les types de données d’intervalle qui ne contiennent pas d’un composant au moment, cette colonne est 0. Pour plus d’informations sur les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) dans l’annexe d : Types de données. La valeur NULL est retournée pour les types de données où DECIMAL_DIGITS n’est pas applicable.|  
 |NUM_PREC_RADIX (ODBC 1.0)|10|Smallint|Types de données numériques, 10 ou 2. Si elle est de 10, les valeurs COLUMN_SIZE et DECIMAL_DIGITS donnent le nombre de chiffres décimaux autorisé pour la colonne. Par exemple, une colonne DECIMAL(12,5) retournerait une NUM_PREC_RADIX de 10, un COLUMN_SIZE 12 et un DECIMAL_DIGITS 5 ; une colonne de type FLOAT peut retourner un NUM_PREC_RADIX de 10, un COLUMN_SIZE de 15 et DECIMAL_DIGITS est NULL.<br /><br /> Si elle est 2, les valeurs COLUMN_SIZE et DECIMAL_DIGITS donnent le nombre de bits autorisées dans la colonne. Par exemple, une colonne de type FLOAT peut renvoyer une base de 2, une valeur COLUMN_SIZE 53 et DECIMAL_DIGITS est NULL.<br /><br /> La valeur NULL est retournée pour les types de données où NUM_PREC_RADIX n’est pas applicable.|  
-|NULLABLE ODBC (1.0)|11|Smallint non NULL|SQL_NO_NULLS si la colonne ne peut pas inclure de valeurs NULL.<br /><br /> SQL_NULLABLE si la colonne accepte les valeurs NULL.<br /><br /> SQL_NULLABLE_UNKNOWN si on ne sait pas si la colonne accepte les valeurs NULL.<br /><br /> La valeur renvoyée pour cette colonne diffère de celle renvoyée pour la colonne IS_NULLABLE. La colonne accepte la valeur null indique avec certitude qu’une colonne peut accepter les valeurs NULL, mais ne peut pas indiquer avec certitude qu’une colonne n’accepte pas les valeurs NULL. La colonne IS_NULLABLE indique avec certitude qu’une colonne ne peut pas accepter les valeurs NULL, mais ne peut pas indiquer avec certitude qu’une colonne accepte les valeurs NULL.|  
+|NULLABLE (ODBC 1.0)|11|Smallint non NULL|SQL_NO_NULLS si la colonne ne peut pas inclure de valeurs NULL.<br /><br /> SQL_NULLABLE si la colonne accepte les valeurs NULL.<br /><br /> SQL_NULLABLE_UNKNOWN si on ne sait pas si la colonne accepte les valeurs NULL.<br /><br /> La valeur renvoyée pour cette colonne diffère de celle renvoyée pour la colonne IS_NULLABLE. La colonne accepte la valeur null indique avec certitude qu’une colonne peut accepter les valeurs NULL, mais ne peut pas indiquer avec certitude qu’une colonne n’accepte pas les valeurs NULL. La colonne IS_NULLABLE indique avec certitude qu’une colonne ne peut pas accepter les valeurs NULL, mais ne peut pas indiquer avec certitude qu’une colonne accepte les valeurs NULL.|  
 |REMARQUES (ODBC 1.0)|12|Varchar|Une description de la colonne.|  
 |COLUMN_DEF (ODBC 3.0)|13|Varchar|Valeur par défaut de la colonne. La valeur de cette colonne doit être interprétée en tant que chaîne si elle est placée entre guillemets.<br /><br /> Si la valeur NULL a été spécifiée comme valeur par défaut, cette colonne est le mot NULL, ne pas entourée guillemets. Si la valeur par défaut ne peut pas être représentée sans troncation, cette colonne contient tronquée, sans placer entre guillemets simples. Si aucune valeur par défaut a été spécifiée, cette colonne est NULL.<br /><br /> La valeur du COLUMN_DEF peut être utilisée pour générer une nouvelle définition de colonne, sauf lorsqu’elle contient la valeur tronquée.|  
 |SQL_DATA_TYPE (ODBC 3.0)|14|Smallint non NULL|Type de données SQL, tel qu’il apparaît dans le champ d’enregistrement SQL_DESC_TYPE dans le descripteur IRD. Cela peut être un type de données ODBC SQL ou un type de données spécifiques au pilote SQL. Cette colonne est la même que la colonne DATA_TYPE, à l’exception des types de données date/heure et intervalle. Cette colonne renvoie le type de données nonconcise (par exemple, SQL_DATETIME ou SQL_INTERVAL), au lieu du type de données concises (comme SQL_TYPE_DATE ou SQL_INTERVAL_YEAR_TO_MONTH) pour datetime et les types de données interval. Si cette colonne retourne SQL_DATETIME ou SQL_INTERVAL, le type de données spécifique peut être déterminé à partir de la colonne SQL_DATETIME_SUB. Pour obtenir la liste des types de données ODBC SQL valides, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.<br /><br /> Les types de données retournées pour ODBC 3. *x* et ODBC 2. *x* applications peuvent être différentes. Pour plus d’informations, consultez [la compatibilité descendante et conformité aux normes](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).|  
 |SQL_DATETIME_SUB (ODBC 3.0)|15|Smallint|Le code de sous-type pour les types de données datetime et interval. Pour les autres types de données, cette colonne renvoie une valeur NULL. Pour plus d’informations sur la date/heure et intervalle sous-codes, consultez « SQL_DESC_DATETIME_INTERVAL_CODE » dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).|  
 |CHAR_OCTET_LENGTH (ODBC 3.0)|16|Entier|Colonne de type de la longueur maximale en octets de données binaire ou caractère. Pour tous les autres types de données, cette colonne retourne une valeur NULL.|  
-|POSITION ORDINALE (ODBC 3.0)|17|Entier non NULL|Position ordinale de la colonne dans la table. La première colonne dans la table est le numérique 1.|  
+|ORDINAL_POSITION (ODBC 3.0)|17|Entier non NULL|Position ordinale de la colonne dans la table. La première colonne dans la table est le numérique 1.|  
 |IS_NULLABLE (ODBC 3.0)|18|Varchar|« NON » si la colonne n’inclut pas les valeurs NULL.<br /><br /> « Oui » si la colonne peut inclure des valeurs NULL.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO SQL ne peut pas renvoyer de chaîne vide.<br /><br /> La valeur renvoyée pour cette colonne diffère de celle renvoyée pour la colonne NULLABLE. (Consultez la description de la colonne NULLABLE.)|  
   
 ## <a name="code-example"></a>Exemple de code  

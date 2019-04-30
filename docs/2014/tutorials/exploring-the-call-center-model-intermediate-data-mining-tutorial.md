@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315082"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez généré le modèle exploratoire, vous pouvez l'utiliser pour en savoir plus sur vos données à l'aide des outils suivants fournis dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "56037760"
     > [!NOTE]  
     >  Les valeurs exactes de cette plage peuvent varier en fonction de la façon dont vous avez configuré le modèle.  
   
-2.  Pour **valeur 2**, sélectionnez la plage comprenant les valeurs les plus élevées. Par exemple, la plage comprenant la valeur >= 0.12 représente les taux d'abandon les plus élevés, et par conséquent le niveau de service le moins bon. En d'autres termes, 12 % des clients qui ont téléphoné pendant le temps de travail de cette équipe ont raccroché avant de parler à un commercial.  
+2.  Pour **valeur 2**, sélectionnez la plage comprenant les valeurs les plus élevées. Par exemple, la plage avec la valeur > = 0.12 représente les taux d’abandon le plus élevés et par conséquent le niveau de service moins bon. En d'autres termes, 12 % des clients qui ont téléphoné pendant le temps de travail de cette équipe ont raccroché avant de parler à un commercial.  
   
      Le contenu de la **Variables** volet sont mises à jour pour comparer les attributs qui contribuent aux valeurs de résultat. Par conséquent, la colonne de gauche vous montre les attributs associés au meilleur niveau de service, et la colonne de droite vous montre ceux associés au niveau de service le moins bon.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037760"
   
  Toutefois, lorsque vous parcourez la liste des facteurs contributeurs, vous voyez d'autres facteurs dont les effets sont plus subtils et plus difficiles à interpréter. Par exemple, l'équipe semble avoir une influence sur le service, mais les scores de finesse et les probabilités relatives indiquent que l'équipe n'est pas un facteur majeur.  
   
-|Attribute|Value|Privilégie \< 0,07|Privilèges >= 0.12|  
+|Attribute|Value|Privilégie \< 0,07|Privilégie > = 0.12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087 - 120.000||Score :  100<br /><br /> Probabilité de Value1 : 4.45 %<br /><br /> Probabilité de Value2 : 51.94 %<br /><br /> Finesse pour Value1 : 0.19<br /><br /> Finesse pour Value2 : 1.94|  
 |Average Time Per Issue|44.000 - 70.597|Score : 92.35<br /><br /> Probabilité de Value1 : 60.06 %<br /><br /> Probabilité de Value2 : 8.30 %<br /><br /> Finesse pour Value1 : 2.61<br /><br /> Finesse pour Value2 : 0.31||  

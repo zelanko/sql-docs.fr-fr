@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281889"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Spécifie la règle à appliquer quand une [clé](../../../ado/reference/adox-api/key-object-adox.md) est supprimé.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Modifications en cascade.|  
 |**adRINone**|0|Valeur par défaut. Aucune action n'est effectuée.|  
