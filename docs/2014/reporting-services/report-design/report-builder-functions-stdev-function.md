@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0dbcb90248761961deb5c932af952a53e3dcbbcf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216117"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>Fonction StDev (Générateur de rapports et SSRS)
   Retourne l'écart type de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.  

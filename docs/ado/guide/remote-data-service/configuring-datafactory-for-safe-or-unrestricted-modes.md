@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214856"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configuration de DataFactory en mode sans échec ou unrestricted
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559906"
   
  Le handsafe.reg de fichier de Registre a été fourni pour configurer les entrées de Registre de gestionnaire pour une configuration sécurisée. Pour exécuter en mode sans échec, exécutez handsafe.reg.  
   
- Après avoir exécuté handsafe.reg, vous devez arrêter et redémarrer le Service de publication World Wide Web sur le serveur Web en tapant les commandes suivantes dans une fenêtre d’invite de commande : « NET STOP W3SVC » et « NET démarrer W3SVC ».  
+ Après avoir exécuté handsafe.reg, vous devez arrêter et redémarrer le Service de publication World Wide Web sur le serveur Web en tapant les commandes suivantes dans une fenêtre d’invite de commandes : « NET STOP W3SVC » et « NET démarrer W3SVC ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   

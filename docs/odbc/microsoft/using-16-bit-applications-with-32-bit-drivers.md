@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209963"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Utilisation d’applications 16 bits avec des pilotes 32 bits
 > [!IMPORTANT]  
@@ -44,16 +44,16 @@ ms.locfileid: "47752927"
   
  Dans Windows sur Windows (thunking de 16 bits vers 32 bits), une DLL thunking supplémentaire nommée convertit Ds32gt.dll valeurs d’argument de 16 bits passées via une installation 32 bits DLL en retour à 16 bits.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Composants  
  Le composant ODBC du SDK MDAC 2.8 SP1 inclut les fichiers suivants pour l’exécution des applications 16 bits avec les pilotes 32 bits. Ces composants sont dans le répertoire \Redist.  
   
 |Nom de fichier|Description|  
 |---------------|-----------------|  
 |Odbc16gt.dll|16 bits générique thunking DLL ODBC|  
-|ODBC32GT.dll|32 bits générique thunking DLL ODBC|  
+|Odbc32gt.dll|32 bits générique thunking DLL ODBC|  
 |Odbccp32.dll|DLL d’installation 32 bits|  
 |Odbcad32.exe|programme administrateur de 32 bits|  
-|ODBCINST.hlp|Fichier d’aide du programme d’installation|  
+|Odbcinst.hlp|Fichier d’aide du programme d’installation|  
 |Ds16gt.dll|programme d’installation 16 bits pilote générique thunking DLL|  
 |Ctl3d32.dll|bibliothèque de style de fenêtre à trois dimensions de 32 bits|  
   
@@ -61,6 +61,6 @@ ms.locfileid: "47752927"
   
 |Nom de fichier|Description|  
 |---------------|-----------------|  
-|ODBC.dll|Gestionnaire de pilotes 16 bits|  
-|ODBCINST.dll|DLL d’installation 16 bits|  
+|Odbc.dll|Gestionnaire de pilotes 16 bits|  
+|Odbcinst.dll|DLL d’installation 16 bits|  
 |Odbcadm.exe|programme de l’administrateur ODBC 16 bits|

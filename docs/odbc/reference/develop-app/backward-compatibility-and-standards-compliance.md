@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201575"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilité descendante et conformité aux normes
-Compatibilité descendante est la possibilité de nouveaux composants ODBC pour travailler avec les anciens composants ODBC. Les sections suivantes décrivent comment ces composants sont affectés par les modifications dans ODBC 3 *.x*. Les informations contenues principalement dans les adresses de l’écriture d’un ODBC 3 *.x* application et comment vers l’arrière les problèmes de compatibilité sont gérées par les pilotes ODBC. Pour obtenir des instructions spécifiques sur la compatibilité descendante comment problèmes affectent l’écriture d’un ODBC 3 *.x* pilote, consultez [annexe g : pilote instructions pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Compatibilité descendante est la possibilité de nouveaux composants ODBC pour travailler avec les anciens composants ODBC. Les sections suivantes décrivent comment ces composants sont affectés par les modifications dans ODBC 3 *.x*. Les informations contenues principalement dans les adresses de l’écriture d’un ODBC 3 *.x* application et comment vers l’arrière les problèmes de compatibilité sont gérées par les pilotes ODBC. Pour obtenir des instructions spécifiques sur la compatibilité descendante comment problèmes affectent l’écriture d’un ODBC 3 *.x* pilote, consultez [g : annexe Conseils sur les pilotes pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Cette section contient les rubriques suivantes.  
   

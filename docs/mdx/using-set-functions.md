@@ -1,5 +1,5 @@
 ---
-title: À l’aide des fonctions de jeu | Documents Microsoft
+title: À l’aide des fonctions de jeu | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251586"
 ---
 # <a name="using-set-functions"></a>Utilisation de fonctions de jeu
 
@@ -23,7 +23,7 @@ ms.locfileid: "34743668"
   
  Les fonctions de jeu, comme les fonctions de membre et de tuple, sont essentielles à la négociation des structures multidimensionnelles présentes dans Analysis Services. Elles sont également essentielles pour l'obtention de résultats à partir de requêtes MDX (Multidimensional Expressions), car les expressions de jeu définissent les axes d'une requête MDX.  
   
- Une des fonctions de jeu plus courantes est la [membres &#40;définir&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) (fonction), qui extrait un jeu contenant tous les membres d’une dimension, une hiérarchie ou un niveau. Ce qui suit est un exemple de son utilisation dans une requête :  
+ Une des fonctions de jeu plus courantes est la [membres &#40;définir&#41; &#40;MDX&#41; ](../mdx/members-set-mdx.md) (fonction), qui extrait un jeu contenant tous les membres à partir d’une dimension, une hiérarchie ou un niveau. Ce qui suit est un exemple de son utilisation dans une requête :  
   
  `SELECT`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34743668"
   
  `FROM [Adventure Works]`  
   
- Le [Descendants &#40;MDX&#41; ](../mdx/descendants-mdx.md) fonction est similaire la **enfants** de fonctionner, mais est plus puissante. Elle retourne les descendants de tout membre à un ou plusieurs niveaux dans une hiérarchie :  
+ Le [Descendants &#40;MDX&#41; ](../mdx/descendants-mdx.md) fonction ressemble le **enfants** de fonctionner, mais est plus puissant. Elle retourne les descendants de tout membre à un ou plusieurs niveaux dans une hiérarchie :  
   
  SELECT  
   
@@ -85,7 +85,7 @@ ms.locfileid: "34743668"
   
  DESCENDANTS(  
   
- [Date]. [Calendar]. [Année civile]. & [2004]  
+ [Date]. [Calendar]. [Calendar Year]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   
@@ -93,7 +93,7 @@ ms.locfileid: "34743668"
   
  FROM [Adventure Works]  
   
- Le [commande &#40;MDX&#41; ](../mdx/order-mdx.md) fonction permet de classer le contenu d’un ensemble croissant ou décroissant en fonction d’une expression numérique particulière. La requête suivante retourne les mêmes membres sur les lignes que la requête précédente, mais elle les classe désormais selon la mesure Internet Sales Amount (volume de vente Internet) :  
+ Le [ordre &#40;MDX&#41; ](../mdx/order-mdx.md) fonction vous permet de classer le contenu d’un ensemble croissant ou décroissant en fonction d’une expression numérique particulière. La requête suivante retourne les mêmes membres sur les lignes que la requête précédente, mais elle les classe désormais selon la mesure Internet Sales Amount (volume de vente Internet) :  
   
  `SELECT`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "34743668"
   
  Cette requête illustre également comment le jeu retourné par une fonction de jeu, Descendants, peut être passé comme un paramètre à une autre fonction de jeu, Order.  
   
- Filtrage d’un jeu selon certains critères est très utile lors de l’écriture de requêtes, et à cet effet, vous pouvez utiliser la [filtre &#40;MDX&#41; ](../mdx/filter-mdx.md) de fonction, comme indiqué dans l’exemple suivant :  
+ Filtrage d’un jeu selon certains critères est très utile lors de l’écriture de requêtes, et pour cela, vous pouvez utiliser la [filtre &#40;MDX&#41; ](../mdx/filter-mdx.md) de fonction, comme indiqué dans l’exemple suivant :  
   
  `SELECT`  
   
@@ -151,7 +151,7 @@ ms.locfileid: "34743668"
   
  `FROM [Adventure Works]`  
   
- D'autres fonctions plus sophistiquées existent et vous permettent de filtrer un jeu d'autres manières. Par exemple, la requête suivante illustre le [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) fonction retourne les premiers éléments n dans un jeu :  
+ D'autres fonctions plus sophistiquées existent et vous permettent de filtrer un jeu d'autres manières. Par exemple, la requête suivante illustre le [TopCount &#40;MDX&#41; ](../mdx/topcount-mdx.md) fonction retourne les n premiers éléments d’un ensemble :  
   
  `SELECT`  
   
@@ -217,7 +217,7 @@ ms.locfileid: "34743668"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [À l’aide des fonctions membres](../mdx/using-member-functions.md)   
+ [À l’aide de fonctions membres](../mdx/using-member-functions.md)   
  [Utilisation de fonctions de tuple](../mdx/using-tuple-functions.md)  
   
   

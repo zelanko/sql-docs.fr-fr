@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188496"
 ---
 # <a name="procedure-call-escape-sequence"></a>Séquence d’échappement d’appel de procédure
 ODBC utilise les séquences d’échappement pour les appels de procédure. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -33,7 +33,7 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  &#124;*ODBC-ÉCHAP-initiateur* [ ? =] appeler *procédure ODBC ÉCHAP-marque de fin*  
   
- *procédure* :: = *nom de la procédure* &#124; *nom de la procédure* (*liste de paramètres de procédure*)  
+ *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
   
  *identificateur de la procédure* :: = *nom défini par l’utilisateur*  
   
@@ -41,7 +41,7 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  &#124;*-nom du propriétaire*. *identificateur de la procédure*  
   
- &#124;*nom-catalogue le séparateur de catalogue* *-identificateur de la procédure*  
+ &#124; *catalog-name catalog-separator* *procedure-identifier*  
   
  &#124;*nom-catalogue le séparateur de catalogue* [*-nom du propriétaire*]. *identificateur de la procédure*  
   
@@ -57,13 +57,13 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  *liste de paramètres de procédure* :: = *paramètre de procédure*  
   
- &#124;*paramètre de procédure*, *liste de paramètres de procédure*  
+ &#124; *procedure-parameter*, *procedure-parameter-list*  
   
- *paramètre de procédure* :: = *dynamique-paramètre* &#124; *littéral* &#124; *une chaîne vide*  
+ *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   
- *une chaîne vide* :: =  
+ *empty-string* ::=  
   
- *ODBC-ÉCHAP-initiateur* :: = {}  
+ *ODBC-esc-initiator* ::= {  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   

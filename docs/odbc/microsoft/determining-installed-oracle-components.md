@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240280"
 ---
 # <a name="determining-installed-oracle-components"></a>Détermination des composants Oracle installés
 > [!IMPORTANT]  
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, utilisez le pilote ODBC fourni par Oracle.  
   
- Pour déterminer les composants Oracle installés sur votre système (et leurs versions), accédez au répertoire \Orainst sous le répertoire de base d’Oracle. Ouvrez un des fichiers texte suivants : Nt.rgs, Win95.rgs ou Win98.rgs.  
+ Pour déterminer les composants Oracle installés sur votre système (et leurs versions), accédez au répertoire \Orainst sous le répertoire de base d’Oracle. Ouvrez un des fichiers texte suivants : NT.rgs, Win95.rgs ou Win98.rgs.  
   
  Le format de fichier est similaire à ce qui suit :  
   

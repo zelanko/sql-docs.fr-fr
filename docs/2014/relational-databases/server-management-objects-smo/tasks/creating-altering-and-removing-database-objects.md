@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188624"
 ---
 # <a name="working-with-database-objects"></a>Utilisation des objets de base de données
   Les étapes de la création d'objets SMO sont les suivantes :  

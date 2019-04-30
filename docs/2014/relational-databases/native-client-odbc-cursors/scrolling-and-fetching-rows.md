@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0c0f7f2cad7eaecc212e2283fab7fc7d69f2ee7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207125"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Défilement et extraction de lignes
   Pour utiliser un curseur permettant le défilement, une application ODBC doit :  

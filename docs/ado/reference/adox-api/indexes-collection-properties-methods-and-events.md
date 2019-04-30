@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5b0efd474debf81d7d61c9228beadb95beea16a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213457"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Indexes
 ## <a name="properties"></a>Properties  

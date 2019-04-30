@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231820"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Paramètres du projet (Mappage de type) (MySQLToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA.  
@@ -64,7 +64,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |bits [33..40]|binaire [5]|  
 |bits [41..48]|binaire [6]|  
 |bits [49..56]|binaire [7]|  
-|bits [57..64]|binaire [8]|  
+|bits [57..64]|binary[8]|  
 |bits [9..16]|binaire [2]|  
 |objet BLOB|varbinary(max)|  
 |objet BLOB de [valeur 0.. 1]|varbinary [1]|  
@@ -72,103 +72,103 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |objet BLOB [8001.. *]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|NCHAR [1]|  
+|char|nchar[1]|  
 |octets de char|binaire [1]|  
 |octets de char [valeur 0.. 1]|binaire [1]|  
 |octets de char [2..255]|binaire [*]|  
-|Char [valeur 0.. 1]|NCHAR [1]|  
-|Char [2..255]|NCHAR [*]|  
-|caractère|NCHAR [1]|  
-|caractère variable la [valeur 0.. 1]|nvarchar [1]|  
+|Char [valeur 0.. 1]|nchar[1]|  
+|Char [2..255]|nchar[*]|  
+|caractère|nchar[1]|  
+|caractère variable la [valeur 0.. 1]|nvarchar[1]|  
 |caractère variable [2..255]|NVARCHAR|  
-|caractère [valeur 0.. 1]|NCHAR [1]|  
-|caractère [2..255]|NCHAR [*]|  
-|Date|Date|  
-|DATETIME|datetime2[0]|  
+|caractère [valeur 0.. 1]|nchar[1]|  
+|caractère [2..255]|nchar[*]|  
+|date|date|  
+|datetime|datetime2[0]|  
 |dec|Décimal|  
-|DEC [*.. 65]|Decimal [*] [0]|  
-|DEC [*.. 65] [\*... 30]|Decimal [*] [\*]|  
+|DEC [*.. 65]|decimal[*][0]|  
+|DEC [*.. 65] [\*... 30]|decimal[*][\*]|  
 |Décimal|Décimal|  
-|Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65] [\*... 30]|Decimal [*] [\*]|  
+|Decimal [*.. 65]|decimal[*][0]|  
+|Decimal [*.. 65] [\*... 30]|decimal[*][\*]|  
 |double|float [53]|  
 |double précision|float [53]|  
-|double précision [*.. 255] [\*... 30]|numérique [*] [\*]|  
-|double [*.. 255] [\*... 30]|numérique [*] [\*]|  
-|fixe|NUMERIC|  
-|fixe [*.. 65] [\*... 30]|numérique [*] [\*]|  
+|double précision [*.. 255] [\*... 30]|numeric[*][\*]|  
+|double [*.. 255] [\*... 30]|numeric[*][\*]|  
+|fixe|numeric|  
+|fixe [*.. 65] [\*... 30]|numeric[*][\*]|  
 |FLOAT|float [24]|  
-|float [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|float [*.. 255] [\*... 30]|numeric[*][\*]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
 |entier|INT|  
 |entier [*.. 255]|INT|  
 |longblob|varbinary(max)|  
-|LONGTEXT|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|INT|  
 |mediumint [*.. 255]|INT|  
 |mediumtext|nvarchar(max)|  
-|national char|NCHAR [1]|  
-|national char [valeur 0.. 1]|NCHAR [1]|  
-|national char [2..255]|NCHAR [*]|  
-|caractères nationaux|NCHAR [1]|  
-|variable de caractères nationaux|nvarchar [1]|  
-|caractères nationaux faire varier la [valeur 0.. 1]|nvarchar [1]|  
-|caractères nationaux varying [2..4000]|nvarchar [*]|  
+|national char|nchar[1]|  
+|national char [valeur 0.. 1]|nchar[1]|  
+|national char [2..255]|nchar[*]|  
+|caractères nationaux|nchar[1]|  
+|variable de caractères nationaux|nvarchar[1]|  
+|caractères nationaux faire varier la [valeur 0.. 1]|nvarchar[1]|  
+|caractères nationaux varying [2..4000]|nvarchar[*]|  
 |variable de caractères nationaux [4001.. *]|nvarchar(max)|  
-|caractères nationaux [valeur 0.. 1]|NCHAR [1]|  
-|caractères nationaux [2..255]|NCHAR [*]|  
-|national varchar|nvarchar [1]|  
-|national varchar [valeur 0.. 1]|nvarchar [1]|  
-|national varchar [2..4000]|nvarchar [*]|  
+|caractères nationaux [valeur 0.. 1]|nchar[1]|  
+|caractères nationaux [2..255]|nchar[*]|  
+|national varchar|nvarchar[1]|  
+|national varchar [valeur 0.. 1]|nvarchar[1]|  
+|national varchar [2..4000]|nvarchar[*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
-|NCHAR|NCHAR [1]|  
-|NCHAR varchar|nvarchar [1]|  
-|NCHAR, varchar [valeur 0.. 1]|nvarchar [1]|  
-|NCHAR, varchar [2..4000]|nvarchar [*]|  
+|NCHAR|nchar[1]|  
+|NCHAR varchar|nvarchar[1]|  
+|NCHAR, varchar [valeur 0.. 1]|nvarchar[1]|  
+|NCHAR, varchar [2..4000]|nvarchar[*]|  
 |NCHAR varchar [4001.. *]|nvarchar(max)|  
-|NCHAR [valeur 0.. 1]|NCHAR [1]|  
-|NCHAR [2..255]|NCHAR [*]|  
-|NUMERIC|NUMERIC|  
+|NCHAR [valeur 0.. 1]|nchar[1]|  
+|NCHAR [2..255]|nchar[*]|  
+|numeric|numeric|  
 |numérique [*.. 65]|numérique [*] [0]|  
-|numérique [*.. 65] [\*... 30]|numérique [*] [\*]|  
-|NVARCHAR|nvarchar [1]|  
-|nvarchar [valeur 0.. 1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar [*]|  
+|numérique [*.. 65] [\*... 30]|numeric[*][\*]|  
+|NVARCHAR|nvarchar[1]|  
+|nvarchar [valeur 0.. 1]|nvarchar[1]|  
+|nvarchar [2..4000]|nvarchar[*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |REAL|float [53]|  
-|réel [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|réel [*.. 255] [\*... 30]|numeric[*][\*]|  
 |série|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
-|texte|nvarchar(max)|  
-|texte [valeur 0.. 1]|nvarchar [1]|  
-|texte [2..4000]|nvarchar [*]|  
+|text|nvarchar(max)|  
+|texte [valeur 0.. 1]|nvarchar[1]|  
+|texte [2..4000]|nvarchar[*]|  
 |texte [4001.. *]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|DATETIME|  
-|tinyblob|varbinary [255]|  
+|TIMESTAMP|datetime|  
+|tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint [*.. 255]|SMALLINT|  
-|tinytext|nvarchar [255]|  
+|tinytext|nvarchar[255]|  
 |valeurs bigint non signées|BIGINT|  
 |valeurs bigint non signées [*.. 255]|BIGINT|  
 |dec non signé|Décimal|  
-|non signé dec [*.. 65]|Decimal [*] [0]|  
-|non signé dec [*.. 65] [\*... 30]|Decimal [*] [\*]|  
+|non signé dec [*.. 65]|decimal[*][0]|  
+|non signé dec [*.. 65] [\*... 30]|decimal[*][\*]|  
 |décimal non signé|Décimal|  
-|décimal non signé [*.. 65]|Decimal [*] [0]|  
-|décimal non signé [*.. 65] [\*... 30]|Decimal [*] [\*]|  
+|décimal non signé [*.. 65]|decimal[*][0]|  
+|décimal non signé [*.. 65] [\*... 30]|decimal[*][\*]|  
 |double non signé|float [53]|  
 |double précision non signée|float [53]|  
-|unsigned double précision [*.. 255] [\*... 30]|numérique [*] [\*]|  
-|unsigned double [*.. 255] [\*... 30]|numérique [*] [\*]|  
-|unsigned fixe|NUMERIC|  
-|unsigned fixe [*.. 65] [\*... 30]|numérique [*] [\*]|  
+|unsigned double précision [*.. 255] [\*... 30]|numeric[*][\*]|  
+|unsigned double [*.. 255] [\*... 30]|numeric[*][\*]|  
+|unsigned fixe|numeric|  
+|unsigned fixe [*.. 65] [\*... 30]|numeric[*][\*]|  
 |float non signé|float [24]|  
-|non signé float [*.. 255] [\*... 30]|numérique [*] [\*]|  
+|non signé float [*.. 255] [\*... 30]|numeric[*][\*]|  
 |non signé float [*.. 53]|float [53]|  
 |nombre entier non signé|BIGINT|  
 |unsigned int [*.. 255]|BIGINT|  
@@ -176,11 +176,11 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |entier non signé [*.. 255]|BIGINT|  
 |mediumint non signé|INT|  
 |mediumint non signé [*.. 255]|INT|  
-|numérique non signé|NUMERIC|  
+|numérique non signé|numeric|  
 |numérique non signée [*.. 65]|numérique [*] [0]|  
-|numérique non signée [*.. 65] [\*... 30]|numérique [*] [\*]|  
+|numérique non signée [*.. 65] [\*... 30]|numeric[*][\*]|  
 |non signé réel|float [53]|  
-|unsigned réel [*.. 255 [[\*... 30]|numérique [*] [\*]|  
+|unsigned réel [*.. 255 [[\*... 30]|numeric[*][\*]|  
 |smallint non signé|INT|  
 |smallint non signé [*.. 255]|INT|  
 |tinyint non signé|TINYINT|  
@@ -188,9 +188,9 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |varbinary [valeur 0.. 1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
-|varchar [valeur 0.. 1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar [*]|  
-|varchar [4001.. *]|nvarchar(max)|  
+|varchar [valeur 0.. 1]|nvarchar[1]|  
+|varchar [2..4000]|nvarchar[*]|  
+|varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  
 |année [2..2]|SMALLINT|  
 |année [4..4]|SMALLINT|  

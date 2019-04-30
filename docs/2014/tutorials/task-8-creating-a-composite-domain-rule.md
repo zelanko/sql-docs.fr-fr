@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 8 : Création d’une règle de domaine Composite | Microsoft Docs'
+title: 'Tâche 8 : Création d’une règle de domaine Composite | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: douglaslms
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217798"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Tâche 8 : Création d’une règle de domaine Composite
+# <a name="task-8-creating-a-composite-domain-rule"></a>Tâche 8 : Création d’une règle de domaine composite
   Dans cette tâche, vous créez une règle pour le **Validation d’adresses** domaine composite. Vous définissez une règle interdomaines : si **Ville** est **Los Angeles**, **état** doit être **autorité de certification** où **Ville** et **état** sont deux domaines.  
   
 1.  Dans le volet droit, basculez vers le **CD règles** onglet.  

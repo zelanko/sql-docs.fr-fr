@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données'
+title: 'Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données'
 titleSuffix: Azure Data Studio
 description: Ce didacticiel illustre les fonctionnalités clées dans Azure Data Studio qui simplifient l’utilisation avec T-SQL.
 ms.custom: seodec18
@@ -12,13 +12,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240896"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Didacticiel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Création et exécution de requêtes, procédures stockées, scripts, etc. sont les tâches fondamentales de professionnels de la base de données. Ce didacticiel illustre les fonctionnalités clées dans l’éditeur T-SQL pour créer des objets de base de données.
 
@@ -68,11 +68,11 @@ Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*
 
 2. Type **sql** dans l’éditeur, flèche vers le bas pour **sqlCreateStoredProcedure**, puis appuyez sur la *onglet* clé (ou *entrée*) pour charger la créer stockée extrait de code de procédure.
 
-   ![liste d’extraits](./media/tutorial-sql-editor/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
 3. L’extrait de code de procédure stockée create comporte deux champs défini pour une modification rapide, *StoredProcedureName* et *SchemaName*. Sélectionnez *StoredProcedureName*, avec le bouton droit, puis sélectionnez **toutes les Occurrences de modification**. Tapez maintenant *getCustomer* et tous les *StoredProcedureName* modifier les entrées à *getCustomer*.
 
-   ![Extrait de code](./media/tutorial-sql-editor/snippet.png)
+   ![snippet](./media/tutorial-sql-editor/snippet.png)
 
 5. Remplacez toutes les occurrences de *SchemaName* à *dbo*. 
 6. L’extrait de code contient les paramètres de l’espace réservé et le texte qui a besoin de la mise à jour. Le *EXECUTE* instruction contient également le texte d’espace réservé, car il ne connaît pas le nombre de paramètres a la procédure. Pour ce didacticiel mise à jour de l’extrait de code par conséquent, il ressemble le code suivant :

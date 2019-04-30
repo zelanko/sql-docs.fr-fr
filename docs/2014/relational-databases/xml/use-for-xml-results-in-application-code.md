@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193333"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
   En utilisant des clauses FOR XML avec des requêtes SQL, vous pouvez récupérer et même convertir les résultats de la requête en données XML. Dès lors que les résultats d'une requête FOR XML peuvent être utilisés dans le code de l'application XML, vous pouvez notamment effectuer les opérations suivantes :  
@@ -153,25 +153,25 @@ ms.locfileid: "58532831"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Traitement côté client du document XML MyDataIsle  
   
--   **AnnualSales :** 1500000  
+-   **AnnualSales:** 1500000  
   
--   **AnnualRevenue :** 150000  
+-   **AnnualRevenue:** 150000  
   
--   **Nom de la banque :** International principal  
+-   **BankName:** Primary International  
   
 -   **BusinessType:** OS  
   
--   **YearOpened :** 1974  
+-   **YearOpened:** 1974  
   
--   **Spécialisation :** Road  
+-   **Specialty:** Road  
   
--   **SquareFeet :** 38000  
+-   **SquareFeet:** 38000  
   
--   **Marques :** 3  
+-   **Brands:** 3  
   
--   **Internet :** DSL  
+-   **Internet:** DSL  
   
--   **NumberEmployees :** 40  
+-   **NumberEmployees:** 40  
   
  La boîte de message VBScript affichera ensuite le contenu original et non filtré de l'îlot de données XML qui a été renvoyé par les résultats de la requête FOR XML.  
   

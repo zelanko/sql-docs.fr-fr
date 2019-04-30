@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 (condition préalable) : Supprimer les données des fournisseurs dans MDS | Microsoft Docs'
+title: 'Tâche 1 (prérequis) : Supprimer les données des fournisseurs dans MDS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222532"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (condition préalable) : Supprimer des données sur les fournisseurs dans MDS
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tâche 1 (prérequis) : Suppression de données de fournisseur dans MDS
   Dans cette tâche, vous allez supprimer les données des fournisseurs stockées dans MDS. Vous avez téléchargé les données manuellement à l’aide **complément MDS pour Excel** dans la leçon précédente. Le package SSIS que vous créez dans cette leçon téléchargera automatiquement les données dans MDS pour vous. Par conséquent, avant de tester le package SSIS, vous devez supprimer les données des fournisseurs dans MDS, ainsi que la hiérarchie dérivée, les entités Fournisseur et État, et créer l'entité Fournisseur sans données.  
   
 1.  Lancez **Master Data Manager** en accédant à **http://localhost/MDS** ou le site Web et l’application que vous avez spécifié lorsque la configuration de MDS. Si vous avez conservé le **Master Data Manager** ouvrir, cliquez sur **SQL Server 2012 Master Data Services** en haut pour basculer vers le **page d’accueil**.  

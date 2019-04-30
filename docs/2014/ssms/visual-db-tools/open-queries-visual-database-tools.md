@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195038"
 ---
 # <a name="open-queries-visual-database-tools"></a>Ouvrir des requêtes (Visual Database Tools)
   Vous pouvez ouvrir une requête existante dans le Concepteur de requêtes et de vues en utilisant la commande **Ouvrir** .  

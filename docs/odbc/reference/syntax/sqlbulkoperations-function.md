@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237859"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations, fonction
 **Conformité**  
@@ -44,7 +44,7 @@ SQLRETURN SQLBulkOperations(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *Opération*  
@@ -66,8 +66,8 @@ SQLRETURN SQLBulkOperations(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Chaîne de données tronquée à droite|Le *opération* argument a été SQL_FETCH_BY_BOOKMARK, et données de chaîne ou binaire retournées pour une ou plusieurs colonnes avec un type de données SQL_C_CHAR ou SQL_C_BINARY a entraîné la troncation des caractères non vides ou non NULL des données binaires.|  
-|01 S 01|Erreur de ligne|Le *opération* argument a été SQL_ADD et une erreur s’est produite dans une ou plusieurs lignes lors de l’exécution de l’opération, mais au moins une ligne a été correctement ajoutée. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (Cette erreur est générée uniquement lorsqu’une application fonctionne avec un ODBC 2. *x* pilote.)|  
-|01 S 07|Troncation fractionnelle|Le *opération* argument était SQL_FETCH_BY_BOOKMARK, le type de données de la mémoire tampon d’application n’était pas SQL_C_CHAR ou SQL_C_BINARY, et les données retournées dans les mémoires tampons d’application pour une ou plusieurs colonnes ont été tronquées. (Pour les types de données numériques C, la partie fractionnaire du nombre ont été tronquée. Pour le moment, timestamp et les types de données d’intervalle C qui contiennent un composant au moment, la partie fractionnaire du temps a été tronquée.)<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S01|Erreur de ligne|Le *opération* argument a été SQL_ADD et une erreur s’est produite dans une ou plusieurs lignes lors de l’exécution de l’opération, mais au moins une ligne a été correctement ajoutée. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (Cette erreur est générée uniquement lorsqu’une application fonctionne avec un ODBC 2. *x* pilote.)|  
+|01S07|Troncation fractionnelle|Le *opération* argument était SQL_FETCH_BY_BOOKMARK, le type de données de la mémoire tampon d’application n’était pas SQL_C_CHAR ou SQL_C_BINARY, et les données retournées dans les mémoires tampons d’application pour une ou plusieurs colonnes ont été tronquées. (Pour les types de données numériques C, la partie fractionnaire du nombre ont été tronquée. Pour le moment, timestamp et les types de données d’intervalle C qui contiennent un composant au moment, la partie fractionnaire du temps a été tronquée.)<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|Le *opération* SQL_FETCH_BY_BOOKMARK a été l’argument et la valeur de données d’une colonne dans le jeu de résultats n’a pas pu être convertie au type de données spécifié par le *TargetType* argument dans l’appel à **SQLBindCol**.<br /><br /> Le *opération* argument était SQL_UPDATE_BY_BOOKMARK ou SQL_ADD, et la valeur de données dans les mémoires tampons d’application n’a pas pu être convertie au type de données d’une colonne dans le jeu de résultats.|  
 |07009|Index de descripteur non valide|L’argument *opération* a été SQL_ADD, et une colonne a été liée avec un numéro de colonne supérieur au nombre de colonnes dans le jeu de résultats.|  
 |21S02|Degré de la table dérivée ne correspond pas à la liste des colonnes|L’argument *opération* a été SQL_UPDATE_BY_BOOKMARK ; et aucune colonne ont été être mise à jour, car toutes les colonnes ont été soit indépendant ou en lecture seule, ou la valeur dans la mémoire tampon de longueur / d’indicateur lié était SQL_COLUMN_IGNORE.|  

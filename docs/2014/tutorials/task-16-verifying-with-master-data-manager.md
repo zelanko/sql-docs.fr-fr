@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 16 : Vérification avec Master Data Manager | Microsoft Docs'
+title: 'Tâche 16 : Vérification avec Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222552"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>Tâche 16 : Vérification à l'aide de Master Data Manager
+# <a name="task-16-verifying-with-master-data-manager"></a>Tâche 16 : Vérification à l’aide de Master Data Manager
   Dans cette tâche, vous allez vérifier l'état du programme de traitement par lots soumis par le package SSIS et vérifiez que les données ont été téléchargées sur le serveur MDS à l'aide de Master Data Manager.  
   
 1.  Lancez **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). Si elle est déjà ouverte, cliquez sur **Microsoft SQL Server Master Data Services** en haut pour basculer vers le **page d’accueil**.  

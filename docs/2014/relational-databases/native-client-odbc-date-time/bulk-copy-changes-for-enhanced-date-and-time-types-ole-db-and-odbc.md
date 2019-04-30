@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207104"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Modifications de la copie en bloc pour les types date/heure améliorés (OLE DB et ODBC)
   Cette rubrique décrit les améliorations de date/heure permettant de prendre en charge les fonctionnalités de copie en bloc. Les informations fournies dans cette rubrique sont valables pour OLE DB et ODBC dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -26,9 +26,9 @@ ms.locfileid: "52401614"
 ## <a name="format-files"></a>Fichiers de format  
  Lors de la génération interactive de fichiers de format, le tableau ci-dessous décrit l'entrée utilisée pour spécifier des types date/heure et les noms de type de données de fichier hôte correspondants.  
   
-|type de stockage de fichier|Type de données du fichier hôte|Réponse à l'invite : « Entrez le type de stockage du champ < nom_champ > [\<par défaut >] : »|  
+|type de stockage de fichier|Type de données du fichier hôte|Réponse à l’invite : « Entrez le type de stockage du champ < nom_champ > [\<par défaut >] : »|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DATETIME|SQLDATETIME|d|  
+|Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Date|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -61,7 +61,7 @@ ms.locfileid: "52401614"
 ```  
   
 ## <a name="character-data-files"></a>Fichiers de données de type caractère  
- Dans les fichiers de données de type caractère, les valeurs de date et d'heure sont représentées comme décrit dans la section « Formats de données : Section de chaînes et littéraux » de [prise en charge du Type de données pour les améliorations ODBC Date / heure](data-type-support-for-odbc-date-and-time-improvements.md) pour ODBC ou [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) pour OLE DB.  
+ Dans les fichiers de données de caractères, les valeurs de date et d’heure sont représentées comme décrit dans la « Formats de données : Section de chaînes et littéraux » de [prise en charge du Type de données pour les améliorations ODBC Date / heure](data-type-support-for-odbc-date-and-time-improvements.md) pour ODBC ou [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) pour OLE DB.  
   
  Dans les fichiers de données en mode natif, les valeurs de date et d’heure pour les quatre nouveaux types sont représentés en tant que leurs représentations TDS avec une échelle de 7 (car c’est le nombre maximal pris en charge par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et fichiers de données bcp ne stockent pas de la mise à l’échelle de ces colonnes). Aucune modification n’est pour le stockage existants `datetime` et `smalldatetime` leurs données tabulaires ou type stream représentations (TDS).  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52401614"
   
 |type de stockage de fichier|Taille de stockage en octets|  
 |-----------------------|---------------------------|  
-|DATETIME|8|  
+|datetime|8|  
 |smalldatetime|4|  
 |date|3|  
 |time|6|  
@@ -92,7 +92,7 @@ ms.locfileid: "52401614"
   
 |type de stockage de fichier|Type de données du fichier hôte|Type dans sqlncli.h pour une utilisation avec IBCPSession::BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Date|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
@@ -104,12 +104,12 @@ ms.locfileid: "52401614"
   
  **Remarque pour OLE DB** : Les conversions suivantes sont effectuées par IBCPSession. IRowsetFastLoad utilise les conversions OLE DB tel que défini dans [Conversions effectuées à partir du Client au serveur](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Notez que les valeurs datetime sont arrondies au 1/300e de seconde et que les secondes des valeurs smalldatetime sont mises à zéro après l'exécution des conversions clientes décrites ci-dessous. L'arrondi des valeurs datetime est propagé aux heures et aux minutes, mais pas à la date.  
   
-|À --><br /><br /> From|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|À--><br /><br /> From|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  

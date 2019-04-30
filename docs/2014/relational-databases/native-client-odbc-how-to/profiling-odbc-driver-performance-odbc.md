@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200286"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Rubriques de procédures relatives au profilage de performances du pilote ODBC (ODBC)
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a deux options spécifiques au pilote pour le profilage de performances du pilote.  

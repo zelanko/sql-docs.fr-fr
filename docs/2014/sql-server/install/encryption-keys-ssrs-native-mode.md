@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: aa9460222d756c76e1ed6489688315ea8b7b0f18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223244"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>Clés de chiffrement (SSRS en mode natif)
   Utilisez la page Clés de chiffrement pour gérer la clé symétrique utilisée pour chiffrer et déchiffrer les données dans un serveur de rapports. La gestion des clés de chiffrement représente une partie importante de la configuration du serveur de rapports. La clé symétrique est créée et appliquée automatiquement lorsque vous créez la base de données du serveur de rapports. Créez une copie de sauvegarde de la clé symétrique de façon à pouvoir effectuer les opérations de maintenance de routine. Les tâches de maintenance suivantes nécessitent une copie valide de la clé symétrique :  
@@ -43,7 +43,7 @@ ms.locfileid: "48144229"
 > [!IMPORTANT]  
 >  La suppression de la clé symétrique ou la création d'une nouvelle clé ne peut pas être inversée ou annulée. La suppression de la clé symétrique ou la création d'une nouvelle clé peut avoir d'importantes conséquences sur votre installation actuelle. Si vous supprimez la clé, toute donnée existante chiffrée par la clé symétrique sera également supprimée. Les données supprimées incluent les chaînes de connexion aux sources de données de rapport externes, les chaînes de connexion stockées et certaines informations d'abonnement.  
   
- Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir cette page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez le lien dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Sauvegarde**  
@@ -54,7 +54,7 @@ ms.locfileid: "48144229"
   
  La copie précédente de la clé symétrique de l'instance du serveur de rapports à laquelle vous est actuellement connecté est remplacée par la version restaurée. Après avoir restauré la clé symétrique, vous devez initialiser tous les serveurs de rapports qui utilisent la base de données du serveur de rapports. Pour plus d’informations sur l’initialisation des serveurs de rapports, consultez [initialiser un serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
- **Modification**  
+ **Change**  
  Recrée la clé symétrique et rechiffre toutes les valeurs chiffrées de la base de données du serveur de rapports. Veillez à arrêter le service Report Server avant de recréer la clé symétrique.  
   
  Dans un déploiement avec montée en puissance parallèle, toutes les copies de la clé symétrique sont remplacées par les versions plus récentes. Avant de remplacer la clé symétrique, veillez à passer en revue la liste des serveurs joints au déploiement avec montée en puissance parallèle pour vérifier que seules les instances valides du serveur de rapports obtiennent un accès à la nouvelle clé. Les serveurs qui font partie d'un déploiement avec montée en puissance parallèle sont répertoriés dans la page **Déploiement avec montée en puissance parallèle** . Arrêtez le service sur chaque serveur de rapports du déploiement avant de recréer la clé.  

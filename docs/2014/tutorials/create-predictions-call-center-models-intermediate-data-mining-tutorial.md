@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217884"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Création de prédictions pour les modèles de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous en savez plus sur les interactions entre les équipes, le nombre d'opérateurs, les appels et le niveau de service, vous êtes prêt à créer des requêtes de prédiction qui peuvent être utilisées dans l'analyse commerciale et la planification. Vous allez d'abord créer des prédictions sur le modèle exploratoire afin de tester des hypothèses. Ensuite, vous allez créer des prédictions en bloc en utilisant le modèle de régression logistique.  
@@ -183,9 +183,9 @@ ms.locfileid: "56025410"
 ## <a name="remarks"></a>Notes  
  Les données d’exploration de données des compléments pour Excel 2007 fournissent des Assistants de régression logistique qui permettent de facilement répondre aux questions complexes, telles que les opérateurs de niveau 2 combien seraient nécessaire pour améliorer le niveau de service à un niveau cible pour une équipe spécifique. Les compléments d'exploration de données, qui peuvent être téléchargés gratuitement, incluent des Assistants basés sur l'algorithme MNN (Microsoft Neural Network) ou l'algorithme MLR (Microsoft Logistic Regression). Pour plus d'informations, consultez les liens suivants :  
   
--   [SQL Server 2005 Data Mining Add-Ins pour Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Analyse de scénarios de valeurs cibles et de scénarios divers  
+-   [SQL Server 2005 Data Mining Add-Ins pour Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): La valeur cible et que se passe-t-il si analyse de scénario  
   
--   [SQL Server 2008 Data Mining Add-Ins pour Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Analyse de scénarios de valeurs cibles, analyse de scénarios divers et calcul de prédiction  
+-   [SQL Server 2008 Data Mining Add-Ins pour Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Valeur cible de l’analyse de scénario, que se passe-t-il si l’analyse de scénario et calcul de prédiction  
   
 ## <a name="conclusion"></a>Conclusion  
  Vous avez appris à créer, à personnaliser et à interpréter des modèles d'exploration de données basés sur l'algorithme MNN (Microsoft Neural Network) et sur l'algorithme MLR (Microsoft Logistic Regression). Ces types de modèles élaborés permettent une diversité presque infinie d'analyses ; ils peuvent, par conséquent, être complexes et difficiles à maîtriser.  

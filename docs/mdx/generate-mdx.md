@@ -1,5 +1,5 @@
 ---
-title: Générer (MDX) | Documents Microsoft
+title: Generate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224881"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -42,13 +42,13 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Expression de chaîne valide qui correspond généralement au nom du membre actuel (CurrentMember.Name) de chaque tuple dans le jeu spécifié.  
   
- *Délimiteur*  
+ *Delimiter*  
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples du deuxième jeu à chaque tuple dans le premier jeu *,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
+ Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples dans le deuxième jeu à chaque tuple dans le premier jeu *,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
   
- Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu *,* puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
+ Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu *,* puis en concaténant le résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -90,7 +90,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Notez qu’un différent des 10 premiers sont affiché pour chaque année et que l’utilisation de **générer** est la seule façon d’obtenir ce résultat. La simple jonction croisée des années civiles et du jeu des 10 premiers produits affichent les 10 premiers produits pour toutes les périodes, pour chaque année, comme illustré dans l'exemple suivant :  
+ Notez qu’un différent des 10 premiers sont affiché pour chaque année et que l’utilisation de **générer** est le seul moyen pour obtenir ce résultat. La simple jonction croisée des années civiles et du jeu des 10 premiers produits affichent les 10 premiers produits pour toutes les périodes, pour chaque année, comme illustré dans l'exemple suivant :  
   
 ```  
 SELECT   
@@ -125,9 +125,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Cette forme de la **générer** fonction peut être utile lors du débogage des calculs, car elle permet de retourner une chaîne qui affiche les noms de tous les membres dans un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un jeu qui le [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) fonction renvoie.  
+>  Cette forme de la **générer** fonction peut être utile lors du débogage des calculs, car elle permet de renvoyer une chaîne qui affiche les noms de tous les membres dans un jeu. Cela peut être plus facile à lire que la représentation MDX stricte d’un jeu qui le [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) fonction renvoie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

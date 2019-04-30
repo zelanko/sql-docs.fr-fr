@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e7d1b0b68835fe8b909369a87814a3d1c41e07d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240248"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Évaluation des objets de base de données SAP ASE pour la conversion (SybaseToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez déterminer comment la complexité de la migration et combien de temps il vous faudra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage des objets et des procédures qui seront correctement converties en [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA vous permet également d’afficher les problèmes spécifiques qui peuvent entraîner des échecs de conversion.  
@@ -35,7 +35,7 @@ Lors de la création de ce rapport d’évaluation, SSMA convertit les objets de
   
     SSMA affiche la progression dans la barre d’état en bas de la fenêtre. Si le volet de sortie est visible, vous verrez également les messages connexes.  
   
-    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Sybase : fenêtre de rapport d’évaluation s’affiche.  
+    Une fois l’évaluation terminée, le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant pour Sybase : Fenêtre de rapport d’évaluation s’affiche.  
   
 ## <a name="use-assessment-reports"></a>Utiliser des rapports d’évaluation  
 La fenêtre de rapport d’évaluation contient trois volets :  

@@ -1,5 +1,5 @@
 ---
-title: Identificateurs (MDX) | Documents Microsoft
+title: Identifiers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224956"
 ---
 # <a name="identifiers-mdx"></a>Identificateurs (MDX)
 
@@ -33,13 +33,13 @@ ms.locfileid: "34740808"
   
 1.  Le premier caractère doit être l'un des suivants :  
   
-    -   Des lettres définies par Unicode Standard 2.0. Outre les caractères alphabétiques d'autres langues, elles incluent les caractères latins a-z et A-Z.  
+    -   Une lettre comme défini par la convention Unicode Standard 2.0. Outre les caractères alphabétiques d'autres langues, elles incluent les caractères latins a-z et A-Z.  
   
     -   Le trait de soulignement (_).  
   
 2.  Les caractères suivants peuvent être :  
   
-    -   Lettres définies dans Unicode Standard 2.0.  
+    -   Lettres définies dans la convention Unicode Standard 2.0.  
   
     -   Des nombres décimaux de Basic Latin ou d'autres scripts nationaux.  
   
@@ -124,8 +124,8 @@ ms.locfileid: "34740808"
  En outre, l'identificateur Measures de l'exemple précédent a été délimité pour illustrer la délimitation de plusieurs identificateurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [Éléments de syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241003"
 ---
 # <a name="datetime-data-types"></a>Type de données datetime
 Dans ODBC 3 *.x*, les identificateurs de date, heure et types de données timestamp SQL ont été modifiés à partir de SQL_DATE, SQL_TIME et SQL_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 9, 10 et 11) à SQL_ TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP (avec des instances de **#define** dans le fichier d’en-tête de 91, 92 et 93), respectivement. Le type C correspondant identificateurs ont été modifiés à partir de SQL_C_DATE, SQL_C_TIME et SQL_C_TIMESTAMP SQL_C_TYPE_DATE SQL_C_TYPE_TIME et SQL_C_TYPE_TIMESTAMP, respectivement et les instances de **#define** ont été modifiés en conséquence.  
   
- La taille de colonne et les chiffres décimaux retournaient pour les types de données datetime SQL dans ODBC 3 *.x* sont le même que la précision et l’échelle retourné pour eux dans ODBC 2. *x*. Ces valeurs sont différentes de celles figurant dans les champs de descripteur SQL_DESC_PRECISION et SQL_DESC_SCALE. (Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) annexe d : Types de données.)  
+ La taille de colonne et les chiffres décimaux retournaient pour les types de données datetime SQL dans ODBC 3 *.x* sont le même que la précision et l’échelle retourné pour eux dans ODBC 2. *x*. Ces valeurs sont différentes de celles figurant dans les champs de descripteur SQL_DESC_PRECISION et SQL_DESC_SCALE. (Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) dans l’annexe d : Types de données.)  
   
  Ces modifications affectent **SQLDescribeCol**, **SQLDescribeParam**, et **SQLColAttributes**; **SQLBindCol**, **SQLBindParameter**, et **SQLGetData**; et **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, et **SQLSpecialColumns**.  
   

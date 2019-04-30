@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207062"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Questions fréquentes (FAQ) pour les administrateurs de la réplication
   Les questions et réponses suivantes fournissent des indications sur une variété de tâches auxquelles les administrateurs de bases de données répliquées sont confrontés.  
@@ -42,7 +42,7 @@ ms.locfileid: "54125850"
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>Quand un abonnement est-il disponible, quand la base de données d'abonnement peut-elle être utilisée ?  
  Un abonnement est disponible après que l'instantané ait été appliqué à la base de données d'abonnement. Bien que la base de données d'abonnement soit accessible avant, il est conseillé de ne pas l'utiliser tant que l'instantané n'a pas été appliqué. Utilisez le Moniteur de réplication pour vérifier l'état de génération et d'application d'instantané :  
   
--   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+-   L'instantané est généré par l'Agent d'instantané. Affichez l'état de génération de l'instantané sur l'onglet **Agents** pour une publication du moniteur de réplication. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   L'instantané est appliqué par l'Agent de distribution ou par l'Agent de fusion. Affichez l'état d'application d'instantané sur la page **Agent de distribution** ou **Agent de fusion** du Moniteur de réplication. 
   
@@ -121,7 +121,7 @@ ms.locfileid: "54125850"
   
 -   La définition d'un objet, par exemple une instruction CREATE TABLE. Par défaut, la réplication copie les définitions de tous les objets répliqués sur l'Abonné.  
   
--   L’espace de noms dans lequel un objet est créé : \<Base de données >. \<Schéma >. \<Objet >. Les schémas sont définis à l'aide de l'instruction CREATE SCHEMA.  
+-   L’espace de noms dans lequel un objet est créé : \<Base de données>.\<Schéma>.\<Objet>. Les schémas sont définis à l'aide de l'instruction CREATE SCHEMA.  
   
 -   La réplication fonctionne par défaut de la façon suivante dans l'Assistant Nouvelle publication quant aux schémas et à la propriété des objets :  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125850"
  Oui. Aucune règle spécifique n'est nécessaire car toutes les données sont stockées sur un ensemble de disques sur le cluster.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de réplication Forum aux questions](frequently-asked-questions-for-replication-administrators.md)   
+ [FAQ sur l’administration de la réplication](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   
   

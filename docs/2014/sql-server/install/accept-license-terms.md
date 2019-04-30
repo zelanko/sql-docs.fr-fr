@@ -17,14 +17,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 631ae416116832c725de8335780db87c03811320
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224819"
 ---
 # <a name="accept-license-terms"></a>Accepter les termes du contrat de licence
-  Utilisez le **accepter les termes du contrat de licence** page de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation pour accepter les termes du contrat de licence pour cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Utilisez la page **Accepter les termes du contrat de licence** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accepter les ter.mes du contrat de licence de cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Vous pouvez imprimer le contrat de licence ou le copier dans le Presse-papiers. Pour continuer, acceptez le contrat de licence, puis cliquez sur **Suivant**. Pour quitter l’installation, cliquez sur **Annuler**.  
   
@@ -39,32 +39,32 @@ ms.locfileid: "48141559"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   REPLICATION  
+-   Réplication  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programme d’installation  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programme d'installation  
   
- Plus d’informations sur l’utilisation des fonctionnalités sont envoyés à [!INCLUDE[msCoName](../../includes/msconame-md.md)], où elles sont stockées avec un accès limité.  
+ Les informations sur l'utilisation des fonctionnalités sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)], puis stockées avec un accès limité.  
   
- Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez le  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rapports d’erreurs et l’utilisation** outil sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **outils de Configuration** menu.  
+ Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez l’outil **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rapports d’erreurs et d’utilisation** dans le menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
  Pour les actions du programme d'installation, telles que l'installation, la mise à niveau, la réparation, entre autres, les informations sont recueillies et téléchargées uniquement pendant l'exécution du programme d'installation  
   
- Pour tous les autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les informations sont recueillies une fois par jour pour toutes les instances activées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, la collecte est effectuée à minuit afin de réduire la charge sur le serveur. Si vous souhaitez changer l'heure de la collecte, vous pouvez modifier manuellement la clé du Registre concernée. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a sa propre clé de Registre :  
+ Pour tous les autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les informations sont recueillies une fois par jour pour toutes les instances activées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par défaut, la collecte est effectuée à minuit afin de réduire la charge sur le serveur. Si vous souhaitez changer l'heure de la collecte, vous pouvez modifier manuellement la clé du Registre concernée. Chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède sa propre clé de Registre :  
   
- HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\< ID_INSTANCE > \CPE\TimeofReporting  
+ HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.\<INSTANCEID>\CPE\TimeofReporting  
   
  La valeur de cette clé de Registre inclut l'heure de la collecte ainsi que le nombre de minutes qui s'écoulent à partir de 00:00 (minuit). Par exemple, la valeur 60 fixe l'exécution de la collecte à 1:00 a.m., la valeur 1200 fixe l'exécution de la collecte à 8:00 p.m., et ainsi de suite.  
   
 ## <a name="error-reporting"></a>Rapport d'erreurs  
- Utilisez le **erreur et les paramètres de rapport d’utilisation** page de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Installation pour activer les erreurs de fonctionnalité et des fonctionnalités pour des rapports d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Utilisez la page **Paramètres de rapports d’erreurs et d’utilisation** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour activer la fonctionnalité de création de rapports d’erreurs et d’utilisation dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="options"></a>Options  
- Par défaut, la collecte des données d’utilisation des fonctionnalités et les fonctionnalités de rapport d’erreurs sont désactivées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ses composants dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Par défaut, les fonctionnalités de rapport d'erreurs et de collecte des données d'utilisation des fonctionnalités sont désactivées pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ses composants dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Rapport d'erreurs  
- Si vous activez la fonctionnalité rapport d’erreurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour envoyer un rapport à [!INCLUDE[msCoName](../../includes/msconame-md.md)] automatiquement si une erreur irrécupérable se produit dans un des éléments suivants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants :  
+ Si vous activez la fonctionnalité Rapport d'erreurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour envoyer automatiquement un rapport à [!INCLUDE[msCoName](../../includes/msconame-md.md)] si une erreur irrécupérable se produit dans l'un des composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
 -   Le [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -76,15 +76,15 @@ ms.locfileid: "48141559"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
--   REPLICATION  
+-   Réplication  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les rapports d’erreurs pour améliorer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnalité et traite toutes les informations comme confidentielles.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilise les rapports d'erreurs pour améliorer le fonctionnement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces informations sont traitées en toute confidentialité.  
   
- Des informations sur les erreurs sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)] par le biais d'une connexion sécurisée (https) et elles sont stockées avec un accès limité. Des rapports d'erreurs peuvent également être envoyés sur votre propre serveur de rapports d'erreurs d'entreprise.  
+ Des informations sur les erreurs sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)]par le biais d'une connexion sécurisée (https) et elles sont stockées avec un accès limité. Des rapports d'erreurs peuvent également être envoyés sur votre propre serveur de rapports d'erreurs d'entreprise.  
   
  Les rapports d'erreurs comprennent les informations suivantes :  
   
--   La condition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le problème s’est produite.  
+-   la condition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque le problème s'est produit ;  
   
 -   des informations sur la version du système d'exploitation et le matériel ;  
   
@@ -94,13 +94,13 @@ ms.locfileid: "48141559"
   
 -   des informations provenant de la mémoire ou des fichiers du processus à l'origine de l'erreur.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne collecte pas intentionnellement vos fichiers, nom, adresse, adresse de messagerie ou toute autre forme d’informations personnelles. Le rapport d'erreurs peut toutefois contenir des informations personnelles qui proviennent de la mémoire ou des fichiers du processus à l'origine de l'erreur. Bien que ces informations permettent à priori de déterminer votre identité, [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne les exploite pas à cette fin.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne regroupe pas de manière intentionnelle vos fichiers, nom, adresse, adresse électronique ou tout autre forme d'informations personnelles. Le rapport d'erreurs peut toutefois contenir des informations personnelles qui proviennent de la mémoire ou des fichiers du processus à l'origine de l'erreur. Bien que ces informations permettent à priori de déterminer votre identité, [!INCLUDE[msCoName](../../includes/msconame-md.md)] ne les exploite pas à cette fin.  
   
- Pour plus d’informations sur la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confidentialité et la stratégie de collecte de données, consultez [déclaration de confidentialité de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
+ Pour plus d’informations sur la politique de confidentialité et la procédure de collecte de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez la [déclaration de confidentialité de Microsoft SQL Server](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   
  Si vous activez les rapports d'erreurs et qu'une erreur irrécupérable se produit, vous pouvez voir une réponse de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans le journal des événements Windows, qui pointe sur un article de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)] traitant cette erreur.  
   
- Pour désactiver le rapport d’erreur ou d’utilisation des fonctionnalités pour toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et leurs composants une fois l’installation terminée, accédez à la **erreur et les paramètres de rapport d’utilisation** boîte de dialogue et désactivez les cases à cocher pour **l’utilisation des fonctionnalités** . Si **rapport d’erreurs** est activée pour plusieurs composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et les composants partagés) vous pouvez désactiver le rapport d’erreurs pour chaque instance d’un individu composant, ainsi que des composants partagés, répertorié comme **d’autres**.  
+ Pour désactiver la fonction de rapport d’erreurs et d’utilisation de fonctionnalités pour toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et leurs composants une fois l’installation terminée, accédez à la boîte de dialogue **Paramètres de rapports d’erreurs et d’utilisation** et décochez les cases pour **Utilisation de fonctionnalités**. Si l’option **Rapport d’erreurs** est activée pour plusieurs composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et les composants partagés), vous pouvez la désactiver individuellement pour l’instance de chaque composant, ainsi que pour les composants partagés répertoriés comme **Autres**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [À propos des termes du contrat de licence SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  

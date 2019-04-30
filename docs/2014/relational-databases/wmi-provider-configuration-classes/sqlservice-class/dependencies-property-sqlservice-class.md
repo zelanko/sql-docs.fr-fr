@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223270"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Propriété Dependencies (classe SqlService)
   Obtient une liste des services qui dépendent du service référencé.  

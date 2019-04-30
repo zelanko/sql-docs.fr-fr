@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239384"
 ---
 # <a name="integrated-terminal"></a>Terminal intégré
 
@@ -96,15 +96,15 @@ Voici les raccourcis clavier pour naviguer rapidement dans le terminal intégré
 
 Key|Command
 ---|---
-**CTRL +'**|Afficher le terminal intégré
-**CTRL + MAJ +'**|Créer nouveau terminal
-**Ctrl + flèche haut**|Défilement vers le haut
-**CTRL + bas**|Défiler vers le bas
-**CTRL + PG. préc.**|Page de défilement précédente
-**CTRL + PG. suiv.**|Défiler d’une page vers le bas
-**CTRL + origine**|Faites défiler vers le haut
-**CTRL + fin**|Faites défiler vers le bas
-**CTRL + K**|Désactivez le terminal
+**CTRL +'**| Afficher le terminal intégré
+**CTRL + MAJ +'**| Créer nouveau terminal
+**Ctrl+Up**|Défilement vers le haut
+**Ctrl+Down**|Défiler vers le bas
+**Ctrl+PageUp**|Page de défilement précédente
+**Ctrl+PageDown**|Défiler d’une page vers le bas
+**Ctrl+Home**|Faites défiler vers le haut
+**Ctrl+End**|Faites défiler vers le bas
+**Ctrl+K**|Désactivez le terminal
 
 Autres commandes de Terminal Server sont disponibles et peuvent être liés à vos raccourcis clavier par défaut.
 

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58e5160065847d5729548702b5f1d65eb31bf694
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200266"
 ---
 # <a name="call-stored-procedures-odbc"></a>Appeler des procédures stockées (ODBC)
   Lorsqu’une instruction SQL appelle une procédure stockée à l’aide de la clause d’échappement ODBC CALL, Microsoft ?? SQL Server ??? pilote envoie la procédure à SQL Server en utilisant le mécanisme d’appel de procédure stockée distante. Les demandes RPC, qui contournent une grande partie de l'analyse des instructions et du traitement des paramètres dans SQL Server, sont plus rapides que l'instruction Transact-SQL EXECUTE.  

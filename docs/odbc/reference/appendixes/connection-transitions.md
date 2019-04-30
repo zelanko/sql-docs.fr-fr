@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224506"
 ---
 # <a name="connection-transitions"></a>Transitions de connexion
 Connexions ODBC ont les états suivants.  
@@ -41,10 +41,10 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1 non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH) [2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(IH) [3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(IH) [4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|(IH)[3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
+|(IH)[4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
  [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
   
@@ -60,13 +60,13 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 de C3 [d] [s]|--C2 [d] [e] C4 [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C3 [d] C4 [s]|--C2 [d] [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--C5 [1] [2]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
   
  [1] la connexion était en mode de validation manuelle.  
   
@@ -76,7 +76,7 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--C6 [1] [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
  [1] la connexion était en mode de validation automatique, ou la source de données n’a pas commencé une transaction.  
   
@@ -88,7 +88,7 @@ Connexions ODBC ont les états suivants.
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
   
-## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField et SQLSetDescRec  
+## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField, and SQLSetDescRec  
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
@@ -112,14 +112,14 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|S C4--n [f]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|--[3]|--[3]|--[3]|--|--|--[4] ou ([5], [6] et [8]) C4 [5] et [7] C5 [5], [6] et [9]|  
-|(IH) [2]|(IH)|(08003)|(08003)|--|--|C5|  
+|(IH)[1]|--[3]|--[3]|--[3]|--|--|--[4] ou ([5], [6] et [8]) C4 [5] et [7] C5 [5], [6] et [9]|  
+|(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
   
  [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
   
@@ -143,7 +143,7 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--C6 DE C6 [1] [2] [3]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
   
  [1] la connexion était en mode de validation automatique, et l’instruction d’exécution n’était pas un *curseur* *spécification* (par exemple, une instruction SELECT) ; ou la connexion a été en mode de validation manuelle, l’instruction exécutée n’a pas commencé une transaction.  
   
@@ -155,10 +155,10 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH) [2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(IH) [3]|(IH)|(IH)|(IH)|(IH)|C4 [5], [6]|--C4 [7] [5] et [8] C5 [6] et [8]|  
-|(IH) [4]|(IH)|(IH)|(IH)|--|--|--|  
+|(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--C4 [7] [5] et [8] C5 [6] et [8]|  
+|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
   
@@ -180,8 +180,8 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|(IH)|(IH)|(IH)|(IH)|--|C5 [3] : [4]|  
-|(IH) [2]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(IH)[1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
+|(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
  [1] cette ligne affiche les transactions lorsque la *Option* argument est SQL_CLOSE.  
   
@@ -205,10 +205,10 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH) [1]|--|--|--|--|--|--|  
-|(IH) [2]|(IH)|--|--|--|--|--|  
-|(IH) [3]|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(IH) [4]|(IH)|(IH)|(IH)|--|--|--|  
+|(IH)[1]|--|--|--|--|--|--|  
+|(IH)[2]|(IH)|--|--|--|--|--|  
+|(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_ENV.  
   
@@ -244,7 +244,7 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--C6 [1] [2]|--C5 [3] [1]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
   
  [1] la connexion a été en mode de validation automatique et l’appel à **SQLMoreResults** n’a pas initialisé le traitement d’un jeu de résultats d’une spécification de curseur.  
   
@@ -262,7 +262,7 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--C6 [1] [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
  [1] la connexion était en mode de validation automatique, ou la source de données n’a pas commencé une transaction.  
   
@@ -272,7 +272,7 @@ Connexions ODBC ont les états suivants.
   
 |C0<br /><br /> Aucun Env.|C1<br /><br /> Non alloué|C2<br /><br /> allouée|C3<br /><br /> Besoin de données|C4<br /><br /> Connecté|C5<br /><br /> .|C6<br /><br /> Transaction|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--08002 [3] [4] HY011 [5]|--08002 [3] [4] HY011 [5]|--[3] et [6] C5 [8] 08002 [4] HY011 [5] ou [7]|  
+|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|--[3] et [6] C5 [8] 08002 [4] HY011 [5] ou [7]|  
   
  [1] le *attribut* argument n’était pas SQL_ATTR_TRANSLATE_LIB ou SQL_ATTR_TRANSLATE_OPTION.  
   

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224486"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données de SQL en types de données C
 Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données à partir du type de données dans lequel, récupérés par le pilote pour le type de données spécifié par le *TargetType* argument dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données dans l’emplacement vers lequel pointé le *TargetValuePtr* argument dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de la ARD).  
@@ -49,28 +49,28 @@ Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetDa
   
 -   **Longueur d’octet de caractère** est le nombre total d’octets nécessaires pour afficher les données au format caractère. Il s’agit comme défini pour chaque type de données C dans la section [taille afficher](../../../odbc/reference/appendixes/display-size.md), sauf que la longueur d’octet de caractère est en octets, tandis que la taille d’affichage est en caractères.  
   
--   Les mots dans *italique* représentent les arguments de fonction ou des éléments de la grammaire SQL. Pour connaître la syntaxe d’éléments de syntaxe, consultez [annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   Les mots dans *italique* représentent les arguments de fonction ou des éléments de la grammaire SQL. Pour connaître la syntaxe d’éléments de syntaxe, consultez [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Cette section contient les rubriques suivantes.  
   
--   [SQL en C : caractère](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL pour c : Character](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL en C : numérique](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL pour c : Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL en C : bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL pour c : Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL en C : binaire](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL pour c : fichier binaire](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL en C : date](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL pour c : Date](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL en C : GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL pour c : GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL en C : heure](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL pour c : heure](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL en C : horodatage](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL pour c : Horodatage](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL en C : intervalles d’années-mois](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL pour c : Intervalles d’années-mois](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL en C : intervalles de jours-heures](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL pour c : Intervalles de jours-heures](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [Exemples de conversion de données SQL en C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

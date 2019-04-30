@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217684"
 ---
 # <a name="open-method-ado-connection"></a>Open, méthode (objet Connection ADO)
 Ouvre une connexion à une source de données.  
@@ -39,7 +39,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Facultatif. Un **chaîne** valeur qui contient les informations de connexion. Consultez le [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) pour plus d’informations sur les paramètres valides.  
   
- *ID d’utilisateur*  
+ *UserID*  
  Facultatif. Un **chaîne** valeur qui contient un nom d’utilisateur à utiliser lors de l’établissement de la connexion.  
   
  *Mot de passe*  

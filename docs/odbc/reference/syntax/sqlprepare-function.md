@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186223"
 ---
 # <a name="sqlprepare-function"></a>Fonction SQLPrepare
 **Conformité**  
@@ -45,7 +45,7 @@ SQLRETURN SQLPrepare(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *StatementText*  
@@ -76,7 +76,7 @@ SQLRETURN SQLPrepare(
 |3F000|Nom de schéma non valide|Le nom de schéma spécifié dans *StatementText* n’était pas valide.|  
 |42000|Syntaxe ou violation d’accès|\**StatementText* contient une instruction SQL qui n’a pas été préparable ou contenait une erreur de syntaxe.<br /><br /> **StatementText* contient une instruction pour laquelle l’utilisateur ne disposait pas des privilèges requis.|  
 |42S01|Table de base ou la vue existe déjà|\**StatementText* contenait un **CREATE TABLE** ou **CREATE VIEW** instruction et que le nom de la table ou vue nom spécifié existe déjà.|  
-|42 S 02|Table de base ou de vue introuvable|\**StatementText* contenait un **DROP TABLE** ou un **DROP VIEW** instruction et la table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **ALTER TABLE** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **CREATE VIEW** instruction et un nom de la table ou le nom défini par la spécification de requête n’existait pas de vue.<br /><br /> \**StatementText* contenait un **CREATE INDEX** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **GRANT** ou **RÉVOQUER** instruction et la table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **sélectionnez** instruction et une table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **supprimer**, **insérer**, ou **mise à jour** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **CREATE TABLE** instruction et une table spécifiée dans une contrainte (faisant référence à une table autre que celui en cours de création) n’existent pas.|  
+|42S02|Table de base ou de vue introuvable|\**StatementText* contenait un **DROP TABLE** ou un **DROP VIEW** instruction et la table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **ALTER TABLE** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **CREATE VIEW** instruction et un nom de la table ou le nom défini par la spécification de requête n’existait pas de vue.<br /><br /> \**StatementText* contenait un **CREATE INDEX** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **GRANT** ou **RÉVOQUER** instruction et la table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **sélectionnez** instruction et une table spécifiée ou vue nom n’existe pas.<br /><br /> \**StatementText* contenait un **supprimer**, **insérer**, ou **mise à jour** instruction et le nom de table spécifié n’existent pas.<br /><br /> \**StatementText* contenait un **CREATE TABLE** instruction et une table spécifiée dans une contrainte (faisant référence à une table autre que celui en cours de création) n’existent pas.|  
 |42S11|L’index existe déjà|\**StatementText* contenait un **CREATE INDEX** instruction et le nom de l’index spécifié existant déjà.|  
 |42S12|Index introuvable|\**StatementText* contenait un **DROP INDEX** instruction et le nom de l’index spécifié n’existent pas.|  
 |42S21|La colonne existe déjà|\**StatementText* contenait un **ALTER TABLE** instruction et la colonne spécifiée dans le **ajouter** clause n’est pas unique ou identifie une colonne existante dans la table de base.|  

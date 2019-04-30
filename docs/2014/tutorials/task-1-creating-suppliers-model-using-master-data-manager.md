@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 : Créer un modèle fournisseurs à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 1 : Créer un modèle fournisseurs à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222698"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tâche 1 : Créer un modèle Fournisseurs à l'aide de Master Data Manager
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tâche 1 : Création d’un modèle Fournisseurs à l’aide de Master Data Manager
   Dans cette tâche, vous créez un modèle nommé **fournisseurs** dans MDS à l’aide **Master Data Manager**.  
   
 1.  Accédez à [ http://localhost/mds ](http://localhost/mds) pour lancer **Master Data Manager**. Remplacez l'URL si vous avez configuré l'application Web avec un nom différent, ou sur un autre site Web.  

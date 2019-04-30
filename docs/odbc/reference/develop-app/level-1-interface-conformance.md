@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213488"
 ---
 # <a name="level-1-interface-conformance"></a>Conformité de l’interface - niveau 1
 Niveau de la conformité de l’interface de niveau 1 inclut les fonctionnalités de niveau de conformité Core interface ainsi que des fonctionnalités supplémentaires, telles que les transactions, qui sont généralement disponibles dans un SGBD relationnelle OLTP. Un pilote conforme à l’interface de niveau 1 permet à l’application procédez comme suit, en plus des fonctionnalités dans le niveau de la conformité de l’interface Core :  

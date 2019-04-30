@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aec0ec20c9bd46a06560f5ce6ebd374e937f0343
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193250"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Utiliser le mode RAW avec FOR XML
   Le mode RAW transforme chaque ligne du jeu de résultats de la requête en un élément XML contenant l’identificateur générique \<row> ou le nom d’élément éventuellement fourni. Par défaut, chaque valeur de colonne dans l’ensemble de lignes qui n’est pas NULL est mappée à un attribut de l’élément \<row>. Si la directive ELEMENTS est ajoutée à la clause FOR XML, chaque valeur de colonne est mappée à un sous-élément de l’élément \<row>. Avec la directive ELEMENTS, vous pouvez éventuellement spécifier l'option XSINIL pour mapper les valeurs de colonnes NULL dans le jeu de résultats à un élément qui possède l'attribut xsi:nil=`"`true`"`.  
@@ -37,17 +37,17 @@ ms.locfileid: "58537041"
   
 -   [Exemple : Récupération des informations de modèle de produit au format XML](example-retrieving-product-model-information-as-xml.md)  
   
--   [Exemple : Spécification de XSINIL avec la Directive ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
+-   [Exemple : Spécification de XSINIL avec la directive ELEMENTS](example-specifying-xsinil-with-the-elements-directive.md)  
   
--   [Exemple : Demande de schémas comme résultats avec les Options XMLDATA et XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
+-   [Exemple : Demande de schémas comme résultats à l’aide des options XMLDATA et XMLSCHEMA](example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md)  
   
 -   [Exemple : Récupération de données binaires](example-retrieving-binary-data.md)  
   
--   [Exemple : Renommer le &#60;ligne&#62; élément](example-renaming-the-row-element.md)  
+-   [Exemple : Renommage de l’élément &#60;row&#62;](example-renaming-the-row-element.md)  
   
--   [Exemple : Spécification d’un élément racine pour les données XML généré par FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
+-   [Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML](example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md)  
   
--   [Exemple : Interrogation de colonnes](example-querying-xmltype-columns.md)  
+-   [Exemple : Interrogation de colonnes de type XML](example-querying-xmltype-columns.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](add-namespaces-to-queries-with-with-xmlnamespaces.md)   

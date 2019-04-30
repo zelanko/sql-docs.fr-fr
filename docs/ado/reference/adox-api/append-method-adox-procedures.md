@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 348b2876e4293ad912383859ace47e462da31bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63207186"
 ---
 # <a name="append-method-adox-procedures"></a>Append, méthode (procédures ADOX)
 Ajoute un nouveau [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) de l’objet à la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  
@@ -38,7 +38,7 @@ Procedures.Append Name, Command
  *Nom*  
  Un **chaîne** valeur qui spécifie le nom de la procédure pour créer et à ajouter.  
   
- *Commandee*  
+ *Commande*  
  ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui représente la procédure pour créer et à ajouter.  
   
 ## <a name="remarks"></a>Notes  

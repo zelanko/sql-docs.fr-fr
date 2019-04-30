@@ -1,5 +1,5 @@
 ---
-title: Base de données master - Parallel Data Warehouse | Documents Microsoft
+title: Base de données master - Parallel Data Warehouse | Microsoft Docs
 description: En savoir plus sur la base de données master dans Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213299"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Base de données master - Parallel Data Warehouse
-La base de données master de SQL Server PDW stocke les informations de connexion au niveau du matériel et le catalogue de base de données. Il s’agit d’une base de données master SQL Server qui réside sur le nœud de contrôle. Par conséquent, il fournit des fonctionnalités similaires à SQL Server PDW master fournit à SQL Server.  
+La base de données master de SQL Server PDW stocke les informations de connexion au niveau du matériel et le catalogue de base de données. Il est une base de données master SQL Server qui réside sur le nœud de contrôle. Par conséquent, il fournit des fonctionnalités similaires à SQL Server PDW comme principal fournit à SQL Server.  
   
 Pour plus d’informations sur les bases de données système, consultez [bases de données système](system-databases.md).  
   
@@ -30,24 +30,24 @@ Vous *ne peut pas :*
   
 -   Créer des objets utilisateur dans master.  
   
--   Modifier le classement de master.  
+-   Modifier le classement du serveur principal.  
   
--   Modifier le propriétaire du maître.  
+-   Changer le propriétaire du maître.  
   
--   Supprimer ou renommer.  
+-   Supprimez ou renommez master.  
   
--   Modifier les autorisations au masque.  
+-   Autorisations de modification sur master.  
   
 -   Exécutez **DBCC SHRINKLOG**.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
-|Tâche| Description|  
+|Tâche|Description|  
 |--------|---------------|  
-|Créer une sauvegarde complète de master.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
-|Restaurer la base de données master|Pour restaurer la base de données master, utilisez la [restaurer la base de données Master](restore-the-master-database.md) page dans l’outil de Configuration Manager.|  
+|Créer une sauvegarde complète du serveur principal.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Restaurer la base de données MASTER|Pour restaurer la base de données master, utilisez la [restaurer la base de données Master](restore-the-master-database.md) page dans l’outil de Configuration Manager.|  
 |Afficher les informations de catalogue de base de données.|`SELECT * FROM master.sys.databases;`|  
-|Afficher les informations de connexion et d’autorisation à l’échelle du système.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
+|Afficher les informations de connexion et l’autorisation de l’échelle du système.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

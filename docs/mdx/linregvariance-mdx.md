@@ -1,5 +1,5 @@
 ---
-title: LinRegVariance (MDX) | Documents Microsoft
+title: LinRegVariance (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b3ae56238623c41d29ccb388a5aaa178352af196
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208750"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
@@ -39,11 +39,11 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
 ## <a name="remarks"></a>Notes  
- La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un est de la pente et b l’ordonnée à l’origine :  
+ La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un représente la pente et b est l’interception :  
   
  y = ax+b  
   
- Le **LinRegVariance** fonction évalue le setagainst spécifié, la première expression numérique pour obtenir les valeurs de l’axe des ordonnées. La fonction évalue ensuite le setagainst spécifié, la deuxième expression, si spécifiée, pour obtenir les valeurs de l’axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que les valeurs de l’axe des abscisses. Il est fréquent de ne pas spécifier l'argument de l'axe des abscisses avec la dimension Time.  
+ Le **LinRegVariance** fonction évalue la setagainst spécifiée la première expression numérique pour obtenir les valeurs de l’axe y. La fonction évalue ensuite le setagainst spécifié de l’expression numérique Deuxièmement, si spécifié, pour obtenir les valeurs de l’axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que les valeurs de l’axe des abscisses. Il est fréquent de ne pas spécifier l'argument de l'axe des abscisses avec la dimension Time.  
   
  Après avoir obtenu l’ensemble de points, le **LinRegVariance** fonction retourne la variance statistique qui décrit l’adéquation entre l’équation linéaire et les points.  
   
@@ -58,6 +58,6 @@ LinRegVariance(LastPeriods(10),[Measures].[Unit Sales],[Measures].[Store Sales])
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228382"
 ---
 # <a name="the-significance-of-cursor-location"></a>Signification de l’emplacement du curseur
 Chaque curseur utilise des ressources temporaires pour contenir ses données. Ces ressources peuvent être en mémoire, un fichier d’échange de disque, les fichiers de disque temporaire ou même temporaire dans la base de données. Le curseur est appelé un *côté client* curseur lorsque ces ressources sont situés sur l’ordinateur client. Le curseur est appelé un *côté serveur* curseur lorsque ces ressources sont situés sur le serveur.  

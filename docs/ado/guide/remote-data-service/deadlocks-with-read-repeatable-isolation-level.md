@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214877"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Interblocages avec le niveau d’isolation REPEATABLE READ
 Si un objet métier personnalisé utilise un niveau d’isolation de lecture renouvelable pour accéder à un serveur SQL, et l’objet métier est appelé simultanément par deux clients qui envoient une requête et de mettre à jour dans la même transaction, un blocage est possible. Service de données distant est conçu pour permettre un processus à l’expiration du délai pour libérer le verrou mortel, mais la mise à jour échouent pour ce client.  

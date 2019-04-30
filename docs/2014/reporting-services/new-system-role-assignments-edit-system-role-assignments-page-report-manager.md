@@ -1,5 +1,5 @@
 ---
-title: 'Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports) | Microsoft Docs'
+title: 'Nouvelles attributions de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188406"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nouvelles attributions de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports)
   La page Nouvelle attribution de rôle système ou Modifier les attributions de rôle système vous permet de définir la sécurité pour le serveur de rapports. La sécurité est définie par l'intermédiaire des attributions de rôle qui mappent des groupes ou des utilisateurs spécifiques aux tâches qu'ils peuvent effectuer. La liste des tâches est représentée sous la forme d'une définition de rôle que vous sélectionnez lors de l'attribution de rôle.  
   
  Au niveau système, les attributions de rôle que vous créez ou modifiez s'appliquent à l'ensemble du serveur de rapports. Par exemple, la possibilité de créer des planifications partagées est spécifiée au niveau système, car celles-ci sont utilisées par tout le système.  

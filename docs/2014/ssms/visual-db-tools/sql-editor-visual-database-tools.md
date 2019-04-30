@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194916"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Éditeur SQL (Visual Database Tools)
   Utilisez l'Éditeur SQL pour modifier des procédures stockées, fonctions, déclencheurs et scripts SQL existants. Cette fenêtre s'affiche lorsque vous ouvrez l'un de ces objets. Si vous souhaitez créer une instruction SQL à exécuter sur votre source de données, utilisez le [volet SQL](visual-database-tools.md) du Concepteur de requêtes.  

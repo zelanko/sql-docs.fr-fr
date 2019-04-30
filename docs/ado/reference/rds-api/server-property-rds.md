@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217644"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
 Indique le protocole de nom et la communication Internet Information Services (IIS).  
@@ -108,7 +108,7 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Paramètres  
- *awebsrvr*ou *Nom_Ordinateur*  
+ *awebsrvr*or *computername*  
  Un **chaîne** valeur contenant un Internet ou le chemin d’accès de l’intranet ou le nom de l’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
  *port*  

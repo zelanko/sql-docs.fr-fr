@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233586"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Configuration d’ODBC pour Visual FoxPro, boîte de dialogue
 Le **d’installation de ODBC Visual FoxPro** boîte de dialogue vous permet d’ajouter ou modifier une source de données Visual FoxPro.  
@@ -67,7 +67,7 @@ strCon = "DRIVER=MICROSOFT VISUAL FOXPRO DRIVER;
 SOURCETYPE=DBC;SOURCEDB=D:\Testdata.dbc;BACKGROUNDFETCH=NO;NULL=NO"  
 ```  
   
- **Supprimé**  
+ **Deleted**  
  Détermine si les lignes marquées comme supprimées sont retournées. Vous pouvez également contrôler cette option dans une chaîne de connexion passée comme dans le code suivant :  
   
 ```  

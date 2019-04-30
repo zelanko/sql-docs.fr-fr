@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240007"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue, propriété (ADO)
 Indique la valeur d’un [champ](../../../ado/reference/ado-api/field-object.md) qui existaient dans l’enregistrement avant que des modifications ont été apportées.  
@@ -36,7 +36,7 @@ Indique la valeur d’un [champ](../../../ado/reference/ado-api/field-object.md)
   
  Dans *mode de mise à jour par lots* (dans lequel le fournisseur met en cache plusieurs modifications et les écrit dans la source de données sous-jacente uniquement lorsque vous appelez le [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) méthode), la **OriginalValue** propriété retourne la valeur du champ qui existaient avant toute modification (autrement dit, depuis le dernier **UpdateBatch** appel de méthode). Il s’agit du même valeur que la [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) méthode utilise pour remplacer le **valeur** propriété. Lorsque vous utilisez cette propriété avec la [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriété, vous pouvez résoudre les conflits qui proviennent des mises à jour par lots.  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Enregistrement  
  Pour [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objets, le **OriginalValue** propriété sera vide pour les champs ajoutés avant [mise à jour](../../../ado/reference/ado-api/update-method.md) est appelée.  
   
 ## <a name="applies-to"></a>S'applique à  

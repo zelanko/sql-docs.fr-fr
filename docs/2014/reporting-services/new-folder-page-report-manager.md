@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188387"
 ---
 # <a name="new-folder-page-report-manager"></a>Page Nouveau dossier (Gestionnaire de rapports)
   La page Nouveau dossier vous permet de créer un dossier dans l'arborescence des dossiers du serveur de rapports. Le dossier que vous créez est un dossier virtuel qui est stocké dans une base de données du serveur de rapports. Le dossier n'est pas créé dans le système de fichiers de votre ordinateur.  

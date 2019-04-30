@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241252"
 ---
 # <a name="display-size"></a>Taille d’affichage
 La taille d’affichage d’une colonne est le nombre maximal de caractères que nécessaire pour afficher les données sous forme de caractère. Le tableau suivant définit la taille d’affichage pour chaque type de données ODBC SQL.  

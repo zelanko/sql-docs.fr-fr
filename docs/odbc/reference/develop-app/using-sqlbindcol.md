@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208477"
 ---
 # <a name="using-sqlbindcol"></a>Utilisation de SQLBindCol
 L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est liée à une colonne à la fois. Avec elle, l’application spécifie les éléments suivants :  
   
 -   Numéro de la colonne. 0 est la colonne de signet ; Cette colonne n’est pas incluse dans certains jeux de résultats. Toutes les autres colonnes sont numérotées à partir du numéro 1. C’est une erreur pour lier une colonne élevé qu’il existe de colonnes du jeu de résultats ; Cette erreur ne peut pas être détectée jusqu'à ce que le jeu de résultats a été créé, qui est retournée par **SQLFetch**, et non **SQLBindCol**.  
   
--   Le C type, l’adresse et octets longueur des données de la variable liée à la colonne. C’est une erreur pour spécifier un type de données C vers lequel le type de données SQL de la colonne ne peut pas être converti ; Cette erreur peut ne pas être détectée jusqu'à ce que le jeu de résultats a été créé, qui est retournée par **SQLFetch**, et non **SQLBindCol**. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) annexe d : Types de données. Pour plus d’informations sur la longueur d’octet, consultez [longueur de mémoire tampon de données](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   Le C type, l’adresse et octets longueur des données de la variable liée à la colonne. C’est une erreur pour spécifier un type de données C vers lequel le type de données SQL de la colonne ne peut pas être converti ; Cette erreur peut ne pas être détectée jusqu'à ce que le jeu de résultats a été créé, qui est retournée par **SQLFetch**, et non **SQLBindCol**. Pour une liste des conversions prises en charge, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur la longueur d’octet, consultez [longueur de mémoire tampon de données](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
 -   L’adresse d’une mémoire tampon de longueur / d’indicateur. La mémoire tampon de longueur / d’indicateur est facultative. Il est utilisé pour retourner la longueur d’octet du fichier binaire ou caractère ou retour SQL_NULL_DATA si les données sont NULL. Pour plus d’informations, consultez [à l’aide des valeurs de longueur / d’indicateur](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200085"
 ---
 # <a name="fetching-result-data"></a>Extraction des données de résultat
   Une application ODBC offre trois options pour l'extraction des données de résultat.  

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d6b5c08e9387517f737ab7003729a281e5594bc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239701"
 ---
 # <a name="sqlxml-40-data-access-components"></a>Composants d'accès aux données SQLXML 4.0
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 comprend trois fournisseurs de données qui peuvent insérer des données XML dans une base de données et les récupérer dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  

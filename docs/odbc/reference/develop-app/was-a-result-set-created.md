@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208397"
 ---
 # <a name="was-a-result-set-created"></a>Un jeu de résultats a-t-il été créé ?
-Dans la plupart des cas, les programmeurs d’applications savent si les instructions de que l’exécution de leur application crée un jeu de résultats. C’est le cas si l’application utilise des instructions SQL codées en dur écrites par le programmeur. Il est généralement le cas lorsque l’application construit des instructions SQL en cours d’exécution : le programmeur peut inclure facilement du code qui signale si un **sélectionnez** instruction ou un **insérer** instruction est en cours construit. Dans certaines situations, le programmeur ne peut pas savoir si une instruction crée un jeu de résultats. Cela est vrai si l’application fournit un moyen de l’utilisateur entrer et exécuter une instruction SQL. Il est également vrai lorsque l’application construit une instruction en cours d’exécution pour exécuter une procédure.  
+Dans la plupart des cas, les programmeurs d’applications savent si les instructions de que l’exécution de leur application crée un jeu de résultats. C’est le cas si l’application utilise des instructions SQL codées en dur écrites par le programmeur. Il est généralement le cas lorsque l’application construit des instructions SQL en cours d’exécution : Le programmeur peut inclure facilement du code qui signale si un **sélectionnez** instruction ou un **insérer** instruction est en cours de construction. Dans certaines situations, le programmeur ne peut pas savoir si une instruction crée un jeu de résultats. Cela est vrai si l’application fournit un moyen de l’utilisateur entrer et exécuter une instruction SQL. Il est également vrai lorsque l’application construit une instruction en cours d’exécution pour exécuter une procédure.  
   
  Dans ce cas, l’application appelle **SQLNumResultCols** pour déterminer le nombre de colonnes dans le jeu de résultats. S’il s’agit de 0, l’instruction n’a pas créé un jeu de résultats ; s’il est tout autre nombre, l’instruction n’a créé un jeu de résultats.  
   
