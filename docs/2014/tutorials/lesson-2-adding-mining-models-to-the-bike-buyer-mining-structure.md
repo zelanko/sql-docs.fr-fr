@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: de65fb7a85154f607cd8f266faec4621cdc41476
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131749"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Bike Buyer
+# <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer
   Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Bike Buyer que vous avez créé [leçon 1 : Création de la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Vous pourrez utiliser ces modèles pour explorer des données avec l'un et créer des tâches de prédiction avec l'autre.  
   
  Pour découvrir comment les clients potentiels peuvent être classés en fonction de leurs caractéristiques, vous allez créer un modèle d’exploration de données basé sur le [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md). Au cours d'une autre leçon, vous découvrirez comment cet algorithme recherche des clusters de clients partageant les mêmes caractéristiques. Par exemple, vous découvrirez peut-être que certains clients vivent proches les uns des autres, se déplacent à vélo et présentent le même parcours éducatif. Vous pouvez recourir à ces clusters pour mieux comprendre les relations entre différents clients et exploiter les informations recueillies pour mettre sur pied une stratégie marketing ciblant des clients spécifiques.  

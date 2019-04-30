@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151202"
 ---
 # <a name="database-engine-tuning-advisor"></a>Assistant Paramétrage du moteur de base de données
   L'Assistant Paramétrage du moteur de base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] analyse les bases de données et émet des recommandations que vous pouvez utiliser pour optimiser les performances des requêtes. L'Assistant Paramétrage du moteur de base de données vous permet de sélectionner et de créer un ensemble optimal d'index, de vues indexées ou de partitions de table sans devoir être un expert familiarisé avec la structure de la base de données ou les mécanismes internes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez effectuer les tâches suivantes à l'aide de l'Assistant Paramétrage du moteur de base de données :  

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Ajout de Source Excel au flux de données | Microsoft Docs'
+title: 'Tâche 6 : Ajout de Source Excel au flux de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 644b80d6a547c58b058c4c932a261762a0235430
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156673"
 ---
-# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d'une source Excel au flux de données
+# <a name="task-6-adding-excel-source-to-the-data-flow"></a>Tâche 6 : Ajout d’une source Excel au flux de données
   Dans cette tâche, vous allez ajouter une source Excel au flux de données pour lire les données des fournisseurs à partir du fichier Excel source. La source Excel extrait des données depuis des feuilles de calcul ou des plages dans des classeurs Microsoft Excel. Consultez la rubrique [Source Excel](../integration-services/data-flow/excel-source.md) pour plus de détails.  
   
 1.  Faites glisser la **Source Excel** depuis **Autres sources** dans **Boîte à outils SSIS** vers l'onglet **Flux de données** .  

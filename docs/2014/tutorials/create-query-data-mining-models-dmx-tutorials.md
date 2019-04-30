@@ -1,5 +1,5 @@
 ---
-title: 'Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels (Analysis Services - Exploration de données) | Microsoft Docs'
+title: 'Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : Didacticiels (Analysis Services - Exploration de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180552"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels (Analysis Services - Exploration de données)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Création et interrogation de modèles d’exploration de données à l’aide du langage DMX : Didacticiels (Analysis Services - Exploration de données)
   Une fois que vous avez créé une solution d’exploration de données à l’aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous pouvez créer des requêtes sur les modèles d’exploration de données pour prévoir des tendances, extraire des modèles dans les données et mesurer la précision des modèles d’exploration de données.  
   
  Les didacticiels pas à pas dans la liste suivante vous aidera à apprendre à générer et exécuter des requêtes d’exploration de données à l’aide de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] afin que vous pouvez obtenir le meilleur parti de vos données.  

@@ -1,5 +1,5 @@
 ---
-title: + (Union) (MDX) | Documents Microsoft
+title: + (Union) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129821"
 ---
 # <a name="union---mdx-operator-reference"></a>Union - référence des opérateurs MDX
 
@@ -36,7 +36,7 @@ Set_Expression + Set_Expression
  Jeu contenant les membres des deux jeux spécifiés.  
   
 ## <a name="remarks"></a>Notes  
- Le **+ (Union)** opérateur est fonctionnellement équivalente à la [Union &#40;MDX&#41; ](../mdx/union-mdx.md) (fonction).  
+ Le **+ (Union)** opérateur est fonctionnellement équivalent à la [Union &#40;MDX&#41; ](../mdx/union-mdx.md) (fonction).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'utilisation de cet opérateur.  

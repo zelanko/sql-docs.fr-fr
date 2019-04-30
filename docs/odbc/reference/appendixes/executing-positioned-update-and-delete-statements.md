@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189019"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Exécution d’instructions de mise à jour et de suppression positionnées
 > [!IMPORTANT]  
@@ -35,9 +35,9 @@ ms.locfileid: "47772047"
   
      **Mise à jour** *nom de la table*  
   
-     **Définissez** *identificateur de colonne* **=** {*expression* &#124; **NULL**}  
+     **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
-     [**,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]  
+     [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]  
   
      **WHERE CURRENT OF** *nom de curseur*  
   

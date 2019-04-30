@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151253"
 ---
 # <a name="conformance-levels"></a>Niveaux de conformité
 Pilotes ODBC donnent l’accès aux applications à diverses sources de données. Chaque pilote permet à l’application de déterminer au moment de l’exécution quelles fonctionnalités ODBC et quelles grammaire SQL le pilote et prend en charge de chaque source de données. Cela n’est pas obligatoire d’applications conçues pour fonctionner avec un seul pilote ou un petit ensemble connu de pilotes, étant donné que ces applications peuvent simplement être écrites dans les fonctionnalités de cette ou les pilotes. Pour découvrir les applications pilote et des fonctionnalités de source de données, deux zones de conformité sont disponibles : l’interface ODBC et la grammaire SQL.  

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138882"
 ---
 # <a name="open-file-dialog-box"></a>Boîte de dialogue Ouvrir un fichier
   La boîte de dialogue **Ouvrir un fichier** permet d'ouvrir un fichier existant à partir du disque. Vous pouvez également utiliser cette boîte de dialogue pour ouvrir un fichier déjà ouvert en utilisant des options d'encodage linguistique différentes.  

@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131517"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les ou les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquer comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  
@@ -119,7 +119,7 @@ ms.locfileid: "52808171"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>b. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
+### <a name="b-updating-multiple-records-by-using-the-updgid-attribute"></a>B. Mise à jour de plusieurs enregistrements à l'aide de l'attribut updg:id  
  Dans cet exemple, le code de mise à jour (updategram) effectue deux mises à jour sur la table HumanResources.Shift de la base de données AdventureWorks :  
   
 -   Il modifie le nom de l'équipe de jour d'origine qui commence à 7 h 09 en remplaçant « Day » par « Early Morning ».  

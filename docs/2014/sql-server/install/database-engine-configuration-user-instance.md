@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162218"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Configuration du moteur de base de données – Instance utilisateur
   La page **Instance utilisateur** permet de générer une instance distincte du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour les utilisateurs sans autorisations d’administrateur, et d’ajouter des utilisateurs dans le rôle d’administrateur.  

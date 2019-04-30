@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134396"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimisation de l’espace utilisé par un fichier journal
 Un fichier journal peut se remplir rapidement (provoquant ainsi l’abandon du serveur) s’il existe un gros volume d’activité sur une base de données SQL Server. Vous pouvez définir le fichier journal sur **vidage au point de contrôle** pour étendre considérablement la durée de vie du fichier journal pour une base de données.  

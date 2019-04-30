@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68165234bcafbb91ef30b45b44fbcf4f64d8657e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206863"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Ajouter un sous-rapport et des paramètres (Générateur de rapports et SSRS)
   Ajoutez des sous-rapports à un rapport pour créer un rapport principal servant de conteneur à plusieurs rapports connexes. Un sous-rapport est une référence à un autre rapport. Pour connecter les rapports par des valeurs de données (par exemple, pour que plusieurs rapports indiquent des données pour le même client), vous devez désigner un rapport paramétrable (par exemple, un rapport qui affiche les renseignements concernant un client spécifique) en tant que sous-rapport. Lorsque vous ajoutez un sous-rapport au rapport principal, vous pouvez spécifier des paramètres à passer au sous-rapport.  

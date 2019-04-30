@@ -15,11 +15,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: cda6719eb46a4a05222bd54062e6cab98459d7dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181777"
 ---
 # <a name="parameter-markers"></a>Marqueurs de paramètres
 Conformément à la spécification SQL-92, une application ne peut pas placer des marqueurs de paramètres dans les emplacements suivants. Pour une liste plus complète, consultez la spécification de SQL-92.  

@@ -1,5 +1,5 @@
 ---
-title: IsSibling (MDX) | Documents Microsoft
+title: IsSibling (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d86c96686357533aa1217571f3c199ec8ddff508
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125505"
 ---
 # <a name="issibling-mdx"></a>IsSibling (MDX)
 
@@ -29,10 +29,10 @@ IsSibling(Member_Expression1, Member_Expression2)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Expression_membre1*  
+ *Member_Expression1*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
- *Expression_membre2*  
+ *Member_Expression2*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ## <a name="remarks"></a>Notes  
@@ -52,6 +52,6 @@ IsSibling(Member_Expression1, Member_Expression2)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

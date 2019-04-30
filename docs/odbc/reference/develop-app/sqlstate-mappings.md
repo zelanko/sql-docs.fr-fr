@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148882"
 ---
 # <a name="sqlstate-mappings"></a>Mappages SQLSTATE
 Cette rubrique décrit les valeurs SQLSTATE pour ODBC 2. *x* et ODBC 3. *x*. Pour plus d’informations sur ODBC 3. *x* valeurs SQLSTATE, consultez [annexe a : Codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
@@ -31,7 +31,7 @@ Cette rubrique décrit les valeurs SQLSTATE pour ODBC 2. *x* et ODBC 3. *x*. Pou
   
  Lorsque l’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie à SQL_OV_ODBC2, le pilote publie ODBC 2. *x* SQLSTATE plutôt que ODBC 3. *x* SQLSTATE lorsque **SQLGetDiagField** ou **SQLGetDiagRec** est appelée. Un mappage spécifique peut être déterminé en notant ODBC 2 *.x* SQLSTATE dans la colonne 1 du tableau suivant qui correspond à la ODBC 3. *x* SQLSTATE dans la colonne 2.  
   
-|ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Commentaires|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|Commentaires|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -42,7 +42,7 @@ Cette rubrique décrit les valeurs SQLSTATE pour ODBC 2. *x* et ODBC 3. *x*. Pou
 |37000|42000||  
 |70100|HY018||  
 |S0001|42S01||  
-|S0002|42 S 02||  
+|S0002|42S02||  
 |S0011|42S11||  
 |S0012|42S12||  
 |S0021|42S21||  

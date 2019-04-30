@@ -1,5 +1,5 @@
 ---
-title: L’instruction SCOPE (MDX) | Documents Microsoft
+title: L’instruction SCOPE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187526"
 ---
-# <a name="mdx-scripting---scope"></a>Écriture de scripts MDX - étendue
+# <a name="mdx-scripting---scope"></a>Écriture de scripts MDX - SCOPE
 
 
   Limite l'étendue des instructions MDX (Multidimensional Expressions) spécifiées à un sous-cube spécifié.  
@@ -84,7 +84,7 @@ Limited_Set ::=
  Les membres calculés et les jeux nommés créés dans le cadre d'une instruction SCOPE ne sont pas affectés par l'instruction SCOPE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant, à partir du script de calcul MDX dans la solution exemple Adventure Works, définit l’étendue actuelle en tant que trimestre fiscal dans l’année fiscale 2005 et de la mesure de quota du montant des ventes, puis assigne une valeur aux cellules dans l’étendue actuelle à l’aide de la **ParallelPeriod** (fonction). L’exemple modifie ensuite l’étendue à l’aide d’une autre instruction SCOPE et qu’il exécute ensuite une autre assignation à l’aide du [This (MDX)](../mdx/this-mdx.md) (fonction).  
+ L’exemple suivant, à partir du script de calcul MDX dans la société Adventure Works exemple de solution, définit l’étendue actuelle en tant que trimestre fiscal dans l’année fiscale 2005 et la mesure de quota du montant des ventes, puis assigne une valeur aux cellules dans l’étendue actuelle à l’aide de la  **ParallelPeriod** (fonction). L’exemple modifie ensuite l’étendue à l’aide d’une autre instruction SCOPE et qu’il exécute ensuite une autre assignation à l’aide du [This (MDX)](../mdx/this-mdx.md) (fonction).  
   
 ```  
 Scope   

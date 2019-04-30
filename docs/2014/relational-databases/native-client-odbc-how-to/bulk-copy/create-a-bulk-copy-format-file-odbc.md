@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54f57ae8d03037639076e890b93c0cff9021bd78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157222"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Créer un fichier de format de copie en bloc (ODBC)
   Cet exemple illustre comment utiliser des fonctions de copie en bloc pour créer un fichier de données et un fichier de format. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  

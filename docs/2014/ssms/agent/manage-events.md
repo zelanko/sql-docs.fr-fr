@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed78d5ff91d09f9d8370eef31fd3a6651b301a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188216"
 ---
 # <a name="manage-events"></a>Gérer les événements
   Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
@@ -88,6 +88,6 @@ ms.locfileid: "52812111"
 >  Un travail pouvant déclencher un événement, veillez à ne pas créer de boucle récursive de travail d'alerte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
+ [sys.sysmessages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysmessages-transact-sql)  
   
   

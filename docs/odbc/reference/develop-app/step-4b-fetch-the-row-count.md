@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 b : extraire le nombre de lignes | Microsoft Docs'
+title: 'Étape 4b : Extraire le nombre de lignes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149155"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Étape 4b : Extraire le nombre de lignes
 L’étape suivante consiste à extraire le nombre de lignes, comme indiqué dans l’illustration suivante.  

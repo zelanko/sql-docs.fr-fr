@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199128"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Boîtes de dialogue de réplication SQL Server Management Studio
   Cette section contient des informations sur les boîtes de dialogue de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  

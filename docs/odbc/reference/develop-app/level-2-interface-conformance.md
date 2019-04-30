@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179824"
 ---
 # <a name="level-2-interface-conformance"></a>Conformité de l’interface - niveau 2
 Niveau de la conformité de l’interface de niveau 2 inclut des fonctionnalités de niveau de conformité de l’interface de niveau 1 ainsi que les fonctionnalités suivantes :  

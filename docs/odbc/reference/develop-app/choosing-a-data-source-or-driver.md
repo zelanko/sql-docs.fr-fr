@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125465"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Choix d’une source de données ou d’un pilote
 La source de données ou le pilote utilisé par une application est parfois codées en dur dans l’application. Par exemple, une application personnalisée écrite par un service MIS à transférer des données à partir d’une source de données à l’autre contient les noms de ces données sources, l’application ne fonctionnerait pas avec toutes les autres sources de données. Un autre exemple est une application verticale, tel que celui utilisé pour la saisie de commandes. Une telle application always utilise la même source de données, ce qui a un schéma prédéfini connu par l’application.  

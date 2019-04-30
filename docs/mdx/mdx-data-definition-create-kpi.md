@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE KPI (MDX) | Documents Microsoft
+title: Instruction CREATE KPI (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181535"
 ---
-# <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - créer un KPI
+# <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - CREATE KPI
 
 
-  Crée un indicateur de performance clé (KPI, &lt;legacyItalic&gt;key performance indicator&lt;/legacyItalic&gt;). Un indicateur de performance clé est un ensemble de calculs associés à un groupe de mesures dans un cube et utilisés pour évaluer les performances de l'entreprise ou du scénario.  
+  Crée un indicateur de performance clé (KPI, &amp;lt;legacyItalic&amp;gt;key performance indicator&amp;lt;/legacyItalic&amp;gt;). Un indicateur de performance clé est un ensemble de calculs associés à un groupe de mesures dans un cube et utilisés pour évaluer les performances de l'entreprise ou du scénario.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -30,16 +30,16 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_icp*  
+ *KPI_Name*  
  Chaîne valide qui fournit le nom d'un indicateur de performance clé.  
   
  *KPI_Value*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
- *Property_name*  
+ *Property_Name*  
  Chaîne valide qui fournit le nom d'une propriété d'indicateur de performance clé.  
   
- *Nom*  
+ *Property_Value*  
  Expression scalaire valide qui définit la valeur de la propriété d'indicateur de performance clé.  
   
 ## <a name="remarks"></a>Notes  
@@ -97,6 +97,6 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction d’indicateur de performance clé DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Extraire (MDX) | Documents Microsoft
+title: Extract (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155206"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -39,12 +39,12 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  Expression MDX (Multidimensional Expressions) valide qui retourne une hiérarchie.  
   
 ## <a name="remarks"></a>Notes  
- Le **extraire** fonction retourne un jeu composé de tuples à partir d’éléments de hiérarchie extraits. Pour chaque tuple du jeu spécifié, les membres des hiérarchies concernées sont extraits vers de nouveaux tuples dans l'ensemble de résultats. Cette fonction supprime toujours les tuples dupliqués.  
+ Le **extraire** fonction retourne un jeu composé de tuples à partir des éléments de hiérarchie extraits. Pour chaque tuple du jeu spécifié, les membres des hiérarchies concernées sont extraits vers de nouveaux tuples dans l'ensemble de résultats. Cette fonction supprime toujours les tuples dupliqués.  
   
  Le **extraire** fonction effectue l’action inverse de la [Crossjoin](../mdx/crossjoin-mdx.md) (fonction).  
   
 ## <a name="examples"></a>Exemples  
- La requête suivante montre comment utiliser le **extraire** fonction sur un jeu de tuples retournés par le **NonEmpty** fonction :  
+ La requête suivante montre comment utiliser le **extraire** fonction sur un jeu de tuples retournés par la **NonEmpty** fonction :  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -79,6 +79,6 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

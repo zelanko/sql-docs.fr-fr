@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161775"
 ---
 # <a name="editing-data"></a>Modification des données
 Nous avons expliqué comment utiliser ADO pour se connecter à une source de données, d’exécuter une commande, d’obtenir les résultats dans un **Recordset** de l’objet et naviguer dans le **Recordset**. Cette section se concentre sur la prochaine opération ADO fondamentale : modification des données.  
@@ -92,4 +92,4 @@ End Function
   
 -   [Suppression d’enregistrements avec la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [Alternatives : utilisation d’instructions SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternatives : À l’aide d’instructions SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)

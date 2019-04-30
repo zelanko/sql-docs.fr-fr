@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165015"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Page Sélection de la source de données (Gestionnaire de rapports)
   La page Sélection de la source de données vous permet de sélectionner un élément de source de données partagée existant à utiliser avec un rapport ou un modèle de rapport. Vous pouvez également utiliser cette page pour sélectionner une autre source de données. Pour afficher le type de source de données ou la chaîne de connexion, vous devez atteindre la source de données partagée et ouvrir les pages de propriétés.  

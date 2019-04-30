@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130366"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturer des données d'événements de déclencheurs de connexion
   Pour capturer des données XML relatives à des événements LOGON à utiliser dans des déclencheurs de connexion, utilisez la fonction [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . L'événement LOGON retourne le schéma des données d'événement suivant :  

@@ -16,50 +16,50 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188817"
 ---
 # <a name="interval-literal-syntax"></a>Syntaxe des littéraux d’intervalle
 La syntaxe suivante est utilisée pour les littéraux d’intervalle dans ODBC.  
   
  *littéral d’intervalle :: = intervalle* [+*&#124;*-] *intervalle-qualificateur de la chaîne de l’intervalle*  
   
- *chaîne de l’intervalle* :: = *devis* { *année-mois-literal* &#124; *littéral d’heure jour* } *devis*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *année-mois-literal* :: = *-valeur en années* &#124; [*-valeur en années* -] *-valeur en mois*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *littéral d’heure jour* :: = *jours d’intervalle de temps* &#124; *intervalle de temps*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
- *intervalle de temps jour* :: = *-valeur en jours* [*-valeur en heures* [ :*valeur des minutes*[ :*valeur des secondes*]]]  
+ *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
  *intervalle de temps* :: = *-valeur en heures* [ :*valeur des minutes* [ :*valeur des secondes* ]]  
   
- &#124;*valeur des minutes* [ :*valeur des secondes* ]  
+ &#124; *minutes-value* [:*seconds-value* ]  
   
- &#124;*valeur des secondes*  
+ &#124; *seconds-value*  
   
  *valeur en années* :: = *-valeur datetime*  
   
- *valeur de mois* :: = *-valeur datetime*  
+ *months-value* ::= *datetime-value*  
   
- *valeur de jours* :: = *-valeur datetime*  
+ *days-value* ::= *datetime-value*  
   
  *valeur des heures* :: = *-valeur datetime*  
   
- *valeur de minutes* :: = *-valeur datetime*  
+ *minutes-value* ::= *datetime-value*  
   
- *valeur des secondes* :: = *secondes entier* [. [ *fraction de seconde*]]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *valeur de nombre entier de secondes* :: = *entier non signé*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *fraction de seconde* :: = *entier non signé*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *valeur de date/heure* :: = *entier non signé*  
+ *datetime-value* ::= *unsigned-integer*  
   
- *qualificateur de l’intervalle* :: = *début champ* TO *fin-champ* &#124; *champ d’horodatage unique*  
+ *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
   
  *champ de début* :: = *non-seconde--champ datetime* [(*intervalle pointe champ précision* )]  
   
@@ -71,10 +71,10 @@ La syntaxe suivante est utilisée pour les littéraux d’intervalle dans ODBC.
   
  *non-seconde--champ datetime* :: = année &#124; mois &#124; jour &#124; heure &#124; MINUTE  
   
- *intervalle--secondes-précision fractionnelle* :: = *entier non signé*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *intervalle de début-champ précision* :: = *entier non signé*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
- *guillemet* :: = '  
+ *quote* ::= '  
   
  *entier non signé* :: = *chiffre...*

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e569e51540cbaa5612b158abdacac5faae77f940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149029"
 ---
 # <a name="sqldescribecol-and-sqlcolattribute"></a>SQLDescribeCol et SQLColAttribute
 **SQLDescribeCol** et **SQLColAttribute** sont utilisées pour récupérer les métadonnées du jeu de résultats. La différence entre ces deux fonctions est que **SQLDescribeCol** retourne toujours les mêmes cinq éléments d’information (d’une colonne nom, type de données, précision, échelle et possibilité de valeur null), tout en **SQLColAttribute** retourne un élément unique d’information demandé par l’application. Toutefois, **SQLColAttribute** peut retourner une sélection beaucoup plus riche de métadonnées, y compris la casse d’une colonne, afficher la taille, les mises à jour et les possibilités de recherche.  

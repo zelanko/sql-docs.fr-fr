@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b65d798c2de3cfe4b1fd14f50ea0dbb68bd624a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135449"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Créer un explorateur de documents (Générateur de rapports et SSRS)
   Un explorateur de documents fournit un ensemble de liens de navigation permettant d'accéder aux éléments de rapport dans un rapport rendu. Lorsque vous visualisez un rapport qui comprend un explorateur de document, un volet latéral distinct apparaît en regard du rapport. L'utilisateur peut cliquer sur les liens de l'explorateur de documents pour accéder à la page du rapport qui affiche l'élément en question. Les sections et les groupes du rapport sont organisés en une hiérarchie de liens. Lorsque vous cliquez sur un de ses éléments, le rapport est actualisé de façon à afficher la zone du rapport correspondant à l'élément sélectionné.  

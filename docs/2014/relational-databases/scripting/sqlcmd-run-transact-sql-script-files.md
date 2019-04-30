@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7dd52c6fb0c5533450a7e32ad68a156406873fdb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136254"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd
-  Vous pouvez utiliser `sqlcmd` pour exécuter un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script est un fichier texte qui peut contenir une combinaison de [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions, `sqlcmd` commandes et variables de script.  
+  Vous pouvez utiliser `sqlcmd` pour exécuter un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] est un fichier texte qui contient une combinaison d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], de commandes `sqlcmd` et de variables de script.  
   
  Pour créer un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] simple à l'aide du Bloc-notes, procédez comme suit :  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48085370"
   
 1.  Ouvrez une fenêtre d'invite de commandes.  
   
-2.  Dans la fenêtre d’invite de commandes, tapez : `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
+2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql`  
   
 3.  Appuyez sur Entrée.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48085370"
   
 1.  Ouvrez une fenêtre d'invite de commandes.  
   
-2.  Dans la fenêtre d’invite de commandes, tapez : `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
+2.  Dans la fenêtre d’invite de commandes, entrez ce qui suit : `sqlcmd -S myServer\instanceName -i C:\myScript.sql -o C:\EmpAdds.txt`  
   
 3.  Appuyez sur Entrée.  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48085370"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer l'utilitaire sqlcmd](sqlcmd-start-the-utility.md)   
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)  
   
   

@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140284"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/field-object.md), [paramètre](../../../ado/reference/ado-api/parameter-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md). L’indicateur de type OLE DB correspondant est indiqué entre parenthèses dans la colonne description du tableau suivant.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Une valeur d’indicateur, toujours combinée avec une autre constante de type de données, qui indique un tableau du type de données. Ne s’applique pas à ADOX.|  
 |**adBigInt**|20|Indique un entier signé de 8 octets (DBTYPE_I8).|  

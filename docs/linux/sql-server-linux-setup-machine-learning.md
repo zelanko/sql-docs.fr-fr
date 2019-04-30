@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 85700f287b3725895fc3ca170fd182353a259737
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190386"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python, Java) sur Linux
 
@@ -574,12 +574,12 @@ Il existe une parité entre Linux et Windows pour [gouvernance des ressources](.
 
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
-+ [Didacticiel : Exécuter R dans T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Didacticiel : Analytique en base de données pour les développeurs R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Analytique en base de données pour les développeurs R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en suivant ces didacticiels :
 
-+ [Didacticiel : Exécutez le code Python dans T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Didacticiel : Analytique en base de données pour les développeurs Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécutez le code Python dans T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique en base de données pour les développeurs Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

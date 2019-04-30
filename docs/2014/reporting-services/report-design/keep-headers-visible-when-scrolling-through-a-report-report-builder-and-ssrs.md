@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 82a31e583123cf04893cffc928b0d8db80906489
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209303"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Laisser les en-têtes visibles lors du défilement d'un rapport (Générateur de rapports et SSRS)
   Pour empêcher les étiquettes de lignes et de colonnes de disparaître de l'écran après le rendu d'un rapport, vous pouvez figer les en-têtes de lignes ou de colonnes.  

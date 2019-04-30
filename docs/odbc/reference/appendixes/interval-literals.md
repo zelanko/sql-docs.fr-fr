@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188808"
 ---
 # <a name="interval-literals"></a>Littéraux d’intervalle
 ODBC requiert que tous les pilotes prennent en charge la conversion du type de données SQL_CHAR ou SQL_VARCHAR à tous les types de données d’intervalle C. Si la source de données sous-jacente ne prend pas en charge les types de données interval, toutefois, le pilote a besoin de connaître le format correct de la valeur dans le champ SQL_CHAR pour prendre en charge de ces conversions. De même, ODBC requiert que n’importe quel type être convertible en SQL_CHAR ou SQL_VARCHAR, par conséquent, un pilote doit savoir quel format un intervalle stocké dans le champ de caractère de ODBC C doit avoir. Cette section décrit la syntaxe des littéraux d’intervalle, le writer de pilote doit utiliser pour valider les champs SQL_CHAR lors de la conversion vers ou depuis les types de données d’intervalle C.  
   
 > [!NOTE]  
->  La syntaxe BNF complète pour les littéraux d’intervalle est indiquée dans la section [syntaxe de littéral d’intervalle](../../../odbc/reference/appendixes/interval-literal-syntax.md) dans l’annexe c : SQL grammaire.  
+>  La syntaxe BNF complète pour les littéraux d’intervalle est indiquée dans la section [syntaxe de littéral d’intervalle](../../../odbc/reference/appendixes/interval-literal-syntax.md) dans l’annexe c : Grammaire SQL.  
   
  Pour transmettre des littéraux d’intervalle dans le cadre d’une instruction SQL, une syntaxe de clause d’échappement est définie pour les littéraux d’intervalle. Pour plus d’informations, consultez [Date, Time et Timestamp littéraux](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
@@ -75,7 +75,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{MONTH(3) INTERVALLE '326'}|Spécifie un intervalle de mois 326. La précision interval est 3.|  
 |{DAY(4) INTERVALLE '3261'}|Spécifie un intervalle de jours 3261. La précision interval est 4.|  
 |{HOUR(3) INTERVALLE '163'}|Spécifie un intervalle de jours 163. La précision interval est 3.|  
-|{MINUTE(3) INTERVALLE '163'}|Spécifie un intervalle de minutes 163. La précision interval est 3.|  
+|{INTERVAL '163' MINUTE(3)}|Spécifie un intervalle de minutes 163. La précision interval est 3.|  
 |{SECOND(3,2) INTERVALLE '223.16'}|Spécifie un intervalle de secondes 223.16. La précision de début d’intervalle est 3, et la précision des secondes est 2.|  
 |{INTERVALLE ' 163-11' ANNÉE (3) MOIS}|Spécifie un intervalle de 163 ans et 11 mois. La précision interval est 3.|  
 |{INTERVALLE 163 ' 12' DAY (3) HEURE}|Spécifie un intervalle de 163 jours et 12 heures. La précision interval est 3.|  
@@ -94,4 +94,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{SECOND(2,2) INTERVALLE '223.16'}<br /><br /> {SECOND(3,1) INTERVALLE '223.16'}|Dans le premier exemple, la précision de début est trop petite, et dans le deuxième exemple, la précision en secondes est trop petite.|  
 |{INTERVALLE '223.16' SECOND}<br /><br /> {INTERVALLE '223' ANNÉE}|Étant donné que la précision de début n’est pas spécifiée, il est par défaut 2, qui est trop petit pour contenir le littéral spécifié.|  
 |{INTERVALLE '22.1234567' SECOND}|La précision en secondes n’est pas spécifiée, afin de la valeur par défaut est 6. Le littéral a sept chiffres après la virgule décimale.|  
-|{INTERVALLE ' 163-13' ANNÉE (3) MOIS}<br /><br /> {INTERVALLE ' 163 65' DAY (3) HEURE}<br /><br /> {INTERVALLE '163 62:39' DAY (3) À LA MINUTE}<br /><br /> {INTERVALLE '163 12:125:59.163' DAY (3) À SECOND(3)}<br /><br /> {INTERVALLE '163:144' HOUR(3) MINUTE}<br /><br /> {INTERVALLE '163:567:234.163' HOUR(3) À SECOND(4)}<br /><br /> {INTERVALLE '163:591.163' MINUTE(3) À SECOND(5)}|Le champ à droite ne suit pas les règles du calendrier grégorien.|
+|{INTERVALLE ' 163-13' ANNÉE (3) MOIS}<br /><br /> {INTERVALLE ' 163 65' DAY (3) HEURE}<br /><br /> {INTERVALLE '163 62:39' DAY (3) À LA MINUTE}<br /><br /> {INTERVALLE '163 12:125:59.163' DAY (3) À SECOND(3)}<br /><br /> {INTERVAL '163:144' HOUR(3) TO MINUTE}<br /><br /> {INTERVALLE '163:567:234.163' HOUR(3) À SECOND(4)}<br /><br /> {INTERVALLE '163:591.163' MINUTE(3) À SECOND(5)}|Le champ à droite ne suit pas les règles du calendrier grégorien.|

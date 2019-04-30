@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5f47bc3b365b2826202eda786afda8407fc77ef
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215266"
 ---
 # <a name="stdevp-function-report-builder-and-ssrs"></a>Fonction StDevP (Générateur de rapports et SSRS)
   Retourne l'écart type de remplissage de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  

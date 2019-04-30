@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157474"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestion de la charge de travail d’Analytique Platform System
 
@@ -82,7 +82,7 @@ Exemples d’allouer jusqu'à 32 emplacements de concurrence pour les demandes s
   
 -   emplacements de 30 = moyenne 10  
   
--   les 32 emplacements = 32 par défaut  
+-   32 slots = 32 default  
   
 -   les 32 emplacements = 1 extra-large + 1 moyen volumineux + 1  
   
@@ -140,7 +140,7 @@ Instructions SQL et opérations régies par des classes de ressources :
 ## <a name="Limits"></a>Limitations et restrictions  
 Les classes de ressources régissent les allocations de mémoire et de concurrence.  Elles ne déterminent pas les opérations d’entrée/sortie.  
   
-## <a name="Metadata"></a>Métadonnées  
+## <a name="Metadata"></a>Metadata  
 Vues de gestion dynamique qui contiennent des informations sur les classes de ressources et les membres de classe de ressource.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -171,7 +171,7 @@ Vues système associé exposées par les vues de gestion dynamique SQL Server su
   
 -   sys.dm_pdw_nodes_exec_query_resource_semaphores  
   
--   Sys.dm_pdw_nodes_os_memory_brokers  
+-   sys.dm_pdw_nodes_os_memory_brokers  
   
 -   sys.dm_pdw_nodes_os_memory_cache_entries  
   

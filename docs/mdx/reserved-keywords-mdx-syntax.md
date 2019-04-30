@@ -1,5 +1,5 @@
 ---
-title: (Syntaxe MDX) de mots clés réservés | Documents Microsoft
+title: Mots clés (syntaxe MDX) réservés | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149870"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Mots clés réservés (syntaxe MDX)
 
 
-  Analysis Services réserve certains mots clés pour son usage exclusif. Pour obtenir la liste des mots clés réservés, consultez [les mots réservés MDX](../mdx/mdx-reserved-words.md).  
+  Analysis Services réserve certains mots clés pour son usage exclusif. Pour obtenir la liste des mots clés réservés, consultez [mots réservés MDX](../mdx/mdx-reserved-words.md).  
   
  Les mots clés respectent les principes suivants :  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131803"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) sont conçus pour la gestion par programme de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez les utiliser pour créer des applications de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] personnalisées. Même si [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est une application puissante et étendue de gestion de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une application SMO donnera dans certains cas de meilleurs résultats.  
@@ -141,7 +141,7 @@ ms.locfileid: "52788161"
   
  Le partitionnement des tables et des index vous permet de gérer les données dispersées dans des tables et des index de groupes de fichiers. Cette nouvelle fonctionnalité est représentée par les objets SMO.  
   
- **Points de terminaison**  
+ **EndPoints**  
   
  Les demandes SOAP et les demandes de mise en miroir de base de données sont gérées par des points de terminaison à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Endpoint>.  
   

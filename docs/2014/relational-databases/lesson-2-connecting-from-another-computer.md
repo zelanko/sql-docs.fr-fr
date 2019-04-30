@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Connexion à partir d’un autre ordinateur | Microsoft Docs'
+title: 'Leçon 2 : Connexion depuis un autre ordinateur | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144807"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
   Pour une sécurité optimale, vous ne pouvez pas accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)] des éditions Developer, Express et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d'un autre ordinateur lors de sa première installation. Dans cette leçon, vous allez apprendre à activer les protocoles et à configurer les ports et le Pare-feu Windows pour la connexion à partir d'autres ordinateurs.  
@@ -127,6 +127,6 @@ ms.locfileid: "54127209"
  Cette étape est la dernière de ce didacticiel sommaire sur les notions de connexion de base.  
   
 ## <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
- [Didacticiel : Mise en route avec le moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutoriel : Bien démarrer avec le moteur de base de données](tutorial-getting-started-with-the-database-engine.md)  
   
   

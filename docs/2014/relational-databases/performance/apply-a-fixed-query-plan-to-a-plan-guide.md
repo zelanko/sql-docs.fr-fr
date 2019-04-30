@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0afa2d8770589ed82890cf5b54e99916f9eb1d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150950"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Appliquer un plan de requête fixe à un repère de plan
   Vous pouvez appliquer un plan de requête fixe à un repère de plan de type OBJET ou SQL. Les repères de plan qui appliquent un plan de requête fixe sont utiles lorsque vous avez connaissance d'un plan d'exécution existant plus performant que celui sélectionné par l'optimiseur pour une requête particulière.  

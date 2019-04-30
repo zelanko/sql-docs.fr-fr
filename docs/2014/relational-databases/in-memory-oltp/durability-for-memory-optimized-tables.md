@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072749"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fournit la durabilité complète pour les tables optimisées en mémoire. Lorsqu'une transaction qui a modifié une table optimisée en mémoire est validée, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (comme pour les tables sur disque), garantit que les modifications sont permanentes (perdureront au redémarrage d'une base de données), à condition que le stockage sous-jacent soit disponible. Il existe deux composantes clés de durabilité : l'enregistrement des transactions et la conservation des modifications de données dans un stockage sur disque.  
@@ -111,7 +111,7 @@ ms.locfileid: "52392023"
  Si nécessaire, une fusion manuelle peut être effectuée en appelant explicitement [sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql).  
   
 ### <a name="life-cycle-of-a-cfp"></a>Cycle de vie d'une paire de fichiers de point de contrôle  
- Les paires de fichiers de point de contrôle traversent plusieurs états avant de pouvoir être libérées. À tout moment, elles sont dans l'une des phases suivantes : PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE et TOMBSTONE. Pour obtenir une description de ces phases, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Les paires de fichiers de point de contrôle traversent plusieurs états avant de pouvoir être libérées. À un moment donné, elles sont dans une des phases suivantes : PRECREATED, UNDER CONSTRUCTION, ACTIVE, MERGE TARGET, MERGED SOURCE, REQUIRED FOR BACKUP/HA, IN TRANSITION TO TOMBSTONE et TOMBSTONE. Pour obtenir une description de ces phases, consultez [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
  Après prise en compte du stockage occupé par les paires de fichiers de point de contrôle selon leurs états, le stockage global pris par les tables mémoire optimisées peut être bien plus grand que 2 fois la taille des tables en mémoire. La DMV [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql) peut être interrogée pour répertorier toutes les paires dans le groupe de fichiers mémoire optimisé, y compris leur phase. Les paires de fichiers de point de contrôle qui passent de l'état MERGE SOURCE à l'état TOMBSTONE et l'opération de garbage collection peuvent occuper jusqu'à cinq points de contrôle, et chaque point est suivi d'une sauvegarde du journal des transactions, si la base de données est configurée selon un mode de restauration complète ou de récupération utilisant les journaux de transactions.  
   

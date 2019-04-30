@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bd6c25ec826f1c2ce7af1aae6e29462de0b6c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192423"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Guide de référence SQL Server Native Client (OLE DB)
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB fournisseur expose des interfaces aux consommateurs souhaitant accéder aux données sur un ou plusieurs ordinateurs en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le fournisseur OLE DB version 2.0 compatible.  

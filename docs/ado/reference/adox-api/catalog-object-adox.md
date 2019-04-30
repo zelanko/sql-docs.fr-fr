@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184202"
 ---
 # <a name="catalog-object-adox"></a>Catalog, objet (ADOX)
 Contient des collections ([Tables](../../../ado/reference/adox-api/tables-collection-adox.md), [vues](../../../ado/reference/adox-api/views-collection-adox.md), [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md), [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), et [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md)) qui décrire le catalogue de schémas d’une source de données.  

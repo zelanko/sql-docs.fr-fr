@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150350"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
   Avant d'installer et d'utiliser la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, vous devez vérifier les informations de sécurité importantes de cette rubrique. Cette rubrique décrit les étapes de configuration de la sécurité consécutives à l'installation requises pour pouvoir utiliser Distributed Replay. Elle inclut également des considérations importantes en ce qui concerne la protection des données et les étapes de suppression importantes.  
@@ -29,7 +29,7 @@ ms.locfileid: "53350823"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|Peut être un compte d'utilisateur de domaine ou un compte d'utilisateur local. Si vous utilisez un compte d'utilisateur local, le contrôleur, le clien, et la cible SQL Server doivent tous exécuter sur le même ordinateur.<br /><br /> **\*\* Remarque relative à la sécurité \*\*** Il est préférable que le compte ne soit pas membre du groupe Administrateurs local dans Windows.|  
 |Compte d'utilisateur interactif qui est utilisé pour exécuter l'outil d'administration de Distributed Replay|Peut être un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.|  
   
- **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+ **Important**: Lorsque vous configurez Distributed Replay controller, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services Distributed Replay client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
 -   Compte d'utilisateur de domaine  
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b51bdbb489c3ddb1c00663dc70d05841dd6fb36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161476"
 ---
 # <a name="intervening-shape-compute-clauses"></a>Clauses COMPUTE intermédiaires de la commande SHAPE
 Il est possible d’incorporer une ou plusieurs clauses COMPUTE entre le parent et enfant dans une commande de mise en forme paramétrée, comme dans l’exemple suivant :  

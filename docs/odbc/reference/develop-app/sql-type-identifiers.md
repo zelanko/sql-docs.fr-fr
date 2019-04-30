@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150032"
 ---
 # <a name="sql-type-identifiers"></a>Identificateurs de types SQL
 Chaque source de données définit ses propres types de données SQL. ODBC définit des identificateurs de type et décrit les caractéristiques générales des types de données SQL qui peuvent être mappés à chaque identificateur de type. Il est spécifique au pilote comment chaque type de données dans la source de données sous-jacente est mappé à un identificateur de type SQL d’ODBC.  
@@ -31,4 +31,4 @@ Chaque source de données définit ses propres types de données SQL. ODBC défi
   
  ODBC définit un large éventail d’identificateurs de type SQL. Toutefois, le pilote n’est pas requis d’utiliser la totalité de ces identificateurs. Au lieu de cela, elle utilise uniquement ces identificateurs qu'il doit exposer les types de données SQL pris en charge par la source de données sous-jacente. Si la source de données sous-jacente prend en charge les types de données SQL qui aucun identificateur de type ne correspond, le pilote peut définir des identificateurs de type supplémentaire. Pour plus d’informations, consultez [les Types de données spécifiques au pilote, Types de descripteurs, Types d’informations, Types de diagnostics et attributs](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md).  
   
- Pour obtenir une description complète des identificateurs de type SQL, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) annexe d : Types de données.
+ Pour obtenir une description complète des identificateurs de type SQL, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe d : Types de données.

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155234"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21, méthode (RDS)
 Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion pour une utilisation avec ADO 2.1.  
@@ -56,7 +56,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  Pointeur vers un pointeur vers le jeu d’enregistrements à synchroniser.  
   
  *pStatusArray*  
- Un variant utilisé pour retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par synchroniser. Ne pas définie si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
+ Un variant utilisé pour retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par synchroniser. Définir si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
   
 ## <a name="remarks"></a>Notes  
  Le *HandlerString* paramètre peut être null. Que se passe-t-il dans ce cas dépend de la façon dont le serveur de services Bureau à distance est configuré. Une chaîne de gestionnaire de « MSDFMAP.handler » indique que le gestionnaire fourni par Microsoft (Msdfmap.dll) doit être utilisé. Une chaîne de gestionnaire de « MASDFMAP.handler,sample.ini » indique que le Gestionnaire de Msdfmap.dll doit être utilisé et que l’argument « sample.ini » doit être passé au gestionnaire. MSDFMAP.dll puis interprétera l’argument comme une direction à utiliser le sample.ini pour vérifier les chaînes de connexion et la requête.  

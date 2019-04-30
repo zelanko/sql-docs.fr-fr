@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157620"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader du chargeur de ligne de commande pour Parallel Data Warehouse
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *en mode fastappend*), ajoute de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimer toutes les lignes avant le chargement existantes et puis insérer toutes les lignes dans une table vide (*recharger mode*).  
@@ -132,7 +132,7 @@ Utiliser l'authentification Windows. (Non *login_name* ou *mot de passe* requis.
 For information about configuring Windows Authentication, see [Security - Configure Domain Trusts](security-configure-domain-trusts.md).  
 -->
   
-**f -** *parameter_file_name*  
+**-f** *parameter_file_name*  
 Utiliser un fichier de paramètres, *parameter_file_name*, à la place des paramètres de ligne de commande. *parameter_file_name* peut contenir n’importe quel paramètre de ligne de commande à l’exception *user_name* et *mot de passe*. Si un paramètre est spécifié sur la ligne de commande et dans le fichier de paramètres, la ligne de commande remplace le paramètre de fichier.  
   
 Le fichier de paramètres contient un paramètre, sans le **-** préfixe, par ligne.  
@@ -200,7 +200,7 @@ Exemples :
   
 -   i - \\\loadserver\loads\daily\monday.*  
   
--   i - \\\loadserver\loads\daily\monday.txt  
+-   -i \\\loadserver\loads\daily\monday.txt  
   
 -   i - \\\loadserver\loads\daily\\*  
   
@@ -215,35 +215,35 @@ Les options pour un *source_data_file_name* qui est délimitée par des caractè
   
 Pour des fichiers ASCII, les valeurs NULL sont représentées en plaçant les délimiteurs de manière consécutive. Par exemple, dans un fichier délimitée une barre verticale (« | »), une valeur NULL est indiquée par « || ». Dans un fichier délimité par des virgules, une valeur NULL est indiquée par «,, ». En outre, le **-E** (--emptyStringAsNull) option doit être spécifiée. Pour plus d’informations sur -E, voir ci-dessous.  
   
-**e -** *character_encoding*  
+**-e** *character_encoding*  
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est primauté des octets et UTF16BE big endian. Ces options respectent la casse.  
   
 **-t** *field_delimiter*  
 Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces caractères d’échappement de ASCII ou les valeurs hexadécimales ASCII...  
   
-|Créer une vue d’abonnement|Caractère d’échappement|Caractère hexadécimal|  
+|Nom|Caractère d’échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
-|Onglet|\t|0 x 09|  
-|Retour chariot (CR)|\r|0x0D|  
-|Saut de ligne (LF)|\n|0x0A|  
+|Onglet|\t|0x09|  
+|Retour chariot (CR)|\r|0x0d|  
+|Saut de ligne (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgule|','|0x2c|  
-|guillemet double|\\"|0 x 22|  
-|un guillemet simple|\\'|0 x 27|  
+|guillemet double|\\"|0x22|  
+|un guillemet simple|\\'|0x27|  
   
 Pour spécifier le caractère barre verticale sur la ligne de commande, mettez-le entre guillemets doubles, « | ». Cela permet d’éviter toute interprétation erronée par l’Analyseur de ligne de commande. Autres caractères sont placées entre guillemets simples.  
   
 Exemples :  
   
-t-« | »  
+-t "|"  
   
--t ' »  
+-t ' '  
   
 -t 0x0a  
   
 -t \t  
   
-t-' ~ | ~'  
+-t '~|~'  
   
 **-r** *row_delimiter*  
 Le délimiteur pour chaque ligne du fichier de données source. Le séparateur de lignes est une ou plusieurs des valeurs ASCII.  
@@ -252,19 +252,19 @@ Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère d
   
 Exemples de retour chariot + saut de ligne :  
   
-r - \r\n  
+-r \r\n  
   
-r - 0x0d0x0a  
+-r 0x0d0x0a  
   
 Exemples de CR :  
   
-r - \r  
+-r \r  
   
-r - 0x0d  
+-r 0x0d  
   
 Exemples de saut de ligne :  
   
-r - \n  
+-r \n  
   
 -r 0x0a  
   
@@ -279,7 +279,7 @@ Exemples :
   
 s - 0 x 22  
   
-< fixed_width_column_options >  
+< fixed_width_column_options>  
 Les options pour un fichier de données source qui a des colonnes de longueur fixe. Par défaut, *source_data_file_name* contient des caractères ASCII dans les colonnes de longueur variable.  
   
 Colonnes de largeur fixe ne sont pas pris en charge -e est UTF8.  
@@ -297,7 +297,7 @@ Exemple de fichier de configuration de la largeur de correction :
   
 SalesCode=3  
   
-SalesID = 10  
+SalesID=10  
   
 Exemple de lignes dans *source_data_file_name*:  
   
@@ -309,7 +309,7 @@ Dans l’exemple précédent, la première ligne chargée aura SalesCode = '230'
   
 Pour plus d’informations sur la gestion de début et de fin de conversion de type des espaces ou des données en mode de largeur fixe, consultez [pour dwloader, les règles de conversion de type de données](dwloader-data-type-conversion-rules.md).  
   
-**e -** *character_encoding*  
+**-e** *character_encoding*  
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est primauté des octets et UTF16BE big endian. Ces options respectent la casse.  
   
 Colonnes de largeur fixe ne sont pas pris en charge -e est UTF8.  
@@ -321,25 +321,25 @@ Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère d
   
 Exemples de retour chariot + saut de ligne :  
   
-r - \r\n  
+-r \r\n  
   
-r - 0x0d0x0a  
+-r 0x0d0x0a  
   
 Exemples de CR :  
   
-r - \r  
+-r \r  
   
-r - 0x0d  
+-r 0x0d  
   
 Exemples de saut de ligne :  
   
-r - \n  
+-r \n  
   
 -r 0x0a  
   
 Un saut de ligne est requis pour Unix. Une demande de modification est requis pour Windows.  
   
-**D -** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Spécifie l’ordre des mois (m), jour (d) et l’année (y) pour tous les champs de date/heure dans le fichier d’entrée. L’ordre par défaut est ymd. Pour spécifier plusieurs formats de commande pour le même fichier source, utilisez l’option -dt.  
   
 YMD | dmy  
@@ -362,10 +362,10 @@ Exemples de mdy des données d’entrée pour le 1er janvier 1975 :
 -   01011975  
   
 maj  
-Entrée des exemples de fichiers pour mars 04,2010 : 03-2010-04, 2010/3/4  
+Entrée des exemples de fichiers pour mars 04,2010 : 03-2010-04, 3/2010/4  
   
 jam  
-Exemples de fichier d’entrée pour le 04 mars 2010 : 2010-04-03, 2010/4/3  
+Exemples de fichier d’entrée pour le 04 mars 2010 : 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* est un format de date personnalisé (par exemple, MM/jj/aaaa) et inclus pour la compatibilité descendante uniquement. dwloader n’enfoce pas le format de date personnalisé. Au lieu de cela, lorsque vous spécifiez un format de date personnalisé, **dwloader** convertira le paramètre correspondant d’ymd, ydm, mdy, myd, dym ou JMA.  
@@ -550,14 +550,14 @@ Le mode append charge les données en deux phases. Première phase charge les do
   
 |Type de table|Transactions multiples<br />Mode (-m)|Table est vide|Prise en charge l’accès concurrentiel|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Segment de mémoire (heap)|Oui|Oui|Oui|Minimale|  
-|Segment de mémoire (heap)|Oui|Non|Oui|Minimale|  
-|Segment de mémoire (heap)|Non|Oui|Non|Minimale|  
-|Segment de mémoire (heap)|Non|Non|Non|Minimale|  
-|CL|Oui|Oui|Non|Minimale|  
-|CL|Oui|Non|Oui|Complète|  
-|CL|Non|Oui|Non|Minimale|  
-|CL|Non|Non|Oui|Complète|  
+|Segment de mémoire (heap)|Oui|Oui|Oui|Minimal|  
+|Segment de mémoire (heap)|Oui|Non|Oui|Minimal|  
+|Segment de mémoire (heap)|Non|Oui|Non|Minimal|  
+|Segment de mémoire (heap)|Non|Non|Non|Minimal|  
+|Cl|Oui|Oui|Non|Minimal|  
+|Cl|Oui|Non|Oui|Complète|  
+|Cl|Non|Oui|Non|Minimal|  
+|Cl|Non|Non|Oui|Complète|  
   
 Le tableau ci-dessus présente **dwloader** en utilisant le mode append, le chargement dans un segment de mémoire ou une table d’index cluster (CI), avec ou sans l’indicateur multi-transactionnelle et le chargement dans une table vide ou une table non vide. Le verrouillage et le comportement de chaque combinaison de charge de ce type d’enregistrement s’affiche dans la table. Par exemple, le chargement (2ème) phase avec le mode append dans un index cluster sans mode multi-transactionnelle et dans vide table aura PDW créer un verrou exclusif sur la table et journalisation est minime. Cela signifie qu’un client ne sera pas en mesure de charger (2e) phase et requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émettra pas un verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, une journalisation complète se produit, le processus peut ralentir.  
   
@@ -593,7 +593,7 @@ Exemple à l’aide des arguments pour un fichier source et le fichier d’erreu
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>b. Charger des données dans une Table d’AdventureWorks  
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Charger des données dans une Table d’AdventureWorks  
 L’exemple suivant fait partie d’un script de commandes qui charge des données dans **AdventureWorksPDW2012**.  Pour afficher le script complet, ouvrez le fichier du fichier aw_create.bat qui est fourni avec le **AdventureWorksPDW2012** package d’installation. 
 
 <!-- Missing link

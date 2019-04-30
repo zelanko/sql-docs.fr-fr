@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150750"
 ---
 # <a name="monitor-sql-server-components"></a>Surveiller les composants SQL Server
   La surveillance est importante car [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un service dans un environnement dynamique. Les données dans l'application sont fluctuantes. Le type d'accès requis par les utilisateurs peut changer. Le mode de connexion des utilisateurs change. Les types des applications accédant à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent même changer, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère automatiquement les ressources de niveau système, telles que la mémoire et l’espace disque, pour minimiser les paramétrages manuels nécessaires au niveau système. La surveillance permet aux administrateurs d'identifier les tendances de performances afin de déterminer si des modifications s'imposent.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ade18b71fa83c7acbb16cb7facd19dd3de61a2e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143318"
 ---
 # <a name="transactions-in-odbc"></a>Transactions dans ODBC
   Les transactions dans ODBC sont gérées connexion par connexion. Lorsqu'une application termine une transaction, elle valide ou restaure tout le travail effectué par le biais de tous les handles d'instruction sur cette connexion. Pour valider ou restaurer une transaction, les applications doivent appeler [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) au lieu de soumettre une instruction COMMIT ou ROLLBACK.  

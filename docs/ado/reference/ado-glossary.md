@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206372"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.  
@@ -183,7 +183,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  hiérarchie  
  En règle générale, une hiérarchie est une structure possédant un haut niveau et les niveaux subordonnés. Dans ADO, hiérarchique **Recordsets** sont utilisés pour représenter la relation parent-enfant entre un enregistrement et un chapitre. Également dans ADO, **enregistrement** et **Stream** objets peuvent être utilisés pour accéder à des arborescences hiérarchiques, telles que des documents et un dossier. ADO MD comprend aussi **hiérarchie** objets pour représenter une relation entre les niveaux d’une dimension dans un cube OLAP. Voir aussi Recordsets hiérarchiques, relation parent-enfant, chapitre, arborescence.  
   
-## <a name="i-l"></a>J’AI-L  
+## <a name="i-l"></a>I-L  
  ISAPI (Internet Server Application programmation Interface)  
  Un ensemble de fonctions pour les serveurs Internet, tel qu’un serveur de 2000 Windows NT® Server/Windows exécutant Microsoft® Internet Information Services (IIS).  
   
@@ -247,7 +247,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  ProgID (identificateur programmatique)  
  Un nom unique mappé au Registre Windows par une application COM. Le ProgID pour une connexion ADO est « ADODB. Connexion ». Voir aussi CLSID, COM.  
   
- Proxy  
+ proxy  
  Un objet spécifique de l’interface qui fournit le marshaling des paramètres et la communication nécessaires à un client pour appeler un objet d’application est en cours d’exécution dans un environnement d’exécution différents, tels que sur un thread différent ou dans un autre processus. Le proxy se trouve avec le client et communique avec un stub correspondant qui se trouve à l’objet d’application qui est appelée. Voir aussi stub.  
   
 ## <a name="r"></a>R  
@@ -279,10 +279,10 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  procédure stockée  
  Collection précompilée du code tel que des instructions SQL et des instructions de flux de contrôle facultatives stockées sous un nom et traitées en tant qu’unité. Procédures stockées sont stockées dans une base de données ; ils peuvent être exécutées avec un appel à partir d’une application et autoriser les variables déclarées par l’utilisateur, l’exécution conditionnelle et autres puissantes fonctionnalités de programmation.  
   
- Stub  
+ stub  
  Un objet spécifique de l’interface qui fournit le marshaling des paramètres et la communication nécessaires pour un objet d’application recevoir des appels à partir d’un client qui est en cours d’exécution dans un environnement d’exécution différents, tels que sur un thread différent ou dans un autre processus. Le stub se trouve à l’objet application et communique avec un proxy correspondant se trouve avec le client qui l’appelle. Voir aussi proxy.  
   
- sous-nœud  
+ sub-node  
  Consultez les enfants.  
   
  opération synchrone  

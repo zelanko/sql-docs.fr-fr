@@ -1,5 +1,5 @@
 ---
-title: LinRegR2 (MDX) | Documents Microsoft
+title: LinRegR2 (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 42c703e703e8c557b4de8466a0cd1b686217fd4b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136203"
 ---
 # <a name="linregr2-mdx"></a>LinRegR2 (MDX)
 
@@ -39,11 +39,11 @@ LinRegR2(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre représentant les valeurs de l'axe des abscisses.  
   
 ## <a name="remarks"></a>Notes  
- La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un est de la pente et b l’ordonnée à l’origine :  
+ La régression linéaire qui utilise la méthode des moindres carrés calcule l'équation d'une droite de régression (c'est-à-dire de la meilleure ligne pour une série de points). La ligne de régression a l’équation suivante, où un représente la pente et b est l’interception :  
   
  y = ax+b  
   
- Le **LinRegR2** fonction évalue le setagainst spécifié la première expressionto numérique obtenir les valeurs de l’axe des ordonnées. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que les valeurs de l’axe des abscisses. Ne pas spécifier le x-axisargument est souvent utilisé avec la dimension de temps.  
+ Le **LinRegR2** fonction évalue la setagainst spécifiée la première expressionto numérique obtenir les valeurs de l’axe des ordonnées. La fonction évalue ensuite le jeu spécifié par rapport à la deuxième expression numérique, si spécifiée, pour extraire les valeurs de l'axe des abscisses. Si le deuxième expressionis numérique pas spécifié, la fonction utilise le contexte actuel des cellules dans le jeu spécifié en tant que les valeurs de l’axe des abscisses. Ne pas spécifier le x-axisargument est fréquemment utilisé avec la dimension de temps.  
   
  Après avoir obtenu l’ensemble de points, le **LinRegR2** fonction retourne le R statistique<sup>2</sup> qui décrit l’adéquation entre l’équation linéaire et les points.  
   
@@ -58,6 +58,6 @@ LinRegR2(LastPeriods(10), [Measures].[Unit Sales],[Measures].[Store Sales])
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144775"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
   Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

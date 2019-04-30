@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192323"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>Limitations de l’utilisation des curseurs de jeu de clés
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668107"
  En outre, si votre application utilise des alias de table, curseurs ne fonctionnent pas ; types de curseurs avant uniquement, ou statiques sont nécessaires. Le jeu de clés à l’aide de type de curseur avec des alias de table entraîne l’erreur suivante : « [Microsoft] [pilote ODBC pour Oracle] ne peut pas utiliser le curseur sur la jointure, avec union, intersect ou moins ou sur lecture seule de jeu de résultats. »  
   
 > [!NOTE]  
->  En raison du mode le pilote gère l’instruction SQL qui est envoyée au serveur Oracle, Oracle retourne en interne le message d’erreur suivant : « ORA-00964 : table nom pas dans à partir de la liste. »
+>  En raison du mode que le pilote gère l’instruction SQL qui est envoyée au serveur Oracle, Oracle retourne en interne le message d’erreur suivant : « ORA-00964 : table nom pas dans à partir de la liste. »

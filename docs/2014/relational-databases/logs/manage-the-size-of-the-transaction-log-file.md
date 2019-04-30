@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144330"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Gérer la taille du fichier journal des transactions
   Dans certains cas, il peut être utile de réduire ou développer physiquement le fichier journal physique du journal des transactions d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique contient des informations sur la façon de contrôler la taille d'un journal des transactions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , réduire le journal des transactions, ajouter ou agrandir un fichier journal de transactions, optimiser le taux de croissance du journal des transactions **tempdb** et contrôler la croissance d'un fichier journal de transactions.  

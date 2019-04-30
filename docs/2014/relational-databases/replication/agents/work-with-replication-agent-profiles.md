@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157128"
 ---
 # <a name="work-with-replication-agent-profiles"></a>Utiliser des profils d'agent de réplication
   Cette rubrique explique comment utiliser les profils de l'Agent de réplication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Le comportement de chaque agent de réplication est contrôlé par un jeu de paramètres que vous pouvez configurer dans un profil de l'Agent. Chaque agent possède un profil par défaut et certains possèdent d'autres profils prédéfinis ; un Agent ne peut avoir qu'un profil actif à tout moment.  
@@ -61,7 +61,7 @@ ms.locfileid: "52772201"
   
     -   Supprimer un profil  
   
--   **Suivi :**  [Après avoir modifié les paramètres d’Agent](#FollowUp)  
+-   **Suivi :**  [Après avoir changé les paramètres de l’Agent](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -284,7 +284,7 @@ ms.locfileid: "52772201"
   
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> pour supprimer le profil défini par l'utilisateur représenté par cet objet du serveur.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir modifié les paramètres d’Agent  
+##  <a name="FollowUp"></a> Suivi : Après avoir changé les paramètres de l’Agent  
  Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161990"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Définition de la durabilité des objets mémoire optimisés
   L'OLTP en mémoire garantit l'atomicité complète, la cohérence, l'isolation et les propriétés de durabilité complète (ACID). Dans le contexte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des tables mémoire optimisées, la durabilité fournit les garanties suivantes :  

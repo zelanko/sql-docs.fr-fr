@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d0c5380a0006de82c39f532f1d87d6b7f33dd6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125545"
 ---
 # <a name="commit-mode"></a>Mode de validation
 Transactions dans ODBC peuvent être dans un des deux modes : mode de validation automatique ou le mode de validation manuelle.  

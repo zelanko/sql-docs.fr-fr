@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128099"
 ---
 # <a name="driver-architecture-overview"></a>Vue d’ensemble de l’architecture du pilote
 Le pilote ODBC Visual FoxPro Microsoft est un pilote 32 bits qui vous permet d’ouvrir et d’interroger une base de données Microsoft Visual FoxPro ou tables FoxPro via l’interface de base de données connectivité ODBC (Open). Vous pouvez accéder données FoxPro avec les types d’applications suivants :  

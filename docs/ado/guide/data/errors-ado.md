@@ -1,5 +1,5 @@
 ---
-title: Erreurs (ADO) | Microsoft Docs
+title: Errors (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161612"
 ---
 # <a name="errors-ado"></a>Erreurs (ADO)
 Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. Lorsqu’une erreur survient, un ou plusieurs **erreur** objets sont placés dans le **erreurs** collection de la **connexion** objet. Pour plus d’informations sur la gestion des avertissements et erreurs dans votre application ADO, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  

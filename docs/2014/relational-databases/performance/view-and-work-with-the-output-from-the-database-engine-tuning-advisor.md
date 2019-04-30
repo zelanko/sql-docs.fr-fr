@@ -27,11 +27,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151453"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
   Lorsque l'Assistant Paramétrage du moteur de base de données paramètre des bases de données, il génère des résumés, des recommandations, des rapports et des journaux de paramétrage. Vous pouvez utiliser les résultats affichés dans le journal de paramétrage pour résoudre les problèmes liés aux sessions de l'Assistant Paramétrage du moteur de base de données. Vous pouvez vous aider des résumés, des recommandations et des rapports pour déterminer si les recommandations de paramétrage doivent être implémentées ou si le paramétrage doit se poursuivre afin d'atteindre un niveau de performance des requêtes répondant aux critères définis pour votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations sur l'utilisation de l'Assistant Paramétrage de base de données pour créer des charges de travail et paramétrer une base de données, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  

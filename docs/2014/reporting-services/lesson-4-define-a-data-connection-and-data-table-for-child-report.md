@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb9678f56bc261edbe8450dbcc03840f8d18fc8b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182914"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant
   Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données doit s'établir avec la base de données AdventureWorks2008. Vous avez également la possibilité de vous connecter à la base de données AdventureWorks2012.  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>Pour définir une connexion de données et un objet DataTable en ajoutant un DataSet (pour le rapport enfant)  

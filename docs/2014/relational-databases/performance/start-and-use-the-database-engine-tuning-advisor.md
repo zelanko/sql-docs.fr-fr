@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150649"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
   Cette rubrique décrit comment démarrer et utiliser l'Assistant Paramétrage du moteur de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur l’affichage et l’utilisation des résultats après avoir paramétré une base de données, consultez [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](database-engine-tuning-advisor.md).  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  Incluez uniquement des recommandations relatives à l'ajout de vues indexées. Les index cluster et non-cluster ne sont pas concernés par les recommandations.  
   
  **Inclure les index filtrés**  
- Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez une de ces structures PDS : **Index et vues indexées**, **index**, ou **index non cluster**.  
+ Incluez des recommandations relatives à l'ajout d'index filtrés. Cette option est disponible si vous sélectionnez l’une de ces structures d’étude de réalisation : **Index et vues indexées**, **Index** ou **Index non-cluster**.  
   
  **Index**  
  Incluez uniquement des recommandations relatives à l'ajout d'index cluster et non-cluster. Les vues indexées ne sont pas concernées par les recommandations.  

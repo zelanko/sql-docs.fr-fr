@@ -31,11 +31,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136665"
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] a introduit un type de données **xml** qui vous permet de stocker des documents et des fragments XML dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le type de données **xml** est intégré dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s’apparente à certains égards à d’autres types intégrés, comme **int** et **varchar**. Tout comme les autres types intégrés, vous pouvez utiliser le type de données **xml** en tant que type de colonne quand vous créez une table ou en tant que type de variable, type de paramètre ou type de retour de fonction ou bien dans des fonctions CAST et CONVERT.  
@@ -176,7 +176,7 @@ ms.locfileid: "52406006"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans le **ITableDefinition** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute trois nouvelles colonnes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom du catalogue où le schéma XML est stocké. Pour d'autres types de colonnes, cette propriété retourne une chaîne vide.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom de schéma XML qui définit cette colonne.|  
@@ -255,7 +255,7 @@ ms.locfileid: "52406006"
   
 -   SQL_C_BINARY : Format est UTF-16 avec aucun caractère null de fin. Une marque d'ordre d'octet (BOM) est ajoutée aux données reçues du serveur. Si le serveur retourne une chaîne vide, une marque d'ordre d'octet est quand même retournée à l'application. Si la longueur de la mémoire tampon est un nombre impair d'octets, les données sont tronquées comme il se doit. Si la valeur tout entière est retournée en plusieurs segments, vous pouvez les concaténer pour reconstituer la valeur correcte.  
   
--   SQL_C_CHAR : Le format est caractères multioctets encodés dans la page de codes client avec le caractère null de fin. Toute conversion à partir de code UTF-16 sur le serveur risque d'endommager les données. Cette liaison est donc fortement déconseillée.  
+-   SQL_C_CHAR: Le format est caractères multioctets encodés dans la page de codes client avec le caractère null de fin. Toute conversion à partir de code UTF-16 sur le serveur risque d'endommager les données. Cette liaison est donc fortement déconseillée.  
   
  Lorsque vous procédez à des conversions entre des types de données C vers SQL, SQL_C_WCHAR, SQL_C_BINARY et SQL_C_CHAR peuvent tous être convertis en SQL_SS_XML avec les caractéristiques suivantes :  
   
@@ -263,7 +263,7 @@ ms.locfileid: "52406006"
   
 -   SQL_C_BINARY : Aucune conversion n’est effectuée, et les données sont transmises au serveur « tel quel ». Les données UTF-16 doivent commencer par une marque d'ordre d'octet (BOM) sans quoi l'encodage risque d'être mal reconnu par le serveur.  
   
--   SQL_C_CHAR : Les données sont converties en UTF-16 sur le client et envoyées au serveur uniquement en tant que SQL_C_WCHAR (y compris l’ajout d’une marque BOM). Si le contenu XML n'est pas encodé dans la page de codes du client, les données risquent d'être endommagées.  
+-   SQL_C_CHAR: Les données sont converties en UTF-16 sur le client et envoyées au serveur uniquement en tant que SQL_C_WCHAR (y compris l’ajout d’une marque BOM). Si le contenu XML n'est pas encodé dans la page de codes du client, les données risquent d'être endommagées.  
   
  Le standard XML exigent que les données XML encodées UTF-16 commencent par une marque d'ordre d'octet (BOM), soit le code de caractère UTF-16 0xFEFF. Lorsque vous travaillez avec une liaison SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne nécessitent ni ajouter une nomenclature, puisque l’encodage provient implicitement par la liaison. L'objectif recherché est la simplification de l'utilisation d'autres processeurs et systèmes de stockage XML. Dans ce cas, une marque d'ordre d'octet doit être présente avec les données XML encodées UTF-16 et l'application n'a pas à se soucier de l'encodage réel puisque la majorité des processeurs XML (y compris [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) détectent l'encodage par inspection des premiers octets de la valeur. Données XML reçues de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à l’aide de SQL_C_BINARY des liaisons sont toujours encodées en UTF-16 avec une nomenclature et sans déclaration d’encodage incorporée.  
   

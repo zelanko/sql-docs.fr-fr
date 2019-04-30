@@ -1,5 +1,5 @@
 ---
-title: Instruction CREATE GLOBAL CUBE (MDX) | Documents Microsoft
+title: Instruction CREATE GLOBAL CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181444"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Définition de données MDX - CREATE GLOBAL CUBE
 
@@ -105,7 +105,7 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nom de la dimension dans le cube local.  
   
- À partir de \<dim clause from >  
+ À partir de \<dim à partir de la clause >  
  Élément spécifié uniquement pour la définition de dimension dérivée.  
   
  NOT_RELATED_TO_FACTS  
@@ -117,7 +117,7 @@ FROM source_cube_name (<param list>)
 ## <a name="remarks"></a>Notes  
  Un cube local est termes definedin des mesures et des définitions qui le caractérisent. Il existe deux types de dimensions.  
   
--   Dimensions sources : ce sont des dimensions qui faisaient partie de l’un ou plusieurs cubes sources  
+-   Dimensions sources : il s’agit des dimensions qui faisaient partie d’un ou plusieurs cubes sources  
   
 -   Dimensions dérivées : dimensions offrant de nouvelles fonctionnalités d'analyse. Une dimension dérivée peut être une dimension régulière définie d'après une dimension source découpée verticalement ou horizontalement ou contenant un regroupement personnalisé de membres de dimension. Il peut s'agir également d'une dimension d'exploration de données fondée sur un modèle d'exploration de données.  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  L'instruction CREATE GLOBAL CUBE respecte les règles suivantes :  
   
--   L'instruction CREATE GLOBAL CUBE copie automatiquement toutes les commandes, telles que les actions ou mesures calculées, dans le cube local. Si une commande contient une expression MDX (Multidimensional Expression) qui fait référence au cube parent de manière explicite, le cube local ne peut pas exécuter cette commande. Pour éviter ce problème, utilisez le **CURRENTCUBE** mot clé lors de la définition des expressions MDX pour les commandes. Le **CURRENTCUBE** (mot clé) utilise le contexte de cube actuel lors du référencement d’un cube dans une expression MDX.  
+-   L'instruction CREATE GLOBAL CUBE copie automatiquement toutes les commandes, telles que les actions ou mesures calculées, dans le cube local. Si une commande contient une expression MDX (Multidimensional Expression) qui fait référence au cube parent de manière explicite, le cube local ne peut pas exécuter cette commande. Pour éviter ce problème, utilisez le **CURRENTCUBE** mot clé lors de la définition des expressions MDX pour les commandes. Le **CURRENTCUBE** mot clé utilise le contexte de cube actuel lors du référencement d’un cube dans une expression MDX.  
   
 -   Un cube global créé à partir d'un cube global existant dans un fichier de cube local ne peut pas être enregistré dans le même fichier de cube local. Par exemple, vous créez un cube global nommé SalesLocal1 et vous l'enregistrez dans le fichier C:\SalesLocal.cub. Vous vous connectez ensuite au fichier C:\SalesLocal.cub et vous créez un deuxième cube global nommé SalesLocal2. Si vous tentez maintenant d'enregistrer le cube global SalesLocal2 dans le fichier C:\SalesLocal.cub, vous recevez une erreur. Toutefois, vous pouvez enregistrer le cube global SalesLocal2 dans un fichier de cube local différent.  
   
@@ -198,7 +198,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instruction CREATE SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126165"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Effectuer une copie en bloc sans fichier de format (ODBC)
   Cet exemple illustre la façon d'utiliser des fonctions de copie en bloc pour créer un fichier de données en mode natif sans fichier de format. Cet exemple a été développé pour la version 3.0 d'ODBC ou une version ultérieure.  

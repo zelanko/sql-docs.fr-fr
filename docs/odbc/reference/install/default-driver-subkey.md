@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198305"
 ---
 # <a name="default-driver-subkey"></a>Sous-clé du pilote par défaut
 La sous-clé par défaut contient une valeur unique qui décrit le pilote utilisé par la source de données par défaut. Le format de cette valeur est illustré dans le tableau suivant.  
   
-|Nom   |Type de données|data|  
+|Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|**Driver**|REG_SZ|*description du pilote par défaut*|  
+|**Driver**|REG_SZ|*default-driver-description*|  
   
  Le *description du pilote par défaut* nom est le même que le nom de la valeur sous la sous-clé de pilotes ODBC qui décrit le pilote.  
   

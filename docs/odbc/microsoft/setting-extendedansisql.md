@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63159365"
 ---
 # <a name="setting-extendedansisql"></a>Définition de ExtendedAnsiSQL
 L’attribut peut être contrôlé dans la chaîne de connexion en ajoutant l’attribut ExtendedAnsiSQL :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|ExtendedAnsiSQL = 0 (valeur par défaut)|Ce paramètre ne permet pas de nouvelles fonctionnalités.|  
-|ExtendedAnsiSQL = 1|Ce paramètre active les nouvelles fonctionnalités.|  
+|ExtendedAnsiSQL=0 (default)|Ce paramètre ne permet pas de nouvelles fonctionnalités.|  
+|ExtendedAnsiSQL=1|Ce paramètre active les nouvelles fonctionnalités.|  
   
  L’attribut peut également être défini dans une source de données via le **Options avancées** boîte de dialogue lors de la configuration d’une source de données via le panneau de configuration.  
   

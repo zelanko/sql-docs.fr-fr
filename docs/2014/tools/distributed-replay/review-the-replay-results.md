@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149707"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
   Une fois que la fonctionnalité [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay a terminé une relecture distribuée, l'activité de relecture de chaque client peut être capturée et enregistrée dans des fichiers de trace de résultats sur chaque client. Pour capturer cette activité, vous devez utiliser le paramètre **-o** quand vous exécutez l’outil d’administration avec l’option **replay**. Pour plus d’informations sur l’option replay, consultez [Option replay &#40;outil d’administration Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "52792831"
 ## <a name="event-classes-captured-in-result-trace-files"></a>Classes d'événements capturées dans les fichiers de trace de résultats  
  Le tableau suivant répertorie toutes les classes d'événements capturées dans les données de trace de résultats.  
   
-|Catégorie|Nom de la classe d'événements|Fréquence de capture|Point de capture|  
+|Category|Nom de la classe d'événements|Fréquence de capture|Point de capture|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Événements pouvant être relus|Audit Login|Une fois pour chaque événement Audit Login dans les données de trace d'origine|Après la réussite ou l'échec de l'événement|  
 ||Audit Logout|Une fois pour chaque événement Audit Logout dans les données de trace d'origine|Après la réussite ou l'échec de l'événement|  

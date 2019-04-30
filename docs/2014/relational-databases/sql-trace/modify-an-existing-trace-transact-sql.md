@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 56d4f7d922c0c229b1e2126f93611670adf7c702
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135616"
 ---
 # <a name="modify-an-existing-trace-transact-sql"></a>Modifier une trace existante (Transact-SQL)
   Cette rubrique décrit l'utilisation de procédures stockées pour modifier une trace existante.  
@@ -47,7 +47,7 @@ ms.locfileid: "53591843"
     ||NOT NULL|La colonne est désactivée pour l'événement spécifié.|  
   
 > [!IMPORTANT]
->  Contrairement aux procédures stockées standard, les paramètres de tous les [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] des procédures stockées (<strong>sp_trace_*xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
+>  Contrairement aux procédures stockées standard, les paramètres de toutes les procédures stockées [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) sont strictement typés et ne prennent pas en charge la conversion automatique des types de données. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
 
 ## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   

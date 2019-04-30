@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151522"
 ---
-# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Leçon 1 : Navigation de base dans SQL Server Management Studio
+# <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Leçon 1 : Navigation de base dans SQL Server Management Studio
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil puissant et souple. Cependant, les utilisateurs novices de Microsoft Visual Studio rencontrent parfois des difficultés à accéder rapidement à la bonne fonctionnalité. Cette leçon montre comment les fenêtres s'articulent pour offrir une zone de conception facilitant le travail. À la fin de cette leçon, vous aurez appris comment supprimer les fenêtres inutiles, comment afficher rapidement des fenêtres avec les informations de votre choix et comment configurer la zone de conception pour vous aider dans vos tâches récurrentes.  
   
  Cette leçon contient les rubriques suivantes :  
@@ -38,7 +38,7 @@ ms.locfileid: "48143629"
   
 -   Restauration de la configuration par défaut de SQL Server Management Studio  
   
--   Résumé  
+-   Récapitulatif  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Démarrer SQL Server Management Studio](../sql-server-management-studio-ssms.md)  

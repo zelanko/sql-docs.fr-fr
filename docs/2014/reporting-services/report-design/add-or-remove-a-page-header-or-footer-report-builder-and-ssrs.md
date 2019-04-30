@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3b42828eab3a439cb21c6d32ff0881debc663e8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206494"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Ajouter ou supprimer un en-tête ou un pied de page (Générateur de rapports et SSRS)
   Vous pouvez ajouter du texte statique, des images, des lignes, des rectangles et des bordures aux en-têtes ou aux pieds de page. Vous pouvez placer des expressions et des images liées aux données dans une zone de texte si vous souhaitez qu'un en-tête ou pied de page contienne des données variables ou calculées.  

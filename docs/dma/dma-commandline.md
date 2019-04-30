@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: ec274af1b3674cb821f0f5a477d1f798c404000e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154677"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécutez l’Assistant Migration des données à partir de la ligne de commande
 Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migration Assistant, il installe également dmacmd.exe dans *% ProgramFiles%\\Microsoft Data Migration Assistant\\*. Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et renvoyer le résultat au fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou des bases de données énormes. 
@@ -46,8 +46,8 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Comment utiliser le texte d’aide dmacmd.exe        | N
 |`/AssessmentName`     |   Nom du projet d’évaluation   | O
 |`/AssessmentDatabases`     | Liste délimitée par des chaînes de connexion. Nom de la base de données (catalogue Initial) respecte la casse. | O
-|`/AssessmentSourcePlatform`     | Plateforme de la source pour l’évaluation, les valeurs prises en charge : SqlOnPrem, RdsSqlServer. Cible Readiness Assessment prennent également en charge Cassandra en tant que plateforme de la source. Valeur par défaut est SqlOnPrem   | N
-|`/AssessmentTargetPlatform`     | Plateforme cible pour l’évaluation, les valeurs prises en charge : AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 et SqlServerWindows2017. Cible Readiness Assessment prennent également en charge CosmosDB en tant que plateforme cible. Valeur par défaut est SqlServerWindows2017   | N
+|`/AssessmentSourcePlatform`     | Plateforme de la source pour l’évaluation : <br>Valeurs prises en charge pour l’évaluation : SqlOnPrem, RdsSqlServer (valeur par défaut) <br>Valeurs prises en charge pour l’évaluation de la disponibilité cible : SqlOnPrem, RdsSqlServer (valeur par défaut), Cassandra (version préliminaire)   | N
+|`/AssessmentTargetPlatform`     | Plateforme cible pour l’évaluation :  <br> Valeurs prises en charge pour l’évaluation : AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 et SqlServerWindows2017 (valeur par défaut)  <br> Valeurs prises en charge pour l’évaluation de la disponibilité cible : ManagedSqlServer (valeur par défaut), CosmosDB (version préliminaire)   | N
 |`/AssessmentEvaluateFeatureParity`  | Exécuter des règles de parité de fonctionnalité. Si la plateforme de la source est RdsSqlServer, évaluation de parité de fonctionnalité n’est pas pris en charge pour la plateforme cible AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Exécuter les règles de compatibilité  | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises.)
 |`/AssessmentEvaluateRecommendations`     | Exécuter les recommandations de fonctionnalité        | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendationsis requis)

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156216"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par Transact-SQL
   Vous pouvez accédez aux tables optimisées en mémoire à l'aide d'une requête Transact-SQL ou d'une instruction DML (SELECT, INSERT, UPDATE ou DELETE), d'une instruction ad hoc et d'un module SQL, par exemple des procédures stockées, des fonctions table, des fonctions scalaires, des déclencheurs et des vues. Pour plus d’informations, consultez [optimisées en mémoire aux Tables à l’aide de Transact-SQL interprété](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48218489"
   
 -   [Création d’un TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql) (consultez `MEMORY_OPTIMIZED`, `BUCKET_COUNT`, `INDEX`, et `HASH`)  
   
--   [DÉCLARER @local_variable &#40;Transact-SQL&#41; ](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (consultez `NULL`  |  `NOT NULL`)  
+-   [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (see `NULL` | `NOT NULL`)  
   
  Les tables optimisées en mémoire prennent en charge `PRIMARY KEY` et `NOT NULL`. Pour plus d’informations sur l’implémentation de contraintes non prises en charge, consultez [migration vérifier et Foreign Key Constraints](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   

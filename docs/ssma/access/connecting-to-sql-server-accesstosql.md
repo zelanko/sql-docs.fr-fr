@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139019"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connexion à SQL Server (AccessToSQL)
 Pour migrer des bases de données Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez vous connecter à l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous vous connectez, SSMA Obtient des métadonnées sur les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous êtes connecté à, mais ne stocke pas les mots de passe.  
@@ -63,9 +63,9 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
     -   Si vous vous connectez à l’instance par défaut sur un autre ordinateur, entrez le nom de l’ordinateur.  
   
-    -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Par exemple : MyServer\MyInstance.  
+    -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Exemple : MyServer\MyInstance.  
   
-    -   Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se connecter à l’aide de canaux nommés protocole et en spécifiant le nom du canal, tel que \\ \\.\pipe\sql\query. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
+    -   Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], se connecter à l’aide de canaux nommés protocole et en spécifiant le nom du canal, tel que \\ \\.\pipe\sql\query. Pour plus d’informations, consultez le [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] documentation.  
   
 3.  Si votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter les connexions sur un port non défini par défaut, entrez le numéro de port qui est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions dans le **port du serveur** boîte. L’instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le numéro de port par défaut est 1433. Pour les instances nommées, SSMA essaiera d’obtenir le numéro de port à partir de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Browser.  
   
@@ -81,7 +81,7 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
 6.  Pour une connexion sécurisée, les deux contrôles sont ajoutés, **chiffrer la connexion** case à cocher et **TrustServerCertificate** case à cocher. Uniquement lorsque **chiffrer la connexion** case à cocher est activée **TrustServerCertificate** case à cocher est visible. Lorsque **chiffrer la connexion** est checked(true) et **TrustServerCertificate** est unchecked(false), validera le certificat SSL SQL Server. La validation du certificat de serveur est une partie de la négociation SSL qui garantit qu'il s'agit du serveur correct avec lequel établir une connexion. Pour ce faire, un certificat doit être installé sur le côté client, ainsi que sur le côté serveur.  
   
-7.  Cliquez sur **Se connecter**.  
+7.  Cliquer sur **Se connecter**.  
   
 **Compatibilité de version supérieur**  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ee1e0cbeaa4e33be223e1b777ff243b5c3ef2d01
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150189"
 ---
 # <a name="strtoset-mdx"></a>StrToSet (MDX)
 
@@ -35,7 +35,7 @@ StrToSet(Set_Specification [,CONSTRAINED] )
 ## <a name="remarks"></a>Notes  
  Le **StrToSet** fonction retourne le jeu spécifié dans l’expression de chaîne. Le **StrToSet** fonction est généralement utilisée avec les fonctions définies par l’utilisateur pour retourner un jeu spécifié d’une fonction externe vers une instruction MDX, ou lorsqu’une requête MDX est paramétrable.  
   
--   Lorsque l’indicateur CONSTRAINED est utilisé, le jeu spécifié doit contenir les noms de membres qualifiés ou ou un jeu de tuples contenant les noms de membres qualifiés ou placées entourés accolades {}. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne qui ne peut être directement résolue à des noms de membres qualifiés ou non qualifiés est fournie, l'erreur suivante s'affiche : « Les restrictions imposées par l'indicateur CONSTRAINED dans la fonction STRTOSET n'ont pas été respectées. »  
+-   Lorsque l’indicateur CONSTRAINED est utilisé, le jeu spécifié doit contenir les noms de membres qualifiés ou ou un jeu de tuples contenant les noms de membres qualifiés ou placées entourés accolades {}. Cet indicateur est employé pour réduire les risques d'attaques par injection au travers de la chaîne spécifiée. Si une chaîne est fournie, qui n’est pas les noms de membre peut être directement résolue à qualifié ou non, l’erreur suivante s’affiche : « Les restrictions imposées par le CONSTRAINED indicateur dans la fonction STRTOSET ont pas été respectées. »  
   
 -   Si l'indicateur CONSTRAINED n'est pas utilisé, vous pouvez résoudre le jeu spécifié à une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   

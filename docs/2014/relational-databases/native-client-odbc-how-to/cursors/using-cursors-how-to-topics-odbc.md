@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c565d924b6d8ed6340d60022f9436ec5a34347
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200426"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Utilisation des rubriques de procédures relatives aux curseurs (ODBC)
   Pour utiliser des curseurs, vous devez d'abord définir des attributs de connexion et d'instruction qui contrôlent le comportement du curseur ODBC. Les curseurs permettent à une application de récupérer plusieurs lignes sur chaque extraction et d' exécuter des instructions UPDATE, INSERT ou DELETE à l'emplacement actuel du curseur.  

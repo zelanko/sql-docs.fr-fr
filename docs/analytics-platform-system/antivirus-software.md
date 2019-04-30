@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199611"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Logiciel antivirus pour l’Analytique Platform System
 Si votre centre de données requiert un logiciel antivirus, utilisez ces instructions pour installer un logiciel antivirus sur le système de plateforme d’Analytique. Nous vous recommandons de ne pas installer un logiciel antivirus, sauf si elle est une exigence stricte de votre centre de données.  
@@ -62,11 +62,11 @@ Pour installer le logiciel antivirus sur les machines virtuelles, exclure la lis
   
 -   G:\  
   
-**_appliance_domain_- VMM**  
+**_appliance_domain_-VMM**  
   
 -   Aucune restriction  
   
-**_appliance_domain_- WDS**  
+**_appliance_domain_-WDS**  
   
 -   Aucune restriction  
   

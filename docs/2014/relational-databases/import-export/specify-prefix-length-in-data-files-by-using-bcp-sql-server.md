@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156697"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Spécifier une longueur de préfixe dans des fichiers de données à l'aide de bcp (SQL Server)
   Pour un stockage de fichier plus compact lors de l’exportation en bloc de données au format natif vers un fichier de données, la commande **bcp** ajoute devant chaque champ un ou plusieurs caractères indiquant la longueur du champ. Ces caractères portent le nom de *caractères de préfixe de longueur*.  
@@ -36,7 +36,7 @@ ms.locfileid: "48058759"
 >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 ## <a name="overview-of-prefix-length"></a>Présentation de la longueur de préfixe  
- Pour stocker la longueur de préfixe d'un champ, vous avez besoin d'un nombre suffisant d'octets pour représenter la longueur maximale du champ. Le nombre d'octets requis dépend également du type de stockage de fichier, de la possibilité de valeurs Null d'une colonne et de ce que les données sont stockées dans le fichier de données au format natif ou au format caractère. Par exemple, un `text` ou `image` type de données requiert quatre caractères de préfixe pour stocker la longueur de champ, mais un `varchar` type de données requiert deux caractères. Dans le fichier de données, ces caractères sont stockés au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour stocker la longueur de préfixe d'un champ, vous avez besoin d'un nombre suffisant d'octets pour représenter la longueur maximale du champ. Le nombre d'octets requis dépend également du type de stockage de fichier, de la possibilité de valeurs Null d'une colonne et de ce que les données sont stockées dans le fichier de données au format natif ou au format caractère. Ainsi, un type de données `text` ou `image` nécessite quatre caractères de préfixe pour stocker la longueur du champ, alors qu'un type de données `varchar` n'en utilise que deux. Dans le fichier de données, ces caractères sont stockés au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
 >  Lorsque vous utilisez le format natif, préférez les préfixes de longueur aux indicateurs de fin de champ. Les données au format natif peuvent entrer en conflit avec les indicateurs de fin, car ces fichiers sont au format de données binaire interne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

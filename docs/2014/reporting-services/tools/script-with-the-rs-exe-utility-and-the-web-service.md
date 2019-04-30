@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc585670b2f91253e85159b1a7715c2a7a603f16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158279"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Écrire des scripts avec l'utilitaire rs.exe et le service Web
   Les développeurs et les administrateurs du serveur de rapports peuvent effectuer des opérations sur un serveur de rapports grâce à l’utilitaire **rs** (RS.exe). Ils peuvent ainsi administrer par programmation un serveur de rapports à l’aide de scripts écrits avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

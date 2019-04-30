@@ -15,27 +15,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bffee33dd49dcae44f8bd2e9d6b5350bc7253f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185441"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Rubriques de procédures relatives au Conseiller de mise à niveau
   Cette section contient des procédures courantes d'utilisation du Conseiller de mise à niveau.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Guide pratique pour installer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
+ [Procédure : Installer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
- [Guide pratique pour lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
+ [Procédure : Lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
   
- [Guide pratique pour exécuter l’Assistant Analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
+ [Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
- [Guide pratique pour afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+ [Procédure : Afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
- [Guide pratique pour filtrer des rapports](../../../2014/sql-server/install/how-to-filter-reports.md)  
+ [Procédure : Rapports de filtre](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
- [Guide pratique pour exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)  
+ [Procédure : Exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b13daf2d32cc41d63deea6c612dde247d541e4d5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128566"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Charger des données avec l’instruction INSERT dans Parallel Data Warehouse
 
@@ -26,7 +26,7 @@ Le tableau suivant définit les types littéraux acceptés, format et les règle
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral binaire|0x*hexidecimal_string*<br /><br />Exemple : 0x12Ef|Littéraux binaires doivent être précédés de 0 x.<br /><br />La longueur de source de données ne peut pas dépasser le nombre d’octets spécifié pour le type de données.<br /><br />Si la longueur de source de données est inférieure à la taille de la **binaire** de type de données, les données sont complétées à droite avec des zéros non significatifs pour atteindre la taille de type de données.|  
+|Littéral binaire|0x*hexidecimal_string*<br /><br />Exemple : 0x12Ef|Littéraux binaires doivent être précédés de 0 x.<br /><br />La longueur de source de données ne peut pas dépasser le nombre d’octets spécifié pour le type de données.<br /><br />Si la longueur de source de données est inférieure à la taille de la **binaire** de type de données, les données sont complétées à droite avec des zéros non significatifs pour atteindre la taille de type de données.|  
   
 ## <a name="InsertingLiteralsDateTime"></a>Insérer des littéraux dans les types de date et d’heure  
 Les littéraux de date et d’heure sont représentées à l’aide des valeurs de caractère dans un format spécifique, placé entre guillemets simples. Les tableaux suivants décrivent les types de littéral autorisés, format et des règles de conversion pour l’insertion d’une date ou heure littérale dans une colonne de distribution SQL Server PDW de type **datetime**, **smalldatetime**, **date**, **temps**, **datetimeoffset**, ou **datetime2**.  
@@ -36,53 +36,53 @@ Le tableau suivant définit les formats acceptés et les règles pour l’insert
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : ' 2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquantes sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35 ' est inséré en tant que « 2007-05-08 12:35:00.000 ».|  
-|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : ' 2007-05-08 12:35 '|Secondes et les chiffres fractionnaires restants sont définis sur 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : ' 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 12:00:00.000 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ.nnnnnnn'<br /><br />Exemple : ' 2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser trois chiffres fractionnaires. Par exemple, le littéral ' 2007-05-08 12:35:29.123 » sera inséré, mais la valeur ' 2007-05-08 12:35:29.1234567 » génère une erreur.|  
+|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : '2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquantes sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35 ' est inséré en tant que « 2007-05-08 12:35:00.000 ».|  
+|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : '2007-05-08 12:35'|Secondes et les chiffres fractionnaires restants sont définis sur 0 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : '2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 12:00:00.000 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ.nnnnnnn'<br /><br />Exemple : '2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser trois chiffres fractionnaires. Par exemple, le littéral ' 2007-05-08 12:35:29.123 » sera inséré, mais la valeur ' 2007-05-08 12:35:29.1234567 » génère une erreur.|  
   
 ### <a name="smalldatetime-data-type"></a>type de données smalldatetime  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **smalldatetime**. N’importe quelle chaîne vide (") est converti en la valeur par défaut ' 1900-01-01 12:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **smalldatetime** format|« AAAA-MM-JJ HH : mm » ou « AAAA-MM-JJ hh:mm:00 »<br /><br />Exemple : ' 2007-05-08 12:00 ' ou ' 2007-05-08-12:00:00 »|La source de données doit avoir des valeurs pour l’année, mois, date, heure et minute. Secondes sont facultatives et, le cas échéant, doivent être définies sur la valeur 00. Toute autre valeur génère une erreur.|  
-|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : ' 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **smalldatetime** format|« AAAA-MM-JJ HH : mm » ou « AAAA-MM-JJ hh:mm:00 »<br /><br />Exemple : « 2007-05-08 12:00 ' ou ' 2007-05-08-12:00:00 »|La source de données doit avoir des valeurs pour l’année, mois, date, heure et minute. Secondes sont facultatives et, le cas échéant, doivent être définies sur la valeur 00. Toute autre valeur génère une erreur.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : '2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée.|  
   
 ### <a name="date-data-type"></a>Type de données date  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **date**. N’importe quelle chaîne vide (") est converti en la valeur par défaut ' 1900-01-01 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : ' 2007-05-08'|Il s’agit du seul format accepté.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : '2007-05-08'|Il s’agit du seul format accepté.|  
   
 ### <a name="time-data-type"></a>type de données heure  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **temps**. N’importe quelle chaîne vide (") est convertie en la valeur par défaut « 00:00:00.0000 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **temps** format|'.nnnnnnn'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** de type de données, les données sont complétées à droite avec des zéros non significatifs. Par exemple, une valeur littérale « 12:35:29.123 » est insérée en tant que « 12:35:29.1230000 ».<br /><br />Une valeur qui a une précision plus élevée que le type de données cible est rejetée.|  
+|Littéral de chaîne dans **temps** format|'hh:mm:ss.nnnnnnn'<br /><br />Exemple : '12:35:29.1234567'|Si la source de données a une précision inférieure ou égale (nombre de chiffres fractionnaires) à la précision de la **temps** de type de données, les données sont complétées à droite avec des zéros non significatifs. Par exemple, une valeur littérale « 12:35:29.123 » est insérée en tant que « 12:35:29.1230000 ».<br /><br />Une valeur qui a une précision plus élevée que le type de données cible est rejetée.|  
   
 ### <a name="datetimeoffset-data-type"></a>type de données DateTimeOffset  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **datetimeoffset** (*n*). Le format par défaut est « AAAA-MM-JJ.nnnnnnn {+ |-} hh : mm ». Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01 12:00:00.0000000 + 00:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur. Le nombre de chiffres fractionnaires dépend de la définition de colonne. Par exemple, une colonne définie comme **datetimeoffset** (2) a deux chiffres fractionnaires.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : ' 2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquants et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35:29.123 » est inséré en tant que « 2007-05-08 12:35:29.1230000 + 00:00 ».|  
-|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : ' 2007-05-08 12:35 '|Secondes, les chiffres fractionnaires restants et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : ' 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08' est inséré en tant que « 2007-05-08 00:00:00.0000000 + 00:00 ».|  
-|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ.nnnnnnn'<br /><br />Exemple : ' 2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser le nombre spécifié de fractions de secondes dans la colonne de datetimeoffset. Si la source de données possède un nombre inférieur ou égal de fractions de secondes, les données sont complétées à droite avec des zéros non significatifs. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale « 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que « 12:35:29.12300 + 12:15 '.|  
-|Littéral de chaîne dans **datetimeoffset** format|' AAAA-MM-JJ.nnnnnnn {+&#124;-} hh : mm '<br /><br />Exemple : ' 2007-05-08 12:35:29.1234567 + 12:15 '|La source de données ne peut pas dépasser le nombre spécifié de fractions de secondes dans la colonne de datetimeoffset. Si la source de données possède un nombre inférieur ou égal de fractions de secondes, les données sont complétées à droite avec des zéros non significatifs. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale « 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que « 12:35:29.12300 + 12:15 '.|  
+|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : '2007-05-08 12:35:29.123'|Les chiffres fractionnaires manquants et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée. Par exemple, le littéral ' 2007-05-08 12:35:29.123 » est inséré en tant que « 2007-05-08 12:35:29.1230000 + 00:00 ».|  
+|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : '2007-05-08 12:35'|Secondes, les chiffres fractionnaires restants et les valeurs de décalage sont définies à 0 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : '2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08' est inséré en tant que « 2007-05-08 00:00:00.0000000 + 00:00 ».|  
+|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ.nnnnnnn'<br /><br />Exemple : '2007-05-08 12:35:29.1234567'|La source de données ne peut pas dépasser le nombre spécifié de fractions de secondes dans la colonne de datetimeoffset. Si la source de données possède un nombre inférieur ou égal de fractions de secondes, les données sont complétées à droite avec des zéros non significatifs. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale « 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que « 12:35:29.12300 + 12:15 '.|  
+|Littéral de chaîne dans **datetimeoffset** format|' AAAA-MM-JJ.nnnnnnn {+&#124;-} hh : mm '<br /><br />Exemple : '2007-05-08 12:35:29.1234567 +12:15'|La source de données ne peut pas dépasser le nombre spécifié de fractions de secondes dans la colonne de datetimeoffset. Si la source de données possède un nombre inférieur ou égal de fractions de secondes, les données sont complétées à droite avec des zéros non significatifs. Par exemple, si le type de données est datetimeoffset (5), la valeur littérale « 2007-05-08 12:35:29.123 + 12:15 ' est inséré en tant que « 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>type de données DATETIME2  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **datetime2** (*n*). Le format par défaut est « AAAA-MM-JJ.nnnnnnn ». Une chaîne vide (") est convertie en la valeur par défaut ' 1900-01-01 12:00:00 ». Les chaînes qui contiennent uniquement des espaces à droite (' ') génère une erreur. Le nombre de chiffres fractionnaires dépend de la définition de colonne. Par exemple, une colonne définie comme **datetime2** (2) a deux chiffres fractionnaires.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : ' 2007-05-08 12:35:29.123'|Fractions de secondes sont facultatives et sont définies sur 0 lorsque la valeur est insérée.<br /><br />Une valeur qui a plus de chiffres fractionnaires que le type de données cible est rejetée.|  
-|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : ' 2007-05-08 12'|Secondes facultatives et les chiffres fractionnaires restants sont définis sur 0 lorsque la valeur est insérée.|  
-|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : ' 2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08' est inséré en tant que « 2007-05-08 12:00:00.0000000 ».|  
-|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ hh:mm:ss:nnnnnnn'<br /><br />Exemple : ' 2007-05-08 12:35:29.1234567'|Si la source de données contient des composants de données et l’heure sont inférieure ou égale à la valeur spécifiée dans **datetime2**(*n*), les données sont insérées ; sinon une erreur est générée.|  
+|Littéral de chaîne dans **datetime** format|« AAAA-MM-JJ HH : mm : [.nnn] »<br /><br />Exemple : '2007-05-08 12:35:29.123'|Fractions de secondes sont facultatives et sont définies sur 0 lorsque la valeur est insérée.<br /><br />Une valeur qui a plus de chiffres fractionnaires que le type de données cible est rejetée.|  
+|Littéral de chaîne dans **smalldatetime** format|« Hh : mm aaaa-MM-JJ »<br /><br />Exemple : '2007-05-08 12'|Secondes facultatives et les chiffres fractionnaires restants sont définis sur 0 lorsque la valeur est insérée.|  
+|Littéral de chaîne dans **date** format|« AAAA-MM-JJ »<br /><br />Exemple : '2007-05-08'|Les valeurs de temps (heures, minutes, secondes et fractions) sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 2007-05-08' est inséré en tant que « 2007-05-08 12:00:00.0000000 ».|  
+|Littéral de chaîne dans **datetime2** format|'AAAA-MM-JJ hh:mm:ss:nnnnnnn'<br /><br />Exemple : '2007-05-08 12:35:29.1234567'|Si la source de données contient des composants de données et l’heure sont inférieure ou égale à la valeur spécifiée dans **datetime2**(*n*), les données sont insérées ; sinon une erreur est générée.|  
   
 ## <a name="InsertLiteralsNumeric"></a>Insérer des littéraux en types numériques  
 Les tableaux suivants définissent les formats acceptés et les règles de conversion pour l’insertion d’une valeur littérale dans une colonne de distribution SQL Server PDW qui utilise un type numérique.  
@@ -90,54 +90,54 @@ Les tableaux suivants définissent les formats acceptés et les règles de conve
 ### <a name="bit-data-type"></a>type de données bit  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **bits**. Une chaîne vide (") ou une chaîne qui contiennent uniquement des espaces à droite (' ') est converti en 0.  
   
-|Type de littéral|Format|Règles de conversion|  
+|Type de littéral|format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnn'<br /><br />Exemple : '1' ou '321'|Une valeur entière mise en forme comme un littéral de chaîne ne peut pas contenir une valeur négative. Par exemple, la valeur « -123 » génère une erreur.<br /><br />Une valeur supérieure à 1 est convertie en 1. Par exemple, la valeur « 123 » est convertie à 1.|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnn'<br /><br />Exemple : '1' ou '321'|Une valeur entière mise en forme comme un littéral de chaîne ne peut pas contenir une valeur négative. Par exemple, la valeur « -123 » génère une erreur.<br /><br />Une valeur supérieure à 1 est convertie en 1. Par exemple, la valeur « 123 » est convertie à 1.|  
 |Littéral de chaîne|'TRUE' ou 'FALSE'<br /><br />Exemple : « true »|La valeur 'TRUE' est converti en 1 ; la valeur « FALSE » est convertie en 0.|  
-|Littéral d’entier|nnnnnnnn<br /><br />Exemple : 1 ou 321|Une valeur supérieure à 1 ou inférieure à 0 est convertie en 1. Par exemple, les valeurs 123 et -123 sont converties en 1.|  
-|Littéral décimal|nnnnn.nnnn<br /><br />Exemple : 1234.5678|Une valeur supérieure à 1 ou inférieure à 0 est convertie en 1. Par exemple, les valeurs 123,45 et -123,45 sont converties en 1.|  
+|Littéral d’entier|nnnnnnnn<br /><br />Exemple : 1 ou 321|Une valeur supérieure à 1 ou inférieure à 0 est convertie en 1. Par exemple, les valeurs 123 et -123 sont converties en 1.|  
+|Littéral décimal|nnnnn.nnnn<br /><br />Exemple : 1234.5678|Une valeur supérieure à 1 ou inférieure à 0 est convertie en 1. Par exemple, les valeurs 123,45 et -123,45 sont converties en 1.|  
   
 ### <a name="decimal-data-type"></a>type de données decimal  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **décimal** (*p, s*). Les règles de conversion de données sont les mêmes que pour SQL Server. Pour plus d’informations, consultez [conversion de type de données](../t-sql/data-types/data-type-conversion-database-engine.md) sur MSDN.  
   
 |Type de littéral|Format|  
 |----------------|----------|  
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnn'<br /><br />Exemple : '321312313123'|  
-|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|  
-|Littéral d’entier|nnnnnnnnnnnn<br /><br />Exemple : 321312313123|  
-|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : '123344.34455'|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnn'<br /><br />Exemple : '321312313123'|  
+|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|  
+|Littéral d’entier|nnnnnnnnnnnn<br /><br />Exemple : 321312313123|  
+|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : '123344.34455'|  
   
 ### <a name="float-and-real-data-types"></a>types de données float et real  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **float** ou **réel**. Les règles de conversion de données sont les mêmes que pour SQL Server. Pour plus d’informations, consultez [conversion de type de données](../t-sql/data-types/data-type-conversion-database-engine.md) sur MSDN.  
   
 |Type de littéral|Format|  
 |----------------|----------|  
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnn'<br /><br />Exemple : '321312313123'|  
-|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|  
-|Littéral de chaîne dans **à virgule flottante** format|'n.nnnnnE+nn'<br /><br />Exemple : « 3.12323E + 14 »|  
-|Littéral d’entier|nnnnnnnnnnnn<br /><br />Exemple : 321312313123|  
-|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|  
-|Littéral de point à virgule flottante|n.nnnnnE+nn<br /><br />Exemple : 3.12323E + 14|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnn'<br /><br />Exemple : '321312313123'|  
+|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|  
+|Littéral de chaîne dans **à virgule flottante** format|'n.nnnnnE+nn'<br /><br />Exemple : « 3.12323E + 14 »|  
+|Littéral d’entier|nnnnnnnnnnnn<br /><br />Exemple : 321312313123|  
+|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|  
+|Littéral de point à virgule flottante|n.nnnnnE+nn<br /><br />Exemple : 3.12323E + 14|  
   
 ### <a name="int-bigint-tinyint-smallint-data-types"></a>int, bigint, tinyint, smallint les types de données  
 Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **int**, **bigint**, **tinyint**, ou **smallint**. La source de données ne peut pas dépasser la plage autorisée pour le type de données donné. Par exemple, la plage pour **tinyint** est comprise entre 0 et 255 et la plage pour **int** est allant de -2,147,483,648 à 2 147 483 647.  
   
 |Type littéral|Format|Règles de conversion|  
 |------------|------|----------------|
-|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| None |  
-|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| None|  
-|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Les valeurs à droite de la virgule décimale sont tronqués.|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnnnnnnnn'<br /><br />Exemple : '321312313123'| None |  
+|Littéral d’entier|nnnnnnnnnnnnnn<br /><br />Exemple : 321312313123| None|  
+|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Les valeurs à droite de la virgule décimale sont tronqués.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>types de données Money et smallmoney  
 Valeurs littérales Money sont représentées sous forme de nombres avec une virgule décimale facultative et le symbole monétaire en tant que préfixe. La source de données ne peut pas dépasser la plage autorisée pour le type de données donné. Par exemple, la plage pour **smallmoney** est entre-214 748,3648 214,748.3647 et la plage pour **money** est -922,337,203,685,477.5808 à 922,337,203,685,477.5807. Le tableau suivant définit les formats acceptés et les règles pour l’insertion de valeurs littérales dans une colonne de distribution de type **money** ou **smallmoney**.  
   
 |Type de littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
-|Littéral de chaîne dans **entier** format|'nnnnnnnn'<br /><br />Exemple : '123433'|Chiffres manquants après la virgule décimale sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 12345 » est inséré en tant que 12345.0000.|  
-|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur « 123344.34455 » est insérée en tant que 123344.3446.|  
+|Littéral de chaîne dans **entier** format|'nnnnnnnn'<br /><br />Exemple : '123433'|Chiffres manquants après la virgule décimale sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral « 12345 » est inséré en tant que 12345.0000.|  
+|Littéral de chaîne dans **décimal** format|'nnnnnn.nnnnn'<br /><br />Exemple : '123344.34455'|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur « 123344.34455 » est insérée en tant que 123344.3446.|  
 |Littéral de chaîne dans **money** format|'$nnnnnn.nnnn'<br /><br />Exemple : '$123456.7890'|Le symbole monétaire n’est pas inséré avec la valeur.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche.|  
-|Littéral d’entier|nnnnnnnn<br /><br />Exemple : 123433|Chiffres manquants après la virgule décimale sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral 12345 est inséré en tant que 12345.0000.|  
-|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123344.34455 est insérée en tant que 123344.3446.|  
+|Littéral d’entier|nnnnnnnn<br /><br />Exemple : 123433|Chiffres manquants après la virgule décimale sont définies sur 0 lorsque la valeur est insérée. Par exemple, le littéral 12345 est inséré en tant que 12345.0000.|  
+|Littéral décimal|nnnnnn.nnnnn<br /><br />Exemple : 123344.34455|Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123344.34455 est insérée en tant que 123344.3446.|  
 |Money littéral|$nnnnnn.nnnn<br /><br />Exemple : $123456.7890|Le symbole monétaire n’est pas inséré avec la valeur.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 4, la valeur est arrondie à la valeur la plus proche.|  
   
 ## <a name="InsertLiteralsString"></a>Insertion de littéraux dans les types de chaîne  
@@ -149,9 +149,9 @@ Le tableau suivant définit les formats acceptés et les règles pour l’insert
 |Type littéral|Format|Règles de conversion|  
 |----------------|----------|--------------------|  
 |Littéral de chaîne|Format : « chaîne de caractères'<br /><br />Exemple : 'abc'| None|  
-|Littéral de chaîne Unicode|Format : Chaîne N'character'<br /><br />Exemple : N’ABC »|  None |  
-|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| None |  
-|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| None |  
+|Littéral de chaîne Unicode|Format : Chaîne de N'character'<br /><br />Exemple : N'abc'|  None |  
+|Littéral d’entier|Format : nnnnnnnnnnn<br /><br />Exemple : 321312313123| None |  
+|Littéral décimal|Format : nnnnnn.nnnnnnn<br /><br />Exemple : 12344.34455| None |  
 |Money littéral|Format : $nnnnnn.nnnnn<br /><br />Exemple : $123456.99|Le symbole monétaire n’est pas inséré avec la valeur. Pour insérer le symbole monétaire, insérez la valeur comme un littéral de chaîne. Cela fera correspondre le format de la **dwloader** outil, qui traite chaque littéral comme un littéral de chaîne.<br /><br />Des virgules ne sont pas autorisés.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 2, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123.946789 est insérée en tant que 123.95.<br /><br />Seul le style par défaut 0 (pas de virgule et 2 chiffres après la virgule décimale) est autorisé lors de l’utilisation de la fonction CONVERT pour insérer des littéraux de l’argent.|  
 
   

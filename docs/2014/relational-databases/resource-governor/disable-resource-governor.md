@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209714"
 ---
 # <a name="disable-resource-governor"></a>Désactiver Resource Governor
   Vous pouvez désactiver Resource Governor à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de Transact-SQL.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
+-   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
   
--   **Pour désactiver le gouverneur de ressources, à l’aide de :**  [Explorateur d’objets](#RGOffObjEx), [propriétés de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Pour désactiver Resource Governor avec :**  [Explorateur d’objets](#RGOffObjEx), [Propriétés de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La désactivation de Resource Governor entraîne les résultats suivants :  
@@ -46,7 +46,7 @@ ms.locfileid: "52761421"
 ###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Vous ne pouvez pas utiliser l'instruction `ALTER RESOURCE GOVERNOR` pour désactiver le gouverneur de ressources pendant une transaction utilisateur.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  La désactivation de Resource Governor requiert l'autorisation CONTROL SERVER.  
   
 ##  <a name="RGOffObjEx"></a> Désactiver Resource Governor à l'aide de l'Explorateur d'objets  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125435"
 ---
 # <a name="closing-the-cursor"></a>Fermeture du curseur
 Lorsqu’une application a terminé d’utiliser un curseur, il appelle **SQLCloseCursor** pour fermer le curseur. Exemple :  
@@ -28,7 +28,7 @@ Lorsqu’une application a terminé d’utiliser un curseur, il appelle **SQLClo
 SQLCloseCursor(hstmt);  
 ```  
   
- Jusqu'à ce que l’application ferme le curseur, l’instruction sur laquelle l’ouverture du curseur ne peut pas être utilisée pour la plupart des autres opérations, telles que l’exécution d’une autre instruction SQL. Pour obtenir une liste complète des fonctions qui peuvent être appelées lorsqu’un curseur est ouvert, consultez [tableaux des transitions d’état ODBC annexe b :](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Jusqu'à ce que l’application ferme le curseur, l’instruction sur laquelle l’ouverture du curseur ne peut pas être utilisée pour la plupart des autres opérations, telles que l’exécution d’une autre instruction SQL. Pour obtenir une liste complète des fonctions qui peuvent être appelées lorsqu’un curseur est ouvert, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
 > [!NOTE]  
 >  Pour fermer un curseur, une application doit appeler **SQLCloseCursor**, et non **SQLCancel**.  

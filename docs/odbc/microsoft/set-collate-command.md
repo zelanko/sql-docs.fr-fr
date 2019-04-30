@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127831"
 ---
 # <a name="set-collate-command"></a>SET COLLATE, commande
 Spécifie une séquence de classement pour les champs caractères dans les opérations de tri et de l’indexation suivantes.  
@@ -36,9 +36,9 @@ SET COLLATE TO cSequenceName
   
 |Options|Langue|  
 |-------------|--------------|  
-|NÉERLANDAIS|Néerlandais|  
+|DUTCH|Néerlandais|  
 |GENERAL|Anglais, Français, allemand, Espagnol moderne, portugais et autres langues d’Europe occidentale|  
-|ALLEMAND|Commande allemand annuaire téléphonique (DIN)|  
+|GERMAN|Commande allemand annuaire téléphonique (DIN)|  
 |ISLANDE|Islandais|  
 |MACHINE|Machine (la séquence de classement par défaut pour les versions antérieures de FoxPro)|  
 |NORDAN|Norvégien, danois|  

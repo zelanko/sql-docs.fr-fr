@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135531"
 ---
 # <a name="optimize-sql-trace"></a>Optimiser Trace SQL
   Même si l'utilisation de la fonctionnalité de trace SQL représente un coût en termes de performances, du fait de l'utilisation de ressources système lors de la collecte de données, il existe plusieurs moyens de le minimiser. Pour limiter la baisse de performances induite par une trace, essayez les méthodes suivantes :  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155304"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
   Les tables mémoire optimisées et les procédures stockées compilées en mode natif ne prennent pas en charge la surface d'exposition [!INCLUDE[tsql](../../includes/tsql-md.md)] complète qui est prise en charge par les tables sur disque et les procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] interprétées. Lorsque vous tentez d'utiliser une des fonctionnalités non prises en charge, le serveur retourne une erreur.  
@@ -35,7 +35,7 @@ ms.locfileid: "52541235"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de données qui utilisent OLTP en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent apparaître dans le texte du message d'une erreur impliquant une base de données OLTP en mémoire.  
   
-|Type|Créer une vue d’abonnement|Résolution|  
+|Type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|L'option de base de données AUTO_CLOSE=ON n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
 |Option|ATTACH_REBUILD_LOG|L'option de base de données CREATE ATTACH_REBUILD_LOG n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
@@ -46,12 +46,12 @@ ms.locfileid: "52541235"
 ## <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique une table mémoire optimisée, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Créer une vue d’abonnement|Résolution|  
+|Type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction `CREATE TABLE`.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [pris en charge les Types de données](supported-data-types-for-in-memory-oltp.md).|  
 |Fonctionnalité|Colonnes calculées|Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction `CREATE TABLE`.|  
-|Fonctionnalité|REPLICATION|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
+|Fonctionnalité|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
 |Fonctionnalité|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `FILESTREAM` de la définition de colonne.|  
 |Fonctionnalité|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé `SPARSE` de la définition de colonne.|  
 |Fonctionnalité|ROWGUIDCOL|L'option ROWGUIDCOL n'est pas prise en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé `ROWGUIDCOL` de la définition de colonne.|  
@@ -98,7 +98,7 @@ ms.locfileid: "52541235"
 ## <a name="nonclustered-hash-indexes"></a>Index de hachage non cluster  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index de hachage non cluster, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Créer une vue d’abonnement|Résolution|  
+|Type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Les index de hachage non cluster ne sont pas ordonnés. Supprimez les mots clés `ASC` et `DESC` de la spécification de clé d'index.|  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52541235"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transactions qui accèdent aux tables mémoire optimisées  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des transactions qui accèdent aux tables mémoire optimisées, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Créer une vue d’abonnement|Résolution|  
+|Type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|point d'enregistrement|La création de points de sauvegarde dans des transactions qui accèdent aux tables mémoire optimisées n'est pas prise en charge.|  
 |Fonctionnalité|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  

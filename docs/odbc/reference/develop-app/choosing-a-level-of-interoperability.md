@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125415"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Choix d’un niveau d’interopérabilité
-En supposant que l’application utilise ODBC, l’étape suivante consiste à déterminer quel est le niveau d’interopérabilité est requis. Le niveau de base d’interopérabilité est généralement une fonction du type d’application : les applications personnalisées tendent à ne pas être interopérable, applications verticales ont tendance à être interopérable parmi un nombre limité de SGBD et les applications génériques ont tendance à être interopérable parmi tous les SGBD.  
+En supposant que l’application utilise ODBC, l’étape suivante consiste à déterminer quel est le niveau d’interopérabilité est requis. Le niveau de base d’interopérabilité est généralement une fonction du type d’application : Applications personnalisées tendent à ne pas être interopérable, applications verticales ont tendance à être interopérable parmi un nombre limité de SGBD et les applications génériques ont tendance à être interopérable parmi tous les SGBD.  
   
  Cette section contient les rubriques suivantes.  
   

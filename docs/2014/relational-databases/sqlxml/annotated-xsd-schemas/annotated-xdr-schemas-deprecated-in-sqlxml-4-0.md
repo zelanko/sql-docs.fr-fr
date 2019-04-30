@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 6d45a3859938b25b2ed9f71f654ff7e9877f35b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131260"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Schémas XDR annotés (déconseillés dans SQLXML 4.0)
   Les schémas XDR annotés sont déconseillés. Cette fonctionnalité ne fera plus l'objet d'aucun travail de développement. Évitez d'utiliser cette fonctionnalité dans un nouveau travail de développement. À la place, utilisez les schémas XSD annotés. Vous pouvez convertir les schémas XDR annotés existants en schémas XSD. Pour plus d’informations, consultez [conversion de schémas XDR annotés à des schémas XSD équivalents &#40;SQLXML 4.0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Pour plus d’informations sur les schémas XDR déconseillés, consultez le [documentation SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  

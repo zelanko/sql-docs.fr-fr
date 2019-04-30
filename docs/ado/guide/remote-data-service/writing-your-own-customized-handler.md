@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155915"
 ---
 # <a name="writing-your-own-customized-handler"></a>Écriture d’un gestionnaire personnalisé
 Vous souhaiterez écrire votre propre gestionnaire si vous êtes un administrateur de serveur IIS qui souhaite que la valeur par défaut prennent en charge des services Bureau à distance, mais plus de contrôle sur les demandes des utilisateurs et droits d’accès.  

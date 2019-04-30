@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 624dfeeec691aeacecdc71f0b68d4ba0684f1567
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131064"
 ---
 # <a name="detach-database-id-32767"></a>Détacher l'ID de base de données 32767
   Le Conseiller de mise à niveau a détecté une base de données avec l'identificateur 32767. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, cet ID de base de données est réservé. Détachez cette base de données avant la mise à niveau. Vous pouvez attacher la base de données après la mise à niveau.  

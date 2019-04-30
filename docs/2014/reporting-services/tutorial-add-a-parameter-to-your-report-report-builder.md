@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151556"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à votre rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports)
   Ajoutez un paramètre à votre rapport pour permettre aux utilisateurs de filtrer les données de rapport à partir de la source de données ou dans le rapport. Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,7 +55,7 @@ ms.locfileid: "59966515"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 25 minutes.  
   

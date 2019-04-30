@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164056"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Exploration du modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
-  Maintenant que vous avez créé le **Sequence Clustering avec Region** modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de Clustering de séquence dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. La visionneuse de l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering) contient cinq onglets : **Diagramme de cluster**, **profils du Cluster**, **caractéristiques du Cluster**, **ClusterDiscrimination**, et **deTransitionsd’état**. Pour plus d’informations sur l’utilisation de cette visionneuse, consultez [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+  Maintenant que vous avez créé le **Sequence Clustering avec Region** modèle, vous pouvez le parcourir à l’aide de la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse de Clustering de séquence dans le **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] msc contient cinq onglets : **Diagramme de cluster**, **profils du Cluster**, **caractéristiques du Cluster**, **ClusterDiscrimination**, et **deTransitionsd’état**. Pour plus d’informations sur l’utilisation de cette visionneuse, consultez [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
 -   [Onglet Diagramme de cluster](#bkmk_CDiagram)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "56024994"
   
 4.  Une ligne de transition contient la Transition de texte dans le **Variables** colonne et une combinaison des valeurs d’attribut séquentielles dans le **valeur** colonne. La séquence peut contenir également des points de départ et des valeurs manquantes.  
   
-     Par exemple, supposez que la transition a la valeur, [Start] -> Road Tire Tube. Cela signifie que les clients dans ce cluster ont fréquemment mis en premier l'élément Road Tire Tube dans leur panier. Cela peut signifier que le produit est un article populaire que les clients recherchent en premier, ou cela peut indiquer uniquement que le produit est facile à localiser sur le site d'achat.  
+     Par exemple, supposons que la transition a la valeur, [Start] -> Road Tire Tube. Cela signifie que les clients dans ce cluster ont fréquemment mis en premier l'élément Road Tire Tube dans leur panier. Cela peut signifier que le produit est un article populaire que les clients recherchent en premier, ou cela peut indiquer uniquement que le produit est facile à localiser sur le site d'achat.  
   
 5.  Faites défiler la liste jusqu'à ce que vous trouviez la première transition qui n’a pas **[Start]** ou **manquant** qu’il contient.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56024994"
   
 8.  Cliquez sur le nœud pour Touring Tire et ramenez le contrôle Slider à la position centrale.  
   
-     En premier lieu, il y a de nombreuses lignes de transition qui connectent Touring Tire à d'autres produits, mais lorsque vous élevez le seuil de probabilité, les transitions moins probables sont éliminées du graphique, ce qui laisse simplement la transition, Touring Tire > Touring Tire Tube. Cette transition signifie que si un client ajoute un élément Touring Tire (pneu de vélo) dans son panier, la probabilité qu'il ajoute ensuite un élément Touring Tire Tube (chambre à air de vélo) est forte.  
+     Dans un premier temps, il existe de nombreuses lignes de transition qui connectent Touring Tire à d’autres produits, mais lorsque vous augmentez le seuil de probabilité, les transitions moins probables sont éliminées du graphique, en laissant simplement la transition, Touring Tire > Touring Tire Tube. Cette transition signifie que si un client ajoute un élément Touring Tire (pneu de vélo) dans son panier, la probabilité qu'il ajoute ensuite un élément Touring Tire Tube (chambre à air de vélo) est forte.  
   
  [Retour au début](#bkmk_CDiagram)  
   

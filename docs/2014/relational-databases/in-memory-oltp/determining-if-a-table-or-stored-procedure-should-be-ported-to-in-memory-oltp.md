@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072370"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
   Le collecteur de performances de transaction dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] vous aide à vous évaluez si l’OLTP en mémoire améliore les performances de votre application de base de données. Le rapport d'analyse des performances de transaction indique également le volume de travail nécessaire pour activer l'OLTP en mémoire dans votre application. Après avoir identifié une table sur disque pour la fonctionnalité OLTP en mémoire, utilisez le [Conseiller d’optimisation de la mémoire](memory-optimization-advisor.md)pour migrer la table. De même, le [Conseiller de compilation native](native-compilation-advisor.md) vous aide à déplacer une procédure stockée vers une procédure stockée compilée en mode natif.  

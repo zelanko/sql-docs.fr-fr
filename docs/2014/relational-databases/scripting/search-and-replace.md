@@ -30,14 +30,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299cb79646ff7d0955ca25343fbe2a7d9c0b1140
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135143"
 ---
 # <a name="search-and-replace"></a>Recherche et remplacement
-  Il existe plusieurs méthodes différentes pour rechercher et remplacer du texte. Dans le menu **Edition** , la commande **Rechercher et remplacer** propose quatre options : **Recherche rapide**, **Remplacement rapide**, **Rechercher dans les fichiers**ou **Remplacer dans les fichiers**. Chaque option ouvre une version de la boîte de dialogue **Rechercher et remplacer** . Vous pouvez également effectuer une recherche sans l'aide de l'une de ces boîtes de dialogue. Pour ce faire, il vous suffit d'utiliser les touches de raccourci clavier de la recherche incrémentielle. Ces techniques vous permettent de contrôler la portée de l'opération de recherche et de remplacement et de choisir la méthode de révision des occurrences trouvées et des remplacements.  
+  Il existe plusieurs méthodes différentes pour rechercher et remplacer du texte. Sur le **modifier** menu, **rechercher et remplacer** propose quatre options : **Recherche rapide**, **remplacement rapide**, **rechercher dans les fichiers**, ou **remplacer dans les fichiers**. Chaque option ouvre une version de la boîte de dialogue **Rechercher et remplacer** . Vous pouvez également effectuer une recherche sans l'aide de l'une de ces boîtes de dialogue. Pour ce faire, il vous suffit d'utiliser les touches de raccourci clavier de la recherche incrémentielle. Ces techniques vous permettent de contrôler la portée de l'opération de recherche et de remplacement et de choisir la méthode de révision des occurrences trouvées et des remplacements.  
   
  Tenez compte des informations suivantes lorsque vous recherchez et remplacez du texte :  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164309"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exporter un rapport dans un autre type de fichier (Générateur de rapports et SSRS)
   Vous pouvez effectuer le rendu d'un rapport dans un autre format de fichier, tel que CSV, Image, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]ou [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)], en affichant un aperçu de votre rapport dans le Générateur de rapports ou le Concepteur de rapports, ou vous pouvez effectuer le rendu du rapport en visualisant le rapport sur le serveur de rapports. Le rendu du rapport dans un format spécifique est utile lorsque vous souhaitez enregistrer immédiatement le rapport dans un autre type de fichier sans le publier sur le serveur de rapports ou lorsque vous souhaitez voir l'aspect de votre conception de rapport une fois remis aux lecteurs du rapport dans un format spécifique. Le rendu du rapport sur le serveur de rapports est utile lorsque vous définissez des abonnements ou remettez vos rapports via messagerie électronique, ou si vous souhaitez enregistrer un rapport qui est disponible sur le serveur de rapports. Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

@@ -12,18 +12,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144671"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets au moyen de l' **Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.  
   
-1.  **Choisissez une méthode :**  [Assistant Générer et publier des scripts](#GenPubScriptWiz), [Menu Script en tant que de l'Explorateur d'objets](#OEScriptAsMenu)  
+1.  **Choisissez une méthode :**  [Générer et publier des Scripts](#GenPubScriptWiz), [Script Explorer en tant que Menu d’objet](#OEScriptAsMenu)  
   
-2.  **Pour utiliser le menu Script en tant que :**  [Générer un script d'un objet unique](#ScriptSingleObject), [Générer un script de deux objets à l'aide de l'Explorateur d'objets](#ScriptTwoObjectsOE), [Générer un script de deux objets à l'aide de la page Détails de l'Explorateur d'objets](#ScriptTwoObjectsOED)  
+2.  **Pour utiliser le menu Script en tant que :**  [Un seul objet de script](#ScriptSingleObject), [deux objets à l’aide de l’Explorateur d’objets de Script](#ScriptTwoObjectsOE), [deux objets à l’aide des détails de l’Explorateur d’objets de Script](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Choisissez le mécanisme qui correspond le mieux à vos besoins.  

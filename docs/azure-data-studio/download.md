@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180527"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -106,7 +106,7 @@ Le *programme d’installation de l’utilisateur* est recommandée, car il ne n
    > Sur Debian, Red Hat et Ubuntu, vous pouvez avoir des dépendances manquantes. Utilisez les commandes suivantes pour installer ces dépendances selon votre version de Linux :
    
 
-   **Debian :** 
+   **Debian :** 
    ```bash
    sudo apt-get install libunwind8
    ```

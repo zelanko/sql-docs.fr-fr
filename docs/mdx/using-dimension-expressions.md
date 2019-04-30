@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Expressions de Dimension | Documents Microsoft
+title: À l’aide d’Expressions de Dimension | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5e26d56a52c8c922c43325bd2267fa623dc0e19
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125530"
 ---
 # <a name="using-dimension-expressions"></a>Utilisation d'expressions de dimension
 

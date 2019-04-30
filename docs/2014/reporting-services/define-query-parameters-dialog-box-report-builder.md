@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164759"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Boîte de dialogue Définir les paramètres de la requête (Générateur de rapports)
   Utilisez la boîte de dialogue **Définir les paramètres de la requête** pour spécifier des valeurs de paramètre lorsque vous exécutez une requête dans un concepteur de requêtes au moment du design afin de visualiser des exemples de données. Les paramètres de requête filtrent les données de la source et permettent de limiter la quantité de données traitées par un rapport. Ces valeurs ne sont pas enregistrées dans la définition de rapport.  

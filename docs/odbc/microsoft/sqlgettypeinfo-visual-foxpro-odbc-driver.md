@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181416"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (pilote ODBC Visual FoxPro)
 > [!NOTE]  
 >  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Prise en charge : Complète  
   
  Conformité d’API ODBC : Niveau 1  
   
@@ -36,7 +36,7 @@ ms.locfileid: "47733057"
 |SQL_BIT|Logical|  
 |SQL_CHAR|Caractère|  
 |SQL_DATE|Date|  
-|SQL_DECIMAL|Numérique|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
 |SQL_INTEGER|Entier|  
@@ -46,7 +46,7 @@ ms.locfileid: "47733057"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Entier|  
 |SQL_TIME|Non pris en charge. Il n’existe aucun Visual FoxPro *temps* type.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|Datetime|  
 |SQL_TINYINT|Entier|  
 |SQL_VARBINARY|Mémo (binaire) *, général|  
 |SQL_VARCHAR|Caractère|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206503"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport (Générateur de rapports et SSRS)
   Cette rubrique décrit les propriétés pour une région de données de tableau matriciel qui permettent de modifier la façon dont une région de données de tableau matriciel s'affiche dans un rapport.  

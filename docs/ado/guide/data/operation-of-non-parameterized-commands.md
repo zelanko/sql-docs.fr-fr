@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884ef4e72b975de0eb9dd92e80ec3ce0d513546b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187793"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Fonctionnement des commandes non paramétrées
 Pour les commandes non paramétrées, toutes les commandes fournisseur sont exécutées et la **Recordsets** sont créés pendant l’exécution de la commande. Si la commande est exécutée de façon synchrone, toutes les **Recordsets** est alimenté. Si un mode de remplissage asynchrone a été sélectionné, le degré de remplissage de la **Recordsets** varient selon le mode de remplissage et la taille de la **Recordsets**.  

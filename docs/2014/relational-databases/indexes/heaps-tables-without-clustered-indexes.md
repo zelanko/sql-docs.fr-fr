@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162150"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Segments (tables sans index cluster)
-  Un segment est une table sans index cluster. Un ou plusieurs index non cluster peuvent être créés sur des tables stockées comme segment. Les données sont stockées dans le segment sans spécifier d'ordre. Généralement, les données sont stockées initialement dans l'ordre dans lequel les lignes sont insérées dans la table, mais le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut déplacer des données dans le segment pour stocker les lignes efficacement ; l'ordre des données ne peut donc pas être prédit. Pour garantir l’ordre des lignes retournées à partir d’un segment de mémoire, vous devez utiliser le `ORDER BY` clause. Pour spécifier l'ordre de stockage des lignes, créez un index cluster sur la table, de sorte que la table ne soit pas un segment.  
+  Un segment est une table sans index cluster. Un ou plusieurs index non cluster peuvent être créés sur des tables stockées comme segment. Les données sont stockées dans le segment sans spécifier d'ordre. Généralement, les données sont stockées initialement dans l'ordre dans lequel les lignes sont insérées dans la table, mais le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut déplacer des données dans le segment pour stocker les lignes efficacement ; l'ordre des données ne peut donc pas être prédit. Pour garantir l'ordre des lignes retournées à partir d'un segment, vous devez utiliser la clause `ORDER BY`. Pour spécifier l'ordre de stockage des lignes, créez un index cluster sur la table, de sorte que la table ne soit pas un segment.  
   
 > [!NOTE]  
 >  Il existe parfois de bonnes raisons de conserver une table comme segment plutôt que de créer un index cluster, mais l'utilisation de segments est effectivement une compétence avancée. La plupart des tables doivent avoir un index cluster soigneusement choisi, à moins qu'il n'existe une bonne raison de conserver la table comme segment.  
@@ -54,6 +54,6 @@ ms.locfileid: "48098679"
   
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- [Description des index cluster et non cluster](clustered-and-nonclustered-indexes-described.md)  
+ [Description des index cluster et non-cluster](clustered-and-nonclustered-indexes-described.md)  
   
   

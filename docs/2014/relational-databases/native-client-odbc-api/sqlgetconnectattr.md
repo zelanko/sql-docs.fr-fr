@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128664"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client définit des attributs de connexion spécifiques au pilote. Certains des attributs sont disponibles pour `SQLGetConnectAttr`, et la fonction est utilisée pour indiquer leurs paramètres actuels. Les valeurs indiquées pour ces attributs ne sont pas garanties tant qu'une connexion n'a pas été établie ou que l'attribut n'a pas été défini à l'aide de [SQLSetConnectAttr](sqlsetconnectattr.md).  

@@ -1,5 +1,5 @@
 ---
-title: L’instruction DRILLTHROUGH (MDX) | Documents Microsoft
+title: L’instruction DRILLTHROUGH (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187659"
 ---
-# <a name="mdx-data-manipulation---drillthrough"></a>Manipulation de données MDX - d’extraction
+# <a name="mdx-data-manipulation---drillthrough"></a>Manipulation de données MDX - DRILLTHROUGH
 
 
   Extrait les lignes de la table sous-jacente qui ont été utilisées pour créer une cellule spécifiée dans un cube.  
@@ -48,9 +48,9 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
 > [!IMPORTANT]  
 >  La sécurité de l'extraction est basée sur les options de sécurité générales définies dans le cube. Si un utilisateur ne parvient pas à se procurer des données via MDX, l'extraction limite aussi l'utilisateur exactement de la même manière.  
   
- Une instruction MDX spécifie la cellule concernée. La valeur spécifiée par la **MAXROWS** argument indique le nombre maximal de lignes qui doivent être retournées par l’ensemble de lignes.  
+ Une instruction MDX spécifie la cellule concernée. La valeur spécifiée par le **MAXROWS** argument indique le nombre maximal de lignes qui doivent être retournées par l’ensemble de lignes obtenu.  
   
- Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous laissez **MAXROWS** n’est pas spécifié, vous obtiendrez 10 000 lignes au maximum. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MAXROWS** sur un nombre plus élevé, tel que `MAXROWS 20000`. Si elle est trop faible globalement, vous pouvez augmenter la valeur par défaut en modifiant le **OLAP\Query\DefaultDrillthroughMaxRows** propriété de serveur. Pour plus d’informations sur la modification de cette propriété, consultez [propriétés du serveur dans Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+ Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous laissez **MAXROWS** n’est pas spécifié, vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MAXROWS** sur un nombre plus élevé, tel que `MAXROWS 20000`. Si elle est trop faible globale, vous pouvez augmenter la valeur par défaut en modifiant le **OLAP\Query\DefaultDrillthroughMaxRows** propriété de serveur. Pour plus d’informations sur la modification de cette propriété, consultez [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. Le **retourner** clause est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par le **retourner** clause.  
   
@@ -98,6 +98,6 @@ RETURN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+ [Instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

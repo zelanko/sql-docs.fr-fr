@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8648a1702dfb54f8272adfb84f2ee0e916ed3dbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183900"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VB)
 Définition de la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriété **rien** doit fermer la connexion au catalogue. Regroupements associés sera vides. Tous les objets qui ont été créés à partir des objets de schéma dans le catalogue sont orphelins. Toutes les propriétés sur les objets qui ont été mis en cache seront toujours disponibles, mais une tentative de lecture des propriétés qui nécessite un appel au fournisseur échouera.  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164910"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports
   Pour inclure des données dans un rapport, vous devez créer des connexions de données et des datasets. Une connexion de données inclut les informations nécessaires pour accéder à une source de données externe. Un dataset inclut une commande de requête qui spécifie les données à inclure à l'aide de la connexion de données.  

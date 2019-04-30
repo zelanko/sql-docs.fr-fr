@@ -1,5 +1,5 @@
 ---
-title: Commentaire (MDX) | Documents Microsoft
+title: Comment (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181572"
 ---
 # <a name="comment-mdx"></a>Commentaire (MDX)
 
@@ -54,7 +54,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
+ [&#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
  [-- &#40;Comment&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [Référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   

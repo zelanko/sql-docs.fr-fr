@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149193"
 ---
 # <a name="step-2-initialize-the-application"></a>Étape 2 : Initialiser l’application
 La deuxième étape consiste à initialiser l’application, comme indiqué dans l’illustration suivante. Exactement ce qui se fait ici varie en fonction de l’application.  

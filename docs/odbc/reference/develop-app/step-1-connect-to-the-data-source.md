@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Se connecter à la Source de données | Microsoft Docs'
+title: 'Étape 1 : Se connecter à la Source de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 154fdd7368835ba2a578d3ec641705c4064859ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149017"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>Étape 1 : Se connecter à la source de données
+# <a name="step-1-connect-to-the-data-source"></a>Étape 1 : Se connecter à la source de données
 La première étape dans n’importe quelle application consiste à se connecter à la source de données. Cette phase, y compris les fonctions qu’il requiert, est illustrée dans l’illustration suivante.  
   
  ![Connexion à la source de données dans une application ODBC](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  

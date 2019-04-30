@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137048"
 ---
 # <a name="extended-events-tools"></a>Outils associés aux événements étendus
   Vous pouvez utiliser les outils suivants pour créer et gérer des sessions d’événements étendus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -38,7 +38,7 @@ ms.locfileid: "52789982"
 ## <a name="ddl-statements"></a>Instructions DDL  
  Utilisez les instructions DDL suivantes pour créer, modifier et supprimer une session d'événements étendus.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|Crée un objet de session Événements étendus qui identifie la source des événements, les cibles de la session d'événements et les paramètres de la session d'événements.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|Démarre ou arrête une session d'événements, ou modifie la configuration d'une session d'événements.|  
@@ -61,7 +61,7 @@ ms.locfileid: "52789982"
 > [!NOTE]  
 >  Ces vues ne contiennent pas de données de session tant qu'une session n'a pas démarré.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|Retourne des informations sur les pools de répartiteurs de la session.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|Retourne une ligne pour chaque objet exposé par un package d'événement.|  
@@ -77,7 +77,7 @@ ms.locfileid: "52789982"
 ## <a name="system-tables"></a>Tables système  
  Utilisez les tables système suivantes pour obtenir les informations à propos des équivalents Événements étendus pour les classes d'événements Trace SQL et les colonnes.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Contient une ligne pour chaque événement Événements étendus mappé à une classe d'événements Trace SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL.|  

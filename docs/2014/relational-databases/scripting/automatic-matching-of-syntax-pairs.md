@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209422"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Correspondance automatique des paires de syntaxe
   La correspondance automatique des paires de syntaxe vous informe immédiatement si les éléments syntaxiques qui doivent être codés par paire sont correctement assortis. Cette correspondance est connue comme correspondance des séparateurs dans l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , correspondance des accolades dans l’éditeur de requête XMLA Analysis Services et correspondance des parenthèses dans les éditeurs MDX et DMX.  
@@ -70,6 +70,6 @@ ms.locfileid: "49085115"
 -   Ouverture et fermeture des guillemets sur les attributs.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Correspondance des parenthèses de l'éditeur MDX et DMX  
- L’expression multidimensionnelle (MDX) et les éditeurs d’Expressions DMX (Data Mining) automatiquement en correspondance des paires de parenthèses dans les fonctions.  
+ Les éditeurs MDX (Multi-Dimensional Expressions) et DMX (Data Mining Expressions) font correspondre automatiquement les paires de parenthèses dans les fonctions.  
   
   

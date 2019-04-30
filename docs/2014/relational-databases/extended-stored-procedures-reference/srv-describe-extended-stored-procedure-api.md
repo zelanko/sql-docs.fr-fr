@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127330"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
     
@@ -112,7 +112,7 @@ srcdata
  Si le nom de colonne dans votre application est en Unicode, vous devez le convertir en page de codes multioctets du serveur avant d’appeler **srv_describe**. Pour plus d’informations, consultez [Données Unicode et pages de codes du serveur](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Voir aussi  
  [srv_sendrow &#40;API de procédure stockée étendue&#41;](srv-sendrow-extended-stored-procedure-api.md)   

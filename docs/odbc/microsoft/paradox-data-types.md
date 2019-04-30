@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208414"
 ---
 # <a name="paradox-data-types"></a>Types de données Paradox
 Le pilote ODBC Paradox mappe les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et montre le SQL ODBC qu’ils sont mappés à des types de données.  
@@ -31,19 +31,19 @@ Le pilote ODBC Paradox mappe les types de données Paradox aux types de données
 |Type de données Paradox|Type de données ODBC|  
 |-----------------------|--------------------|  
 |ALPHANUMÉRIQUE|SQL_VARCHAR|  
-|AUTOINCREMENT [1]|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
-|OCTETS [1]|SQL_BINARY|  
+|AUTOINCREMENT[1]|SQL_INTEGER|  
+|BCD[1]|SQL_DOUBLE|  
+|BYTES[1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE [2]|SQL_LONGVARBINARY|  
 |LOGIQUE [1]|SQL_BIT|  
 |LONG [1]|SQL_INTEGER|  
-|MÉMO [2]|SQL_LONGVARCHAR|  
+|MEMO[2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |COURT|SQL_SMALLINT|  
-|HEURE [1]|SQL_TIMESTAMP|  
-|HORODATAGE [1]|SQL_TIMESTAMP|  
+|TIME[1]|SQL_TIMESTAMP|  
+|TIMESTAMP[1]|SQL_TIMESTAMP|  
   
  Valide [1] uniquement pour les versions de Paradox 5. *x*.  
   

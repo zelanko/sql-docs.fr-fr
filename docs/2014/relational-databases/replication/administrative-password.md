@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186955"
 ---
 # <a name="administrative-password"></a>Mot de passe d'administration
   Si, dans la page **Serveurs de distribution** de cet Assistant, vous avez sélectionné un serveur de distribution distant pour ce serveur de publication, vous devez entrer un mot de passe de façon à effectuer la réplication de connexion entre les serveurs de publication et de distribution en utilisant le nom de connexion **distributor_admin** . Le mot de passe doit correspondre à celui spécifié dans la page **Mot de passe du serveur de distribution** de l'Assistant Configuration de la distribution de la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** .  

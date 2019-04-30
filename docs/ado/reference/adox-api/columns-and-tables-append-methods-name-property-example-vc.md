@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cadebd87f664f603a94532531432446c015039d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183949"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Append, méthode des collections Columns et Tables, Name (exemple de propriété) (VC++)
 Le code suivant montre comment créer une nouvelle table.  

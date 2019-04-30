@@ -1,5 +1,5 @@
 ---
-title: 'Résultats d’une jointure la mise à jour : Unique Table | Microsoft Docs'
+title: 'Mise à jour des résultats d’une jointure : Table unique | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a01c9dd672193a91c494ccdf098375e9a64d5b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184976"
 ---
 # <a name="updating-joined-results-unique-table"></a>Mise à jour des résultats d’une jointure : table unique
 ADO permet un contrôle précis des modifications apportées à une table de base de données dans un jeu d’enregistrements qui a été formé par une opération de jointure sur plusieurs tables de base à l’aide de la propriété dynamique Unique Table. Pour plus d’informations sur l’utilisation de Table Unique, consultez les rubriques de référence du programmeur ADO sur les propriétés dynamiques Unique Table et la resynchronisation de la mise à jour.  

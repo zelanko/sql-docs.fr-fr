@@ -1,5 +1,5 @@
 ---
-title: FirstChild (MDX) | Documents Microsoft
+title: FirstChild (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed769da991c54b4ae7bc85091a652a27f5399a73
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155185"
 ---
 # <a name="firstchild-mdx"></a>FirstChild (MDX)
 
@@ -29,7 +29,7 @@ Member_Expression.FirstChild
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
 ### <a name="example"></a>Exemple  
@@ -42,6 +42,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [LastChild &#40;MDX&#41;](../mdx/lastchild-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

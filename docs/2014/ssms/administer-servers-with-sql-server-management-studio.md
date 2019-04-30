@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d57657d47f28dc0502b83375f563fa9df737831
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206820"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Administrer des serveurs à l'aide de SQL Server Management Studio
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est un client d’administration intégré complet, conçu pour répondre à la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exigences de gestion de l’administrateur serveur. Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], les tâches d'administration sont effectuées à l'aide de l'Explorateur d'objets qui vous permet de vous connecter à n'importe quel serveur de la famille des produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Un serveur peut être une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)], d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou d'[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

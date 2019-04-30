@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216224"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Référence aux fonctions d'agrégation (Générateur de rapports et SSRS)
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  

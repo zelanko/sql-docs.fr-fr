@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d394dea5af4f2602918dc4b85b21e0cc4704eaba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200658"
 ---
 # <a name="parameterized-query-limitations"></a>Limitations des requêtes paramétrées
-Lorsque le pilote Microsoft Access est utilisé, une requête paramétrable peut être appelée à l’aide de la syntaxe suivante : appelez *nom de la requête* [(*paramètre*[,*paramètre*]...)].
+Lorsque le pilote Microsoft Access est utilisé, une requête paramétrable peut être appelée à l’aide de la syntaxe suivante : Appelez *nom de la requête* [(*paramètre*[,*paramètre*]...)].

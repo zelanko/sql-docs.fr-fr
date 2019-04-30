@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63075250"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Attribuer la propriété d’un travail à d’autres utilisateurs
   Cette rubrique explique comment réattribuer la propriété de travaux  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à un autre utilisateur.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#Restrictions), [sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
 -   **Pour attribuer la propriété d'un travail à d'autres utilisateurs, utilisez :**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52800231"
 > [!NOTE]  
 >  Si vous transférez la propriété d’un travail à un utilisateur qui n’est pas membre du rôle serveur fixe **sysadmin** et que ce travail exécute des étapes qui nécessitent des comptes proxy (par exemple l’exécution de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), vérifiez que l’utilisateur en question a accès à ce compte proxy, sinon le travail échouera.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProc2"></a> Utilisation de SQL Server Management Studio  

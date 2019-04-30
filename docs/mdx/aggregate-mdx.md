@@ -1,5 +1,5 @@
 ---
-title: Aggregate (MDX) | Documents Microsoft
+title: Aggregate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200627"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -32,18 +32,18 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
  Si un jeu de tuples vides ou un jeu vide est spécifié, cette fonction retourne une valeur vide.  
   
- Le tableau suivant décrit comment la **d’agrégation** fonction se comporte avec différentes fonctions d’agrégation.  
+ Le tableau suivant décrit comment la **agrégation** fonction se comporte avec différentes fonctions d’agrégation.  
   
-|Opérateur d'agrégation|Résultats|  
+|Opérateur d'agrégation|Résultat|  
 |--------------------------|------------|  
-|SUM|Retourne la somme des valeurs dans le jeu.|  
-|Compter|Retourne le nombre de valeurs dans le jeu.|  
+|Sum|Retourne la somme des valeurs dans le jeu.|  
+|Count|Retourne le nombre de valeurs dans le jeu.|  
 |Max|Retourne la valeur maximale dans le jeu.|  
 |Min|Retourne la valeur minimale dans le jeu.|  
 |Fonctions d'agrégation semi-additives|Retourne le calcul du comportement semi-additif dans le jeu après projection de la forme sur l'axe temporel.|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Attributions|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui sont contenus dans le `Date` dimension, à partir de la **Adventure Works** cube.  
+ L’exemple suivant retourne la somme de la `Measures.[Order Quantity]` membre, agrégé sur les huit premiers mois de l’année civile 2003 qui figurent dans le `Date` dimension, à partir de la **Adventure Works** cube.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -124,14 +124,14 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>Voir aussi  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Enfants &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Nombre &#40;définir&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filtre &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Propriétés &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

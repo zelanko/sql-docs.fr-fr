@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140367"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString, propriété (ADO)
 Indique les informations utilisées pour établir une connexion à une source de données.  
@@ -36,11 +36,11 @@ Indique les informations utilisées pour établir une connexion à une source de
   
 |Argument|Description|  
 |--------------|-----------------|  
-|*Fournisseur =*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
+|*Provider=*|Spécifie le nom d’un fournisseur à utiliser pour la connexion.|  
 |*Nom du fichier =*|Spécifie le nom d’un fichier spécifique au fournisseur (par exemple, un objet de source de données persistantes) contenant des informations de connexion prédéfinies.|  
 |*Fournisseur distant =*|Spécifie le nom d’un fournisseur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
 |*Serveur distant =*|Spécifie le nom de chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
-|*URL =*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, comme un fichier ou répertoire.|  
+|*URL=*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, comme un fichier ou répertoire.|  
   
  Après avoir défini le **ConnectionString** propriété et ouvrez le [connexion](../../../ado/reference/ado-api/connection-object-ado.md) de l’objet, le fournisseur peut modifier le contenu de la propriété, par exemple, en mappant les noms d’arguments définis par ADO à leur équivalents pour le fournisseur spécifique.  
   
@@ -68,4 +68,4 @@ Indique les informations utilisées pour établir une connexion à une source de
 ## <a name="see-also"></a>Voir aussi  
  [ConnectionString, ConnectionTimeout et les propriétés State, exemple (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString, ConnectionTimeout et les propriétés State, exemple (VC ++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

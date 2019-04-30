@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132718"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx, fonction
 **Conformité**  
@@ -68,7 +68,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [Sortie] Nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans *lpszPathOut*. Si le nombre d’octets à retourner est supérieur ou égal à *cbPathOutMax*, le chemin de sortie dans *lpszPathOut* est tronqué à *cbPathOutMax* moins le caractère du caractère nul de terminaison. Le *pcbPathOut* argument peut être un pointeur null.  
   
- *fréquents*  
+ *fRequest*  
  [Entrée] Type de requête. Le *fréquents* argument doit contenir l’une des valeurs suivantes :  
   
  ODBC_INSTALL_INQUIRY : Savoir où un pilote peut être installé.  
@@ -102,7 +102,7 @@ BOOL SQLInstallDriverEx(
   
  _pilote-desc_ **\\**0Driver**=**_pilote-DLL-filename_ **\\**0 [le programme d’installation**=**_le programme d’installation-DLL-filename_<b>\\</b>0]  
   
- [_pilote-attr-mot-Clé1_**=**_value1_<b>\\</b>0] [_pilote-attr-MotClé2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  où \0 est un octet null et *pilote-attr-keywordn* est n’importe quel attribut de pilote mot clé. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers de texte mis en forme possède de pilote séparé et le programme d’installation DLL et pouvez utiliser des fichiers avec les extensions .txt et .csv. Le *lpszDriver* argument pour ce pilote peut être comme suit :  
   

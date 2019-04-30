@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161583"
 ---
 # <a name="more-about-recordset-persistence"></a>En savoir plus sur la persistance des recordsets
 Prend en charge de l’objet ADO Recordset stockant le contenu d’un **Recordset** objet dans un fichier à l’aide de son [enregistrer](../../../ado/reference/ado-api/save-method.md) (méthode). Le fichier stocké de façon permanente peut-être exister sur un ordinateur local du lecteur, serveur, ou en tant qu’URL sur un serveur Web de site. Plus tard, le fichier peut être restauré avec une le [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode de la **Recordset** objet ou le [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) méthode de la [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  

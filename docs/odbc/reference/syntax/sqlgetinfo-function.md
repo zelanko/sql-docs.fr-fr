@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132707"
 ---
 # <a name="sqlgetinfo-function"></a>Fonction SQLGetInfo
 **Conformité**  
@@ -47,10 +47,10 @@ SQLRETURN SQLGetInfo(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Handle de connexion*  
+ *ConnectionHandle*  
  [Entrée] Handle de connexion.  
   
- *infoType*  
+ *InfoType*  
  [Entrée] Type d’informations.  
   
  *InfoValuePtr*  
@@ -350,23 +350,23 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-type-descriptions"></a>Descriptions de types d’informations  
  Le tableau suivant répertorie par ordre alphabétique de chaque type d’information, la version d’ODBC dans lequel il a été introduit et sa description.  
   
- SQL_ACCESSIBLE_PROCEDURES ODBC (1.0)  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si l’utilisateur peut exécuter toutes les procédures retournées par **SQLProcedures**; « N » s’il peut y avoir des procédures retournées que l’utilisateur ne peut pas exécuter.  
   
- SQL_ACCESSIBLE_TABLES ODBC (1.0)  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si l’utilisateur est assuré **sélectionnez** des privilèges à toutes les tables retournées par **SQLTables**; « N » s’il peut y avoir des tables retournée que l’utilisateur ne peut pas accéder.  
   
- SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal d’environnements actifs que le pilote peut prendre en charge. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  Un masque de bits SQLUINTEGER l’énumération prise en charge des fonctions d’agrégation :  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  Un pilote de conforme à niveau d’entrée SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ALTER DOMAIN** instruction, comme défini dans SQL-92, pris en charge par la source de données. Un pilote de niveau compatible SQL-92 Full retournera toujours tous les masques de bits. Une valeur de retour de « 0 » signifie que le **ALTER DOMAIN** instruction n’est pas prise en charge.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -387,7 +387,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AD_ADD_CONSTRAINT_DEFERRABLE (niveau complet) SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (niveau complet) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED (niveau complet) SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (niveau complet)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ALTER TABLE** instruction pris en charge par la source de données.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -429,7 +429,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_ASYNC_DBC_NOT_CAPABLE = le pilote ne peut pas exécuter les fonctions de connexion de façon asynchrone.  
   
- SQL_ASYNC_MODE (ODBC 3.0)  
+ SQL_ASYNC_MODE(ODBC 3.0)  
  Une valeur SQLUINTEGER qui indique le niveau de prise en charge asynchrone dans le pilote :  
   
  SQL_AM_CONNECTION = connexion d’exécution asynchrone au niveau est pris en charge. Tous les descripteurs d’instruction associées à un handle de connexion donné sont en mode asynchrone ou toutes sont en mode synchrone. Un descripteur d’instruction sur une connexion ne peut pas être en mode asynchrone alors que le handle d’une autre instruction sur la même connexion est en mode synchrone et vice versa.  
@@ -467,7 +467,7 @@ SQLRETURN SQLGetInfo(
   
  Sql_bs_select_explicit = les pilote prend en charge explicite des procédures qui peuvent avoir des instructions de génération de nombre de lignes.  
   
- SQL_BOOKMARK_PERSISTENCE (ODBC 2.0)  
+ SQL_BOOKMARK_PERSISTENCE(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les opérations par le biais duquel les signets persistent.  
   
  Les masques de bits suivantes permettent de déterminer par le biais duquel les signets d’options persistent avec l’indicateur :  
@@ -484,7 +484,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BP_OTHER_HSTMT = un signet associé à une instruction peut être utilisée avec une autre instruction. À moins que SQL_BP_CLOSE ou SQL_BP_DROP est spécifié, le curseur sur la première instruction doit être ouvert.  
   
- SQL_CATALOG_LOCATION (ODBC 2.0)  
+ SQL_CATALOG_LOCATION(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui indique la position du catalogue dans un nom de table qualifié :  
   
  SQL_CL_STARTSQL_CL_END  
@@ -495,26 +495,26 @@ SQLRETURN SQLGetInfo(
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_QUALIFIER_LOCATION.  
   
- SQL_CATALOG_NAME (ODBC 3.0)  
+ SQL_CATALOG_NAME(ODBC 3.0)  
  Une chaîne de caractères : « Y » si le serveur prend en charge les noms de catalogues, ou « N » si elle n’est pas le cas.  
   
  Un pilote conforme à niveau complète de SQL-92 retourne toujours « Y ».  
   
- SQL_CATALOG_NAME_SEPARATOR ODBC (1.0)  
+ SQL_CATALOG_NAME_SEPARATOR(ODBC 1.0)  
  Une chaîne de caractères : l’ou les caractères qui définit de la source de données comme séparateur entre un nom de catalogue et de l’élément de nom qualifié qui suit ou précède.  
   
  Une chaîne vide est retournée si les catalogues ne sont pas pris en charge par la source de données. Pour déterminer si les catalogues sont pris en charge, une application appelle **SQLGetInfo** avec le type d’information SQL_CATALOG_NAME. Retourne toujours un pilote conforme à niveau complète de SQL-92 «. ».  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_QUALIFIER_NAME_SEPARATOR.  
   
- SQL_CATALOG_TERM ODBC (1.0)  
+ SQL_CATALOG_TERM(ODBC 1.0)  
  Une chaîne de caractères avec le nom du fournisseur de source de données pour un catalogue ; par exemple, « database » ou « directory ». Cette chaîne peut être dans le coin supérieur, inférieur ou les casses mixtes.  
   
  Une chaîne vide est retournée si les catalogues ne sont pas pris en charge par la source de données. Pour déterminer si les catalogues sont pris en charge, une application appelle **SQLGetInfo** avec le type d’information SQL_CATALOG_NAME. Retourne toujours un pilote conforme à niveau complète de SQL-92 « catalog ».  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_QUALIFIER_TERM.  
   
- SQL_CATALOG_USAGE (ODBC 2.0)  
+ SQL_CATALOG_USAGE(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les instructions dans lesquels les catalogues peuvent être utilisés.  
   
  Les masques de bits suivants sont utilisés pour déterminer où les catalogues peuvent être utilisés :  
@@ -533,15 +533,15 @@ SQLRETURN SQLGetInfo(
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_QUALIFIER_USAGE.  
   
- SQL_COLLATION_SEQ (ODBC 3.0)  
+ SQL_COLLATION_SEQ(ODBC 3.0)  
  Le nom de la séquence de classement. Il s’agit d’une chaîne de caractères qui indique le nom du classement par défaut pour le caractère par défaut définie pour ce serveur (par exemple, « EBCDIC ou ISO 8859-1'). Si c’est inconnu, une chaîne vide est retournée. Un pilote conforme à niveau complète de SQL-92 retourne toujours une chaîne non vide.  
   
- SQL_COLUMN_ALIAS (ODBC 2.0)  
+ SQL_COLUMN_ALIAS(ODBC 2.0)  
  Une chaîne de caractères : « Y » si la source de données prend en charge les alias de colonne ; Sinon, « N ».  
   
  Un alias de colonne est un autre nom qui peut être spécifié pour une colonne dans la liste de sélection à l’aide d’une clause AS. Un pilote de conforme à niveau d’entrée SQL-92 retourne toujours « Y ».  
   
- SQL_CONCAT_NULL_BEHAVIOR ODBC (1.0)  
+ SQL_CONCAT_NULL_BEHAVIOR(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui indique la façon dont la source de données gère la concaténation de NULL à valeurs de colonnes de type de données de caractères avec des colonnes de type caractère à valeurs non NULL :  
   
  SQL_CB_NULL = résultat est la valeur NULL de la table.  
@@ -559,14 +559,14 @@ SQLRETURN SQLGetInfo(
   
  SQL_CVT_BIGINT (ODBC 1.0) SQL_CVT_BINARY (ODBC 1.0) SQL_CVT_BIT (ODBC 1.0) SQL_CVT_GUID (ODBC 3.5) SQL_CVT_CHAR (ODBC 1.0) SQL_CVT_DATE (ODBC 1.0) SQL_CVT_DECIMAL (ODBC 1.0) SQL_CVT_DOUBLE (ODBC 1.0) SQL_CVT_FLOAT (ODBC 1.0) SQL_CVT_INTEGER (ODBC 1.0) SQL SQL_CVT_ DE SQL_CVT_TIME (ODBC 1.0) _CVT_INTERVAL_YEAR_MONTH (ODBC 3.0) SQL_CVT_INTERVAL_DAY_TIME (ODBC 3.0) SQL_CVT_LONGVARBINARY (ODBC 1.0) SQL_CVT_LONGVARCHAR (ODBC 1.0) SQL_CVT_NUMERIC (ODBC 1.0) SQL_CVT_REAL ODBC 1.0) SQL_CVT_SMALLINT (ODBC 1.0) HORODATAGE (ODBC 1.0) SQL_CVT_TINYINT (ODBC 1.0) SQL_CVT_VARBINARY (ODBC 1.0) SQL_CVT_VARCHAR (ODBC 1.0)  
   
- SQL_CONVERT_FUNCTIONS ODBC (1.0)  
+ SQL_CONVERT_FUNCTIONS(ODBC 1.0)  
  Un masque de bits SQLUINTEGER énumérant les fonctions de conversion scalaires pris en charge par le pilote et de la source de données associée.  
   
  Le masque de bits suivant est utilisé pour déterminer les fonctions de conversion sont prises en charge :  
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME ODBC (1.0)  
+ SQL_CORRELATION_NAME(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui indique si les noms de corrélation de table sont pris en charge :  
   
  SQL_CN_NONE = la corrélation de noms ne sont pas pris en charge.  
@@ -577,7 +577,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournera toujours SQL_CN_ANY.  
   
- SQL_CREATE_ASSERTION (ODBC 3.0)  
+ SQL_CREATE_ASSERTION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ASSERTION créer** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -590,7 +590,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 toutes ces options retournera toujours pris en charge. Une valeur de retour de « 0 » signifie que le **ASSERTION créer** instruction n’est pas prise en charge.  
   
- SQL_CREATE_CHARACTER_SET (ODBC 3.0)  
+ SQL_CREATE_CHARACTER_SET(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **créer un jeu de caractères** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -599,7 +599,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 toutes ces options retournera toujours pris en charge. Une valeur de retour de « 0 » signifie que le **créer un jeu de caractères** instruction n’est pas prise en charge.  
   
- SQL_CREATE_COLLATION (ODBC 3.0)  
+ SQL_CREATE_COLLATION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **créer un classement** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -608,7 +608,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours cette option comme pris en charge. Une valeur de retour de « 0 » signifie que le **créer un classement** instruction n’est pas prise en charge.  
   
- SQL_CREATE_DOMAIN (ODBC 3.0)  
+ SQL_CREATE_DOMAIN(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **créer un domaine** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -621,11 +621,11 @@ SQLRETURN SQLGetInfo(
   
  Les bits suivants spécifient les attributs de contrainte pris en charge si la spécification de contraintes de domaine est pris en charge (SQL_CDO_DEFAULT est défini) :  
   
- SQL_CDO_CONSTRAINT_INITIALLY_DEFERRED (niveau complet) SQL_CDO_CONSTRAINT_INITIALLY_IMMEDIATE (niveau complet) SQL_CDO_CONSTRAINT_DEFERRABLE (niveau complet) SQL_CDO_CONSTRAINT_NON_DEFERRABLE (niveau complet)  
+ SQL_CDO_CONSTRAINT_INITIALLY_DEFERRED (Full level)SQL_CDO_CONSTRAINT_INITIALLY_IMMEDIATE (Full level)SQL_CDO_CONSTRAINT_DEFERRABLE (Full level)SQL_CDO_CONSTRAINT_NON_DEFERRABLE (Full level)  
   
  Une valeur de retour de « 0 » signifie que le **créer un domaine** instruction n’est pas prise en charge.  
   
- SQL_CREATE_SCHEMA (ODBC 3.0)  
+ SQL_CREATE_SCHEMA(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **CREATE SCHEMA** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -634,7 +634,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme de niveau intermédiaire SQL-92 retournera toujours les options SQL_CS_CREATE_SCHEMA et SQL_CS_AUTHORIZATION pris en charge. Ils doivent également être pris en charge le niveau d’entrée de SQL-92, mais pas nécessairement en tant qu’instructions SQL. Un pilote conforme à niveau complète de SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_CREATE_TABLE (ODBC 3.0)  
+ SQL_CREATE_TABLE(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **CREATE TABLE** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -659,7 +659,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CT_CONSTRAINT_INITIALLY_DEFERRED (niveau complet) SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (niveau complet) SQL_CT_CONSTRAINT_DEFERRABLE (niveau complet) SQL_CT_CONSTRAINT_NON_DEFERRABLE (niveau complet)  
   
- SQL_CREATE_TRANSLATION (ODBC 3.0)  
+ SQL_CREATE_TRANSLATION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **créer une traduction** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -668,7 +668,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours ces options pris en charge. Une valeur de retour de « 0 » signifie que le **créer une traduction** instruction n’est pas prise en charge.  
   
- SQL_CREATE_VIEW (ODBC 3.0)  
+ SQL_CREATE_VIEW(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **CREATE VIEW** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -681,7 +681,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_CURSOR_COMMIT_BEHAVIOR ODBC (1.0)  
+ SQL_CURSOR_COMMIT_BEHAVIOR(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui indique comment un **validation** opération affecte les curseurs et des instructions préparées dans la source de données (le comportement de la source de données lorsque vous validez une transaction).  
   
  La valeur de cet attribut reflète l’état actuel du paramètre suivant : SQL_COPT_SS_PRESERVE_CURSORS.  
@@ -692,7 +692,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CB_PRESERVE = conserver les curseurs dans la même position comme avant la **valider** opération. L’application peut continuer à extraire des données, ou il peut fermer le curseur et ré-exécutez l’instruction sans ré-préparation.  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR ODBC (1.0)  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui indique comment un **ROLLBACK** opération affecte les curseurs et des instructions préparées dans la source de données :  
   
  SQL_CB_DELETE = curseurs fermer et supprimer des instructions préparées. Pour utiliser le curseur là encore, l’application doit reprepare et redéfinir l’instruction.  
@@ -714,21 +714,21 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournent toujours l’option SQL_INSENSITIVE pris en charge.  
   
- SQL_DATA_SOURCE_NAME ODBC (1.0)  
+ SQL_DATA_SOURCE_NAME(ODBC 1.0)  
  Une chaîne de caractères avec le nom de source de données qui a été utilisé lors de la connexion. Si l’application a appelé **SQLConnect**, c’est la valeur de la *szDSN* argument. Si l’application a appelé **SQLDriverConnect** ou **SQLBrowseConnect**, c’est la valeur du mot clé DSN dans la chaîne de connexion transmise au pilote. Si la chaîne de connexion ne contenait pas la **DSN** mot clé (par exemple lorsqu’il ne contient le **pilote** mot clé), il s’agit d’une chaîne vide.  
   
- SQL_DATA_SOURCE_READ_ONLY ODBC (1.0)  
+ SQL_DATA_SOURCE_READ_ONLY(ODBC 1.0)  
  Une chaîne de caractères. « Y » si la source de données est définie en mode lecture seule, « N » s’il s’agit dans le cas contraire.  
   
  Cette caractéristique se rapporte uniquement à la source de données ; Il n’est pas une caractéristique du pilote qui permet d’accéder à la source de données. Un pilote qui est en lecture/écriture peut être utilisé avec une source de données est en lecture seule. Si un pilote est en lecture seule, toutes ses sources de données doivent être en lecture seule et doivent retourner SQL_DATA_SOURCE_READ_ONLY.  
   
- SQL_DATABASE_NAME ODBC (1.0)  
+ SQL_DATABASE_NAME(ODBC 1.0)  
  Un caractère de chaîne avec le nom de la base de données actuelle en cours d’utilisation, si la source de données définit un objet nommé appelé « database ».  
   
 > [!NOTE]
 >  Dans ODBC 3 *.x*, la valeur retournée pour ce *InfoType* peut également être retourné en appelant **SQLGetConnectAttr** avec un *attribut* argument de SQL_ATTR_CURRENT_CATALOG.  
   
- SQL_DATETIME_LITERALS (ODBC 3.0)  
+ SQL_DATETIME_LITERALS(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les littéraux de date/heure SQL-92 pris en charge par la source de données. Notez que ceux-ci sont les littéraux de date/heure répertoriés dans la spécification SQL-92 et sont séparés des clauses d’échappement de littéral de date/heure définis par ODBC. Pour plus d’informations sur les clauses d’échappement ODBC le littéral de date/heure, consultez [Date, Time et Timestamp littéraux](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
  Un pilote de niveau conforme FIPS transitoire retourne toujours la valeur « 1 » dans le masque de bits pour les bits contenus dans la liste suivante. Valeur « 0 » signifie que les littéraux de date/heure SQL-92 ne sont pas pris en charge.  
@@ -739,18 +739,18 @@ SQLRETURN SQLGetInfo(
   
  SQL_DL_SQL92_INTERVAL_DAY_TO_MINUTESQL_DL_SQL92_INTERVAL_DAY_TO_SECONDSQL_DL_SQL92_INTERVAL_HOUR_TO_MINUTESQL_DL_SQL92_INTERVAL_HOUR_TO_SECONDSQL_DL_SQL92_INTERVAL_MINUTE_TO_SECOND  
   
- SQL_DBMS_NAME ODBC (1.0)  
+ SQL_DBMS_NAME(ODBC 1.0)  
  Une chaîne de caractères avec le nom du produit SGBD accédé par le pilote.  
   
- SQL_DBMS_VER ODBC (1.0)  
+ SQL_DBMS_VER(ODBC 1.0)  
  Une chaîne de caractères qui indique la version du produit SGBD accédé par le pilote. La version est au format ##. ##. ###, où les deux premiers chiffres sont la version principale, les deux chiffres suivants à la version secondaire, et les quatre derniers chiffres sont la version release. Le pilote doit rendre la version du produit SGBD dans cet écran, mais peut également ajouter la version de produit spécifique de SGBD. Par exemple, « 04.01.0000 Rdb 4.1 ».  
   
- SQL_DDL_INDEX (ODBC 3.0)  
+ SQL_DDL_INDEX(ODBC 3.0)  
  Une valeur SQLUINTEGER qui indique la prise en charge pour la création et suppression d’index :  
   
  SQL_DI_CREATE_INDEXSQL_DI_DROP_INDEX  
   
- SQL_DEFAULT_TXN_ISOLATION ODBC (1.0)  
+ SQL_DEFAULT_TXN_ISOLATION(ODBC 1.0)  
  Une valeur SQLUINTEGER qui indique le niveau d’isolation de transaction par défaut pris en charge par la pilote ou source de données, ou zéro si la source de données ne prend pas en charge les transactions. Les termes suivants sont utilisés pour définir des niveaux d’isolation de transaction :  
   
  **Lecture erronée** 1 de la Transaction modifie une ligne. La transaction 2 lit la ligne modifiée avant que la transaction 1 valide la modification. Si la transaction 1 annule la modification, la transaction 2 ont lit une ligne qui est considéré comme n’ayant jamais existé.  
@@ -769,12 +769,12 @@ SQLRETURN SQLGetInfo(
   
  SQL_TXN_SERIALIZABLE = Transactions sont sérialisables. Les transactions Serializable n’autorisent pas les lectures incorrectes, des lectures non reproductibles ou des fantômes.  
   
- SQL_DESCRIBE_PARAMETER (ODBC 3.0)  
+ SQL_DESCRIBE_PARAMETER(ODBC 3.0)  
  Une chaîne de caractères : « Y » si les paramètres peuvent être décrits ; « N » dans le cas contraire.  
   
  Un pilote conforme à niveau complète de SQL-92 retourne généralement « Y », car il prendra en charge la **DÉCRIVENT une entrée** instruction. Étant donné que cela ne spécifie pas directement de la prise en charge SQL sous-jacent, toutefois, décrivant les paramètres ne peut pas être pris en charge, même dans un pilote conforme à niveau complète de SQL-92.  
   
- SQL_DM_VER (ODBC 3.0)  
+ SQL_DM_VER(ODBC 3.0)  
  Une chaîne de caractères avec la version du Gestionnaire de pilotes. La version est au format ##. ##. ###. ###, où :  
   
  Le premier jeu de deux chiffres est la version majeure de ODBC, comme indiqué par la constante SQL_SPEC_MAJOR.  
@@ -796,42 +796,42 @@ SQLRETURN SQLGetInfo(
   
  Un pilote n’a pas besoin d’implémenter SQL_DRIVER_AWARE_POOLING_SUPPORTED et le Gestionnaire de pilotes ne respecteront pas à la valeur de retour du pilote.  
   
- SQL_DRIVER_HDBCSQL_DRIVER_HENV ODBC (1.0)  
+ SQL_DRIVER_HDBCSQL_DRIVER_HENV(ODBC 1.0)  
  Une valeur SQLULEN du pilote handle d’environnement et/ou handle de connexion, déterminée par l’argument *InfoType*.  
   
  Ces types d’informations sont implémentées par le Gestionnaire de pilote uniquement.  
   
- SQL_DRIVER_HDESC (ODBC 3.0)  
+ SQL_DRIVER_HDESC(ODBC 3.0)  
  Handle de descripteur du pilote déterminé par le handle du descripteur du Gestionnaire de pilotes, qui doit être passée en entrée dans un SQLULEN valeur \* *InfoValuePtr* à partir de l’application. Dans ce cas, *InfoValuePtr* est un argument d’entrée et de sortie. Le handle de descripteur d’entrée transmis \* *InfoValuePtr* doit avoir été implicitement ou explicitement alloué sur le *ConnectionHandle*.  
   
  L’application doit faire une copie du descripteur du Gestionnaire de pilotes de gérer avant d’appeler **SQLGetInfo** avec ce type d’information, pour vous assurer que le handle n’est pas remplacé lors de la sortie.  
   
  Ce type d’information est implémenté par le Gestionnaire de pilote uniquement.  
   
- SQL_DRIVER_HLIB (ODBC 2.0)  
+ SQL_DRIVER_HLIB(ODBC 2.0)  
  Une valeur SQLULEN, le *hinst* à partir de la bibliothèque charge retourné pour le Gestionnaire de pilotes lorsqu’il chargé la DLL du pilote sur un système d’exploitation de Microsoft Windows, ou son équivalent sur un autre système d’exploitation. Le handle est valide uniquement pour le handle de connexion spécifié dans l’appel à **SQLGetInfo**.  
   
  Ce type d’information est implémenté par le Gestionnaire de pilote uniquement.  
   
- SQL_DRIVER_HSTMT ODBC (1.0)  
+ SQL_DRIVER_HSTMT(ODBC 1.0)  
  Descripteur d’instruction du pilote déterminé par le descripteur d’instruction de gestionnaire de pilotes, qui doit être passé en entrée dans un SQLULEN valeur \* *InfoValuePtr* à partir de l’application. Dans ce cas, *InfoValuePtr* est une entrée et un argument de sortie. Le descripteur d’instruction d’entrée transmis \* *InfoValuePtr* doit avoir été alloué sur l’argument *ConnectionHandle*.  
   
  L’application doit faire une copie de l’instruction du Gestionnaire de pilotes gérer avant d’appeler **SQLGetInfo** avec ce type d’information, pour vous assurer que le handle n’est pas remplacé lors de la sortie.  
   
  Ce type d’information est implémenté par le Gestionnaire de pilote uniquement.  
   
- SQL_DRIVER_NAME ODBC (1.0)  
+ SQL_DRIVER_NAME(ODBC 1.0)  
  Une chaîne de caractères avec le nom de fichier du pilote utilisé pour accéder à la source de données.  
   
- SQL_DRIVER_ODBC_VER (ODBC 2.0)  
+ SQL_DRIVER_ODBC_VER(ODBC 2.0)  
  Une chaîne de caractères avec la version d’ODBC qui prend en charge par le pilote. La version est au format ##. ##, où les deux premiers chiffres sont la version principale et les deux chiffres suivants à la version mineure. SQL_SPEC_MAJOR et SQL_SPEC_MINOR définissent les numéros de version majeure et mineure. Pour la version d’ODBC, décrit dans ce manuel, il s’agit de 0 et 3, et le pilote doit retourner « 03.00 ».  
   
  Le Gestionnaire de pilotes ODBC ne modifiera pas la valeur de retour de SQLGetInfo(SQL_DRIVER_ODBC_VER) pour assurer la compatibilité descendante pour les applications existantes. Le pilote spécifie quelle valeur à retourner. Toutefois, un pilote qui prend en charge l’extensibilité du type de données C doit retourner 3,8 (ou version ultérieure) lorsqu’une application appelle **SQLSetEnvAttr** à la valeur SQL_ATTR_ODBC_VERSION 3.8. Pour plus d’informations, consultez [des Types de données C dans ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
- SQL_DRIVER_VER ODBC (1.0)  
+ SQL_DRIVER_VER(ODBC 1.0)  
  Une chaîne de caractères avec la version du pilote et éventuellement une description du pilote. Au minimum, la version est au format ##. ##. ###, où les deux premiers chiffres sont la version principale, les deux chiffres suivants à la version secondaire, et les quatre derniers chiffres sont la version release.  
   
- SQL_DROP_ASSERTION (ODBC 3.0)  
+ SQL_DROP_ASSERTION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ASSERTION DROP** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -840,7 +840,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours cette option comme pris en charge.  
   
- SQL_DROP_CHARACTER_SET (ODBC 3.0)  
+ SQL_DROP_CHARACTER_SET(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **supprimer le jeu de caractères** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -849,7 +849,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours cette option comme pris en charge.  
   
- SQL_DROP_COLLATION (ODBC 3.0)  
+ SQL_DROP_COLLATION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **classement DROP** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -858,7 +858,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours cette option comme pris en charge.  
   
- SQL_DROP_DOMAIN (ODBC 3.0)  
+ SQL_DROP_DOMAIN(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **DROP DOMAIN** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -867,7 +867,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme de niveau intermédiaire SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_DROP_SCHEMA (ODBC 3.0)  
+ SQL_DROP_SCHEMA(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **DROP SCHEMA** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -876,7 +876,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme de niveau intermédiaire SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_DROP_TABLE (ODBC 3.0)  
+ SQL_DROP_TABLE(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **DROP TABLE** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -885,7 +885,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de niveau conforme FIPS transitoire retourne toujours toutes ces options de prise en charge.  
   
- SQL_DROP_TRANSLATION (ODBC 3.0)  
+ SQL_DROP_TRANSLATION(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **supprimer la traduction** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Le masque de bits suivant est utilisé pour déterminer les clauses sont prises en charge :  
@@ -894,7 +894,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote conforme à niveau complète de SQL-92 retournera toujours cette option comme pris en charge.  
   
- SQL_DROP_VIEW (ODBC 3.0)  
+ SQL_DROP_VIEW(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **DROP VIEW** instruction, comme défini dans SQL-92, pris en charge par la source de données.  
   
  Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :  
@@ -987,10 +987,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_CA2_SIMULATE_UNIQUE = le pilote garantit que simulated positionné mise à jour ou des instructions de suppression affecteront qu’une seule ligne lorsque le curseur se trouve un curseur dynamique. Si le pilote ne peut pas garantir cela pour une instruction donnée, **SQLExecDirect** ou **SQLPrepare** retourne SQLSTATE 01001 (conflit d’opération de curseur). Pour définir ce comportement, l’application appelle **SQLSetStmtAttr** avec la SQL_ATTR_SIMULATE_CURSOR attribut SQL_SC_UNIQUE.  
   
- SQL_EXPRESSIONS_IN_ORDERBY ODBC (1.0)  
+ SQL_EXPRESSIONS_IN_ORDERBY(ODBC 1.0)  
  Une chaîne de caractères : « Y » si la source de données prend en charge les expressions dans le **ORDER BY** liste ; « N » dans le cas contraire.  
   
- SQL_FILE_USAGE (ODBC 2.0)  
+ SQL_FILE_USAGE(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui indique la manière dont un pilote de niveau unique traite directement les fichiers dans une source de données :  
   
  SQL_FILE_NOT_SUPPORTED = le pilote n’est pas un pilote de niveau unique. Par exemple, un pilote ORACLE est un pilote à deux niveaux.  
@@ -1021,7 +1021,7 @@ SQLRETURN SQLGetInfo(
   
  Pour obtenir une description de ces masques de bits, consultez SQL_DYNAMIC_CURSOR_ATTRIBUTES2 (puis remplacez « curseur avant uniquement » pour « curseur dynamique » dans les descriptions).  
   
- SQL_GETDATA_EXTENSIONS (ODBC 2.0)  
+ SQL_GETDATA_EXTENSIONS(ODBC 2.0)  
  Un masque de bits SQLUINTEGER l’énumération des extensions à **SQLGetData**.  
   
  Les masques de bits suivants sont utilisés avec l’indicateur pour déterminer quelles extensions courantes, le pilote prend en charge pour **SQLGetData**:  
@@ -1040,22 +1040,22 @@ SQLRETURN SQLGetInfo(
   
  Si un pilote prend en charge des signets (soit de longueur fixe ou de longueur variable), il doit prendre en charge l’appel **SQLGetData** sur la colonne 0. Cette prise en charge est requis indépendamment de ce que le pilote retourne pour un appel à **SQLGetInfo** avec la SQL_GETDATA_EXTENSIONS *InfoType*.  
   
- SQL_GROUP_BY (ODBC 2.0)  
+ SQL_GROUP_BY(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie la relation entre les colonnes de la **GROUP BY** clause et les colonnes non regroupées en agrégats dans la liste de sélection :  
   
- SQL_GB_COLLATE = A **COLLATE** clause peut être spécifiée à la fin de chaque colonne de regroupement. ODBC (3.0)  
+ SQL_GB_COLLATE = A **COLLATE** clause peut être spécifiée à la fin de chaque colonne de regroupement. (ODBC 3.0)  
   
- SQL_GB_NOT_SUPPORTED = **GROUP BY** clauses ne sont pas prises en charge. ODBC (2.0)  
+ SQL_GB_NOT_SUPPORTED = **GROUP BY** clauses ne sont pas prises en charge. (ODBC 2.0)  
   
- SQL_GB_GROUP_BY_EQUALS_SELECT = le **GROUP BY** clause doit contenir toutes les colonnes non regroupées en agrégats dans la liste de sélection. Il ne peut pas contenir toutes les autres colonnes. Par exemple, **sélectionnez DEPT, MAX(SALARY) d’employé GROUP BY DEPT**. ODBC (2.0)  
+ SQL_GB_GROUP_BY_EQUALS_SELECT = le **GROUP BY** clause doit contenir toutes les colonnes non regroupées en agrégats dans la liste de sélection. Il ne peut pas contenir toutes les autres colonnes. Par exemple, **sélectionnez DEPT, MAX(SALARY) d’employé GROUP BY DEPT**. (ODBC 2.0)  
   
- SQL_GB_GROUP_BY_CONTAINS_SELECT = le **GROUP BY** clause doit contenir toutes les colonnes non regroupées en agrégats dans la liste de sélection. Il peut contenir des colonnes qui ne sont pas dans la liste de sélection. Par exemple, **sélectionnez DEPT, MAX(SALARY) d’employé GROUP BY DEPT, l’ancienneté**. ODBC (2.0)  
+ SQL_GB_GROUP_BY_CONTAINS_SELECT = le **GROUP BY** clause doit contenir toutes les colonnes non regroupées en agrégats dans la liste de sélection. Il peut contenir des colonnes qui ne sont pas dans la liste de sélection. Par exemple, **sélectionnez DEPT, MAX(SALARY) d’employé GROUP BY DEPT, l’ancienneté**. (ODBC 2.0)  
   
- SQL_GB_NO_RELATION = les colonnes dans le **GROUP BY** clause et la liste de sélection ne sont pas liées. La signification des colonnes nongrouped, non regroupées en agrégats dans la liste de sélection est dépend de la source de données. Par exemple, **sélectionnez DEPT, salaire d’employé GROUP BY DEPT, l’ancienneté**. ODBC (2.0)  
+ SQL_GB_NO_RELATION = les colonnes dans le **GROUP BY** clause et la liste de sélection ne sont pas liées. La signification des colonnes nongrouped, non regroupées en agrégats dans la liste de sélection est dépend de la source de données. Par exemple, **sélectionnez DEPT, salaire d’employé GROUP BY DEPT, l’ancienneté**. (ODBC 2.0)  
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournent toujours l’option SQL_GB_GROUP_BY_EQUALS_SELECT pris en charge. Un pilote conforme à niveau complète de SQL-92 retournent toujours l’option SQL_GB_COLLATE pris en charge. Si aucune option ne sont prise en charge, le **GROUP BY** clause n’est pas pris en charge par la source de données.  
   
- SQL_IDENTIFIER_CASE ODBC (1.0)  
+ SQL_IDENTIFIER_CASE(ODBC 1.0)  
  Un SQLUSMALLINT valeur comme suit :  
   
  SQL_IC_UPPER = identificateurs dans SQL ne respectent pas la casse et sont stockés en majuscules dans le catalogue système.  
@@ -1068,14 +1068,14 @@ SQLRETURN SQLGetInfo(
   
  Identificateurs dans SQL-92 ne respectent jamais la casse, un pilote qui respecte strictement SQL-92 (n’importe quel niveau) ne retourne jamais l’option sql_ic_sensitive en pris en charge.  
   
- SQL_IDENTIFIER_QUOTE_CHAR ODBC (1.0)  
+ SQL_IDENTIFIER_QUOTE_CHAR(ODBC 1.0)  
  La chaîne de caractères qui est utilisée comme délimiteur de début et de fin d’une entre guillemets (délimité) identificateur dans les instructions SQL. (Les identificateurs passés comme arguments aux fonctions ODBC n’ont pas à être mis entre guillemets.) Si la source de données ne prend pas en charge les identificateurs entre guillemets, une valeur vide est retournée.  
   
  Cette chaîne de caractères peut également être utilisée pour les arguments de fonction de catalogue lorsque l’attribut de connexion SQL_ATTR_METADATA_ID a la valeur SQL_TRUE.  
   
  Étant donné que le caractère de guillemet d’identificateur dans SQL-92 est le double guillemet («), un pilote compatible strictement à SQL-92 retourne toujours le caractère guillemet double.  
   
- SQL_INDEX_KEYWORDS (ODBC 3.0)  
+ SQL_INDEX_KEYWORDS(ODBC 3.0)  
  Un masque de bits SQLUINTEGER qui énumère les mots clés dans l’instruction CREATE INDEX qui sont pris en charge par le pilote :  
   
  SQL_IK_NONE = aucun des mots clés est pris en charge.  
@@ -1088,7 +1088,7 @@ SQLRETURN SQLGetInfo(
   
  Pour voir si l’instruction CREATE INDEX est pris en charge, une application appelle **SQLGetInfo** avec le type d’information SQL_DLL_INDEX.  
   
- SQL_INFO_SCHEMA_VIEWS (ODBC 3.0)  
+ SQL_INFO_SCHEMA_VIEWS(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérer les vues de INFORMATION_SCHEMA qui sont pris en charge par le pilote. Les vues dans et le contenu de, INFORMATION_SCHEMA sont tel que défini dans SQL-92.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -1141,7 +1141,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_ISV_VIEWS = identifie les tables affichées définies dans ce catalogue qui sont accessibles par un utilisateur donné. (Niveau transitoire FIPS)  
   
- SQL_INSERT_STATEMENT (ODBC 3.0)  
+ SQL_INSERT_STATEMENT(ODBC 3.0)  
  Un masque de bits SQLUINTEGER qui indique la prise en charge de **insérer** instructions :  
   
  SQL_IS_INSERT_LITERALS  
@@ -1152,7 +1152,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_INTEGRITY ODBC (1.0)  
+ SQL_INTEGRITY(ODBC 1.0)  
  Une chaîne de caractères : « Y » si la source de données prend en charge le Integrity Enhancement Facility ; « N » dans le cas contraire.  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_ODBC_SQL_OPT_IEF.  
@@ -1177,131 +1177,131 @@ SQLRETURN SQLGetInfo(
   
  Pour obtenir une description de ces masques de bits, consultez SQL_DYNAMIC_CURSOR_ATTRIBUTES1 (puis remplacez « curseur » pour « curseur dynamique » dans les descriptions).  
   
- SQL_KEYWORDS (ODBC 2.0)  
+ SQL_KEYWORDS(ODBC 2.0)  
  Une chaîne de caractères qui contient une liste séparée par des virgules de tous les mots clés spécifiques à la source de données. Cette liste ne contient pas de mots clés spécifiques à ODBC ou les mots clés utilisés par la source de données et ODBC. Cette liste représente tous les mots clés réservés ; applications interopérables ne devraient pas utiliser ces mots dans les noms d’objet.  
   
  Pour obtenir la liste de mots clés ODBC, consultez [mots clés réservés](../../../odbc/reference/appendixes/reserved-keywords.md) dans [annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Le **#define** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules des mots clés ODBC.  
   
- Annexe c : Grammaire SQL  
+ Annexe C : Grammaire SQL  
   
- SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
- Une chaîne de caractères : « Y » si la source de données prend en charge un caractère d’échappement pour le caractère de pourcentage (%) et trait de soulignement (_) de caractères dans un **comme** prédicat et le pilote prend en charge la syntaxe ODBC permettant de définir un **comme** prédicat caractère d’échappement ; « N » dans le cas contraire.  
+ SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
+ Une chaîne de caractères : « Y » si la source de données prend en charge un caractère d’échappement pour le caractère de pourcentage (%) et un trait de soulignement (_) de caractères dans un **comme** prédicat et le pilote prend en charge la syntaxe ODBC permettant de définir un **comme** prédicat caractère d’échappement ; « N » dans le cas contraire.  
   
- SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
+ SQL_MAX_ASYNC_CONCURRENT_STATEMENTS(ODBC 3.0)  
  Une valeur SQLUINTEGER qui spécifie le nombre maximal d’instructions simultanées actives en mode asynchrone que le pilote peut prendre en charge sur une connexion donnée. S’il n’existe aucune limite spécifique ou la limite est inconnue, cette valeur est zéro.  
   
- SQL_MAX_BINARY_LITERAL_LEN (ODBC 2.0)  
+ SQL_MAX_BINARY_LITERAL_LEN(ODBC 2.0)  
  Une valeur SQLUINTEGER qui spécifie la longueur maximale (nombre de caractères hexadécimaux, en excluant le préfixe et le suffixe retourné par **SQLGetTypeInfo**) d’un littéral binaire dans une instruction SQL. Par exemple, le fichier binaire 0xFFAA littéral a une longueur de 4. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_CATALOG_NAME_LEN ODBC (1.0)  
+ SQL_MAX_CATALOG_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de catalogue dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS complète renvoie au moins 128.  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_MAX_QUALIFIER_NAME_LEN.  
   
- SQL_MAX_CHAR_LITERAL_LEN (ODBC 2.0)  
+ SQL_MAX_CHAR_LITERAL_LEN(ODBC 2.0)  
  Une valeur SQLUINTEGER qui spécifie la longueur maximale (nombre de caractères, ni le préfixe et le suffixe retourné par **SQLGetTypeInfo**) d’un caractère littéral dans une instruction SQL. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_COLUMN_NAME_LEN ODBC (1.0)  
+ SQL_MAX_COLUMN_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de colonne dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins égale à 18. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_GROUP_BY(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de colonnes autorisées dans un **GROUP BY** clause. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins 6. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 15.  
   
- SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_INDEX(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de colonnes autorisées dans un index. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_ORDER_BY(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de colonnes autorisées dans un **ORDER BY** clause. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins 6. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 15.  
   
- SQL_MAX_COLUMNS_IN_SELECT (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_SELECT(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de colonnes autorisé dans une liste de sélection. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins 100. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 250.  
   
- SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_TABLE(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de colonnes autorisé dans une table. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins 100. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 250.  
   
- SQL_MAX_CONCURRENT_ACTIVITIES ODBC (1.0)  
+ SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal d’instructions actives qui le pilote peut prendre en charge pour une connexion. Une instruction est définie comme actif s’il a des résultats en attente, avec les lignes de signification terme « résultats » à partir d’un **sélectionnez** opération ou lignes affectées par une **insérer**, **mise à jour**, ou **Supprimer** opération (par exemple, un nombre de lignes), ou si elle est dans un état NEED_DATA. Cette valeur peut refléter une limitation imposée par le pilote ou la source de données. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_ACTIVE_STATEMENTS.  
   
- SQL_MAX_CURSOR_NAME_LEN ODBC (1.0)  
+ SQL_MAX_CURSOR_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de curseur dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins égale à 18. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 128.  
   
- SQL_MAX_DRIVER_CONNECTIONS ODBC (1.0)  
+ SQL_MAX_DRIVER_CONNECTIONS(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de connexions actives qui le pilote peut prendre en charge pour un environnement. Cette valeur peut refléter une limitation imposée par le pilote ou la source de données. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_ACTIVE_CONNECTIONS.  
   
- SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
+ SQL_MAX_IDENTIFIER_LEN(ODBC 3.0)  
  SQLUSMALLINT qui indique la taille maximale en caractères qui prend en charge de la source de données pour les noms définis par l’utilisateur.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins égale à 18. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 128.  
   
- SQL_MAX_INDEX_SIZE (ODBC 2.0)  
+ SQL_MAX_INDEX_SIZE(ODBC 2.0)  
  Une valeur SQLUINTEGER qui spécifie le nombre maximal d’octets autorisés dans les champs combinés d’un index. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_PROCEDURE_NAME_LEN ODBC (1.0)  
+ SQL_MAX_PROCEDURE_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de procédure dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_ROW_SIZE (ODBC 2.0)  
+ SQL_MAX_ROW_SIZE(ODBC 2.0)  
  Une valeur SQLUINTEGER qui spécifie la longueur maximale d’une ligne unique dans une table. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins de 2 000. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 8 000.  
   
- SQL_MAX_ROW_SIZE_INCLUDES_LONG (ODBC 3.0)  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG(ODBC 3.0)  
  Une chaîne de caractères : « Y » si la taille maximale des lignes retournées pour le type d’information SQL_MAX_ROW_SIZE inclut la longueur des colonnes de toutes les SQL_LONGVARCHAR et SQL_LONGVARBINARY dans la ligne ; « N » dans le cas contraire.  
   
- SQL_MAX_SCHEMA_NAME_LEN ODBC (1.0)  
+ SQL_MAX_SCHEMA_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de schéma dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins égale à 18. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 128.  
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_MAX_OWNER_NAME_LEN.  
   
- SQL_MAX_STATEMENT_LEN (ODBC 2.0)  
+ SQL_MAX_STATEMENT_LEN(ODBC 2.0)  
  Une valeur SQLUINTEGER qui spécifie la longueur maximale (nombre de caractères, y compris un espace blanc) d’une instruction SQL. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
- SQL_MAX_TABLE_NAME_LEN ODBC (1.0)  
+ SQL_MAX_TABLE_NAME_LEN(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom de table dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins égale à 18. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 128.  
   
- SQL_MAX_TABLES_IN_SELECT (ODBC 2.0)  
+ SQL_MAX_TABLES_IN_SELECT(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal de tables autorisées dans le **FROM** clause d’une **sélectionnez** instruction. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
  Un pilote de niveau-conforme FIPS entrée retourne au moins 15. Un pilote de niveau-conforme FIPS intermédiaire renvoie au moins 50.  
   
- SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
+ SQL_MAX_USER_NAME_LEN(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie la longueur maximale d’un nom d’utilisateur dans la source de données. S’il n’existe aucune longueur maximale ou la longueur est inconnue, cette valeur est définie à zéro.  
   
- SQL_MULT_RESULT_SETS ODBC (1.0)  
+ SQL_MULT_RESULT_SETS(ODBC 1.0)  
  Une chaîne de caractères : « Y » si la source de données prend en charge plusieurs jeux de résultats, « N » si elle n’est pas le cas.  
   
  Pour plus d’informations sur plusieurs jeux de résultats, consultez [plusieurs résultats](../../../odbc/reference/develop-app/multiple-results.md).  
   
- SQL_MULTIPLE_ACTIVE_TXN ODBC (1.0)  
+ SQL_MULTIPLE_ACTIVE_TXN(ODBC 1.0)  
  Une chaîne de caractères : « Y » si le pilote ne prend en charge plus de transactions actives en même temps, « N » si une seule transaction peut être active à tout moment.  
   
  Les informations retournées pour ce type d’information ne s’applique pas dans le cas des transactions distribuées.  
   
- SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
+ SQL_NEED_LONG_DATA_LEN(ODBC 2.0)  
  Une chaîne de caractères : Si elle n’est pas le cas, « Y » si la source de données a besoin de la longueur d’une valeur de données de type long (le type de données est SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données spécifiques à la source de données de type long) avant cette valeur est envoyée à la source de données, « N ». Pour plus d’informations, consultez [SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md) et [SQLSetPos, fonction](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
- SQL_NON_NULLABLE_COLUMNS ODBC (1.0)  
+ SQL_NON_NULLABLE_COLUMNS(ODBC 1.0)  
  Une valeur SQLUSMALLINT qui spécifie si la source de données prend en charge pas de valeur NULL dans les colonnes :  
   
  SQL_NNC_NULL = toutes les colonnes doivent être nullables.  
@@ -1310,7 +1310,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournera SQL_NNC_NON_NULL.  
   
- SQL_NULL_COLLATION (ODBC 2.0)  
+ SQL_NULL_COLLATION(ODBC 2.0)  
  Une valeur SQLUSMALLINT qui spécifie où les valeurs NULL sont triées dans un jeu de résultats :  
   
  SQL_NC_END = les valeurs NULL sont triées à la fin du jeu de résultats, quel que soit les mots clés ASC ou DESC.  
@@ -1321,8 +1321,8 @@ SQLRETURN SQLGetInfo(
   
  SQL_NC_START = les valeurs NULL sont triées au début du jeu de résultats, quel que soit les mots clés ASC ou DESC.  
   
- SQL_NUMERIC_FUNCTIONS ODBC (1.0)  
- Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
+ SQL_NUMERIC_FUNCTIONS(ODBC 1.0)  
+ Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
   
  Un masque de bits SQLUINTEGER énumérant les fonctions numériques scalaires pris en charge par le pilote et de la source de données associée.  
   
@@ -1330,10 +1330,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_NUM_ABS (ODBC 1.0) SQL_FN_NUM_ACOS (ODBC 1.0) SQL_FN_NUM_ASIN (ODBC 1.0) SQL_FN_NUM_ATAN (ODBC 1.0) SQL_FN_NUM_ATAN2 SQL_ SQL_FN_NUM_DEGREES (ODBC 2.0) DE (ODBC 1.0) SQL_FN_NUM_CEILING (ODBC 1.0) SQL_FN_NUM_COS (ODBC 1.0) SQL_FN_NUM_COT (ODBC 1.0) FN_NUM_EXP (ODBC 1.0) SQL_FN_NUM_FLOOR (ODBC 1.0) SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 SQL_FN_ SQL_FN_NUM_RAND (ODBC 1.0) DE (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) SQL_FN_NUM_PI (ODBC 1.0) SQL_FN_NUM_POWER (ODBC 2.0) SQL_FN_NUM_RADIANS (ODBC 2.0) NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) SQL_FN_NUM_SQRT (ODBC 1.0) SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
- SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
+ SQL_ODBC_INTERFACE_CONFORMANCE(ODBC 3.0)  
  Une valeur SQLUINTEGER qui indique le niveau de 3 ODBC *.x* interface le pilote est conforme à.  
   
- SQL_OIC_CORE : Le niveau minimal qui sont tous les pilotes ODBC doit se conformer. Ce niveau comprend les éléments d’interface de base telles que les fonctions de connexion, fonctions pour la préparation et l’exécution d’une instruction SQL, fonctions de métadonnées de jeu de résultats de base, les fonctions de catalogue de base et ainsi de suite.  
+ SQL_OIC_CORE: Le niveau minimal qui sont tous les pilotes ODBC doit se conformer. Ce niveau comprend les éléments d’interface de base telles que les fonctions de connexion, fonctions pour la préparation et l’exécution d’une instruction SQL, fonctions de métadonnées de jeu de résultats de base, les fonctions de catalogue de base et ainsi de suite.  
   
  SQL_OIC_LEVEL1 : Un niveau, y compris les principales fonctionnalités de niveau de conformité aux normes, ainsi que des curseurs avec défilement, signets, positionnés met à jour et supprime et ainsi de suite.  
   
@@ -1341,10 +1341,10 @@ SQLRETURN SQLGetInfo(
   
  Pour plus d’informations, consultez [les niveaux de conformité Interface](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
- SQL_ODBC_VER ODBC (1.0)  
+ SQL_ODBC_VER(ODBC 1.0)  
  Une chaîne de caractères avec la version d’ODBC à laquelle le Gestionnaire de pilotes se conforme. La version est au format ##. ##. 0000, où les deux premiers chiffres sont la version principale et les deux chiffres suivants à la version mineure. Cela est implémentée uniquement dans le Gestionnaire de pilotes.  
   
- SQL_OJ_CAPABILITIES (ODBC 2.01)  
+ SQL_OJ_CAPABILITIES(ODBC 2.01)  
  Un masque de bits SQLUINTEGER énumérer les types de jointures externes pris en charge par la source de données et de pilote. Les masques de bits suivants sont utilisés pour déterminer quels types sont pris en charge :  
   
  SQL_OJ_LEFT = gauche jointures externes sont pris en charge.  
@@ -1365,17 +1365,17 @@ SQLRETURN SQLGetInfo(
   
  Pour plus d’informations sur la prise en charge des opérateurs de jointure relationnelle dans une instruction SELECT, comme défini par SQL-92, consultez SQL_SQL92_RELATIONAL_JOIN_OPERATORS.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT (ODBC 2.0)  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT(ODBC 2.0)  
  Une chaîne de caractères : « Y » si les colonnes dans le **ORDER BY** clause doit être dans la liste de sélection ; sinon, « N ».  
   
- SQL_PARAM_ARRAY_ROW_COUNTS (ODBC 3.0)  
+ SQL_PARAM_ARRAY_ROW_COUNTS(ODBC 3.0)  
  Une énumération des propriétés du pilote concernant la disponibilité de la ligne SQLUINTEGER compte dans une exécution paramétrable. A les valeurs suivantes :  
   
  SQL_PARC_BATCH = individuel des nombres de lignes sont disponibles pour chaque jeu de paramètres. Conceptuellement, cela équivaut à la génération d’un lot d’instructions SQL, une pour chaque paramètre défini dans le tableau de pilote. Informations d’erreur étendues peuvent être récupérées en utilisant le champ de descripteur SQL_PARAM_STATUS_PTR.  
   
  SQL_PARC_NO_BATCH ne = qu’une seule ligne le nombre est disponible, c'est-à-dire le nombre de lignes cumulative résultant de l’exécution de l’instruction pour l’intégralité du tableau de paramètres. Conceptuellement, cela équivaut à traiter l’instruction avec le tableau de paramètres complet en tant qu’unité atomique unique. Les erreurs sont gérés comme si une instruction ont été exécutée.  
   
- SQL_PARAM_ARRAY_SELECTS (ODBC 3.0)  
+ SQL_PARAM_ARRAY_SELECTS(ODBC 3.0)  
  Une énumération des propriétés du pilote concernant la disponibilité du résultat SQLUINTEGER définit dans une exécution paramétrable. A les valeurs suivantes :  
   
  SQL_PAS_BATCH = il existe un jeu de résultats disponible par le jeu de paramètres. Conceptuellement, cela équivaut à la génération d’un lot d’instructions SQL, une pour chaque paramètre défini dans le tableau de pilote.  
@@ -1384,20 +1384,20 @@ SQLRETURN SQLGetInfo(
   
  SQL_PAS_NO_SELECT = un pilote n’autorise pas une instruction de génération de jeu de résultats doit être exécuté avec un tableau de paramètres.  
   
- SQL_PROCEDURE_TERM ODBC (1.0)  
+ SQL_PROCEDURE_TERM(ODBC 1.0)  
  Une chaîne de caractères avec le nom du fournisseur de source de données d’une procédure ; par exemple, « procédure de base de données », « procédure stockée », « procédure », « package » ou « requête stockée ».  
   
- SQL_PROCEDURES ODBC (1.0)  
+ SQL_PROCEDURES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si la source de données prend en charge les procédures et le pilote prend en charge la syntaxe d’appel de procédure ODBC ; « N » dans le cas contraire.  
   
- SQL_POS_OPERATIONS (ODBC 2.0)  
+ SQL_POS_OPERATIONS(ODBC 2.0)  
  Un masque de bits SQLINTEGER énumérant les opérations de prise en charge dans **SQLSetPos**.  
   
  Les masques de bits suivantes sont utilisées avec l’indicateur pour déterminer quelles options sont prises en charge.  
   
  SQL_POS_POSITION (ODBC 2.0) SQL_POS_REFRESH (ODBC 2.0) SQL_POS_UPDATE (ODBC 2.0) SQL_POS_DELETE (ODBC 2.0) SQL_POS_ADD (ODBC 2.0)  
   
- SQL_QUOTED_IDENTIFIER_CASE (ODBC 2.0)  
+ SQL_QUOTED_IDENTIFIER_CASE(ODBC 2.0)  
  Un SQLUSMALLINT valeur comme suit :  
   
  SQL_IC_UPPER = entre guillemets les identificateurs dans SQL ne respectent pas la casse et sont stockés dans majuscules dans le catalogue système.  
@@ -1410,10 +1410,10 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournera toujours sql_ic_sensitive en.  
   
- SQL_ROW_UPDATES ODBC (1.0)  
+ SQL_ROW_UPDATES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si un curseur commandé par keyset ou mixte gère les versions de ligne ou de valeurs pour toutes les extraire des lignes et par conséquent peut détecter les mises à jour qui ont été apportées à une ligne par n’importe quel utilisateur depuis la dernière extraction de la ligne. (S’applique uniquement aux mises à jour, pas suppressions ou insertions). Le pilote peut retourner l’indicateur SQL_ROW_UPDATED à l’état de la ligne de tableau quand **SQLFetchScroll** est appelée. Sinon, « N ».  
   
- SQL_SCHEMA_TERM ODBC (1.0)  
+ SQL_SCHEMA_TERM(ODBC 1.0)  
  Une chaîne de caractères avec le nom du fournisseur de source de données pour un schéma ; par exemple, « propriétaire », « ID d’autorisation » ou « Schema ».  
   
  La chaîne de caractères peut être retournée dans supérieure, inférieure ou les casses mixtes.  
@@ -1422,7 +1422,7 @@ SQLRETURN SQLGetInfo(
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_OWNER_TERM.  
   
- SQL_SCHEMA_USAGE (ODBC 2.0)  
+ SQL_SCHEMA_USAGE(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les instructions dans lequel les schémas peuvent être utilisés :  
   
  SQL_SU_DML_STATEMENTS = schémas sont pris en charge dans toutes les instructions de langage de Manipulation de données : **Sélectionnez**, **insérer**, **mettre à jour**, **supprimer**et si la prise en charge, **Sélectionnez pour mettre à jour** et positionné update et delete instructions.  
@@ -1439,39 +1439,39 @@ SQLRETURN SQLGetInfo(
   
  Cela *InfoType* a été renommé pour ODBC 3.0 à partir de l’interface ODBC 2.0 *InfoType* SQL_OWNER_USAGE.  
   
- SQL_SCROLL_OPTIONS ODBC (1.0)  
- Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
+ SQL_SCROLL_OPTIONS(ODBC 1.0)  
+ Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
   
  Un masque de bits SQLUINTEGER énumérant les options de défilement pris en charge pour les curseurs avec défilement.  
   
  Les masques de bits suivants sont utilisés pour déterminer quelles options sont prises en charge :  
   
- SQL_SO_FORWARD_ONLY = le curseur uniquement fait défiler vers l’avant. ODBC (1.0)  
+ SQL_SO_FORWARD_ONLY = le curseur uniquement fait défiler vers l’avant. (ODBC 1.0)  
   
- SQL_SO_STATIC = les données dans le résultat de l’ensemble est statique. ODBC (2.0)  
+ SQL_SO_STATIC = les données dans le résultat de l’ensemble est statique. (ODBC 2.0)  
   
- SQL_SO_KEYSET_DRIVEN = le pilote enregistre et utilise les clés pour chaque ligne du jeu de résultats. ODBC (1.0)  
+ SQL_SO_KEYSET_DRIVEN = le pilote enregistre et utilise les clés pour chaque ligne du jeu de résultats. (ODBC 1.0)  
   
- SQL_SO_DYNAMIC = le pilote conserve les clés pour chaque ligne dans l’ensemble de lignes (la taille du jeu de clés est identique à la taille de l’ensemble de lignes). ODBC (1.0)  
+ SQL_SO_DYNAMIC = le pilote conserve les clés pour chaque ligne dans l’ensemble de lignes (la taille du jeu de clés est identique à la taille de l’ensemble de lignes). (ODBC 1.0)  
   
- SQL_SO_MIXED = le pilote de conserve les clés pour chaque ligne dans le jeu de clés et la taille de jeu de clés est supérieure à la taille de l’ensemble de lignes. Le curseur est dynamique en dehors du jeu de clés et curseurs pilotés par dans le jeu de clés. ODBC (1.0)  
+ SQL_SO_MIXED = le pilote de conserve les clés pour chaque ligne dans le jeu de clés et la taille de jeu de clés est supérieure à la taille de l’ensemble de lignes. Le curseur est dynamique en dehors du jeu de clés et curseurs pilotés par dans le jeu de clés. (ODBC 1.0)  
   
  Pour plus d’informations sur les curseurs avec défilement, consultez [curseurs avec défilement](../../../odbc/reference/develop-app/scrollable-cursors.md).  
   
- SQL_SEARCH_PATTERN_ESCAPE ODBC (1.0)  
- Une chaîne de caractères spécifiant que le pilote prend en charge comme caractère d’échappement qui permet d’utiliser le modèle match métacaractères un trait de soulignement (_) et le signe de pourcentage (%) comme caractères valides dans les modèles de recherche. Ce caractère d’échappement s’applique uniquement à ces arguments de fonction de catalogue qui prennent en charge les chaînes de recherche. Si cette chaîne est vide, le pilote ne prend pas en charge un caractère d’échappement de modèle de recherche.  
+ SQL_SEARCH_PATTERN_ESCAPE(ODBC 1.0)  
+ Une chaîne de caractères spécifiant que le pilote prend en charge comme caractère d’échappement qui autorise l’utilisation du modèle correspondance métacaractères un trait de soulignement (_) et le signe de pourcentage (%) comme les caractères valides dans les modèles de recherche. Ce caractère d’échappement s’applique uniquement à ces arguments de fonction de catalogue qui prennent en charge les chaînes de recherche. Si cette chaîne est vide, le pilote ne prend pas en charge un caractère d’échappement de modèle de recherche.  
   
  Étant donné que ce type d’information n’indique pas de prise en charge générale du caractère d’échappement dans le **comme** prédicat, SQL-92 n’inclure pas les exigences pour cette chaîne de caractères.  
   
  Cela *InfoType* est limité aux fonctions de catalogue. Pour obtenir une description de l’utilisation du caractère d’échappement dans les chaînes de modèle de recherche, consultez [Arguments de valeur de modèle](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
- SQL_SERVER_NAME ODBC (1.0)  
+ SQL_SERVER_NAME(ODBC 1.0)  
  Une chaîne de caractères avec le nom de serveur de spécifique à la source de données réelles ; utile lorsqu’un nom de source de données est utilisé au cours de **SQLConnect**, **SQLDriverConnect**, et **SQLBrowseConnect**.  
   
- SQL_SPECIAL_CHARACTERS (ODBC 2.0)  
+ SQL_SPECIAL_CHARACTERS(ODBC 2.0)  
  Une chaîne de caractères qui contient tous les caractères spéciaux (autrement dit, tous les caractères à l’exception d’a à z, A à Z, 0 à 9 et trait de soulignement) qui peuvent être utilisés dans un nom d’identificateur, par exemple un nom de la table, le nom de colonne ou le nom de l’index sur la source de données. Par exemple, « #$^ ». Si un identificateur contient un ou plusieurs de ces caractères, l’identificateur doit être un identificateur délimité.  
   
- SQL_SQL_CONFORMANCE (ODBC 3.0)  
+ SQL_SQL_CONFORMANCE(ODBC 3.0)  
  Une valeur SQLUINTEGER qui indique le niveau de prise en charge par le pilote SQL-92 :  
   
  SQL_SC_SQL92_ENTRY = entrée niveau SQL-92 conforme.  
@@ -1573,10 +1573,10 @@ SQLRETURN SQLGetInfo(
   
  SQL_SVE_CASE (niveau intermédiaire) SQL_SVE_CAST (niveau transitoire FIPS) SQL_SVE_COALESCE (niveau intermédiaire) SQL_SVE_NULLIF (niveau intermédiaire)  
   
- SQL_STANDARD_CLI_CONFORMANCE (ODBC 3.0)  
+ SQL_STANDARD_CLI_CONFORMANCE(ODBC 3.0)  
  Un masque de bits SQLUINTEGER l’énumération de l’interface CLI ou les normes à laquelle le pilote se conforme. Les masques de bits suivants sont utilisés pour déterminer les niveaux qui le pilote est conforme à :  
   
- SQL_SCC_XOPEN_CLI_VERSION1 : Le pilote est conforme à l’interface CLI ouverte de groupe version 1.  
+ SQL_SCC_XOPEN_CLI_VERSION1: Le pilote est conforme à l’interface CLI ouverte de groupe version 1.  
   
  SQL_SCC_ISO92_CLI : Le pilote est conforme à ISO 92 CLI.  
   
@@ -1600,8 +1600,8 @@ SQLRETURN SQLGetInfo(
   
  Pour obtenir une description de ces masques de bits, consultez SQL_DYNAMIC_CURSOR_ATTRIBUTES2 (puis remplacez « curseur statique » pour « curseur dynamique » dans les descriptions).  
   
- SQL_STRING_FUNCTIONS ODBC (1.0)  
- Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
+ SQL_STRING_FUNCTIONS(ODBC 1.0)  
+ Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
   
  Un masque de bits SQLUINTEGER énumérant les fonctions de chaîne scalaire pris en charge par le pilote et de la source de données associée.  
   
@@ -1613,7 +1613,7 @@ SQLRETURN SQLGetInfo(
   
  (Pour plus d’informations, consultez [fonctions de chaîne](../../../odbc/reference/appendixes/string-functions.md) dans l’annexe E, « fonctions scalaires. »)  
   
- SQL_SUBQUERIES (ODBC 2.0)  
+ SQL_SUBQUERIES(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les prédicats qui prennent en charge les sous-requêtes :  
   
  SQL_SQ_CORRELATED_SUBQUERIESSQL_SQ_COMPARISONSQL_SQ_EXISTSSQL_SQ_INSQL_SQ_QUANTIFIED  
@@ -1622,21 +1622,21 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournent toujours un masque de bits dans laquelle tous ces bits sont définies.  
   
- SQL_SYSTEM_FUNCTIONS ODBC (1.0)  
+ SQL_SYSTEM_FUNCTIONS(ODBC 1.0)  
  Un masque de bits SQLUINTEGER énumérant les fonctions système scalaires pris en charge par le pilote et de la source de données associée.  
   
  Les masques de bits suivants sont utilisés pour déterminer les fonctions système sont prises en charge :  
   
  SQL_FN_SYS_DBNAMESQL_FN_SYS_IFNULLSQL_FN_SYS_USERNAME  
   
- SQL_TABLE_TERM ODBC (1.0)  
+ SQL_TABLE_TERM(ODBC 1.0)  
  Une chaîne de caractères avec le nom du fournisseur de source de données pour une table ; par exemple, « table » ou « fichier ».  
   
  Cette chaîne de caractères peut être dans le coin supérieur, inférieur ou les casses mixtes.  
   
  Retourne toujours un pilote de conforme à niveau d’entrée SQL-92 « table ».  
   
- SQL_TIMEDATE_ADD_INTERVALS (ODBC 2.0)  
+ SQL_TIMEDATE_ADD_INTERVALS(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les intervalles d’horodatage pris en charge par le pilote et de la source de données associée pour la fonction scalaire TIMESTAMPADD.  
   
  Les masques de bits suivants sont utilisés pour déterminer les intervalles sont pris en charge :  
@@ -1645,7 +1645,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de niveau conforme FIPS transitoire retourne toujours un masque de bits dans laquelle tous ces bits sont définies.  
   
- SQL_TIMEDATE_DIFF_INTERVALS (ODBC 2.0)  
+ SQL_TIMEDATE_DIFF_INTERVALS(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les intervalles d’horodatage pris en charge par le pilote et de la source de données associée pour la fonction scalaire TIMESTAMPDIFF.  
   
  Les masques de bits suivants sont utilisés pour déterminer les intervalles sont pris en charge :  
@@ -1654,8 +1654,8 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de niveau conforme FIPS transitoire retourne toujours un masque de bits dans laquelle tous ces bits sont définies.  
   
- SQL_TIMEDATE_FUNCTIONS ODBC (1.0)  
- Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
+ SQL_TIMEDATE_FUNCTIONS(ODBC 1.0)  
+ Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.  
   
  Un masque de bits SQLUINTEGER énumérant les scalaire fonctions date et heure prises en charge par le pilote et de la source de données associée.  
   
@@ -1663,24 +1663,24 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_TD_CURRENT_DATE ODBC 3.0) SQL_FN_TD_CURRENT_TIME (ODBC 3.0) SQL_FN_TD_CURRENT_TIMESTAMP (ODBC 3.0) SQL_FN_TD_CURDATE (ODBC 1.0) SQL_FN_TD_CURTIME (ODBC 1.0) SQL_FN_TD_DAYNAME (ODBC 2.0) SQL_FN_TD_DAYOFMONTH (ODBC 1.0) SQL_FN_TD_DAYOFWEEK () ODBC 1.0) SQL_FN_TD_DAYOFYEAR (ODBC 1.0) SQL_FN_TD_EXTRACT (ODBC 3.0) SQL_FN_TD_HOUR (ODBC 1.0) SQL_FN_TD_MINUTE (ODBC 1.0) SQL_FN_TD_MONTH (ODBC 1.0) SQL_FN_TD_MONTHNAME (ODBC 2.0) SQL_FN_TD_NOW (ODBC 1.0) SQL_FN_TD_QUARTER (ODBC 1.0) SQL_FN_TD_ DEUXIÈME (ODBC 1.0) SQL_FN_TD_TIMESTAMPADD (ODBC 2.0) SQL_FN_TD_TIMESTAMPDIFF (ODBC 2.0) SQL_FN_TD_WEEK (ODBC 1.0) SQL_FN_TD_YEAR (ODBC 1.0)  
   
- SQL_TXN_CAPABLE ODBC (1.0)  
- Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque valeur de retour est étiquetée avec la version dans laquelle il a été introduite.  
+ SQL_TXN_CAPABLE(ODBC 1.0)  
+ Remarque : Le type d’informations a été introduit dans ODBC 1.0 ; chaque valeur de retour est étiquetée avec la version dans laquelle il a été introduite.  
   
  Une valeur SQLUSMALLINT qui décrit la prise en charge de transaction dans la source de données ou de pilote :  
   
- SQL_TC_NONE = non pris en charge des Transactions. ODBC (1.0)  
+ SQL_TC_NONE = non pris en charge des Transactions. (ODBC 1.0)  
   
- SQL_TC_DML = Transactions peuvent contenir uniquement des instructions de langage de Manipulation de données (DML) (**sélectionnez**, **insérer**, **mise à jour**, **supprimer** ). Instructions de langage de définition (DDL) de données dans une cause de la transaction une erreur. ODBC (1.0)  
+ SQL_TC_DML = Transactions peuvent contenir uniquement des instructions de langage de Manipulation de données (DML) (**sélectionnez**, **insérer**, **mise à jour**, **supprimer** ). Instructions de langage de définition (DDL) de données dans une cause de la transaction une erreur. (ODBC 1.0)  
   
- SQL_TC_DDL_COMMIT = Transactions peuvent contenir uniquement des instructions DML. Instructions DDL (**CREATE TABLE**, **DROP INDEX**, et ainsi de suite) a rencontré dans une cause de la transaction de la transaction est validée. ODBC (2.0)  
+ SQL_TC_DDL_COMMIT = Transactions peuvent contenir uniquement des instructions DML. Instructions DDL (**CREATE TABLE**, **DROP INDEX**, et ainsi de suite) a rencontré dans une cause de la transaction de la transaction est validée. (ODBC 2.0)  
   
- SQL_TC_DDL_IGNORE = Transactions peuvent contenir uniquement des instructions DML. Instructions DDL a rencontré dans une transaction sont ignorées. ODBC (2.0)  
+ SQL_TC_DDL_IGNORE = Transactions peuvent contenir uniquement des instructions DML. Instructions DDL a rencontré dans une transaction sont ignorées. (ODBC 2.0)  
   
- SQL_TC_ALL = Transactions peuvent contenir des instructions DDL et des instructions DML de n’importe quel ordre. ODBC (1.0)  
+ SQL_TC_ALL = Transactions peuvent contenir des instructions DDL et des instructions DML de n’importe quel ordre. (ODBC 1.0)  
   
  (Étant donné que la prise en charge des transactions est obligatoire dans SQL-92, un pilote de conforme SQL-92 [n’importe quel niveau] ne retourne jamais SQL_TC_NONE.)  
   
- SQL_TXN_ISOLATION_OPTION ODBC (1.0)  
+ SQL_TXN_ISOLATION_OPTION(ODBC 1.0)  
  Un masque de bits SQLUINTEGER énumérant les niveaux d’isolation de transaction disponibles à partir de la source de données ou de pilote.  
   
  Les masques de bits suivants sont utilisés avec l’indicateur pour déterminer quelles options sont prises en charge :  
@@ -1693,7 +1693,7 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 retournera toujours SQL_TXN_SERIALIZABLE pris en charge. Un pilote de niveau conforme FIPS transitoire retourne toujours toutes ces options de prise en charge.  
   
- SQL_UNION (ODBC 2.0)  
+ SQL_UNION(ODBC 2.0)  
  Un masque de bits SQLUINTEGER l’énumération de la prise en charge pour le **UNION** clause :  
   
  SQL_U_UNION = la source de données prend en charge la **UNION** clause.  
@@ -1702,29 +1702,29 @@ SQLRETURN SQLGetInfo(
   
  Un pilote de conforme à niveau d’entrée SQL-92 renvoie toujours ces deux options pris en charge.  
   
- SQL_USER_NAME ODBC (1.0)  
+ SQL_USER_NAME(ODBC 1.0)  
  Une chaîne de caractères avec le nom utilisé dans une base de données, qui peut être différent du nom de connexion.  
   
- SQL_XOPEN_CLI_YEAR (ODBC 3.0)  
+ SQL_XOPEN_CLI_YEAR(ODBC 3.0)  
  Une chaîne de caractères qui indique l’année de publication de la spécification Open Group avec lequel la version du Gestionnaire de pilotes ODBC est entièrement conforme.  
   
- SQL_ACCESSIBLE_PROCEDURES ODBC (1.0)  
+ SQL_ACCESSIBLE_PROCEDURES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si l’utilisateur peut exécuter toutes les procédures retournées par **SQLProcedures**; « N » s’il peut y avoir des procédures retournées que l’utilisateur ne peut pas exécuter.  
   
- SQL_ACCESSIBLE_TABLES ODBC (1.0)  
+ SQL_ACCESSIBLE_TABLES(ODBC 1.0)  
  Une chaîne de caractères : « Y » si l’utilisateur est assuré **sélectionnez** des privilèges à toutes les tables retournées par **SQLTables**; « N » s’il peut y avoir des tables retournée que l’utilisateur ne peut pas accéder.  
   
- SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
+ SQL_ACTIVE_ENVIRONMENTS(ODBC 3.0)  
  Une valeur SQLUSMALLINT qui spécifie le nombre maximal d’environnements actifs que le pilote peut prendre en charge. Si aucune limite n’est spécifié ou si la limite est inconnue, cette valeur est définie à zéro.  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  Un masque de bits SQLUINTEGER l’énumération prise en charge des fonctions d’agrégation :  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  Un pilote de conforme à niveau d’entrée SQL-92 toutes ces options retournera toujours pris en charge.  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ALTER DOMAIN** instruction, comme défini dans SQL-92, pris en charge par la source de données. Un pilote de niveau compatible SQL-92 Full retournera toujours tous les masques de bits. Une valeur de retour de « 0 » signifie que le **ALTER DOMAIN** instruction n’est pas prise en charge.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -1745,7 +1745,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AD_ADD_CONSTRAINT_DEFERRABLE (niveau complet) SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (niveau complet) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED (niveau complet) SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (niveau complet)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  Un masque de bits SQLUINTEGER énumérant les clauses dans le **ALTER TABLE** instruction pris en charge par la source de données.  
   
  Le niveau de conformité SQL-92 ou FIPS à laquelle cette fonctionnalité doit être pris en charge est affiché entre parenthèses en regard de chaque masque de bits.  
@@ -1780,7 +1780,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_AT_CONSTRAINT_INITIALLY_DEFERRED (niveau complet) (ODBC 3.0) SQL_AT_CONSTRAINT_INITIALLY_IMMEDIATE (niveau complet) (ODBC 3.0) SQL_AT_CONSTRAINT_DEFERRABLE (niveau complet) (ODBC 3.0) SQL_AT_CONSTRAINT_NON_DEFERRABLE (niveau complet) (ODBC 3.0)  
   
- SQL_ASYNC_MODE (ODBC 3.0)  
+ SQL_ASYNC_MODE(ODBC 3.0)  
  Une valeur SQLUINTEGER qui indique le niveau de prise en charge asynchrone dans le pilote :  
   
  SQL_AM_CONNECTION = connexion d’exécution asynchrone au niveau est pris en charge. Tous les descripteurs d’instruction associées à un handle de connexion donné sont en mode asynchrone ou toutes sont en mode synchrone. Un descripteur d’instruction sur une connexion ne peut pas être en mode asynchrone alors que le handle d’une autre instruction sur la même connexion est en mode synchrone et vice versa.  

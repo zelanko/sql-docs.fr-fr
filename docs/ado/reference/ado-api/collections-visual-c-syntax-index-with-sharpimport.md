@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155228"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (Index de la syntaxe Visual C++ avec #import)
 Il est utile de savoir que les collections héritent certaines méthodes et propriétés communes.  
@@ -99,6 +99,6 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

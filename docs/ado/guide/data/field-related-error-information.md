@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161568"
 ---
 # <a name="field-related-error-information"></a>Informations sur les erreurs liées aux champs
 Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ - vous pouvez récupérer plus d’informations sur la cause du problème en examinant le **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminé en examinant la **état** propriété de la **champs** dans chacune du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui sont particulièrement intéressants lorsqu’une erreur se produit.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149133"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Construction d’instructions SQL au moment de l’exécution
 Les applications qui effectuent des analyses ad hoc couramment construisent des instructions SQL en cours d’exécution. Par exemple, une feuille de calcul peut autoriser un utilisateur de sélectionner les colonnes à partir duquel récupérer des données :  

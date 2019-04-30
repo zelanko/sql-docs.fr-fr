@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154782"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Aperçu des rapports dans le Générateur de rapports
   Lors de la création d'un rapport, il est utile d'afficher fréquemment un aperçu du rapport afin de vérifier qu'il s'affiche comme vous le souhaitez. Cliquez sur **Exécuter**pour afficher un aperçu du rapport. Le rapport est restitué en mode Aperçu.  

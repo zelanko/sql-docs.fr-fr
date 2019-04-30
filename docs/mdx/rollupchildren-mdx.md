@@ -1,5 +1,5 @@
 ---
-title: RollupChildren (MDX) | Documents Microsoft
+title: RollupChildren (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5df035ab7ae2949164869536c498c341327916c3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149317"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren (MDX)
 
@@ -29,7 +29,7 @@ RollupChildren(Member_Expression, Unary_Operator)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Argument*  
+ *Member_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un membre.  
   
  *Unary_Operator*  
@@ -40,7 +40,7 @@ RollupChildren(Member_Expression, Unary_Operator)
   
  Le tableau ci-dessous décrit les opérateurs unaires valides pour cette fonction.  
   
-|Opérateur|Résultats|  
+|Opérateur|Résultat|  
 |--------------|------------|  
 |**+**|total = total + enfant actuel|  
 |**-**|total = total - enfant actuel|  
@@ -61,6 +61,6 @@ RollupChildren
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

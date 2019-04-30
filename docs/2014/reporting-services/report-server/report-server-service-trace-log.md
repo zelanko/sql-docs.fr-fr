@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190950"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Le journal des traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est un fichier texte ASCII qui contient des informations détaillées sur les opérations du service Report Server, y compris celles effectuées par le service web Report Server, le Gestionnaire de rapports et les traitements en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions.  

@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7289c18fac421bbdb5ccc0e00a3bea60b7a22d9e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150617"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Analyse des performances et surveillance de l'activité du serveur
   Le but de la surveillance des bases de données est d'évaluer le fonctionnement d'un serveur. Une surveillance efficace implique la prise d'instantanés périodiques des performances actuelles afin d'isoler les processus à l’origine des problèmes, ainsi que la collecte de données en continu pour suivre de près les tendances des performances. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows fournissent des utilitaires qui permettent de contrôler les conditions actuelles de la base de données et de suivre l'évolution des performances en fonction de l’évolution de ces conditions.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161632"
 ---
 # <a name="event-parameters"></a>Paramètres des événements
 Chaque gestionnaire d’événements a un paramètre d’état qui contrôle le Gestionnaire d’événements. Pour les événements de fin, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. Événements la plus complètes ont également un paramètre d’erreur pour fournir des informations sur toute erreur qui se sont produites et un ou plusieurs paramètres de l’objet qui font référence aux objets ADO utilisés pour effectuer l’opération. Par exemple, le [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) événement inclut les paramètres de l’objet pour le **commande**, **Recordset**, et **connexion** objets associé à l’événement. Dans l’exemple suivant de Microsoft® Visual Basic®, vous pouvez voir les pCommand, Connection et pConnection objets qui représentent le **commande**, **Recordset**, et **connexion** objets qui sont utilisés par le **Execute** (méthode).  
@@ -44,7 +44,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Paramètre d’état  
  Lorsque la routine de gestionnaire d’événements est appelée, le *état* paramètre est défini sur une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusOK**|Passé aux va et événements de fin. Cette valeur signifie que l’opération qui a provoqué l’événement s’est terminée correctement.|  
 |**adStatusErrorsOccurred**|Transmise complets uniquement aux événements. Cette valeur signifie que l’opération qui a provoqué l’événement a échoué, ou un événement Will a annulé l’opération. Vérifier le *erreur* paramètre pour plus d’informations.|  
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  Si vous souhaitez ne plus traiter un événement, vous pouvez définir *état* à **adStatusUnwantedEvent** et votre application ne recevra plus la notification de l’événement. Toutefois, n’oubliez pas que certains événements peuvent être déclenchés pour plusieurs raisons. Dans ce cas, vous devez spécifier **adStatusUnwantedEvent** pour chaque raison possible. Par exemple, pour ne plus recevoir de notification en attente **RecordChange** événements, vous devez définir le *état* paramètre **adStatusUnwantedEvent** pour  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, et **adRsnFirstChange** qu’ils se produisent.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|Demande que ce gestionnaire d’événements ne reçoivent aucune autre notification.|  
 |**adStatusCancel**|Demander l’annulation de l’opération qui doit se produire.|  

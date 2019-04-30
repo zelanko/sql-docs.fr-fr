@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190779"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>fichier de configuration RSReportDesigner
   Le fichier RSReportDesigner.config stocke les paramètres relatifs aux extensions de rendu et de traitement de données accessibles au Concepteur de rapports. Les informations d'extension pour le traitement des données sont stockées dans l'élément `Data`. Les informations d'extension de rendu sont stockées dans l'élément `Render`. L'élément `Designer` énumère les générateurs de requêtes utilisés dans le Concepteur de rapports.  

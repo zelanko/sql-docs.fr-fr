@@ -16,24 +16,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181280"
 ---
 # <a name="numeric-literal-syntax"></a>Syntaxe des littéraux numériques
 La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :  
   
- *littéral numérique* :: = *littéral numérique signé &#124; littéral numérique non signé*  
+ *numeric-literal* ::= *signed-numeric-literal &#124; unsigned-numeric-literal*  
   
- *littéral numérique signé* :: = [*connexion*] *littéral numérique non signé*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
- *littéral numérique non signé* :: = *littéral numérique exacte &#124; littéral numérique approximatif*  
+ *unsigned-numeric-literal* ::= *exact-numeric-literal &#124; approximate-numeric-literal*  
   
  *littéral numérique exacte* :: = *entier non signé* [*période*[*entier non signé*]]  *&#124;entier non signé période*  
   
- *connexion* :: = *signe &#124; -signe moins*  
+ *sign* ::= *plus-sign &#124; minus-sign*  
   
  *littéral numérique approximatif* :: = *exposant de la mantisse E*  
   
@@ -41,14 +41,14 @@ La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :
   
  *exposant* :: = *entier signé*  
   
- *entier signé* :: = [*connexion*] *entier non signé*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
  *entier non signé* :: = *chiffre...*  
   
- *signe* :: = *+*  
+ *plus-sign* ::= *+*  
   
- *signe* :: = -  
+ *minus-sign* ::= -  
   
- *chiffre* :: = 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
+ *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *période* :: =.

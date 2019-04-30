@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162351"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
   Cette rubrique explique comment créer un index unique sur une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index unique garantit que la clé d'index ne contient aucune valeur dupliquée et que, par conséquent, chaque ligne de la table est unique d'une certaine manière. Il n'existe pas de différence notable entre la création d'une contrainte UNIQUE et la création d'un index unique indépendant de toute contrainte. La validation des données se produit d'une manière similaire et l'optimiseur de requête ne fait aucune distinction entre un index unique créé à partir d'une contrainte et un index unique créé manuellement. Toutefois, la création d'une contrainte UNIQUE sur la colonne permet de clarifier l'objectif de l'index. Pour plus d'informations sur les contraintes UNIQUE, consultez [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
@@ -91,7 +91,7 @@ ms.locfileid: "54127229"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

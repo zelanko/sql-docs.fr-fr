@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148991"
 ---
 # <a name="state-transitions"></a>Transitions d’état
-ODBC définit discrètes *états* pour chaque environnement, chaque connexion et chaque instruction. Par exemple, l’environnement a trois états possibles : non alloué (dans lequel aucun environnement n’est affectée), alloué (dans lequel un environnement est alloué, mais aucune connexion n’est allouées) et la connexion (dans lequel un environnement et une ou plusieurs connexions sont allouée). Les connexions ont sept États possibles ; les instructions avoir 13 états possibles.  
+ODBC définit discrètes *états* pour chaque environnement, chaque connexion et chaque instruction. Par exemple, l’environnement a trois états possibles : Non alloué (dans lequel aucun environnement n’est affectée), alloué (dans lequel un environnement est alloué, mais aucune connexion n’est allouées) et la connexion (dans lequel un environnement et une ou plusieurs connexions sont allouées). Les connexions ont sept États possibles ; les instructions avoir 13 états possibles.  
   
  Un élément particulier, tel qu’identifié par son handle, se déplace d’un état à un autre lorsque l’application appelle une ou plusieurs fonctions et passe le handle à cet élément. Ces mouvements est appelée un *transition d’état*. Par exemple, allouer un handle d’environnement avec **SQLAllocHandle** déplace de l’environnement de non alloué à alloué et la libération de ce descripteur avec **SQLFreeHandle** renvoie à partir d’alloué à Non alloué. ODBC définit un nombre limité de transitions d’état légal, qui est une autre façon de dire que les fonctions doivent être appelées dans un certain ordre.  
   
@@ -35,6 +35,6 @@ ODBC définit discrètes *états* pour chaque environnement, chaque connexion et
   
  Certaines transitions d’état sont inhérentes à la conception d’ODBC. Par exemple, il n’est pas possible d’allouer un handle de connexion sans premier allouer un handle d’environnement, car la fonction qui alloue un handle de connexion requiert un handle d’environnement. Autres transitions d’état sont appliquées par le Gestionnaire de pilotes et les pilotes. Par exemple, **SQLExecute** exécute une instruction préparée. Si le handle d’instruction passé à il n’est pas dans un état préparé, **SQLExecute** retourne SQLSTATE HY010 (erreur de séquence de fonction).  
   
- Du point de vue de l’application, les transitions d’état sont généralement simples : transitions d’état juridique ont tendance à aller de pair avec le flux d’une application bien écrite. Transitions d’état sont plus complexes pour le Gestionnaire de pilotes et les pilotes, car ils doivent suivre l’état de l’environnement, chaque connexion et chaque instruction. La majeure partie de ce travail est effectué par le Gestionnaire de pilotes ; l’essentiel du travail qui doit être effectué par les pilotes s’effectue avec les instructions avec des résultats en attente.  
+ Du point de vue de l’application, les transitions d’état sont généralement simples : Transitions d’état juridique ont tendance à aller de pair avec le flux d’une application bien écrite. Transitions d’état sont plus complexes pour le Gestionnaire de pilotes et les pilotes, car ils doivent suivre l’état de l’environnement, chaque connexion et chaque instruction. La majeure partie de ce travail est effectué par le Gestionnaire de pilotes ; l’essentiel du travail qui doit être effectué par les pilotes s’effectue avec les instructions avec des résultats en attente.  
   
- Les parties 1 et 2 de ce manuel (« Introduction à ODBC » et « Développement des Applications et des pilotes ») tendent à ne pas mentionner explicitement les transitions d’état. Au lieu de cela, ils décrivent l’ordre dans lequel les fonctions doivent être appelées. Par exemple, « L’exécution des instructions » stipule qu’une instruction doit être préparée avec **SQLPrepare** avant de pouvoir être exécuté avec **SQLExecute**. Pour obtenir une description complète des États et transitions d’état, y compris les transitions sont vérifiées par le Gestionnaire de pilotes et qui doit être vérifié par les pilotes, consultez [tableaux des transitions d’état ODBC annexe b :](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).
+ Les parties 1 et 2 de ce manuel (« Introduction à ODBC » et « Développement des Applications et des pilotes ») tendent à ne pas mentionner explicitement les transitions d’état. Au lieu de cela, ils décrivent l’ordre dans lequel les fonctions doivent être appelées. Par exemple, « L’exécution des instructions » stipule qu’une instruction doit être préparée avec **SQLPrepare** avant de pouvoir être exécuté avec **SQLExecute**. Pour obtenir une description complète des États et transitions d’état, y compris les transitions sont vérifiées par le Gestionnaire de pilotes et qui doit être vérifié par les pilotes, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a4123ea79502821026b80254db4fba7a61e5f565
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158765"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
   Utilisez cette page pour définir des propriétés système sur le serveur de rapports. Il existe plusieurs façons de définir des propriétés système. Cet outil fournit une interface utilisateur graphique afin que vous puissiez définir des propriétés sans devoir écrire du code.  
@@ -78,7 +78,7 @@ ms.locfileid: "59960775"
  Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, il n'existe aucune limite sur le nombre d'instantanés.  
   
  **EnableIntegratedSecurity**  
- Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :  
+ Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :  
   
  `True` = la sécurité intégrée de Windows est activée.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 12 : Ajout d’une transformation de colonne à ajouter les colonnes requises par MDS dérivée | Microsoft Docs'
+title: 'Tâche 12 : Ajout d’une transformation de colonne à ajouter les colonnes requises par MDS dérivée | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222643"
 ---
-# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d'une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
+# <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d’une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
   Dans cette tâche, vous allez ajouter une transformation de colonne dérivée au flux de données. Vous ajoutez deux colonnes dérivées, **ImportType** et **BatchTag**, vers les enregistrements transmis à cette transformation. Vous devez ajouter ces colonnes avant de télécharger les données dans des tables intermédiaires dans MDS. Ces deux colonnes sont requises pour les tables intermédiaires dans MDS. Consultez [Tables intermédiaires des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md) pour plus d’informations.  
   
 1.  Glisser-déplacer **transformation de colonne dérivée** à partir de **commune** section dans le **boîte à outils SSIS** à la **de flux de données** onglet.  

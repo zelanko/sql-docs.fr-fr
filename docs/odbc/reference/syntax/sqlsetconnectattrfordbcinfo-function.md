@@ -1,5 +1,5 @@
 ---
-title: Sqlsetconnectattrfordbcinfo, fonction | Microsoft Docs
+title: SQLSetConnectAttrForDbcInfo Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125527"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo, fonction
 **Conformité**  
- Version introduite : ODBC normes 3,81 conformité : ODBC  
+ Version introduite : Conformité aux normes 3,81 ODBC : ODBC  
   
  **Résumé**  
  **SQLSetConnectAttrForDbcInfo** est identique à **SQLSetConnectAttr**, mais il définit l’attribut sur le jeton d’informations de connexion à la place de sur le handle de connexion.  

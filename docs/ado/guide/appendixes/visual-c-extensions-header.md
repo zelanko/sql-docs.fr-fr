@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217659"
 ---
 # <a name="visual-c-extensions-header"></a>En-tête d’extensions Visual C++
 L’en-tête suivant, **icrsint.h décrit**, décrit en détail l’interface qui permet aux clients de récupérer les champs à partir d’un **Recordset** dans des variables définies dans une classe dérivée de **CADORecordBinding**. Vous devez spécifier une macro de liaison ADO pour chaque champ que vous voulez accéder.  

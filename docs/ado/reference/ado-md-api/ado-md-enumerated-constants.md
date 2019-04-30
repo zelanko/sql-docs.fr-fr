@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206322"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes énumérées ADO MD
 Pour faciliter le débogage, les constantes énumérées ADO MD répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version d’ADO MD vers un autre. Votre code doit uniquement dépendre du nom, pas la valeur réelle, de constantes énumérées.  

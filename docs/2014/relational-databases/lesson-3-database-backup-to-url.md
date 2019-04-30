@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Créer une base de données dans le stockage Windows Azure | Microsoft Docs'
+title: 'Leçon 4 : Créer une base de données dans le stockage Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182000"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Leçon 4 : Créer une base de données dans le Stockage Microsoft Azure
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Leçon 4 : Créer une base de données dans Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer une base de données à l'aide de la fonctionnalité Fichiers de données SQL Server dans Microsoft Azure. Notez que vous devez avoir terminé les leçons 1, 2 et 3 avant d'effectuer les tâches de cette leçon. La leçon 3 est une étape très importante, car vous devez supprimer les informations sur votre conteneur de stockage Windows Azure et le nom de stratégie associée, ainsi que la clé SAS dans le magasin d'informations d'identification SQL Server avant de passer à la leçon 4.  
   
  Pour chaque conteneur de stockage utilisé par un fichier de données ou un fichier journal, vous devez créer des informations d'identification SQL Server dont le nom correspond au chemin d'accès du conteneur. Ensuite, créez une base de données dans le Stockage Microsoft Azure.  
@@ -33,7 +33,7 @@ ms.locfileid: "48063009"
   
 -   Vous avez créé des informations d'identification SQL Server sur l'ordinateur source.  
   
- Pour créer une base de données dans Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans le Stockage Windows Azure, procédez comme suit :  
+ Pour créer une base de données dans Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans le Stockage Microsoft Azure, procédez comme suit :  
   
 1.  Connectez-vous à SQL Server Management Studio.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "48063009"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Remarque :** s’il existe des références actives aux fichiers de données dans un conteneur, toute tentative de suppression du serveur SQL associé à des informations d’identification échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour interrompre le bail, vous pouvez utiliser [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Remarque :** S’il existe des références actives aux fichiers de données dans un conteneur, toute tentative pour supprimer les informations d’identification SQL Server associée échoue. De même, s'il existe déjà un bail sur un fichier de base de données spécifique d'un objet blob et que vous voulez le supprimer, vous devez d'abord résilier le bail sur l'objet blob. Pour interrompre le bail, vous pouvez utiliser [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
- Grâce à cette nouvelle fonctionnalité, configurez SQL Server afin que les instructions CREATE DATABASE créent par défaut une base de données activée pour le cloud. En d'autres termes, définissez des données par défaut et consignez des emplacements dans les propriétés de l'instance SQL Server Management Studio de façon à ce que lorsque vous créez une base de données, tous les fichiers de base de données (.mdf, .ldf) soient créés en tant qu'objets blob de page dans le stockage Windows Azure.  
+ Grâce à cette nouvelle fonctionnalité, configurez SQL Server afin que les instructions CREATE DATABASE créent par défaut une base de données activée pour le cloud. En d'autres termes, définissez des données par défaut et consignez des emplacements dans les propriétés de l'instance SQL Server Management Studio de façon à ce que lorsque vous créez une base de données, tous les fichiers de base de données (.mdf, .ldf) soient créés en tant qu'objets blob de page dans le Stockage Microsoft Azure.  
   
- Pour créer une base de données dans le stockage Windows Azure à l'aide de l'interface utilisateur de SQL Server Management Studio, procédez comme suit :  
+ Pour créer une base de données dans le Stockage Microsoft Azure à l'aide de l'interface utilisateur de SQL Server Management Studio, procédez comme suit :  
   
 1.  Dans l'Explorateur d'objets, connectez-vous à une instance du moteur de base de données SQL Server et développez-la.  
   

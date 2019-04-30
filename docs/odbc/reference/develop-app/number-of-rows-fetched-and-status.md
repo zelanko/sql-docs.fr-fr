@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149332"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Nombre de lignes extraites et état
 Si l’attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR a été définie, elle spécifie une mémoire tampon qui retourne le nombre de lignes extraites par l’appel à **SQLFetch** ou **SQLFetchScroll**et les lignes d’erreur. (Ce nombre est un nombre de toutes les lignes qui n’ont pas l’état SQL_ROW_NO_ROWS.) Après un appel à **SQLBulkOperations** ou **SQLSetPos**, la mémoire tampon contient le nombre de lignes affectées par une opération en bloc effectuée par la fonction. Si l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR a été défini, **SQLFetch** ou **SQLFetchScroll** retourne le *tableau d’état de ligne,* qui fournit l’état de chaque ligne retournée. À la fois des mémoires tampons vers lequel pointés ces champs sont allouées par l’application et remplies par le pilote. Une application doit s’assurer que ces pointeurs restent valides jusqu'à ce que le curseur est fermé.  

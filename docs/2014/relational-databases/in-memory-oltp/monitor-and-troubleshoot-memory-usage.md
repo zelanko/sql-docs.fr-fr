@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63073874"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilise la mémoire selon des modèles différents pour les tables sur disque. Analysez la quantité de mémoire allouée et utilisée par les tables et les index optimisés en mémoire dans votre base de données à l'aide des DMV ou des compteurs de performance fournis pour la mémoire et le sous-système de garbage collection.  Vous aurez ainsi la visibilité au niveau du système et de la base de données, et vous pourrez prévenir les problèmes liés à l'insuffisance de mémoire.  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209681"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
   Vous pouvez créer ou configurer des entités de Resource Governor, telles que des pools de ressources et des groupes de charge de travail, en utilisant la page Propriétés de Resource Governor dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "54100794"
   
  Vous pouvez déterminer s’il existe une configuration en attente en interrogeant la vue de gestion dynamique [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) pour obtenir l’état en cours d’is_configuration_pending.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  L'affichage des propriétés de Resource Governor nécessite l'autorisation VIEW SERVER STATER. Les tâches de configuration de Resource Governor nécessitent l'autorisation CONTROL SERVER.  
   
 ##  <a name="ViewRGProp"></a> Afficher la Page de propriétés du gouverneur de ressources  
@@ -73,7 +73,7 @@ ms.locfileid: "54100794"
  Activez ou désactivez Resource Governor en activant ou désactivant la case à cocher.  
   
  **Pools de ressources**  
- Créez ou modifiez la configuration des pools de ressources à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un nouveau pool de ressources, cliquez sur la ligne qui est précédée de l’astérisque (**&#42;**).  
+ Créez ou modifiez la configuration des pools de ressources à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
  **Nom**  
  Spécifiez le nom du pool de ressources.  
@@ -93,7 +93,7 @@ ms.locfileid: "54100794"
  Pour plus d’informations, consultez [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Groupes de charge de travail pour le pool de ressources**  
- Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un nouveau groupe de charge de travail, cliquez sur la ligne qui est précédée de l’astérisque (**&#42;**).  
+ Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
  **Nom**  
  Spécifiez le nom du groupe de charges de travail.  

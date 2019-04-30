@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157112"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Administrer des serveurs à l'aide de la Gestion basée sur des stratégies
   La Gestion basée sur des stratégies est un système permettant de gérer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque les administrateurs de stratégie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisent la Gestion basée sur des stratégies, ils utilisent [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer des stratégies afin de gérer des entités sur le serveur, telles que l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les bases de données ou les autres objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

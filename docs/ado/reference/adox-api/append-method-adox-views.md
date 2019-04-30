@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184220"
 ---
 # <a name="append-method-adox-views"></a>Append, méthode (vues ADOX)
 Crée un [vue](../../../ado/reference/adox-api/view-object-adox.md) de l’objet et l’ajoute à la [vues](../../../ado/reference/adox-api/views-collection-adox.md) collection.  
@@ -38,7 +38,7 @@ Views.Append Name, Command
  *Nom*  
  Un **chaîne** valeur qui spécifie le nom de la vue à créer.  
   
- *Commandee*  
+ *Commande*  
  ADO [commande](../../../ado/reference/ado-api/command-object-ado.md) objet qui représente la vue à créer.  
   
 ## <a name="remarks"></a>Notes  

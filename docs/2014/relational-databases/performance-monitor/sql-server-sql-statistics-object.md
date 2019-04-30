@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 783c20de7f1ea23f41dcbc4fb645644bdaf5ad7d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183081"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Objet SQLServer:SQL Statistics
   L’objet **SQLServer:SQL Statistics** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des compteurs pour surveiller la compilation et le type de demandes transmises à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La surveillance du nombre de compilations et de recompilations de requêtes, ainsi que le nombre de lots reçus par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous donne une idée de la rapidité avec laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les requêtes utilisateur et de l'efficacité avec laquelle l'optimiseur de requêtes traite les requêtes.  

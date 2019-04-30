@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d1f4f5ce302c6f9e3e28b037c838d452f771114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206333"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Spécifie si les enregistrements avec des valeurs null sont indexés.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|L’index n’autorise pas les entrées dans lequel les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, l’entrée est insérée dans l’index.|  
 |**adIndexNullsDisallow**|1|Valeur par défaut. L’index n’autorise pas les entrées dans lequel les colonnes clés sont null. Si une valeur null est entrée dans une colonne clé, une erreur se produit.|  

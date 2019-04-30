@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181763"
 ---
 # <a name="behavioral-changes"></a>Changements de comportement
 Changements de comportement sont ces modifications pour lequel le *syntaxe* de l’interface reste la même, mais le *sémantique* ont été modifiés. Pour que ces modifications, les fonctionnalités utilisées dans ODBC 2. *x* se comporte différemment de la même fonctionnalité dans ODBC 3. *x*.  
   
  Si une application présente un ODBC 2. *x* comportement ou ODBC 3. *x* comportement est déterminé par l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cette valeur de 32 bits est définie à SQL_OV_ODBC2 à présenter ODBC 2. *x* comportement et SQL_OV_ODBC3 à présenter ODBC 3. *x* comportement.  
   
- L’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie par un appel à **SQLSetEnvAttr**. Une fois une application appelle **SQLAllocHandle** pour allouer un handle d’environnement, il doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’elles dévoilent. (Par conséquent, il est un nouvel état de l’environnement pour décrire le handle d’environnement dans allouée, mais pour un logiciel, état.) Pour plus d’informations, consultez [tableaux des transitions d’état ODBC annexe b :](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ L’attribut d’environnement SQL_ATTR_ODBC_VERSION est définie par un appel à **SQLSetEnvAttr**. Une fois une application appelle **SQLAllocHandle** pour allouer un handle d’environnement, il doit appeler**SQLSetEnvAttr** immédiatement pour définir le comportement qu’elles dévoilent. (Par conséquent, il est un nouvel état de l’environnement pour décrire le handle d’environnement dans allouée, mais pour un logiciel, état.) Pour plus d’informations, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Une application indique quel comportement qu’elles dévoilent avec l’attribut d’environnement SQL_ATTR_ODBC_VERSION, mais l’attribut n’a aucun effet sur la connexion de l’application avec une API ODBC 2. *x* ou ODBC 3. *x* pilote. Une application ODBC 3. *x* application peut se connecter à l’un ODBC 2. *x* ou 3. *x* pilote, quel que soit le paramètre de l’attribut de l’environnement.  
   

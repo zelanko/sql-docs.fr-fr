@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215432"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Concepts de création de rapport (Générateur de rapports et SSRS)
   Cette section définit brièvement les concepts clés utilisés dans la documentation du Générateur de rapports et du Concepteur de rapports. Pour obtenir des définitions de mots ou de termes spécifiques, consultez le [Glossaire &#40;Générateur de rapports&#41;](../report-builder/glossary-report-builder.md).  

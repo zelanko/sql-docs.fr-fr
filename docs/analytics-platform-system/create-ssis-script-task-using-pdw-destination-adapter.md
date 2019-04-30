@@ -1,5 +1,5 @@
 ---
-title: Créer une tâche de script avec l’adaptateur de destination SSIS PDW | Documents Microsoft
+title: Créer une tâche de script avec l’adaptateur de destination SSIS PDW | Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142301"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Créer une tâche de script qui utilise l’adaptateur de destination SSIS Parallel Data Warehouse
 Ce code de script de package SSIS est un exemple de code pour l’utilisation de l’adaptateur de destination SSIS PDW.  La tâche de Script Integration Services permet d’effectuer pratiquement n’importe quelle opération qui peut être effectuée dans une application .net dans le contexte d’un flux de contrôle SSIS. 
@@ -25,11 +25,11 @@ Ce code de script de package SSIS est un exemple de code pour l’utilisation de
   
 2.  Ouvrez la tâche dans le **éditeur de tâche de Script**, puis cliquez sur **modifier le Script**.  
   
-3.  Modifiez le script pour utiliser le code ci-dessous. Personnaliser le script à votre environnement en apportant les modifications suivantes :  
+3.  Modifiez le script pour utiliser le code fourni ci-dessous. Personnaliser le script à votre environnement en apportant les modifications suivantes :  
   
     -   Vous devez conserver l’espace de noms du script créé par la tâche de script. Notez le nom de l’espace de noms `namespace ST_<GUID>` et modifiez le script ci-dessous, en modifiant *ST_<GUID>*  à l’original *GUID* de la tâche de script.  
   
-    -   Remplacer les quatre occurrences de la valeur de l’espace réservé *XXXXXXXX* avec les valeurs appropriées pour votre environnement et destinés à l’action.  
+    -   Remplacez les quatre occurrences de la valeur d’espace réservé *XXXXXXXX* avec les valeurs appropriées pour votre environnement et destinés à l’action.  
   
     ```c#  
     #region Help:  Introduction to the script task  

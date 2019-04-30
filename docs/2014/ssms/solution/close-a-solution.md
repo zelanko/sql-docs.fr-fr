@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f14fea5c448a4b3cd3dbb0a34ce86b40d1db7835
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128548"
 ---
 # <a name="close-a-solution"></a>Fermer une solution
   Vous pouvez fermer une solution et la retirer de l'Explorateur de solutions. Fermer une solution la rend inutilisable dans l'Explorateur de solutions.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e1e195cf27e6d961bc7d53dac6439554022761d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209886"
 ---
 # <a name="ole-db-how-to-topics"></a>Rubriques de procédures OLE DB
   Pour utiliser le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, vous devez comprendre comment établir une connexion au serveur, exécutez la commande et traiter les résultats.  

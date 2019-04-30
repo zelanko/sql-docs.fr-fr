@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205069"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>Prise en charge FOR XML des différents types de données SQL Server
   Les rubriques de cette section décrivent la prise en charge de FOR XML pour les types de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

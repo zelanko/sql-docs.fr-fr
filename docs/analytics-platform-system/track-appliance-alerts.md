@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156988"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Effectuer le suivi des alertes de l’appliance d’Analytique Platform System
 Cette rubrique explique comment utiliser la Console d’administration et les vues système pour effectuer le suivi des alertes dans une appliance SQL Server PDW.  

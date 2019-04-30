@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209770"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-  **ISSCommandWithParameters** expose la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML et les types définis par l’utilisateur (UDT). Il s'agit d'une interface facultative qui hérite de l'interface OLE DB de base **ICommandWithParameters**. Outre les trois méthodes héritées de **ICommandWithParameters**( **GetParameterInfo**, **MapParameterNames**et **SetParameterInfo**) **ISSCommandWithParameters** fournit deux nouvelles méthodes permettant de gérer des types de données spécifiques au serveur.  
+  **ISSCommandWithParameters** expose la prise en charge de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML et des types définis par l'utilisateur (UDT). Il s'agit d'une interface facultative qui hérite de l'interface OLE DB de base **ICommandWithParameters**. Outre les trois méthodes héritées de **ICommandWithParameters**( **GetParameterInfo**, **MapParameterNames**et **SetParameterInfo**) **ISSCommandWithParameters** fournit deux nouvelles méthodes permettant de gérer des types de données spécifiques au serveur.  
   
 > [!NOTE]  
 >  L'interface **ISSCommandWithParameters** peut être utilisée lorsque des composants de service sont utilisés, mais ceux-ci n'utilisent pas cette interface.  

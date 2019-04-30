@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134343"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize, méthode (RDS)
 Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion pour une utilisation dans ADO 2.5 et versions ultérieur.  
@@ -56,7 +56,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  Pointeur vers le jeu d’enregistrements à synchroniser.  
   
  *pStatusArray*  
- Un variant utilisé pour retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par synchroniser. Ne pas définie si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
+ Un variant utilisé pour retourner un tableau sécurisé de statuts de ligne pour les lignes affectées par synchroniser. Définir si aucune des options de synchronisation suivantes sont définies : *RefreshWithUpdate*, *Actualiser* et *RefreshConflicts*.  
   
  *lcid*  
  Le LCID utilisé pour générer des erreurs sont retournées dans *pInformation*.  

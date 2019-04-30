@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151631"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET(BULK...) (SQL Server)
   Cette rubrique fournit une vue d'ensemble de l'utilisation de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT et de l'instruction INSERT...SELECT * FROM OPENROWSET(BULK...) destinées à l'importation en bloc de données à partir d'un fichier de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique décrit aussi des règles de sécurité relatives à l’utilisation de BULK INSERT et OPENROWSET(BULK...), et l’utilisation de ces méthodes pour l’importation en bloc à partir d’une source de données distante.  
@@ -64,7 +64,7 @@ ms.locfileid: "54127579"
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="openrowsetbulk-function"></a>OPENROWSET(BULK...) Fonction  
+## <a name="openrowsetbulk-function"></a>OPENROWSET Fonction  
  Le fournisseur d'ensembles de lignes en bloc OPENROWSET est accessible en appelant la fonction OPENROWSET et en spécifiant l'option BULK. La fonction OPENROWSET(BULK...) vous permet d’accéder aux données distantes en vous connectant à une source de données distante (un fichier de données) par l’intermédiaire d’un fournisseur OLE DB.  
   
  Pour importer en bloc des données, appelez OPENROWSET(BULK...) à partir d’une clause SELECT...FROM dans une instruction INSERT. La syntaxe de base pour l'importation en bloc de données est la suivante :  

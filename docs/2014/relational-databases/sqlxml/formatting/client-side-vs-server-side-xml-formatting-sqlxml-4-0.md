@@ -1,5 +1,5 @@
 ---
-title: XPath côté client et (SQLXML 4.0) de la mise en forme XML côté serveur | Microsoft Docs
+title: Côté client et (SQLXML 4.0) de la mise en forme XML côté serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131170"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>XPath côté client et Mise en forme XML côté serveur (SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Côté client et Mise en forme XML côté serveur (SQLXML 4.0)
   Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Les requêtes générant plusieurs ensembles de lignes ne sont pas prises en charge dans la mise en forme côté client  
@@ -42,7 +42,7 @@ ms.locfileid: "52822433"
   
  Si vous exécutez ce modèle dans un code d'application, une erreur est alors retournée car la mise en forme XML côté client ne prend pas en charge la mise en forme de plusieurs ensembles de lignes. Si vous spécifiez les requêtes dans deux séparer  **\<SQL : >** blocs, vous obtiendrez les résultats souhaités.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp est mappé différemment dans la mise en forme côté client et la mise en forme côté serveur  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp est mappé différemment dans Visual Studio du Client. Mise en forme côté serveur  
  Dans la mise en forme XML côté serveur, la colonne de base de données de type `timestamp` est mappée au type XDR i8 (lorsque l'option XMLDATA est spécifiée dans la requête).  
   
  Dans la mise en forme XML côté client, la colonne de base de données de type `timestamp` est mappée au type XDR `uri` ou `bin.base64` (selon que l'option BINARY BASE64 est spécifiée dans la requête). Le `bin.base64` type XDR est utile si vous utilisez les fonctionnalités de mise à jour et de chargement en masse, car ce type est converti en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` type. De cette manière, l'opération insert, update ou delete réussit.  
@@ -75,7 +75,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Lorsque vous exécutez le modèle, le XML suivant est retourné (extrait des résultats). Notez que les noms des éléments correspondent aux noms des vues sur lesquelles la requête est exécutée.  
+ Lorsque vous exécutez le modèle, le XML suivant est retourné (Uniquement les résultats partiels sont affichés.) Notez que les noms d’élément sont les noms des vues par rapport à laquelle la requête est exécutée.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -131,7 +131,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- Lorsque vous utilisez le mode NESTED de FOR XML côté client, les noms des tables sont retournés en tant que noms des éléments dans le XML résultant. (Les alias de tables spécifiés dans la requête ne sont pas utilisés.) Considérons par exemple le modèle suivant :  
+ Lorsque vous utilisez le mode NESTED de FOR XML côté client, les noms des tables sont retournés en tant que noms des éléments dans le XML résultant. (Alias de table qui sont spécifiés dans la requête ne sont pas utilisés.) Considérons par exemple le modèle suivant :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -203,7 +203,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>XPath côté client et côté serveur  
+### <a name="client-side-vs-server-side-xpath"></a>Côté client et XPath côté serveur  
  XPath côté client et XPath côté serveur fonctionnement de la même manière, à quelques différences près :  
   
 -   Les conversions de données appliquées lorsque vous utilisez des requêtes XPath côté client sont différentes de celles qui s'appliquent lorsque vous utilisez des requêtes XPath côté serveur. Les requêtes XPath côté client utilisent CAST au lieu du mode CONVERT 126.  

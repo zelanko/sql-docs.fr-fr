@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184823"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
 Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser ces opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas - tels que celui de la [Index](../../../ado/reference/ado-api/index-property.md) propriété - la structure de la source de données.  
@@ -90,7 +90,7 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
   
 -   *Opérateur* doit être une des opérations suivantes : **\<**, **>**, **\< =**, **>=** , **<>**, **=**, ou **comme**.  
   
--   *Valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Utilisez des guillemets simples (') avec des chaînes et les signes dièse (`#`) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si *opérateur* est **comme**, *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et symbole de pourcentage (%) caractères génériques autorisés, et ils doivent être le dernier caractère de la chaîne. *Valeur* ne peut pas être null.  
+-   *Valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Utilisez des guillemets simples (') avec des chaînes et les signes dièse (`#`) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si *opérateur* est **comme**, *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et symbole de pourcentage (%) caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. *Valeur* ne peut pas être null.  
   
     > [!NOTE]
     >  Pour inclure des guillemets simples (') dans le filtre *valeur*, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur *o ' Malley*, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, placer la chaîne entre les signes dièse (#). Par exemple, pour filtrer sur *'1'*, la chaîne de critères doit être `"col1 = #'1'#"`.  

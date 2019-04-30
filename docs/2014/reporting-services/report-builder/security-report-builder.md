@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f5d8f6f88f862486a50b0e7365bb221acb0138e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156439"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
