@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272770"
 ---
 # <a name="project-settings-gui-db2tosql"></a>Paramètres du projet (GUI) (DB2ToSQL)
 Les paramètres de projet de l’interface graphique utilisateur vous permettent de configurer la manière dont les données apparaissent sur le **données** onglet et s’il faut afficher le rapport d’évaluation après la conversion ou non.  

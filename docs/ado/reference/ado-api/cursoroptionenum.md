@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308729"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Spécifie quelles sont les fonctionnalités du [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode doit effectuer un test.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Prend en charge la [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) méthode pour ajouter de nouveaux enregistrements.|  
 |**adApproxPosition**|0x4000|Prend en charge la [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) propriétés.|  

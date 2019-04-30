@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : Utilisation du Mode AUTO | Microsoft Docs'
+title: 'Exemples : Utilisation du mode AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287808"
 ---
 # <a name="examples-using-auto-mode"></a>Exemples : Utilisation du mode AUTO
   Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : Récupération des informations détaillées de commande, l’ordre et la clientèle  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : Récupération d’informations sur les clients, les commandes et les détails des commandes  
  Cette requête extrait les informations de client, de commande et de détail de commande relatives à un client spécifique.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : Spécification de GROUP BY et fonctions d’agrégation  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : Spécification de la clause GROUP BY et de fonctions d’agrégation  
  La requête suivante renvoie des ID de client spécifiques et le nombre de commandes passées par chaque client.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : Spécification de colonnes calculées dans le mode AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : Spécification de colonnes calculées en mode AUTO  
  Cette requête renvoie des noms concaténés de clients spécifiques et les informations de commande. Étant donné que la colonne calculée est affectée au niveau le plus profond rencontré à ce stade, l'élément <`SOH`> est utilisé dans cet exemple. Les noms concaténés des clients sont ajoutés comme attributs de l'élément <`SOH`> dans le résultat.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Exemple : Renvoi de données binaires  
+## <a name="example-returning-binary-data"></a>Exemple : Retour de données binaires  
  Cette requête retourne une photo du produit de la table `ProductPhoto` . `ThumbNailPhoto` est une colonne `varbinary(max)` dans la table `ProductPhoto`. Par défaut, le mode `AUTO` renvoie vers les données binaires une référence, en l'occurrence une URL relative pointant vers la racine virtuelle de la base de données dans laquelle la requête est exécutée. L'attribut de clé `ProductPhotoID` doit être spécifié pour identifier l'image. Lors de l'extraction d'une référence d'image telle qu'elle apparaît dans cet exemple, la clé primaire de la table doit aussi être spécifiée dans la clause `SELECT` pour identifier une ligne de façon univoque.  
   
 ```  
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Cela peut poser un problème, notamment lorsque des requêtes dbobject sont exécutées sur une base de données respectant la casse. Pour l'éviter, la casse du nom de table ou de colonne spécifié dans les requêtes doit correspondre à celle du nom de table ou de colonne défini dans la base de données.  
   
-## <a name="example-understanding-the-encoding"></a>Exemple : Présentation de l’encodage  
+## <a name="example-understanding-the-encoding"></a>Exemple : Fonctionnement de l’encodage  
  Cet exemple montre les différents encodages qui se produisent dans les résultats.  
   
  Créez cette table :  

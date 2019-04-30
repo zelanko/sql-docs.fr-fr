@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312486"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instructions de mise à jour et de suppression positionnées
 Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une mise à jour positionnée ou instruction. Mise à jour et delete positionnées instructions sont prises en charge par certaines sources de données, mais pas tous. Pour déterminer si un prend en charge de source de données positionné instructions update et delete, une application appelle **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule la mise à jour positionnée et supprimer des instructions.  
   
  Pour utiliser une mise à jour positionnée ou l’instruction delete, l’application doit créer un jeu de résultats avec un **Sélectionnez pour mettre à jour** instruction. La syntaxe de cette instruction est :  
   
- **Sélectionnez** [**tous les** &#124; **DISTINCT**] *liste de sélection*  
+ **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
   
  **À partir de** *liste de références de table*  
   
- [**Où** *condition de recherche*]  
+ [**WHERE** *search-condition*]  
   
  **POUR la mise à jour de** [*nom-colonne* [**,** *nom-colonne*]...]  
   
@@ -40,7 +40,7 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  **Mise à jour** *nom de la table*  
   
- **Définissez** *identificateur de colonne* **=** {*expression* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
  [**,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]...  
   

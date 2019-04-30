@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1706a5d953a46871e6e65484e757a4c45d764cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277833"
 ---
 # <a name="prepare-image-type"></a>Préparer le type d'image
   Utilisez la page **Préparer le type d'image** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s'il convient d'installer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou d'ajouter des fonctionnalités à une instance existante.  
@@ -26,7 +26,7 @@ ms.locfileid: "48070532"
   
 -   Préparez une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Ajouter des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Ajoutez des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      Si vous choisissez d'ajouter des fonctionnalités à une instance existante, utilisez la liste déroulante pour sélectionner l'instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mettre à jour.  
   

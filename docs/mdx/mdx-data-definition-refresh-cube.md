@@ -1,5 +1,5 @@
 ---
-title: Instruction REFRESH CUBE (MDX) | Documents Microsoft
+title: Instruction REFRESH CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dafc13dda1f8ecab1400a88d1ca66eff5f317e43
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285082"
 ---
 # <a name="mdx-data-definition---refresh-cube"></a>Définition de données MDX - REFRESH CUBE
 
@@ -41,6 +41,6 @@ REFRESH CUBECube_Name
 >  Les jeux nommés stockés sur le serveur ne sont pas actualisés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

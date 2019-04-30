@@ -19,20 +19,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c5bb124af74d1fa009a61237edb54a9c8baec74
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267691"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Déclaration de l’Application&#39;s Version ODBC
 Une application alloue une connexion, il doit au préalable l’attribut d’environnement SQL_ATTR_ODBC_VERSION. Cet attribut indique que l’application suit ODBC 2. *x* ou ODBC 3. *x* spécification lors de l’utilisation des éléments suivants :  
   
--   **SQLSTATE**. Nombre de valeurs SQLSTATE est différente dans ODBC 2. *x* et ODBC 3. *x*.  
+-   **SQLSTATEs**. Nombre de valeurs SQLSTATE est différente dans ODBC 2. *x* et ODBC 3. *x*.  
   
 -   **Date, Time et identificateurs de Type Timestamp**. Le tableau suivant présente les identificateurs de type pour la date, time et timestamp des données dans ODBC 2. *x* et ODBC 3. *x*.  
   
-    |ODBC 2. *x*|ODBC 3. *x*|  
+    |ODBC 2.*x*|ODBC 3.*x*|  
     |----------------|----------------|  
     |**Identificateurs de types SQL**||  
     |SQL_DATE|SQL_TYPE_DATE|  

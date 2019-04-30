@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312869"
 ---
 # <a name="odbc-dynamic-cursors"></a>Curseurs dynamiques dans ODBC
-Un curseur dynamique est exactement cela : dynamique. Il peut détecter les modifications apportées à l’appartenance, order et les valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, un curseur dynamique extrait deux lignes et une autre application, puis met à jour un de ces lignes et supprime l’autre. Si le curseur dynamique puis tente de récupérer à nouveau ces lignes, elle ne trouvera pas la ligne supprimée mais retournera les nouvelles valeurs pour la ligne mise à jour.  
+Un curseur dynamique est exactement cela : dynamique. Il peut détecter les modifications apportées à l’appartenance, order et les valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, supposez qu’un curseur dynamique extrait deux lignes et qu’une autre application met ensuite à jour l’une de ces lignes et supprime l’autre. Si le curseur dynamique puis tente de récupérer à nouveau ces lignes, elle ne trouvera pas la ligne supprimée mais retournera les nouvelles valeurs pour la ligne mise à jour.  
   
  Les curseurs dynamiques détectent toutes les mises à jour, suppressions et des insertions, les deux leurs propres et celles effectuées par d’autres utilisateurs. (C’est soumis à l’isolation au niveau de la transaction, tel que défini par l’attribut de connexion de SQL_ATTR_TXN_ISOLATION.) Le tableau d’état de ligne spécifié par l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR reflète ces modifications et peut contenir SQL_ROW_SUCCESS SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED et SQL_ROW_ADDED. Il ne peut pas retourner SQL_ROW_DELETED, car un curseur dynamique ne retourne pas de lignes supprimées à l’extérieur de l’ensemble de lignes et par conséquent ne reconnaît pas l’existence de la ligne supprimée du jeu de résultats ou son élément correspondant dans le tableau d’état de ligne. SQL_ROW_ADDED est renvoyée uniquement si une ligne est mise à jour par un appel à **SQLSetPos**, pas lorsqu’elle est mise à jour par un autre curseur.  
   

@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299153"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Paramètres du projet (Conversion) (AccessToSQL)
 Les paramètres de projet de Conversion vous permettent de configurer le mode de conversion des objets à partir d’objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure.  
@@ -42,11 +42,11 @@ Crée une nouvelle clé primaire dans le [!INCLUDE[ssNoVersion](../../includes/s
 Lorsque connecté à SQL Azure, il est par défaut la valeur True. **Ajouter des colonnes timestamp**  
 Spécifie si SSMA doit créer une valeur d’horodatage si nécessaire.  
   
--   **Par défaut en Mode**: SSMA permettent de décider  
+-   **Par défaut en Mode**: Laisser SSMA décider  
   
--   **Mode optimiste**: jamais  
+-   **Mode optimiste**: Never  
   
--   **Mode plein**: SSMA permettent de décider  
+-   **Mode plein**: Laisser SSMA décider  
   
 **Inclure un rapport d’évaluation de données avec la conversion des rapports d’évaluation**  
 Inclut une évaluation des données dans le rapport d’évaluation.  
@@ -60,29 +60,29 @@ Inclut une évaluation des données dans le rapport d’évaluation.
 **Type de message lorsqu’une clé primaire comprend des colonnes de type nullable**  
 Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte des clés primaires avec les colonnes de type nullable.  
   
--   **Par défaut en Mode**: avertissement  
+-   **Par défaut en Mode**: Warning  
   
--   **Mode optimiste**: aucun message  
+-   **Mode optimiste**: Aucun message  
   
--   **Mode plein**: erreur  
+-   **Mode plein**: Error  
   
 **Type de message lorsque les colonnes clés étrangères sont de tailles différentes**  
 Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte une clé étrangère incorrecte de texte.  
   
--   **Par défaut en Mode**: avertissement  
+-   **Par défaut en Mode**: Warning  
   
--   **Mode optimiste**: aucun message  
+-   **Mode optimiste**: Aucun message  
   
--   **Mode plein**: erreur  
+-   **Mode plein**: Error  
   
 **Type de message lorsque les colonnes Mémo sont indexées.**  
 Spécifie le type de message (avertissement, erreur ou rien) indiquant SSMA dans le volet de sortie lorsqu’il détecte un index qui contient un **mémo** colonne.  
   
--   **Par défaut en Mode**: avertissement  
+-   **Par défaut en Mode**: Warning  
   
--   **Mode optimiste**: aucun message  
+-   **Mode optimiste**: Aucun message  
   
--   **Mode plein**: erreur  
+-   **Mode plein**: Error  
   
 **Avertir en cas d’une requête complexe utilise un caractère générique (\&#42 ;)**  
 Affiche un avertissement dans le volet de sortie et liste d’erreurs lorsqu’un nom de colonne dans une instruction SELECT est un caractère générique (*).  

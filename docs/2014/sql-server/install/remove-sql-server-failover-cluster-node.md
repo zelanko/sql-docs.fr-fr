@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f0881341cc899ac010de68b873e3fe7628a664b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295925"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>Supprimer un nœud de cluster de basculement SQL Server
   Utilisez la page Supprimer un nœud de cluster de basculement pour identifier l'ordinateur à supprimer en tant que nœud de cluster de basculement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

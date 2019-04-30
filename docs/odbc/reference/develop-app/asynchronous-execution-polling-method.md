@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306298"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Exécution asynchrone (méthode d’interrogation)
 Avant d’ODBC 3.8 et le Kit de développement logiciel de Windows 7, les opérations asynchrones étaient autorisées uniquement sur les fonctions de l’instruction. Pour plus d’informations, consultez le **l’exécution des opérations déclaration de façon asynchrone**, plus loin dans cette rubrique.  
@@ -181,7 +181,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLAllocHandle** (allocation ENV/DBC)  
   
--   **SQLAllocHandleStd** (allocation ENV/DBC)  
+-   **SQLAllocHandleStd** (allocating ENV/DBC)  
   
 -   **SQLGetEnvAttr**  
   

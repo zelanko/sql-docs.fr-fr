@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24e41082fa274c08176a8a9cf9cbe2a53d90d4f8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266277"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>Configuration et administration d'un serveur de rapports (mode SharePoint de Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est une plateforme de création de rapports basée sur serveur qui fournit une plage complète d’outils et de services prêts à l’emploi pour vous aider à créer, déployer et gérer des rapports pour votre organisation, ainsi que des fonctions de programmation pour vous permettre d’étendre et de personnaliser vos fonctionnalités de création de rapports. Vous pouvez intégrer votre environnement de création de rapports à un produit SharePoint afin de tirer parti des avantages liés à l'utilisation de l'environnement de collaboration fourni par les sites SharePoint.  

@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249557"
 ---
 # <a name="ado-dynamic-property-index"></a>Index des propriétés dynamiques ADO
-Fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques pour la **propriétés** collections de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. Un fournisseur donné peut également insérer des propriétés supplémentaires lorsque ces objets sont ouverts. Certaines de ces propriétés sont répertoriées dans le [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. D’autres sont répertoriées sous les fournisseurs spécifiques dans le [annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
+Fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques pour la **propriétés** collections de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. Un fournisseur donné peut également insérer des propriétés supplémentaires lorsque ces objets sont ouverts. Certaines de ces propriétés sont répertoriées dans le [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. D’autres sont répertoriées sous les fournisseurs spécifiques dans le [annexe a : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
   
  Les tableaux suivants sont cross-indexes des noms ADO et OLE DB pour chaque propriété dynamique du fournisseur OLE DB standard. Vos fournisseurs peuvent ajouter d’autres propriétés non répertoriées ici. Pour obtenir des informations spécifiques sur les propriétés dynamiques spécifiques au fournisseur, consultez la documentation du fournisseur.  
   
@@ -52,7 +52,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Conservation d’isolement|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|  
-|Emplacement|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |Taille d’Index maximale|DBPROP_MAXINDEXSIZE|  
 |Taille maximale de ligne|DBPROP_MAXROWSIZE|  
 |Taille de ligne maximale inclut des objets BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -196,7 +196,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Catalogue unique|DBPROP_ADC_UNIQUECATALOG|  
 |Lignes uniques|DBPROP_UNIQUEROWS|  
 |Schéma unique|DBPROP_ADC_UNIQUESCHEMA|  
-|Table unique|DBPROP_ADC_UNIQUETABLE|  
+|table unique|DBPROP_ADC_UNIQUETABLE|  
 |Mettre à jour|DBPROP_UPDATABILITY|  
 |Critères de mise à jour|DBPROP_ADC_UPDATECRITERIA|  
 |Resynchronisation de la mise à jour|DBPROP_ADC_UPDATERESYNC|  

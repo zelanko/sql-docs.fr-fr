@@ -1,5 +1,5 @@
 ---
-title: KPIGoal (MDX) | Documents Microsoft
+title: KPIGoal (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6b85136e5fde72635f5691b5172232e7d601a24
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272825"
 ---
 # <a name="kpigoal-mdx"></a>KPIGoal (MDX)
 
@@ -29,7 +29,7 @@ KPIGoal(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Nom_icp*  
+ *KPI_Name*  
  Expression de chaîne valide qui spécifie le nom d'un indicateur de performance clé.  
   
 ## <a name="remarks"></a>Notes  
@@ -54,6 +54,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

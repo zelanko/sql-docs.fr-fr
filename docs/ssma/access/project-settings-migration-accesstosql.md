@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299292"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (Migration) (AccessToSQL)
 Les paramètres de projet de Migration vous permettent de configurer la façon dont les données sont migrées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  

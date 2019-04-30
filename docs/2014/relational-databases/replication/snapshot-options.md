@@ -1,5 +1,5 @@
 ---
-title: Modifier les Options de l’initialisation d’instantané pour la réplication SQL | Microsoft Docs
+title: Modifier les options d’initialisation d’instantané pour la réplication SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270255"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modifier les Options de l’initialisation d’instantané pour la réplication SQL
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modifier les options d’initialisation d’instantané pour la réplication SQL
 
 Cet article explique comment modifier un nombre d’options quand [l’initialisation d’un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md).
 
@@ -35,12 +35,12 @@ Cet article explique comment modifier un nombre d’options quand [l’initialis
 
 ## <a name="snapshot-folder-locations"></a>Emplacements de dossier de capture instantanée
 
-### <a name="default-snapshot-location"></a>Emplacement d’instantané par défaut
+### <a name="default-snapshot-location"></a>Emplacement par défaut des instantanés
 Spécifiez le nom de l’emplacement par défaut des instantanés (SQL Server Management Studio) emplacement des instantanés de la valeur par défaut sur le **dossier d’instantanés** page de l’Assistant Configuration de Distribution. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Configurer la publication et la distribution](configure-publishing-and-distribution.md). Si vous créez une publication sur un serveur qui n'est pas configuré en tant que serveur de distribution, spécifiez un emplacement d'instantanés par défaut dans la page **Dossier d'instantanés** de l'Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](publish/create-a-publication.md).  
   
  Modifiez l’emplacement par défaut des instantanés dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](view-and-modify-distributor-and-publisher-properties.md). Définissez le dossier d’instantanés pour chaque publication dans la boîte de dialogue **Propriétés de publication - \<Publication>**. Pour plus d'informations, voir [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-#### <a name="modify-the-default-snapshot-location"></a>Modifiez l’emplacement d’instantanés par défaut  
+#### <a name="modify-the-default-snapshot-location"></a>Modifier l’emplacement par défaut des instantanés  
   
 1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>**, cliquez sur le bouton des propriétés (**…**) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.    
 2.  Dans la boîte de dialogue **Propriétés du serveur de publication - \<Serveur de publication>**, entrez une valeur pour la propriété **Dossier des captures instantanées par défaut**.
@@ -80,7 +80,7 @@ Spécifiez que les fichiers doivent être compressés dans la page **Instantané
 2.  Sélectionnez **Compresser les fichiers d'instantanés dans ce dossier**.    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Exécuter des scripts avant et après que l’instantané est appliqué.
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Exécuter des scripts avant et après l’application d’un instantané
 
  Vous pouvez spécifier les scripts à exécuter sur l'Abonné avant ou après l'application de l'instantané. Les scripts peuvent être utilisés à diverses fins, par exemple pour créer des connexions et des schémas (propriétaires d'objets) sur chaque Abonné.  
   

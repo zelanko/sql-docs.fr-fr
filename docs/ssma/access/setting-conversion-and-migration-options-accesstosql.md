@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299095"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Définition des Options de Migration (AccessToSQL) et de Conversion
 Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options spécifient la façon dont les objets sont convertis, la migration des données, et la correspondance entre les types de sources de données et les types de données cible. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  
   
 ## <a name="configuration-options-and-modes"></a>Modes et les Options de configuration  
-SSMA a quatre ensembles de paramètres de configuration et les quatre modes de configuration de ces paramètres : par défaut, Optimistic, complète et personnalisée. Le mode par défaut est recommandé pour la plupart des utilisateurs. Utiliser le mode optimiste pour les conversions simples. Utilisez le mode complet si vous souhaitez afficher tous les messages. Dans le mode personnalisé, vous définissez les options.  
+SSMA a quatre ensembles de paramètres de configuration et les quatre modes de configuration de ces paramètres : Par défaut, optimiste, complète et personnalisée. Le mode par défaut est recommandé pour la plupart des utilisateurs. Utiliser le mode optimiste pour les conversions simples. Utilisez le mode complet si vous souhaitez afficher tous les messages. Dans le mode personnalisé, vous définissez les options.  
   
 Les paramètres sont décrits dans la section « Référence de l’Interface utilisateur » de cette documentation. Pour plus d’informations sur les paramètres et la façon dont les paramètres sont appliqués dans chaque mode, consultez les rubriques suivantes :  
   

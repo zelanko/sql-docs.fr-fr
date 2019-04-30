@@ -17,17 +17,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315797"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
   
 ## <a name="remarks"></a>Notes  
- Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO sont disponibles dans les rubriques de [annexe b : Schema Rowsets](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de référence du programmeur OLE DB. Le nom de chaque rubrique est répertorié dans les parenthèses dans la section de Description du tableau suivant.  
+ Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO sont disponibles dans les rubriques de [annexe b : Ensembles de lignes de schéma](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de référence du programmeur OLE DB. Le nom de chaque rubrique est répertorié dans les parenthèses dans la section de Description du tableau suivant.  
   
  Des informations supplémentaires sur la fonction et les colonnes renvoyées pour chaque constante ADO MD sont disponibles dans les rubriques de [OLE DB pour les objets OLAP et d’ensembles de lignes de schéma](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans OLE DB pour la documentation de traitement analytique en ligne (OLAP). Le nom de chaque rubrique est répertorié dans les parenthèses dans la colonne Description du tableau suivant.  
   
@@ -35,7 +35,7 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
   
  ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **Recordset**, puis remplit chaque ligne avec les valeurs retournées respectivement par le **IDBInfo::GetKeywords** et **IDBInfo::GetLiteralInfo** méthodes. Vous trouverez plus d’informations sur ces méthodes dans le [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) section de référence du programmeur OLE DB.  
   
-|Constante|Valeur|Description|Colonnes de contrainte|  
+|Constante|Value|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes ASSERTIONS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
@@ -44,7 +44,7 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
 |**adSchemaCollations**|3|Retourne les classements de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de classements)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|Retourne les privilèges sur les colonnes de tables définies dans le catalogue qui sont disponibles pour ou accordés par un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMN_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|Retourne les colonnes des tables (vues comprises) définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMNS)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|Retourne les colonnes définies dans le catalogue qui dépendent d’un domaine défini dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMN_DOMAIN_USAGE)|DOMAIN_CATALOG DOMAIN_SCHEMA NOM_DOMAINE COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|Retourne les colonnes définies dans le catalogue qui dépendent d’un domaine défini dans le catalogue et détenues par un utilisateur donné.<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|DOMAIN_CATALOG DOMAIN_SCHEMA NOM_DOMAINE COLUMN_NAME|  
 |**adSchemaConstraintColumnUsage**|6|Retourne les colonnes utilisées par les contraintes référentielles, les contraintes uniques, les contraintes de validation et les assertions, définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Retourne les tables qui sont utilisées par les contraintes référentielles, les contraintes uniques, les contraintes check et les assertions définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_TABLE_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Retourne des informations sur les cubes disponibles dans un schéma (ou le catalogue, si le fournisseur ne prend pas en charge les schémas).<br /><br /> (CUBES ensemble de lignes *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  

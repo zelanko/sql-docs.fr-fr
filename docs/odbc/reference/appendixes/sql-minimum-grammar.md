@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270497"
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale de SQL
 Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe de niveau d’entrée de SQL-92.  
@@ -29,7 +29,7 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
  Les pilotes qui fonctionnent uniquement avec les sources de données en lecture seule ne peuvent pas en charge les parties de la grammaire inclus dans cette section qui traitent de la modification des données. Une application peut déterminer si une source de données est en lecture seule en appelant **SQLGetInfo** avec le type d’information SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>.  
- *instruction de table créer* :: =  
+ *create-table-statement* ::=  
   
  CREATE TABLE *nom de table de base*  
   
@@ -38,47 +38,47 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
 > [!IMPORTANT]  
 >  Comme un *type de données* dans un *-table-instruction create*, les applications doivent utiliser un type de données à partir de la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**.  
   
- *Delete-instruction recherché* :: =  
+ *delete-statement-searched* ::=  
   
  DELETE FROM *nom de la table* [où *condition de recherche*]  
   
- *instruction DROP-table* :: =  
+ *drop-table-statement* ::=  
   
  DROP TABLE *nom de table de base*  
   
- *instruction d’insertion* :: =  
+ *insert-statement* ::=  
   
  INSERT INTO *nom de la table* [( *identificateur de colonne* [, *identificateur de colonne*]...)]      VALEURS (*-valeur à insérer*[, *-valeur à insérer*]...)  
   
- *instruction SELECT* :: =  
+ *select-statement* ::=  
   
- Sélectionnez [tous les &#124; DISTINCT] *liste de sélection*  
+ SELECT [ALL &#124; DISTINCT] *select-list*  
   
  À partir de *liste de références de table*  
   
  [Où *condition de recherche*]  
   
- [*clause order by*]  
+ [*order-by-clause*]  
   
  *instruction* :: = *-table-instruction create*  
   
- &#124;*recherchées dans instruction delete*  
+ &#124; *delete-statement-searched*  
   
- &#124;*instruction drop-table*  
+ &#124; *drop-table-statement*  
   
- &#124;*-instruction insert*  
+ &#124; *insert-statement*  
   
- &#124;*instruction select*  
+ &#124; *select-statement*  
   
- &#124;*recherchées dans la déclaration de mise à jour*  
+ &#124; *update-statement-searched*  
   
- *recherche-instruction de mise à jour*  
+ *update-statement-searched*  
   
  Mise à jour *-nom de la table*  
   
  Définissez *identificateur de colonne* = {*expression* &#124; NULL}  
   
- [, *identificateur de colonne* = {*expression* &#124; NULL}]...  
+ [, *column-identifier* = {*expression* &#124; NULL}]...  
   
  [Où *condition de recherche*]  
   

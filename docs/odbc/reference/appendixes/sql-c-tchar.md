@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 42afb911dda26cbda53f9cd14c883abb3775b94b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270527"
 ---
 # <a name="sqlctchar"></a>SQL_C_TCHAR
 L’identificateur de type SQL_C_TCHAR n’identifie pas réellement un type de données ; Il est une macro qui existe dans le fichier d’en-tête pour la conversion d’Unicode. Il est remplacé par SQL_C_CHAR ou SQL_C_WCHAR selon le paramètre de l’UNICODE **#define**. Il est utile pour une application de transfert de données de caractère qui sont compilées en tant que ANSI et une application Unicode.

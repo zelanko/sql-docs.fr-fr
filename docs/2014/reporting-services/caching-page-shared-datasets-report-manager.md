@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266335"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Page Mise en cache, datasets partagés (Gestionnaire de rapports)
   Utilisez la page de propriétés de mise en cache pour définir les options de mise en cache d'un dataset partagé.  

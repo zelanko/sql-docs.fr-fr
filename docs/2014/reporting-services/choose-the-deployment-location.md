@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b73bd104663f8a6f79551e9ed2f0494703fd3c39
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266200"
 ---
 # <a name="choose-the-deployment-location"></a>Choisir l'emplacement du déploiement
   Utilisez cette page de l'Assistant Rapport pour définir le serveur et le dossier de déploiement du projet Report Server.  

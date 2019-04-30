@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283636"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>Affichage des rapports de cas de test (OracleToSQL)
 Le rapport de cas de Test affiche les résultats des tests de vérification et les informations de test généraux. En cas de défaillance de test, les informations sur toutes les données qui ne correspondent pas dans les objets vérifiés s’affiche également.  

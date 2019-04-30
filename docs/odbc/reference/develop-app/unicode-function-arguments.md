@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305798"
 ---
 # <a name="unicode-function-arguments"></a>Arguments des fonctions Unicode
 Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les versions ANSI et Unicode de toutes les fonctions qui acceptent des pointeurs vers des chaînes de caractères ou SQLPOINTER dans leurs arguments. Les fonctions Unicode sont implémentées en tant que fonctions (avec le suffixe de *W*), et non comme macros. Les fonctions ANSI (qui peut être appelé avec ou sans le suffixe *A*) sont identiques aux fonctions API ODBC en cours.  
@@ -58,7 +58,7 @@ Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les
 |-|-|  
 |**SQLConfigDataSource**|**SQLInstallDriverManager**|  
 |**SQLCreateDataSource**|**SQLInstallerError**|  
-|**SQLDataSourceToDriver**|**SQLInstallODBC n'**|  
+|**SQLDataSourceToDriver**|**SQLInstallODBC**|  
 |**SQLDriverToDataSource**|**SQLReadFileDSN**|  
 |**SQLGetAvailableDrivers**|**SQLRemoveDSNFromINI**|  
 |**SQLGetInstalledDrivers**|**SQLValidDSN**|  

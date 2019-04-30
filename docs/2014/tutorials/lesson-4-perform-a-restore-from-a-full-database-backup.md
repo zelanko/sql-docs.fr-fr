@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 077fb708f09db0182bc5f1510f0264b139beab13
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312071"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Leçon 4 : Effectuer une restauration à partir d’une sauvegarde de base de données complète
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Leçon 4 : Effectuer une restauration d’une sauvegarde de base de données complète
   Cette leçon illustre l'utilisation d'une instruction TSQL pour effectuer une restauration d'une sauvegarde de base de données complète créée au cours de la leçon précédente.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Effectuer une restauration d'une sauvegarde de base de données  
@@ -43,6 +43,6 @@ ms.locfileid: "56017090"
 5.  Vérifiez l'instruction T-SQL et cliquez sur **Exécuter**  
   
 ### <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
- [Didacticiel : Service de stockage d’objets Blob SQL Server Backup and Restore sur Windows Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ [Tutoriel : Service de stockage d’objets Blob SQL Server Backup and Restore sur Windows Azure](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

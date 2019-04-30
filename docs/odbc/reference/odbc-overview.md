@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272928"
 ---
 # <a name="odbc-overview"></a>Vue d’ensemble d’ODBC
 Open Database Connectivity (ODBC) est une interface de programmation d’application largement acceptées (API) pour l’accès de base de données. Il est basé sur les spécifications de l’Interface de niveau d’appel (CLI) à partir d’Open Group et ISO/IEC pour l’API de la base de données et utilise le langage SQL (Structured Query) en tant que son langage d’accès de base de données.  

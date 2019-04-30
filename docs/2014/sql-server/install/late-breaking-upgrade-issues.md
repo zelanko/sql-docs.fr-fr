@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38192933b84b5ba904952239b11abb2b6a8a74cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301409"
 ---
 # <a name="late-breaking-upgrade-issues"></a>Informations les plus récentes concernant les problèmes de mise à niveau
   Une logique de détection a pu être ajoutée ou modifiée après la publication de la documentation. Si vous avez utilisé la visionneuse de rapports du Conseiller de mise à niveau pour accéder à cette rubrique ou si vous souhaitez consulter les toutes dernières informations, reportez-vous au fichier lisez-moi installé avec le Conseiller de mise à niveau pour en savoir plus.  

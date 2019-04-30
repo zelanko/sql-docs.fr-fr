@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fcb3a7ccfc5e0b5da01d3976f3c9f13e06df7ee7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250379"
 ---
 # <a name="replication-monitor"></a>Moniteur de réplication
   Cette section de la documentation contient des informations sur le Moniteur de réplication. Les pages et les boîtes de dialogue affichées dans le moniteur diffèrent en fonction du type de réplication et de la version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contrôlée.  

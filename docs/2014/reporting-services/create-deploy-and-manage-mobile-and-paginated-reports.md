@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a4ae0bcfaeda7b494ae07bee53980dfdbff7a12e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266167"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit une gamme complète d’outils de prêts à l’emploi et des services pour vous aider à créer, déployer et gérer des rapports pour votre organisation. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] intègre des fonctionnalités de programmation qui vous permettent d'étendre et de personnaliser votre fonctionnalité de création de rapports.  

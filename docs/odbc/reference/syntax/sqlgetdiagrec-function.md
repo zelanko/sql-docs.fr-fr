@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259327"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec, fonction
 **Conformité**  
@@ -98,7 +98,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS_WITH_INFO : Le \* *MessageText* tampon est trop petit pour contenir le message de diagnostic demandé. Aucun enregistrement de diagnostic ont été générés. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
+-   SQL_INVALID_HANDLE: Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
 -   SQL_ERROR : Parmi les options suivantes s’est produite :  
   
@@ -108,7 +108,7 @@ SQLRETURN SQLGetDiagRec(
   
     -   Lorsque vous utilisez la notification asynchrone, l’opération asynchrone sur le handle n’est pas complète.  
   
--   SQL_NO_DATA : *RecNumber* a été supérieur au nombre d’enregistrements de diagnostics qui existaient pour le handle spécifié dans *gérer.* La fonction retourne également SQL_NO_DATA pour n’importe quel résultat positif *RecNumber* si aucun enregistrement de diagnostic pour *gérer*.  
+-   SQL_NO_DATA: *RecNumber* a été supérieur au nombre d’enregistrements de diagnostics qui existaient pour le handle spécifié dans *gérer.* La fonction retourne également SQL_NO_DATA pour n’importe quel résultat positif *RecNumber* si aucun enregistrement de diagnostic pour *gérer*.  
   
 ## <a name="comments"></a>Commentaires  
  Une application appelle généralement **SQLGetDiagRec** quand un appel précédent à une fonction ODBC a retourné SQL_ERROR ou SQL_SUCCESS_WITH_INFO. Toutefois, étant donné que n’importe quelle fonction ODBC peut valider zéro ou plusieurs enregistrements de diagnostic à chaque fois qu’elle est appelée, une application peut appeler **SQLGetDiagRec** après un appel de fonction ODBC. Une application peut appeler **SQLGetDiagRec** plusieurs fois afin de retourner tout ou partie des enregistrements dans la structure de données de diagnostic. ODBC n’impose aucune limite au nombre d’enregistrements de diagnostic qui peuvent être stockés à tout moment.  

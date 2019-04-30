@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 186ae568a21c39f35389100d55d5395687f20755
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253517"
 ---
 # <a name="distributed-replay-controller-configuration"></a>Configuration de Distributed Replay Controller
   Utilisez la page **Configuration de Distributed Replay Controller** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier les utilisateurs auxquels vous voulez accorder des autorisations administratives sur le service Distributed Replay Controller.  

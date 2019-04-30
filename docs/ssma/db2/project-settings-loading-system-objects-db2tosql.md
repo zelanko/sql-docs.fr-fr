@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266459"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Paramètres (chargement d’objets système) du projet (DB2ToSQL)
 La page de chargement des objets de système de la **paramètres du projet** boîte de dialogue vous permet de spécifier les objets de système DB2 SSMA convertit et les charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ Conversion d’objets système consomme des ressources système et prend du temp
   
 -   SYS. STANDARD  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
 -   SYS.DBMS_LOB  
   

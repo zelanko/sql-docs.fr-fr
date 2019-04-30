@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287181"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Paramètres de migration de données (OracleToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51656136"
   
 Il existe deux boutons présents reportages. :  
   
--   **Appliquer :** cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
+-   **S’appliquent :** Cliquez sur **appliquer** pour appliquer les paramètres qui ont été modifiés.  
   
--   **Annuler :** cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
+-   **Annuler :** Cliquez sur **Annuler** pour restaurer les paramètres présents avant que les modifications sont apportées.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de données Oracle vers SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298140"
 ---
 # <a name="ado-glossary-terms"></a>Termes du glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.
@@ -137,7 +137,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
 
  hiérarchie en général, une hiérarchie est une structure de classement avec un haut niveau et les niveaux subordonnés. Dans ADO, hiérarchique **Recordsets** sont utilisés pour représenter la relation parent-enfant entre un enregistrement et un chapitre. Également dans ADO, **enregistrement** et **Stream** objets peuvent être utilisés pour accéder à des arborescences hiérarchiques, telles que des documents et un dossier. ADO MD comprend aussi **hiérarchie** objets pour représenter une relation entre les niveaux d’une dimension dans un cube OLAP. Voir aussi Recordsets hiérarchiques, relation parent-enfant, chapitre, arborescence.
 
-## <a name="i-l"></a>J’AI-L
+## <a name="i-l"></a>I-L
  Ensemble ISAPI (Internet Server Application Programming Interface) de fonctions pour les serveurs Internet, tel qu’un serveur de 2000 Windows NT® Server/Windows exécutant Microsoft® Internet Information Services (IIS).
 
  La clé d’une ou plusieurs colonnes dans une table qui identifient de manière unique une ligne ; souvent utilisé pour indexer une table.

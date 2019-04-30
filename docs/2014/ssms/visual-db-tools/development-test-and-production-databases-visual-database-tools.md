@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316467"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de données de développement, de test et de production (Visual Database Tools)
   Si deux bases de données sont de structure identique, vous pouvez apporter des modifications à l'une, puis les propager dans l'autre. Par exemple, si vous avez une base de données de développement personnelle et une base de données destinée aux tests à l'échelle du groupe, vous pouvez apporter des modifications dans la base de données de développement, puis les propager dans la base de données de test.  

@@ -1,5 +1,5 @@
 ---
-title: '- (Soustraction) (MDX) | Documents Microsoft'
+title: '- (Subtract) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd0bb64169f6474874405cfd88476d426a9a6ee0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266548"
 ---
 # <a name="--subtract-mdx"></a>- (Soustraction) (MDX)
 
@@ -29,7 +29,7 @@ Numeric_Expression - Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  

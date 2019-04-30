@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 223f587b35a55b6f2df6d31ca64f48aac96fd6f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288337"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Transformer les colonnes existantes en colonnes XML
   L'instruction ALTER TABLE prend en charge le type de données `xml`. Par exemple, vous pouvez modifier n'importe quelle colonne de type chaîne au type de données `xml`. Dans ces cas-là, les documents contenus dans la colonne doivent être corrects. En outre, si vous convertissez la colonne du type chaîne dans le type xml typé, les documents de la colonne sont validés par rapport aux schémas XSD spécifiés.  

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : afficher un rapport du Conseiller de mise à niveau | Microsoft Docs'
+title: 'Procédure : Afficher un rapport du Conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294547"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procédure : afficher un rapport du Conseiller de mise à niveau
   Le Conseiller de mise à niveau crée des rapports pour chaque composant que vous sélectionnez pour analyse. Cette rubrique décrit comment afficher un rapport du Conseiller de mise à niveau à partir de la page de démarrage du Conseiller de mise à niveau.  
@@ -74,8 +74,8 @@ ms.locfileid: "48201929"
 >  Le rapport peut contenir un élément pour les problèmes indétectables. Ce sont des problèmes qui ne peuvent pas être détectés ou qui généreraient trop de résultats faux positifs. Cliquez sur le **en savoir plus sur ce problème et sa résolution** lien pour afficher la liste des problèmes indétectables pour le composant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Procédure : Exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Les rubriques de procédures de conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

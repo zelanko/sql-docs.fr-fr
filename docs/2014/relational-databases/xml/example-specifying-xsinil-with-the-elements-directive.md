@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287277"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Exemple : spécification de XSINIL avec la directive ELEMENTS
   La requête suivante spécifie la directive `ELEMENTS` pour générer des données XML centrées sur les éléments à partir du résultat de la requête.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270601"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Volet Critères (Visual Database Tools)
   Ce volet permet d’utiliser une grille similaire à une feuille de calcul pour spécifier des options de requêtes, telles que les colonnes de données à afficher, la façon de trier les résultats et les lignes à sélectionner. Dans le volet Critères, vous pouvez spécifier les éléments suivants :  
@@ -60,7 +60,7 @@ ms.locfileid: "52797911"
 |colonne|All|Affiche soit le nom d'une colonne de données utilisée pour la requête, soit l'expression d'une colonne calculée. La colonne est verrouillée pour rester toujours visible lors d'un défilement horizontal.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie soit un autre nom à donner à la colonne, soit le nom d'une colonne calculée.|  
 |Table de charge de travail|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie le nom de la table ou de l'objet structuré en table contenant la colonne de données associée. Cette colonne est vide dans le cas de colonnes calculées.|  
-|Sortie|SELECT, INSERT FROM, MAKE TABLE|Spécifie si une colonne de données apparaît dans le résultat de la requête.<br /><br /> Remarque : Si la base de données le permet, vous pouvez mettre les clauses de tri ou de recherche dans une colonne de données que vous n'afficherez pas dans l'ensemble des résultats.|  
+|Sortie|SELECT, INSERT FROM, MAKE TABLE|Spécifie si une colonne de données apparaît dans le résultat de la requête.<br /><br /> Remarque : Si la base de données le permet, vous pouvez utiliser une colonne de données pour les clauses de tri ou de recherche sans l’afficher dans le jeu de résultats.|  
 |Type de tri|SELECT, INSERT FROM|Spécifie si la colonne de données associée sert à trier les résultats de la requête et si le tri est croissant ou décroissant.|  
 |Ordre de tri|SELECT, INSERT FROM|Spécifie l'ordre de priorité dans lequel les colonnes de données seront triées dans l'ensemble des résultats. Lorsque vous modifiez l'ordre de tri d'une colonne de données, toutes les autres colonnes sont mises à jour en conséquence.|  
 |Regrouper par|SELECT, INSERT FROM, MAKE TABLE|Spécifie que la colonne de données associée est utilisée pour créer une requête d'agrégation. Cette colonne n'apparaît que si, dans le menu **Outils** , vous avez choisi **Regroupement** ou si, dans le volet SQL, vous avez ajouté une clause GROUP BY.<br /><br /> Par défaut, cette colonne a la valeur **Regrouper par**et la colonne associée devient partie intégrante de la clause GROUP BY.<br /><br /> Si vous allez dans une cellule de cette colonne, puis sélectionnez une fonction d'agrégation à appliquer à la colonne de données associée, par défaut l'expression obtenue s'ajoute en tant que colonne de sortie de l'ensemble des résultats.|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 99aadf2d532c6e42b2638aab34d19289617e7d38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315927"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>CompareBookmarks, exemple de méthode (VB)
 Cet exemple montre la [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) (méthode). La valeur relative de signets est rarement nécessaire, sauf si un signet particulier présente une caractéristique spécial.  

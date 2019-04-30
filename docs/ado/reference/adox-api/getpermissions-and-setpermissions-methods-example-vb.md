@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298019"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions et SetPermissions, exemples de méthodes (VB)
 Cet exemple montre la [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) et [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) méthodes. Le code suivant donne un accès complet de la table Orders à l’utilisateur administrateur.  

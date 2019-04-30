@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315787"
 ---
 # <a name="rowset-property-ado"></a>Rowset, propriété (ADO)
 Obtient ou définit un OLE DB **ensemble de lignes** objet à partir de/sur un **ADORecordsetConstruction** objet. Lorsque vous utilisez put_Rowset, l’ensemble de lignes est activée dans ADO **Recordset** objet.  

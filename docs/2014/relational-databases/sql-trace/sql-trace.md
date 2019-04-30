@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286528"
 ---
 # <a name="sql-trace"></a>Trace SQL
   Dans la trace SQL, les événements sont collectés si ce sont des instances de classes d'événements répertoriées dans la définition de la trace. Ces événements peuvent être extraits de la trace par filtrage ou placés dans la file d'attente de leur destination. La destination peut être un fichier ou des objets SMO ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Object), qui peuvent utiliser les informations de la trace dans les applications gérant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -85,13 +85,13 @@ ms.locfileid: "52823483"
 |**Duration**|13|Durée (en microsecondes) de l'événement.<br /><br /> Le serveur signale la durée d’un événement en microsecondes (un millionième, ou 10<sup>-6</sup>, de seconde) et le temps UC utilisé par l’événement en millisecondes (un millième, ou 10<sup>-3</sup>, de seconde). L'interface utilisateur graphique de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] affiche par défaut la colonne **Durée** en millisecondes. Cependant, quand la trace est enregistrée dans un fichier ou une table de base de données, la valeur de la colonne **Durée** est mentionnée en microsecondes.|  
 |**EndTime**|15|Heure de fin de l'événement. Cette colonne n’est pas remplie pour les classes d’événements faisant référence au démarrage d’un événement, comme par exemple **SQL:BatchStarting** ou **SP:Starting**.|  
 |**Erreur**|31|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans **sysmessages**.|  
-|**Classe d’événements** <sup>1</sup>|27|Type de classe d'événements capturée.|  
+|**EventClass** <sup>1</sup>|27|Type de classe d'événements capturée.|  
 |**EventSequence**|51|Numéro de séquence de cet événement.|  
 |**EventSubClass** <sup>1</sup>|21|Type de sous-classe d'événements, qui fournit des informations complémentaires concernant chaque classe d'événements. Par exemple, les valeurs de sous-classe d’événements pour la classe d’événements **Execution Warning** représentent le type d’avertissement pour l’exécution :<br /><br /> **1** = Attente de requête. La requête doit attendre les ressources (telles que la mémoire) pour s'exécuter.<br /><br /> **2** = Expiration du délai d’attente de requête. La requête a dépassé le délai d'attente d'obtention des ressources nécessaires pour s'exécuter. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
 |**GUID**|54|Valeur de type GUID qui dépend de la classe d'événements spécifiée dans la trace.|  
 |**FileName**|36|Nom logique du fichier modifié.|  
 |**Handle**|33|Entier utilisé par ODBC, OLE DB ou DB-Library pour coordonner l'exécution du serveur.|  
-|**Nom d’hôte** <sup>1</sup>|8|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|  
+|**HostName** <sup>1</sup>|8|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|  
 |**IndexID**|24|ID d'index de l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **indid** de la table système **sysindexes** .|  
 |**IntegerData**|25|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
 |**IntegerData2**|55|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|  
@@ -119,7 +119,7 @@ ms.locfileid: "52823483"
 |**RequestID**|49|ID de la demande qui contient l'instruction.|  
 |**RoleName**|38|Nom du rôle d'application activé.|  
 |**RowCounts**|48|Nombre de lignes du traitement.|  
-|**Nom_serveur** <sup>1</sup>|26|Nom de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tracée.|  
+|**ServerName** <sup>1</sup>|26|Nom de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tracée.|  
 |**SessionLoginName**|64|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et Windows.|  
 |**Severity**|20|Niveau de gravité de l'événement d'exception.|  
 |**SourceDatabaseID**|62|ID de la base de données contenant la source de l'objet.|  

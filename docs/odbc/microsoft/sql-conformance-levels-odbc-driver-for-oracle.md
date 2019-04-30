@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313390"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Niveaux de conformité de SQL (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -37,10 +37,10 @@ ms.locfileid: "47669367"
     |||||  
     |-|-|-|-|  
     |Abs|Journal|round|tan|  
-    |plafond|LOG10|second|truncate|  
+    |plafond|Log10|second|truncate|  
     |Cos|Mod|connexion||  
-    |Exp|PI|sin||  
-    |Floor|Power|SQRT||  
+    |Exp|Pi|sin||  
+    |Floor|Power|sqrt||  
   
 -   Fonctions de date :  
   
@@ -55,9 +55,9 @@ ms.locfileid: "47669367"
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Gauche|Oui|UCase|  
-    |Char|Longueur|RTrim||  
-    |Concat|LTrim|SOUNDEX||  
+    |Ascii|Gauche|Oui|UCase|  
+    |Char|Longueur|rtrim||  
+    |Concat|Ltrim|soundex||  
     |LCase|Remplacer|substring||  
   
 -   Fonction de conversion de type :  
