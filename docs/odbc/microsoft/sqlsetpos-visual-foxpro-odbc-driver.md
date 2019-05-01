@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669297"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473109"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (pilote ODBC Visual FoxPro)
 > [!NOTE]  
 >  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Prise en charge : Complète  
   
- Conformité d’API ODBC : 2 de niveau  
+ Conformité d’API ODBC : Niveau 2  
   
  Définit la position du curseur dans un ensemble de lignes. Vous pouvez utiliser **SQLSetPos** avec [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) pour extraire des lignes à partir des colonnes indépendantes après positionner le curseur sur une ligne spécifique dans l’ensemble de lignes.  
   

@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583402"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472166"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Qu’est le contrôleur sur un cluster de données volumineux de SQL Server ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Le contrôleur héberge la logique de base pour déployer et gérer un cluster de données volumineux. Il s’occupe de toutes les interactions avec Kubernetes, les instances de SQL Server qui font partie du cluster et d’autres composants tels que HDFS et Spark. 
+Le contrôleur héberge la logique de base pour déployer et gérer un cluster de données volumineux. Il s’occupe de toutes les interactions avec Kubernetes, les instances de SQL Server qui font partie du cluster et d’autres composants tels que HDFS et Spark.
 
 Le service de contrôleur fournit les fonctionnalités principales suivantes :
 
@@ -31,9 +31,10 @@ Le service de contrôleur fournit les fonctionnalités principales suivantes :
 - Gérer des pools de stockage, de données et de calcul
 - Exposer des outils de surveillance pour observer l’état du cluster
 - Exposer des outils de dépannage pour détecter et corriger les problèmes inattendus
-- Gérer la sécurité du cluster : Vérifiez les points de terminaison de cluster sécurisé, gérer les utilisateurs et les rôles, configurez les informations d’identification pour la communication intra-cluster
-- Gérer le flux de travail des mises à niveau afin qu’ils sont implémentés en toute sécurité (non disponible dans les CTP 2.4)
-- Gérer une haute disponibilité et récupération d’urgence pour les services avec état dans le cluster (non disponible dans les CTP 2.4)
+- Gérer la sécurité du cluster :
+  - Vérifiez les points de terminaison de cluster sécurisé
+  - Gérer les utilisateurs et rôles
+  - Configurer les informations d’identification pour la communication intra-cluster
 
 ## <a name="deploying-the-controller-service"></a>Déploiement du service de contrôleur
 

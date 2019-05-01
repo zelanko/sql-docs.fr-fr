@@ -5,17 +5,17 @@ description: Ce didacticiel montre comment charger des exemples de données dans
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859990"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473514"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server
 
@@ -71,7 +71,7 @@ Les étapes suivantes décrivent comment utiliser un client Windows pour charger
    | <KNOX_PASSWORD> | Le mot de passe pour la passerelle HDFS/Spark. |
 
    > [!TIP]
-   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**pool de point de terminaison principal**) et Knox (**-security du point de terminaison**).
+   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**).
 
 1. Exécutez le script de démarrage.
 
@@ -107,7 +107,7 @@ Les étapes suivantes décrivent comment utiliser un client Linux pour charger l
    | <KNOX_PASSWORD> | Le mot de passe pour la passerelle HDFS/Spark. |
 
    > [!TIP]
-   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**pool de point de terminaison principal**) et Knox (**-security du point de terminaison**).
+   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**).
 
 1. Exécutez le script de démarrage.
 
@@ -121,14 +121,14 @@ Une fois le script de démarrage s’exécute, votre cluster de données volumin
 
 Virtualisation des données :
 
-- [Didacticiel : Requête HDFS dans un cluster de données volumineux de SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Didacticiel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server](tutorial-query-oracle.md)
+- [Tutoriel : Requête HDFS dans un cluster de données volumineux de SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Tutoriel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server](tutorial-query-oracle.md)
 
 Ingestion de données :
 
-- [Didacticiel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Didacticiel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
+- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
 
 Ordinateurs portables :
 
-- [Didacticiel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019](tutorial-notebook-spark.md)
+- [Tutoriel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019](tutorial-notebook-spark.md)

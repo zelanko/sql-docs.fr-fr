@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934125"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472192"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension de SQL Server 2019 (version préliminaire)
 
@@ -30,9 +30,9 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
    |Plateforme|Télécharger|Date de publication|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 avril 2019 |0.12.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 avril 2019 |0.12.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 avril 2019 |0.12.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 avril 2019 |0.12.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 avril 2019 |0.12.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 avril 2019 |0.12.1
 
 1. Dans Azure Data Studio choisissez **installer l’Extension à partir du Package VSIX** à partir de la **fichier** menu et sélectionnez le fichier .vsix téléchargé.
 
@@ -44,7 +44,7 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
 1. Une fois les dépendances de terminer l’installation, fermez et rouvrez Studio de données Azure. Le **cluster de données volumineux de SQL Server** type de connexion n’est pas disponible tant que vous ne redémarrez Azure Data Studio.
 
-## <a name="changes-in-release-012"></a>Modifications apportées à la version 0.12
+## <a name="changes-in-release-0121"></a>Modifications apportées à la version 0.12.1 de version
 
 * Le **cluster de données volumineux de SQL Server** type de connexion a été supprimé dans cette version. Toutes les fonctionnalités précédemment disponibles à partir de la connexion au cluster volumineuses de données SQL Server sont maintenant disponible dans la connexion SQL Server.
 * HDFS de navigation se trouve sous le **Data Services** dossier

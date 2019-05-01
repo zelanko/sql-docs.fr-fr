@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1458e1e7fa43b69d771bfcadcc1c0fa039a97c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073221"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462319"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Se connecter au moteur de base de données avec sqlcmd
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la communication cliente par le biais du protocole réseau TCP/IP (protocole par défaut) et du protocole des canaux nommés. Le protocole de mémoire partagée est également disponible si le client se connecte à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur le même ordinateur. Il existe trois méthodes courantes de sélection du protocole. Le protocole utilisé par l’utilitaire **sqlcmd** est déterminé dans l’ordre suivant :  
@@ -75,7 +75,7 @@ sqlcmd -S 127.0.0.1,1691
     sqlcmd -S tcp:127.0.0.1,1433  
     ```  
   
--   Connectez-vous à une instance nommée :  
+-   Connectez-vous à une instance nommée :  
   
     ```  
     sqlcmd -S tcp:ComputerA,1691  
@@ -84,7 +84,7 @@ sqlcmd -S 127.0.0.1,1691
   
 ### <a name="to-connect-using-named-pipes"></a>Pour établir la connexion à l'aide de canaux nommés  
   
--   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
+-   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
   
     ```  
     sqlcmd -S np:\\<computer name>\<pipe name>  

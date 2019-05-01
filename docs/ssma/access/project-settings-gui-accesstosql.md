@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754627"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453482"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Paramètres du projet (GUI) (AccessToSQL)
 Les paramètres de projet de l’interface graphique utilisateur vous permettent de configurer la manière dont les données apparaissent sur le **données** onglet et pour inclure des rapports de données avec des rapports d’évaluation.  

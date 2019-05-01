@@ -5,16 +5,16 @@ description: Découvrez les étapes et les ressources pour le déploiement des c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860430"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472248"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters de données volumineuses de SQL Server
 
@@ -45,21 +45,23 @@ Les clusters de données volumineuses sont déployés comme une série de conten
 
 - **Minikube**: Minikube vous autorise à exécuter Kubernetes localement sur un seul serveur. Il est une bonne option si vous testez des clusters de données volumineuses ou que vous devrez l’utiliser dans un scénario de test ou de développement. Pour plus d’informations sur l’utilisation de Minikube, consultez le [Minikube documentation](https://kubernetes.io/docs/setup/minikube/). Pour connaître les exigences spécifiques pour l’utilisation de Minikube avec les clusters de données volumineuses, consultez [configurer minikube pour les déploiements de cluster SQL Server 2019 big data](deploy-on-minikube.md).
 
-## <a name="deployment-scripts"></a>Scripts de déploiement
-
-Scripts de déploiement peuvent aider à déployer Kubernetes et les clusters de données volumineuses en une seule étape. Ils fournissent également souvent des valeurs par défaut pour les variables d’environnement requises. Pour obtenir un exemple d’un script de déploiement pour le cluster de données volumineux sur Azure Kubernetes Service (AKS), consultez [déployer un 2019 de serveur SQL du cluster big data avec un script de déploiement (AKS)](quickstart-big-data-cluster-deploy.md).
-
-Vous pouvez personnaliser n’importe quel script de déploiement en créant votre propre version qui configure les variables d’environnement de cluster big data différemment.
-
 ## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster Big Data
 
-Pour déployer Kubernetes et un cluster de données volumineux à AKS avec un seul script, consultez l’exemple suivant :
+Après avoir configuré Kubernetes, vous déployez un cluster de données volumineuses avec la `mssqlctl cluster create` commande. Lors du déploiement, vous pouvez tirer plusieurs approches différentes.
 
-- [Déployer un cluster de données volumineuses de SQL Server 2019 avec un script de déploiement (AKS)](quickstart-big-data-cluster-deploy.md)
+- Si vous déployez dans un environnement de développement et de test, vous pouvez choisir d’utiliser une de la [configurations par défaut](deployment-guidance.md#deploy) fourni par **mssqlctl**.
 
-Pour obtenir des conseils de déploiement détaillées pour le déploiement de clusters de données volumineuses à l’aide de AKS, kubeadm et MiniKube, consultez l’article suivant :
+- Pour personnaliser votre déploiement, vous pouvez créer et utiliser votre propre [les fichiers de configuration de déploiement](deployment-guidance.md#configfile). 
 
-- [Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes](deployment-guidance.md)
+- Pour une installation entièrement sans assistance, vous pouvez transmettre tous les autres paramètres dans les variables d’environnement. Pour plus d’informations, consultez [des déploiements sans assistance](deployment-guidance.md#unattended).
+
+## <a name="deployment-scripts"></a>Scripts de déploiement
+
+Scripts de déploiement peuvent aider à déployer Kubernetes et les clusters de données volumineuses en une seule étape. Ils fournissent également souvent des valeurs par défaut pour les paramètres de cluster de données volumineuses. Pour obtenir un exemple d’un script de déploiement pour le cluster de données volumineux sur Azure Kubernetes Service (AKS), consultez l’article suivant :
+
+[Déployer un 2019 de serveur SQL du cluster big data avec un script de déploiement (AKS)](quickstart-big-data-cluster-deploy.md).
+
+Vous pouvez personnaliser n’importe quel script de déploiement en créant votre propre version qui configure les variables d’environnement de cluster big data différemment.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

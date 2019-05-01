@@ -5,16 +5,16 @@ description: Article de référence pour les commandes de stockage mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 47c4d331c2f1848265c1322bda88c358b61cf56a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 120f230fad10c968590ab7e5c1430433598ddcd6
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860614"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473197"
 ---
 # <a name="mssqlctl-storage"></a>Stockage mssqlctl
 
@@ -22,11 +22,10 @@ ms.locfileid: "58860614"
 
 L’article suivant fournit la référence pour le **stockage** commandes dans le **mssqlctl** outil. Pour plus d’informations sur les autres **mssqlctl** commandes, consultez [mssqlctl référence](reference-mssqlctl.md).
 
-## <a id="commands"></a> Commandes
-
-|||
-|---|---|
-| [mount](reference-mssqlctl-storage-mount.md) | Gérer le montage des magasins distants dans HDFS. |
+## <a name="commands"></a>Commandes
+|     |     |
+| --- | --- |
+[montage du stockage mssqlctl](reference-mssqlctl-storage-mount.md) | Gérer le montage des magasins distants dans HDFS.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

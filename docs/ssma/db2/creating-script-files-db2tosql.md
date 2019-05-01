@@ -11,18 +11,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520644"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453414"
 ---
 # <a name="creating-script-files-db2tosql"></a>Création de fichiers de Script (DB2ToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
 Le fichier de script peut être divisé en trois sections, reportages.., :  
   
-1.  **configuration :** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
+1.  **config:** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
   
 2.  **serveurs :** Permet à l’utilisateur définir des définitions de serveur de la source/cible. Cela peut également être dans un fichier de connexion de serveur distinct.  
   
@@ -86,7 +86,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   source-utilisation-last-used = « true » (valeur par défaut) ou serveur de source = « source_servername »  
   
-    -   cible-utilisation-last-used = « true » (valeur par défaut) ou serveur de la cible = « target_servername »  
+    -   target-use-last-used="true" (default) or target-server="target_servername"  
   
     **Exemple :**  
   
@@ -148,7 +148,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Les modes de reconnexion sont :  
   
-    -   se reconnecter-last-utilisé-serveur : Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
+    -   reconnect-to-last-used-server: Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
   
     -   générer une-erreur : Si la connexion n’est pas active, une erreur est générée.  
   

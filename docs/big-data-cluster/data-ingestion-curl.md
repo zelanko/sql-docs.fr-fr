@@ -5,17 +5,17 @@ description: Utilisez curl pour charger des données dans HDFS sur des clusters 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947795"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472089"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Utilisez curl pour charger des données dans HDFS sur les clusters de données volumineuses de SQL Server
 
@@ -25,10 +25,10 @@ Cet article explique comment utiliser **curl** pour charger des données dans HD
 
 ## <a name="obtain-the-service-external-ip"></a>Obtenir l’adresse IP externe de service
 
-WebHDFS est démarré lorsque le déploiement est terminé et que son accès traverse Knox. Le point de terminaison Knox est exposée via un service Kubernetes appelé **-security du point de terminaison**.  Pour créer l’URL WebHDFS nécessaire pour télécharger des fichiers, vous devez le **-security du point de terminaison** adresse IP externe et le nom de votre cluster de service. Vous pouvez obtenir le **-security du point de terminaison** adresse IP externe de service en exécutant la commande suivante :
+WebHDFS est démarré lorsque le déploiement est terminé et que son accès traverse Knox. Le point de terminaison Knox est exposée via un service Kubernetes appelé **passerelle-svc-external**.  Pour créer l’URL WebHDFS nécessaire pour télécharger des fichiers, vous devez le **passerelle-svc-external** adresse IP externe et le nom de votre cluster de service. Vous pouvez obtenir le **passerelle-svc-external** adresse IP externe de service en exécutant la commande suivante :
 
 ```bash
-kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
@@ -38,7 +38,7 @@ kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.
 
 Maintenant, vous pouvez construire l’URL pour accéder à la WebHDFS comme suit :
 
-`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
 Exemple :
 
@@ -49,7 +49,7 @@ Exemple :
 Au fichier de liste sous **hdfs : / / / airlinedata**, utilisez la commande curl suivante :
 
 ```bash
-curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
 ## <a name="put-a-local-file-into-hdfs"></a>Placez un fichier local dans HDFS
@@ -57,7 +57,7 @@ curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external 
 Pour placer un nouveau fichier **test.csv** à partir d’un répertoire local au répertoire d’airlinedata, utilisez la commande curl suivante (le **Content-Type** paramètre est obligatoire) :
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
 ## <a name="create-a-directory"></a>Créez un répertoire
@@ -65,7 +65,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP extern
 Pour créer un répertoire **tester** sous `hdfs:///`, utilisez la commande suivante :
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

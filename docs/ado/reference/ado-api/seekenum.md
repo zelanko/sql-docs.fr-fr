@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772727"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459336"
 ---
 # <a name="seekenum"></a>SeekEnum
 Spécifie le type de [recherche](../../../ado/reference/ado-api/seek-method.md) à exécuter.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Recherche la première clé égale à *KeyValues*.|  
 |**adSeekLastEQ**|2|Recherche la dernière clé égale à *KeyValues*.|  

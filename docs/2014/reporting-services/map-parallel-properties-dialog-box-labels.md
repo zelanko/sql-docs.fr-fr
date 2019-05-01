@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968265"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462106"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des parallèles de la carte, Étiquettes
   Utilisez le **MapParallel propriétés** la boîte de dialogue options d’étiquette pour le quadrillage horizontal de la carte. Un parallèle représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre de carte :  

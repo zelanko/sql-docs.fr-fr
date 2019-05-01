@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280623"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455088"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Consignes d’installation pour SQL Server sur Linux
 
@@ -109,7 +109,7 @@ Ces commandes téléchargent le package le plus récent et remplacent les fichie
 
 Pour la restauration ou la rétrogradation de SQL Server vers une version antérieure, utilisez les étapes suivantes :
 
-1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de numéros de versions de package, consultez les [notes de publication](sql-server-linux-release-notes.md).
+1. Identifiez le numéro de version pour le package de SQL Server que vous souhaitez rétrograder. Pour obtenir la liste de numéros de versions de package, consultez les [notes de publication](../linux/sql-server-linux-release-notes.md).
 
 1. Passez à une version antérieure de SQL Server. Dans les commandes suivantes, remplacez `<version_number>` par le numéro de version SQL Server que vous avez identifié à l’étape 1.
 
@@ -178,7 +178,7 @@ Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés d
 > [!TIP]
 > Si vous avez installé avec succès avec les étapes décrites dans les Démarrages rapides, il est inutile de télécharger ou installer manuellement l’ou les packages SQL Server. Cette section concerne uniquement le scénario hors connexion.
 
-1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](sql-server-linux-release-notes.md).
+1. **Téléchargez le package de moteur de base de données pour votre plateforme**. Recherchez les liens de téléchargement de package dans la section des détails du package dans les [Notes de publication](../linux/sql-server-linux-release-notes.md).
 
 1. **Déplacez le package téléchargé sur votre ordinateur Linux**. Si vous avez utilisé un autre ordinateur pour télécharger les packages, déplacez les packages vers l’ordinateur Linux avec la commande **scp**.
 

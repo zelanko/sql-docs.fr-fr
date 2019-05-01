@@ -4,18 +4,18 @@ description: Cet article décrit comment SQL Server s’exécute sur Linux et fo
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/25/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 37cd2269d6d8fe413b730a111ad0a5f604ed8994
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: c24e4fa86c92a183c957c44a33a2d3524cdd1f8c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408876"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457365"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 
@@ -26,22 +26,22 @@ ms.locfileid: "52408876"
 ::: moniker-end
 
 ::: moniker range=">= sql-server-ver15 || >= sql-server-linux-ver15"
-Version préliminaire de SQL Server 2019 s’exécute sur Linux. Il est le même moteur de base de données SQL Server, avec nombreux services, quel que soit votre système d’exploitation des fonctionnalités similaires. Pour en savoir plus sur cette version, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+Version préliminaire de SQL Server 2019 s’exécute sur Linux. Il est le même moteur de base de données SQL Server, avec nombreux services, quel que soit votre système d’exploitation des fonctionnalités similaires. Pour en savoir plus sur cette version, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-2017"
 > [!TIP]
-> [Version préliminaire de SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sqllinux).
+> [Version préliminaire de SQL Server 2019](sql-server-linux-overview.md?view=sql-server-ver15) a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sql-server-linux-2017"
 > [!TIP]
-> [Version préliminaire de SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sqllinux).
+> [Version préliminaire de SQL Server 2019](sql-server-linux-overview.md?view=sql-server-linux-ver15) a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-linux-ver15#sql-server-on-linux).
 ::: moniker-end
 
 ::: moniker range="= sqlallproducts-allversions"
 > [!TIP]
-> Version préliminaire de SQL Server 2019 a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux).
+> Version préliminaire de SQL Server 2019 a été publié ! Pour découvrir les nouveautés dans la dernière version de Linux, consultez [Nouveautés de la version préliminaire de SQL Server 2019 pour Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux).
 ::: moniker-end
 
 ## <a name="install"></a>Installation
@@ -65,7 +65,7 @@ Après l’installation, connectez-vous à l’instance de SQL Server installée
 |-----|-----|
 | Visual Studio Code (VS Code) | [Utiliser VS Code avec SQL Server sur Linux](sql-server-linux-develop-use-vscode.md) |
 | SQL Server Management Studio (SSMS) | [Utiliser SSMS sur Windows pour se connecter à SQL Server sur Linux](sql-server-linux-manage-ssms.md) |
-| Outils de données SQL Server (SSDT) | [Utiliser SSDT avec SQL Server sur Linux](sql-server-linux-develop-use-ssdt.md) |
+| SQL Server Data Tools (SSDT) | [Utiliser SSDT avec SQL Server sur Linux](sql-server-linux-develop-use-ssdt.md) |
 
 ## <a name="explore"></a>Explorer
 
@@ -99,7 +99,7 @@ Si vous êtes déjà familiarisé avec SQL Server sur Linux, passez en revue les
 Examinez ensuite quelles sont les nouveautés :
 
 - [Quelles sont les nouveautés de SQL Server 2017](sql-server-linux-whats-new.md)
-- [Nouveautés de la version préliminaire de SQL Server 2019 sur Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sqllinux)
+- [Nouveautés de la version préliminaire de SQL Server 2019 sur Linux](../sql-server/what-s-new-in-sql-server-ver15.md#sql-server-on-linux)
 
 ::: moniker-end
 

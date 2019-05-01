@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207008"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457625"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE, commande SQL
 Modifie par programmation la structure d’une table.  
@@ -64,10 +64,10 @@ ALTER TABLE TableName1
  *TableName1*  
  Spécifie le nom de la table dont la structure est modifiée.  
   
- Ajouter [colonne] *FieldName1*  
+ ADD [COLUMN] *FieldName1*  
  Spécifie le nom du champ à ajouter.  
   
- ALTER [colonne] *FieldName1*  
+ ALTER [COLUMN] *FieldName1*  
  Spécifie le nom d’un champ existant à modifier.  
   
  *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
@@ -119,7 +119,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- ALTER [colonne] *FieldName2*  
+ ALTER [COLUMN] *FieldName2*  
  Spécifie le nom d’un champ existant à modifier.  
   
  DÉFINIR par défaut *eExpression2*  
@@ -137,7 +137,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  VÉRIFICATION DE LA LISTE  
  Supprime la règle de validation pour un champ existant.  
   
- DROP [colonne] *FieldName3*  
+ DROP [COLUMN] *FieldName3*  
  Spécifie un champ à supprimer de la table. Suppression d’un champ de la table supprime également la valeur de la valeur par défaut et la règle de validation de champ.  
   
  Si l’index clé ou déclencheur expressions font référence au champ, les expressions deviennent non valides lorsque le champ est supprimé. Dans ce cas, une erreur n’est pas générée lorsque le champ est supprimé, mais les expressions de clé ou d’un déclencheur des index non valide génère des erreurs au moment de l’exécution.  
@@ -172,7 +172,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  BALISE de clé étrangère DROP *TagName6*[Enregistrer]  
  Supprime une clé étrangère dont l’étiquette index est *TagName6*. Si vous omettez d’enregistrement, la balise de l’index est supprimée de l’index structurel. Inclure enregistrer pour empêcher la suppression de la balise de l’index de l’index structurel.  
   
- COLONNE de changement de nom *FieldName4*à *FieldName5*  
+ RENAME COLUMN *FieldName4*TO *FieldName5*  
  Vous permet de modifier le nom d’un champ dans la table. *FieldName4* Spécifie le nom du champ qui est renommé. *FieldName5* Spécifie le nouveau nom du champ.  
   
 > [!CAUTION]  

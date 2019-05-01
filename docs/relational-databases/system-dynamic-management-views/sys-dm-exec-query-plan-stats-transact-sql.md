@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 89185976120c15f9d1fcdfef75f2bddb41415c65
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582096"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63474279"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Retourne l’équivalent du dernier plan d’exécution réel connu pour un plan de requête mis en cache précédemment. 
 
@@ -64,7 +64,7 @@ Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique sui
 ## <a name="remarks"></a>Notes
 Cette fonction système est disponible à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Il s’agit d’une fonctionnalité d’activation qui nécessite l’activation de l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451.   
+Il s’agit d’une fonctionnalité d’activation qui nécessite l’activation de l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. En commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], pour effectuer cette opération au niveau de la base de données, consultez l’option LAST_QUERY_PLAN_STATS dans [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Cette fonction système fonctionne sous le **léger** infrastructure de profilage des statistiques d’exécution de requête. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
@@ -80,7 +80,7 @@ Dans les conditions suivantes, un **simplifiée <sup>1</sup>**  sortie Showplan 
     **AND**    
 -   La requête est assez simple, généralement classés en tant que partie d’une charge de travail OLTP.
 
-<sup>1</sup> cela fait référence à un plan de requête qui contient uniquement l’opérateur de nœud racine (SELECT). Pour [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 que cet élément fait référence au plan de mise en cache comme étant disponibles via sys.dm_exec_cached_plans.
+<sup>1</sup> compter [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5, cela fait référence à un plan de requête qui contient uniquement l’opérateur de nœud racine (SELECT). Pour [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] cela fait référence au plan de mise en cache comme étant disponibles par le biais de CTP 2.4 `sys.dm_exec_cached_plans`.
 
 Dans les conditions suivantes, **aucune sortie est retournée** de **sys.dm_exec_query_plan_stats**:
 
@@ -131,6 +131,16 @@ CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle) AS qps
 WHERE st.text LIKE 'SELECT * FROM Person.Person%';  
 GO  
 ```   
+
+### <a name="d-look-at-cached-events-for-trigger"></a>D. Examinez les événements mis en cache pour le déclencheur
+
+```sql
+SELECT *
+FROM sys.dm_exec_cached_plans
+CROSS APPLY sys.dm_exec_query_plan_stats(plan_handle)
+WHERE objtype ='Trigger';
+GO
+```
 
 ## <a name="see-also"></a>Voir aussi
   [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  

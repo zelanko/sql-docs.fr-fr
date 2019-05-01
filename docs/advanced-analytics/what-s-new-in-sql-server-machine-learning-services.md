@@ -1,7 +1,7 @@
 ---
 title: Nouveautés - SQL Server Machine Learning Services | Microsoft Docs
 description: Nouvelles annonces de fonctionnalité pour chaque version de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MT
+ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645521"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458794"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Quelles sont les nouveautés dans SQL Server Machine Learning Services
 
@@ -30,7 +30,8 @@ Cette version ajoute les fonctionnalités les plus demandées pour les opératio
 
 | Version | Mise à jour de fonctionnalité |
 |---------|----------------|
-| CTP 2.4 | Prise en charge de Linux pour [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) pour R, Python et Java. |
+| CTP 2.5 | Nouvelle [extensibilité Microsoft SDK pour Java](java/java-sdk.md). |
+| CTP 2.4 | Prise en charge de Linux pour [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) pour R, Python et Java. |
 | | La variable d’environnement qui spécifie l’emplacement de l’interpréteur Java est devenue `JAVA_HOME` à `JRE_HOME`. |
 | CTP 2.3 | Nouvelles prises en charge [les types de données Java](java/java-sql-datatypes.md). |
 | | Sur Windows, le code Java est accessible dans une bibliothèque externe à l’aide de la [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) instruction. Fonctionnalité équivalente sera disponible sur Linux dans une prochaine version CTP. En savoir plus : [L’appel de Java à partir de SQL Server](java/howto-call-java-from-sql.md). |

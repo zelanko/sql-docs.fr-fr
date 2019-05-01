@@ -1,5 +1,5 @@
 ---
-title: Sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs
+title: sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
-ms.translationtype: MT
+ms.openlocfilehash: af6c2996877f4ab7d8a2305c4f6fe4b30a0127cc
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947653"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473742"
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>Sys.database_scoped_configurations (Transact-SQL)
+# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne par configuration. 
@@ -38,15 +38,14 @@ ms.locfileid: "51947653"
 |**value**|**sqlvariant**|La valeur définie pour cette option de configuration pour le réplica principal.|  
 |**value_for_secondary**|**sqlvariant**|La valeur définie pour cette option de configuration pour les réplicas secondaires.|  
 |**is_value_default**|**bit** |Spécifie si la valeur définie est la valeur par défaut.|
-|**elevate_resumable**|nvarchar(60)|La base de données étendue ensemble par défaut pour l’option pouvant être reprise des opérations d’index| 
   
-##  <a name="Permissions"></a> Permissions  
- Nécessite l'appartenance au rôle **public** .  
+##  <a name="Permissions"></a> Autorisations  
+Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="remarks"></a>Notes  
- Lorsque la valeur NULL est retournée comme valeur pour **value_for_secondary**, cela signifie que la base de données secondaire est défini dans la région primaire.  
+Lorsque la valeur NULL est retournée comme valeur pour **value_for_secondary**, cela signifie que la base de données secondaire est défini dans la région primaire.  
  
- Les paramètres configurés au niveau de la base de données sont reportés avec la base de données. Cela signifie que lorsqu’une base de données est restaurée ou jointe, les paramètres de configuration existants sont conservés.
+Les paramètres configurés au niveau de la base de données sont reportés avec la base de données. Cela signifie que lorsqu’une base de données est restaurée ou jointe, les paramètres de configuration existants sont conservés.
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  

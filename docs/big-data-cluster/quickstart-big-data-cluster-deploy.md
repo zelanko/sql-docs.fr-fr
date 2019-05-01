@@ -5,17 +5,17 @@ description: Procédure pas à pas un déploiement de clusters SQL Server 2019 d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582913"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473482"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Exécutez le script de déploiement
 
-Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce script crée un service AKS dans Azure et puis déployer un cluster de données volumineuses de SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#env) pour créer un déploiement personnalisé.
+Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce script crée un service AKS dans Azure et puis déployer un cluster de données volumineuses de SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#configfile) pour créer un déploiement personnalisé.
 
 1. Exécutez le script avec la commande suivante :
 
@@ -114,7 +114,7 @@ Au bout de 10 à 20 minutes, vous devez averti que le pod de contrôleur est en 
 ```
 
 > [!IMPORTANT]
-> La totalité du déploiement peut prendre beaucoup de temps en raison du temps nécessaire pour télécharger les images de conteneur pour les composants du cluster de données volumineuses. Toutefois, il ne doit pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez le [la résolution des problèmes de déploiement](deployment-guidance.md#troubleshoot) section de l’article de conseils de déploiement.
+> La totalité du déploiement peut prendre beaucoup de temps en raison du temps nécessaire pour télécharger les images de conteneur pour les composants du cluster de données volumineuses. Toutefois, il ne doit pas prendre plusieurs heures. Si vous rencontrez des problèmes avec votre déploiement, consultez [analyse et résoudre les problèmes de clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Inspecter le cluster
 
@@ -149,20 +149,20 @@ Ouvrez une nouvelle fenêtre de commande à utiliser **kubectl** pendant le proc
    ```
 
 > [!TIP]
-> Pour plus d’informations sur comment surveiller et résoudre les problèmes d’un déploiement, consultez le [la résolution des problèmes de déploiement](deployment-guidance.md#troubleshoot) section de l’article de conseils de déploiement.
+> Pour plus d’informations sur comment surveiller et résoudre les problèmes d’un déploiement, consultez [analyse et résoudre les problèmes de clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).
 
 ### <a name="use-the-cluster-administration-portal"></a>Utilisez le portail d’Administration de Cluster
 
-Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez également utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `endpoint-service-proxy` (par exemple : **https://\<ip-address\>: 30777/portail**). Les informations d’identification utilisées pour se connecter au portail correspondent aux valeurs pour **utilisateur du contrôleur** et **mot de passe** que vous avez spécifié dans le script de déploiement.
+Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez également utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `mgmtproxy-svc-external` (par exemple : **https://\<ip-address\>: 30777/portail**). Les informations d’identification utilisées pour se connecter au portail correspondent aux valeurs pour **utilisateur du contrôleur** et **mot de passe** que vous avez spécifié dans le script de déploiement.
 
-Vous pouvez obtenir l’adresse IP de la **proxy de service de point de terminaison** service en exécutant cette commande dans une fenêtre bash ou cmd :
+Vous pouvez obtenir l’adresse IP de la **mgmtproxy-svc-external** service en exécutant cette commande dans une fenêtre bash ou cmd :
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> Dans CTP 2.4, vous verrez un avertissement de sécurité lorsque vous accédez à la page web, car les clusters de données volumineuses est actuellement à l’aide de certificats SSL générés automatiquement.
+> Dans CTP 2.5, vous verrez un avertissement de sécurité lorsque vous accédez à la page web, car les clusters de données volumineuses est actuellement à l’aide de certificats SSL générés automatiquement.
 
 ## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
 
@@ -195,4 +195,4 @@ Le script de déploiement configuré Azure Kubernetes Service et également dép
 Maintenant que le cluster de données volumineuses de SQL Server est déployé, vous pouvez charger des exemples de données et explorez les didacticiels :
 
 > [!div class="nextstepaction"]
-> [Didacticiel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019](tutorial-load-sample-data.md)
+> [Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019](tutorial-load-sample-data.md)

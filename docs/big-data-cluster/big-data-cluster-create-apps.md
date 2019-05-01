@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582444"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472236"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server (version préliminaire)
 
@@ -45,7 +45,7 @@ Les types d’applications suivants sont pris en charge :
 
 ## <a name="capabilities"></a>Fonctions
 
-Dans SQL Server 2019 (version préliminaire) CTP 2.4 vous pouvez créer, supprimer, décrivent, initialiser, liste de s’exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl**.
+Dans SQL Server 2019 (version préliminaire) CTP 2.5 vous pouvez créer, supprimer, décrivent, initialiser, liste de s’exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl**.
 
 |Command |Description |
 |:---|:---|
@@ -68,19 +68,19 @@ Les sections suivantes décrivent ces commandes plus en détail.
 
 ## <a name="sign-in"></a>Connexion
 
-Avant de déployer ou d’interagir avec les applications, tout d’abord vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl login` commande. Spécifiez l’adresse IP externe de la `endpoint-service-proxy` service (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
+Avant de déployer ou d’interagir avec les applications, tout d’abord vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl login` commande. Spécifiez l’adresse IP externe de la `mgmtproxy-svc-external` service (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="aks"></a>AKS
 
-Si vous utilisez AKS, vous devez exécuter la commande suivante pour obtenir l’adresse IP de la `endpoint-service-proxy` service en exécutant cette commande dans une fenêtre bash ou cmd :
+Si vous utilisez AKS, vous devez exécuter la commande suivante pour obtenir l’adresse IP de la `mgmtproxy-svc-external` service en exécutant cette commande dans une fenêtre bash ou cmd :
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm ou Minikube

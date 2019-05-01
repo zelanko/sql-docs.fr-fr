@@ -5,17 +5,17 @@ description: Découvrez comment configurer minikube pour les déploiements de cl
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860690"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473496"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Configurer minikube pour les déploiements de cluster SQL Server big data
 
@@ -27,7 +27,7 @@ Cet article décrit comment configurer **minikube** sur un ordinateur unique pou
 
 - 32 Go de mémoire (64 Go recommandé).
 
-- Si l’ordinateur possède uniquement le minimum recommandé de mémoire, puis configurez le déploiement du cluster que 1 seule instance de pool de calcul, 1 instance de pool de données et instance de pool de stockage de 1. Cette configuration ne doit être utilisée pour les environnements d’évaluation où la durabilité et la disponibilité des données sont sans importance. Consultez le [documentation relative au déploiement](deployment-guidance.md#env) pour plus d’informations sur les variables d’environnement à définir pour configurer le nombre de réplicas pour les pools de données, de calcul, pools et les pools de stockage.
+- Si l’ordinateur possède uniquement le minimum recommandé de mémoire, puis configurez le déploiement du cluster que 1 seule instance de pool de calcul, 1 instance de pool de données et instance de pool de stockage de 1. Cette configuration ne doit être utilisée pour les environnements d’évaluation où la durabilité et la disponibilité des données sont sans importance. Consultez le [documentation relative au déploiement](deployment-guidance.md#configfile) pour plus d’informations sur les variables d’environnement à définir pour configurer le nombre de réplicas pour les pools de données, de calcul, pools et les pools de stockage.
 
 - La virtualisation x VT ou AMD-v doit être activée dans le BIOS de votre ordinateur.
 
@@ -44,11 +44,11 @@ Cet article décrit comment configurer **minikube** sur un ordinateur unique pou
    - Pour Linux, installez [VirtualBox](https://www.virtualbox.org/wiki/Downloads) ou [KVM](https://www.linux-kvm.org/).
    - Pour Windows, installez [VirtualBox](https://www.virtualbox.org/wiki/Downloads) ou [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). Si vous n’avez pas d’un commutateur externe configuré dans hyper-v, créez-en un qui a accès au réseau externe.  Consultez Comment [créer le commutateur externe dans hyper-v pour minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
-## <a name="install-minikube"></a>Installer Minikube
+## <a name="install-minikube"></a>Installer minikube
 
-Installer Minikube conformément aux instructions pour le [v0.28.2 version](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Le cluster de données volumineuses de SQL Server 2019 (version préliminaire) fonctionne uniquement avec la version v0.24.1 et inscrire.
+Installer minikube conformément aux instructions pour le [v0.28.2 version](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). Le cluster de données volumineuses de SQL Server 2019 (version préliminaire) fonctionne uniquement avec la version v0.24.1 et inscrire.
 
-## <a name="create-a-minikube-cluster"></a>Créer un cluster Minikube
+## <a name="create-a-minikube-cluster"></a>Créer un cluster minikube
 
 La commande suivante crée un cluster minikube dans une machine virtuelle Hyper-V dotée de 8 processeurs, 28 Go de mémoire, taille du disque de 100 Go. La taille du disque n’est pas un espace réservé.  Il atteint cette taille sur le disque en fonction des besoins.  Nous vous recommandons ne pas de modifier le disque de l’espace sur une valeur inférieure à 100 Go que nous avons rencontré des problèmes avec ce test. Il spécifie également le commutateur hyper-v avec un accès externe explicitement.
 
@@ -58,7 +58,7 @@ Modifier les paramètres tels que **--mémoire** en fonction des besoins en fonc
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-Si vous utilisez Minikube avec VirtualBox, la commande ressemblerait à ceci :
+Si vous utilisez minikube avec VirtualBox, la commande ressemblerait à ceci :
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les étapes décrites dans cet article configuré un cluster Minikube. L’étape suivante consiste à déployer le cluster de données volumineux de SQL Server 2019. Pour obtenir des instructions, consultez l’article suivant :
+Les étapes décrites dans cet article configuré un cluster minikube. L’étape suivante consiste à déployer le cluster de données volumineux de SQL Server 2019. Pour obtenir des instructions, consultez l’article suivant :
 
 [Déployer des clusters de données volumineuses de SQL Server 2019 sur Kubernetes](deployment-guidance.md#deploy)
