@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316328"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analyser des blocages à l'aide de SQL Server Profiler
   Utilisez le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour identifier la cause d'un interblocage. Un interblocage se produit quand il y a une dépendance cyclique entre au moins deux threads ou processus pour un jeu de ressources dans SQL Server. Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vous permet de créer une trace qui enregistre, relit et affiche les événements de blocage dans le cadre d'une analyse.  

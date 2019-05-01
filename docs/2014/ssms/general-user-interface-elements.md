@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316141"
 ---
 # <a name="general-user-interface-elements"></a>Éléments généraux relatifs à l'interface utilisateur
    **L’éditeur**, la fenêtre **Propriétés** et la **boîte à outils** représentent certains des éléments d’interface utilisateur de base de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
