@@ -1,5 +1,5 @@
 ---
-title: Configuration d’erreur pour le Cube, Partition et le traitement des dimensions | Documents Microsoft
+title: Configuration d’erreur pour le Cube, Partition et le traitement de Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57ad330c44f378dd71cad1e02f3a5b3e6c63f38f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d8883d72ec5fcb15dfb1b827ea7e053a14568a48
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025546"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357355"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Configuration d’erreur pour le Cube, Partition et le traitement de Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "34025546"
   
 2.  Dans Propriétés, cliquez sur **Configuration d’erreur**.  
   
-#### <a name="sql-server-data-tools"></a>Outils de données SQL Server  
+#### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur une dimension ou sur un cube. **ErrorConfiguration** s’affiche dans Propriétés dans le volet au-dessous.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "34025546"
   
 -   Définissez **NullProcessing**=**Error** pour exclure les enregistrements avec des valeurs NULL. Cela génère l’erreur **NullKeyNotAllowed** , qui est consignée et comptabilisée dans le nombre maximal d’erreurs. Vous pouvez affecter à la propriété de configuration d’erreur **Clé Null non autorisée** la valeur **IgnoreError** pour permettre au traitement de continuer.  
   
- Les valeurs NULL peuvent poser des problèmes pour les champs non-clé. De fait, les requêtes MDX retournent un résultat différent si la valeur NULL est interprétée en tant que zéro ou chaîne vide. C'est pourquoi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des options de traitement des valeurs NULL qui vous permettent de prédéfinir le comportement de conversion souhaité. Pour plus d’informations, consultez [Définition du membre inconnu et des propriétés de traitement Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) et <xref:Microsoft.AnalysisServices.NullProcessing> .  
+ Les valeurs NULL peuvent poser des problèmes pour les champs non-clé. De fait, les requêtes MDX retournent un résultat différent si la valeur NULL est interprétée en tant que zéro ou chaîne vide. C'est pourquoi, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des options de traitement des valeurs NULL qui vous permettent de prédéfinir le comportement de conversion souhaité.  
   
 #### <a name="set-nullprocessing-property-on-a-dimension-attribute"></a>Définir la propriété NullProcessing sur un attribut de dimension  
   
@@ -174,10 +174,10 @@ ms.locfileid: "34025546"
 ##  <a name="bkmk_next"></a> Étape suivante  
  Décidez si les erreurs arrêtent le traitement ou sont ignorées. N'oubliez pas que seule l'erreur est ignorée. L'enregistrement ayant provoqué l'erreur n'est pas ignoré ; il est annulé ou converti en membre inconnu. Les enregistrements qui ne sont pas conformes aux règles d'intégrité des données ne sont jamais ajoutés à la base de données. Par défaut, le traitement s'arrête lorsqu'la première erreur se produit, mais vous pouvez modifier ce comportement en augmentant le nombre maximal d'erreurs. Dans le développement de cube, il peut être utile d'abaisser les règles de configuration d'erreur, ce qui autorise la poursuite du traitement, de façon à ce qu'il y ait des données à tester.  
   
- Décidez s'il faut modifier les comportements de traitement des valeurs NULL par défaut. Par défaut, les valeurs NULL dans une colonne de chaîne sont traitées en tant que valeurs vides, alors que les valeurs NULL dans une colonne numérique sont traitées en tant que zéro. Pour obtenir des instructions sur la définition du traitement de la valeur NULL sur un attribut, consultez [Définition du membre inconnu et des propriétés de traitement Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Décidez s'il faut modifier les comportements de traitement des valeurs NULL par défaut. Par défaut, les valeurs NULL dans une colonne de chaîne sont traitées en tant que valeurs vides, alors que les valeurs NULL dans une colonne numérique sont traitées en tant que zéro.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Propriétés du journal](../../analysis-services/server-properties/log-properties.md)   
- [Définition des propriétés de traitement des valeurs Null et membre inconnu](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Définition du membre inconnu et des propriétés de traitement Null](../multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   

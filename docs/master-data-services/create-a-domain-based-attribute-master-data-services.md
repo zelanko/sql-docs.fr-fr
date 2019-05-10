@@ -12,15 +12,15 @@ helpviewer_keywords:
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 23fe106f296860d121d7315daf669855c792b64d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 09d0b3b339a70b5d2ccae3c9edca11ddf942e95c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759211"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487593"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Créer un attribut basé sur un domaine (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52759211"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut basé sur un domaine pour remplir les valeurs d'un attribut avec les membres d'une entité.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -45,7 +45,7 @@ ms.locfileid: "52759211"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Créer une vue d’abonnement|Nom de l'attribut.|  
+|Nom|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -100,7 +100,7 @@ ms.locfileid: "52759211"
   
 13. Cliquez sur **Enregistrer**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs basés sur un domaine &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
  [Créer une hiérarchie dérivée &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Modifier le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   

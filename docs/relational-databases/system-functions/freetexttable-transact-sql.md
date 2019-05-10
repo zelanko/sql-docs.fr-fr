@@ -19,16 +19,16 @@ helpviewer_keywords:
 - ranked results [full-text search]
 - column searches [full-text search]
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f5004224d3c590830ed44a13a4926f097ebef4b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f61daaedb3aa0157c872e6b1e9441d6523b8601
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589983"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097276"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  LANGUAGE *language_term*  
  Langue dont les ressources seront utilisées pour l'analyse lexicale, la recherche de radical, l'utilisation du dictionnaire de synonymes et la suppression de mots vides dans la requête. Ce paramètre est facultatif et peut être spécifié sous la forme d'une chaîne, d'un entier ou d'une valeur hexadécimale correspondant à l'identificateur de paramètres régionaux (LCID) d'une langue. Si une langue est définie avec *language_term*, elle est appliquée à tous les éléments de la condition de recherche. Si aucune valeur n'est définie, la langue du texte intégral de la colonne est utilisée.  
   
- Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Lorsque vous interrogez une telle colonne, en spécifiant *language_term de langage* augmente la probabilité d’une meilleure correspondance.  
+ Si des documents de langues différentes sont stockés ensemble en tant qu'objets blob dans une colonne unique, l'identificateur de paramètres régionaux (LCID) d'un document donné détermine la langue utilisée pour l'indexation de son contenu. Quand une requête est effectuée sur la colonne, la spécification de*LANGUAGE language_term* augmente la probabilité d’une meilleure correspondance.  
   
  Quand il est spécifié en tant que chaîne, *language_term* correspond à la valeur de colonne **alias** dans l’affichage de compatibilité [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).  La chaîne doit être placée entre guillemets simples, comme dans '*language_term*'. Quand il est spécifié sous la forme d’un entier, *language_term* est le LCID qui identifie la langue. Quand il est spécifié sous la forme d’une valeur hexadécimale, *language_term* est 0x suivi de la valeur hexadécimale du LCID. La valeur hexadécimale ne doit pas dépasser huit caractères, y compris les zéros non significatifs.  
   
@@ -125,7 +125,7 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>b. Utilisation de FREETEXT dans un INNER JOIN  
+### <a name="b-using-freetext-in-an-inner-join"></a>B. Utilisation de FREETEXT dans un INNER JOIN  
  L’exemple suivant retourne la description et le rang de tous les produits avec une description qui correspond à la signification de `high level of performance`.  
   
 ```  

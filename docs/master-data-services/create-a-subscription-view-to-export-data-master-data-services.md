@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9619bca36ec488fdd5e25b5b9eb9a82370d7049
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754671"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485061"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52754671"
 
   Créez une vue d’abonnement pour exporter les données Master Data Services vers des systèmes d’abonnement. Vous créez une vue de vos données dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Gestion de l'intégration** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -69,7 +69,7 @@ ms.locfileid: "52754671"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Créer une vue d’abonnement|Nom de la vue d’abonnement.|  
+|Nom|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Options de version|Nom de la version.|  
 |Version|Nom de l’indicateur de version.|  
@@ -89,7 +89,7 @@ ms.locfileid: "52754671"
   
 -   **Le** : date et heure de la dernière mise à jour de la vue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Supprimer une vue d’abonnement &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Créer un indicateur de version &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  

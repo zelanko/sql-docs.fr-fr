@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7c77f802f7714e24345449405d0de75bd874a75f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 93f8af2203496e385ceaede559c99c337cf9651a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777867"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485304"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Modifier le nom d'une version (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52777867"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], modifiez le nom de version pour le personnaliser en fonction de votre organisation.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -45,7 +45,7 @@ ms.locfileid: "52777867"
   
 4.  Appuyez sur Entrée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)   
  [Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)   
