@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676901"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106279"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques de performances et les instructions de configuration de SQL Server sur Linux
 
@@ -62,7 +62,7 @@ Il s’agit de la performance associés à haute des paramètres de système d�
 
 Le tableau suivant fournit des recommandations pour les paramètres de l’UC :
 
-| Paramètre | Valeur | Informations complémentaires |
+| Paramètre | Value | Informations complémentaires |
 |---|---|---|
 | Gouverneur de fréquence du processeur | performances | Consultez le **cpupower** commande |
 | ENERGY_PERF_BIAS | performances | Consultez le **x86_energy_perf_policy** commande |
@@ -71,10 +71,10 @@ Le tableau suivant fournit des recommandations pour les paramètres de l’UC :
 
 Le tableau suivant fournit des recommandations pour les paramètres de disque :
 
-| Paramètre | Valeur | Informations complémentaires |
+| Paramètre | Value | Informations complémentaires |
 |---|---|---|
 | anticipation de disque | 4096 | Consultez le **blockdev** commande |
-| paramètres de sysctl | Kernel.sched_min_granularity_ns = 10000000<br/>Kernel.sched_wakeup_granularity_ns = 15 000 000<br/>VM.dirty_ratio = 40<br/>VM.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
+| paramètres de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consultez le **sysctl** commande |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Noyau paramètre automatique numa équilibrage pour les systèmes à plusieurs nœuds NUMA
 
@@ -100,7 +100,7 @@ Utilisez le **noatime** attribut avec n’importe quel système de fichiers qui 
 
 La plupart des installations de Linux doit avoir cette option sur par défaut. Nous recommandons pour l’expérience de performances plus cohérente de laisser cette option de configuration est activée.
 
-### <a name="swapfile"></a>fichier d’échange
+### <a name="swapfile"></a>swapfile
 
 Assurez-vous de qu'avoir un fichier d’échange configuré correctement pour éviter les problèmes de mémoire insuffisante. Consultez votre documentation Linux pour savoir comment créer et dimensionner correctement un fichier d’échange.
 

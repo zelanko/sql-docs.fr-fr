@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532481"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088503"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -101,6 +101,8 @@ sp_describe_undeclared_parameters
 -   Si l’entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] lot déclare une variable locale du même nom qu’un paramètre déclaré dans \@params.  
   
 - Si l’instruction fait référence à des tables temporaires.
+
+- La requête inclut la création d'une table permanente qui est alors interrogée.
   
  Si \@tsql n’a aucun paramètre, autres que ceux déclarés dans \@params, la procédure retourne un jeu de résultats vide.  
   

@@ -2,21 +2,21 @@
 title: Téléchargez et installez
 titleSuffix: Azure Data Studio
 description: Télécharger et installer Azure Data Studio pour Windows, macOS ou Linux
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f352e47f95d6c530eea062505860fdab10cb25af
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.custom: seodec18
+ms.date: 04/19/2019
+ms.reviewer: alayu; sstein
+ms.openlocfilehash: 06f6dbd9184b13768e25f1ea652ed41b4fe245a1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63180527"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104867"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -158,11 +158,12 @@ Si vous avez installé [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]
 
 ## <a name="recommended-system-requirements"></a>Configuration système recommandée
 Pour une expérience optimale, utilisez la configuration système recommandée.
+[Nécessaire de mise à jour ici pour quantifier la mémoire]
 
 |             | Cœurs de processeur | Mémoire/RAM |
-|:-----------:|:---------:|:----------:|
-| Recommandation |     4     |      8     |
-|   Minimum   |     2     |      4     |
+|:-----------|:---------|:----------|
+| Recommandation |     4     |      8 GO    |
+|   Minimum   |     2     |      4 Go     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Rechercher des mises à jour
