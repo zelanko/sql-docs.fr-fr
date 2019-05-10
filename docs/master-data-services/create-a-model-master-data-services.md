@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f08318c5dbd42137b7c818e5bb4b0a3d1e34fae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748831"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477058"
 ---
 # <a name="create-a-model-master-data-services"></a>Créer un modèle (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52748831"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un modèle destiné à contenir des objets de modèle.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -72,11 +72,11 @@ ms.locfileid: "52748831"
   
 -   **Date et heure de mise à jour** : date et heure de la dernière mise à jour du modèle.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Créer une entité &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Supprimer un modèle &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   

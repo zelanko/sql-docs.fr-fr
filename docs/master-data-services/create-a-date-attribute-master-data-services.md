@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9179b2f016fe2d720da1b82078c03f0e7cb3e67a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753451"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487385"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Créer un attribut de date (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52753451"
 > [!NOTE]  
 >  L'attribut est appelée DateTime, mais les valeurs d'heure ne sont pas prises en charge.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -90,7 +90,7 @@ ms.locfileid: "52753451"
   
  Le masque de saisie est une chaîne au format DateTime .NET personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Changer le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

@@ -8,15 +8,15 @@ ms.technology:
 - master-data-services
 ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79a6d9c2d3010043daddab14dcaae51e58914fbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764937"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482777"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) est la solution [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de gestion des données de référence. La gestion des données de référence correspond aux efforts d'une organisation en vue de découvrir et de définir des listes de données non transactionnelles, dans le but de compiler des listes de référence gérables. Un projet de gestion des données de référence comprend une évaluation et une restructuration des processus métier internes, ainsi que l'implémentation de la technologie de gestion des données de référence. Une solution de gestion des données de référence réussie contient des données fiables et centralisées pouvant être analysées, permettant ainsi des prises de décision plus adaptées.  

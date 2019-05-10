@@ -10,15 +10,15 @@ helpviewer_keywords:
 - groups [Master Data Services], adding
 - adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1245b637eeb31ab8dee9bf498a6d076925d1dae3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df04cd5bcb216a716312783aff3b78d03ea01ac1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765982"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480146"
 ---
 # <a name="add-a-group-master-data-services"></a>Ajouter un groupe (Master Data Services)
   Ajoutez un groupe à la liste **Groupes** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Pour qu’un utilisateur du groupe puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez accorder au groupe une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925019"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479713"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Supprimer un membre ou une collection (Master Data Services)
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], supprimez un membre ou une collection lorsque vous n'en avez plus besoin. Si vous souhaitez supprimer des membres en bloc, utilisez le processus de site à la place. Pour plus d’informations, consultez [désactiver ou supprimer des membres à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  

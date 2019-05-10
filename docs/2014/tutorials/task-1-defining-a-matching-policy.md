@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222787"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481312"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d’une stratégie de correspondance
   Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Nom du fournisseur** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec **similarité** la valeur **30 %**.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 30f720874a29d04e129733e771f3ee680c7ef93f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7b3c15af012675bfccecad7e8f74f99882fed11
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792985"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480831"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
   Cette rubrique explique en quoi consiste une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Pour nettoyer les données, vous devez disposer de connaissances sur les données. Pour préparer les connaissances d'un projet de qualité des données, vous créez et gérez une base de connaissances que DQS peut utiliser pour identifier les données incorrectes ou non valides. DQS vous permet d'utiliser des processus assistés par ordinateur et interactifs pour créer, générer, et mettre à jour votre base de connaissances. Les connaissances contenues dans une base de connaissances sont conservées dans des domaines, chacun d'entre eux étant spécifique à un champ de données. La base de connaissances est un référentiel de connaissances sur vos données qui vous permet de comprendre vos données et de préserver leur intégrité.  

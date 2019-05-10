@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 24e1c1fea5404d984f05391624fd244960c0eec3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a7e3496d005ded5fa935db828501a71c922c261
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765282"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478832"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Inverser une transaction (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les administrateurs peuvent inverser une transaction lorsqu'une action doit être annulée. Les exemples de transactions sont les suivants : modifications apportées aux valeurs d'attribut, déplacements de hiérarchie ou suppressions de membres.  

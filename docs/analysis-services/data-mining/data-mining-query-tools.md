@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147944"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449952"
 ---
 # <a name="data-mining-query-tools"></a>Outils de requête d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147944"
 |transformation de requête d'exploration de données|Exécute une requête de prédiction au sein d'un flux de données, à l'aide des données fournies par une source de flux de données.<br /><br /> L'éditeur de tâche fournit le Générateur de requêtes de prédiction, ainsi qu'une zone de texte permettant de modifier manuellement la requête DMX.<br /><br /> La transformation peut être utilisée uniquement pour créer des requêtes qui utilisent des données dans le flux de données ; autrement dit, les requêtes qui utilisent la syntaxe PREDICTION JOIN. Ce composant ne peut pas être utilisé pour exécuter des requêtes de contenu ou d'autres types d'instructions DMX.|  
   
 ##  <a name="bkmk_API"></a> Interfaces de programmation d'applications  
- Vous pouvez créer des applications personnalisées qui exécutent des requêtes sur des modèles d'exploration de données à l'aide de divers langages de programmation, en association avec des protocoles serveur tels que OLE DB ou le client Analysis Services ADOMD. Pour plus d’informations, consultez [Programmation de l’exploration de données](../../analysis-services/data-mining-programming.md).  
+ Vous pouvez créer des applications personnalisées qui exécutent des requêtes sur des modèles d'exploration de données à l'aide de divers langages de programmation, en association avec des protocoles serveur tels que OLE DB ou le client Analysis Services ADOMD. Pour plus d’informations, consultez [Programmation de l’exploration de données](../../analysis-services/data-mining/data-mining-programming.md).  
   
  Toutefois, XMLA constitue le format de message sous-jacent pour toutes les interactions avec un serveur Analysis Service. Dans un message XMLA, les requêtes sont représentées différemment selon que vous envoyez une requête de prédiction basée sur DMX, une requête de contenu ou une requête qui récupère les métadonnées du modèle à l'aide des ensembles de lignes de schéma d'exploration de données.  
   

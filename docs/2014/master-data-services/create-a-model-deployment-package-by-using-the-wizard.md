@@ -11,15 +11,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 96e5ef33776e1b8d7e78bec22b6cc46dee6055d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925040"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483601"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Créer un package de déploiement de modèle à l'aide de l'Assistant
   Utilisez l'Assistant Déploiement de modèle de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour créer un package d'objets de modèle uniquement. Si vous avez besoin d’inclure des données dans un package, consultez [Créer un package de déploiement de modèle à l’aide de MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  

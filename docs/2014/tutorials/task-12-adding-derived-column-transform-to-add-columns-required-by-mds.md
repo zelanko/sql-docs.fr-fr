@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222643"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485242"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d’une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
   Dans cette tâche, vous allez ajouter une transformation de colonne dérivée au flux de données. Vous ajoutez deux colonnes dérivées, **ImportType** et **BatchTag**, vers les enregistrements transmis à cette transformation. Vous devez ajouter ces colonnes avant de télécharger les données dans des tables intermédiaires dans MDS. Ces deux colonnes sont requises pour les tables intermédiaires dans MDS. Consultez [Tables intermédiaires des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md) pour plus d’informations.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63313859"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489724"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestion des informations d'entreprise en associant SSIS, MDS et DQS [Didacticiel]
   La gestion des informations dans une entreprise implique généralement l'intégration des données au sein de l'entreprise et avec l'extérieur, le nettoyage des données, leur correspondance pour supprimer tous les doublons, leur normalisation, leur enrichissement, rendre les données conformes aux exigences juridiques et de conformité, et enfin, le stockage des données dans un emplacement centralisé avec tous les paramètres de sécurité nécessaires.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services], creating
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 894c27e89f2dc9be90c792b4cce8db5690a32863
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c541c61f32b24a2d32ee78d20a78a6f894a0dece
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769591"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477095"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Créer un indicateur de version (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52769591"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un indicateur de version à affecter à une version. L’indicateur peut spécifier la version que les utilisateurs ou les systèmes d’abonnement doivent utiliser.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -55,11 +55,11 @@ ms.locfileid: "52769591"
   
 8.  Cliquez sur **Enregistrer**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Affecter un indicateur à une version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Modifier le nom d’un indicateur de version &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   

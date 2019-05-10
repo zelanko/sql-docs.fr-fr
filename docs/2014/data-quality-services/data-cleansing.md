@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793029"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480811"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Le nettoyage de données est le processus qui consiste à analyser la qualité des données contenues dans une source de données, à approuver/refuser manuellement les suggestions formulées par le système et à apporter les modifications correspondantes aux données. Le nettoyage de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) inclut un processus assisté par ordinateur qui analyse la conformité des données par rapport aux connaissances contenues dans une base de connaissances et un processus interactif qui permet au gestionnaire de données d'examiner et de modifier les résultats du processus assisté par ordinateur afin de s'assurer que le nettoyage de données correspond exactement à ce qu'il souhaite faire.  

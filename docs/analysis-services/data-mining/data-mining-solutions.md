@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4668afcd31c7eb97e398772587866636ff155459
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cef68db4bc688aafae6f6c106063ff61fa7ad015
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62670703"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449967"
 ---
 # <a name="data-mining-solutions"></a>Solutions d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,6 +82,6 @@ ms.locfileid: "62670703"
 |Mettez à jour et gérer des solutions d'exploration de données.|Lien à déterminer|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiels sur l’exploration de données &#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Didacticiels sur l’exploration de données &#40;Analysis Services&#41;](../../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
   
   

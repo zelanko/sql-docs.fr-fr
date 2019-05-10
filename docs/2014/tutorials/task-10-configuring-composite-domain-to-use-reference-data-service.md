@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 752eefde-8b87-4f54-878e-9963ccbadc8e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b8e309592588a38a57d2e5160845ad171346e758
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222816"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481228"
 ---
 # <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Tâche 10 : Configuration d’un domaine pour utiliser un service de données de référence
   Dans cette tâche, vous allez configurer le **Validation d’adresses** domaine composite à utiliser le **Melissa Data – contrôle d’adresse** service. Au moment de l'exécution, pendant l'activité de nettoyage, DQS passe les valeurs des domaines du domaine Validation d'adresses au service pour le nettoyage. Consultez [mappage de domaine/domaine Composite aux données de référence](https://msdn.microsoft.com/library/hh213030.aspx) pour plus d’informations.  

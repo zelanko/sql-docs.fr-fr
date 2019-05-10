@@ -2,26 +2,26 @@
 title: Exécuter les notebooks dans Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Cet article explique comment exécuter les blocs-notes Jupyter dans Azure Data Studio connecté à un cluster de données volumineux de SQL Server 2019.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859970"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462051"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit comment lancer l’expérience de bloc-notes dans Azure Data Studio et comment commencer à créer vos propres blocs-notes. Il montre également comment écrire à l’aide de différents noyaux de blocs-notes.
+Cet article décrit comment lancer l’expérience de bloc-notes dans la dernière version de [ **Azure Data Studio** ](../azure-data-studio/download.md) et comment commencer à créer vos propres blocs-notes. Il montre également comment écrire à l’aide de différents noyaux de blocs-notes.
 
 ## <a name="connect-to-sql-server"></a>Se connecter à SQL Server
 
@@ -48,7 +48,7 @@ Il existe plusieurs façons de lancer un nouveau bloc-notes.
 
 L’Installation du bloc-notes dans Azure Data Studio en mode natif prend en charge que le noyau de SQL. Si vous êtes un développeur SQL et que vous souhaitez utiliser des blocs-notes, puis il s’agirait choisi noyau. 
 
-Le noyau de SQL peut également servir à se connecter aux instances de serveur PostgreSQL. Si vous êtes un développeur de PostgreSQL et que vous souhaitez vous connecter à votre serveur PostgreSQL, puis téléchargez le [ **PostgreSQL extension** ](../azure-data-studio/postgres-extension.md) dans la place de marché Azure Data Studio extension.
+Le noyau de SQL peut également servir à se connecter aux instances de serveur PostgreSQL. Si vous êtes un développeur de PostgreSQL et que vous souhaitez vous connecter les ordinateurs portables à votre serveur PostgreSQL, puis téléchargez le [ **PostgreSQL extension** ](../azure-data-studio/postgres-extension.md) dans la place de marché Azure Data Studio extension, puis Lancez **nouveau bloc-notes** pour ouvrir une instance de bloc-notes pour vous connecter au serveur PostgreSQL.
 
 ![Connexion de PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ Noyau de SQL pour vous connecter à l’instance de serveur PostgreSQL
 Résultats de requête
 
 ![Résultats de la requête](media/notebooks-guidance/pgsql-cell-results.png)
+
+Si vous souhaitez ajouter des cellules de texte à votre ordinateur portable attaché au noyau de SQL, cliquez sur le **+ texte** commande dans la barre d’outils.
+
+![Barre d’outils du bloc-notes](media/notebooks-guidance/notebook-toolbar.png)
+
+La cellule est modifiée en mode édition et tapez maintenant markdown et vous verrez la version préliminaire en même temps
+
+![Cellule de markdown](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Cliquez en dehors de la cellule de texte pour afficher le texte markdown.
+
+![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Configuration de Python pour les blocs-notes
 
@@ -119,9 +132,27 @@ Blocs-notes ouvrir dans Studio de données Azure sont par défaut **approuvé**.
 
 Si vous ouvrez un bloc-notes à partir d’une autre source, il s’ouvre dans **Non sécurisés** mode et que vous pouvez les rendre **approuvé**.
 
+### <a name="run-cells"></a>Exécution des cellules
+Si vous souhaitez exécuter toutes les cellules dans le bloc-notes, puis cliquez sur le **cellules exécuter** bouton dans la barre d’outils.
+
+![Markdown text](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Effacer les résultats
+
+Si vous souhaitez effacer les résultats de toutes les cellules exécutées dans le bloc-notes, vous pouvez cliquer sur le **effacer les résultats** bouton dans la barre d’outils.
+
+![Markdown text](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Enregistrer
 
-Vous pouvez enregistrer le bloc-notes par **Ctrl + S** ou en cliquant sur le **l’enregistrement du fichier**, **fichier Enregistrer sous...**  et **Enregistrer tout fichier** commandes dans le menu fichier et **fichier : Enregistrer** commandes entrées dans la palette de commandes.
+Pour enregistrer le bloc-notes effectuez l’une des opérations suivantes.
+
+- Sélectionnez Ctrl + S
+- Cliquez sur **fichier** > **enregistrer**
+- Cliquez sur **fichier** > **enregistrer en tant que...**
+- Cliquez sur **fichier** > **Enregistrer tout** 
+- Dans la palette de commandes, entrez **fichier : Enregistrer** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Noyau Pyspark3/PySpark
 

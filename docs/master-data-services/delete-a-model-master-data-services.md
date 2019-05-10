@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c7ae7bce17aad06bf17c8d78d976cdd0ef518bad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b58ab23dabb6528783422e82b493f4a721f2fb73
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796417"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487688"
 ---
 # <a name="delete-a-model-master-data-services"></a>Supprimer un modèle (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52796417"
 > [!NOTE]  
 >  Lorsque vous effectuez cette procédure, tous les objets et toutes les données de toutes les versions du modèle sont supprimés définitivement.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -53,7 +53,7 @@ ms.locfileid: "52796417"
   
  La colonne **État** de la grille affiche l’état de l’opération sur le modèle. Quand vous cliquez sur le bouton **Enregistrer le modèle**, l’image ![Mise à jour](../master-data-services/media/mds-model-status-updating.png "Mise à jour") s’affiche, ce qui signifie que le modèle est en cours de mise à jour. En cas d’erreur pendant la création ou la modification d’un modèle, l’image ![Erreur](../master-data-services/media/mds-model-status-error.png "Erreur") apparaît. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") apparaît.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   

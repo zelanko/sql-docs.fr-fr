@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f7bcb622370b691ae48161d65dbc56d922c735fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8522ece96543fa9ca5ae743079f955524e5967c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036384"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480591"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
 
@@ -35,7 +35,7 @@ ms.locfileid: "56036384"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine.  
   
 ##  <a name="Discovery"></a> Créer un domaine dans l'activité de découverte des connaissances  
@@ -93,7 +93,7 @@ ms.locfileid: "56036384"
   
 10. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'un domaine  
+##  <a name="FollowUp"></a> Suivi : Après avoir créé un domaine  
  Après avoir créé un domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

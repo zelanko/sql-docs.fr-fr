@@ -18,12 +18,12 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7819e14ccfea387a83e88f7aff8c81541968e89a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589123"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450057"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_OAGetErrorInfo [ objecttoken ]
  _source_ **sortie**  
  Source des informations d'erreur. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- _Description_ **sortie**  
+ _description_ **OUTPUT**  
  Est la description de l’erreur. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- _HelpFile_ **sortie**  
+ _helpfile_ **OUTPUT**  
  Fichier d'aide de l'objet OLE. Si spécifié, il doit être une variable locale **char**, **nchar**, **varchar**, ou **nvarchar** variable. Si nécessaire, la valeur renvoyée est tronquée pour s'adapter à la variable locale.  
   
- _HelpID_ **sortie**  
+ _helpid_ **OUTPUT**  
  ID de contexte du fichier d'aide. Si spécifié, il doit être une variable locale **int** variable.  
   
 > [!NOTE]  
@@ -72,7 +72,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Noms des colonnes|Type de données|Description|  
 |------------------|---------------|-----------------|  
-|**Erreur**|**binary (4)**|Représentation binaire du numéro d'erreur.|  
+|**Erreur**|**binary(4)**|Représentation binaire du numéro d'erreur.|  
 |**Source**|**nvarchar(nn)**|Source de l'erreur.|  
 |**Description**|**nvarchar(nn)**|Description de l’erreur.|  
 |**HelpFile**|**nvarchar(nn)**|Fichier d'aide pour la source.|  
@@ -91,12 +91,12 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Échec de l’exécution du serveur (0 x 80080005)**|L'objet OLE spécifié est inscrit comme serveur OLE local (fichier .EXE), mais le fichier .EXE ne peut pas être trouvé ou démarré.|  
 |**Le module spécifié est introuvable (0x8007007e)**|L'objet OLE spécifié est inscrit comme serveur OLE in-process (fichier .DLL), mais le fichier .DLL ne peut pas être trouvé ou chargé.|  
 |**Incompatibilité de type (0 x 80020005)**|Le type de données d'une variable locale [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée pour stocker une valeur de propriété renvoyée ou une valeur de retour de méthode ne correspond pas au type de données [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] de la valeur de retour de la propriété ou de la méthode. La raison peut aussi être que la valeur de retour d'une propriété ou d'une méthode était requise, mais qu'aucune valeur n'a été renvoyée.|  
-|**Le type de données ou la valeur du paramètre 'context' de sp_OACreate n'est pas valide. (0x8004275B)**|La valeur du paramètre de contexte doit être : 1, 4 ou 5.|  
+|**Type de données ou la valeur du paramètre 'context' de sp_OACreate n’est pas valide. (0x8004275B)**|La valeur du paramètre de contexte doit être une des suivantes : 1, 4 ou 5.|  
   
  Pour plus d’informations sur le traitement des Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou d’autorisation d’exécuter directement cette procédure stockée. `Ole Automation Procedures` configuration doit être **activé** à utiliser des procédures système liées à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant affiche des informations d'erreur OLE Automation.  

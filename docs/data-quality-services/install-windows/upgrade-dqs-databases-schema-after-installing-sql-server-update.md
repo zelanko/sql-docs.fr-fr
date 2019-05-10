@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 343a5ea33ed805cc3e5f2c4ce6e91b7546276e00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 96f3d36c77e12f69184a3f5644b6bbc3d52ac394
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015236"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487448"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Mettre à niveau le schéma des bases de données DQS après avoir installé la mise à jour SQL Server
 
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  La majorité des mises à jour SQL Server nécessite une mise à niveau du schéma des bases de données DQS. Pour plus d’informations sur les mises à jour SQL Server qui nécessitent une mise à niveau avec le schéma des bases de données DQS, consultez le graphique à l’étape 1.A dans [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Vous devez être connecté en tant que membre du groupe Administrateurs sur l'ordinateur [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .  
   
@@ -61,12 +61,12 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  Un message d'achèvement s'affiche une fois la mise à niveau du schéma des bases de données DQS terminée.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Connectez-vous au serveur de qualité des données à partir d'une application client de qualité des données.  
   
  Pour plus d’informations sur la mise à niveau du schéma des bases de données DQS après l’installation des mises à jour SQL Server et les procédures de dépannage associées, consultez [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

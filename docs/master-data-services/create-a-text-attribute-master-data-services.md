@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 227c43c52fda16e8c521ecefe9771dc5ea5a41e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 3a7c3ef7e6d0c01a33716aeb807141397cb13ee9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759391"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477007"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Créer un attribut de texte (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52759391"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez un attribut de texte lorsque vous souhaitez que les utilisateurs entrent une chaîne de caractères comme valeur d'attribut.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -42,7 +42,7 @@ ms.locfileid: "52759391"
 |colonne|Description|  
 |------------|-----------------|  
 |État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Créer une vue d’abonnement|Nom de l'attribut.|  
+|Nom|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
@@ -93,7 +93,7 @@ ms.locfileid: "52759391"
   
 13. Cliquez sur **Enregistrer**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Changer le nom d’un attribut et un type de données &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Créer un attribut basé sur un domaine &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

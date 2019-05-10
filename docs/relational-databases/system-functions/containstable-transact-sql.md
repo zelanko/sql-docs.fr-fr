@@ -30,16 +30,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a987309091ada65c036d518d948c21c521bded
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524447"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097291"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>b. Retour de valeurs de classement  
+### <a name="b-returning-rank-values"></a>B. Retour de valeurs de classement  
  L'exemple suivant recherche tous les noms de produits contenant les mots « frame », « wheel » ou « tire ». Une pondération différente est affectée à chacun des mots. Le degré de correspondance (valeur de classement) est indiqué pour chaque ligne retournée correspondant à ces critères de recherche. Les lignes ayant le degré de correspondance le plus élevé sont retournées en premier.  
   
 ```  

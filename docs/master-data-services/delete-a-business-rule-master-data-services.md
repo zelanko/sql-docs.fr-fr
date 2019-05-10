@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deleting business rules [Master Data Services]
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41229ed69a75e86f8b37199fa392ae5e277ce7cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 8dee36c433cc1fec26bd66bf3498e505fd3edc9c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769941"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487749"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Supprimer une règle d'entreprise (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52769941"
 > [!NOTE]  
 >  Vous pouvez empêcher la validation des données par rapport à une règle d'entreprise en l'excluant, plutôt qu'en la supprimant. Pour plus d’informations, consultez [Exclure une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -59,7 +59,7 @@ ms.locfileid: "52769941"
   
 10. Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La règle d’entreprise supprimée n’est plus affichée dans la grille.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exclure une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.dm.rules.f1
 - sql12.dqs.dm.testdomainrule.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 750773c728b2cbe026aac404f90a13928802a4bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793097"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481030"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
   Cette rubrique décrit comment créer une règle de domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Une règle de domaine est une condition utilisée pour valider, corriger et normaliser les valeurs de domaine. Une règle de domaine doit avoir la valeur true sur un domaine pour que les valeurs de domaine soient considérées comme exactes et conformes aux besoins de l'entreprise. Les règles de domaine peuvent comprendre les règles de validation qui sont utilisées pour valider les valeurs de domaine, mais ne sont pas utilisées pour corriger les données dans les projets de qualité des données. Les règles incluent également les règles de normalisation qui sont appliquées sur les données valides et sont utilisées dans la correction des données.  

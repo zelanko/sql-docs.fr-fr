@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: debef7eae7554a2c4d3967e2fbe2971f080df0ef
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 64a5fbd4cf2bff4d4fb7338c565bb9bc46a5a22d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65357499"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450001"
 ---
 # <a name="analysis-services-tutorials"></a>Didacticiels sur Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -28,7 +28,7 @@ S’applique à Azure Analysis Services et SQL Server 2016 Analysis Services et 
 [Modélisation multidimensionnelle](multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
 S’applique à SQL Server 2012 Analysis Services et versions ultérieures. Les modèles multidimensionnels ne sont pas pris en charge sur Azure Analysis Services. Ce didacticiel inclut des leçons pour l’apprentissage des compétences fondamentales et des concepts de modélisation multidimensionnelle dans SSDT. Lorsque vous avez terminé, vous aurez une base de données du cube en fonction des données Adventure Works auxquelles vous pouvez accéder à partir d’Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
   
-[Exploration de données](../analysis-services/data-mining-tutorials-analysis-services.md)  
+[Exploration de données](../analysis-services/data-mining/data-mining-tutorials-analysis-services.md)  
 S’applique à SQL Server 2012 Analysis Services et versions ultérieures. Les modèles multidimensionnels avec l’exploration de données ne sont pas pris en charge sur Azure Analysis Services. Cet ensemble de didacticiels décrit la création de solutions d’exploration de données à l’aide d’Assistants et de visualisations intégrées.  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e6a58554d045ab907820016c8d51782fa7f02e8e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032240"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480312"
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
 
@@ -42,7 +42,7 @@ ms.locfileid: "56032240"
  Pour plus d'informations sur l'activité de nettoyage dans un projet de qualité des données, consultez [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
 ##  <a name="Matching"></a> Projet de qualité des données : activité de correspondance  
- Un projet de qualité des données de correspondance vous permet d'effectuer l'activité de correspondance en fonction de la stratégie de correspondance dans une base de connaissances pour éviter la duplication de données en identifiant les correspondances exactes et approximatives, et en vous permettant ainsi de supprimer des données en double. Il est recommandé de nettoyer vos données avant d'exécuter la correspondance sur celles-ci. Pour cela :  
+ Un projet de qualité des données de correspondance vous permet d'effectuer l'activité de correspondance en fonction de la stratégie de correspondance dans une base de connaissances pour éviter la duplication de données en identifiant les correspondances exactes et approximatives, et en vous permettant ainsi de supprimer des données en double. Il est recommandé de nettoyer vos données avant d'exécuter la correspondance sur celles-ci. Pour ce faire :  
   
 1.  Créez un projet de qualité des données, sélectionnez l'activité **Nettoyage** , effectuez l'activité de nettoyage de données sur vos données sources, puis exportez-les vers une table dans une base de données SQL Server.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "56032240"
 |Décrit comment ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.|[Ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Décrit comment ouvrir un projet Integration Services dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Ouvrir des projets Integration Services dans Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   
