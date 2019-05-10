@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659694"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357400"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scénarios de globalisation pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659694"
 |**Fonctionnalité**|**Tabulaire**|**(Multidimensionnel)**|  
 |[Langues et classements &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Héritée du système d’exploitation.|Héritée, mais avec la possibilité de remplacer la langue et le classement des objets principaux dans la hiérarchie du modèle.|  
 |Étendue de la prise en charge de la traduction|Légendes et descriptions.|Vous pouvez traduire les noms d’objet, les légendes, les identificateurs et les descriptions dans n’importe quel script et langage Unicode. Cela est vrai même quand les outils et l'environnement sont dans une autre langue. Par exemple, dans un environnement de développement qui utilise la langue anglaise et un classement Latin dans toute la pile, vous pouvez inclure dans votre modèle un objet dont le nom contient des caractères cyrilliques.|  
-|Implémentation de la prise en charge de la traduction|Utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour générer des fichiers de traduction que vous complétez et réimporter dans le modèle.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Utilisez[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions de la légende, de la description et des types de compte des cubes, mesures, dimensions et attributs.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles multidimensionnels &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). Vous trouverez une leçon sur la façon d’utiliser cette fonctionnalité dans [leçon 9 : Définition de Perspectives et traductions](../analysis-services/lesson-9-defining-perspectives-and-translations.md) de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] didacticiel.|  
+|Implémentation de la prise en charge de la traduction|Utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour générer des fichiers de traduction que vous complétez et réimporter dans le modèle.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles tabulaires &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).|Utilisez[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les traductions de la légende, de la description et des types de compte des cubes, mesures, dimensions et attributs.<br /><br /> Pour plus d’informations, consultez [Traductions dans les modèles multidimensionnels &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md). |  
 |Conversion monétaire|Non disponible.|La conversion monétaire s’effectue à l’aide de scripts MDX spécialisés qui convertissent les mesures contenant des données monétaires. Vous pouvez utiliser l'Assistant Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour générer un script MDX qui utilise une combinaison de données et de métadonnées issues de dimensions, d'attributs et de groupes de mesures pour convertir des mesures contenant des données monétaires. Consultez [Conversions monétaires &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  

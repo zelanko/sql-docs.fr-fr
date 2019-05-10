@@ -18,12 +18,12 @@ ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac4989b43ca507fb1d24a36b6957bb774c69a90e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634497"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450040"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_OAStop
 ## <a name="remarks"></a>Notes  
  Un seul environnement d'exécution est partagé par tous les clients utilisant les procédures stockées de OLE Automation. Si un client appelle **sp_OAStop** l’environnement d’exécution partagé va être arrêté pour tous les clients. Une fois que l’environnement d’exécution a été arrêtée, tout appel à **sp_OACreate** redémarre l’environnement d’exécution.  
   
-## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou d’autorisation d’exécuter directement cette procédure stockée. `Ole Automation Procedures` configuration doit être **activé** à utiliser des procédures système liées à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
  Dans cet exemple, l'environnement d'exécution partagé de OLE Automation est arrêté.  

@@ -1,7 +1,7 @@
 ---
 title: sys.workload_management_workload_classifiers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2019
+ms.date: 05/01/2019
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.reviewer: jrasnick
@@ -12,19 +12,16 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 3b023654728375aee76bfb0c4434a8413dc81e7d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 43d8921f2135dbc1a343e8f3a604cc81f79b9faa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582562"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089546"
 ---
-# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (Transact-SQL) (Preview)
+# <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
-
-> [!Note]
-> Classification de la charge de travail est disponible en version préliminaire sur SQL Data Warehouse Gen2. Aperçu de Classification de gestion de la charge de travail et l’Importance est pour les builds avec une date de publication de 9 avril 2019 ou version ultérieure.  Les utilisateurs Évitez d’utiliser les builds antérieures à cette date pour le test de charge de travail administration.  Pour déterminer si votre build est la gestion de la charge de travail capable, exécutez select @@version lorsque connecté à votre instance SQL Data Warehouse.
 
  Renvoie les détails de classifieurs de charge de travail.  
   
@@ -32,7 +29,7 @@ ms.locfileid: "59582562"
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**Int**|ID unique du classifieur. N'accepte pas la valeur NULL||
 group_name|**sysname**|Nom du groupe de charge de travail le classifieur est assigné à. N'accepte pas la valeur NULL. |Classes de ressources statiques</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Classes de ressources dynamiques</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-NAME|**sysname**|Nom du classifieur. Doit être unique à l’instance. N'accepte pas la valeur NULL.||
+name|**sysname**|Nom du classifieur. Doit être unique à l’instance. N'accepte pas la valeur NULL.||
 |importance|**sysname**|Est l’importance relative d’une demande dans ce groupe de charge de travail et les groupes de charges de travail pour les ressources partagées.  Importance spécifiée dans le classifieur remplace le paramètre d’importance de groupe de charge de travail.|low, below_normal, normal, above_normal, high |
 |create_time|**datetime**|Heure de que création de classifieur. N'accepte pas la valeur NULL.||
 modify_time|**datetime**|Heure de que dernière modification du classifieur. N'accepte pas la valeur NULL.||

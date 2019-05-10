@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d053ee3d9e48e261eb7fe1ed8f89b7429949cd50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765712"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483177"
 ---
 # <a name="delete-a-model-master-data-services"></a>Supprimer un modèle (Master Data Services)
   Supprimez un modèle afin de supprimer le modèle et toutes ses données de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

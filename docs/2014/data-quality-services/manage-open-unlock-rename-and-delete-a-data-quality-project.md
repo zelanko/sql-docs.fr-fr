@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data quality project,unlock
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792351"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484153"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Gérer (ouvrir, déverrouiller, renommer et supprimer) un projet de qualité des données
   Cette rubrique explique comment gérer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , par exemple ouvrir, déverrouiller, renommer et supprimer un projet de qualité des données.  

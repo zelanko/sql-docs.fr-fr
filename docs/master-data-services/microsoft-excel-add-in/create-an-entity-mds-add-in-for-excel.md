@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663737"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488231"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Créer une entité (Complément MDS pour Excel)
 
@@ -24,12 +24,12 @@ ms.locfileid: "47663737"
 
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent créer des entités pour stocker des données. Lorsque vous créez une entité, vous devez charger au moins un échantillonnage des données que vous souhaitez stocker.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Vous devez disposer d'un modèle existant dans lequel créer l'entité. Pour plus d’informations, consultez [Créer un modèle &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -73,13 +73,13 @@ ms.locfileid: "47663737"
   
 12. Cliquez sur **OK**. Lorsque l'entité a été correctement créée, une nouvelle ligne d'en-tête est affichée, les cellules sont mises en surbrillance et le nom de la feuille est mis à jour pour correspondre au nom de l'entité.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   Pour afficher les erreurs qui se sont produites, dans le groupe **Publier et valider** , cliquez sur **Afficher l’état**. Les colonnes ValidationStatus et InputStatus sont affichées. Pour plus d’informations, consultez [Validation des données &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Vérifiez que les attributs ont été créés avec le type de données escompté.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un attribut basé sur un domaine &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

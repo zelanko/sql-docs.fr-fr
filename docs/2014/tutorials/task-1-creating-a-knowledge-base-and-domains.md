@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62822183"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481247"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d’une base de connaissances et de domaines
   Dans cette tâche, vous allez créer le **fournisseurs** base de connaissances et créer des domaines qui est utilisé pour la correspondance des données et de nettoyage des données pour supprimer les doublons.  

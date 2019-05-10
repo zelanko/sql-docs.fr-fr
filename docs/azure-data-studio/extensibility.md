@@ -2,21 +2,21 @@
 title: Ajout de fonctionnalités supplémentaire par le biais d’extensibilité
 titleSuffix: Azure Data Studio
 description: En savoir plus sur le modèle d’extensibilité et les zones d’extensibilité clé pour étendre les fonctionnalités d’Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: ce80ae9ec15fc7e1fdf8c68b595c71b2ee3f0a64
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238948"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105042"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Prise en main [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilité
 

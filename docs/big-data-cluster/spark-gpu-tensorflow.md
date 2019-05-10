@@ -10,12 +10,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4913526270e919e95c2ff6dad73fa4b67693a038
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 2d31736ee4dd68857e3afce678b6dd806701a82b
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774953"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Déployer un cluster de données volumineuses avec prise en charge GPU et exécuter TensorFlow
 
@@ -53,11 +53,11 @@ Les étapes suivantes utilisent l’interface CLI Azure pour créer un cluster A
 1. Créer un cluster Kubernetes dans ACS avec la [créer az aks](https://docs.microsoft.com/cli/azure/aks) commande. L’exemple suivant crée un cluster Kubernetes nommé `gpucluster` dans le `sqlbigdatagroupgpu` groupe de ressources.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6s_v3 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]
-   > Ce cluster utilise le **Standard_NC6** [taille de machine de virtuelle GPU optimisé](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), qui est une des machines virtuelles spécialisées disponibles avec un ou plusieurs GPU NVIDIA. Pour plus d’informations, consultez [GPU d’utilisation pour les charges de travail de calcul intensif sur Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
+   > Ce cluster utilise le **Standard_NC6s_v3** [taille de machine de virtuelle GPU optimisé](https://docs.microsoft.com/azure/virtual-machines/linux/sizes-gpu), qui est une des machines virtuelles spécialisées disponibles avec un ou plusieurs GPU NVIDIA. Pour plus d’informations, consultez [GPU d’utilisation pour les charges de travail de calcul intensif sur Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/gpu-cluster).
 
 1. Pour configurer kubectl pour vous connecter à votre cluster Kubernetes, exécutez le [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) commande.
 
@@ -69,7 +69,7 @@ Les étapes suivantes utilisent l’interface CLI Azure pour créer un cluster A
 
 1. Utilisez **kubectl** pour créer un espace de noms Kubernetes nommé `gpu-resources`.
 
-   ```
+   ```bash
    kubectl create namespace gpu-resources
    ```
 
@@ -122,69 +122,31 @@ Les étapes suivantes utilisent l’interface CLI Azure pour créer un cluster A
 
 1. Maintenant, utilisez le kubectl appliquer la commande pour créer le DaemonSet. **NVIDIA-device-plug-in-ds.yaml** doit être dans le répertoire de travail lorsque vous exécutez la commande suivante :
 
-   ```
+   ```bash
    kubectl apply -f nvidia-device-plugin-ds.yaml
    ```
 
 ## <a name="deploy-the-big-data-cluster"></a>Déployer le cluster de données volumineuses
 
-Pour déployer un cluster de données volumineuses de SQL Server 2019 (version préliminaire) qui prend en charge les GPU, vous devez déployer à partir d’un Registre docker spécifique et un référentiel. Plus précisément, vous utilisez des valeurs différentes pour **DOCKER_REGISTRY**, **DOCKER_REPOSITORY**, **DOCKER_USERNAME**, **DOCKER_PASSWORD**, et **DOCKER_EMAIL**. Les sections suivantes fournissent des exemples montrant comment définir les variables d’environnement. Utilisez les sections de la Windows ou Linux selon la plateforme du client que vous utilisez pour déployer le cluster de données volumineuses.
+Pour déployer un cluster de données volumineuses de SQL Server 2019 (version préliminaire) qui prend en charge les GPU, vous devez déployer à partir d’un Registre docker spécifique et un référentiel. Les variables d’environnement sont différents pour un déploiement de GPU :
 
-### <a name="windows"></a>Windows
+| Variable d'environnement | Value |
+|---|---|
+| **DOCKER_REGISTRY** | `marinchcreus3.azurecr.io` |
+| **DOCKER_REPOSITORY** | `ctp25-8-0-61-gpu` |
+| **DOCKER_USERNAME** | `<your username, gpu-specific credentials provided by Microsoft>` |
+| **DOCKER_PASSWORD** | `<your password, gpu-specific credentials provided by Microsoft>` |
 
-   1. À l’aide d’une fenêtre CMD (pas PowerShell), configurer les variables d’environnement suivantes. N’utilisez pas les valeurs entre guillemets.
+Utilisez **mssqlctl** pour déployer le cluster, sélectionnez la configuration d’ACS-dev-test.json et approvisionnement personnalisé des valeurs ci-dessus lorsque vous y êtes invité.
 
-      ```cmd
-      SET ACCEPT_EULA=yes
-      SET CLUSTER_PLATFORM=aks
+```bash
+mssqlctl cluster create
+```
 
-      SET CONTROLLER_USERNAME=<controller_admin_name - can be anything>
-      SET CONTROLLER_PASSWORD=<controller_admin_password - can be anything, password complexity compliant>
-      SET KNOX_PASSWORD=<knox_password - can be anything, password complexity compliant>
-      SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
+> [!TIP]
+> Le nom par défaut du cluster big data est `mssql-cluster`.
 
-      SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
-      SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
-      SET DOCKER_EMAIL=<your email address>
-      SET DOCKER_PRIVATE_REGISTRY=1
-      SET STORAGE_SIZE=10Gi
-      ```
-
-   1. Déployer le cluster de données volumineuses :
-
-      ```cmd
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
-
-### <a name="linux"></a>Linux
-
-   1. Initialiser les variables d’environnement suivantes. Dans l’interpréteur de commandes, vous pouvez utiliser des guillemets autour de chaque valeur.
-
-      ```bash
-      export ACCEPT_EULA=yes
-      export CLUSTER_PLATFORM="aks"
-
-      export CONTROLLER_USERNAME="<controller_admin_name - can be anything>"
-      export CONTROLLER_PASSWORD="<controller_admin_password - can be anything, password complexity compliant>"
-      export KNOX_PASSWORD="<knox_password - can be anything, password complexity compliant>"
-      export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
-
-      export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
-      export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
-      export DOCKER_EMAIL="<your email address>"
-      export DOCKER_PRIVATE_REGISTRY="1"
-      export STORAGE_SIZE="10Gi"
-      ```
-
-   1. Déployer le cluster de données volumineuses :
-
-      ```bash
-      mssqlctl cluster create --name gpubigdatacluster
-      ```
+Vous pouvez également personnaliser davantage votre déploiement en passant un fichier de configuration de déploiement personnalisé. Pour plus d’informations, consultez le [déploiement](deployment-guidance.md#customconfig).
 
 ## <a name="run-the-tensorflow-example"></a>Exécutez l’exemple TensorFlow
 
@@ -198,7 +160,7 @@ Les blocs-notes deux exemples suivants montrent deux image classification modèl
 Placez le fichier de bloc-notes approprié sur votre ordinateur local, puis ouvrir et exécuter dans Azure Data Studio, l’utilisation du noyau PySpark3. Sauf si vous avez un besoin spécifique pour une version antérieure de CUDA ou TensorFlow, choisissez CUDA 9/CUDNN 7/TensorFlow 1.12.0. Pour plus d’informations sur l’utilisation des blocs-notes avec les clusters de données volumineuses, consultez [comment utiliser des blocs-notes en version préliminaire de SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Notez que les blocs-notes installer des logiciels dans les emplacements du système. Cela est possible, car les ordinateurs portables exécutent actuellement avec des privilèges root dans CTP 2.4.
+> Notez que les blocs-notes installer des logiciels dans les emplacements du système. Cela est possible, car les ordinateurs portables exécutent actuellement avec des privilèges root dans CTP 2.5.
 
 Après avoir installé les bibliothèques de GPU NVIDIA et TensorFlow pour le GPU, les blocs-notes liste périphériques GPU disponibles. Ensuite, ils ajusteront et évaluent un modèle TensorFlow afin qu’il reconnaisse les chiffres manuscrits à l’aide de l’ensemble de données MNIST. Après avoir vérifié l’espace disque disponible, ils téléchargent et exécuter l’exemple de classification d’images CIFAR 10 à partir de [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). En exécutant l’exemple CIFAR 10 sur des clusters ayant différents GPU, vous pouvez observer l’augmentation de vitesse offertes par chaque génération de GPU disponible dans Azure.
 
@@ -206,7 +168,7 @@ Après avoir installé les bibliothèques de GPU NVIDIA et TensorFlow pour le GP
 
 Pour supprimer le cluster de données volumineux, utilisez la commande suivante :
 
-```
+```bash
 mssqlctl cluster delete --name gpubigdatacluster
 ```
 

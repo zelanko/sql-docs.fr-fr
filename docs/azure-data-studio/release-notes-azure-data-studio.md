@@ -2,25 +2,40 @@
 title: Notes de publication
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143708"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450021"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="may-2019"></a>Mai 2019
+
+Le 8 mai 2019 &nbsp;  /  &nbsp; version : 1.7.0 
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Version de l’extension de comparaison de schémas | Comparaison de schémas est une fonctionnalité bien connue dans SQL Server Data Tools (SSDT) et son est principalement utilisé pour comparer et visualiser les différences entre les bases de données et fichiers .dacpac et d’exécuter des actions pour que la même. |
+| Déplacé d’affichage de la tâche dans la fenêtre Sortie | Les utilisateurs peuvent désormais afficher l’état des tâches longues telles que la sauvegarde, la restauration et la comparaison de schémas dans la vue tâches dans la fenêtre Sortie
+| Page d’accueil ajouté | &bull; &nbsp; Des liens vers des actions courantes telles que la nouvelle requête, le nouveau fichier, nouveau bloc-notes <br/>&bull; &nbsp; Liens vers la documentation et Github |
+| Améliorations du bloc-notes SQL | &bull; &nbsp; Améliorations de rendu markdown, y compris une meilleure prise en charge pour les tables et les notes de publication <br/>&bull; &nbsp; Améliorations de la convivialité de la barre d’outils <br/>&bull; &nbsp; Liens markdown pour les blocs-notes approuvés n’est plus nécessitent Cmd/Ctrl + cliquez sur et peuvent être activés directement <br/>&bull; &nbsp; Améliorations de nettoyage des processus de Jupyter après la fermeture des ordinateurs portables et en réduisant les erreurs lors du démarrage de plusieurs blocs-notes simultanément <br/>&bull; &nbsp; Améliorations aux connexions de bloc-notes SQL pour vous assurer d’erreurs ne se produisent pas lors de l’exécution de 2 ordinateurs portables par rapport à la même base de données <br/>&bull; &nbsp; Améliorations apportées au bloc-notes le défilement automatique vers la cellule en cours d’exécution lorsque vous cliquez sur le bouton Exécuter les cellules à partir de la barre d’outils <br/>&bull; &nbsp; Améliorations de stabilité et de performances générales |
+| Bogues résolus et les problèmes. | Consultez [bogues et des problèmes, sur GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>Avril 2019
 

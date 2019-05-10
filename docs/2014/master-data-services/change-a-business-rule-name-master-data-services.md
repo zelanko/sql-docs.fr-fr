@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], changing name
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e849e093872952494ff6f3d5a9f74f5521b23057
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e8e2d7ca2f6ad28e7e1bd072bdeb238199471ad9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926130"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480111"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Modifier le nom d'une règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], modifiez le nom d'une règle d'entreprise lorsque le nom affecté ne répond pas aux besoins de votre société.  
