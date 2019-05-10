@@ -1,6 +1,6 @@
 ---
 title: Didacticiels sur Analysis Services | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 05/07/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0b92410b6c078d83158b64db69716e23204745db
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MT
+ms.openlocfilehash: debef7eae7554a2c4d3967e2fbe2971f080df0ef
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034977"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357499"
 ---
 # <a name="analysis-services-tutorials"></a>Didacticiels sur Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -22,10 +22,10 @@ ms.locfileid: "38034977"
 [Modélisation tabulaire (niveau de compatibilité 1400)](tutorial-tabular-1400/as-adventure-works-tutorial.md)   
 S’applique à Azure Analysis Services et SQL Server Analysis Services 2017 et versions ultérieures. Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base pour la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT). 
 
-[Modélisation tabulaire (niveau de compatibilité 1200)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
+[Modélisation tabulaire (niveau de compatibilité 1200)](tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md)  
 S’applique à Azure Analysis Services et SQL Server 2016 Analysis Services et versions ultérieures. Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire Analysis Services de base pour la société fictive, Adventure Works, à l’aide de SQL Server Data Tools (SSDT).  
   
-[Modélisation multidimensionnelle](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modélisation multidimensionnelle](multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
 S’applique à SQL Server 2012 Analysis Services et versions ultérieures. Les modèles multidimensionnels ne sont pas pris en charge sur Azure Analysis Services. Ce didacticiel inclut des leçons pour l’apprentissage des compétences fondamentales et des concepts de modélisation multidimensionnelle dans SSDT. Lorsque vous avez terminé, vous aurez une base de données du cube en fonction des données Adventure Works auxquelles vous pouvez accéder à partir d’Excel, Reporting Services ou toute autre application cliente qui se connecte à Analysis Services.  
   
 [Exploration de données](../analysis-services/data-mining-tutorials-analysis-services.md)  

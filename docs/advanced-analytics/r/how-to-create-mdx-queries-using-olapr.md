@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503736"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357523"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Comment créer des requêtes MDX dans R à l’aide d’olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Les opérations suivantes ne sont pas prises en charge :
 
 Les exemples suivants reposent sur le données mini-Data Warehouse et du cube projet d’AdventureWorks, étant donné que ce projet est largement disponible dans plusieurs versions, y compris les fichiers de sauvegarde qui peuvent facilement être restaurées à Analysis Services. Si vous n’avez pas un cube existant, obtenir un exemple de cube à l’aide d’une des options suivantes :
 
-+ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [Création d’un cube OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Créer le cube qui est utilisé dans ces exemples en suivant le didacticiel Analysis Services jusqu'à la leçon 4 : [Création d’un cube OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Télécharger un cube existant en tant que sauvegarde et restaurez-la sur une instance d’Analysis Services. Par exemple, ce site propose un cube entièrement traité dans un format compressé : [Adventure Works modèle multidimensionnel SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extrayez le fichier et sa restauration sur votre instance SSAS. Pour plus d’informations, consultez [sauvegarde et restauration](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), ou [applet de commande Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e62c50026d391db37beca5844da24eae43f12014
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: feb215c24081d8f7c33e63369a24651b4008595c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072446"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65356503"
 ---
 # <a name="dax-in-tabular-models"></a>DAX dans les modèles tabulaires 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "53072446"
 |Nombre entier|Valeur entière de 64 bits (huit octets) <sup>1, 2</sup>|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
 |Nombre décimal|Nombre réel de 64 bits (huit octets) <sup>1, 2</sup>|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
 |Booléen|Booléen|Valeur True ou valeur False.|  
-|Texte|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
+|Text|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
@@ -382,7 +382,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  Dans les quatre premiers cas, DAX signale la colonne entière qui contient la formule non valide. Dans le dernier cas, DAX grise la colonne pour indiquer que la colonne se trouve dans un état non traité.  
   
 ##  <a name="bkmk_addional_resources"></a> Ressources supplémentaires  
- La rubrique [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md) fournit des instructions pas à pas pour créer un modèle tabulaire incluant de nombreux calculs dans des colonnes calculées, des mesures et des filtres de lignes. Pour la plupart des formules, une description de la fonction est fournie.  
+ La rubrique [Modélisation tabulaire &#40;didacticiel Adventure Works&#41;](../tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md) fournit des instructions pas à pas pour créer un modèle tabulaire incluant de nombreux calculs dans des colonnes calculées, des mesures et des filtres de lignes. Pour la plupart des formules, une description de la fonction est fournie.  
   
  Le [Blog de l’équipe Analysis Services](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fournit les dernières informations, astuces, actualités et annonces. 
   
