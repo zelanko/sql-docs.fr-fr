@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: 6ec87bdb2a1ca458893b65bc47e18a8f4664acb1
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d6f3d0b7fd60a39ce81a8464abdb6f2908f54239
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63456731"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774748"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>Nouveautés de SQL Server sur Linux
 
@@ -66,7 +66,7 @@ Pour installer SQL Server sur Linux, utilisez un des didacticiels suivants :
 - [Installer sur SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installer sur Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Exécuter sur Docker](quickstart-install-connect-docker.md)
-- [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+- [Approvisionner une machine virtuelle SQL dans Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=/sql/toc/toc.json)
 
 Pour connaître les autres améliorations introduites dans SQL Server 2017, consultez [What ' s New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

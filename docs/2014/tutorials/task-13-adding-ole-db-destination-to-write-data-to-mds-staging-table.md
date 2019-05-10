@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222585"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476985"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tâche 13 : Ajout d’une destination OLE DB pour écrire des données dans une table intermédiaire MDS
   Maintenant que vous avez ajouté **ImportType** et **BatchTag** valeurs à tous les enregistrements, vous êtes prêt à les transmettre à MDS pour l’environnement intermédiaire. Dans cette tâche, vous utilisez la Destination OLE DB pour écrire les données dans **stg.supplier_Leaf** table intermédiaire.  

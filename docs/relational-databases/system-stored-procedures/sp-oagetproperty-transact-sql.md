@@ -18,12 +18,12 @@ ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690007"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449716"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyname*  
  Nom de la propriété de l'objet OLE à renvoyer.  
   
- *PropertyValue* **sortie**  
+ *propertyvalue* **OUTPUT**  
  Valeur de la propriété renvoyée. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
- Si la propriété retourne un objet OLE, *propertyvalue* doit être une variable locale du type de données **int**. Un jeton d'objet est stocké dans la variable locale et il peut être utilisé avec d'autres procédures stockées OLE Automation.  
+ Si la propriété retourne un objet OLE, *propertyvalue* doit être une variable locale du type de données **int**. Un jeton d’objet est stocké dans la variable locale, et ce jeton d’objet peut être utilisé avec d’autres procédures stockées OLE Automation.  
   
  Si la propriété retourne une valeur unique, soit elle spécifie une variable locale pour *propertyvalue*, qui retourne la propriété de valeur dans la variable locale, ou ne spécifiez pas *propertyvalue*, qui retourne le valeur de propriété au client comme un jeu de résultats d’une seule colonne et d’une ligne unique.  
   
@@ -83,7 +83,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  Lorsque toutes les valeurs de données d'une colonne partagent le même type de données, ce type est utilisé pour toute la colonne. Lorsque les valeurs de données d'une colonne utilisent des types de données différents, le choix du type pour l'ensemble de la colonne se fait sur la base du tableau suivant.  
   
-||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -95,8 +95,8 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="remarks"></a>Notes  
  Vous pouvez également utiliser **sp_OAMethod** pour obtenir une valeur de propriété.  
   
-## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou d’autorisation d’exécuter directement cette procédure stockée. `Ole Automation Procedures` configuration doit être **activé** à utiliser des procédures système liées à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
   

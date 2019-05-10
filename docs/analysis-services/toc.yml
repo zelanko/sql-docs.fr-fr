@@ -12,8 +12,6 @@
       href: ../analysis-services/tools-and-applications-used-in-analysis-services.md
     - name: Comparaison des solutions tabulaires et multidimensionnelles
       href: ../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md
-    - name: Fonctionnalités et tâches Analysis Services
-      href: ../analysis-services/analysis-services-features-and-tasks.md
     - name: Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server
       href: ../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
     - name: "Compatibilité descendante (SQL Server\_2016 Analysis Services)"
@@ -71,143 +69,143 @@
         - name: Leçon supplémentaire - Hiérarchies déséquilibrées
           href: ../analysis-services/tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
     - name: Modélisation tabulaire (niveau de compatibilité 1200)
-      href: ../analysis-services/tabular-modeling-adventure-works-tutorial.md
+      href: ../analysis-services/tutorial-tabular-1200/tabular-modeling-adventure-works-tutorial.md
       items:
         - name: 1 - Créer un projet de modèle tabulaire
-          href: ../analysis-services/lesson-1-create-a-new-tabular-model-project.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-1-create-a-new-tabular-model-project.md
         - name: 2 - Ajouter des données
-          href: ../analysis-services/lesson-2-add-data.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-2-add-data.md
         - name: 3 - Marquer comme table de dates
-          href: ../analysis-services/lesson-3-mark-as-date-table.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-3-mark-as-date-table.md
         - name: 4 - Créer des relations
-          href: ../analysis-services/lesson-4-create-relationships.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-4-create-relationships.md
         - name: 5 - Créer des colonnes calculées
-          href: ../analysis-services/lesson-5-create-calculated-columns.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-5-create-calculated-columns.md
         - name: 6 - Créer des mesures
-          href: ../analysis-services/lesson-6-create-measures.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-6-create-measures.md
         - name: 7 - Créer des indicateurs de performance clé
-          href: ../analysis-services/lesson-7-create-key-performance-indicators.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-7-create-key-performance-indicators.md
         - name: 8 - Créer des perspectives
-          href: ../analysis-services/lesson-8-create-perspectives.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-8-create-perspectives.md
         - name: 9 - Créer des hiérarchies
-          href: ../analysis-services/lesson-9-create-hierarchies.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-9-create-hierarchies.md
         - name: 10 - Créer des partitions
-          href: ../analysis-services/lesson-10-create-partitions.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-10-create-partitions.md
         - name: 11 - Créer des rôles
-          href: ../analysis-services/lesson-11-create-roles.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-11-create-roles.md
         - name: 12 - Analyser dans Excel
-          href: ../analysis-services/lesson-12-analyze-in-excel.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-12-analyze-in-excel.md
         - name: 13 - Déployer
-          href: ../analysis-services/lesson-13-deploy.md
+          href: ../analysis-services/tutorial-tabular-1200/lesson-13-deploy.md
         - name: "Leçon supplémentaire\_: Implémenter la sécurité dynamique à l’aide des filtres de lignes"
-          href: ../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
         - name: "Leçon supplémentaire\_: Configurer les propriétés de création de rapports pour les rapports Power View"
-          href: ../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+          href: ../analysis-services/tutorial-tabular-1200/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
     - name: Modélisation multidimensionnelle
-      href: ../analysis-services/multidimensional-modeling-adventure-works-tutorial.md
+      href: ../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md
       items:
         - name: Scénario du tutoriel
-          href: ../analysis-services/analysis-services-tutorial-scenario.md
+          href: ../analysis-services/multidimensional-tutorial/analysis-services-tutorial-scenario.md
         - name: Installer les exemples de données et de projets pour le tutoriel sur la modélisation multidimensionnelle Analysis Services
-          href: ../analysis-services/install-sample-data-and-projects.md
+          href: ../analysis-services/multidimensional-tutorial/install-sample-data-and-projects.md
         - name: "Leçon\_1\_: Définition d’une vue de source de données dans un projet Analysis Services"
-          href: ../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
           items:
             - name: "Leçon 1-1\_: Création d’un projet Analysis Services"
-              href: ../analysis-services/lesson-1-1-creating-an-analysis-services-project.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-1-1-creating-an-analysis-services-project.md
             - name: "Leçon 1-2\_: Définition d’une source de données"
-              href: ../analysis-services/lesson-1-2-defining-a-data-source.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-1-2-defining-a-data-source.md
             - name: "Leçon 1-3\_: Définition d’une vue de source de données"
-              href: ../analysis-services/lesson-1-3-defining-a-data-source-view.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-1-3-defining-a-data-source-view.md
             - name: "Leçon 1-4\_: Modification des noms de tables par défaut"
-              href: ../analysis-services/lesson-1-4-modifying-default-table-names.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-1-4-modifying-default-table-names.md
         - name: "Leçon\_2\_: Définition et déploiement d’un cube"
-          href: ../analysis-services/lesson-2-defining-and-deploying-a-cube.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-2-defining-and-deploying-a-cube.md
           items:
             - name: "Leçon 2-1\_: Définition d’une dimension"
-              href: ../analysis-services/lesson-2-1-defining-a-dimension.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-1-defining-a-dimension.md
             - name: "Leçon 2-2\_: Définition d’un cube"
-              href: ../analysis-services/lesson-2-2-defining-a-cube.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-2-defining-a-cube.md
             - name: "Leçon 2-3\_: Ajout d’attributs aux dimensions"
-              href: ../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-3-adding-attributes-to-dimensions.md
             - name: "Leçon 2-4\_: Vérification des propriétés de cube et de dimension"
-              href: ../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-4-reviewing-cube-and-dimension-properties.md
             - name: "Leçon 2-5\_: Déploiement d’un projet Analysis Services"
-              href: ../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-5-deploying-an-analysis-services-project.md
             - name: "Leçon 2-6\_: Exploration du cube"
-              href: ../analysis-services/lesson-2-6-browsing-the-cube.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-2-6-browsing-the-cube.md
         - name: "Leçon\_3\_: Modification des mesures, des attributs et des hiérarchies"
-          href: ../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-3-modifying-measures-attributes-and-hierarchies.md
           items:
             - name: "Leçon 3-1\_: Modification des mesures"
-              href: ../analysis-services/lesson-3-1-modifying-measures.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-3-1-modifying-measures.md
             - name: "Leçon 3-2\_: Modification de la dimension Customer"
-              href: ../analysis-services/lesson-3-2-modifying-the-customer-dimension.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-3-2-modifying-the-customer-dimension.md
             - name: "Leçon 3-3\_: Modification de la dimension Product"
-              href: ../analysis-services/lesson-3-3-modifying-the-product-dimension.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-3-3-modifying-the-product-dimension.md
             - name: "Leçon 3-4\_: Modification de la dimension Date"
-              href: ../analysis-services/lesson-3-4-modifying-the-date-dimension.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-3-4-modifying-the-date-dimension.md
             - name: "Leçon 3-5\_: Exploration du cube déployé"
-              href: ../analysis-services/lesson-3-5-browsing-the-deployed-cube.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-3-5-browsing-the-deployed-cube.md
         - name: "Leçon\_4\_: Définition des propriétés d’attribut et de dimension avancées"
-          href: ../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-4-defining-advanced-attribute-and-dimension-properties.md
           items:
             - name: "Leçon 4-1\_: Utilisation d’une version modifiée du projet du tutoriel Analysis Services"
-              href: ../analysis-services/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
             - name: "Leçon 4-2\_: Définition des propriétés d’attribut parent dans une hiérarchie parent-enfant"
-              href: ../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
             - name: "Leçon 4-3\_: Regroupement automatique des membres d’attribut"
-              href: ../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-3-automatically-grouping-attribute-members.md
             - name: "Leçon 4-4\_: Masquage et désactivation des hiérarchies d’attributs"
-              href: ../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
             - name: "Leçon 4-5\_: Tri des membres d’attribut sur la base d’un attribut secondaire"
-              href: ../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
             - name: "Leçon 4-6\_: Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur"
-              href: ../analysis-services/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
             - name: "Leçon 4-7\_: Définition du membre inconnu et des propriétés de traitement Null"
-              href: ../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
         - name: "Leçon\_5\_: Définition des relations entre les dimensions et les groupes de mesures"
-          href: ../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
           items:
             - name: "Leçon 5-1\_: Définition d’une relation référencée"
-              href: ../analysis-services/lesson-5-1-defining-a-referenced-relationship.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-5-1-defining-a-referenced-relationship.md
             - name: "Leçon 5-2\_: Définition d’une relation de faits"
-              href: ../analysis-services/lesson-5-2-defining-a-fact-relationship.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-5-2-defining-a-fact-relationship.md
             - name: "Leçon 5-3\_: Définition d’une relation plusieurs-à-plusieurs"
-              href: ../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-5-3-defining-a-many-to-many-relationship.md
             - name: "Leçon 5-4\_: Définition de la granularité des dimensions dans un groupe de mesures"
-              href: ../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
         - name: "Leçon\_6\_: Définition des calculs"
-          href: ../analysis-services/lesson-6-defining-calculations.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-6-defining-calculations.md
           items:
             - name: "Leçon 6-1\_: Définition des membres calculés"
-              href: ../analysis-services/lesson-6-1-defining-calculated-members.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-6-1-defining-calculated-members.md
             - name: "Leçon 6-2\_: Définition de jeux nommés"
-              href: ../analysis-services/lesson-6-2-defining-named-sets.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-6-2-defining-named-sets.md
         - name: "Leçon\_7\_: Définition d'indicateurs de performance clés"
-          href: ../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-7-defining-key-performance-indicators-kpis.md
           items:
             - name: "Leçon 7-1\_: Définition et exploration d’indicateurs de performance clés"
-              href: ../analysis-services/lesson-7-1-defining-and-browsing-kpis.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-7-1-defining-and-browsing-kpis.md
         - name: "Leçon\_8\_: Définition des actions"
-          href: ../analysis-services/lesson-8-defining-actions.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-8-defining-actions.md
           items:
             - name: "Leçon 8-1\_: Définition et utilisation d’une action d’extraction"
-              href: ../analysis-services/lesson-8-1-defining-and-using-a-drillthrough-action.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-8-1-defining-and-using-a-drillthrough-action.md
         - name: "Leçon 9\_: Définition des perspectives et des traductions"
-          href: ../analysis-services/lesson-9-defining-perspectives-and-translations.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-9-defining-perspectives-and-translations.md
           items:
             - name: "Leçon 9-1\_: Définition et exploration de perspectives"
-              href: ../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-9-1-defining-and-browsing-perspectives.md
             - name: "Leçon 9-2\_: Définition et exploration de traductions"
-              href: ../analysis-services/lesson-9-2-defining-and-browsing-translations.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-9-2-defining-and-browsing-translations.md
         - name: "Leçon 10\_: Définition des rôles administratifs"
-          href: ../analysis-services/lesson-10-defining-administrative-roles.md
+          href: ../analysis-services/multidimensional-tutorial/lesson-10-defining-administrative-roles.md
           items:
             - name: "Leçon 10\_: Attribution de l’autorisation de traiter la base de données"
-              href: ../analysis-services/lesson-10-granting-process-database-permissions.md
+              href: ../analysis-services/multidimensional-tutorial/lesson-10-granting-process-database-permissions.md
     - name: Exploration de données
-      href: ../analysis-services/data-mining-tutorials-analysis-services.md
+      href: ../analysis-services/data-mining/data-mining-tutorials-analysis-services.md
 - name: Procédures
   items:
     - name: Installation et configuration
@@ -1739,7 +1737,7 @@
     - name: Exploration de données
       items:
         - name: Programmation de l’exploration de données
-          href: ../analysis-services/data-mining-programming.md
+          href: ../analysis-services/data-mining/data-mining-programming.md
         - name: Objets AMO (Analysis Management Objects) +
           href: /bi-reference/amo/amo-classes-introduction
         - name: ADOMD.NET +
@@ -1747,7 +1745,7 @@
         - name: XML for Analysis (XMLA) +
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: OLE DB pour l'exploration de données
-          href: ../analysis-services/data-mining-programming-ole-db.md
+          href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
 - name: Exemples
   items:
     - name: Exemples Analysis Services

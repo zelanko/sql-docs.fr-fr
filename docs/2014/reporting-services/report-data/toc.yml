@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: 'Boîte de dialogue Propriétés du dataset, Requête'
       href: ../dataset-properties-dialog-box-query.md
-    - name: Boîte de dialogue Définir les paramètres de la requête
-      href: define-query-parameters-dialog-box.md
     - name: Boîte de dialogue Entrez les informations d'identification pour la source de données
       href: ../enter-data-source-credentials-dialog-box.md
     - name: 'Boîte de dialogue Propriétés de la source de données partagée, Informations d''identification'

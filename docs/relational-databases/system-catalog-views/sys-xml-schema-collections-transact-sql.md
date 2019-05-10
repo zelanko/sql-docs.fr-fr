@@ -1,10 +1,9 @@
 ---
-title: Sys.xml_schema_collections (Transact-SQL) | Microsoft Docs
+title: sys.xml_schema_collections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,16 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_collections catalog view
 ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e891585d5e44c4b2562d5fa704848f7abfa8292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f7756d13f3a844d3cb8fb146a691698b69ba280
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632577"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945972"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47632577"
 |xml_collection_id|**Int**|ID de la collection de schémas XML. Unique dans la base de données.|  
 |schema_id|**Int**|ID du schéma relationnel qui contient cette collection de schémas XML.|  
 |principal_id|**Int**|ID du propriétaire spécifique s’il est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Toutefois, un autre propriétaire peut être spécifié à l’aide de l’instruction ALTER AUTHORIZATION pour modifier la propriété.<br /><br /> NULL = Pas d'autre propriétaire individuel.|  
-|NAME|**sysname**|Nom de la collection de schémas XML.|  
+|name|**sysname**|Nom de la collection de schémas XML.|  
 |create_date|**datetime**|Date de création de la collection de schémas XML.|  
 |modify_date|**datetime**|Date de dernière modification de la collection de schémas XML.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776156"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster volumineux de données SQL Server sur Kubernetes
 
@@ -49,19 +49,19 @@ Pour utiliser le stockage persistant pendant le déploiement, définissez les va
 > [!WARNING]
 > En cours d’exécution sans stockage persistant peut fonctionner dans un environnement de test, mais cela peut entraîner un cluster non fonctionnelles. Lors des redémarrages de pod, données de métadonnées ou pour un utilisateur de cluster seront définitivement perdues. Nous déconseillons d’exécuter dans cette configuration. 
 
-Cette section fournit plus d’exemples sur la façon de configurer les paramètres de stockage pour votre déploiement de cluster de données volumineuses de SQL Server.
+[Configurer le stockage](#config-samples) section fournit des exemples supplémentaires sur la façon de configurer les paramètres de stockage pour votre déploiement de cluster de données volumineuses de SQL Server.
 
 ## <a name="aks-storage-classes"></a>Classes de stockage AKS
 
 ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **par défaut** et **premium managed** , ainsi que le fournisseur dynamique pour eux. Vous pouvez spécifier des deux ou créer votre propre classe de stockage pour le déploiement de cluster de données volumineux avec le stockage persistant est activé. Par défaut, généré dans le fichier de configuration de cluster pour aks *aks-dev-test.json* est fourni avec des configurations de stockage persistant à utiliser **premium managed** classe de stockage.
 
 > [!WARNING]
-> Volumes persistants créés avec **par défaut** classe de stockage ont une stratégie de demande de récupération de *supprimer*. Au moment où vous supprimer le cluster de données volumineux de SQL Server, les revendications de volume persistant obtient également les volumes supprimés et puis persistants. **premium Managed** a une stratégie de demande de récupération de *conserver*. Vous trouverez plus d’informations sur les classes de stockage dans ACS et leurs configurations dans [cela](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
+> Volumes persistants créés avec les classes de stockage intégrée **par défaut** et **premium managed** ont une stratégie de demande de récupération de *supprimer*. Au moment où vous supprimer le cluster de données volumineux de SQL Server, les revendications de volume persistant obtient également les volumes supprimés et puis persistants. Vous pouvez créer des classes de stockage personnalisés à l’aide de **azure-disque** privioner avec un *conserver* récupérer la stratégie comme indiqué dans [cela](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
 
 
 ## <a name="minikube-storage-class"></a>Classe de stockage Minikube
 
-Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci. La configuration intégrée dans fichier minikube *minikube-dev-test.json* a les paramètres de configuration de stockage dans la spécification de plan de contrôle. Les mêmes paramètres s’appliqueront à toutes les spécifications de pools. Vous pouvez également personnaliser une copie de ce fichier et l’utiliser pour votre déploiement de cluster de données volumineuses sur minikube. Vous pouvez modifier le fichier personnalisé et modifier la taille des revendications volumes persistants pour les pools spécifiques prendre en charge les charges de travail à exécuter manuellement. Ou, consultez cette section pour obtenir des exemples sur la procédure à suivre les modifications à l’aide de *mssqlctl* commandes.
+Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci. La configuration intégrée dans fichier minikube *minikube-dev-test.json* a les paramètres de configuration de stockage dans la spécification de plan de contrôle. Les mêmes paramètres s’appliqueront à toutes les spécifications de pools. Vous pouvez également personnaliser une copie de ce fichier et l’utiliser pour votre déploiement de cluster de données volumineuses sur minikube. Vous pouvez modifier le fichier personnalisé et modifier la taille des revendications volumes persistants pour les pools spécifiques prendre en charge les charges de travail à exécuter manuellement. Vous pouvez aussi consulter [configurer le stockage](#config-samples) modifie de section pour obtenir des exemples sur la procédure à suivre à l’aide de *mssqlctl* commandes.
 
 ## <a name="kubeadm-storage-classes"></a>Classes de stockage Kubeadm
 
@@ -97,7 +97,7 @@ L’exemple suivant met à jour la taille de volume persistant des revendication
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>Configurer la classe de stockage
+### <a id="config-samples"></a> Configurer la classe de stockage
 
 Exemple suivant montre comment modifier la classe de stockage pour le plan de contrôle :
 
