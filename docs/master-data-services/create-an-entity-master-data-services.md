@@ -11,15 +11,15 @@ helpviewer_keywords:
 - entities [Master Data Services], creating
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3597ac503684c84b10b9ce8025b8fddbb26f3947
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755081"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477003"
 ---
 # <a name="create-an-entity-master-data-services"></a>Créer une entité (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52755081"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une entité destinée à contenir des membres et leurs attributs.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -70,10 +70,10 @@ ms.locfileid: "52755081"
 ## <a name="grid-columns"></a>Colonnes de la grille  
  Pour chaque entité créée, une ligne comportant treize colonnes est ajoutée à la grille. Les différentes colonnes sont décrites ci-après.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |État|État de l’entité. Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.<br /><br /> ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une entité, l’image suivante apparaît.<br /><br /> ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK")|  
-|Créer une vue d’abonnement|Nom de l’entité.|  
+|Nom|Nom de l’entité.|  
 |Description|Description de l’entité.|  
 |Table de mise en lots|Nom de préfixe de la table utilisée pour le stockage des données.|  
 |Type de journal des transactions|Type du journal des transactions de l’entité.|  
@@ -86,7 +86,7 @@ ms.locfileid: "52755081"
 |Mise à jour par|Nom de l’utilisateur ayant effectué la dernière mise à jour de l’entité.|  
 |Mise à jour le|Date et heure de la dernière mise à jour de l’entité.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Créer un attribut de texte &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52755081"
   
 -   [Créer un attribut de fichier &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Entités &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Hiérarchies explicites &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Modifier une entité &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

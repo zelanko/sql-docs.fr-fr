@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 928624480fca725392bb13c87a18c6d48e639f25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 8d93ae5e43a550cb1c7faaa9a05e57e4408bbd43
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024040"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480304"
 ---
 # <a name="data-quality-client-home-screen"></a>Écran d'accueil de Data Quality Client
 
@@ -63,7 +63,7 @@ ms.locfileid: "56024040"
  **Configuration**  
  Affichez les propriétés de configuration des comptes de service de données de référence (par le biais de Windows Azure Marketplace et directement dans les services de données de référence), les paramètres généraux (nettoyage interactif, mise en correspondance et profilage) et les paramètres de gravité du journal.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Projets de qualité des données &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Administration de DQS](../data-quality-services/dqs-administration.md)  

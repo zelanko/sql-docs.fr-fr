@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ae5e6ad40a9a4c071ca452d893ca6644dae133d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403894"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477165"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Boîte de dialogue Filtrer (Complément MDS pour Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52403894"
 
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], utilisez la boîte de dialogue **Filtre** pour limiter la liste des données managées MDS avant de les charger dans Excel.  
   
- Cette boîte de dialogue contient trois sections : **Colonnes**, **Lignes**et **Résumé**.  
+ Cette boîte de dialogue contient trois sections : **Colonnes**, **lignes**, et **Résumé**.  
   
 ## <a name="columns"></a>Colonnes  
  Utilisez la section **Colonnes** pour déterminer les attributs (colonnes) que vous souhaitez afficher dans Excel.  
@@ -43,7 +43,7 @@ ms.locfileid: "52403894"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n’est répertorié, les attributs n’ont pas été ajoutés.<br /><br /> Remarque : Vous pouvez filtrer à l’aide d’attributs que vous n’envisagez pas d’afficher dans la feuille de calcul.|  
+|Attribute|Affiche l'attribut utilisé pour filtrer. Si aucun attribut n’est répertorié, les attributs n’ont pas été ajoutés.<br /><br /> Remarque : Vous pouvez filtrer par les attributs que vous ne prévoyez pas à afficher dans la feuille de calcul.|  
 |Opérateur|Affiche les opérateurs qui correspondent au type d'attribut sélectionné. Pour plus d’informations, consultez [Opérateurs de filtre &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Critères|Critères qui doivent servir de filtre.|  
 |Résumé de la mise à jour|Si vous utilisez de grands datasets, cliquez pour mettre à jour la section **Résumé** avec les informations relatives à la quantité de données qui seront chargées.|  
@@ -51,19 +51,19 @@ ms.locfileid: "52403894"
 |Supprimer tout|Supprime tous les filtres de la liste.|  
 |Supprimer|Supprime de la liste le filtre sélectionné.|  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Utilisez la section **Résumé** pour afficher des informations sur la quantité de données qui seront chargées, avant de les charger.  
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
 |Modèle|Nom du modèle.|  
-|Options de version|Nom de la version.|  
+|Version|Nom de la version.|  
 |Entité|Nom de l'entité.|  
 |Lignes|Nombre de lignes qui seront chargées dans Excel, en fonction des filtres appliqués dans la section **Lignes** .|  
 |Colonnes|Nombre de colonnes qui seront chargées dans Excel, en fonction des attributs sélectionnés dans la section **Colonnes** .|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtrer les données avant l’exportation &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
- [Vue d’ensemble : exportation de données vers Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+ [Vue d’ensemble : exportation de données vers Excel &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   

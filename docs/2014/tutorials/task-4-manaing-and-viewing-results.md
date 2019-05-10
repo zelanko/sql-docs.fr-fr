@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745630"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489457"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
   Dans cette tâche, vous allez examiner les résultats du nettoyage assisté par ordinateur, et vous allez également effectuer un nettoyage interactif des données du fournisseur. Consultez [étape de nettoyage interactif](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) pour plus d’informations.  
