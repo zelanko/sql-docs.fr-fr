@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222495"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484063"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>Tâche 11 : Publication de la base de connaissances
   Dans cette tâche, vous allez publier la base de connaissances. Une base de connaissances publiée peut être utilisée pour les activités de nettoyage ou de mise en correspondance dans un projet de qualité des données.  

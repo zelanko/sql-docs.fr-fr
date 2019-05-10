@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 18d788e78a58f171a9a6ead5afbe7706eed2111b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f4f39c05c0f2d8bccafa31488bab2fad700a0d90
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813001"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489003"
 ---
 # <a name="member-revision-history-master-data-services"></a>Historique de révision de membre (Master Data Services)
 
@@ -71,7 +71,7 @@ ms.locfileid: "52813001"
 |----------------------|-----------|  
 |Rétablissement de l’historique de révision de membre|[Rétablissement de l’historique de révision de membre &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un modèle &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Paramètres système &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   

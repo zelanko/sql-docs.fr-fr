@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765662"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478893"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Envoyer par courrier électronique un fichier de requête de raccourci (Complément MDS pour Excel)
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez envoyer par e-mail un fichier de requête de raccourci à un autre utilisateur quand vous voulez vous assurer qu’il utilise les mêmes données que vous. Il est préférable de partager les requêtes plutôt qu'enregistrer la feuille de calcul et l'envoyer par courrier électronique.  

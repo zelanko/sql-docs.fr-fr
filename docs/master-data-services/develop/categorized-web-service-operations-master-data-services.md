@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d6a65e16bd82c6f44df7b8a2d4172a75d5b4ef9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 077e9268c7a68e7b6e5b96cdbf7aca6f22daf860
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668417"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485253"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Opérations de service Web par catégorie (Master Data Services)
 
@@ -122,7 +122,7 @@ ms.locfileid: "47668417"
 |<xref:Microsoft.MasterDataServices.ServiceClient.DataQualityOperationStatus%2A>|  
   
 ## <a name="data-import-operations"></a>Opérations d'importation de données  
- Ces opérations sont utilisées pour importer des données dans une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Pour plus d’informations, consultez [Présentation : Importation de données à partir de tables &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+ Ces opérations sont utilisées pour importer des données dans une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
 ||  
 |-|  
@@ -141,7 +141,7 @@ ms.locfileid: "47668417"
 |<xref:Microsoft.MasterDataServices.ServiceClient.StagingProcess%2A>|  
   
 ## <a name="data-export-operations"></a>Opérations d'exportations de données  
- Ces opérations sont utilisées pour exporter des données via les vues d'abonnement. Pour plus d’informations, consultez [Overview: Exporting Data &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
+ Ces opérations sont utilisées pour exporter des données via les vues d'abonnement. Pour plus d’informations, consultez [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md).  
   
 ||  
 |-|  
@@ -151,7 +151,7 @@ ms.locfileid: "47668417"
 |<xref:Microsoft.MasterDataServices.ServiceClient.ExportViewUpdate%2A>|  
   
 ## <a name="security-operations"></a>Opérations de sécurité  
- Ces opérations sont utilisées pour modifier les paramètres de sécurité qui contrôlent l'accès à la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Pour plus d’informations, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
+ Ces opérations sont utilisées pour modifier les paramètres de sécurité qui contrôlent l'accès à la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Pour plus d’informations, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md).  
   
 ||  
 |-|  

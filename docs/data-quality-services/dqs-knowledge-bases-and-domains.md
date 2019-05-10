@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67c11167938ba2c76b668a56a879bf39e9b7801a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 91e8be0b2c07a846c2ff52f548e364eb0a536028
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030210"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487357"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
 
@@ -108,7 +108,7 @@ ms.locfileid: "56030210"
 ### <a name="setting-domain-values"></a>Définition de valeurs de domaine  
  Après avoir généré une base de connaissances, vous pouvez renseigner et afficher les valeurs de données dans chaque domaine de la base de connaissances. Après la découverte des connaissances, DQS affiche le nombre d'occurrences de chaque terme, l'état de chaque terme et toutes les corrections proposées. Vous pouvez gérer ces connaissances comme suit :  
   
--   Modifier l'état d'une valeur de sorte qu'elle soit correcte, erronée ou non valide.  
+-   Modifier l'état d'une valeur de sorte qu'elle soit correcte, erronée ou non valide  
   
 -   Ajouter une valeur spécifique à ou supprimer une valeur spécifique de la base de connaissances  
   
@@ -130,7 +130,7 @@ ms.locfileid: "56030210"
   
 -   L'analyse des différents domaines uniques qui constituent un domaine composite peut permettre d'évaluer plus efficacement la qualité des données.  
   
--   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Angleterre » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
+-   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Grande-Bretagne » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
   
 -   Les données des champs composites peuvent être jointes à une source de données de référence, auquel cas le domaine composite sera envoyé au fournisseur de données de référence. Cela se produit souvent avec les données d'adresse.  
   

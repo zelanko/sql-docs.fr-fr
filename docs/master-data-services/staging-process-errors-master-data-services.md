@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766131"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488021"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erreurs du processus de site (Master Data Services)
 
@@ -46,7 +46,7 @@ ms.locfileid: "52766131"
 |210047|Le membre ne peut pas être un frère d'Inutilisé.|Ceci se produit lorsque **RelationshipType** = **2** (frère) et que **ParentCode** ou **ChildCode** a la valeur **Inutilisé**. Les membres peuvent uniquement être des enfants du nœud Inutilisé.|Relation|  
 |210048|**ParentCode** et **ChildCode** ne peuvent pas être identiques.|La valeur **ParentCode** est identique à la valeur **ChildCode** . Ces valeurs doivent être différentes.|Relation|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher les erreurs rencontrées lors de la mise en lots &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

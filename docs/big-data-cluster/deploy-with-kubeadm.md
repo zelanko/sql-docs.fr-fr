@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0432f590af92befa845af819269b1111da28251c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4e79c74851dae2d86b74064799b053d57b1a17db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860613"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488273"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs ordinateurs pour les déploiements de cluster SQL Server big data
 
@@ -80,7 +80,7 @@ Sur chaque ordinateur, il existe plusieurs conditions préalables requises. Dans
 
 ## <a name="configure-the-kubernetes-master"></a>Configurer le serveur maître de Kubernetes
 
-Après avoir exécuté les commandes précédentes sur chaque ordinateur, choisissez une des machines à être votre maître de Kubernetes. Amusants ensuite les commandes suivantes sur cet ordinateur.
+Après avoir exécuté les commandes précédentes sur chaque ordinateur, choisissez une des machines à être votre maître de Kubernetes. Puis exécutez les commandes suivantes sur cet ordinateur.
 
 1. Tout d’abord, créez un fichier rbac.yaml dans votre répertoire actuel avec la commande suivante. 
 
