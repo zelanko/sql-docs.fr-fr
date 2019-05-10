@@ -18,12 +18,12 @@ ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b57c4dfe7a0b798801968acb8afa7b5a2b0341de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2d3cc319a99c9e1b157e5b6bc06cabea2dd19a7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747027"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450061"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  *propertyname*  
  Nom de la propriété de l'objet OLE à laquelle une nouvelle valeur doit être affectée.  
   
- *newValue*  
+ *newvalue*  
  Nouvelle valeur de la propriété, ce doit être une valeur du type de données approprié.  
   
  *index*  
@@ -62,8 +62,8 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
  Pour plus d’informations sur les Codes de retour HRESULT, consultez [OLE Automation Codes de retour et les informations d’erreur](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="permissions"></a>Permissions  
- Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
+## <a name="permissions"></a>Autorisations  
+ Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou d’autorisation d’exécuter directement cette procédure stockée. `Ole Automation Procedures` configuration doit être **activé** à utiliser des procédures système liées à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant définit la `HostName` propriété (de l’élément précédemment créé **SQLServer** objet) à une nouvelle valeur.  

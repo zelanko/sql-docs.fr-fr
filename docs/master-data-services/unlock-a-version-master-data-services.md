@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8abefd83f46bc38e790615831e4325903e4a2626
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 26bbb1d9544c99dd600a512a96b7d5105b98cb65
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791411"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488407"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Déverrouiller une version (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52791411"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], déverrouillez une version d'un modèle pour permettre que des modifications soient apportées aux membres du modèle et à leurs attributs.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -48,11 +48,11 @@ ms.locfileid: "52791411"
   
 4.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Verrouiller une version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

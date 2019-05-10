@@ -13,15 +13,15 @@ helpviewer_keywords:
 - monitoring activity
 - activity monitoring
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a9bc3aa9f703cc53b50bc499f44ffc6b7971dcfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 308001ec4e6e903eadfcf203b6673e154de8faf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020401"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489195"
 ---
 # <a name="monitor-dqs-activities"></a>Surveiller les activités DQS
 
@@ -36,7 +36,7 @@ ms.locfileid: "56020401"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour afficher les activités DQS.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "56020401"
   
 3.  L'écran de surveillance affiche des informations sur chaque activité d'une grille d'activité. La grille d'activité affiche les informations suivantes sur chaque activité DQS :  
   
-     **ID** :  valeur entière. Numéro d'activité unique généré par le système pour l'analyse des activités.  
+     **ID** :  Valeur entière. Numéro d'activité unique généré par le système pour l'analyse des activités.  
   
-     **Nom**: nom de la base de connaissances ou du projet de qualité des données utilisé pour cette activité.  
+     **Nom**: Nom de la base de connaissances ou du projet de qualité des données utilisé pour cette activité.  
   
-     **Est activé** : indique si l'activité est actuellement active ou non. Peut prendre les valeurs suivantes :  
+     **Est activé** : Indique si l'activité est actuellement active ou non. Peut prendre les valeurs suivantes :  
   
     -   **Actif** : l’activité est en cours d’exécution.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "56020401"
   
     -   **Terminé** : l’activité a été terminée à partir de l’écran de surveillance de l’activité par l’administrateur DQS ou l’activité a été annulée par l’utilisateur pendant qu’il l’exécutait dans la zone de fonctionnalité correspondante de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-     **Type** : indique le type d'activité. **Sous-type** : indique le flux de travail spécifique exécuté pour un type d’activité. Les types d’activité suivants sont analysés :  
+     **Type** : Indique le type d'activité. **Sous-type** : indique le flux de travail spécifique exécuté pour un type d’activité. Les types d’activité suivants sont analysés :  
   
     -   Sous-types relatifs à la**gestion des connaissances** :  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56020401"
   
         -   **Nettoyage**  
   
-     **État actuel** : indique l’état actuel d’une activité. L'état d'une activité est déterminé par le dernier processus de calcul. Remarque : il peut y avoir plusieurs processus de calcul dans une activité, tels que l’exécution répétée du processus de découverte (au sein de l’activité de découverte des connaissances). Par conséquent, l'état peut changer plusieurs fois pendant la durée de vie d'une activité.  
+     **État actuel** : Indique l'état actuel d'une activité. L'état d'une activité est déterminé par le dernier processus de calcul. Remarque : il peut y avoir plusieurs processus de calcul dans une activité, tels que l’exécution répétée du processus de découverte (au sein de l’activité de découverte des connaissances). Par conséquent, l'état peut changer plusieurs fois pendant la durée de vie d'une activité.  
   
      Le paramètre**État actuel** peut prendre les valeurs suivantes :  
   
@@ -96,15 +96,15 @@ ms.locfileid: "56020401"
   
     -   **Arrêté** : le processus de calcul a été arrêté.  
   
-     **BCQD** : nom de la base de connaissances utilisée pour l’activité.  
+     **BCQD** : Nom de la base de connaissances utilisée pour l'activité.  
   
-     **Utilisateur** : nom de l’utilisateur qui a démarré l’activité ou du dernier utilisateur qui a travaillé sur l’activité (au cas où il ne s’agirait pas de la même personne).  
+     **Utilisateur** : Le nom de l'utilisateur qui a démarré l'activité, ou du dernier utilisateur qui a travaillé sur l'activité (au cas où il ne s'agirait pas des deux mêmes personnes).  
   
-     **Heure de début de l’activité** : date et heure auxquelles l’activité a démarré  
+     **Heure de début de l’activité** : Date et heure du début de l'activité  
   
-     **Temps écoulé** : temps qui s’est écoulé depuis le début de l’activité. Affiché en notation HH:MM:SS.  
+     **Temps écoulé** : Temps qui s'est écoulé depuis le début de l'activité. Affiché en notation HH:MM:SS.  
   
-     **Heure de fin de l’activité** : date et heure auxquelles l’activité a pris fin.  
+     **Heure de fin de l’activité** : Date et heure de fin de l'activité.  
   
 ##  <a name="Filter"></a> Filtrer les informations sur les activités DQS  
  Vous pouvez utiliser le volet de filtre (**Filtrer par**, **Valeur**, **Date de début**et **À ce jour**) dans l'écran de surveillance de l'activité pour filtrer et afficher les activités requises sur certains critères. Pour filtrer les enregistrements d'activité :  
@@ -129,7 +129,7 @@ ms.locfileid: "56020401"
     -   **Générateur de profils** : affiche les informations de profilage des activités en cours et historiques. Pour les activités courantes, les informations sont partielles mais cohérentes. Les informations de profilage d'une activité sont exportées vers un fichier Excel lorsque vous exportez les détails d'activité correspondants dans un fichier Excel. Les informations sont disponibles dans les feuilles de **Générateur de profils - source** et de **Générateur de profils - champs** dans le fichier Excel exporté.  
   
 ##  <a name="Export"></a> Exporter les détails des activités DQS  
- Vous pouvez exporter les propriétés d'activité, les processus d'activité, et les informations de profilage d'une activité de l'écran d'analyse vers un fichier Excel. Pour cela :  
+ Vous pouvez exporter les propriétés d'activité, les processus d'activité, et les informations de profilage d'une activité de l'écran d'analyse vers un fichier Excel. Pour ce faire :  
   
 1.  Sélectionnez une activité dans la grille des activités (dans le volet supérieur).  
   

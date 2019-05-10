@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 263bc590c43899c3b9531549f4e73eefbde81c9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dbc88c186e5f8f92c943c3e0d766ab6d8846941
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763913"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479026"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Options de déploiement de modèle (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], lorsque vous déployez un fichier de package de modèle, vous devez décider soit de déployer un modèle nouveau ou cloné, soit de mettre à jour un modèle précédemment cloné.  

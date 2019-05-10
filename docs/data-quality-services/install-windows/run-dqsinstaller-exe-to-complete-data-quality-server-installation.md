@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013420"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487532"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS
 
@@ -56,7 +56,7 @@ ms.locfileid: "56013420"
 3.  Vous êtes invité à taper un mot de passe pour la clé principale de base de données. La clé principale de base de données est requise pour chiffrer les clés du fournisseur de services de données de référence qui seront stockées dans la base de données DQS_MAIN lorsque vous installerez des fournisseurs de données de référence dans [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ultérieurement.  
   
     > [!IMPORTANT]  
-    >  Le mot de passe doit comporter au moins 8 caractères et doit contenir des caractères appartenant à trois des quatre catégories suivantes : lettres majuscules (A, B, C,... Z), lettres minuscules (a, b, c,... z), chiffres (0, 1, 2,... 9) et les caractères non alphanumériques ou spéciaux (~!@#$%^&*()_-+=|\\{}[]:;"’<>,.?/). Par exemple : P@ssword. Le programme d'installation vous invite à entrer un autre mot de passe si le mot de passe actuel ne correspond pas aux conditions.  
+    >  Le mot de passe doit comporter au moins 8 caractères et doit contenir des caractères appartenant à trois des quatre catégories suivantes : lettres majuscules (A, B, C,... Z), lettres minuscules (a, b, c,... z), chiffres (0, 1, 2,... 9) et les caractères non alphanumériques ou spéciaux (~!@#$%^&*()_-+=|\\{}[]:;"’<>,.?/). Par exemple : P@ssword. Le programme d'installation vous invite à entrer un autre mot de passe si le mot de passe actuel ne correspond pas aux conditions.  
   
 4.  Fournissez un mot de passe, confirmez le mot de passe, puis appuyez sur ENTRÉE pour continuer l'installation.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "56013420"
   
     -   **Sans paramètre de ligne de commande** : Saisissez `dqsinstaller.exe`, puis appuyez sur ENTRÉE.  
   
-    -   **Avec paramètre de ligne de commande** : saisissez la commande requise comme indiqué dans le tableau ci-dessus, puis appuyez sur ENTRÉE.  
+    -   **Avec paramètre de ligne de commande** : Saisissez la commande requise comme indiqué dans le tableau ci-dessus, puis appuyez sur ENTRÉE.  
   
 4.  Les actions requises sont exécutées selon la commande spécifiée. Si vous choisissez d’installer uniquement [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sans aucun paramètre de ligne de commande, le reste des étapes est identique, comme décrit dans les étapes 2 à 6 dans la section précédente, [Exécuter DQSInstaller.exe à partir de l’écran Démarrer, du menu Démarrer ou de l’Explorateur Windows](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   Attribuez les rôles DQS appropriés aux utilisateurs selon leur profil de travail. Consultez [Affecter des rôles DQS aux utilisateurs](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "56013420"
   
 -   Assurez-vous que vous avez accès à vos données sources pour les opérations DQS et que vous pouvez exporter les données traitées vers une table dans une base de données. Consultez [Accéder aux données pour les opérations DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  

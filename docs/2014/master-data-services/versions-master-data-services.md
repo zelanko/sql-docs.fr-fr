@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767391"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481355"
 ---
 # <a name="versions-master-data-services"></a>Versions (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez créer plusieurs versions des données de référence dans un modèle. Les versions peuvent être verrouillées pendant que vous validez vos données et activées une fois les données validées. Les versions activées constituent un enregistrement des modifications pouvant être audité. Chaque version que vous créez contient l'ensemble des membres, valeurs d'attribut, membres de hiérarchie, relations de hiérarchie et collections pour le modèle.  

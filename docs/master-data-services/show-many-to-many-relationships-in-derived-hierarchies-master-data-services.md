@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797131"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488064"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
 
@@ -92,7 +92,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> Sécurité des membres  
- Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Exemple :  
+ Une hiérarchie permettant une duplication des membres (permettant à un membre d’avoir plusieurs parents) ne peut pas être utilisée pour affecter des autorisations de sécurité de membre. Exemple :  
   
 -   Une hiérarchie dérivée qui n’ancre pas les récursions Null (chaque membre au niveau récursif apparaît sous la racine et sous son parent récursif).  
   
@@ -103,7 +103,7 @@ Pour obtenir des instructions sur le déploiement de l’exemple de modèle Cust
 ## <a name="collections"></a>Collections  
  Les Hiérarchies explicites et collections sont déconseillées. La procédure stockée de conversion (udpConvertCollectionAndConsolidatedMembersToLeaf) convertit des membres de la collection en membres feuille, et crée des hiérarchies dérivées plusieurs à plusieurs pour capturer les informations d’appartenance.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Hiérarchies dérivées &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

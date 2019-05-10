@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65aa1b0531eb4ba30875e53a77551383b3f38579
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042355"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484651"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Leçon 3 : Faire correspondre les données pour supprimer les doublons de la liste des fournisseurs
   Vous préparez la base de connaissances pour effectuer une activité de correspondance en créant une stratégie de correspondance dans la base de connaissances. Il ne peut exister qu'une seule stratégie de correspondance dans une base de connaissances. Une stratégie de correspondance comprend une ou plusieurs règles de correspondance. Une règle identifie les domaines impliqués dans le processus de correspondance, et spécifie le poids de chaque valeur de domaine dans un jugement de correspondance. Vous spécifiez dans la règle si des valeurs de domaine doivent être une correspondance exacte ou si elles peuvent être semblables, et avec quel degré de similarité. Vous pouvez également spécifier si une correspondance de domaine est requise pour le processus de correspondance. Vous pouvez tester chaque règle séparément, ainsi que l'ensemble de la stratégie, sur des exemples de données. Le processus de test affiche les enregistrements dont les scores correspondants sont supérieurs à la **score d’enregistrement minimal** seuil spécifié dans la configuration de DQS dans un cluster (groupe). Vous pouvez continuer à ajuster les règles de la stratégie jusqu'à ce que vous soyez satisfait.  
