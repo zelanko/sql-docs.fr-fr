@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250088"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489269"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tâche 4 (facultatif) : Combinaison, mise en correspondance et publication d’un nouvel ensemble de données
   Au fil du temps, vous souhaiterez ajouter des données au référentiel MDS. Avant d’ajouter des données, il peut être utile pour comparer les nouvelles données aux données qui sont déjà managées dans MDS, pour vous assurer que vous n’ajoutez pas de données dupliquées ou incorrectes. Dans le complément Master Data Services pour Excel, vous pouvez combiner les données de deux feuilles de calcul et les comparer afin d'identifier et supprimer les doublons, avant de les publier dans MDS. La fonctionnalité de correspondance dans le complément MDS pour Excel utilise la fonctionnalité de correspondance de DQS pour identifier les correspondances de données. Dans cette tâche, vous allez combiner les données de deux feuilles de calcul dans une seule feuille, puis vous allez exercer l'activité de correspondance pour identifier et supprimer les doublons avant la publication dans MDS. Consultez [correspondance de qualité de données dans le complément MDS pour Excel](https://msdn.microsoft.com/library/hh548681.aspx) et [combiner des données](https://msdn.microsoft.com/library/hh548680.aspx) rubriques pour plus d’informations.  

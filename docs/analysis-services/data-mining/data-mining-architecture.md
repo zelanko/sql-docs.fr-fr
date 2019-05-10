@@ -1,5 +1,5 @@
 ---
-title: Architecture d’exploration de données | Documents Microsoft
+title: Architecture d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019996"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450051"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,25 +26,25 @@ ms.locfileid: "34019996"
   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
- [Emplacement de stockage de base de données](../../analysis-services/multidimensional-models/database-storage-location.md)  
+ [Emplacement de stockage de la base de données](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Pour plus d'informations sur la façon dont vous pouvez implémenter l'exploration de données dans votre solution décisionnelle, consultez la section relative aux guides de solutions de MSDN Library.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Architecture logique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Architecture logique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Architecture physique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Architecture physique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
- [Services d’exploration de données et Sources de données](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
+ [Services d'exploration de données et sources de données](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [Gestion des Solutions d’exploration de données et des objets](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Gestion des solutions et des objets d’exploration de données](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [Vue d’ensemble de la sécurité & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de modèle multidimensionnel](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Programmation d’exploration de données](../../analysis-services/data-mining-programming.md)  
+ [Programmation de l'exploration de données](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

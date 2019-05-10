@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b8511efe6b567fad82ab45f7f5a53188b0f13643
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f25023f6a0191cb645134d327f40ea84ba64932f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147074"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357313"
 ---
 # <a name="translations-in-multidimensional-models-analysis-services"></a>Traductions dans les modèles multidimensionnels (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,8 +36,6 @@ ms.locfileid: "50147074"
 4.  Cliquez avec le bouton droit sur un champ et sélectionnez **Explorer les données**. Vous verrez des traductions en anglais, espagnol et français de chaque membre.  
   
  Les formats de date, d'heure et de devise ne sont pas implémentés dans les traductions. Pour fournir de manière dynamique des formats spécifiques à une culture en fonction des paramètres régionaux du client, utilisez l'Assistant Conversion monétaire et la propriété **FormatString** . Pour plus d’informations, consultez [Conversions monétaires &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md) et [Élément FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
-  
- [Lesson 9: Defining Perspectives and Translations](../../analysis-services/lesson-9-defining-perspectives-and-translations.md) d ans le didacticiel Analysis Services décrit les étapes de création et de test des traductions.  
   
 ## <a name="defining-translations"></a>Définition des traductions  
   
@@ -108,8 +106,8 @@ ms.locfileid: "50147074"
   
     |Identificateur de langue spécifié|Identificateur de langue de remplacement|  
     |-----------------------------------|-----------------------------------|  
-    |3076 - Chinois (RAS de Hong Kong, RPC)|1028 - Chinois (Taïwan)|  
-    |5124 - Chinois (RAS de Macao)|1028 - Chinois (Taïwan)|  
+    |3076 - Chinois (Hong Kong (R.A.S.), RPC)|1028 - Chinois (Taïwan)|  
+    |5124 - Chinois (Macao (R.A.S.))|1028 - Chinois (Taïwan)|  
     |1028 - Chinois (Taïwan)|Langue par défaut|  
     |4100 - Chinois (Singapour)|2052 - Chinois (RPC)|  
     |2074 - Croate|Langue par défaut|  

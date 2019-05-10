@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b7ff9b57b8b83b8850aac4a854a3fd7b04a76804
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a81b217b00ead3f9c26915f19c540e1225a198c2
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030660"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486356"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
 
@@ -34,7 +34,7 @@ ms.locfileid: "56030660"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une règle de domaine.  
   
 ##  <a name="Build"></a> Créer les règles de domaine  
@@ -113,7 +113,7 @@ ms.locfileid: "56030660"
   
  Vous avez différentes alternatives pour créer une règle de domaine. Par exemple, pour valider si les valeurs commencent par la lettre A, B, ou C, vous pouvez créer une règle simple avec une condition complexe (telle qu'une expression régulière avec des barres verticales), ou vous pouvez créer une règle complexe qui contient plusieurs conditions simples. Un exemple de la première règle est « La valeur contient l’expression régulière (^A|^B|^C) ». Un exemple de la deuxième règle est « La valeur commence par un A OR La valeur commence par un B OR La valeur commence par un C ».  
   
-|Condition|Description| Exemple|  
+|Condition|Description|Exemple|  
 |---------------|-----------------|-------------|  
 |La longueur est égale à|Seules les valeurs composées du nombre de caractères définis par l'opérande seront valides.|Exemple d’opérande : 3<br /><br /> Valeur valide : BB1<br /><br /> Valeur non valide : AA|  
 |La longueur est supérieure ou égale à|Seules les valeurs composées du nombre (ou d'un nombre supérieur) de caractères définis par l'opérande seront valides.|Exemple d’opérande : 3<br /><br /> Valeurs valides : BB1, BBAA<br /><br /> Valeur non valide : AA|  
@@ -124,8 +124,8 @@ ms.locfileid: "56030660"
 |La valeur ne contient pas|Seules les valeurs qui ne sont pas contenues dans l'opérande sont valides.|Exemple d’opérande : A1<br /><br /> Valeurs valides : 1A, AA<br /><br /> Valeurs non valides : A1, AA1|  
 |La valeur commence par|Seules les valeurs qui commencent par les caractères de l'opérande sont valides.|Exemple d’opérande : AA<br /><br /> Valeurs valides : AA1<br /><br /> Valeurs non valides : 1AAB|  
 |La valeur se termine par|Seules les valeurs qui se terminent par les caractères de l'opérande sont valides.|Exemple d’opérande : AA<br /><br /> Valeurs valides : 1AA<br /><br /> Valeurs non valides : 1AAB|  
-|La valeur est numérique|Seules les valeurs ayant un type de données numérique SQL Server sont valides. Cela inclut int, decimal, float, etc.|Exemple d’opérande : Néant<br /><br /> Valeurs valides : 1, 25, 345,1234<br /><br /> Valeurs non valides : 2b, bcdef|  
-|La valeur est date/heure|Seules les valeurs ayant un type de données date/heure SQL Server sont valides. Cela inclut datetime, time, date, etc.|Exemple d’opérande : Néant<br /><br /> Valeurs valides : 04-06-1916 ; 04-06-1916 18:24:24 ; 21 mars 2001 ; 18/05/2011 ; 18:24:24<br /><br /> Valeurs non valides : 213 mars 2006|  
+|La valeur est numérique|Seules les valeurs ayant un type de données numérique SQL Server sont valides. Cela inclut int, decimal, float, etc.|Exemple d’opérande : N/A<br /><br /> Valeurs valides : 1, 25, 345,1234<br /><br /> Valeurs non valides : 2b, bcdef|  
+|La valeur est date/heure|Seules les valeurs ayant un type de données date/heure SQL Server sont valides. Cela inclut datetime, time, date, etc.|Exemple d’opérande : N/A<br /><br /> Valeurs valides : 04-06-1916 ; 04-06-1916 18:24:24 ; 21 mars 2001 ; 18/05/2011 ; 18:24:24<br /><br /> Valeurs non valides : 213 mars 2006|  
 |La valeur se trouve dans|Seules les valeurs qui sont dans l'ensemble de l'opérande sont valides.<br /><br /> Pour écrire les valeurs de l'ensemble, cliquez dans la zone de texte de l'opérande, entrez la première valeur, appuyez sur ENTRÉE, entrez la seconde valeur, répétez ces étapes pour toutes les valeurs que vous souhaitez entrer, puis cliquez de nouveau dans la zone de texte de l'opérande. DQS ajoute une virgule entre les valeurs de l'ensemble. Si vous entrez une chaîne unique avec des virgules et aucun retour chariot (par exemple, « A1, B1 »), DQS considère cette chaîne comme une valeur unique dans l’ensemble.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : A1, B1<br /><br /> Valeurs non valides : AA, 11|  
 |La valeur ne se trouve pas dans|Seules les valeurs qui ne se trouvent pas dans l'ensemble de l'opérande sont valides.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : AA, 11<br /><br /> Valeurs non valides : A1, B1|  
 |La valeur correspond au modèle|Seules les valeurs qui correspondent au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.<br /><br /> Toute lettre (A…Z) peut être utilisée comme modèle pour toute lettre ; respecte la casse. Tout chiffre (0…9) peut être utilisé comme modèle pour tout chiffre. Tout caractère spécial, sauf une lettre ou un chiffre, peut être utilisé comme modèle pour lui-même. Les crochets, [], définissent la correspondance facultative.|Exemple d’opérande : AA:000 (un modèle de deux caractères *quelconques* suivis de deux-points (:), puis suivis de trois chiffres *quelconques*.<br /><br /> Valeurs valides : AB:012, df:257<br /><br /> Valeurs non valides : abc:123, FJ-369<br /><br /> Pour plus d'informations et des exemples sur les règles de modèle dans DQS, consultez [Correspondance de modèle dans les règles de domaine DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  

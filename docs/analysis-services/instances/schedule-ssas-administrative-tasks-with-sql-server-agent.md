@@ -1,5 +1,5 @@
 ---
-title: Planifier des tâches administratives SSAS avec SQL Server Agent | Documents Microsoft
+title: Planifier des tâches administratives SSAS avec SQL Server Agent | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f0a8525196bacff6d0bf75b28a17c154a6eb919a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019116"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357509"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,14 +24,14 @@ ms.locfileid: "34019116"
   
  Cette rubrique est une procédure pas à pas qui décrit deux méthodes d'utilisation de SQL Server Agent pour exécuter le script XMLA. Le premier exemple montre comment planifier le traitement d'une dimension unique. Le deuxième exemple montre comment combiner les tâches de traitement dans un seul script qui s'exécute sur une planification. Pour effectuer cette procédure pas à pas, vous devez satisfaire aux conditions suivantes.  
   
-## <a name="prerequisites"></a>Conditions préalables  
+## <a name="prerequisites"></a>Prérequis  
  Le service Agent SQL Server doit être installé.  
   
  Par défaut, les travaux s'exécutent sous le compte de service. Le compte par défaut de SQL Server Agent est NT Service\SQLAgent$\<nom_instance >. Pour effectuer une sauvegarde ou une tâche de traitement, ce compte doit être un administrateur système sur l'instance Analysis Services. Pour plus d’informations, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
- Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../../analysis-services/install-sample-data-and-projects.md).  
+ Vous devez également disposer d'une base de données de test. Vous pouvez déployer l'exemple de base de données multidimensionnelle AdventureWorks ou un projet du didacticiel MDX Analysis Services dans cette procédure pas à pas. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../multidimensional-tutorial/install-sample-data-and-projects.md).  
   
-## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : traitement d'une dimension dans une tâche planifiée  
+## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>Exemple 1 : Traitement d’une dimension dans une tâche planifiée  
  Cet exemple montre comment créer et planifier un travail qui traite une dimension.  
   
  Une tâche planifiée [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est un script XMLA imbriqué dans un travail de SQL Server Agent. Ce travail est planifié pour s'exécuter à une heure et une fréquence souhaitées. SQL Server Agent faisant partie de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous travaillez avec le Moteur de base de données et avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour créer et planifier une tâche administrative.  
@@ -83,7 +83,7 @@ ms.locfileid: "34019116"
   
 7.  Dans **Serveur**, tapez **localhost** pour une instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et **localhost\\**\<*nom_instance*> pour une instance nommée.  
   
-     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \< *nom du serveur*> pour une instance par défaut, et \< *nom du serveur*>\\<*nom de l’instance*> pour une instance nommée.  
+     Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \< *nom du serveur*> pour une instance par défaut, et \< *nom du serveur*>\\<*instance nom*> pour une instance nommée.  
   
 8.  Dans **Type**, sélectionnez **Commande SQL Server Analysis Services**.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34019116"
   
 15. Lorsque le travail est terminé, cliquez sur **Fermer**.  
   
-## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : traitement par lots d'une dimension et d'une partition dans une tâche planifiée  
+## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Exemple 2 : Traitement par lots une dimension et une partition dans une tâche planifiée  
  Les procédures de cet exemple montrent comment créer et planifier un travail qui traite par lots une dimension de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et en même temps traiter une partition de cube qui dépend de la dimension pour l'agrégation. Pour plus d’informations sur le traitement par lots des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   
 ###  <a name="bkmk_BatchProcess"></a> Créer un script pour le traitement par lots d'une dimension et d'une partition dans un travail de SQL Server Agent  

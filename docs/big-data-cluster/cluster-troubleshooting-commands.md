@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472296"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877664"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Surveillance et de résoudre les problèmes de clusters de données volumineuses de SQL Server
 
@@ -244,7 +244,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > Si vous obtenez l’erreur suivante : *Impossible d’écouter sur le port 8001 : Échec de tous les écouteurs créer et les erreurs suivantes : Impossible de créer l’écouteur : Erreur écouter tcp4 127.0.0.1:8001 : > lier : Qu’une seule utilisation de chaque adresse de socket (adresse réseau/protocole/port) est normalement autorisée. Impossible de créer l’écouteur : Erreur écouter tcp6 : adresse [[ :: 1]] : 8001 : manquant de port dans > résolution des problèmes : Impossible d’écouter sur un des ports demandées : [{8001 9090}]*, assurez-vous que vous n’avez pas démarré le tableau de bord déjà d’une autre fenêtre.
 
-Lorsque vous lancez le tableau de bord sur votre navigateur, vous pouvez obtenir des avertissements d’autorisation en raison de RBAC étant activé par défaut dans les clusters AKS, et le compte de service utilisé par le tableau de bord n’a pas d’autorisations suffisantes pour accéder à toutes les ressources (par exemple,  *PODS est interdite : Utilisateur « système : serviceaccount:kube-système : kubernetes-Need » ne peut pas répertorier les pods dans l’espace de noms « default »*). Exécutez la commande suivante pour accorder les autorisations nécessaires pour `kubernetes-dashboard`, puis redémarrez le tableau de bord :
+Lorsque vous lancez le tableau de bord sur votre navigateur, vous pouvez obtenir des avertissements d’autorisation en raison de RBAC étant activé par défaut dans les clusters AKS, et le compte de service utilisé par le tableau de bord n’a pas d’autorisations suffisantes pour accéder à toutes les ressources (par exemple,  *PODS est interdite : Utilisateur « système : serviceaccount:kube-système : kubernetes-tableau de bord « Impossible de répertorier le nombre de pods dans l’espace de noms « default »*). Exécutez la commande suivante pour accorder les autorisations nécessaires pour `kubernetes-dashboard`, puis redémarrez le tableau de bord :
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
