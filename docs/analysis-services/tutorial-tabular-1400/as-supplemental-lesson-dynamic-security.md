@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3fa566c26c95d84544ecd2dbb9f54c815f677e02
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685706"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776089"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Leçon supplémentaire - Sécurité dynamique
 
@@ -150,10 +150,9 @@ Dans cette tâche, vous créez un rôle d’utilisateur. Ce rôle inclut un filt
 9. Pour le **DimSalesTerritory** table, tapez la formule suivante :  
 
     ```  
-    ='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 
-      'Employee Security'[Login Id], USERNAME(), 
-      'Employee Security'[Sales Territory Id], 
-      'Sales Territory'[Sales Territory Id]) 
+    ='DimSalesTerritory'[SalesTerritoryKey]=LOOKUPVALUE('EmployeeSecurity'[SalesTerritoryId], 
+      'EmployeeSecurity'[LoginId], USERNAME(), 
+      'EmployeeSecurity'[SalesTerritoryId], 'DimSalesTerritory'[SalesTerritoryKey]) 
     ```
   
     Dans cette formule, la fonction LOOKUPVALUE retourne toutes les valeurs pour la colonne DimEmployeeSecurity [SalesTerritoryId], où la valeur EmployeeSecurity [LoginId] est le même que l’actuellement connecté sur le nom d’utilisateur Windows et EmployeeSecurity [SalesTerritoryId] est le identique à la valeur DimSalesTerritory [SalesTerritoryId].  
