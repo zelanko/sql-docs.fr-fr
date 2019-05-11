@@ -1,6 +1,6 @@
 ---
-title: Conversions monétaires (Analysis Services) | Microsoft Docs
-ms.date: 05/08/2018
+title: Conversions monétaires dans Analysis Services | Microsoft Docs
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,53 +9,47 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3e9934345856e3af3c10be5bf2cea38b259ec09d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e5e23e81f4f22ea7a31fdf09d46a1ccfdae52bf6
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207208"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527402"
 ---
-# <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
+# <a name="currency-conversions-in-analysis-services"></a>Conversions monétaires dans Analysis Services
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
-  [!INCLUDE[applies](../includes/applies-md.md)] Multidimensionnel uniquement  
+ Analysis Services utilise une combinaison de fonctionnalités, guidées par des scripts MDX (Multidimensional Expressions), pour prendre en charge de conversion de devise dans les cubes prenant en charge plusieurs devises.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise une combinaison de fonctionnalités, guidées par des scripts MDX (Multidimensional Expressions), pour assurer la prise en charge des conversions monétaires dans les cubes qui prennent en charge plusieurs devises.  
+## <a name="currency-conversion-terminology"></a>Terminologie de conversion monétaire  
+
+ La terminologie suivante est utilisée pour décrire la fonctionnalité de conversion monétaire :  
   
-## <a name="currency-conversion-terminology"></a>Terminologie propre aux conversions monétaires  
- La terminologie répertoriée ci-dessous est utilisée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour décrire la fonctionnalité de conversion monétaire :  
+ **Devise de tableau croisé dynamique** -est une devise par rapport à laquelle les taux de change sont entrés dans le groupe de mesures de taux.  
   
- Devise pivot  
- Devise dans laquelle les taux de change sont entrés dans le groupe de mesures de taux.  
+ **Devise locale** -est de la devise utilisée pour stocker les transactions sur lequel reposent des mesures à convertir.  
   
- Devise locale  
- Devise utilisée pour stocker les transactions sur lesquelles se basent les mesures à convertir.  
-  
- La devise locale peut être identifiée par un des éléments suivants :  
+Devise locale peut être identifiée par un :  
   
 -   Un identificateur de devise dans la table de faits stockée avec la transaction, comme cela est communément le cas avec les applications bancaires où la transaction identifie elle-même la devise qu'elle utilise.  
   
 -   Un identificateur de devise associé à un attribut dans une table de dimensions qui est ensuite associée à une transaction dans la table de faits, comme cela est communément le cas dans les applications financières où un emplacement ou un autre identificateur, tel qu'une filiale, identifie la devise utilisée pour une transaction associée.  
   
- Devise pour les rapports  
- Devise dans laquelle les transactions sont converties à partir de la devise pivot.  
+**Devise pour les rapports** -est de la devise à laquelle les transactions sont converties à partir de la devise pivot.  
   
 > [!NOTE]  
 >  Pour les conversions monétaires plusieurs-à-un, la devise pivot et la devise pour les rapports sont les mêmes.  
   
- Dimension monétaire  
- Dimension de base de données définie avec les paramètres suivants :  
+ **Dimension de devise** -une dimension de base de données définie avec les paramètres suivants :  
   
 -   La propriété **Type** de la dimension a la valeur Currency.  
   
 -   La propriété **Type** d'un attribut de la dimension a la valeur CurrencyName.  
   
-    > [!IMPORTANT]  
-    >  Les valeurs de cet attribut doivent être utilisées dans toutes les colonnes qui doivent contenir un identificateur de devise.  
+Les valeurs de cet attribut doivent être utilisées dans toutes les colonnes qui doivent contenir un identificateur de devise.  
   
- Groupe de mesures de taux  
- Groupe de mesures dans un cube, défini avec les paramètres suivants :  
+**Groupe de mesures taux** -un groupe de mesures dans un cube, défini avec les paramètres suivants :  
   
 -   Une relation de dimension régulière existe entre une dimension monétaire et le groupe de mesures de taux.  
   
@@ -65,8 +59,7 @@ ms.locfileid: "53207208"
   
 -   Une ou plusieurs mesures, représentant les taux de change contenus par le groupe de mesures de taux.  
   
- Dimension monétaire de rapport  
- Dimension, définie par l'Assistant Business Intelligence après qu'une conversion monétaire a été définie, qui contient les devises pour les rapports relatives à cette conversion monétaire. La dimension monétaire de rapport se base sur une requête nommée, définie dans la vue de source de données sur laquelle se base la dimension monétaire associée au groupe de mesures de taux, à partir de la table principale de dimensions de la dimension monétaire. La dimension est définie avec les paramètres suivants :  
+**Dimension monétaire de rapport** -est de la dimension, définie par l’Assistant Business Intelligence après avoir défini une conversion monétaire, qui contient les devises pour les rapports pour cette conversion monétaire. La dimension monétaire de rapport se base sur une requête nommée, définie dans la vue de source de données sur laquelle se base la dimension monétaire associée au groupe de mesures de taux, à partir de la table principale de dimensions de la dimension monétaire. La dimension est définie avec les paramètres suivants :  
   
 -   La propriété **Type** de la dimension a la valeur Currency.  
   
@@ -74,13 +67,16 @@ ms.locfileid: "53207208"
   
 -   La propriété **Type** d'un attribut au sein de la dimension a la valeur CurrencyDestination et la colonne liée à cet attribut contient les identificateurs de devises qui représentent les devises pour les rapports de la conversion monétaire.  
   
-## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
+## <a name="defining-currency-conversions"></a>Définition de conversions monétaires  
+
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  
   
 ### <a name="prerequisites"></a>Prérequis  
+
  Avant de pouvoir définir une conversion monétaire dans un cube à l'aide de l'Assistant Business Intelligence, vous devez définir au préalable au moins une dimension monétaire, au moins une dimension de temps et au moins un groupe de mesures de taux. À partir de ces objets, l'Assistant Business Intelligence peut récupérer les données et métadonnées utilisées pour générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire.  
   
 ### <a name="decisions"></a>Décisions  
+
  Vous devez prendre les décisions ci-dessous pour que l'Assistant Business Intelligence puisse générer la dimension monétaire de rapport et le script MDX nécessaires pour assurer la fonctionnalité de conversion monétaire :  
   
 -   Sens du taux de change  
@@ -93,7 +89,8 @@ ms.locfileid: "53207208"
   
 -   Devises pour les rapports  
   
-### <a name="exchange-rate-directions"></a>Sens des taux de change  
+### <a name="exchange-rate-directions"></a>Sens du taux de change  
+
  Le groupe de mesures de taux contient des mesures représentant les taux de change entre les devises locales et la devise pivot (souvent appelée « devise d'entreprise »). La combinaison du sens du taux de change et du type de conversion détermine l'opération effectuée sur les mesures que doit convertir le script MDX généré à l'aide de l'Assistant Business Intelligence. Le tableau ci-dessous décrit les opérations effectuées en fonction du sens du taux de change et du type de conversion, selon les options de sens de taux de change et les sens de conversion disponibles dans l'Assistant Business Intelligence.  
   
 |||||  
@@ -105,6 +102,7 @@ ms.locfileid: "53207208"
  Vous pouvez choisir le sens du taux de change à la page **Définir les options de conversion monétaire** de l'Assistant Business Intelligence. Pour plus d’informations sur la spécification du sens de conversion, consultez [Définir les options de conversion monétaire &#40;Assistant Business Intelligence&#41;](http://msdn.microsoft.com/library/a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d).  
   
 ### <a name="converted-members"></a>Membres convertis  
+
  Vous pouvez utiliser l'Assistant Business Intelligence pour spécifier les mesures du groupe de mesures de taux qui sont utilisées pour convertir les valeurs pour :  
   
 -   les mesures d'autres groupes de mesures ;  
@@ -116,6 +114,7 @@ ms.locfileid: "53207208"
  L'Assistant Business Intelligence utilise ces informations dans le script MDX qu'il génère pour déterminer l'étendue du calcul de conversion monétaire. Pour plus d’informations sur la spécification des membres de conversion monétaire, consultez [Sélectionner les membres &#40;Assistant Business Intelligence&#41;](http://msdn.microsoft.com/library/1a147461-d594-41e7-a41d-09d2d003e1e0).  
   
 ### <a name="conversion-types"></a>Types de conversion  
+
  L'Assistant Business Intelligence prend en charge trois types différents de conversion monétaire :  
   
 -   **Un-à-plusieurs**  
@@ -139,6 +138,7 @@ ms.locfileid: "53207208"
  La spécification du type de conversion permet à l'Assistant Business Intelligence de définir la requête nommée et la structure de dimensions de la dimension monétaire de rapport, ainsi que la structure du script MDX défini pour la conversion monétaire.  
   
 ### <a name="local-currencies"></a>Devises locales  
+
  Si vous choisissez un type de conversion plusieurs-à-plusieurs ou plusieurs-à-un pour la conversion monétaire, vous devez spécifier comment identifier les devises locales à partir desquelles le script MDX généré par l'Assistant Business Intelligence doit effectuer les calculs de conversion monétaire. La devise locale d'une transaction dans une table de faits peut être identifiée de deux manières différentes :  
   
 -   Le groupe de mesures contient une relation de dimension régulière avec la dimension monétaire. Par exemple, dans la base de données [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de l'exemple [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , le groupe de mesures Internet Sales (Ventes Internet) possède une relation de dimension régulière avec la dimension monétaire. La table de faits pour ce groupe de mesures contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour cette dimension. Dans ce cas, vous pouvez sélectionner l'attribut à partir de la dimension monétaire qui est référencé par le groupe de mesures pour identifier la devise locale pour les transactions dans la table de faits pour ce groupe de mesures. Cette situation a lieu le plus souvent dans les applications bancaires, où la transaction détermine elle-même la devise qu'elle utilise.  
@@ -146,6 +146,7 @@ ms.locfileid: "53207208"
 -   Le groupe de mesures contient une relation de dimension référencée avec la dimension monétaire, via une autre dimension qui fait référence directement à la dimension monétaire. Par exemple, dans l'exemple [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , le groupe de mesures Financial Reporting a une relation de dimension référencée avec la dimension Devise via la dimension Organisation. La table de faits pour ce groupe de mesures contient une colonne clé étrangère qui fait référence aux membres de la table de dimensions pour la dimension Organization. La table de dimensions pour la dimension Organization, à son tour, contient une colonne clé étrangère qui fait référence aux identificateurs de devises dans la table de dimensions pour la dimension Currency. Cette situation a lieu le plus souvent dans les applications de comptabilité, où l'emplacement ou la filiale pour une transaction détermine la devise utilisée pour la transaction. Dans ce cas, vous pouvez sélectionner l'attribut qui fait référence à la dimension monétaire à partir de la dimension pour l'entité commerciale.  
   
 ### <a name="reporting-currencies"></a>Devises pour les rapports  
+
  Si vous choisissez un type de conversion plusieurs-à-plusieurs ou un-à-plusieurs pour la conversion monétaire, vous devez spécifier les devises pour les rapports pour lesquelles le script MDX généré par l'Assistant Business Intelligence doit effectuer les calculs de conversion monétaire. Vous pouvez spécifier tous les membres de la dimension monétaire liée au groupe de mesures de taux ou sélectionner des membres individuels à partir de la dimension.  
   
  L'Assistant Business Intelligence crée une dimension monétaire de rapport, basée sur une requête nommée construite à partir de la table de dimensions pour la dimension monétaire à l'aide des devises pour les rapports sélectionnées.  
@@ -156,10 +157,12 @@ ms.locfileid: "53207208"
  Une dimension monétaire de rapport distincte est définie pour chaque conversion monétaire définie dans un cube. Vous pouvez modifier le nom des dimensions monétaires de rapport après leur création, mais dans ce cas vous devez également mettre à jour le script MDX généré pour cette conversion monétaire pour garantir que le nom correct est utilisé par la commande de script lors d'une référence à la dimension monétaire de rapport.  
   
 ## <a name="defining-multiple-currency-conversions"></a>Définition de plusieurs conversions monétaires  
+
  Grâce à l'Assistant Business Intelligence, vous pouvez définir autant de conversions monétaires qu'en nécessite votre solution Business Intelligence. Vous pouvez remplacer une conversion monétaire existante ou ajouter une nouvelle conversion monétaire au script MDX pour un cube. Plusieurs conversions monétaires définies dans un même cube confèrent de la flexibilité aux applications Business Intelligence qui ont des conditions requises complexes en matière de rapports, telles que des applications de comptabilité qui prennent en charge plusieurs conditions requises de conversions distinctes pour la rédaction de rapports internationaux.  
   
-### <a name="identifying-currency-conversions"></a>Identification des conversions monétaires  
- L'Assistant Business Intelligence identifie chaque conversion monétaire en encadrant les commandes de script liées à la conversion monétaire par les commentaires suivants :  
+### <a name="currency-conversion-in-multidimensional-models-by-using-business-intelligence-wizard"></a>Conversion de devise dans les modèles multidimensionnels à l’aide de l’Assistant Business Intelligence  
+ 
+L'Assistant Business Intelligence identifie chaque conversion monétaire en encadrant les commandes de script liées à la conversion monétaire par les commentaires suivants :  
   
  `//<Currency conversion>`  
   

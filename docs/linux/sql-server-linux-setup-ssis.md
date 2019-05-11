@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 46833459abec325c8df0baed27a1831d5ad9c347
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 950f8b3c912a5c8d1aabd2e49ee681d4ffcdd23e
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486365"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527296"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -25,7 +25,7 @@ Suivez les étapes de cet article pour installer SQL Server Integration Services
 
 Installer SQL Server Integration Services pour votre plateforme :
 
-- [Ubuntu](#ubuntu)
+- [Ubuntu 16.04](#ubuntu)
 - [Red Hat Enterprise Linux](#RHEL)
 
 ## <a name="ubuntu"></a> Installer SSIS sur Ubuntu
