@@ -20,12 +20,12 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982292"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537613"
 ---
 # <a name="sqldescribeparam-function"></a>Fonction SQLDescribeParam
 **Conformité**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982292"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeParam(  
       SQLHSTMT        StatementHandle,  
@@ -111,7 +111,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="code-example"></a>Exemple de code  
  L’exemple suivant invite l’utilisateur pour une instruction SQL et prépare ensuite cette instruction. Ensuite, il appelle **SQLNumParams** pour déterminer si l’instruction contient tous les paramètres. Si l’instruction contient des paramètres, il appelle **SQLDescribeParam** pour décrire ces paramètres et **SQLBindParameter** pour les lier. Enfin, il invite l’utilisateur pour les valeurs des paramètres et exécute ensuite l’instruction.  
   
-```  
+```cpp  
 SQLCHAR       Statement[100];  
 SQLSMALLINT   NumParams, i, DataType, DecimalDigits, Nullable;  
 SQLUINTEGER   ParamSize;  

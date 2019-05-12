@@ -20,12 +20,12 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ac3d24b1213096be20658fb48dbfe9a6d39df8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63240237"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538021"
 ---
 # <a name="sqlgetfunctions-function"></a>Fonction SQLGetFunctions
 **Conformité**  
@@ -36,7 +36,7 @@ ms.locfileid: "63240237"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetFunctions(  
      SQLHDBC           ConnectionHandle,  
@@ -148,7 +148,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="code-example"></a>Exemple de code  
  Les trois exemples suivants montrent comment une application utilise **SQLGetFunctions** pour déterminer si un pilote prend en charge **SQLTables**, **SQLColumns**, et  **SQLStatistics**. Si le pilote ne prend pas en charge ces fonctions, l’application déconnecte le pilote. Le premier exemple appelle **SQLGetFunctions** une fois pour chaque fonction.  
   
-```  
+```cpp  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
   
@@ -171,7 +171,7 @@ SQLDisconnect(hdbc);
   
  Dans le deuxième exemple, une application de 3.x ODBC appelle **SQLGetFunctions** et transmet un tableau dans lequel **SQLGetFunctions** retourne des informations sur tous les ODBC 3.x et les fonctions antérieures.  
   
-```  
+```cpp  
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  
 SQLUSMALLINT fExists[SQL_API_ODBC3_ALL_FUNCTIONS_SIZE];  
   
@@ -193,7 +193,7 @@ SQLDisconnect(hdbc);
   
  Le troisième exemple est une application ODBC 2.x appelle **SQLGetFunctions** et il passe un tableau de 100 éléments dans lequel **SQLGetFunctions** retourne des informations sur tous les ODBC 2.x et fonctions antérieures.  
   
-```  
+```cpp  
 #define FUNCTIONS 100  
   
 RETCODE retcodeTables, retcodeColumns, retcodeStatistics  

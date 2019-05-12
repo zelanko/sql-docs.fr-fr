@@ -11,12 +11,12 @@ ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d4e546aa56cf9831a0b519f5788359d8c58c41fb
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63273417"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538181"
 ---
 # <a name="odbc-64-bit-information"></a>Informations sur ODBC 64 bits
 À compter de Windows Server 2003, systèmes d’exploitation Microsoft ont pris en charge les bibliothèques ODBC 64 bits. Les en-têtes ODBC et les bibliothèques livrés avec MDAC 2.7 SDK contiennent des modifications pour permettre aux programmeurs d’écrire facilement du code pour les nouvelles plateformes 64 bits. En veillant à ce que votre code utilise les types ODBC définie ci-dessous, vous pouvez compiler le même code source pour les plateformes 64 bits et 32 bits en se basant sur le **_WIN64** ou **WIN32** macros.  
@@ -34,7 +34,7 @@ ms.locfileid: "63273417"
 ## <a name="function-declaration-changes"></a>Modifications de déclaration de fonction  
  Les signatures de fonction suivantes ont été modifiés pour la programmation 64 bits. Les éléments en gras sont les paramètres spécifiques qui sont différents.  
   
-```c
+```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -126,7 +126,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  La définition de SQLSETPOSIROW a changé pour les compilateurs 32 bits et 64 bits :  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +136,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  Les définitions de SQLLEN et SQLULEN ont été modifiés pour les compilateurs 64 bits :  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +148,7 @@ typedef UINT64 SQLULEN;
   
  Bien que SQL_C_BOOKMARK est déconseillé dans ODBC 3.0, les compilateurs 64 bits sur les 2.0 clients, cette valeur a changé :  
   
-```c
+```cpp
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +158,7 @@ typedef UINT64 SQLULEN;
   
  Le type de signet est défini différemment dans les en-têtes plus récente :  
   
-```c
+```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   

@@ -20,12 +20,12 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39d1fca288196dcf42da70083dad323c406ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465955"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536530"
 ---
 # <a name="sqlnativesql-function"></a>Fonction SQLNativeSql
 **Conformité**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465955"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLNativeSql(  
      SQLHDBC        ConnectionHandle,  
@@ -97,25 +97,25 @@ SQLRETURN SQLNativeSql(
 ## <a name="comments"></a>Commentaires  
  Voici des exemples de ce à quoi **SQLNativeSql** peut retourner pour la chaîne SQL d’entrée suivante contenant la fonction scalaire CONVERT. Supposons que la colonne empid est de type entier dans la source de données :  
   
-```  
+```sql  
 SELECT { fn CONVERT (empid, SQL_SMALLINT) } FROM employee  
 ```  
   
  Un pilote pour Microsoft SQL Server peut renvoyer la chaîne SQL traduite suivante :  
   
-```  
+```sql  
 SELECT convert (smallint, empid) FROM employee  
 ```  
   
  Un pilote pour le serveur ORACLE peut retourner la chaîne SQL traduite suivante :  
   
-```  
+```sql  
 SELECT to_number (empid) FROM employee  
 ```  
   
  Un pilote pour Ingres peut retourner la chaîne SQL traduite suivante :  
   
-```  
+```sql  
 SELECT int2 (empid) FROM employee  
 ```  
   

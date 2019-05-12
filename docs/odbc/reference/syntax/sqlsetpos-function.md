@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982397"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536318"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Conformité**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982397"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Exemple de code  
  Dans l’exemple suivant, une application permet à un utilisateur de parcourir la table ORDERS et de mettre à jour d’état de la commande. Le curseur est commandé par keyset avec une taille d’ensemble de lignes de 20 et utilise le contrôle d’accès concurrentiel optimiste comparaison des versions de ligne. Une fois que chaque ensemble de lignes est extraites, l’application imprime et permet à l’utilisateur sélectionner et mettre à jour l’état d’une commande. L’application utilise **SQLSetPos** pour positionner le curseur sur la ligne sélectionnée et effectue une mise à jour positionnée de la ligne. (La gestion des erreurs sont omises par souci de clarté).  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

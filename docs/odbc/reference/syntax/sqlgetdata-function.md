@@ -20,12 +20,12 @@ ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258962"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538002"
 ---
 # <a name="sqlgetdata-function"></a>Fonction SQLGetData
 **Conformité**  
@@ -36,7 +36,7 @@ ms.locfileid: "63258962"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetData(  
       SQLHSTMT       StatementHandle,  
@@ -204,7 +204,7 @@ SQLRETURN SQLGetData(
   
  Les appels successifs à **SQLGetData** récupérera les données à partir de la dernière colonne demandée ; décalages préalables deviennent non valides. Par exemple, lorsque la séquence suivante est exécutée :  
   
-```  
+```cpp  
 SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)  
 ```  
   
@@ -218,7 +218,7 @@ SQLGetData(icol=n), SQLGetData(icol=m), SQLGetData(icol=n)
 ## <a name="code-example"></a>Exemple de code  
  Dans l’exemple suivant, une application exécute un **sélectionnez** instruction pour retourner un jeu de résultats du client ID, les noms et triés par nom, ID et numéro de téléphone de numéros de téléphone. Pour chaque ligne de données, il appelle **SQLFetch** pour positionner le curseur à la ligne suivante. Il appelle **SQLGetData** pour récupérer les données extraites ; les mémoires tampons pour les données et le nombre d’octets retourné sont spécifiés dans l’appel à **SQLGetData**. Enfin, il imprime le nom de chaque employé, ID et numéro de téléphone.  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 50  
   
