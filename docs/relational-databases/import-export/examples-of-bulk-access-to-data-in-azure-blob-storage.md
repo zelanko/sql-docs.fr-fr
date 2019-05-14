@@ -13,16 +13,16 @@ helpviewer_keywords:
 - BULK INSERT, Azure blob storage
 - OPENROWSET, Azure blob storage
 ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
-author: CarlRabeler
-ms.author: carlrab
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 190a9a07ad293253ee9a2005a6b5981db129465f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29d54fc9c2643638ccbcb61691bbb12931c2b348
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214098"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946257"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Exemples d’accès en bloc à des données dans Stockage Blob Azure
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Tous les exemples suivants nécessitent des informations d’identification incl
 > [!IMPORTANT]
 >  La source de données externe doit être créée avec des informations d’identification incluses dans l’étendue de la base de données utilisant l’identité `SHARED ACCESS SIGNATURE`. Pour créer une signature d’accès partagé pour votre compte de stockage, examinez la propriété **Signature d’accès partagé** dans la page de propriétés du compte de stockage, dans le portail Azure. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Pour plus d’informations sur les informations d’identification, consultez [CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).  
  
-Créez des informations d’identification incluses dans l’étendue de la base de données avec `IDENTITY` qui doit avoir la valeur `SHARED ACCESS SIGNATURE`. Utilisez le secret à partir de votre portail Azure. Exemple :  
+Créez des informations d’identification incluses dans l’étendue de la base de données avec `IDENTITY` qui doit avoir la valeur `SHARED ACCESS SIGNATURE`. Utilisez le secret à partir de votre portail Azure. Par exemple :  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  

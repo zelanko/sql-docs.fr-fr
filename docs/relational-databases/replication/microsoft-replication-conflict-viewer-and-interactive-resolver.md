@@ -1,5 +1,5 @@
 ---
-title: Outil de résolution des conflits de réplication de Microsoft et Résolveur interactif | Microsoft Docs
+title: Visionneuse des conflits de réplication de Microsoft et Résolveur interactif | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,9 +21,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54135460"
 ---
-# <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Outil de résolution des conflits de réplication de Microsoft et Résolveur interactif
+# <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visionneuse des conflits de réplication de Microsoft et Résolveur interactif
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette section contient des informations sur l'Outil de résolution des conflits de réplication pour la réplication de fusion et la réplication transactionnelle, et sur le Résolveur interactif pour la réplication de fusion :  
+  Cette section contient des informations sur la Visionneuse des conflits de réplication pour la réplication de fusion et la réplication transactionnelle, et sur le Résolveur interactif pour la réplication de fusion :  
   
 -   [Outil de résolution des conflits de réplication Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
   

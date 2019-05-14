@@ -14,16 +14,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9a7592e4ba1d3087aafaff1eef22b467eb55dd7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215475"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946171"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "53215475"
         >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Instructions pour l'utilisation d'indicateurs de fin  
- Dans certains cas, un indicateur de fin s'avère utile pour les champs de données de type **char** ou **nchar** . Exemple :  
+ Dans certains cas, un indicateur de fin s'avère utile pour les champs de données de type **char** ou **nchar** . Par exemple :  
   
 -   pour une colonne de données qui contient une valeur Null dans un fichier de données qui sera importé dans un programme qui ne comprend pas les informations de longueur de préfixe ;  
   
@@ -97,7 +97,7 @@ ms.locfileid: "53215475"
 
 ### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Spécification de `\n` comme indicateur de fin de ligne pour l’exportation en bloc
 
-Lorsque vous spécifiez `\n` comme indicateur de fin de ligne pour l’exportation en bloc ou utilisez implicitement l’indicateur de fin de ligne, le programme de copie en bloc sort une combinaison de renvoi de saut de ligne (CRLF) comme indicateur de fin de ligne. Si vous souhaitez générer un seul caractère de saut de ligne (LF) en tant qu’indicateur de fin de ligne, courante sur les ordinateurs Unix et Linux : utilisez la notation hexadécimale pour spécifier l’indicateur de fin de ligne LF. Exemple :
+Lorsque vous spécifiez `\n` comme indicateur de fin de ligne pour l’exportation en bloc ou utilisez implicitement l’indicateur de fin de ligne, le programme de copie en bloc sort une combinaison de renvoi de saut de ligne (CRLF) comme indicateur de fin de ligne. Si vous souhaitez générer un seul caractère de saut de ligne (LF) en tant qu’indicateur de fin de ligne, courante sur les ordinateurs Unix et Linux : utilisez la notation hexadécimale pour spécifier l’indicateur de fin de ligne LF. Par exemple :
 
 ```cmd
 bcp -r '0x0A'
@@ -181,7 +181,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
  L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de l'instruction `BULK INSERT` en utilisant les qualificateurs répertoriés dans le tableau suivant.  
   
 |Option|Attribute|  

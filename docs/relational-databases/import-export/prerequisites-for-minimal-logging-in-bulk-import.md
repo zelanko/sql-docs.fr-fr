@@ -14,15 +14,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server]
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e78ad38f56402439e1459ab218e0ce01ff0dcc68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594865"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946574"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47594865"
   
 -   La table n'est pas une table mémoire optimisée.  
   
- La possibilité de journalisation minimale pour une table dépend également du fait que celle-ci soit indexée et, si elle l'est, du fait qu'elle soit vide :  
+ La possibilité de journalisation minimale pour une table dépend également du fait que celle-ci soit indexée et, si elle l'est, du fait qu'elle soit vide :  
   
 -   Si la table ne possède aucun index, les pages de données bénéficient de la journalisation minimale.  
   

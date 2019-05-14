@@ -30,7 +30,7 @@ ms.locfileid: "47845127"
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient des informations supplémentaires sur le type d’audit de fichier dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’audit sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contient des informations supplémentaires sur le type d’audit de fichier dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’audit sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

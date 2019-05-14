@@ -7,16 +7,16 @@ ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01bc625ac8b444c25d59909b7e07d2669b2c5af2
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 4febbf78223178062e04c8465588461e277e5403
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578988"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946422"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importer des données d’Excel vers SQL Server ou Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -223,7 +223,7 @@ Comme décrit précédemment dans la section [Prérequis](#prereq), vous devez e
 
 Pour plus d’informations sur l’Assistant Copie, consultez les rubriques suivantes :
 -   [Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
--   [Didacticiel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
+-   [Tutoriel : Créer un pipeline avec activité de copie à l’aide de l’Assistant Copie de Data Factory](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)
 
 ## <a name="adf"></a> Azure Data Factory
 Si vous connaissez Azure Data Factory et que vous ne voulez pas exécuter l’Assistant Copie, créez un pipeline avec une activité de copie qui permet d’effectuer une copie à partir du fichier texte dans SQL Server ou Azure SQL Database.
@@ -237,7 +237,7 @@ Pour plus d’informations sur l’utilisation de ces sources et récepteurs Dat
 
 Pour apprendre à copier des données avec Azure Data Factory, consultez les rubriques suivantes :
 -   [Déplacer des données grâce à l’activité de copie](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
--   [Didacticiel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
+-   [Tutoriel : Créer un pipeline avec activité de copie à l’aide du Portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database)
 
 ## <a name="see-also"></a> Voir aussi
 [Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

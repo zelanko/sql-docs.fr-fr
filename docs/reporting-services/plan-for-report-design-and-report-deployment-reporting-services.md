@@ -2,18 +2,18 @@
 title: Planifier la conception de rapports et le déploiement de rapports | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814232"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503692"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planifier la conception de rapports et le déploiement de rapports | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports paginés. Découvrez comment planifier un outil de création de rapports et un environnement de serveur de rapports qui fonctionnent ensemble.
@@ -51,8 +51,12 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
 -   **Générateur de rapports :** enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
   
 -   **Portail web :** téléchargez un rapport vers un serveur de rapports configuré en mode natif à partir du [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint :** téléchargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
+
+::: moniker-end
   
 -   **Par programmation :** publiez par programmation un rapport à l'aide des interfaces SOAP API vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -61,12 +65,18 @@ Cette rubrique offre une vue d'ensemble de la prise en charge de la définition 
 |Version de serveur de rapports|Version de schéma RDL|  
 |---------------------------|------------------------|  
 |SQL Server 2016|2016 RDL<br /><br />RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|RDL 2010<br /><br /> RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|RDL 2008<br /><br /> RDL 2005<br /><br /> RDL 2000|  
   
  Lorsque vous téléchargez ou publiez une définition de rapport vers le serveur de rapports ou mettez à niveau un serveur de rapports qui contient des rapports, le serveur de rapports conserve la définition de rapport dans le format d'origine. **Lors de la première utilisation**, le serveur de rapports met à niveau le rapport dans la base de données du serveur de rapports dans un format binaire qui est conservé pour les vues suivantes. La définition de rapport (.rdl) proprement dite n'est pas mise à niveau.  
   
- Vous pouvez extraire du serveur de rapports une copie en lecture seule du fichier de définition de rapport (.rdl). Sur un serveur de rapports en mode natif, accédez au [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez le rapport et cliquez sur **Télécharger**. Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documents, sélectionnez le rapport et cliquez sur **Télécharger une copie**.  
+ Vous pouvez extraire du serveur de rapports une copie en lecture seule du fichier de définition de rapport (.rdl). Sur un serveur de rapports en mode natif, accédez au [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], sélectionnez le rapport et cliquez sur **Télécharger**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+Dans un déploiement en mode SharePoint, accédez à la bibliothèque de documents, sélectionnez le rapport et cliquez sur **Télécharger une copie**.  
+
+::: moniker-end
   
  Pour mettre à niveau la définition de rapport, vous devez ouvrir le rapport dans un environnement de création de rapports, comme SQL Server Data Tools, et l’enregistrer.  
   

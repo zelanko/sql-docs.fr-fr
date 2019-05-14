@@ -21,16 +21,15 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 523b1cc852c7098f6c18828efdb789fa2fcafcdf
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0cdd3d2a7a64ddc701a73a3b6c978bd9f0264e20
+ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801743"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877589"
 ---
 # <a name="sql-server-documentation"></a>Documentation SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017  || = sqlallproducts-allversions"
 SQL Server est un élément central de la plateforme de données Microsoft. SQL Server est un leader dans le secteur des systèmes de gestion de base de données opérationnelles (ODBMS). Cette documentation vous aide à installer, à configurer et à utiliser SQL Server sur Windows et Linux. Le contenu inclut des exemples de bout en bout, des exemples de code et des vidéos. Pour connaître les rubriques relatives au langage SQL Server, consultez [Référence du langage](../t-sql/language-reference.md).
@@ -84,8 +83,6 @@ SQL Server est un élément central de la plateforme de données Microsoft. SQL 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"
 **Essayez SQL Server 2016 !**
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server pour Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Télécharger SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Créer une machine virtuelle ](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Obtenir une machine virtuelle avec SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
 
@@ -93,10 +90,10 @@ SQL Server est un élément central de la plateforme de données Microsoft. SQL 
 **Essayer SQL Server**
 - [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) [Télécharger SQL Server pour Windows](https://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Installer SQL Server sur Linux](../includes/media/download2.png)](../linux/sql-server-linux-setup.md) [Installer SQL Server sur Linux](../linux/sql-server-linux-setup.md)
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [Télécharger SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 - [![Créer une machine virtuelle ](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Obtenir une machine virtuelle avec SQL Server](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 ::: moniker-end
+
+[!INCLUDE[get-sql-tools](../includes/paragraph-content/get-sql-tools.md)]
 
 ## <a name="sql-server-technologies"></a>Technologies SQL Server
 
