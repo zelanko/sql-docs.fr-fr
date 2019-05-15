@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518383"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096662"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ Spécifie si l’élément sélectionné dans la liste **Clé ou index Primary/U
 **Catégorie Identité**  
 Développée, elle affiche les champs de propriété de **Nom** et **Description**.  
   
-**Nom**  
+**Name**  
 Indique le nom de la clé ou de l'index. Lorsqu'un nouvel index ou une nouvelle clé sont créés, ils obtiennent un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
 **Description**  

@@ -22,9 +22,9 @@ ms.lasthandoff: 04/23/2019
 ms.locfileid: "63255426"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>afficher et résoudre les conflits de données pour les publications de fusion (SQL Server Management Studio)
-  Les conflits de réplication de fusion sont résolus en fonction de l'outil de résolution spécifié pour chaque article. Par défaut, les conflits sont résolus sans que l'utilisateur doive intervenir. Mais il est possible de les afficher et de modifier le résultat de la résolution dans l'outil de résolution des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+  Les conflits de réplication de fusion sont résolus en fonction de l'outil de résolution spécifié pour chaque article. Par défaut, les conflits sont résolus sans que l'utilisateur doive intervenir. Mais il est possible de les afficher et de modifier le résultat de la résolution dans la Visionneuse des conflits de réplication de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Les données de conflit sont disponibles dans cet outil pendant la durée définie comme période de rétention des conflits (par défaut 14 jours). Pour définir la période de rétention des conflits :  
+ Les données de conflit sont disponibles dans la Visionneuse des conflits de réplication pendant la durée définie comme période de rétention des conflits (par défaut 14 jours). Pour définir la période de rétention des conflits :  
   
 -   Spécifiez une valeur de rétention pour le paramètre **@conflict_retention** de [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "63255426"
   
 4.  Dans la boîte de dialogue **Sélectionner la table de conflits** , sélectionnez une base de données et une table dont il faut afficher les conflits.  
   
-5.  Dans l'outil de résolution des conflits de réplication, vous pouvez effectuer les actions suivantes :  
+5.  Dans la Visionneuse des conflits de réplication, vous pouvez effectuer les actions suivantes :  
   
     -   Filtrer des lignes avec les boutons situés à droite de la grille supérieure.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63255426"
   
     -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir (**...**) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
-6.  Fermer l'outil de résolution de conflits.  
+6.  Fermer la Visionneuse des conflits de réplication.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection et résolution des conflits de réplication de fusion avancée](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

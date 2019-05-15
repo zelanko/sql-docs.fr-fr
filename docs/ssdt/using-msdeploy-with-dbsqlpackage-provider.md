@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 128e1feeb3b344a21dbb682d4d41d402060ab1ff
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256944"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101968"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 **DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
@@ -103,7 +103,7 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
 |**DropDmlTriggersNotInSource= {True &#124; False}**|**True**|Spécifie si l'action de publication doit supprimer de la base de données cible les déclencheurs DML (Data Manipulation Language) absents de l'instantané de base de données (.dacpac) au moment de la publication vers une base de données.|  
 |**DropExtendedPropertiesNotInSource= {True &#124; False}**|**True**|Spécifie si l’action de publication doit supprimer de la base de données cible les propriétés étendues absentes de l’instantané de base de données (.dacpac) au moment de la publication vers une base de données.|  
 |**DropIndexesNotInSource= {True &#124; False}**|**True**|Spécifie si l'action de publication doit supprimer de la base de données cible les index absents de l'instantané de base de données (.dacpac) au moment de la publication vers une base de données.|  
-|**DropObjectsNotInSource= {True &#124; False}**|**False**|Spécifie si les objets qui n’existent pas dans le fichier d’instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données.|  
+|**DropObjectsNotInSource= {True &#124; False}**|**False**|Spécifie si les objets qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données.|  
 |**DropPermissionsNotInSource= {True &#124; False}**|**False**|Spécifie si l'action de publication doit supprimer de la base de données cible les autorisations absentes de l'instantané de base de données (.dacpac) au moment de la publication vers une base de données.|  
 |**DropRoleMembersNotInSource= {True &#124; False}**|**False**|Spécifie si l’action de publication doit supprimer de la base de données cible les membres de rôle absents de l’instantané de base de données (.dacpac) au moment de la publication vers une base de données.|  
 |**GenerateSmartDefaults={True &#124; False}**|**False**|Spécifie si **SqlPackage.exe** doit fournir automatiquement une valeur par défaut lorsqu'il met à jour une table contenant des données et une colonne n'acceptant pas les valeurs Null.|  
@@ -115,7 +115,7 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
 |**IgnoreDdlTriggerOrder= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l'ordre des déclencheurs DDL (Data Definition Language) doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreDdlTriggerState={True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l'état d'activation des déclencheurs DDL (Data Definition Language) doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreDefaultSchema={True &#124; False}**|**False**|Spécifie si les différences situées au niveau du schéma par défaut doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
-|**IgnoreDmlTriggerOrder= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l'ordre des déclencheurs DML doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
+|**IgnoreDmlTriggerOrder= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l’ordre des déclencheurs DML doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreDmlTriggerState= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l'état d'activation des déclencheurs DML (Data Definition Language) doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreExtendedProperties= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau des propriétés étendues doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreFileAndLogFilePath={True &#124; False}**|**True**|Spécifie si les différences situées au niveau des chemins d'accès aux fichiers et fichiers journaux doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
@@ -126,7 +126,7 @@ Les paramètres **Destination** suivants sont disponibles pour toutes les opéra
 |Propriété|Valeur par défaut|Description|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau du chemin d'accès aux fichiers d'index de recherche en texte intégral doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
-|**IgnoreIdentitySeed= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de la valeur initiale d’une colonne d’identité doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
+|**IgnoreIdentitySeed= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de la valeur initiale d'une colonne d'identité doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreIncrement= {True &#124; False}**|**False**|Spécifie si les différences situées au niveau de l'incrément d'une colonne d'identité doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreIndexOptions ={True &#124; False}**|**False**|Spécifie si les différences situées au niveau des options d'index doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  
 |**IgnoreIndexPadding= {True &#124; False}**|**True**|Spécifie si les différences situées au niveau du remplissage d'index doivent être ignorées ou mises à jour au moment de la publication vers une base de données.|  

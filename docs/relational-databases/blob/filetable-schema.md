@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40bca8db984a0f1c4b84dd6ba01f78c5be915b32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5d944e359091a7f6c3b7ee6bcf88ee1b41d6bce
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623837"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094233"
 ---
 # <a name="filetable-schema"></a>Schéma de FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47623837"
 |**stream_id**|**[uniqueidentifier] rowguidcol**||Valeur retournée par la fonction **NEWID()** .|ID unique pour les données FILESTREAM.|Non applicable.|  
 |**file_stream**|**varbinary(max)**<br /><br /> **flux de fichier**|variable|NULL|Contient les données FILESTREAM.|Non applicable.|  
 |**file_type**|**nvarchar(255)**|variable|NULL.<br /><br /> Une opération de création ou de changement de nom dans le système de fichiers remplit la valeur d'extension du fichier à partir du nom.|Représente le type du fichier.<br /><br /> Cette colonne peut être utilisée comme **TYPE COLUMN** quand vous créez un index de recherche en texte intégral.<br /><br /> **file_type** est une colonne calculée persistante.|Calculé automatiquement. Ne peut pas être définie.|  
-|**Nom**|**nvarchar(255)**|variable|Valeur GUID.|Nom du fichier ou du répertoire.|Peut être créé ou modifié à l'aide des API Windows.|  
+|**Name**|**nvarchar(255)**|variable|Valeur GUID.|Nom du fichier ou du répertoire.|Peut être créé ou modifié à l'aide des API Windows.|  
 |**parent_path_locator**|**hierarchyid**|variable|**hierarchyid** qui identifie le répertoire qui contient cet élément.|**hierarchyid** du répertoire conteneur.<br /><br /> **parent_path_locator** est une colonne calculée persistante.|Calculé automatiquement. Ne peut pas être définie.|  
 |**cached_file_size**|**bigint**|||Taille des données FILESTREAM, en octets.<br /><br /> **cached_file_size** est une colonne calculée persistante.|Bien que la taille du fichier mis en cache soit automatiquement mise à jour, elle peut être mal synchronisée dans des circonstances exceptionnelles. Pour calculer la taille exacte, utilisez la fonction **DATALENGTH()** .|  
 |**creation_time**|**datetime2(4)**<br /><br /> **Non Null**|8 octets|Heure actuelle.|Date et heure de création du fichier.|Calculé automatiquement. Peut également être défini à l'aide d'API Windows.|  

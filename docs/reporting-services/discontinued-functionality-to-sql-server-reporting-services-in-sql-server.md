@@ -1,21 +1,21 @@
 ---
 title: Fonctionnalités supprimées
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552931"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503977"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Fonctionnalités supprimées dans SQL Server Reporting Services (SSRS)
 
@@ -29,14 +29,12 @@ Une *fonctionnalité interrompue* désigne une fonctionnalité qui n’est plus 
 
 |Fonctionnalité|Remplacement ou contournement|
 |-|-|
-|Charger des modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
-|Gérer des modèles de rapport via le portail web|Ceci peut encore être effectué via l’API SOAP.|
 |Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports|Vous pouvez toujours [personnaliser le portail web](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Nouveautés de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Nouveautés de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Fonctions déconseillées de SQL Server Reporting Services dans SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

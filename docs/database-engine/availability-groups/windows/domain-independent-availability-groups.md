@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090254"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Un suffixe DNS commun est nécessaire pour le cluster de groupe de travail d’u
 
 La création d’un groupe de disponibilité indépendant du domaine n’est pas réalisable entièrement avec SQL Server Management Studio. Quand bien même la création du groupe de disponibilité indépendant du domaine ressemble trait pour trait à celle d’un groupe de disponibilité normal, certains aspects (tels que la création des certificats) sont uniquement possibles avec Transact-SQL. L’exemple ci-dessous illustre une configuration de groupe de disponibilité avec deux réplicas : un réplica principal et un réplica secondaire. 
 
-1. [En suivant les instructions indiquées par ce lien](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), déployez un cluster de groupe de travail composé de tous les serveurs inclus dans le groupe de disponibilité. Vérifiez que le suffixe DNS commun est déjà configuré avant de configurer le cluster de groupe de travail.
+1. [En suivant les instructions indiquées par ce lien](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), déployez un cluster de groupe de travail composé de tous les serveurs inclus dans le groupe de disponibilité. Vérifiez que le suffixe DNS commun est déjà configuré avant de configurer le cluster de groupe de travail.
 2. [Activez la fonctionnalité Groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) sur chaque instance membre du groupe de disponibilité. Un redémarrage de chaque instance SQL Server est alors nécessaire.
 3. Chaque instance qui héberge le réplica principal a besoin d’une clé principale de base de données. Si aucune clé principale n’existe déjà, exécutez la commande suivante :
 
@@ -126,7 +126,7 @@ La création d’un groupe de disponibilité indépendant du domaine n’est pas
    ```
 
 10. Pour tout réplica pouvant être un réplica principal, créez une connexion et un utilisateur sur tous les réplicas secondaires pertinents.
-11. Sur chaque instance, restaurez les certificats pour les autres instances pour lesquelles une connexion et un utilisateur ont été créés. Sur le réplica principal, restaurez tous les certificats de réplica secondaire. Sur chaque réplica secondaire, restaurez le certificat du réplica principal, mais aussi sur tout autre réplica pouvant être un réplica principal. Exemple :
+11. Sur chaque instance, restaurez les certificats pour les autres instances pour lesquelles une connexion et un utilisateur ont été créés. Sur le réplica principal, restaurez tous les certificats de réplica secondaire. Sur chaque réplica secondaire, restaurez le certificat du réplica principal, mais aussi sur tout autre réplica pouvant être un réplica principal. Par exemple :
 
    ```sql
    CREATE CERTIFICATE [InstanceB_Cert]
