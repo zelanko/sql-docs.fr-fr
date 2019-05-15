@@ -1,5 +1,5 @@
 ---
-title: Vue d'ensemble
+title: Qu’est Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Azure Data Studio est un outil gratuit, léger, qui s’exécute sur Windows, macOS et Linux, pour la gestion de SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.
 ms.prod: sql
@@ -9,14 +9,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 1b64b8d23ce58fda704926affdea1103afae0e91
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
+ms.openlocfilehash: 00c8a5aeba30d16e2ae2f5c98290797765c9a357
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089489"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620188"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est Azure Data Studio ?
 
@@ -160,9 +160,8 @@ Pour en savoir plus sur la création d’extensions, consultez [création d’ex
 |Évaluation des vulnérabilités||Oui|
 |Gestion de XEvent||Oui|
 
-
-
 ## <a name="next-steps"></a>Étapes suivantes
+
 - [Téléchargez et installez[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 
 - [Se connecter à et interroger SQL Server](quickstart-sql-server.md)
