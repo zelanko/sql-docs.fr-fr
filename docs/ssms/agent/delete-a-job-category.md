@@ -14,16 +14,16 @@ helpviewer_keywords:
 - categories [SQL Server Agent jobs]
 - removing job category
 ms.assetid: 47a7640b-20b3-4639-ab37-b6fc73575e6c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 722cda778454601a77384be0e8637ce202e53ef2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7478ea0fae6d1859407fd071ce205aeebdc5385e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701887"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096912"
 ---
 # <a name="delete-a-job-category"></a>Supprimer une catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Les catégories de travaux permettent d'organiser les travaux afin d'en facilite
 Lorsque vous supprimez une catégorie de travaux définie par l'utilisateur, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous invite à réaffecter les travaux qui en dépendent à une autre catégorie de travaux. Seules les catégories de travaux définies par l'utilisateur peuvent être supprimées.  
   
 ### <a name="Security"></a>Sécurité  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
