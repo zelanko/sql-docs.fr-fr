@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099910"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502928"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
@@ -75,6 +75,9 @@ ms.locfileid: "50099910"
  Pour extraire les fichiers image, le serveur de rapports utilise automatiquement le compte et aucune action spécifique n'est requise de votre part. Pour utiliser le compte pour vous connecter aux sources de données externes qui fournissent les données aux rapports, vous devez spécifier une option **Type d'informations d'identification** dans la page de propriétés de source de données de la source de données du rapport ou de la source de données partagée :  
   
 -   Dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou sur un site SharePoint, sélectionnez l’option **Informations d’identification non requises** .  
+
+> [!NOTE]
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
   
  Le compte de traitement des rapports sans assistance est utilisé principalement pour se connecter aux serveurs externes, et non comme connexion aux serveurs de base de données. Si vous souhaitez utiliser les informations d'identification du compte pour vous connecter à une base de données, vous devez spécifier ces informations dans la chaîne de connexion. Vous pouvez spécifier **Integrated Security=SSPI** si le serveur de base de données prend en charge la sécurité intégrée Windows et si le compte utilisé pour le traitement de rapport sans assistance dispose de l’autorisation de lecture dans la base de données. Sinon, vous devez entrer le nom d'utilisateur et le mot de passe dans la chaîne de connexion, où ces informations apparaissent en texte en clair à tout utilisateur qui peut modifier les propriétés de la connexion à la source de données.  
   

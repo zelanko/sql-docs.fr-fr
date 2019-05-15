@@ -18,15 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6289e84ecfce552345688368810a9081529b5f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cf5eec621d32ac0454700e6519332b3419c9aa8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615517"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102845"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "47615517"
 |Déplacer le curseur vers le bas|Bas|Bas|  
 |Placer le curseur au début de la ligne|Origine|Origine|  
 |Placer le curseur à la fin de la ligne|END|END|  
-|Placer le curseur au début du document|CTRL+ORIGINE|Ctrl+Origine|  
+|Placer le curseur au début du document|Ctrl+Origine|Ctrl+Origine|  
 |Placer le curseur à la fin du document|CTRL+FIN|CTRL+FIN|  
 |Déplacer le curseur d'un écran vers le haut|Pg. préc|Pg. préc|  
 |Déplacer le curseur d'un écran vers le bas|Pg. suiv|Pg. suiv|  
@@ -139,7 +139,7 @@ ms.locfileid: "47615517"
 |Étendre la sélection d'une page vers le bas|Maj+Pg. suiv|Maj+Pg. suiv|  
 |Sélectionner le document actif tout entier|Ctrl+A|Ctrl+A|  
 |Sélectionner le mot contenant le curseur ou le mot le plus proche|Ctrl+W|Ctrl+W|  
-|Effectuer la sélection de l'emplacement actuel dans l'éditeur vers l'emplacement précédent dans l'éditeur|Ctrl + =|Ctrl + =|  
+|Effectuer la sélection de l'emplacement actuel dans l'éditeur vers l'emplacement précédent dans l'éditeur|Ctrl + =|Ctrl + =|  
 |Étendre la sélection jusqu'en haut de la fenêtre active|Ctrl+Maj+Pg. préc|Ctrl+Maj+Pg. préc|  
 |Étendre la sélection en plaçant le curseur sur la dernière ligne affichée|Ctrl+Maj+Pg. suiv|Ctrl+Maj+Pg. suiv|  
 |Étendre la sélection d'un mot vers la droite|Ctrl+Maj+Flèche droite|Ctrl+Maj+Flèche droite|  
@@ -424,7 +424,7 @@ ms.locfileid: "47615517"
 |Actualiser|F5|F5|  
 |Ouvrir une fenêtre de détails à partir d'une grille|Entrée|Entrée|  
   
-## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Raccourcis clavier de l'Outil de résolution des conflits  
+## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Raccourcis clavier de la Visionneuse des conflits de réplication  
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  

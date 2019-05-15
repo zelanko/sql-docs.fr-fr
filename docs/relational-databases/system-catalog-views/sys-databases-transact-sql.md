@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080369"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560131"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Si une base de données n’est pas `ONLINE`, ou `AUTO_CLOSE` a la valeur `ON` e
 |**is_temporal_retention_enabled**|**bit**|Indique si la tâche de nettoyage de stratégie de rétention temporelle est activée.<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**Int**|Le paramètre de classement de catalogue :<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Le paramètre de classement de catalogue :<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**Int**|Réservé à un usage interne</br>**S’applique à** : Azure SQL Data Warehouse.
+|**is_result_set_caching_on**|**Int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**S’applique à** : Azure SQL Data Warehouse Gen2
   
 ## <a name="permissions"></a>Autorisations  
  Si l’appelant de `sys.databases` n’est pas le propriétaire de la base de données et la base de données n’est pas `master` ou `tempdb`, les autorisations minimales requises pour consulter la ligne correspondante sont `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` au niveau du serveur, ou `CREATE DATABASE` autorisation dans le `master` base de données. La base de données à laquelle l’appelant est connecté peut toujours être vue dans `sys.databases`.  
@@ -140,7 +140,7 @@ SELECT name, user_access_desc, is_read_only, state_desc, recovery_model_desc
 FROM sys.databases;  
 ```  
   
-### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>b. Vérifier l'état de copie dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+### <a name="b-check-the-copying-status-in-includesssdsincludessssds-mdmd"></a>B. Vérifier l'état de copie dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  L’exemple suivant interroge la `sys.databases` et `sys.dm_database_copies` l’opération de copie de vues pour retourner des informations sur une base de données.  
   
 **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  

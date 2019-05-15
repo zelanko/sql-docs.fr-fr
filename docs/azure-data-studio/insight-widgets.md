@@ -1,9 +1,9 @@
 ---
-title: Utiliser des widgets d’analyse pour surveiller les serveurs et bases de données
+title: Utiliser des widgets d’analyse dans Studio de données Azure pour surveiller les serveurs et bases de données
 titleSuffix: Azure Data Studio
 description: En savoir plus sur les widgets d’analyse dans Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238887"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620346"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gérer les serveurs et bases de données avec des widgets d’analyse dans [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets d’analyse prennent les requêtes Transact-SQL (T-SQL) vous permet de surveiller les serveurs et bases de données et les transforme en visualisations pertinentes. 
+Widgets d’analyse prennent les requêtes Transact-SQL (T-SQL) vous permet de surveiller les serveurs et bases de données et les transforme en visualisations pertinentes.
 
-Insights sont personnalisables des graphiques que vous ajoutez au serveur et base de données des tableaux de bord de surveillance. Afficher une vue d’ensemble de vos serveurs et les bases de données, puis d’Explorer plus en détail et de lancer des actions de gestion que vous définissez. 
+Insights sont personnalisables des graphiques que vous ajoutez au serveur et base de données des tableaux de bord de surveillance. Afficher une vue d’ensemble de vos serveurs et les bases de données, puis d’Explorer plus en détail et de lancer des actions de gestion que vous définissez.
 
 Vous pouvez générer awesome serveur et base de données de gestion des tableaux de bord similaire à l’exemple suivant :
 
@@ -33,11 +33,11 @@ Pour lancer et commencer à créer différents types de widgets d’analyse, con
 
 - [Générer un widget d’analyse personnalisée](tutorial-build-custom-insight-sql-server.md)
 - *Activer les widgets d’analyse intégrées*
-   - [Activer la surveillance d’un aperçu des performances](tutorial-qds-sql-server.md)
-   - [Activer l’analyse de l’utilisation d’espace de table](tutorial-table-space-sql-server.md)
+  - [Activer la surveillance d’un aperçu des performances](tutorial-qds-sql-server.md)
+  - [Activer l’analyse de l’utilisation d’espace de table](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>Requêtes SQL 
+## <a name="sql-queries"></a>Requêtes SQL
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] tente d’éviter d’introduire encore un autre utilisateur de langage ou lourde interface afin d’essayer d’utiliser autant que possible le T-SQL avec une configuration minimale JSON. Configuration des widgets d’analyse avec T-SQL s’appuie sur le nombre un nombre illimité de sources existantes de requêtes T-SQL utiles qui peuvent être activés dans les widgets pertinents.
 

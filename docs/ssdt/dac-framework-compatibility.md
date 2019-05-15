@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5f8e7f4a-f157-442a-8fe5-32b8774776dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 62c6ce306434dcbad34057f2bde82d1a83ed69ae
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e8960633edb73f53b7ca2f7d3c9bca392ec6b0ba
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616080"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106302"
 ---
 # <a name="dac-framework-compatibility"></a>Compatibilité avec DAC Framework
 Lorsque vous essayez d'effectuer une action qui utilise le DAC Framework, SQL Server Data Tools (SSDT) détermine d'abord si une version compatible de DACFx est installée sur l'ordinateur. Si SSDT ne fonctionne pas avec la version installée de DACFx, l'erreur suivante s'affiche :  

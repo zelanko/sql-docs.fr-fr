@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 3686ab7df82a3241ee97948ab2ffa9a0b1d41df3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215455"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626671"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
@@ -27,7 +27,9 @@ Ce document décrit comment résoudre les problèmes de Microsoft SQL Server s'e
 > Pour obtenir des réponses aux questions fréquemment posées, consultez le [SQL Server sur le Forum aux questions sur Linux](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Résoudre les échecs de connexion
-Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL Server sous Linux, il existe quelques éléments à vérifier. 
+Si vous rencontrez des difficultés pour vous connecter à votre serveur SQL Server sous Linux, il existe quelques éléments à vérifier.
+
+- Si vous ne parvenez pas à se connecter localement à l’aide **localhost**, essayez plutôt d’utiliser l’adresse IP 127.0.0.1. Il est possible que **localhost** n’est pas correctement mappé à cette adresse.
 
 - Vérifiez que le nom du serveur ou l’adresse IP est accessible à partir de votre ordinateur client.
 
@@ -206,7 +208,7 @@ Il existe de nombreux facteurs affectent les performances, notamment la concepti
 
    Consultez la section Dépannage de l’article, [se connecter à SQL Server sur Linux](#connection).
 
-2. ERREUR : Nom d’hôte doit être de 15 caractères ou moins.
+2. ERREUR : Nom d’hôte doit être de 15 caractères ou moins.
 
    Il s’agit d’un problème connu qui se produit chaque fois que le nom de l’ordinateur sur lequel on tente d’installer le package Debian SQL Server est supérieur à 15 caractères. Il n’existe actuellement aucune solution de contournement autre que la modification du nom de l’ordinateur. Une façon d’effectuer cette opération est de modifier le fichier de nom d’hôte et de redémarrer l’ordinateur. Le [guide du site Web](https://www.cyberciti.biz/faq/ubuntu-change-hostname-command/) suivant explique cela en détail.
 

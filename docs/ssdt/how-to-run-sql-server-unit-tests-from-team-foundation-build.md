@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8faabc4655cd3aff4d6f15790a4f0e03dd60b8e8
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226536"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099650"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
 Utilisez Team Foundation Build pour exécuter vos tests unitaires SQL Server dans un test de vérification de la génération. Configurez les tests unitaires pour déployer la base de données, générer des données de test, puis exécuter les tests sélectionnés. Si vous n'êtes pas familiarisé avec Team Foundation Build, vous devez vérifier les informations suivantes avant de suivre les procédures de cette rubrique :  
@@ -167,7 +167,7 @@ Par défaut, Team Foundation Build crée un fichier de configuration à partir d
   
 9. Dans l'Explorateur de solutions, double-cliquez sur app.config.  
   
-10. Dans l'éditeur, pour chaque nœud \<SqlUnitTesting_*VSVersion*>, ajoutez `AllowConfigurationOverride="true"`. Exemple :  
+10. Dans l'éditeur, pour chaque nœud \<SqlUnitTesting_*VSVersion*>, ajoutez `AllowConfigurationOverride="true"`. Par exemple :  
   
     ```  
     -- Update SqlUnitTesting_VS2010 node to:  

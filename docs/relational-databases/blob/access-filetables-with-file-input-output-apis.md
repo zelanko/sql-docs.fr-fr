@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74f3fb094b8d3e852a5ffb0cce77e52cdfe47293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740373"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089030"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,29 +107,29 @@ ms.locfileid: "47740373"
 |Fonctionnalité|Pris en charge|Commentaires|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
-|**Attributs étendus**|non||  
-|**Points d'analyse**|non||  
-|**ACL persistants**|non||  
-|**Flux nommés**|non||  
+|**Attributs étendus**|Non||  
+|**Points d'analyse**|Non||  
+|**ACL persistants**|Non||  
+|**Flux nommés**|Non||  
 |**Fichiers partiellement alloués**|Oui|Le caractère éparse ne peut être défini que sur les fichiers et affecte le stockage du flux de données. Dans la mesure où les données FILESTREAM sont stockées sur des volumes NTFS, la fonctionnalité FileTable prend en charge les fichiers partiellement alloués en envoyant les demandes au système de fichiers NTFS.|  
 |**Compression**|Oui||  
 |**Chiffrement**|Oui||  
-|**TxF**|non||  
-|**ID de fichier**|non||  
-|**ID d'objet**|non||  
-|**Liens symboliques**|non||  
-|**Liens physiques**|non||  
-|**Noms courts**|non||  
-|**Notifications de modification de répertoire**|non||  
+|**TxF**|Non||  
+|**ID de fichier**|Non||  
+|**ID d'objet**|Non||  
+|**Liens symboliques**|Non||  
+|**Liens physiques**|Non||  
+|**Noms courts**|Non||  
+|**Notifications de modification de répertoire**|Non||  
 |**Verrouillage de plage d'octets**|Oui|Les demandes de verrouillage de plage d'octets sont passées au système de fichiers NTFS.|  
-|**Fichiers mappés en mémoire**|non||  
+|**Fichiers mappés en mémoire**|Non||  
 |**Annulation d'entrées/sorties**|Oui||  
-|**Sécurité**|non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
-|**Journal USN**|non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
+|**Sécurité**|Non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
+|**Journal USN**|Non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
   
 ## <a name="see-also"></a> Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
- [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

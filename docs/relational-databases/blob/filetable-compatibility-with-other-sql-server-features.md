@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b8205fdb8dc5e869a9ef96ab4d76739e08ce386
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4afc0cfe0b310dcfcc106fc9d38b028c88f0261c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522369"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094373"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Compatibilité de FileTable avec d'autres fonctionnalités SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "52522369"
   
 -   La fonctionnalité FileTable n'est prise en charge que partiellement par [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
   
-    > **REMARQUE :**  notez qu’après un basculement, l’intégralité des fonctionnalités FILESTREAM est prise en charge. Les données FILESTREAM sont accessibles à la fois sur les réplicas secondaires avec accès en lecture et sur le nouveau réplica principal.  
+    > **REMARQUE :**  Notez qu'après un basculement, l'intégralité des fonctionnalités FILESTREAM est prise en charge. Les données FILESTREAM sont accessibles à la fois sur les réplicas secondaires avec accès en lecture et sur le nouveau réplica principal.  
   
 -   Les fonctions FILESTREAM et FileTable acceptent ou retournent des noms de réseau virtuel (VNN) à la place de noms d'ordinateur. Pour plus d’informations sur ces fonctions, consultez [Fonctions FileStream et FileTable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md).  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52522369"
   
 -   La vue peut être modifiable selon la sémantique de la « vue modifiable », mais les contraintes de table sous-jacentes peuvent refuser les mises à jour comme dans la table.  
   
--   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Exemple :  
+-   Le chemin d'accès à un fichier peut être visualisé dans la vue en l'ajoutant en tant que colonne explicite dans la vue. Par exemple :  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52522369"
  Actuellement, les vues indexées ne peuvent pas inclure de colonnes FILESTREAM ni de colonnes calculées/calculées persistantes qui dépendent des colonnes FILESTREAM. Ce comportement reste également inchangé avec les vues définies sur le FileTable.  
   
 ##  <a name="OtherSnapshots"></a> Isolement de capture instantanée et FileTables  
- L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
+ L'isolement de capture instantanée de lecture validée (RCSI) et l'isolement de capture instantanée (SI) comptent sur la possibilité d'avoir un instantané des données disponible pour les lecteurs même lorsque des opérations de mise à jour se produisent sur les données. Cependant, les FileTables autorisent l'accès en écriture non transactionnel aux données FILESTREAM. Par conséquent, les restrictions suivantes s'appliquent à l'utilisation de ces fonctionnalités dans les bases de données qui contiennent des FileTables :  
   
 -   Une base de données qui contient des FileTables peut être modifiée pour activer l'isolement RCSI/SI.  
   

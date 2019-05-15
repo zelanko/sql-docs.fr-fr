@@ -11,12 +11,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0da82a782dcebeee22e422d5c25b05e17584393c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319200"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503203"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56319200"
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -68,7 +68,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
  Nom de l’ordinateur serveur distant ou adresse IPv4 du serveur distant. Les adresses IPv6 ne sont pas prises en charge. Vous pouvez spécifier une instance nommée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format **nom_ordinateur\nom_instance** ou **adresse_IP\nom_instance**. Le serveur doit être distant et ne peut donc pas être spécifié comme (local).  
   
  Numéro de *port* TCP  
- Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Exemple : **ServerA,1450** ou **10.192.14.27,1435**  
+ Numéro de port TCP pour la connexion. Vous pouvez spécifier un numéro de port TCP compris entre 0 et 65 535 pour une instance de SQL Server qui n’est pas à l’écoute sur le port par défaut 1433. Par exemple : **ServerA,1450** ou **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Nous vous recommandons de vous connecter à un serveur distant à l’aide de l’adresse IP. En fonction de votre configuration réseau, la connexion à l’aide du nom de l’ordinateur peut nécessiter des étapes supplémentaires afin d’utiliser votre serveur DNS non-appliance pour résoudre le nom au serveur approprié. Cette étape n’est pas nécessaire lors de la connexion avec une adresse IP. Pour plus d’informations, consultez « Utiliser un redirecteur DNS pour résoudre les noms DNS non-appliance (Analytics Platform System) » dans la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -87,7 +87,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  SELECT \<select_criteria> Prédicat de requête qui spécifie les données qui rempliront la table distante. Pour plus d’informations sur l’instruction SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite :  
   
 -   L’autorisation SELECT sur chaque objet dans la clause SELECT.  
@@ -144,7 +144,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>b. Interrogation de la vue de gestion dynamique sys.dm_pdw_dms_workers pour l’état de copie de table distante  
+### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. Interrogation de la vue de gestion dynamique sys.dm_pdw_dms_workers pour l’état de copie de table distante  
  Cette requête montre comment afficher l’état de la copie d’une table distante.  
   
 ```  

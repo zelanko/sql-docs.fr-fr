@@ -13,15 +13,15 @@ helpviewer_keywords:
 - tables [SQL Server], database diagrams
 - database diagrams [SQL Server], Table Designer
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fb21f08c5762cc89534a1d79e047ac4b301dbc27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bef5713f86521bca416b7048fda12ba465ec3e30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825817"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104386"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Utiliser des tables dans les diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +37,9 @@ Vous pouvez modifier et créer des tables de base de données dans le Concepteur
   
 [Enregistrer des tables sélectionnées dans un schéma &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-selected-tables-on-a-diagram-visual-database-tools.md)  
   
-[Copier des tables d’un schéma de base de données vers un autre &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
+[Copier des tables d’un diagramme de base de données vers un autre &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/copy-tables-from-one-database-diagrams-to-another-visual-database-tools.md)  
   
-[Supprimer des tables de schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md)  
+[Supprimer des tables de diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-database-diagrams-visual-database-tools.md)  
   
 [Mapper des relations plusieurs-à-plusieurs &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/map-many-to-many-relationships-visual-database-tools.md)  
   

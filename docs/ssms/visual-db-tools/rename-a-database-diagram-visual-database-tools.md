@@ -13,15 +13,15 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4a5169dd6237b53223db41754e708969e7059473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35d97032f2764ffe128665472fa7369452c1746e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833257"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099273"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Renommer un diagramme de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,5 +42,5 @@ Vous pouvez renommer un diagramme de base de données dans l’Explorateur d’o
     Le diagramme de base de données apparaît sous son nouveau nom dans l’Explorateur d’objets.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

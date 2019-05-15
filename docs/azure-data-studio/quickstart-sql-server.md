@@ -2,8 +2,8 @@
 title: 'Démarrage rapide : Se connecter et interroger SQL Server'
 titleSuffix: Azure Data Studio
 description: Ce démarrage rapide montre comment utiliser Azure Data Studio pour vous connecter à SQL Server et exécuter une requête
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 4dfe47c44a6bc5e706db3123d167802bfd74dddc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142400"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620381"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utiliser les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
@@ -37,7 +37,7 @@ Si vous n’avez pas accès à un serveur SQL, sélectionnez votre plateforme pa
 
    
 1. Démarrer **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
-1. La première fois que vous exécutez *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* le **connexion** boîte de dialogue s’ouvre. Si le **connexion** boîte de dialogue ne s’ouvre, cliquez sur le **nouvelle connexion** icône dans le **serveurs** page :
+1. La première fois que vous exécutez [!INCLUDE[name-sos](../includes/name-sos-short.md)] le **Bienvenue** page doit s’ouvrir. Si vous ne voyez pas le **Bienvenue** page, sélectionnez **aide** > **Bienvenue**. Sélectionnez **nouvelle connexion** pour ouvrir le **connexion** volet :
    
    ![Nouvelle icône de connexion](media/quickstart-sql-server/new-connection-icon.png)
 
