@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683679"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502861"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ Pour plus d’informations sur les conventions de la syntaxe, consultez [Convent
 ## <a name="syntax-for-disk-based-tables"></a>Syntaxe des tables basées sur disque
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>Syntaxe des tables à mémoire optimisée
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -848,7 +848,7 @@ Quand vous désactivez Stretch pour une table, vous avez deux options pour les d
 - Pour désactiver Stretch pour une table et copier les données distantes pour la table d'Azure vers SQL Server, exécutez la commande suivante. Cette commande ne peut pas être annulée.
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ Une fois que toutes les données distantes ont été copiées d'Azure vers SQL S
 - Pour désactiver Stretch pour une table et abandonner les données distantes, exécutez la commande suivante.
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1007,7 +1007,7 @@ Dans les versions antérieures, la spécification du format server.database.sche
 
 Pour résoudre le problème, supprimez l'utilisation d'un préfixe en quatre parties.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Requiert une autorisation ALTER sur la table.
 
@@ -1042,7 +1042,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>b. Ajout d'une colonne avec une contrainte
+#### <a name="b-adding-a-column-with-a-constraint"></a>B. Ajout d'une colonne avec une contrainte
 
 L'exemple suivant ajoute une nouvelle colonne avec une contrainte `UNIQUE`.
 
@@ -1279,7 +1279,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>b. Suppression de contraintes et de colonnes
+#### <a name="b-dropping-constraints-and-columns"></a>B. Suppression de contraintes et de colonnes
 
 Le premier exemple supprime une contrainte `UNIQUE` d'une table. Le second exemple supprime deux contraintes et une seule colonne.
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1359,7 +1359,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>b. Modification de la taille d’une colonne
+#### <a name="b-changing-the-size-of-a-column"></a>B. Modification de la taille d’une colonne
 
 L’exemple suivant augmente la taille d’une colonne **varchar** ainsi que la précision et l’échelle d’une colonne **decimal**. Dans la mesure où les colonnes contiennent des données, la taille de colonne peut uniquement être augmentée. Remarquez aussi que `col_a` est défini dans un index unique. La taille de `col_a` peut encore être augmentée car le type de données est un **varchar** et l’index n’est pas le résultat d’une contrainte PRIMARY KEY.
 
@@ -1471,7 +1471,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 Pour obtenir d’autres exemples de compression de données, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modification d'une table columnstore pour modifier la compression d'archivage
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modification d'une table columnstore pour modifier la compression d'archivage
 
 L'exemple suivant compresse davantage une partition de table columnstore en appliquant un algorithme de compression supplémentaire. Cette compression réduit la taille de la table, mais augmente également le temps nécessaire pour le stockage et la récupération. Cela est utile pour l'archivage, ou d'autres situations qui nécessitent moins d'espace de stockage et supportent plus de temps pour le stockage et la récupération.
 
@@ -1584,7 +1584,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Désactivation et réactivation d'un déclencheur
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Désactivation et réactivation d'un déclencheur
 
 L'exemple suivant utilise l'option `DISABLE TRIGGER` de l'instruction `ALTER TABLE` pour désactiver le déclencheur et autoriser une insertion qui ne respecte normalement pas le déclencheur. `ENABLE TRIGGER` est ensuite utilisée pour réactiver le déclencheur.
 
@@ -1640,7 +1640,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>b. Modification de colonne en ligne
+#### <a name="b-online-alter-column"></a>B. Modification de colonne en ligne
 
 L'exemple suivant montre comment exécuter une opération de modification de colonne avec l'option ONLINE.
 
@@ -1683,7 +1683,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Migrer une solution existante pour utiliser la gestion système des versions
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Migrer une solution existante pour utiliser la gestion système des versions
 
 L’exemple suivant montre comment migrer vers la gestion système des versions à partir d’une solution qui utilise des déclencheurs pour reproduire la prise en charge temporelle. Il part du principe qu’il existe une solution qui utilise une table `ProjectTask` et une table `ProjectTaskHistory`, qui utilise les colonnes `Changed Date` et `Revised Date` comme périodes, que ces colonnes de période n’utilisent pas le type de données `datetime2` et que la table `ProjectTask` a une clé primaire définie.
 
@@ -1757,7 +1757,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Déterminer les valeurs limites pour une table partitionnée
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Déterminer les valeurs limites pour une table partitionnée
 
 La requête suivante renvoie les valeurs limites pour chaque partition de la table `FactResellerSales` .
 

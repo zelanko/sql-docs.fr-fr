@@ -12,15 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 16750be8520038500e605f4eb3f6f6939b2ca3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e883757ec7c7aedf459382a1938813883942b415
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764007"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095249"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>Naviguer dans le Concepteur de diagrammes de base de données (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,5 +40,5 @@ Vous pouvez travailler dans le Concepteur de diagrammes de base de données à l
 |Zoom|Ctrl+Touche Plus ou Moins|  
   
 ## <a name="see-also"></a> Voir aussi  
-[Créer des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[Créer des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

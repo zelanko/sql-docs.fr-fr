@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2985376d8ef2cc7e9569d675e80dcb1cf2e7cf7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a7e8f97feb6823df6f72ff62bc5b1ecf585bb56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604338"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096855"
 ---
 # <a name="job-categories---manage-job-categories"></a>Catégories de travaux - Gérer les catégories de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47604338"
 Utilisez la boîte de dialogue **Catégories de travaux** pour ajouter ou supprimer des catégories de travaux. Les catégories de travaux prédéfinies ne peuvent pas être supprimées.  
   
 ## <a name="options"></a>Options  
-**Nom**  
+**Name**  
 Le nom de la catégorie de travaux.  
   
 **Nombre de travaux dans la catégorie**  

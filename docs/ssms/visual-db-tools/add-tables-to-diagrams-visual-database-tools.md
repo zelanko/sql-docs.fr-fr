@@ -11,15 +11,15 @@ helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a211647949ff4f234ac0287076e608b83e5a9421
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 601f077b8ebeb5971526c6f9f25978e09078fb83
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502212"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099453"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Ajouter des tables à des schémas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,6 +73,6 @@ Vous pouvez ajouter une table à votre diagramme de base de données, afin de mo
 > Toutes les tables référencées par une contrainte de clé étrangère depuis les tables sélectionnées et toutes les tables qui référencent les tables sélectionnées avec une contrainte de clé étrangère sont ajoutées au schéma.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Utiliser des schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Utiliser des tables dans les schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[Utiliser des diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des tables dans les diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

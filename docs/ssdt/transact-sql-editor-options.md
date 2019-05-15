@@ -25,15 +25,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667048"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102058"
 ---
 # <a name="transact-sql-editor-options"></a>Options de l'Éditeur Transact-SQL
 Cette rubrique contient des informations sur certaines options de l'Éditeur Transact-SQL. Pour définir ces options, accédez à la boîte de dialogue **Option** depuis le menu **Outils\Options**.  
@@ -79,7 +79,7 @@ Cette rubrique contient des informations sur certaines options de l'Éditeur Tra
 |**Ignorer les résultats après l'exécution**|Permet de libérer de la mémoire en ignorant les résultats de la requête une fois qu'ils ont été affichés à l'écran.|  
 |**Afficher les résultats dans un onglet séparé**|Permet d'afficher l'ensemble de résultats dans une nouvelle fenêtre de document et non pas en bas de la fenêtre de requête de document.|  
 |**Basculer vers l'onglet des résultats après l'exécution de la requête**|Affiche automatiquement l'ensemble de résultats à l'écran.|  
-|**Nombre maximal de caractères récupérés**|Données non-XML :<br /><br />Entrez un nombre compris entre 1 et 65 535 pour indiquer le nombre maximal de caractères affichés dans chaque cellule. **Remarque :** si vous précisez un nombre trop élevé, les données de l’ensemble de résultats risquent d’être tronquées à l’affichage. Le nombre maximal de caractères affichés dans chaque cellule dépend de la taille de police. Si les ensembles de résultats retournés sont volumineux, il est préférable de ne pas spécifier une valeur trop élevée sans quoi vous risquez d'être confronté à une mémoire insuffisante pour l'exécution de SQL Server Management Studio ou à une dégradation des performances système.<br /><br />Données XML :<br /><br />Sélectionnez 1 Mo, 2 Mo ou 5 Mo. Sélectionnez Illimité pour récupérer tous les caractères.|  
+|**Nombre maximal de caractères récupérés**|Données non-XML :<br /><br />Entrez un nombre compris entre 1 et 65 535 pour indiquer le nombre maximal de caractères affichés dans chaque cellule. **Remarque :** Si vous précisez un nombre trop élevé, les données de l'ensemble de résultats risquent d'être tronquées à l'affichage. Le nombre maximal de caractères affichés dans chaque cellule dépend de la taille de police. Si les ensembles de résultats retournés sont volumineux, il est préférable de ne pas spécifier une valeur trop élevée sans quoi vous risquez d'être confronté à une mémoire insuffisante pour l'exécution de SQL Server Management Studio ou à une dégradation des performances système.<br /><br />Données XML :<br /><br />Sélectionnez 1 Mo, 2 Mo ou 5 Mo. Sélectionnez Illimité pour récupérer tous les caractères.|  
 |**Format de sortie**|Par défaut, la sortie est affichée sous la forme de colonnes créées par le remplissage des résultats à l'aide d'espaces. Il est également possible de séparer les colonnes à l'aide de virgules, de tabulations ou d'espaces. Activez la case à cocher **Séparateur personnalisé** pour définir un autre **caractère de délimitation** dans la zone de même nom.|  
 |**Séparateur personnalisé**|Indiquez le caractère à utiliser pour séparer les colonnes. Cette option n'est disponible que lorsque la case à cocher **Séparateur personnalisé** est activée dans la zone **Format de sortie** .|  
 |**Inclure des en-têtes de colonne dans l'ensemble de résultats**|Désactivez cette case à cocher si vous ne voulez pas que chaque colonne soit étiquetée au moyen d'un titre de colonne.|  

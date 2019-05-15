@@ -12,21 +12,21 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 manager: craigg
-ms.openlocfilehash: 711ebc8f8abb3fb703a26978afe60f11e423bee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 178068ee909369fa8559bdce284364630b7763f2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619777"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094332"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
+FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
   
 FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système de fichiers NTFS ou ReFS en stockant les données d’objet blob **varbinary(max)** en tant que fichiers dans le système de fichiers. [!INCLUDE[tsql](../../includes/tsql-md.md)] Les instructions peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
   
@@ -134,7 +134,7 @@ Lorsqu'une API du système de fichiers ne parvient pas à ouvrir un fichier en r
 |Ouvert pour l'écriture.|Ouvert pour l'écriture.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|  
 |Ouvert pour la lecture.|Ouvert pour SELECT.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour la lecture.|Ouvert pour UPDATE ou DELETE.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|  
-|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
+|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
 |Ouvert pour l'écriture.|Ouvert pour UPDATE ou DELETE.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|  
 |Ouvert pour SELECT.|Ouvert pour la lecture.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour SELECT.|Ouvert pour l'écriture.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|  

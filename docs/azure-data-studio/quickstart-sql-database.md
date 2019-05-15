@@ -2,8 +2,8 @@
 title: 'Démarrage rapide : Se connecter et interroger une base de données SQL Azure'
 titleSuffix: Azure Data Studio
 description: Ce démarrage rapide montre comment utiliser Azure Data Studio pour vous connecter à une base de données SQL et exécuter une requête
-ms.custom: seodec18
-ms.date: 12/21/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255964"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620360"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger la base de données SQL Azure
 
@@ -39,7 +39,7 @@ Si vous n’avez pas un serveur SQL Azure, effectuez l’une des Démarrages rap
 
 Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une connexion à votre serveur de base de données SQL Azure.
 
-1. La première fois que vous exécutez [!INCLUDE[name-sos](../includes/name-sos-short.md)] le **connexion** page doit s’ouvrir. Si vous ne voyez pas le **connexion** page, sélectionnez **ajouter une connexion**, ou le **nouvelle connexion** icône dans le **serveurs** encadré :
+1. La première fois que vous exécutez [!INCLUDE[name-sos](../includes/name-sos-short.md)] le **Bienvenue** page doit s’ouvrir. Si vous ne voyez pas le **Bienvenue** page, sélectionnez **aide** > **Bienvenue**. Sélectionnez **nouvelle connexion** pour ouvrir le **connexion** volet :
    
    ![Nouvelle icône de connexion](media/quickstart-sql-database/new-connection-icon.png)
 

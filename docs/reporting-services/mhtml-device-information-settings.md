@@ -2,21 +2,21 @@
 title: Paramètres d’informations de périphérique pour le format de rendu MHTML | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 170c97c2f01f58972fbcba1d8dc9e63045a1095f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659317"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502729"
 ---
 # <a name="mhtml-device-information-settings"></a>Paramètres d'informations de périphérique pour le format de rendu MHTML
   Le tableau suivant répertorie les paramètres des informations de périphérique qui permettent de restituer les rapports au format Archive Web MHTML.  
@@ -31,7 +31,7 @@ ms.locfileid: "47659317"
 ## <a name="see-also"></a> Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   

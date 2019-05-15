@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710640"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503039"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -26,7 +26,10 @@ Le mode natif de Reporting Services prend en charge un modèle de déploiement p
 
 Pour Power BI Report Server, vous devez configurer l’affinité du client (parfois appelée « sessions persistantes ») sur l’équilibreur de charge de n’importe quel environnement de montée en puissance parallèle, afin d’assurer des performances adéquates.  
   
-Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour le scale-out. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;montée en puissance SSRS&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveurs de rapports en mode SharePoint utilisent l’infrastructure de produits SharePoint pour le scale-out. La montée en puissance parallèle en mode SharePoint est effectuée en ajoutant des serveurs de rapports en mode SharePoint à la batterie de serveurs SharePoint. Pour plus d’informations sur la montée en puissance parallèle en mode SharePoint, consultez [Ajouter un serveur de rapports supplémentaires à une batterie de serveurs &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+
+> [!NOTE]
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
  
   Un *déploiement avec montée en puissance parallèle* est utilisé dans les scénarios suivants :  
   

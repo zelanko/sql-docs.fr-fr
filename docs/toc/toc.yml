@@ -491,7 +491,7 @@
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
                 - name: PowerShell
                   href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
-                - name: Machines virtuelles Azure +
+                - name: Machines virtuelles Azure >
                   href: /azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
         - name: Procédures
           href: ../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md
@@ -1946,9 +1946,9 @@
               href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Développement
   items:
-    - name: Programmation de l’interaction ++
+    - name: Code d’un programme client >>
+      displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: ../connect/index.md
-      displayName: 'Connectivity, Connect, Connection'
     - name: Applications de la couche Données
       href: ../relational-databases/data-tier-applications/data-tier-applications.md
       items:
@@ -4432,12 +4432,12 @@
               href: ../database-engine/configure-windows/server-properties-advanced-page.md
 - name: Migrer et charger des données
   items:
-    - name: SQL Server Integration Services (SSIS) ++
+    - name: SQL Server Integration Services (SSIS) >>
       href: ../integration-services/index.md
     - name: Utilitaire de copie en bloc (bcp)
       href: ../tools/bcp-utility.md
-    - name: Azure Migration Services +
-      displayName: 'DMS, Data Migration Service'
+    - name: Azure Migration Services >
+      displayName: 'DMS, Data Migration Service, Azure Data Migration Service'
       href: /azure/dms/dms-overview
     - name: Data Quality Services (DQS)
       items:
@@ -4965,7 +4965,7 @@
               items:
                 - name: Abonnés aux tables optimisées en mémoire
                   href: ../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md
-                - name: Réplication sur SQL Database +
+                - name: Réplication sur SQL Database >
                   href: /azure/sql-database/replication-to-sql-database
                 - name: Republier des données
                   href: ../relational-databases/replication/republish-data.md
@@ -5315,7 +5315,7 @@
                     - name: Abonnements de fusion
                       href: ../relational-databases/replication/subscription-validation-options-merge-subscriptions.md
                 - name: Réinitialiser des abonnements
-                  itmes:
+                  items:
                     - name: Tous les abonnements
                       href: ../relational-databases/replication/reinitialize-subscription-s-all-subscriptions.md
                     - name: Un abonnement
@@ -5593,13 +5593,13 @@
                   href: ../sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: Ressources
           items:
-            - name: Tarification +
+            - name: Tarification >
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: Blog +
+            - name: Blog >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: Mises à jour du service +
+            - name: Mises à jour du service >
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: Vidéos +
+            - name: Vidéos >
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Assistant Expérimentation de base de données
       href: ../dea/database-experimentation-assistant-overview.md
@@ -6978,180 +6978,173 @@
                     - name: Analyser un plan d’exécution réel
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
         - name: OLTP en mémoire
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           items:
-            - name: Exemples
-              items:
-                - name: Exemples de code OLTP en mémoire
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: "Démonstration\_: Optimisation des performances de l'OLTP en mémoire"
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: Partitionnement au niveau de l'application
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: Exemple de base de données pour OLTP en mémoire
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: Concepts
               items:
-                - name: Scénarios d’utilisation
+                - name: Vue d’ensemble d’OLTP en mémoire
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: Planifier votre adoption des fonctionnalités
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: Spécifications
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: Index
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: Tables optimisées en mémoire
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: Vue d’ensemble
+                    - name: Tables optimisées en mémoire
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: Compilation native
+                    - name: Enquête rapide
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: 'Vidéo, exemple et ressources'
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: Planification d’OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: Spécifications
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: Évaluer les avantages
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: Évaluer avec PowerShell
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: Conseiller d’optimisation de la mémoire
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: Conseiller de compilation native
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
+                    - name: Tailles de table et de ligne
+                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
+                    - name: Estimer la mémoire
+                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
+                    - name: Configurer le stockage
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: Migrer des déclencheurs
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: Compilé en mode natif
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: Tables et procédures stockées
                       href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: Modification des tables
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                    - name: Blocs atomiques
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: Fonctions définies par l’utilisateur scalaires
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: Meilleures pratiques
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: Accès interprété des tables en mémoire
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: Performances d’OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: Matériel pour l’OLTP en mémoire
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: OLTP en mémoire dans Azure SQL Database
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: Administration d’OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: Restaurer et récupérer
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: Backup
+                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
+                    - name: Point de contrôle
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: Haute disponibilité
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: Extensibilité
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: Implémentation d’IDENTITY
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: Architecture d’OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: Stockage
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: Comparer les modes de stockage
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: Durabilité
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: Nettoyage de la mémoire
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: T-SQL pour OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: T-SQL pris en charge
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: T-SQL non pris en charge
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: Fonctionnalités non prises en charge
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: DDL pour les procédures stockées compilées en mode natif
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: Définir la durabilité
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: Types de données
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: Index pour OLTP en mémoire
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: SSIS pour OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: Didacticiels
+              items:
+                - name: Créer une table et une procédure optimisée en mémoire
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: Partition d’applications par date récente
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: Démo de performances
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: Superviser et dépanner
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: Exemples
+              items:
+                - name: Exemple de base de données pour OLTP en mémoire
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: Appeler une procédure compilée en mode natif
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: Modèle de partitionnement de table
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: MERGE dans des procédures compilées en mode natif
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: 'SMO C# pour OLTP en mémoire'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: Guides pratiques
+              items:
+                - name: Tables à mémoire optimisée
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: Index de hachage
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: Modules compilés en mode natif
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: Modules compilés en mode natif ALTER
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: Solutions de contournement T-SQL
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: Accéder aux tables TempDb
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: Requête de bases de données croisées
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: Simuler IF WHILE EXISTS
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: Expression CASE
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: Colonne SQL_VARIANT
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: "Colonne calculée dans SQL\_2016"
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
                     - name: Transactions
                       href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: Modèle d’application pour le partitionnement
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: Statistiques
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
-                    - name: Taille de ligne et de table
-                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: Guide relatif au traitement des requêtes
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: procédures stockées compilées en mode natif
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: Création de procédures stockées compilées en mode natif
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: Altering Natively Compiled T-SQL Modules
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: Blocs Atomic
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: Procédures stockées compilées en mode natif et options SET d’exécution
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: Meilleures pratiques pour appeler des procédures stockées compilées en mode natif
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: Surveillance des performances des procédures stockées compilées en mode natif
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: Estimer les besoins en mémoire
-                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: Lier une base de données à un pool de ressources
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: Superviser l’utilisation de la mémoire et résoudre les problèmes associés
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: Résoudre les problèmes de mémoire insuffisante
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: Restaurer une base de données et la lier à un pool de ressources
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: Garbage collection
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: Création et gestion du stockage
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: Configuration du stockage
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: Groupe de fichiers mémoire optimisé
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: Durabilité
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: Opération de point de contrôle
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: Définition de la durabilité
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: Comparaison du stockage des tables sur disque et du stockage des tables à mémoire optimisée
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: Extensibilité
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: Sauvegarde d’une base de données
-                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: Restauration fragmentaire
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: Restauration et récupération
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: Prise en charge de SQL Server
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: Fonctions non prises en charge
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: Objets de gestion
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: Haute disponibilité
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: Prise en charge T-SQL
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: Types de données
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: Accès aux tables à mémoire optimisée à l’aide du T-SQL interprété
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: DDL pris en charge pour les modules T-SQL compilés en mode natif
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: Constructions T-SQL non prises en charge par l’OLTP en mémoire
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: Migration vers OLTP en mémoire
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: Conseiller d'optimisation de la mémoire
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: Conseiller de compilation native
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: Applet de commande PowerShell pour l’évaluation de la migration
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: Implémentation de SQL_VARIANT dans une table optimisée en mémoire
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: Migration de colonnes calculées
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: Migration de déclencheurs
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: Requêtes de bases de données croisées
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: Implémentation d'IDENTITY dans une table optimisée en mémoire
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: Problèmes de migration pour les procédures stockées compilées en mode natif
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: Simulation d’une instruction IF-WHILE EXISTS dans un module compilé en mode natif
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: Implémentation de la fonctionnalité MERGE dans une procédure stockée compilée en mode natif
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: Implémentation d’UPDATE avec FROM ou des sous-requêtes
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: Implémentation d'une jointure externe
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: Procédures
-              items:
-                - name: Inventaire des technologies pour accélérer les performances
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: Résolution des problèmes liés aux index de hachage
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: References
-              items:
-                - name: Internals for SQL Server 2016 - Livre blanc
-                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                - name: 'Administration, y compris en cas de mémoire insuffisante'
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: Pool de ressources
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: Restaurer une base de données sur un nouveau pool
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: Restaurer par étape
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 'Performances, avec statistiques'
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: Superviser les performances
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: Tables temporaires plus rapides
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: SSMS pour les tables optimisées en mémoire
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: Partitions
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7317,15 +7310,15 @@
               href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Ressources
           items:
-            - name: DBA Stack Exchange +
+            - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow +
+            - name: Stack Overflow >
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Forums MSDN +
+            - name: Forums MSDN >
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: Envoyer des commentaires +
+            - name: Envoyer des commentaires >
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit +
+            - name: Reddit >
               href: 'https://www.reddit.com/r/SQLServer'
     - name: Serveurs liés
       href: ../relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7421,16 +7414,17 @@
           href: ../relational-databases/synonyms/create-synonyms.md
 - name: Création de rapports et analytique
   items:
-    - name: Analytique avancée et Machine Learning ++
+    - name: Analytique avancée et Machine Learning >>
       href: ../advanced-analytics/index.md
-    - name: Analytics Platform System ++
+    - name: Analytics Platform System >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: ../analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) ++
+    - name: SQL Server Analysis Services (SSAS) >>
       href: ../analysis-services/index.md
-    - name: SQL Server Reporting Services (SSRS) ++
+    - name: SQL Server Reporting Services (SSRS) >>
       href: ../reporting-services/index.md
     - name: Master Data Services
+      displayName: MDS
       href: ../master-data-services/master-data-services-overview-mds.md
       items:
         - name: Prise en main
@@ -7915,6 +7909,8 @@
           items:
             - name: Choisir un algorithme
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: Résoudre les problèmes de TDE
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: Configurer Always Encrypted avec enclaves sécurisées
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -7956,11 +7952,11 @@
           items:
             - name: Connecteur SQL Server avec chiffrement
               href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
-            - name: BYOK (Bring Your Own Key) +
+            - name: BYOK (Bring Your Own Key) >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
-            - name: Effectuer la rotation des clés BYOK TDE +
+            - name: Effectuer la rotation des clés BYOK TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
-            - name: Supprimer le protecteur TDE +
+            - name: Supprimer le protecteur TDE >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
             - name: EKM avec Azure Key Vault
               href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
@@ -8020,6 +8016,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: Hiérarchie des autorisations
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: Chiffrement
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -8027,10 +8025,10 @@
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Transparent Data Encryption (TDE)
               href: ../relational-databases/security/encryption/transparent-data-encryption.md
-            - name: TDE avec Azure SQL Database +
+            - name: TDE avec Azure SQL Database >
               href: /azure/sql-database/transparent-data-encryption-azure-sql
               items:
-                - name: BYOK (Bring Your Own Key) +
+                - name: BYOK (Bring Your Own Key) >
                   href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
             - name: Always Encrypted
               href: ../relational-databases/security/encryption/always-encrypted-database-engine.md
@@ -8156,13 +8154,13 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Ressources
           items:
-            - name: Référentiel GitHub Azure Data Studio +
+            - name: Référentiel GitHub Azure Data Studio >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: Blog SQL Server +
+            - name: Blog SQL Server >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
             - name: Questions fréquentes (FAQ)
               href: ../azure-data-studio/faq.md
-            - name: Signaler des problèmes et faire des suggestions +
+            - name: Signaler des problèmes et faire des suggestions >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Utilitaires de ligne de commande
       href: ../tools/command-prompt-utility-reference-database-engine.md
@@ -9048,8 +9046,8 @@
                       href: ../ssms/agent/job-categories-manage-job-categories.md
                     - name: Nouvelle catégorie de travaux
                       href: ../ssms/agent/job-categories-properties-new-job-category.md
-                    - name: Propriétés du travail
-                      items: null
+                - name: Propriétés du travail
+                  items:
                     - name: Travaux faisant référence à une planification
                       href: ../ssms/agent/jobs-that-reference-a-schedule.md
                     - name: Page Alertes
@@ -10043,7 +10041,7 @@
           href: ../linux/quickstart-install-connect-ubuntu.md
         - name: Exécuter et connecter - Docker
           href: ../linux/quickstart-install-connect-docker.md
-        - name: Provisionner une machine virtuelle SQL dans Azure +
+        - name: Provisionner une machine virtuelle SQL dans Azure >
           href: /azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine
         - name: Exécuter et connecter - Cloud
           href: ../linux/quickstart-install-connect-clouds.md
@@ -10128,8 +10126,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: Utiliser Azure Data Studio pour gérer
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: Utiliser PowerShell pour gérer
+            - name: Utiliser Windows PowerShell
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: Utiliser PowerShell Core
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: Utiliser la copie des journaux de transaction
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: Utiliser la messagerie de base de données et les alertes de messagerie
@@ -10255,63 +10255,63 @@
       items:
         - name: Dépanner
           href: ../linux/sql-server-linux-troubleshooting-guide.md
-        - name: Comment octroyer une licence
+        - name: Comment octroyer une licence >
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Forums MSDN +
+        - name: Forums MSDN >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Envoyer des commentaires +
+        - name: Envoyer des commentaires >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
 - name: SQL sur Azure
   items:
-    - name: Azure SQL Database +
+    - name: Azure SQL Database >
       href: /azure/sql-database/
-    - name: Azure SQL Data Warehouse +
+    - name: Azure SQL Data Warehouse >
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-    - name: SQL Server sur une machine virtuelle Azure +
+    - name: SQL Server sur une machine virtuelle Azure >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Ressources
   items:
     - name: Découvrir
       items:
-        - name: Microsoft Virtual Academy +
+        - name: Microsoft Virtual Academy >
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: SQL sur Channel 9 +
+        - name: SQL sur Channel 9 >
           href: 'https://channel9.msdn.com/Search'
     - name: Blogs
       items:
-        - name: SQL Server +
+        - name: SQL Server >
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: Moteur de base de données SQL Server +
+        - name: Moteur de base de données SQL Server >
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: Sécurité SQL Server +
+        - name: "Sécurité de SQL\_Server >"
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools +
+        - name: SQL Server Data Tools >
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: Commentaires et aide
       items:
         - name: Obtenir de l’aide
           href: ../sql-server/sql-server-get-help.md
-        - name: Commentaires sur des documents SQL +
+        - name: Commentaires sur des documents SQL >
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: Commentaires sur SQL Server (UserVoice) +
+        - name: Commentaires sur SQL Server (UserVoice) >
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Enquête sur les documents SQL +
+        - name: Enquête sur les documents SQL >
           href: 'https://aka.ms/sqldocsurvey'
         - name: "Contribuez à la documentation SQL\_!"
           href: ../sql-server/sql-server-docs-contribute.md
-        - name: DBA Stack Exchange +
+        - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow +
+        - name: Stack Overflow >
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Forums MSDN +
+        - name: Forums MSDN >
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit +
+        - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
     - name: Partenaires
       items:
@@ -10329,14 +10329,14 @@
   items:
     - name: Fichiers include de documents SQL
       href: ../sql-server/applies-to-includes.md
-    - name: Contenu archivé (SQL 2005 - 2012) +
-      displayName: '2005, 2008, 2008 r2, 2012'
+    - name: Contenu archivé (SQL 2005 - 2012) >
+      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: Exemples de base de données
       items:
         - name: Vue d’ensemble des exemples
           href: ../samples/sql-samples-where-are.md
-        - name: Tous les exemples GitHub +
+        - name: Tous les exemples GitHub >
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
@@ -17119,6 +17119,8 @@
                   href: ../t-sql/statements/set-quoted-identifier-transact-sql.md
                 - name: REMOTE_PROC_TRANSACTIONS
                   href: ../t-sql/statements/set-remote-proc-transactions-transact-sql.md
+                - name: MISE EN CACHE DU JEU DE RÉSULTATS
+                  href: ../t-sql/statements/set-result-set-caching-transact-sql.md
                 - name: ROWCOUNT
                   href: ../t-sql/statements/set-rowcount-transact-sql.md
                 - name: SHOWPLAN_ALL
