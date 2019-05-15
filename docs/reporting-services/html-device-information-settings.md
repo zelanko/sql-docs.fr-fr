@@ -2,21 +2,21 @@
 title: Paramètres d’informations de périphérique HTML | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a8acf400f03ec77aff21d839dee132ba5258f54f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c0d477364c4920e8220aef96629b24e34650ebb
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403634"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503099"
 ---
 # <a name="html-device-information-settings"></a>Paramètres d'informations de périphérique HTML
 Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu du rapport au format HTML.  
@@ -26,7 +26,7 @@ Le tableau suivant répertorie les paramètres d'informations de périphérique 
   
 |Paramètre|Valeur|  
 |-------------|-----------|  
-|**AccessibleTablix**|Indique s'il faut effectuer le rendu avec des métadonnées d'accessibilité supplémentaires en vue de l'utilisation d'un lecteur d'écran. Les métadonnées d'accessibilité supplémentaires imposent la mise en conformité du rapport eu égard des normes techniques suivantes décrites dans la section « Intranet Web et Applications et Informations Internet » (1194.22) du document relatif aux normes d'accessibilité dans le domaine de l'électronique et des technologies de l'information (Section 508) :<br /><br /> (g) les en-têtes de ligne et de colonne doivent être identifiés pour les tables de données.<br /><br /> (h) le balisage doit être utilisé pour associer les cellules de données aux cellules d'en-tête pour les tables de données qui ont plusieurs niveaux logiques d'en-têtes de ligne ou de colonne.|  
+|**AccessibleTablix**|Indique s'il faut effectuer le rendu avec des métadonnées d'accessibilité supplémentaires en vue de l'utilisation d'un lecteur d'écran. Les métadonnées d'accessibilité supplémentaires imposent la mise en conformité du rapport eu égard des normes techniques suivantes décrites dans la section « Intranet Web et Applications et Informations Internet » (1194.22) du document relatif aux normes d'accessibilité dans le domaine de l'électronique et des technologies de l'information (Section 508) :<br /><br /> (g) les en-têtes de ligne et de colonne doivent être identifiés pour les tables de données.<br /><br /> (h) le balisage doit être utilisé pour associer les cellules de données aux cellules d'en-tête pour les tables de données qui ont plusieurs niveaux logiques d'en-têtes de ligne ou de colonne.|  
 |**ActionScript(\*)**|Spécifie le nom de la fonction JavaScript à utiliser lorsqu'un événement d'action se produit, tel qu'une extraction ou un clic pour atteindre un signet. Si ce paramètre est spécifié, un événement d'action déclenchera la fonction JavaScript nommée au lieu d'une publication sur le serveur.|  
 |**BookmarkID**|Identificateur du signet à atteindre dans le rapport.|  
 |**DocMap**|Indique s'il faut afficher ou masquer l'Explorateur de documents du rapport. La valeur par défaut de ce paramètre est **true**.|  
