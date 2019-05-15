@@ -1,19 +1,19 @@
 ---
 title: Créer une base de données du serveur de rapports, Gestionnaire de configuration de SSRS | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/15/2018
-ms.openlocfilehash: 9fee8b60cff2b0c8bdfa2e38576cfed036f09584
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: 7f04bff24ca1472b35b71c5e8f04d017714ddf0f
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54184985"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502646"
 ---
 # <a name="create-a-report-server-database"></a>Créer une base de données du serveur de rapports 
 
@@ -25,7 +25,12 @@ Le mode natif SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-m
 
 Les bases de données sont créées ensemble et liées par le nom. Avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut, les bases de données ont pour nom respectif **reportserver** et **reportservertempdb**. Les deux bases de données sont collectivement appelées **base de données de serveur de rapports** ou **catalogue du serveur de rapports**.
 
-Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. Voici des exemples de noms des trois bases de données en mode SharePoint :
+Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut une troisième base de données utilisée pour les métadonnées d’alerte des données. Les trois bases de données sont créées pour chaque application de service SSRS. Les noms de base de données par défaut incluent un identificateur global unique (GUID) qui représente l’application de service. 
+
+> [!NOTE]
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+
+Voici des exemples de noms des trois bases de données en mode SharePoint :
 
 - ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -46,6 +51,8 @@ Le **mode SharePoint** SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsno
 - **Automatique**. Utilisez l’Assistant Installation de SQL Server si vous choisissez l’option d’installation de la configuration par défaut. Dans l’Assistant Installation de SQL Server, cette option s’appelle **Installer et configurer** dans la page des **options d’installation du serveur de rapports**. Si vous choisissez l’option **Installer uniquement**, vous devez utiliser le Gestionnaire de configuration de SQL Server Reporting Services pour créer la base de données.  
   
 - **Manuel**. Utilisez le Gestionnaire de configuration de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Créez la base de données du serveur de rapports manuellement si vous utilisez un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] distant pour héberger la base de données. Pour plus d’informations, consultez [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ### <a name="sharepoint-mode"></a>Mode SharePoint 
 La page des **options d’installation du serveur de rapports** n’offre que l’option **Installer uniquement** pour le mode SharePoint. Cette option installe tous les fichiers SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ainsi que le service partagé SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L'étape suivante consiste à créer au moins une application de service SSRS de l'une des manières suivantes :  
@@ -53,6 +60,8 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
 - Accédez à l'Administration centrale dans SharePoint Server pour créer une application de service SSRS. Pour plus d’informations, consultez la section **créer une application de service** dans [Installer le premier serveur de rapports en mode SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication).  
   
 - Utilisez les applets de commande PowerShell SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour créer une application de service et les bases de données du serveur de rapports. Pour plus d’informations, consultez l’exemple pour la création d’applications de service dans la rubrique [Applets de commande PowerShell pour le mode SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+
+::: moniker-end
   
 ## <a name="database-server-version-requirements"></a>Conditions requises pour une version du serveur de bases de données
 
