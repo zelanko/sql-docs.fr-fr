@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b574de14749a7317a4da64c850dbf4d2103c7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac9ce3c3def4341fd653d7e4c750890c58a77c76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763917"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096852"
 ---
 # <a name="job-categories-properties---new-job-category"></a>Propriétés des catégories de travaux - Nouvelle catégorie de travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47763917"
 Affiche la liste des travaux contenus dans une catégorie de travaux ou dans l'ensemble des catégories de travaux, et vous permet d'ajouter une nouvelle catégorie de travaux.  
   
 ## <a name="options"></a>Options  
-**Nom**  
+**Name**  
 Tapez le nom de la nouvelle catégorie de travail. S'il s'agit de la boîte de dialogue Propriétés de la catégorie de travail, la catégorie consultée apparaît ici.  
   
 **Travaux dans cette catégorie**  

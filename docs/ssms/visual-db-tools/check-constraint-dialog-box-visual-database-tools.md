@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 722ffb0dc01adbd096ecc28960244b8fc87b1ed9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504011"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65091406"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ Affiche l'expression pour la contrainte de validation sélectionnée. Pour les n
 **Catégorie Identité**  
 Se développe pour afficher les propriétés de **Nom** et **Description**.  
   
-**Nom**  
+**Name**  
 Indique le nom de la contrainte de validation sélectionnée. Pour modifier le nom de cette contrainte, tapez directement le texte dans le champ de la propriété.  
   
 **Description**  

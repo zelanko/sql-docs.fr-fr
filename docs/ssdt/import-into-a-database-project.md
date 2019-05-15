@@ -12,15 +12,15 @@ f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143459"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099573"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
 Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveaux objets provenant d'une base de données active ou d'un fichier .dacpac, ou pour mettre à jour des objets existants dans votre projet avec une nouvelle définition d'un script. Il convient de noter plusieurs différences de comportement entre ces trois choix, comme décrit ci-dessous.  

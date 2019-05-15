@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], how-to topics
 - Visual Database Tools [SQL Server], database diagrams
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2df1037439613492d41fdb53e77a64e147ac8bc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b12ce8d9c9f2c63265f79f5c8c5614dc16f9fa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660477"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089465"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>Copier une image d’un diagramme de base de données dans le Presse-papiers (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,5 +37,5 @@ Vous pouvez créer une image d’un diagramme de base de données et la copier d
     L’image de l’intégralité du diagramme de la base de données est désormais dans le Presse-papiers système.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Utiliser des schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

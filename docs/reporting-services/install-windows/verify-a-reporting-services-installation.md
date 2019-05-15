@@ -12,17 +12,22 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c3f3bb02022fe4bbb8090c2160fa3cf75cfefa7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1c2bb116f08dca2df111b6cccd9d6f0bf28160
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814052"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503292"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être installés au choix dans l'un des deux modes, natif ou SharePoint. Les étapes que vous devez suivre pour vérifier l'installation dépendent du mode de serveur de rapports.  
+
+> [!NOTE]
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 ##  <a name="bkmk_sharepointmode"></a> Vérifiez l'installation en mode SharePoint  
   
@@ -71,6 +76,8 @@ ms.locfileid: "51814052"
 1.  Suivez l'un des didacticiels de Reporting Services. Pour plus d’informations, consultez [Didacticiels de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md).  
   
 2.  Téléchargez l’exemple de base de données AdventureWorks et les exemples de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] depuis GitHub. Pour plus d’informations, consultez [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+
+::: moniker-end
   
 ##  <a name="bkmk_nativemode"></a> Vérifier une installation en mode natif  
  Lorsque vous installez un serveur de rapports en mode natif en utilisant la configuration par défaut, le programme d'installation installe et déploie le serveur. Vous pouvez vérifier que le programme d'installation a déployé le serveur de rapports en réalisant quelques tests simples. Pour effectuer ces interventions, vous devez être un administrateur local. Pour permettre à d'autres utilisateurs de réaliser des tests, vous devez configurer leur accès au serveur de rapports.  

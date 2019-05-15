@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.manageschedules.f1
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dc219f1a5ec75d98d90168811630a39438a9bbd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56e8fcb2048b4d741708beff3fae2267981be475
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683632"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105400"
 ---
 # <a name="manage-schedules"></a>Gérer les planifications
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Permet de visualiser et de modifier les propriétés des planifications de trava
 **Planifications disponibles**  
 Répertorie les planifications disponibles pour cet utilisateur. Il faut noter qu'un travail et une planification doivent avoir le même propriétaire. Cette liste ne répertorie donc que les planifications appartenant au propriétaire du travail.  
   
-**Nom**  
+**Name**  
 Affiche le nom de la planification.  
   
 **Activé**  
