@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877091"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619588"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
   Cette rubrique présente les pratiques recommandées et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service d'objets blob Windows Azure.  
@@ -125,7 +125,7 @@ ms.locfileid: "62877091"
   
      La sauvegarde de base de données s'est terminée anormalement.  
   
--   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak». Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
+-   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
   
  Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
   

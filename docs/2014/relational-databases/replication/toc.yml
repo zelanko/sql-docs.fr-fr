@@ -609,7 +609,7 @@
               href: distribution-agent-security-peer-to-peer-replication.md
             - name: Initialisation d'un nouvel homologue (réplication d'égal à égal)
               href: new-peer-initialization-peer-to-peer-replication.md
-        - name: Outil de résolution des conflits de réplication de Microsoft et Résolveur interactif
+        - name: Visionneuse des conflits de réplication de Microsoft et Résolveur interactif
           href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
           items:
             - name: Réplication de fusion

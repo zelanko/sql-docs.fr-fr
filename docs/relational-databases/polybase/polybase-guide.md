@@ -1,6 +1,6 @@
 ---
 title: Qu’est-ce que PolyBase ? | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,16 +19,16 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e91afc38ec7cfa4d37217a3152ca731d3c8dac39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3520ff79f3bc79107966024a8c28b80ee8b47507
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775459"
 ---
 # <a name="what-is-polybase"></a>Qu’est-ce que PolyBase ?
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-asdw-pdw-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
 ::: moniker range="= sql-server-2016 || = sql-server-2017"
@@ -44,7 +44,7 @@ PolyBase envoie certains calculs au nœud Hadoop pour optimiser la requête glob
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 PolyBase permet à votre instance SQL Server de traiter des requêtes Transact-SQL qui lisent des données dans des sources de données externes. SQL Server 2016 et ultérieur peut accéder à des données externes dans Hadoop et dans Stockage Blob Azure. À compter de SQL Server 2019 CTP 2.0, vous pouvez utiliser PolyBase pour accéder à des données externes dans [SQL Server](polybase-configure-sql-server.md), [Oracle](polybase-configure-oracle.md), [Teradata](polybase-configure-teradata.md) et [MongoDB](polybase-configure-mongodb.md).
 
@@ -109,7 +109,7 @@ Avant d’utiliser PolyBase, vous devez [installer la fonctionnalité PolyBase](
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Stockage Blob Azure](polybase-configure-azure-blob-storage.md)
