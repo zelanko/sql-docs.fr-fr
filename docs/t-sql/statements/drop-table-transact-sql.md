@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201524"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503474"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,15 +57,14 @@ ms.locfileid: "53201524"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -102,7 +101,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 > [!IMPORTANT]  
 >  DROP TABLE et CREATE TABLE ne doivent pas être exécutés sur la même table dans le même lot. Sinon, une erreur inattendue risque de se produire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation ALTER sur le schéma auquel appartient la table, l’autorisation CONTROL sur la table ou l’appartenance au rôle de base de données fixe **db_ddladmin** .  
   
 ## <a name="examples"></a>Exemples  
@@ -114,7 +113,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 DROP TABLE ProductVendor1 ;  
 ```  
   
-### <a name="b-dropping-a-table-in-another-database"></a>b. Suppression d'une table dans une autre base de données  
+### <a name="b-dropping-a-table-in-another-database"></a>B. Suppression d'une table dans une autre base de données  
  L'exemple suivant supprime la table `SalesPerson2` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cet exemple peut être exécuté à partir de n'importe quelle base de données de l'instance de serveur.  
   
 ```  

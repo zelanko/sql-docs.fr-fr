@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f793c940e6c32bfd3455946db4d538546f49f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 850d349760d28d57b7ffe14eb3791cd038be2c1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819897"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099925"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Enregistrer des tables sélectionnées dans un schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,5 +40,5 @@ Si vous ne souhaitez pas enregistrer toutes les modifications que vous avez appo
     > La liste des tables peut contenir d'autres tables en plus de celles que vous avez sélectionnées. Par exemple, si vous changez le type de données d'une colonne qui participe à une relation avec une autre table, les deux tables seront incluses dans cette liste.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Utiliser des schémas de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[Utiliser des diagrammes de base de données (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

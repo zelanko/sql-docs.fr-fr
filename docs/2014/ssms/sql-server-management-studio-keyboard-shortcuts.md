@@ -422,7 +422,7 @@ ms.locfileid: "63127052"
 |Actualiser|F5|F5|  
 |Ouvrir une fenêtre de détails à partir d'une grille|Entrée|Entrée|  
   
-## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Raccourcis clavier de l'Outil de résolution des conflits  
+## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Raccourcis clavier de la Visionneuse des conflits de réplication  
   
 |Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
