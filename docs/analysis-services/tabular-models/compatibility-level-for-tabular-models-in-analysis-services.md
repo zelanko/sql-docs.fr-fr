@@ -1,6 +1,6 @@
 ---
 title: Niveau de compatibilité pour les modèles tabulaires dans Analysis Services | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fd70a673744d2e401e8a28f6ce2c533434e1c75e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 45ea2e048a7ea7ae7d041614d62a280ee3698131
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472312"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709121"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Niveau de compatibilité pour les modèles tabulaires Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Le *niveau de compatibilité* fait référence aux comportements spécifiques à chaque version dans le moteur Analysis Services. Par exemple, DirectQuery et les métadonnées d’objet tabulaire ont des implémentations différentes selon le niveau de compatibilité. En général, vous devez choisir le dernier niveau de compatibilité pris en charge par vos serveurs.
 
-  **Le dernier niveau de compatibilité est 1400** 
+  **Le dernier niveau de compatibilité pris en charge est 1400** 
   
 Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suivantes :
 
@@ -38,8 +38,9 @@ Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suiv
 |||  
 |-|-|- 
 |**Niveau de compatibilité**|**Version du serveur**| 
-|1400|Azure Analysis Services, SQL Server 2017 |  
-|1200|Azure Analysis Services, SQL Server 2017, SQL Server 2016| 
+|1470|SQL Server 2019 (CTP 2.3 et versions ultérieures) | 
+|1400|Azure Analysis Services, SQL Server 2019, SQL Server 2017 |  
+|1200|Azure Analysis Services, SQL Server 2019, SQL Server 2017, SQL Server 2016| 
 |1103|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
