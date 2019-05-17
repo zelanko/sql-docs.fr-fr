@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690793"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805168"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ Cette commande remet tous les compteurs à 0.
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |RBIO_WAIT_VLF |TBD <br /> **S'applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Se produit lorsqu’un nœud de calcul de base de données de très grande échelle est limité en raison de la consommation de journal différée sur les serveurs de la page. <br /> **S’applique à** : Très grande échelle de la base de données SQL Azure.|
+|RBIO_RG_DESTAGE |Se produit lorsqu’un nœud de calcul de base de données de très grande échelle est limité en raison de la consommation de journal retardée par le stockage des journaux à long terme. <br /> **S’applique à** : Très grande échelle de la base de données SQL Azure.|
+|RBIO_RG_REPLICA |Se produit lorsqu’un nœud de calcul de base de données est limitée en raison de Hyperscale retardé la consommation de journal par les nœuds de réplica secondaire lisible. <br /> **S’applique à** : Très grande échelle de la base de données SQL Azure.|
+|RBIO_RG_LOCALDESTAGE |Se produit lorsqu’un nœud de calcul de base de données de très grande échelle est limité en raison de la consommation de journal retardée par le service de journal. <br /> **S’applique à** : Très grande échelle de la base de données SQL Azure.|
 |RECOVER_CHANGEDB |Se produit durant la synchronisation de l'état de la base de données dans une base de données en mode secours semi-automatique.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
