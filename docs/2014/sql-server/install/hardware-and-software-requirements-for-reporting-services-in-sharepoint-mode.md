@@ -38,7 +38,7 @@ ms.locfileid: "63295423"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint requiert SharePoint Server. Pour plus d'informations sur les configurations requises et les configurations SharePoint, consultez les rubriques suivantes :  
   
-    -   [Configuration matérielle et logicielle requises (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) ()https://go.microsoft.com/fwlink/p/?LinkId=256365)  
+    -   [Configuration matérielle et logicielle requises (SharePoint 2013)](https://go.microsoft.com/fwlink/p/?LinkId=256365) (https://go.microsoft.com/fwlink/p/?LinkId=256365)  
   
     -   [Gestion et dimensionnement de la capacité pour SharePoint Server 2013](https://technet.microsoft.com/library/cc261700.aspx)  
   
