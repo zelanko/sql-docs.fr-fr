@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 832db366e3596b4e4b4f2ab1e930178986147923
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b93af690fb15c7ab62084d7175612508b5a22445
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63202425"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -60,6 +60,8 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 ## <a name="sql-server"></a>SQL Server
 
 La mise en miroir de bases de données, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] et les niveaux de compatibilité sont des options `SET` mais sont décrits dans des rubriques distinctes en raison de leur longueur. Pour plus d’informations, voir [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) et [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
+
+Les configurations de niveau base de données sont utilisées pour définir plusieurs configurations de base de données au niveau de la base de données individuelle. Pour plus d’informations, consultez [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 > [!NOTE]
 > La plupart des options SET de base de données sont configurables pour la session en cours avec les [Instructions SET](../../t-sql/statements/set-statements-transact-sql.md), souvent par des applications au moment de la connexion. Les options SET de niveau session remplacent les valeurs **ALTER DATABASE SET** . Les options de base de données décrites ci-après sont des valeurs qui peuvent être définies pour les sessions qui ne fournissent pas explicitement d’autres valeurs d’option SET.

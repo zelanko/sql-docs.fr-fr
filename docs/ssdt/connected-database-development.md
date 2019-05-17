@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLSERVEROBJECTEXPLORER
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 536dbcddf73d8b6af5e1106a7eb279cc1db22f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655887"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105767"
 ---
 # <a name="connected-database-development"></a>Développement de base de données connectée
 Cette section décrit les fonctionnalités fournies par SQL Server Data Tools pour la conception et l'exécution de requêtes relatives à une base de données connectée.  
@@ -32,12 +32,12 @@ L'Explorateur d'objets SQL Server de Visual Studio permet à présent aux dével
   
 |Rubrique|Description|  
 |---------|---------------|  
-|[Procédure : se connecter à une base de données et parcourir les objets existants](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Connectez-vous à une base de données et recherchez ses entités.|  
-|[Guide pratique : Créer des objets de base de données avec le Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)|Utilisez le nouveau Concepteur de tables pour concevoir des tables et gérer les relations entre tables.|  
+|[Procédure : se connecter à une base de données et parcourir les objets existants](../ssdt/how-to-connect-to-a-database-and-browse-existing-objects.md)|Connectez-vous à une base de données et recherchez ses entités.|  
+|[Procédure : créer des objets de base de données avec le Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)|Utilisez le nouveau Concepteur de tables pour concevoir des tables et gérer les relations entre tables.|  
 |[Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)|Mettez à jour une base de données connectée sans écrire de scripts ALTER.|  
 |[Boîte de dialogue Filtrer et trier](../ssdt/filter-and-sort-dialog-box.md)|Spécifiez les données qui doivent s'afficher dans la vue de données.|  
-|[Procédure : créer de nouveaux objets de base de données à l'aide de requêtes](../ssdt/how-to-create-new-database-objects-using-queries.md)|Utiliser l'Éditeur Transact\-SQL pour modifier et exécuter des scripts Transact\-SQL.|  
-|[Procédure : modifier une table existante à l'aide de requêtes](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Écrivez des scripts Transact\-SQL pour modifier la définition d'une table, ou remplir des données.|  
+|[Procédure : créer de nouveaux objets de base de données à l’aide de requêtes](../ssdt/how-to-create-new-database-objects-using-queries.md)|Utiliser l'Éditeur Transact\-SQL pour modifier et exécuter des scripts Transact\-SQL.|  
+|[Procédure : modifier une table existante à l’aide de requêtes](../ssdt/how-to-edit-an-existing-table-using-queries.md)|Écrivez des scripts Transact\-SQL pour modifier la définition d'une table, ou remplir des données.|  
 |[Procédure : afficher et modifier des données dans une table](../ssdt/how-to-view-and-edit-data-in-a-table.md)|Utilisez l'Éditeur de données pour consulter ou entrer des données dans une table.|  
 |[Procédure : supprimer des objets et résoudre des dépendances](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)|Renommez ou supprimez des entités de base de données, et laissez SQL Server Data Tools résoudre automatiquement les dépendances d'objet.|  
 |[Procédure : cloner une base de données existante](../ssdt/how-to-clone-an-existing-database.md)|Créez une base de données de développement à partir d'une base de données de production.|  

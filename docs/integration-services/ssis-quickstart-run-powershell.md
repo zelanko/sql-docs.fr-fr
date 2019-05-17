@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 101c0656aa8720743906e1f9e71075764942b7f3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: aea2f8900f4c56168b6e1ef95fe2383b1b8163cc
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282533"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376834"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Exécuter un package SSIS avec PowerShell
 Ce guide de démarrage rapide montre comment utiliser un script PowerShell pour se connecter à un serveur de base de données et exécuter un package SSIS.
@@ -43,6 +43,16 @@ Pour exécuter le package sur Azure SQL Database, obtenez les informations de co
 4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 5. Cliquez sur **Afficher les chaînes de connexion de la base de données**.
 6. Examinez la chaîne de connexion **ADO.NET** complète.
+
+## <a name="ssis-powershell-provider"></a>Fournisseur PowerShell SSIS
+Vous pouvez utiliser le fournisseur PowerShell de SSIS pour vous connecter à un catalogue SSIS et exécuter les packages qu’il contient.
+
+Voici un exemple simple illustrant la méthode pour exécuter un package SSIS dans un catalogue de packages avec le fournisseur PowerShell de SSIS.
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>Script PowerShell
 Entrez les valeurs appropriées pour les variables en haut du script suivant, puis exécutez le script pour exécuter le package SSIS.

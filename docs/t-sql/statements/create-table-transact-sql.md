@@ -47,12 +47,12 @@ ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e33e1602f98094c6085d179982a252aa6abc840b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f5cda166fdd343392f85f5537877cbc7da3e05ae
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478284"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503728"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -70,7 +70,7 @@ Crée une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
 ```
 --Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
 [ ; ]
 ```
@@ -80,7 +80,7 @@ CREATE TABLE
 ```
 --Disk-Based CREATE TABLE Syntax
 CREATE TABLE
-    [ database_name . [ schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
     ( {   <column_definition>
         | <computed_column_definition>
@@ -265,10 +265,9 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized
-LE Syntax
+--Memory optimized CREATE TABLE Syntax
 CREATE TABLE
-    [database_name . [schema_name ] . | schema_name . ] table_name
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
     | [ <table_constraint> ] [ ,... n ]
     | [ <table_index> ]
@@ -362,7 +361,7 @@ Crée la table en tant que FileTable. Vous ne spécifiez pas de colonnes car un 
 
 *column_name*      
 *computed_column_expression*    
-Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. La colonne est calculée à partir d'une expression qui utilise d'autres colonnes dans la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price** \* **qty**. L'expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou contenir des types de données d'alias.
+Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. La colonne est calculée à partir d'une expression qui utilise d'autres colonnes dans la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price** \* **qty**. L’expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou contenir des types de données d'alias.
 
 Les colonnes calculées peuvent être utilisées dans des listes de sélection, des clauses WHERE, des clauses ORDER BY ou à tout autre emplacement où il est possible d'utiliser des expressions régulières, aux exceptions suivantes près :
 
@@ -538,7 +537,7 @@ Si la table n'est pas partitionnée, la colonne FILESTREAM ne peut pas être par
 Pour plus d’informations, consultez [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md).
 
 ROWGUIDCOL     
-Indique que la nouvelle colonne est une colonne d'identité ROWGUID. Une seule colonne **uniqueidentifier** par table peut être désignée comme colonne ROWGUIDCOL. L’application de la propriété ROWGUIDCOL permet à la colonne d’être référencée à l’aide de `$ROWGUID`. La propriété ROWGUIDCOL ne peut être affectée qu’à une colonne **uniqueidentifier**. Les colonnes avec un type de données défini par l'utilisateur ne peuvent pas être conçues avec ROWGUIDCOL.
+Indique que la nouvelle colonne est une colonne d’identité ROWGUID. Une seule colonne **uniqueidentifier** par table peut être désignée comme colonne ROWGUIDCOL. L’application de la propriété ROWGUIDCOL permet à la colonne d’être référencée à l’aide de `$ROWGUID`. La propriété ROWGUIDCOL ne peut être affectée qu’à une colonne **uniqueidentifier**. Les colonnes avec un type de données défini par l'utilisateur ne peuvent pas être conçues avec ROWGUIDCOL.
 
 La propriété ROWGUIDCOL n'assure pas l'unicité des valeurs stockées dans la colonne. ROWGUIDCOL ne peut pas non plus générer automatiquement des valeurs pour les nouvelles lignes insérées dans la table. Pour générer des valeurs uniques pour chaque colonne, vous pouvez soit utiliser la fonction [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) sur des instructions [INSERT](../../t-sql/statements/insert-transact-sql.md), soit utiliser ces fonctions comme fonctions par défaut pour la colonne.
 
@@ -600,7 +599,7 @@ Pour plus d’informations sur les noms de classements Windows et SQL, consultez
 Pour plus d’informations, consultez l’article [COLLATE](~/t-sql/statements/collations.md).
 
 CONSTRAINT     
-Mot clé facultatif qui indique le début de la définition d'une contrainte PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY ou CHECK.
+Mot clé facultatif qui indique le début de la définition d’une contrainte PRIMARY KEY, NOT NULL, UNIQUE, FOREIGN KEY ou CHECK.
 
 *constraint_name*     
 Nom d’une contrainte. Les noms de contraintes doivent être uniques au sein du schéma auquel appartient la table.
@@ -609,7 +608,7 @@ NULL | NOT NULL
 Détermine si les valeurs Null sont autorisées dans la colonne. NULL n'est pas strictement une contrainte, mais peut être spécifié comme NOT NULL. Il est possible de spécifier NOT NULL pour des colonnes calculées seulement si PERSISTED est également spécifié.
 
 PRIMARY KEY    
-Contrainte assurant l'intégrité d'entité d'une ou de plusieurs colonnes spécifiées au moyen d'un index unique. Une seule contrainte PRIMARY KEY peut être créée par table.
+Contrainte assurant l’intégrité d’entité d’une ou de plusieurs colonnes spécifiées au moyen d’un index unique. Une seule contrainte PRIMARY KEY peut être créée par table.
 
 UNIQUE     
 Contrainte assurant l'intégrité de l'entité d'une colonne ou de plusieurs colonnes spécifiées au moyen d'un index unique. Une table peut comprendre plusieurs contraintes UNIQUE.
@@ -628,7 +627,7 @@ Nom de la table référencée par la contrainte FOREIGN KEY, et le schéma à la
 **(** *ref_column* [ **,**... *n* ] **)** est une colonne, ou liste de colonnes, provenant de la table référencée par la contrainte FOREIGN KEY.
 
 ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }         
-Spécifie l'action qui se produit dans les lignes de la table créée, si ces lignes comportent une relation référentielle et si la ligne référencée est supprimée de la table parente. La valeur par défaut est NO ACTION.
+Spécifie l’action qui se produit dans les lignes de la table créée, si ces lignes comportent une relation référentielle et si la ligne référencée est supprimée de la table parente. La valeur par défaut est NO ACTION.
 
 NO ACTION      
 Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] déclenche une erreur et la suppression de la ligne dans la table parent est annulée.
@@ -690,7 +689,7 @@ Colonne, ou liste de colonnes, entre parenthèses, utilisée dans des contrainte
 Indique l'ordre de tri de la ou des colonnes impliquées dans les contraintes de table. La valeur par défaut est ASC.
 
 *partition_scheme_name*     
-Nom du schéma de partition qui définit les groupes de fichiers vers lesquels les partitions d'une table partitionnée seront mappées. Le schéma de partition doit exister dans la base de données.
+Nom du schéma de partition qui définit les groupes de fichiers vers lesquels les partitions d’une table partitionnée seront mappées. Le schéma de partition doit exister dans la base de données.
 
 [ _partition\_colonne\_nom_**.** ]      
 Désigne la colonne selon laquelle une table partitionnée sera partitionnée. Cette colonne doit être identique en termes de type de données, de longueur et de précision à celle qui est spécifiée dans la fonction de partition utilisée par *partition_scheme_name*. Une colonne calculée qui participe à une fonction de partition doit être explicitement marquée comme PERSISTED.
@@ -752,7 +751,7 @@ S'applique uniquement aux index columnstore, y compris aux index columnstore non
 Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).
 
 ON PARTITIONS **(** { `<partition_number_expression>` | [ **,**...*n* ] **)**      
-Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. Si la table n'est pas partitionnée, l'argument `ON PARTITIONS` génère une erreur. Si la clause `ON PARTITIONS` n’est pas fournie, l’option `DATA_COMPRESSION` s’applique à toutes les partitions d’une table partitionnée.
+Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. Si la table n’est pas partitionnée, l’argument `ON PARTITIONS` génère une erreur. Si la clause `ON PARTITIONS` n’est pas fournie, l’option `DATA_COMPRESSION` s’applique à toutes les partitions d’une table partitionnée.
 
 *partition_number_expression* peut être spécifié des manières suivantes :
 
@@ -774,10 +773,10 @@ WITH
 ```
 
 \<index_option> ::=      
-Spécifie une ou plusieurs options d'index. Pour obtenir une description complète de ces options, consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
+Spécifie une ou plusieurs options d’index. Pour obtenir une description complète de ces options, consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md).
 
 PAD_INDEX = { ON | **OFF** }     
-Lorsque ON est spécifié, le pourcentage d'espace disponible spécifié par FILLFACTOR est appliqué aux pages de niveau intermédiaire de l'index. Lorsque OFF ou une valeur FILLFACTOR n'est pas spécifié, les pages de niveau intermédiaire de l'index sont presque entièrement remplies, ce qui laisse un espace libre suffisant pour prendre en charge au moins une ligne de la taille maximale permise par l'index, en prenant en compte l'ensemble de clés sur les pages intermédiaires. La valeur par défaut est OFF.
+Lorsque ON est spécifié, le pourcentage d’espace disponible spécifié par FILLFACTOR est appliqué aux pages de niveau intermédiaire de l’index. Lorsque OFF ou une valeur FILLFACTOR n'est pas spécifié, les pages de niveau intermédiaire de l'index sont presque entièrement remplies, ce qui laisse un espace libre suffisant pour prendre en charge au moins une ligne de la taille maximale permise par l'index, en prenant en compte l'ensemble de clés sur les pages intermédiaires. La valeur par défaut est OFF.
 
 FILLFACTOR **=**_fillfactor_     
 Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la modification de l'index. *fillfactor* doit être une valeur entière comprise entre 1 et 100. La valeur par défaut est 0. Les taux de remplissage 0 et 100 sont identiques en tous points.
@@ -798,13 +797,13 @@ Pour voir `IGNORE_DUP_KEY`, utilisez [sys.indexes](../../relational-databases/sy
 Dans la syntaxe à compatibilité descendante, `WITH IGNORE_DUP_KEY` équivaut à `WITH IGNORE_DUP_KEY = ON`.
 
 STATISTICS_NORECOMPUTE **=** { ON | **OFF** }     
-Lorsque la valeur spécifiée est ON, les statistiques d'index périmées ne sont pas recalculées automatiquement. Lorsque la valeur spécifiée est OFF, la mise à jour automatique des statistiques est activée. La valeur par défaut est OFF.
+Lorsque la valeur spécifiée est ON, les statistiques d’index périmées ne sont pas recalculées automatiquement. Lorsque la valeur spécifiée est OFF, la mise à jour automatique des statistiques est activée. La valeur par défaut est OFF.
 
 ALLOW_ROW_LOCKS **=** { **ON** | OFF }      
-Si la valeur est ON, les verrous de ligne sont autorisés lorsque vous accédez à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés. Si la valeur est OFF, les verrous de ligne ne sont pas utilisés. La valeur par défaut est ON.
+Si la valeur est ON, les verrous de ligne sont autorisés lorsque vous accédez à l’index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés. Si la valeur est OFF, les verrous de ligne ne sont pas utilisés. La valeur par défaut est ON.
 
 ALLOW_PAGE_LOCKS **=** { **ON** | OFF }       
-Si la valeur est ON, les verrous de page sont autorisés lorsque vous accédez à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés. Si la valeur est OFF, les verrous de page ne sont pas utilisés. La valeur par défaut est ON.
+Si la valeur est ON, les verrous de page sont autorisés lorsque vous accédez à l’index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés. Si la valeur est OFF, les verrous de page ne sont pas utilisés. La valeur par défaut est ON.
 
 FILETABLE_DIRECTORY = *directory_name*      
 
@@ -819,7 +818,7 @@ FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }
 Spécifie le nom du classement à appliquer à la colonne **Name** du FileTable. Le classement ne doit pas être sensible à la casse pour des raisons de conformité à la sémantique d'attribution des noms de fichiers Windows. Si cette valeur n'est pas spécifiée, le classement par défaut de la base de données est utilisé. Si le classement par défaut de la base de données respecte la casse, une erreur est générée et l'opération CREATE TABLE échoue.
 
 *collation_name*     
-Nom d'un classement non sensible à la casse.
+Nom d’un classement non sensible à la casse.
 
 database_default        
 Spécifie que le classement par défaut de la base de données doit être utilisé. Ce classement ne doit pas être sensible à la casse.
@@ -1087,7 +1086,7 @@ Avant de créer une table partitionnée à l'aide de CREATE TABLE, vous devez d'
 Pour obtenir des informations sur une table et ses colonnes, utilisez `sp_help` ou `sp_helpconstraint`. Pour renommer une table, utilisez `sp_rename`. Pour obtenir un rapport sur les vues et procédures stockées qui dépendent d’une table, utilisez [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) et [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).
 
 ## <a name="nullability-rules-within-a-table-definition"></a>Règles des possibilités de valeurs Null dans une définition de table
-La possibilité de valeurs Null pour une colonne détermine si cette colonne peut accepter une valeur Null (NULL) comme données dans la colonne. La valeur NULL n'est pas équivalente à la valeur zéro ou à un blanc : cela signifie qu'il n'y a pas eu d'entrée dans la colonne ou que la valeur NULL explicite a été spécifiée. Cela implique généralement que la valeur est inconnue ou non applicable.
+La possibilité de valeurs Null pour une colonne détermine si cette colonne peut accepter une valeur Null (NULL) comme données dans la colonne. La valeur NULL n’est pas équivalente à la valeur zéro ou à un blanc : cela signifie qu’il n’y a pas eu d’entrée dans la colonne ou que la valeur NULL explicite a été spécifiée. Cela implique généralement que la valeur est inconnue ou non applicable.
 
 Quand vous utilisez `CREATE TABLE` ou `ALTER TABLE` pour créer ou modifier une table, les paramètres de la base de données et de la session influencent et éventuellement modifient la possibilité de valeur NULL pour le type de données utilisé dans une définition de colonne. Il est recommandé de toujours définir explicitement une colonne comme NULL ou NOT NULL ou, si vous utilisez un type de données défini par l'utilisateur, d'autoriser la colonne à utiliser la possibilité de valeur NULL par défaut pour ce type de données. Les colonnes éparses doivent toujours autoriser les valeurs NULL.
 

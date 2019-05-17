@@ -14,16 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: c6a48d0eb6abae94ba6e3c54e0aa5b0b6b874371
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342880"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089442"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "58342880"
 >   
 > Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
-Le remplacement de jetons dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est simple et efficace : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
+Le remplacement de jetons dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est simple et efficace : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent remplace le jeton par une valeur de chaîne littérale exacte. Tous les jetons respectent la casse. Vous devez tenir compte de ce changement dans vos étapes de travail et nommer correctement les jetons utilisés, ou bien convertir la chaîne de remplacement en type de données correct.  
   
 Par exemple, vous pouvez utiliser l'instruction suivante pour imprimer le nom de la base de données dans une étape de travail :  
   
@@ -78,7 +78,7 @@ Les tableaux suivants répertorient et décrivent les jetons et les macros pris 
 |**(MSSA)**|Nom du service SQLServerAgent principal.|  
 |**(OSCMD)**|Préfixe du programme utilisé pour exécuter les étapes de travail **CmdExec** .|  
 |**(SQLDIR)**|Répertoire d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La valeur par défaut est : C:\Program Files\Microsoft SQL Server\MSSQL.|  
-|**(SQLLOGDIR)**|Jeton de remplacement pour le chemin du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)).|  
+|**(SQLLOGDIR)**|Jeton de remplacement pour le chemin du dossier des fichiers journaux des erreurs SQL Server, par exemple, $(ESCAPE_SQUOTE(SQLLOGDIR)). Ce jeton est disponible uniquement sur SQL Server 2014 et ultérieur.|  
 |**(STEPCT)**|Nombre de fois où cette étape a été exécutée (ne tient pas compte des nouvelles tentatives). Peut être utilisé par la commande d'étape pour forcer l'arrêt d'une boucle multi-étape.|  
 |**(STEPID)**|Numéro d'identification de l'étape.|  
 |**(SRVR)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance nommée, le nom de l'instance est compris.|  
@@ -115,7 +115,7 @@ Après l'exécution du script de mise à jour, une `ESCAPE_NONE` macro est insé
   
 `PRINT N'Current database name is $(ESCAPE_SQUOTE(A-DBN))' ;`  
   
-### <a name="b-using-tokens-in-nested-strings"></a>b. Utilisation de jetons dans des chaînes imbriquées  
+### <a name="b-using-tokens-in-nested-strings"></a>B. Utilisation de jetons dans des chaînes imbriquées  
 Dans les scripts d'étape de travail où les jetons sont utilisés dans des chaînes ou des instructions imbriquées, les instructions imbriquées doivent être réécrites sous forme de plusieurs instructions avant d'insérer les macros d'échappement appropriées.  
   
 Par exemple, imaginez l'étape de travail suivante qui utilise le jeton `A-MSG` et n'a pas été mise à jour avec une macro d'échappement :  

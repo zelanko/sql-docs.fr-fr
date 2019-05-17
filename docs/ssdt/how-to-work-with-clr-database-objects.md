@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.allowsqlclrdebugging
 ms.assetid: 4a28d43d-eb5e-444d-aace-5df691f38709
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8192bd6c074f5ed90868af9f256935e6222fc525
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396882"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099583"
 ---
-# <a name="how-to-work-with-clr-database-objects"></a>Procédure : utilisation des objets de base de données CLR
+# <a name="how-to-work-with-clr-database-objects"></a>Procédure : Travailler avec des objets de base de données CLR
 Outre le langage de programmation Transact\-SQL, vous pouvez utiliser les langages .NET Framework pour créer des objets de base de données et récupérer et mettre à jour des données pour les bases de données SQL Server. Les objets de base de données écrits en code managé sont appelés objets de base de données Common Language Runtime (CLR) de SQL Server. Pour obtenir une explication des avantages de l'utilisation des objets de base de données CLR hébergés dans SQL Server, ainsi que sur le choix entre Transact\-SQL et CLR, consultez [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md) et [Avantages de l'utilisation du code managé pour créer des objets de base de données](https://msdn.microsoft.com/library/k2e1fb36.aspx).  
   
 Pour créer un objet de base de données CLR avec SQL Server Data Tools, vous créez un projet de base de données, puis vous lui ajoutez un objet de base de données CLR. Contrairement aux versions précédentes de Visual Studio, vous n'avez pas besoin de créer un projet CLR distinct, puis de lui ajouter une référence à partir du projet de base de données. Lorsque vous générez et publiez le projet de base de données, vous publiez automatiquement les objets CLR dans le projet en même temps. Une fois ces objets CLR publiés, ils peuvent être appelés et exécutés comme les autres objets de base de données.  
   
 Les pages de propriétés CLR et Build CLR contiennent de nombreux paramètres d'utilisation des objets de base de données CLR dans votre projet. Plus particulièrement, la page de propriétés CLR dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly CLR. Elle possède aussi le paramètre Générer le DDL pour contrôler si le DDL des objets de base de données CLR ajoutés au projet doit être généré. La page de propriétés Build CLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code CLR dans le projet. Ces pages de propriétés sont accessibles en cliquant avec le bouton droit sur votre projet dans l'**Explorateur de solutions** et en sélectionnant **Propriétés**.  
   
-Pour activer le débogage des objets de base de données CLR, ouvrez l'**Explorateur d'objets SQL Server**. Cliquez avec le bouton droit sur le serveur contenant les artefacts de base de données CLR à déboguer, puis sélectionnez **Autoriser le débogage SQL CLR**. Une boîte de message affiche l'avertissement suivant : « Notez que pendant le débogage, tous les threads gérés sur ce serveur s'arrêtent. Voulez-vous activer le débogage SQL CLR sur ce serveur ? ». Lorsque vous déboguez des objets de base de données CLR, l'interruption de l'exécution interrompt tous les threads sur le serveur, ce qui affecte les autres utilisateurs. C'est pourquoi vous ne devez pas déboguer les applications pour des objets de base de données CLR sur un serveur de production. Notez également qu'une fois que vous avez commencé à déboguer, il est trop tard pour modifier des paramètres dans l'**Explorateur d'objets SQL Server**. Les modifications effectuées dans l'**Explorateur d'objets SQL Server** ne prendront pas effet avant le démarrage de la session de débogage suivante.  
+Pour activer le débogage des objets de base de données CLR, ouvrez l'**Explorateur d'objets SQL Server**. Cliquez avec le bouton droit sur le serveur contenant les artefacts de base de données CLR à déboguer, puis sélectionnez **Autoriser le débogage SQL CLR**. Une boîte de message affiche l’avertissement suivant : « Notez que pendant le débogage, tous les threads gérés sur ce serveur s’arrêtent. Voulez-vous activer le débogage SQL CLR sur ce serveur ? ». Lorsque vous déboguez des objets de base de données CLR, l'interruption de l'exécution interrompt tous les threads sur le serveur, ce qui affecte les autres utilisateurs. C'est pourquoi vous ne devez pas déboguer les applications pour des objets de base de données CLR sur un serveur de production. Notez également qu'une fois que vous avez commencé à déboguer, il est trop tard pour modifier des paramètres dans l'**Explorateur d'objets SQL Server**. Les modifications effectuées dans l'**Explorateur d'objets SQL Server** ne prendront pas effet avant le démarrage de la session de débogage suivante.  
   
 Pour plus d'informations sur les conditions de création d'objets de base de données CLR requises, consultez les rubriques appropriées dans [Création d'objets de base de données avec l'intégration CLR (Common Language Runtime)](https://msdn.microsoft.com/library/ms131046.aspx).  
   

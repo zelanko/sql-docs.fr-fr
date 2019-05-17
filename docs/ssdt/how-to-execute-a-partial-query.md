@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a1c10ec2282e5e7870ec05de356b0d2f1461e95f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677311"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090174"
 ---
-# <a name="how-to-execute-a-partial-query"></a>Procédure : exécuter une requête partielle
+# <a name="how-to-execute-a-partial-query"></a>Procédure : Exécuter une requête partielle
 L'éditeur Transact\-SQL permet de mettre en surbrillance un segment spécifique du script et de l'exécuter en tant que requête unique. Ainsi, il est plus facile pour vous de déboguer des sections de requêtes complexes.  
   
 > [!WARNING]  

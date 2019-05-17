@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.datatoolsoperations
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 99ed8322745c86bbcf18356c27ed9ec68ab34b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604527"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099372"
 ---
 # <a name="data-tools-operations-window"></a>Fenêtre Opérations des outils de données
 La fenêtre **Opérations des outils de données** affiche la progression de certaines opérations traitées dans cette rubrique et vous avertit qu'une erreur s'est produite.  
@@ -32,11 +32,11 @@ La fenêtre **Opérations des outils de données** affiche la progression lorsqu
   
 -   Développement d'une base de données dans l'**Explorateur d'objets SQL Server**. Cette opération démarre une importation du modèle de base de données.  
   
--   Validation des modifications apportées à une base de données ou génération de scripts via le bouton **Mettre à jour la base de données** dans l'Éditeur Transact\-SQL. Pour plus d’informations, consultez [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+-   Validation des modifications apportées à une base de données ou génération de scripts via le bouton **Mettre à jour la base de données** dans l'Éditeur Transact\-SQL. Pour plus d’informations, consultez [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
--   Suppression d'un objet de l'**Explorateur d'objets SQL Server**. Pour plus d’informations, consultez [Procédure : supprimer des objets et résoudre des dépendances](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
+-   Suppression d'un objet de l'**Explorateur d'objets SQL Server**. Pour plus d’informations, consultez [Procédure : supprimer des objets et résoudre des dépendances](../ssdt/how-to-delete-objects-and-resolve-dependencies.md).  
   
--   Publication de résultats. Pour plus d’informations, consultez [Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+-   Publication de résultats. Pour plus d’informations, consultez [Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   
--   Déploiement. Pour plus d’informations, consultez [Procédure : générer et déployer dans une base de données locale](../ssdt/how-to-build-and-deploy-to-a-local-database.md).  
+-   Déploiement. Pour plus d’informations, consultez [Procédure : Procédure : générer et déployer dans une base de données locale](../ssdt/how-to-build-and-deploy-to-a-local-database.md).  
   

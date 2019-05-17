@@ -12,14 +12,15 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6c92421a2c29964683489c93b59e98a398d9262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661248"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106265"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauration fragmentaire de bases de données avec des tables mémoire optimisées
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) et [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md).  
   
@@ -27,7 +28,7 @@ ms.locfileid: "51661248"
   
 -   Si vous sauvegardez (ou restaurez) le groupe de fichiers principal, vous devez spécifier le groupe de fichiers mémoire optimisé.  
   
--   Si vous sauvegardez (ou restaurez) le groupe de fichiers mémoire optimisé, vous devez spécifier le groupe de fichiers principal.  
+-   Si vous sauvegardez (ou restaurez) le groupe de fichiers principal, vous devez spécifier le groupe de fichiers à mémoire optimisée.  
   
  Principaux scénarios de sauvegarde et de restauration fragmentaires  
   
@@ -46,59 +47,107 @@ ms.locfileid: "51661248"
 ## <a name="samples"></a>Exemples  
  Les exemples utilisent le schéma suivant :  
   
-```  
-CREATE DATABASE imoltp  
-ON PRIMARY (name = imoltp_primary1, filename = 'c:\data\imoltp_data1.mdf')  
-LOG ON (name = imoltp_log, filename = 'c:\data\imoltp_log.ldf')  
+```sql
+CREATE DATABASE imoltp
+    ON PRIMARY (
+        name = imoltp_primary1,
+        filename = 'c:\data\imoltp_data1.mdf')
+    LOG ON (
+        name = imoltp_log,
+        filename = 'c:\data\imoltp_log.ldf');
+    GO  
+  
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_primary2,
+        filename = 'c:\data\imoltp_data2.ndf');
 GO  
   
-ALTER DATABASE imoltp ADD FILE (name = imoltp_primary2, filename = 'c:\data\imoltp_data2.ndf')  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_secondary;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = imoltp_secondary,
+        filename = 'c:\data\imoltp_secondary.ndf')
+            TO FILEGROUP imoltp_secondary;
 GO  
   
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_secondary  
-ALTER DATABASE imoltp ADD FILE (name = imoltp_secondary, filename = 'c:\data\imoltp_secondary.ndf') TO FILEGROUP imoltp_secondary  
+ALTER DATABASE imoltp
+    ADD FILEGROUP imoltp_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod1',
+        filename = 'c:\data\imoltp_mod1')
+            TO FILEGROUP imoltp_mod;
+
+ALTER DATABASE imoltp
+    ADD FILE (
+        name = 'imoltp_mod2',
+        filename = 'c:\data\imoltp_mod2')
+            TO FILEGROUP imoltp_mod;
 GO  
-  
-ALTER DATABASE imoltp ADD FILEGROUP imoltp_mod CONTAINS MEMORY_OPTIMIZED_DATA   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod1', filename='c:\data\imoltp_mod1') TO FILEGROUP imoltp_mod   
-ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod2') TO FILEGROUP imoltp_mod   
-GO  
 ```  
   
-### <a name="backup"></a>Sauvegarde  
- Cet exemple montre comment sauvegarder le groupe de fichiers principal et le groupe de fichiers mémoire optimisé. Vous devez spécifier le groupe de fichiers principal et le groupe de fichiers mémoire optimisé.  
+### <a name="backup"></a>Backup  
+ Cet exemple montre comment sauvegarder le groupe de fichiers principal et le groupe de fichiers à mémoire optimisée. Vous devez spécifier le groupe de fichiers principal et le groupe de fichiers mémoire optimisé.  
   
-```  
-backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\data\imoltp.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    to disk = 'c:\data\imoltp.dmp'
+    with init;
+```
   
- L'exemple suivant montre qu'une sauvegarde d'un ou plusieurs groupes de fichiers autres que le groupe de fichiers principal et le groupe de fichiers mémoire optimisé est similaire dans les bases de données sans tables mémoire optimisées. La commande suivante permet de sauvegarder le groupe de fichiers secondaire  
+ L’exemple suivant montre qu’une sauvegarde d’un groupe de fichiers autre que le groupe de fichiers principal et le groupe de fichiers à mémoire optimisé est similaire dans les bases de données sans tables à mémoire optimisée. La commande suivante permet de sauvegarder le groupe de fichiers secondaire  
   
-```  
-backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
-```  
+```sql
+BACKUP database imoltp
+    filegroup = 'imoltp_secondary'
+    to disk = 'c:\data\imoltp_secondary.dmp'
+    with init;
+```
   
 ### <a name="restore"></a>Restaurer  
  Cet exemple montre comment restaurer le groupe de fichiers principal et le groupe de fichiers mémoire optimisé ensemble.  
-  
-```  
-restore database imoltp filegroup = 'primary', filegroup = 'imoltp_mod'   
-from disk='c:\data\imoltp.dmp' with partial, norecovery  
-  
---restore the transaction log  
- RESTORE LOG [imoltp] FROM DISK = N'c:\data\imoltp_log.dmp' WITH  FILE = 1,  NOUNLOAD,  STATS = 10  
-GO  
-```  
+
+```sql
+RESTORE database imoltp
+    filegroup = 'primary',
+    filegroup = 'imoltp_mod'
+    from disk = 'c:\data\imoltp.dmp'
+    with
+        partial,
+        norecovery;
+
+-- Restore the transaction log.
+
+RESTORE LOG [imoltp]
+    FROM DISK = N'c:\data\imoltp_log.dmp'
+    WITH
+        FILE = 1,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
   
  L'exemple suivant montre que la restauration d'un ou plusieurs groupes de fichiers autres que le groupe de fichiers principal et le groupe de fichiers mémoire optimisé est similaire dans les bases de données sans tables mémoire optimisées.  
   
-```  
-RESTORE DATABASE [imoltp] FILE = N'imoltp_secondary'   
-FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOAD,  STATS = 10  
-GO  
-```  
-  
+```sql
+RESTORE DATABASE [imoltp]
+    FILE = N'imoltp_secondary'
+    FROM DISK = N'c:\data\imoltp_secondary.dmp'
+    WITH
+        FILE = 1,
+        RECOVERY,
+        NOUNLOAD,
+        STATS = 10;
+GO
+```
+
 ## <a name="see-also"></a> Voir aussi  
  [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
-  
+

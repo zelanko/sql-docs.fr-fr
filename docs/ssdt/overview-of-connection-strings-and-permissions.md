@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a61361460513e546e459aa6183b8081f510d8ed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646867"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102031"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Vue d'ensemble des chaînes de connexion et des autorisations
 Pour exécuter des tests unitaires SQL Server, vous devez vous connecter à un serveur de base de données en utilisant une ou deux chaînes de connexion spécifiques. Chaque chaîne de connexion représente un compte disposant des autorisations spécifiques nécessaires pour effectuer une tâche ou un ensemble de tâches dans un script particulier dans le cadre du test. Vous pouvez spécifier ces chaînes dans la boîte de dialogue **Configuration de test SQL Server** ou en modifiant manuellement le fichier app.config de votre projet de test.  
@@ -27,7 +27,7 @@ Dans la boîte de dialogue **Configuration de test SQL Server**, vous pouvez sp�
 > [!NOTE]  
 > Le contexte d’exécution et le contexte privilégié ne diffèrent que si l’authentification SQL Server est utilisée. Si vous utilisez l'authentification Windows, les mêmes informations d'identification sont utilisées pour les deux chaînes de connexion.  
   
--   Contexte d'exécution (obligatoire) : compte d'utilisateur utilisé pour exécuter le script de test. Cette chaîne de connexion doit avoir les mêmes informations d'identification que celles que doivent avoir les utilisateurs. Ceci est important, car cela garantit que les autorisations appropriées ont été appliquées à la base de données. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+-   Contexte d'exécution (obligatoire) : compte d'utilisateur utilisé pour exécuter le script de test. Cette chaîne de connexion doit avoir les mêmes informations d'identification que celles que doivent avoir les utilisateurs. Ceci est important, car cela garantit que les autorisations appropriées ont été appliquées à la base de données. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
     Dans le fichier app.config de votre projet de test, il s'agit de l'élément `ExecutionContext`.  
   
@@ -40,7 +40,7 @@ Les chaînes spécifiées dans la boîte de dialogue de configuration du projet 
 ## <a name="windows-authentication-versus-sql-server-authentication"></a>Comparaison entre l’authentification Windows et l’authentification SQL Server  
 Lorsque vous spécifiez des chaînes de connexion, vous devez choisir entre l'utilisation de l'authentification Windows et l'authentification SQL. Une des raisons qui amènent à choisir l’authentification Windows est qu’elle prend mieux en charge l’utilisation de tests par une équipe que l’authentification SQL Server. Si vous choisissez l’authentification SQL Server, les chaînes de connexion sont chiffrées à l’aide de l’API de protection des données (DPAPI), selon les informations d’identification de l’utilisateur. Cela signifie que les tests de ce projet de test seront exécutés uniquement pour vous, et non pour les membres de l'équipe qui obtiennent les tests via le système de contrôle de code source après que vous les avez archivés. Pour exécuter des tests dans ce projet de test, les autres membres de votre équipe devront reconfigurer le projet de test à l'aide de leurs propres informations d'identification. Pour cela, ils doivent modifier la copie du fichier app.config ou utiliser la boîte de dialogue de configuration du projet.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Le script de test s'exécute au niveau d'autorisation du contexte d'exécution, qui est identique à celui appliqué pour les commandes de l'utilisateur qui sont exécutées sur la base de données lors d'une utilisation standard. L'action d'avant test, d'après test et les scripts TestInitialize et TestCleanup s'exécutent au niveau d'autorisation du contexte de privilèges.  
   
 En raison de la connexion à niveau d'autorisation plus élevé utilisée pour le script d'action d'avant test, vous pouvez effectuer la validation dans celui-ci. Dans ce script, vous pouvez également exécuter des commandes de script qui testent les autorisations. Pour plus d’informations sur les autorisations, consultez la section des tests unitaires SQL Server de [Autorisations requises pour SQL Server Data Tools](../ssdt/required-permissions-for-sql-server-data-tools.md).  

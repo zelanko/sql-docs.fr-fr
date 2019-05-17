@@ -13,12 +13,12 @@ ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d19670ec51172fc704d0387664f0c484315c7be7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703807"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105971"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47703807"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.locfileid: "47703807"
   
 5.  Dans la zone **Chemin d'accès réseau au dossier de sauvegarde** , tapez le chemin d'accès réseau vers le partage que vous avez créé pour le dossier de sauvegarde des journaux de transactions.  
   
-6.  Si le dossier de sauvegarde est situé sur le serveur principal, tapez le chemin d'accès local vers le dossier de sauvegarde dans la zone **Si le dossier de sauvegarde se trouve sur le serveur principal, tapez un chemin d'accès local au dossier** . Si le dossier de sauvegarde n'est pas situé sur le serveur principal, vous pouvez laisser cette zone vide.  
+6.  **Si le dossier de sauvegarde se trouve sur le serveur principal, tapez un chemin d’accès local au dossier dans la boîte de dialogue**  du dossier de sauvegarde. Si le dossier de sauvegarde n'est pas situé sur le serveur principal, vous pouvez laisser cette zone vide.  
   
     > [!IMPORTANT]  
     >  Si le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur votre serveur principal est exécuté sous le compte système local, vous devez créer votre dossier de sauvegarde sur le serveur principal et spécifier un chemin d'accès local vers ce dossier.  
@@ -79,7 +79,7 @@ ms.locfileid: "47703807"
   
 8.  Notez la planification de la sauvegarde figurant dans la zone **Planification** sous **Travail de sauvegarde**. Si vous souhaitez personnaliser la planification pour votre installation, cliquez ensuite sur **Planification** et ajustez la planification de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en fonction de vos besoins.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lors de la création d'une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression de la sauvegarde pour les sauvegardes de journaux en choisissant l'une des options suivantes : **Utiliser le paramètre du serveur par défaut**, **Compresser la sauvegarde**ou **Ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lorsque vous créez une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression des sauvegardes de fichiers journaux grâce à l’une des options suivantes : **Utiliser le paramètre de serveur par défaut**, **Compresser la sauvegarde**, ou **Ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Cliquez sur **OK**.  
   

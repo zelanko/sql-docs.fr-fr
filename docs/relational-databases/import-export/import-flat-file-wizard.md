@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217817"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946433"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Pour les besoins de ce didacticiel, n’hésitez pas à utiliser votre propre fi
 
 ![Assistant - Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>Étape 1 : Accéder à l’Assistant et à la page d’introduction
+### <a name="step-1-access-wizard-and-intro-page"></a>Étape 1 : Accéder à l’Assistant et à la page d’introduction
 Accédez à l’Assistant, comme décrit [ici](#started).
 
 La première page de l’Assistant est la page d’accueil. Si vous ne souhaitez plus voir cette page, n’hésitez pas à cliquer sur **Ne plus afficher cette page de démarrage.**
@@ -68,24 +68,24 @@ Le nouveau nom de table doit être unique. S’il ne l’est pas, l’Assistant 
 
 ![Assistant - Spécification](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Étape 3 : Prévisualiser les données
+### <a name="step-3-preview-data"></a>Étape 3 : Aperçu des données
 L’Assistant génère un aperçu où vous pouvez voir les 50 premières lignes. Si vous rencontrez des problèmes, cliquez sur Annuler, sinon passez à la page suivante.
 
 ![Assistant - Aperçu](media/import-flat-file-wizard/importffpreview.png)
 
-### <a name="step-4-modify-columns"></a>Étape 4 : Modifier les colonnes
+### <a name="step-4-modify-columns"></a>Étape 4 : Modifier les colonnes
 L’Assistant identifie ce qu’il pense être les bons noms de colonnes, de types de données, etc. Voici où vous pouvez modifier les champs s’ils sont incorrects (par exemple, le type de données doit être une valeur float et non une valeur int).
 
 Quand vous êtes prêt, poursuivez.
 
 ![Assistant - Modification](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>Étape 5 : Résumé
+### <a name="step-5-summary"></a>Étape 5 : Résumé
 Il s’agit simplement d’une page qui résume votre configuration actuelle. Si vous voyez des problèmes, vous pouvez revenir à des sections précédentes. Sinon, cliquez sur Terminer pour tenter le processus d’importation.
 
 ![Assistant - Résumé](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>Étape 6 : Résultats
+### <a name="step-6-results"></a>Étape 6 : Résultats
 Cette page indique si l’importation a réussi. Si une coche verte s’affiche, elle a réussi. Dans le cas contraire, vous devrez peut-être rechercher des erreurs dans votre configuration ou votre fichier d’entrée.
 
 ![Assistant - Résultats](media/import-flat-file-wizard/importffresults.png)

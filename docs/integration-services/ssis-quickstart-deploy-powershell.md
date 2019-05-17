@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282703"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376884"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Déployer un projet SSIS avec PowerShell
 Ce guide de démarrage rapide montre comment utiliser un script PowerShell pour se connecter à un serveur de base de données et déployer un projet SSIS dans le catalogue SSIS.
@@ -43,6 +43,36 @@ Pour déployer le projet sur Azure SQL Database, obtenez les informations de con
 4. Si vous oubliez vos informations de connexion de serveur Azure SQL Database, accédez à la page du serveur SQL Database pour afficher le nom d’administrateur de serveur. Vous pouvez réinitialiser le mot de passe si nécessaire.
 5. Cliquez sur **Afficher les chaînes de connexion de la base de données**.
 6. Examinez la chaîne de connexion **ADO.NET** complète.
+
+## <a name="ssis-powershell-provider"></a>Fournisseur PowerShell SSIS
+Entrez les valeurs appropriées pour les variables en haut du script suivant, puis exécutez le script pour déployer le projet SSIS.
+
+> [!NOTE]
+> L’exemple suivant utilise l’authentification Windows pour effectuer un déploiement sur un serveur SQL local. Utilisez le cmdlet `New-PSDive` pour établir une connexion à l’aide de l’authentification SQL Server. Si vous vous connectez à un serveur Azure SQL Database, vous ne pouvez pas utiliser l’authentification Windows.
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>Script PowerShell
 Entrez les valeurs appropriées pour les variables en haut du script suivant, puis exécutez le script pour déployer le projet SSIS.

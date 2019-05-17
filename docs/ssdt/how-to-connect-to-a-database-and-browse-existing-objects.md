@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : se connecter à une base de données et parcourir les objets existants | Microsoft Docs'
+title: 'Procédure : se connecter à une base de données et parcourir les objets existants | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7b29eac3b080a78f2552a2558b3ab3278b89a1bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670462"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098108"
 ---
-# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
+# <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>Procédure : se connecter à une base de données et parcourir les objets existants
 La connexion à une base de données active, la conception ou la navigation dans son schéma et l'exécution de requêtes relatives à ses objets sont des tâches très courantes pour les administrateurs et les développeurs de base de données. L'Explorateur d'objets SQL Server de Visual Studio contient à présent un nœud **SQL Server** dédié, sous lequel toutes les instances SQL Server connectées et leurs bases de données sont regroupées dans une hiérarchie de type SSMS. Les instances SQL Server connectées peuvent être une instance sur site, telle que le serveur SQL Server 2008 en cours d'exécution, ou une instance SQL Azure hors site.  
   
 La procédure suivante suppose que vous avez déjà installé l'exemple de base de données AdventureWorks. Utilisez [CodePlex](https://msftdbprodsamples.codeplex.com/) pour rechercher et installer des exemples de bases de données pour différentes versions de SQL Server. Si vous préférez, vous pouvez aussi suivre la procédure et utiliser une base de données existante sur votre serveur.  

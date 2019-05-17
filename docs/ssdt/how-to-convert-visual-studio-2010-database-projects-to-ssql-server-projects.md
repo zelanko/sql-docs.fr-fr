@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme | Microsoft Docs'
+title: 'Procédure : convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.projectconversion.dialog
 - sql.data.tools.ImportDAC
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5853dcc142dbee73846617fc3c32e876978f6609
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398572"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098240"
 ---
-# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Procédure : convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme
+# <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Procédure : Convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme
 Dans SQL Server Data Tools (SSDT), vous pouvez convertir une base de données SQL Server, des objets CLR et des projets d’application de la couche Données existants créés dans Visual Studio 2010 en nouveau projet de base de données SQL Server. Ainsi, vous pouvez tirer parti de la nouvelle expérience de développement de base de données fournie par SSDT, telle que la mise à jour de l'expérience de modification Transact\-SQL, et de la possibilité de recibler votre projet vers Microsoft SQL Server 2012 et SQL Azure avec validation du code. Le processus de conversion convertit les objets (tables, affichages, procédures stockées, fichiers de propriétés ou scripts) qui possèdent un type équivalent dans SSDT, notamment leurs autorisations et fichiers de stratégie de contrôle DAC. Les artefacts qui ne peuvent pas être convertis sont mis en surbrillance dans un journal/rapport de conversion.  
   
 Le tableau suivant répertorie tous les artefacts de projet pouvant ou non être convertis par SSDT.  

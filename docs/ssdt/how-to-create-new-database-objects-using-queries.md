@@ -1,5 +1,5 @@
 ---
-title: "Procédure : créer de nouveaux objets de base de données à l'aide de requêtes | Microsoft Docs"
+title: 'Procédure : créer de nouveaux objets de base de données à l’aide de requêtes | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780347"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098165"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Procédure : créer de nouveaux objets de base de données à l'aide de requêtes
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procédure : Créer de nouveaux objets de base de données à l’aide de requêtes
 Si vous préférez utiliser des scripts pour créer ou modifier des affichages, des procédures stockées, des fonctions, des déclencheurs ou des types définis par l'utilisateur, vous pouvez utiliser l'Éditeur Transact\-SQL. L'Éditeur Transact\-SQL offre la prise en charge d'IntelliSense et d'autres langages. Pour plus d’informations, consultez [Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 L'Éditeur Transact\-SQL est appelé lorsque vous utilisez le menu contextuel **Afficher le code** pour ouvrir une entité de base de données dans une base de données connectée ou un projet. Il s'ouvre aussi automatiquement lorsque vous utilisez le menu contextuel **Nouvelle requête** de l'Explorateur d'objets SQL Server, ou lorsque vous ajoutez un nouvel objet de script à un projet de base de données. Si vous n'êtes pas connecté à une base de données, mais que vous souhaitez exécuter une requête par rapport à une base de données, vous pouvez aussi utiliser la boîte de dialogue **Nouvelle connexion à la requête** en sélectionnant le menu **Éditeur Transact-SQL** du menu **SQL** pour vous connecter à une base de données et démarrer l'Éditeur Transact\-SQL.  

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682226"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101854"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorisations nécessaires pour SQL Server Data Tools
 Avant d'exécuter une action sur une base de données dans Visual Studio, vous devez ouvrir une session avec un compte disposant de certaines autorisations sur cette base de données. Les autorisations nécessaires varient selon l'action à exécuter. Les sections suivantes décrivent chaque action que vous pouvez éventuellement effectuer et les autorisations spécifiques nécessaires à cet effet.  
@@ -45,7 +45,7 @@ Vous devez disposer des autorisations suivantes pour créer ou déployer une bas
 |Importer les objets et paramètres de serveur|Vous devez pouvoir vous connecter à la base de données master sur le serveur spécifié.<br /><br />Si le serveur exécute SQL Server 2005, vous devez disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur.<br /><br />Si la base de données source est basée sur SQL 2008 ou version ultérieure, vous devez disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur. Votre connexion doit disposer de l’autorisation **VIEW SERVER STATE** (pour les clés de chiffrement de la base de données).|  
 |Créer ou mettre à jour un projet de base de données|Aucune autorisation n'est nécessaire pour créer ou modifier un projet de base de données.|  
 |Déployer une nouvelle base de données ou déployer avec l’option **Toujours recréer la base de données** définie|Vous devez disposer de l’autorisation **CREATE DATABASE** ou être membre du rôle **dbcreator** sur le serveur cible.<br /><br />Lorsque vous créez une base de données, Visual Studio se connecte à la base de données model et copie son contenu. La connexion d’origine (par exemple, *yourLogin*) que vous utilisez pour vous connecter à la base de données cible doit disposer des autorisations **db_creator** et **CONNECT SQL**. Cette connexion doit avoir un mappage d'utilisateur sur la base de données model. Si vous disposez des autorisations **sysadmin**, vous pouvez créer le mappage en émettant les instructions Transact\-SQL suivantes :<br /><br />`USE [model] CREATE USER yourUser FROM LOGIN yourLogin`<br /><br />L’utilisateur (dans cet exemple, yourUser) doit disposer des autorisations **CONNECT** et **VIEW DEFINITION** sur la base de données model. Si vous disposez des autorisations **sysadmin**, vous pouvez octroyer ces autorisations en émettant les instructions Transact\-SQL suivantes :<br /><br />`USE [model] GRANT CONNECT to yourUser GRANT VIEW DEFINITION TO yourUser`<br /><br />Si vous déployez une base de données qui contient des contraintes sans nom alors que l’option **CheckNewContraints** est activée (par défaut), vous devez disposer des autorisations **db_owner** ou **sysadmin** pour pouvoir effectuer le déploiement. Cela ne concerne que les contraintes sans nom. Pour plus d’informations sur l’option **CheckNewConstraints**, consultez [Paramètres du projet de base de données](../ssdt/database-project-settings.md).|  
-|Déployer des mises à jour dans une base de données existante|Vous devez être un utilisateur de base de données valide. Vous devez également être membre du rôle **db_ddladmin**, propriétaire du schéma ou propriétaire des objets que vous souhaitez créer ou modifier dans la base de données cible. Vous devez disposer d'autorisations supplémentaires pour utiliser des concepts plus avancés tels que les connexions ou les serveurs liés dans les scripts de prédéploiement ou de post-déploiement.<br /><br />**REMARQUE** : Si vous effectuez un déploiement sur la base de données master, vous devez également disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur sur lequel vous effectuez le déploiement.|  
+|Déployer des mises à jour dans une base de données existante|Vous devez être un utilisateur de base de données valide. Vous devez également être membre du rôle **db_ddladmin**, propriétaire du schéma ou propriétaire des objets que vous souhaitez créer ou modifier dans la base de données cible. Vous devez disposer d'autorisations supplémentaires pour utiliser des concepts plus avancés tels que les connexions ou les serveurs liés dans les scripts de prédéploiement ou de post-déploiement.<br /><br />**REMARQUE :** si vous effectuez un déploiement sur la base de données MASTER, vous devez également disposer de l’autorisation **VIEW ANY DEFINITION** sur le serveur sur lequel vous effectuez le déploiement.|  
 |Utiliser un assembly avec l'option EXTERNAL_ACCESS dans un projet de base de données|Vous devez définir la propriété TRUSTWORTHY pour votre projet de base de données. Vous devez disposer de l'autorisation EXTERNAL ACCESS ASSEMBLY pour votre connexion SQL Server.|  
 |Déployer des assemblys dans une base de données nouvelle ou existante|Vous devez être membre du rôle sysadmin sur le serveur de déploiement cible.|  
   
@@ -63,8 +63,8 @@ Vous devez disposer des autorisations suivantes pour exécuter des tests unitair
 |Exécuter une action de test|Vous devez utiliser la connexion de base de données dans le contexte d'exécution. Pour plus d’informations, consultez [Vue d’ensemble des chaînes de connexion et des autorisations](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Exécuter une action de prétest ou de post-test|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Cette connexion de base de données dispose de davantage d'autorisations par rapport à celles du contexte d'exécution.|  
 |Exécuter les scripts TestInitialize et TestCleanup|Vous devez utiliser la connexion de base de données dans le contexte privilégié.|  
-|Déployer les modifications de la base de données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Générer des données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Déployer les modifications de la base de données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Générer des données avant d'exécuter des tests|Vous devez utiliser la connexion de base de données dans le contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="DataGenerationPermissions"></a>Autorisations nécessaires pour générer des données  
 Vous devez disposer des autorisations **INSERT** et **SELECT** sur les objets de la base de données cible pour générer les données de test en utilisant le générateur de données. Si vous supprimez des données avant de générer des données, vous devez également disposer des autorisations **DELETE** sur les objets de la base de données cible. Pour réinitialiser la colonne **IDENTITY** dans une table, vous devez être propriétaire de la table ou être membre du rôle db_owner ou db_ddladmin.  

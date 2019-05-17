@@ -2,7 +2,7 @@
 title: 'Groupes de disponibilité : solution de haute disponibilité et de reprise d’activité'
 description: Les groupes de disponibilité Always On sont une solution de haute disponibilité et de reprise d’activité SQL Server qui offre une alternative au niveau de l’entreprise à la mise en miroir de bases de données, avec davantage de fonctionnalités. Découvrez les principes de base et les fonctions de cette fonctionnalité.
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -17,12 +17,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54c5cf218021b2a585ff50afb22ac7594ab4b2d6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b369247fccdac3407670b5edc63c0f5490fac23e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974278"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775553"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Groupes de disponibilité Always On : solution de haute disponibilité et de reprise d’activité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,9 @@ ms.locfileid: "57974278"
   
     -   *Mode de validation synchrone*. Ce mode de disponibilité privilégie la haute disponibilité et la protection des données plutôt que les performances, au prix d'une latence accrue des transactions. Un groupe de disponibilité donné peut prendre en charge jusqu'à trois réplicas de disponibilité avec validation synchrone, y compris le réplica principal actuel.  
   
-     Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+     Pour plus d’informations, consultez [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md). 
+
+     [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] augmente le nombre maximal de réplicas synchrones à 5, contre 3 dans [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]. Vous pouvez configurer ce groupe de cinq réplicas de manière à instaurer le basculement automatique en son sein. Il existe un seul réplica principal, plus quatre réplicas secondaires synchrones.
   
 -   Prend en charge plusieurs formes de basculement de groupe de disponibilité : le basculement automatique, le basculement manuel planifié (généralement appelé simplement « basculement manuel ») et le basculement manuel forcé (généralement appelé simplement « basculement forcé »). Pour plus d’informations, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - diagrams [SQL Server], designing
 ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aedefdb9234279a3be93bcfb4705e227e0badebd
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: a6722dcbc9f9052803ef32a3b1bdb75a9e06de31
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590394"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090027"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Créer des relations entre des tables sur un diagramme (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Vous pouvez créer des relations entre des colonnes dans différentes tables dan
   
 2.  Faites glisser la ou les colonne(s) sélectionnée(s) vers la table associée.  
   
-3.  Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
+3.  Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** et **Tables et colonnes**, cette dernière apparaissant au premier plan.  
   
 4.  Le**nom de relation** est fourni par le système au format FK_*localtable*\_*foreigntable*. Vous pouvez modifier cette valeur.  
   

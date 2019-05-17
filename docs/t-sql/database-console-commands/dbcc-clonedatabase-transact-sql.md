@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: c21fb619391701d3506c3c73f9acf699f4c5d54f
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305337"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774839"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Si vous avez des index columnstore, consultez [Remarques à prendre en compte lors de l'optimisation des requêtes avec des index Columnstore sur des bases de données clones](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.  À compter de SQL Server 2019, les étapes manuelles listées dans l’article ci-dessus ne seront plus requises, car la commande **DBCC CLONEDATABASE** collecte automatiquement ces informations.
+> Si vous avez des index columnstore, consultez [Remarques à prendre en compte lors de l'optimisation des requêtes avec des index Columnstore sur des bases de données clones](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294) pour mettre à jour les statistiques d’index columnstore avant d’exécuter la commande **DBCC CLONEDATABASE**.  À compter de SQL Server 2019, les étapes manuelles listées dans l’article ci-dessus ne seront plus requises, car la commande **DBCC CLONEDATABASE** collecte automatiquement ces informations.
 
-Pour plus d’informations sur la sécurité des données dans les bases de données clonées, consultez [Understanding data security in cloned databases](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>Objets blob de statistiques pour les index columnstore
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` capture automatiquement les objets blob de statistiques pour les index columnstore ; aucune étape manuelle n’est donc requise.`DBCC CLONEDATABASE` crée une copie de schéma uniquement d’une base de données qui comporte tous les éléments nécessaires pour résoudre les problèmes de performances des requêtes sans copier les données. Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande ne copiait pas les statistiques permettant de résoudre avec précision les problèmes des requêtes d’index columnstore, ce qui obligeait l’utilisateur à effectuer des étapes manuelles pour capturer ces informations.
+
+Pour plus d’informations sur la sécurité des données dans les bases de données clonées, consultez [Understanding data security in cloned databases](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
 ## <a name="internal-database-snapshot"></a>Instantané de base de données interne
 DBCC CLONEDATABASE utilise un instantané de base de données interne de la base de données source pour assurer la cohérence transactionnelle nécessaire à l’exécution de la copie. L’utilisation de cet instantané évite les problèmes de blocage et de concurrence pendant l’exécution de ces commandes. Si un instantané ne peut pas être créé, DBCC CLONEDATABASE échoue. 
@@ -176,7 +182,7 @@ Seuls les objets suivants peuvent être clonés dans la base de données de dest
 - XML INDEX
 - XML SCHEMA COLLECTION  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
 
 ## <a name="error-log-messages"></a>Messages du journal des erreurs
@@ -213,7 +219,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);
 GO 
 ```  
   
-### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>b. Création d’un clone de schéma uniquement d’une base de données sans statistiques 
+### <a name="b-creating-a-schema-only-clone-of-a-database-without-statistics"></a>B. Création d’un clone de schéma uniquement d’une base de données sans statistiques 
 L’exemple suivant crée un clone de la base de données AdventureWorks qui n’inclut pas de statistiques ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 CU3 et ultérieur)
 
 ```sql  

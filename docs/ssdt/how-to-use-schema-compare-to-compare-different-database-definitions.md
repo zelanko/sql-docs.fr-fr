@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668547"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095931"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procédure : utiliser le schéma pour comparer différentes définitions de base de données
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procédure : Utiliser Comparer les schémas pour comparer différentes définitions de base de données
 SQL Server Data Tools (SSDT) inclut un utilitaire de comparaison de schémas que vous pouvez utiliser pour comparer deux définitions de base de données.  La source et la cible de la comparaison peuvent être n'importe quelle combinaison des éléments suivants : base de données connectée, projet de base de données SQL Server, instantané ou fichier .dacpac.  Les résultats de la comparaison s'affichent en tant qu'ensemble d'actions qui doivent être effectuées sur la cible de façon à ce qu'elle soit identique à la source.  Une fois la comparaison effectuée, vous pouvez mettre à jour la cible directement (s'il s'agit d'un projet ou d'une base de données) ou générer un script de mise à jour qui a le même effet.  
   
 Les différences entre la source et la cible s'affichent dans une grille qui permet de les examiner facilement.  Vous pouvez extraire et passer en revue chaque différence dans la grille de résultats ou sous la forme d'un script.  Vous pouvez ensuite exclure des différences spécifiques de manière sélective.  
@@ -71,7 +71,7 @@ Dans la procédure suivante, vous comparez le schéma d'un projet de base de don
   
 7.  Recherchez la table `Products` dans le groupe `Tables`. Cliquez sur la ligne et notez que les définitions source et cible de la table s'affichent dans le volet **Définitions d'objet** avec les différences en surbrillance. Vous pouvez aussi développer la ligne de la table `Products` dans le volet de **résultats** pour examiner des éléments spécifiques de la table qui sont différents.  
   
-8.  Par défaut, toutes les différences sont incluses dans l'étendue de l'action Mettre à jour la cible. Vous pouvez exclure les différences que vous ne souhaitez pas synchroniser. Pour cela, désactivez la colonne **Action** au centre de chaque ligne. Vous pouvez aussi cliquer avec le bouton droit sur une ligne dans le volet de schéma et sélectionner **Exclure**. Notez que la ligne apparaît immédiatement grisée. Lorsqu'il est temps de mettre à jour la base de données cible, cette ligne n'est pas prise en compte pour les modifications en attente.  
+8.  Par défaut, toutes les différences sont incluses dans l'étendue de l'action Mettre à jour la cible. Vous pouvez exclure les différences que vous ne souhaitez pas synchroniser. Pour cela, désactivez la colonne **Action** au centre de chaque ligne. Vous pouvez aussi cliquer avec le bouton droit sur une ligne dans le volet de schéma et sélectionner **Exclure**. Notez que la ligne apparaît immédiatement grisée. Lorsqu’il est temps de mettre à jour la base de données cible, cette ligne n’est pas prise en compte pour les modifications en attente.  
   
     Vous pouvez aussi cliquer avec le bouton droit sur une ligne de groupe et sélectionner **Exclure tout** ou **Inclure tout**, ce qui revient à désactiver ou activer toutes les différences dans ce groupe. Le regroupement des résultats par schéma s'avère utile pour inclure ou exclure toutes les modifications apportées à un schéma spécifique.  
   

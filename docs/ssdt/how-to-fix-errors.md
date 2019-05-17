@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664017"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090247"
 ---
-# <a name="how-to-fix-errors"></a>Procédure : résoudre les erreurs
+# <a name="how-to-fix-errors"></a>Procédure : Corriger les erreurs
 La volet Liste d'erreurs affiche toutes les erreurs de déploiement ou de build. Les erreurs de syntaxe et sémantique dues à la modification dans l'Éditeur Transact\-SQL ou dans le Concepteur de tables s'affichent aussi dans la liste lorsque vous modifiez des entités de base de données et leurs définitions. La Liste d'erreurs est mise à jour dynamiquement au fur et à mesure que vous modifiez des scripts dans les différents onglets. Vous pouvez ensuite suivre les erreurs identifiées pour la résolution des problèmes.  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ La volet Liste d'erreurs affiche toutes les erreurs de déploiement ou de build.
   
 3.  Notez que dans le volet **Liste d'erreurs** au bas de l'écran, un avertissement et une erreur similaires aux suivants s'affichent immédiatement.  
   
-**Avertissement SQL71502 : Fonction : [dbo].[GetProductsBySupplier] contient une référence non résolue à un objet. L'objet n'existe pas ou la référence est ambiguë, car elle peut faire référence à l'un des objets suivants : [dbo].[Product].[p]::[ShelfLife] or [dbo].[Product].[ShelfLife].Error SQL71501: Check Constraint: [dbo].[CK_Product_ShelfLife] contient une référence non résolue à l'objet [dbo].[Product].[ShelfLife].**  
+**Avertissement SQL71502 : Fonction : [dbo].[GetProductsBySupplier] contient une référence non résolue à un objet. Soit l’objet n’existe pas, soit la référence est ambiguë car elle peut désigner l’un des objets suivants : [dbo].[Product].[p]::[ShelfLife] ou [dbo].[Product].[ShelfLife].Erreur SQL71501 : Contrainte de validation : [dbo]. [CK_Product_ShelfLife] contient une référence non résolue à l’objet [dbo].[Product].[ShelfLife].**  
   
 4.  Vous pouvez cliquer avec le bouton droit sur la **Liste d'erreurs** et utiliser les menus contextuels pour trier les résultats, filtrer les entrées à afficher, ainsi que les colonnes d'information à afficher pour chaque entrée.  
   

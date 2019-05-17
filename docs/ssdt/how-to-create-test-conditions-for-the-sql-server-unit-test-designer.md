@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400033"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090265"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : Créer des conditions de test pour le Concepteur de test unitaire SQL Server
 Utilisez la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) extensible pour créer des conditions de test. Vous pouvez, par exemple, créer une condition de test qui vérifie le nombre de colonnes ou valeurs dans un jeu de résultats.  
   
 ## <a name="to-create-a-test-condition"></a>Pour créer une condition de test  
@@ -49,7 +49,7 @@ Cette procédure explique comment créer une condition de test de façon à ce q
   
 10. Dérivez votre classe de la classe [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Signez l'assembly avec un nom fort. Pour plus d'informations, consultez [Procédure : signer un assembly avec un nom fort](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Signez l'assembly avec un nom fort. Pour plus d’informations, consultez [Procédure : signer l’assembly avec un nom fort](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Générez la bibliothèque de classes.  
   

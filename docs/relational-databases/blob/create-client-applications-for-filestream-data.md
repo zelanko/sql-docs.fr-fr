@@ -3,22 +3,21 @@ title: Créer des applications clientes pour les données FILESTREAM | Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0699d7d270536c81b254694be5fad273bbc207dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 20573362cc8eb41c3b6741bbc6efb8f6a3f9c9f5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094299"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>Créer des applications clientes pour les données FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51671808"
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT ()](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md) retourne un jeton qui représente la transaction actuelle d’une session. Une application utilise ce jeton pour lier des opérations de diffusion en continu de système de fichiers FILESTREAM à la transaction.  
   
--   L' [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L'application utilise le descripteur pour transmettre en continu les données FILESTREAM et peut ensuite passer le descripteur aux API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
+-   L' [API OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) obtient un descripteur de fichier Win32. L’application utilise le descripteur pour diffuser les données FILESTREAM et peut ensuite le passer aux API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si l'application appelle toute autre API en utilisant le descripteur, une erreur ERROR_ACCESS_DENIED est retournée. L'application doit fermer le descripteur à l'aide de [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428).  
   
  Tout accès au conteneur de données FILESTREAM est exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent être exécutées dans la même transaction afin de maintenir la cohérence entre les données SQL et les données FILESTREAM.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "51671808"
  [!code-sql[FILESTREAM#FS_GET_TRANSACTION_CONTEXT](../../relational-databases/blob/codesnippet/tsql/create-client-applicatio_2.sql)]  
   
 ###  <a name="handle"></a> Obtention d'un descripteur de fichier Win32  
- Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le descripteur retourné peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
+ Pour obtenir un descripteur de fichier Win32, appelez l’API OpenSqlFilestream. Cette API est exportée à partir du fichier sqlncli.dll. Le descripteur renvoyé peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Les exemples suivants montrent comment obtenir un descripteur de fichier Win32 et l'utiliser pour lire et écrire des données dans un BLOB FILESTREAM.  
   
  [!code-cs[FILESTREAM#FS_CS_ReadAndWriteBLOB](../../relational-databases/blob/codesnippet/csharp/create-client-applicatio_3.cs)]  
   

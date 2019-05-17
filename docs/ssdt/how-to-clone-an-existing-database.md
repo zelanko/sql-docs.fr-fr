@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818756"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090112"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Procédure : cloner une base de données existante
-Cette tâche utilise certaines des étapes que vous avez apprises aux cours des procédures précédentes pour créer une nouvelle base de données et déplacer des données existantes. En outre, il utilise les étapes abordées dans [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) pour synchroniser le schéma de base de données source et de projet.  
+# <a name="how-to-clone-an-existing-database"></a>Procédure : Cloner une base de données existante
+Cette tâche utilise certaines des étapes que vous avez apprises aux cours des procédures précédentes pour créer une nouvelle base de données et déplacer des données existantes. En outre, elle utilise les étapes abordées dans [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) pour synchroniser le schéma de base de données source et de projet.  
   
 Ces étapes vous permettront de créer facilement une base de données de développement ou de test à partir d'une base de données de production avec un schéma et des données identiques. Vous pouvez ensuite continuer à développer la base de données de test en mode connecté, ou à créer un projet de base de données à des fins de développement et de test en mode hors connexion, et tout cela sans interrompre le fonctionnement de la base de données de production.  
   
@@ -34,7 +34,7 @@ Ces étapes vous permettront de créer facilement une base de données de dével
   
 3.  Renommez la nouvelle base de données en **TradeDev**.  
   
-4.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Comparaison de schémas**. Suivez les étapes de la rubrique [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) en sélectionnant la base de données **Trade** d'origine comme source et la nouvelle base de données **TradeDev** comme cible. Ainsi, la base de données **TradeDev** sera mise à jour avec le schéma de la base de données **Trade**.  
+4.  Dans l’**Explorateur d'objets SQL Server**, cliquez avec le bouton droit sur **Trade** et sélectionnez **Comparaison de schémas**. Suivez les étapes décrites dans la rubrique [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) en sélectionnant la base de données **Trade** d’origine comme source et la nouvelle base de données **TradeDev** comme cible. Ainsi, la base de données **TradeDev** sera mise à jour avec le schéma de la base de données **Trade**.  
   
 ### <a name="to-replicate-data"></a>Pour répliquer les données  
   
@@ -55,5 +55,5 @@ Ces étapes vous permettront de créer facilement une base de données de dével
 7.  Utilisez l'Éditeur de code pour vérifier que toutes les tables de la nouvelle base de données `TradeDev` ont été remplies.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

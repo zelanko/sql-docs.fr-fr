@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a20544fb4f19611071f28b7cfc5f16fd7e462ce
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665424"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775952"
 ---
 # <a name="polybase-features-and-limitations"></a>Fonctionnalités et limitations de PolyBase
 
@@ -31,16 +31,16 @@ Ce tableau contient les principales fonctionnalités de PolyBase et les produits
 ||||||
 |-|-|-|-|-|   
 |**Fonctionnalité**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|non|Oui|
-|Importer des données depuis Hadoop|Oui|non|non|Oui|
-|Exporter des données vers Hadoop  |Oui|non|non| Oui|
-|Interroger, importer, exporter vers Azure HDInsights |non|non|non|non
-|Transmettre des calculs de requête à Hadoop|Oui|non|non|Oui|  
-|Importer des données à partir du stockage d’objets blob Azure|Oui|non|Oui|Oui| 
-|Exporter des données vers le stockage d’objets blob Azure|Oui|non|Oui|Oui|  
-|Importer des données depuis Azure Data Lake Store|non|non|Oui|non|    
-|Exporter des données depuis Azure Data Lake Store|non|non|Oui|non|
-|Exécuter des requêtes PolyBase à partir des outils décisionnels Microsoft|Oui|non|Oui|Oui|   
+|Interroger des données Hadoop avec [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|Non|Oui|
+|Importer des données depuis Hadoop|Oui|Non|Non|Oui|
+|Exporter des données vers Hadoop  |Oui|Non|Non| Oui|
+|Interroger, importer, exporter vers Azure HDInsights |Non|Non|Non|Non
+|Transmettre des calculs de requête à Hadoop|Oui|Non|Non|Oui|  
+|Importer des données à partir du stockage d’objets blob Azure|Oui|Non|Oui|Oui| 
+|Exporter des données vers le stockage d’objets blob Azure|Oui|Non|Oui|Oui|  
+|Importer des données depuis Azure Data Lake Store|Non|Non|Oui|Non|    
+|Exporter des données depuis Azure Data Lake Store|Non|Non|Oui|Non|
+|Exécuter des requêtes PolyBase à partir des outils décisionnels Microsoft|Oui|Non|Oui|Oui|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>Transmission des calculs prise en charge par les opérateurs T-SQL
 
@@ -49,18 +49,20 @@ Dans SQL Server et APS, tous les opérateurs T-SQL ne peuvent pas être transmis
 ||||
 |-|-|-| 
 |**Type d’opérateur**|**Transmissible à Hadoop**|**Transmissible au stockage d’objets blob**|
-|Projections de colonne|Oui|non|
-|Prédicats|Oui|non|
-|Agrégats|Partielle|non|
-|Jointures entre les tables externes|non|non|
-|Jointures entre les tables externes et les tables locales|non|non|
-|Tris|non|non|
+|Projections de colonne|Oui|Non|
+|Prédicats|Oui|Non|
+|Agrégats|Partielle|Non|
+|Jointures entre les tables externes|Non|Non|
+|Jointures entre les tables externes et les tables locales|Non|Non|
+|Tris|Non|Non|
 
 L’agrégation partielle signifie qu’une agrégation finale doit se produire une fois que les données ont atteint SQL Server, mais qu’une partie de l’agrégation se produit dans Hadoop. Il s’agit d’une méthode courante de calcul des agrégations dans les systèmes à traitement parallèle massif.  
 
 ## <a name="known-limitations"></a>Limitations connues
 
 PolyBase présente les limitations suivantes :
+
+- Pour pouvoir utiliser PolyBase, vous devez disposer des autorisations de niveau serveur de contrôle ou sysadmin pour la base de données.
 
 - La taille de ligne maximale, qui comprend la longueur totale des colonnes à longueur variable, ne peut pas dépasser 32 Ko dans SQL Server ou 1 Mo dans Azure SQL Data Warehouse.
 

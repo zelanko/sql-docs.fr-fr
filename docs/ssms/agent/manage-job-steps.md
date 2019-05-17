@@ -22,16 +22,16 @@ helpviewer_keywords:
 - ActiveX scripting jobs [SQL Server]
 - job steps [Analysis Services]
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b904d0040645beb3abc625ab9c9ccb46cc7d80b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2faec2479ab664d6eaf49c3076b84d42145daf07
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211588"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105867"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Lorsque vous utilisez un programme exécutable ou une commande du système d'exp
   
 -   le code de sortie du processus renvoyé en cas de succès de la commande ;  
   
--   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d'un programme externe, il s'agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
+-   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d’un programme externe, il s’agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     > Vous devez indiquer le chemin d'accès complet au fichier exécutable si ce dernier ne réside pas dans un répertoire spécifié dans le chemin système ou le chemin d'accès de l'utilisateur sous le nom duquel l'étape de travail est exécutée.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 46a65938bdac731d9922c1ccdb5f95eb8a05f700
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: a2bae29b9292ecd36950c131389a8eb9ecc7253d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327999"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104879"
 ---
 # <a name="create-a-project"></a>Créer un projet
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
     **Modèles**  
     Dans la zone **Modèles** , sélectionnez un modèle. Une brève description du modèle de projet sélectionné apparaît sous la zone **Modèles** .  
   
-    **Nom**  
+    **Name**  
     Entrez le nom du projet de script que vous voulez créer. Un dossier avec un nom identique à celui du projet est également créé à l’emplacement indiqué dans le champ **Emplacement** . Pour certains projets, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] crée des fichiers sources et de prise en charge, qu'il place dans le dossier du nouveau projet.  
   
     > [!NOTE]  
@@ -93,7 +93,7 @@ Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution exista
   
 4.  Cliquez sur **OK**.  
   
-Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L'emplacement par défaut des dossiers de projets de scripts est le suivant : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
+Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut des dossiers de projets de scripts est le suivant : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a> Voir aussi
 

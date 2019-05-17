@@ -12,15 +12,15 @@ f1_keywords:
 - sql.data.tools.datacompare.watermark.f1
 - sql.data.tools.datacompare.connection.objectselection.f1
 ms.assetid: 2148e517-ed42-41c6-b753-1ac625f594c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a481e5c603f5bf427b7d86dd19203fd899694b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685727"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090126"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
 Vous pouvez comparer les données contenues dans deux bases de données. Les bases de données que vous comparez sont appelées *source* et *cible*.  
@@ -39,7 +39,7 @@ Une fois la comparaison terminée, vous pouvez effectuer d'autres actions :
 Pour plus d'informations, consultez [Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md).  
   
 > [!NOTE]  
-> Vous pouvez également comparer le *schéma* de deux bases de données ou de deux versions de la même base de données. Pour plus d'informations, consultez [Procédure : utiliser la comparaison de schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
+> Vous pouvez également comparer le *schéma* de deux bases de données ou de deux versions de la même base de données. Pour plus d’informations, consultez [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md).  
   
 ## <a name="CompareDatabaseData"></a>Comparaison des données d'une base de données  
   

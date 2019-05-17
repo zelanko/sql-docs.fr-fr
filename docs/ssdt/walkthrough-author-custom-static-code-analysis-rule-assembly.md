@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406236"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090164"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procédure pas à pas : création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
 Cette procédure pas à pas montre les étapes permettant de créer une règle d’analyse du code SQL Server. La règle créée lors de cette procédure pas à pas sert à éviter la présence d'instructions WAITFOR DELAY dans les procédures stockées, les déclencheurs et les fonctions.  
@@ -250,7 +250,7 @@ Ensuite, vous ajoutez un fichier de ressources qui définit le nom de la règle,
   
 6.  Définissez quatre chaînes de ressources comme suit :  
   
-    |Nom   |Valeur|  
+    |Créer une vue d’abonnement|Valeur|  
     |--------|---------|  
     |AvoidWaitForDelay_ProblemDescription|L'instruction WAITFOR DELAY a été trouvée dans {0}.|  
     |AvoidWaitForDelay_RuleName|Évitez d'utiliser des instructions WaitFor Delay dans des procédures stockées, des fonctions et des déclencheurs.|  
@@ -539,7 +539,7 @@ Enfin, la nouvelle règle s’affiche dans le projet SQL Server. Pour afficher l
   
 3.  Cliquez sur **Analyse du code**. Vous devez voir une nouvelle catégorie nommée RuleSamples.CategorySamples.  
   
-4.  Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : Évitez d'utiliser des instructions WaitFor Delay dans des procédures stockées, des fonctions et des déclencheurs.  
+4.  Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : éviter d’utiliser des instructions WAITFOR DELAY dans des procédures stockées, des fonctions et des déclencheurs.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Vue d’ensemble de l’extensibilité pour les règles d’analyse du code de base de données](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  

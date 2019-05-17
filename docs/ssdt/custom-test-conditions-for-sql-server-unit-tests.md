@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b136f2707012860ba7be88f61cd5f6de17ec148d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6573a8667224eacef61c9c22cb4ede026e7d0a61
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635887"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106334"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Conditions de test personnalisées pour les tests unitaires SQL Server
 Il est possible d’ajouter des conditions de test personnalisées aux tests unitaires SQL Server. Cependant, vous devez d'abord installer la condition de test pour pouvoir l'utiliser, que vous ayez créé l'extension ou que vous en installiez une créée par un autre utilisateur.  
@@ -39,11 +39,11 @@ Pour installer une condition de test personnalisée, copiez l’assembly signé 
   
 Pour plus d’informations sur les conditions de test personnalisées des tests unitaires SQL Server, voir :  
   
--   [Guide pratique : Créer des conditions de test pour le Concepteur de test unitaire SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
+-   [Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Guide pratique : Mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
--   [Procédure pas à pas : Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
+-   [Procédure pas à pas : utilisation d’une condition de test personnalisée pour vérifier le résultat d’une procédure stockée](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  

@@ -16,12 +16,12 @@ ms.assetid: 4da0e793-1ee4-4f69-a80b-45c6732a238d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bbdc659100477b7a4d5edae427ba74c76365ea3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135979"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776261"
 ---
 # <a name="identity-and-access-control-replication"></a>Identité et contrôle d'accès (réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,8 @@ ms.locfileid: "54135979"
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Gérer les connexions et les mots de passe dans la réplication
 Spécifiez les connexions et les mots de passe des agents de réplication lors de la configuration de la réplication. Après la configuration de la réplication, vous pouvez modifier les connexions et les mots de passe. Pour plus d’informations, consultez [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md). Si vous changez le mot de passe d’un compte utilisé par un agent de réplication, exécutez [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md).  
+
+Le support pour l’utilisation de MSA de groupe (gMSA) est introduit dans SQL Server 2014. Pour plus d’informations, consultez [Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) (Réplication et comptes de service administrés de groupe).
   
 ## <a name="see-also"></a> Voir aussi  
  [Atténuation des menaces et des vulnérabilités &#40;réplication&#41; ](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Modèle de sécurité de l’agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)   

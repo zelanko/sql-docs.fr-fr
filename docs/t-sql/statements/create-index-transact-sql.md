@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe34c0441e455fad18d87b5ddb5dfbc3081c378
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 0e53128745296653d3892947310d03d8acc2d780
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802310"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504123"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -118,10 +118,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 [ ; ]
   
 <object> ::=
-{
-    [ database_name. [ schema_name ] . | schema_name. ]
-    table_or_view_name
-}
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
 
 <relational_index_option> ::=
 {
@@ -370,9 +367,9 @@ Dans la syntaxe de compatibilité descendante, WITH SORT_IN_TEMPDB est équivale
 
 IGNORE_DUP_KEY = { ON | **OFF** } Spécifie la réponse d’erreur lorsqu’une opération d’insertion essaie d’insérer des valeurs de clés en double dans un index unique. L'option IGNORE_DUP_KEY s'applique uniquement aux opérations d'insertion après la création ou la régénération de l'index. Cette option n’a aucun effet lors de l’exécution de [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), d’[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) ou d’[UPDATE](../../t-sql/queries/update-transact-sql.md). La valeur par défaut est OFF.
 
-ON Un message d’avertissement s’affiche lorsque des valeurs de clé en double sont insérées dans un index unique. Seules les lignes qui violent la contrainte d'unicité échouent.
+ON : un message d’avertissement s’affiche lorsque des valeurs de clé en double sont insérées dans un index unique. Seules les lignes qui violent la contrainte d'unicité échouent.
 
-OFF Un message d’erreur s’affiche lorsque des valeurs de clé en double sont insérées dans un index unique. L'intégralité de l'opération INSERT sera restaurée.
+OFF : un message d’erreur s’affiche lorsque des valeurs de clé en double sont insérées dans un index unique. L'intégralité de l'opération INSERT sera restaurée.
 
 IGNORE_DUP_KEY ne peut pas être activé (ON) dans le cas d'index créés sur une vue, d'index non uniques, d'index XML, d'index spatiaux et d'index filtrés.
 
@@ -514,9 +511,9 @@ Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. S
 
 \<partition_number_expression> peut être spécifié des manières suivantes :
 
-- Spécifiez le numéro de partition, par exemple : ON PARTITIONS (2).
-- Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).
-- Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8).
+- Spécifiez le numéro de partition, par exemple : ON PARTITIONS (2).
+- Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).
+- Spécifiez à la fois des plages et des partitions individuelles, par exemple : ON PARTITIONS (2, 4, 6 TO 8).
 
 \<range> peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : ON PARTITIONS (6 TO 8).
 
@@ -752,12 +749,12 @@ La compression de données est décrite dans la rubrique [Compression de donnée
 Les restrictions suivantes s'appliquent aux index partitionnés :
 
 - Vous ne pouvez pas modifier le paramètre de compression d'une partition unique si la table possède des index non alignés.
-- La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l'index.
-- La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l'index.
+- La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.
+- La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.
 
 Pour évaluer la façon dont la modification de l’état de compression affecte une table, un index ou une partition, utilisez la procédure stockée [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .
 
@@ -788,7 +785,7 @@ CREATE INDEX IX_VendorID ON dbo.ProductVendor (VendorID DESC, Name ASC, Address 
 CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
-### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>b. Créer un index composite rowstore non-cluster simple
+### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. Créer un index composite rowstore non-cluster simple
 
 L’exemple suivant crée un index composite non-cluster sur les colonnes `SalesQuota` et `SalesYTD` de la table `Sales.SalesPerson`.
 

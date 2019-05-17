@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751625"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101898"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts des tests unitaires SQL Server
 Chaque test unitaire SQL Server contient une action unique d'avant test, de test, et d'après test. Chacune de ces actions contient à son tour les éléments suivants :  
@@ -49,7 +49,7 @@ Il est important de comprendre l'ordre dans lequel chaque script s'exécute. Bie
 ![Tests de deux unités de base de données](../ssdt/media/twodatabaseunittests.png "Tests de deux unités de base de données")  
   
 > [!NOTE]  
-> Si un déploiement de projet de base de données SQL Server a été configuré, il a lieu au début de la série de tests, sous la chaîne de connexion de contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+> Si un déploiement de projet de base de données SQL Server a été configuré, il a lieu au début de la série de tests, sous la chaîne de connexion de contexte privilégié. Pour plus d’informations, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 ## <a name="initialization-and-cleanup-scripts"></a>Scripts d'initialisation et de nettoyage  
 Dans le Concepteur de test unitaire SQL Server, les scripts TestInitialize et TestCleanup sont appelés scripts courants. L'exemple précédent suppose que les deux tests unitaires font partie de la même classe de test. Par conséquent, ils partagent les mêmes scripts TestInitialize et TestCleanup. Pour tous les tests unitaires d'une classe unique de test, cela est toujours le cas. Toutefois, si votre série de tests contient des tests unitaires de différentes classes de test, les scripts courants de la classe de test associée seront exécutés avant et après l'exécution des tests unitaires.  

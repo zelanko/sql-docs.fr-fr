@@ -38,15 +38,15 @@ f1_keywords:
 - sql.data.tools.dbassemblyinfo
 - sql.data.tools.extendedpropertieseditor.dialog
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78dde89a5554dbd548cc2d1d5d4b1436f08c9662
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099387"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 Vous utilisez des paramètres de projet de base de données pour contrôler des aspects de vos configurations de build, de débogage et de bases de données. Ces paramètres peuvent être répartis dans les catégories suivantes :  
@@ -222,7 +222,7 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
 |Chaîne de connexion cible|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|Spécifie les informations de connexion du serveur de base de données que vous souhaitez cibler pour la configuration de build spécifiée. La chaîne de connexion par défaut est spécifiée par rapport à une instance LocalDB SQL Server et une base de données.|  
 |Déployer les propriétés de la base de données|Oui|Spécifie si les paramètres DatabaseProerties.DatabaseProperties sont déployés ou mis à jour lorsque vous déployez le projet de base de données.|  
 |Toujours recréer la base de données|Non|Spécifie si la base de données doit être supprimée et recréée au lieu d'effectuer une mise à niveau incrémentielle. Vous pouvez cocher cette case par exemple si vous souhaitez exécuter des tests unitaires de bases de données par rapport à un déploiement propre de la base de données. Si cette case à cocher est désactivée, la base de données existante sera mise à jour au lieu d'être supprimée et recréée.|  
-|Bloquer le déploiement incrémentiel si une perte de données peut se produire|oui|Spécifie si le déploiement s'arrête si une mise à jour entraîne la perte de données. Si cette case à cocher est activée, les modifications susceptibles de créer une perte de données entraînent l'arrêt du déploiement avec une erreur, ce qui empêche toute perte des données. Par exemple, le déploiement s'arrête si une colonne `varchar(50)` a été remplacée par une colonne `varchar(30)`.<br /><br />**REMARQUE :** Le déploiement est bloqué uniquement si les tables dans lesquelles une perte de données peut se produire contiennent des données. Le déploiement se poursuit si aucune donnée n'a été perdue.|  
+|Bloquer le déploiement incrémentiel si une perte de données peut se produire|oui|Spécifie si le déploiement s'arrête si une mise à jour entraîne la perte de données. Si cette case à cocher est activée, les modifications susceptibles de créer une perte de données entraînent l'arrêt du déploiement avec une erreur, ce qui empêche toute perte des données. Par exemple, le déploiement s'arrête si une colonne `varchar(50)` a été remplacée par une colonne `varchar(30)`.<br /><br />**REMARQUE :** le déploiement est bloqué uniquement si les tables dans lesquelles une perte de données peut se produire contiennent des données. Le déploiement se poursuit si aucune donnée n'a été perdue.|  
 |Objets DROP dans la cible mais pas dans le projet|non|Spécifie si les objets qui sont dans la base de données cible, mais pas dans le projet de base de données, doivent être supprimés dans le cadre du script de déploiement. Vous pouvez exclure des fichiers de votre projet pour les supprimer temporairement de votre script de compilation. Toutefois, il est possible que vous souhaitiez laisser les versions existantes de ces objets dans la base de données cible. Cette case à cocher n'a aucun effet si la case **Toujours recréer la base de données** est cochée, car la base de données sera supprimée.|  
 |Ne pas utiliser d'instructions ALTER ASSEMBLY pour mettre à jour les types CLR|Non|Spécifie si les instructions ALTER ASSEMBLY permettent de mettre à jour des types CLR (Common Language Run-time) ou si l'objet qui instancie le type CLR doit plutôt être supprimé et recréé lors du déploiement de modifications.|  
 |Avancé...|Non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  

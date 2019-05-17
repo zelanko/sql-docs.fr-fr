@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e413fec31f27231ef52957aff03bbacb082fb782
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d18a4654fc14aa5c0997734184ec700fad3162
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659367"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095509"
 ---
 # <a name="set-up-the-job-history-log"></a>Configurer le journal d'historique des travaux
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Cette rubrique décrit la façon de définir le journal de l'historique des trav
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
 ### <a name="Security"></a>Sécurité  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
 **Pour définir le journal d'historique des travaux**  

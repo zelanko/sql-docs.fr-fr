@@ -11,15 +11,15 @@ f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
 ms.assetid: e61e830d-9fcd-45e7-b7b4-93a42155dd56
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96effd7670d22461f6c347c9220f7a3c26b7f611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4c14a1e4f0ef2196cf2cebfd5e1c531cf7878e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624517"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101946"
 ---
 # <a name="project-oriented-offline-database-development"></a>Développement de base de données hors connexion orienté projet
 Cette section décrit les fonctionnalités fournies par SQL Server Data Tools (SSDT) pour la création, la génération, le débogage et la publication d’un projet de base de données.  
@@ -37,18 +37,18 @@ Cette section décrit les fonctionnalités fournies par SQL Server Data Tools (S
 |[Boîte de dialogue Ajouter une référence de la base de données](../ssdt/add-database-reference-dialog-box.md)|Décrit les différentes méthodes d'ajout d'une référence de base de données.|  
 |[Boîte de dialogue Rechercher des mises à jour](../ssdt/check-for-updates-dialog-box.md)|Décrit la manière dont SQL Server Data Tools peut rechercher des mises à jour du produit.|  
 |[Paramètres des projets de base de données](../ssdt/database-project-settings.md)|Décrit les paramètres de projet permettant de contrôler des aspects de vos configurations de build et de bases de données.|  
-|[Guide pratique : Parcourir les objets d’un projet de base de données SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|L’Explorateur d’objets SQL Server dans Visual Studio contient à présent un nœud Projets dédié, sous lequel tous les projets de base de données SQL Server de la solution sont regroupés dans une hiérarchie de type SQL Server Management Studio.|  
+|[Procédure : parcourir les objets d’un projet de base de données SQL Server](../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md)|L’Explorateur d’objets SQL Server dans Visual Studio contient à présent un nœud Projets dédié, sous lequel tous les projets de base de données SQL Server de la solution sont regroupés dans une hiérarchie de type SQL Server Management Studio.|  
 |[Fenêtre Opérations de Data Tools](../ssdt/data-tools-operations-window.md)|Décrit la fenêtre **Opérations des outils de données** , qui affiche la progression de certaines opérations et vous avertit en cas d'erreurs.|  
 |[Options de l’Éditeur Transact-SQL](../ssdt/transact-sql-editor-options.md)|Décrit les options de Transact\-SQL.|  
-|[Guide pratique : Créer un projet de base de données](../ssdt/how-to-create-a-new-database-project.md)|Créez un projet de base de données et importez un schéma de base de données existant.|  
-|[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Comparez les schémas d'une base de données et d'un projet et synchronisez.|  
-|[Guide pratique : Générer et déployer dans une base de données locale](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Utilisez l’instance SQL Server locale à la demande, qui est activée lors du débogage d’un projet de base de données.|  
-|[Guide pratique : Modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Modifiez la plateforme SQL Server cible de votre projet en une instance SQL Server prise en charge et validez la syntaxe.|  
-|[Guide pratique : Créer une capture instantanée d’un projet](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Créez un proxy en lecture seule du schéma de la base de données et revenez au projet source lorsque des modifications indésirables sont appliquées au projet.|  
-|[Guide pratique : Utiliser des objets Microsoft SQL Server 2012 dans un projet](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Ajoutez un nouvel objet séquence à votre projet.|  
-|[Guide pratique : Travailler avec des objets de base de données CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Créez et publiez des objets CLR dans le projet de base de données SQL Server Data Tools.|  
-|[Guide pratique : Convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convertissez une base de données SQL Server, des objets CLR et des projets d’application de la couche Données existants créés dans Visual Studio 2010 en projet de base de données SQL Server Data Tools.|  
-|[Guide pratique : Spécifier des scripts de prédéploiement et de post-déploiement](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Explique comment utiliser les scripts que vous souhaitez exécuter avant ou après le déploiement de votre base de données.|  
+|[Procédure : créer un nouveau projet de base de données](../ssdt/how-to-create-a-new-database-project.md)|Créez un projet de base de données et importez un schéma de base de données existant.|  
+|[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)|Comparez les schémas d'une base de données et d'un projet et synchronisez.|  
+|[Procédure : générer et déployer dans une base de données locale](../ssdt/how-to-build-and-deploy-to-a-local-database.md)|Utilisez l’instance SQL Server locale à la demande, qui est activée lors du débogage d’un projet de base de données.|  
+|[Procédure : modifier la plateforme cible et publier un projet de base de données](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)|Modifiez la plateforme SQL Server cible de votre projet en une instance SQL Server prise en charge et validez la syntaxe.|  
+|[Procédure : créer une capture instantanée d’un projet](../ssdt/how-to-create-a-snapshot-of-a-project.md)|Créez un proxy en lecture seule du schéma de la base de données et revenez au projet source lorsque des modifications indésirables sont appliquées au projet.|  
+|[Procédure : utiliser des objets Microsoft SQL Server 2012 dans votre projet](../ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md)|Ajoutez un nouvel objet séquence à votre projet.|  
+|[Procédure : utilisation des objets de base de données CLR](../ssdt/how-to-work-with-clr-database-objects.md)|Créez et publiez des objets CLR dans le projet de base de données SQL Server Data Tools.|  
+|[Procédure : convertir des projets de base de données Visual Studio 2010 en projets de base de données SQL Server et recibler vers une autre plateforme](../ssdt/how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md)|Convertissez une base de données SQL Server, des objets CLR et des projets d’application de la couche Données existants créés dans Visual Studio 2010 en projet de base de données SQL Server Data Tools.|  
+|[Procédure : spécifier les scripts de prédéploiement et de post-déploiement](../ssdt/how-to-specify-predeployment-or-postdeployment-scripts.md)|Explique comment utiliser les scripts que vous souhaitez exécuter avant ou après le déploiement de votre base de données.|  
   
 ## <a name="related-sections"></a>Sections connexes  
 [Gérer des tables et des relations, et résoudre les erreurs](../ssdt/manage-tables-relationships-and-fix-errors.md)  

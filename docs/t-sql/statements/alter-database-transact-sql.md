@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203066"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -72,6 +72,9 @@ ALTER DATABASE Le présent article indique la syntaxe à utiliser et les informa
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Indique la syntaxe et les informations associées des options [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] d’ALTER DATABASE pour configurer une base de données secondaire sur un réplica secondaire d’un groupe de disponibilité Always On.
 
 [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) Indique la syntaxe et les informations associées des options SET d’ALTER DATABASE relatives aux niveaux de compatibilité des bases de données.
+
+[MODIFIER LA CONFIGURATION DÉLIMITÉE À LA BASE DE DONNÉES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Indique la syntaxe associée aux configurations étendues à la base de données utilisées pour les paramètres individuels au niveau de la base de données, tels que l’optimisation des requêtes et les comportements associés à l’exécution des requêtes. 
 
 ## <a name="syntax"></a>Syntaxe
 

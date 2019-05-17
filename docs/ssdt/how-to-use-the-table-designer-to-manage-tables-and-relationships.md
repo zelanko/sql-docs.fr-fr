@@ -1,5 +1,5 @@
 ---
-title: 'Guide pratique : Utiliser le Concepteur de tables pour gérer les tables et les relations | Microsoft Docs'
+title: 'Procédure : utiliser le Concepteur de tables pour gérer les tables et les relations | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652870"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096864"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : utiliser le Concepteur de tables pour gérer les tables et les relations
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : Utiliser le Concepteur de tables pour gérer les tables et les relations
 Le Concepteur de tables offre une expérience visuelle parallèle à l’Éditeur Transact\-SQL pour la création et la modification de la structure des tables, y compris des objets de programmation propres aux tables, pour les bases de données SQL Server.  Il s’exécute lorsque l’utilisateur crée une table pour une base de données connectée ou un projet, ou double-clique pour modifier une table dans l’Explorateur d’objets SQL Server ou l’Explorateur de solutions.  
   
 Le concepteur comprend la Grille Colonnes, un volet de script et un volet contextuel. La Grille Colonnes répertorie toutes les colonnes de la table. Vous pouvez ajouter, modifier et supprimer des colonnes dans cette grille.  Le volet contextuel présente un affichage logique de la définition de table (clés, indices, contraintes, déclencheurs, etc.) et permet de sélectionner un objet pour mettre en surbrillance ses relations avec chaque colonne. Vous pouvez aussi ajouter de nouveaux objets à la table dans ce volet et modifier les propriétés d'un objet sélectionné dans la grille des propriétés. Le volet de script affiche la définition de la structure de la table, et met en surbrillance le script des objets sélectionnés dans le volet contextuel ou la Grille Colonnes. Vous pouvez modifier le script côte à côte avec la Grille Colonnes et le volet contextuel dans l'affichage. Les modifications apportées à l'un des trois volets seront propagées aux deux autres immédiatement.  
@@ -57,5 +57,5 @@ Le concepteur comprend la Grille Colonnes, un volet de script et un volet contex
     Notez que l'expérience de création et modification d'entités de base de données pour un projet en mode hors connexion est identique à celle d'exécution des tâches avec une base de données connectée.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Guide pratique : Créer des objets de base de données avec le Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)  
+[Procédure : créer des objets de base de données à l’aide du Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

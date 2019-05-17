@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b2e04e5b63000bcdd7100c297ecd9d90dd33f27
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125579"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105588"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54125579"
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des comptes de connexion. L'étendue d'un compte de connexion est l'intégralité du [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion. Les autorisations dont l’étendue englobe la totalité de l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (par exemple, l’autorisation **CREATE ENDPOINT** ) peuvent être accordées à un compte de connexion.  
   
-> **REMARQUE :** Lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données autonome. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+> **REMARQUE :** Lors d’une connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’identité est validée sur la base de données MASTER. Faites appel à des utilisateurs de base de données autonome pour authentifier les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] au niveau de la base de données. Aucune connexion n’est nécessaire pour les utilisateurs de base de données autonome. Une base de données autonome est une base de données qui est isolée d'autres bases de données et de l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (et la base de données MASTER) qui héberge la base de données. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les utilisateurs de base de données autonome pour Windows et l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si vous utilisez [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], associez les utilisateurs de base de données autonome à des règles de pare-feu au niveau de la base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ##  <a name="Security"></a> Sécurité  
 
@@ -183,7 +183,7 @@ ms.locfileid: "54125579"
   
 4.  Si vous sélectionnez **Tous les objets des types...**, dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- **Nom**  
+ **Name**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
   
  **Type**  
@@ -264,7 +264,7 @@ ms.locfileid: "54125579"
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md).  
   
-##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé une connexion  
+##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](../../../relational-databases/security/authentication-access/join-a-role.md).  

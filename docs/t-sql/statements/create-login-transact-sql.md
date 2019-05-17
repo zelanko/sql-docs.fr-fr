@@ -28,16 +28,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797039"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095338"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
 Crée une connexion pour des bases de données SQL Server, SQL Database, SQL Data Warehouse ou Analytics Platform System. Cliquez sur l’un des onglets suivants pour accéder à la syntaxe, aux arguments, aux remarques et aux exemples propres à chaque version.
+
+CREATE LOGIN participe aux transactions. Si CREATE LOGIN est exécutée dans une transaction et que la transaction est restaurée, la création de la connexion est restaurée. Si elle est exécutée dans une transaction, la connexion créée ne peut pas être utilisée jusqu’à ce que la transaction soit validée.
 
 Pour plus d’informations sur les conventions de la syntaxe, consultez [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 

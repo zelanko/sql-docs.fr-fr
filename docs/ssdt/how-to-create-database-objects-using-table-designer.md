@@ -1,5 +1,5 @@
 ---
-title: "Procédure : créer des objets de base de données à l'aide du Concepteur de tables | Microsoft Docs"
+title: 'Procédure : créer des objets de base de données à l’aide du Concepteur de tables | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396142"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098146"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : créer des objets de base de données à l'aide du Concepteur de tables
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procédure : Créer des objets de base de données avec le Concepteur de tables
 Non seulement le nouveau nœud **SQL Server** de l'**Explorateur d'objets SQL Server** est très similaire à SSMS visuellement, mais vous pouvez aussi créer de nouveaux objets à l'aide de menus contextuels dont le fonctionnement est semblable à celui de leurs homologues SSMS.  
   
 Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Bases de données**. De la même façon, vous pouvez sélectionner une base de données spécifique et créer ou modifier des définitions de tables et leurs objets de programmation associés à la volée à l'aide du nouveau Concepteur de tables. Dans le Concepteur de tables, vous pouvez basculer vers un volet de script qui vous permet de modifier directement le script qui définit cette table.  
@@ -57,21 +57,21 @@ Par exemple, vous pouvez créer une nouvelle base de données sous le nœud **Ba
 5.  Ajoutez une autre colonne. Entrez **Adresse** pour le champ **Nom**, **nvarchar (MAX)** pour **Type de données**, et désactivez le champ **Autoriser les valeurs NULL**.  
   
     > [!WARNING]  
-    > Lorsque vous modifiez des objets d'une base de données connectée, ne les enregistrez pas sur le disque local. Pour enregistrer correctement vos modifications dans la base de données, suivez les étapes de la prochaine [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Lorsque vous modifiez des objets d'une base de données connectée, ne les enregistrez pas sur le disque local. Pour enregistrer les modifications apportées à la base de données, suivez les étapes de la [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) suivante.  
   
 6.  Répétez les étapes précédentes pour créer une autre table nommée **Customer**. Cette fois-ci, ajoutez les colonnes suivantes à la table Customer à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Customer]`.  
   
-    |Nom   |Type de données|**Null autorisé**|  
+    |Créer une vue d’abonnement|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
     |Id|INT|unchecked|  
-    |Nom   |nvarchar (128)|unchecked|  
+    |Créer une vue d’abonnement|nvarchar (128)|unchecked|  
   
 7.  Créez une autre table nommée **Products**. Ajoutez les colonnes suivantes à la table Products à l'aide de la Grille Colonnes. Et n’oubliez pas de modifier le script afin que le nom de la table soit `[dbo].[Products]`.  
   
-    |Nom   |Type de données|**Null autorisé**|  
+    |Créer une vue d’abonnement|Type de données|**Null autorisé**|  
     |--------|-------------|-------------------|  
     |Id|INT|unchecked|  
-    |Nom   |nvarchar (128)|unchecked|  
+    |Créer une vue d’abonnement|nvarchar (128)|unchecked|  
     |ShelfLife|INT|checked|  
     |SupplierId|INT|checked|  
     |CustomerId|INT|checked|  

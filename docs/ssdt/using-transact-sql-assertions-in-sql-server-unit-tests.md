@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543905"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102006"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
 Dans un test unitaire SQL Server, un script de test Transact\-SQL s'exécute et retourne un résultat. Parfois, les résultats sont retournés sous la forme d'un jeu de résultats. Validez les résultats à l'aide de conditions de test. Par exemple, utilisez une condition de test pour vérifier le nombre de lignes qui ont été retournées dans un jeu de résultats spécifique ou pour vérifier le temps qui a été nécessaire à l'exécution d'un test spécifique. Pour plus d’informations sur les conditions de test, consultez [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -57,7 +57,7 @@ Où :
   
 Tous les paramètres non spécifiés sont ignorés. Vous passez ces paramètres à l'instruction RAISERROR dans votre code de base de données. Si vous spécifiez MatchFirstError = true, l'attribut correspond à une des erreurs SqlErrors dans l'exception. Le comportement par défaut (MatchFirstError = truei) n'est utilisé que pour correspondre à la première erreur qui se produit.  
   
-Pour obtenir un exemple montrant comment utiliser les exceptions attendues et un test unitaire de SQL Server négatif, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Pour obtenir un exemple d’utilisation des exceptions attendues et de test unitaire négatif SQL Server, consultez [Procédure pas à pas : création et exécution d’un test unitaire SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Instruction RAISERROR  
   
@@ -79,11 +79,11 @@ où :
   
 @ErrorState est un entier aléatoire compris entre 1 et 127. Utilisez cet entier pour distinguer les occurrences d'une erreur qui se produit à différents emplacements dans le code.  
   
-Pour plus d'informations, consultez [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un exemple d’utilisation de RAISERROR dans un test unitaire SQL Server est fourni dans la rubrique,[Procédure : écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
+Pour plus d'informations, consultez [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un exemple d’utilisation de l’instruction RAISERROR dans un test unitaire SQL Server est disponible dans la rubrique [Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
-[Vérification du code de la base de données à l'aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
+[Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Procédure : ouvrir un test unitaire SQL Server à modifier](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 547fb6e8bc880fc98d4cf1f3592e550edfaab735
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666248"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101958"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement
 Visual Studio fournit des points d'extensibilité que vous pouvez utiliser pour modifier le comportement des actions de génération et de déploiement pour les projets de base de données.  
@@ -47,8 +47,8 @@ En outre, vous pouvez exposer des paires personnalisées d'arguments nom/valeurs
   
 |**Tâches courantes**|**Contenu de prise en charge**|  
 |--------------------|--------------------------|  
-|**En savoir plus sur les points d'extensibilité :** vous pouvez vous documenter au sujet des classes de base que vous utilisez pour implémenter des contributeurs de génération et de déploiement.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
-|**Créer des exemples de contributeurs :** apprenez les étapes nécessaires pour créer un contributeur de génération ou de déploiement. Si vous suivez ces procédures pas à pas, vous serez en mesure de :<br /><br />-   Créer un contributeur de génération qui génère un rapport répertoriant tous les éléments du modèle.<br />-   Créer un contributeur de déploiement qui modifie le plan de déploiement avant son exécution.<br />-   Créer un contributeur de déploiement qui génère un rapport de déploiement lorsque vous déployez un projet SQL.<br /><br />Vous pouvez créer tous les contributeurs dans un seul assembly ou sur plusieurs assemblys, selon la façon dont vous souhaitez qu'ils soient distribués à votre équipe.|[Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
+|**En savoir plus sur les points d’extensibilité :** vous pouvez vous documenter au sujet des classes de base que vous utilisez pour implémenter des contributeurs de génération et de déploiement.|[BuildContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.buildcontributor.aspx)<br /><br />[DeploymentContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentcontributor.aspx)|  
+|**Créer des exemples de contributeurs :** apprenez les étapes nécessaires pour créer un contributeur de génération ou de déploiement. Si vous suivez ces procédures pas à pas, vous serez en mesure de :<br /><br />-   Créer un contributeur de génération qui génère un rapport répertoriant tous les éléments du modèle.<br />-   Créer un contributeur de déploiement qui modifie le plan de déploiement avant son exécution.<br />-   Créer un contributeur de déploiement qui génère un rapport de déploiement lorsque vous déployez un projet SQL.<br /><br />Vous pouvez créer tous les contributeurs dans un seul assembly ou sur plusieurs assemblys, selon la façon dont vous souhaitez qu'ils soient distribués à votre équipe.|[Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)<br /><br />[Procédure pas à pas : étendre le déploiement du projet de base de données pour modifier le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md)<br /><br />[Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)|  
   
 ## <a name="see-also"></a> Voir aussi  
 [Définir des conditions personnalisées pour les tests unitaires SQL](https://msdn.microsoft.com/library/jj860449(v=vs.103).aspx)  

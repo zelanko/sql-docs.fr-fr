@@ -27,12 +27,12 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 27e3eefcb9a43d8063e9f72f18f76dd8ac7e3c94
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802883"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503252"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -46,7 +46,7 @@ Importe un fichier de données dans une table ou vue de base de données dans un
   
 ```
 BULK INSERT   
-   [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
+   { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'   
      [ WITH   
     (   
@@ -94,7 +94,7 @@ BULK INSERT
  **'** _data_file_ **'**  
  Chemin d'accès complet du fichier de données contenant les données à importer dans la table ou la vue spécifiée. BULK INSERT peut importer des données à partir d'un disque (réseau, disquette, disque dur, etc.).   
  
- *data_file* doit spécifier un chemin valide à partir du serveur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute. Si *data_file* correspond à un fichier distant, spécifiez le nom UNC (Universal Naming Convention). Un nom UNC se présente sous la forme \\\\*nom_système*\\*nom_partage*\\*chemin*\\*nom_fichier*. Exemple :   
+ *data_file* doit spécifier un chemin valide à partir du serveur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute. Si *data_file* correspond à un fichier distant, spécifiez le nom UNC (Universal Naming Convention). Un nom UNC se présente sous la forme \\\\*nom_système*\\*nom_partage*\\*chemin*\\*nom_fichier*. Par exemple :   
 
 ```sql
 BULK INSERT Sales.Orders
@@ -225,7 +225,7 @@ Numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à
  ROWS_PER_BATCH **=** _lignes_par_lot_  
  Nombre approximatif de lignes de données que compte le fichier de données.  
   
- Par défaut, toutes les données du fichier de données sont envoyées au serveur en une seule transaction, et le nombre de lignes du lot est inconnu de l'optimiseur de requête. Si vous spécifiez ROWS_PER_BATCH (valeur > 0), le serveur utilise cette valeur pour optimiser l'importation en bloc. La valeur spécifiée pour ROWS_PER_BATCH devrait correspondre à peu près au nombre réel de lignes. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
+ Par défaut, toutes les données du fichier de données sont envoyées au serveur en une seule transaction, et le nombre de lignes du lot est inconnu de l'optimiseur de requête. Si vous spécifiez ROWS_PER_BATCH (valeur > 0), le serveur utilise cette valeur pour optimiser l’importation en bloc. La valeur spécifiée pour ROWS_PER_BATCH devrait correspondre à peu près au nombre réel de lignes. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
   
  
  TABLOCK  
@@ -342,7 +342,7 @@ GO
 
 ## <a name="general-remarks"></a>Remarques d'ordre général  
 
- Pour obtenir une comparaison de l'instruction BULK INSERT, de l'instruction INSERT ... SELECT \* FROM OPENROWSET(BULK...), et de la commande **bcp**, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Pour obtenir une comparaison de l’instruction BULK INSERT, de l’instruction INSERT ... SELECT \* FROM OPENROWSET(BULK...), et de la commande **bcp**, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Pour plus d’informations sur la préparation des données en vue d’une importation en bloc, consultez [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -381,7 +381,7 @@ Avant [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fichi
   
  Pour plus d’informations sur les considérations relatives à l’utilisation de BULK INSERT, consultez [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
 
  Requiert les autorisations INSERT et ADMINISTER BULK OPERATIONS. Dans Azure SQL Database, les opérations INSERT et ADMINISTER DATABASE BULK OPERATIONS sont nécessaires. De plus, l'autorisation ALTER TABLE est nécessaire si une ou plusieurs des conditions suivantes sont réunies :  
   
@@ -416,7 +416,7 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
   
-### <a name="b-using-the-firetriggers-argument"></a>b. Utilisation de l'argument FIRE_TRIGGERS  
+### <a name="b-using-the-firetriggers-argument"></a>B. Utilisation de l'argument FIRE_TRIGGERS  
 
  L'exemple suivant spécifie l'argument `FIRE_TRIGGERS`.  
   

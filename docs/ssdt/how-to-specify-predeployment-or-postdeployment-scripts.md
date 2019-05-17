@@ -1,5 +1,5 @@
 ---
-title: 'Guide pratique : Spécifier des scripts de prédéploiement et de post-déploiement | Microsoft Docs'
+title: 'Procédure : Spécifier des scripts de prédéploiement et de post-déploiement | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731247"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098469"
 ---
-# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Guide pratique : Spécifier des scripts de prédéploiement et de post-déploiement
-Les scripts de prédéploiement et de post-déploiement exécutent des instructions Transact\-SQL avant et après le script de déploiement principal, qui est généré à partir du projet de base de données. Un projet peut comporter un script de prédéploiement et un script de post-déploiement. Ces scripts peuvent être utilisés à de nombreuses fins. Exemple :  
+# <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procédure : Spécifier des scripts de prédéploiement et de post-déploiement
+Les scripts de prédéploiement et de post-déploiement exécutent des instructions Transact\-SQL avant et après le script de déploiement principal, qui est généré à partir du projet de base de données. Un projet peut comporter un script de prédéploiement et un script de post-déploiement. Ces scripts peuvent être utilisés à de nombreuses fins. Par exemple :  
   
 -   Un script de prédéploiement peut copier les données d'une table qui est modifiée dans une table temporaire avant de les remettre en forme et de les appliquer à la table modifiée dans un script de post-déploiement.  
   
@@ -46,7 +46,7 @@ END
   
     L’Éditeur Transact\-SQL s’ouvre et présente le contenu du fichier.  
   
-Utilisez la syntaxe et les variables SQLCMD dans vos scripts et définissez-les dans les propriétés du projet de base de données. Exemple :  
+Utilisez la syntaxe et les variables SQLCMD dans vos scripts et définissez-les dans les propriétés du projet de base de données. Par exemple :  
   
 -   Utilisez la syntaxe SQLCMD pour inclure le contenu d'un fichier dans un script de pré-déploiement ou de post-déploiement. Ces fichiers sont inclus et s'exécutent dans l'ordre dans lequel vous les définissez : `:r .\myfile.sql`  
   

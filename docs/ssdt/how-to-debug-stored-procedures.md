@@ -1,5 +1,5 @@
 ---
-title: 'Guide pratique : Déboguer des procédures stockées | Microsoft Docs'
+title: 'Procédure : Déboguer des procédures stockées | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533422"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090208"
 ---
-# <a name="how-to-debug-stored-procedures"></a>Procédure : déboguer des procédures stockées
+# <a name="how-to-debug-stored-procedures"></a>Procédure : Déboguer des procédures stockées
 Le débogueur Transact\-SQL permet de déboguer interactivement des procédures stockées en affichant la pile des appels SQL, les variables locales et les paramètres de la procédure stockée SQL. Comme pour le débogage dans d’autres langages de programmation, il est possible d’afficher et modifier les variables locales et les paramètres, d’afficher les variables globales et de contrôler et gérer les points d’arrêt lors du débogage du script Transact\-SQL.  
   
 Cet exemple explique comment créer et déboguer une procédure stockée Transact\-SQL en effectuant un pas à pas détaillé.  

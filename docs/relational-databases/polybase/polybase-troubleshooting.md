@@ -1,7 +1,7 @@
 ---
 title: Superviser et dépanner PolyBase | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
 ms.reviewer: ''
@@ -15,16 +15,17 @@ ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c8c6922aca2d291527412e3384fe6682ba26556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 70d6be59845433719cc462326d1135c77d34beee
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687507"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776149"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>Superviser et dépanner PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour résoudre les problèmes de PolyBase, utilisez les techniques indiquées dans cette rubrique.
 
@@ -81,7 +82,7 @@ Surveillez et résolvez les problèmes des requêtes PolyBase à l’aide des vu
 
    Vérifiez l’élément location_type de l’étape d’exécution la plus longue :  
 
-   - Head ou Compute : implique une opération SQL. Passez à l’étape 3a.
+   - Head ou Compute : implique une opération SQL. Passez à l’étape 3a.
 
       - DMS : implique une opération de Service de déplacement de données PolyBase. Passez à l’étape 3b.
 
@@ -218,7 +219,7 @@ Après avoir configuré un ensemble d’ordinateurs dans le cadre d’un groupe 
 
 De nos jours, PolyBase n’interagit pas avec les services de haute disponibilité des nœuds de nom tels que Zookeeper ou Knox. Toutefois, vous pouvez utiliser une solution de contournement éprouvée pour fournir cette fonctionnalité.
 
-Cette solution consiste à utiliser le nom DNS pour rediriger les connexions vers le nom de nœud actif. Pour ce faire, vous devez vous assurer que la source de données externe utilise un nom DNS pour communiquer avec le nom de nœud. Quand le basculement du nom de nœud se produit, vous devez changer l’adresse IP associée au nom DNS utilisé dans la définition de la source de données externe. Cette opération redirige toutes les nouvelles connexions vers le nœud de nom correct. Les connexions existantes échouent quand le basculement se produit. Pour automatiser ce processus, une « pulsation » peut exécuter un ping sur le nom de nœud actif. Si la pulsation échoue, on peut supposer qu’un basculement a eu lieu, donnant lieu à un basculement automatiquement vers l’adresse IP des bases de données secondaires.
+Solution de contournement : utiliser le nom DNS pour rediriger les connexions vers le nom de nœud actif. Pour ce faire, vous devez vous assurer que la source de données externe utilise un nom DNS pour communiquer avec le nom de nœud. Quand le basculement du nom de nœud se produit, vous devez changer l’adresse IP associée au nom DNS utilisé dans la définition de la source de données externe. Cette opération redirige toutes les nouvelles connexions vers le nœud de nom correct. Les connexions existantes échouent quand le basculement se produit. Pour automatiser ce processus, une « pulsation » peut exécuter un ping sur le nom de nœud actif. Si la pulsation échoue, on peut supposer qu’un basculement a eu lieu, donnant lieu à un basculement automatiquement vers l’adresse IP des bases de données secondaires.
 
 ## <a name="error-messages-and-possible-solutions"></a>Messages d’erreur et solutions possibles
 

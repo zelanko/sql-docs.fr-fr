@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: edb990e57f3f02db207959a4511d3b23069b0db4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507768"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098379"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ Répertorie tous les éléments de l'interface utilisateur dont vous pouvez modi
 |--------|--------------|  
 |Éditeur de texte|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices dans l'éditeur de texte influencent la présentation du texte dans l'éditeur de texte par défaut. Les documents ouverts dans un éditeur de texte en dehors de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne sont pas affectés par ces paramètres.|  
 |Imprimante|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices de l'imprimante influencent la présentation du texte sur les documents imprimés.<br /><br />Remarque : Vous pouvez sélectionner pour l’impression une police par défaut autre que celle utilisée pour l’affichage dans l’éditeur de texte. Cela peut être utile lors de l'impression de code contenant des caractères codés sur un octet et sur deux octets.|  
-|[Toutes les fenêtres Outil de texte **]**|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Outils disposant de volets de sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], par exemple les fenêtres Sortie, Résultats de texte, et ainsi de suite.<br /><br />Remarque : Les modifications apportées au texte des éléments [Toutes les fenêtres Outil de texte] ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué les changements. Vous pouvez évaluer le résultat obtenu du fait des modifications apportées en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|[Toutes les fenêtres Outil de texte **]**|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Outils disposant de volets de sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], par exemple les fenêtres Sortie, Résultats de texte, et ainsi de suite.<br /><br />Remarque : les modifications apportées au texte des éléments [Toutes les fenêtres Outil de texte] ne sont pas prises en compte lors de la session au cours de laquelle vous avez effectué les changements. Vous pouvez évaluer le résultat obtenu du fait des modifications apportées en ouvrant une autre instance de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |Fenêtre Résultats de la recherche|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans la fenêtre Résultats de la recherche.|  
 |Fenêtre Sortie|Les modifications apportées aux paramètres d'affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres Sortie.|  
 |Résultats de grille|Les modifications apportées aux paramètres d’affichage du style, de la taille et de la couleur des polices pour cet élément influencent la présentation du texte dans les fenêtres **Résultats de grille** .|  
@@ -57,7 +57,7 @@ Répertorie les éléments dont vous pouvez modifier la couleur de premier plan 
   
 Voici quelques-uns des éléments affichés.  
   
--   Marge des indicateurs : marge à gauche de l'éditeur de code où sont affichés les points d'arrêt et les icônes de signet.  
+-   Marge des indicateurs : marge à gauche de l’éditeur de code où sont affichés les points d’arrêt et les icônes de signet.  
   
 -   Réduction du texte : bloc de texte ou de code que vous pouvez faire apparaître ou masquer dans l’éditeur de code (XML uniquement).  
   

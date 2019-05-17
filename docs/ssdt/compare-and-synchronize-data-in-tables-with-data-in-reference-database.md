@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745107"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105811"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence
 Vous pouvez comparer les données d'une base de données *source* et d'une base de données *cible* et spécifier quelles tables doivent être comparées. Vous pouvez examiner les données et décider quels changements synchroniser. Vous pouvez ensuite soit mettre à jour la cible pour synchroniser les bases de données, soit exporter le script de mise à jour dans l'éditeur Transact\-SQL ou dans un fichier.  
@@ -29,7 +29,7 @@ Cette section contient les rubriques suivantes :
   
 -   [Procédure : comparer et synchroniser les données de deux bases de données](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Procédure : afficher les différences entre les données](../ssdt/how-to-view-data-differences.md)  
+-   [Procédure : afficher les différences entre les données](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Spécifications  
 Lorsque vous comparez des données dans une table ou une vue, la table ou la vue dans la base de données source doit partager plusieurs attributs avec une table ou une vue dans la base de données cible. Les tables et les vues qui ne répondent pas aux critères suivants ne sont pas comparées et n'apparaissent pas dans la deuxième page de l'Assistant **Nouvelle comparaison de données** :  
@@ -49,9 +49,9 @@ Chaque objet a une clé ou un index qui détermine les objets auxquels elle corr
 ## <a name="common-tasks"></a>Tâches courantes  
 Dans cette section, vous pouvez trouver des descriptions des tâches courantes qui prennent en charge ce scénario.  
   
-**Définir les options de contrôle de la façon dont les données sont comparées :** lorsque vous comparez des données, vous pouvez ignorer en toute sécurité des colonnes d'identité, désactiver des déclencheurs, puis désactiver des clés étrangères. Vous pouvez également supprimer des clés primaires, des index et des contraintes uniques du script de mise à jour.  
+**Définir les options de contrôle de la façon dont les données sont comparées :** lorsque vous comparez des données, vous pouvez ignorer en toute sécurité des colonnes d’identité, désactiver des déclencheurs, puis désactiver des clés étrangères. Vous pouvez également supprimer des clés primaires, des index et des contraintes uniques du script de mise à jour.  
   
-**Comparer les données dans les tables et éventuellement mettre à jour la cible pour qu'elle corresponde à la source :** après avoir spécifié une base de données source et une base de données cible à comparer et après avoir effectué la comparaison, vous pouvez afficher les résultats dans la fenêtre de **Comparaison de données**. Vous pouvez afficher non seulement les détails des différences mais également le script de mise à jour que vous pouvez utiliser pour synchroniser les données. Après avoir identifié les différences entre les deux bases de données, vous pouvez spécifier une action pour chaque différence. Vous pouvez ensuite mettre à jour la cible ou exporter le script de mise à jour dans l'éditeur Transact\-SQL ou dans un fichier. Vous pouvez exporter le script afin que vous ou quelqu'un d'autre puisse l'examiner avant d'appliquer les modifications.  
+**Comparer les données dans les tables et éventuellement mettre à jour la cible pour qu’elle corresponde à la source :** après avoir spécifié une base de données source et une base de données cible à comparer et après avoir effectué la comparaison, vous pouvez afficher les résultats dans la fenêtre de **Comparaison de données**. Vous pouvez afficher non seulement les détails des différences mais également le script de mise à jour que vous pouvez utiliser pour synchroniser les données. Après avoir identifié les différences entre les deux bases de données, vous pouvez spécifier une action pour chaque différence. Vous pouvez ensuite mettre à jour la cible ou exporter le script de mise à jour dans l'éditeur Transact\-SQL ou dans un fichier. Vous pouvez exporter le script afin que vous ou quelqu'un d'autre puisse l'examiner avant d'appliquer les modifications.  
   
 ## <a name="UnderstandingDataCompareResults"></a>Comprendre les résultats de la comparaison  
 Le tableau suivant décrit les cinq colonnes de la fenêtre de **Comparaison de données**.  
@@ -69,5 +69,5 @@ Lorsque vous cliquez sur une table ou une vue dans la fenêtre de **Comparaison 
   
 ## <a name="see-also"></a> Voir aussi  
 [Outils de données SQL Server](../ssdt/sql-server-data-tools.md)  
-[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c8f458f0405feec07a33a2355d117752c3b10e80
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418449"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094169"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Travailler avec des répertoires et des chemins d'accès dans FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Décrit la structure de répertoires dans laquelle les fichiers sont stockés dans FileTables.  
   
-##  <a name="HowToDirectories"></a> Procédure : travailler avec des répertoires et des chemins d'accès dans FileTables  
+##  <a name="HowToDirectories"></a> Procédure : Travailler avec des répertoires et des chemins d'accès dans FileTables  
  Vous pouvez utiliser les trois fonctions suivantes pour travailler avec des répertoires FileTable dans [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Pour obtenir ce résultat|Utilisez cette fonction|  
@@ -33,7 +33,7 @@ ms.locfileid: "52418449"
 |Obtenir un chemin d'accès UNC absolu ou relatif pour un fichier ou répertoire d'un FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Obtenir la valeur d'ID de localisateur de chemin d'accès pour le fichier ou le répertoire spécifié d'un FileTable, en spécifiant le chemin d'accès.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d'accès relatifs pour du code portable  
+##  <a name="BestPracticeRelativePaths"></a> Procédure : utiliser des chemins d’accès relatifs pour du code portable  
  Pour garder le code et les applications indépendantes de l'ordinateur actuel et de la base de données, évitez d'écrire du code qui contient des chemins d'accès de fichier absolus. Au lieu de cela, récupérez le chemin d’accès complet d’un fichier au moment de l’exécution en utilisant les fonctions [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) et [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)ensemble, comme illustré dans l’exemple suivant. Par défaut, la fonction **GetFileNamespacePath** retourne le chemin relatif du fichier sous le chemin racine de la base de données.  
   
 ```sql  

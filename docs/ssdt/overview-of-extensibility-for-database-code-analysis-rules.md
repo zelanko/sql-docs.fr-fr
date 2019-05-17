@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 62f5c980-18d5-43fe-b443-c9e149d01fc7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 42896bb62b5566c955c86c43618a8f64e4968b5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 32462daf6d747b278be788d2364e01c2e8912114
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405866"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101931"
 ---
 # <a name="overview-of-extensibility-for-database-code-analysis-rules"></a>Vue d'ensemble de l'extensibilité pour les règles d'analyse du code de base de données
 Les éditions de Visual Studio contenant SQL Server Data Tools comportent des règles d’analyse du code permettant de générer des rapports sur les avertissements de conception, d’affectation de noms et de performances de Transact\-SQL dans le code de la base de données. Pour plus d’informations, voir [Analyser le code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133(v=vs.100).aspx).  
@@ -30,9 +30,9 @@ Le diagramme suivant illustre l'interaction entre les composants de règles d'an
   
 ![Composants des règles d’analyse du code de base de données](../ssdt/media/ssdt-database-code-analysis-rules-components.jpg "Composants des règles d’analyse du code de base de données")  
   
-Quand vous utilisez la fonctionnalité d’analyse du code de base de données, soit en exécutant directement l’analyse du code statique (pour plus d’informations, voir [Guide pratique : Analyser du code Transact-SQL afin de détecter des défauts](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)), soit en effectuant une génération, toutes les règles sont chargées et utilisées selon la manière dont vous les avez configurées dans votre projet. Pour plus d’informations, voir [Guide pratique : Activer et désactiver des règles spécifiques pour l’analyse statique du code d’une base de données](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Le Gestionnaire d'extensions charge également les éventuels assemblys de règles personnalisées que vous avez créés et enregistrés. Pour plus d’informations, voir [Guide pratique : Installer et gérer des extensions de fonctionnalités](../ssdt/how-to-install-and-manage-feature-extensions.md).  
+Lorsque vous utilisez la fonctionnalité des règles d’analyse du code de base de données, soit en exécutant l’analyse du code statique directement (pour plus d’informations, consultez [Procédure : Analyser le Code Transact-SQL pour trouver des défauts](https://msdn.microsoft.com/library/dd172119(v=vs.100).aspx)), soit en effectuant une génération, toutes les règles sont chargées et utilisées en fonction de la manière dont vous avez les configurées dans votre projet. Pour plus d’informations, consultez [Procédure : activer et désactiver des règles spécifiques pour l’analyse statique du code d’une base de données](https://msdn.microsoft.com/library/dd172131(v=vs.100).aspx). Le Gestionnaire d'extensions charge également les éventuels assemblys de règles personnalisées que vous avez créés et enregistrés. Pour plus d’informations, consultez [Procédure : installer et gérer des extensions de fonctionnalités](../ssdt/how-to-install-and-manage-feature-extensions.md).  
   
-Une classe de règle personnalisée d’analyse du code hérite de [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La classe de règle personnalisée peut accéder à plusieurs objets utiles via son contexte d'exécution de règle, notamment :  
+Une classe de règle personnalisée d’analyse du code hérite de [SqlCodeAnalysisRule](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.codeanalysis.sqlcodeanalysisrule.aspx). La classe de règle personnalisée peut accéder à plusieurs objets utiles via son contexte d'exécution de règle, notamment :  
   
 -   Des métadonnées relatives à la règle elle-même.  
   

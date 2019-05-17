@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ccc25df3c3567907b50e37164d9090ca63fc58b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 31750fffc81fba1b22377578bddc09e1994e9b29
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582952"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568343"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -49,6 +49,7 @@ Cette instruction active plusieurs paramètres de configuration de base de donn�
 - Activer ou désactiver les fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 - Activer ou désactiver l’[infrastructure de profilage de requête léger](../../relational-databases/performance/query-profiling-infrastructure.md).
 - Activer ou désactiver le nouveau message d’erreur `String or binary data would be truncated`.
+- Active ou désactive la collection du dernier plan d’exécution actuel dans [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -85,6 +86,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
+    | LAST_QUERY_PLAN_STATS = { ON | OFF }
 }
 ```
 
@@ -154,16 +156,16 @@ PRIMARY
 
 Cette valeur est valide uniquement pour les bases de données secondaires lorsque la base de données est définie sur PRIMARY, et indique que, sur toutes les bases de données secondaires, ce paramètre est défini sur la valeur de la base de données primaire. Si la configuration de la base de données primaire est modifiée, la valeur des bases de données secondaires est modifiée en conséquence, sans que vous ayez à la définir explicitement. PRIMARY est le paramètre par défaut des bases de données secondaires.
 
-IDENTITY_CACHE **=** { **ON** | OFF }
+IDENTITY_CACHE **=** { **ON** | OFF }      
 
-**S’applique à :** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Active ou désactive le cache d’identité au niveau de la base de données. La valeur par défaut est **ON**. La mise en cache d’identité est utilisée pour améliorer les performances INSERT sur les tables comprenant des colonnes d’identité. Pour éviter les écarts dans les valeurs des colonnes d’identité si un serveur redémarre de façon inattendue ou bascule vers un serveur secondaire, désactivez l’option IDENTITY_CACHE. Cette option est similaire à [l’indicateur de trace 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) existant, sauf qu’elle peut être définie au niveau de la base de données et non uniquement au niveau du serveur.
 
 > [!NOTE]
 > Cette option peut uniquement être définie sur la valeur PRIMARY. Pour plus d’informations, consultez [Colonnes d’identité](create-table-transact-sql-identity-property.md).
 
-INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }   
 
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -172,18 +174,18 @@ Vous permet d’activer ou de désactiver l’exécution entrelacée pour les fo
 > [!NOTE]
 > Pour le niveau de compatibilité de la base de données inférieur ou égal à 130, cette configuration étendue à la base de données n’a aucun effet.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}    
 
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. La rétroaction d’allocation de mémoire en mode batch est une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 > [!NOTE]
 > Pour le niveau de compatibilité de la base de données inférieur ou égal à 130, cette configuration étendue à la base de données n’a aucun effet.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}   
 
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Vous permet d’activer ou de désactiver les jointures adaptatives en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. Les jointures adaptatives en mode batch sont une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -192,7 +194,7 @@ Vous permet d’activer ou de désactiver les jointures adaptatives en mode batc
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 Vous permet d’activer ou de désactiver l’incorporation (inlining) des fonctions UDF scalaires T-SQL dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. L’incorporation (inlining) des fonctions UDF scalaires T-SQL fait partie de la famille des fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -218,7 +220,7 @@ Cette valeur élève les opérations qui prennent en charge l’option ONLINE. L
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**S’applique à** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 Permet de sélectionner des options pour forcer le moteur à élever automatiquement les opérations prises en charge pour une exécution pouvant être reprise. La valeur par défaut est OFF, ce qui signifie que les opérations ne sont pas élevées pour une exécution pouvant être reprise, sauf si cela est spécifié dans l’instruction. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflète la valeur actuelle de ELEVATE_RESUMABLE. Ces options s’appliquent uniquement aux opérations prises en charge pour une exécution pouvant être reprise.
 
@@ -259,7 +261,7 @@ Pour plus d’informations sur la supervision des performances des modules [!INC
 
 ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode ligne dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (le mode ligne est pris en charge dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
@@ -268,7 +270,7 @@ Vous permet d’activer ou de désactiver la rétroaction d’allocation de mém
 
 BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 Vous permet d’activer ou de désactiver le mode batch sur rowstore dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Le mode batch sur rowstore est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -277,7 +279,7 @@ Vous permet d’activer ou de désactiver le mode batch sur rowstore dans l’é
 
 DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
 Vous permet d’activer ou de désactiver la compilation différée de variables de table dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La compilation différée de variables de table est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -295,13 +297,15 @@ Permet de définir la fonctionnalité de suppression automatique pour les [table
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Vous permet d’activer ou de désactiver l’[infrastructure de profilage de requête léger](../../relational-databases/performance/query-profiling-infrastructure.md). L’infrastructure de profilage de requête léger (LWP) fournit les données de performances de requête plus efficacement que les mécanismes de profilage standard et est activée par défaut.
 
+<a name="verbose-truncation"></a>
+
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 
 Vous permet d’activer ou de désactiver le nouveau message d’erreur `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit un nouveau message d’erreur (2628), plus spécifique, dans ce scénario :  
 
@@ -312,6 +316,12 @@ Quand sa valeur est définie sur ON pour un niveau de compatibilité de la base 
 Quand sa valeur est définie sur OFF pour un niveau de compatibilité de la base de données en dessous de 150, les erreurs de troncation déclenchent l’ancien message d’erreur 8152.
 
 Pour un niveau de compatibilité de la base de données égal ou inférieur à 140, le message d’erreur 2628 reste un message d’erreur d’activation qui nécessite l’activation de l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 ; cette configuration au niveau de la de base de données n’a alors aucun effet.
+
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (fonctionnalité en préversion publique)
+
+Permet d’activer ou désactiver la collection des statistiques du dernier plan de requête (équivalent à un plan d’exécution réel) dans [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 ## <a name="Permissions"></a> Autorisations
 
@@ -474,6 +484,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Effacer un plan de requête du cache du plan
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
 Cet exemple efface un plan spécifique à du cache de procédure 
 
 ```sql

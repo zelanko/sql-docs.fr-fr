@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.dropdatabaseconfirmation.dialog
 - sql.data.tools.dropmultipledatabasesconfirmation.dialog
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1c52b2bcd700d4b7399fe27c79063f4b27d4e68a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676167"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090217"
 ---
-# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procédure : supprimer des objets et résoudre des dépendances
+# <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procédure : Supprimer des objets et résoudre des dépendances
 Lorsque vous renommez ou supprimez un objet dans l'**Explorateur d'objets SQL Server**, SQL Server Data Tools détecte automatiquement tous ses objets dépendants et prépare un script ALTER pour renommer ou supprimer les dépendances selon les besoins.  
   
 > [!WARNING]  
@@ -47,7 +47,7 @@ Lorsque vous renommez ou supprimez un objet dans l'**Explorateur d'objets SQL Se
     > [!WARNING]  
     > Les dépendances basées sur un script, telles que les références à une table dans un affichage, ou les procédures stockées ne sont pas mises à jour automatiquement par SSDT. Après l'attribution du nouveau nom, vous pouvez utiliser le volet **Liste d'erreurs** pour rechercher toutes les autres dépendances et les corriger manuellement.  
   
-5.  Appliquer la modification en suivant les étapes dans la [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) précédente.  
+5.  Appliquez la modification en suivant les étapes de la [Procédure : mettre à jour une base de données connectée avec Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md) précédente.  
   
 6.  Dans l’**Explorateur d'objets SQL Server**, cliquez à nouveau avec le bouton droit sur **Customers** et sélectionnez **Afficher les données**. Notez que les données de la table sont intactes après le changement de nom.  
   

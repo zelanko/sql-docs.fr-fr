@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aede830ed407fcd7dddba4d2d9446b6510e84c8a
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774937"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,17 +126,18 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier ou à l’aide de fichiers de clé privée.
   
+ BINARY =*asn_encoded_certificate*  
+ Bits de certificat encodés par ASN spécifiés comme constante binaire.  
+ **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
  WITH PRIVATE KEY  
- Spécifie que la clé privée du certificat est chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette clause est valide uniquement lorsque le certificat est créé à partir d'un fichier. Pour charger la clé privée d’un assembly, utilisez [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
+ Spécifie que la clé privée du certificat est chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette clause est invalide lorsque le certificat est créé à partir d’un assembly. Pour charger la clé privée d’un certificat créé à partir d’un assembly, utilisez [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
  FILE ='*path_to_private_key*'  
  Spécifie le chemin d'accès complet, y compris le nom du fichier, à la clé privée. *path_to_private_key* peut être un chemin local ou un chemin UNC d’un emplacement réseau. L’accès au fichier s’effectue dans le contexte de sécurité du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce compte doit posséder les autorisations de système de fichiers nécessaires.  
   
 > [!IMPORTANT]  
 >  Cette option n’est pas disponible dans une base de données autonome, ni dans Azure SQL Database.  
-  
- asn_encoded_certificate  
- Bits de certificat encodés par ASN spécifiés comme constante binaire.  
   
  BINARY =*private_key_bits*  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -162,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  Met le certificat à disposition de l'initiateur d'une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)]. La valeur par défaut est ON.  
   
 ## <a name="remarks"></a>Notes   
- Un certificat est un élément sécurisable de niveau base de données qui suit la norme X.509 et prend en charge les champs X.509 V1. CREATE CERTIFICATE permet de charger un certificat à partir d'un fichier ou d'un assembly. Cette instruction peut également générer une paire de clés et créer un certificat autosigné.  
+ Un certificat est un élément sécurisable de niveau base de données qui suit la norme X.509 et prend en charge les champs X.509 V1. CREATE CERTIFICATE permet de charger un certificat à partir d’un fichier, d’une constante binaire ou d’un assembly. Cette instruction peut également générer une paire de clés et créer un certificat autosigné.  
   
  La clé privée doit être \<= 2500 octets dans un format chiffré. Les clés privées générées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] font 1024 bits jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], et 2 048 bits à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Les clés privées importées à partir d'une source externe ont une longueur minimale de 384 bits et une longueur maximale de 4 096 bits. La longueur d'une clé privée importée doit être un entier multiple de 64 bits. Les certificats utilisés pour le chiffrement transparent des données sont limités à une taille de clé privée de 3456 bits.  
   
@@ -183,7 +184,7 @@ CREATE CERTIFICATE certificate_name
   
  Vous pouvez créer une description binaire d’un certificat à l’aide des fonctions [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) et [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). L’exemple B de l’article [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) utilise **CERTPRIVATEKEY** et **CERTENCODED** afin de copier un certificat dans une autre base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE CERTIFICATE sur la base de données. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d’application sont les seuls à pouvoir posséder des certificats. Les groupes et les rôles ne peuvent pas posséder de certificats.  
   
 ## <a name="examples"></a>Exemples  
@@ -199,7 +200,7 @@ CREATE CERTIFICATE Shipping04
 GO  
 ```  
   
-### <a name="b-creating-a-certificate-from-a-file"></a>b. Création d'un certificat à partir d'un fichier  
+### <a name="b-creating-a-certificate-from-a-file"></a>B. Création d'un certificat à partir d'un fichier  
  L'exemple ci-dessous crée un certificat dans la base de données en chargeant la paire de clés à partir de fichiers.  
   
 ```  
@@ -233,7 +234,10 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la création d’un certificat à partir d’un fichier.
-   
+
+> [!IMPORTANT]
+> À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], l’option de configuration de serveur [« CLR strict security »](../../database-engine/configure-windows/clr-strict-security.md) empêche le chargement d’assemblys sans avoir d’abord défini les paramètres de sécurité les concernant. Chargez le certificat, créez une connexion à partir de celui-ci, autorisez `UNSAFE ASSEMBLY` pour cette connexion, puis chargez l’assembly.
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Création d'un certificat auto-signé  
  L’exemple suivant crée un certificat nommé `Shipping04` sans spécifier de mot de passe de chiffrement. Il est utilisable avec [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
@@ -251,6 +255,8 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

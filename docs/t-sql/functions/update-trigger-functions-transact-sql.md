@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776003"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - Fonctions de déclencheurs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  La clause IF UPDATE(*colonne*n) fonctionne de la même manière qu’une clause IF, IF...ELSE ou WHILE, et elle peut utiliser le bloc BEGIN...END. Pour plus d’informations, consultez [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) peut être utilisé dans n’importe quel endroit du corps d’un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 
+Si un déclencheur s’applique à une colonne, la valeur `UPDATED` retourne `true` ou `1`, même si la valeur de colonne reste inchangée. Cela est intentionnel. Le déclencheur doit implémenter une logique métier qui détermine si l’opération d’insertion/de mise à jour/de suppression est autorisée ou non. 
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée un déclencheur qui envoie un message au client lorsqu'une personne essaie de mettre à jour les colonnes `StateProvinceID` ou `PostalCode` de la table `Address`.  

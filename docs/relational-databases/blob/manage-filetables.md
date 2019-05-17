@@ -11,21 +11,21 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1d2d1dbd025db3a72251435133149cdc80275f0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ab88dfa27c63607c312b2a3c757b04cd076745a9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411776"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094154"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
   
-##  <a name="HowToEnumerate"></a> Procédure : obtenir une liste de FileTables et d'objets connexes  
+##  <a name="HowToEnumerate"></a> Procédure : obtenir une liste de FileTables et d’objets connexes  
  Pour obtenir une liste de FileTables, interrogez l'un des affichages catalogue suivants :  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -80,7 +80,7 @@ GO
   
 -   Aucun des répertoires au niveau de la base de données sur l'instance n'est visible si FILESTREAM est désactivé au niveau de l'instance.  
   
-###  <a name="HowToDisable"></a> Procédure : désactiver et réactiver l'accès non transactionnel au niveau de la base de données  
+###  <a name="HowToDisable"></a> Procédure : désactiver et réactiver l’accès non transactionnel au niveau de la base de données  
  Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  **Pour désactiver l'accès non transactionnel complet**  
@@ -139,7 +139,7 @@ GO
   
 -   Le répertoire FileTable et les fichiers et répertoires qu'il contient sont visibles dans le système de fichiers et sont disponibles pour l'accès aux E/S de fichier.  
   
-###  <a name="HowToEnableNS"></a> Procédure : désactiver et réactiver l'espace de noms FileTable au niveau de la table  
+###  <a name="HowToEnableNS"></a> Procédure : désactiver et réactiver l’espace de noms FileTable au niveau de la table  
  Appelez l’instruction ALTER TABLE avec l’option **{ENABLE | DISABLE} FILETABLE_NAMESPACE** .  
   
  **Pour désactiver l'espace de noms FileTable**  

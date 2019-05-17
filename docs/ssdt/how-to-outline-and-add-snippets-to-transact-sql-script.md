@@ -1,5 +1,5 @@
 ---
-title: 'Guide pratique : Mettre un script Transact-SQL en mode Plan et ajouter des extraits de code | Microsoft Docs'
+title: 'Procédure : structurer et ajouter des extraits de code à un script Transact-SQL | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526062"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099666"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procédure : structurer et ajouter des extraits de code à un script Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procédure : Structurer et ajouter des extraits de code à un script Transact-SQL
 SQL Server Data Tools comprend une bibliothèque de codes composée d’extraits de code prêts à être insérés dans une application. Chaque extrait de code effectue une tâche de script complète, comme créer une fonction, une table, un déclencheur, un index, un affichage, un type de données défini par l’utilisateur, etc. Vous pouvez insérer un extrait de code dans votre code source en quelques clics. Ces extraits de code augmentent votre productivité en réduisant le temps passé à la saisie.  
   
 Lorsque vous devez rechercher un extrait spécifique, vous pouvez utiliser le sélecteur d'extraits de code afin d'obtenir des listes classées d'extraits de code. Une fois que vous avez ajouté l'extrait à votre code, certaines parties devront peut-être être personnalisées, par exemple, remplacer le nom des variables par un nom plus adapté, ou insérer la logique réelle d'une procédure stockée. Vous noterez que le code de l'extrait inséré comporte un ou plusieurs points de remplacement mis en surbrillance dans le code à cet effet. Si vous positionnez le pointeur de votre souris sur le point de remplacement, une Info-bulle s'affiche pour vous expliquer comment modifier le code.  

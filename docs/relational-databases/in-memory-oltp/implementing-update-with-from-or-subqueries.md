@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653298"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104989"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implémentation d’UPDATE avec FROM ou des sous-requêtes
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Les modules T-SQL compilés en mode natif ne prennent pas en charge la clause FROM et ne prennent pas en charge les sous-requêtes dans les instructions UPDATE (elles sont prises en charge dans SELECT). Les instructions UPDATE avec la clause FROM sont généralement utilisées pour mettre à jour les informations contenues dans une table basée sur un paramètre table), ou pour mettre à jour les colonnes d’une table dans un déclencheur AFTER. 
+
+
+Dans l’instruction Transact-SQL UPDATE, dans un module T-SQL compilé en mode natif, les éléments syntaxiques suivants ne sont *pas* pris en charge :
+
+- la Clause FROM
+- Sous-requêtes
+
+En revanche, les éléments précédents *sont* pris en charge dans les modules compilés en mode natif sur l’instruction SELECT.
+
+Les instructions UPDATE avec la clause FROM sont généralement utilisées pour mettre à jour les informations contenues dans une table basée sur un paramètre table (TVP), ou pour mettre à jour les colonnes d’une table dans un déclencheur AFTER.
 
 Pour le scénario de mise à jour basée sur un paramètre table, consultez [Implémentation de la fonctionnalité MERGE dans une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-L’exemple ci-dessous illustre une mise à jour effectuée dans un déclencheur. La colonne LastUpdated de la table est mise à jour à la date et à l’heure actuelles APRÈS les mises à jour. La solution de contournement utilise une variable de table avec une colonne d’identité, et une boucle WHILE pour itérer au sein des lignes dans la variable de table et effectuer des mises à jour.
-  
-Voici l’instruction T-SQL UPDATE d’origine :  
-  
-  
-  
-   ```
+L’exemple suivant illustre une mise à jour effectuée dans un déclencheur. Dans la table, la colonne nommée LastUpdated a la valeur date-heure en cours APRÈS les mises à jour. La solution de contournement procède à des mises à jour individuelles à l’aide des éléments suivants :
+
+- Une variable de table qui a une colonne IDENTITY.
+- Une boucle WHILE pour itérer sur les lignes dans la variable de table.
+
+Voici l’instruction originale T-SQL UPDATE :
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-L’exemple de code T-SQL dans cette section illustre une solution de contournement qui fournit de bonnes performances. La solution de contournement est implémentée dans un déclencheur compilé en mode natif. Les principaux éléments à remarquer dans le code sont les suivants :  
+L’exemple de code T-SQL dans le bloc suivant illustre une solution de contournement qui fournit de bonnes performances. La solution de contournement est implémentée dans un déclencheur compilé en mode natif. Les principaux éléments à remarquer dans le code sont les suivants :  
   
 - Le type nommé dbo.Type1, qui est un type de table optimisé en mémoire.  
 - La boucle WHILE dans le déclencheur.  
@@ -50,13 +59,13 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ L’exemple de code T-SQL dans cette section illustre une solution de contournem
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

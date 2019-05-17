@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble de la restauration et de la récupération (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242040"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461816"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242040"
 -   [Assistant Récupération : introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Récupération de base de données accélérée
+
+La préversion de SQL Server 2019 CTP 2.3 introduit [la récupération de base de données accélérée](/azure/sql-database/sql-database-accelerated-database-recovery/) pour SQL Server local. La récupération de base de données accélérée améliore considérablement la disponibilité des bases de données, notamment en présence de transactions durables, en redéfinissant le processus de récupération du moteur de base de données SQL Server. La [récupération de base de données](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) est le processus que SQL Server utilise pour chaque base de données pour démarrer dans un état cohérent (ou propre) en termes de transaction. Une base de données, pour laquelle la récupération de base de données est accélérée, termine la récupération beaucoup plus rapidement après un basculement ou tout autre arrêt qui n’est pas propre. 
+
+À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3, la récupération de base de données accélérée peut être activée par base de données à l’aide de la syntaxe suivante :
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Cette syntaxe n’est pas obligatoire pour tirer parti de cette fonctionnalité dans Azure SQL DB, où elle est activée par défaut.
+
+Si vous avez des bases de données critiques enclines à des transactions volumineuses, essayez cette fonctionnalité dans la préversion. Envoyez vos commentaires à l’[équipe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   

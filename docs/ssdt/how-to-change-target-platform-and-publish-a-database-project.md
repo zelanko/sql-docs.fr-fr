@@ -1,5 +1,5 @@
 ---
-title: 'Guide pratique : Changer de plateforme cible et publier un projet de base de données | Microsoft Docs'
+title: 'Procédure : modifier la plateforme cible et publier un projet de base de données | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516699"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090101"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : modifier la plateforme cible et publier un projet de base de données
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : Modifier la plateforme cible et publier un projet de base de données
 Vous pouvez remplacer la version cible de SQL Server de votre projet de base de données SQL Server Data Tools (SSDT) par n’importe quelle instance prise en charge de SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 ou SQL Azure). Cela vous permettra de centraliser le développement de votre base de données dans un seul projet, tout en la publiant dans plusieurs instances SQL Server en cas de besoin.  
   
 SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et en détectant automatiquement les erreurs dans votre code (par exemple, lorsque vous utilisez des fonctionnalités non prises en charge pour un projet qui va être publié sur SQL Azure).  
@@ -41,7 +41,7 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
   
 2.  Ajoutez `ON [PRIMARY]` à la fin de l'instruction `CREATE TABLE` .  
   
-3.  L’erreur suivante s’affiche dans le volet **Liste d’erreurs** : SQL70015 : Le « schéma de partition et de référence du groupe de fichiers » n’est pas pris en charge dans SQL Azure.  
+3.  Notez que l’erreur suivante s’affiche dans le volet **Liste d’erreurs** :  SQL70015 : « Référence de groupe de fichiers et schéma de partitionnement » n’est pas pris en charge dans SQL Azure.  
   
     SSDT valide automatiquement votre script en fonction de la plateforme cible. Dans ce cas, étant donné que le groupe de fichiers n'est pas pris en charge dans SQL Azure, SSDT retourne une erreur. Pour connaître la liste des instructions Transact\-SQL non prises en charge dans SQL Azure, voir [Instructions Transact-SQL partiellement prises en charge (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
   

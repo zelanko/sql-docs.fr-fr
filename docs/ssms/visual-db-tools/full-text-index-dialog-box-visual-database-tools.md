@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213508"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105160"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ Affiche le nom du catalogue de texte intégral dans lequel cet index de texte in
 **Catégorie Identité**  
 Développée, elle affiche le champ Nom de cet index.  
   
-**Nom**  
+**Name**  
 Affiche le nom spécifié par le système de cet index de texte intégral.  
   
 **Catégorie Concepteur de tables**  
@@ -65,7 +65,7 @@ Développée, elle affiche les propriétés qui dictent le mode d'exécution de 
 Indique si vous pouvez actuellement exécuter une recherche en texte intégral à l'aide de cet index de texte intégral.  
   
 **Paramètre du suivi des modifications**  
-Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
+Décrit le statut du suivi des modifications pour cet index : Manuel, Auto ou Inactif.  
   
 **Analyse terminée**  
 Indique si l'analyse la plus récente est terminée. Si cette propriété a la valeur Non, une analyse est actuellement en cours.  
@@ -89,7 +89,7 @@ Affiche la date et l'heure de démarrage de l'analyse actuelle ou de la dernièr
 Affiche la date et l'heure de démarrage de la prochaine analyse.  
   
 **Type de l'analyse actuelle ou de la dernière analyse**  
-Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
+Affiche le type de l’analyse actuelle ou de la dernière analyse : Complet, Incrémentiel, Mettre à jour ou Propagation automatique.  
   
 **Nom d'index unique**  
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  

@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf274779c038f6cb2111a1b01ca8315cbd0002e4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a9cdaf6d6fdf6ebe713cde17e87480b5fac4047f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606419"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65367060"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +48,33 @@ ms.locfileid: "51606419"
 -   En plus des requêtes et des opérations d'index, cette option gère également le parallélisme de DBCC CHECKTABLE, DBCC CHECKDB et DBCC CHECKFILEGROUP. Vous pouvez désactiver les plans d'exécution parallèle pour ces instructions en utilisant l'indicateur de trace 2528. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ###  <a name="Guidelines"></a> Instructions  
-Utilisez les directives suivantes quand vous configurez la valeur de configuration de serveur **max degree of parallelism** :
+Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], lors du démarrage du service, si [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte plus de huit cœurs physiques par socket ou nœud NUMA au démarrage, des nœuds soft-NUMA sont créés automatiquement par défaut. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] place les processeurs logiques du même cœur physique dans différents nœuds soft-NUMA. Les recommandations contenues dans le tableau ci-dessous ont pour but de conserver tous les threads de travail d’une requête parallèle au sein du même nœud soft-NUMA. Cela améliorera les performances des requêtes et la distribution des threads de travail entre les nœuds NUMA pour la charge de travail. Pour plus d’informations, consultez [Soft-NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md).
+
+Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], suivez les directives suivantes quand vous configurez la valeur de configuration de serveur **max degree of parallelism** :
+
+||||
+|----------------|-----------------|-----------------|
+|Serveur avec un seul nœud NUMA|Moins de 16 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
+|Serveur avec un seul nœud NUMA|Plus de 16 processeurs logiques|Conservez MAXDOP à la moitié du nombre de processeurs logiques avec une valeur MAX de 16|
+|Serveur avec plusieurs nœuds NUMA|Moins de 16 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
+|Serveur avec plusieurs nœuds NUMA|Plus de 16 processeurs logiques par nœud NUMA|Conservez MAXDOP à la moitié du nombre de processeurs logiques par nœud NUMA avec une valeur MAX de 16|
+  
+> [!NOTE]
+> Nœud NUMA dans le tableau ci-dessus fait référence à des nœuds soft-NUMA automatiquement créés par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.   
+>  Utilisez ces instructions lorsque vous définissez l’option max degree of parallelism pour les groupes de charge de travail du Resource Governor. Pour plus d’informations, consultez [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
+  
+De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], utilisez les directives suivantes quand vous configurez la valeur de configuration de serveur **max degree of parallelism** :
 
 ||||
 |----------------|-----------------|-----------------|
 |Serveur avec un seul nœud NUMA|Moins de 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
 |Serveur avec un seul nœud NUMA|Supérieur à 8 processeurs logiques|Conservez MAXDOP à 8|
-|Serveur avec plusieurs nœuds NUMA|Moins de 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
+|Serveur avec plusieurs nœuds NUMA|Supérieur à 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
 |Serveur avec plusieurs nœuds NUMA|Supérieur à 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à 8|
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -89,7 +104,7 @@ EXEC sp_configure 'show advanced options', 1;
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
-EXEC sp_configure 'max degree of parallelism', 8;  
+EXEC sp_configure 'max degree of parallelism', 16;  
 GO  
 RECONFIGURE WITH OVERRIDE;  
 GO  
@@ -97,7 +112,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max degree of parallelism  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option max degree of parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a> Voir aussi  

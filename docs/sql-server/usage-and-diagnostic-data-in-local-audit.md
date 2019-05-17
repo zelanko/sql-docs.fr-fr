@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582763"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372441"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>Introduction
 
-Microsoft SQL Server contient des fonctionnalités Internet capables de collecter et d’envoyer des informations sur votre ordinateur ou appareil. Il s’agit des *informations standard de l’ordinateur*. Le composant d’audit local de la [collecte de données d’utilisation et de diagnostic de SQL Server](https://support.microsoft.com/kb/3153756) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  
+Microsoft SQL Server contient des fonctionnalités Internet capables de collecter et d’envoyer des informations sur votre ordinateur ou appareil. Il s’agit des *informations standard de l’ordinateur*. Le composant d’audit local de la [collecte de données d’utilisation et de diagnostic de SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) écrit les données collectées par le service vers un dossier désigné, représentant les données (journaux) qui peuvent être envoyées à Microsoft. L’objectif de l’audit local est d’autoriser les clients à visualiser toutes les données collectées par Microsoft avec cette fonctionnalité, pour des raisons de conformité, de réglementation ou de validation de la confidentialité.  
 
 À partir de SQL Server 2016 CU2, possibilité de configuration au niveau de l’instance pour le moteur de base de données SQL Server et Analysis Services (SSAS). Dans SQL Server 2016 CU4 et SQL Server 2016 SP1, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour les données d’utilisation et de diagnostic.
+
+## <a name="remarks"></a>Notes 
+
+ - La suppression ou la désactivation du service CEIP SQL n’est pas prise en charge. 
+ - La suppression des ressources CEIP SQL à partir du groupe de cluster n’est pas prise en charge. 
+
+Pour refuser la collecte de données, consultez [Activation ou désactivation de l’audit local](#turning-local-audit-on-or-off)
 
 ## <a name="prerequisites"></a>Conditions préalables requises 
 

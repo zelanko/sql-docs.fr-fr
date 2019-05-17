@@ -1,5 +1,5 @@
 ---
-title: "Procédure : écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction | Microsoft Docs"
+title: 'Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681287"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099561"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procédure : écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procédure : Écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction
 Modifiez les tests unitaires de façon à ce qu'ils s'exécutent dans l'étendue d'une transaction. Si vous adoptez cette approche, vous pouvez restaurer les modifications apportées par le test une fois le test terminé. Les procédures suivantes expliquent comment effectuer les tâches suivantes :  
   
 -   Créer une transaction dans votre script de test Transact\-SQL qui utilise **BEGIN TRANSACTION** et **ROLLBACK TRANSACTION**.  
@@ -54,7 +54,7 @@ Pour certaines procédures de cette rubrique, le service Distributed Transaction
     > [!NOTE]  
     > Vous ne pouvez pas restaurer une transaction après l'exécution d'une instruction COMMIT TRANSACTION.  
   
-    Pour plus d'informations sur le fonctionnement de l'instruction ROLLBACK TRANSACTION avec les procédures stockées et les déclencheurs, consultez cette page sur le site Web Microsoft : [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
+    Pour plus d’informations sur le fonctionnement de l’instruction ROLLBACK TRANSACTION avec les procédures stockées et les déclencheurs, consultez cette page sur le site Web Microsoft : [ROLLBACK TRANSACTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Pour créer une transaction pour une seule méthode de test  
 Dans cet exemple, vous utilisez une transaction ambiante lorsque vous utilisez le type [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Par défaut, les connexions d'exécution et privilégiées n'utilisent pas la transaction ambiante, car les connexions ont été créées avant que la méthode ne soit exécutée. SqlConnection possède une méthode [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), qui associe une connexion active à une transaction. Lorsqu'une transaction ambiante est créée, elle est inscrite en tant que transaction active, et la propriété [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current) vous permet d'y accéder. Dans cet exemple, la transaction est restaurée lorsque la transaction ambiante est supprimée. Si vous souhaitez valider toutes les modifications apportées lorsque vous avez exécuté le test unitaire, vous devez appeler la méthode [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
@@ -156,7 +156,7 @@ Dans cet exemple, vous utilisez une transaction ambiante lorsque vous utilisez l
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Pour démarrer le service Distributed Transaction Coordinator  
-Certaines procédures de cette rubrique utilisent des types dans l'assembly System.Transactions. Avant que vous suiviez les procédures, vous devez vérifier que le service Distributed Transaction Coordinator est en cours d'exécution sur l'ordinateur sur lequel vous exécutez les tests unitaires. Sinon, les tests échouent, et le message d'erreur suivant s'affiche : « La méthode de test *ProjectName*.*TestName*.*MethodName* a levé une exception : System.Data.SqlClient.SqlException : MSDTC n'est pas disponible sur le serveur *ComputerName* ».  
+Certaines procédures de cette rubrique utilisent des types dans l'assembly System.Transactions. Avant que vous suiviez les procédures, vous devez vérifier que le service Distributed Transaction Coordinator est en cours d'exécution sur l'ordinateur sur lequel vous exécutez les tests unitaires. Sinon, les tests échouent et le message d’erreur suivant apparaît : « Méthode de test *ProjectName*.*TestName*.*MethodName* a levé une exception : System.Data.SqlClient.SqlException : MSDTC n’est pas disponible sur le serveur '*ComputerName*' ».  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Pour démarrer le service Distributed Transaction Coordinator  
   

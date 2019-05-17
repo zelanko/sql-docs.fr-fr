@@ -14,12 +14,12 @@ ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34d019792a898290c65371e32f83b49911cb27a3
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9600287fb847dcea4f24c565a843e9757e364c5e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973827"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105241"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Groupes de disponibilité Always On : interopérabilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Le tableau suivant répertorie les fonctionnalités de [!INCLUDE[ssNoVersion](..
 |Chiffrement de base de données|[Bases de données chiffrées avec groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)|
 |Instantanés de base de données|[Instantanés de base de données avec des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)|
 |FILESTREAM et FileTable|[FILESTREAM et FileTable avec groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|
-|Recherche en texte intégral|Remarque : les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires Always On.|
+|Recherche en texte intégral|Remarque : les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires Always On.|
 |Copie des journaux de transaction|[Conditions préalables requises pour la migration de la copie des journaux de transaction vers les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|
 |Magasin d'objets blob distants (RBS)|[Magasin d’objets blob distants&#40;RBS&#41; et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md)|
 |Réplication|[Configurer la réplication pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-replication-for-always-on-availability-groups-sql-server.md)<br /><br /> [Gestion d’une base de données de publication Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)<br /><br /> [Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)<br /><br /> [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)|
@@ -52,6 +52,7 @@ Le tableau suivant répertorie les fonctionnalités de [!INCLUDE[ssNoVersion](..
 Les fonctionnalités suivantes interopèrent avec les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des restrictions spécifiques. Consultez les rubriques associées pour plus d’informations.
 
 - Transactions entre bases de données/transactions distribuées ([!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] et Windows Server 2016). Pour plus d’informations, consultez [Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).
+- Le [collecteur de données système des statistiques de requête](../../../relational-databases/data-collection/system-data-collection-set-reports.md#Query) ne peut pas s’exécuter de manière fiable dans un environnement avec des secondaires non accessibles en lecture. Pour utiliser le collecteur de données système des statistiques de requête, paramétrez tous les réplicas de groupe de disponibilité secondaires afin d’autoriser l’[accès en lecture](configure-read-only-access-on-an-availability-replica-sql-server.md). 
 
 ## <a name="NoInterop"></a> Fonctionnalités qui n’interopèrent pas avec les groupes de disponibilité Always On
 

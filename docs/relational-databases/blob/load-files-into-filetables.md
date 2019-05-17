@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c36a1b7235b1a323bbace94762411aa2c71df15b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526708"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65094260"
 ---
 # <a name="load-files-into-filetables"></a>Charger des fichiers dans FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Vous pouvez appliquer les méthodes suivantes pour charger des fichiers dans un 
   
 -   Écrivez une application personnalisée pour déplacer ou copier les fichiers en C# ou Visual Basic.NET. Appelez des méthodes à partir de l’espace de noms **System.IO**.  
   
-###  <a name="HowToMigrateFiles"></a> Exemple : migration de fichiers à partir du système de fichiers dans un FileTable  
+###  <a name="HowToMigrateFiles"></a> Exemple : migration de fichiers à partir du système de fichiers dans un FileTable  
  Dans ce scénario, vos fichiers sont stockés dans le système de fichiers et vous disposez d'une table de métadonnées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient des pointeurs sur les fichiers. Vous souhaitez déplacer les fichiers dans un FileTable, puis remplacer le chemin UNC d'origine pour chaque fichier dans les métadonnées par le chemin UNC de FileTable. La fonction [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) vous aide à accomplir cet objectif.  
   
  Pour cet exemple, supposez qu'il existe une table de base de données nommée **PhotoMetadata**qui contient des données relatives à des photographies. Cette table comprend une colonne **UNCPath** du type **varchar**(512) qui contient le chemin UNC réel à un fichier .jpg.  

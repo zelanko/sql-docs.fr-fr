@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535851"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450087"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Avant de commencer, passez en revue les informations importantes suivantes :
 - [Vérifier si la capture des changements de données ou la réplication est utilisée pour les bases de données du groupe de disponibilité](#special-steps-for-change-data-capture-or-replication) : si des bases de données du groupe de disponibilité sont activées pour la capture des changements de données (CDC), suivez ces [instructions](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->Le mélange de versions d’instances SQL Server dans le même groupe de disponibilité n’est pas pris en charge en dehors d’une mise à niveau propagée qui met à niveau les réplicas en place. Une version supérieure d’une instance SQL Server ne peut pas être ajoutée comme nouveau réplica à un groupe de disponibilité existant. Par exemple, un réplica SQL Server 2017 ne peut pas être ajouté à un groupe de disponibilité SQL Server 2016 existant. Pour migrer vers une nouvelle version d’une instance SQL Server à l’aide de groupes de disponibilité, la seule méthode prise en charge est d’utiliser un groupe de disponibilité distribué qui figure dans SQL Server 2016 Enterprise Edition ou version ultérieure.
+>Avoir plusieurs versions différentes des instances de SQL Server dans le même groupe de disponibilité n’est pas pris en charge en dehors d’une mise à niveau propagée. En outre, cet état ne devrait pas durer pendant de longues périodes, étant donné que la mise à niveau doit avoir lieu rapidement. L’autre option pour la mise à niveau de SQL Server 2016 et versions ultérieures est via un groupe de disponibilité distribué.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Concepts de base de la mise à niveau propagée pour les groupes de disponibilité Always On  
 Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jour du serveur afin de réduire le temps d’arrêt et la perte de données de vos groupes de disponibilité :  

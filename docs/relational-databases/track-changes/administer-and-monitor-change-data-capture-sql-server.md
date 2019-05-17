@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991902"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099971"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
 
@@ -176,6 +176,11 @@ Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
   
 4. Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
   
+## <a name="ScriptUpgrade"></a> Mode de mise à niveau du script
+
+Lorsque vous appliquez des mises à jour cumulatives ou des Service Pack à une instance, au redémarrage, l’instance peut entrer en mode de mise à niveau du script. Dans ce mode, SQL Server peut procéder à une analyse et mise à niveau des tables internes de capture des changements de données, ce qui pourrait entraîner la recréation d’objets tels que les index sur les tables de capture. Selon la quantité de données impliquées, cette étape peut prendre un certain temps ou provoquer une forte utilisation du journal des transactions pour les bases de données où la capture des changements de données est activée.
+
+
 ## <a name="see-also"></a> Voir aussi
 
 - [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

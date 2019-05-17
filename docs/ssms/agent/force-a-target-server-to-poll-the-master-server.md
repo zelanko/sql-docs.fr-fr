@@ -13,16 +13,16 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - target servers [SQL Server], polling the master server
 ms.assetid: f1189a47-5ac3-45e2-9c5f-847810672279
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c0f3c9d209055bc05ff53c64f354b282e32be8c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49408bfe22bf05e6315b9598c0b65f5c02b791de
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740497"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096566"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forcer un serveur cible à interroger le serveur maître
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Un travail est une série d'actions exécutées par [!INCLUDE[ssNoVersion](../..
 > [!NOTE]  
 > Si le serveur maître est accessible lorsque le serveur cible tente de charger l'état du travail, ce dernier est mis en attente dans le spouleur jusqu'à ce que le serveur maître soit accessible.  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
 -   **Pour forcer l’interrogation du serveur maître par un serveur cible, avec :** [SQL Server Management Studio](#SSMS)  
   

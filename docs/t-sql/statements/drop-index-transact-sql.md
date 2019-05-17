@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e151639595e181fb434e5144daa64cc84128892
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132449"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503452"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,10 +70,7 @@ DROP INDEX [ IF EXISTS ]
     [ owner_name. ] table_or_view_name.index_name  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_clustered_index_option> ::=  
 {  
@@ -100,16 +97,13 @@ DROP INDEX
     index_name ON <object>  
   
 <object> ::=   
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] table_name  
+DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -238,7 +232,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  Des index peuvent parfois être supprimés et recréés pour réorganiser ou reconstruire l'index, par exemple pour appliquer un nouveau taux de remplissage ou pour réorganiser les données après un chargement en masse. Pour ce faire, l’utilisation de [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) est plus efficace, en particulier pour les index clusters. ALTER INDEX REBUILD possède des optimisations permettant d'éviter la surcharge liée à la reconstruction des index non cluster.  
   
 ## <a name="using-options-with-drop-index"></a>Utilisations d'options avec DROP INDEX  
- Vous pouvez définir les options d'index suivantes lorsque vous supprimez un index cluster : MAXDOP, ONLINE, et MOVE TO.  
+ Vous pouvez définir les options d’index suivantes lorsque vous supprimez un index cluster : MAXDOP, ONLINE, et MOVE TO.  
   
  Utilisez MOVE TO pour supprimer l'index cluster et déplacer la table résultante vers un autre groupe de fichiers ou schéma de partition dans une transaction unique.  
   
@@ -256,7 +250,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
 1.  supprimer l'index cluster ;  
   
-2.  modifier la table à l'aide d'une option ALTER TABLE ... REBUILD ... spécifiant l'option de compression.  
+2.  modifier la table à l’aide d’une option ALTER TABLE ... REBUILD ... spécifiant l’option de compression.  
   
 Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérieurs des index clusters sont supprimés ; cette opération est donc très rapide. Quand un index cluster est supprimé EN LIGNE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconstruit le segment de mémoire deux fois, une fois pour l’étape 1 et une fois pour l’étape 2. Pour plus d’informations sur la compression de données, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
@@ -270,7 +264,7 @@ Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérie
   
  Pour plus d’informations sur les index spatiaux, consultez [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'exécution de DROP INDEX nécessite au moins une autorisation ALTER sur la table ou la vue. L’autorisation est accordée par défaut au rôle serveur fixe **sysadmin** et aux rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ## <a name="examples"></a>Exemples  
@@ -284,7 +278,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>b. Suppression de plusieurs index  
+### <a name="b-dropping-multiple-indexes"></a>B. Suppression de plusieurs index  
  L'exemple suivant supprime deux index en une seule transaction dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

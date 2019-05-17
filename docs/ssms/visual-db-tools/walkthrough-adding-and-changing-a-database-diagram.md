@@ -12,17 +12,17 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 177c3e0e4dcd6e632b82501441fdb240bcc19b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e55163886d39fc59cd8ce8787088f3645fb7e51
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787497"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105601"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
@@ -46,7 +46,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
   
     La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -60,7 +60,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 1.  Cliquez avec le bouton droit sur la table `Address` . Dans le menu contextuel, pointez sur **Vue Table**, puis cliquez sur **Standard**.  
   
-    La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
+    La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
   
 2.  Cliquez avec le bouton droit sur la table `Address` , cliquez sur **Vue Table** et sélectionnez **Clés**.  
   
@@ -74,7 +74,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 2.  Dans la boîte de dialogue **Choisir un nom** , cliquez sur **OK** pour accepter le nom par défaut **Table1**.  
   
-    Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**et **Autoriser les valeurs NULL**.  
+    Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
   
 3.  Ajoutez les informations suivantes à la **Table1**:  
   
@@ -210,10 +210,10 @@ Il s'agit d'un schéma de base contenant deux nouvelles tables et deux tables ex
   
 ## <a name="see-also"></a> Voir aussi  
 [Personnaliser la quantité d’informations affichées dans les schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  
-[Configurer le Concepteur de schémas de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[Configurer le Concepteur de diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Ajouter des tables à des schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Créer des relations entre des tables sur un diagramme &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
 [Créer des index XML](../../relational-databases/xml/create-xml-indexes.md)  
-[Copier une image d’un schéma de base de données dans le Presse-papiers &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
+[Copier une image d’un diagramme de base de données dans le Presse-papiers &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Utiliser une disposition de schémas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

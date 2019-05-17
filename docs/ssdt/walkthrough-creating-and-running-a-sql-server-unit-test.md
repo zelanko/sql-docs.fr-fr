@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305957"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101941"
 ---
-# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d'un test unitaire SQL Server
+# <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
 Dans cette procédure pas à pas, vous créez un test unitaire SQL Server qui vérifie le comportement de plusieurs procédures stockées. Vous créez des tests unitaires SQL Server pour identifier les erreurs de code qui peuvent provoquer un comportement d'application incorrect. Vous pouvez exécuter des tests unitaires SQL Server et des tests d'application dans le cadre d'une suite automatisée de tests.  
   
 Au cours de cette procédure pas à pas, vous effectuez les tâches suivantes :  
@@ -723,7 +723,7 @@ Les tests supposent que la base de données démarre dans un état propre. Vous 
     |--------|-------------------|  
     |Sales_uspPlaceNewOrderTest|Succès|  
     |Sales_uspShowOrderDetailsTest|Succès|  
-    |Sales_uspFillOrderTest|Échec avec l'erreur suivante : « Échec de la condition ScalarValueCondition (scalarValueCondition2) : jeu de résultats 1 ligne 1 colonne 1 : les valeurs ne correspondent pas, réelles '-100' attendues '100'. » Cette erreur se produit, car la définition de la procédure stockée contient une erreur mineure.|  
+    |Sales_uspFillOrderTest|Échec avec l’erreur suivante : « Échec de la condition ScalarValueCondition (scalarValueCondition2) : jeu de résultats 1 ligne 1 colonne 1 : les valeurs ne correspondent pas, réelles '-100' attendues '100'. » Cette erreur se produit, car la définition de la procédure stockée contient une erreur mineure.|  
   
     Ensuite, vous allez corriger l'erreur et réexécuter le test.  
   

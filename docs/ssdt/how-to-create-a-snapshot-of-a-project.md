@@ -1,5 +1,5 @@
 ---
-title: "Procédure : créer une capture instantanée d'un projet | Microsoft Docs"
+title: 'Procédure : créer une capture instantanée d’un projet | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530787"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098081"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : créer une capture instantanée d'un projet
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : Créer une capture instantanée d’un projet
 Chaque fichier d'**application de la couche Données** vous fournit une représentation en lecture seule du schéma de la base de données au moment de la création de l'instantané. Il est essentiellement traité comme un schéma de base de données à partir duquel vous pouvez réimporter les objets de schéma vers un projet. Vous pouvez aussi le comparer au schéma d'une base de données ou d'un projet, et mettre à jour la base de données ou le projet pour refléter le schéma défini dans l'instantané.  
   
 Si une erreur utilisateur se produit dans un projet de base de données source, vous pouvez rétablir le projet source dans l'état qui était le sien au moment où l'instantané a été créé. Vous pouvez aussi établir des instantanés à différentes phases de votre développement à des fins de référence.  
@@ -52,7 +52,7 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
 3.  Cliquez sur **Terminer** sur la page **Résumé**. Dans l'**Explorateur de solutions**, notez que la table supprimée a été restaurée dans le projet.  
   
     > [!WARNING]  
-    > L'instantané d'importation importera toutes les entités de base de données dans le schéma de l'instantané vers le projet. En conséquence, des entités en double peuvent être créées. Par exemple, chacune des tables et vues contient à présent une copie supplémentaire d'elle-même nommée <ObjectName_1>. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur chacun de ces objets en double et sélectionnez **Supprimer** pour le supprimer du projet.  
+    > L'instantané d'importation importera toutes les entités de base de données dans le schéma de l'instantané vers le projet. En conséquence, des entités en double peuvent être créées. Par exemple, chacune des tables et vues contient à présent une copie supplémentaire d’elle-même nommée <ObjectName_1>. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur chacun de ces objets en double et sélectionnez **Supprimer** pour le supprimer du projet.  
   
 ### <a name="to-compare-snapshots"></a>Pour comparer les instantanés  
   
@@ -65,5 +65,5 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
     Vous pouvez facilement rechercher le delta d'autres instantanés à l'aide de Comparaison de schémas. Dans ce cas, vous pouvez découvrir comment votre projet évolue au cours du processus de développement.  
   
 ## <a name="see-also"></a> Voir aussi  
-[Guide pratique : Utiliser Comparer les schémas pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

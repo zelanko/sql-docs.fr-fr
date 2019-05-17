@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736765"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775025"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+Si un déclencheur s’applique à une colonne, `COLUMNS_UPDATED` retourne `true` ou `1`, même si la valeur de colonne reste inchangée. Cela est intentionnel. Le déclencheur doit implémenter une logique métier qui détermine si l’opération d’insertion/de mise à jour/de suppression est autorisée ou non. 
   
 ## <a name="column-sets"></a>Jeux de colonnes
 Quand un jeu de colonnes est défini sur une table, la fonction `COLUMNS_UPDATED` se comporte comme suit :
@@ -181,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilisation de COLUMNS_UPDATED pour tester plus de huit colonnes  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilisation de COLUMNS_UPDATED pour tester plus de huit colonnes  
 Pour tester l’existence de mises à jour affectant des colonnes autres que les huit premières colonnes d’une table, utilisez la fonction `SUBSTRING` afin de tester le bit adéquat retourné par `COLUMNS_UPDATED`. Cet exemple teste l’existence de mises à jour affectant les colonnes `3`, `5` et `9` de la table `AdventureWorks2012.Person.Person`.
   
 ```sql

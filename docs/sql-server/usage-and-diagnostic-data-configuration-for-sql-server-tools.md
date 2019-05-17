@@ -1,5 +1,5 @@
 ---
-title: Configurer la collecte de données d’utilisation et de diagnostic pour les outils SQL Server | Microsoft Docs
+title: Configurer la collecte de données d’utilisation et de diagnostic pour les outils SQL Server (CEIP) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243513"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376852"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Configurer les données d’utilisation et de diagnostic pour les outils SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configurer les données d’utilisation et de diagnostic pour les outils SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ Découvrez comment le Programme d’amélioration du produit (CEIP) aide Microso
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Inscription et désinscription au CEIP pour SQL Server Data Tools  
 
- Le Programme d’amélioration du produit (CEIP) est un programme conçu pour aider Microsoft à améliorer ses produits au fil du temps. Ce programme collecte des informations sur le matériel informatique et la manière dont les clients utilisent notre produit, sans interrompre les utilisateurs dans leurs tâches sur l’ordinateur. Les informations recueillies aident Microsoft à identifier les fonctionnalités à améliorer. Dans ce document, nous abordons l’inscription et la désinscription au Programme d’amélioration du produit SQL Server Data Tools (SSDT) pour Visual Studio 2017, Visual Studio 2015 et Visual Studio 2013.  
+ Le Programme d’amélioration du produit (CEIP) est un programme conçu pour aider Microsoft à améliorer ses produits au fil du temps. Ce programme collecte des informations sur le matériel informatique et la manière dont les clients utilisent notre produit, sans interrompre les utilisateurs dans leurs tâches sur l’ordinateur. Les informations recueillies aident Microsoft à identifier les fonctionnalités à améliorer. Dans ce document, nous abordons l’inscription et la désinscription au Programme d’amélioration du produit SQL Server Data Tools (SSDT) pour Visual Studio 2017, Visual Studio 2015 et Visual Studio 2013.  Pour plus d’informations sur la désactivation du CEIP pour SQL Server, consultez [Désactivation de l’audit local pour SQL Server](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Choix et contrôle relatifs au Programme d’amélioration du produit et SQL Server Data Tools pour Visual Studio 2017
 

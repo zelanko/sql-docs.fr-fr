@@ -1,5 +1,5 @@
 ---
-title: "Procédure : configurer l'exécution de test unitaire SQL Server | Microsoft Docs"
+title: 'Procédure : configurer l’exécution de test unitaire SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666758"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090183"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : configurer l'exécution de test unitaire SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : Configurer l’exécution de test unitaire SQL Server
 Lorsque vous configurez votre projet de test, vous spécifiez plusieurs paramètres qui contrôlent la façon dont vos tests unitaires SQL Server sont exécutés. Ces paramètres de configuration sont stockés dans le fichier app.config de votre projet de test. Si vous modifiez ce fichier directement, les nouvelles valeurs apparaissent dans la boîte de dialogue de configuration du test.  
   
 Votre solution peut contenir plusieurs projets de test. Chaque projet de test contient un fichier app.config (autrement dit, un ensemble de paramètres de configuration). Par conséquent, votre solution peut contenir différents ensembles de tests unitaires (un ensemble pour chaque projet de test) qui sont configurés pour s'exécuter différemment.  

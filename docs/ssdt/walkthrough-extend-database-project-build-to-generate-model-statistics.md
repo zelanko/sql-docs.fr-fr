@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle | Microsoft Docs'
+title: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523423"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102037"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle
 Vous pouvez créer un contributeur de génération pour effectuer des actions personnalisées lorsque vous générez un projet de base de données. Dans cette procédure pas à pas, vous allez créer un contributeur de génération nommé ModelStatistics qui génère des statistiques de base de données SQL lorsque vous créez un projet de base de données. Ce contributeur de génération acceptant des paramètres lorsque vous effectuez la génération, quelques étapes supplémentaires sont nécessaires.  
   
 Au cours de cette procédure pas à pas, vous allez effectuer les tâches principales suivantes :  
@@ -474,7 +474,7 @@ Pour exécuter ou tester un contributeur de génération, vous devez effectuer l
 ### <a name="add-properties-to-the-sql-project-sqlproj-file"></a>Ajouter des propriétés au fichier de projet SQL (.sqlproj)  
 Vous devez toujours mettre à jour le fichier de projet SQL pour spécifier l'ID des contributeurs à exécuter. En outre, ce contributeur de génération acceptant des paramètres de ligne de commande Msbuild, vous devez modifier le projet SQL pour permettre aux utilisateurs de transmettre ces paramètres via Msbuild.  
   
-Vous pouvez le faire de deux façons :  
+Vous pouvez le faire de deux façons :  
   
 -   Vous pouvez modifier manuellement le fichier .sqlproj pour ajouter les arguments requis. Vous pouvez procéder de la sorte si vous n'envisagez pas de réutiliser le contributeur de génération sur un grand nombre de projets. Si vous choisissez cette option, ajoutez les instructions suivantes dans le fichier .sqlproj après le premier nœud d'importation dans le fichier  
   
@@ -525,7 +525,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
 1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Regénérer ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l’Explorateur de solutions pour visualiser le fichier XML.  
   
-2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>**, cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)**.  
+2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>**, cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)**.  
   
 3.  À l'invite de commandes, accédez au dossier qui contient votre projet SQL.  
   
@@ -537,7 +537,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
     Remplacez *MyDatabaseProject* par le nom du projet de base de données que vous souhaitez générer. Si vous avez modifié le projet après l'avoir généré, vous pouvez utiliser /t:Build au lieu de /t:Rebuild.  
   
-    Dans la sortie vous devez voir les informations de génération comme suit :  
+    Dans la sortie vous devez voir les informations de génération comme suit :  
   
 ```  
 Model Statistics:  
@@ -593,5 +593,5 @@ Vous pouvez créer des outils supplémentaires pour effectuer le traitement du f
   
 ## <a name="see-also"></a> Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

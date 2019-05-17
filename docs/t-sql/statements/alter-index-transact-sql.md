@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980415"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502870"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -184,12 +183,12 @@ ALTER INDEX { index_name | ALL }
   
 |Utilisation du mot clé ALL avec cette opération|Entraîne un échec si la table possède des|  
 |----------------------------------------|----------------------------------------|  
-|REBUILD WITH ONLINE = ON|Index XML<br /><br /> Index spatial<br /><br /> Index Columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|REBUILD WITH ONLINE = ON|Index XML<br /><br /> Index spatial<br /><br /> Index columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |REBUILD PARTITION = *partition_number*|Index non partitionné, index XML, index spatial ou index désactivé|  
 |REORGANIZE|Index pour lesquels ALLOW_PAGE_LOCKS a la valeur OFF|  
 |REORGANIZE PARTITION = *partition_number*|Index non partitionné, index XML, index spatial ou index désactivé|  
-|IGNORE_DUP_KEY = ON|Index XML<br /><br /> Index spatial<br /><br /> Index Columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
-|ONLINE = ON|Index XML<br /><br /> Index spatial<br /><br /> Index Columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
+|IGNORE_DUP_KEY = ON|Index XML<br /><br /> Index spatial<br /><br /> Index columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|ONLINE = ON|Index XML<br /><br /> Index spatial<br /><br /> Index columnstore : **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|
 |RESUMABLE = ON  | Les index pouvant être repris ne sont pas pris en charge avec le mot clé **All**. <br /><br /> **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. |   
   
 > [!WARNING]
@@ -536,11 +535,11 @@ La valeur par défaut est 0 minute.
   
  \<partition_number_expression> peut être spécifié des manières suivantes :  
   
--   Spécifiez le numéro de partition, par exemple : ON PARTITIONS (2).  
+-   Spécifiez le numéro de partition, par exemple : ON PARTITIONS (2).  
   
--   Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).  
+-   Spécifiez des numéros de partition pour plusieurs partitions individuelles séparées par des virgules, par exemple : ON PARTITIONS (1, 5).  
   
--   Spécifiez à la fois des plages et des partitions individuelles : ON PARTITIONS (2, 4, 6 TO 8).  
+-   Spécifiez à la fois des plages et des partitions individuelles : ON PARTITIONS (2, 4, 6 TO 8).  
   
  \<range> peut être spécifié sous la forme de numéros de partitions séparés par le mot TO, par exemple : ON PARTITIONS (6 TO 8).  
   
@@ -735,8 +734,7 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
    -    ALTER TABLE avec la reconstruction d’index  
    -    Il n’est pas possible d’exécuter la commande DDL avec « RESUMABLE=ON » dans une transaction explicite (ne peut pas faire partie d’un block begin tran ... commit)
    -    La reconstruction d’un index qui a calculé ou horodaté (TIMESTAMP) la ou les colonnes en tant que colonnes clés.
--   Si la table de base contient une ou plusieurs colonnes LOB, la reconstruction d’index cluster pouvant être reprise nécessite un verrou Sch-M au début de cette opération
-   -    L’option SORT_IN_TEMPDB=ON n’est pas prise en charge pour l’index pouvant être repris. 
+-   Si la table de base contient une ou plusieurs colonnes LOB, la reconstruction d’index cluster pouvant être reprise nécessite un verrou Sch-M au début de cette opération 
 
 > [!NOTE]
 > La commande DDL s’exécute tant qu’elle n’a pas fini, n’est pas mise en pause ou n’a pas échoué. Si la commande est en pause, une erreur s’affiche indiquant que l’opération a été mise en pause et que la création d’index n’a pas été effectuée. Vous trouverez plus d’informations sur l’état d’index actuel dans [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Comme avant, en cas de défaillance, une erreur s’affiche également. 
@@ -764,13 +762,13 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de recons
 Les restrictions suivantes s'appliquent aux index partitionnés :  
   
 -   Lorsque vous utilisez ALTER INDEX ALL ..., vous ne pouvez pas modifier le paramètre de compression d’une partition unique si la table comporte des index non alignés.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l'index.  
--   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l'index.  
+-   La syntaxe ALTER INDEX \<index> ... REBUILD PARTITION ... reconstruit la partition spécifiée de l’index.  
+-   La syntaxe ALTER INDEX \<index> ... REBUILD WITH ... reconstruit toutes les partitions de l’index.  
   
 ## <a name="statistics"></a>Statistiques  
  Quand vous exécutez **ALTER INDEX ALL ...** sur une table, seules les statistiques associées aux index sont mises à jour. Les statistiques automatiques ou manuelles créées sur la table (au lieu d'un index) ne sont pas mises à jour.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour pouvoir exécuter l'instruction ALTER INDEX, vous devez obligatoirement bénéficier au minimum d'autorisations nécessaires pour exécuter les instructions ALTER sur la table ou la vue.  
   
 ## <a name="version-notes"></a>Notes de version  
@@ -870,7 +868,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Compression des rowgroups delta CLOSED dans le columnstore  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Compression des rowgroups delta CLOSED dans le columnstore  
  Cet exemple utilise l’option REORGANIZE pour compresser chaque rowgroup delta CLOSED dans le columnstore en tant que rowgroup compressé.   Ce n’est pas nécessaire, mais utile quand le moteur de tuple ne compresse pas les rowgroups CLOSED assez rapidement.  
   
 ```sql  
@@ -1005,7 +1003,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Reconstruction de tous les index d'une table et indication des options  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Reconstruction de tous les index d'une table et indication des options  
  L’exemple suivant spécifie le mot clé ALL. Il reconstruit tous les index associés à la table Production.Product dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Trois options sont spécifiées.  
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

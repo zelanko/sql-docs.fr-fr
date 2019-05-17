@@ -24,12 +24,12 @@ ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 472f70d3f522eabf5d0e901639683a6a9f9ef117
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a336b58ed148fa135835f4d991d73644c5f1799e
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697128"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503229"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,7 @@ ALTER QUEUE <object>
 [ ; ]  
   
 <object> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        queue_name  
-}   
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
   
 <queue_settings> : :=  
 WITH  
@@ -73,10 +70,7 @@ WITH
    | MOVE TO { file_group | "default" }  
   
 <procedure> : :=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]  
-        stored_procedure_name  
-}  
+{ database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
   
 <queue_rebuild_options> : :=  
 {  
@@ -175,7 +169,7 @@ Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file 
   
  Si une instruction RECEIVE ou GET CONVERSATION GROUP spécifie une file d'attente indisponible, cette instruction échoue et une erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] se produit.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'autorisation de modification d'une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  
@@ -248,7 +242,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
-### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I : Déplacement d’une table interne de file d’attente vers un autre groupe de fichiers  
+### <a name="i-moving-queue-internal-table-to-another-filegroup"></a>I. Déplacement d’une table interne de file d’attente vers un autre groupe de fichiers  
   
 **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

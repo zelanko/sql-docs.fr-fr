@@ -1,5 +1,5 @@
 ---
-title: "Procédure pas à pas : utilisation d'une condition de test personnalisée pour vérifier le résultat d'une procédure stockée | Microsoft Docs"
+title: 'Procédure pas à pas : utilisation d’une condition de test personnalisée pour vérifier le résultat d’une procédure stockée | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832997"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097442"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procédure pas à pas : utilisation d'une condition de test personnalisée pour vérifier le résultat d'une procédure stockée
-Dans cette procédure pas à pas d'extension de fonctionnalité, vous allez créer une condition de test, puis vérifier cette fonctionnalité en créant un test unitaire SQL Server. Cette procédure inclut la création d'un projet de bibliothèque de classes pour la condition de test, sa signature et son installation. Si vous disposez déjà d'une condition de test à mettre à jour, consultez [Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d'une version antérieure vers SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procédure pas à pas : Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée
+Dans cette procédure pas à pas d'extension de fonctionnalité, vous allez créer une condition de test, puis vérifier cette fonctionnalité en créant un test unitaire SQL Server. Cette procédure inclut la création d'un projet de bibliothèque de classes pour la condition de test, sa signature et son installation. Si vous disposez déjà d’une condition de test à mettre à jour, consultez [Procédure : mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
   
 Cette procédure pas à pas décrit les tâches suivantes :  
   
@@ -121,7 +121,7 @@ Vous allez renommer **Class1** **ResultSetColumnCountCondition** et la dériver 
     public class ResultSetColumnCountCondition : TestCondition  
     ```  
   
-5.  Ajoutez [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Consultez [Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) pour plus d’informations sur UnitTesting.Conditions.ExportTestConditionAttribute.  
+5.  Ajoutez [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx). Consultez [Procédure : créer des conditions de test pour le Concepteur de test unitaire SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md) pour plus d’informations sur UnitTesting.Conditions.ExportTestConditionAttribute.  
   
     ```  
     [ExportTestCondition("ResultSet Column Count", typeof(ResultSetColumnCountCondition))]  
@@ -381,7 +381,7 @@ Vous devez ensuite créer un test unitaire. Pour créer un test unitaire SQL Ser
   
 6.  Cliquez sur **Annuler** pour créer le test unitaire sans configurer le projet de test de façon à utiliser une connexion de base de données. Le test vide apparaît dans le Concepteur de test unitaire SQL Server. Un fichier de code source Visual C\# est ajouté au projet de test.  
   
-    Pour plus d'informations sur la création et la configuration de tests unitaires de base de données avec des connexions de base de données, consultez [Procédure : créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
+    Pour plus d’informations sur la création et la configuration de tests unitaires de base de données avec des connexions de base de données, consultez [Procédure : Créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md).  
   
 7.  Cliquez sur **Cliquez ici pour créer** pour terminer la création du test unitaire. La nouvelle condition de test s'affiche dans le projet SQL Server.  
   
@@ -400,7 +400,7 @@ Pour afficher la nouvelle condition de test :
   
 5.  Dans la fenêtre **Propriétés**, configurez les propriétés Count, Enabled et ResultSet.  
   
-    Pour plus d'informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+    Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
