@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754137"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805156"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
   Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d'avertissement pour la base de données sélectionnée dans l'arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données** .  
@@ -30,7 +30,7 @@ ms.locfileid: "62754137"
   
 ## <a name="options"></a>Options  
  *Instance de serveur et état de la connexion*  
- Nom d’une instance de serveur partenaire au format *SYSTÈME***\\***NOM_INSTANCE*. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
+ Nom d’une instance de serveur partenaire au format _SYSTÈME_**\\**_NOM_INSTANCE_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
   
  Ce champ indique également si le moniteur est actuellement connecté à cette instance de serveur. Les états de connexion possibles sont les suivants :  
   
