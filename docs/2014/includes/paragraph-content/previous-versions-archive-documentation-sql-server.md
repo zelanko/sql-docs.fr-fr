@@ -1,18 +1,23 @@
 ---
-ms.openlocfilehash: 51254f2045ea7e3125a42abbbab9c1599a1deb2a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 7bcf7ac382bb60e1a38b34ac6e3a26c2126e1e88
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820618"
+ms.locfileid: "65836161"
 ---
 
+Nous accumulons et conservons la documentation pour les très anciennes versions de SQL Server dans un ensemble de pages web d’archives. Les pages Web archivés ne sont pas traités par les moteurs de recherche, tels que Bing.com et Google.com. Mais vous pouvez voir ces archives à notre documentation _versions précédentes /_ adresse :
 
-Nous accumulons et conservons la documentation pour les très anciennes versions de SQL Server dans un ensemble de pages web d’archives. Vous pouvez voir ces archives à la page [Documentation sur les versions précédentes de SQL Server](https://docs.microsoft.com/previous-versions/sql/).
+- [https://docs.microsoft.com/previous-versions/sql/](https://docs.microsoft.com/previous-versions/sql/)
 
-À compter de novembre 2018, ces archives incluent la documentation pour au moins les versions suivantes :
+Ces archives incluent la documentation au moins les versions antérieures suivantes :
+
 - SQL Server 2012
 - SQL Server 2008 R2
 - SQL Server 2008
 - SQL Server 2005
 
+[Documentation de SQL Server 2014](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014) est toujours traitée par les moteurs de recherche.
+
+SQL Server 2016 et versions ultérieures, sont documentées [ici](https://docs.microsoft.com/sql/sql-server/index).

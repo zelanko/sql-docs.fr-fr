@@ -19,17 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f8c8ac11c1dada747783a1edaac3d3b1c8b5c795
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62470421"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836206"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Documentation en ligne de SQL Server 2014
 
   Bienvenue dans [!INCLUDE[msCoName](../includes/msconame-md.md)]® la documentation en ligne pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. La documentation en ligne contient les descriptions et la documentation de référence des tâches qui explique comment réaliser la gestion des données et le travail de décisionnel à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-  
+
+SQL Server 2016 et versions ultérieures, sont documentées [ici](https://docs.microsoft.com/sql/sql-server/index). SQL Server 2012 et les versions antérieures, sont documentées [ici](#previous-versions-gm2014). <!-- ?view= defaults to the latest GA version, to resolve the https '/index' address ambiguity. So '2014' will always be too old to be the default. -->
+
  **Essayez :**  
  ![Machine virtuelle Azure de petite taille](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Vous avez un compte Azure ?  Puis accédez **[ici](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** pour lancer une Machine virtuelle avec SQL Server 2014 Service Pack 1 (SP1) déjà installé. Pour plus d’informations sur SQL Server 2014 (SP1), consultez [les informations de version de SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865). 
   
@@ -64,7 +66,11 @@ ms.locfileid: "62470421"
 -   [Centre de développement de plate-forme de données](https://go.microsoft.com/fwlink/?LinkId=17386)  
   
 -   [Centre de développement XML](https://go.microsoft.com/fwlink/?LinkId=42458)  
-  
+
+## <a name="previous-versions-gm2014"></a> SQL Server 2005, 2008, 2012, 2016+
+
+[!INCLUDE[???](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
+
 ## <a name="see-also"></a>Voir aussi  
 
  [Aide sur le Gestionnaire de configuration SQL Server](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
