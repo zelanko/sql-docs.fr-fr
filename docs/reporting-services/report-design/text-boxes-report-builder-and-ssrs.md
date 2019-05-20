@@ -2,7 +2,7 @@
 title: Zones de texte (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ef1eb498077cf7d2592592f9c74b5af0516dbceb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c2c4ad1faa149a384e42c52e7bbd8437dfc03d6f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294651"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573728"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
   Pour vous, une zone de texte désigne probablement une zone autonome qui contient du texte sur une surface comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent des zones de texte de ce type pour afficher le texte statique des titres, des descriptions et des étiquettes, ou le texte dynamique basé sur des expressions. Toutefois, chaque cellule d’une table ou d’une matrice (région de données de tableau matriciel) contient également une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes de votre rapport.  
@@ -51,7 +51,7 @@ ms.locfileid: "56294651"
   
  L'orientation est définie sur la zone de texte et s'applique à tout le texte de la zone. Vous ne pouvez pas spécifier d'orientation différente pour certaines parties de la zone de texte.  
   
- Pour commencer, consultez la section sur la rotation du texte dans le [Tutoriel : Mettre en forme le texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md) et [Définir l’orientation des zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
+ Pour commencer, consultez la section sur la rotation du texte dans [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md) et consultez [Définir l’orientation d’une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-text-box-orientation-report-builder-and-ssrs.md).  
   
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Ajouter, déplacer ou supprimer une zone de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  

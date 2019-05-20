@@ -1,36 +1,39 @@
 ---
 title: Mettre à niveau et migrer Reporting Services | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: e1c32d07408f9eaf2beeaff5d92865520b49f08d
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MTE75
+ms.openlocfilehash: 9717b74c7f59bec8da91fcbd24d4fbb2d79175d0
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583362"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502634"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   Cette rubrique propose une vue d’ensemble des options de mise à niveau et de migration pour SQL Server Reporting Services. La mise à niveau d’un déploiement de SQL Server Reporting Services peut se faire selon deux approches générales :  
-  
+ 
 -   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section « Migration du mode natif au mode SharePoint » plus loin dans ce document.  
   
 -   **Migration**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint
-  
+
+> [!NOTE]
+> L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
+   
 ##  <a name="bkmk_known_issues"></a> Problèmes connus de mise à niveau et meilleures pratiques  
  Pour obtenir la liste des éditions et versions prises en charge que vous pouvez mettre à niveau, consultez [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -220,7 +223,7 @@ ms.locfileid: "59583362"
   
 -   Écrivez du code qui appelle le fournisseur WMI pour copier des données entre des bases de données. Pour plus d’informations sur cette approche, consultez [Accès au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
--   Si vous avez seulement quelques éléments, vous pouvez publier de nouveau les rapports, les modèles de rapport et les sources de données partagées du Concepteur de rapports, du Générateur de modèles et du Générateur de rapports sur le nouveau serveur de rapports. Vous devez recréer les attributions de rôles, les abonnements, les planifications partagées, les planifications d'instantanés de rapports, les propriétés personnalisées que vous définissez sur les rapports ou d'autres éléments, la sécurité des éléments de modèle et les propriétés que vous définissez sur le serveur de rapports. L'historique de rapport et les données du journal des exécutions des rapports seront perdus.  
+-   Si vous avez seulement quelques éléments, vous pouvez republier des rapports et des sources de données partagées à partir du Concepteur de rapports, du Générateur de modèles et du Générateur de rapports vers le nouveau serveur de rapports. Vous devez recréer les attributions de rôles, les abonnements, les planifications partagées, les planifications d'instantanés de rapports, les propriétés personnalisées que vous définissez sur les rapports ou d'autres éléments, la sécurité des éléments de modèle et les propriétés que vous définissez sur le serveur de rapports. L'historique de rapport et les données du journal des exécutions des rapports seront perdus.  
   
   
 ##  <a name="bkmk_additional_resources"></a> Ressources supplémentaires  

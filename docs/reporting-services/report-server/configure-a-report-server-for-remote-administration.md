@@ -2,7 +2,7 @@
 title: Configurer un serveur de rapports pour l’administration à distance | Microsoft Docs
 ms.date: 09/14/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25ac3270e936f80bce62bdeeb67965c4688dfbcf
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580414"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez configurer des instances de serveur de rapports localement ou à distance. Pour configurer une instance de serveur de rapports à distance, vous pouvez faire appel à l’outil de configuration de Reporting Services ou bien écrire un code personnalisé qui utilise le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'outil de configuration de Reporting Services offre une interface graphique avec le fournisseur WMI pour vous permettre de configurer un serveur de rapports sans avoir à écrire du code. Lorsque vous démarrez l'outil, vous pouvez spécifier un serveur distant auquel vous connecter.  
@@ -50,9 +50,9 @@ ms.locfileid: "50020333"
   
 -   Activer les demandes WMI distantes pour franchir le Pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
--   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez définir les autorisations DCOM pour activer l'accès WMI distant à un compte d'utilisateur Windows standard. Du fait que WMI utilise DCOM en tant que moyen de transport pour les appels distants, vous devez définir les autorisations DCOM afin que les utilisateurs non connectés en tant qu'administrateur local puissent configurer le serveur.  
+-   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez définir les autorisations DCOM pour activer l'accès WMI distant à un compte d'utilisateur Windows standard. Du fait que WMI utilise DCOM en tant que moyen de transport pour les appels distants, vous devez définir les autorisations DCOM afin que les utilisateurs non connectés en tant qu'administrateur local puissent configurer le serveur.  
   
--   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez également définir les autorisations WMI sur l'espace de noms WMI du serveur de rapports. Par défaut, tous les membres du groupe Administrateurs local ont accès à l'espace de noms WMI du serveur de rapports. Pour accorder un droit d'accès aux personnes qui ne sont pas administrateurs, vous devez définir des autorisations.  
+-   Si vous configurez un serveur de rapports distant pour l'administration par un utilisateur non-administrateur, vous devez également définir les autorisations WMI sur l'espace de noms WMI du serveur de rapports. Par défaut, tous les membres du groupe Administrateurs local ont accès à l'espace de noms WMI du serveur de rapports. Pour accorder un droit d'accès aux personnes qui ne sont pas administrateurs, vous devez définir des autorisations.  
   
  Les instructions relatives à l'exécution de ces tâches sont fournies dans cette rubrique.  
   

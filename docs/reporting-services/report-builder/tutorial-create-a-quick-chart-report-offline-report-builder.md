@@ -1,8 +1,8 @@
 ---
-title: 'Didacticiel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286067"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571768"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : Créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
-  Dans ce tutoriel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
+  Dans ce didacticiel, vous allez utiliser un assistant pour créer un graphique à secteurs dans un rapport paginé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Vous ajoutez ensuite des pourcentages et modifiez légèrement le graphique à secteurs. 
   
 Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux méthodes aboutissent au même résultat, à savoir un graphique à secteurs semblable à celui de cette illustration :  
   

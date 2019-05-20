@@ -2,18 +2,18 @@
 title: Imprimer des rapports (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c3b18a02c29be7221e70f1b4092cd9b212de3133
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 45b38940afcd0fe73ad2c79abc59db9dc7b549b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292377"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581155"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Imprimer des rapports - Reporting Services (SSRS)
   Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l’afficher et l’imprimer à partir du portail web ou de toute application permettant d’afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
@@ -44,7 +44,7 @@ ms.locfileid: "56292377"
  Explique comment imprimer des rapports exportés vers une autre application.  
   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- Explique pas à pas comment imprimer un rapport, contrôler les marges sur une page et spécifier le format du papier des rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
+ Fournit des instructions détaillées sur la façon d'imprimer un rapport, sur la façon de contrôler les marges dans une page et sur la façon de spécifier le format du papier pour les rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

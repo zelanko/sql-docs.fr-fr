@@ -2,17 +2,17 @@
 title: Exporter des rapports (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289027"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580818"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exporter des rapports (Générateur de rapports et SSRS)
 
@@ -96,15 +96,15 @@ ms.locfileid: "56289027"
   
 -   **Extensions de convertisseurs de données** Les extensions de rendu de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données ne prennent pas en charge les sauts de page.  
   
-     Les extensions de rendu de données suivantes sont prises en charge : CSV, XML et Atom.  
+     Les extensions de rendu de données suivantes sont prises en charge : CSV, XML et Atom.  
   
 -   **Extensions de convertisseurs de saut de page conditionnelle** Les extensions de rendu de saut de page conditionnelle conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour l’affichage à l’écran et la remise, par exemple sur une page web ou dans les contrôles **ReportViewer** .  
   
-     Les extensions de rendu de saut de page conditionnel suivantes sont prises en charge : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word et archive web (MHTML).  
+     Les extensions de rendu de saut de page conditionnelle suivantes sont prises en charge : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word et archive Web (MHTML).  
   
 -   **Extensions de rendu de saut de page manuel** Les extensions de convertisseurs de saut de page manuel conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre.  
   
-     Les extensions de rendu de saut de page manuel suivantes sont prises en charge : TIFF et PDF.  
+     Les extensions de rendu de saut de page manuel suivantes sont prises en charge : TIFF et PDF.  
   
 ##  <a name="ExportFormats"></a> Formats d’exportation disponibles pendant l’affichage de rapports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des extensions de rendu qui affichent les rapports dans divers formats. Il est conseillé d’optimiser la conception des rapports en fonction du format de fichier choisi.  Le tableau suivant répertorie les formats d’exportation disponibles dans l’interface utilisateur.  D’autres formats vous sont proposés avec des abonnements à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou si vous effectuez l’exportation à partir de l’URL d’accès.  Consultez la section [Autres modes d'exportation des rapports](#OtherWaysExportingReports)dans cette rubrique.  
@@ -116,7 +116,7 @@ ms.locfileid: "56289027"
 |CSV|data|L'extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports sous la forme d'une représentation aplatie des données d'un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier PDF](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).|  
 |EXCELOPENXML|Saut de page conditionnelle|Affiché avec la mention « Excel » dans les menus d’exportation lors de la consultation de rapports. L’extension de rendu Excel affiche un rapport au format Excel (.xslx) compatible avec [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Excel](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |PowerPoint|Saut de page manuel|l’extension de rendu PowerPoint affiche un rapport au format PowerPoint (.pptx) compatible avec PowerPoint 2013.|  
-|Fichier TIFF|Saut de page manuel|L'extension de rendu de type image effectue le rendu d'un rapport dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer.<br /><br /> L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] : BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier image](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
+|Fichier TIFF|Saut de page manuel|L'extension de rendu de type image effectue le rendu d'un rapport dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer.<br /><br /> L'extension de rendu de type image peut générer des fichiers dans l'un des formats pris en charge par [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]: BMP, EMF, EMFPlus, GIF, JPEG, PNG et TIFF.<br /><br /> Pour plus d’informations, consultez [Exportation vers un fichier image](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).|  
 |Archive Web|Saut de page conditionnelle|L'extension de rendu HTML effectue le rendu d'un rapport au format HTML. Elle peut également produire des pages HTML entièrement formées ou des fragment HTML à incorporer dans d'autres pages HTML. La sortie HTML est générée avec l'encodage UTF-8.<br /><br /> L’extension de rendu HTML représente l’extension de rendu par défaut pour les rapports qui sont prévisualisés dans le Générateur de rapports et qui s’affichent dans un navigateur, y compris pendant une exécution dans portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Pour plus d’informations, consultez [Rendu au format HTML](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md).|  
 |WORDOPENXML|Saut de page conditionnelle|Affiché avec la mention « Word » dans le menu d’exportation lors de l’affichage des rapports. L’extension de rendu Word génère un rapport au format Word (.docx) compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013.  Pour plus d’informations, consultez [Exportation vers Microsoft Word](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md).|  
 |XML|Données|L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.<br/><br/> Pour plus d’informations, consultez [Exportation vers XML](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).|  

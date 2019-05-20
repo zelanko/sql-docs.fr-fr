@@ -2,7 +2,7 @@
 title: Inscrire un fournisseur de données .NET Framework standard (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 453b31328c732833756a39a56389aa7640346817
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: badeb4de20aa885a77fa61ec3a261a8c09c79506
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215638"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571247"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Inscrire un fournisseur de données .NET Framework standard (SSRS)
   Pour utiliser un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tiers afin d’extraire des données pour un dataset de rapport [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez déployer et inscrire l’assembly de fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à deux emplacements : sur le client de création de rapports et sur le serveur de rapports. Sur le client de création de rapports, vous devez inscrire le fournisseur de données comme type de source des données et l'associer à un concepteur de requêtes. Vous pouvez ensuite sélectionner ce fournisseur de données comme type de source des données lorsque vous créez un dataset de rapport. Le concepteur de requêtes associé s'ouvre pour vous permettre de créer des requêtes pour ce type de source de données. Sur le serveur de rapports, vous devez inscrire le fournisseur de données comme type de source de données. Vous pouvez ensuite traiter les rapports publiés qui extraient les données d'une source de données à l'aide de ce fournisseur de données.  
@@ -58,7 +58,7 @@ ms.locfileid: "53215638"
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |**Nom**|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. La valeur que vous insérez à cet emplacement s’affiche dans la liste déroulante des types de source de données quand vous créez une source de données.|  
+    |**Name**|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. La valeur que vous insérez à cet emplacement s’affiche dans la liste déroulante des types de source de données quand vous créez une source de données.|  
     |**Type**|Entrez une liste séparée par des virgules qui comprend l’espace de noms complet de la classe qui implémente l’interface <xref:System.Data.IDbConnection> suivie du nom de l’assembly du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sans compter l’extension de nom de fichier .dll).|  
   
      Par exemple, l'entrée peut ressembler à ce qui suit pour un fichier .dll déployé vers le répertoire bin du serveur de rapports :  
@@ -67,7 +67,7 @@ ms.locfileid: "53215638"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     si vous chargez votre assembly dans le GAC (Global Assembly Cache), vous devez fournir les propriétés de nom fort. Exemple :  
+     si vous chargez votre assembly dans le GAC (Global Assembly Cache), vous devez fournir les propriétés de nom fort. Par exemple :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -131,7 +131,7 @@ ms.locfileid: "53215638"
   
     |Attribute|Description|  
     |---------------|-----------------|  
-    |**Nom**|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. La valeur que vous insérez à cet emplacement s'affiche dans la liste déroulante des types de source de données lorsque vous créez une nouvelle source de données.|  
+    |**Name**|Donnez un nom unique au fournisseur de données, par exemple, **MyNETDataProvider**. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. La valeur que vous insérez à cet emplacement s'affiche dans la liste déroulante des types de source de données lorsque vous créez une nouvelle source de données.|  
     |**Type**|Entrez une liste séparée par des virgules qui comprend l’espace de noms complet de la classe qui implémente l’interface <xref:System.Data.IDbConnection> suivie du nom de l’assembly du fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (sans compter l’extension de nom de fichier .dll).|  
   
      Par exemple, l’entrée peut ressembler à ce qui suit pour un fichier .dll déployé vers le répertoire PrivateAssemblies [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] :  
@@ -140,7 +140,7 @@ ms.locfileid: "53215638"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     si vous chargez votre assembly dans le GAC, vous devez fournir les propriétés de nom fort. Exemple :  
+     si vous chargez votre assembly dans le GAC, vous devez fournir les propriétés de nom fort. Par exemple :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

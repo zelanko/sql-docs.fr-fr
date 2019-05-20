@@ -2,7 +2,7 @@
 title: Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fdd3fb449e43fdfd2877150a50afdc1c29eb6327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846709"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571589"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config
   Vous pouvez spécifier des paramètres d'extension de rendu dans le fichier de configuration RSReportServer afin de remplacer le comportement de la génération de rapport par défaut pour les rapports exécutés sur un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous pouvez modifier les paramètres d'extension de rendu pour obtenir les résultats suivants :  
@@ -129,12 +129,12 @@ ms.locfileid: "47846709"
 ## <a name="see-also"></a> Voir aussi  
  [Fichier de configuration RSReportServer.config](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Paramètres d’informations de périphérique CSV](../reporting-services/csv-device-information-settings.md)   
+ [Paramètres d'informations de périphérique CSV](../reporting-services/csv-device-information-settings.md)   
  [Paramètres d’informations de périphérique Excel](../reporting-services/excel-device-information-settings.md)   
  [Paramètres d’informations de périphérique HTML](../reporting-services/html-device-information-settings.md)   
  [Paramètres d’informations de périphérique pour l’image](../reporting-services/image-device-information-settings.md)   
  [Paramètres d’informations de périphérique pour le format de rendu MHTML](../reporting-services/mhtml-device-information-settings.md)   
- [Paramètres d’informations de périphérique PDF](../reporting-services/pdf-device-information-settings.md)   
- [Paramètres des informations de périphériques XML](../reporting-services/xml-device-information-settings.md)  
+ [Paramètres d'informations de périphérique PDF](../reporting-services/pdf-device-information-settings.md)   
+ [Paramètres d'informations de périphérique XML](../reporting-services/xml-device-information-settings.md)  
   
   

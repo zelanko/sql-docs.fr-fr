@@ -2,7 +2,7 @@
 title: Prise en charge des navigateurs pour Reporting Services et Power View | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 161b69416fcdcda57487f0ce2762807835dbd368
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021214"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65504101"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
@@ -82,7 +82,11 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  Si vous utilisez un produit SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez  [Planifier la prise en charge du navigateur dans SharePoint 2016](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>Exigences relatives à l’authentification
 
@@ -142,7 +146,11 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
  **(+)** Dernière version commercialisée
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  Pour en savoir plus sur la prise en charge des navigateurs SharePoint 2016, consultez [Planifier la prise en charge du navigateur dans SharePoint 2013](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Étapes suivantes
 

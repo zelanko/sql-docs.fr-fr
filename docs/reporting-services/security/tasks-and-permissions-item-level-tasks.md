@@ -2,20 +2,20 @@
 title: Tâches au niveau élément | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8dc24ff10be5f9621f01ba8ec71e97cce7680074
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792851"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570277"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tâches et autorisations - Tâches au niveau élément
   Une tâche au niveau élément est une collection d'autorisations liées à un rapport, un dossier, un modèle de rapport, une ressource ou une source de données partagée. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut également des tâches de niveau système qui s’appliquent à l’ensemble du site de serveur de rapports. Pour plus d’informations, consultez [Tâches au niveau système](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Pour plus d'informations sur les tâches et les autorisations en général, consultez [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "47792851"
   
  Les datasets partagés utilisent le même jeu d'autorisations que les rapports. Les parties de rapports utilisent le même jeu d'autorisations que les ressources.  
   
-|Tâche|S'applique à l'élément|Permissions|  
+|Tâche|S'applique à l'élément|Autorisations|  
 |----------|---------------------|-----------------|  
 |Lire les rapports|Rapports|Lire le contenu<br /><br /> Lire les définitions de rapport<br /><br /> Lire les propriétés|  
 |Lire les rapports|Datasets partagés|Lire le contenu<br /><br /> Lire les définitions de rapport<br /><br /> Lire les propriétés|  

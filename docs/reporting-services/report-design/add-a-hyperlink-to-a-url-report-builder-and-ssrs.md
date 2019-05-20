@@ -2,18 +2,18 @@
 title: Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288947"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574826"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
 Découvrez comment ajouter des actions de lien hypertexte à des zones de texte, des images, des graphiques et des jauges aux rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Les liens peuvent mener à d’autres rapports, aux signets d’un rapport ou à des URL dynamiques ou statiques. 
@@ -26,7 +26,7 @@ Découvrez comment ajouter des actions de lien hypertexte à des zones de texte,
  
  *  Vous pouvez **ajouter un signet à un emplacement spécifique** dans le même rapport. 
   
-Essayez d’ajouter des liens hypertexte avec des exemples de données dans [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Essayez d’ajouter des liens hypertexte avec des exemples de données dans le [didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md).  

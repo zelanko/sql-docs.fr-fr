@@ -1,6 +1,6 @@
 ---
-title: Linux et macOS didacticiel d’Installation pour le Microsoft Drivers for PHP for SQL Server | Microsoft Docs
-ms.date: 02/11/2019
+title: 'Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs'
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,30 +9,30 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: a31b17b8fbe2130b84b27be08d1a6218d697f9f2
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 2e1e6e6773644b12b6259349c522113ec66a0d43
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744629"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502766"
 ---
-# <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux et macOS didacticiel d’Installation pour le Microsoft Drivers for PHP for SQL Server
-Les instructions suivantes supposent un environnement propre et montrent comment installer PHP 7.x, le pilote ODBC de Microsoft, Apache et le Microsoft Drivers for PHP for SQL Server sur Ubuntu 16.04, 18.04 et 18.10, Red Hat 7, Debian 8 et 9, Suse 12 et 15 et macOS 10.12 , 10.13 et 10.14. Ces instructions conseiller l’installation des pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github page de projet et les installer en suivant les instructions de [ Chargement des pilotes Microsoft pour PHP pour SQL Server](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication de chargement de l’extension et pourquoi nous n’ajoutez pas les extensions à php.ini, consultez la section sur [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
+# <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server
+Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote Microsoft ODBC, Apache et les pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 18.10, Red Hat 7, Debian 8 et 9, Suse 12 et 15 et macOS 10.12, 10.13 et 10.14. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet Github des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
 
-Ces instructions installent 7.3 de PHP par défaut. Notez que certains pris en charge la valeur par défaut des distributions Linux pour PHP 7.0 ou version antérieure, ce qui n’est pas pris en charge pour les pilotes PHP pour SQL Server, consultez les notes au début de chaque section pour installer PHP 7.1 ou 7.2 à la place.
+Ces instructions installent PHP 7.3 par défaut. Notez que certaines distributions de Linux prises en charge utilisent par défaut pour PHP 7.0 ou version antérieure, n’est pas pris en charge pour les pilotes PHP pour SQL Server. Consultez les notes au début de chaque section pour installer PHP 7.1 ou 7.2 à la place.
 
 ## <a name="contents-of-this-page"></a>Contenu de cette page :
 
-- [Installation des pilotes sur Ubuntu 16.04, 18.04 et 18.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1810)
-- [Installation des pilotes sur Red Hat 7](#installing-the-drivers-on-red-hat-7)
-- [Installation des pilotes sur Debian 8 et 9](#installing-the-drivers-on-debian-8-and-9)
-- [Installation des pilotes sur Suse 12 et 15](#installing-the-drivers-on-suse-12-and-15)
+- [Installation des pilotes sur Ubuntu 16.04, 18.04 et 18.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1810)
+- [Installation des pilotes sur Red Hat 7](#installing-the-drivers-on-red-hat-7)
+- [Installation des pilotes sur Debian 8 et 9](#installing-the-drivers-on-debian-8-and-9)
+- [Installation des pilotes sur Suse 12 et 15](#installing-the-drivers-on-suse-12-and-15)
 - [Installation des pilotes sur macOS Sierra, High Sierra et Mojave](#installing-the-drivers-on-macos-sierra-high-sierra-and-mojave)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1810"></a>Installation des pilotes sur Ubuntu 16.04, 18.04 et 18.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1810"></a>Installation des pilotes sur Ubuntu 16.04, 18.04 et 18.10
 
 > [!NOTE]
-> Pour installer PHP 7.1 ou 7.2, remplacez-les par 7.3 7.1 ou 7.2 dans les commandes suivantes.
+> Pour installer PHP 7.1 ou 7.2, remplacez 7.3 par 7.1 ou 7.2 dans les commandes suivantes.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
 ```
@@ -42,9 +42,9 @@ apt-get update
 apt-get install php7.3 php7.3-dev php7.3-xml -y --allow-unauthenticated
 ```
 ### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
-Installer le pilote ODBC pour Ubuntu en suivant les instructions la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Installez le pilote ODBC pour Ubuntu en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installez les pilotes PHP pour Microsoft SQL Server
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -56,7 +56,7 @@ exit
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Étape 4. Installer Apache et configurer le chargement du pilote
 ```
 sudo su
-apt-get install libapache2-mod-php7.2 apache2
+apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
@@ -64,16 +64,16 @@ echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
 echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 exit
 ```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrez Apache et tester l’exemple de script
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```
 sudo service apache2 restart
 ```
-Pour tester votre installation, consultez [tester votre installation](#testing-your-installation) à la fin de ce document.
+Pour tester votre installation, consultez [Test de votre installation](#testing-your-installation) à la fin de ce document.
 
-## <a name="installing-the-drivers-on-red-hat-7"></a>Installation des pilotes sur Red Hat 7
+## <a name="installing-the-drivers-on-red-hat-7"></a>Installation des pilotes sur Red Hat 7
 
 > [!NOTE]
-> Pour installer PHP 7.1 ou 7.2, remplacez-les par ance-php73 ance-php71 ou ance-php72 respectivement dans les commandes suivantes.
+> Pour installer PHP 7.1 ou 7.2, remplacez remi-php73 respectivement par remi-php71 ou remi-php72 dans les commandes suivantes.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
 
@@ -89,15 +89,15 @@ yum update
 yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ```
 ### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
-Installer le pilote ODBC pour Red Hat 7 en suivant les instructions la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Installez le pilote ODBC pour Red Hat 7 en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-Compilation les pilotes PHP avec PECL avec PHP 7.2 ou 7.3 nécessite un GCC plus récente que la valeur par défaut :
+La compilation des pilotes PHP avec PECL avec PHP 7.2 ou 7.3 nécessite une version de GCC plus récente que la version par défaut :
 ```
 sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
 sudo yum install devtoolset-7
 scl enable devtoolset-7 bash
 ```
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installez les pilotes PHP pour Microsoft SQL Server
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -106,17 +106,17 @@ echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini file
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
 exit
 ```
-Un problème dans PECL peut empêcher l’installation correcte de la dernière version des pilotes même si vous avez mis à niveau GCC. Pour installer, de télécharger les packages et de compiler manuellement (des étapes similaires pour pdo_sqlsrv) :
+Un problème dans PECL peut empêcher l’installation correcte de la dernière version des pilotes même si vous avez mis à niveau GCC. Pour installer, téléchargez les packages et compilez manuellement (étapes similaires pour pdo_sqlsrv) :
 ```
 pecl download sqlsrv
-tar xvzf sqlsrv-5.6.0.tgz
-cd sqlsrv-5.6.0/
+tar xvzf sqlsrv-5.6.1.tgz
+cd sqlsrv-5.6.1/
 phpize
 ./configure --with-php-config=/usr/bin/php-config
 make
 sudo make install
 ```
-Vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la [page de projet Github](https://github.com/Microsoft/msphpsql/releases), ou l’installer à partir du dépôt ance :
+Vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la [page de projet Github](https://github.com/Microsoft/msphpsql/releases), ou installer à partir du dépôt Remi :
 ```
 sudo yum install php-sqlsrv
 ```
@@ -124,20 +124,20 @@ sudo yum install php-sqlsrv
 ```
 sudo yum install httpd
 ```
-SELinux est installé par défaut et s’exécute en mode d’application. Pour autoriser Apache pour se connecter aux bases de données via SELinux, exécutez la commande suivante :
+SELinux est installé par défaut et s’exécute en mode forcé. Pour autoriser Apache à se connecter aux bases de données par le biais de SELinux, exécutez la commande suivante :
 ```
 sudo setsebool -P httpd_can_network_connect_db 1
 ```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrez Apache et tester l’exemple de script
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```
 sudo apachectl restart
 ```
-Pour tester votre installation, consultez [tester votre installation](#testing-your-installation) à la fin de ce document.
+Pour tester votre installation, consultez [Test de votre installation](#testing-your-installation) à la fin de ce document.
 
-## <a name="installing-the-drivers-on-debian-8-and-9"></a>Installation des pilotes sur Debian 8 et 9
+## <a name="installing-the-drivers-on-debian-8-and-9"></a>Installation des pilotes sur Debian 8 et 9
 
 > [!NOTE]
-> Pour installer PHP 7.1 ou 7.2, remplacez 7.3 dans les commandes suivantes par 7.1 ou 7.2.
+> Pour installer PHP 7.1 ou 7.2, remplacez 7.3 par 7.1 ou 7.2 dans les commandes suivantes.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
 ```
@@ -149,16 +149,16 @@ apt-get update
 apt-get install -y php7.3 php7.3-dev php7.3-xml
 ```
 ### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
-Installer le pilote ODBC pour Debian en suivant les instructions la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+Installez le pilote ODBC pour Debian en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
-Vous serez peut-être amené à générer les paramètres régionaux corrects pour obtenir une sortie PHP s’affichent correctement dans un navigateur. Par exemple, pour les paramètres régionaux de UTF-8 fr_FR, exécutez les commandes suivantes :
+Vous devrez peut-être aussi générer les paramètres régionaux corrects pour que la sortie PHP s’affiche correctement dans un navigateur. Par exemple, pour les paramètres régionaux UTF-8 en_US, exécutez les commandes suivantes :
 ```
 sudo su
 sed -i 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 locale-gen
 ```
 
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installez les pilotes PHP pour Microsoft SQL Server
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -177,20 +177,20 @@ a2enmod php7.3
 echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
 echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 ```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrez Apache et tester l’exemple de script
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```
 sudo service apache2 restart
 ```
-Pour tester votre installation, consultez [tester votre installation](#testing-your-installation) à la fin de ce document.
+Pour tester votre installation, consultez [Test de votre installation](#testing-your-installation) à la fin de ce document.
 
-## <a name="installing-the-drivers-on-suse-12-and-15"></a>Installation des pilotes sur Suse 12 et 15
-
-> [!NOTE]
-> Dans les instructions suivantes, remplacez <SuseVersion> avec votre version de Suse - si vous utilisez Suse Enterprise Linux 15, il sera SLE_15 ou SLE_15_SP1 et même pour les autres versions. Pas toutes les versions de PHP sont disponibles pour toutes les versions de Suse Linux -, consultez `http://download.opensuse.org/repositories/devel:/languages:/php` pour voir quelles versions de Suse sur lesquels la version par défaut PHP disponible, ou la valeur `http://download.opensuse.org/repositories/devel:/languages:/php:/` pour identifier les autres versions de PHP sont disponibles pour les différentes versions de Suse.
+## <a name="installing-the-drivers-on-suse-12-and-15"></a>Installation des pilotes sur Suse 12 et 15
 
 > [!NOTE]
-> Packages pour PHP 7.3 ne sont pas disponibles pour Suse 12. Pour installer PHP 7.1, remplacez l’URL du référentiel ci-dessous avec l’URL suivante : `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`.
-> Pour installer PHP 7.2, remplacez l’URL du référentiel ci-dessous avec l’URL suivante : `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`.
+> Dans les instructions suivantes, remplacez <SuseVersion> par votre version de Suse. Si vous utilisez Suse Enterprise Linux 15, il s’agira de SLE_15 ou SLE_15_SP1, et de même pour les autres versions. Toutes les versions de PHP ne sont pas disponibles pour toutes les versions de Suse Linux. Consultez `http://download.opensuse.org/repositories/devel:/languages:/php` afin de savoir pour quelles versions de Suse la version par défaut de PHP est disponible, ou `http://download.opensuse.org/repositories/devel:/languages:/php:/` pour savoir quelles autres versions de PHP sont disponibles pour les différentes versions de Suse.
+
+> [!NOTE]
+> Les packages pour PHP 7.3 ne sont pas disponibles pour Suse 12. Pour installer PHP 7.1, remplacez l’URL du référentiel ci-dessous par l’URL suivante : `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo`.
+> Pour installer PHP 7.2, remplacez l’URL du référentiel ci-dessous par l’URL suivante : `https://download.opensuse.org/repositories/devel:/languages:/php:/php72/<SuseVersion>/devel:languages:php:php72.repo`.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
 ```
@@ -200,11 +200,11 @@ zypper --gpg-auto-import-keys refresh
 zypper -n install php7 php7-pear php7-devel php7-openssl
 ```
 ### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
-Installer le pilote ODBC pour Suse en suivant les instructions la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
+Installez le pilote ODBC pour Suse en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installez les pilotes PHP pour Microsoft SQL Server
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 > [!NOTE]
-> Si vous obtenez un message indiquant d’erreur `Connection to 'pecl.php.net:443' failed: Unable to find the socket transport "ssl"`, modifiez le script pecl à /usr/bin/pecl et supprimer le `-n` basculer dans la dernière ligne. Ce commutateur empêche le chargement des fichiers ini lorsque PHP est appelée, ce qui empêche le chargement de l’extension OpenSSL PECL.
+> Si vous obtenez le message d’erreur `Connection to 'pecl.php.net:443' failed: Unable to find the socket transport "ssl"`, modifiez le script pecl situé dans /usr/bin/pecl en supprimant le commutateur `-n` sur la dernière ligne. Ce commutateur empêche PECL de charger les fichiers ini quand PHP est appelé, ce qui empêche le chargement de l’extension OpenSSL.
 
 ```
 sudo pecl install sqlsrv
@@ -223,21 +223,21 @@ echo "extension=sqlsrv.so" >> /etc/php7/apache2/php.ini
 echo "extension=pdo_sqlsrv.so" >> /etc/php7/apache2/php.ini
 exit
 ```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrez Apache et tester l’exemple de script
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```
 sudo systemctl restart apache2
 ```
-Pour tester votre installation, consultez [tester votre installation](#testing-your-installation) à la fin de ce document.
+Pour tester votre installation, consultez [Test de votre installation](#testing-your-installation) à la fin de ce document.
 
 ## <a name="installing-the-drivers-on-macos-sierra-high-sierra-and-mojave"></a>Installation des pilotes sur macOS Sierra, High Sierra et Mojave
 
-Si vous ne l’avez pas déjà, installez brew comme suit :
+Si ce n’est déjà fait, installez brew comme suit :
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 > [!NOTE]
-> Pour installer PHP 7.1 ou 7.2, remplacez php@7.3 avec php@7.1 ou php@7.2 respectivement dans les commandes suivantes.
+> Pour installer PHP 7.1 ou 7.2, remplacez php@7.3 respectivement par php@7.1 ou php@7.2 dans les commandes suivantes.
 
 ### <a name="step-1-install-php"></a>Étape 1. Installer PHP
 
@@ -246,20 +246,20 @@ brew tap
 brew tap homebrew/core
 brew install php@7.3
 ```
-PHP doit être présent dans votre chemin d’accès--exécuter `php -v` pour vérifier que vous exécutiez la version appropriée de PHP. Si PHP n’est pas dans votre chemin d’accès, ou il n’est pas la version correcte, exécutez la commande suivante :
+PHP doit maintenant être présent dans votre chemin. Exécutez `php -v` pour vérifier que vous exécutez la version correcte de PHP. Si PHP n’est pas dans votre chemin, ou s’il ne s’agit pas de la version correcte, exécutez la commande suivante :
 ```
 brew link --force --overwrite php@7.3
 ```
 
-### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
-Installer le pilote ODBC pour macOS en suivant les instructions la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
+### <a name="step-2-install-prerequisites"></a>Étape 2. Installer les prérequis
+Installez le pilote ODBC pour macOS en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md). 
 
-En outre, vous devrez peut-être installer les outils de création de GNU :
+Vous devrez peut-être aussi installer les outils de création GNU :
 ```
 brew install autoconf automake libtool
 ```
 
-### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installez les pilotes PHP pour Microsoft SQL Server
+### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
@@ -268,24 +268,24 @@ sudo pecl install pdo_sqlsrv
 ```
 brew install apache2
 ```
-Pour rechercher des fichiers de configuration pour votre installation Apache Apache, exécutez 
+Pour rechercher le fichier de configuration Apache pour votre installation Apache, exécutez 
 ```
 apachectl -V | grep SERVER_CONFIG_FILE
 ``` 
-puis remplacez le chemin d’accès pour `httpd.conf` dans les commandes suivantes :
+et remplacez le chemin de `httpd.conf` dans les commandes suivantes :
 ```
-echo "LoadModule php7_module /usr/local/opt/php@7.2/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
+echo "LoadModule php7_module /usr/local/opt/php@7.3/lib/httpd/modules/libphp7.so" >> /usr/local/etc/httpd/httpd.conf
 (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /usr/local/etc/httpd/httpd.conf
 ```
-### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrez Apache et tester l’exemple de script
+### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```
 sudo apachectl restart
 ```
-Pour tester votre installation, consultez [tester votre installation](#testing-your-installation) à la fin de ce document.
+Pour tester votre installation, consultez [Test de votre installation](#testing-your-installation) à la fin de ce document.
 
 ## <a name="testing-your-installation"></a>Test de votre installation
 
-Pour tester cet exemple de script, créez un fichier appelé testsql.php dans la racine du document de votre système. Il s’agit de `/var/www/html/` sur Ubuntu, Red Hat et Debian `/srv/www/htdocs` sur SUSE, ou `/usr/local/var/www` sur macOS. Copier le script suivant, en remplaçant le serveur de base de données, nom d’utilisateur et mot de passe comme il convient.
+Pour tester cet exemple de script, créez un fichier nommé testsql.php à la racine de document de votre système. Il s’agit de `/var/www/html/` sur Ubuntu, Red Hat et Debian, de `/srv/www/htdocs` sur SUSE, ou de `/usr/local/var/www` sur macOS. Copiez-y le script suivant, en remplaçant le serveur de base de données, le nom d’utilisateur et le mot de passe comme il convient.
 ```
 <?php
 $serverName = "yourServername";
@@ -335,10 +335,10 @@ function formatErrors($errors)
 }
 ?>
 ```
-Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devez maintenant être en mesure de se connecter à votre base de données SQL Server/SQL Azure.
+Dirigez votre navigateur vers https://localhost/testsql.php (https://localhost:8080/testsql.php sur macOS). Vous devriez maintenant pouvoir vous connecter à votre base de données SQL Server/SQL Azure.
 
 ## <a name="see-also"></a> Voir aussi  
-[Mise en route avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Chargement de Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)
 

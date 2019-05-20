@@ -2,7 +2,7 @@
 title: Compatibilité descendante | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 54fe4e8786bac599ab5e71b5109d5838f4ae13cf
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b16398915b774454895ee39ad80fa008d22a8a75
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571456"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilité descendante de Reporting Services
 En savoir plus sur les changements de comportement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Cette rubrique traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures.

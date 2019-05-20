@@ -2,18 +2,18 @@
 title: Afficher les numéros de page ou d’autres propriétés de rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0f9e826ff115183180ad42a1c065619f2196cd3e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296797"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580884"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Afficher les numéros de page ou d'autres propriétés de rapport (Générateur de rapports et SSRS)
   Vous pouvez facilement ajouter des numéros de page, un titre de rapport, un nom de fichier, et d'autres propriétés de rapport aux en-têtes ou pieds de page de votre rapport. Ces propriétés sont stockées en tant que champs dans le dossier Champs prédéfinis du volet Données du rapport.  
@@ -60,7 +60,7 @@ ms.locfileid: "56296797"
   
 1.  Cliquez avec le bouton droit sur la zone de texte qui contient [&PageNumber] et cliquez sur **Expressions**.  
   
-     La zone de texte **Définir l'expression pour : valeur** contient l’expression =Globals!PageNumber.  
+     La zone de texte **Définir l’expression pour : valeur** contient l’expression =Globals!PageNumber.  
   
 2.  Placez le curseur après le signe =, puis tapez **"Page " &**.  
   

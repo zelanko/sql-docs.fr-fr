@@ -2,7 +2,7 @@
 title: Prise en charge d’UTF-8 dans le pilote OLE DB pour SQL Server | Microsoft Docs
 description: Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: 4a30b233190817faee581106db5c8a18695a00d1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: HT
+ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583012"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775170"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "59583012"
 
 Le pilote Microsoft OLE DB pour SQL Server (version 18.2.1) prend en charge l’encodage de serveur UTF-8. Pour plus d’informations sur la prise en charge UTF-8 SQL Server, voir :
 - [Prise en charge d'Unicode et du classement](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Prise en charge d’UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
+- [Prise en charge d’UTF-8](#ctp23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Insertion de données dans une colonne CHAR ou VARCHAR encodée UTF-8
 Si vous créez une mémoire tampon de paramètres d’entrée pour l’insertion, elle est décrite à l’aide d’un tableau de [structures DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Chaque structure DBBINDING associe un seul paramètre à la mémoire tampon du consommateur et contient différentes informations, comme la longueur et le type de la valeur de données. Pour une mémoire tampon de paramètres d’entrée de type CHAR, le *wType* de la structure DBBINDING doit être défini sur DBTYPE_STR. Pour une mémoire tampon de paramètres d’entrée de type WCHAR, le *wType* de la structure DBBINDING doit être défini sur DBTYPE_WSTR.
@@ -46,7 +46,25 @@ Si vous créez une mémoire tampon pour les données récupérées, elle est dé
 Pour l’indicateur de type DBTYPE_STR de la mémoire tampon, le pilote convertit les données encodées UTF-8 dans l’encodage du client. L’utilisateur doit vérifier que cet encodage peut représenter les données de la colonne UTF-8 ; sinon, il y a un risque de perte de données.
 
 Pour l’indicateur de type DBTYPE_WSTR de la mémoire tampon, le pilote convertit les données encodées UTF-8 dans l’encodage UTF-16.
-  
+
+<a name="ctp23"></a>
+
+### <a name="utf-8-support-sql-server-2019-ctp-23"></a>Prise en charge d’UTF-8 (SQL Server 2019 CTP 2.3)
+
+[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] introduit la prise en charge complète du codage de caractères UTF-8 courant en tant qu’encodage d’importation ou d’exportation ou que classement de données texte au niveau de la base de données ou des colonnes. UTF-8 est autorisé dans les types de données `CHAR` et `VARCHAR`, et est activé pendant la création du classement d’un objet ou sa modification en un classement avec le suffixe `UTF8`.
+
+Par exemple,`LATIN1_GENERAL_100_CI_AS_SC` en `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 est uniquement disponible pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. `NCHAR` et `NVARCHAR` autorisent uniquement l’encodage UTF-16 et restent inchangés.
+
+Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne existant comportant des chaînes ASCII (Latin) de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même chaîne Unicode.
+
+Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../../relational-databases/collations/collation-and-unicode-support.md).
+
+Avec **CTP 2.1**, il est maintenant possible de sélectionner le classement UTF-8 par défaut lors de à l’installation de [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+
+Avec **CTP 2.2**, il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec la réplication SQL Server.
+
+Avec **CTP 2.3**, il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (UTF8_BIN2).
+
 ## <a name="see-also"></a> Voir aussi  
 [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 

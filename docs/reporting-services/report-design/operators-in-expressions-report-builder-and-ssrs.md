@@ -2,18 +2,18 @@
 title: Opérateurs dans les expressions (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f933ea46def5dff7c6fb9cb5bc51b3c2f310d53a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292277"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582235"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Opérateurs dans les expressions (Générateur de rapports et SSRS)
   Un opérateur est un symbole qui représente des actions exécutées sur un ou plusieurs termes d'une expression. Les catégories d'opérateurs suivantes sont prises en charge dans une expression : arithmétique, de comparaison, de concaténation, logique ou au niveau du bit, et de décalage de bits.  
@@ -45,7 +45,7 @@ ms.locfileid: "56292277"
 |>=|Supérieur ou égal à.|  
 |=|Égal à.|  
 |<>|Différent de.|  
-|Correspond à|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés.<br /><br /> Le tableau suivant répertorie les caractères qui peuvent être utilisés comme caractères génériques :<br /><br /> % : Toute chaîne de zéro caractère ou plus.<br /><br /> _ : N'importe quel caractère.<br /><br /> [ ] : N'importe quel caractère de la plage spécifiée (par exemple, [a-f]) ou de l'ensemble spécifié (par exemple, [aeiou]).<br /><br /> [^] : Tout caractère hors de la plage spécifiée (par exemple, [^a-f]) ou de l’ensemble spécifié (par exemple, [^aeiou]).|  
+|Correspond à|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés.<br /><br /> Le tableau suivant répertorie les caractères qui peuvent être utilisés comme caractères génériques :<br /><br /> % : toute chaîne de zéro caractère ou plus.<br /><br /> _ : tout caractère unique.<br /><br /> [ ] : tout caractère de la plage spécifiée (par exemple, [a-f]) ou de l’ensemble spécifié (par exemple, [aeiou]).<br /><br /> [^] : tout caractère hors de la plage spécifiée (par exemple, [^a-f]) ou de l’ensemble spécifié (par exemple, [^aeiou]).|  
 |Is|Compare deux références d'objet.|  
   
 ### <a name="string-concatenation"></a>Concaténation de chaînes  

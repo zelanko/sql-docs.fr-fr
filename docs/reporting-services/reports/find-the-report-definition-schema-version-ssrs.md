@@ -2,7 +2,7 @@
 title: Rechercher la version du schéma de définition de rapport | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - Report Definition Language, XML schema
 - schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cb28747cd85c007f968e5be0e980ca112638faec
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67f1311e3f8bde71c52301178bf242d88e62c3a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254144"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576415"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Rechercher la version du schéma de définition de rapport (SSRS)
 
 Un fichier de définition de rapport spécifie l'espace de noms RDL de la version du schéma de définition de rapport qui est utilisée pour valider le fichier rdl. Lorsque vous ouvrez un fichier .rdl dans un environnement de création de rapports, tel que le Concepteur de rapports de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou le Générateur de rapports, si le rapport a déjà été créé pour un espace de noms, un fichier de sauvegarde est automatiquement créé et le rapport est mis à niveau d'après l'espace de noms actuel. Si vous enregistrez la définition de rapport mise à niveau, vous enregistrez le fichier .rdl converti. Il s'agit de la seule façon de mettre à niveau une définition de rapport. La définition de rapport proprement dite n'est pas mise à niveau sur un serveur de rapports. Le rapport compilé est mis à niveau sur un serveur de rapports. Pour plus d'informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md).  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procédure : identifier la version du schéma RDL d’un rapport  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>Procédure : identifier la version du schéma RDL d'un rapport  
   
 1.  Ouvrez le fichier de rapport .rdl dans une application, telle que le Bloc-notes ou XML Notepad 2007, dans laquelle vous pouvez visualiser le fichier xml.  
   
@@ -36,7 +36,7 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
   
      L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`.  
   
-### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procédure : identifier la version du schéma RDL du Concepteur de rapports  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>Procédure : identifier la version du schéma RDL du Concepteur de rapports  
   
 1.  Ouvrez un nouveau projet. La version du projet que vous choisissez détermine la version du schéma RDL. Dans SQL Server, plusieurs versions de schéma sont prises en charge. Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -59,7 +59,7 @@ Un fichier de définition de rapport spécifie l'espace de noms RDL de la versio
   
      L'espace de noms de la définition de rapport est spécifié par l'URL suivante : `https://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procédure : identifier la version du schéma RDL sur le serveur de rapports  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>Procédure : identifier la version du schéma RDL sur Report Server  
   
 -   Dans le Gestionnaire de rapports, tapez l'URL du serveur de rapports. Par exemple, l'URL suivante spécifie un serveur de rapports sur l'ordinateur local :  
   

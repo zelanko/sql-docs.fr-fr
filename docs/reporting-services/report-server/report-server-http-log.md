@@ -2,20 +2,20 @@
 title: Journal HTTP Report Server | Microsoft Docs
 ms.date: 03/02/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85e0bf1588739c5e27ec46273ad1a24908639c14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789947"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581399"
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
   Le fichier journal HTTP Report Server garde un enregistrement de chaque requête et réponse HTTP gérée par le serveur de rapports. Dans la mesure où les erreurs de dépassement de capacité et de délai d'attente des requêtes n'atteignent pas le serveur de rapports, elles ne sont pas enregistrées dans le fichier journal.  
@@ -57,24 +57,24 @@ ms.locfileid: "47789947"
 |Champ|Description|Valeur par défaut|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Cette valeur est facultative. La valeur par défaut est ReportServerServiceHTTP_. Vous pouvez spécifier une autre valeur si vous souhaitez utiliser une convention d'affectation de noms de fichiers distincte (pour inclure le nom du serveur lorsque vous enregistrez les fichiers journaux dans un emplacement central, par exemple).|Oui|  
-|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|non|  
-|Date|Date à laquelle l'activité s'est produite.|non|  
-|Time|Heure à laquelle l'activité s'est produite.|non|  
+|HTTPTraceSwitches|Cette valeur est facultative. Si vous le spécifiez, vous pouvez configurer les champs du fichier journal en utilisant le format délimité par des virgules.|Non|  
+|Date|Date à laquelle l'activité s'est produite.|Non|  
+|Time|Heure à laquelle l'activité s'est produite.|Non|  
 |ClientIp|Adresse IP du client qui accède au serveur de rapports.|Oui|  
-|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|non|  
-|ServerPort|Numéro de port utilisé pour la connexion.|non|  
-|Hôte|Contenu de l'en-tête de l'hôte.|non|  
+|UserName|Nom de l'utilisateur qui a accédé au serveur de rapports.|Non|  
+|ServerPort|Numéro de port utilisé pour la connexion.|Non|  
+|Hôte|Contenu de l'en-tête de l'hôte.|Non|  
 |Méthode|Action ou méthode SOAP appelée à partir du client.|Oui|  
 |UriStem|Ressource ayant fait l'objet d'un accès.|Oui|  
-|UriQuery|Requête utilisée pour accéder à la ressource.|non|  
+|UriQuery|Requête utilisée pour accéder à la ressource.|Non|  
 |ProtocolStatus|Code d'état HTTP.|Oui|  
-|BytesReceived|Nombre d'octets reçus par le serveur.|non|  
-|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|non|  
-|ProtocolVersion|Version de protocole utilisée par le client.|non|  
-|UserAgent|Type de navigateur utilisé par le client.|non|  
-|CookieReceived|Contenu du cookie reçu par le serveur.|non|  
-|CookieSent|Contenu du cookie envoyé par le serveur.|non|  
-|Referrer|Site précédent visité par le client.|non|  
+|BytesReceived|Nombre d'octets reçus par le serveur.|Non|  
+|TimeTaken|Délai écoulé (en millisecondes) entre le moment où HTTP.SYS retourne les données de requête et le moment où le serveur termine le dernier envoi, sans inclure la durée de transmission réseau.|Non|  
+|ProtocolVersion|Version de protocole utilisée par le client.|Non|  
+|UserAgent|Type de navigateur utilisé par le client.|Non|  
+|CookieReceived|Contenu du cookie reçu par le serveur.|Non|  
+|CookieSent|Contenu du cookie envoyé par le serveur.|Non|  
+|Referrer|Site précédent visité par le client.|Non|  
   
 ## <a name="see-also"></a> Voir aussi  
  [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)   

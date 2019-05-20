@@ -1,34 +1,33 @@
 ---
 title: Guide de référence des erreurs et des événements (Reporting Services) | Microsoft Docs
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021783"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574006"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
-  Cette rubrique fournit des informations sur les erreurs et les événements pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiennent également des informations sur les erreurs. Pour plus d’informations sur les types de fichiers journaux disponibles et la manière de les afficher, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
-  
+
+Cette rubrique fournit des informations sur les erreurs et les événements pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiennent également des informations sur les erreurs. Pour plus d’informations sur les types de fichiers journaux disponibles et la manière de les afficher, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Cause et solution des messages d'erreur de Reporting Services  
- Les sites Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] contiennent des informations sur les causes des erreurs rencontrées le plus fréquemment, ainsi que les solutions correspondantes. Pour plus d’informations, consultez [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
+
+Les sites Web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] contiennent des informations sur les causes des erreurs rencontrées le plus fréquemment, ainsi que les solutions correspondantes. Pour plus d’informations, consultez [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
   
-## <a name="report-server-events"></a>Événements du serveur de rapports  
- Les événements suivants du serveur de rapports sont consignés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+## <a name="report-server-events"></a>Événements du serveur de rapports
+
+Les événements suivants du serveur de rapports sont consignés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 |ID d'événement|Type|Catégorie|Source|Description|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021783"
 |133|Error|Gestion|Serveur de rapports<br /><br /> Gestionnaire de rapports<br /><br /> Processeur de planification et de remise|Échec de chargement du fichier de configuration. Cette erreur peut se produire si le fichier XML n'est pas valide.|  
 |134|Error|Gestion|Serveur de rapports|Le serveur de rapports n'a pas réussi à chiffrer les valeurs d'un paramètre dans le fichier de configuration.|  
   
-## <a name="see-also"></a> Voir aussi  
- [Analyser les abonnements Reportions Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>Voir aussi
+
+- [Analyser les abonnements Reportions Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

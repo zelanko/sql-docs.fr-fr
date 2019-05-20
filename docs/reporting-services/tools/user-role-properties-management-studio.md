@@ -2,20 +2,20 @@
 title: Propriétés de rôle d’utilisateur (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d87d7a3975cff4f2ac7b9afd65cc4250325feef2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850527"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575775"
 ---
 # <a name="user-role-properties-management-studio"></a>Propriétés de rôle d'utilisateur (Management Studio)
   Utilisez cette page pour afficher les tâches qui figurent dans une définition de rôle au niveau élément. Vous pouvez également utiliser cette page pour modifier la liste des tâches ou la description d'un rôle.  
@@ -28,7 +28,7 @@ ms.locfileid: "47850527"
 >  Les attributions de rôles d'utilisateur sont utilisées uniquement sur un serveur de rapports qui s'exécute en mode natif. Si le serveur de rapports est configuré pour l'intégration SharePoint, cette page affiche des informations en lecture seule sur les rôles et niveaux d'autorisation définis sur le site SharePoint.  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Spécifie le nom de la définition de rôle.  
   
  **Description**  

@@ -2,18 +2,18 @@
 title: Gérer une application de service Reporting Services SharePoint | Microsoft Docs
 ms.date: 10/05/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814002"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580089"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gérer une application de service Reporting Services SharePoint
 
@@ -65,7 +65,7 @@ ms.locfileid: "51814002"
   
 |Paramètre|Commentaires|  
 |-------------|--------------|  
-|Délai d'expiration de session|La valeur par défaut est 600 secondes.|  
+|Délai d'expiration de session|La valeur par défaut est 600 secondes.|  
 |Utiliser des cookies de session|La valeur par défaut est TRUE.|  
 |Délai d'attente de rapport d'EDLX|La valeur par défaut est 1800 secondes.|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51814002"
 |Paramètre|Commentaires|  
 |-------------|--------------|  
 |Activer la journalisation des exécutions|La valeur par défaut est TRUE.<br /><br /> Vous pouvez spécifier si le serveur de rapports génère des journaux de traces et le nombre de jours pendant lesquels ces journaux sont conservés. . Les journaux sont stockés sur l'ordinateur serveur de rapports dans le dossier \Microsoft SQL Server\MSSQL.n\ReportServer\Log. Un nouveau fichier journal est démarré chaque fois que le service est démarré. Pour plus d'informations sur les fichiers journaux, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
-|Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
+|Nombre de jours de conservation dans le journal des exécutions|La valeur par défaut est 60 jours.|  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge la journalisation ULS SharePoint.  Pour plus d’informations, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   

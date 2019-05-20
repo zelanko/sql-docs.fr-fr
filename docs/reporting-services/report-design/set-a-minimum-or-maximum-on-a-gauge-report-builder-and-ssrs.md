@@ -2,18 +2,18 @@
 title: Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 906c1202d7c2362009bef00bbfa9f728e022cf8b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a2cbda4af8898233e27aa2ad2c505981e343116c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287528"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576866"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Définir un minimum ou un maximum sur une jauge (Générateur de rapports et SSRS)
   Contrairement aux graphiques dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , où plusieurs groupes sont définis, les jauges affichent une seule valeur. Étant donné que le Générateur de rapports et le Concepteur de rapports déterminent le contexte ou la précision relative de la valeur que vous essayez d’afficher sur la jauge, vous devez définir les valeurs minimale et maximale de l’échelle.   

@@ -2,7 +2,7 @@
 title: Base de données du serveur de rapports (SSRS en mode natif) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 899c7b5a116c7b544218aea64749c3f77e1222e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1790841420d86eea3cc3d7a19ccbd2e72283a425
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850336"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577566"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de données du serveur de rapports (SSRS en mode natif)
   Un serveur de rapports est un serveur sans état qui utilise le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour stocker les métadonnées et les définitions d'objets. Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise deux bases de données pour distinguer le stockage de données persistantes des obligations de stockage temporaire. Les bases de données sont créées ensemble et liées par le nom. Les noms par défaut de ces bases de données sont respectivement **reportserver** et **reportservertempdb**.  
@@ -34,7 +34,7 @@ ms.locfileid: "47850336"
 > [!IMPORTANT]  
 >  La structure de table des bases de données est optimisée pour les opérations serveur et ne doit pas être modifiée ou ajustée. [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut éventuellement modifier la structure de table d'une version à une autre. Si vous modifiez ou agrandissez la base de données, vous pouvez limiter voire supprimer la possibilité d'effectuer des mises à jour ou d'appliquer des Service Packs. Vous risquez également de créer des perturbations sur le serveur de rapports par les modifications que vous effectuez. Par exemple si vous activez READ_COMMITTED_SNAPSHOT sur la base de données ReportServer, vous arrêterez des fonctionnalités interactives de tri.  
   
- Tous les accès à une base de données du serveur de rapports doivent être gérés par le biais du serveur de rapports. Pour avoir accès au contenu d’une base de données de serveur de rapports, utilisez les outils d’administration dédiés aux serveurs de rapports (tels que le Gestionnaire de rapports et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou des interfaces par programmation telles que l’accès par URL, le service Web Report Server ou le fournisseur WMI (Windows Management Instrumentation).  
+ Tous les accès à une base de données du serveur de rapports doivent être gérés par le biais du serveur de rapports. Pour avoir accès au contenu d'une base de données de serveur de rapports, utilisez les outils d'administration dédiés aux serveurs de rapports (tels que le Gestionnaire de rapports et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou des interfaces par programmation telles que l'accès par URL, le service Web Report Server ou le fournisseur WMI (Windows Management Instrumentation).  
   
  La connexion à la base de données du serveur de rapports est généralement définie par l'intermédiaire du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Toutefois, cette connexion peut être configurée au cours de l'installation si vous choisissez d'installer la configuration par défaut. Pour plus d’informations sur la connexion du serveur de rapports à la base de données, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "47850336"
   
 -   propriétés système et paramètres de sécurité au niveau système ;  
   
--   données du journal d'exécution des rapports ;  
+-   données du journal d'exécution des rapports ;  
   
 -   clés symétriques, ainsi que connexions et informations d'identification chiffrées pour les sources de données des rapports.  
   

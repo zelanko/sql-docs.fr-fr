@@ -2,20 +2,20 @@
 title: Aide sur le Concepteur de rapports via la touche F1 | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 helpviewer_keywords:
 - Report Designer [Reporting Services], dialog boxes
 ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 38134905af9e79627a70df52767e2fa92adcf704
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5f767424e9ec24215e280b49fe1ed6b820b7a3d6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030028"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576047"
 ---
 # <a name="report-designer-f1-help"></a>Aide sur le Concepteur de rapports via la touche F1
   Cette section décrit l’aide obtenue via la touche F1 pour l’ensemble des Assistants, des vues et des boîtes de dialogue du Concepteur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  

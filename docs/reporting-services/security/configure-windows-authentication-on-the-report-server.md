@@ -2,21 +2,21 @@
 title: Configurer une authentification Windows sur le serveur de rapports | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617799"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571145"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -140,7 +140,7 @@ ms.locfileid: "52617799"
 ##### <a name="user-account-control-attribute"></a>Attribut User-Account-Control  
  Déterminez si l'attribut défini pour le compte de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est suffisant dans Active Directory. Examinez le fichier journal de trace des services de création de rapports pour rechercher la valeur enregistrée pour l'attribut UserAccountControl. La valeur enregistrée se présente au format décimal. Vous devez convertir la valeur décimale au format hexadécimal, puis rechercher cette valeur dans la rubrique MSDN qui décrit l'attribut User-Account-Control.  
   
--   L'entrée journal de trace des services de création de rapports doit ressembler à l'exemple suivant :  
+-   L'entrée journal de trace des services de création de rapports doit ressembler à l'exemple suivant :  
   
     ```  
     appdomainmanager!DefaultDomain!8f8!01/14/2010-14:42:28:: i INFO: The UserAccountControl value for the service account is 590336  

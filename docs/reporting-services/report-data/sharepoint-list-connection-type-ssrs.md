@@ -2,18 +2,18 @@
 title: Type de connexion de liste SharePoint (SSRS) | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575355"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -42,9 +42,9 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|non|  
-|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|Non|  
+|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
   
  *Authentification Windows, authentification basée sur des formulaires (FBA), jetons SAML (Secure Application Markup Language), autres fournisseurs d’identité ou combinaison de plusieurs fournisseurs d’authentification indiqués ci-dessus.  
   
@@ -53,9 +53,9 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
 ||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|non|non|  
-|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
-||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|non|non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Non|Non|  
+|Liste SharePoint distante|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
+||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Non|Non<br /><br /> L’authentification basée sur des formulaires et l’authentification par revendications ne sont pas prises en charge pour les listes SharePoint distantes.|  
   
  *Authentification Windows, authentification basée sur des formulaires (FBA), jetons SAML (Secure Application Markup Language), autres fournisseurs d’identité ou combinaison de plusieurs fournisseurs d’authentification indiqués ci-dessus.  
   

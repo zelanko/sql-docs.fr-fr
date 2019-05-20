@@ -2,7 +2,7 @@
 title: Outils de Reporting Services | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b227ef4d93c5629305c711e46b4278428986ce0b
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 676e64250a12d3c31dfcbe20683fd5bab5b7868a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712470"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581301"
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -51,7 +51,7 @@ ms.locfileid: "52712470"
 |----------|-----------------|-------------------|  
 |Gestionnaire de configuration de Reporting Services|Utilisez cet outil pour configurer une installation de services de rapports. Les tâches disponibles sont les suivantes :<br /><br /> configuration des instances de serveur de rapports locales et distantes<br /><br /> configuration du compte de service Report Server<br /><br /> création et configuration d'une ou plusieurs URL de service Web.<br /><br /> configuration de l'URL du Gestionnaire de rapports<br /><br /> création et configuration de la base de données du serveur de rapports.<br /><br /> configuration d'un déploiement avec montée en puissance parallèle.<br /><br /> sauvegarde, restauration ou remplacement de la clé symétrique utilisée pour chiffrer des chaînes de connexion stockées et des informations d'identification.<br /><br /> configuration du compte d'exécution sans assistance.<br /><br /> configuration d'un serveur SMTP pour la remise du courrier électronique.<br /><br /> <br /><br /> Remarque : le Gestionnaire de configuration de Reporting Services ne vous permet pas de gérer le contenu du serveur de rapports, d’activer des fonctionnalités supplémentaires ou d’accorder l’accès au serveur.<br /><br /> Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).|Menu Démarrer|  
 |SQL Server Management Studio|Utilisez cet outil pour gérer une ou plusieurs instances de serveurs de rapports dans un environnement unique, y compris :<br /><br /> la gestion des instances de serveur de rapports locales et distantes<br /><br /> la définition des propriétés du serveur de rapports<br /><br /> la modification des définitions de rôles<br /><br /> la désactivation des fonctionnalités du serveur que vous n'utilisez pas<br /><br /> la gestion des travaux<br /><br /> la gestion des planifications partagées|Menu Démarrer|  
-|Gestionnaire de configuration SQL Server|Utilisez cet outil pour :<br /><br /> installer et démarrer les services Windows de services de rapport<br /><br /> configurer la création de rapports pour les commentaires client, l'emplacement du répertoire de vidage et le rapport d'erreurs<br /><br /> <br /><br /> **\*\* Avertissement \*\*** N’utilisez pas cet outil pour configurer un compte de service. Utilisez plutôt l'outil Configuration de Reporting Services.<br /><br /> Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Démarrer|  
+|Gestionnaire de configuration SQL Server|Utilisez cet outil pour :<br /><br /> installer et démarrer les services Windows de services de rapport<br /><br /> configurer la création de rapports pour les commentaires client, l'emplacement du répertoire de vidage et le rapport d'erreurs<br /><br /> <br /><br /> **\*\* Avertissement \*\*** N’utilisez pas cet outil pour configurer un compte de service. Utilisez plutôt l'outil Configuration de Reporting Services.<br /><br /> Pour plus d'informations, consultez [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Démarrer|  
 |Utilitaire rsconfig|Utilisez cet outil pour configurer et gérer la connexion du serveur de rapports à la base de données du serveur de rapports. mais aussi à définir un compte d'utilisateur pour le traitement des rapports autonomes.<br /><br /> Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Ligne de commande|  
 |Utilitaire Rskeymgmt|Utilisez cet outil pour :<br /><br /> extraire, restaurer, créer et supprimer la clé symétrique utilisée pour chiffrer les données de serveur de rapports<br /><br /> joindre des instances de serveurs de rapports dans un déploiement avec montée en puissance parallèle<br /><br /> <br /><br /> Pour plus d’informations, consultez [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md).|Ligne de commande|  
 |Classes WMI (Windows Management Instrumentation)|Utilisez ces classes pour automatiser les tâches de configuration dans le gestionnaire de configuration des services de rapports sans qu'il soit nécessaire d'utiliser l'interface utilisateur graphique.<br /><br /> Pour plus d'informations, consultez [Accessing the WMI Provider Programmatically](../../reporting-services/accessing-the-wmi-provider-programmatically.md).|Script Visual Basic|  

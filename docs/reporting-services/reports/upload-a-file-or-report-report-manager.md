@@ -2,7 +2,7 @@
 title: Charger un fichier ou un rapport dans le serveur de rapports | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b54290c582dab62b7e0f5b8a1cb7ca4dd2eb642c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660197"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573307"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Charger un fichier ou un rapport dans le serveur de rapports
 Le portail web du serveur de rapports fournit une fonctionnalité de chargement qui vous permet d’ajouter des rapports et d’autres fichiers à un serveur de rapports sans devoir publier ces éléments à partir d’une application cliente. Les fichiers que vous téléchargez à partir du système de fichiers sont stockés en tant qu'éléments sur le serveur de rapports. Le type de fichier téléchargé détermine son mode de stockage :  

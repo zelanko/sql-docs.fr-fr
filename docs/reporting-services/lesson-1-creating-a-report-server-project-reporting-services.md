@@ -1,80 +1,70 @@
 ---
-title: 'Leçon 1 : Création d’un projet Report Server (Reporting Services) | Microsoft Docs'
-ms.date: 11/30/2016
+title: 'Leçon 1 : création d’un projet Report Server (Reporting Services) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292347"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095857"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
 
-Dans cette leçon, vous créez un *projet Report Server* et un fichier de *définition de rapport (.rdl)* dans [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dans Visual Studio. 
+Dans cette leçon, vous créez un *projet Report Server* et un fichier de *définition de rapport (.rdl)* dans le *Concepteur de rapports*.
 
-Pour créer un rapport avec [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vous avez d’abord besoin d’un projet Report Server où vous pouvez enregistrer votre fichier de définition de rapport (.rdl), ainsi que les autres fichiers de ressources dont vous avez besoin pour votre rapport. 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] est un environnement [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] pour créer des solutions d’aide à la décision. SSDT comprend l’environnement de création Concepteur de rapports, où vous pouvez ouvrir, modifier, afficher un aperçu, enregistrer et déployer des définitions de rapport paginés [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] , des sources de données partagées, des datasets partagés et des parties de rapports.
 
-Dans les leçons suivantes, vous définissez une source de données pour votre rapport, un dataset et la mise en page du rapport. Quand vous exécutez le rapport, les données sont extraites et combinées avec la mise en page, puis restituées sur votre écran, à partir duquel vous pouvez les exporter, les imprimer ou les enregistrer.  
+Quand vous créez des rapports avec le Concepteur de rapports, il crée un projet Report Server qui contient les fichiers de rapports et autres fichiers de ressources utilisés par les rapports.
+
+## <a name="to-create-a-report-server-project"></a>Pour créer un projet Report Server
   
-  
-  
-## <a name="to-create-a-report-server-project"></a>Pour créer un projet Report Server  
-  
-1.  Ouvrez [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
-  
-2.  Dans le menu **Fichier** > **Nouveau** > **Projet**.  
+1. Dans le menu **Fichier**, sélectionnez **Nouveau** > **Projet**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  Sous **Modèles** > **installés** > **Business Intelligence**, cliquez sur **Reporting Services**.
+2. Dans la colonne la plus à gauche sous **Installé**, sélectionnez **Reporting Services**. Dans certains cas, cette option peut se trouver sous le groupe **Business Intelligence**.
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. Cliquez sur **Projet Report Server** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
+    > [!IMPORTANT]
+    > Pour Visual Studio, si vous ne voyez pas Reporting Services dans la colonne de gauche, ajoutez le Concepteur de rapports en installant la charge de travail SSDT. Dans le menu **Outils**, sélectionnez **Obtenir les outils et fonctionnalités** et sélectionnez **SQL Server Data Tools** parmi les charges de travail affichées. Si vous ne voyez pas les objets de services de rapports dans la colonne centrale, ajoutez les extensions Reporting Services. Dans le menu **Outils**, sélectionnez **Extensions et mises à jour** > **En ligne**. Dans la colonne centrale, sélectionnez **Projets Microsoft Reporting Services** > **Télécharger** parmi les extensions affichées. Pour SSDT, consultez [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-   >**Remarque**: Si vous ne voyez pas les options **Business Intelligence** ou **Projet Report Server**, vous devez mettre à jour SSDT avec les modèles Business Intelligence. Voir [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).  
-  
-5.  Dans la zone **Nom**, tapez **Didacticiel**.  
+3. Sélectionnez l’icône **Projet Report Server** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png)&nbsp;&nbsp; dans la colonne centrale de la boîte de dialogue **Nouveau projet**.
 
-    Par défaut, il est créé dans votre dossier Visual Studio 2015\Project, dans un nouveau répertoire.
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  Cliquez sur **OK** pour créer le projet.  
-  
-    Le projet Didacticiel s’affiche dans l’Explorateur de solutions sur la droite.  
-  
-## <a name="to-create-a-new-report-definition-file"></a>Pour créer un nouveau fichier de définition de rapport  
-  
-1.  Dans le volet **Explorateur de solutions** , cliquez avec le bouton droit sur **Rapports** > **Ajouter** > **Nouvel élément**. 
+4. Dans la zone de texte **Nom**, tapez « Tutorial » comme nom du projet. Par défaut, la zone de texte **Emplacement** affiche le chemin de votre dossier « Documents\Visual Studio 20xx\Projects\". Le Concepteur de rapports crée un dossier nommé Tutorial sous ce chemin, et crée le projet Tutorial dans ce dossier. Si le projet n’appartient pas à une solution VS, Visual Studio crée également un fichier solution (.sln).
 
-    >**Astuce** : Si vous ne voyez pas le volet **Explorateur de solutions** , dans le menu **Affichage** , cliquez sur **Explorateur de solutions**. 
+5. Sélectionnez **OK** pour créer le projet. Le projet Tutorial s’affiche dans l’**Explorateur de solutions** sur la droite.
+  
+## <a name="creating-a-report-definition-file-rdl"></a>Création d’un fichier de définition de rapport (RDL)  
+  
+1. Dans le volet **Explorateur de solutions**, cliquez avec le bouton droit sur le dossier **Rapports**. Si vous ne voyez pas le volet **Explorateur de solutions**, sélectionnez le menu **Affichage** > **Explorateur de solutions**.
+
+2. Sélectionnez **Ajouter** > **Nouvel élément**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  Dans la fenêtre **Ajouter un nouvel élément** , cliquez sur **Rapport** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png).  
-  
-3.  Dans la zone **Nom**, tapez **Sales Orders.rdl** , puis cliquez sur **Ajouter**.  
-  
-    Le Concepteur de rapports s'ouvre et affiche le nouveau fichier .rdl en mode Conception.  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     Le Concepteur de rapports est un composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui s'exécute dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Il dispose de deux vues : **Conception** et **Aperçu**. Cliquez sur chacun des onglets pour passer d'une vue à une autre.  
-  
-    Vous définissez vos données dans le volet **Données du rapport** . Vous définissez la mise en page de votre rapport en mode **Conception** . Vous pouvez exécuter le rapport et visualiser son aspect en mode **Aperçu** .  
-  
-## <a name="next-lesson"></a>Leçon suivante  
-Vous avez créé avec succès un projet de rapport appelé « Didacticiel » et ajouté un fichier de définition de rapport (.rdl) au projet de rapport. Vous allez ensuite spécifier la source de données à utiliser pour le rapport. Consultez [Leçon 2 : Spécification des informations de connexion &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
-  
-## <a name="see-also"></a> Voir aussi  
-[Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. Dans la fenêtre **Ajouter un nouvel élément**, sélectionnez l’icône **Rapport**.
+
+4. Tapez « Sales Orders.rdl » dans la zone de texte **Nom**.
+
+5. Sélectionnez le **bouton Ajouter** en bas à droite de la boîte de dialogue **Ajouter un nouvel élément** pour terminer le processus. Le Concepteur de rapports s’ouvre et affiche le fichier de rapport Sales Orders en mode Conception.
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Jusqu’à présent, vous avez créé le projet de rapport Tutorial et le rapport Sales Orders. Dans les leçons suivantes, vous allez découvrir comment :
+
+- Configurer une source de données pour le rapport.
+- Créer un dataset à partir de la source de données.
+- Concevoir et mettre en forme la disposition du rapport.
+
+Poursuivez avec la [Leçon 2 : Spécification des informations de connexion &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

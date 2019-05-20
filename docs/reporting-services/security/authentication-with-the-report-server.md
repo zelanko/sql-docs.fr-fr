@@ -2,7 +2,7 @@
 title: Authentification avec le serveur de rapports | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030218"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570901"
 ---
 # <a name="authentication-with-the-report-server"></a>Authentification avec le serveur de rapports
 
@@ -34,9 +34,9 @@ ms.locfileid: "50030218"
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Oui|Tente d'utiliser Kerberos en premier pour l'authentification intégrée de Windows, mais revient à NTLM si Active Directory ne peut pas accorder de ticket pour la demande du client au serveur de rapports. Negotiate revient à NTLM uniquement si le ticket n'est pas disponible. Si les premières tentatives entraînent une erreur plutôt qu'un ticket manquant, le serveur de rapports n'effectue pas de deuxième tentative.|  
 |RSWindowsNTLM|NTLM|Oui|Utilise NTLM pour l'authentification intégrée de Windows.<br /><br /> Les informations d'identification ne seront pas déléguées ou empruntées sur d'autres demandes. Les demandes suivantes suivent une nouvelle séquence de stimulation/réponse. Selon les paramètres de sécurité du réseau, le système peut demander à un utilisateur des informations d'identification ou la demande d'authentification est gérée de façon transparente.|  
-|RSWindowsKerberos|Kerberos|non|Utilise Kerberos pour l'authentification intégrée de Windows. La configuration de Kerberos passe par celle des noms des principes du service (SPN) pour vos comptes de service, lequel requiert des privilèges d'administrateur de domaine. Si vous configurez la délégation d'identité à l'aide de Kerberos, le jeton de l'utilisateur qui demande un rapport peut également être utilisé sur une connexion supplémentaire aux sources de données externes qui fournissent des données aux rapports.<br /><br /> Avant de spécifier RSWindowsKerberos, vérifiez que le type de navigateur que vous utilisez prend bien en charge ce dernier. Si vous utilisez Microsoft Edge ou Internet Explorer, l’authentification Kerberos est prise en charge uniquement par l’intermédiaire de Negotiate. Microsoft Edge ou Internet Explorer ne formule pas de demande d’authentification qui spécifie Kerberos directement.|  
-|RSWindowsBasic|Basic|non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Custom|(Anonyme)|non|L'authentification anonyme dirige le serveur de rapports pour ignorer l'en-tête d'authentification dans une requête HTTP. Le serveur de rapports accepte toutes les demandes, mais appelle une authentification par formulaire [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personnalisée que vous fournissez pour authentifier l'utilisateur.<br /><br /> Spécifiez **Custom** si vous déployez un module d’authentification personnalisé qui gère toutes les demandes d’authentification sur le serveur de rapports. Vous ne pouvez pas utiliser le type d'authentification Personnalisé avec l'extension d'authentification Windows par défaut.|  
+|RSWindowsKerberos|Kerberos|Non|Utilise Kerberos pour l'authentification intégrée de Windows. La configuration de Kerberos passe par celle des noms des principes du service (SPN) pour vos comptes de service, lequel requiert des privilèges d'administrateur de domaine. Si vous configurez la délégation d'identité à l'aide de Kerberos, le jeton de l'utilisateur qui demande un rapport peut également être utilisé sur une connexion supplémentaire aux sources de données externes qui fournissent des données aux rapports.<br /><br /> Avant de spécifier RSWindowsKerberos, vérifiez que le type de navigateur que vous utilisez prend bien en charge ce dernier. Si vous utilisez Microsoft Edge ou Internet Explorer, l’authentification Kerberos est prise en charge uniquement par l’intermédiaire de Negotiate. Microsoft Edge ou Internet Explorer ne formule pas de demande d’authentification qui spécifie Kerberos directement.|  
+|RSWindowsBasic|Simple|Non|L'authentification de base est définie dans le protocole HTTP et peut être utilisée uniquement pour authentifier des requêtes HTTP au serveur de rapports.<br /><br /> Les informations d'identification sont passées dans la requête HTTP à l'aide de l'encodage en base 64. Si vous avez recours à l'authentification de base, utilisez le protocole SSL (Secure Sockets Layer) pour chiffrer les informations du compte d'utilisateur avant de les envoyer sur le réseau. Le protocole SSL fournit un canal chiffré pour l'envoi d'une demande de connexion du client au serveur de rapports via une connexion HTTP TCP/IP. Pour plus d’informations, consultez [Using SSL to Encrypt Confidential Data](https://go.microsoft.com/fwlink/?LinkId=71123) (Chiffrer les données confidentielles à l’aide de SSL) sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Custom|(Anonyme)|Non|L'authentification anonyme dirige le serveur de rapports pour ignorer l'en-tête d'authentification dans une requête HTTP. Le serveur de rapports accepte toutes les demandes, mais appelle une authentification par formulaire [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] personnalisée que vous fournissez pour authentifier l'utilisateur.<br /><br /> Spécifiez **Custom** si vous déployez un module d’authentification personnalisé qui gère toutes les demandes d’authentification sur le serveur de rapports. Vous ne pouvez pas utiliser le type d'authentification Personnalisé avec l'extension d'authentification Windows par défaut.|  
   
 ## <a name="unsupported-authentication-methods"></a>Méthodes d'authentification non prises en charge  
  Les méthodes et demandes d'authentification suivantes ne sont pas prises en charge.  

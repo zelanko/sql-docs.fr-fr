@@ -2,20 +2,20 @@
 title: Annuler les travaux du serveur de rapports (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.cancelreportserverjobs.f1
 ms.assetid: 1c5b4975-49e9-4d0b-b298-2638e81edbfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fcb1945bdf5a6cc274a947b407f33f70d5905f9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8c433b8fcc0d768b3db48edf8bc56bed6440839a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722247"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574217"
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>Annuler les travaux du serveur de rapports (Management Studio)
   Utilisez la boîte de dialogue **Annuler les travaux du serveur de rapports** pour afficher ou annuler les rapports en cours. Cette boîte de dialogue affiche tous les travaux qui sont en cours d'exécution sur le serveur de rapports. Bien que vous ne puissiez pas suspendre ni redémarrer des travaux en cours de traitement, vous pouvez annuler tous les travaux ou des travaux individuels si leur exécution est trop longue.  
@@ -34,7 +34,7 @@ ms.locfileid: "47722247"
 >  Cette fonctionnalité n'est pas prise en charge dans [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services. La page n'apparaît pas lorsque vous exécutez [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Affiche le nom du rapport. Les abonnements sont identifiés par leur description.  
   
  **Type**  

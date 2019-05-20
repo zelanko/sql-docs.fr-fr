@@ -2,21 +2,21 @@
 title: Configurer la mémoire disponible pour les applications du serveur de rapports | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4727cff529db944205f46be291f65ebb653eb9bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722707"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580387"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
   Bien que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  
@@ -72,7 +72,7 @@ ms.locfileid: "47722707"
 |**MemorySafetyMargin**|Spécifie un pourcentage de **WorkingSetMaximum** qui définit la limite entre les scénarios correspondant à une sollicitation moyenne et basse. Cette valeur est le pourcentage de mémoire disponible réservée au système et ne peut pas être utilisée pour les opérations du serveur de rapports. La valeur par défaut est 80.|  
   
 > [!NOTE]  
->  Les paramètres**MemoryLimit** et **MaximumMemoryLimit** sont obsolètes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures. Si vous avez mis à niveau une installation existante ou si vous utilisez un fichier RSReportServer.config qui comprend ces paramètres, le serveur de rapports ne lit plus ces valeurs.  
+>  Les paramètres**MemoryLimit** et **MaximumMemoryLimit** sont obsolètes dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et later versions. Si vous avez mis à niveau une installation existante ou si vous utilisez un fichier RSReportServer.config qui comprend ces paramètres, le serveur de rapports ne lit plus ces valeurs.  
   
 #### <a name="example-of-memory-configuration-settings"></a>Exemple de paramètres de configuration de la mémoire  
  L'exemple suivant illustre les paramètres de configuration d'un serveur de rapports qui utilise des valeurs de configuration de la mémoire personnalisées. Pour ajouter **WorkingSetMaximum** ou **WorkingSetMinimum**, vous devez taper les éléments et les valeurs dans le fichier RSReportServer.config. Les deux valeurs sont des entiers qui représentent les kilo-octets de mémoire vive (RAM) que vous allouez aux applications serveur. L'exemple suivant spécifie que l'allocation de mémoire totale pour les applications du serveur de rapports ne peut pas dépasser 4 gigaoctets. Si la valeur par défaut **WorkingSetMinimum** (60 % de **WorkingSetMaximum**) est acceptable, vous pouvez l’omettre et spécifier simplement **WorkingSetMaximum** dans le fichier RSReportServer.config. Cet exemple inclut **WorkingSetMinimum** afin que vous puissiez voir à quoi il ressemble, si vous décidez de l’ajouter :  
@@ -91,6 +91,6 @@ ms.locfileid: "47722707"
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Domaines d’application pour des applications du serveur de rapports](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [Application Domains for Report Server Applications](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

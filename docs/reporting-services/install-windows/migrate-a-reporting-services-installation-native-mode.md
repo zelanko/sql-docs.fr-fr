@@ -1,18 +1,18 @@
 ---
 title: Migrer une installation Reporting Services (mode natif) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 96b55cafe46994f44f496679f2d66f887baf4dce
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712420"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503615"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
 
@@ -38,9 +38,10 @@ Cette rubrique fournit des instructions détaillées de migration de l’une des
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 Pour plus d’informations sur la migration d’un déploiement en mode SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , consultez [Migrer une installation Reporting Services &#40;mode SharePoint&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  La migration s’entend ici comme étant le déplacement de fichiers de données d’application vers une nouvelle instance de SQL Server. Voici quelques raisons courantes pour lesquelles vous devez migrer votre installation :  
   
@@ -89,7 +90,7 @@ Pour plus d’informations sur la migration d’un déploiement en mode SharePoi
   
 * Écrivez du code qui appelle le fournisseur WMI pour copier des données entre des bases de données. Pour plus d’informations sur cette approche, consultez [Accès au fournisseur WMI de Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* Si vous avez seulement quelques éléments, vous pouvez publier de nouveau les rapports, les modèles de rapport et les sources de données partagées du Concepteur de rapports, du Générateur de modèles et du Générateur de rapports sur le nouveau serveur de rapports. Recréez les attributions de rôles, les abonnements, les planifications partagées, les planifications d’instantanés de rapports, les propriétés personnalisées que vous définissez dans les rapports ou d’autres éléments, la sécurité des éléments de modèle et les propriétés que vous définissez dans le serveur de rapports. Si vous exécutez ces actions, vous devez être préparé à perdre l’historique des rapports ainsi que les données des journaux d’exécution des rapports.
+* Si vous avez seulement quelques éléments, vous pouvez republier des rapports et des sources de données partagées à partir du Concepteur de rapports, du Générateur de modèles et du Générateur de rapports vers le nouveau serveur de rapports. Recréez les attributions de rôles, les abonnements, les planifications partagées, les planifications d’instantanés de rapports, les propriétés personnalisées que vous définissez dans les rapports ou d’autres éléments, la sécurité des éléments de modèle et les propriétés que vous définissez dans le serveur de rapports. Si vous exécutez ces actions, vous devez être préparé à perdre l’historique des rapports ainsi que les données des journaux d’exécution des rapports.
   
 ## <a name="bkmk_before_you_start"></a> Avant de commencer
 

@@ -2,20 +2,20 @@
 title: Reporting Services dans SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292327"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581346"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "56292327"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -175,7 +175,7 @@ ms.locfileid: "56292327"
   
 -   **Propriétés du rapport** Sélectionnez cette option pour ouvrir la boîte de dialogue **Propriétés du rapport** . Dans cette boîte de dialogue, vous pouvez affecter les propriétés générales du rapport, telles que le nom de l'auteur et l'espacement de la grille, et définir des propriétés pour sa mise en page, notamment le nombre de colonnes et la taille de la page. Vous pouvez également inclure du code personnalisé, des références à des assemblys et à des classes, ainsi que les noms d'éléments de sortie des données, des transformations de données et des schémas de données.  
   
--   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
+-   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
   
 -   **En-tête de page** Ajoutez ou supprimez un en-tête de page dans le rapport. Lorsque vous supprimez un en-tête de page, tous les éléments qu'il contient sont supprimés.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56292327"
   
 
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue Options** pour spécifier le plug-in et configurer les paramètres.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modèles de rapports personnalisés  
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans l’emplacement suivant : `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  

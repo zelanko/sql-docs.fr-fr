@@ -2,18 +2,18 @@
 title: Environnement de création du Générateur de rapports (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 68728f18f72aed6316f3764d81889f1ab5368d25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 597685b5de75fa78fab0fda4fc3f217462c3d736
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295297"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576306"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Environnement de création du Générateur de rapports (SSRS)
   Le Générateur de rapports [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] est un environnement autonome dédié à la création de rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en dehors de Visual Studio. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez l’installer depuis le portail web de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou le Centre de téléchargement Microsoft.  

@@ -2,7 +2,7 @@
 title: Filtrer, regrouper et trier des données (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.sorting.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bd86e9376e8520205702460e6f3e7834b5fe7424
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0012f01fead8d6890f8e593f4991cbb0252e3dd6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289287"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576530"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -107,7 +107,7 @@ ms.locfileid: "56289287"
   
  Les trois types de tri peuvent être associés dans un même rapport. Par défaut, l'ordre de tri est déterminé par l'ordre dans lequel les données sont retournées par la requête de dataset. Les expressions de tri sont appliquées dans la région de données et le groupe de régions de données. Les tris interactifs sont appliqués après les expressions de tri.  
   
- Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d'agrégation suivantes sont affectées par l'ordre de tri : Premier, Dernier et Précédent. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d’agrégation suivantes sont affectées par l’ordre de tri : First, Last et Previous. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  

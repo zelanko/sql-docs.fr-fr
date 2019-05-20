@@ -2,18 +2,18 @@
 title: Activer des événements Reporting Services pour le journal des traces SharePoint (ULS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409536"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580947"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52409536"
 |Base de données|Commentaires|Journalise les événements ayant trait à l'accès aux bases de données.|  
 |Général|Commentaires|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
 |Généralités sur Office Server|Exception|Journalise les échecs d'ouverture de session.|  
-|Topologie|Verbose|Journalise des informations sur l'utilisateur actuel.|  
+|Topologie|Commentaires|Journalise des informations sur l'utilisateur actuel.|  
 |composants WebPart|Commentaires|Journalise les événements ayant trait à l'accès au composant WebPart Visionneuse de rapports.|  
   
 ##  <a name="bkmk_turnon"></a> Pour activer et désactiver des événements Reporting Services dans la catégorie Reporting Services  

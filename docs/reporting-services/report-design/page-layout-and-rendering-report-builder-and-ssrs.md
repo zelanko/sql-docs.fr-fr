@@ -2,18 +2,18 @@
 title: Mise en page et rendu (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b4d2193730a07ff59ddfc8c74189663f74e804b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8ec929d77b9805e3285b5d5a75940231b09cbd8e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289467"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576346"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
 Découvrez les extensions de rendu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les rapports paginés, grâce auxquelles vous pouvez donner à votre rapport l’aspect souhaité, notamment en ce qui concerne la mise en page, les sauts de page et le format de papier. 

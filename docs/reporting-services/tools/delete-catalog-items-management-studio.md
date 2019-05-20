@@ -2,20 +2,20 @@
 title: Suppression des éléments du catalogue (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792117"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573934"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Suppression des éléments du catalogue (Management Studio)
   Utilisez cette page pour supprimer des planifications partagées et des définitions de rôle.  
@@ -27,7 +27,7 @@ ms.locfileid: "47792117"
  Vous ne pouvez pas annuler une opération de suppression. Pour récupérer un élément supprimé, vous devez le recréer ou restaurer une copie de sauvegarde de la base de données du serveur de rapports.  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Spécifie le nom de l'élément à supprimer.  
   
  **Type**  
@@ -45,6 +45,6 @@ ms.locfileid: "47792117"
 ## <a name="see-also"></a> Voir aussi  
  [Supprimer un élément &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [Créer, modifier et supprimer des planifications](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

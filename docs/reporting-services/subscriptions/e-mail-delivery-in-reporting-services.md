@@ -2,7 +2,7 @@
 title: Remise par courrier électronique dans Reporting Services | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a5ff1c1266e5d2586ec063c18db5c83737f0409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f21a974ee9beeeba8b50914092704f1879c5f501
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827247"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575569"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Pour distribuer un rapport par courrier électronique, vous devez 1) configurer le serveur de rapports pour la remise du courrier électronique et 2) définir un abonnement standard ou piloté par les données. Un abonnement unique ne permet pas de distribuer plusieurs rapports dans un seul message électronique. Toutefois, vous pouvez créer plusieurs abonnements.  
@@ -81,7 +81,7 @@ ms.locfileid: "47827247"
  Pour un serveur de rapports en mode natif, vous pouvez configurer l’extension de remise par e-mail via le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Dans le cas d’un serveur de rapports en mode SharePoint, l’extension de remise du courrier électronique est configurée dans les pages de gestion de SharePoint et dans les scripts PowerShell.  
   
  
- Pour des informations sur la configuration d’un serveur de rapports en mode natif, consultez [Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
+ Pour des informations sur la configuration d’un serveur de rapports en mode natif, consultez [Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  Pour plus d'informations sur la configuration d'un serveur de rapports en mode SharePoint, consultez :  

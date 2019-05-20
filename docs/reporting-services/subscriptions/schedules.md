@@ -2,7 +2,7 @@
 title: Planifications | Microsoft Docs
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711470"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578095"
 ---
 # <a name="schedules"></a>Planifications
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des **planifications partagées** et des **planifications spécifiques aux rapports** pour vous aider à contrôler le traitement et la distribution des rapports. La différence entre ces deux types de planifications réside dans la façon dont elles sont définies, stockées et gérées. La construction interne des deux types de planifications est la même. Toutes les planifications spécifient un type de périodicité : mensuelle, hebdomadaire ou quotidienne. Dans le type de périodicité, vous définissez les intervalles et la plage pour configurer la fréquence à laquelle un événement se produit. Qu'il s'agisse de créer une planification partagée ou une planification spécifique aux rapports, le type de périodicité et la façon dont elle est spécifiée restent inchangés.
@@ -29,7 +29,7 @@ ms.locfileid: "52711470"
   
 -   Les planifications spécifiques aux rapports sont créées lorsque vous définissez un abonnement ou configurez des propriétés d'exécution de rapport. L'entrée des informations de planification fait partie de la définition d'un abonnement ou du paramétrage des propriétés. Pour définir une planification spécifique aux rapports, ouvrez le rapport ou l'abonnement qui l'utilise.  
   
- Une planification partagée contient les informations de planification et de périodicité qui peuvent être utilisées par tous les rapports publiés et abonnements qui s'exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si de nombreux rapports et abonnements s'exécutent en même temps, vous pouvez créer une planification partagée pour ces travaux. Si vous souhaitez modifier ultérieurement la périodicité ou la date de fin, vous pouvez effectuer cette modification à un seul emplacement.  
+ Une planification partagée contient les informations de planification et de périodicité qui peuvent être utilisées par tous les rapports publiés et abonnements qui s'exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si de nombreux rapports et abonnements s'exécutent en même temps, vous pouvez créer une planification partagée pour ces travaux. Si vous souhaitez modifier ultérieurement la périodicité ou la date de fin, vous pouvez effectuer cette modification à un seul emplacement.  
   
  La maintenance des planifications partagées est plus facile à assurer ; par ailleurs, ces dernières vous apportent une plus grande souplesse de gestion des opérations planifiées. Par exemple, vous pouvez suspendre et reprendre des planifications partagées. En outre, si vous trouvez que trop d'opérations planifiées s'exécutent en même temps, vous pouvez créer plusieurs planifications partagées qui s'exécutent à des heures différentes, puis vous pouvez ajuster les informations de planification de sorte que la charge de traitement soit répartie de manière égale sur le serveur de rapports.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52711470"
   
 -   Appelle l'extension de remise qui est spécifiée dans un abonnement de sorte que le rapport puisse être remis.  
   
- Les autres aspects d'une opération de planification et de remise sont gérés par d'autres composants et services qui fonctionnent avec le processeur de planification et de livraison. En particulier, le processeur de planification et de livraison s'exécute dans le service Report Server et utilise l'Agent SQL Server comme minuteur pour générer des événements planifiés. La procédure pas à pas suivante explique le fonctionnement des opérations planifiées dans un déploiement de Reporting Services :  
+ Les autres aspects d'une opération de planification et de remise sont gérés par d'autres composants et services qui fonctionnent avec le processeur de planification et de livraison. En particulier, le processeur de planification et de livraison s'exécute dans le service Report Server et utilise l'Agent SQL Server comme minuteur pour générer des événements planifiés. La procédure pas à pas suivante explique le fonctionnement des opérations planifiées dans un déploiement de Reporting Services :  
   
 1.  Une opération planifiée est définie lorsqu'un utilisateur crée une planification. La planification définit la date et l'heure qui seront utilisées pour déclencher un abonnement pour la remise de rapport, actualiser un instantané ou terminer un cache.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "52711470"
 >  Vous pouvez utiliser la facette **Configuration de la surface d'exposition pour Reporting Services** pour interrompre temporairement ou définitivement des opérations planifiées. Bien que vous puissiez créer et déployer des extensions de remise personnalisées, le processeur de planification et de livraison n'est en lui-même pas extensible. Vous ne pouvez pas modifier la manière dont il gère les événements et les notifications. Pour plus d'informations sur la désactivation des fonctionnalités, consultez la section **Événements planifiés et remise** de [Turn Reporting Services Features On or Off](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md).  
   
 ###  <a name="bkmk_stoppingagent"></a> Conséquences de l'interruption de l'Agent SQL Server  
- Le traitement des rapports planifiés utilise l'Agent SQL Server par défaut. Si vous arrêtez ce service, aucune nouvelle demande de traitement ne sera ajoutée à la file d’attente à moins d’y être intégrée, par programmation, à l’aide de la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Lorsque vous redémarrez le service, les travaux à l'origine des demandes de traitement des rapports reprennent leur cours. Le serveur de rapports ne tente pas de recréer les travaux de traitement des rapports survenus précédemment tandis que l'Agent SQL Server était en mode hors connexion. Si vous arrêtez l'Agent SQL Server l'espace d'une semaine, toutes les opérations planifiées de cette semaine sont perdues.  
+ Le traitement des rapports planifiés utilise l'Agent SQL Server par défaut. Si vous arrêtez ce service, aucune nouvelle demande de traitement ne sera ajoutée à la file d’attente à moins d’y être intégrée, par programmation, à l’aide de la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> . Lorsque vous redémarrez le service, les travaux à l'origine des demandes de traitement des rapports reprennent leur cours. Le serveur de rapports ne tente pas de recréer les travaux de traitement des rapports survenus précédemment tandis que l'Agent SQL Server était en mode hors connexion. Si vous arrêtez l'Agent SQL Server l'espace d'une semaine, toutes les opérations planifiées de cette semaine sont perdues.  
   
 > [!NOTE]  
 >  La fonction assurée par SQL Server Agent pour Reporting Services peut être remplacée par un code personnalisé qui utilise la méthode <xref:ReportService2010.ReportingService2010.FireEvent%2A> pour ajouter des événements planifiés dans la file d’attente.  

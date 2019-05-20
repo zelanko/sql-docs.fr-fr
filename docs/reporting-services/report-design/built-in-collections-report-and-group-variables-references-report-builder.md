@@ -2,7 +2,7 @@
 title: Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -15,14 +15,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.seriesgroupproperties.variables.f1
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e23ffcae117f42770604ca60cd2fc2d313eb8a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 97123f3e9802ddbdf452f66e83a1b3c00f99764d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286117"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581778"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>Collections intégrées - Références à des variables de rapport et de groupe (Générateur de rapports)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  
@@ -55,7 +55,7 @@ ms.locfileid: "56286117"
 ## <a name="group-variables"></a>Variables de groupe  
  Utilisez une variable de groupe pour calculer une expression complexe dans l'étendue d'un groupe. Une variable de groupe est valide uniquement dans l'étendue du groupe et ses groupes enfants.  
   
- Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Exemple :  
+ Par exemple, supposez qu'une région de données affiche des données d'inventaire pour des éléments qui sont dans différentes catégories d'impôts et que vous souhaitez appliquer différents taux de taxe pour chaque catégorie. Vous regroupez les données en fonction des catégories et définissez une variable *Tax* sur le groupe parent. Vous définissez ensuite une variable de groupe pour *ItemTax* pour chaque catégorie d’impôts et affectez chacun des différents sous-groupes de catégories à la variable de groupe correcte. Par exemple :  
   
 -   Pour le groupe parent basé sur `[Category]`, affectez à la variable *Tax* la valeur `[Tax]`. Supposez que les valeurs des catégories sont Food et Clothing.  
   

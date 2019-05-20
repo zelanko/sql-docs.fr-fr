@@ -1,21 +1,21 @@
 ---
 title: Développer avec les API REST pour Reporting Services | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254694"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502741"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Développer avec les API REST pour Reporting Services
 
@@ -33,10 +33,10 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 * **L’URI de demande**, qui se compose de : `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Bien que l’URI de demande soit inclus dans l’en-tête de message de la demande, nous l’appelons séparément ici, car la plupart des langages ou des frameworks vous obligent à le transmettre séparément du message de demande.
 
-    * Schéma d’URI : Indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
-    * Hôte d’URI : Spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison du service REST est hébergé, comme `myserver.contoso.com`.
-    * Chemin de la ressource : Spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
-    * Chaîne de requête (facultatif) : Fournit des paramètres simples supplémentaires, comme la version de l’API ou les critères de sélection des ressources.
+    * Schéma d’URI : indique le protocole utilisé pour transmettre la demande. Par exemple, `http` ou `https`.
+    * Hôte de l’URI : spécifie le nom de domaine ou l’adresse IP du serveur où le point de terminaison de service REST est hébergé, tel que `myserver.contoso.com`.
+    * Chemin de la ressource : spécifie la ressource ou la collection de ressources, qui peut inclure plusieurs segments utilisés par le service pour déterminer la sélection de ces ressources. Par exemple : `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` peut être utilisé pour obtenir les propriétés spécifiées pour le CatalogItem.
+    * Chaîne de requête (facultative) : fournit des paramètres simples supplémentaires, tels que la version de l’API ou les critères de sélection des ressources.
 
 * Champs d’en-tête du message de requête HTTP :
 
@@ -56,7 +56,7 @@ Une paire demande/réponse d’API REST peut être divisée en cinq composants :
 
 ## <a name="api-documentation"></a>Documentation de l’API
 
-Une API REST moderne exige une documentation d’API moderne. L’API REST repose sur la spécification OpenAPI (également appelé spécification Swagger), et la documentation est disponible sur [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Au-delà de la documentation de l’API, SwaggerHub permet de générer une bibliothèque cliente dans le langage souhaité : JavaScript, TypeScript, C#, Java, Python, Ruby, entre autres.
+Une API REST moderne exige une documentation d’API moderne. L’API REST repose sur la spécification OpenAPI (également appelée spécification swagger), et la documentation est disponible sur [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Au-delà de la documentation de l’API, SwaggerHub permet de générer une bibliothèque cliente dans le langage souhaité : JavaScript, TypeScript, C#, Java, Python, Ruby, entre autres.
 
 ## <a name="testing-api-calls"></a>Test des appels d’API
 
