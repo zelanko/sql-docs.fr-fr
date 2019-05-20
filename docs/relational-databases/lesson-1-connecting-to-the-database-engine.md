@@ -29,15 +29,15 @@ Cette leçon contient les tâches suivantes :
 - [Autorisation de connexions supplémentaires](#additional) 
 
 ## <a name="tools">Outils de mise en route</a> 
-- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d'outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l'outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer** . Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu'éléments inhérents aux composants clients lors de l'installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
+- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d'outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l'outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer**. Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu'éléments inhérents aux composants clients lors de l'installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
 
 ### <a name="basic-tools"></a>Outils de base
-- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est l’outil principal employé pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et écrire le code [!INCLUDE[tsql](../includes/tsql-md.md)] . Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . SSMS peut être téléchargé gratuitement depuis le [Centre de téléchargement Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La version la plus récente peut être utilisée avec les versions antérieures du [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est l’outil principal employé pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et écrire le code [!INCLUDE[tsql](../includes/tsql-md.md)]. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. SSMS peut être téléchargé gratuitement depuis le [Centre de téléchargement Microsoft](https://msdn.microsoft.com/library/mt238290.aspx). La version la plus récente peut être utilisée avec les versions antérieures du [!INCLUDE[ssDE_md](../includes/ssde-md.md)].  
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
 
-### <a name="sample-database"></a>Base de données exemple
-Les exemples de bases de données et les exemples ne sont pas fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La plupart des exemples décrits dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
+### <a name="sample-database"></a>Exmple de base de données
+Les exemples de bases de données et les exemples ne sont pas fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La plupart des exemples décrits dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
 
 ##### <a name="to-start-sql-server-management-studio"></a>Pour démarrer SQL Server Management Studio
 - Dans les versions actuelles de Windows, dans la page **Accueil** , tapez SSMS, puis cliquez sur **Microsoft SQL Server Management Studio**.  
@@ -68,7 +68,7 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 
 ##### <a name="to-connect-to-the-database-engine"></a>Pour se connecter au moteur de base de données  
 
-Au moins un compte d’administrateur a été sélectionné pendant l’installation de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] . Effectuez l’étape suivante quand vous êtes connecté à Windows en tant qu’administrateur.
+Au moins un compte d’administrateur a été sélectionné pendant l’installation de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]. Effectuez l’étape suivante quand vous êtes connecté à Windows en tant qu’administrateur.
 
 1.  Dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], dans le menu **Fichier** , cliquez sur **Connecter l'Explorateur d'objets**. 
 - La boîte de dialogue **Se connecter au serveur** s'ouvre. La zone **Type de serveur** affiche le dernier type de composant utilisé.  
