@@ -2,7 +2,7 @@
 title: Mise à niveau SQL Server vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données sur site | Microsoft Docs
 description: Découvrez comment utiliser Data Migration Assistant pour mettre à niveau un serveur local SQL Server vers une version ultérieure de SQL Server ou SQL Server sur des machines virtuelles Azure
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706974"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875180"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Mise à niveau de SQL Server sur site vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données
 
 Data Migration Assistant fournit des évaluations transparentes de SQL Server en local et mises à niveau vers des versions ultérieures de SQL Server ou des migrations vers SQL Server sur machines virtuelles Azure ou Azure SQL Database.
 
-Cet article fournit des instructions détaillées pour la mise à niveau SQL Server local vers une version ultérieure de SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données.   
+Cet article fournit des instructions détaillées pour la mise à niveau SQL Server sur site vers des versions ultérieures de SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données.
 
 ## <a name="create-a-new-migration-project"></a>Créer un nouveau projet de migration
 
