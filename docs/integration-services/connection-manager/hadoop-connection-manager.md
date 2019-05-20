@@ -13,14 +13,18 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281433"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728221"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le Gestionnaire de connexions Hadoop permet à un package SSIS (SQL Server Integration Services) de se connecter à un cluster Hadoop en utilisant les valeurs que vous spécifiez pour les propriétés.  
   
 ## <a name="configure-the-hadoop-connection-manager"></a>Configurer le Gestionnaire de connexions Hadoop  
@@ -64,7 +68,7 @@ ms.locfileid: "58281433"
 ## <a name="connect-with-kerberos-authentication"></a>Se connecter avec l’authentification Kerberos
 Il existe deux options permettant de configurer l’environnement local pour pouvoir utiliser l’authentification Kerberos avec le Gestionnaire de connexions Hadoop. Vous pouvez choisir l’option qui correspond le mieux à votre situation.
 -   Option n°1 : [Joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
--   Option 2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
+-   Option n°2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
 
 ### <a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
 

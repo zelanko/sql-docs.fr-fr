@@ -11,7 +11,7 @@ author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
 ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/06/2018
 ms.locfileid: "52984100"
@@ -153,7 +153,7 @@ Ensembles de lignes de schéma sont décrites dans les deux protocoles de SQL Se
 |[DISCOVER_ENUMERATORS](https://msdn.microsoft.com/library/ee302012)|Retourne une liste des noms, types de données et valeurs d'énumération d'énumérateurs pris en charge par le fournisseur XMLA pour une source de données spécifique.|  
 |[DISCOVER_INSTANCES](https://msdn.microsoft.com/library/ee320541)|Décrit les instances sur le serveur.|  
 |[DISCOVER_JOBS](https://msdn.microsoft.com/library/ee320363)|Fournit des informations sur les travaux actifs exécutés sur le serveur. Un travail fait une partie d'une commande qui exécute une tâche spécifique pour le compte de la commande.|  
-|[DISCOVER_KEYWORDS &AMP;#40;XMLA&AMP;#41;](https://msdn.microsoft.com/library/ee301719)|Retourne des informations sur les mots clés réservés par le serveur XMLA.|  
+|[DISCOVER_KEYWORDS &#40;XMLA&#41;](https://msdn.microsoft.com/library/ee301719)|Retourne des informations sur les mots clés réservés par le serveur XMLA.|  
 |[DISCOVER_LITERALS](https://msdn.microsoft.com/library/ee301320)|Retourne des informations sur les littéraux pris en charge par le serveur.|  
 |[DISCOVER_LOCATIONS](https://msdn.microsoft.com/library/ee302024)|Retourne des informations sur le contenu d'un fichier de sauvegarde. |
 |[DISCOVER_LOCKS](https://msdn.microsoft.com/library/ee320398)|Fournit des informations sur les verrous actuellement en place sur le serveur.|  
