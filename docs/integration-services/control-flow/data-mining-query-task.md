@@ -19,14 +19,18 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f759c8ee2b21d22e49bcc402baf16b1fe1534f87
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281963"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727830"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] met à votre disposition des tâches qui effectuent d’autres opérations Business Intelligence, telles que l’exécution d’instructions DDL (Data Definition Language) et le traitement d’objets analytiques.  
@@ -71,7 +75,7 @@ ms.locfileid: "58281963"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
   
 ### <a name="general-options"></a>Options générales  
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -103,7 +107,7 @@ ms.locfileid: "58281963"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
   
 ### <a name="general-options"></a>Options générales  
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -159,7 +163,7 @@ ms.locfileid: "58281963"
  Pour en savoir plus sur l’implémentation de l’exploration de données dans les packages, consultez [Tâche de requête d’exploration de données](../../integration-services/control-flow/data-mining-query-task.md) et [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md).  
   
 ### <a name="general-options"></a>Options générales  
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche de requête d'exploration de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

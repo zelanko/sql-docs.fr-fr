@@ -18,14 +18,18 @@ ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d1c5ab11bd6fb6447e991eea64ba2d8a10dfca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289430"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723538"
 ---
 # <a name="integration-services-ssis-queries"></a>Requêtes Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche Exécution SQL, la source OLE DB, la destination OLE DB et la transformation de recherche peuvent utiliser des requêtes SQL. Dans la tâche d'exécution SQL, les instructions SQL peuvent créer, mettre à jour et supprimer des données et des objets de base de données, exécuter des procédures stockées et des instructions SELECT. Dans la source OLE DB et la transformation de recherche, les instructions SQL sont généralement des instructions SELECT ou EXEC. Cette dernière exécute le plus souvent des procédures stockées qui retournent des jeux de résultats.  
   
  Un requête peut être analysée pour déterminer si elle est valide. Pendant l’analyse d’une requête utilisant une connexion vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la requête est analysée, exécutée et le résultat de l’exécution (succès ou échec) est affecté au résultat de l’analyse. Si la requête utilise une connexion à des données qui ne sont pas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], l'instruction est seulement analysée.  

@@ -18,14 +18,18 @@ ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 526ecbfaf5b445ccf116675b60d6560790bfb88c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4e9157dc3e3fb7bffe8365290ef6e4be1878f81
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273499"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727464"
 ---
 # <a name="sequence-container"></a>conteneur de séquences
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le conteneur de séquences définit un flux de contrôle représentant un sous-ensemble du flux de contrôle du package. Les conteneurs de séquences regroupent le package en plusieurs flux de contrôle distincts contenant chacun un ou plusieurs conteneurs et tâches exécutés dans le flux de contrôle global du package.  
   
  Le conteneur de séquences peut inclure plusieurs tâches et d'autres conteneurs. L'ajout de tâches et de conteneurs à un conteneur de séquences est identique à l'ajout de ces éléments à un package. La seule différence est que vous faites glisser les tâches et les conteneurs dans le conteneur de séquences au lieu de les glisser dans le conteneur de package. Si le conteneur de séquences inclut plusieurs tâches ou conteneurs, vous pouvez les connecter à l'aide de contraintes de précédence de la même manière que dans un package. Pour plus d’informations, consultez [Contraintes de précédence](../../integration-services/control-flow/precedence-constraints.md).  

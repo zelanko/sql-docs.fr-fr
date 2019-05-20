@@ -11,14 +11,18 @@ ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275429"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726694"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fournir une requête de source OData au moment de l’exécution
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  Vous pouvez modifier la requête de source OData au moment de l’exécution en ajoutant une *expression* à la propriété **[OData Source].[Query]** de la tâche de flux de données.  
   
  Les colonnes retournées doivent être identiques aux colonnes retournées au moment du design ; dans le cas contraire, vous obtenez une erreur à l’exécution du package. Veillez à spécifier les mêmes colonnes (dans le même ordre) lorsque vous utilisez l'option de requête $select. Une alternative plus sûre à l’utilisation de l’option $select est de désélectionner les colonnes que vous ne souhaitez pas utiliser directement de l’interface utilisateur du composant source.  

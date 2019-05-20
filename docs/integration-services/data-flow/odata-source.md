@@ -16,14 +16,18 @@ ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b1c9e39e4ccec7ab54229a8bbd0bf51b1d751207
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290615"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726667"
 ---
 # <a name="odata-source"></a>Source OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol).
 
 ## <a name="supported-protocols-and-data-formats"></a>Protocoles et formats de données pris en charge
@@ -59,7 +63,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
   
 ## <a name="related-topics-in-this-section"></a>Rubriques connexes de cette section  
   
--   [Didacticiel : Utiliser la source OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Tutoriel : Utiliser la source OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modifier la requête de la source OData à l’exécution](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -102,7 +106,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Exemple : Employees  
+ Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  

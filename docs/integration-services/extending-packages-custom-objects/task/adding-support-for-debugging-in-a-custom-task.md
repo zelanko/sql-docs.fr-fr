@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282383"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724493"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Ajout de la prise en charge du débogage dans une tâche personnalisée
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet aux packages, tâches et autres types de conteneurs d'être suspendus pendant l'exécution à l'aide de points d'arrêt. L'utilisation de points d'arrêt vous permet d'examiner et de corriger les erreurs qui empêchent votre application ou vos tâches de s'exécuter correctement. L'architecture de point d'arrêt permet au client d'évaluer la valeur d'exécution des objets contenus dans le package aux points d'exécution définis pendant la suspension du traitement de la tâche.  
   
  Les développeurs de tâches personnalisées peuvent utiliser cette architecture pour créer des cibles de points d'arrêt personnalisées en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> et son interface parente <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> définit l'interaction entre le moteur d'exécution et la tâche pour créer et gérer des sites ou des cibles de points d'arrêt personnalisés. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> fournit des méthodes et propriétés appelées par le moteur d'exécution pour notifier la tâche de suspendre ou reprendre son exécution.  

@@ -15,14 +15,18 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 509f090fbd7dc4fe81cbd2d58a6a6654f384cec3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 56abf4898704d8545d0c38a9294cdf5d4736d1de
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270372"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728439"
 ---
 # <a name="ado-connection-manager"></a>Gestionnaire de connexions ADO
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un gestionnaire de connexions ADO permet à un package de se connecter à des objets ADO (ActiveX Data Objects), comme un recordset. Ce gestionnaire de connexions est généralement utilisé dans les tâches personnalisées écrites dans une version antérieure d’un langage comme Microsoft Visual Basic 6.0 ou dans les tâches personnalisées qui font partie d’une application existante utilisant ADO pour se connecter à une source de données.  
   
  Quand vous ajoutez un gestionnaire de connexions ADO à un package, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera converti en connexion ADO au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connections** du package. La propriété **ConnectionManagerType** du gestionnaire de connexions a pour valeur **ADO**.  

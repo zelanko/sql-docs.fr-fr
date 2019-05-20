@@ -16,14 +16,18 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290535"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727172"
 ---
 # <a name="cdc-source"></a>Source CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
   
  La plage de données modifiées lue par la source CDC est appelée « plage de traitement de capture de données modifiées » et est déterminée par la tâche de contrôle de capture de données modifiées exécutée avant le démarrage du flux de données actuel. La plage de traitement de capture de données modifiées est dérivée de la valeur d'une variable de package qui gère l'état du traitement de capture de données modifiées pour un groupe de tables.  
@@ -51,7 +55,7 @@ ms.locfileid: "58290535"
   
 -   **Code d'erreur** : La valeur est toujours -1.  
   
--   **Colonne d’erreur** : Colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   **Colonnes de ligne d’erreur** : Données d’enregistrement à l’origine de l’erreur.  
   
@@ -153,13 +157,13 @@ use <cdc-enabled-database-name>
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
   
--   **Tout** : Retourne les modifications apportées à la plage de capture de données modifiées actuelle sans les valeurs **Avant la mise à jour**.  
+-   **Tout** : retourne les modifications apportées à la plage CDC actuelle sans les valeurs **Avant la mise à jour**.  
   
--   **Tout avec les anciennes valeurs** : Retourne les modifications apportées à la plage de traitement de capture de données modifiées actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
+-   **Tout avec les anciennes valeurs** : retourne les modifications apportées à la plage de traitement CDC actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
   
--   **Net** : Retourne une seule ligne de modification par ligne source modifiée dans la plage de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
+-   **Net** : retourne une seule ligne de modification par ligne source modifiée dans la plage CDC actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **Net avec masque de mise à jour** : Ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Modifié** qui indique les colonnes modifiées dans la ligne de modification active.  
+-   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Changed** qui indique les colonnes modifiées dans la ligne de modification active.  
   
 -   **Net avec fusion** : Ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   

@@ -13,19 +13,23 @@ ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e6ebbdd1f4df148d146393865039102af26b2984
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280113"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728903"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Modifier les propriétés d'une base de données Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez l'onglet Oracle de l'éditeur de propriétés pour apporter des modifications à la description que vous avez fournie dans la page Créer une base de données CDC de l'Assistant Nouvelle instance et pour apporter des modifications aux informations de connexion à la base de données d'exploration de données de journaux Oracle.  
   
  La section suivante décrit les informations présentes dans l'onglet **Oracle** .  
   
- **Nom**  
+ **Name**  
  Nom de l'instance de capture de données modifiées entré dans la page Créer une base de données CDC de l'Assistant Nouvelle instance. Ce champ est en lecture seule et vous ne pouvez pas modifier ces informations.  
   
  **Description**  

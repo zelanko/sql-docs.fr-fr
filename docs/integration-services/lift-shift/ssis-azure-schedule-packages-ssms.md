@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786237"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720722"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Planifier l’exécution de packages SSIS déployés dans Azure avec SQL Server Management Studio (SSMS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Vous pouvez utiliser SQL Server Management Studio (SSMS) pour planifier le déploiement de packages SSIS dans Azure SQL Database. SQL Server local et SQL Database Managed Instance ont respectivement SQL Server Agent et Managed Instance Agent comme planificateur performant des travaux SSIS. De son côté, SQL Database n’intègre pas de planificateur de travaux SSIS de première classe. La fonctionnalité SSMS décrite dans cet article présente une interface utilisateur bien connue qui s’apparente à celle de SQL Server Agent pour la planification des packages déployés dans SQL Database.
 
@@ -26,7 +30,7 @@ Si vous utilisez SQL Database pour héberger le catalogue SSIS, `SSISDB`, vous p
 
 Quand vous vous servez de SSMS pour planifier un package, SSIS crée automatiquement trois objets Data Factory et les nomme selon le nom du package sélectionné et de l’horodatage. Par exemple, si le nom du package SSIS est **MonPackage**, SSMS crée des objets Data Factory semblables aux suivants :
 
-| Object | Nom    |
+| Object | Créer une vue d’abonnement |
 |---|---|
 | Pipeline | **Pipeline_MonPackage_2018-05-08T09_00_00Z** |
 | Activité Exécuter le package SSIS | **Activité_MonPackage_2018-05-08T09_00_00Z** |

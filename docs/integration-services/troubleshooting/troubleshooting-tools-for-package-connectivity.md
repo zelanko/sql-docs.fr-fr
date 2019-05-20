@@ -18,14 +18,18 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d96a8f5797493dd0b6a3453eab841fd62f1ffd5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8dbeb09c113dceb68996582d115169e1c50ff5ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277398"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713594"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>Outils de dépannage de la connectivité des packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut des fonctionnalités et des outils que vous pouvez utiliser pour dépanner la connectivité entre les packages et les sources de données à partir desquelles les packages extraient et chargent des données.  
   
 ## <a name="troubleshooting-issues-with-external-data-providers"></a>Dépannage des problèmes liés aux fournisseurs de données externes  

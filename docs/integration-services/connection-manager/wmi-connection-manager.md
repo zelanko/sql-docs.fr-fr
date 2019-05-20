@@ -17,14 +17,18 @@ ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 659eb7ee0c6e75c4df778d04b50b30efc35c3f97
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: df12fa3713ea3e8bc44f810a7a02ea3d0bba1c26
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270615"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728077"
 ---
 # <a name="wmi-connection-manager"></a>Gestionnaire de connexions WMI
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un gestionnaire de connexions WMI permet à un package d'utiliser WMI (Windows Management Instrumentation) pour gérer des informations dans un environnement d'entreprise. La tâche de service web incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions WMI.  
   
  Quand vous ajoutez un gestionnaire de connexions WMI à un package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera résolu en une connexion WMI au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connexions** sur le package. La propriété **ConnectionManagerType** du gestionnaire de connexions est définie sur **WMI**.  
@@ -50,7 +54,7 @@ ms.locfileid: "58270615"
  Pour en savoir plus sur le gestionnaire de connexions WMI, consultez [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md).  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique au gestionnaire de connexions.  
   
  **Description**  

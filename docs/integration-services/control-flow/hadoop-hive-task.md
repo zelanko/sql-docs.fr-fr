@@ -13,14 +13,18 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c78c8b091751e1fd849c3490544acd492cd595c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1d9ae752dabee68d6fae786675e640773009f4b7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282893"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727623"
 ---
 # <a name="hadoop-hive-task"></a>Tâche Hive Hadoop
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la tâche Hive Hadoop pour exécuter le script Hive sur un cluster Hadoop.  
   
  Pour ajouter une tâche Hive Hadoop, sélectionnez-la et faites-la glisser vers le concepteur. Double-cliquez ensuite sur la tâche, ou cliquez avec le bouton droit et sélectionnez **Modifier**pour ouvrir la boîte de dialogue **Éditeur de tâches Hive Hadoop** .  

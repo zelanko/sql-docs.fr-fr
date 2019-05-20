@@ -17,14 +17,18 @@ ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f5b93a38b461cb56348902beef37ef696d3f0723
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290345"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725303"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Une expression est une combinaison de symboles (identificateurs, littéraux, fonctions et opérateurs) qui génère une seule valeur de données. Les expressions simples peuvent être une constante unique, une variable ou une fonction. Généralement, les expressions sont complexes, car elles utilisent plusieurs opérateurs et fonctions, et référencent plusieurs colonnes et variables. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser des expressions pour définir des conditions dans les instructions CASE, créer et mettre à jour des valeurs dans des colonnes de données, mettre à jour ou remplir des propriétés au moment de l’exécution, définir des contraintes dans des contraintes de précédence et fournir les expressions utilisées par le conteneur de boucles For.  
   
  Les expressions sont basées sur un langage d'expressions et sur l'évaluateur d'expressions. L'évaluateur d'expression analyse l'expression et détermine si elle respecte les règles du langage d'expressions. Pour plus d'informations sur la syntaxe d'expression, les littéraux et les identificateurs pris en charge, consultez les rubriques suivantes.  

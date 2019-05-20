@@ -13,14 +13,18 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281058"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724472"
 ---
 # <a name="persisting-custom-objects"></a>Persistance des objets personnalisés
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Il n’est pas nécessaire d’implémenter une persistance personnalisée pour les objets personnalisés que vous créez à condition que leurs propriétés utilisent uniquement des types de données simples, comme **integer** et **string**. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  
   
  Toutefois, si votre objet comporte des propriétés qui utilisent des types de données complexes, ou si vous souhaitez effectuer un traitement personnalisé sur des valeurs de propriétés lors de leur chargement et de leur enregistrement, vous pouvez implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> et ses méthodes <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. Avec ces méthodes, vous effectuez un chargement depuis (ou un enregistrement vers) la définition XML du package, d'un fragment XML qui contient les propriétés de votre objet et leurs valeurs actuelles. Le format de ce fragment XML n'est pas défini ; il doit uniquement s'agir d'un format XML bien formé.  

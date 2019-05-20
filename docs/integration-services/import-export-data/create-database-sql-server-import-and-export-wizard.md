@@ -12,14 +12,18 @@ ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a81b45e3d744573b99d270ae7983a599e8fabf
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 3b051e5f2dc951eb07d4a23a5a22e15f1b2cc071
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222013"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805124"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Créer la base de données (Assistant Importation et Exportation SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Si vous sélectionnez **Nouveau** dans la page **Choisir une destination** pour créer une base de données de destination SQL Server, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] présente la boîte de dialogue **Créer une base de données** . Dans cette page, spécifiez un nom pour la nouvelle base de données. Vous pouvez éventuellement modifier les paramètres de la taille initiale et la croissance automatique de la nouvelle base de données et de son fichier journal. 
 
 La boîte de dialogue **Créer une base de données** de l’Assistant offre uniquement les options de base disponibles pour la création d’une base de données SQL Server. Pour afficher et configurer toutes les options d’une nouvelle base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer la base de données, ou la configurer après sa création par l’Assistant. 
@@ -33,7 +37,7 @@ La capture d’écran suivante montre la boîte de dialogue **Créer une base de
 ![Page Créer une base de données de l’Assistant Importation et Exportation](../../integration-services/import-export-data/media/create-database.png "Page Créer une base de données de l’Assistant Importation et Exportation")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Fournir un nom pour la nouvelle base de données  
-**Nom**  
+**Name**  
  Fournissez un nom pour la base de données SQL Server de destination.
  
 ### <a name="naming-requirements"></a>Exigences concernant l’affectation des noms

@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270450"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727446"
 ---
 # <a name="select-variables-page"></a>Page Sélectionner des variables
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la boîte de dialogue **Sélectionner des variables** pour sélectionner une ou plusieurs variables pour les propriétés **ReadOnlyVariables** et **ReadWriteVariables** quand vous configurez une tâche de script ou un composant Script.  
   
  Pour ouvrir la boîte de dialogue **Sélectionner des variables** , dans la page **Script** de la boîte de dialogue **Éditeur de transformation de script**, sous **Propriétés personnalisées**, recherchez la propriété **ReadOnlyVariables** ou **ReadWriteVariables**, puis cliquez sur les points de suspension (...) en regard de cette propriété.  
@@ -32,7 +36,7 @@ ms.locfileid: "58270450"
  Zone Sélectionner  
  Sélectionne une variable spécifique, sélectionne toutes les variables ou désactive la sélection de toutes les variables.  
   
- **Nom**  
+ **Name**  
  Spécifie le nom d'une variable.  
   
  **Type**  

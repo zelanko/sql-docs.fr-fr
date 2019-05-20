@@ -17,14 +17,18 @@ ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 911aa8f873f43245e92b4524c1633a4e55e82a72
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6977e5934178ae17ce8d4469728af211ec2ec274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277288"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727356"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère un ou plusieurs types d’objets d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, la tâche peut copier des tables et des procédures stockées. Selon la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée comme source, différents types d’objets sont disponibles pour la copie. Par exemple, seule une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut des schémas et des agrégats définis par l’utilisateur.  
   
 ## <a name="objects-to-transfer"></a>Objets à transférer  
@@ -128,7 +132,7 @@ ms.locfileid: "58277288"
 >  L’utilisateur qui crée la tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir les autorisations suffisantes sur les objets du serveur source pour pouvoir les sélectionner pour la copie, ainsi que l’autorisation d’accéder à la base de données du serveur de destination où les objets seront transférés.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

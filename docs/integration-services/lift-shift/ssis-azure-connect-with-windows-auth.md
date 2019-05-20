@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe0248f455cc95c14486373af6f9374edaebc97
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 94002a79d53c008249836541fc84f7e9ff06a6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356442"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720735"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Accéder à des magasins de données et à des partages de fichiers avec l’authentification Windows à partir de packages SSIS sur Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Vous pouvez utiliser l’authentification Windows pour accéder à des magasins de données, par exemple des serveurs SQL, des partages de fichiers, Azure Files, etc. à partir de packages SSIS qui s’exécutent sur Azure-SSIS Integration Runtime (IR) dans Azure Data Factory (ADF). Il peut s’agir de magasins de données sur site, hébergés sur les Machines virtuelles Azure ou qui s’exécutent dans Azure en tant que services gérés. S’ils sont en local, vous devez joindre votre runtime Azure-SSIS IR à un réseau virtuel connecté à votre réseau local : voir [Joindre un runtime Azure-SSIS IR à un réseau virtuel](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Il existe quatre moyens d’accéder à des magasins de données avec l’authentification Windows à partir de packages SSIS qui s’exécutent sur un runtime Azure-SSIS IR :
 
 | Méthode de connexion | Portée effective | Étape de configuration | Méthode d’accès dans des packages | Nombre de jeux d’informations d’identification et ressources connectées | Type de ressources connectées | 

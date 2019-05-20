@@ -13,14 +13,18 @@ ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c16d757432c964f778b39c8cc4e290faf7711ef0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fee01a2531ce405f212c2559d91ec0ea241b9784
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277588"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728620"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Exécuter un chargement incrémentiel de plusieurs table
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dans la rubrique [Amélioration des chargements incrémentiels avec la capture de données modifiées](../../integration-services/change-data-capture/change-data-capture-ssis.md), le diagramme illustre un package de base qui effectue un chargement incrémentiel sur une seule table. Toutefois, il est plus fréquent de devoir effectuer un chargement incrémentiel de plusieurs tables.  
   
  Dans le cadre d'un chargement incrémentiel de plusieurs tables, certaines étapes doivent être effectuées une seule fois pour toutes les tables, alors que d'autres doivent être répétées pour chaque table source. Plusieurs options s’offrent à vous pour implémenter ces étapes dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:  

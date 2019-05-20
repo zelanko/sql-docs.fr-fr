@@ -14,16 +14,16 @@ ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e56a64564d3b546f6bd6c45c36bdb7b4b1484b87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9260a04673ecdf4de8090bf6582fa9c674d9cf2c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033240"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570982"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Analyser et transformer des données JSON avec OPENJSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La fonction d’ensemble de lignes **OPENJSON** convertit du texte JSON en un ensemble de lignes et de colonnes. Après avoir transformé une collection JSON en ensemble de lignes avec **OPENJSON**, vous pouvez exécuter n’importe quelle requête SQL sur les données retournées ou l’insérer dans une table SQL Server. 
   
@@ -42,9 +42,10 @@ Quand vous utilisez la fonction **OPENJSON** sans fournir un schéma explicite p
 **OPENJSON** retourne chaque propriété de l’objet JSON, ou chaque élément du tableau, sous la forme d’une ligne distincte.  
 
 L’exemple ci-dessous utilise **OPENJSON** avec le schéma par défaut (autrement dit, sans la clause **WITH** facultative) et retourne une ligne pour chaque propriété de l’objet JSON.  
- 
+
 **Exemple**
-```sql  
+
+```sql
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -53,7 +54,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**Résultats**  
+**Résultats**
   
 |Clé|valeur|Type|  
 |---------|-----------|----------|  
@@ -68,8 +69,8 @@ Pour plus d’informations et pour obtenir des exemples, consultez [Utiliser OPE
 
 Pour plus d’informations sur la syntaxe et l’utilisation, consultez [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md). 
 
-    
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>Option 2 : Sortie OPENJSON avec une structure explicite
+
 Quand vous spécifiez un schéma pour les résultats à l’aide de la clause **WITH** de la fonction **OPENJSON**, la fonction retourne une table contenant uniquement les colonnes que vous définissez dans la clause **WITH**. Dans la clause **WITH** facultative, vous spécifiez un ensemble de colonnes de sortie, leurs types et les chemins des propriétés sources JSON pour chaque valeur de sortie. **OPENJSON** itère le tableau d’objets JSON, lit la valeur du chemin spécifié pour chaque colonne, puis convertit la valeur dans le type spécifié.  
 
 L’exemple ci-dessous utilise **OPENJSON** avec un schéma pour la sortie que vous spécifiez de façon explicite dans la clause **WITH**.  
@@ -114,7 +115,7 @@ WITH (
  ) 
 ```  
   
-**Résultats**  
+**Résultats**
   
 |Number|Date|Customer|Quantité|  
 |------------|----------|--------------|--------------|  
@@ -128,11 +129,13 @@ Cette fonction retourne et met en forme les éléments d’un tableau JSON.
 -   Pour chaque colonne spécifiée à l’aide de la syntaxe `colName type json_path`, **OPENJSON** convertit la valeur trouvée dans chaque élément de tableau sur le chemin spécifié dans le type spécifié. Dans cet exemple, les valeurs de la colonne `Date` sont tirées de chaque élément sur le chemin `$.Order.Date` et converties en valeur datetime.  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>Plus d’informations sur OPENJSON avec un schéma explicite
+
 Pour plus d’informations et pour obtenir des exemples, consultez [Utilisation d’OPENJSON avec un schéma explicite &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
 
 Pour plus d’informations sur la syntaxe et l’utilisation, consultez [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON exige le niveau de compatibilité 130
+
 La fonction **OPENJSON** est disponible uniquement sous le **niveau de compatibilité 130**. Si le niveau de compatibilité de votre base de données est inférieur à 130, SQL Server ne peut pas trouver ni exécuter la fonction **OPENJSON**. Les autres fonctions JSON intégrées sont disponibles à tous les niveaux de compatibilité.
 
 Vous pouvez vérifier le niveau de compatibilité dans la vue `sys.databases` ou dans les propriétés de base de données.
@@ -146,13 +149,12 @@ Vous pouvez changer le niveau de compatibilité d’une base de données à l’
 
 Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON dans SQL Server et Azure SQL Database, consultez les vidéos suivantes :
 
--   [SQL Server 2016 et prise en charge de JSON](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
+- [SQL Server 2016 et prise en charge de JSON](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
 
--   [Utilisation de JSON dans SQL Server 2016 et Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
+- [Utilisation de JSON dans SQL Server 2016 et Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database)
 
--   [JSON : un pont entre les mondes relationnel et NoSQL](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
+- [JSON : un pont entre les mondes relationnel et NoSQL](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
 ## <a name="see-also"></a> Voir aussi  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
   

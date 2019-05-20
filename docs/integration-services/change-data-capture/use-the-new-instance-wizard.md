@@ -11,14 +11,18 @@ ms.assetid: dfc09f71-7037-4cd5-a3cd-c79f8c714e22
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 75735a8f7bbcd442bd67b550b096732abcaf8544
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d77c5c6b1c0402a277eda9da944199b3f11301d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289905"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728459"
 ---
 # <a name="use-the-new-instance-wizard"></a>Utiliser l'Assistant Nouvelle instance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'Assistant Nouvelle instance est utilisé pour créer une instance d'un service de capture de données modifiées. Vous ouvrez l'Assistant Création d'une instance Oracle CDC à partir de la console du concepteur CDC. Vous pouvez effectuer les opérations suivantes dans l'Assistant Nouvelle instance.  
   
 -   [Créer la base de données de modifications SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)  

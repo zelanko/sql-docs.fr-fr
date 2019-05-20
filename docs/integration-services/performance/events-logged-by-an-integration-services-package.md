@@ -14,14 +14,18 @@ ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281533"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719618"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Événements journalisés par un package Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consigne différents messages d'événements dans le journal des événements des applications Windows. Un package enregistre ces messages lorsqu'il démarre, lorsqu'il s'arrête et lorsque certains problèmes se produisent.  
   
  Cette rubrique fournit des informations sur les messages d'événements courants qu'un package enregistre dans le journal des événements des applications. Par défaut, un package enregistre certains de ces messages même si vous n'avez pas activé l'enregistrement sur le package. Toutefois, il existe d'autres messages que le package enregistrera seulement si vous avez activé l'enregistrement sur le package. Que le package enregistre ces messages par défaut ou parce que l'enregistrement a été activé, la source d'événements pour les messages est SQLISPackage.  

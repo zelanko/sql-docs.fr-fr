@@ -11,14 +11,18 @@ ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a16deda0b17a15d6eae3c1e2b22e35b3fa8a9a7a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 74099a8611c9c81b54619e1fc071b63a5d22777a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289765"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722897"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Leçon 1-9 : Tester le package de la leçon 1
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dans ce tutoriel, vous avez effectué les tâches suivantes :  
   
@@ -51,7 +55,7 @@ Avant de tester le package, vous devez vérifier que le flux de contrôle et le 
 2.  Une fois l’exécution du package terminée, dans le menu **Déboguer**, sélectionnez **Arrêter le débogage**.  
   
 ## <a name="go-to-next-lesson"></a>Passer à la leçon suivante
-[Leçon 2 : Ajouter un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Leçon 2 : Ajouter un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md) 

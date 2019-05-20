@@ -13,14 +13,18 @@ ms.assetid: 594aaf5d-7703-4788-897d-fb95aca798c5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87dd03cb63da117f3d754cdc9692310e9633e70d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ffb3559a379a8d1f64c76072f262b89d41164533
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290735"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727632"
 ---
 # <a name="hadoop-file-system-task"></a>Tâche du système de fichiers Hadoop
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Une tâche du système de fichiers Hadoop permet à un package SSIS de copier des fichiers à partir d’un cluster Hadoop, vers un cluster Hadoop ou au sein d’un cluster Hadoop.  
   
  Pour ajouter une tâche du système de fichiers Hadoop, opérez un glisser-déplacer de cette tâche vers le concepteur. Double-cliquez ensuite sur la tâche ou cliquez avec le bouton droit et sélectionnez **Modifier**pour ouvrir la boîte de dialogue **Éditeur de tâches du système de fichiers Hadoop** .  

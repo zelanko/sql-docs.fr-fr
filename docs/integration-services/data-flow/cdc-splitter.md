@@ -13,14 +13,18 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38a72f9628e621f5ed960a125800451badd180e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273648"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727142"
 ---
 # <a name="cdc-splitter"></a>Séparateur de capture de données modifiées
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le séparateur de capture de données modifiées fractionne un flux de lignes de modification d'un flux de données de source CDC en flux de données distincts pour les opérations d'insertion, de mise à jour et de suppression. Le flux de données est fractionné en fonction de la colonne requise `__$operation` et de ses valeurs standard dans les tables de modification de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Valeur de l'opération|Sortie|Description|  

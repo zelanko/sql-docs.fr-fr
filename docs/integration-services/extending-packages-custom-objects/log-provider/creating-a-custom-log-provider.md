@@ -16,14 +16,18 @@ ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ebc75a6877b79910f5d30bd42a822762701ff43
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 43b5c2e9691959bcb624a7a22c488240a9730a76
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270937"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724533"
 ---
 # <a name="creating-a-custom-log-provider"></a>Création d'un module fournisseur d'informations personnalisé
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'environnement d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] possède des fonctionnalités de journalisation complètes. Un journal vous permet de capturer des événements qui se produisent pendant l'exécution d'un package. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclut divers modules fournisseurs d'informations qui permettent de créer et stocker des journaux dans plusieurs formats, notamment XML, texte et base de données ou dans le journal des événements Windows. Si l'un de ces fournisseurs ou formats de sortie ne répond pas à vos besoins, vous pouvez créer un module fournisseur d'informations personnalisé.  
   
  Les étapes à suivre pour créer un module fournisseur d'informations personnalisé sont similaires à celles qui permettent de créer tout autre objet personnalisé pour [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] :  

@@ -11,14 +11,18 @@ ms.assetid: 70db7832-b5a0-4db5-a8ad-42ad8630d8e8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7f931a95981ae15fe98c80770e91d370fe0a6b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3d0d250b3b3b6ac37982794a3580dee0eabfdd8a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290115"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725072"
 ---
 # <a name="replacenull-ssis-expression"></a>REPLACENULL (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Retourne la valeur du paramètre de la seconde expression si la valeur du paramètre de la première expression est NULL ; sinon, retourne la valeur de la première expression.  
   
 ## <a name="syntax"></a>Syntaxe  

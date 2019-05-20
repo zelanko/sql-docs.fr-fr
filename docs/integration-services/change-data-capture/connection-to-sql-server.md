@@ -11,14 +11,18 @@ ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70b4738f4a6e9d5cab8b4e851b8467b984b4ec47
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a3e9f70011d96d9aa5d5068af5cddecd8f29cce9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290315"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728990"
 ---
 # <a name="connection-to-sql-server"></a>Connexion à SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Quand une connexion sans rôle de base de données qui inclut l’autorisation d’accès en écriture (par exemple le rôle **db_owner**) à la base de données MSXDBCDC tente de créer une instance Oracle CDC, la boîte de dialogue Connexion à SQL Server s’affiche.  
   
  Dans cette boîte de dialogue, vous devez entrer les informations d’identification pour une connexion qui dispose d’une autorisation d’accès en écriture à la base de données MSXDBCDC (tel est notamment le cas du rôle de base de données **db_owner** ) pour créer l’instance Oracle CDC.  
@@ -38,11 +42,11 @@ ms.locfileid: "58290315"
 ### <a name="options"></a>Options  
  Cliquez sur la flèche pour afficher les options disponibles à configurer. Vous pouvez choisir de conserver ces options avec leur valeur par défaut. Options disponibles :  
   
--   **Délai de connexion** : Tapez le délai (en secondes) pendant lequel le programme attend une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de générer une erreur de délai d’expiration. La valeur par défaut est **15**.  
+-   **Délai de connexion** : tapez le délai (en secondes) pendant lequel le programme attend la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant de générer une erreur de délai d’expiration. La valeur par défaut est **15**.  
   
--   **Délai d’exécution** : Tapez le délai (en secondes) pendant lequel le programme attend la fin d’exécution d’une commande SQL avant de générer une erreur de délai d’expiration. La valeur par défaut est **30**.  
+-   **Délai d’exécution** : tapez le délai (en secondes) pendant lequel le programme attend la fin d’exécution de la commande SQL avant de générer une erreur de délai d’expiration. La valeur par défaut est **30**.  
   
--   **Chiffrer la connexion** : Sélectionnez **Chiffrer la connexion** pour garantir que la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie est chiffrée afin d’assurer la protection des données.  
+-   **Chiffrer la connexion** : sélectionnez **Chiffrer la connexion** pour que la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] établie soit chiffrée dans un souci de protection des données personnelles.  
   
 -   **Avancé** : Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   

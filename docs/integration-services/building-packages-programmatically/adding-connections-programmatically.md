@@ -25,14 +25,18 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bcc954457c38f8c9bcd8e038ce3461bb94335eb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274904"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729403"
 ---
 # <a name="adding-connections-programmatically"></a>Ajout de connexions par programme
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> représente des connexions physiques aux sources de données externes. La classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isole du runtime les détails d'implémentation de la connexion. Elle permet au runtime d'interagir avec chaque gestionnaire de connexions de façon cohérente et prévisible. Les gestionnaires de connexions contiennent un jeu de propriétés stock que toutes les connexions ont en commun, telles que les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Toutefois, les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> sont habituellement les seules propriétés requises pour configurer un gestionnaire de connexions. Contrairement à d’autres paradigmes de programmation, où les classes de connexion exposent des méthodes telles que **Open** ou **Connect** pour établir physiquement une connexion à la source de données, le moteur d’exécution gère toutes les connexions du package pendant qu’il s’exécute.  
   
  La classe <xref:Microsoft.SqlServer.Dts.Runtime.Connections> est une collection des gestionnaires de connexions qui ont été ajoutés à ce package et qui sont disponibles au moment de l'exécution. Vous pouvez ajouter d'autres gestionnaires de connexions à la collection en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> de la collection, et en fournissant une chaîne qui indique le type de gestionnaire de connexions. La méthode <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> renvoie l'instance <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> ajoutée au package.  

@@ -21,14 +21,18 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c8203ae3b9b9abf1b45a332ca6c5706a1156125
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bd586c0ca3fa2cca354a2f394d9008761d744d41
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277178"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725372"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  
   
 ## <a name="regular-identifiers"></a>Identificateurs standard  

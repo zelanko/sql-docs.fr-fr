@@ -14,14 +14,18 @@ ms.assetid: e298776e-d18a-4393-a8e6-65ee3d555749
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a64cf0fecb7313ebd8947a1acd3ef54ccb34636f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d9f33fa68288f216f0b4cbac61f1ef75086feb21
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272350"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727967"
 ---
 # <a name="azure-hdinsight-delete-cluster-task"></a>Tâche Supprimer un cluster Azure HDInsight
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 La tâche **Supprimer un cluster Azure HDInsight** permet à un package SSIS de supprimer un cluster Azure HDInsight dans l’abonnement et le groupe de ressources Azure spécifiés.
   
 La **tâche Supprimer un cluster Azure HDInsight** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

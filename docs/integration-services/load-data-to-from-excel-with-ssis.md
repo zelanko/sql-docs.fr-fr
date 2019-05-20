@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fe8e30ec548703a8210680bca10f75304cbc3c8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282603"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720476"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Cet article décrit les informations de connexion à fournir et les paramètres à configurer pour importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS).
 
@@ -60,7 +64,7 @@ Téléchargez la dernière version des composants de connectivité pour Excel ic
 
 -   Si une version 32 bits d’Office est déjà installée sur l’ordinateur, vous devez installer la version 32 bits des composants. Vous devez également exécuter le package SSIS en mode 32 bits ou exécuter la version 32 bits de l’Assistant Importation et Exportation.
 
--   Si vous avez un abonnement Office 365, vous pouvez voir s’afficher un message d’erreur à l’exécution du programme d’installation. L’erreur indique que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Exemple :
+-   Si vous avez un abonnement Office 365, vous pouvez voir s’afficher un message d’erreur à l’exécution du programme d’installation. L’erreur indique que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Par exemple :
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

@@ -22,14 +22,18 @@ ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2076e445d90945d02ab41ac2ec2cb6165ba08f1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5335e93d133787f1ee2f855d3a2eb9ad1faa2824
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290105"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724788"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties synchrones
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les composants de transformation à sorties synchrones reçoivent des lignes en provenance des composants en amont, puis lisent ou modifient les valeurs comprises dans les colonnes de ces lignes alors qu'ils transfèrent les lignes aux composants en aval. Ils peuvent également définir des colonnes de sortie supplémentaires dérivées des colonnes fournies par les composants en amont, mais ils n'ajoutent pas de lignes au flux de données. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
   
  Ce type de composant convient aux tâches dans lesquelles les données sont modifiées en ligne à mesure qu'elles sont fournies au composant et dans lesquelles le composant n'a pas à consulter toutes les lignes avant de les traiter. Il s'agit du composant le plus facile à développer parce que les transformations à sorties synchrones ne se connectent pas en général à des sources de données externes, gèrent des colonnes de métadonnées externes ou ajoutent des lignes aux tampons de sortie.  

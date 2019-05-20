@@ -22,14 +22,18 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282363"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727566"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
   
  L'utilisation de la tâche MSMQ vous permet de coordonner des opérations à l'échelle de votre entreprise. Les messages peuvent être placés dans la file d'attente et remis ultérieurement si la destination est indisponible ou occupée ; par exemple, la tâche peut mettre en file d'attente les messages destinés à l'ordinateur portable hors connexion des représentants commerciaux, qui reçoivent leurs messages lorsqu'ils se connectent au réseau. Vous pouvez utiliser la tâche MSMQ pour effectuer les opérations suivantes :  
@@ -104,7 +108,7 @@ ms.locfileid: "58282363"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Attribuez un nom unique à la tâche MSMQ. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

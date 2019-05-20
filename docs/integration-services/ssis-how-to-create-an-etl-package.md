@@ -18,14 +18,18 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 53979c1f02b5e1a2331072199b32bbf47affa0e9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271127"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717932"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS : comment créer un package ETL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dans ce didacticiel, vous découvrez comment utiliser le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] simple. Ce package extrait les données d'un fichier plat, les reformate et les insère dans une table de faits. Dans les leçons suivantes, ce package est développé pour illustrer le bouclage, les configurations des packages, la journalisation et le flux des erreurs.  
   
@@ -56,7 +60,7 @@ Pour exécuter ce tutoriel, les composants suivants doivent être installés :
 [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 Dans cette leçon, vous allez créer un package ETL simple qui extrait des données d’un fichier plat, transforme ces données en utilisant des transformations de recherche et charge le résultat dans une destination de table de faits.  
   
-[Leçon 2 : Ajout d’un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Leçon 2 : Ajout d’un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 Dans cette leçon, vous développez le package créé au cours de la leçon 1 pour utiliser les nouvelles fonctionnalités de bouclage et extraire des données de plusieurs fichiers plats dans un même processus de flux de données.  
   
 [Leçon 3 : Ajouter la journalisation avec SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  

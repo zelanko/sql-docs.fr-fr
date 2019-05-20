@@ -11,14 +11,18 @@ ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66b5b6c36b167507397a0a5b33e16dea6b6a8dd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e7332f70144194bcddca0c2729b4615252a39e7e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283193"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717913"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) dans un cluster
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le clustering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas recommandé, car le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas un service cluster ou prenant en charge les clusters. De plus, il ne prend pas en charge le basculement d’un nœud de cluster à un autre. Par conséquent, dans un environnement cluster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit être installé et démarré en tant que service autonome sur chaque nœud du cluster.  
   
  Même si le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas un service cluster, vous pouvez le configurer manuellement pour qu’il fonctionne en tant que ressource de cluster après avoir installé séparément [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur chaque nœud du cluster.  

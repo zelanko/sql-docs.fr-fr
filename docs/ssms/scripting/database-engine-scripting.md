@@ -13,16 +13,16 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1f2c1cc7c40e3992f2cd28a777b48e0f927cf87
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c55f1bdf06781feab128a61ba3cf2b2ae402c516
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135849"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820833"
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,6 +81,6 @@ ms.locfileid: "54135849"
   
 ## <a name="see-also"></a> Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Didacticiel : Écriture d’instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Tutoriel : Écriture d’instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

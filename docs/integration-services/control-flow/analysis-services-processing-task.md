@@ -18,14 +18,18 @@ ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 01e5fa146c49d1fd43b2fac8fda419dec412fee6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271060"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728074"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tels que les modèles tabulaires, les cubes, les dimensions et les modèles d'exploration de données.  
   
  Lors du traitement des modèles tabulaires, gardez à l'esprit les points suivants :  
@@ -84,7 +88,7 @@ ms.locfileid: "58271060"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour nommer et décrire la tâche de traitement d’Analysis Services.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche de traitement Analysis Services. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

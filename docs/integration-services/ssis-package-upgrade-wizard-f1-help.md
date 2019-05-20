@@ -19,14 +19,18 @@ ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e51589ee33e03fca23167357f7022d817f808981
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289995"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717839"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez l’Assistant Mise à niveau de packages SSIS pour mettre à niveau des packages créés par des versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers le format de package utilisé par la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  

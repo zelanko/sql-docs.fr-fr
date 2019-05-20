@@ -17,14 +17,18 @@ ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290125"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713672"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
   
  Au moment de la conception, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournit des points d'arrêt permettant d'arrêter l'exécution des packages, une fenêtre Progression et des visionneuses de données à l'aide desquelles vous pouvez observer les données qui traversent le flux de données. Néanmoins, ces fonctionnalités ne sont pas disponibles lorsque vous exécutez des packages que vous avez déployés. Les principales techniques de dépannage des packages déployés sont les suivantes :  

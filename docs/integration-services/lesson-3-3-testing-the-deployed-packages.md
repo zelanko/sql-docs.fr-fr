@@ -11,14 +11,18 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5d6b035f0ca428f6c31492f940a9964982f04f66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277251"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722330"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Leçon 3-3 : Test des packages déployés
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Dans cette tâche, vous allez tester les packages que vous avez déployés vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Dans d'autres didacticiels [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous avez exécuté des packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], l'environnement de développement pour [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], à l'aide de l'option **Démarrer le débogage** du menu **Débogage** . Vous allez cette fois exécuter les packages différemment.  

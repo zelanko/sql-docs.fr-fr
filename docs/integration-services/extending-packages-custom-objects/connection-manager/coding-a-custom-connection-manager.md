@@ -13,14 +13,18 @@ ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f03fa46643f062aa03cac60dbf3dcbe7b31f22c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282413"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724762"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codage d'un gestionnaire de connexions personnalisé
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
   
  Pour obtenir des exemples de gestionnaires de connexions personnalisés, consultez [Développement d’une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Les exemples de code présentés dans cette rubrique sont tirés de l'exemple de gestionnaire de connexions personnalisé SQL Server.  

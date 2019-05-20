@@ -15,14 +15,18 @@ ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74bfa46a09968549ef8b11dd21230f8da2e7714f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d04e4be41f72d244ec5cd0c7d2a04e468f871181
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274120"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727432"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulaire de profil rapide de table simple (tâche de profilage des données)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez le **Formulaire de profil rapide de table simple** pour configurer rapidement la tâche de profilage des données afin de profiler une table ou une vue unique à l'aide des paramètres par défaut.  
   
  Pour plus d’informations sur l’utilisation de la tâche de profilage des données, consultez [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md). Pour plus d’informations sur l’utilisation de la visionneuse du profil des données pour analyser le résultat de la tâche de profilage des données, consultez [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md).  

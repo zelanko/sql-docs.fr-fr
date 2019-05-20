@@ -13,14 +13,18 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa74a85020afdac21fd83178679be6e5db3231ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289815"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728670"
 ---
 # <a name="manage-a-cdc-service"></a>Gérer un service de capture de données modifiées
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la console du concepteur CDC pour afficher les services que vous avez créés à l'aide de la console de configuration du service de capture de données modifiées et gérer toutes les instances dans le service de capture de données modifiées Oracle.  
   
  Cliquez sur le nom du service dans le volet gauche pour afficher les informations sur le service et le gérer.  

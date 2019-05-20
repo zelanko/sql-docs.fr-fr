@@ -24,14 +24,18 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4764ae6b782ea1f7f8187a4d76ce89ea320b145f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275857"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728247"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent des connexions pour effectuer différentes tâches et pour implémenter des fonctionnalités [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   
 -   Connexion à des banques de données sources et de destination telles que du texte, des données XML, des classeurs Excel et des bases de données relationnelles pour extraire et charger des données.  

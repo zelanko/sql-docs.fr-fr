@@ -16,14 +16,18 @@ ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 867822310e1eaef3bd1d715d2f026609d72d0272
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282713"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719571"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Enregistrez une tâche ou un conteneur de flux de contrôle couramment utilisés dans un fichier de pièce (fichier « .dtsxp ») autonome, et réutilisez celui-ci plusieurs fois dans un ou plusieurs packages à l’aide de composants de package de flux de contrôle. Cette possibilité de réutilisation facilite la conception et la gestion des packages SSIS.  
   
 ## <a name="create-a-new-control-flow-package-part"></a>Créer un composant de package de flux de contrôle  

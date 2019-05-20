@@ -15,14 +15,18 @@ ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4df9d8299d7c423dc0fe96fb41222cc041a01146
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283153"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729225"
 ---
 # <a name="configure-dialog-box"></a>Boîte de dialogue Configurer
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la boîte de dialogue **Configurer** pour configurer les paramètres, les gestionnaires de connexions, ainsi que les références aux environnements, pour les packages et les projets.  
   
  **Que voulez-vous faire ?**  
@@ -57,7 +61,7 @@ ms.locfileid: "58283153"
  **Conteneur**  
  Indique l'objet qui contient le paramètre.  
   
- **Nom**  
+ **Name**  
  Indique le nom du paramètre.  
   
  **Value**  
@@ -68,7 +72,7 @@ ms.locfileid: "58283153"
  **Conteneur**  
  Indique l'objet qui contient le gestionnaire de connexions.  
   
- **Nom**  
+ **Name**  
  Indique le nom du gestionnaire de connexions.  
   
  **Nom de la propriété**  

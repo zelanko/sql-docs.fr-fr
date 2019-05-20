@@ -19,14 +19,18 @@ ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33ccc6269c37f3f0b97e6f10de8d53ca58854a7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6bd29508a760421722a776aa3924c3866bee79f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277818"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725744"
 ---
 # <a name="unpivot-transformation"></a>Transformation Unpivot
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation Unpivot convertit un dataset non normalisé en version plus normalisée en étendant les valeurs de plusieurs colonnes d'un enregistrement dans plusieurs enregistrements avec les mêmes valeurs dans une colonne unique. Par exemple, un dataset qui répertorie des noms de clients possède une ligne pour chaque client, avec les produits et la quantité achetée mentionnés dans les colonnes sur la ligne. Après que la transformation Unpivot a normalisé le dataset, celui-ci contient une ligne différente pour chaque produit que le client a acheté.  
   
  Le schéma suivant illustre un dataset avant que les données n'aient été transformées dans la colonne Product.  
@@ -64,7 +68,7 @@ ms.locfileid: "58277818"
  **Colonnes d'entrée disponibles**  
  Définissez les colonnes à convertir en lignes en utilisant les cases à cocher.  
   
- **Nom**  
+ **Name**  
  Affiche le nom de la colonne d'entrée disponible.  
   
  **Transfert direct**  

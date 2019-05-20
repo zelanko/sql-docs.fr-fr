@@ -15,16 +15,16 @@ helpviewer_keywords:
 - VIA
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e8171ab2ca424a0889028f58e4858c1d4ab61d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a3cd1c9f4fee9f92ee993c27fbaed4602e7ff4e1
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643111"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821897"
 ---
 # <a name="sqlcmd---connect-to-the-database-engine"></a>sqlcmd : se connecter au moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +76,7 @@ sqlcmd -S 127.0.0.1,1691
     sqlcmd -S tcp:127.0.0.1,1433  
     ```  
   
--   Connectez-vous à une instance nommée :  
+-   Connectez-vous à une instance nommée :  
   
     ```  
     sqlcmd -S tcp:ComputerA,1691  
@@ -85,7 +85,7 @@ sqlcmd -S 127.0.0.1,1691
   
 ### <a name="to-connect-using-named-pipes"></a>Pour établir la connexion à l'aide de canaux nommés  
   
--   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
+-   Connectez-vous à l'aide de l'une des syntaxes générales suivantes :  
   
     ```  
     sqlcmd -S np:\\<computer name>\<pipe name>  

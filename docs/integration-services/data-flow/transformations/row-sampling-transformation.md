@@ -23,14 +23,18 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271943"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725898"
 ---
 # <a name="row-sampling-transformation"></a>transformation d'échantillonnage de lignes
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation d'échantillonnage de lignes permet d'obtenir un sous-ensemble sélectionné aléatoirement d'un ensemble de données d'entrée. Vous pouvez spécifier la taille exacte de l'échantillon de sortie ainsi que la valeur de départ du générateur de nombres aléatoires.  
   
  Il existe de nombreuses applications de l'échantillonnage aléatoire. Par exemple, une entreprise souhaitant sélectionner aléatoirement 50 employés pour l'attribution de prix dans une loterie peut utiliser la transformation d'échantillonnage de lignes dans la base de données des employés afin de générer le nombre exact de gagnants.  

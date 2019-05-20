@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275628"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721768"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Pour traiter les erreurs qui risquent de se produire dans le processus de transformation, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de décider par composant et par colonne comment traiter les données que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne peut pas transformer. Vous pouvez choisir d’ignorer un échec dans certaines colonnes, de rediriger dans sa totalité la ligne qui a échoué ou de faire échouer le composant. Par défaut, les composants de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont configurés pour échouer lorsque des erreurs se produisent. Le composant en échec entraîne à son tour l’échec du package et l’arrêt du traitement.  
   

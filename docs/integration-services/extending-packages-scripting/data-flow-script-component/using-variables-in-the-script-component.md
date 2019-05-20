@@ -13,14 +13,18 @@ ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c267518f15bb87dddfd1139e80c3c7922bdf37c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278058"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724174"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilisation de variables dans le composant Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les variables stockent les valeurs qu'un package et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  Vous pouvez rendre des variables existantes accessibles en lecture seule ou en lecture/écriture par votre script personnalisé en entrant des listes délimitées par des virgules de variables dans les champs **ReadOnlyVariables** et **ReadWriteVariables** de la page **Script** de l’**Éditeur de transformation de script**. N'oubliez pas que les noms de variables respectent la casse. Utilisez la propriété **Value** pour lire et écrire des variables individuelles. Le composant Script gère tout le verrouillage sous-jacent requis quand votre script manipule les variables au moment de l'exécution.  

@@ -14,14 +14,18 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a0e23af1cf138fa3bbf613ce0cc0f34cca75b3c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c865c1316996c54e589326fa1351aa3cab4a934
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277698"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725612"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusive au niveau du bit) (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Effectue une opération OR au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des deux bits a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur zéro (0).  
   
  Les deux conditions doivent être de type de données signed integer ou unsigned integer.  

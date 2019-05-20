@@ -14,14 +14,18 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8338cb3c4e4d4d4915c1eaee5d6a118edc23ca5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80445ce66d9b6333e5fd8f6856af251eda2ac5ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282823"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727254"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Ajouter ou supprimer un composant dans un flux de données
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les composants de flux de données sont des sources, des destinations et des transformations dans un flux de données. Pour que vous puissiez ajouter des composants à un flux de données, le flux de contrôle du package doit inclure une tâche de flux de données.  
   
  Les procédures ci-dessous montrent comment ajouter ou supprimer un composant dans le flux de données d'un package.  

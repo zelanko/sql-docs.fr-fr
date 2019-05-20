@@ -11,14 +11,18 @@ ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a12faf8abe604adac73af56586b40338c5aa48cd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae98170e3c6628afc75934cece345bbbfbc22267
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277488"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728644"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Informations d'identification Oracle pour l'exécution d'un script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Pour exécuter le script de journalisation supplémentaire Oracle à partir de la console du concepteur de capture de données modifiées Oracle, le programme vous invite à entrer les informations d'identification de l'utilisateur Oracle qui exécute le script. Pour exécuter ce script, l'utilisateur Oracle doit disposer de l'autorisation ALTER TABLE pour que toutes les tables soient capturées et de l'autorisation SELECT sur la vue DBA_LOG_GROUPS.  
   
 ## <a name="task-list"></a>Liste des tâches  

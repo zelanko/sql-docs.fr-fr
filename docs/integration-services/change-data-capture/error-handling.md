@@ -11,14 +11,18 @@ ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05aca45bdfc8a6f45ce32b4a6ac328ae5acc0ad5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4c957089cf73ba9992c04d56162b1a0cb9901f29
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280003"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728859"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Une instance Oracle CDC exploite les modifications d'une base de données source Oracle (un cluster Oracle RAC est considéré comme une seule base de données) et écrit les modifications validées dans les tables de modifications dans une base de données CDC de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
   
  Une instance de capture de données modifiées conserve son état dans une table système appelée **cdc.xdbcdc_state**. Cette table peut être interrogée à tout moment pour trouver l'état de l'instance de capture de données modifiées. Pour plus d’informations sur la table cdc.xdbcdc_state, consultez [cdc.xdbcdc_state](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state).  

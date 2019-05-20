@@ -17,14 +17,18 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c147c5fc44f8dcb96679ecc83d3b88fd474830a3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 27993a5f420588b7bb542f6875488c1624d26e71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289855"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727584"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  
   
  Les packages utilisent les conteneurs aux fins suivantes :  
@@ -67,7 +71,7 @@ ms.locfileid: "58289855"
 |**LocaleID**|Paramètre régional Microsoft Win32. La valeur par défaut de cette propriété est le paramètre régional du système d'exploitation sur l'ordinateur local.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>.|  
 |**LoggingMode**|Valeur qui indique le comportement de journalisation du conteneur. Ces valeurs sont **Disabled**, **Enabled**et **UseParentSetting**. La valeur par défaut de cette propriété est **UseParentSetting**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |**MaximumErrorCount**|Nombre maximal d'erreurs pouvant se produire avant l'arrêt de l'exécution d'un conteneur. La valeur par défaut de cette propriété est **1**.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
-|**Nom**|Nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
+|**Name**|Nom du conteneur.<br /><br /> Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
 |**TransactionOption**|Participation transactionnelle du conteneur. Cette propriété peut prendre les valeurs **NotSupported**, **Supported**et **Required**. La valeur par défaut de cette propriété est **Supported**. Pour plus d’informations, consultez <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Pour plus d'informations sur toutes les propriétés disponibles pour les conteneurs de boucle Foreach, les conteneurs de boucle For, les conteneurs Sequence et les conteneurs d'hôte de tâche lorsqu'ils sont configurés par programmation, consultez les rubriques API [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] suivantes :  

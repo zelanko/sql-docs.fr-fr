@@ -14,14 +14,18 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f6f206382d74ace29bdc34e8e25426079c016f6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f3f35e1178af11111cdbdd00d1cbdba51660c098
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281923"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728026"
 ---
 # <a name="azure-blob-upload-task"></a>Tâche de chargement d’objets blob Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 La **tâche de chargement d’objets blob Azure** permet à un package SSIS de charger des fichiers sur un stockage d’objets blob Azure.
     
 Pour ajouter une **tâche de chargement d’objets blob Azure**, faites-la glisser vers le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue de **l’Éditeur de tâche de chargement d’objets blob Azure** .  

@@ -17,14 +17,18 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289395"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727543"
 ---
 # <a name="maintenance-cleanup-task"></a>Tâche de nettoyage de maintenance
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de nettoyage de maintenance supprime les fichiers associés aux plans de maintenance, notamment des fichiers de sauvegarde de base de données et des rapports créés par les plans de maintenance. Pour plus d’informations, consultez [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md) et [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  En utilisant la tâche de nettoyage de maintenance, un package peut supprimer les fichiers de sauvegarde ou les rapports de plan de maintenance sur le serveur spécifié. La tâche de nettoyage de maintenance inclut une option permettant de supprimer un fichier spécifique ou un groupe de fichiers dans un dossier. Vous pouvez facultativement spécifier l'extension des fichiers à supprimer.  

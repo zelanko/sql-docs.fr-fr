@@ -18,14 +18,18 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 043c99a06b42e1bc1fcbe76971c55d77fc2bd45f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290445"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727311"
 ---
 # <a name="wmi-data-reader-task"></a>Tâche Lecteur de données WMI
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche Lecteur de données WMI exécute des requêtes au moyen du langage de requête WMI (Windows Management Instrumentation) qui retournent des informations à partir de WMI sur un système informatique. Vous pouvez utiliser la tâche Lecteur de données WMI pour effectuer les opérations suivantes :  
   
 -   Interrogation des journaux des événements Windows sur un ordinateur local ou distant et écriture des informations dans un fichier ou une variable.  
@@ -104,7 +108,7 @@ Select * FROM Win32_QuickFixEngineering
   Pour plus d’informations sur le langage de requêtes WMI (WQL), consultez la rubrique [Requêtes avec WQL](https://go.microsoft.com/fwlink/?LinkId=79045)dans la documentation Windows Management Instrumentation de la bibliothèque MSDN.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Fournit un nom unique pour la tâche Lecteur de données WMI. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

@@ -15,14 +15,18 @@ ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c68ab205087358682959685953266ad962a7e9a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9f962738621bf4be19975077d39fb253f62ad3ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281103"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724382"
 ---
 # <a name="additional-script-component-examples"></a>Exemples supplémentaires du composant Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le composant Script est un outil configurable que vous pouvez utiliser dans le flux de données d'un package pour remplir presque toutes les conditions qui ne sont pas satisfaites par les sources, les transformations et les destinations incluses dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Cette section contient des exemples de code du composant Script qui montrent les divers types de fonctionnalités disponibles.  
   
  Pour obtenir des exemples montrant comment configurer le composant Script en tant que source, transformation ou destination de base, consultez [Développement de types spécifiques de composants Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  

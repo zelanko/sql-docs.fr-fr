@@ -10,14 +10,18 @@ ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f895175a3ee4798643c2841399d2ed2ea9a89c27
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221993"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723981"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Cette rubrique vous montre comment se connecter à une source de données **PostgreSQL** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. 
 
 > [!IMPORTANT]

@@ -14,14 +14,18 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 5db5df2a209cf9f291c37f960cdd9b2947966061
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 2a8ed5e2326a5d769f190421d2427c06bc2e1211
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531104"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728374"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Store
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Un package SQL Server Integration Services (SSIS) peut utiliser le gestionnaire de connexions Azure Data Lake Store pour se connecter à un compte Azure Data Lake Storage Gen1 avec un des deux types d’authentification suivants :
 -   Identité de l’utilisateur Azure AD
 -   Identité du service Azure AD 

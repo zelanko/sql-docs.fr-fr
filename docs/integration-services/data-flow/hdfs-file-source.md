@@ -13,14 +13,18 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c40acf6b85fd8a8a2078ea8c085ac54512361ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276848"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726771"
 ---
 # <a name="hdfs-file-source"></a>HDFS File Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le composant HDFS File Source permet à un package SSIS de lire les données provenant d’un fichier HDFS. Les formats de fichier pris en charge sont le format texte et Avro. (Les sources ORC ne sont pas prises en charge.)  
   
  Pour configurer HDFS File Source, opérez un glisser-déplacer de HDFS File Source vers le concepteur de flux de données, puis double-cliquez sur le composant pour ouvrir l’éditeur.  

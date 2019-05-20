@@ -17,14 +17,18 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2512be2c3fcac33c3bb87700f8925a0f4743a8a4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275092"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727765"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de profilage des données calcule différents profils qui vous aident à vous familiariser avec une source de données et à identifier les problèmes à résoudre au niveau des données.  
   
  Vous pouvez utiliser la tâche de profilage des données à l’intérieur d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour profiler les données stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et pour identifier les problèmes potentiels de qualité des données.  

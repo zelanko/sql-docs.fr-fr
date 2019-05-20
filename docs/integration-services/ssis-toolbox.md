@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289635"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717279"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Tous les composants installés sur l’ordinateur local apparaissent automatiquement dans la **Boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
  
  Quand vous créez un projet SSIS ou ouvrez un projet existant, la **Boîte à outils SSIS** est automatiquement affichée. Vous pouvez également ouvrir la boîte à outils en cliquant sur le bouton de la boîte à outils en haut à droite de l’aire de conception du package, ou en cliquant sur Affichage -> Autres fenêtres -> Boîte à outils SSIS.

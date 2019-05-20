@@ -18,14 +18,18 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271968"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727329"
 ---
 # <a name="web-service-task"></a>Tâche de service Web
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de service Web exécute une méthode de service Web. Vous pouvez utiliser la tâche de service Web pour :  
   
 -   Écrire dans une variable les valeurs renvoyées par une méthode de service Web. Vous pouvez par exemple obtenir la température la plus élevée de la journée à partir d'une méthode de service Web, puis utiliser cette valeur pour mettre à jour une variable utilisée dans une expression qui définit une valeur de colonne.  
@@ -112,7 +116,7 @@ ms.locfileid: "58271968"
   
  Si vous projetez de télécharger le fichier WSDL à l’aide du bouton **Télécharger WSDL** , définissez cette valeur sur **True**.  
   
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche de service Web. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  
@@ -139,7 +143,7 @@ ms.locfileid: "58271968"
  **WebMethodDocumentation**  
  Entrez la description de la méthode web ou cliquez sur le bouton Parcourir **(...)** et entrez la description dans la boîte de dialogue **Documentation de la méthode Web**.  
   
- **Nom**  
+ **Name**  
  Contient la liste des noms des entrées dans la méthode Web.  
   
  **Type**  

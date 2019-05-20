@@ -24,14 +24,18 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4f9dc06cb17b0135f6368824235e264bfcddddb2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290305"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725791"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  
   
  Avant d'effectuer une recherche, la transformation de recherche de terme extrait des mots du texte dans une colonne d'entrée à l'aide de la même méthode que la transformation d'extraction de terme :  

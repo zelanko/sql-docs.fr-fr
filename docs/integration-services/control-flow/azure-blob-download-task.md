@@ -14,14 +14,18 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a1a8c8c23519ca6f0ceb4ab1d2a3e587f7a86f8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283163"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728036"
 ---
 # <a name="azure-blob-download-task"></a>Tâche de téléchargement d’objet blob Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 La tâche de téléchargement d’objet blob Azure permet à un package SSIS de télécharger des fichiers à partir d’un stockage d’objets blob Azure.
 
 Pour ajouter une **tâche de téléchargement d’objet blob Azure**, faites-la glisser sur le concepteur SSIS, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue **Éditeur de la tâche de téléchargement d’objet blob Azure** .  

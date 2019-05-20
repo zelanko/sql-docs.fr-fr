@@ -22,14 +22,18 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a598695807d978df8dd14635f127949e835b9e7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277359"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805261"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Pour exécuter un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser un outil parmi plusieurs, en fonction de l’endroit où ces packages sont stockés. Ces outils sont répertoriées dans le tableau ci-dessous.  
 
 > [!NOTE]

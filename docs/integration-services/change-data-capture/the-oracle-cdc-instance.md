@@ -11,14 +11,18 @@ ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b4deab77c9ff3aec771b77ae9a9f6b7c7668fb3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276676"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728491"
 ---
 # <a name="the-oracle-cdc-instance"></a>Instance Oracle CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'instance Oracle CDC est un processus créé par le service de capture de données modifiées Oracle pour traiter les modifications capturées d'une seule base de données source Oracle. L’instance Oracle CDC récupère sa configuration à partir de la table **cdc.xdbcdc_config** et conserve son état dans la table **cdc.xdbcdc_state** . Ces tables font partie de la base de données CDC, qui définit l'instance Oracle CDC. Pour plus d'informations sur la base de données xdbcdc et les tables, consultez [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
   
  La section suivante décrit les tâches effectuées par l'instance Oracle CDC :  

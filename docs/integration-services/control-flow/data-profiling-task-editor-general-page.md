@@ -15,14 +15,18 @@ ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d6a8b8ce43caad05f56ac780a8c08997a217e288
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290485"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727776"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Éditeur de tâche de profilage de données (page Général)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la page **Général** de l' **Éditeur de tâche de profilage de données** pour configurer les options suivantes :  
   
 -   Spécifiez la destination de la sortie du profil.  
@@ -53,8 +57,8 @@ ms.locfileid: "58290485"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l'option **Destination**.|  
-|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous devez spécifier la variable de package à utiliser dans l'option **Destination**.|  
+|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l'option **Destination**.|  
+|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous devez spécifier la variable de package à utiliser dans l'option **Destination**.|  
   
  **Destination**  
  Spécifiez le gestionnaire de connexions de fichiers ou la variable de package qui contient la sortie du profil des données :  

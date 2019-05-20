@@ -11,14 +11,18 @@ ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bbf24f97146e98fc074870410f8e68a83672f72
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7e0ea4b800a4e48959782bfb70d834db93a323d6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282323"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726748"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Charger des données à l'aide de la destination ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cette procédure montre comment charger des données à l'aide de la destination ODBC. Pour pouvoir ajouter et configurer une destination ODBC, le package doit inclure au moins une tâche de flux de données et une source.  
   
 ### <a name="to-load-data-using-an-odbc-destination"></a>Pour charger des données à l'aide d'une destination ODBC  

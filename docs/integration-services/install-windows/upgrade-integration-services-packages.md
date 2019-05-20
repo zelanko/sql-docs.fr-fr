@@ -14,14 +14,18 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 02ac3c6522dd97cf0ac2e752894f0c2ba1fc91c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3d7a1d96603168560c55b78fb05b5546e8674c7c
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209948"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805386"
 ---
 # <a name="upgrade-integration-services-packages"></a>Mettre à niveau des packages Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Lorsque vous mettez à niveau une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] vers la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vos packages [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] existants ne sont pas automatiquement mis à niveau vers le format de package utilisé par la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous devez choisir une méthode de mise à niveau et mettre à niveau vos packages manuellement.  
   
  Pour plus d’informations sur la mise à niveau des packages lorsque vous convertissez un projet en modèle de déploiement de projet, consultez [Déployer des projets et des packages Integration Services Server (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
@@ -72,7 +76,7 @@ ms.locfileid: "53209948"
   
 |Composant ou fonctionnalité|Résultats de la mise à niveau|  
 |--------------------------|---------------------|  
-|Chaînes de connexion|Pour les packages [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> Utilisez l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l'option **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs** .<br /><br /> Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], sur la page Général de la boîte de dialogue Options, sélectionnez l'option **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs** . Pour plus d’informations sur cette option, consultez la page Général.<br /><br /> Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : Vous ne pouvez pas appliquer les procédures ci-dessus pour mettre à jour une chaîne de connexion lorsque celle-ci est stockée dans un fichier de configuration ou dans un fichier de source de données, ou quand une expression définit la propriété **ConnectionString**. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../../integration-services/connection-manager/data-sources.md).|  
+|Chaînes de connexion|Pour les packages [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , les noms de certains fournisseurs ont changé et requièrent des valeurs différentes dans les chaînes de connexion. Pour mettre à jour les chaînes de connexion, utilisez l'une des procédures suivantes :<br /><br /> Utilisez l'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour mettre à niveau le package et sélectionnez l'option **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs** .<br /><br /> Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], sur la page Général de la boîte de dialogue Options, sélectionnez l'option **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs** . Pour plus d’informations sur cette option, consultez la page Général.<br /><br /> Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le package et modifiez manuellement le texte de la propriété ConnectionString.<br /><br /> Remarque : Vous ne pouvez pas appliquer les procédures ci-dessus pour mettre à jour une chaîne de connexion lorsque celle-ci est stockée dans un fichier de configuration ou dans un fichier de source de données, ou quand une expression définit la propriété **ConnectionString**. Pour mettre à jour la chaîne de connexion dans ces cas-là, vous devez mettre à jour le fichier ou l'expression manuellement.<br /><br /> Pour plus d’informations sur les sources de données disponibles, consultez [Sources de données](../../integration-services/connection-manager/data-sources.md).|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Scripts qui dépendent d'ADODB.dll  
  Les scripts de la tâche de script et du composant Script qui référencent explicitement ADODB.dll risquent de ne pas pouvoir être mis à niveau ou de ne pas pouvoir s'exécuter sur les ordinateurs qui ne disposent pas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour permettre la mise à niveau des scripts de la tâche de script et du composant Script, il est recommandé de supprimer la dépendance sur ADODB.dll.  Ado.Net est l'alternative recommandée pour le code managé, à l'instar des scripts VB et C#.  
