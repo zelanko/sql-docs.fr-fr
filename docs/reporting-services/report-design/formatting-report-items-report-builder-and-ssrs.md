@@ -2,20 +2,20 @@
 title: Mise en forme des éléments de rapport (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298197"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580317"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  
@@ -24,13 +24,13 @@ ms.locfileid: "56298197"
   
  A. Zone de texte avec une bordure à double trait et divers styles de mise en forme, incluant un lien.  
   
- b. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
+ B. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
   
  C. Zone de texte avec une étiquette de texte et un espace réservé.  
   
  Vous pouvez modifier les options de mise en forme en sélectionnant l'élément à mettre en forme, puis en ouvrant la boîte de dialogue Propriétés de l'élément. Par exemple, si vous souhaitez mettre en forme le contenu de l’intégralité d’une zone de texte ou un mot sélectionné dans la zone de texte, cliquez avec le bouton droit sur l’élément et sélectionnez **Propriétés de la zone de texte**. Vous pouvez ensuite appliquer les styles de mise en forme souhaités.  
   
- Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

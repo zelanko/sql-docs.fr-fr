@@ -2,20 +2,20 @@
 title: Compteurs de performances - Service ReportServer, objets de performance | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a7b147862a8a64936636f9171fa2778352af4a8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7e87b285eccbd35c6c90cffa2f32e276aaefe0ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418860"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581052"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Compteurs de performances - Service ReportServer, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **ReportServer:Service** et **ReportServerSharePoint:Service** qui font partie d’un déploiement de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -61,7 +61,7 @@ ms.locfileid: "52418860"
 |**Tentatives d’ouverture de session/s**|Taux de tentatives d'ouverture de session.|  
 |**Total d’ouvertures de session réussies**|Nombre d'ouvertures de session réussies pour les types d'authentification RSWindows. Les types d'authentification RSWindows incluent RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos et RSWindowsBasic. La valeur zéro (0) représente l'authentification personnalisée.|  
 |**Ouvertures de session réussies/s**|Taux d'ouvertures de session réussies.|  
-|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
+|**État de sollicitation de la mémoire**|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
 |**Nombre de réductions de mémoire**|Nombre d'octets demandés par le serveur pour réduire la mémoire utilisée.|  
 |**Notifications de réduction de mémoire/s**|Nombre de notifications émises par le serveur au cours de la dernière seconde pour réduire la mémoire utilisée. Cette valeur indique la fréquence à laquelle le serveur se trouve en situation de sollicitation de la mémoire.|  
 |**Requêtes déconnectées**|Nombre de requêtes qui sont déconnectées en raison d'un échec de communication.|  
