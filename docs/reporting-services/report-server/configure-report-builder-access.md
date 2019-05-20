@@ -1,19 +1,19 @@
 ---
 title: Configurer l’accès au Générateur de rapports | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.date: 03/14/2017
-ms.openlocfilehash: 2f99729717d291b241418b12142a5be8cfa67a03
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774436"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580372"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
 Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 810dd88b7572ea6af6ed5c5ac8a669a9c598b695
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: a6fe3c0cd82d8ee8b92948d76d4f7cdb5fa4cf73
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449668"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570566"
 ---
 # <a name="role-assignments"></a>Attributions de rôles
 
@@ -57,10 +57,10 @@ Diagramme des attributions de rôles
  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , la sécurité basée sur les rôles s'articule autour des niveaux suivants :
 
 - Les attributions de rôles au niveau élément contrôlent l’accès aux éléments dans la hiérarchie des dossiers du serveur de rapports, tels que :
-  - Rapports
+  - rapports
   - Dossiers
   - Modèles de rapport
-  - Sources de données partagées
+  - sources de données partagées
   - Autres ressources
 
 - Les attributions de rôles au niveau élément sont définies quand vous créez une attribution de rôle sur un élément spécifique ou sur le dossier racine.
