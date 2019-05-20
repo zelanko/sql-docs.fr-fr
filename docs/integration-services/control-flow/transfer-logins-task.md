@@ -17,14 +17,18 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: feed75c71d49f64ad7fd8285fd45f36ed19a7eda
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc1df2936c51509ffe3e2b68c6ee497e18558dbc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282504"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727393"
 ---
 # <a name="transfer-logins-task"></a>Tâche de transfert de connexions
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de transfert de connexions transfère une ou plusieurs connexions entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Transférer des connexions entre des instances de SQL Server  
@@ -86,7 +90,7 @@ ms.locfileid: "58282504"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de connexions** pour donner un nom et une description à la tâche de transfert de connexions.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche de transfert de connexions. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

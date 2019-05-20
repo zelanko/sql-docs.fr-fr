@@ -11,14 +11,18 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272010"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721796"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Leçon 4-3 : Ajouter une redirection de flux d’erreurs
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dans la tâche précédente, la transformation Lookup Currency Key ne peut pas générer de correspondance lorsqu’elle tente de traiter l’exemple de fichier plat endommagé qui a généré une erreur. Du fait que la transformation utilise les paramètres par défaut pour l'affichage en sortie des erreurs, toute erreur qui survient entraîne un échec de la transformation. Si la transformation échoue, le reste du package échoue également.  
   

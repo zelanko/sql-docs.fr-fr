@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221889"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723856"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Se connecter à des sources de données à l’aide de l’Assistant Importation et Exportation SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Les rubriques de cette section montrent comment se connecter à de nombreuses sources de données couramment utilisées lorsque vous exécutez l’Assistant Importation et Exportation SQL Server. Vous devez fournir les informations de connexion de vos sources de données dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
 Les rubriques de cette section décrivent uniquement comment **se connecter à des sources de données** à partir des pages **Choisir une source de données** et **Choisir une destination** de l’Assistant. Si ce n’est pas ce que vous recherchez, consultez [Tâches et contenus connexes](#related).

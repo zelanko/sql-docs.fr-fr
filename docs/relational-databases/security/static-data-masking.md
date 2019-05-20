@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516465"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580980"
 ---
 # <a name="static-data-masking"></a>Masquage statique des données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Masquage statique des données mis en production comme composant de [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)18.0 préversion 5 et versions ultérieures. Nous avons décidé que notre prototype actuel ne répondait pas aux attentes de nos clients. Par conséquent, nous ne proposons plus cette fonctionnalité. Nous vous tiendrons au courant de nos plans si nous avons une solution de remplacement.
+Masquage statique des données mis en production comme composant de [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)18.0 préversion 5 et versions ultérieures. 
+> [!IMPORTANT]
+> Nous avons décidé que notre prototype actuel ne répondait pas aux attentes de nos clients. Par conséquent, nous ne proposons plus cette fonctionnalité. Nous vous tiendrons au courant de nos plans si nous avons une solution de remplacement.
+>
+
+
 
 ![Masquage statique des données](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

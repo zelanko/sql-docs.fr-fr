@@ -11,14 +11,18 @@ ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276079"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728479"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le service de capture de données modifiées Oracle est un service Windows qui exécute le programme xdbcdcsvc.exe. Ce service peut être configuré pour exécuter plusieurs services Windows sur le même ordinateur, chacun avec un nom différent de service Windows. La création de plusieurs services Windows de capture de données modifiées Oracle sur un seul ordinateur est souvent réalisée pour obtenir une meilleure séparation entre eux, ou lorsque chacun d'eux doit fonctionner avec une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Un service de capture de données modifiées Oracle est créé à l'aide de la console de configuration du service de capture de données modifiées Oracle ou est défini par l'interface de ligne de commande intégrée au programme xdbcdcsvc.exe. Dans les deux cas, chaque service de capture de données modifiées Oracle créé est associé à une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (qui peut être regroupée ou mise en miroir avec l’installation **AlwaysOn** ) et les informations de connexion (chaîne de connexion et informations d’identification d’accès) font partie de la configuration du service.  

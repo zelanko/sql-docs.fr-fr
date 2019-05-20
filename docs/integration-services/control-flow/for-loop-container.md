@@ -18,14 +18,18 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 683d3bcee8450a62a040663dacf30d337556529d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276317"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727683"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le conteneur de boucles For définit un flux de contrôle répétitif dans un package. La mise en œuvre de la boucle est similaire à la structure de bouclage **For** des langages de programmation. Dans chaque répétition de la boucle, le conteneur de boucles For évalue une expression et répète son flux de travail jusqu'à ce que l'expression retourne la valeur **False**.  
   
  Le conteneur de boucles For utilise les éléments suivants pour définir la boucle :  
@@ -104,7 +108,7 @@ Utilisez la page **Éditeur de boucle For** de la boîte de dialogue **Éditeur 
  **AssignExpression**  
  Indiquez éventuellement une expression qui modifie une expression à chaque répétition de la boucle.  
   
- **Nom**  
+ **Name**  
  Indiquez un nom unique pour le conteneur de la boucle For. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

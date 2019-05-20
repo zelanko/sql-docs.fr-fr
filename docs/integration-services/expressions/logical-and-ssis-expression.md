@@ -15,14 +15,18 @@ ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c39db8b0bc318b9bf3adb117e72e8f8af3f62c6b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7802a28926b9e81763bacc85d2623100bb480f1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725235"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND logique) (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Effectue une opération AND logique. L'expression renvoie la valeur TRUE si toutes les conditions s'évaluent à TRUE.  
   
 ## <a name="syntax"></a>Syntaxe  

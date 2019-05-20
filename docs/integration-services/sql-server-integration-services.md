@@ -21,14 +21,18 @@ helpviewer_keywords:
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f11fac0a7f875c019f4371144f38c3882d4c013c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c3c7c128cc74e43877e481f405d8b7df30ce6b5f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271496"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717908"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est une plateforme qui permet de créer des solutions de transformation de données et d’intégration de données au niveau de l’entreprise. Utilisez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour résoudre des problèmes métier complexes en copiant ou en téléchargeant des fichiers, en chargeant des entrepôts de données, en nettoyant et en explorant des données et en gérant des données et des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 

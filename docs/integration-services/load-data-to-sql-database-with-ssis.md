@@ -11,14 +11,18 @@ ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
 manager: craigg
-ms.openlocfilehash: dcbd6f7c70bebd84b7435d4371b38ee9cc8ef3d6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671265"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720558"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Charger des données dans SQL Server ou Azure SQL Database avec SSIS (SQL Server Integration Services)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Créez un package SSIS (SQL Server Integration Services) pour charger des données dans SQL Server ou [Azure SQL Database](/azure/sql-database/). Vous pouvez éventuellement restructurer, transformer et nettoyer les données qui traversent le flux de données SSIS.
 

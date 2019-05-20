@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278923"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722549"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Leçon 2-3 : Modifier le gestionnaire de connexions de fichiers plats
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Au cours de cette tâche, vous allez modifier le gestionnaire de connexions de fichiers plats de la leçon 1. Ce gestionnaire de connexions de fichiers plats est configuré pour charger statiquement un seul fichier. Pour faire en sorte que le gestionnaire de connexions de fichiers plats charge les fichiers de manière itérative, vous devez modifier sa propriété ConnectionString de sorte à utiliser la variable définie par l’utilisateur `User::varFileName`. Celle-ci contient le chemin du fichier à charger au moment de l’exécution.  
   

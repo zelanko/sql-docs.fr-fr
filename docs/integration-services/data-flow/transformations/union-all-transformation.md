@@ -19,14 +19,18 @@ ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9069bffba5739a7eb53c12315ba3d28702e3398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4173a5153dbd05977fcb8cd42b695d3654b1584
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273749"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725827"
 ---
 # <a name="union-all-transformation"></a>transformation d'union totale
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation d'union totale combine plusieurs entrées en une seule sortie. Par exemple, les sorties de cinq sources de fichier plat peuvent être des entrées de la transformation d'union totale et être combinées en une seule sortie.  
   
 ## <a name="inputs-and-outputs"></a>Entrées et sorties  

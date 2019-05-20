@@ -17,14 +17,18 @@ ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8dd39c8803b5b03a3595191d58bf4bd3f6a54812
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 258c04583f5494e158c9a92fd9ae53dfc501ad9a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271871"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727380"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de transfert de travaux transfère un ou plusieurs travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La tâche de transfert de travaux peut être configurée pour transférer tous les travaux ou seulement certains travaux spécifiés. Vous pouvez également spécifier si les travaux transférés sont activés lorsqu'ils arrivent à destination.  
@@ -83,7 +87,7 @@ ms.locfileid: "58271871"
 >  Seuls les membres du rôle serveur fixe **sysadmin** ou l'un des rôles de base de données fixe de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le serveur de destination peuvent y créer des travaux. Pour accéder à des travaux sur le serveur source, les utilisateurs doivent au moins y être membres du rôle de base de données fixe **SQLAgentUserRole** . Pour plus d’informations sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôles de base de données fixe de l’Agent et leurs autorisations, consultez [Rôles de base de données fixe de l’Agent SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche de transfert de travaux. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

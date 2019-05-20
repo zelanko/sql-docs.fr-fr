@@ -17,14 +17,18 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b183ff23efd18a19e08033e64691b723d4b4f323
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276031"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727658"
 ---
 # <a name="ftp-task"></a>Tâche FTP
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche FTP télécharge des fichiers de données et gère des répertoires sur les serveurs. Par exemple, un package peut télécharger des fichiers de données à partir d’un serveur distant ou d’un emplacement Internet dans le cadre d’un flux de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez utiliser la tâche FTP aux fins suivantes :  
   
 -   Copie de répertoires et de fichiers de données depuis un répertoire vers un autre, avant ou après le déplacement de données, et application de transformations aux données  
@@ -92,7 +96,7 @@ ms.locfileid: "58276031"
  **Arrêt en cas d'échec de l'opération**  
  Indique si la tâche FTP se termine en cas d'échec de l'opération.  
   
- **Nom**  
+ **Name**  
  Fournit un nom unique pour la tâche FTP. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

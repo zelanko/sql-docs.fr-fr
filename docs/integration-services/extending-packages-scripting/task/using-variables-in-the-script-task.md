@@ -21,14 +21,18 @@ ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bcc6036ba1821b502ad04fe003b21ac1a30b64b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bb3ad2907396d88515f9d661e8fdfddaba4e5fc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279961"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723987"
 ---
 # <a name="using-variables-in-the-script-task"></a>Utilisation de variables dans la tâche de script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les variables permettent à la tâche de script d'échanger des données avec d'autres objets dans le package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md).  
   
  La tâche de script utilise la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> de l’objet **Dts** pour lire et écrire dans les objets <xref:Microsoft.SqlServer.Dts.Runtime.Variable> du package.  

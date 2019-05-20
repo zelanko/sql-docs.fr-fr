@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273288"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726000"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
   
  Le dataset de référence peut être un fichier cache, une table ou une vue existante, une nouvelle table ou le résultat d'une requête SQL. La transformation de recherche utilise un gestionnaire de connexions OLE DB ou un gestionnaire de connexions du cache pour se connecter au dataset de référence. Pour plus d’informations, consultez [Gestionnaire de connexions OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) et [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  

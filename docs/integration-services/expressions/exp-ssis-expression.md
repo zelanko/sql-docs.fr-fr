@@ -14,14 +14,18 @@ ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6374e8b33c678f418ee456021ef739bde5ac22d9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8ffe52a392dfec79afa301df7650cf73f2ad35ac
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271730"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725441"
 ---
 # <a name="exp-ssis-expression"></a>EXP (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Renvoie l'exposant en base e d'une expression numérique. La fonction EXP est complémentaire de l'action LN et est parfois appelée « antilogarithme ».  
   
 ## <a name="syntax"></a>Syntaxe  

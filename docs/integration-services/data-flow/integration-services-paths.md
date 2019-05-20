@@ -21,14 +21,18 @@ ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3aa227c82d9481863c6cca360fdac41cec3ace13
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d66c98acec072ff2ce3afa4fb2ecfb0236f05ec
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282453"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726870"
 ---
 # <a name="integration-services-paths"></a>Chemins d'accès d'Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un chemin d'accès connecte deux composants d'un flux de données en reliant la sortie d'un composant à l'entrée d'un autre composant. Un chemin d'accès comporte une source et une destination. Par exemple, si un chemin d'accès connecte une source OLE DB et une transformation de tri, la source OLE DB est la source du chemin d'accès, tandis que la transformation de tri est la destination du chemin d'accès. La source est le composant où débute le chemin d'accès et la destination, le composant où il se termine.  
   
  Si vous exécutez un package dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous pouvez afficher les données d'un flux de données en attachant des visionneuses de données à un chemin d'accès. Une visionneuse de données peut être configurée pour afficher des données dans une grille. Une visionneuse de données est un outil de débogage très utile. Pour plus d’informations, consultez [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md).  
@@ -63,7 +67,7 @@ Utilisez la boîte de dialogue **Éditeur du chemin d'accès au flux de données
  Utilisez le nœud **Général** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour nommer et décrire le chemin d'accès et pour spécifier ses options d'annotation.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique au chemin d'accès.  
   
  **ID**  
@@ -91,7 +95,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
  **Path metadata**  
  Affiche la liste des métadonnées des colonnes. Cliquez sur les en-têtes de colonne pour trier les données des colonnes.  
   
- **Nom**  
+ **Name**  
  Donne le nom de la colonne.  
   
  **Type de données**  
@@ -128,7 +132,7 @@ Utilisez la page **Métadonnées** de la boîte de dialogue **Éditeur du chemin
 Utilisez la page **Visionneuses de données** de la boîte de dialogue **Éditeur du chemin d'accès au flux de données** pour gérer les visionneuses de données liées au chemin d'accès.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Affiche la liste des visionneuses de données.  
   
  **Type de Visionneuse de données**  

@@ -15,14 +15,18 @@ ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd0adbfc5f2e7ea27a39758e81c0afaed0186123
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c5692d8bb04c239e0cdb84531ff9fc7fec07cc31
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277169"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726840"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraire des données à l'aide de la source OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Pour pouvoir ajouter et configurer une source OLE DB, le package doit inclure au moins une tâche de flux de données.  
   
 ### <a name="to-extract-data-using-an-ole-db-source"></a>Pour extraire des données à l'aide d'une source OLE DB  

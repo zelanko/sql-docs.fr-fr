@@ -11,14 +11,18 @@ ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f97121a1916362d415eef3de717ad091fbac7958
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272293"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721537"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>Leçon 5-4 : Tester le package de la leçon 5
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Au moment de l’exécution, votre package récupère la valeur de la propriété **Directory** à partir d’une variable de configuration plutôt que du nom du répertoire spécifié lors de la création du package. La valeur de cette variable provient du fichier XML **SSISTutorial.dtsConfig**.  
   

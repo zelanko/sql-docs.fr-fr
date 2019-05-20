@@ -14,14 +14,18 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14fd2981a20bea0aac3d5ab06cf1a1a55cadad6a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 60284ac8c7c1f99bac6b5eae20748b2d7f5308ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276838"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729200"
 ---
 # <a name="project-properties-dialog-box"></a>Propriétés du projet, boîte de dialogue
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est une unité de déploiement. Chaque projet peut contenir des packages, des paramètres et des références d'environnement. Un projet est un objet sécurisable et peut définir des autorisations pour les principaux de base de données. Quand un projet est redéployé, la version précédente du projet peut être stockée dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Les paramètres du projet et les paramètres du package peuvent être utilisés pour affecter des valeurs aux propriétés dans des packages au moment de l'exécution. Certains paramètres requièrent des valeurs avant que le package puisse être exécuté. Les valeurs de paramètre qui référencent des variables d'environnement requièrent que le projet utilise la référence d'environnement correspondante avant l'exécution.  
@@ -51,7 +55,7 @@ ms.locfileid: "58276838"
 ##  <a name="general"></a> Définir les options sur la page Général  
  Utilisez la page Général pour afficher les propriétés du projet.  
   
- **Nom**  
+ **Name**  
  Indique le nom du projet.  
   
  **Identificateur**  
@@ -72,7 +76,7 @@ ms.locfileid: "58276838"
  ...  
  Cliquez sur **Parcourir** pour sélectionner les utilisateurs et les rôles auxquels vous souhaitez affecter des autorisations à l’aide de la boîte de dialogue **Parcourir tous les principaux** .  
   
- **Nom**  
+ **Name**  
  Indique le nom de l'utilisateur ou du rôle.  
   
  **Type**  

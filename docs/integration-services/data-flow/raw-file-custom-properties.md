@@ -11,14 +11,18 @@ ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1124d4f7f0d5adfe7836b27d2331bda32a8284d8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f036866a41376b2ee37076ac311b7dbe3f3d56e4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281393"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726543"
 ---
 # <a name="raw-file-custom-properties"></a>Propriétés personnalisées des fichiers bruts
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propriétés personnalisées des sources**  
   
  La source de fichier brut comporte des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  

@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277068"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720819"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Leçon 6-4 : Déployer le package de la leçon 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Pour déployer le package, vous devez l’ajouter au catalogue SSISDB dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur une instance de SQL Server. Dans cette leçon, vous ajoutez le package de la leçon 6 au catalogue SSISDB, vous définissez le nouveau paramètre, puis vous exécutez le package. Dans le cadre de cette leçon, vous utilisez SQL Server Management Studio pour ajouter le package de la leçon 6 au catalogue SSISDB et vous déployez le package. Une fois le package déployé, vous modifiez le paramètre afin qu’il pointe vers un nouvel emplacement, puis vous exécutez le package.   
 Dans cette tâche, vous effectuez les opérations suivantes :  

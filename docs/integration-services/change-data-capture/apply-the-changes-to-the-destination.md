@@ -13,14 +13,18 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53021d9d3f2081ffb14876cd325bb8f1df8bf180
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db439c34845dc01c54752e01428fa9793f994fdb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271289"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729091"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Appliquer des modifications à la destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Dans le flux d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à appliquer les modifications à votre destination. Vous aurez besoin de trois composants : un pour appliquer les insertions, un pour appliquer les mises à jour et un pour appliquer les suppressions.  
   
 > [!NOTE]  

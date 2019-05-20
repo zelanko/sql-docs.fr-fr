@@ -13,14 +13,18 @@ ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fcea03fa8a1493fbbe233810765a9853988f6c1e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 3b02eb586db5bc18ffa96c8a24037d48fbe4695a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272299"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728922"
 ---
 # <a name="connect-to-oracle"></a>Connexion à Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Lorsque vous ajoutez ou modifiez les tables utilisées dans l'instance de capture de données modifiées pour la première fois, vous pouvez être invité à vous connecter à la base de données Oracle. Vous devez entrer les informations d'identification d'un utilisateur Oracle qui a accès au schéma des tables à capturer. Entrez les informations suivantes dans cette boîte de dialogue :  
   
  **Authentification**  

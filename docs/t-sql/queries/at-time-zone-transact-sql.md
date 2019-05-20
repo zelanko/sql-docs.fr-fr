@@ -16,15 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eb345a2e34eb3b6088686e71b6ffa63329bae5d5
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= azure-sqldw-latest ||= sqlallproducts-allversions
+ms.openlocfilehash: c3601e341205cc41a2da3991b4de434166f246a1
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334396"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560193"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Convertit une valeur *inputdate* en valeur *datetimeoffset* correspondante dans le fuseau horaire cible. Quand la valeur *inputdate* est fournie sans informations sur le décalage, la fonction applique le décalage du fuseau horaire en supposant que la valeur *inputdate* figure dans le fuseau horaire cible. Si la valeur *inputdate* est fournie en tant que valeur *datetimeoffset*, la clause **AT TIME ZONE** la convertit dans le fuseau horaire cible selon les règles de conversion de fuseau horaire.  
   
@@ -133,7 +134,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>b. Convertir des valeurs entre des fuseaux horaires différents  
+### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir des valeurs entre des fuseaux horaires différents  
  L’exemple suivant convertit les valeurs entre des fuseaux horaires différents :  
   
 ```  

@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283033"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727920"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de contrôle de capture de données modifiées permet de contrôler le cycle de vie des packages de capture de données modifiées. Elle gère la synchronisation des package de capture de données modifiées avec le package de charge initiale et la gestion des plages de numéros séquentiels dans le journal (NSE) qui sont traités lors de l'exécution d'un package de capture de données modifiées. En outre, la tâche de contrôle de capture de données modifiées traite les scénarios d'erreur et la récupération.  
   
  La tâche de contrôle de capture de données modifiées gère l'état du package de capture de données modifiées dans une variable de package SSIS et peut également le conserver de manière permanente dans une table de base de données afin qu'il soit conservé d'une activation de package à l'autre et entre plusieurs packages qui exécutent ensemble un processus de capture de données modifiées commun (par exemple, une tâche peut être responsable du chargement initial et l'autre des mises à jour du flux progressif).  

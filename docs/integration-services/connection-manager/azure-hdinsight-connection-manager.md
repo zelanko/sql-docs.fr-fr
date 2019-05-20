@@ -14,14 +14,18 @@ ms.assetid: 29d01bd9-8b38-43b1-b937-67f8aea57c0f
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 1578b71f898f02450b90d9e6f7c20473f6ffed35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89bf14fb82516a9bd819431d92962169d56f68ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763287"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728362"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Gestionnaire de connexions Azure HDInsight
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Le **gestionnaire de connexions Azure HDInsight** permet à un package SSIS de se connecter à un cluster Azure HDInsight.
 
 Le **gestionnaire de connexions Azure HDInsight** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).

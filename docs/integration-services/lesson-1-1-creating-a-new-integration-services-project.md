@@ -11,14 +11,18 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f39232dd7a1471d08eb283eea0819d909d1e8fca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281893"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723324"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Leçon 1-1 : Créer un projet Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet exemple de projet comprend les modèles des sources de données, vues de source de données et packages qui constituent une solution de transformation de données.  
   

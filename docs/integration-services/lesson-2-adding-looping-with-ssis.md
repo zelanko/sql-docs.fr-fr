@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274183"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722450"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Leçon 2 : Ajouter un bouclage avec SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Dans [Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), vous avez créé un package qui extrait des données d’une source de fichier plat unique. Les données sont ensuite transformées par des transformations de recherche. Enfin, le package charge les données dans une copie de la table de faits **FactCurrencyRate** de l’exemple de base de données **AdventureWorksDW2012**.  
   

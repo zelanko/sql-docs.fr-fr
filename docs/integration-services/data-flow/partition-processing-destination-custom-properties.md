@@ -11,14 +11,18 @@ ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65e004be009a1be3608ee867467ea12422d07438
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270672"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726584"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriétés personnalisées de la destination de traitement de partition
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destination de traitement de partition comporte à la fois des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
   
  Le tableau suivant décrit les propriétés personnalisées de la destination de traitement de partition. Toutes les propriétés sont en lecture/écriture.  

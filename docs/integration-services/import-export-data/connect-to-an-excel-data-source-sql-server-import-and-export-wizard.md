@@ -10,14 +10,18 @@ ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e91a32da57488153e9d916cb70232d64c9b38a1b
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 747cf2bb865fb9b3fcdb11a43e410f574556dcc5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723889"
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Excel (Assistant Importation et Exportation SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Cet article vous montre comment vous connecter à une source de données **Microsoft Excel** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
 
 La capture d’écran suivante montre un exemple de connexion à un classeur Microsoft Excel.
@@ -35,7 +39,7 @@ Vous pouvez être amené à télécharger et installer des fichiers supplémenta
 > Les options de connexion de ce fournisseur de données sont les mêmes, qu’Excel soit la source ou la destination. Autrement dit, les options que vous voyez sont identiques dans les pages **Choisir une source de données** et **Choisir une destination** de l’Assistant.
 
 **Chemin de fichier Excel**  
- Spécifiez le chemin et le nom du fichier Excel. Exemple :
+ Spécifiez le chemin et le nom du fichier Excel. Par exemple :
 -   Pour un fichier sur un ordinateur local, **C:\\MyData.xlsx**.
 -   Pour un fichier sur un partage réseau, **\\\\Ventes\\Base de données\\Northwind.xlsx**.
 

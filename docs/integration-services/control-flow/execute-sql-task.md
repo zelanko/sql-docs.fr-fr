@@ -21,14 +21,18 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273912"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727720"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
   
 -   Tronquer une table ou une vue pour la préparer à l'insertion de données.  
@@ -115,7 +119,7 @@ ms.locfileid: "58273912"
 Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
   
 ### <a name="static-options"></a>Options statiques  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche d'exécution SQL dans le flux de travail. Le nom fourni est affiché dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  **Description**  

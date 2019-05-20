@@ -11,14 +11,18 @@ ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7524010d42675b2eb503f8b8f43205a7ef2705b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272208"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722462"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>Leçon 2-4 : Tester le package du tutoriel de la leçon 2
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Une fois le conteneur de boucles Foreach et le gestionnaire de connexions de fichiers plats configurés, le package Lesson 2 peut parcourir les 14 fichiers plats dans le dossier Sample Data. Chaque fois qu’un nom de fichier correspond au critère spécifié, le conteneur de boucles Foreach remplace la variable définie par l’utilisateur par ce nom de fichier. Cette variable met à jour à son tour la propriété ConnectionString du gestionnaire de connexions de fichiers plats, qui se connecte à ce fichier plat. Le conteneur de boucles Foreach exécute alors la tâche de flux de données inchangée sur les données de ce fichier plat.  
   

@@ -23,14 +23,18 @@ ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280643"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725906"
 ---
 # <a name="script-component"></a>Composant Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  
   
 -   Appliquer plusieurs transformations aux données, au lieu d'utiliser plusieurs transformations dans le flux de données. Par exemple, un script peut ajouter les valeurs de deux colonnes, puis calculer la moyenne de la somme.  
@@ -126,7 +130,7 @@ ms.locfileid: "58280643"
  **Connection managers**  
  Affiche la liste des connexions disponibles que peut utiliser le script.  
   
- **Nom**  
+ **Name**  
  Tapez un nom unique descriptif pour la connexion.  
   
  **Gestionnaire de connexions**  
@@ -206,10 +210,10 @@ ms.locfileid: "58280643"
 |-----------|-----------------|  
 |**Description**|Décrit la transformation de script en terme de fonction.|  
 |**LocaleID**|Définissez les paramètres régionaux pour fournir des informations spécifiques à la région relatives au tri et à la conversion de date et d'heure.|  
-|**Nom**|Entrez un nom descriptif pour le composant.|  
+|**Name**|Entrez un nom descriptif pour le composant.|  
 |**ValidateExternalMetadata**|Indiquez si la transformation de script valide les métadonnées de colonne par rapport aux sources de données externes lors de la conception. La valeur **false** diffère la validation jusqu'à l'exécution.|  
-|**ReadOnlyVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture seule par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
-|**ReadWriteVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture/écriture par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
+|**ReadOnlyVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture seule par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
+|**ReadWriteVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture/écriture par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
 |**ScriptLanguage**|Sélectionnez le langage de script que le composant de script doit utiliser.<br /><br /> Pour définir le langage de script par défaut pour les composants et les tâches de script, utilisez l'option **Langage de script** dans la page **Général** de la boîte de dialogue **Options** .|  
 |**UserComponentTypeName**|Spécifie la classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> et l’assembly **Microsoft.SqlServer.TxScript** qui prennent en charge l’infrastructure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   

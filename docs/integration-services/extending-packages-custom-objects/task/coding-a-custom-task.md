@@ -19,14 +19,18 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b58065146f19351c3eab9489a6e507fdc298853
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277637"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724465"
 ---
 # <a name="coding-a-custom-task"></a>Codage d'une tâche personnalisée
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.Task>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  
   
 ## <a name="configuring-the-task"></a>Configuration de la tâche  

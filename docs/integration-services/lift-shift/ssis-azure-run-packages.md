@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 129b2b760f755985028de214a1f18b00be004cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758147"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720593"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Exécuter des packages SSIS (SQL Server Integration Services) déployés sur Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Choisissez une des méthodes décrites dans cet article pour exécuter des packages SSIS déployés sur le catalogue SSISDB sur un serveur Azure SQL Database. Vous pouvez exécuter un package directement ou dans le cadre d’un pipeline Azure Data Factory. Pour une vue d’ensemble de SSIS sur Azure, consultez [Déployer et exécuter des packages SSIS dans Azure](ssis-azure-lift-shift-ssis-packages-overview.md).
 

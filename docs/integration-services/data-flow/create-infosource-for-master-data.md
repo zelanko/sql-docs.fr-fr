@@ -11,14 +11,18 @@ ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fd51e064196d2c3c0de0a0da7d10b1a5e1c0b23b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 077ea12b10278be8a38a50f82b6b7e6873be5dab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290505"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727093"
 ---
 # <a name="create-infosource-for-master-data"></a>Créer un InfoSource pour les données maîtres
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la boîte de dialogue **Créer un InfoSource pour les données maîtres** pour créer un nouvel InfoSource pour les données maîtres dans le système SAP Netweaver BW.  
   
  Vous pouvez ouvrir la boîte de dialogue **Créer un InfoSource pour les données maîtres** à partir de la page **Gestionnaire de connexions** de **l’Éditeur de destination SAP BW**. Pour en savoir plus sur la destination SAP BW, consultez [Destination SAP BW](../../integration-services/data-flow/sap-bw-destination.md).  

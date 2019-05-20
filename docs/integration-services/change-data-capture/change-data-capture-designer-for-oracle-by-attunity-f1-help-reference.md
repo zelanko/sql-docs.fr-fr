@@ -13,14 +13,18 @@ ms.assetid: aa2ec095-6a32-44a8-9069-41759d087162
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6737c03525d82c123b9c1b77bfad7ecdfb5c44ce
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fdb66a6d9b9e14d5f308532d07ddc16264614b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278068"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729079"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity-f1-help-reference"></a>Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le concepteur de capture de données modifiées pour Oracle par Attunity permet de créer et gérer une instance Oracle CDC. Les rubriques de cette section expliquent comment effectuer les tâches disponibles dans la console du concepteur CDC.  
   
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?  

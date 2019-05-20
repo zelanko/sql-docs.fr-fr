@@ -19,14 +19,18 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a97fe11d254d16fa6242513a9542b30f5efd3cf4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c821414a3e514e6c426c634a6de735da0fb4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271100"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727412"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de transfert de bases de données transfère une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Contrairement aux autres tâches qui ne transfèrent les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'en les copiant, la tâche de transfert de base de données peut copier ou déplacer une base de données. Cette tâche peut également servir à copier une base de données sur le même serveur.  
   
 ## <a name="offline-and-online-modes"></a>Modes en ligne et hors connexion  
@@ -91,7 +95,7 @@ ms.locfileid: "58271100"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de bases de données** pour donner un nom et une description à la tâche de transfert de base de données. La tâche de transfert de bases de données copie ou déplace une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre deux instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette tâche peut également servir à copier une base de données sur le même serveur.   
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Donnez un nom unique à la tâche de transfert de bases de données. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

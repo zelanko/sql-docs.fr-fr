@@ -16,14 +16,18 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272207"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727694"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de système de fichiers effectue des opérations sur les fichiers et les répertoires du système de fichiers. Par exemple, à l'aide de la tâche de système de fichiers, un package peut créer, déplacer ou supprimer des répertoires et des fichiers. Vous pouvez également utiliser la tâche de système de fichiers pour définir les attributs des fichiers et des répertoires. Par exemple, la tâche de système de fichiers peut rendre les fichiers cachés ou accessibles en lecture seule.  
   
  Toutes les opérations de la tâche de système de fichiers utilisent une source, qui peut être un fichier ou un répertoire. Par exemple, le fichier que la tâche copie, ou le répertoire qu'elle supprime, est une source. La source peut être spécifiée à l'aide d'un gestionnaire de connexions de fichiers qui pointe vers le répertoire ou vers le fichier, ou à l'aide du nom d'une variable qui contient le chemin d'accès source. Pour plus d’informations, consultez [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
@@ -104,7 +108,7 @@ ms.locfileid: "58272207"
  **OverwriteDestination**  
  Indiquez si l'opération peut remplacer les fichiers dans le répertoire de destination.  
   
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche de système de fichiers. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

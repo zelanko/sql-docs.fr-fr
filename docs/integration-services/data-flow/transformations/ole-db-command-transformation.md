@@ -16,14 +16,18 @@ ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027c7c142a825b6ebed8bac35f38779a6ac4bd12
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279833"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725939"
 ---
 # <a name="ole-db-command-transformation"></a>transformation de commande OLE DB
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation de commande OLE DB exécute une instruction SQL pour chaque ligne d'un flux de données. Par exemple, vous pouvez exécuter une instruction SQL qui insère, met à jour ou supprime des lignes d'une table de base de données.  
   
  Vous pouvez configurer la transformation de commande OLE DB de plusieurs manières :  

@@ -14,14 +14,18 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9af217f8a866438774a4345b2fd799609ef5e360
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282795"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729149"
 ---
 # <a name="validate-dialog-box"></a>Boîte de dialogue Valider
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez la boîte de dialogue **Valider** pour examiner les problèmes usuels d'un projet ou package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  En cas de problème, un message s'affiche en haut de la boîte de dialogue. Sinon, le terme Prêt s'affiche en haut.  
@@ -71,7 +75,7 @@ ms.locfileid: "58282795"
  **Conteneur**  
  Indique l'objet qui contient le gestionnaire de connexions.  
   
- **Nom**  
+ **Name**  
  Indique le nom du gestionnaire de connexions.  
   
  **Nom de la propriété**  

@@ -13,14 +13,18 @@ ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a18a12c10e23e44b597ec6dc5bddebf6a5a77db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275790"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726778"
 ---
 # <a name="hdfs-file-destination"></a>HDFS File Destination
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le composant HDFS File Destination permet à un package SSIS d’écrire des données dans un fichier HDFS. Les formats de fichier pris en charge sont les formats texte, Avro et ORC.
 
  Pour configurer HDFS File Destination, opérez un glisser-déplacer de HDFS File Source vers le concepteur de flux de données, puis double-cliquez sur le composant pour ouvrir l’éditeur.

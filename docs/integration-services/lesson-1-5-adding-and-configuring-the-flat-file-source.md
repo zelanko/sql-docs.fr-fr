@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280023"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723078"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Leçon 1-5 : Ajouter et configurer la source du fichier plat
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Au cours de cette tâche, vous allez ajouter et configurer une source de fichier plat à votre package. Une source de fichier plat est un composant de flux de données qui utilise des métadonnées définies par un gestionnaire de connexions de fichiers plats. Ces métadonnées spécifient le format et la structure des données à extraire du fichier plat par un processus de transformation. La source de fichier plat extrait les données d’un seul fichier plat, en utilisant les définitions de format indiquées dans le gestionnaire de connexions de fichiers plats.  
   
 Au cours de cette tâche, vous configurez la source de fichier plat pour qu’elle utilise le gestionnaire de connexions de l’**exemple de données sources de fichier plat** que vous avez préalablement créé.  

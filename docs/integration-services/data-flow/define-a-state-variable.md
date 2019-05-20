@@ -11,14 +11,18 @@ ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0561da6cd6877d9129a6581d2d415b3675c467a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6d689ee12759b6d894a068bf5a9f9437a0631ef0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281813"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726971"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  
   
  La variable d'état de capture de données modifiées est chargée, initialisée et mise à jour par la tâche de contrôle de capture de données modifiées et est utilisée par le composant de flux de données de la source CDC pour déterminer la plage de traitement actuelle des enregistrements de modification. La variable d'état de capture de données modifiées peut être définie sur n'importe quel conteneur commun à la tache de contrôle de capture de données modifiées et à la source CDC. La définition peut être effectuée au niveau du package mais également sur d'autres conteneurs, tel qu'un conteneur de boucles.  

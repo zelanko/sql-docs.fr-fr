@@ -21,14 +21,18 @@ ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271479"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727469"
 ---
 # <a name="send-mail-task"></a>tache Envoyer un message
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche Envoyer un message envoie un message électronique. La tâche Envoyer un message permet à un package d'envoyer des messages en cas de réussite ou d'échec des tâches du flux de travail du package, ou d'envoyer des messages en réponse à un événement déclenché par le package au moment de l'exécution. Par exemple, la tâche peut notifier à un administrateur de base de données la réussite ou l'échec de la tâche de sauvegarde de base de données.  
   
  Vous pouvez configurer la tâche Envoyer un message comme suit :  
@@ -89,7 +93,7 @@ ms.locfileid: "58271479"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche Envoyer un message** pour définir le nom de la tâche d'envoi d'un message et décrire la tâche.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Fournissez un nom unique pour la tâche d'envoi de message. Ce nom sert d'étiquette à l'icône de la tâche.  
   
  **Remarque** Les noms de tâches doivent être uniques dans un package.  

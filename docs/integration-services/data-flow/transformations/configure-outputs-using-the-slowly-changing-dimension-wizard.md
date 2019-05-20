@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274307"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726211"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L'Assistant Dimension à variation lente fonctionne comme un éditeur pour la transformation de dimension à variation lente. La création et la configuration du flux de données pour des données de dimension à variation lente peuvent être des tâches complexes. L'Assistant Dimension à variation lente constitue le moyen le plus simple de créer le flux de données pour les sorties de transformation de dimension à variation lente ; il vous guide lors des étapes de mappage de colonnes, de sélection de colonnes clés d'entreprise, de définition des attributs de modification de colonnes et de configuration de la prise en charge des membres de dimension inférés.  
   
  Vous devez sélectionner au moins une colonne clé d'entreprise dans la table de dimension et la mapper à une colonne d'entrée. La valeur de la clé d'entreprise lie un enregistrement de la source à un enregistrement de la table de dimension. La transformation utilise ce mappage pour rechercher l'enregistrement dans la table de dimension et déterminer si un enregistrement est nouveau ou en cours d'évolution. En règle générale, la clé d'entreprise est la clé primaire dans la source, mais il peut s'agir d'une autre clé sous réserve qu'elle identifie de manière unique un enregistrement et que sa valeur ne change pas. La clé d'entreprise peut également être une clé composite, englobant plusieurs colonnes. La clé primaire de la table de dimension est généralement une clé de substitution, en l'occurrence une valeur numérique générée automatiquement par une colonne d'identité ou par une solution personnalisée telle qu'un script.  

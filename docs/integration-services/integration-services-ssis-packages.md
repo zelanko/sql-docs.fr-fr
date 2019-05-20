@@ -21,14 +21,18 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e44feb2ee9355a5992de3063a669da5b7bb589e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b04e493e6b78e140f62f43d7eb36ab73a9155a52
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272759"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723552"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un package est une collection organisée de connexions, d'éléments de flux de contrôle, d'éléments de flux de données, de gestionnaires d'événements, de variables, de paramètres et de configurations que vous assemblez à l'aide des outils de conception graphiques de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ou que vous créez via un programme.  Vous enregistrez le package terminé dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , ou le système de fichiers, ou vous pouvez déployer le projet ssISnoversion sur le serveur [!INCLUDE[ssIS](../includes/ssis-md.md)] . Le package est l'unité de travail qui est extraite, exécutée et enregistrée.  
   
  Lorsque vous créez un package, il s'agit d'un objet vide qui ne fait rien. Pour doter un package de fonctionnalités, vous ajoutez à celui-ci un flux de contrôle et, éventuellement un ou plusieurs flux de données.  
@@ -87,8 +91,8 @@ ms.locfileid: "58272759"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|**PackageStart**|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
-|**PackageEnd**|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|**PackageStart**|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|**PackageEnd**|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
 |**Diagnostic**|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Définir les propriétés d’un package  

@@ -24,14 +24,18 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290355"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724669"
 ---
 # <a name="implementing-external-metadata"></a>Implémentation des métadonnées externes
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Lorsqu'un composant est déconnecté de sa source de données, vous pouvez valider les colonnes comprises dans les collections de colonnes d'entrée et de sortie par rapport aux colonnes de sa source de données externe en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Cette interface vous permet de conserver un instantané des colonnes à la source de données externe et de les mapper aux colonnes de la collection de colonnes d'entrée et de sortie du composant.  
   
  L'implémentation de colonnes de métadonnées externes ajoute une couche de charge et de complexité au développement du composant, parce que vous devez effectuer une gestion et une validation par rapport à une collection de colonnes supplémentaire, mais la capacité d'éviter des allers-retours onéreux vers le serveur pour la validation peut rendre ce travail de développement valable.  

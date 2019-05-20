@@ -10,14 +10,18 @@ ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf57a0b6dd76e95d0fada08aa2f5049341884a72
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 27c6b863ac563b0814ac1d5e483f6b62e667b3e5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221903"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723847"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Cette rubrique vous montre comment se connecter à une source de données **Stockage Blob Azure** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.
 
 > [!NOTE]

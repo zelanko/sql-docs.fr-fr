@@ -24,14 +24,18 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb6ae0f62967da4ecf26bd47b29187538ca95fe0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 63fe305bb47c43d9302b90256fc21ac41491984a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276701"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729291"
 ---
 # <a name="enabling-logging-programmatically"></a>Activation de la journalisation par programme
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le moteur d'exécution fournit une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> qui permettent la capture d'informations spécifiques à un événement au cours de la validation et de l'exécution de package. Les objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sont disponibles pour les objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, y compris les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> et <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La journalisation est activée sur des conteneurs individuels, ou sur l'ensemble du package.  
   
  Un conteneur peut utiliser plusieurs types des modules fournisseurs d'informations disponibles. Il est donc possible de créer et stocker des informations de journal dans de multiples formats. L'inscription d'un objet conteneur dans la journalisation s'effectue en deux étapes : d'abord l'activation de la journalisation, puis la sélection d'un module fournisseur d'informations. Les propriétés <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> du conteneur permettent de spécifier les événements enregistrés et sélectionner le module fournisseur d'informations.  

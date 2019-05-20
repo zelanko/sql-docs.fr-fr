@@ -11,14 +11,18 @@ ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6ba2488aff0efdb6ed0d1c4ae03ec46ba6a6a25
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 80d2eb1ec30b4729deb4891c451fc5967bec9d54
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277908"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722071"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Leçon 3-2 : Ajouter et configurer la journalisation
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Au cours de cette tâche, vous allez activer la journalisation du flux de données dans le package Lesson 3.dtsx. Vous allez ensuite configurer un module fournisseur d’informations pour les fichiers texte pour journaliser les événements PipelineExecutionPlan et PipelineExecuteTrees. Le module fournisseur d’informations pour les fichiers texte crée des journaux faciles à consulter et à déplacer. La simplicité de ces fichiers journaux les rend utiles pendant la phase de test de base d’un package. Vous pouvez également consulter les entrées de journal dans la fenêtre **Journaux d’événements** du Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   

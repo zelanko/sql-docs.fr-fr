@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290705"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728010"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche d'insertion en bloc est un moyen efficace pour copier de gros volumes de données dans une table ou une vue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, supposons que votre entreprise stocke la liste de ses produits d’un million de lignes sur un mainframe, mais que son système d’e-commerce utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour fournir des données à des pages web. Vous devez mettre à jour la table des produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les nuits, à l'aide de la liste principale des produits depuis le gros ordinateur. Pour mettre à jour la table, vous enregistrez la liste des produits dans un fichier au format délimité par des tabulations, puis vous utilisez la tâche d'insertion en bloc pour copier les données directement dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour garantir une copie de données à haute vitesse, les transformations ne peuvent s'effectuer sur les données lors de leur déplacement entre le fichier source et la table ou la vue.  
@@ -166,7 +170,7 @@ ms.locfileid: "58290705"
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin d'attribuer un nom et décrire la tâche d'insertion en bloc.  
   
 ### <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Permet d'attribuer un nom unique à la tâche d'insertion en bloc. Ce nom sert d'étiquette à l'icône de la tâche.  
   
 > [!NOTE]  

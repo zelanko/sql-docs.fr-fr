@@ -11,14 +11,18 @@ ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ba4cadf966bdeec08cee922d091a3b01820e082
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277668"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723332"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Leçon 1-4 : Ajouter une tâche de flux de données au package
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Après avoir créé des gestionnaires de connexions pour les données sources et de destination, ajoutez une tâche de flux de données à votre package. La tâche de flux de données définit le moteur de flux de données qui déplace les données entre les sources et les destinations et fournit la fonctionnalité grâce à laquelle il est possible de transformer, nettoyer et modifier les données lors de leur déplacement. La tâche de flux de données est l'endroit où s'effectue la majorité du travail d'un processus d'extraction, de transformation et de chargement (ETL).  
   

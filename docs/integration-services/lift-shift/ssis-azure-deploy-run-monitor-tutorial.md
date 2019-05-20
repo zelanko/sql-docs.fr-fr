@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 96a93c846fa2d958343d0fd3913e5710bd79e628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019510"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720861"
 ---
-# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Didacticiel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Ce tutoriel vous montre comment déployer un projet SQL Server Integration Services sur le catalogue SSIS dans Azure SQL Database, comment exécuter un package dans le runtime d’intégration Azure-SSIS et comment surveiller le package en cours d’exécution.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
