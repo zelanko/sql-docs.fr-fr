@@ -54,7 +54,7 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
   
  Uniquement un seul nom de colonne peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
   
- L’opérateur de comparaison pour le critère peut être »**>**« (supérieur à), »**\<**» (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), » <> » (différent de), ou « LIKE » (critères spéciaux).  
+ L’opérateur de comparaison pour le critère peut être "**>**" (supérieur à), "**\<**" (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), » <> » (différent de), ou « LIKE » (critères spéciaux).  
   
  La valeur du critère peut être une chaîne, un nombre à virgule flottante ou une date. Valeurs de chaîne sont délimitées par des guillemets simples ou « # » (signe dièse) (par exemple, « état = 'WA' » ou « état = #WA # »). Valeurs de date sont séparés par des signes « # » (signe dièse) (par exemple, « start_date > #7/22/97 # »).  
   

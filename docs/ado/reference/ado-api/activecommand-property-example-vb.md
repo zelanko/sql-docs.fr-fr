@@ -93,7 +93,7 @@ End Sub
   
  Le **ActiveCommandXprint** routine reçoit uniquement un **Recordset** de l’objet, mais elle doit imprimer le texte de la commande et le paramètre créé le **Recordset**. Cela est possible, car le **Recordset** l’objet **ActiveCommand** propriété produit associé [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
   
- Le **commande** l’objet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété génère la commande paramétrable qui a créé le **Recordset**. Le **commande** l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection génère la valeur qui a été remplacée par un espace réservé de paramètre de la commande («**?**»).  
+ Le **commande** l’objet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété génère la commande paramétrable qui a créé le **Recordset**. Le **commande** l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection génère la valeur qui a été remplacée par un espace réservé de paramètre de la commande ("**?**").  
   
  Enfin, un message d’erreur ou son nom et l’ID sont imprimés.  
   

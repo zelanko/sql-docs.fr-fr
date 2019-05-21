@@ -30,7 +30,7 @@ ms.locfileid: "62916234"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Texte du message|Impossible de créer le repère de plan ' %. \*%.*ls, car les indicateurs spécifiés dans `@hints` ne peut pas être appliqué à l’instruction spécifiée par `@stmt` ou `@statement_start_offset`. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
+|Texte du message|Impossible de créer le repère de plan ' %.\**ls, car les indicateurs spécifiés dans `@hints` ne peut pas être appliqué à l’instruction spécifiée par `@stmt` ou `@statement_start_offset`. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
   
 ## <a name="explanation"></a>Explication  
  Les indicateurs spécifiés dans `@hints` ne peuvent pas être appliqués à l'instruction spécifiée par `@stmt` ou `@statement_start_offset`.  

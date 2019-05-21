@@ -43,9 +43,9 @@ ms.locfileid: "63185893"
   
      Le volet **Données du graphique** s’ouvre.  
   
-6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
+6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs **+**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
   
-7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
+7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs **+**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
   
      En général, pour les graphiques sparkline et les barres de données, vous n’ajoutez pas de champ à la zone **Groupes de séries** car vous voulez une seule série pour chaque ligne.  
   

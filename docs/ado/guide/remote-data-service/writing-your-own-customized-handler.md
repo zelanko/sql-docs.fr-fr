@@ -32,7 +32,7 @@ Vous souhaiterez écrire votre propre gestionnaire si vous êtes un administrate
 ## <a name="idatafactoryhandler-interface"></a>String  
  Cette interface comporte deux méthodes, **GetRecordset** et **reconnexion**. Les deux méthodes requièrent que le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété être définie sur **adUseClient**.  
   
- Les deux méthodes acceptent des arguments qui apparaissent après la première virgule dans le «**gestionnaire =**« mot clé. Par exemple, `"Handler=progid,arg1,arg2;"` transmettra une chaîne d’argument `"arg1,arg2"`, et `"Handler=progid"` un argument null.  
+ Les deux méthodes acceptent des arguments qui apparaissent après la première virgule dans le "**gestionnaire =**" mot clé. Par exemple, `"Handler=progid,arg1,arg2;"` transmettra une chaîne d’argument `"arg1,arg2"`, et `"Handler=progid"` un argument null.  
   
 ## <a name="getrecordset-method"></a>Méthode GetRecordset  
  Cette méthode interroge la source de données et crée un nouveau [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet à l’aide des arguments fournis. Le **Recordset** doit être ouvert avec **adLockBatchOptimistic** et ne doit pas être ouvert de façon asynchrone.  
