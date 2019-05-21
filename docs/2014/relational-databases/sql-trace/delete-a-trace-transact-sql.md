@@ -28,9 +28,9 @@ ms.locfileid: "62714737"
   
 ### <a name="to-delete-a-trace"></a>Pour supprimer une trace  
   
-1.  Exécutez **sp_trace_setstatus** en spécifiant **@status= 0** pour arrêter la trace.  
+1.  Exécutez **sp_trace_setstatus** en spécifiant **\@status= 0** pour arrêter la trace.  
   
-2.  Exécutez **sp_trace_setstatus** en spécifiant **@status= 2** pour fermer la trace et supprimer du serveur les informations la concernant.  
+2.  Exécutez **sp_trace_setstatus** en spécifiant **\@status= 2** pour fermer la trace et supprimer du serveur les informations la concernant.  
   
 > [!NOTE]  
 >  Une trace doit d'abord être arrêtée avant d'être fermée.  

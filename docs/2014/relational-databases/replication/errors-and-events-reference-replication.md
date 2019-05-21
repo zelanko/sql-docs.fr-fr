@@ -28,11 +28,11 @@ ms.locfileid: "62721318"
   
 |Error|Message|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet '%1!' avec un index unique '%.\*ls'.|  
-|[MSSQL_ENG002627](mssql-eng002627.md)|Violation de %1! contrainte '%2!'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
+|[MSSQL_ENG002601](mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet ' %. * ls' avec un index unique ' %. \*%.*ls.|  
+|[MSSQL_ENG002627](mssql-eng002627.md)|Violation de %ls contrainte ' %. * ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|La base de données '%ls' a été restaurée ; cependant, une erreur est survenue lors de la restauration/suppression de la réplication. La base de données est restée hors ligne. Consultez la rubrique MSSQL_ENG003165 dans la documentation en ligne de SQL Server.|  
-|[MSSQL_ENG003724](mssql-eng003724.md)|Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.|  
-|[MSSQL_ENG004929](mssql-eng004929.md)|Impossible de modifier %1! '%2!' parce qu'elle est en cours d'édition pour la réplication.|  
+|[MSSQL_ENG003724](mssql-eng003724.md)|Impossible de % S_MSG % S_MSG ' %. * ls', car il est utilisé pour la réplication.|  
+|[MSSQL_ENG004929](mssql-eng004929.md)|Impossible de modifier le % S_MSG ' %. * ls', car elle est publiée pour la réplication.|  
 |MSSQL_ENG007395. Consultez [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Impossible pour le fournisseur OLE DB « %ls » du serveur lié « %ls » de démarrer une transaction imbriquée. Cette dernière est obligatoire, car l'option XACT_ABORT est définie à la valeur OFF.|  
 |[MSSQL_ENG014005](mssql-eng014005.md)|Impossible de supprimer la publication. Il existe un abonnement.|  
 |[MSSQL_ENG014010](mssql-eng014010.md)|Le serveur '%s' n'est pas défini comme serveur d'abonnements.|  

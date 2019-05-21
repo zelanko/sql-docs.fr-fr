@@ -14,24 +14,24 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 815822c983154d55cf67ec02475e81f33008d42e
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449681"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619601"
 ---
 # <a name="create-and-manage-role-assignments"></a>Créer et gérer des attributions de rôles
 
-Une *attribution de rôle* est une stratégie de sécurité qui détermine les autorisations d’un utilisateur ou d’un groupe. Les autorisations déterminent si l’utilisateur ou le groupe peut accéder à un élément de serveur de rapports spécifique ou effectuer une tâche. Elle se compose d'un seul nom de compte d'utilisateur ou de groupe et d'une ou de plusieurs définitions de rôles.
+Une *attribution de rôle* est une stratégie de sécurité qui détermine les autorisations d’un utilisateur ou d’un groupe. Les autorisations déterminent si l’utilisateur ou le groupe peut accéder ou modifier un élément de serveur de rapports spécifique ou effectuer une tâche. Elle se compose d'un seul nom de compte d'utilisateur ou de groupe et d'une ou de plusieurs définitions de rôles.
 
 Les attributions de rôles ont comme portée le *niveau élément* ou le *niveau système*.
 
-- Une attribution de rôle au niveau élément est créée dans le contexte d’un élément ou d’une branche spécifique de l’arborescence des dossiers sur le serveur de rapports. Vous naviguez jusqu'à un dossier ou un élément spécifique pour lui créer une attribution de rôle.
+- Une attribution de rôle au niveau élément est créée pour un élément ou une branche spécifique de l’arborescence des dossiers sur le serveur de rapports. Vous naviguez jusqu'à un dossier ou un élément spécifique pour lui créer une attribution de rôle.
 
 - Les attributions de rôles au niveau système permettent aux utilisateurs sélectionnés d’effectuer des tâches qui affectent le site du serveur de rapports dans son ensemble. Il s’agit notamment des tâches suivantes :
   - Création de planifications partagées
-  - Gestion de travaux
+  - la gestion des travaux
   - Traitement de rapports
   - Définition de propriétés
 
@@ -39,27 +39,23 @@ La sécurité au niveau système n’implique pas d’accès aux éléments de l
 
 ## <a name="creating-an-item-level-role-assignment"></a>Création d'une attribution de rôle au niveau élément
 
-Pour créer ou gérer des attributions de rôles, accédez au portail web. Ouvrez la page **Propriété de sécurité** de l’élément que vous souhaitez sécuriser.
-
-Vous pouvez créer une attribution de rôle distincte pour chaque compte d’utilisateur ou de groupe qui nécessite un accès au serveur de rapports. Si le compte se trouve sur un domaine autre que celui qui contient le serveur de rapports, incluez le nom de domaine. Après avoir spécifié un compte, vous choisissez une ou plusieurs définitions de rôles. Les définitions de rôles s'additionnent. L’ensemble combiné de toutes les tâches de toutes les définitions est pris en charge dans l’attribution relative à un utilisateur ou à un groupe spécifique.
+De là, vous pouvez créer une attribution de rôle distincte pour chaque compte d’utilisateur ou de groupe qui nécessite un accès au serveur de rapports. Si le compte se trouve sur un domaine autre que celui qui contient le serveur de rapports, incluez le nom de domaine. Après avoir spécifié un compte, vous choisissez une ou plusieurs définitions de rôles. Les définitions de rôles s'additionnent. L’ensemble combiné de toutes les tâches de toutes les définitions est pris en charge dans l’attribution relative à un utilisateur ou à un groupe spécifique.
 
 Pour activer un accès étendu, vous choisissez un élément qui est élevé dans la hiérarchie de dossiers (par exemple le dossier racine Accueil). Plus tard, vous pourrez créer des attributions de rôles pour verrouiller différentes zones spécifiques dans la hiérarchie de dossiers.
 
 Vous devez être membre du groupe local Administrateurs sur l'ordinateur serveur de rapports pour créer une attribution de rôle. Vous pouvez déléguer cette responsabilité en affectant d’autres utilisateurs au rôle **Gestionnaire de contenu** .
 
-Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)
+Pour créer ou gérer des attributions de rôles, ou pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)
   
 ## <a name="creating-a-system-level-role-assignment"></a>Création d'une attribution de rôle au niveau système
 
-Pour créer ou gérer une attribution de rôle au niveau système, accédez au portail web et ouvrez la page Paramètres du site.
+Les attributions de rôles au niveau système et au niveau élément sont compatibles. Vous pouvez créer une attribution de rôle au niveau système pour chaque utilisateur ou groupe qui possède une attribution de rôle au niveau élément.
 
-Les attributions de rôles au niveau système et au niveau élément sont compatibles. Vous devez créer une attribution de rôle au niveau système pour chaque utilisateur ou groupe qui a une attribution de rôle au niveau élément.
+Les attributions de rôles au niveau système incluent un large éventail d’autorisations, mais elles n’incluent pas les autorisations qui font partie d’une attribution de rôle au niveau élément.
 
-Les attributions de rôles au niveau système incluent un large éventail d’autorisations, mais elles n’incluent pas les autorisations qui font partie d’une attribution de rôle au niveau élément. 
+Contrairement aux autorisations système sur un ordinateur, les rôles système dans les serveurs de rapports n’accordent pas d’autorisations primordiales comprenant toutes les tâches possibles. Au lieu de cela, les attributions de rôles au niveau système sont simplement un ensemble des tâches dont la portée est le site du serveur de rapports. Les attributions de rôles système déterminent si les utilisateurs peuvent afficher les propriétés des applications (telles que l’image ou le titre de la page d’accueil), afficher ou gérer des planifications partagées, ou utiliser le Générateur de rapports.
 
-Contrairement aux autorisations système sur un ordinateur, les rôles système dans les serveurs de rapports n’accordent pas des autorisations primordiales qui incluent le jeu complet de toutes les tâches possibles. Au lieu de cela, les attributions de rôles au niveau système sont simplement un ensemble des tâches dont la portée est le site du serveur de rapports. Les attributions de rôles système déterminent si les utilisateurs peuvent afficher les propriétés des applications (telles que l’image ou le titre de la page d’accueil), afficher ou gérer des planifications partagées, ou utiliser le Générateur de rapports.
-
-Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports ](../../reporting-services/security/grant-user-access-to-a-report-server.md) et [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md).  
+Pour créer ou gérer une attribution de rôles au niveau système, ou pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md) et [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## <a name="modifying-a-role-assignment"></a>Modification d'une attribution de rôle
 
