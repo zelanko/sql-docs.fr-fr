@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - troubleshooting [SQL Server], full-text search
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 86a4aa126ef72425aa2e3c284a3762517d31222d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790027"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944279"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,17 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- DB_ID ('*database_name*»)  
+ db_id('*database_name*')  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de la base de données, ce qui **sys.dm_fts_index_keywords** utilise pour rechercher la base de données spécifié. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.  
   
- object_id («*table_name*»)  
+ object_id('*table_name*')  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Mot clé**|**nvarchar(4000)**|La représentation hexadécimale du mot clé stocké à l’intérieur de l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
+|**keyword**|**nvarchar(4000)**|La représentation hexadécimale du mot clé stocké à l’intérieur de l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
 |**display_term**|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format hexadécimal.<br /><br /> Remarque : Le **display_term** valeur de OxFF est « END OF FILE ».|  
 |**column_id**|**Int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |**document_count**|**Int**|Nombre de documents ou de lignes contenant le terme actuel.|  
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 > [!NOTE]  
 >  Le **document_count** retourné par **sys.dm_fts_index_keywords** peut être moins précis pour un document spécifique que le nombre retourné par **sys.dm_fts_index_keywords_by_document** ou un **CONTAINS** requête. Cette imprécision éventuelle est estimée inférieure à 1 %. Cette imprécision peut se produire, car un **document_id** risquent d’être comptées deux fois s’il tient sur plusieurs lignes dans le fragment d’index, ou lorsqu’il apparaît plusieurs fois dans la même ligne. Pour obtenir un nombre plus précis pour un document spécifique, utilisez **sys.dm_fts_index_keywords_by_document** ou un **CONTAINS** requête.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

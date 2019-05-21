@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560131"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949102"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Si une base de données n’est pas `ONLINE`, ou `AUTO_CLOSE` a la valeur `ON` e
 |**is_temporal_retention_enabled**|**bit**|Indique si la tâche de nettoyage de stratégie de rétention temporelle est activée.<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**Int**|Le paramètre de classement de catalogue :<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Le paramètre de classement de catalogue :<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**Int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**S’applique à** : Azure SQL Data Warehouse Gen2
+|**is_result_set_caching_on**|**Int**|1 = is_result_set_caching_on is on</br>0 = is_result_set_caching_on is off</br>**S’applique à** : Azure SQL Data Warehouse Gen2. Bien que cette fonctionnalité est déployée dans toutes les régions, veuillez vérifier la version déployée sur votre instance et la dernière version [notes de publication d’Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour la disponibilité des fonctionnalités.|
   
 ## <a name="permissions"></a>Autorisations  
  Si l’appelant de `sys.databases` n’est pas le propriétaire de la base de données et la base de données n’est pas `master` ou `tempdb`, les autorisations minimales requises pour consulter la ligne correspondante sont `ALTER ANY DATABASE` ou `VIEW ANY DATABASE` au niveau du serveur, ou `CREATE DATABASE` autorisation dans le `master` base de données. La base de données à laquelle l’appelant est connecté peut toujours être vue dans `sys.databases`.  

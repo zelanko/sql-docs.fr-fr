@@ -1,9 +1,8 @@
 ---
-title: Sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535296"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944233"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  Identificateur de paramètres régionaux (LCID) de l’analyseur lexical à utiliser pour l’analyse *query_string*.  
   
  *stoplist_id*  
- ID de la liste de mots vides, cas échéant, pour être utilisé par l’analyseur lexical identifié par *lcid*. *stoplist_id* est **int**. Si vous spécifiez 'NULL', aucune liste de mots vides n'est utilisée. Si vous spécifiez 0, la liste de mots vides système est utilisée.  
+ ID de la liste de mots vides, cas échéant, pour être utilisé par l’analyseur lexical identifié par *lcid*. *stoplist_id* est **int**. Si vous spécifiez 'NULL', aucune liste de mots vides n’est utilisé. Si vous spécifiez 0, la liste de mots vides système est utilisée.  
   
  Un ID de liste de mots vides est unique dans une base de données. Pour obtenir l’ID de liste de mots vides pour un index de recherche en texte intégral sur une table donnée, utilisez le [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) vue de catalogue.  
   
@@ -68,8 +68,8 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|mot clé|**varbinary(128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas lisible, mais il est utile de concernant un mot-clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d'un fichier ou d'un dataset.|  
-|group_id|**Int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1 : Serveur<br />2 : BdD<br />3: BdD|  
+|mot clé|**varbinary(128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas lisible, mais il est utile de concernant un mot-clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
+|group_id|**Int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1: Serveur<br />2: BdD<br />3: BdD|  
 |phrase_id|**Int**|Contient une valeur entière qui est utile pour différencier les cas dans lesquels les formes alternatives de mots composés, tels que le texte intégral, sont émises par l'analyseur lexical. Il peut arriver qu'en présence de mots composés (« multi-million ») des formes alternatives soient émises par l'analyseur lexical. Ces formes alternatives (expressions) doivent parfois être différenciées.<br /><br /> Par exemple, « `multi-million` » produit les valeurs phrase_id suivantes en anglais :<br /><br /> 1 pour `multi`<br />1 pour `million`<br />2 pour `multimillion`|  
 |occurrence|**Int**|Indique l'ordre de chaque terme dans le résultat de l'analyse. Par exemple, pour l'expression « `SQL Server query processor` », l'occurrence contiendrait les valeurs d'occurrence suivantes pour les termes de l'expression, en anglais :<br /><br /> 1 pour `SQL`<br />2 pour `Server`<br />3 pour `query`<br />4 pour `processor`|  
 |special_term|**nvarchar(4000)**|Contient des informations sur les caractéristiques du terme émis par l'analyseur lexical, informations qui peuvent être l'une des suivantes :<br /><br /> Concordance exacte<br /><br /> Mot parasite<br /><br /> Fin de phrase<br /><br /> Fin de paragraphe<br /><br /> Fin de chapitre|  
@@ -140,7 +140,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>b. Affichage de la sortie d'un analyseur lexical donné dans le contexte de filtrage de liste de mots vides  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>B. Affichage de la sortie d'un analyseur lexical donné dans le contexte de filtrage de liste de mots vides  
  L'exemple suivant retourne la sortie produite par l'analyseur lexical anglais, dont le LCID est 1033, utilisé avec une liste de mots vides anglaise, dont l'ID est 77, sur la chaîne de requête suivante :  
   
  `"The Microsoft business analysis" OR "MS revenue"`  

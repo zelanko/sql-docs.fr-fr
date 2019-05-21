@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860180"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945155"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutoriel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server
 
@@ -45,7 +45,7 @@ Utilisez les instructions suivantes pour charger l’exemple de fichier de bloc-
 1. Exécutez la commande suivante **curl** commande pour télécharger le fichier de bloc-notes à partir de GitHub :
 
    ```bash
-   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark-sql.ipynb' -o spark-sql.ipynb
+   curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
 ## <a name="open-the-notebook"></a>Ouvrir le bloc-notes
@@ -71,7 +71,7 @@ Vous pouvez exécuter chaque cellule du bloc-notes en appuyant sur le bouton de 
 Exécuter chacune des cellules dans l’exemple de notebook successivement. Pour plus d’informations sur l’utilisation de blocs-notes avec les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019](notebooks-guidance.md)
-- [Comment gérer des ordinateurs portables dans Azure Data Studio](notebooks-how-to-manage.md)
+- [Comment gérer des notebooks dans Azure Data Studio](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

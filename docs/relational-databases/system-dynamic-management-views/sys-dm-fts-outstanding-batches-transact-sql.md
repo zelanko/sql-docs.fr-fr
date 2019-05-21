@@ -1,10 +1,9 @@
 ---
-title: Sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.dm_fts_outstanding_batches dynamic management view
 ms.assetid: c4d697ed-c906-4c28-b137-036a25e13c84
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6903c5eeb18cad271eb6f9e7ba1671380112ebe9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3644e809910b2a7b54e1acc89c6dc667deb7c7cc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594663"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947242"
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47594663"
 |doc_failed|**bigint**|Nombre de documents ayant échoué dans le lot|  
 |batch_timestamp|**timestamp**|Valeur d'horodatage obtenue lorsque le lot a été créé|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
