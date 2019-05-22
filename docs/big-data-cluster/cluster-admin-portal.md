@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d54e74bb5956b569adb605a94a56dfeb00b040cd
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472134"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994098"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Comment utiliser le portail d’administration de cluster pour surveiller un cluster de données volumineux de SQL Server
 
@@ -38,7 +38,7 @@ Suivez le [Guide de démarrage rapide pour déployer votre cluster big data](qui
 Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’administration de cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `mgmtproxy-svc-external` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
 
 > [!NOTE]
-> 2.5 de CTP, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
+> Pour CTP 3.0, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
 
 ## <a name="overview"></a>Vue d'ensemble
 

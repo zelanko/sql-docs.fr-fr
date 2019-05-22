@@ -5,16 +5,16 @@ description: Article de référence pour les commandes de mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ebd3b63d641c77dae1afbff21264ec4fe34df4d0
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: dd9248c059cb4179bca7953e8a7d5bf721892fb8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775499"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993321"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -27,36 +27,38 @@ L’article suivant fournit la référence pour le **mssqlctl** outil pour [clus
 | --- | --- |
 |[mssqlctl app](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 |[mssqlctl cluster](reference-mssqlctl-cluster.md) | Sélectionnez, gérer et exploiter des clusters. |
-[mssqlctl login](#mssqlctl-login) | Connectez-vous au cluster.
+[mssqlctl login](#mssqlctl-login) | Connectez-vous au point de terminaison de contrôleur du cluster.
 [déconnexion de mssqlctl](#mssqlctl-logout) | Se déconnecter de cluster.
-|[stockage de mssqlctl](reference-mssqlctl-storage.md) | Gérer le stockage de cluster. |
 ## <a name="mssqlctl-login"></a>mssqlctl login
-Connectez-vous au cluster.
+Lorsque votre cluster est déployé, il répertorie le point de terminaison du contrôleur au cours du déploiement, vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez la connexion en utilisant la configuration de kube de votre cluster sur votre système dans l’emplacement par défaut de <user home>/.kube/config ou utiliser le var env KUBECONFIG, par exemple, exporter KUBECONFIG=path/to/.kube/config.
 ```bash
-mssqlctl login [--username -u] 
-               [--password -p]  
-               [--endpoint -e]
+mssqlctl login [--cluster-name -n] 
+               [--controller-username -u]  
+               [--controller-endpoint -e]  
+               [--accept-eula -a]
 ```
 ### <a name="examples"></a>Exemples
-Connectez-vous de manière interactive.
+Connectez-vous de manière interactive. Nom du cluster est toujours invité à indiquer si n’est pas spécifié en tant qu’argument. Si vous avez les variables env CONTROLLER_USERNAME, CONTROLLER_PASSWORD et ACCEPT_EULA sur votre système, ces pas demandera. Si vous avez la configuration de kube sur votre système ou que vous utilisez le var env KUBECONFIG pour spécifier le chemin d’accès à la configuration, l’expérience interactive tente tout d’abord utiliser la configuration et vous demande si la configuration échoue.
 ```bash
 mssqlctl login
 ```
-Connectez-vous avec le nom d’utilisateur et mot de passe.
+Se connecter (en mode non interactif). Connectez-vous avec le nom du cluster, nom d’utilisateur de contrôleur, point de terminaison de contrôleur et l’acceptation du CLUF défini en tant qu’arguments. La variable d’environnement CONTROLLER_PASSWORD doit être définie.  Si vous ne souhaitez pas spécifier le point de terminaison du contrôleur, demandez à la configuration de kube sur votre ordinateur dans l’emplacement par défaut de <user home>/.kube/config ou utiliser le var env KUBECONFIG, par exemple, exporter KUBECONFIG=path/to/.kube/config.
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret
+mssqlctl login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
-Connectez-vous avec nom d’utilisateur, mot de passe et le point de terminaison de cluster.
+Connectez-vous avec le fichier de configuration kube sur l’ordinateur et var env définie pour CONTROLLER_USERNAME, CONTROLLER_PASSWORD et ACCEPT_EULA.
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
+mssqlctl login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--username -u`
-Compte d’utilisateur.
-#### `--password -p`
-Informations d’identification de mot de passe.
-#### `--endpoint -e`
-Cluster hôte et le port (ex) « http://host:port».
+#### `--cluster-name -n`
+Nom du cluster.
+#### `--controller-username -u`
+Compte d’utilisateur. Si vous ne souhaitez pas utiliser cette arg, vous pouvez définir la variable d’environnement CONTROLLER_USERNAME.
+#### `--controller-endpoint -e`
+Point de terminaison de contrôleur de cluster « https://host:port». Si vous ne souhaitez pas utiliser cette arg, vous pouvez utiliser la configuration de kube sur votre ordinateur. Vérifiez que la configuration se trouve à l’emplacement par défaut de <user home>/.kube/config ou utilisez le KUBECONFIG env-var.
+#### `--accept-eula -a`
+Acceptez-vous les termes du contrat de licence ? Oui/non. Si vous ne souhaitez pas utiliser cette arg, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « Oui »
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmente le détail de journalisation pour afficher que tous les journaux de débogage.

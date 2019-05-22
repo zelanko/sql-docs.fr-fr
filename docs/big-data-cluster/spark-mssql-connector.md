@@ -5,22 +5,22 @@ description: Découvrez comment utiliser le connecteur Spark MSSQL dans Spark po
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759216"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994190"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
 Un modèle d’utilisation de clé de données volumineuses est le traitement de données de volume élevé dans Spark, suivie de l’écriture des données dans SQL Server pour l’accès à line of business applications. Ces modèles d’utilisation bénéficient d’un connecteur qui utilise des clés optimisations de SQL et fournit un mécanisme efficace d’écriture.
 
-Avec les Clusters de données Big CTP2.5 fournit un nouveau connecteur MSSQL Spark qui utilise SQL Server en bloc écrire des API pour une performante Spark à l’écriture SQL. Cet article fournit un exemple montrant comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL. Dans cet exemple, les données sont lues à partir de HDFS dans un cluster de données volumineuses, traitées par Spark et ensuite écrites dans l’instance principale de SQL Server dans le cluster en utilisant le nouveau connecteur MSSQL Spark.
+Les Clusters de données volumineuses fournit un nouveau connecteur MSSQL Spark qui utilise SQL Server en bloc écrire des API pour une performante Spark à l’écriture SQL. Cet article fournit un exemple montrant comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL. Dans cet exemple, les données sont lues à partir de HDFS dans un cluster de données volumineuses, traitées par Spark et ensuite écrites dans l’instance principale de SQL Server dans le cluster en utilisant le nouveau connecteur MSSQL Spark.
 
 ## <a name="mssql-spark-connector-interface"></a>Interface de connecteur Spark MSSQL
 

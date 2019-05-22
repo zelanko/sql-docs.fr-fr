@@ -1,7 +1,7 @@
 ---
 title: Sys.dm_db_resource_stats (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/21/2019
+ms.date: 05/21/2019
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f3b8defbb43cd07afe38915c6a0c14cb226fbf2c
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58325502"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993887"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,10 @@ ms.locfileid: "58325502"
 |max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
 |dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
 |cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Base de données l’utilisation du processeur en pourcentage moyen.|
+|avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de base de données de mémoire en pourcentage.|
+|avg_login_rate_percent|**decimal (5,2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
+|replica_role|**Int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
 |||
   
 > [!TIP]  

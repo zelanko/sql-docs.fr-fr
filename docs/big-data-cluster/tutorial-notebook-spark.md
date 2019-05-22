@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2452651fde63b08483e238d900ec82f3a93c146e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945155"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994144"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutoriel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server
 
@@ -52,7 +52,7 @@ Utilisez les instructions suivantes pour charger l’exemple de fichier de bloc-
 
 Les étapes suivantes montrent comment ouvrir le fichier de bloc-notes dans Azure Data Studio :
 
-1. Dans Azure Data Studio, connectez-vous à la passerelle HDFS/Spark de votre cluster big data. Pour plus d’informations, consultez [se connecter à la passerelle HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+1. Dans Azure Data Studio, connectez-vous à l’instance principale de votre cluster big data. Pour plus d’informations, consultez [se connecter à un cluster de données volumineux](connect-to-big-data-cluster.md).
 
 1. Double-cliquez sur la connexion de passerelle HDFS/Spark dans le **serveurs** fenêtre. Puis sélectionnez **ouvrir le bloc-notes**.
 

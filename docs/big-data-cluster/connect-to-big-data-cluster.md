@@ -5,30 +5,22 @@ description: Découvrez comment vous connecter à l’instance principale de SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774659"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994053"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Cet article décrit comment se connecter à un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à partir d’Azure Data Studio. Il existe deux points de terminaison principales qui servent à interagir avec un cluster de données volumineuses :
-
-| Point de terminaison | Description |
-|---|---|
-| Instance de SQL Server Master | L’instance principale de SQL Server dans le cluster contenant les bases de données relationnelles SQL Server. |
-| Passerelle HDFS/Spark | Accès au stockage HDFS du cluster et la possibilité d’exécuter des tâches Spark. |
-
-> [!TIP]
-> Avec la version de février 2019 de Studio de données Azure, se connecter automatiquement à l’instance principale de SQL Server fournit l’accès de l’interface utilisateur à la passerelle HDFS/Spark.
+Cet article décrit comment se connecter à un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à partir d’Azure Data Studio.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -72,37 +64,6 @@ Avec la version de février 2019 de Studio de données Azure, se connecter à l�
 - Le **tableau de bord Server** pour la connexion contient également des onglets pour **cluster de données volumineux de SQL Server** et **SQL Server 2019 (version préliminaire)** lorsque l’extension est installée.
 
    ![Nœud des Services de données Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> Si vous voyez **erreur inconnue** dans l’interface utilisateur, vous devrez peut-être [vous connecter directement à la passerelle HDFS/Spark](#hdfs). Une des causes de cette erreur sont des mots de passe différents pour l’instance principale de SQL Server et de la passerelle HDFS/Spark. Azure Data Studio part du principe que le mot de passe est utilisé pour les deux.
-  
-## <a id="hdfs"></a> Se connecter à la passerelle HDFS/Spark
-
-Dans la plupart des cas, connexion à l’instance principale de SQL Server vous permet d’accéder au HDFS et Spark également via le **Data Services** nœud. Toutefois, vous pouvez toujours de créer une connexion dédiée à la **passerelle HDFS/Spark** si nécessaire. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
-
-1. À partir de la ligne de commande, recherchez l’adresse IP de votre passerelle HDFS/Spark avec l’une des commandes suivantes.
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
-
-1. Dans **type de connexion**, sélectionnez **cluster de données volumineux de SQL Server**.
-
-   > [!TIP]
-   > Si vous ne voyez pas le **cluster de données volumineux de SQL Server** connexion type, assurez-vous que vous avez installé le [extension de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) et que vous avez redémarré Azure Data Studio après l’extension terminée l’installation.
-
-1. Tapez l’adresse IP du cluster big data dans **nom_serveur** (ne spécifiez pas de port).
-
-1. Entrez `root` pour le **utilisateur** et spécifiez le **mot de passe** à votre cluster big data.
-
-   ![Se connecter à HDFS/Spark passerelle](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > Par défaut, le nom d’utilisateur est **racine** et le mot de passe correspond à la **KNOX_PASSWORD** variable d’environnement utilisée au cours du déploiement.
-
-1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -3,17 +3,17 @@ title: Installer de nouveaux packages de langage R - Services de SQL Server Mach
 description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f443113222181f0909bd72048e3c3f5c739df4ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8c935400188ae6905a9915907fb097d02100ad2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506927"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994206"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installer de nouveaux packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +30,7 @@ Cet article décrit comment installer de nouveaux packages R à une instance de 
 
 La bibliothèque de packages R se trouve physiquement dans le dossier Program Files de votre instance de SQL Server, dans un dossier sécurisé avec un accès restreint. L’écriture à cet emplacement nécessite des autorisations d’administrateur.
 
-Non, les administrateurs peuvent installer des packages, mais cela requiert complétez configuration et fonctionnalité non disponible dans les installations initiales. Il existe deux approches pour les installations de package non administrateur : RevoScaleR à l’aide de la version 9.0.1 et version ultérieure, ou en utilisant CREATE EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur avec l’autorisation de créer une bibliothèque externe peut installer des packages R à la base de données actuelle.
+Non, les administrateurs peuvent installer des packages, mais cela requiert une configuration supplémentaire et fonctionnalité non disponible dans les installations initiales. Il existe deux approches pour les installations de package non administrateur : RevoScaleR à l’aide de la version 9.0.1 et version ultérieure, ou en utilisant CREATE EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur avec l’autorisation de créer une bibliothèque externe peut installer des packages R à la base de données actuelle.
 
 R développeurs sont habitués à créer des bibliothèques utilisateur pour les packages que dont ils ont besoin si les bibliothèques centralisées sont hors d’atteinte. Cette pratique est problématique pour le code R exécuté dans une instance du moteur de base de données SQL Server. SQL Server ne peut pas charger des packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Uniquement les packages à partir de la bibliothèque d’instance peuvent être utilisés dans le code R dans SQL Server.
 
@@ -41,7 +41,6 @@ Accès au système de fichiers est généralement limité sur le serveur, et mê
 Avant d’installer de nouveaux packages, vérifiez si les fonctionnalités activées par un package donné sont appropriées dans un environnement SQL Server. Dans un environnement sécurisé de manière renforcé de SQL Server, vous souhaiterez sans doute éviter les éléments suivants :
 
 + Packages qui nécessitent un accès réseau
-+ Packages qui nécessitent Java ou autres frameworks généralement pas utilisés dans un environnement de SQL Server
 + Packages qui nécessitent un accès de système de fichier avec élévation de privilèges
 + Package est utilisé pour le développement web ou d’autres tâches qui ne bénéficient pas en cours d’exécution à l’intérieur de SQL Server
 
@@ -51,7 +50,7 @@ En général, les serveurs qui hébergent les bases de données de production bl
 
 Identifier toutes les dépendances se complique. Pour R, nous vous recommandons d’utiliser [miniCRAN pour créer un référentiel local](create-a-local-package-repository-using-minicran.md) , puis transférer le référentiel entièrement défini à une instance de SQL Server isolée.
 
-Également, vous pouvez effectuer cette procédure manuellement :
+Vous pouvez également effectuer ces étapes manuellement :
 
 1. Identifier toutes les dépendances de package. 
 2. Vérifiez si tous les packages requis sont déjà installés sur le serveur. Si le package est installé, vérifiez que la version est correcte.

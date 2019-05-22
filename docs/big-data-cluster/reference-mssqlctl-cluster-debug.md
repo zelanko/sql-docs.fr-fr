@@ -5,16 +5,16 @@ description: Article de référence pour les commandes de débogage de cluster m
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774860"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993661"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Débogage de cluster mssqlctl
 
@@ -28,7 +28,7 @@ L’article suivant fournit la référence pour le **débogage de cluster** comm
 [mssqlctl cluster debug copy-logs](#mssqlctl-cluster-debug-copy-logs) | Copier les journaux.
 [mssqlctl cluster debug dump](#mssqlctl-cluster-debug-dump) | Vidage de journalisation de déclencheur.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>mssqlctl cluster debug copy-logs
-Copier les journaux de débogage à partir du cluster.
+Copier les journaux de débogage à partir du cluster : configuration de kube est requis sur votre système.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath
 #### `--verbose`
 Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
 ## <a name="mssqlctl-cluster-debug-dump"></a>vidage du débogage mssqlctl cluster
-Déclencher le vidage de la journalisation et les copier à partir du conteneur.
+Déclencher le vidage de la journalisation et le copier à partir du conteneur : configuration de kube est requis sur votre système.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

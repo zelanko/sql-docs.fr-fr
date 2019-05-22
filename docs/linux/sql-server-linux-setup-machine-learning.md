@@ -1,35 +1,35 @@
 ---
-title: Installer SQL Server Machine Learning Services (R, Python, Java) sur Linux | Microsoft Docs
-description: Découvrez comment installer SQL Server Machine Learning Services (R, Python, Java) sur Red Hat et Ubuntu.
-author: HeidiSteen
-ms.author: heidist
+title: Installer SQL Server Machine Learning Services (R, Python) sur Linux | Microsoft Docs
+description: Découvrez comment installer SQL Server Machine Learning Services (R, Python) sur Red Hat, Ubuntu et SUSE.
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85700f287b3725895fc3ca170fd182353a259737
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2232d56141984d03224967043f1977d178952bd1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190386"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993438"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-java-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python, Java) sur Linux
+# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python) sur Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) s’exécute sur les systèmes d’exploitation Linux à partir de cette version préliminaire de SQL Server 2019. Suivez les étapes décrites dans cet article pour installer l’extension de programmation Java, ou les extensions d’apprentissage pour R et Python. 
+[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) s’exécute sur les systèmes d’exploitation Linux à partir de cette version préliminaire de SQL Server 2019. Suivez les étapes décrites dans cet article pour installer les extensions d’apprentissage pour R et Python. 
 
 Machine learning et extensions de programmation est un module complémentaire pour le moteur de base de données. Bien que vous puissiez [installer le moteur de base de données et les Services Machine Learning simultanément](#install-all), il est recommandé d’installer et configurer le moteur de base de données SQL Server tout d’abord, afin que vous pouvez résoudre les problèmes avant d’ajouter plus d’informations composants. 
 
-Emplacement du package pour les extensions R, Python et Java se trouvent dans les référentiels de code source SQL Server Linux. Si vous avez configuré déjà des référentiels de code source pour l’installation du moteur de base de données, vous pouvez exécuter la **mssql-mlservices** commandes d’installation à l’aide de la même inscription de référentiel de package.
+Emplacement du package pour les extensions R et Python se trouvent dans les référentiels de code source SQL Server Linux. Si vous avez configuré déjà des référentiels de code source pour l’installation du moteur de base de données, vous pouvez exécuter la **mssql-mlservices** commandes d’installation à l’aide de la même inscription de référentiel de package.
 
 Services machine Learning est également pris en charge sur les conteneurs Linux. Nous ne fournissons pas de conteneurs prédéfinis à Machine Learning Services, mais vous pouvez en créer un à partir des conteneurs SQL Server à l’aide de [un exemple de modèle disponible sur GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
 ## <a name="uninstall-previous-ctp"></a>Désinstaller la version CTP précédente
 
-La liste des packages a changé au CTP versions antérieures, ce qui entraîne moins de packages. Nous vous recommandons de désinstallation de CTP 2.x pour supprimer tous les packages précédentes avant d’installer la version CTP 2.4. Installation côte à côte de plusieurs versions n’est pas pris en charge.
+La liste des packages a changé au CTP versions antérieures, ce qui entraîne moins de packages. Nous vous recommandons de désinstallation de CTP 2.x pour supprimer tous les packages précédentes avant d’installer la version CTP 3.0. Installation côte à côte de plusieurs versions n’est pas pris en charge.
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmer l’installation du package
 
@@ -45,15 +45,14 @@ Désinstallez au niveau du package le plus bas. N’importe quel package amont d
 
   + Pour l’intégration de R, supprimer **microsoft-r-open***
   + Pour l’intégration de Python, supprimer **mssql-mlservices-python**
-  + Pour l’intégration de Java, vous devez supprimer **mssql-server-extensibilité-java**
 
 Commandes de suppression de packages apparaissent dans le tableau suivant.
 
 | Plateforme  | Commandes de suppression de package | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python`<br/>`sudo yum remove msssql-server-extensibility-java` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python`<br/>`sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`<br/>`sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
 > Microsoft R Open est composée de trois packages. Si un de ces packages restent après la suppression de microsoft-r-open-mro-3.4.4, vous devez les supprimer individuellement.
@@ -63,7 +62,7 @@ Commandes de suppression de packages apparaissent dans le tableau suivant.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-24-install"></a>3. Poursuivre l’installation du CTP 2.4
+### <a name="3-proceed-with-ctp-30-install"></a>3. Poursuivre l’installation de la version CTP 3.0
 
 Installez au niveau du package le plus élevé en suivant les instructions dans cet article pour votre système d’exploitation.
 
@@ -169,8 +168,7 @@ Sur un appareil connecté à internet, les packages sont téléchargés et insta
 
 | Nom du package | Applies-to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Infrastructure d’extensibilité permettant d’exécuter le code R, Python ou Java. |
-|mssql-server-extensibility-java | Java | Extension de Java pour le chargement d’un environnement d’exécution Java. Il n’existe aucune des bibliothèques supplémentaires ou des packages pour Java. |
+|mssql-server-extensibility  | All | Infrastructure d’extensibilité utilisé pour exécuter du code R et Python. |
 | microsoft-openmpi  | Python, R | Message passant interface utilisée par les bibliothèques Revo * pour la parallélisation sur Linux. |
 | mssql-mlservices-python | Python | Distribution Open source d’Anaconda et Python. |
 |mssql-mlservices-mlm-py  | Python | *Installation complète*. Fournit des revoscalepy, microsoftml, de modèles pour l’analyse de sentiments de caractérisation et texte image préformés.| 
@@ -183,7 +181,7 @@ Sur un appareil connecté à internet, les packages sont téléchargés et insta
 
 <a name="RHEL"></a>
 
-## <a name="rhel-commands"></a>Commandes RHEL
+## <a name="redhat-commands"></a>Commandes de Red Hat
 
 Vous pouvez installer la prise en charge linguistique dans la combinaison, vous avez besoin (un ou plusieurs langages). Pour R et Python, il existe deux packages sélectionnables. Un fournit toutes les fonctionnalités disponibles, caractérisées par le *installation complète*. Le choix autre exclut les modèles d’apprentissage préformés et est considéré comme le *installation minimale*.
 
@@ -192,28 +190,26 @@ Vous pouvez installer la prise en charge linguistique dans la combinaison, vous 
 
 ### <a name="example-1----full-installation"></a>Exemple 1 : installation complète 
 
-Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python, Java), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
+Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # Be sure to include -9.4.6* in mlsservices package names
 sudo yum install mssql-mlservices-mlm-py-9.4.6*
 sudo yum install mssql-mlservices-mlm-r-9.4.6* 
-sudo yum install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>Exemple 2 : installation minimale 
 
-Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python et l’extension de Java. Exclut les modèles préformés.
+Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python. Exclut les modèles préformés.
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java extensions
+# Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
 sudo yum install mssql-mlservices-packages-py-9.4.6*
 sudo yum install mssql-mlservices-packages-r-9.4.6*
-sudo yum install mssql-server-extensibility-java
 ```
 
 <a name="ubuntu"></a>
@@ -237,28 +233,26 @@ dpkg -i libpng12-0_1.2.54-1ubuntu1_amd64.deb
 
 ### <a name="example-1----full-installation"></a>Exemple 1 : installation complète 
 
-Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python, Java), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
+Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # There is no asterisk in this full install
 sudo apt-get install mssql-mlservices-mlm-py 
 sudo apt-get install mssql-mlservices-mlm-r 
-sudo apt-get install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>Exemple 2 : installation minimale 
 
-Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python et l’extension de Java. Exclut les modèles préformés. 
+Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python. Exclut les modèles préformés. 
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java
+# Minimum install of R, Python
 # No aasterisk
 sudo apt-get install mssql-mlservices-packages-py
 sudo apt-get install mssql-mlservices-packages-r
-sudo apt-get install mssql-server-extensibility-java
 ```
 
 <a name="suse"></a>
@@ -269,28 +263,26 @@ Vous pouvez installer la prise en charge linguistique dans la combinaison, vous 
 
 ### <a name="example-1----full-installation"></a>Exemple 1 : installation complète 
 
-Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python, Java), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
+Inclut open source R et Python, infrastructure d’extensibilité, de microsoft-openmpi, extensions (R, Python), avec les bibliothèques machine learning et modèles préentraînés pour R et Python. 
 
 ```bash
 # Install as root or sudo
-# Add everything (all R, Python, Java)
+# Add everything (all R, Python)
 # Be sure to include -9.4.6* in mlsservices package names
 sudo zypper install mssql-mlservices-mlm-py-9.4.6*
 sudo zypper install mssql-mlservices-mlm-r-9.4.6* 
-sudo zypper install mssql-server-extensibility-java
 ```
 
 ### <a name="example-2---minimum-installation"></a>Exemple 2 : installation minimale 
 
-Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python et l’extension de Java. Exclut les modèles préformés. 
+Inclut open source R et Python, infrastructure d’extensibilité, microsoft openmpi, Revo * bibliothèques principales et bibliothèques machine learning pour R et Python. Exclut les modèles préformés. 
 
 ```bash
 # Install as root or sudo
-# Minimum install of R, Python, Java extensions
+# Minimum install of R, Python extensions
 # Be sure to include -9.4.6* in mlsservices package names
 sudo zypper install mssql-mlservices-packages-py-9.4.6*
 sudo zypper install mssql-mlservices-packages-r-9.4.6*
-sudo zypper install mssql-server-extensibility-java
 ```
 
 ## <a name="post-install-config-required"></a>Configuration de post-installation (obligatoire)
@@ -351,8 +343,6 @@ Vous trouverez les bibliothèques R (MicrosoftML, RevoScaleR, etc.) dans `/opt/m
 
 Vous trouverez les bibliothèques Python (microsoftml et revoscalepy) dans `/opt/mssql/mlservices/libraries/PythonServer`.
 
-Intégration des fonctionnalités Java n’inclut pas les bibliothèques, mais vous pouvez exécuter `grep -r JAVA_HOME /etc` pour confirmer la création de la variable d’environnement JAVA_HOME.
-
 Pour valider l’installation, exécutez un script T-SQL qui exécute une procédure stockée système appel R ou Python. Vous aurez besoin un outil de requête pour cette tâche. Azure Data Studio est un bon choix. Autres outils couramment utilisés tels que SQL Server Management Studio ou PowerShell sont Windows uniquement. Si vous avez un ordinateur Windows grâce à ces outils, utilisez-le pour vous connecter à votre installation de Linux du moteur de base de données.
 
 Exécutez la commande SQL suivante pour tester l’exécution de R dans SQL Server. Si le script ne s’exécute pas, essayez de redémarrage d’un service, `sudo systemctl restart mssql-server.service`.
@@ -384,22 +374,22 @@ GO
 
 ## <a name="chained-combo-install"></a>Chaînées « zone de liste déroulante » installer
 
-Vous pouvez installer et configurer le moteur de base de données et les Services Machine Learning dans une procédure en ajoutant des packages R, Python ou Java et des paramètres sur une commande qui installe le moteur de base de données. 
+Vous pouvez installer et configurer le moteur de base de données et les Services Machine Learning dans une procédure en ajoutant des packages R ou Python et des paramètres sur une commande qui installe le moteur de base de données. 
 
 1. Pour l’intégration de R, installez [Microsoft R Open](#mro) comme condition préalable. Ignorez cette étape si vous n’installez pas la fonctionnalité R.
 
 2. Fournir une ligne de commande qui inclut le moteur de base de données, ainsi que les fonctionnalités d’extension de langage.
 
-  Vous pouvez ajouter une fonctionnalité unique, tels que Java installer integration, un moteur de base de données.
+  Vous pouvez ajouter une fonctionnalité unique, tels que Python, installer l’intégration, un moteur de base de données.
 
   ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java 
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* 
   ```
 
-  Ou bien, ajoutez toutes les extensions (Java, R, Python).
+  Ou bien, ajoutez les deux extensions (R, Python).
 
   ```bash
-  sudo yum install -y mssql-server mssql-server-extensibility-java mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
+  sudo yum install -y mssql-server mssql-mlservices-packages-r-9.4.6* mssql-mlservices-packages-py-9.4.6*
   ```
 
 3. Accepter les contrats de licence et terminer la configuration de post-installation. Utilisez le **mssql-conf** outil pour cette tâche.
@@ -438,7 +428,7 @@ Suivez le [installation hors connexion](sql-server-linux-setup.md#offline) obten
 
 #### <a name="download-site"></a>Site de téléchargement
 
-Vous pouvez télécharger des packages à partir de [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Tous les packages mlservices pour R, Python et Java sont colocalisés avec le package du moteur de base de données. Version de base pour les packages mlservices est 9.4.5 (pour CTP 2.0) 9.4.6 (CTP 2.1 et versions ultérieures). Souvenez-vous que les packages microsoft-r-open se trouvent dans un [autre dépôt](#mro).
+Vous pouvez télécharger des packages à partir de [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Tous les packages mlservices pour R et Python sont colocalisés avec le package du moteur de base de données. Version de base pour les packages mlservices est 9.4.5 (pour CTP 2.0) 9.4.6 (CTP 2.1 et versions ultérieures). Souvenez-vous que les packages microsoft-r-open se trouvent dans un [autre dépôt](#mro).
 
 #### <a name="rhel7-paths"></a>Chemins d’accès RHEL/7
 
@@ -471,9 +461,6 @@ Selon les extensions que vous souhaitez utiliser, télécharger les packages né
 mssql-server-15.0.1000
 mssql-server-extensibility-15.0.1000
 
-# Java
-mssql-server-extensibility-java-15.0.1000
-
 # R
 microsoft-openmpi-3.0.0
 microsoft-r-open-foreachiterators-3.4.4
@@ -490,17 +477,6 @@ mssql-mlservices-packages-py-9.4.6.523
 mssql-mlservices-mlm-py-9.4.6.523
 mssql-mlservices-mml-py-9.4.6.523
 ```
-
-#### <a name="package-list-for-original-ctp-20-and-21"></a>Liste des packages d’origine CTP 2.0 et 2.1
-
-Supprime de la CTP 2.2 **mssql-mlservices-mlm-py** et **mssql-mlservices-mlm-r** grâce à la consolidation de package dans **mssql-mlservices-packages-py** et **mssql-mlservices-packages-r**, respectivement.
-
-Si vous avez besoin en particulier le CTP 2.0 d’origine ou 2.1 packages, téléchargez les packages suivants :
-
-* Pour CTP 2.0, téléchargez les versions de package 9.4.5
-
-* Pour CTP 2.1, téléchargez les versions de package 9.4.6.237
-
 
 ## <a name="add-more-rpython-packages"></a>Ajoutez d’autres packages R/Python 
  
@@ -551,11 +527,9 @@ Vous pouvez installer d’autres packages R et Python et les utiliser dans un sc
 
 ## <a name="limitations-in-ctp-releases"></a>Limitations dans les versions CTP
 
-Intégration de R, Python et Java sur Linux est toujours en cours de développement. Les fonctionnalités suivantes ne sont pas encore disponibles dans la version d’évaluation.
+Intégration de R et Python sur Linux est toujours en cours de développement. Les fonctionnalités suivantes ne sont pas encore disponibles dans la version d’évaluation.
 
 + Actuellement, l’authentification implicite n’est pas disponible dans Machine Learning Services sur Linux pour l’instant, ce qui signifie que vous ne peut pas se connecter au serveur à partir d’un script en cours d’exécution de R ou Python pour accéder aux données ou autres ressources. 
-
-+ [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) (pour le stockage des packages R dans la base de données) n’est actuellement pas disponible sur Linux et ne prend pas en charge Python.  
 
 ### <a name="resource-governance"></a>Gouvernance des ressources
 

@@ -5,16 +5,16 @@ description: Article de référence pour les commandes de cluster mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3a4693c5ffb68ad555d97d02f983fadf4e6bbd9a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 984a3c50ac691df3759edc161baabc533bd9456f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774666"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993333"
 ---
 # <a name="mssqlctl-cluster-config"></a>Configuration de cluster mssqlctl
 
@@ -25,22 +25,26 @@ L’article suivant fournit la référence pour le **cluster config** commandes 
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl cluster config get](#mssqlctl-cluster-config-get) | Obtenir la configuration de cluster - kube config est requis sur votre système.
-[mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initialise une configuration de cluster.
+[afficher de configuration de cluster mssqlctl](#mssqlctl-cluster-config-show) | Obtient la configuration actuelle de SQL Server Big Data du Cluster.
+[mssqlctl cluster config init](#mssqlctl-cluster-config-init) | Initialise de créer un profil de configuration de cluster qui peut être utilisé avec le cluster.
 [mssqlctl cluster config list](#mssqlctl-cluster-config-list) | Répertorie les options de fichier de configuration disponibles.
-[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commandes pour travailler avec des sections individuelles du fichier de configuration.
-## <a name="mssqlctl-cluster-config-get"></a>mssqlctl cluster config get
-Obtient le fichier de configuration SQL Server Big Data du Cluster actuel.
+[mssqlctl cluster config section](reference-mssqlctl-cluster-config-section.md) | Commandes pour travailler avec des sections individuelles du fichier de configuration du cluster.
+## <a name="mssqlctl-cluster-config-show"></a>afficher de configuration de cluster mssqlctl
+Obtient le fichier de configuration SQL Server Big Data du Cluster actuel et sort dans le fichier cible ou assez l’imprime sur la console.
 ```bash
-mssqlctl cluster config get --name -n 
-                            [--output-file -f]
+mssqlctl cluster config show [--target -t] 
+                             [--force -f]
 ```
-### <a name="required-parameters"></a>Paramètres obligatoires
-#### `--name -n`
-Nom du cluster, utilisé pour l’espace de noms kubernetes.
+### <a name="examples"></a>Exemples
+Afficher la configuration de cluster dans votre console
+```bash
+mssqlctl cluster config show
+```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--output-file -f`
+#### `--target -t`
 Fichier de sortie pour stocker le résultat dans. Par défaut : dirigé vers stdout.
+#### `--force -f`
+Forcer le remplacement du fichier cible.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
@@ -53,16 +57,28 @@ Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath
 #### `--verbose`
 Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
 ## <a name="mssqlctl-cluster-config-init"></a>mssqlctl cluster config init
-Initialise un fichier de configuration de cluster pour l’utilisateur en fonction du type spécifié par défaut.
+Initialise de créer un profil de configuration de cluster qui peut être utilisé avec le cluster. La source du profil de configuration spécifique peut être spécifiée dans les arguments à partir de 3 choix.
 ```bash
 mssqlctl cluster config init [--target -t] 
-                             [--src -s]
+                             [--src -s]  
+                             [--force -f]
+```
+### <a name="examples"></a>Exemples
+Guider cluster config init - vous allez recevoir des invites pour les valeurs nécessaires.
+```bash
+mssqlctl cluster config init
+```
+Init config avec des arguments d’un cluster, crée un profil de configuration d’ACS-dev-test dans. / custom.json.
+```bash
+mssqlctl cluster config init --src aks-dev-test.json --target custom.json
 ```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
 #### `--target -t`
-Chemin d’accès de l’endroit où vous souhaitez que le fichier de configuration placées, par défaut, cwd avec personnalisé-config.JSON.
+Chemin d’accès de l’emplacement où vous souhaitez le profil de configuration placées, par défaut, cwd avec personnalisé-config.JSON.
 #### `--src -s`
-Source de configuration : [« aks-dev-test.json', ' kubeadm-dev-test.json', ' minikube-dev-test.json']
+Source du profil de configuration : [« aks-dev-test.json', ' kubeadm-dev-test.json', ' minikube-dev-test.json']
+#### `--force -f`
+Forcer le remplacement du fichier cible.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
 Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
@@ -77,11 +93,20 @@ Augmente le détail de journalisation. Utilisez--debug pour les journaux de déb
 ## <a name="mssqlctl-cluster-config-list"></a>mssqlctl cluster config list
 Répertorie les options de fichier de configuration disponibles pour une utilisation dans init de configuration de cluster
 ```bash
-mssqlctl cluster config list [--config-file -f] 
+mssqlctl cluster config list [--config-file -c] 
                              
 ```
+### <a name="examples"></a>Exemples
+Affiche tous les noms de profil de configuration disponibles.
+```bash
+mssqlctl cluster config list
+```
+Affiche le json d’un profil de configuration spécifique.
+```bash
+mssqlctl cluster config list --config-file aks-dev-test.json
+```
 ### <a name="optional-parameters"></a>Paramètres facultatifs
-#### `--config-file -f`
+#### `--config-file -c`
 Fichier de configuration par défaut : [« aks-dev-test.json', ' kubeadm-dev-test.json', ' minikube-dev-test.json']
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`

@@ -1,7 +1,7 @@
 ---
 title: Installation et configuration de Master Data Services | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488222"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994114"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -128,8 +128,19 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
 2.  Dans **l’Assistant Création d’une base de données**, cliquez sur **Créer une base de données** , puis sur **Suivant**.  
   
-3.  Dans la page **Serveur de base de données** , sélectionnez le **Type d’authentification** , puis cliquez sur **Tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données avec les informations d’identification correspondant au type d’authentification que vous avez sélectionné. Cliquer sur **Suivant**.
-  
+3.  Sur le **serveur de base de données** , spécifiez l’instance de SQL Server. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **Instance de SQL Server** à l’hôte d’un Azure SQL Database managed instance. Par exemple, `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Sélectionnez le **type d’authentification** puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquer sur **Suivant**.
+
+    >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], pour vous connecter à Azure SQL Database managed instance, utilisez un des types d’authentification suivants :
+    >
+    >- Authentification intégrée Azure Active Directory : **Utilisateur actuel-intégrées à Active Directory**
+    >- Authentification SQL Server : **Compte SQL Server**.
+    >
+    >Dans l’instance gérée de la base de données SQL Azure, l’utilisateur doit être un membre de la `sysadmin` rôle serveur fixe.
+
     > [!NOTE]  
     >  Si vous sélectionnez le type d’authentification **Utilisateur actuel - Sécurité intégrée**, la zone **Nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur. Si vous exécutez [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure, la zone **Nom d’utilisateur** affiche le nom de la machine virtuelle et le nom d’utilisateur associé au compte Administrateur local sur la machine virtuelle. 
 

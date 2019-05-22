@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620324"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994180"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Utiliser sparklyr dans un cluster de données volumineux de SQL Server
 
@@ -49,7 +49,7 @@ Vous pouvez utiliser sparklyr pour se connecter à partir d’un client pour le 
 Dans RStudio, créez un script R et se connecter à Spark comme dans l’exemple suivant :
 
 > [!TIP]
-> Pour le `<USERNAME>` et `<PASSWORD>` valeurs, utilisez le nom d’utilisateur (par exemple, la racine) et le mot de passe définis lors du déploiement de cluster de données volumineuses. Pour le `<IP>` et `<PORT>` valeurs, consultez la documentation sur le [passerelle HDFS/Spark](connect-to-big-data-cluster.md#hdfs).
+> Pour le `<USERNAME>` et `<PASSWORD>` valeurs, utilisez le nom d’utilisateur (par exemple, la racine) et le mot de passe définis lors du déploiement de cluster de données volumineuses. Pour le `<IP>` et `<PORT>` valeurs, consultez la documentation sur [connexion à un cluster de données volumineuses](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 74e08c16e528c580bf78b3928a1aaf0c9b3eb069
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774225"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994050"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Utilisez curl pour charger des données dans HDFS sur les clusters de données volumineuses de SQL Server
 
@@ -32,7 +32,7 @@ kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .stat
 ```
 
 > [!NOTE]
-> Le `<cluster name>` ici est le nom du cluster que vous avez fourni lors de l’exécution `mssqlctl cluster create --name <cluster name>`.
+> Le `<cluster name>` ici est le nom du cluster que vous avez spécifié dans le fichier de configuration de déploiement. Le nom par défaut est `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Construire l’URL pour accéder à WebHDFS
 

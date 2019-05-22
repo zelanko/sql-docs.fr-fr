@@ -1,21 +1,21 @@
 ---
-title: S3 de montage de la hiérarchisation HDFS
+title: Monter S3 pour la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
 description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe S3 dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/15/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 79c09d5bcff26c9f5867e5b0fb38bd019b681b5c
-ms.sourcegitcommit: 89abd4cd4323ae5ee284571cd69a9fe07d869664
+ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64330597"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993961"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -30,7 +30,7 @@ Les sections suivantes fournissent un exemple de configuration HDFS la hiérarch
 - Créer et charger des données dans un compartiment S3 
   - Charger un fichier CSV ou Parquet des fichiers à votre compartiment S3. Il s’agit de données HDFS externes qui seront montées à HDFS du cluster de données volumineuses.
 
-## <a name="access-keys"></a>Touches d’accès rapide
+## <a name="access-keys"></a>Clés d'accès
 
 1. Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux.
 
@@ -48,22 +48,22 @@ Les sections suivantes fournissent un exemple de configuration HDFS la hiérarch
 
 Maintenant que vous avez préparé un fichier d’informations d’identification avec des clés d’accès, vous pouvez commencer le montage. Les étapes suivantes monter le stockage HDFS à distance dans S3 vers le stockage HDFS local de votre cluster big data.
 
-1. Utilisez **kubectl** pour rechercher l’adresse IP pour le **mgmtproxy-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
+1. Utilisez **kubectl** pour rechercher l’adresse IP du point de terminaison **contrôleur-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Se connecter avec **mssqlctl** à l’aide de l’adresse IP externe du point de terminaison de proxy de gestion avec votre nom d’utilisateur du cluster et le mot de passe :
+1. Se connecter avec **mssqlctl** à l’aide de l’adresse IP externe du point de terminaison contrôleur avec votre nom d’utilisateur du cluster et le mot de passe :
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage du stockage mssqlctl**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
+1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage du pool de stockage de clusters mssqlctl**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   mssqlctl storage mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ Si monté correctement, il se peut que vous devez être en mesure d’interroger
 Pour répertorier l’état de tous les montages dans votre cluster de données volumineux, utilisez la commande suivante :
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Pour répertorier l’état d’un montage à un emplacement spécifique dans HDFS, utilisez la commande suivante :
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Supprimer le montage
 
-Pour supprimer le montage, utilisez le **mssqlctl stockage montage delete** commande et spécifiez le chemin d’accès de montage dans HDFS :
+Pour supprimer le montage, utilisez le **delete de montage de pool de stockage de cluster mssqlctl** commande et spécifiez le chemin d’accès de montage dans HDFS :
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

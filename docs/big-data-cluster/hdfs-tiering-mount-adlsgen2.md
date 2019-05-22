@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317128"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993971"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -100,22 +100,22 @@ Vous pouvez également monter à l’aide de clés d’accès que vous pouvez ob
 
 Maintenant que vous avez préparé un fichier d’informations d’identification avec les clés d’accès ou à l’aide d’OAuth, vous pouvez commencer le montage. Les étapes suivantes monter le stockage HDFS à distance dans Azure Data Lake sur le stockage HDFS local de votre cluster big data.
 
-1. Utilisez **kubectl** pour rechercher l’adresse IP du point de terminaison **mgmtproxy-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
+1. Utilisez **kubectl** pour rechercher l’adresse IP du point de terminaison **contrôleur-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Se connecter avec **mssqlctl** à l’aide de l’adresse IP externe du point de terminaison de proxy de gestion avec votre nom d’utilisateur du cluster et le mot de passe :
+1. Se connecter avec **mssqlctl** à l’aide de l’adresse IP externe du point de terminaison contrôleur avec votre nom d’utilisateur du cluster et le mot de passe :
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage du stockage mssqlctl**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
+1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage du pool de stockage de clusters mssqlctl**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Si monté correctement, il se peut que vous devez être en mesure d’interroger
 Pour répertorier l’état de tous les montages dans votre cluster de données volumineux, utilisez la commande suivante :
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Pour répertorier l’état d’un montage à un emplacement spécifique dans HDFS, utilisez la commande suivante :
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Supprimer le montage
 
-Pour supprimer le montage, utilisez le **mssqlctl stockage montage delete** commande et spécifiez le chemin d’accès de montage dans HDFS :
+Pour supprimer le montage, utilisez le **delete de montage de pool de stockage de cluster mssqlctl** commande et spécifiez le chemin d’accès de montage dans HDFS :
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

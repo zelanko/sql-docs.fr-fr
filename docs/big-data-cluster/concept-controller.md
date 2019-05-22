@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775586"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994077"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Qu’est le contrôleur sur un cluster de données volumineux de SQL Server ?
 
@@ -38,11 +38,7 @@ Le service de contrôleur fournit les fonctionnalités principales suivantes :
 
 ## <a name="deploying-the-controller-service"></a>Déploiement du service de contrôleur
 
-Le contrôleur est déployé et hébergé dans le même espace de noms Kubernetes où le client souhaite créer un cluster de données volumineux. Ce service est installé par un administrateur de Kubernetes au cours de bootstrap du cluster, à l’aide de l’utilitaire de ligne de commande mssqlctl :
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+Le contrôleur est déployé et hébergé dans le même espace de noms Kubernetes où le client souhaite créer un cluster de données volumineux. Ce service est installé par un administrateur de Kubernetes au cours de démarrage, à l’aide de cluster le **mssqlctl** utilitaire de ligne de commande. Pour plus d’informations, consultez [prise en main des clusters de données volumineuses de SQL Server](deploy-get-started.md).
 
 Le flux de travail buildout sera à disposition sur Kubernetes un cluster de données volumineuses de SQL Server entièrement fonctionnel qui inclut tous les composants décrits dans le [vue d’ensemble](big-data-cluster-overview.md) article. Le flux de travail d’amorçage crée tout d’abord le service de contrôleur et une fois que cela est déployé, le service de contrôleur coordonne l’installation et la configuration du reste de la partie de services de pools de master, de calcul, de données et de stockage.
 

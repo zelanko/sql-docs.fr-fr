@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51e6f11460e7a7c1f650b68624cc09d7cea76399
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877664"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994091"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Surveillance et de résoudre les problèmes de clusters de données volumineuses de SQL Server
 
@@ -121,7 +121,7 @@ Les services suivants prennent en charge les connexions externes au cluster big 
 | **appproxy-svc-external** | Prend en charge les scénarios de déploiement d’application. |
 
 > [!TIP]
-> Il s’agit d’une façon d’afficher les services avec **kubectl**, mais il est également possible d’utiliser `mssqlctl cluster endpoints list` commande pour afficher ces points de terminaison. Pour plus d’informations, consultez [obtenir les points de terminaison de cluster big data](deployment-guidance.md#endpoints).
+> Il s’agit d’une façon d’afficher les services avec **kubectl**, mais il est également possible d’utiliser `mssqlctl cluster endpoint list` commande pour afficher ces points de terminaison. Pour plus d’informations, consultez [obtenir les points de terminaison de cluster big data](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Obtenir les détails du service
 
