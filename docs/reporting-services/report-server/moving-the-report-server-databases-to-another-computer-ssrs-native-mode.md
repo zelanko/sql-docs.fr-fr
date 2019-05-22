@@ -2,18 +2,18 @@
 title: Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100220"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619684"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
 
@@ -25,16 +25,16 @@ ms.locfileid: "50100220"
   
 -   Les planifications sont recréées la première fois que vous redémarrerez le service Report Server.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
   
--   Les abonnements, les instantanés et les rapports mis en cache sont préservés dans la base de données déplacée. Si un instantané ne collecte pas des données actualisées après le déplacement de la base de données, désactivez les options d’instantané dans le Gestionnaire de rapports, cliquez sur **Appliquer** pour enregistrer les modifications apportées, recréez la planification, puis cliquez à nouveau sur **Appliquer** pour enregistrer les modifications apportées.  
+-   Les abonnements, les instantanés et les rapports mis en cache sont préservés dans la base de données déplacée. Si un instantané ne collecte pas des données actualisées après le déplacement de la base de données, décochez les options d’instantané et sélectionnez **Appliquer** pour enregistrer vos changements, recréez la planification et resélectionnez **Appliquer** pour enregistrer vos changements.  
   
 -   Les données temporaires de session utilisateur et de rapport qui sont stockées dans reportservertempdb sont conservées lorsque vous déplacez la base de données.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose plusieurs approches pour déplacer les bases de données, notamment la sauvegarde et la restauration, l’attachement et le détachement, ainsi que la copie. Les approches ne sont pas toutes appropriées lorsqu'il s'agit de déplacer une base de données vers une nouvelle instance de serveur. L'approche à utiliser pour déplacer la base de données du serveur de rapports varie selon les impératifs de disponibilité de votre système. Pour déplacer les bases de données du serveur de rapports, la méthode la plus simple consiste à les attacher et à les détacher. Cependant, cette approche exige une mise hors connexion du serveur de rapports durant le détachement de la base de données. La méthode de sauvegarde et de restauration est un choix plus judicieux si vous voulez minimiser les perturbations de service, mais vous devez exécuter des commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] pour effectuer les opérations. La copie de la base de données n'est pas recommandée (surtout à l'aide de l'Assistant Copie de base de données), car elle ne conserve pas les paramètres d'autorisation dans la base de données.  
   
 > [!IMPORTANT]  
->  Les procédures décrites dans cette rubrique sont recommandées lorsque le déplacement de la base de données du serveur de rapports est la seule modification que vous apportez à l'installation existante. Procéder à la migration de toute une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (c’est-à-dire déplacer la base de données et modifier l’identité du service Windows Report Server utilisant la base de données) nécessite la reconfiguration de la connexion et la réinitialisation de la clé de chiffrement.  
+>  Les procédures décrites dans cet article sont recommandées quand le déplacement de la base de données du serveur de rapports est le seul changement à faire dans l’installation existante. Procéder à la migration de toute une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (c’est-à-dire déplacer la base de données et modifier l’identité du service Windows Report Server utilisant la base de données) nécessite la reconfiguration de la connexion et la réinitialisation de la clé de chiffrement.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Détachement et attachement des bases de données du serveur de rapports  
  Si vous pouvez procéder à une mise hors connexion du serveur de rapports, vous pouvez détacher les bases de données pour les déplacer vers l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous souhaitez utiliser. Cette approche permet de conserver les autorisations définies dans les bases de données. Si vous utilisez une base de données SQL Server, vous devez la déplacer vers une autre instance SQL Server. Une fois que vous avez déplacé les bases de données, vous devez reconfigurer la connexion du serveur de rapports à la base de données du serveur de rapports. Si vous exécutez un déploiement avec montée en puissance parallèle, vous devez reconfigurer la connexion à la base de données du serveur de rapports pour chaque serveur de rapports appartenant au déploiement.  

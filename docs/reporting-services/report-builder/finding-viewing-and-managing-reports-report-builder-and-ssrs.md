@@ -2,18 +2,18 @@
 title: Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711010"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581235"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Recherche, affichage et gestion des rapports (Générateur de rapports et SSRS)
   Le Générateur de rapports vous permet de parcourir les dossiers d'un serveur de rapports ou site SharePoint pour y rechercher des rapports, des sources de données partagées, des modèles et d'autres éléments de rapport connexes, ainsi que de parcourir votre ordinateur pour trouver des rapports en local. Pour faciliter la recherche de rapports, le Générateur de rapports gère une liste de serveurs et sites récemment utilisés, et fournit l'accès direct aux dossiers Bureau, Mes documents et Poste de travail dans le système de fichiers de votre ordinateur.  
@@ -67,7 +67,7 @@ ms.locfileid: "52711010"
   
  Certaines de ces tâches peuvent être effectuées pour vous par l'administrateur du serveur de rapports. Pour en savoir plus sur les tâches effectuées sur un serveur de rapports, consultez [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données et des modèles de rapport, ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports.  
+ Le Gestionnaire de rapports contient en général des dossiers, des rapports, des sources de données ainsi que le dossier Mes rapports. Le dossier Mes rapports est un espace de travail personnel où vous pouvez stocker et utiliser les rapports dont vous êtes propriétaire. Les autres dossiers du serveur de rapports sont publics et nécessitent généralement que les utilisateurs disposent d'autorisations avancées pour ajouter ou modifier du contenu. Vous pouvez créer des dossiers dans Mes rapports pour organiser davantage vos rapports.  
   
  Le Gestionnaire de rapports affiche les rapports dans la visionneuse HTML Reporting Services. La visionneuse HTML fournit une infrastructure pour l'affichage des rapports au format HTML et inclut une barre d'outils Rapports, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. La barre d'outils Rapports fournit les fonctions de navigation entre les pages, de zoom, d'actualisation, de recherche, d'exportation, d'impression et de flux de données. La barre d'outils Rapport apparaît également dans les fenêtres des navigateurs, en haut des rapports, lorsque vous accédez aux rapports au moyen d'une URL. La fonction d'impression est facultative et doit être activée par votre administrateur. Lorsqu'elle est disponible, l'icône Imprimante s'affiche dans la barre d'outils. Les illustrations suivantes montrent la barre d'outils Rapport dans une fenêtre du Gestionnaire de rapports et un agrandissement des fonctionnalités de la barre d'outils Rapport.  
   
@@ -105,9 +105,9 @@ Barre d'outils Rapports
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Recherche d'éléments de serveur de rapports sur un site SharePoint  
  Avant de pouvoir définir des propriétés, vous devez être en mesure de localiser l'élément. Les éléments de serveur de rapports sont toujours stockés dans des bibliothèques ou dans un dossier d'une bibliothèque.  
   
- Lorsque vous accédez au site SharePoint, vous voyez la page Parcourir et l'onglet Outils de bibliothèque. La page Parcourir répertorie les bibliothèques et le contenu de la bibliothèque sélectionnée. Vous pouvez afficher le rapport, les modèles de rapport et d'autres éléments de la bibliothèque, explorer des dossiers et effectuer des recherches sur le site pour trouver des éléments.  
+ Lorsque vous accédez au site SharePoint, vous voyez la page Parcourir et l'onglet Outils de bibliothèque. La page Parcourir répertorie les bibliothèques et le contenu de la bibliothèque sélectionnée. Vous pouvez voir le rapport et d’autres éléments de la bibliothèque, explorer des dossiers et effectuer des recherches sur le site pour trouver des éléments.  
   
- Pour distinguer les éléments de serveur de rapports d'autres éléments sur un site SharePoint, vous pouvez utiliser l'icône pour identifier visuellement un élément ou placer le curseur de la souris sur le type et examiner l'extension du fichier. L'image suivante montre des dossiers, un modèle de rapport et une définition de rapport dans la bibliothèque **Rapports** :  
+ Pour distinguer les éléments de serveur de rapports d'autres éléments sur un site SharePoint, vous pouvez utiliser l'icône pour identifier visuellement un élément ou placer le curseur de la souris sur le type et examiner l'extension du fichier. L'image suivante montre des dossiers et une définition de rapport dans la bibliothèque **Rapports** :  
   
  ![Bibliothèque SharePoint avec éléments de serveur de rapports](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Bibliothèque Sharepoint avec éléments de serveur de rapports")  
   

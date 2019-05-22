@@ -37,7 +37,7 @@ ms.locfileid: "62999550"
  **Entrez le nom de l’objet**  
  Contient le nom de l'objet qui n'a pas été trouvé. Corrigez le nom de l'objet ou tapez un nouveau nom d'objet.  
   
- **Supprimer** *\<nom_objet >***à partir de la sélection**  
+ **Supprimer** *\<nom_objet >* **à partir de la sélection**  
  Sélectionnez cette option pour fermer la boîte de dialogue **Nom introuvable** et supprimer l’élément de la boîte de dialogue **Sélectionner des objets** .  
   
   

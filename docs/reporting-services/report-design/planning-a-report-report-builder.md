@@ -2,21 +2,21 @@
 title: Planification d’un rapport (Générateur de rapports) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 48011d4f815df916236a60f2471c7ce45fe1f2f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297327"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581478"
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer divers types de rapports paginés. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  
@@ -33,7 +33,7 @@ ms.locfileid: "56297327"
   
      Le Générateur de rapports fournit de nombreux éléments de rapports que vous pouvez ajouter à votre rapport afin d'en faciliter la lecture, de souligner des informations clés, d'aider les utilisateurs à parcourir le rapport, et ainsi de suite. Le fait de savoir quelle apparence vous souhaitez donner au rapport peut déterminer si vous devez utiliser des éléments de rapports tels que des zones de texte, des rectangles, des images ou des lignes. Vous souhaiterez peut-être également afficher ou masquer des éléments, ajouter un explorateur de documents, inclure des rapports ou des sous-rapports d'extraction, ou établir des liaisons vers d'autres rapports. Pour plus d’informations, consultez [Images, zones de texte, rectangles et lignes &#40;&Générateur de rapports et SSRS#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md) et [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
+-   **Quelles données voulez-vous présenter aux lecteurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
   
      Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   

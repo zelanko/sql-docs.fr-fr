@@ -28,7 +28,7 @@ ms.locfileid: "62721318"
   
 |Error|Message|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet ' %. * ls' avec un index unique ' %. \*%.*ls.|  
+|[MSSQL_ENG002601](mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet ' %. * ls' avec un index unique ' %.\*ls.|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Violation de %ls contrainte ' %. * ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|La base de données '%ls' a été restaurée ; cependant, une erreur est survenue lors de la restauration/suppression de la réplication. La base de données est restée hors ligne. Consultez la rubrique MSSQL_ENG003165 dans la documentation en ligne de SQL Server.|  
 |[MSSQL_ENG003724](mssql-eng003724.md)|Impossible de % S_MSG % S_MSG ' %. * ls', car il est utilisé pour la réplication.|  

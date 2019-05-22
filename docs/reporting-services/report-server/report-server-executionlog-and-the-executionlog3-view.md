@@ -2,21 +2,21 @@
 title: Journal d’exécution du serveur de rapports et vue ExecutionLog3 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414097"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619688"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal des exécutions du serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs dans le cadre d’un déploiement évolutif en mode natif ou sur une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Ajouté à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      Cette valeur est exprimée en millisecondes. Ces données peuvent être utilisées pour diagnostiquer les problèmes de performances. Le temps nécessaire pour récupérer des images d'un serveur web externe peut ralentir l'exécution globale des rapports.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Connexions**  
-  
-     Ajouté à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      Structure à plusieurs niveaux  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  La table suivante décrit les données qui sont capturées dans le journal d'exécution des rapports :  
   
 |colonne|Description|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Nom de l'instance du serveur de rapports qui a géré la demande.|  
-|ReportPath|Structure du chemin d'accès au rapport.  Par exemple, pour un rapport nommé « test » qui se trouve dans le dossier racine du gestionnaire de rapports, le ReportPath sera « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples » du gestionnaire de rapports, le ReportPath sera « /Samples/test/ »|  
+|ReportPath|Structure du chemin d'accès au rapport. Un rapport enregistré dans le dossier racine, comme « test », a un ReportPath « /test ».<br /><br /> Pour un rapport nommé « test » qui est enregistré dans le dossier « samples », le ReportPath est « /Samples/test/ »|  
 |UserName|Identificateur de l'utilisateur.|  
 |ExecutionID||  
 |RequestType|Type de demande (utilisateur ou système).|  

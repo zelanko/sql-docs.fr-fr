@@ -1,22 +1,22 @@
 ---
 title: Référence de paramètre d’accès URL | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515125"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620598"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
   Vous pouvez utiliser les paramètres suivants dans une URL afin de configurer l’apparence de vos rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "52515125"
 -   [Commandes de composant WebPart Visionneuse de rapports (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Commandes de visionneuse HTML (rc:)  
- Les commandes de visionneuse HTML sont utilisées pour cibler la visionneuse HTML (par exemple, à partir du Gestionnaire de rapports). Elles sont précédées de *rc:*.  
+ - Les commandes de visionneuse HTML sont utilisées pour cibler la visionneuse HTML et sont précédées de *rc:*  :
   
 -   *Toolbar* :  
                   Affiche ou masque la barre d'outils. Si la valeur de ce paramètre est **false**, toutes les options restantes sont ignorées. Si vous omettez ce paramètre, la barre d'outils s'affiche automatiquement pour les formats de rendu assurant sa prise en charge. La valeur par défaut de ce paramètre est **true**.  
@@ -267,7 +267,7 @@ ms.locfileid: "52515125"
      Vous pouvez spécifier l'ID de session en tant que cookie ou dans le cadre de l'URL. Lorsque le serveur de rapports a été configuré de manière à ne pas utiliser de cookies de session, la première demande sans un ID de session spécifié provoque une redirection avec un ID de session. Pour plus d'informations sur les sessions de serveur de rapports, consultez [Identifying Execution State](../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
 -   *ClearSession*:  
-                  La valeur **true** indique au serveur de rapports de supprimer un rapport d’une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un rapport identique exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est **false**.  
+                  La valeur **true** indique au serveur de rapports de supprimer un rapport d’une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un même rapport exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est **false**.  
   
 -   *ResetSession*:  
                   La valeur **true** indique au serveur de rapports de réinitialiser la session de rapport en supprimant l’association de la session de rapport à tous les instantanés de rapport. La valeur par défaut est **false**.  

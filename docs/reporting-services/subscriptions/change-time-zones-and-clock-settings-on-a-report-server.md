@@ -2,7 +2,7 @@
 title: Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - schedules [Reporting Services], clock settings
 - schedules [Reporting Services], time zones
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bb822890e3a54be5c221c41a0c1489a4e2b252b5
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5c1e3a2b4fe468f3565dbf7ad47295ab8836315b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973477"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578363"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
   Un serveur de rapports utilise toujours l'heure locale de l'ordinateur sur lequel il est installé. Vous ne pouvez pas le configurer de manière à utiliser un autre fuseau horaire. Si une application cliente pointe vers un serveur de rapports se trouvant dans un autre fuseau horaire, c'est le fuseau horaire du serveur de rapports qui sera utilisé pour effectuer une opération planifiée. Dans les pages de gestion SharePoint et le Gestionnaire de rapports, le fuseau horaire est indiqué sur chaque page de planification de sorte que vous savez exactement à quel moment doit se produire une opération planifiée. Par exemple, la page consacrée à la création de planifications personnalisées indiquera « Les heures sont exprimées en (UTC-08:00) Heure du Pacifique (États-Unis et Canada). »
-Le serveur de rapports crée un travail SQL Server Agent qui est utilisé pour déclencher la planification. Lorsque le serveur de rapports et l’Agent SQL Server sont situés sur des serveurs distincts, le fuseau horaire doit être identique sur tous les serveurs.
+Le serveur de rapports crée un travail SQL Server Agent qui est utilisé pour déclencher la planification. Quand le serveur de rapports et SQL Server Agent sont situés sur des serveurs distincts, le fuseau horaire doit être identique sur tous les serveurs.
   
 ## <a name="changing-the-time-zone-native-mode"></a>Modification du fuseau horaire (mode natif)  
  Si vous changez le fuseau horaire sur un ordinateur qui héberge un serveur de rapports, vous devez redémarrer le service Report Server pour que le changement de fuseau horaire soit pris en compte.  

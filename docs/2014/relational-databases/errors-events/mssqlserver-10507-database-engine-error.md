@@ -30,7 +30,7 @@ ms.locfileid: "62916298"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_STMT_DOES_NOT_MATCH|  
-|Texte du message|Impossible de créer le repère de plan ' %.\**ls, car l’instruction spécifiée par `@stmt` et `@module_or_batch`, ou par `@plan_handle` et `@statement_start_offset`, ne correspond à aucune instruction dans le module spécifié ou lot. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls, car l’instruction spécifiée par `@stmt` et `@module_or_batch`, ou par `@plan_handle` et `@statement_start_offset`, ne correspond à aucune instruction dans le module spécifié ou lot. Modifiez les valeurs pour qu'elles correspondent à une instruction dans le module ou le lot.|  
   
 ## <a name="explanation"></a>Explication  
  Une instruction dans le module ou le lot spécifié n'a pas pu être mise en correspondance avec l'instruction ou la valeur de décalage de l'instruction spécifiée.  
