@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d3db11a8ace49a206ffaff106814e87b64948cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62633996"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982811"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
@@ -34,7 +34,7 @@ La manière de basculer dépend de la distribution de Linux. Suivez les instruct
 - [RHEL ou Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#rhelFailover"></a> Basculement manuel (RHEL ou Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> Basculement manuel (RHEL ou Ubuntu)
 
 Pour effectuer un basculement manuel, sur des serveurs Red Hat Enterprise Linux (RHEL) ou Ubuntu, exécutez les étapes suivantes.
 1.  Exécutez la commande suivante : 
@@ -55,7 +55,7 @@ Pour effectuer un basculement manuel, sur des serveurs Red Hat Enterprise Linux 
 
 \<FCIResourceName > est le nom de ressource Pacemaker pour l’instance FCI. 
 
-## <a name = "#slesFailover"></a> Basculement manuel (SLES)
+## <a name = "#-manual-failover-sles"></a> Basculement manuel (SLES)
 
 
 Dans Suse Linux Enterprise Server (SLES), utilisez la commande `migrate` pour basculer manuellement une instance FCI SQL Server. Exemple :

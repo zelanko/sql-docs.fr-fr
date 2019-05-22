@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947619"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980042"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ OUTPUT
  La valeur par défaut est  **\<racine xmlns:mp = "urn : schemas-microsoft-com-metaprop" >**. *xpath_namespaces* fournit l’URI d’espace de noms pour les préfixes utilisés dans les expressions XPath sous OPENXML au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com-metaprop**; fournit les métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **mp** est toujours valide pour **urn : schemas-microsoft-com-metaprop** même si *xpath_namespaces* ne contient aucun une telle déclaration.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 (réussite) ou >0 (échec)  
+ 0 (succès) ou > 0 (échec)  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
@@ -108,7 +108,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 exec sp_xml_removedocument @hdoc;  
 ```  
   
-### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>b. Préparation d'une représentation interne pour un document XML correctement mis en forme avec un schéma DTD  
+### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. Préparation d'une représentation interne pour un document XML correctement mis en forme avec un schéma DTD  
  L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. La procédure stockée valide le document chargé sur le schéma DTD inclus dans le document. L'appel à `sp_xml_preparedocument` contient un mappage de préfixes d'espaces de noms par défaut.  
   
 ```  
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[Code XML stocké Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[Système stockées Procedures(Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[Sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

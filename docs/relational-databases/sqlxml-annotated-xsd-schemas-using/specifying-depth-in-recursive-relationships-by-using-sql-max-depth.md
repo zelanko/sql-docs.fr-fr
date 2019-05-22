@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030720"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980750"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  La relation étant récursive, vous devez trouver un moyen de spécifier la profondeur de récursivité dans le schéma. Sinon, le résultat sera une récursivité sans fin (employé subalterne à employé subalterne à employé, et ainsi de suite). Le **SQL : max-depth** annotation permet de spécifier la profondeur de récursivité. Dans cet exemple particulier, pour spécifier une valeur pour **SQL : max-depth**, vous devez connaître la profondeur la hiérarchie de direction de l’entreprise.  
   
 > [!NOTE]  
->  Le schéma spécifie le **SQL : limit-champ** annotation, mais ne spécifie ne pas le **SQL : limit-valeur** annotation. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (ReportsTo a la valeur NULL.) Spécification **SQL : limit-champ** et en ne spécifiant **SQL : limit-valeur** (qui est par défaut avec la valeur NULL) annotation effectue cette opération. Si vous souhaitez que le XML résultant inclue chaque direction possible arborescence (l’arborescence de création de rapports pour chaque employé dans la table), supprimez le **SQL : limit-champ** annotation à partir du schéma.  
+>  Le schéma spécifie le **SQL : limit-champ** annotation, mais ne spécifie ne pas le **SQL : limit-valeur** annotation. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (ReportsTo a la valeur NULL). Spécification **SQL : limit-champ** et en ne spécifiant **SQL : limit-valeur** (qui est par défaut avec la valeur NULL) annotation effectue cette opération. Si vous souhaitez que le XML résultant inclue chaque direction possible arborescence (l’arborescence de création de rapports pour chaque employé dans la table), supprimez le **SQL : limit-champ** annotation à partir du schéma.  
   
 > [!NOTE]  
 >  La procédure suivante utilise la base de données tempdb.  
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Utilisez le **SQL : max-depth** annotation dans le schéma pour spécifier la profondeur de récursivité dans une relation récursive décrite dans le schéma. La valeur de la **SQL : max-depth** annotation est un entier positif (1 à 50) qui indique le nombre de récursivités :  Une valeur de 1 arrête la récursivité à l’élément pour lequel le **SQL : max-profondeur** annotation est spécifiée ; une valeur de 2 arrête la récursivité au niveau suivant de l’élément auquel **SQL : max-depth** est spécifié ; et ainsi de suite.  
   
 > [!NOTE]  
->  Dans l'implémentation sous-jacente, une requête XPath spécifiée contre un schéma de mappage est convertie en requête SELECT ... FOR XML EXPLICIT. Cette requête nécessite que vous spécifiiez une profondeur de récursivité finie. Plus la valeur que vous spécifiez pour **SQL : max-depth**, plus la requête FOR XML EXPLICIT qui est généré. Cela risque d'allonger la durée de récupération.  
+>  Dans l’implémentation sous-jacente, une requête XPath spécifiée contre un schéma de mappage est convertie en une instruction SELECT... POUR une requête XML EXPLICIT. Cette requête nécessite que vous spécifiiez une profondeur de récursivité finie. Plus la valeur que vous spécifiez pour **SQL : max-depth**, plus la requête FOR XML EXPLICIT qui est généré. Cela risque d'allonger la durée de récupération.  
   
 > [!NOTE]  
 >  Les codes de mise à jour (updategrams) et chargements en masse XML ignorent l'annotation max-depth. Cela signifie que les insertions ou mises à jour récursives ont lieu indépendamment de la valeur que vous spécifiez pour max-depth.  

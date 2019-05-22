@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d700fd19999da3905a0ff69231a286a022d57e5
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790437"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982912"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Spécifie le nom de la base de données Azure qui contient les données distantes. *@azure_databasename* est de type sysname.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- 0 (réussite) ou >0 (échec)  
+ 0 (succès) ou > 0 (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations db_owner.  
   
 ## <a name="remarks"></a>Notes  

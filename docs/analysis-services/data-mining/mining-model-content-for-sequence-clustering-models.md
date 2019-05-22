@@ -1,5 +1,5 @@
 ---
-title: Contenu du modèle pour les modèles Sequence Clustering d’exploration de données | Documents Microsoft
+title: Le contenu du modèle Sequence Clustering des modèles d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019286"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961371"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34019286"
  NODE_TYPE  
  Un modèle Sequence Clustering génère les types de nœuds suivants :  
   
-|ID du type de nœud| Description|  
+|ID du type de nœud|Description|  
 |------------------|-----------------|  
 |1 (Modèle)|Nœud racine pour le modèle|  
 |5 (cluster)|Contient le nombre de transitions dans le cluster, une liste des attributs et des statistiques qui décrivent les valeurs dans le cluster.|  
@@ -58,7 +58,7 @@ ms.locfileid: "34019286"
 |14 (Transition)|Décrit une séquence d'événements sous forme de table dans laquelle la première ligne contient l'état initial, et toutes les autres lignes contiennent les états successifs, ainsi que les statistiques de prise en charge et de probabilité.|  
   
  NODE_GUID  
- Vide.  
+ : vide.  
   
  NODE_CAPTION  
  Étiquette ou légende associée au nœud à des fins d'affichage.  
@@ -227,7 +227,7 @@ ORDER BY Count(*) DESC
   
  La table suivante affiche les résultats de la table NODE_DISTRIBUTION, ainsi que les valeurs de probabilité arrondies présentées dans la visionneuse graphique.  
   
-|Product|Prise en charge (table NODE_DISTRIBUTION)|Probabilité (table NODE_DISTRIBUTION)|Probabilité (du graphique)|  
+|Produit|Prise en charge (table NODE_DISTRIBUTION)|Probabilité (table NODE_DISTRIBUTION)|Probabilité (du graphique)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |manquantes|48.447887|0.138028169|(non affiché)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -258,8 +258,8 @@ ORDER BY Count(*) DESC
  Pour savoir comment obtenir la liste des chemins d’accès observés en interrogeant le contenu du modèle et pour voir d’autres exemples de requêtes sur un modèle Sequence Clustering, consultez [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algorithme de Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Exemples de requêtes de modèle Sequence Clustering](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

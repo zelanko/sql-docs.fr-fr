@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb8ac0d8af4c6180bb9851df793285d3bc17340c
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542249"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980052"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "59542249"
 |**runtime_stats_interval_id**|**bigint**|Clé étrangère. Joins to [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md).|  
 |**execution_type**|**tinyint**|Détermine le type d’exécution de requête :<br /><br /> 0 - exécution normale (achevée correctement)<br /><br /> 3 - initié par le client annulé l’exécution<br /><br /> 4 - exception abandonnée de l’exécution|  
 |**execution_type_desc**|**nvarchar(128)**|Description textuelle du champ de type d’exécution :<br /><br /> 0 - standard<br /><br /> 3 - abandonnée<br /><br /> 4 - exception|  
-|**first_execution_time**|**datetimeoffset**|Première heure d’exécution du plan de requête dans l’intervalle d’agrégation.|  
-|**last_execution_time**|**datetimeoffset**|Plan de la dernière exécution de la requête au sein de l’intervalle d’agrégation.|  
+|**first_execution_time**|**datetimeoffset**|Première heure d’exécution du plan de requête dans l’intervalle d’agrégation. Cela fait référence à l’heure de fin de l’exécution de requête.|  
+|**last_execution_time**|**datetimeoffset**|Plan de la dernière exécution de la requête au sein de l’intervalle d’agrégation. Cela fait référence à l’heure de fin de l’exécution de requête.|  
 |**count_executions**|**bigint**|Nombre total d’exécutions du plan de requête dans l’intervalle d’agrégation.|  
 |**avg_duration**|**float**|Durée du plan de requête dans l’intervalle d’agrégation (indiqué en microsecondes) de la moyenne.|  
 |**last_duration**|**bigint**|Plan de la dernière durée de la requête dans l’intervalle d’agrégation (indiqué en microsecondes).|  

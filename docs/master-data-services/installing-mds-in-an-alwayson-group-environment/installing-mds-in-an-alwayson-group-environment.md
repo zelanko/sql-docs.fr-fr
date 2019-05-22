@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489607"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982113"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -302,8 +302,7 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
     Figure 17
 
-    Pour chaque réplica, configurez les paramètres **Validation synchrone**, **Basculement automatique** et **Secondaire accessible en lecture**. Voir figure
-17.
+    Pour chaque réplica, configurez les paramètres **Validation synchrone**, **Basculement automatique** et **Secondaire accessible en lecture**. Voir figure 17.
 
     **Validation synchrone** : si une transaction est validée sur le réplica principal d’une base de données, la transaction est également validée sur tous les autres réplicas synchrones. Ne pouvant pas garantir cela, la validation asynchrone risque d’être en retard par rapport au réplica principal.
 

@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_pendingchanges
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: baf9443372b36eaaa5aac26ddaaa10d3609bcea4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef93287acb610e813f20f213e8fb6a325058116d
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833747"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983024"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_fulltext_pendingchanges table_id
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Clé**|*|Valeur de la clé de texte intégral pour une table spécifiée.|  
-|**ID de document**|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
+|**DocId**|**bigint**|Colonne de l'ID interne de document (DocId) qui correspond à la valeur de la clé.|  
 |**État**|**Int**|0 = La ligne est supprimée de l'index de texte intégral.<br /><br /> 1 = La ligne est indexée sur le texte intégral.<br /><br /> 2 = La ligne est à jour.<br /><br /> -1 = La ligne est en état de transition (traitée en lot mais non validée) ou en erreur.|  
 |**DocState**|**tinyint**|Vidage brut de la colonne d'état du mappage de l'ID interne du document (DocId).|  
   
  <sup>* Le type de données pour la clé est identique au type de données de la colonne de clé de recherche en texte intégral dans la table de base.</sup>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="remarks"></a>Notes  
