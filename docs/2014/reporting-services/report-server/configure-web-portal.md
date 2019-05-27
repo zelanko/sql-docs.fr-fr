@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
@@ -13,12 +12,12 @@ ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011427"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103935"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurer le serveur de rapports (mode natif)
   Le Gestionnaire de rapports est une application Web frontale utilisée pour consulter des rapports, gérer le contenu d'un serveur de rapports et accorder aux utilisateurs l'accès à un serveur de rapports en mode natif. Le Gestionnaire de rapports est installé avec le service Web Report Server dans la même instance du serveur de rapports et est configuré si vous sélectionnez l'option **Installer la configuration par défaut en mode Natif** dans le programme d'installation. Vous pouvez également configurer le Gestionnaire de rapports après son installation. Cette rubrique fournit des informations sur les scénarios de configuration suivants du Gestionnaire de rapports :  

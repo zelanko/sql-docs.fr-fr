@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134395"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186793"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Se connecter aux nœuds d’appliance d’Analytique Platform System
 Cet article explique les différentes façons de se connecter à chaque nœud dans l’appliance Analytique Platform System.  
@@ -26,6 +26,9 @@ Avant d’utiliser Hadoop avec SQL Server PDW, demandez à votre administrateur 
 Chacun des nœuds d’appliance est accessible directement uniquement dans les scénarios d’utilisation spécifiques et par les types d’utilisateur spécifique. Le tableau suivant répertorie chaque nœud de l’appliance et les scénarios sous lequel les utilisateurs se connectent directement à ce nœud.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Modification des paramètres de base de données ou table sur des nœuds de calcul ou de contrôle sans consentement explicite de l’équipe de produit ou d’une équipe de Support client aux points d’accès peut rendre votre appliance APS la prise en charge.
   
 |||  
 |-|-|  
