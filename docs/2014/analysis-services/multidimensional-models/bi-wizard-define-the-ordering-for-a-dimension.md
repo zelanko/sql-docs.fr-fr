@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OrderBy property
@@ -18,12 +17,12 @@ ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 916663a7d667187acc6b881ec4ac3c68d406c987
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62701001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076861"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>Définir le classement d'une dimension
   Ajoutez la fonctionnalité de classement des attributs à un cube ou à une dimension pour spécifier comment les membres d'un attribut sont classés. Les membres peuvent être classés d'après le nom ou la clé de l'attribut, ou d'après le nom ou la clé d'un autre attribut (en fonction d'une relation d'attribut). Par défaut, les membres sont classés d'après le nom de l'attribut. Cette fonctionnalité modifie les paramètres de propriété `OrderBy` et `OrderByAttributeID` des attributs d'une dimension.  

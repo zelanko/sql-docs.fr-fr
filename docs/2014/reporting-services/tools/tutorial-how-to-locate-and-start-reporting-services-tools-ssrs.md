@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
@@ -22,12 +21,12 @@ ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657996"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099479"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutoriel : Comment localiser et démarrer les outils Reporting Services (SSRS)
   Ce didacticiel présente les outils permettant de configurer un serveur de rapports, de gérer le contenu et les opérations d'un serveur de rapports, et de créer et publier des rapports. Ce didacticiel a pour but d'aider les nouveaux utilisateurs à savoir rechercher et ouvrir chaque outil. Si vous connaissez déjà les différents outils, vous pouvez enchaîner sur les autres didacticiels qui peuvent vous aider à acquérir d'importantes compétences dans l'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Pour plus d’informations sur les autres didacticiels, consultez [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

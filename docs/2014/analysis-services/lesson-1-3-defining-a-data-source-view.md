@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079276"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
   L'étape qui suit la définition des sources de données que vous utiliserez dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consiste généralement à définir une vue de source de données pour le projet. Une vue de source de données est une vue unique et unifiée des métadonnées des tables et des vues spécifiées que la source de données définit dans le projet. Le stockage des métadonnées dans la vue de source de données permet d'utiliser ces métadonnées au cours de la phase de développement sans avoir besoin de disposer d'une connexion ouverte à une source de données sous-jacente. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md).  

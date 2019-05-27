@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
@@ -17,12 +16,12 @@ ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072862"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Sources de données prises en charge (SSAS multidimensionnel)
   Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  
@@ -35,7 +34,7 @@ ms.locfileid: "62740919"
   
 |||||  
 |-|-|-|-|  
-|Source|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
+|`Source`|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
 |Bases de données Access|Microsoft Access 2007, 2010, 2013.|.accdb ou .mdb|Fournisseur Microsoft Jet 4.0 OLE DB|  
 |Les bases de données relationnelles SQL Server <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 11.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |Bases de données relationnelles Oracle|Oracle 9i, 10g, 11g.|(non applicable)|Fournisseur OLE DB Oracle<br /><br /> Fournisseur de données .NET Framework pour client Oracle<br /><br /> Fournisseur de données .NET Framework pour SQL Server<br /><br /> Fournisseur OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

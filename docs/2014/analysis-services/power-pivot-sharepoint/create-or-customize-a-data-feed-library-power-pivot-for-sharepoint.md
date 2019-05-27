@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
@@ -14,12 +13,12 @@ ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3586379cbd22dee4e288a032a9dd850355b2b674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31e69ddc36079c993e66a7e9253bfdd178057302
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749539"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071557"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Créer ou personnaliser une bibliothèque de flux de données (PowerPivot pour SharePoint)
   Une *bibliothèque de flux de données* est une bibliothèque SharePoint spécifique qui permet d’enregistrer et de partager des documents de service de données Atom (.atomsvc). Ces documents fournissent des flux XML aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou à d'autres applications clientes qui prennent en charge le format de flux Atom. Une bibliothèque de flux de données est différente des autres bibliothèques SharePoint, car elle vous donne la possibilité :  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731582"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081319"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Remplir à partir de l'exemple (Outils d'analyse de table pour Excel)
   ![Bouton remplir à partir de l’exemple dans la Table Analysis Tools](media/tat-fillex.gif "bouton remplir à partir de l’exemple dans les outils d’analyse de Table")  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
@@ -13,12 +12,12 @@ ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733041"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082899"
 ---
 # <a name="security-overview-data-mining"></a>Vue d'ensemble de la sécurité (exploration de données)
   La sécurisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a lieu à plusieurs niveaux. Vous devez sécuriser chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses sources de données pour vous assurer que seuls les utilisateurs autorisés disposent d'autorisations de lecture/écriture sur les dimensions, les modèles d'exploration de données et les sources de données sélectionnés. Vous devez également sécuriser les sources de données sous-jacentes pour empêcher les utilisateurs non autorisés de compromettre volontairement les informations professionnelles sensibles. Le processus de sécurisation d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est décrit dans les rubriques suivantes.  

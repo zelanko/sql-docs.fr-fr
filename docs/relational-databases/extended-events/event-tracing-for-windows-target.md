@@ -1,7 +1,7 @@
 ---
 title: Suivi d’événements pour Windows en cible | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d12e2afd2e2cf7e7558b832d97a986ad9c8ad943
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478114"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198313"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
 
@@ -60,7 +60,8 @@ ms.locfileid: "58478114"
 |default_etw_session_logfile_size_mb|Entier quelconque non signé. Cette valeur est facultative.|Taille du fichier journal, en mégaoctets (Mo), de la session Événements étendus. La valeur par défaut est 20 Mo.|  
 |default_etw_session_buffer_size_kb|Entier quelconque non signé. Cette valeur est facultative.|Taille des tampons en mémoire, en kilo-octets (Ko), pour la session Événements étendus. La valeur par défaut est 128 Ko.|  
 |retries|Entier quelconque non signé.|Nombre de nouvelles tentatives de publication de l'événement dans le sous-système ETW avant la suppression de l'événement. La valeur par défaut est 0.|  
-  
+| &nbsp; | &nbsp; | &nbsp; |
+
  La configuration de ces paramètres est facultative. La cible ETW utilise les valeurs par défaut de ces paramètres.  
   
  La cible ETW est chargée des opérations suivantes :  
@@ -80,19 +81,22 @@ ms.locfileid: "58478114"
     > [!IMPORTANT]  
     >  Le chemin d'accès ne peut pas être modifié une fois la première session démarrée.  
   
--   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.  
-  
+-   Les fichiers MOF (Managed Object Format) se trouvent dans le dossier *\<chemin de votre installation>* \Microsoft SQL Server\Shared. Pour plus d'informations, consultez [Format d'objet managé](https://go.microsoft.com/fwlink/?LinkId=92851) sur MSDN.
+
+<!-- ?LinkId=92851  ==  https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-
+-->
+
 ## <a name="adding-the-target-to-a-session"></a>Ajout de la cible à une session  
  Pour ajouter la cible ETW à une session Événements étendus lorsque vous créez ou modifiez une session d'événements, vous devez inclure l'instruction suivante :  
   
-```  
+```sql
 ADD TARGET package0.etw_classic_sync_target  
 ```  
   
  Pour plus d’informations et pour obtenir un exemple complet qui montre comment utiliser la cible ETW (et notamment comment afficher les données), consultez [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
+ [Cibles des Événements étendus SQL Server](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
@@ -16,12 +15,12 @@ ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700136"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076106"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes dans les modèles multidimensionnels
   Un cube est une structure multidimensionnelle qui contient des informations à des fins analytiques ; les constituants principaux d'un cube sont des dimensions et des mesures. Les dimensions définissent la structure du cube que vous utilisez pour la découpe, et les mesures fournissent des valeurs numériques agrégées qui intéressent l'utilisateur final. Comme structure logique, un cube permet à une application cliente de récupérer des valeurs, de mesures, comme si elles étaient contenues dans des cellules du cube ; les cellules sont définies pour chaque valeur résumée possible. Une cellule, dans le cube, est définie par l'intersection des membres de dimension et contient les valeurs agrégées des mesures à cette intersection spécifique.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
@@ -13,12 +12,12 @@ ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 354ec6968698dc5b6a7bbca8ffcd33a34db4389d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0948fda951bb415d9fe3f457729200752a8afaaf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730338"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080486"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Mise à jour incrémentielle (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Mise à jour incrémentielle** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres utilisés pendant la mise à jour incrémentielle des groupes de mesures et des partitions. Pour afficher la boîte de dialogue **Mise à jour incrémentielle** , cliquez sur **Configurer** dans la colonne **Paramètres** de la grille **Liste d’objets** dans la boîte de dialogue **Traiter** .  

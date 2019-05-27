@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.proactivecaching.f1
@@ -13,12 +12,12 @@ ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67ebcc8bcf5c3219d259e4b29eb5c2c737c11df1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070713"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Mise en cache proactive (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Mise en cache proactive** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés de mise en cache proactive d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

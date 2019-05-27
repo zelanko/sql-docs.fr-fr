@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052490"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110180"
 ---
 # <a name="viewing-tuning-recommendations"></a>Affichage des recommandations pour le paramétrage
   Cette tâche est basée sur la session de paramétrage que vous avez créée dans [Paramétrage d’une charge de travail](lesson-1-1-tuning-a-workload.md). Une fois la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] paramétrée au moyen du script [!INCLUDE[tsql](../../includes/tsql-md.md)] MyScript.sql, l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] affiche ses résultats sous l’onglet **Recommendations** . La tâche suivante présente l’onglet **Recommendations** de l’interface graphique utilisateur de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et vous guide pour explorer les informations que ce dernier fournit sur les résultats de la session de paramétrage.  
@@ -47,7 +46,7 @@ ms.locfileid: "48052490"
   
 8.  Type `EvaluateMySession` pour votre nouvelle **nom de la Session**, puis cliquez sur le **démarrer l’analyse** dans la barre d’outils. Vous pouvez répéter les étapes 2 et 3 pour cette nouvelle session de paramétrage afin d'en visualiser les recommandations.  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Vous avez affiché le contenu de l’onglet **Recommandations** pour la session de paramétrage MySession et vous avez évalué un sous-ensemble de ces recommandations pour la nouvelle session de paramétrage EvaluateMySession.  
   
  L'évaluation d'un sous-ensemble de recommandations de paramétrage peut s'avérer nécessaire si vous pensez devoir modifier des options de paramétrage après l'exécution d'une session. Cela peut être le cas, par exemple, si vous configurez l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour qu’il tienne compte des vues indexées quand vous spécifiez des options de paramétrage pour une session, mais décidez après la génération des recommandations de réutiliser les vues indexées. Vous pouvez utiliser ensuite l’option **Évaluer les recommandations** du menu **Actions** pour que l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] réévalue la session sans tenir compte des vues indexées. Quand vous utilisez l’option **Évaluer les recommandations** , les recommandations générées sont appliquées hypothétiquement à la structure de création physique courante pour parvenir à la structure de création physique de la deuxième session de paramétrage.  

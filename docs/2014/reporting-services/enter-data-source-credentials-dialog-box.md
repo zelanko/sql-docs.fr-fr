@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.runtimecredentials.f1
@@ -14,12 +13,12 @@ ms.assetid: 70258400-0c6b-49fe-a507-344427255223
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 33b2d2f33cf0ed85524dba50c936f4a2ea774d29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e7fa4658b0a784b854023975234218d1a58f936c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164682"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109234"
 ---
 # <a name="enter-data-source-credentials-dialog-box"></a>Boîte de dialogue Entrez les informations d'identification pour la source de données
   Utilisez le **Entrez les informations d’identification de données Source** boîte de dialogue pour fournir votre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin que vous pouvez récupérer des données à partir de la source de données des informations d’identification.  

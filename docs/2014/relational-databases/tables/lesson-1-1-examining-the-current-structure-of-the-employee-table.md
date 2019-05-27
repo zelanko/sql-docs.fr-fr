@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
@@ -13,12 +12,12 @@ ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62760868"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110141"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Étude de la structure actuelle de la table Employee
   L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contient une table **Employee** dans le schéma **HumanResources** . Afin d'éviter de modifier la table d'origine, cette étape effectue une copie de la table **Employee** , nommée **EmployeeDemo**. Pour simplifier l'exemple, vous ne copiez que cinq colonnes de la table d'origine. Ensuite, vous interrogez le **HumanResources.EmployeeDemo** table pour passer en revue la façon dont les données sont structurées dans une table sans utiliser le `hierarchyid` type de données.  

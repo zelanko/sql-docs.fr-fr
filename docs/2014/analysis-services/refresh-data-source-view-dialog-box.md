@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.refreshdsv.f1
@@ -15,12 +14,12 @@ ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748483"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070505"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Boîte de dialogue Actualiser la vue de source de données
   Utilisez la boîte de dialogue **Actualiser la vue de source de données** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour accepter ou annuler les modifications résultant de l'actualisation de la vue de source de données. Cette boîte de dialogue affiche les modifications apportées à la vue de source de données résultant des modifications apportées à la source de données sous-jacente. Cliquez sur **OK** pour accepter les modifications et actualiser la vue de source de données, ou sur **Annuler** pour ignorer les modifications et ne pas modifier la vue de source de données. Vous pouvez afficher la boîte de dialogue **Actualiser la vue de source de données** de la manière suivante :  

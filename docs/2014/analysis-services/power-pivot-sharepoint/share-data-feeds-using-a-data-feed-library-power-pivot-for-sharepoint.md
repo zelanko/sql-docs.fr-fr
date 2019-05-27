@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
@@ -13,12 +12,12 @@ ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749198"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071153"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Partager des flux de données à l'aide d'une bibliothèque de flux de données (PowerPivot pour SharePoint)
   Un flux de données est un flux de données XML généré à partir d'un service ou d'une application qui expose des données au format câble Atom. Son utilisation pour transporter des données entre applications et vers des visionneuses côté client est de plus en plus répandue. Dans un déploiement PowerPivot pour SharePoint, les flux de données sont utilisés pour remplir un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] source de données contenant des données à partir d’une application prenant en charge Atom ou un service.  

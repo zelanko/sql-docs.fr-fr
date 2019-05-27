@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
@@ -13,12 +12,12 @@ ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccf4e335f3b6d700fd47e1073e4f9432cc81cd29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732578"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082700"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Utilisation de SQL Server Profiler pour contrôler l'exploration de données (Analysis Services – Exploration de données)
   Si vous avez les autorisations nécessaires, vous pouvez utiliser SQL Server Profiler pour contrôler les activités d'exploration de données émises sous la forme de demandes envoyées à une instance de SQL Server Analysis Services. L'activité d'exploration de données peut inclure le traitement de modèles ou de structures, de requêtes de prédiction ou de requêtes de contenu ou la création de nouveaux modèles ou structures.  

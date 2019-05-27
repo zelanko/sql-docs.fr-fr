@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91cc8740dfaeddcf489f3274b6766cdb803b1321
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a36ad34a7f8636d5d13c8d914f8b90965ead65c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749157"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070880"
 ---
 # <a name="use-powerpivot-gallery"></a>Utiliser la Galerie PowerPivot
   La Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et des rapports Reporting Services contenant des données PowerPivot et d'autres types de documents.  

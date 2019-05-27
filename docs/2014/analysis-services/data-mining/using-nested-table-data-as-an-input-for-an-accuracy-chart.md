@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
@@ -16,12 +15,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082733"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision
   Si vous testez l'exactitude d'un modèle d'exploration de données en utilisant des données externes et que le modèle d'exploration de données contient des tables imbriquées, les données externes doivent également contenir une table de cas et une table imbriquée associée.  

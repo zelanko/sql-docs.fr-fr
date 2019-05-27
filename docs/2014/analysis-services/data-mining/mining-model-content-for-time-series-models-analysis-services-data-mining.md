@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733585"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083531"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
   Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -336,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Prévision|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Prévision|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Prévision|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Prévision|T1'000 Pacifique : quantité | TA0000000b | 27 | ARIMA (1,0,3)|  
+|Prévision|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
  À partir de ces résultats, que vous pouvez également parcourir à l’aide de la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md), vous pouvez indiquer, d’un seul coup d’œil, les séries qui sont complètement linéaires, celles qui ont plusieurs structures périodiques et les périodicités qui ont été découvertes.  
   

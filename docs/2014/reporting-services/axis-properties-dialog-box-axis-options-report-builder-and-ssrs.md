@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
@@ -14,12 +13,12 @@ ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 553d1d4e2be366cc56ed37caad6a9db20850e856
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239349"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109959"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'axe, Options de l'axe (Générateur de rapports et SSRS)
   Sélectionnez **Options de l’axe** sur le **Horizontal** ou **propriétés de l’axe vertical** boîte de dialogue pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

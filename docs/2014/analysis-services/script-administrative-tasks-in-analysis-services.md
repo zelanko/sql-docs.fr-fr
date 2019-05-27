@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic Analysis Services administration
@@ -14,12 +13,12 @@ ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0384498d5068171b205bcafdfd28222a86e1bab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747931"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069941"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Tâches d'administration à l'aide de scripts dans Analysis Services
   Vous pouvez automatiser des tâches d'administration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en écrivant ou en générant des scripts qui peuvent être exécutés manuellement ou planifiés grâce à SQL Server Agent. Le tableau suivant résume les options de script à votre disposition et fournit des liens vers des informations supplémentaires.  

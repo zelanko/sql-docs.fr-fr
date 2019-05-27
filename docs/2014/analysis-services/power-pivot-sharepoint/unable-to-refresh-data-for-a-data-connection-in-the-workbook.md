@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070941"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot
   Pour les classeurs Excel qui contiennent des données PowerPivot, Excel Services retourne cette erreur en cas de demande de connexion à un serveur PowerPivot qui échoue.  
@@ -55,7 +54,7 @@ ms.locfileid: "62749125"
   
  Les serveurs qui exécutent PowerPivot pour SharePoint obtiennent le fournisseur de données OLE DB mis à jour automatiquement. D'autres serveurs, tels que ceux qui exécutent une instance autonome d'Excel Services sans PowerPivot pour SharePoint sur le même ordinateur, doivent être corrigés pour utiliser les bibliothèques clientes plus récentes. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
- **Scénario 3 : Contrôleur de domaine n’est pas disponible**  
+ **Scénario 3 : Contrôleur de domaine n’est pas disponible**  
   
  La cause de l'erreur peut être qu'un contrôleur de domaine n'est pas disponible pour valider l'identité de l'utilisateur. Un contrôleur de domaine est requis par le service d'émission de jetons Revendications vers Windows pour authentifier l'utilisateur SharePoint à chaque connexion. Le service d'émission de jetons Revendications vers Windows n'utilise pas des informations d'identification mises en cache. Il valide l'identité de l'utilisateur pour chaque connexion.  
   

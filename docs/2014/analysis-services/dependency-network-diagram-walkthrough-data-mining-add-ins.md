@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
@@ -19,12 +18,12 @@ ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732175"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081968"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme Réseau de dépendances (Compléments d'exploration de données)
   Plusieurs types de modèles d'exploration de données différents utilisent un graphique de réseau comme manière d'explorer les relations dans les données. Vous pouvez importer ces modèles dans Visio à l’aide du **réseau de dépendances** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour travailler avec des diagrammes de réseau de dépendance :  

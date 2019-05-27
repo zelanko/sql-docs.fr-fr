@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ec74b3d16830eff3c78a3b74e07bc017287defb5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc1e5ae5d17d45b937a5dd44ab3ea6fe5f8620eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064616"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108780"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Installation d'invite de commandes en mode natif et en mode SharePoint de Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l’installation à partir de la ligne de commande du programme d’installation de SQL Server. Cette rubrique contient plusieurs exemples d'installations à partir de la ligne de commande spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour obtenir une description complète des options de ligne de commande disponibles pour tous les composants de SQL Server, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Cette rubrique ne décrit pas les options de ligne de commande du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Pour plus d’informations sur l’installation du complément à partir de la ligne de commande, consultez [Installer le complément à l’aide du fichier d’installation rsSharePoint.msi](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  

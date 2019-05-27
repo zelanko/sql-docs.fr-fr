@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -18,12 +17,12 @@ ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63224809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108699"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Supprimer et recréer des clés de chiffrement (Gestionnaire de configuration de SSRS)
   La suppression et la recréation de clés de chiffrement sont des activités qui dépassent le cadre d'une simple opération de maintenance des clés de chiffrement. Vous effectuez ces tâches en réponse à une menace spécifique pesant sur votre serveur de rapports ou comme ultime recours si vous ne pouvez plus accéder à la base de données du serveur de rapports.  

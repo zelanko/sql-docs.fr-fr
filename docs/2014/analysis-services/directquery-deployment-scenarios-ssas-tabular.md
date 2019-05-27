@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731665"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081652"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scénarios de déploiement DirectQuery (SSAS Tabulaire)
   Cette rubrique fournit une procédure pas-à-pas présentant le processus de conception et de déploiement des modèles DirectQuery. Vous pouvez configurer DirectQuery pour utiliser des données relationnelles uniquement (DirectQuery uniquement), ou vous pouvez configurer le modèle pour basculer entre l'utilisation de données en mémoire cache uniquement ou de données relationnelles uniquement (mode hybride). Cette rubrique présente le processus d'implémentation pour les deux modes, et décrit les différences possibles dans les résultats de la requête selon le mode et la configuration de la sécurité.  

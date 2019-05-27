@@ -19,16 +19,16 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87f14c6784f35f918c63af490ca6a5f8c1ddf3f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57be9c0aabc429e1c9a6d3e148ab5a11461f2d32
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745085"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943250"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  Représente une chaîne de caractères au format Unicode. *character_string* est de type **sysname** et est limité à 128 caractères. Les entrées de plus de 128 caractères retournent une valeur NULL.  
   
  '*quote_character*'  
- Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Il peut s’agir d’une apostrophe ( **'**), d’un crochet droit ou gauche ( **[]**), d’un guillemet double ( **"**), d’une parenthèse gauche ou droite ( **()** ), d’un signe inférieur ou supérieur à ( **><** ), d’une accolade gauche ou droite ( **{}** ) ou d’un accent grave ( **\`** ). La valeur NULL est retournée si un caractère non autorisé est fourni. Si *quote_character* n’est pas spécifié, les crochets sont utilisés.  
+ Représente une chaîne d'un seul caractère à utiliser en tant que délimiteur. Il peut s’agir d’une apostrophe ( **'** ), d’un crochet droit ou gauche ( **[]** ), d’un guillemet double ( **"** ), d’une parenthèse gauche ou droite ( **()** ), d’un signe inférieur ou supérieur à ( **><** ), d’une accolade gauche ou droite ( **{}** ) ou d’un accent grave ( **\`** ). La valeur NULL est retournée si un caractère non autorisé est fourni. Si *quote_character* n’est pas spécifié, les crochets sont utilisés.  
   
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(258)**  

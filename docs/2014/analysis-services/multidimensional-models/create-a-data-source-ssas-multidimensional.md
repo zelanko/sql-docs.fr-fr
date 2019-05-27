@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
@@ -19,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62702155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076517"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
   Dans un modèle multidimensionnel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objet de source de données représente une connexion à la source de données depuis laquelle vous traitez (ou importez) des données. Un modèle multidimensionnel doit contenir au moins un objet de source de données, mais rien ne vous empêche d'en ajouter plus pour combiner des données émanant de plusieurs entrepôts de données. Suivez les instructions de cette rubrique pour créer un objet de source de données pour votre modèle. Pour plus d’informations sur la définition des propriétés de cet objet, consultez [Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md).  

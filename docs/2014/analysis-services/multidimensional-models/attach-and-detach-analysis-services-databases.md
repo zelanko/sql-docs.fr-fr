@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
@@ -19,12 +18,12 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727079"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077485"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
   Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et bien plus encore, le `Attach` et `Detach` commandes activent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et la mettre en ligne avec peu d’efforts.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
@@ -13,12 +12,12 @@ ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081486"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Boîte de dialogue Extraire (Visionneuse de modèle d'exploration de données)
   Quand vous affichez un modèle d’exploration de données sous l’onglet **Visionneuse de modèle d’exploration de données** du concepteur de modèle d’exploration de données, vous pouvez extraire les détails des données de cas, à condition que l’extraction ait été activée sur le modèle. De plus, si l'extraction a été activée sur la structure d'exploration de données sous-jacente, vous pouvez aussi afficher les colonnes dans la structure d'exploration de données, même si ces colonnes n'ont pas été incluses dans le modèle d'exploration de données. Dans la liste de colonnes, les colonnes de structure portent un préfixe par l’étiquette « Structure. ».  
