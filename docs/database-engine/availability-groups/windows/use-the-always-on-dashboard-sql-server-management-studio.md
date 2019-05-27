@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120196"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982794"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120196"
 -   Mode et état de synchronisation    
 -   Durée de restauration du journal  
   
-##  <a name="before-you-begin"></a>Avant de commencer  
   
-### <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Conditions préalables requises  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge soit le réplica principal, soit un réplica secondaire d'un groupe de disponibilité.  
   
-### <a name="security"></a>Sécurité  
-  
-#### <a name="permissions"></a>Permissions  
+ 
+### <a name="permissions"></a>Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Pour démarrer le tableau de bord Always On  
@@ -56,7 +54,7 @@ ms.locfileid: "49120196"
   
 2.  Développez le nœud **Haute disponibilité Always On** , cliquez avec le bouton droit sur le nœud **Groupes de disponibilité** , puis cliquez sur **Afficher le tableau de bord**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Changer les options du tableau de bord Always On  
+##  <a name="change-always-on-dashboard-options"></a>Changer les options du tableau de bord Always On  
  Vous pouvez utiliser la boîte de dialogue **Options de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]** pour configurer le comportement du tableau de bord [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On en ce qui concerne l’actualisation automatique et l’activation d’une stratégie Always On définie automatiquement.  
   
 1.  Dans le menu **Outils** , cliquez sur **Options**.  
@@ -112,7 +110,7 @@ Quand vous êtes connecté au réplica principal, **Détails du réplica de disp
 
 Le volet **Réplica de disponibilité** affiche les colonnes suivantes :  
   
- **Nom**  
+ **Name**  
  Nom de l'instance du serveur qui héberge le réplica de disponibilité. Cette colonne est affichée par défaut.  
   
  **Rôle**  
@@ -201,7 +199,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
   
  Le volet qui affiche les informations regroupées comporte les colonnes suivantes :  
   
- **Nom**  
+ **Name**  
  Nom de la base de données de disponibilité. Cette valeur est affichée par défaut.  
   
  **Réplica**  
@@ -216,8 +214,7 @@ Le volet **Réplica de disponibilité** affiche les colonnes suivantes :
     -   Pour une base de données secondaire, indique que la base de données n'a pas commencé la synchronisation du journal en raison d'un problème de connexion, est suspendue, ou passe par des états de transition pendant le démarrage ou lors d'un changement de rôle.  
   
 -   **Avec synchronisation** :
--   
-     Sur un réplica principal :   
+- Sur un réplica principal :   
     - Sur une base de données primaire, indique que cette base de données est prête à recevoir une demande d’analyse d’une base de données secondaire.  
     - Sur un réplica secondaire, indique qu'il existe un déplacement des données actif pour cette base de données secondaire. 
   

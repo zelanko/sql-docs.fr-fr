@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265951"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109619"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
   Les pages Créer un abonnement piloté par les données vous permettent de générer ou modifier un abonnement qui interroge une base de données de l'abonné pour obtenir des informations sur l'abonnement chaque fois que l'abonnement est exécuté. Les abonnements pilotés par les données utilisent les résultats de la requête pour identifier les destinataires de l'abonnement, paramètres de remise et valeurs des paramètres de rapport. Lors de l'exécution, le serveur de rapports exécute une requête pour obtenir les valeurs utilisées pour les paramètres de l'abonnement. Vous pouvez utiliser ces pages pour définir la requête et attribuer des valeurs de requête aux paramètres de l'abonnement. Les valeurs et les options que vous spécifiez pour un abonnement piloté par les données sont réparties dans plusieurs pages (identiques à celles d'un Assistant). Il existe sept pages en tout.  

@@ -11,14 +11,18 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282983"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720142"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
   
 > **REMARQUE :** Lorsque vous utilisez la version actuelle de l’utilitaire **dtexec** pour exécuter un package créé par une version antérieure de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l’utilitaire met temporairement à niveau le package au format de package actuel. En revanche, vous ne pouvez pas vous servir de l’utilitaire **dtexec** pour enregistrer le package mis à niveau. Pour plus d’informations sur la mise à niveau permanente d’un package vers la version actuelle, voir [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
@@ -299,31 +303,31 @@ dtexec /option [value] [/option [value]]...
   
     -   Fichier texte :  
   
-        -   ProgID: DTS.LogProviderTextFile.1  
+        -   ProgID : DTS.LogProviderTextFile.1  
   
         -   ClassID : {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID: DTS.LogProviderSQLProfiler.1  
+        -   ProgID : DTS.LogProviderSQLProfiler.1  
   
         -   ClassID : {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID: DTS.LogProviderSQLServer.1  
+        -   ProgID : DTS.LogProviderSQLServer.1  
   
         -   ClassID : {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Journaux d'événements Windows :  
   
-        -   ProgID: DTS.LogProviderEventLog.1  
+        -   ProgID : DTS.LogProviderEventLog.1  
   
         -   ClassID : {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   Fichier XML :  
   
-        -   ProgID: DTS.LogProviderXMLFile.1  
+        -   ProgID : DTS.LogProviderXMLFile.1  
   
         -   ClassID : {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   

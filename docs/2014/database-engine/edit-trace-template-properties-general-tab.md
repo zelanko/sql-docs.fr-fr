@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.edittracetemplateproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 2ab1a21d-3a0f-4ba4-92d8-7150b68e585e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c27057a5968ac9c415852d7cb934251056af9d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779685"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064899"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Modifier les propriétés du modèle de trace (onglet Général)
   Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSMS.XEDISPLAY.GROUPING.F1
@@ -20,12 +19,12 @@ ms.assetid: 6b2244bc-df6a-4b0a-990e-ddd8d42f7907
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1135b4738aea40d4bf426dffc6bcccb64c9f59e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39dd8c4f333df1528f3894ffc6dfe01a48a91f2c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808194"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065014"
 ---
 # <a name="create-an-extended-events-session-using-the-new-session-dialog"></a>Créer une session Événements étendus à l'aide de la boîte de dialogue Nouvelle session
   La boîte de dialogue Nouvelle session permet de définir une session Événements étendus qui capture, affiche et analyse vos données. La boîte de dialogue Nouvelle session expose toutes les fonctionnalités Événements étendus.  

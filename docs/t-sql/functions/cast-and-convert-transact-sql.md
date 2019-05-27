@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801833"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942895"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST et CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ Ces fonctions convertissent une expression d’un type de données en un autre.
 
 **Cast**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Convert**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -122,9 +123,9 @@ Quand *expression* est un type de données de date ou d’heure, *style* peut pr
 |-|**13** ou **113** (<sup>1,</sup><sup>2</sup>)|Valeur par défaut Europe + millièmes de secondes|jj mois aaaa hh:mi:ss:mmm (24h)|  
 |**14**|**114**|-|hh:mi:ss:mmm(24h)|  
 |-|**20** ou **120** (<sup>2</sup>)|ODBC canonique|aaaa-mm-jj hh:mi:ss (24h)|  
-|-|**21** ou **121** (<sup>2</sup>)|Valeur par défaut canonique ODBC (avec millisecondes) pour time, date, datetime2, et datetimeoffset|aaaa-mm-jj hh:mi:ss.mmm (24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-jjThh:mi:ss.mmm (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur de la fraction décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
-|-|**127**(<sup>6, 7</sup>)|ISO8601 avec fuseau horaire Z.|aaaa-mm-jjThh:mi:ss.mmmZ (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
+|-|**21** ou **121** (<sup>2</sup>)|Valeur canonique ODBC par défaut (avec millisecondes) pour time, date, datetime2 et datetimeoffset|aaaa-mm-jj hh:mi:ss.mmm (24h)|  
+|-|**126** (<sup>4</sup>)|ISO8601|aaaa-mm-jjThh:mi:ss.mmm (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur de la fraction décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
+|-|**127**(<sup>6, 7</sup>)|ISO8601 avec fuseau horaire Z.|aaaa-mm-jjThh:mi:ss.mmmZ (sans espace)<br /><br /> Remarque : Pour une valeur en millisecondes (mmm) égale à 0, la valeur décimale n’est pas affichée. Par exemple, la valeur « 2012-11-07T18:26:20.000 » est affichée comme « 2012-11-07T18:26:20 ».|  
 |-|**130** (<sup>1,</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|jj mois aaaa hh:mi:ss:mmmAM<br /><br /> Dans ce style, **mois** correspond à une représentation Unicode Hijri à plusieurs jetons du nom complet du mois. Cette valeur n’est pas retournée correctement sur les installations en anglais américain par défaut de SSMS.|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|jj/mm/yyyy hh:mi:ss:mmmAM|  
   
@@ -176,12 +177,12 @@ Quand *expression* est un type **xml**, *style* peut prendre l’une des valeurs
 |Valeur|Sortie|  
 |---|---|
 |**0** (valeur par défaut)|Utilisez le comportement d’analyse par défaut permettant de supprimer les espaces non significatifs et n’autorisant pas de sous-ensemble DTD interne.<br /><br />**Remarque :** Quand vous effectuez une conversion vers le type de données **xml**, les espaces non significatifs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont gérés différemment de ceux dans XML 1.0. Pour plus d’informations, consultez [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
-|**1**|Maintien des espaces non significatifs. Ce paramètre de style définit la gestion par défaut de **xml:space** pour correspondre au comportement de **xml:space="preserve"**.|  
+|**1**|Maintien des espaces non significatifs. Ce paramètre de style définit la gestion par défaut de **xml:space** pour correspondre au comportement de **xml:space="preserve"** .|  
 |**2**|Activation du traitement limité de sous-ensembles DTD internes.<br /><br /> Si cette option est activée, le serveur peut utiliser les informations suivantes fournies dans un sous-ensemble DTD interne afin de procéder à des opérations d’analyse autres que celles de validation des données.<br /><br />   - Les valeurs par défaut concernant les attributs sont alors appliquées<br />   - Les références à des entités internes sont résolues et développées<br />   - Le modèle de contenu DTD fait ensuite l’objet d’une vérification syntaxique<br /><br /> L’analyseur ignore les sous-ensembles DTD externes. Il n’évalue pas non plus la déclaration des balises XML au niveau de l’attribut **standalone** pour vérifier s’il a la valeur **yes** ou **no**. Il analyse cependant l’instance XML comme s’il s’agissait d’un document autonome.|  
 |**3**|Maintien des espaces non significatifs et activation du traitement limité de sous-ensembles DTD internes.|  
   
 ## <a name="binary-styles"></a>Styles binaires
-Quand *expression* est un type **binary(n)**, **char(n)**, **varbinary(n)** ou **varchar(n)**, *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les valeurs de style qui ne sont pas répertoriées dans le tableau retournent une erreur.
+Quand *expression* est un type **binary(n)** , **char(n)** , **varbinary(n)** ou **varchar(n)** , *style* peut prendre l’une des valeurs indiquées dans le tableau suivant. Les valeurs de style qui ne sont pas répertoriées dans le tableau retournent une erreur.
   
 |Valeur|Sortie|  
 |---|---|
@@ -204,8 +205,8 @@ Quand vous effectuez une conversion entre **datetimeoffset** et les types de car
   
 ## <a name="large-value-data-types"></a>Types de données de valeur élevée
 Les types de données correspondant à des valeurs élevées ont le même comportement de conversion, à la fois implicite et explicite, que leurs équivalents de valeurs plus faibles, notamment en ce qui concerne les types **nvarchar**, **varbinary** et **varchar**. Vous devez cependant prendre en compte les recommandations suivantes :
--   Une conversion du type **image** en **varbinary(max)** et vice versa fonctionne comme une conversion implicite et il en va de même pour les conversions entre les types **text** et **varchar(max)**, et **ntext** et **nvarchar(max)**.  
--   La conversion de types de données de valeur élevée, comme c’est le cas pour le type **varchar(max)**, en type équivalent de valeur plus faible, par exemple **varchar**, reste aussi une conversion implicite, mais la valeur trop grande risque d’être tronquée si elle dépasse la longueur indiquée autorisée pour le type de données de valeur plus modeste.  
+-   Une conversion du type **image** en **varbinary(max)** et vice versa fonctionne comme une conversion implicite et il en va de même pour les conversions entre les types **text** et **varchar(max)** , et **ntext** et **nvarchar(max)** .  
+-   La conversion de types de données de valeur élevée, comme c’est le cas pour le type **varchar(max)** , en type équivalent de valeur plus faible, par exemple **varchar**, reste aussi une conversion implicite, mais la valeur trop grande risque d’être tronquée si elle dépasse la longueur indiquée autorisée pour le type de données de valeur plus modeste.  
 -   Les conversions de **nvarchar**, **varbinary** ou **varchar** en leurs équivalents de valeur élevée se déroulent de façon implicite.  
 -   Enfin, les conversions du type de données **sql_variant** en type plus conséquent correspondent cependant à une conversion explicite.  
 -   Il reste à savoir que les types de données de valeur élevée ne peuvent pas être convertis en **sql_variant**.  
@@ -221,7 +222,7 @@ Les types de données **text** et **image** ne prennent pas en charge la convers
 ## <a name="output-collation"></a>Classement des résultats  
 Quand l’entrée et la sortie de CAST ou CONVERT sont des chaînes de caractères, l’entrée et la sortie présentent les mêmes classement et étiquette de classement. Si l'entrée n'est pas une chaîne de caractères, la sortie présente le classement par défaut de la base de données et une étiquette de classement de contrainte par défaut. Pour plus d’informations, consultez [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).
   
-Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Exemple :
+Pour attribuer un classement différent à la sortie, appliquez la clause COLLATE à l'expression de résultat de la fonction CAST ou CONVERT. Par exemple :
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -366,7 +367,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilisation de CAST avec des opérateurs arithmétiques  
+### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilisation de CAST avec des opérateurs arithmétiques  
 Cet exemple illustre le calcul effectué sur une colonne unique (intitulée `Computed`) où le total des ventes de l’année en cours (`SalesYTD`) est divisé par le pourcentage de commission (dont la valeur se trouve dans `CommissionPCT`). Cette valeur est arrondie au nombre entier le plus proche, puis convertie en type de données `int`.
   
 ```sql
@@ -421,7 +422,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Utilisation de CAST pour faciliter la lecture des résultats  
-Cet exemple s’appuie sur CAST dans la liste SELECT pour convertir la colonne `Name` en colonne de type **char(10)**. Il utilise la base de données AdventureWorksDW.
+Cet exemple s’appuie sur CAST dans la liste SELECT pour convertir la colonne `Name` en colonne de type **char(10)** . Il utilise la base de données AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
@@ -611,7 +612,7 @@ Style 2, character to binary
 (1 row(s) affected)  
 ```  
   
-### <a name="i-converting-date-and-time-data-types"></a>I. Convertit les types de données de date et d'heure  
+### <a name="i-converting-date-and-time-data-types"></a>I. Conversion des types de données de date et d'heure  
 Cet exemple illustre la conversion des types de données date, time et datetime.
   
 ```sql

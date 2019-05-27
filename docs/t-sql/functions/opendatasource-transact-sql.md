@@ -20,16 +20,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6a8daefea37ba33264ca6fa4498f89201abeb0d0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571388"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944888"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Nom enregistré comme PROGID du fournisseur OLE DB utilisé pour accéder à la source de données. *provider_name* est du type de données **char**, sans valeur par défaut.  
   
  *init_string*  
- Chaîne de connexion transmise à l’interface IDataInitialize du fournisseur de destination. La syntaxe de la chaîne du fournisseur est basée sur des paires mot clé-valeur séparées par un point-virgule, par exemple : **'**_mot-clé1_=_valeur_ **;** _mot-clé2_=_valeur_**'**.  
+ Chaîne de connexion transmise à l’interface IDataInitialize du fournisseur de destination. La syntaxe de la chaîne du fournisseur est basée sur des paires mot clé-valeur séparées par un point-virgule, par exemple : **'** _mot-clé1_=_valeur_ **;** _mot-clé2_=_valeur_ **'** .  
   
  Pour plus d'informations sur les paires mot clé-valeur prises en charge par le fournisseur, consultez le kit de développement logiciel (SDK) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access. Cette documentation définit la syntaxe de base. Le tableau suivant répertorie les mots clés utilisés fréquemment dans l’argument *init_string*.  
   
@@ -79,7 +79,7 @@ OPENDATASOURCE ( provider_name, init_string )
   
  Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées au résultat de l’un de ces appels n’ont aucun effet sur les résultats de l’autre.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter OPENDATASOURCE. Les autorisations utilisées pour la connexion au serveur distant sont déterminées à partir de la chaîne de connexion.  
   
 ## <a name="examples"></a>Exemples  

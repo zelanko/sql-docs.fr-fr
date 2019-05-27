@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -17,12 +16,12 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63058130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092587"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Options de configuration Reporting Services (SSRS)
   Utilisez la page **Configuration de Reporting Services** de l’Assistant Installation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier le mode d’installation et de configuration d’un serveur de rapports. La disponibilité d’une option d’installation dépend des options que vous avez choisies précédemment dans la page **Sélection de fonctionnalités** , ainsi que du fait que vous installez également ou non une instance locale du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lors de l’installation du serveur de rapports.  
@@ -49,7 +48,7 @@ ms.locfileid: "63058130"
 #### <a name="install-only"></a>Installer uniquement  
  Installe les fichiers programme du serveur de rapports, crée le compte de service Report Server et inscrit le fournisseur WMI (Windows Management Instrumentation) du serveur de rapports. Cette option d'installation porte également le nom d'installation de « fichiers uniquement ». Sélectionnez cette option si vous ne souhaitez pas utiliser la configuration par défaut. Si la configuration par défaut ne peut pas être installée, ou si vous installez un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui inclut [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], cette option est la seule disponible. Pour plus d’informations sur l’installation de fichiers uniquement, consultez [l’Installation de fichiers uniquement (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Une fois l'installation terminée, vous devez créer la base de données du serveur de rapports et configurer le serveur de rapports de sorte qu'il puisse être utilisé. Pour configurer un serveur de rapports et créer la base de données correspondante, utilisez le gestionnaire de configuration de Reporting Services. Pour plus d’informations, consultez [Comment : Créer une base de données de serveur de rapports (Configuration de Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) et [configuration d’une connexion de base de données de serveur de rapports](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
+ Une fois l'installation terminée, vous devez créer la base de données du serveur de rapports et configurer le serveur de rapports de sorte qu'il puisse être utilisé. Pour configurer un serveur de rapports et créer la base de données correspondante, utilisez le gestionnaire de configuration de Reporting Services. Pour plus d’informations, consultez [Procédure : Créer une base de données de serveur de rapports (Configuration de Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) et [configuration d’une connexion de base de données de serveur de rapports](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Mode SharePoint de Reporting Services  
   

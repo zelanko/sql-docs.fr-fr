@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fe356d15c0602f33ec9c59ee463a69783686899b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756818"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066153"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez les fonctionnalités de la **Barre d’outils** dans le Concepteur de cube pour exécuter des actions courantes pendant la conception d’un cube, en le parcourant, en parcourant ses objets, ou en créant une requête MDX. Les opérations qui sont communes à la conception et à l'affichage des requêtes incluent la définition du contexte de l'utilisateur, le traitement des objets et la définition de la langue par défaut.  
