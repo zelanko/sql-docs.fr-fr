@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680447"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087458"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurer les informations d'identification stockées pour l'actualisation des données PowerPivot (PowerPivot pour SharePoint)
   Les travaux d'actualisation des données PowerPivot peuvent s'exécuter sous n'importe quel compte d'utilisateur Windows, du moment que vous créez une application cible dans le service Banque d'informations sécurisé pour stocker les informations d'identification que vous souhaitez utiliser. De la même façon, si vous souhaitez fournir une connexion à une base de données qui varie de celle utilisée à l'origine pour importer les données dans PowerPivot pour Excel, vous pouvez mapper ces informations d'identification à une application cible de service Banque d'informations sécurisé, puis spécifier cette application cible dans une planification d'actualisation des données.  

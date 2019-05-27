@@ -30,15 +30,15 @@ helpviewer_keywords:
 - default database
 - LOGINPROPERTY function
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4135760bb80daa7ffebe01b173fdc8e1c4fd1059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616797"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949137"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="remarks"></a>Notes   
  Cette fonction intégrée retourne des informations sur les paramètres de stratégie de mot de passe d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que les noms des propriétés ne respectent pas la casse, les noms de propriété tels que **BadPasswordCount** et **badpasswordcount** sont équivalents. Les valeurs des propriétés **PasswordHash, PasswordHashAlgorithm** et **PasswordLastSetTime** sont disponibles sur toutes les configurations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge, mais les autres propriétés ne sont disponibles que si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution sous [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] et que CHECK_POLICY et CHECK_EXPIRATION sont tous les deux activés. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW sur la connexion. Pour la demande du hachage de mot de passe, requiert en outre l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  

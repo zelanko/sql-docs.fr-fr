@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -16,12 +15,12 @@ ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ac6c8b8e45e63ccebd8ccc1cca2e1035d8f830d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18cbed174a5be656079ef232ba70cba3599d2815
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63277013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090290"
 ---
 # <a name="print-code-and-results"></a>Imprimer le code et les résultats
   Lorsque vous imprimez une requête ou un fichier, les éléments en couleurs s'impriment en couleurs si votre imprimante prend en charge l'impression en couleurs et que celle-ci est activée dans la configuration de l'imprimante.  

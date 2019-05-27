@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.copyaggregationdesign.f1
@@ -13,12 +12,12 @@ ms.assetid: 50c26cb1-c294-4f17-8b9e-435fdbd4806d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 11ee89e8849155f905e3908e491184f78a8f08b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643229"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062229"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Affecter une conception d'agrégation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Affecter une conception d'agrégation** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour affecter des conceptions d'agrégation à une ou plusieurs partitions de destination. Vous pouvez afficher la boîte de dialogue **Affecter une conception d’agrégation** en cliquant avec le bouton droit sur une partition ou une conception d’agrégation dans **l’Explorateur d’objets** , puis en sélectionnant **Affecter une conception d’agrégation**.  

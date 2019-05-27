@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102314"
 ---
 # <a name="schedules-page-report-manager"></a>Page Planifications (Gestionnaire de rapports)
   La page Planifications vous permet de créer, modifier, supprimer, suspendre ou reprendre des planifications partagées. Une planification partagée est une planification nommée que vous créez et gérez séparément à partir des rapports, des abonnements et des autres processus qui utilisent des informations de planification. Les utilisateurs peuvent sélectionner les planifications partagées que vous leur fournissez.  

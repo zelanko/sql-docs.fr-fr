@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d66bede3868b836c47527f51d527ba6b68282e79
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c14596554fd5df79fc967866421d7137ead71872
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168769"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945596"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -38,10 +38,10 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>Arguments  
  *expression*  
-A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+A **varbinary(** _n_ **)** , **varbinary(max)** , or **binary(** _n_ **)** value. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
-Valeur ayant le type de données **varbinary(max)**. `DECOMPRESS` utilise l’algorithme ZIP pour décompresser l’argument d’entrée. Si nécessaire, l’utilisateur doit explicitement caster le résultat en type de cible.  
+Valeur ayant le type de données **varbinary(max)** . `DECOMPRESS` utilise l’algorithme ZIP pour décompresser l’argument d’entrée. Si nécessaire, l’utilisateur doit explicitement caster le résultat en type de cible.  
   
 ## <a name="remarks"></a>Notes   
   

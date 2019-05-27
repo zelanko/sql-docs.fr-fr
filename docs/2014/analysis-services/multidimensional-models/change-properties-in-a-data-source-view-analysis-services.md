@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076735"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
   Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  
@@ -48,7 +47,7 @@ ms.locfileid: "62726833"
 |--------------|-----------------|  
 |Source de données|Indique la source de données dans la vue de source de données dont vous consultez les propriétés|  
 |Description|Fournit la description de la vue de source de données.|  
-|Créer une vue d’abonnement|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
+|Nom|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
 |NameMatchingCriteria|Critères de correspondance de noms pour la source de données. La valeur par défaut est (none) si des relations clé primaire/clé étrangère ont été détectées par l'Assistant Vue de source de données. Que cette propriété ait été définie ou non par l'Assistant Vue de source de données, vous pouvez spécifier une valeur ici. S'il existe des relations de base de données et que vous spécifiez des critères de correspondance de noms, les deux seront utilisés pour déterminer les relations entre les tables existantes et les nouvelles tables ajoutées.|  
 |RetrieveRelationships|Indique si les relations sont récupérées dans la base de données. La valeur par défaut est True.|  
 |SchemaRestriction|Indique les restrictions, le cas échéant, sur les schémas récupérés dans une source de données. Par défaut, aucune restriction de schéma n'est définie.|  

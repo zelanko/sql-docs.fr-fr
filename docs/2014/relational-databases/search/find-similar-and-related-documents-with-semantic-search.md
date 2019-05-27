@@ -9,22 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 186294182e39845ce600c04b35804759b61eb0f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63218098"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011318"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Rechercher des documents similaires ou connexes avec la recherche sémantique
   Explique comment rechercher des valeurs textuelles ou des documents similaires ou connexes et donne des informations sur leur similitude, dans des colonnes configurées pour l'indexation sémantique statistique.  
   
 ##  <a name="BasicsQuerySimilar"></a> Recherche de Documents similaires ou connexes  
   
-###  <a name="HowToQuerySimilar"></a> Comment : Rechercher des Documents similaires ou connexes avec SEMANTICSIMILARITYTABLE  
+###  <a name="HowToQuerySimilar"></a> Procédure : Rechercher des Documents similaires ou connexes avec SEMANTICSIMILARITYTABLE  
  Pour identifier des documents similaires ou connexes dans une colonne spécifique, interrogez la fonction [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql).  
   
  **SEMANTICSIMILARITYTABLE** retourne une table de zéro, une ou plusieurs lignes pour les colonnes dont le contenu dans la colonne spécifiée est sémantiquement similaire au document spécifié. Cette fonction d'ensemble de lignes peut être référencée dans la clause FROM d'une instruction SELECT comme un nom de table classique.  
@@ -53,7 +53,7 @@ GO
   
 ##  <a name="BasicsQuerySimilarity"></a> Recherche d’informations sur la façon dont les Documents sont similaires ou connexes  
   
-###  <a name="HowToQuerySimilarity"></a> Comment : Trouver des informations sur la façon dont les Documents sont similaires ou connexes avec SEMANTICSIMILARITYDETAILSTABLE  
+###  <a name="HowToQuerySimilarity"></a> Procédure : Trouver des informations sur la façon dont les Documents sont similaires ou connexes avec SEMANTICSIMILARITYDETAILSTABLE  
  Pour obtenir des informations sur les expressions clés qui rendent des documents similaires ou connexes, vous pouvez interroger la fonction [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
  **SEMANTICSIMILARITYDETAILSTABLE** retourne une table de zéro, une ou plusieurs lignes d’expressions clés communes dans deux documents (un document source et un document mis en correspondance) dont le contenu est similaire sémantiquement. Cette fonction d'ensemble de lignes peut être référencée dans la clause FROM d'une instruction SELECT comme un nom de table classique.  

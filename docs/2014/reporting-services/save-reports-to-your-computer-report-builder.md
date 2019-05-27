@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190220"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102309"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer des définitions de rapport sur votre ordinateur. Toutefois, lorsque des définitions sont enregistrées sur votre ordinateur, les autres utilisateurs ne peuvent pas consulter les rapports. Par ailleurs, les rapports qui font référence aux sources de données partagées ou qui stockent en externe des éléments de rapport, tels que des images et des sous-rapports, peuvent ne pas s'exécuter. Il est recommandé d'enregistrer des rapports sur un serveur de rapports ou un site SharePoint.  

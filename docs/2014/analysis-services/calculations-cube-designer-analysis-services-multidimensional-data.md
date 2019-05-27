@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
@@ -13,12 +12,12 @@ ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681086"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088288"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calculs (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Calculs** dans le Concepteur de cube pour afficher ou modifier les calculs, y compris les membres calculés, les jeux nommés et les commandes de script MDX (Multidimensional Expressions) du cube sélectionné.  

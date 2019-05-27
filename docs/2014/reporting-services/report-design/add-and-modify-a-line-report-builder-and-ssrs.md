@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8dc4998b-a214-49b6-96e7-fbc179015209
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020855"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106717"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Ajouter et modifier une ligne (Générateur de rapports et SSRS)
   Vous pouvez ajouter une ligne à votre rapport lorsque vous souhaitez qu'un élément graphique sépare des sections du rapport. Vous pouvez personnaliser l'apparence de la ligne en modifiant des propriétés telles que la couleur ou le style. Par exemple, vous pouvez incorporer les couleurs de la société dans le rapport.  

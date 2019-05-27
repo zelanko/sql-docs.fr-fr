@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
@@ -15,12 +14,12 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131178"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090987"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL de service Web (SSRS en mode natif)
   Utilisez la page URL du service Web pour configurer ou modifier l'URL permettant d'accéder au serveur de rapports. Une *réservation d'URL* est créée en fonction de l'URL que vous spécifiez. La réservation d'URL définit la syntaxe et les règles de toutes les URL qui peuvent être utilisées par la suite pour accéder au service Web Report Server. Elle spécifie le préfixe, l'hôte, le port et le répertoire virtuel pour le service Web Report Server. Selon la façon dont vous spécifiez l'hôte, plusieurs URL peuvent être possibles pour une réservation unique. La valeur par défaut pour l'hôte spécifie un caractère générique fort. Un caractère générique fort vous permet de spécifier dans une URL un nom d'hôte qui peut être résolu sur l'ordinateur qui héberge le serveur de rapports. Pour plus d’informations sur la configuration de l’URL et les réservations, consultez [configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) et [configurer l’URL de Report Server &#40;Gestionnaire de Configuration de SSRS&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

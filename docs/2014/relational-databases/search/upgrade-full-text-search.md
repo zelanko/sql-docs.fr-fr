@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363641"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010960"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
   La mise à niveau de recherche en texte intégral vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est effectuée pendant l'installation et lorsque les fichiers de base de données et les catalogues de texte intégral de la version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont joints, restaurés ou copiés à l'aide de l'Assistant Copie de base de données.  
@@ -135,9 +135,9 @@ ms.locfileid: "53363641"
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez le **mise à niveau\_option** action de [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez l’action **upgrade\_option** de [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Utilisez le **Option de mise à niveau de recherche en texte intégral** de la **propriétés du serveur** boîte de dialogue. Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]   **:** Utilisez l’**Option de mise à niveau du catalogue de texte intégral** de la boîte de dialogue **Propriétés du serveur**. Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Considérations relatives à la restauration d’un catalogue de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Une méthode de mise à niveau de données de texte intégral d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est de restaurer une sauvegarde de la base de données complète vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

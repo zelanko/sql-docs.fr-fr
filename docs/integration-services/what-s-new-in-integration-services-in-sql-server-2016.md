@@ -15,14 +15,18 @@ ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dea9e83bcfeff2c3b5c208cc947f48f21b9f4a7
-ms.sourcegitcommit: 6193aa9b4967302424270d67c27dbc601ca6849a
+ms.openlocfilehash: 659059130d63dd2f320dcbd9ec0364b249f0889b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877708"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713875"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Cette rubrique décrit les fonctionnalités qui ont été ajoutées ou mises à jour dans SQL Server 2016[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elle mentionne également les fonctionnalités ajoutées ou mises à jour dans le [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md) durant le calendrier SQL Server 2016.  
 
@@ -284,7 +288,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le Gestionnaire de connexions Excel, la source Excel et la destination Excel fournissent désormais une prise en charge explicite des sources de données Excel 2016.  
 
 ####  <a name="SAPBW"></a> Publication du connecteur pour SAP BW pour SQL Server 2016  
- Microsoft® Connector pour SAP BW pour Microsoft SQL Server® 2016 a été publié avec SQL Server 2016 Feature Pack. Pour télécharger les composants du Feature Pack, consultez [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).
+ Microsoft® Connector for SAP BW pour Microsoft SQL Server® 2016 a été publié comme faisant partie du Feature Pack de SQL Server 2016. Pour télécharger les composants du Feature Pack, consultez [Feature Pack Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).
  
 #### <a name="oracleteradata"></a> Publication de la version 4.0 des connecteurs pour Oracle et Teradata
 La version 4.0 de Microsoft Connectors pour Oracle et Teradata a été publiée. Pour télécharger les connecteurs, consultez [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
@@ -345,7 +349,7 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
  L’Assistant Importation et Exportation SQL Server peut désormais importer des données à partir d’Azure Blob Storage, mais également enregistrer des données à cet emplacement. Pour plus d’informations, consultez [Choisir une source de données &#40;Assistant Importation et Exportation SQL Server&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md) et [Choisir une destination &#40;Assistant Importation et Exportation SQL Server&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md). 
 
 ####  <a name="CDCOracle"></a> Service et concepteur de capture de données modifiées pour Oracle pour Microsoft SQL Server 2016  
- Le service et le concepteur de capture de données modifiées Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 ont été publiés avec SQL Server 2016 Feature Pack.  Ces composants prennent désormais en charge Oracle 12c dans une installation classique. (L’installation multi-locataire n’est pas prise en charge). Pour télécharger les composants du Feature Pack, consultez [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297).  
+ Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 ont été publiés comme faisant partie du Feature Pack SQL Server 2016.  Ces composants prennent désormais en charge Oracle 12c dans une installation classique. (L’installation multi-locataire n’est pas prise en charge). Pour télécharger les composants du Feature Pack, consultez [Feature Pack Microsoft® SQL Server® 2016](https://go.microsoft.com/fwlink/?LinkID=746297).  
   
 ####  <a name="cdc2016"></a> Mise à jour des composants de capture de données modifiées pour SQL Server 2016  
  Les composants de capture de données modifiées (CDC), tels que la tâche de contrôle, la source et la transformation de séparateur, ont été mis à jour pour assurer une compatibilité complète avec SQL Server 2016. Il n’existe aucune nouvelle fonctionnalité, ni aucun changement de comportement.  

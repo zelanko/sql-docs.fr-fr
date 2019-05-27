@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669608"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935484"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51669608"
   
 7.  Pour spécifier la colonne spatiale à indexer, cliquez sur **Ajouter**.  
   
-8.  Dans la boîte de dialogue **Sélectionner des colonnes à partir de** *\<nom_table>*, sélectionnez une colonne de type **geometry** ou **geography** en cochant la case correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Sélectionner des colonnes à partir de** *\<nom_table>* , sélectionnez une colonne de type **geometry** ou **geography** en cochant la case correspondante. Toutes les autres colonnes spatiales deviennent alors impossibles à modifier. Si vous souhaitez sélectionner une autre colonne spatiale, vous devez tout d'abord désactiver la colonne sélectionnée actuellement. Lorsque vous avez terminé, cliquez sur **OK**.  
   
 9. Vérifiez votre sélection de colonne dans la grille **Colonnes clés d'index** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51669608"
   
 11. Dans la page **Spatial** , spécifiez les valeurs que vous souhaitez utiliser pour les propriétés spatiales de l'index.  
   
-     Quand vous créez un index sur une colonne de type **geometry** , vous devez spécifier les coordonnées **(**_X-min_**,**_Y-min_**)** et **(**_X-max_**,**_Y-max_**)** du cadre englobant. Pour un index sur une colonne de type **geography** , les champs de cadre englobant deviennent en lecture seule après que vous avez spécifié le schéma de pavage **Grille géographique** , car le pavage de la grille de géographie n’utilise pas de cadre englobant.  
+     Quand vous créez un index sur une colonne de type **geometry** , vous devez spécifier les coordonnées **(** _X-min_ **,** _Y-min_ **)** et **(** _X-max_ **,** _Y-max_ **)** du cadre englobant. Pour un index sur une colonne de type **geography** , les champs de cadre englobant deviennent en lecture seule après que vous avez spécifié le schéma de pavage **Grille géographique** , car le pavage de la grille de géographie n’utilise pas de cadre englobant.  
   
      Si vous le souhaitez, vous pouvez spécifier des valeurs autres que les valeurs par défaut pour le champ **Cellules par objet** et pour la densité de grille à tout niveau du schéma de pavage. La quantité par défaut de cellules par objet est 16 pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou 8 pour [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou les versions supérieures, et la densité de grille par défaut est **Moyenne** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -134,7 +134,7 @@ ms.locfileid: "51669608"
  Un index spatial peut être créé uniquement sur une colonne de type **geometry** ou **geography**.  
   
 ### <a name="table-and-view-restrictions"></a>Restrictions sur les tables et les vues  
- Les index spatiaux peuvent être définis uniquement sur une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15.  
+ Les index spatiaux peuvent être définis uniquement sur une table dotée d'une clé primaire. Le nombre maximal de colonnes clés primaires sur la table est de 15.  
   
  La taille maximale des enregistrements de clés d'index est de 895 octets. Les tailles supérieures génèrent une erreur.  
   

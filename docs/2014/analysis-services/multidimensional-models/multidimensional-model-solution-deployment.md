@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
@@ -15,12 +14,12 @@ ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699163"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073548"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Déploiement d'une solution de modèle multidimensionnel
   Une fois le développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] terminé, vous pouvez déployer la base de données sur un serveur Analysis Services. Analysis Services fournit six méthodes de déploiement possibles qui peuvent être utilisées pour déplacer la base de données vers un serveur de production ou de test. Les méthodes sont énumérées ici dans l’ordre de leur avantage : Automatisation AMO, XMLA, Assistant de déploiement, utilitaire de déploiement, synchronisez l’Assistant, sauvegarde et restauration.  

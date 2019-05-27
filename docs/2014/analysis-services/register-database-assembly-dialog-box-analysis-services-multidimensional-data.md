@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070471"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Enregistrer l'assembly de base de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Enregistrer l'assembly de serveur** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une référence d'assembly dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Enregistrer l’assembly de serveur** en cliquant avec le bouton droit sur le dossier Assemblys d’une instance ou d’une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans **l’Explorateur d’objets** , puis en sélectionnant **Nouvel assembly**.  

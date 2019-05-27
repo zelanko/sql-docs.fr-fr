@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277658"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724886"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
   
  Une expression peut être ajoutée à un package, une tâche, une boucle Foreach, une boucle For, une séquence, un énumérateur Foreach, un gestionnaire d'événements, un gestionnaire de connexions aux niveaux des packages ou du projet, ou un module fournisseur d'informations. Toute propriété de ces objets qui est en lecture/écriture peut implémenter une expression de propriété. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend également en charge l'utilisation d'expressions de propriété dans certaines propriétés personnalisées de composants de flux de données. Les variables et les contraintes de précédence ne prennent pas en charge les expressions de propriété, mais elles incluent des propriétés spéciales dans lesquelles vous pouvez utiliser des expressions.  
@@ -126,7 +130,7 @@ ms.locfileid: "58277658"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 AM Durée : 9 secondes.  
+ PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 Durée : 9 secondes.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -137,11 +141,11 @@ ms.locfileid: "58277658"
   
  Lignes traitées :  
   
- NASDAQ: 7058  
+ NASDAQ : 7058  
   
- NYSE: 3528  
+ NYSE : 3528  
   
- AMEX: 1102  
+ AMEX : 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Expression de propriété pour la propriété exécutable d'une tâche d'exécution de processus  
  L’expression de propriété suivante peut être utilisée pour définir la propriété Executable d’une tâche d’exécution de processus. L'expression utilise une combinaison de littéraux de chaîne, d'opérateurs et de fonctions. L'expression utilise les fonctions DATEPART et GETDATE et l'opérateur conditionnel.  

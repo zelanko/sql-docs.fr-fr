@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
@@ -24,12 +23,12 @@ ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a7330fab8b4c0ecdff296e0daa5e529442fd8b94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734910"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083872"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal associe chaque état possible de l’attribut d’entrée avec chaque état possible de l’attribut prédictible et utilise les données d’apprentissage pour calculer les probabilités. Vous pouvez utiliser ces probabilités ultérieurement pour procéder à une classification ou à une régression ainsi que pour prédire le résultat de l'attribut prédit en fonction des attributs d'entrée.  

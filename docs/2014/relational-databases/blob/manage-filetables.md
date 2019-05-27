@@ -10,20 +10,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874786"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009991"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
   Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
   
-##  <a name="HowToEnumerate"></a> Comment : Obtenir une liste de FileTables et d’objets connexes  
+##  <a name="HowToEnumerate"></a> Procédure : obtenir une liste de FileTables et d’objets connexes  
  Pour obtenir une liste de FileTables, interrogez l'un des affichages catalogue suivants :  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Aucun des répertoires au niveau de la base de données sur l'instance n'est visible si FILESTREAM est désactivé au niveau de l'instance.  
   
-###  <a name="HowToDisable"></a> Comment : Désactiver et réactiver l’accès Non transactionnel au niveau de la base de données  
+###  <a name="HowToDisable"></a> Procédure : désactiver et réactiver l’accès non transactionnel au niveau de la base de données  
  Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Pour désactiver l'accès non transactionnel complet**  
@@ -106,7 +106,7 @@ ALTER DATABASE database_name
 GO  
 ```  
   
-###  <a name="visible"></a> Comment : Assurer la visibilité des FileTables dans une base de données  
+###  <a name="visible"></a> Procédure : assurer la visibilité des FileTables dans une base de données  
  Un répertoire au niveau de la base de données et les répertoires FileTable sous celui-ci sont visibles lorsque toutes les conditions suivantes sont remplies :  
   
 1.  FILESTREAM est activé au niveau de l'instance.  
@@ -138,7 +138,7 @@ GO
   
 -   Le répertoire FileTable et les fichiers et répertoires qu'il contient sont visibles dans le système de fichiers et sont disponibles pour l'accès aux E/S de fichier.  
   
-###  <a name="HowToEnableNS"></a> Comment : Désactiver et réactiver le Namespace FileTable au niveau des tables  
+###  <a name="HowToEnableNS"></a> Procédure : désactiver et réactiver l’espace de noms FileTable au niveau de la table  
  Appelez l’instruction ALTER TABLE avec l’option **{ENABLE | DISABLE} FILETABLE_NAMESPACE** .  
   
  **Pour désactiver l'espace de noms FileTable**  
@@ -161,7 +161,7 @@ GO
 > [!WARNING]  
 >  La suppression des descripteurs de fichiers ouverts peut entraîner la perte de données utilisateur non enregistrées. Ce comportement est cohérent avec le comportement du système de fichiers lui-même.  
   
-###  <a name="HowToListOpen"></a> Comment : Obtenir la liste des descripteurs de fichiers ouverts associés à un FileTable  
+###  <a name="HowToListOpen"></a> Procédure : obtenir une liste des descripteurs de fichiers ouverts associés à un FileTable  
  Interrogez l’affichage catalogue [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql).  
   
 ```sql  
@@ -169,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> Comment : Supprimer les descripteurs de fichiers ouverts associés à un FileTable  
+###  <a name="HowToKill"></a> Procédure : supprimer les descripteurs de fichiers ouverts associés à un FileTable  
  Appelez la procédure stockée [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) avec les arguments appropriés pour supprimer tous les descripteurs de fichiers ouverts dans la base de données ou dans le FileTable, ou pour supprimer un descripteur spécifique.  
   
 ```  
@@ -188,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> Comment : Identifier les verrous maintenus par les FileTables  
+###  <a name="HowToIdentifyLocks"></a> Procédure : identifier les verrous maintenus par les FileTables  
  La plupart des verrous acceptés par les FileTables correspondent aux fichiers ouverts par des applications.  
   
  **Pour identifier les fichiers ouverts et les verrous associés**  

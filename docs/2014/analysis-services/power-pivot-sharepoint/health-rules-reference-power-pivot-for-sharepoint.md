@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 60d8599942db1c7f1ff679d92de496692ed2d58b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749442"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071402"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Référence de règles d'intégrité (PowerPivot pour SharePoint)
   Cette rubrique de référence décrit les règles d'intégrité de SharePoint ajoutées par une installation de PowerPivot pour SharePoint. Ces règles sont utilisées pour signaler des problèmes avec l'intégrité du serveur, la disponibilité, ou la configuration d'une application de service [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ou son instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] associée.  

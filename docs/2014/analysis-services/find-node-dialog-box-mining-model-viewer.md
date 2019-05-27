@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.findnode.f1
@@ -15,12 +14,12 @@ ms.assetid: 220ebca3-3339-4b32-9770-4293fe8e70a4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731511"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081139"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Boîte de dialogue Rechercher un nœud (Visionneuse de modèle d'exploration de données)
   Utilisez la boîte de dialogue **Rechercher un nœud** , disponible sous l'onglet **Réseau de dépendances** d'un modèle, pour rechercher un nœud spécifique. Cette fonctionnalité est utile dans les schémas complexes qui contiennent un grand nombre de nœuds ou de jeux d'éléments.  

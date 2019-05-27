@@ -1,23 +1,23 @@
 ---
 title: Afficher le schéma de Cube | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 93898e6ed8dc26e3b06fd6a583bfa4084dd4c5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b094e27a8b7c51afec21fcc4807d3ee6e8b22c37
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072507"
 ---
 # <a name="view-the-cube-schema"></a>Afficher le schéma de cube
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Le volet **Vue de source de données** de l'onglet **Structure de cube** du **Concepteur de cube** affiche le schéma de cube. Le schéma est l'ensemble de tables à partir desquelles les mesures et les dimensions d'un cube sont dérivées. Chaque schéma de cube se compose d'une ou plusieurs tables de faits et d'une ou plusieurs tables de dimension sur lesquelles les mesures et les dimensions du cube sont basées.  
   
  Le volet **Vue de source de données** de l'onglet **Structure de cube** affiche un diagramme de la vue de source de données sur laquelle le cube est basé. Ce diagramme est un sous-ensemble du diagramme principal de la vue de source de données. Vous pouvez masquer et afficher les tables dans le volet **Vue de source de données** et afficher tous les diagrammes existants. Toutefois, vous ne pouvez pas apporter des modifications (telles que l'ajout de nouvelles relations ou requêtes nommées) au schéma sous-jacent. Pour apporter des modifications au schéma, utilisez le concepteur de vue de source de données.  
