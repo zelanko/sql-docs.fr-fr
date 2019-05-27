@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647042"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098701"
 ---
 # <a name="view-page-resources-report-manager"></a>Page Vue, Ressources (Gestionnaire de rapports)
   La page Afficher des ressources vous permet d'afficher une ressource. Une ressource est un élément stocké et géré sur un serveur de rapports, mais qui n'est pas traité sur un serveur de rapports (un serveur de rapports traite des rapports et des modèles). Vous pouvez utiliser des ressources lorsque vous souhaitez stocker des documents, des images ou d'autres fichiers arbitraires qui ne sont pas traités par le serveur. La plupart des fichiers image (tels que les fichiers JPG, GIF et PNG) peuvent être affichés dans la page Afficher du Gestionnaire de rapports. Les autres ressources s'ouvrent dans une autre fenêtre de l'application.  

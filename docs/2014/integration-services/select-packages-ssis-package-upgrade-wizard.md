@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
@@ -13,12 +12,12 @@ ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22de08e60bb8305337d0c251d59e8ddf2850715
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889255"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056019"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Sélectionner les packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Sélectionnez les packages** pour sélectionner les packages à mettre à niveau. Cette page répertorie les packages qui sont stockés dans l'emplacement spécifié sur la page **Sélectionner l'emplacement source** de l'Assistant.  

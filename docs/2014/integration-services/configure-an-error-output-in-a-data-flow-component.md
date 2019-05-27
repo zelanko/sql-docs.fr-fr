@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [Integration Services], data flow components
@@ -15,12 +14,12 @@ ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e06ee3d9bdd3f987fb03701e56fdb5db133d0bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835144"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060815"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurer une sortie d'erreur dans un composant de flux de données
   De nombreux composants de flux de données prennent en charge les sorties d’erreur, et en fonction du composant, le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] offre différentes manières de configurer une sortie d’erreur. En plus de configurer une sortie d'erreur, vous pouvez également configurer les colonnes d'une sortie d'erreur. Cela inclut la configuration des colonnes **ErrorCode** et **ErrorColumn** ajoutées par le composant.  

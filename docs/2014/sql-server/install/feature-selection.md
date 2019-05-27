@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
@@ -16,12 +15,12 @@ ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d20a8ea8a4e05b455a4c69a867504e82bdce014a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165371"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095221"
 ---
 # <a name="feature-selection"></a>Sélection des fonctionnalités
   Utilisez les cases à cocher de la page **Sélection de fonctionnalités** de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour sélectionner les composants de votre installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -41,7 +40,7 @@ ms.locfileid: "63165371"
   
 |Fonctionnalités|Description|  
 |--------------|-----------------|  
-| du[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et le [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] serveur (DQS). Les fonctionnalités du moteur de base de données sont les suivantes :<br /><br /> Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données.<br /><br /> Réplication : Facultatif : La réplication repose sur un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser ces bases de données afin de préserver leur cohérence.<br /><br /> Recherche en texte intégral : Facultatif : La recherche en texte intégral fournit les fonctionnalités nécessaires à l’émission de requêtes de texte intégral sur les données caractères en texte brut des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]: Facultatif : [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) est une solution de nettoyage de données qui vous permet d’identifier les données incohérentes et incorrectes dans votre source de données et fournit les moyens assistés par ordinateur et interactifs pour nettoyer vos données. Activez cette case à cocher pour installer le serveur DQS. Une fois l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminée, vous devez exécuter le fichier DQSInstaller.exe pour *terminer* l'installation du serveur DQS. Si vous avez installé l’instance par défaut de SQL server, ce fichier est disponible sous C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clusters de basculement :** Composants de réplication et recherche en texte intégral sont requis et sélectionnés automatiquement par le programme d’installation pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clustering de basculement installations lorsque vous sélectionnez Services moteur de base de données.|  
+| du[!INCLUDE[ssDE](../../includes/ssde-md.md)] |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] inclut le [!INCLUDE[ssDE](../../includes/ssde-md.md)], le service principal de stockage, traitement et de sécurisation des données, réplication, recherche en texte intégral, outils de gestion relationnelles et XML et le [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] serveur (DQS). Les fonctionnalités du moteur de base de données sont les suivantes :<br /><br /> Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est le service central qui permet de stocker, traiter et sécuriser les données.<br /><br /> Réplication : Facultatif : La réplication repose sur un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser ces bases de données afin de préserver leur cohérence.<br /><br /> Recherche en texte intégral : Facultatif : La recherche en texte intégral fournit les fonctionnalités nécessaires à l’émission de requêtes de texte intégral sur les données caractères en texte brut des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]: Facultatif : [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) est une solution de nettoyage de données qui vous permet d’identifier les données incohérentes et incorrectes dans votre source de données et fournit les moyens assistés par ordinateur et interactifs pour nettoyer vos données. Activez cette case à cocher pour installer le serveur DQS. Une fois l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] terminée, vous devez exécuter le fichier DQSInstaller.exe pour *terminer* l'installation du serveur DQS. Si vous avez installé l’instance par défaut de SQL server, ce fichier est disponible sous C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. MSSQLSERVER\MSSQL\Binn.<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Clusters de basculement :** Composants de réplication et recherche en texte intégral sont requis et sélectionnés automatiquement par le programme d’installation pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clustering de basculement installations lorsque vous sélectionnez Services moteur de base de données.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut les outils de création et de gestion d’applications de traitement analytique en ligne (OLAP, OnLine Analytical Processing) et d’exploration de données.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Native|Le mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclut les composants serveur et clients permettant de créer, de gérer et de déployer des rapports tabulaires, de matrice, graphiques et de forme libre. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est également une plateforme évolutive que vous pouvez utiliser pour développer des applications de création de rapports.|  
   

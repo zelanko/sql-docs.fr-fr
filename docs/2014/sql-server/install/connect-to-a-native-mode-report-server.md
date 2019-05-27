@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
@@ -15,12 +14,12 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95062797cdfe8f2ab4bc2f3b8b8bb2735d2d0dcf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395822"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096058"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Se connecter à un serveur de rapports en mode natif
   Utilisez cette boîte de dialogue pour vous connecter à une instance du serveur de rapports [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieure) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , locale ou distante. Vous ne pouvez pas utiliser cet outil pour vous connecter aux versions antérieures de serveurs de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous ne pouvez vous connecter qu'à une instance à la fois.  
@@ -43,7 +42,7 @@ ms.locfileid: "52395822"
  **Nom de serveur**  
  Entrez le nom de réseau de l'ordinateur sur lequel [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou ultérieure) [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé. Tapez simplement le nom de l'ordinateur, sans inclure de préfixe ou de barre oblique.  
   
- **Rechercher**  
+ **Find**  
  Recherchez l'ordinateur spécifié dans **Nom du serveur**.  
   
  **Instance de serveur de rapports**  

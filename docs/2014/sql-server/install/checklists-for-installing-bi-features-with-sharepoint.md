@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a677729f5c0f7a5ee1b6d10bbb3491937255b555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a5056eda52064120164a25b270a5292951f71fa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190610"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096512"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>Listes de vérification pour installer des fonctionnalités BI avec SharePoint
   Cette section fournit des listes de contrôle pour installer des fonctionnalités de SQL Server BI dans différentes combinaisons ou dans les topologies avec montée en puissance parallèle. Si vous savez déjà comment exécuter un programme d'installation pour installer une fonctionnalité de BI, une liste de contrôle est l'étape suivante pour comprendre la commande recommandée d'installation et pour savoir si des modifications de configuration supplémentaires sont requises pour activer les scénarios d'intégration de fonctionnalité.  

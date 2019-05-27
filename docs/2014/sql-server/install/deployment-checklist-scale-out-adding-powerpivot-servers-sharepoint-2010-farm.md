@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 2dbddcc7-427a-4537-a8e2-56d99b9d967d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bef5104038dad251927c6afff613f248f4a6a47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 300337a2cd4d3275a4fe6b9d8ebfc7a133a3a224
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025704"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095563"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Liste de vérification de déploiement : scale-out en ajoutant des serveurs PowerPivot à une batterie SharePoint 2010
   Si vous anticipez un volume élevé de demandes de traitement de requêtes PowerPivot dans une batterie de serveurs SharePoint, vous pouvez ajouter une instance supplémentaire de PowerPivot pour SharePoint afin d'ajouter de façon transparente un support de traitement des nouvelles requêtes et données.  
