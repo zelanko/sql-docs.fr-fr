@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Integration Services]
@@ -14,12 +13,12 @@ ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877830"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054485"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Afficher les métadonnées d'un chemin d'accès dans l'Éditeur du chemin d'accès au flux de données
   Les chemins d'accès connectent deux composants de flux de données. Pour pouvoir afficher les métadonnées d'un chemin d'accès, le flux de données doit contenir au moins deux composants de flux de données connectés. Pour plus d’informations, consultez [Ajouter ou supprimer un composant dans un flux de données](data-flow/add-or-delete-a-component-in-a-data-flow.md) et [Connecter des composants dans un flux de données](data-flow/connect-components-in-a-data-flow.md).  

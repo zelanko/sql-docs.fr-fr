@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747281"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069354"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Sélectionner les colonnes de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner les colonnes de la table imbriquée** pour sélectionner les attributs et les mesures à inclure dans la table imbriquée et pour définir comment le modèle d’exploration des données va les utiliser.  

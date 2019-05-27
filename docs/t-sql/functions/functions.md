@@ -17,16 +17,16 @@ helpviewer_keywords:
 - scalar functions
 - functions [SQL Server]
 ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d764bcfec14d14b1c1a3e6bf5a6f0af9b18687ce
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701317"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946532"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quelles sont les fonctions de base de données SQL ?
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ Effectuent des opérations sur une valeur unique et retournent ensuite une valeu
 |[Fonctions de curseur](cursor-functions-transact-sql.md)|Retournent des informations sur les curseurs.|  
 |[Types de données et fonctions de date et d’heure](date-and-time-data-types-and-functions-transact-sql.md)|Effectuent des opérations sur des valeurs d'entrée de type date et heure et retournent des valeurs de type date et heure, numérique ou chaîne.|  
 |[Fonctions JSON](json-functions-transact-sql.md)|Validez, interrogez et modifiez les données JSON.|  
-|[Fonctions logiques](https://msdn.microsoft.com/library/5b2b4546-951b-462d-91d5-e41fc5acd6f9)|Effectuent des opérations logiques.|  
+|[Fonctions logiques](logical-functions-choose-transact-sql.md)|Effectuent des opérations logiques.|  
 |[Fonctions mathématiques](mathematical-functions-transact-sql.md)|Effectuent des calculs sur la base des valeurs d'entrée fournies comme paramètres aux fonctions et retournent des valeurs numériques.|  
 |[Fonctions de métadonnées](metadata-functions-transact-sql.md)|Retournent des informations concernant la base de données et les objets de base de données.|  
 |[Fonctions de sécurité](security-functions-transact-sql.md)|Retournent des informations concernant les utilisateurs et les rôles.|  
