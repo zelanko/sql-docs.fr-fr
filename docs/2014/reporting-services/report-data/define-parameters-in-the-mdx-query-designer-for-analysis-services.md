@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -17,12 +16,12 @@ ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4cc72035c59aa782111776deb75ccdac55d571dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1b3696612ab9d0693b3c0135b6aff34137906b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107309"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services (Générateur de rapports et SSRS)
   Pour paramétrer une requête MDX pour une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vous devez ajouter un paramètre de requête à la requête. Dans le Concepteur de requêtes MDX, vous pouvez ajouter un paramètre de requête à la fois en mode Création et en mode Requête en spécifiant un filtre. Après avoir défini la requête avec un paramètre de requête, Reporting Services crée automatiquement un paramètre de rapport et un dataset pour fournir la liste des valeurs valides. Cela permet à un utilisateur de spécifier une valeur transmise directement à la requête.  

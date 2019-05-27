@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10249"
@@ -41,12 +40,12 @@ ms.assetid: 1f8d1ef2-0daf-40c6-9ba7-3b391249bcd4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b939882e5021eb08925f974bad71d1720c6eff7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2fe3d55dc70a606df759c049b7b147820f0e3110
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105987"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>Action d'exploration (Générateur de rapports et SSRS)
   En fournissant des icônes plus et moins (+/-) dans une zone de texte, vous pouvez permettre aux utilisateurs de masquer et d'afficher des éléments de manière interactive. Cela s'appelle une action d' *exploration* . Pour une table ou une matrice, vous pouvez afficher ou masquer des colonnes et des lignes statiques ou des colonnes et des lignes qui sont associées à des groupes.  

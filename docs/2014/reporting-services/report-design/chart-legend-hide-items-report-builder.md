@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 92256240-0cd5-4be4-8904-d1e3b93cb6b3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c798ce1bd5f25b1a844894b8aa609a4c641e4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e2a9f9364f790e88f119ee46ed17ad2051d23b64
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185595"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106258"
 ---
 # <a name="hide-legend-items-on-the-chart-report-builder-and-ssrs"></a>Masquer des éléments de légende dans le graphique (Générateur de rapports et SSRS)
   Par défaut, toute série ajoutée à un graphique qui n'est pas à base de formes sera ajoutée en tant qu'élément à la légende. Pour les graphiques à secteurs, en anneau, en entonnoir et en pyramide, toute série ajoutée au graphique ajoutera des points de données individuels à la légende.  

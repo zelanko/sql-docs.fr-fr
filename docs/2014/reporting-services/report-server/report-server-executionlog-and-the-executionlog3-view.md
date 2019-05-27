@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -14,12 +13,12 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190914"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103472"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal d'exécution du serveur de rapports contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs en mode natif regroupés dans un déploiement évolutif ou une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -124,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
 |TimeProcessing|Nombre de millisecondes passées pour le traitement du rapport.|  
 |TimeRendering|Nombre de millisecondes passées pour le rendu du rapport.|  
-|Source|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: Indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : Indique un rapport généré dynamiquement en fonction de modèle d’extraction ou un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et de rendu.<br /><br /> **Session**: Indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**:  Indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
+|`Source`|Source d'exécution du rapport. Valeurs possibles :<br /><br /> **Live**<br /><br /> **Cache**: Indique une exécution mise en cache, par exemple, jeu de données de requêtes ne sont pas exécutées en temps réel.<br /><br /> **Snapshot**<br /><br /> **Historique**<br /><br /> **Ad hoc** : Indique un rapport généré dynamiquement en fonction de modèle d’extraction ou un rapport du Générateur de rapports affiché en aperçu sur un client utilisant le serveur de rapports pour le traitement et de rendu.<br /><br /> **Session**: Indique une requête de suivi dans une session déjà établie.  Par exemple, la requête initiale concerne l'affichage de la page 1 et la requête de suivi concerne l'exportation vers Excel avec l'état de la session active.<br /><br /> **RDCE**:  Indique une Report Definition Customization Extension. Une extension RDCE personnalisée peut personnaliser dynamiquement une définition de rapport avant qu'elle ne soit passée au moteur de traitement lors de l'exécution.|  
 |État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
@@ -323,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Source de l'exécution du rapport (1=Direct, 2=Cache, 3=Instantané, 4=Historique).|  
+|`Source`|Source de l'exécution du rapport (1=Direct, 2=Cache, 3=Instantané, 4=Historique).|  
 |État|État (soit rsSuccess, soit un code d'erreur. En cas de plusieurs erreurs, seule la première est enregistrée).|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  
@@ -353,7 +352,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Nombre de millisecondes consacré à la récupération des données, au traitement du rapport et au rendu du rapport.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Source d'exécution du rapport. Valeurs possibles : (1 = actif, 2 = Cache, 3 = instantané, 4 = historique, 5 = Adhoc, 6 = Session, 7 = RDCE).|  
+|`Source`|Source d'exécution du rapport. Valeurs possibles : (1 = actif, 2 = Cache, 3 = instantané, 4 = historique, 5 = Adhoc, 6 = Session, 7 = RDCE).|  
 |État|Valeurs possibles : rsSuccess, rsProcessingAborted, ou un code d'erreur. Si plusieurs erreurs se produisent, seule la première erreur est enregistrée.|  
 |ByteCount|Taille en octets des rapports rendus.|  
 |RowCount|Nombre de lignes retournées par les requêtes.|  

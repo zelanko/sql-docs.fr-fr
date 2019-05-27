@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825024"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105974"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Extraction, exploration, sous-rapports et régions de données imbriquées (Générateur de rapports et SSRS)
   Vous pouvez organiser les données de plusieurs façons pour montrer une relation du général au particulier.  Vous pouvez placer toutes les données dans le rapport et les masquer jusqu'à ce qu'un utilisateur clique pour afficher des détails ; il s'agit d'une action d' *exploration* . Vous pouvez afficher les données dans une région de données, telle qu'un tableau ou un graphique, *imbriquée* à l'intérieur d'une autre région de données, telle qu'un tableau ou une matrice. Vous pouvez afficher les données dans un *sous-rapport* intégralement contenu dans un rapport principal. Sinon, vous pouvez placer les données de détail dans des rapports d' *extraction* , des rapports distincts qui s'affichent lorsqu'un utilisateur clique sur un lien.  
