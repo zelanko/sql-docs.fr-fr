@@ -29,7 +29,7 @@ La section Visual C++ de [instanciation des événements ADO par langage](../../
   
 -   Le **#import** directive résout **typedef**du, types de données de signature de méthode et les modificateurs pour leurs formes fondamentales.  
   
--   Les méthodes virtuelles pures qui doivent être écrasées portent tous le préfixe «**raw_**».  
+-   Les méthodes virtuelles pures qui doivent être écrasées portent tous le préfixe "**raw_**".  
   
  Partie du code reflète simplement le style de codage.  
   

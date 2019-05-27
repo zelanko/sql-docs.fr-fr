@@ -29,14 +29,18 @@ ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282573"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725815"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation d'extraction de terme extrait des termes à partir de texte d'une colonne d'entrée de transformation, puis écrit les termes dans une colonne de sortie de transformation. La transformation fonctionne uniquement avec du texte en langue anglaise et utilise uniquement son propre dictionnaire d'anglais et ses propres informations linguistiques.  
   
  Vous pouvez utiliser la transformation d'extraction de terme pour découvrir le contenu d'un dataset. Par exemple, du texte contenant des messages électroniques peut fournir des commentaires utiles sur des produits ; vous pourriez donc utiliser la transformation d'extraction de terme pour extraire les rubriques de discussion dans les messages et ainsi analyser les commentaires.  
@@ -238,7 +242,7 @@ ms.locfileid: "58282573"
  Indique que le score correspond à la fréquence du terme.  
   
  **TFIDF**  
- Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d'un terme T = (fréquence de T) * log( (#lignes en entrée) / (#lignes ayant T))  
+ Indique que le score correspond à la valeur TFIDF du terme. Le score TFIDF est le produit de la fréquence des termes et de la fréquence inverse de documents, défini comme suit : TFIDF d’un terme T = (fréquence de T) * journal((nombre de lignes en entrée) / (nombre de lignes comportant T))  
   
  **Seuil de fréquence**  
  Définissez le nombre d'occurrences d'un mot ou d'une expression avant son extraction. La valeur par défaut est 2.  

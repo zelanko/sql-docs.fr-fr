@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188240"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108082"
 ---
 # <a name="plan-for-map-report-support"></a>Planifier la prise en charge de rapport cartographique
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] prend en charge les rapports cartographiques qui utilisent des sources de données spatiales. Les données spatiales peuvent provenir de bases de données SQL Server, de fichiers de formes ESRI ou de la Bibliothèque de cartes installée avec Reporting Services ou le Générateur de rapports. Une carte peut également afficher un arrière-plan de mosaïques Bing. Un auteur de rapport peut créer un rapport qui spécifie des données spatiales ou des mosaïques Bing comme dynamique et récupéré au moment de l'exécution ou comme statique et incorporé dans la définition de rapport.  

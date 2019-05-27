@@ -11,14 +11,18 @@ ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4272bc60b461c8757d50c6867966fd905447be3a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c546b5b1935c15f2a597821aefe7b0298e86a413
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290245"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728759"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Procédure : gérer un service de capture de données modifiées local
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cette procédure décrit comment utiliser la console de configuration du service de capture de données modifiées pour gérer des services de capture de données modifiées spécifiques.  
   
 ### <a name="to-manage-a-specific-cdc-service"></a>Pour gérer un service de capture de données modifiées spécifique  
@@ -45,7 +49,7 @@ ms.locfileid: "58290245"
   
          Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées à supprimer et sélectionner **Supprimer**.  
   
-         **Remarque**: Si le service est en cours d'exécution lors de sa suppression, il est arrêté avant d'être supprimé.  
+         **Remarque** : Si le service est en cours d'exécution lors de sa suppression, il est arrêté avant d'être supprimé.  
   
          Pour supprimer une définition de service Windows de capture de données modifiées Oracle, le programme doit disposer d'un accès de mise à jour à la base de données MSXDBCDC dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associée. Lorsque vous cliquez sur **OK** pour supprimer le service, le programme tente de supprimer l'inscription du service de capture de données modifiées Oracle dans la base de données MSXDBCDC. Si cette opération échoue en raison de l'absence d'autorisations, une boîte de dialogue s'affiche pour inviter l'utilisateur à entrer une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec un accès de mise à jour de la base de données MSXDBCDC.  
   

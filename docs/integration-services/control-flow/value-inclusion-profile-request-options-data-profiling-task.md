@@ -13,14 +13,18 @@ ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b523b3653e7fff1ffba694c49056debaa6d64ec
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 078e7be919c9cefca45ac7676d5621bfb302f4eb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278088"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727341"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil d’inclusion de valeur** sélectionnée dans le volet Demandes. Un profil d'inclusion de valeur calcule le chevauchement des valeurs entre deux colonnes ou des ensembles de colonnes. De cette manière, ce profil permet également de déterminer si une colonne ou un ensemble de colonnes peut servir de clé étrangère entre les tables sélectionnées. Ce profil peut également vous aider à identifier les problèmes dans vos données, tels que les valeurs non valides. Par exemple, vous utilisez un profil d'inclusion de valeur pour profiler la colonne ProductID d'une table Sales. et découvrez que la colonne contient des valeurs qui sont introuvables dans la colonne ProductID de la table Products.  
   
 > [!NOTE]  
@@ -114,7 +118,7 @@ ms.locfileid: "58278088"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**IgnoreCase**|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
-|**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
+|**IgnoreNonSpace**|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « à » est identique à « a ».|  
 |**IgnoreKanaType**|Indique si la comparaison fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option est définie, la comparaison de chaînes ignore le type Kana.|  
 |**IgnoreWidth**|Indique si la comparaison fait la distinction entre un caractère sur un octet et le même caractère représenté sur deux octets. Si cette option est définie, la comparaison de chaînes traite les représentations sur un octet et sur deux octets du même caractère comme identiques.|  
   

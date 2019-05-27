@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.storage.f1
@@ -13,12 +12,12 @@ ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 251ecccbd7e28b4f15709d060ead8cbb61309fea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3c7ddd5311232ae12b3eb9f66adc0cd1f5714b32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731880"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081008"
 ---
 # <a name="general-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Général (boîte de dialogue Options de stockage) (Analysis Services - Données multidimensionnelles)
   Utilisez l'onglet **Général** de la boîte de dialogue **Options de stockage** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir le mode de stockage et les paramètres de mise en cache proactive pour une dimension, un cube, un groupe de mesures ou une partition.  

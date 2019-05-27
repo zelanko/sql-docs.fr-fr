@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743365"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071890"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Référence de paramètre de configuration (PowerPivot pour SharePoint)
   Cette rubrique fournit une documentation de référence pour les paramètres de configuration utilisés par les applications de service PowerPivot dans une batterie de serveurs SharePoint. Si vous utilisez du script PowerShell pour configurer un serveur, ou si vous souhaitez rechercher des informations sur un paramètre spécifique, les informations de cette rubrique fournissent des descriptions détaillées.  
@@ -42,7 +41,7 @@ ms.locfileid: "62743365"
 ##  <a name="LoadingData"></a> Délai d'attente du chargement de données  
  Les données PowerPivot sont récupérées et chargées par les instances du serveur Analysis Services de la batterie. Selon le moment où le dernier accès aux données s'est produit et la façon dont il s'est produit, les données seront chargées à partir d'une bibliothèque de contenu ou d'un cache de fichiers local. Les données sont chargées en mémoire à chaque réception d'une requête ou d'une demande de traitement. Pour optimiser la disponibilité globale du serveur, vous pouvez définir une valeur de délai d'attente qui indique au serveur d'interrompre une demande de chargement de données si elle ne peut pas être exécutée dans le délai imparti.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du chargement de données|1800 (en secondes)|1 à 3600|Spécifie la durée pendant laquelle une application de service PowerPivot attend une réponse d'une instance spécifique du serveur Analysis Services.<br /><br /> Par défaut, l'application de service attendra 30 minutes une charge utile de données en provenance de l'instance du service de moteur à laquelle elle a transféré une requête spécifique.<br /><br /> Si la source de données PowerPivot ne peut pas être chargée dans ce laps de temps, le thread sera arrêté et un nouveau sera démarré.|  
   
@@ -66,14 +65,14 @@ ms.locfileid: "62743365"
 ##  <a name="AllocationScheme"></a> Équilibrage de charge  
  L'une des fonctions qu'assure le service PowerPivot consiste à déterminer où les données Analysis Services seront chargées parmi les instances du service PowerPivot disponibles. Le paramètre `AllocationMethod` spécifie les critères selon lesquels une instance du service est sélectionnée.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Méthode d'allocation|RoundRobin|Tourniquet (round robin)<br /><br /> Selon l'intégrité|Méthode d'allocation des requêtes de chargement parmi deux instances du serveur Analysis Services ou davantage.<br /><br /> Par défaut, le service PowerPivot alternera les demandes selon l'intégrité du serveur. La méthode selon l'intégrité alloue les requêtes au serveur où les ressources système disponibles sont les plus importantes, d'après la mémoire disponible et l'utilisation du processeur.<br /><br /> La méthode « tourniquet » (round robin) passe les demandes entre les serveurs disponibles dans un ordre séquentiel, indépendamment de la charge actuelle ou de l'intégrité du serveur.|  
   
 ##  <a name="DataRefresh"></a> Actualisation des données  
  Spécifiez la plage horaire qui définit la journée de travail normale ou classique dans votre organisation. Ces paramètres de configuration déterminent quand, après les heures d'ouverture, le traitement des données intervient pour les opérations d'actualisation des données. Le traitement après les heures d'ouverture peut commencer à l'heure où se termine la journée de travail. Le traitement après les heures d'ouverture est une option de planification pour les propriétaires de documents qui souhaitent actualiser une source de données PowerPivot avec les données transactionnelles qui ont été générées pendant les heures d'ouverture normales.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Heure de début|4h00|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite inférieure d'une plage d'heures d'ouverture.|  
 |Heure de fin|08:00 PM|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite supérieure d'une plage d'heures d'ouverture.|  

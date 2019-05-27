@@ -1,9 +1,8 @@
 ---
 title: Exécution d’une mise à jour à l’aide de OLE DB (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
-ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -16,16 +15,14 @@ ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7597df95cecaaab72eb4f23255a4607fa02f2e93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63268492"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014791"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Exécution d'un code de mise à jour (updategram) à l'aide d'OLE DB (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Cette rubrique fournit un exemple fonctionnel d’usingOLE DB pour exécuter une mise à jour.  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>Utilisation d'ICommandStream pour définir une commande XML  

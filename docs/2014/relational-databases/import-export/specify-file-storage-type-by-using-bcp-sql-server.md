@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155826"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011821"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
   Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données au type de table de base de données (format natif), dans sa représentation caractères (format caractères) ou tout type de données pour lesquelles la conversion implicite est prise en charge ; par exemple, en copiant un type de données `smallint` comme `int`. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  

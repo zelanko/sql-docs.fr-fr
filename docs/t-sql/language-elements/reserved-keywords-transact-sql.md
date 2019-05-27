@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626676"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Mots clés réservés (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des mots clés réservés pour définir des bases de données, les manipuler et y accéder. Les mots clés réservés font partie de la grammaire du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour analyser et interpréter les lots et instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que, d'un point de vue syntaxique, il soit possible d'employer dans les scripts [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] réservés comme identificateurs et noms d'objets, ceci est réalisable uniquement en utilisant des identificateurs délimités.  
   
- Le tableau suivant répertorie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les mots clés réservés de SQL Data Warehouse.  
+ La table suivante répertorie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les mots clés réservés d’Azure SQL Data Warehouse.  
   
 ||||  
 |-|-|-|  
@@ -98,11 +98,11 @@ ms.locfileid: "47853568"
 |EXISTS|PRINT|WRITETEXT|  
 |EXIT|PROC||
   
-Le tableau suivant répertorie les mots clés réservés qui sont exclusives à **SQL Data Warehouse**.
+La table suivante répertorie les mots clés réservés qui sont exclusifs à **Azure SQL Data Warehouse**.
 
 |||
 |-|-|
-|**Étiquette**||
+|**LABEL**||
   
  De plus, la norme ISO définit une liste de mots clés réservés. Évitez d'utiliser des mots clés réservés ISO pour des identificateurs et des noms d'objets. La liste des mots clés réservés ODBC figurant dans le tableau ci-dessous est identique à celle des mots clés réservés ISO.  
   
@@ -285,7 +285,7 @@ Le tableau suivant répertorie les mots clés réservés qui sont exclusives à 
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
-|GRATUIT|REGR_AVGX|XMLPARSE|  
+|FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
 |FUSION|REGR_COUNT|XMLQUERY|  
 |GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  

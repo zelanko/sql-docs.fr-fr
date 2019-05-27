@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.calculatingobjectcounts.f1
@@ -13,12 +12,12 @@ ms.assetid: 306c7c25-ae24-4852-ab8c-c82f68a4bc1f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6f4bb5bcf2584cba8265fb175b7581b6b40ce08
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e0503192c3c948110f8301c8eb375e1c8203e42f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746133"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068237"
 ---
 # <a name="specify-object-counts-usage-based-optimization-wizard"></a>Spécifier le nombre d'objets (Assistant Optimisation de l'utilisation)
   La page **Spécifier le nombre d'objets** permet de calculer automatiquement le nombre d'objets inclus dans le cube ou d'entrer une estimation manuellement. L'Assistant Optimisation de l'utilisation utilise le nombre d'objets pour évaluer la capacité de stockage nécessaire.  

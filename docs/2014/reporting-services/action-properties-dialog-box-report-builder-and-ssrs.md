@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -34,12 +33,12 @@ ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 125b40193edca5dc60fa86fe5818f7722f5af91c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231180"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110080"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
   Vous pouvez utiliser la boîte de dialogue **Action** pour activer les options de lien hypertexte pour un graphique, une jauge ou des éléments cartographiques prenant les liens en charge. Définissez une action afin qu'un utilisateur puisse cliquer sur le rapport et aller à une URL, à un rapport différent sur le même serveur de rapports ou sur un site SharePoint intégré à un serveur de rapports, ou encore à un emplacement différent dans le même rapport.  

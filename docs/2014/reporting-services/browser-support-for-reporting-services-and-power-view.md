@@ -35,7 +35,7 @@ ms.locfileid: "63266820"
   
 ##  <a name="bkmk_powerview"></a> Scénarios de navigateur Power View
 
- La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et «**.rdlx**« fichiers utilisent des composants différents.  
+ La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et "**.rdlx**" fichiers utilisent des composants différents.  
   
 |Type de document|Environnement|Prise en charge des navigateurs|  
 |-------------------|-----------------|---------------------|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
@@ -16,12 +15,12 @@ ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733457"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083680"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme de gestion de clusters Microsoft. Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

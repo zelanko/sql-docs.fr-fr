@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 808cac0491d7a62ef6a7616745dfb56874299f6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294351"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014866"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Suppression de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Une mise à jour indique une opération de suppression lorsqu’une instance d’enregistrement apparaît dans le  **\<avant >** bloc sans enregistrements correspondants dans le  **\<après >** bloc. Dans ce cas, la mise à jour supprime l’enregistrement dans le  **\<avant >** bloc à partir de la base de données.  

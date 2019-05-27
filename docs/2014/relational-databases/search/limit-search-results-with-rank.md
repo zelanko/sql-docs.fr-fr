@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807251"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011148"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
   Les fonctions [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) retournent une colonne appelée RANK qui contient des valeurs ordinales comprises entre 0 et 1000 (valeurs de classement). Ces valeurs servent à établir le rang des lignes retournées en fonction de leur correspondance par rapport aux critères de sélection. Les valeurs de classement indiquent uniquement un ordre relatif de pertinence pour les lignes du jeu de résultats. Une valeur inférieure indique une pertinence plus faible. Les valeurs réelles sont sans importance et sont généralement différentes d'une exécution de requête à une autre.  
@@ -37,7 +37,7 @@ ms.locfileid: "52807251"
   
 ##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : Recherche uniquement les trois premières correspondances  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple a : Recherche des trois premières correspondances uniquement  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : Recherche des dix premières correspondances  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple b : Recherche des dix premières correspondances  
  L'exemple suivant utilise CONTAINSTABLE pour retourner la description des 5 premiers produits dont la colonne `Description` contient les mots « aluminum » à proximité du mot « light » ou « lightweight ».  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Les statistiques telles que `IndexRowCount` peuvent fortement varier. Par exemple, si un catalogue a 2 milliards de lignes dans l'index principal, un nouveau document est indexé dans un index intermédiaire en mémoire ; par ailleurs, les rangs de ce document qui sont basés sur le nombre de documents dans l'index en mémoire peuvent être incorrects par rapport aux rangs des documents de l'index principal. Par conséquent, lorsqu'un remplissage entraîne l'indexation ou la réindexation d'un grand nombre de lignes, il est recommandé de fusionner les index dans un index principal via l'instruction ALTER FULLTEXT CATALOG ... Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] REORGANIZE. Le Moteur d'indexation et de recherche en texte intégral fusionne automatiquement les index en fonction de paramètres tels que le nombre et la taille des index intermédiaires.  
   
- Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Dans la mesure où les documents ont une longueur comprise dans la plage située entre les valeurs adjacentes 32 et 128 du tableau, ils sont effectivement traités comme s'ils avaient le même nombre de mots, c'est-à-dire 128 (32 < `docLength` <= 128).  
+ Les valeurs `MaxOccurrence` sont normalisées sous forme de 32 plages individuelles. Par exemple, un document de 50 mots est traité de la même façon qu'un document de 100 mots. Vous trouverez ci-dessous le tableau de normalisation utilisé. Étant donné que les longueurs de document se trouvent dans la plage entre les valeurs adjacentes du tableau 32 et 128, ils sont effectivement traités comme ayant la même longueur, 128 (32 < `docLength` < = 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993360"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014991"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -37,6 +37,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 | Améliorations du stockage | Prise en charge différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster de données volumineuses a été réduit. |
 | Plusieurs instances de pool de calcul | Prise en charge de plusieurs instances de pool de calcul. |
 | Fonctionnalités et le nouveau comportement de pool | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool des données et le pool de stockage dans un **ROUND_ROBIN** distribution uniquement. Le pool de données peut désormais utiliser un nouveau nouveau **RÉPLIQUÉ** type de distribution, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
+| Améliorations de la table externe | Les tables externes de la source de données HADOOP Tapez maintenant prend en charge la lecture des lignes jusqu'à 1 Mo de taille. Lignes de prise en charge désormais les tables externes (ODBC, pool de stockage, pool de données) aussi larges que d’une table SQL Server. |
 
 ### <a name="known-issues"></a>Problèmes connus
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 79e43f273183d531a8fbc61fd71315a971213773
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7efb713b5dbf9a3f19118bb3572ccd35778aad19
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265391"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109647"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Créer un rapport d'extraction (RDLC) avec des paramètres à l'aide de ReportViewer (didacticiel SSRS)
   Un rapport [d’extraction](https://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce didacticiel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
@@ -30,7 +29,7 @@ ms.locfileid: "63265391"
   
 ## <a name="tasks"></a>Tâches  
  [Leçon 1 : Créer un nouveau Site Web](../reporting-services/lesson-1-create-a-new-web-site.md)   
- [Leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
+ [Leçon 2 : Définir une connexion de données et la Table de données pour le rapport Parent](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)   
  [Leçon 3 : Concevoir le rapport Parent à l’aide de l’Assistant rapport](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)   
  [Leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)   
  [Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)   

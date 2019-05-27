@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 60bcbca88f2d75e062a45fc21103ece8631f9503
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508730"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821352"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,10 +28,10 @@ ms.locfileid: "52508730"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Si vous partagez des fichiers avec des utilisateurs d'autres sites qui utilisent des pages de codes distinctes, vous devez enregistrer votre fichier avec le code Unicode approprié afin d'éviter les erreurs de lecture du fichier. De même, lorsque vous enregistrez des fichiers pour UNIX ou Macintosh, assurez-vous de les enregistrer au format de document approprié. Dans le menu **Fichier** , cliquez sur **Enregistrer sous**, puis sur **Enregistrer avec encodage** en cliquant sur la flèche en regard du bouton **Enregistrer** , puis choisissez **Unix** ou **Macintosh** sous **Fins de ligne**.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
-## <a name="how-to-open-editors"></a>Procédure : ouvrir les éditeurs  
+## <a name="how-to-open-editors"></a>Procédure : Ouvrir les éditeurs  
  Cette section explique comment ouvrir les différents éditeurs dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilisation du menu Fichier/Nouveau  

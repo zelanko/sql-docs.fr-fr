@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9d4ed9d30be850df2ad18374790a91fd72f5e50a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262316"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108809"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services en mode natif
   Un serveur de rapports en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut être installé via l'Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou à partir de la ligne de commande. Dans l'Assistant Installation, vous pouvez choisir 1) d'installer les fichiers te de configurer le serveur avec les paramètres par défaut ou 2) d'installer uniquement les fichiers et le serveur n'est pas configuré par l'Assistant Installation. Cette rubrique passe en revue *la configuration par défaut pour le mode natif* où le programme d'installation installe et configure une instance de serveur de rapports. Une fois l'installation terminée, le serveur de rapports fonctionne et est opérationnel. Un serveur de rapports en mode natif s'exécute comme serveur d'applications autonome. Le mode natif est le mode serveur par défaut.  

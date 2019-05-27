@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280893"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722432"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Leçon 2-1 : Génération de l’utilitaire de déploiement
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Au cours de cette tâche, vous allez configurer et générer un utilitaire de déploiement pour le projet Didacticiel de déploiement.  
   
 Avant de générer l'utilitaire de déploiement, vous devez modifier les propriétés du projet Didacticiel de déploiement. La boîte de dialogue **Pages de propriétés du didacticiel de déploiement** vous permet de configurer ces propriétés. Dans cette boîte de dialogue, vous devez activer la possibilité de mettre à jour des configurations au cours du déploiement et spécifier que le processus de création génère un utilitaire de déploiement. Après avoir défini les propriétés, vous allez générer le projet.  
@@ -49,7 +53,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
 4.  Dans la fenêtre de sortie, vérifiez les informations suivantes :  
   
-    Création démarrée : projet SQL Integration Services : incrémentiel ...  
+    Build démarrée : Projet SQL Integration Services : Incrémentiel ...  
   
     Création de l'utilitaire de déploiement...  
   
@@ -57,7 +61,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
     Fin de la génération -- 0 erreur, 0 avertissement  
   
-    ========== Génération : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
+    ========== Build : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
   
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   

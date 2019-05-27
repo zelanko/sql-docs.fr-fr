@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1833989b2dd5fed0616a7587252ac97a09cb75f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266239"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109903"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Page Choisir l'emplacement de l'élément (Gestionnaire de rapports)
   La page Choisir l'emplacement de l'élément vous permet de sélectionner un dossier pour un nouveau rapport lié ou modèle. Si vous créez un rapport lié ou un modèle pour un groupe d'utilisateurs spécifique, vous pouvez souhaiter placer l'élément dans un dossier qui contient d'autres rapports et modèles qu'ils utilisent. Vous devez choisir un dossier qui existe déjà et pour lequel vous êtes autorisé à ajouter du contenu.  

@@ -13,14 +13,18 @@ ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280853"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729062"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Concepteur de capture de données modifiées pour Oracle par Attunity
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La console du concepteur CDC est utilisée pour développer et maintenir les instances Oracle CDC. Il s'agit d'un composant logiciel enfichable MMC (Microsoft Management Console) qui contient les éléments suivants :  
   
 -   Assistant Nouvelle instance : Cet Assistant crée une instance Oracle CDC. Pour plus d'informations sur l'utilisation de l'Assistant Nouvelle instance, consultez [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
@@ -29,7 +33,7 @@ ms.locfileid: "58280853"
   
 -   Éditeur de propriétés d'instance de capture de données modifiées : Cette boîte de dialogue permet de modifier n'importe quelle instance de service de capture de données modifiées Oracle. Pour plus d'informations sur la modification des propriétés d'une instance de capture de données modifiées, consultez [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
- Le service et le concepteur de capture de données modifiées Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Le service et le concepteur de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server® 2016 font partie du Feature Pack de SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ## <a name="in-this-documentation"></a>Dans cette documentation  
   

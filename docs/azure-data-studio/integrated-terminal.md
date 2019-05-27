@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239384"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010948"
 ---
 # <a name="integrated-terminal"></a>Terminal intégré
 
@@ -94,17 +94,17 @@ Le **vue : Activer/désactiver Terminal intégré** commande est liée à **Ctr
 
 Voici les raccourcis clavier pour naviguer rapidement dans le terminal intégré :
 
-Key|Command
----|---
-**CTRL +'**| Afficher le terminal intégré
-**CTRL + MAJ +'**| Créer nouveau terminal
-**Ctrl+Up**|Défilement vers le haut
-**Ctrl+Down**|Défiler vers le bas
-**Ctrl+PageUp**|Page de défilement précédente
-**Ctrl+PageDown**|Défiler d’une page vers le bas
-**Ctrl+Home**|Faites défiler vers le haut
-**Ctrl+End**|Faites défiler vers le bas
-**Ctrl+K**|Désactivez le terminal
+|Key|Command|  
+|---|---|  
+|**Ctrl+\`**|Afficher le terminal intégré|  
+|**CTRL + MAJ +\`**|Créer nouveau terminal|  
+|**Ctrl+Up**|Défilement vers le haut|  
+|**Ctrl+Down**|Défiler vers le bas|  
+|**Ctrl+PageUp**|Page de défilement précédente|  
+|**Ctrl+PageDown**|Défiler d’une page vers le bas|  
+|**Ctrl+Home**|Faites défiler vers le haut|  
+|**Ctrl+End**|Faites défiler vers le bas|  
+|**Ctrl+K**|Désactivez le terminal|  
 
 Autres commandes de Terminal Server sont disponibles et peuvent être liés à vos raccourcis clavier par défaut.
 

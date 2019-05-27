@@ -23,14 +23,18 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e81e43aa0eafb76b107c30b2bdd07a0a70b60fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275733"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728192"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un gestionnaire de connexions de fichiers plats multiples permet à un package d'accéder aux données de plusieurs fichiers plats. Par exemple, une source de fichier plat peut utiliser un gestionnaire de connexions de fichiers plats multiples lorsque la tâche de flux de données se trouve dans un conteneur de boucles (conteneur de boucles For, par exemple). Dans chaque boucle du conteneur, la source de fichier plat charge les données à partir du nom de fichier suivant fourni par le gestionnaire de connexions de fichiers plats multiples.  
   
  Quand vous ajoutez un gestionnaire de connexions de fichiers plats multiples à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions qui sera résolu en une connexion de fichiers plats multiples au moment de l’exécution, définit les propriétés de la connexion de fichiers plats multiples et ajoute les gestionnaires de connexions de fichiers plats multiples à la collection **Connexions** du package.  
@@ -234,10 +238,10 @@ ms.locfileid: "58275733"
 |Propriété|Description|  
 |--------------|-----------------|  
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Dans les fichiers en drapeau à droite, chaque colonne a une largeur fixe, sauf la dernière qui est arrêtée par le séparateur de lignes.|  
-|**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources.<br /><br /> Remarque : Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
+|**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources.<br /><br /> Remarque : Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**TextQualified**|Indiquez si les données texte sont qualifiées à l’aide d’un caractère identificateur de texte :<br /><br /> **True** : Les données texte du fichier plat sont qualifiées.<br /><br /> **False** : Les données texte du fichier plat ne sont pas qualifiées.|  
-|**Nom**|Précisez un nom de colonne. La valeur par défaut est une liste numérotée de colonnes. Vous pouvez toutefois indiquer un nom descriptif unique de votre choix.|  
+|**Name**|Précisez un nom de colonne. La valeur par défaut est une liste numérotée de colonnes. Vous pouvez toutefois indiquer un nom descriptif unique de votre choix.|  
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**  : les colonnes sont délimitées par une combinaison retour chariot/saut de ligne<br /><br /> **{CR}**  : les colonnes sont séparées par un retour chariot<br /><br /> **{LF}**  : les colonnes sont séparées par un saut de ligne<br /><br /> **Point-virgule {;}**  : les colonnes sont délimitées par un point-virgule<br /><br /> **Deux-points {:}**  : les colonnes sont délimitées par un deux-points<br /><br /> **Virgule {,}**  : les colonnes sont délimitées par une virgule<br /><br /> **Tabulation {t}**  : les colonnes sont délimitées par une tabulation<br /><br /> **Barre verticale {&#124;}**  : les colonnes sont délimitées par une barre verticale|  
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  

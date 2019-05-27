@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203066"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560155"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>Arguments
 
-*database_name*      
-Nom de la base de données à modifier.
+*database_name* Spécifie le nom de la base de données à modifier.
 
-CURRENT     
-Indique que la base de données actuelle en cours d'utilisation doit être modifiée.
+ACTUEL indique que la base de données actuelle en cours d'utilisation doit être modifiée.
 
 ## <a name="remarks"></a>Notes 
 Pour supprimer une base de données, utilisez [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Présentation : Azure SQL Data Warehouse.
 
-Modifie le nom, la taille maximale ou l’objectif de service d’une base de données.
+Dans Azure SQL Dta Warehouse, « MODIFIER BASE DE DONNÉES » modifie le nom, la taille maximale ou l’objectif des service pour la base de données.
+
+En raison de sa longueur, la syntaxe d’ALTER DATABASE est divisée en plusieurs articles.
+
+[Options d’ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) Indique la syntaxe à utiliser et les informations associées pour modifier les attributs d’une base de données à l’aide des options SET d’ALTER DATABASE.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Arguments
 
-*database_name*     
-Spécifie le nom de la base de données à modifier.
+*database_name* Spécifie le nom de la base de données à modifier.
 
-MODIFY NAME = *new_database_name*    
-Renomme la base de données avec le nom spécifié *nouveau_nom_base_de_données*.
+MODIFY NAME = *new_database_name* Renomme la base de données avec le nom spécifié sous la forme *new_database_name*.
 
-MAXSIZE    
-La valeur par défaut est 245 760 Go (240 To).
+MAXSIZE La valeur par défaut est de 245 760 Go (240 To).
 
 **S’applique à :** Optimisé pour le calcul Gen1
 
@@ -835,8 +838,7 @@ Taille maximale autorisée pour la base de données. La base de données ne peut
 
 Taille maximale autorisée pour les données rowstore dans la base de données. Les données stockées dans les tables rowstore, dans un deltastore d’index columnstore ou un index non cluster sur un index columnstore cluster ne peuvent pas croître au-delà de MAXSIZE. Les données compressées au format columnstore n’ont pas de taille limite et ne sont pas restreintes par MAXSIZE.
 
-SERVICE_OBJECTIVE      
-Spécifie le niveau de performances. Pour plus d’informations sur les objectifs de service pour SQL Data Warehouse, consultez [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE Spécifie le niveau de performance. Pour plus d’informations sur les objectifs de service de SQL Data Warehouse, voir [Data Warehouse Units (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Autorisations
 

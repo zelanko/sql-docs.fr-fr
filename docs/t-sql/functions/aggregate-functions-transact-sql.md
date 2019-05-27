@@ -19,19 +19,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d0fa6a0ee5b63d098e0feb4a6ace368e145dd57
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 3195259f2ea4c709b0e01011264dedfc88e538af
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801433"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875201"
 ---
 # <a name="aggregate-functions-transact-sql"></a>Fonctions d'agrégation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Une fonction d’agrégation effectue un calcul sur un ensemble de valeurs et retourne une seule valeur. À l’exception de `COUNT`, les fonctions d’agrégation ignorent les valeurs NULL. Les fonctions d’agrégation sont souvent utilisées avec la clause GROUP BY de l’instruction SELECT.
   
-Toutes les fonctions d'agrégation sont déterministes. En d’autres termes, les fonctions d’agrégation retournent la même valeur chaque fois qu’elles sont appelées, quand elles sont appelées avec un ensemble spécifique de valeurs d’entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La clause [OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation, sauf GROUPING et GROUPING_ID.
+Toutes les fonctions d'agrégation sont déterministes. En d’autres termes, les fonctions d’agrégation retournent la même valeur chaque fois qu’elles sont appelées, quand elles sont appelées avec un ensemble spécifique de valeurs d’entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clause OVER](../../t-sql/queries/select-over-clause-transact-sql.md) peut suivre toutes les fonctions d’agrégation, sauf les fonctions STRING_AGG, GROUPING ou GROUPING_ID.
   
 Utilisez les fonctions d’agrégation comme expressions seulement dans les cas suivants :
 -   la liste de sélection d'une instruction SELECT (une sous-requête ou une requête externe) ;  

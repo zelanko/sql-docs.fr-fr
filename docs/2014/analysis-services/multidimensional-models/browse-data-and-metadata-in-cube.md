@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700936"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076757"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
   Utilisez l'onglet **Navigateur** du Concepteur de cube pour parcourir les données du cube. Vous pouvez utiliser cette vue pour examiner la structure d'un cube et vérifier des données, le calcul, la mise en forme, ainsi que la sécurité des objets de base de données. Vous pouvez examiner rapidement un cube tel que les utilisateurs finaux le voient dans les outils de création de rapports ou d'autres applications clientes. Lorsque vous parcourez des données de cube, vous pouvez afficher différentes dimensions, explorer les membres et découper les dimensions.  

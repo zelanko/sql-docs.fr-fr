@@ -1,7 +1,7 @@
 ---
 title: Afficher ou modifier le mode de récupération d’une base de données (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/05/2016
+ms.date: 05/10/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753513"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560071"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50753513"
   
   Un *mode de récupération* est une propriété de base de données qui contrôle la façon dont les transactions sont journalisées, précise si le journal des transactions nécessite (et permet) une sauvegarde et spécifie les types d’opérations de restauration disponibles. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. En règle générale, une base de données utilise le mode de restauration complète ou le mode de récupération simple. Il est possible de modifier le mode de récupération d'une base de données à tout moment. La base de données **model** définit le mode de récupération par défaut des nouvelles bases de données.  
   
-  Pour obtenir une explication plus approfondie des [modèles de récupération](recovery-models-sql-server.md), consultez le site web sur les [modèles de récupération](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) de SQL Server de l’équipe [MSSQLTips!](https://www.mssqltips.com/)
+  Pour une explication plus approfondie, consultez [modes de récupération](recovery-models-sql-server.md).
   
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -103,7 +103,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
+##  <a name="FollowUp"></a> Recommandations : Après avoir modifié le mode de récupération  
   
 -   **Après un changement de mode de récupération complète ou de mode de récupération utilisant les journaux de transactions**  
   
@@ -111,13 +111,13 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
     -   Après être passé du mode de récupération utilisant les journaux de transactions au mode de récupération complète, sauvegardez le journal.  
   
-        >**REMARQUE :** votre stratégie de sauvegarde ne change pas : continuez à effectuer régulièrement des sauvegardes des bases de données, des sauvegardes des journaux et des sauvegardes différentielles.  
+        >**REMARQUE :** Votre stratégie de sauvegarde ne change pas : continuez à effectuer régulièrement des sauvegardes des bases de données, des sauvegardes des journaux et des sauvegardes différentielles.  
   
 -   **Après basculement à partir du mode de récupération simple**  
   
     -   Aussitôt après être passé en mode de restauration complète ou en mode de récupération utilisant les journaux de transactions, procédez à une sauvegarde de base de données complète ou différentielle pour lancer la séquence de journaux.  
   
-        >**REMARQUE :** le passage au mode de restauration complète ou mode de récupération utilisant les journaux de transactions n’est effectif qu’après la première sauvegarde de base de données.  
+        >**REMARQUE :** Le passage au mode de restauration complète ou mode de récupération utilisant les journaux de transactions n'est effectif qu'après la première sauvegarde de base de données.  
   
     -   Planifiez des sauvegardes de journaux régulières et mettez à jour votre plan de restauration en conséquence.  
   

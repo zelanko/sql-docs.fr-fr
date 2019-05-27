@@ -30,14 +30,18 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277508"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719593"
 ---
 # <a name="integration-services-ssis-logging"></a>Journalisation d'Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient des modules fournisseur d'informations que vous pouvez utiliser pour implémenter la journalisation dans les packages, les conteneurs et les tâches. Avec la journalisation, vous pouvez capturer des informations d'exécution sur un package qui vous aideront à auditer et à résoudre les problèmes d'un package à chaque exécution. Un journal peut ainsi capturer le nom de l'opérateur ayant exécuté le package et l'heure à laquelle le package a débuté et s'est terminé.  
   
  Vous pouvez configurer l'étendue des informations enregistrées lors d'une exécution de package sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](#server_logging).  
@@ -102,7 +106,7 @@ ms.locfileid: "58277508"
 |Opérateur|L'identité de l'utilisateur ayant lancé le package.|  
 |SourceName|Le nom du conteneur ou de la tâche dans laquelle l'événement du journal est survenu.|  
 |SourceID|L'identificateur unique du package ; la boucle Foreach, la boucle For ou le conteneur de séquences ; ou la tâche dans laquelle l'événement du journal est survenu.|  
-|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
+|ExecutionID|L'identificateur global unique (GUID) de l'instance d'exécution du package.<br /><br /> Remarque : L'exécution d'un package unique peut créer des entrées de journal avec des valeurs différentes pour l'élément ExecutionID. Par exemple, lorsque vous exécutez un package dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la phase de validation peut créer des entrées de journal avec un élément ExecutionID correspondant à [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Toutefois, la phase d'exécution peut créer des entrées de journal avec un élément ExecutionID correspondant à dtshost.exe. Autre exemple : lorsque vous exécutez un package qui contient des tâches d'exécution de package, chacune de ces tâches exécute un package enfant. Ces packages enfants peuvent créer des entrées de journal comportant un élément ExecutionID différent de celui des entrées de journal créées par le package parent.|  
 |MessageText|Un message associé à l'entrée de journal.|  
 |DataBytes|Un tableau d'octets spécifique à l'entrée du journal. La signification de ce champ varie en fonction de l'entrée du journal.|  
   
@@ -134,7 +138,7 @@ ms.locfileid: "58277508"
 |**OnVariableValueChanged**|Écrit une entrée de journal lorsque la valeur d'une variable est modifiée.|  
 |**OnWarning**|Écrit une entrée de journal lorsqu'un avertissement survient.|  
 |**PipelineComponentTime**|Pour chaque composant de flux de données, écrit une entrée de journal pour chaque phase de validation et d'exécution. L'entrée de journal spécifie le temps de traitement de chaque phase.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : Si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Écrit une entrée de journal qui fournit des informations de diagnostic.<br /><br /> Par exemple, vous pouvez enregistrer un message avant et après chaque appel à un fournisseur de données externes. Pour plus d’informations, consultez [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Consignez l’événement **DiagnosticEx** lorsque vous souhaitez rechercher les noms des colonnes dans le flux de données qui contiennent des erreurs. Cet événement consigne un mappage de lignage de flux de données dans le journal. Vous pouvez alors rechercher le nom de colonne dans ce mappage de lignage à l’aide de l’identificateur de colonne capturé par une sortie d’erreur. Pour plus d’informations, consultez [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Notez que l’événement **DiagnosticEx** ne conserve pas l’espace blanc dans sa sortie XML afin réduire la taille du journal. Pour améliorer la lisibilité, copiez le journal dans un éditeur XML (dans Visual Studio, par exemple) prenant en charge la mise en forme XML et la mise en surbrillance de la syntaxe.<br /><br /> Remarque : Si vous consignez l’événement **DiagnosticEx** avec le fournisseur de journaux SQL Server, la sortie risque d’être tronquée. Le champ **message** du module fournisseur d’informations SQL Server est de type nvarchar(2048). Pour prévenir le risque de troncation, utilisez un fournisseur de journaux différent lorsque vous consignez l’événement **DiagnosticEx** .|  
   
  Le package ainsi que de nombreuses tâches contiennent des entrées du journal personnalisées qui peuvent être activées pour la journalisation. Par exemple, la tâche d’envoi de courrier fournit l’entrée de journal personnalisée **SendMailTaskBegin** , qui journalise les informations quand l’exécution de la tâche démarre, mais avant d’envoyer un message électronique. Pour plus d’informations, consultez [Custom Messages for Logging](#custom_messages).  
   
@@ -153,7 +157,7 @@ ms.locfileid: "58277508"
   
 1.  Activez le package et ses tâches pour la journalisation. La journalisation peut s'effectuer au niveau du package, du conteneur et de la tâche. Vous pouvez spécifier différents journaux pour les packages, conteneurs et tâches.  
   
-2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
+2.  Sélectionnez un module fournisseur d'informations et ajoutez un journal pour le package. Les journaux ne peuvent être créés qu'au niveau du package, et une tâche ou un conteneur doit utiliser un des journaux créés pour le package. Chaque journal est associé à l'un des modules fournisseurs d'informations suivants : Fichier texte, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], journal des événements Windows ou fichier XML. Pour plus d’informations, consultez [Activer la journalisation des packages dans les outils de données SQL Server](#ssdt).  
   
 3.  Sélectionnez les événements et les informations de schéma de journal pour chaque événement que vous voulez capturer dans le journal. Pour plus d’informations, consultez [Configurer la journalisation à l’aide d’un fichier de configuration enregistré](#saved_config).  
   
@@ -302,7 +306,7 @@ ms.locfileid: "58277508"
  **Ajouter**  
  Ajoutez un journal du type spécifié à la collection de modules fournisseurs d'informations du package.  
   
- **Nom**  
+ **Name**  
  Activez ou désactivez les journaux pour les conteneurs ou les tâches sélectionnés dans le volet **Conteneurs** de la boîte de dialogue **Configurer les journaux SSIS** à l’aide des cases à cocher. Le champ de nom est modifiable. Utilisez le nom par défaut du fournisseur ou tapez un nom descriptif unique.  
   
  **Description**  
@@ -528,7 +532,7 @@ SQL Server Integration Services fournit un ensemble complet d’événements per
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
-|**ExecuteDTS80PackageTaskEnd**|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
+|**ExecuteDTS80PackageTaskEnd**|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
 |**ExecuteDTS80PackageTaskTaskInfo**|Fournit des informations détaillées concernant la tâche.|  
 |**ExecuteDTS80PackageTaskTaskResult**|Indique le résultat d'exécution du package DTS 2000 que la tâche a exécuté.|  
   

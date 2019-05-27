@@ -24,14 +24,18 @@ ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65802343"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La destination OLE DB charge des données dans différentes bases de données compatibles OLE DB à l'aide d'une table ou d'une vue de base de données ou d'une commande SQL. Par exemple, la source OLE DB peut charger des données dans des tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
@@ -94,7 +98,7 @@ ms.locfileid: "58283083"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Indique la taille à insérer en kilo-octets. L’option a la forme **KILOBYTES_PER_BATCH** = \<valeur entière positive**>**.|  
 |FIRE_TRIGGERS|Spécifie si des déclencheurs sont activés sur la table d'insertion. L’option a la forme **FIRE_TRIGGERS**. La présence de l'option indique que des déclencheurs sont activés.|  
-|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : Les performances peuvent être améliorées si vous utilisez l'option ORDER pour trier des données d'entrée selon l'index cluster de la table.|  
+|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : Les performances peuvent être améliorées si vous utilisez l'option ORDER pour trier des données d'entrée selon l'index cluster de la table.|  
   
  Les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] sont traditionnellement tapés en majuscules, mais ils ne tiennent pas compte de la casse.  
   

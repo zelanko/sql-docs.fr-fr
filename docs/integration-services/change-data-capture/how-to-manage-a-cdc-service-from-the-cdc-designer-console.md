@@ -11,14 +11,18 @@ ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c5cb28e7474a78c25d82b86f7ba3b81bed90d38
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: caa86a14e114958ef109d54e2f2d374c8b096b4d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276998"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728731"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cette procédure décrit comment utiliser la console du concepteur CDC pour gérer un service de capture de données modifiées.  
   
 ### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Pour gérer un service de capture de données modifiées à partir de la console du concepteur CDC  
@@ -29,7 +33,7 @@ ms.locfileid: "58276998"
   
 3.  Sélectionnez le service à gérer.  
   
-     **Remarque**: S'il n'existe aucun service répertorié dans la console du concepteur CDC, vous devez créer des instances à l'aide de la console de configuration du service de capture de données modifiées. Pour plus d'informations sur la création d'un service, consultez l'aide en ligne fournie avec la console de configuration du service.  
+     **Remarque** : S'il n'existe aucun service répertorié dans la console du concepteur CDC, vous devez créer des instances à l'aide de la console de configuration du service de capture de données modifiées. Pour plus d'informations sur la création d'un service, consultez l'aide en ligne fournie avec la console de configuration du service.  
   
 4.  Vous pouvez effectuer les tâches suivantes pour un service de capture de données modifiées :  
   

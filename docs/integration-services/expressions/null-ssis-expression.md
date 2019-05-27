@@ -14,14 +14,18 @@ ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2713a1d1f8f5db05f07bafc14ee8ce96314d46b1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f6e94c381e6303d380b2d1447f98299a0f28ec89
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275211"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725162"
 ---
 # <a name="null-ssis-expression"></a>NULL (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Renvoie une valeur NULL d'un type de données demandé.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -53,7 +57,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|L'expression (DT_TEXT,1252) convertit une valeur vers le type de données DT_TEXT à l'aide de la page de codes 1252.|  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Les exemples ci-après renvoient la valeur NULL des types de données suivants : DT_STR, DT_DATE et DT_BOOL.  
+ Les exemples ci-après renvoient la valeur Null des types de données suivants : DT_STR, DT_DATE et DT_BOOL.  
   
 ```  
 NULL(DT_STR,10,1252)  

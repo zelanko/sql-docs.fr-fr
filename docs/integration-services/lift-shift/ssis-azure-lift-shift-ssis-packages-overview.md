@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c881cbbefc5fa8fb9f0810a5c8ea26f375a56
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829671"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721468"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Effectuer un « lift-and-shift » des charges de travail SQL Server Integration Services vers le cloud
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Vous pouvez maintenant déplacer vos projets, packages et charges de travail SQL Server Integration Services (SSIS) vers le cloud Azure. Déployez, exécutez et gérez des projets et des packages SSIS dans le catalogue SSIS (SSISDB) dans Azure SQL Database ou SQL Database Managed Instance avec des outils habituels, comme SQL Server Management Studio (SSMS).
 
 ## <a name="benefits"></a>Avantages
@@ -42,9 +46,9 @@ La différence la plus importante est la séparation du stockage et de l’exéc
 
 **Provisionnez**. Avant de pouvoir déployer et exécuter des packages SSIS dans Azure, vous devez provisionner le catalogue SSIS (SSISDB) et le runtime d’intégration Azure-SSIS.
 
--   Pour configurer SSIS sur Azure dans le Portail Azure, suivez les étapes d’approvisionnement de cet article : [Configurer Azure-SSIS Integration Runtime dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+-   Pour configurer SSIS sur Azure dans le portail Azure, suivez les étapes de configuration dans cet article : [Configurer Azure-SSIS Integration Runtime dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
 
--   Pour configurer SSIS sur Azure avec PowerShell, suivez les étapes d’approvisionnement de cet article : [Configurer Azure-SSIS Integration Runtime dans Azure Data Factory avec PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
+-   Pour configurer SSIS sur Azure avec PowerShell, suivez les étapes de configuration dans cet article : [Configurer Azure-SSIS Integration Runtime dans Azure Data Factory avec PowerShell](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell).
 
 Il vous suffit de provisionner Azure-SSIS IR une seule fois. Vous pouvez ensuite utiliser des outils familiers tels que SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) pour déployer, configurer, exécuter, surveiller, planifier et gérer les packages.
 
@@ -88,7 +92,7 @@ Avec Azure SQL Database, vous pouvez utiliser uniquement des transactions élast
 
 ## <a name="deploy-and-run-packages"></a>Déployer et exécuter des packages
 
-Pour commencer, voir [Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Pour démarrer, consultez [Didacticiel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="prerequisites"></a>Conditions préalables requises
 
@@ -112,7 +116,7 @@ Pour déployer des projets sur Azure, vous pouvez utiliser plusieurs outils et o
 
 Le processus de déploiement valide chaque package pour vérifier qu’il peut s’exécuter dans Azure SSIS Integration Runtime. Pour plus d’informations, voir [Valider les packages SQL Server Integration Services (SSIS) déployés sur Azure](ssis-azure-validate-packages.md).
 
-Pour obtenir un exemple de déploiement qui utilise SSMS et l’Assistant Déploiement d’Integration Services, voir [Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
+Pour obtenir un exemple de déploiement qui utilise SSMS et l’Assistant Déploiement d’Integration Services, consultez [Didacticiel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md).
 
 ### <a name="version-support"></a>Prise en charge de version
 
@@ -141,5 +145,5 @@ Il existe différents outils permettant de planifier l’exécution de packages 
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour bien démarrer avec les charges de travail SSIS sur Azure, consultez les articles suivants :
--   [Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [Tutoriel : Déployer et exécuter un package SQL Server Integration Services (SSIS) sur Azure](ssis-azure-deploy-run-monitor-tutorial.md)
 -   [Configurer Azure-SSIS Integration Runtime dans Azure Data Factory](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)

@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283203"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729175"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Le catalogue **SSISDB** est l’élément central pour l’utilisation des projets [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que vous avez déployés sur le serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Ainsi, c'est dans ce catalogue que vous définissez les paramètres de projet et de package, configurez les environnements pour spécifier des valeurs d'exécution pour les packages, exécutez et résolvez les problèmes relatifs aux packages, et gérez les opérations du serveur [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
@@ -172,13 +176,13 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
 |Nom de la propriété (boîte de dialogue**Propriétés du catalogue** )|Nom de la propriété (vue de base de données)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nom de l'algorithme de chiffrement|ENCRYPTION_ALGORITHM|  
-|Nettoyer les journaux régulièrement|OPERATION_CLEANUP_ENABLED|  
+|Nettoyer les journaux régulièrement|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Période de rétention (jours)|RETENTION_WINDOW|  
 |Supprimer régulièrement les anciennes versions|VERSION_CLEANUP_ENABLED|  
 |Nombre maximal de versions par projet|MAX_PROJECT_VERSIONS|  
 |Niveau d'enregistrement par défaut au niveau du serveur|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Les projets, les environnements et les packages sont contenus dans des dossiers qui sont des objets sécurisables. Vous pouvez accorder des autorisations à un dossier, notamment l'autorisation de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS vous permet de déléguer l'administration du contenu du dossier à un utilisateur sans avoir à accorder à celui-ci l'appartenance au rôle ssis_admin. Vous pouvez également accorder des autorisations relatives à des projets, des environnements et des opérations. Les opérations incluent l'initialisation de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], le déploiement de projets, la création et le démarrage d'exécutions, la validation de projets et de packages, ainsi que la configuration du catalogue **SSISDB** .  
   
  Pour plus d’informations sur les rôles de base de données, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
@@ -412,7 +416,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en effectuant les actions suivantes. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md).  
   

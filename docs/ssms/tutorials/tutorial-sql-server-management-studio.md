@@ -1,7 +1,7 @@
 ---
-title: 'Didacticiel : SQL Server Management Studio (SSMS) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/30/2017
+title: 'Tutoriel : SQL Server Management Studio (SSMS) | Microsoft Docs'
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800973"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620514"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriels pour SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Le didacticiel SQL Server Management Studio (SSMS) vous présente l’environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
+Les didacticiels SQL Server Management Studio (SSMS) vous présente l’environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour la configuration, l’analyse et l’administration de Azure SQL Database, l’instance gérée Azure SQL Database, Azure SQL Data Warehouse et les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, surveiller et mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 
@@ -41,27 +41,27 @@ Ces tutoriels vous aident à comprendre la présentation des informations dans S
   
 La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces tutoriels vous permettent de vous familiariser avec les diverses fonctionnalités disponibles dans SSMS.  Ces tutoriels vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.  
 
-Voici les sujets traités dans les tutoriels : 
+Voici les sujets traités dans les tutoriels :
 
-  
-- [Didacticiel : Se connecter à et interroger SQL Server avec SSMS](connect-query-sql-server.md)
+
+- [Tutoriel : Se connecter à et interroger SQL Server avec SSMS](connect-query-sql-server.md)
 
     Dans ce tutoriel, vous allez apprendre à vous connecter à votre instance SQL Server. Vous allez également étudier quelques commandes T-SQL (Transact-SQL) de base pour créer, puis interroger une base de données. 
 
-- [Didacticiel : Objets de script dans SSMS](scripting-ssms.md)
+- [Tutoriel : Objets de script dans SSMS](scripting-ssms.md)
 
     Dans ce tutoriel, vous allez apprendre à générer le script de différents objets dans SSMS, dont les bases de données et les requêtes. 
 
-- [Didacticiel : Utilisation de modèles dans SSMS](templates-ssms.md)
+- [Tutoriel : Utilisation de modèles dans SSMS](templates-ssms.md)
    
-    Dans ce tutoriel, vous allez apprendre à utiliser les modèles prédéfinis dans SSMS. Les modèles sont une fonctionnalité peu connue qui stocke un nombre d’extraits de code Transact-SQL pour diverses tâches d’administration de base de données. 
+    Dans ce tutoriel, vous allez apprendre à utiliser les modèles prédéfinis dans SSMS. Les modèles sont une fonctionnalité peu connue qui stocke un nombre d’extraits de code Transact-SQL pour diverses tâches d’administration de bases de données. 
 
-- [Didacticiel : Configuration de SSMS](ssms-configuration.md)
+- [Tutoriel : Configuration de SSMS](ssms-configuration.md)
 
     Dans ce tutoriel, vous apprenez les bases de la configuration de votre environnement SSMS, comme le changement de la disposition de l’environnement. Ce tutoriel explique également quels sont les différents composants SSMS. 
   
 
-- [Didacticiel : Conseils et astuces supplémentaires pour utiliser SSMS](ssms-tricks.md)
+- [Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS](ssms-tricks.md)
 
     Dans ce tutoriel, vous allez découvrir d’autres conseils et astuces pour utiliser SSMS. Le tutoriel inclut les thèmes suivants :
     - Ajout et suppression de commentaires dans le texte

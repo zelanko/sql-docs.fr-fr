@@ -13,18 +13,18 @@ api_location:
 helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62875098"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010484"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Accéder à des données FILESTREAM avec OpenSqlFilestream
-  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) qui est stocké dans le système de fichiers. Le handle peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
+  L’API OpenSqlFilestream Obtient un descripteur de fichier compatible Win32 pour un objet FILESTREAM (BLOB) qui est stocké dans le système de fichiers. Le descripteur peut être passé à chacune des API Win32 suivantes : [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), ou [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si vous passez ce descripteur à une autre API Win32, l'erreur ERROR_ACCESS_DENIED est retournée. Le descripteur doit être fermé en le passant à l’API [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) Win32 avant que la transaction soit validée ou restaurée. Si le descripteur n'est pas fermé, il peut y avoir des fuites de ressources côté serveur.  
   
  Tout accès au conteneur de données FILESTREAM doit être exécuté dans une transaction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] Vous pouvez également exécuter des instructions dans la même transaction. Cela maintient la cohérence entre les données SQL et les données BLOB FILESTREAM.  
   
@@ -53,7 +53,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *DesiredAccess*  
  [in] Définit le mode utilisé pour accéder aux données BLOB FILESTREAM. Cette valeur est passée à la [fonction DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|Créer une vue d’abonnement|Value|Signification|  
+|Nom|Value|Signification|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|Les données peuvent être lues à partir du fichier.|  
 |SQL_FILESTREAM_WRITE|1|Les données peuvent être écrites dans le fichier.|  

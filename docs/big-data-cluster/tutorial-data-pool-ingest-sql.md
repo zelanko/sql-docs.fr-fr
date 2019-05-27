@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994158"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014947"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutoriel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL
 
@@ -85,7 +85,7 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
 
 Les étapes suivantes ingérer les données de parcours web exemple dans le pool de données à l’aide de la table externe créée dans les étapes précédentes.
 
-1. Définir des variables de la requête que vous souhaitez utiliser pour insérer des données dans le pool de données. Pour CTP 2.3 ou version antérieure, le **modèle... sp_data_pool_table_insert_data** procédure stockée est nécessaire. Pour CTP 2.4 et versions ultérieures, vous pouvez utiliser un `INSERT INTO` instruction pour insérer les résultats de la requête dans le pool de données (le **web_clickstream_clicks_data_pool** table externe).
+1. Utilisez un `INSERT INTO` instruction pour insérer les résultats de la requête dans le pool de données (le **web_clickstream_clicks_data_pool** table externe).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

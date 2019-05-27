@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071119"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion PowerPivot et données d'utilisation
   Le tableau de bord de gestion PowerPivot est une collection de rapports et de composants WebPart prédéfinis dans l'Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server PowerPivot pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  

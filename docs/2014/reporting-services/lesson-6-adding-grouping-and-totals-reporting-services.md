@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278737"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108413"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout de regroupement et totaux (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
@@ -41,13 +40,13 @@ ms.locfileid: "63278737"
   
 2.  Si vous ne voyez pas le volet **Groupes de lignes** , cliquez avec le bouton droit sur l'aire de conception, puis sélectionnez **Vue** et cliquez sur **Regroupement**.  
   
-3.  À partir de la **les données de rapport** volet, faites glisser le `Date` champ la **groupes de lignes** volet. Placez-le au-dessus de la ligne appelée **(Details)**.  
+3.  Faites glisser le champ `Date` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  À partir de la **les données de rapport** volet, faites glisser le `Order` champ la **groupes de lignes** volet. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
+4.  Faites glisser le champ `Order` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
   
      Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. Le tableau présente désormais deux `Order` colonnes, trop.  
   

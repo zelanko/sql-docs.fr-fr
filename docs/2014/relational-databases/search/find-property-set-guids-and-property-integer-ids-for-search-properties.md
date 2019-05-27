@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631937"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011327"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
   Cette rubrique explique comment extraire les valeurs requises avant d'ajouter une propriété à une liste de propriétés de recherche et les rendre détectables par la recherche en texte intégral. Ces valeurs incluent le GUID du jeu de propriétés et l'identificateur entier d'une propriété de document.  
@@ -41,7 +41,7 @@ ms.locfileid: "62631937"
 |Nom connu|Nom canonique Windows|GUID du jeu de propriétés|ID entier|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Auteurs|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Auteur ou auteurs d'un élément donné.|  
-|Balises|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
+|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
 |Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
 |Titre|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
   

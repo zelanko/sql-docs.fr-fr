@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
@@ -15,12 +14,12 @@ ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63265916"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109690"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des abonnements pilotés par les données qui permettent de personnaliser la distribution d'un rapport basé sur des données d'abonnés dynamiques. Les abonnements pilotés par les données s'utilisent dans les types de scénarios suivants :  
@@ -37,7 +36,7 @@ ms.locfileid: "63265916"
  [Leçon 1 : Création d’une base de données exemple abonné](lesson-1-creating-a-sample-subscriber-database.md)  
  Au cours de cette leçon, vous allez apprendre à créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés.  
   
- [Leçon 2 : Modification des propriétés d’une source de données de rapport](lesson-2-modifying-the-report-data-source-properties.md).  
+ [Leçon 2 : Modification des propriétés d’une source de données de rapport](lesson-2-modifying-the-report-data-source-properties.md).  
  Dans cette leçon, vous allez apprendre à modifier les propriétés d'une source de données afin que le rapport puisse s'exécuter sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné.  
   
  [Leçon 3 : Définition d’un abonnement piloté par les données](lesson-3-defining-a-data-driven-subscription.md)  

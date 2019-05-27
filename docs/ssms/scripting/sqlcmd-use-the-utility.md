@@ -14,16 +14,16 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617872"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821876"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Utiliser l’utilitaire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "52617872"
     sqlcmd -S <ComputerName>  
     ```  
   
-    > **REMARQUE :** dans l’exemple précédent, **-E** n’est pas définie, car il s’agit de l’option par défaut et **sqlcmd** se connecte à l’instance par défaut en utilisant l’authentification Windows.  
+    > **REMARQUE :** Dans l’exemple précédent, **-E** n’est pas définie, car il s’agit de l’option par défaut et **sqlcmd** se connecte à l’instance par défaut en utilisant l’authentification Windows.  
   
 -   Connexion à une instance nommée à l'aide de l'authentification Windows pour exécuter de manière interactive des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52617872"
     > **CONSEIL !!!** Pour obtenir une liste des options prises en charge par l’utilitaire **sqlcmd** , exécutez `sqlcmd -?`.  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Exécuter des instructions Transact-SQL de manière interactive à l’aide de sqlcmd  
- Vous pouvez utiliser l'utilitaire **sqlcmd** interactivement pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une fenêtre d'invite de commandes. Pour exécuter interactivement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de **sqlcmd**, exécutez l’utilitaire sans utiliser les options **-Q**, **-q**, **-Z**ou **-i** pour spécifier des fichiers ou des requêtes d’entrée. Exemple :  
+ Vous pouvez utiliser l'utilitaire **sqlcmd** interactivement pour exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans une fenêtre d'invite de commandes. Pour exécuter interactivement des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de **sqlcmd**, exécutez l’utilitaire sans utiliser les options **-Q**, **-q**, **-Z**ou **-i** pour spécifier des fichiers ou des requêtes d’entrée. Par exemple :  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "52617872"
 ## <a name="quoted-strings"></a>Chaînes entre guillemets  
  Les caractères entourés par des guillemets sont utilisés sans autre prétraitement, à l'exception des guillemets insérés au sein d'une chaîne en entrant deux guillemets consécutifs. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite cette séquence de caractères comme un seul guillemet. (La traduction s'effectue toutefois sur le serveur). Les variables des scripts ne sont pas développées lorsqu'elles apparaissent au sein d'une chaîne.  
   
- Exemple :  
+ Par exemple :  
   
  `sqlcmd`  
   
@@ -546,7 +546,7 @@ SQLCMD -E -C
   
 ```  
   
- Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
+ Connexion à l'aide des informations d'identification Windows, d'une communication chiffrée et d'un certificat de serveur de confiance :  
   
 ```  
 SQLCMD -E -N -C  

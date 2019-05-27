@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157620"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175037"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader du chargeur de ligne de commande pour Parallel Data Warehouse
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *en mode fastappend*), ajoute de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimer toutes les lignes avant le chargement existantes et puis insérer toutes les lignes dans une table vide (*recharger mode*).  
@@ -111,7 +111,8 @@ dwloader.exe
     [ -E ]  
     [ -m ]  
     [ -N ]  
-    [ -se ]   
+    [ -se ]
+    [ -l ]   
 }  
 ```  
   
@@ -143,7 +144,7 @@ Exemples :
   
 `rv=25`  
   
-**-S***target_appliance*  
+* *-S***target_appliance*  
 Spécifie l’appliance SQL Server PDW qui recevra les données chargées.  
   
 *Pour les connexions Infiniband*, *target_appliance* est spécifié en tant que < appliance-name >-SQLCTL01. Pour configurer ce nommé connexion, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
@@ -156,10 +157,10 @@ Si omis, dwloader par défaut la valeur qui a été spécifiée lors de l’inst
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.*[*schema*].*table_name*  
+**-T** *target_database_name.* [*schema*].*table_name*  
 Le nom en trois parties pour la table de destination.  
   
-**-I***source_data_location*  
+* *-I***source_data_location*  
 L’emplacement d’un ou plusieurs fichiers source à charger. Chaque fichier source doit être un fichier texte ou un fichier texte qui est compressé avec gzip. Uniquement un fichier source peut être compressé dans chaque fichier gzip.  
   
 Pour mettre en forme un fichier source :  
@@ -174,7 +175,7 @@ Pour spécifier l’emplacement de source de données :
   
 -   L’emplacement de données source peut être un chemin d’accès réseau ou un chemin d’accès local vers un répertoire sur le serveur de chargement.  
   
--   Pour spécifier tous les fichiers dans un répertoire, entrez le chemin du répertoire suivi de la * caractère générique.  Le chargeur ne charge pas les fichiers à partir de tous les sous-répertoires qui se trouvent dans l’emplacement de source de données... Les erreurs lorsqu’un répertoire existe dans un fichier gzip du chargeur.  
+-   Pour spécifier tous les fichiers dans un répertoire, entrez le chemin du répertoire suivi de la * caractère générique.  Le chargeur ne charge pas les fichiers à partir de tous les sous-répertoires qui se trouvent dans l’emplacement de source de données. Les erreurs lorsqu’un répertoire existe dans un fichier gzip du chargeur.  
   
 -   Pour spécifier certains des fichiers dans un répertoire, utilisez une combinaison de caractères et le * générique.  
   
@@ -219,7 +220,7 @@ Pour des fichiers ASCII, les valeurs NULL sont représentées en plaçant les d�
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est primauté des octets et UTF16BE big endian. Ces options respectent la casse.  
   
 **-t** *field_delimiter*  
-Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces caractères d’échappement de ASCII ou les valeurs hexadécimales ASCII...  
+Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de champ est un ou plusieurs de ces caractères d’échappement de ASCII ou les valeurs hexadécimales ASCII.  
   
 |Nom|Caractère d’échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
@@ -368,9 +369,9 @@ jam
 Exemples de fichier d’entrée pour le 04 mars 2010 : 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
-*custom_date_format* est un format de date personnalisé (par exemple, MM/jj/aaaa) et inclus pour la compatibilité descendante uniquement. dwloader n’enfoce pas le format de date personnalisé. Au lieu de cela, lorsque vous spécifiez un format de date personnalisé, **dwloader** convertira le paramètre correspondant d’ymd, ydm, mdy, myd, dym ou JMA.  
+*custom_date_format* est un format de date personnalisé (par exemple, MM/jj/aaaa) et inclus pour la compatibilité descendante uniquement. dwloader n’applique pas le format de date personnalisé. Au lieu de cela, lorsque vous spécifiez un format de date personnalisé, **dwloader** convertira le paramètre correspondant d’ymd, ydm, mdy, myd, dym ou JMA.  
   
-Par exemple, si vous spécifiez -D MM/jj/aaaa, dwloader attend toutes les date d’entrée doivent être classés avec mois tout d’abord, puis jour et puis année (MJA). Il n’applique pas de 2 caractères mois, jours à un chiffre 2 et 4 chiffres comme spécifié par le format de date personnalisé. Voici quelques exemples de dates peuvent être mis en forme dans le fichier d’entrée lorsque le format de date est -D MM/jj/aaaa : 01/02/2013, Jan.02.2013, 1/2/2013  
+Par exemple, si vous spécifiez -D MM/jj/aaaa, dwloader attend toutes les date d’entrée doivent être classés avec mois tout d’abord, puis jour et puis année (MJA). Il n’applique pas de caractère de 2 mois, les jours à 2 chiffres et 4 chiffres, comme spécifié par le format de date personnalisé. Voici quelques exemples de dates peuvent être mis en forme dans le fichier d’entrée lorsque le format de date est -D MM/jj/aaaa : 01/02/2013, Jan.02.2013, 1/2/2013  
   
 Pour obtenir des informations de mise en forme plus complètes, consultez [pour dwloader, les règles de conversion de type de données](dwloader-data-type-conversion-rules.md).  
   
@@ -481,7 +482,10 @@ Nous vous recommandons d’utiliser **-m** uniquement lors du chargement dans un
 Vérifiez que l’appliance cible dispose d’un certificat de SQL Server PDW valid d’une autorité approuvée. Cela permet de garantir à vos données ne sont pas en cours détournée par un attaquant et envoyées à un emplacement non autorisé. Le certificat doit déjà être installé sur l’appliance. La seule façon d’installer le certificat est pour l’administrateur de l’appliance pour l’installer à l’aide de l’outil de Configuration Manager. Demandez à votre administrateur de matériel si vous ne savez pas si l’appliance a un certificat approuvé installé.  
   
 **-se**  
-Ignorer le chargement des fichiers vides. Il ignore également décompression des fichiers gzip vide.  
+Ignorer le chargement des fichiers vides. Il ignore également décompression des fichiers gzip vide.
+
+**-l**  
+Disponible avec la mise à jour CU7.4, spécifie la longueur de ligne maximale (en octets) qui peut être chargée. Les valeurs valides sont des entiers compris entre 32768 et 33554432. Utilisez uniquement lorsque nécessaire pour charger des lignes de grande taille (supérieures à 32 Ko) comme ceci alloue plus de mémoire sur le client et le serveur.
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
 0 (succès) ou une autre valeur d’entier (échec)  
@@ -542,7 +546,7 @@ La chaîne vide ne doit pas servir comme délimiteur. Lorsqu’une chaîne vide 
 -   **upsert** -Upsert charge les données dans une table intermédiaire, puis effectue une opération de fusion à partir de la table intermédiaire vers la table finale. Upsert ne nécessite pas de verrous exclusifs sur la table finale. Les performances peuvent varier lorsque vous utilisez upsert. Tester le comportement dans votre environnement.  
   
 ### <a name="locking-behavior"></a>Comportement de verrouillage  
-**Un verrouillage du mode append**  
+**Ajouter le mode de verrouillage**  
   
 Ajouter peut être exécuté en mode transactionnel multi (à l’aide de l’argument -m), mais il n’est pas sûr de la transaction. Par conséquent ajouter doit être utilisé comme une opération transactionnelle (sans utiliser l’argument -m). Malheureusement, lors de l’opération INSERT-SELECT finale, mode transactionnel est actuellement environ six fois plus lent que le mode transactionnel multiples.  
   
@@ -600,7 +604,7 @@ L’exemple suivant fait partie d’un script de commandes qui charge des donné
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. Si elle utilisait InfiniBand, server serait *< nom_solution >*`-SQLCTL01`.  
+L’extrait de script suivant utilise dwloader pour charger des données dans les tables DimAccount et DimCurrency. Ce script utilise une adresse Ethernet. Si elle utilisait InfiniBand, server serait *< nom_solution >* `-SQLCTL01`.  
   
 ```  
 set server=10.193.63.134  

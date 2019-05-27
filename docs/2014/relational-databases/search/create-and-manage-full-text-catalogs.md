@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145985"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011468"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
   Un catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers ; c'est un concept logique qui renvoie à un groupe d'index de recherche en texte intégral.  
@@ -43,7 +43,7 @@ ms.locfileid: "48145985"
   
   
 ##  <a name="props"></a> Affichage des propriétés d’un catalogue de texte intégral  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions, telles que FULLTEXTCATALOGPROPERTY peuvent être utilisées pour obtenir la valeur de diverses propriétés relatives à l’indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
+ Vous pouvez faire appel à plusieurs fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], telles que FULLTEXTCATALOGPROPERTY, pour obtenir la valeur de diverses propriétés relatives à l'indexation de texte intégral. Ces informations sont utiles pour administrer la recherche en texte intégral et résoudre les problèmes qui la concernent.  
   
  Le tableau suivant répertorie les propriétés liées aux catalogues de texte intégral.  
   

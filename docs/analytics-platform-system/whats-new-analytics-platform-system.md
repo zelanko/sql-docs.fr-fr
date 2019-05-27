@@ -9,17 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63243777"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175043"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## <a name="aps-cu74"></a>APS CU7.4
+Date de publication : mai 2019
+
+### <a name="loading-large-rows-with-dwloader"></a>Chargement des lignes de grande taille avec dwloader
+À partir de points d’accès CU7.4, les clients seront en mesure d’utiliser un nouveau dwloader pour charger des lignes dans les tables qui sont supérieures à 32 Ko (32 768 octets). La nouvelle dwloader prend en charge le commutateur -l qui prend un entier compris entre 32768 et 33554432 (en octets) pour charger les lignes supérieures à 32 Ko. Utilisez uniquement cette option lors du chargement de lignes de grande taille (supérieures à 32 Ko) que ce commutateur alloue plus de mémoire sur le client et le serveur et peut ralentir les charges. Vous pouvez télécharger le nouveau dwloader à partir de [site de téléchargement](https://www.microsoft.com/download/details.aspx?id=57472).  
+
+### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 et 3.1 prise en charge avec PolyBase
+PolyBase sur les points d’accès prend désormais en charge HDP 3.0 et 3.1 avec cette mise à jour. Utilisez l’option 7 pour les versions 3.x HDP. Pour plus d’informations, consultez [connectivité PolyBase](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) page.
+
+### <a name="utf16-file-support-with-polybase"></a>Prise en charge des fichiers UTF16 avec PolyBase
+PolyBase prend maintenant en charge la lecture des fichiers texte délimité qui se trouvent dans le codage UTF16 (LE). Consultez [créer un format de fichier externe](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) pour plus d’informations d’installation. 
+
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
 Date de publication - décembre 2018

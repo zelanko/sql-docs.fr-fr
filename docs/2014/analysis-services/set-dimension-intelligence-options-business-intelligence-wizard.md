@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.selectdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: 3fe16614-bf5b-458a-9f30-67ebc8ac2a8e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 465b056b457279911cc9e728ff088325e658cf7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f85ec2a21b478771a9ace733c22ff93a521c8430
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068704"
 ---
 # <a name="set-dimension-intelligence-options-business-intelligence-wizard"></a>Définir les options d'intelligence des dimensions (Assistant Business Intelligence)
   Utilisez la page **Définir les options d'intelligence des dimensions** pour sélectionner la dimension à laquelle l'Assistant Business Intelligence applique l'intelligence des dimensions. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge plusieurs types d’entreprises standard pour les dimensions et attributs, tels que les dimensions de produit ou les dimensions de compte. Les applications clientes peuvent utiliser ces types d'entreprises pour fournir un support d'analyse supplémentaire pour les solutions Business Intelligence. Pour plus d’informations sur les types de dimensions et les types d’attributs disponibles, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md) et [Attributs et hiérarchies d’attributs](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

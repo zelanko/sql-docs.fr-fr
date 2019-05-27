@@ -17,15 +17,15 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238400"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011065"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Recherche de mots dans le voisinage d'autres mots avec NEAR
   Vous pouvez utiliser un terme de proximité (NEAR) dans un prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) ou une fonction [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) pour rechercher des mots ou des expressions à proximité les uns des autres. Vous pouvez également spécifier le nombre maximal de termes de non-recherche qui séparent le premier et le dernier terme de recherche. De plus, vous pouvez rechercher des mots ou des expressions dans n'importe quel ordre ou dans un ordre spécifié. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge l’ancien [terme de proximité générique](#Generic_NEAR), qui est maintenant déconseillé et le [terme de proximité personnalisé](#Custom_NEAR), qui est une nouveauté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  

@@ -10,14 +10,18 @@ ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222133"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723901"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
 
 ## <a name="an-alternative-for-simple-text-import"></a>Une alternative pour l’importation de texte simple
@@ -203,7 +207,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Nom**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
+|**Name**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne à conserver en nombre d’octets. Pour les fichiers Unicode, cette valeur est un nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|

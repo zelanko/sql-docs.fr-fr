@@ -13,14 +13,18 @@ ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f629b0f7905cce4547d76ddfe97adc7dedd17079
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278078"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728854"
 ---
 # <a name="edit-the-table-properties"></a>Modifier les propriétés d'une table
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cette boîte de dialogue permet de modifier des colonnes spécifiques de la table sélectionnée où les modifications sont capturées. Vous pouvez également modifier les informations du **Rôle de sécurité** et de l' **Instance de capture** .  
   
 ### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Pour modifier les colonnes à inclure dans l'instance CDC.  
@@ -43,11 +47,11 @@ ms.locfileid: "58278078"
   
     -   **Nouvelle instance de capture** : dans ce cas, une nouvelle instance de capture est enregistrée et l’ancienne n’est pas supprimée.  
   
-         **Remarque**: il n’est pas possible d’avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
+         **Remarque** : il n’est pas possible d’avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
   
     -   **Remplacer l’instance de capture existante** : dans ce cas, l’instance de capture actuelle est supprimée et remplacée par celle que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
   
- **Remarque**: vous pouvez supprimer une instance de capture de la liste des tables dans l’onglet **Table** .  
+ **Remarque** : vous pouvez supprimer une instance de capture de la liste des tables dans l’onglet **Table** .  
   
  Une fois les informations entrées dans cette boîte de dialogue, cliquez sur **OK** pour accepter les modifications.  
   

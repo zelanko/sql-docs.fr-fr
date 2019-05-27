@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 808543b2a9e0f770eaf47966bb8d6a08fecabcc8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749919"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071782"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2013 (outil de configuration de PowerPivot)
   Utilisez l'Outil de configuration de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint pour configurer ou réparer une installation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013, L'outil de configuration commence par analyser le système, puis retourne une liste d'actions nécessaires pour achever ou réparer votre installation. L'Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2010 et un outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013. Cette rubrique décrit l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013. Pour plus d’informations sur SharePoint 2010, consultez [configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
@@ -108,7 +107,7 @@ ms.locfileid: "62749919"
   
  Le tableau suivant décrit les valeurs utilisées pour configurer le serveur.  
   
-|Radiomessagerie|Valeur d'entrée|Source|Description|  
+|Radiomessagerie|Valeur d'entrée|`Source`|Description|  
 |----------|-----------------|------------|-----------------|  
 |**Configurer ou réparer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour mettre en service les éléments suivants :<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut<br />Service Banque d'informations sécurisé<br />Excel Services<br />Identité du pool d'applications Web<br />Administrateur de collection de sites<br />Compte d'actualisation des données sans assistance [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Par défaut, il utilise le compte de domaine de l'utilisateur actuel. Il est recommandé de remplacer la valeur par défaut sauf si vous configurez un serveur à des fins d'évaluation et expérimentales. Vous pouvez modifier les identités de service ultérieurement, à l'aide de l'Administration centrale. Éventuellement, dans l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , spécifiez des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l'aide de la page **Créer une application Web par défaut** (en supposant que l'outil crée une application Web pour la batterie).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , à l’aide de la page **Créer un compte sans assistance pour l’actualisation des données** de cet outil.|  
 ||Serveur de base de données|Instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locale, le cas échéant|Si une instance du moteur de base de données est installée en tant qu'instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l'outil renseigne le champ du serveur de base de données avec ce nom d'instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide.<br /><br /> Le**Serveur de base de données**  est un paramètre obligatoire. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|  

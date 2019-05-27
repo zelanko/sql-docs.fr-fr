@@ -19,15 +19,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50ec2b9a4c35fdf16b8d7f696b9d227eb63ff7cb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63228465"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013861"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Exclusion d'éléments du schéma du document XML obtenu à l'aide de sql:mapped (SQLXML 4.0)
   Chaque élément et chaque attribut du schéma XSD sont mappés à une vue/table et à une colonne de base de données en raison du mappage par défaut. Si vous souhaitez créer un élément dans le schéma XSD qui n'est mappé à aucune table (vue) ou colonne de base de données et qui n'apparaît pas dans le XML, vous pouvez spécifier l'annotation `sql:mapped`.  

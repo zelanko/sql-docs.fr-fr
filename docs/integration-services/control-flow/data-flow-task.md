@@ -19,14 +19,18 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 295c5156c1f3b27f5030c27d70311e34f0141f18
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274070"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727823"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tâche de flux de données encapsule le moteur de flux de données chargé de déplacer des données entre les sources et les destinations et permet à l'utilisateur de transformer, nettoyer et modifier les données au cours de leur déplacement. L'ajout d'une tâche de flux de données à un flux de contrôle de package permet au package d'extraire, de transformer et de charger des données.  
   
  Un flux de données est constitué d'au moins un composant de flux de données, mais il s'agit en général d'un ensemble de composants de flux de données connectés : des sources qui extraient des données, des transformations qui modifient, acheminent ou résument des données, et des destinations qui chargent des données.  
@@ -87,7 +91,7 @@ ms.locfileid: "58274070"
   
  De nombreux événements de journal écrivent plusieurs entrées et les messages liés à de nombreuses entrées de journal contiennent des données complexes. Pour faciliter la compréhension et la communication du contenu des messages complexes, vous pouvez analyser leur texte. En fonction de l'emplacement des journaux, vous pouvez utiliser des instructions Transact-SQL ou un composant Script pour répartir le texte complexe sur plusieurs colonnes ou sous d'autres formats que vous jugez plus utiles.  
   
- Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Tri : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l’événement **OnPipelineRowsSent** au moment où les lignes ont été envoyées de la source OLE DB à la transformation de tri.  
+ Par exemple, le tableau suivant affiche le message « Des lignes ont été fournies comme entrée à un composant de flux de données. :  : 1185 : Sortie de source OLE DB : 1180 : Trier : 1181 : Entrée de tri : 76 », analysé sur plusieurs colonnes. Le message a été écrit par l’événement **OnPipelineRowsSent** au moment où les lignes ont été envoyées de la source OLE DB à la transformation de tri.  
   
 |colonne|Description|Valeur|  
 |------------|-----------------|-----------|  

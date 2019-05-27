@@ -25,7 +25,7 @@ ms.locfileid: "63245938"
   
 ### <a name="to-set-a-trace-filter"></a>Pour définir un filtre de trace  
   
-1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant **@status = 0** pour l’arrêter.  
+1.  Si la trace est déjà en cours d’exécution, exécutez **sp_trace_setstatus** en spécifiant  **@status = 0** pour l’arrêter.  
   
 2.  Exécutez **sp_trace_setfilter** pour configurer le type d’informations extraites pour l’événement dont vous voulez suivre la trace.  
   

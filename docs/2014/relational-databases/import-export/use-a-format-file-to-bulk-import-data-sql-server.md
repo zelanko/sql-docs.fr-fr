@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155861"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011767"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
   Cette rubrique illustre l'utilisation d'un fichier de format dans les importations en bloc. Le fichier de format met en relation les champs du fichier de données avec les colonnes de la table.  Vous pouvez opter pour un fichier de format XML ou non-XML pour importer des données en bloc quand vous utilisez une commande **bcp** ou une instruction BULK INSERT ou INSERT... SELECT * FROM OPENROWSET(BULK...)[!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "63155861"
  Pour plus d’informations, consultez [Utilitaire bcp](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) ou [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes client ou dans la page de codes impliquée par le classement), SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode), ou SQLBINARY ou SQLVARYBIN (les données sont envoyées sans conversion).  
+>  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format : SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes client ou dans la page de codes inhérente au classement) ; SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode) ; SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).  
   
 ## <a name="examples"></a>Exemples  
  Les exemples de cette section illustrent l’utilisation des fichiers de format pour importer des données en bloc au moyen de la commande **bcp** et des instructions BULK INSERT et INSERT... SELECT * FROM OPENROWSET(BULK...). Avant de pouvoir exécuter un des exemples d'importation en bloc, vous devez créer un exemple de table, de fichier de données et de fichier de format.  

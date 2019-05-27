@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788096"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560110"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Groupes de disponibilité Always On<sup>3</sup>|Oui|Non|Non|Non|Non|
 |Groupes de disponibilité de base<sup>4</sup>|Non|Oui|Non|Non|Non|
 |Restauration en ligne de pages et de fichiers|Oui|Non|Non|Non|Non|
-|Indexation en ligne|Oui|Non|Non|Non|Non|
+|Créer et reconstruire un index en ligne|Oui|Non|Non|Non|Non|
 |Reconstructions d’index en ligne pouvant être reprises|Oui|Non|Non|Non|Non|
 |Modification de schéma en ligne|Oui|Non|Non|Non|Non|
 |Récupération rapide|Oui|Non|Non|Non|Non|

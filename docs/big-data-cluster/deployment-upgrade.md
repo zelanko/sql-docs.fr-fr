@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f8291eeb292226b3dfcb2bd1a89816926c53d88
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 45c489d7bb2dc6f0fea5815dce4b2f0ef11ae5ad
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993976"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015185"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Comment mettre à niveau des clusters de données volumineuses de SQL Server
 
@@ -45,10 +45,10 @@ Actuellement, la seule façon de mettre à niveau un cluster de données volumin
    pip3 uninstall mssqlctl
    ```
 
-   Pour CTP 2.3 ou version ultérieure, exécutez la commande suivante. Remplacez `ctp-2.4` dans la commande avec la version de **mssqlctl** que vous désinstallez :
+   Pour CTP 2.3 ou version ultérieure, exécutez la commande suivante. Remplacez `ctp-2.5` dans la commande avec la version de **mssqlctl** que vous désinstallez :
 
    ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
    ```
 
 1. Installez la dernière version de **mssqlctl**. Les commandes suivantes installent **mssqlctl** pour CTP 3.0 :
@@ -56,13 +56,13 @@ Actuellement, la seule façon de mettre à niveau un cluster de données volumin
    **Windows :**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
    **Linux :**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

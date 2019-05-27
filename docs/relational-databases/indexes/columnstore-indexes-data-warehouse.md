@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cfd16b46ddf4c06c283009ecfa836780c1c2444
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412066"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581302"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Index columnstore - Entrepôt de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ CREATE UNIQUE INDEX taccount_nc1 ON t_account (AccountKey);
   
  Il en résulte un index columnstore avec un index non cluster qui applique une contrainte de clé primaire sur les deux index.  
   
-```sql 
+```sql
 --EXAMPLE: Enforce a primary key constraint on a columnstore table.   
   
 --Create a rowstore table with a unique constraint.  

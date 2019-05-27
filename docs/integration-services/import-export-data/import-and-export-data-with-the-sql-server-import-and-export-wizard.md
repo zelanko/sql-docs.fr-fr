@@ -23,14 +23,18 @@ ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8159be3478fbf4d3e83de6a066a07104997c4ade
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c540acdbda08d79f89b6bba3a016314609e6607f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222083"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723815"
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>Importer et exporter des données avec l’Assistant Importation et Exportation SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
  La fonction de l’Assistant Importation et Exportation[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est de copier simplement des données d’une source vers une destination. Cette présentation décrit les sources de données que l’Assistant peut utiliser en tant que sources et destinations, ainsi que les autorisations nécessaires à l’exécution de l’Assistant.
 
@@ -47,7 +51,7 @@ Si vous souhaitez exécuter l’Assistant, mais [!INCLUDE[msCoName](../../includ
  
 | Source de données | Dois-je télécharger des fichiers supplémentaires ? |
 |-------------|-----------------------------------------|
-|**Bases de données d’entreprise**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 et autres.|SQL Server ou SQL Server Data Tools (SSDT) installe les fichiers dont vous avez besoin pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, SSDT n’installe pas tous les fichiers qui vous sont nécessaires pour vous connecter à d’autres bases de données d’entreprise, telles que Oracle ou IBM DB2.<br/><br/>Pour vous connecter à une base de données d’entreprise, vous devez généralement disposer de deux choses :<br/><br/>1. **Logiciel client**. Si vous disposez déjà du logiciel client de votre système de base de données d’entreprise, vous avez en général ce qu’il vous faut pour établir une connexion. Si vous n’avez pas installé le logiciel client, contactez l’administrateur de base de données pour lui demander comment installer une copie sous licence.<br/><br/>2. **Pilotes ou fournisseurs**. Microsoft installe les pilotes et les fournisseurs nécessaires pour se connecter à Oracle. Pour la connexion à IBM DB2, procurez-vous le Fournisseur OLE DB Microsoft® pour DB2 v5.0 pour Microsoft SQL Server à partir de [Microsoft SQL Server 2016 Feature Pack](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Pour plus d’informations, consultez [Se connecter à une source de données SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) ou [Se connecter à une source de données Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
+|**Bases de données d’entreprise**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, DB2 et autres.|SQL Server ou SQL Server Data Tools (SSDT) installe les fichiers dont vous avez besoin pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, SSDT n’installe pas tous les fichiers qui vous sont nécessaires pour vous connecter à d’autres bases de données d’entreprise, telles que Oracle ou IBM DB2.<br/><br/>Pour vous connecter à une base de données d’entreprise, vous devez généralement disposer de deux choses :<br/><br/>1. **Logiciel client**. Si vous disposez déjà du logiciel client de votre système de base de données d’entreprise, vous avez en général ce qu’il vous faut pour établir une connexion. Si vous n’avez pas installé le logiciel client, contactez l’administrateur de base de données pour lui demander comment installer une copie sous licence.<br/><br/>2. **Pilotes ou fournisseurs**. Microsoft installe les pilotes et les fournisseurs nécessaires pour se connecter à Oracle. Pour la connexion à IBM DB2, procurez-vous le Fournisseur OLE DB Microsoft® pour DB2 v5.0 pour Microsoft SQL Server à partir du [Feature Pack Microsoft SQL Server 2016](https://www.microsoft.com/download/details.aspx?id=52676).<br/><br/>Pour plus d’informations, consultez [Se connecter à une source de données SQL Server](connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md) ou [Se connecter à une source de données Oracle](connect-to-an-oracle-data-source-sql-server-import-and-export-wizard.md).|
 |**Fichiers texte** (fichiers plats)|Aucun fichier supplémentaire n’est requis.<br/><br/>Pour plus d’informations, consultez [Se connecter à une source de données de fichiers plats](connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).|
 |**Fichiers Microsoft Excel et Microsoft Access**|Microsoft Office n’installe pas tous les fichiers nécessaires à l’établissement d’une connexion à des sources de données Excel et Access. Procédez au téléchargement suivant : [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920).<br/><br/>Pour plus d’informations, consultez [Se connecter à une source de données Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) et [Se connecter à une source de données Access](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md).|
 |**Sources de données Azure**<br/>Stockage d’objets blob Azure uniquement pour l’instant.|SQL Server Data Tools n’installe pas les fichiers dont vous avez besoin pour vous connecter à Stockage Blob Azure en tant que source de données. Obtenez le téléchargement suivant : [Microsoft SQL Server 2016 Integration Services Feature Pack pour Azure](https://www.microsoft.com/download/details.aspx?id=49492).<br/><br/>Pour plus d’informations, consultez [Se connecter à Stockage Blob Azure](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md).|

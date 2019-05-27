@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 42358e9e43e12a13c5b9e03b58df349b8f7a4231
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306047"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729456"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 représente une étape importante pour faire de SQL Server une plateforme vous offrant des choix en matière de langages de développement, de types de données, d’utilisation locale ou dans le cloud et de systèmes d’exploitation, en apportant la puissance de SQL Server à Linux, aux conteneurs Docker basés sur Linux et à Windows. Cette rubrique récapitule les nouveautés pour des domaines de fonctionnalités spécifiques et inclut des liens vers des informations supplémentaires. Pour plus d’informations sur SQL Server sur Linux, consultez [Documentation de SQL Server sur Linux](https://docs.microsoft.com/sql/linux/).
 
-[![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Faites un essai :** [Télécharger SQL Server 2017 - Version d’octobre 2017 :](https://go.microsoft.com/fwlink/?LinkID=829477).
+[![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **Faites un essai :** [Télécharger SQL Server version 2017 - octobre 2017](https://go.microsoft.com/fwlink/?LinkID=829477).
 
 > [!NOTE]
 > En plus des modifications ci-dessous, des mises à jour cumulatives sont publiées à intervalles réguliers après la version en disponibilité générale. Ces mises à jour cumulatives fournissent de nombreuses améliorations et correctifs. Pour plus d’informations sur la dernière version des mises à jour cumulatives, consultez [Mises à jour cumulatives de SQL Server 2017](https://aka.ms/sql2017cu).

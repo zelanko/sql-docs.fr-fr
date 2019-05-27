@@ -23,15 +23,15 @@ helpviewer_keywords:
 - updg:before attribute
 - record updates [SQLXML]
 ms.assetid: 90ef8a33-5ae3-4984-8259-608d2f1d727f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24d0b4d15dd425bc58e307f5b3cc5ba765d1fa3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131517"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014674"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Lorsque vous mettez à jour les données existantes, vous devez spécifier à la fois le  **\<avant >** et  **\<après >** blocs. Les éléments spécifiés dans le  **\<avant >** et  **\<après >** blocs décrivent la modification souhaitée. Mise à jour utilise l’ou les éléments qui sont spécifié dans le  **\<avant >** bloc pour identifier les ou les enregistrements existants dans la base de données. Les éléments correspondants dans le  **\<après >** bloc indiquer comment les enregistrements doivent ressembler après l’exécution de l’opération de mise à jour. À partir de ces informations, la mise à jour crée une instruction SQL qui correspond à la  **\<après >** bloc. Le code de mise à jour (updategram) utilise ensuite cette instruction pour mettre à jour la base de données.  

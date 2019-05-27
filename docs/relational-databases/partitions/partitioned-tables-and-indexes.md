@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658293"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713315"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658293"
   
 -   Vous pouvez effectuer des opérations de maintenance sur une ou plusieurs partitions plus rapidement. Les opérations sont plus efficaces car elles ne ciblent que ces sous-ensembles de données, au lieu de la totalité de la table. Par exemple, vous pouvez choisir de compresser les données dans une ou plusieurs partitions ou de reconstruire une ou plusieurs partitions d'un index.  
   
--   Suivant les types de requêtes fréquemment exécutées et la configuration matérielle, vous pouvez améliorer les performances des requêtes. Par exemple, l'optimiseur de requête peut traiter les requêtes d'équijointure entre plusieurs tables partitionnées plus rapidement lorsque les colonnes de partitionnement dans les tables sont identiques, car les partitions elles-mêmes peuvent être jointes.  
+-   Suivant les types de requêtes fréquemment exécutées et la configuration matérielle, vous pouvez améliorer les performances des requêtes. Par exemple, l'optimiseur de requête peut traiter des requêtes d'équi-jointure entre plusieurs tables partitionnées plus rapidement lorsque les colonnes de partitionnement sont identiques que les colonnes sur lesquelles les tables sont jointes. Consultez [Requêtes](#queries) ci-dessous pour plus d’informations.
   
 Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie des données pour des opérations d'entrée/sortie, il trie d'abord les données par partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accède à un lecteur à la fois, ce qui peut réduire les performances. Pour améliorer les performances de tri des données, distribuez les fichiers de données des partitions sur plusieurs disques en définissant un volume RAID. Ainsi, bien que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trie toujours les données par partition, il peut accéder à tous les lecteurs de chaque partition au même moment.  
   

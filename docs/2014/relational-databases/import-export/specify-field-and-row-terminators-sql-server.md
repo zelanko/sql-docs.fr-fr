@@ -13,15 +13,15 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62712796"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011859"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
   Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  

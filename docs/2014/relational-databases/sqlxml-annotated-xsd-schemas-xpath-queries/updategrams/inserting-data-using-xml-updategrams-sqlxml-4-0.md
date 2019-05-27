@@ -30,15 +30,15 @@ helpviewer_keywords:
 - at-identity attribute
 - xml data type [SQL Server], SQLXML
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb8058eacc2958327f1aa5649ed2dcfefe173b37
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060298"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014805"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
   Une mise à jour indique une opération d’insertion lorsqu’une instance d’enregistrement apparaît dans le  **\<après >** bloc mais ne pas dans le correspondantes  **\<avant >** bloc. Dans ce cas, la mise à jour insère l’enregistrement dans le  **\<après >** bloc dans la base de données.  

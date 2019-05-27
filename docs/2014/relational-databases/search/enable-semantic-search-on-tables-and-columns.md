@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631720"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011384"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
   Décrit la procédure d'activation ou de désactivation de l'indexation sémantique statistique sur des colonnes sélectionnées qui contiennent des documents ou du texte.  
@@ -50,7 +50,7 @@ ms.locfileid: "62631720"
   
 -   Si vous spécifiez une langue pour une colonne pour laquelle le modèle linguistique n'est pas disponible, la création de l'index échoue et retourne un message d'erreur.  
   
-###  <a name="HowToEnableCreate"></a> Comment : Créer un Index sémantique lorsqu’il n’existe aucun Index de recherche en texte intégral  
+###  <a name="HowToEnableCreate"></a> Procédure : Créer un Index sémantique lorsqu’il n’existe aucun Index de recherche en texte intégral  
  Lorsque vous créez un index de recherche en texte intégral avec l’instruction **CREATE FULLTEXT INDEX** , vous avez la possibilité d’activer l’indexation sémantique au niveau de la colonne en spécifiant le mot clé **STATISTICAL_SEMANTICS** dans le cadre de la définition de la colonne. Vous pouvez également activer l'indexation sémantique lorsque vous utilisez l'Assistant Indexation de texte intégral pour créer un index de recherche en texte intégral.  
   
  **Créer un index sémantique à l’aide de Transact-SQL**  
@@ -115,7 +115,7 @@ GO
  **Créer un index sémantique à l’aide de SQL Server Management Studio**  
  Exécutez l’Assistant Indexation de texte intégral et activez **Sémantiques statistiques** dans la page **Sélectionner les colonnes de la table** pour chaque colonne sur laquelle vous souhaitez créer un index sémantique. Pour plus d’informations, notamment sur le démarrage de l’Assistant Indexation de texte intégral, consultez [Utiliser l’Assistant Indexation de texte intégral](use-the-full-text-indexing-wizard.md).  
   
-###  <a name="HowToEnableAlter"></a> Comment : Créer un Index sémantique lorsqu’il existe un Index de recherche en texte intégral existant  
+###  <a name="HowToEnableAlter"></a> Procédure : Créer un Index sémantique lorsqu’il existe un Index de recherche en texte intégral existant  
  Vous pouvez ajouter l’indexation sémantique lorsque vous modifiez un index de recherche en texte intégral existant avec l’instruction **ALTER FULLTEXT INDEX** . Vous pouvez également ajouter l'indexation sémantique à l'aide de différentes boîtes de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Ajouter un index sémantique à l’aide de Transact-SQL**  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> Suppression d’un Index sémantique  
   
-###  <a name="drophow"></a> Comment : Supprimer un Index sémantique  
+###  <a name="drophow"></a> Procédure : Supprimer un Index sémantique  
  Vous pouvez supprimer l’indexation sémantique lorsque vous modifiez un index de recherche en texte intégral existant avec l’instruction **ALTER FULLTEXT INDEX** . Vous pouvez également supprimer l'indexation sémantique à l'aide de différentes boîtes de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Supprimer un index sémantique à l’aide de Transact-SQL**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Vérification de l'activation de la recherche sémantique sur des objets de base de données  
   
-###  <a name="HowToCheckEnabled"></a> Comment : Vérifier si la recherche sémantique est activée sur des objets de base de données  
+###  <a name="HowToCheckEnabled"></a> Procédure : Vérifier si la recherche sémantique est activée sur des objets de base de données  
  **Recherche sémantique est-elle activée pour une base de données ?**  
  Interrogez la propriété **IsFullTextEnabled** de la fonction de métadonnées [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql).  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Déterminer ce qui peut être indexé pour la recherche sémantique  
   
-###  <a name="HowToCheckLanguages"></a> Comment : Vérifier quelles langues sont prises en charge pour la recherche sémantique  
+###  <a name="HowToCheckLanguages"></a> Procédure : Vérifier quelles langues sont prises en charge pour la recherche sémantique  
   
 > [!IMPORTANT]  
 >  Moins de langues sont prises en charge pour l'indexation sémantique que pour l'indexation de texte intégral. Par conséquent, il peut y avoir des colonnes que vous pouvez indexer pour la recherche en texte intégral, mais pas pour la recherche sémantique.  
@@ -266,7 +266,7 @@ GO
 |Portugais (Portugal)|2070|  
 |Espagnol|3082|  
   
-###  <a name="doctypes"></a> Comment : Déterminer les Types de documents pouvant être indexés  
+###  <a name="doctypes"></a> Procédure : Déterminer les Types de documents pouvant être indexés  
  Interrogez l’affichage catalogue [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](view-or-change-registered-filters-and-word-breakers.md).  

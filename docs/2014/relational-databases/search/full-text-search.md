@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473611"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011242"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
   La recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permet aux utilisateurs et aux applications d’exécuter des requêtes de texte intégral sur des données caractères dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant de pouvoir exécuter des requêtes de texte intégral sur une table, l'administrateur de base de données doit créer un index de recherche en texte intégral sur la table. L'index de recherche en texte intégral inclut une ou plusieurs colonnes de caractères dans la table. Les types de données de ces colonnes peuvent être `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` ou `varbinary(max)` et FILESTREAM. Chaque index de recherche en texte intégral indexe une ou plusieurs colonnes de la table, et chaque colonne peut utiliser une langue spécifique.  

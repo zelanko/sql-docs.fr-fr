@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725795"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073664"
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
   Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  

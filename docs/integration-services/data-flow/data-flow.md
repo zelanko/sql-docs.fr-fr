@@ -18,14 +18,18 @@ ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 89637c641506ae3c536143fc8e55160d5cd1f4e1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271402"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727071"
 ---
 # <a name="data-flow"></a>Flux de données
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  
   
 > [!NOTE]  
@@ -109,7 +113,7 @@ ms.locfileid: "58271402"
 ## <a name="transformations"></a>Transformations  
  Les fonctionnalités des transformations peuvent être très différentes. Elles peuvent réaliser des tâches comme la mise à jour, la synthèse, le nettoyage, la fusion ou encore la distribution de données. Vous pouvez modifier les valeurs des colonnes, rechercher des valeurs dans des tables, nettoyer des données et agréger les valeurs de colonnes.  
   
- Les entrées et sorties d'une transformation définissent les colonnes des données entrantes et sortantes. En fonction de l'opération réalisée sur les données, certaines transformations comportent une seule entrée et plusieurs sorties, alors que d'autres auront plusieurs entrées et une seule sortie. Les transformations peuvent également inclure des sorties d'erreurs, qui fournissent des informations sur l'erreur qui s'est produite et indiquent les données ayant échoué ; par exemple, des données de type string qui n’ont pas pu être converties en données de type integer. Le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne limite pas le nombre d'entrées, de sorties normales et de sorties d'erreurs des transformations. Vous pouvez créer des transformations personnalisées qui implémentent une combinaison de plusieurs entrées, sorties normales et sorties d'erreurs.  
+ Les entrées et sorties d'une transformation définissent les colonnes des données entrantes et sortantes. En fonction de l'opération réalisée sur les données, certaines transformations comportent une seule entrée et plusieurs sorties, alors que d'autres auront plusieurs entrées et une seule sortie. Les transformations peuvent également inclure des sorties d'erreurs, qui fournissent des informations sur l'erreur qui s'est produite et indiquent les données ayant échoué : par exemple, des données de type string qui n’ont pas pu être converties en données de type integer. Le modèle objet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne limite pas le nombre d'entrées, de sorties normales et de sorties d'erreurs des transformations. Vous pouvez créer des transformations personnalisées qui implémentent une combinaison de plusieurs entrées, sorties normales et sorties d'erreurs.  
   
  L'entrée d'une transformation est définie comme une ou plusieurs colonnes d'entrée. Certaines transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peuvent aussi avoir comme entrée des colonnes externes référencées. Par exemple, l'entrée de la transformation de commande OLE DB comprend des colonnes externes. Une colonne de sortie est une colonne que la transformation ajoute au flux de données. Les sorties normales et les sorties d'erreurs contiennent des colonnes de sortie. Ces colonnes de sortie sont à leur tour disponibles comme colonnes d'entrées par le composant suivant du flux de données qui peut être une autre transformation ou une destination.  
   
@@ -179,7 +183,7 @@ ms.locfileid: "58271402"
  Les sources comportent des sorties, les destinations des entrées et les transformations des entrées et des sorties. Par ailleurs, de nombreux composants de flux de données peuvent être configurés pour utiliser une sortie d'erreur.  
   
 ### <a name="inputs"></a>Entrées  
- Les destinations et les transformations comportent des entrées. Une entrée contient une ou plusieurs colonnes d'entrée qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les entrées peuvent être configurées pour analyser et contrôler le flux de données. Vous pouvez ainsi spécifier si le composant doit échouer en réponse à une erreur, ignorer les erreurs ou rediriger les lignes d’erreur vers la sortie d’erreur. Vous pouvez également donner une description de l'entrée ou mettre à jour le nom de l'entrée. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les entrées sont configurées via la boîte de dialogue **Éditeur avancé** . Pour plus d’informations sur **l’Éditeur avancé** , consultez [Interface utilisateur d’Integration Services](../../integration-services/integration-services-user-interface.md).  
+ Les destinations et les transformations comportent des entrées. Une entrée contient une ou plusieurs colonnes d'entrée qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les entrées peuvent être configurées pour analyser et contrôler le flux de données : Vous pouvez ainsi spécifier si le composant doit échouer en réponse à une erreur, ignorer les erreurs ou rediriger les lignes d’erreur vers la sortie d’erreur. Vous pouvez également donner une description de l'entrée ou mettre à jour le nom de l'entrée. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les entrées sont configurées via la boîte de dialogue **Éditeur avancé** . Pour plus d’informations sur **l’Éditeur avancé** , consultez [Interface utilisateur d’Integration Services](../../integration-services/integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Sorties  
  Les sources et les transformations comportent toujours des sorties. Une sortie contient une ou plusieurs colonnes de sortie qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les sorties peuvent être configurées de manière à fournir des informations utiles pour le traitement en aval des données. Par exemple, vous pouvez indiquer si la sortie est triée. Vous pouvez également donner une description de la sortie ou mettre à jour le nom de la sortie. Dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , les sorties sont configurées via la boîte de dialogue **Éditeur avancé** .  

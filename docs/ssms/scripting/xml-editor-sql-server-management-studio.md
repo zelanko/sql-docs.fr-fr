@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adf261e9abf18bce685a98a55c1128c1a121eba4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: eda7c83e982bbf6c006ac9a6c470b116009420ea
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643535"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821557"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,10 +83,10 @@ ms.locfileid: "51643535"
 ## <a name="data-view"></a>Vue de données  
  Le mode Données affiche une grille de données dont vous pouvez vous servir pour modifier les fichiers .xml. Seul le contenu d'un fichier XML (pas les balises ni la structure) peut être modifié en mode Données.  
   
- Il y a deux zones séparées en mode Données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
+ Il y a deux zones séparées dans la Vue de données : **Tables de données** et **Données**. La zone **Tables de données** est une liste des relations définies à l’intérieur du fichier XML, dans l’ordre de leur imbrication (en allant de l’extérieur vers l’intérieur). La zone **Données** est une grille de données qui affiche les données en fonction de la sélection effectuée dans la zone Tables de données.  
   
 > [!NOTE]  
->  Les fichiers XML nouvellement créés ne contiennent pas de données et ne peuvent donc pas être affichés en mode Données. Il existe également certaines instances de documents XML où il est impossible d'appeler le mode Données. Même si le document XML est considéré comme correct, si les données essayant de passer en mode Données ne sont pas structurées, le message suivant s'affiche : « Bien que ce document soit correctement construit, il contient une structure impossible à afficher en mode Données. »  
+>  Les fichiers XML nouvellement créés ne contiennent pas de données et ne peuvent donc pas être affichés en mode Données. Il existe également certaines instances de documents XML où il est impossible d'appeler le mode Données. Même si le document XML est considéré comme correct, si les données essayant de passer dans la Vue de données ne sont pas structurées, le message suivant s'affiche : « Bien que ce document soit correctement construit, il contient une structure impossible à afficher dans la Vue de données. »  
   
  En mode Données, vous pouvez :  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067797"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modélisation tabulaire (didacticiel Adventure Works)
   Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services, à l’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -69,7 +68,7 @@ ms.locfileid: "62795514"
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
 |[Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
-|[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
+|[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
 |[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
 |[Leçon 4 : Marquer comme Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
 |[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  

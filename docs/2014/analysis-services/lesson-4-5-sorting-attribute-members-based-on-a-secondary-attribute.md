@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f199238c09be6409f9d8fe9266acd547738a0076
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078700"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>Tri des membres d'attribut sur la base d'un attribut secondaire
   Au cours de la leçon 3, vous avez appris à trier les membres d'attribut en fonction de leur nom ou de la valeur de leur clé. Vous avez également appris à utiliser une clé de membre composite pour modifier les membres d'attribut et l'ordre de tri. Pour plus d’informations, consultez [Modification de la dimension Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Toutefois, si ni le nom ni la clé de l'attribut principal ne fournissent l'ordre de tri que vous souhaitez, vous pouvez utiliser un attribut secondaire pour obtenir l'ordre de tri désiré. En définissant une relation entre les attributs, vous pouvez utiliser le deuxième attribut pour trier les membres du premier attribut.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63285612"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013937"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
   Pour spécifier un élément constant-autrement dit, un élément dans le schéma XSD qui n’est pas mappé à aucune table de base de données ou de la colonne-vous pouvez utiliser le `sql:is-constant` annotation. Cette annotation accepte une valeur booléenne (0 = false, 1 = true). Les valeurs acceptables sont 0, 1, true et false. L'annotation `sql:is-constant` peut être spécifiée sur un élément qui n'a pas d'attributs. Si elle est spécifiée sur un élément qui a la valeur true (ou 1), cet élément n'est pas mappé à la base de données mais apparaît néanmoins dans le document XML.  

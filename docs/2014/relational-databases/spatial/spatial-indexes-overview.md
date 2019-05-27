@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524271"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014022"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les données spatiales et les index spatiaux. Un *index spatial* est un type d'index étendu qui vous permet d'indexer une colonne spatiale. Une colonne spatiale est une colonne de table qui contient des données d'un type de données spatiales, tel que `geometry` ou `geography`.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188394"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108154"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nouvelle attribution de rôle : Modifier la Page d’attribution de rôle (Gestionnaire de rapports)
   Utilisez la page Nouvelle attribution de rôle ou Modifier l'attribution de rôle pour accorder des autorisations à des opérations et éléments de serveur de rapports. Chaque utilisateur qui demande l'accès à un serveur de rapports doit posséder une attribution de rôle qui définit le niveau d'accès. Vous pouvez créer des attributions de rôles au nœud racine ou sur un rapport, modèle, dossier, ressource ou source de données partagée spécifique. La sécurité [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est mise en place via les attributions de rôle que vous appliquez aux éléments. Une attribution de rôle fait correspondre un groupe ou un utilisateur à une définition de rôle. Chaque définition de rôle identifie les tâches que les groupes ou les utilisateurs peuvent effectuer sur un élément spécifique.  

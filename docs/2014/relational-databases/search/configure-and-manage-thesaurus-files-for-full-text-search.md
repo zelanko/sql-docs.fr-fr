@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792261"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011475"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les requêtes de texte intégral peuvent rechercher les synonymes des termes spécifiés par l'utilisateur grâce à un dictionnaire des synonymes. Un *dictionnaire des synonymes* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définit un jeu de synonymes pour une langue spécifique. Les administrateurs système peuvent définir deux formes de synonymes : les jeux d'expansion et les jeux de remplacement. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) et [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) et pour les requêtes [CONTAINS](/sql/t-sql/queries/contains-transact-sql) et [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) qui spécifient la clause FORMSOF THESAURUS.  
@@ -77,7 +77,7 @@ ms.locfileid: "52792261"
 ##  <a name="location"></a> Emplacement des fichiers de dictionnaire des synonymes  
  L'emplacement par défaut des fichiers de dictionnaires des synonymes est :  
   
- *< SQL_Server_data_files_path >* \MSSQL12. MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  Cet emplacement par défaut contient les fichiers suivants :  
   

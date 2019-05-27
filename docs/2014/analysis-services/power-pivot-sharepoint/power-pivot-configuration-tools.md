@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 88f8937658fd7330148f8bcf4e0f5e4db5463e7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749669"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071349"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   Configurez, réparez ou supprimez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] avec les outils de configuration de PowerPivot.  
@@ -50,7 +49,7 @@ ms.locfileid: "62749669"
   
  Les outils ne peuvent être utilisés qu'avec une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Ne les utilisez pas avec des installations de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|Créer une vue d’abonnement|Version prise en charge de SharePoint|Détails de la configuration|  
+|Nom|Version prise en charge de SharePoint|Détails de la configuration|  
 |----------|-------------------------------------|----------------------------|  
 |Configuration de PowerPivot pour SharePoint 2013|SharePoint 2013|[Configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de Configuration PowerPivot&#41;](configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |Outil de configuration de PowerPivot|SharePoint 2010 avec SharePoint 2010|[Configurer ou réparer PowerPivot pour SharePoint 2010 &#40;outil de Configuration PowerPivot&#41;](../configure-repair-powerpivot-sharepoint-2010.md)|  

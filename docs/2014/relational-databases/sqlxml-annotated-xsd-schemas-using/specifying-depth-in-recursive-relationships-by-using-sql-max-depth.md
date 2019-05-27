@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sql:max-depth
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745480"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013656"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
   Dans les bases de données relationnelles, lorsqu'une table est impliquée dans une relation avec elle-même, on utilise le terme de relation récursive. Par exemple, dans une relation responsable-subalterne, une table qui stocke des enregistrements d'employés est impliquée dans une relation avec elle-même. Dans ce cas, la table d'employés joue un rôle de responsable d'un côté de la relation, et la même table joue un rôle de subalterne de l'autre côté.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Remote Blob Store (RBS) [SQL Server]
 - RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874809"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009848"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Magasin d'objets blob distants (RBS) (SQL Server)
   Le magasin d'objets blob distants[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant additionnel facultatif qui permet aux administrateurs de base de données de stocker des objets blob dans des solutions de stockage de marchandises au lieu de les stocker directement sur le serveur de base de données principal.  

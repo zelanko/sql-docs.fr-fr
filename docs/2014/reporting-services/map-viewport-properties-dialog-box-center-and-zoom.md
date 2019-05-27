@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.centerandzoom.f1
@@ -14,12 +13,12 @@ ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278986"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108289"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Boîte de dialogue Propriétés du point de vue de la carte, Centrer et zoomer
   Sélectionnez **Centrer et zoomer** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour définir le centre d'affichage et le facteur de zoom d'une carte. Après avoir spécifié une source de données cartographiques et les limites de la carte que vous souhaitez inclure dans votre rapport, vous pouvez spécifier le centre d'affichage et le facteur de zoom pour contrôler encore davantage l'affichage de la carte. Les options disponibles varient en fonction de la méthode utilisée pour spécifier le centre et les valeurs de zoom. Cliquez sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l'option.  

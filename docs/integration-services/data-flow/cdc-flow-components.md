@@ -11,14 +11,18 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4648f66c9bc73a3de8bcf1bad68a9ad748718bc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271178"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727215"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les composants CDC par Attunity destinés aux développeurs SSIS d'aide Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] fonctionnent avec la capture de données modifiées (CDC) et réduisent la complexité des packages CDC.  
   
  Les composants CDC SSIS sont conçus pour fonctionner avec la fonctionnalité CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] où les tables sources sont soit la même base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , soit une base de données Oracle (quand le service CDC d’Oracle pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]est utilisé). Les tables partitionnées sont prises en charge.  
@@ -40,7 +44,7 @@ ms.locfileid: "58271178"
 ## <a name="installation"></a>Installation  
  Cette section décrit les procédures d'installation des composants CDC pour Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
- Les composants CDC pour SSIS font partie du package Microsoft® Change Data Capture Designer and Service pour Oracle d’Attunity pour Microsoft SQL Server®. Ce téléchargement fait partie du Feature pack SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
+ Les composants CDC pour SSIS font partie du package avec le concepteur et le service de capture des changements de données Microsoft® pour Oracle par Attunity pour Microsoft SQL Server®. Ce téléchargement fait partie du Feature pack SQL Server 2016. Téléchargez les composants du Feature Pack à partir de la [page web SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   
 ### <a name="version-support"></a>Prise en charge de la version
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b7192fda17360ec473956332db03ed3b4feab5bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717456"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013337"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
   Le chargement en masse XML traite les données d'entrée XML et prépare des enregistrements pour les tables appropriées dans Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La logique de la fonctionnalité de chargement en masse XML détermine quand générer un nouvel enregistrement, quelles valeurs d'attributs ou d'éléments enfants copier dans les champs de l'enregistrement et quand l'enregistrement est terminé et prêt à être envoyé à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour insertion.  

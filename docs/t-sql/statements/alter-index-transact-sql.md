@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502870"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580122"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>Arguments  
+```
+
+## <a name="arguments"></a>Arguments
+
  *index_name*  
  Nom de l'index. Les noms d'index doivent être uniques dans une table ou une vue, mais ne doivent pas être nécessairement uniques dans une base de données. Les noms d’index doivent se conformer aux règles régissant les [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
@@ -653,23 +655,28 @@ Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultéri
   
 Pour reconstruire un index cluster columnstore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-1.  Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit. Les données sont « hors connexion » et indisponibles pendant la reconstruction.  
+1. Acquiert un verrou exclusif sur la table ou la partition lorsque la reconstruction se produit. Les données sont « hors connexion » et indisponibles pendant la reconstruction.  
   
-2.  Défragmente le columnstore en supprimant physiquement les lignes qui ont été logiquement supprimées de la table ; les octets supprimés sont récupérés sur le support physique.  
+1. Défragmente le columnstore en supprimant physiquement les lignes qui ont été logiquement supprimées de la table ; les octets supprimés sont récupérés sur le support physique.  
   
-3.  Lit toutes les données de l'index columnstore d'origine, y compris le deltastore. Associe les données dans de nouveaux rowgroups, et compresse les rowgroups dans le columnstore.  
+1. Lit toutes les données de l'index columnstore d'origine, y compris le deltastore. Associe les données dans de nouveaux rowgroups, et compresse les rowgroups dans le columnstore.  
   
-4.  Nécessite de l'espace sur le support physiques pour stocker deux copies de l'index columnstore pendant que la reconstruction est en cours. Lorsque la reconstruction est terminée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime l'index columnstore cluster d'origine.  
+1. Nécessite de l'espace sur le support physiques pour stocker deux copies de l'index columnstore pendant que la reconstruction est en cours. Lorsque la reconstruction est terminée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime l'index columnstore cluster d'origine.
+
+1. Pour une table Azure SQL Data Warehouse avec un index cluster columnstore ordonné, ALTER INDEX REBUILD trie à nouveau les données.  
   
-## <a name="reorganizing-indexes"></a> Réorganisation des index  
+## <a name="reorganizing-indexes"></a> Réorganisation des index
 La réorganisation d'un index utilise des ressources système minimes. En effet, elle défragmente le niveau feuille des index cluster et non cluster sur les tables et les vues en retriant les pages de niveau feuille de façon physique afin de resuivre l'ordre logique, c'est-à-dire de gauche à droite, des nœuds. Cette opération compacte également les pages d'index. Le compactage s'appuie sur la valeur du facteur de remplissage existante. Pour afficher le paramètre du facteur de remplissage, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 Si ALL est précisé, les index relationnels, aussi bien cluster que non cluster, et les index XML sur la table sont réorganisés. Certaines restrictions s’appliquent quand ALL est spécifié ; consultez la définition de ALL dans la section Arguments de cet article.  
   
 Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
- 
+
 > [!IMPORTANT]
 > Quand un index est réorganisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les statistiques ne sont pas mises à jour.
+
+>[!IMPORTANT]
+> Pour une table Azure SQL Data Warehouse avec un index cluster columnstore en cluster ordonné, `ALTER INDEX REORGANIZE` trie à nouveau les données. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a> Désactivation des index  
 Désactiver un index permet d'éviter l'accès à l'index, et dans le cas d'index cluster, aux données de la table sous-jacente par les utilisateurs. La définition de l'index est conservée dans le catalogue système. Désactiver un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. Désactiver un index cluster permet d'éviter l'accès aux données mais celles-ci ne sont plus mises à jour dans l'arborescence binaire (appelé également arbre B) jusqu'à ce que l'index soit supprimé ou reconstruit. Pour afficher l’état d’un index, qu’il soit activé ou désactivé, lancez une requête sur la colonne **is_disabled** dans la vue de catalogue **sys.indexes**.  

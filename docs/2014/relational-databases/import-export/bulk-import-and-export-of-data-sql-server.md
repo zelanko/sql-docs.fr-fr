@@ -21,15 +21,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server]
 - importing data
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a80eb337bfc03d826ab0933ac235f76dd16bfde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63140611"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012118"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importation et exportation en bloc de données (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge l’exportation en bloc de données (*données en bloc*) à partir d’une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l’importation en bloc de données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une vue non partitionnée. L'importation et l'exportation en bloc sont essentielles pour transférer efficacement des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et des sources de données hétérogènes. L'*exportation en bloc* consiste à copier des données d'une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un fichier de données. Le terme*importation en bloc* fait référence au chargement de données d’un fichier de données vers une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, vous pouvez exporter des données d'une application [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel vers un fichier de données, puis importer en bloc ces données dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -66,7 +66,7 @@ ms.locfileid: "63140611"
   
  Les fichiers de format procurent une souplesse qui permet d'une part l'interprétation des données tel qu'elles existent dans le fichier de données au moment de l'importation, et d'autre part le formatage des données dans le fichier de données au moment de l'exportation. Cette souplesse vous dispense d'écrire un code spécial en vue d'interpréter ou de reformater les données en fonction des exigences spécifiques de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de l'application externe. Ainsi, si les données exportées en bloc doivent être chargées dans une application nécessitant des valeurs séparées par une virgule, vous pouvez utiliser un fichier de format pour insérer des virgules comme terminateurs de champ dans les données exportées.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : Fichiers de format XML et les fichiers de format non-XML.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge deux types de fichiers de format : les fichiers de formats XML et de format non-XML.  
   
  Le seul outil capable de générer un fichier de format est l'utilitaire **bcp** . Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](create-a-format-file-sql-server.md). Pour plus d’informations sur les fichiers de format, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md).  
   

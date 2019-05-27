@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757967"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067958"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurer les propriétés de création de rapports pour les rapports Power View
   Dans cette leçon supplémentaire, vous allez définir les propriétés de création de rapports pour le projet Adventure Works Internet Sales Model. Les propriétés de création de rapports facilitent la sélection et l'affichage des données du modèle dans Power View. Vous définirez également des propriétés permettant de masquer certaines colonnes et tables, et vous créerez des données à utiliser dans des graphiques.  

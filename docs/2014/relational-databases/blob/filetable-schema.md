@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62920127"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010122"
 ---
 # <a name="filetable-schema"></a>Schéma de FileTable
   Décrit le schéma prédéfini et fixe d'un FileTable.  

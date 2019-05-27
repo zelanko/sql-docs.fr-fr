@@ -14,14 +14,18 @@ ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 782d0289c90255743774de65f18848b7e9891271
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ce9b5f138929da84e9a007cbabb4b6f36260f95b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270609"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725453"
 ---
 # <a name="-equal-ssis-expression"></a>== (Égal à) (expression SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Effectue une comparaison pour déterminer si deux expressions sont égales. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
  Toutefois, pour certains types de données, il est nécessaire que l'expression contienne une conversion explicite afin qu'elle puisse être évaluée correctement. Pour plus d’informations sur les conversions valides entre les types de données, consultez [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
@@ -53,7 +57,7 @@ expression1 == expression2
     > [!NOTE]  
     >  Les comparaisons de chaîne respectent la casse, les accents, le jeu de caractères Kana et la largeur.  
   
--   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  

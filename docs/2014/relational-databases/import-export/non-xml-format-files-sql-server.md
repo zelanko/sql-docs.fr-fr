@@ -11,15 +11,15 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064017"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011878"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Fichiers de format non-XML (SQL Server)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], deux types de fichiers de format sont pris en charge pour l’exportation et l’importation en bloc : les *fichiers de format non XML* et les *fichiers de format XML*.  
@@ -58,7 +58,7 @@ ms.locfileid: "63064017"
   
 |Champ du fichier de format|Description|  
 |------------------------|-----------------|  
-|Version|Ce numéro de version n'est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : La version de la **bcp** utilitaire (Bcp.exe) est utilisé pour lire un fichier de format doit être identique, ou une version ultérieure a été utilisé pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
+|Version|Ce numéro de version n'est reconnu que par **bcp**, et non par [!INCLUDE[tsql](../../includes/tsql-md.md)]. Numéro de version de l’utilitaire **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Remarque : la version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0, généré par [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 12.0, généré par [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp**.|  
 |Nombre de colonnes|Nombre de champs dans le fichier de données. Il doit être identique pour toutes les lignes.|  
   
  Les autres champs de fichier de format décrivent les champs de données à importer ou exporter en bloc. Chaque champ de données nécessite une ligne séparée dans le fichier de format. Chaque ligne de fichier de format contient les valeurs des champs de fichier de format décrits dans le tableau suivant.  

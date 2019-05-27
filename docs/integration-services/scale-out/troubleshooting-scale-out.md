@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206325"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718276"
 ---
 # <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out implique la communication entre la base de données de catalogues SSIS `SSISDB`, le service Scale Out Master et le service Scale Out Worker. Parfois, cette communication est interrompue en raison par exemple d’erreurs de configuration ou d’un défaut d’autorisations d’accès. Cet article vous aide à résoudre les problèmes liés à la configuration de Scale Out.
 
@@ -224,4 +228,4 @@ WHERE executions.execution_id = *Your Execution Id* AND tasks.JobId = executions
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations, consultez les articles suivants sur l’installation et la configuration de SSIS Scale Out :
 -   [Bien démarrer avec SSIS (SQL Server Integration Services) Scale Out sur un seul ordinateur](get-started-with-ssis-scale-out-onebox.md)
--   [Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out](walkthrough-set-up-integration-services-scale-out.md)

@@ -22,14 +22,18 @@ ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e47a17c2802b9de56c567d4f12a2edcff84f1061
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289795"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726124"
 ---
 # <a name="export-column-transformation"></a>Transformation d'exportation de colonne
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformation d'exportation de colonne lit des données dans un flux de données puis les insère dans un fichier. Par exemple, si le flux de données contient des informations sur les produits, telles qu'une image de chaque produit, vous pouvez utiliser la transformation d'exportation de colonne pour enregistrer les images dans des fichiers.  
   
 ## <a name="append-and-truncate-options"></a>Options d'ajout et de troncation  

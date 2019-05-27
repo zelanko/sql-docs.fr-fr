@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108209"
 ---
 # <a name="new-model-page-report-manager"></a>Page Nouveau modèle (Gestionnaire de rapports)
   Utilisez cette page pour générer un modèle de rapport par défaut à partir d'une source de données partagée. Vous ne pouvez générer des modèles de rapport qu'à partir de sources de données multidimensionnelles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , de sources de données relationnelles [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de sources de données relationnelles Oracle.  

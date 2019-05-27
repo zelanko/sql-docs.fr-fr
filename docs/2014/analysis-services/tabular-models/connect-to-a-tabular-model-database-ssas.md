@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757618"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067660"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
   Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  

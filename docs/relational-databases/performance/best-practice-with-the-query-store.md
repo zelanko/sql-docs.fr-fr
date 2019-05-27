@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542239"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779255"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  Si le problème persiste, cela signifie que les données du magasin des requêtes sont endommagées sur le disque.
  
- Le Magasin des requêtes a pu être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée.
+ Pour SQL 2017 et version ultérieure, le Magasin de données des requêtes a pu être récupéré via l’exécution de la procédure stockée **sp_query_store_consistency_check** dans la base de données affectée. Pour 2016, vous devez effacer les données du Magasin de données des requêtes, comme indiqué ci-dessous.
  
  Si cela n’a pas résolu le problème, vous pouvez essayer d’effacer le magasin des requêtes avant de demander le mode lecture/écriture.  
   
@@ -339,7 +339,7 @@ Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour amél
   
 -  L’indicateur de trace 7745 empêche le comportement par défaut où le Magasin des requêtes écrit des données sur le disque avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse être arrêté. Cela signifie que les données du Magasin des requêtes qui ont été collectées mais pas encore enregistrées sur disque seront perdues. 
   
--  L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes. Cela permet de mettre en ligne une base de données et d’exécuter des requêtes avant la récupération complète du Magasin des requêtes. Le comportement par défaut consiste à charger de façon synchrone le Magasin des requêtes. Le comportement par défaut empêche l’exécution des requêtes avant la récupération complète du Magasin des requêtes, mais il évite également qu’une requête soit oubliée lors de la collection des données.
+-  L’indicateur de trace 7752 permet le chargement asynchrone du Magasin des requêtes. Cela permet de mettre en ligne une base de données et d’exécuter des requêtes avant la récupération complète du Magasin des requêtes. Le comportement par défaut consiste à charger de façon synchrone le Magasin de données des requêtes. Le comportement par défaut empêche l’exécution des requêtes avant la récupération complète du Magasin des requêtes, mais il évite également qu’une requête soit oubliée lors de la collection des données.
 
 > [!IMPORTANT]
 > Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible. 

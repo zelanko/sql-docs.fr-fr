@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 94c8d399f7b6ba36b48b4c5aa7f35bbd67ce6909
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: afa5728d651444aeb633c69b310c36af6b0e821a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62678641"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175253"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurer PolyBase pour accéder à des données externes dans Hadoop
 
@@ -25,6 +25,7 @@ L’article explique comment utiliser PolyBase sur une appliance APS pour interr
 PolyBase prend en charge deux fournisseurs Hadoop, HDP (Hortonworks Data Platform) et CDH (Cloudera Distributed Hadoop). Hadoop suit le modèle « majeure.mineure.version » pour ses nouvelles versions, et toutes les versions d’une version majeure ou mineure prise en charge sont prises en charge. Les fournisseurs Hadoop suivants sont pris en charge :
  - Hortonworks HDP 1.3 sur Linux/Windows Server  
  - Hortonworks HDP 2.1-2.6 sur Linux
+ - Hortonworks HDP 3.0-3.1 sur Linux
  - Hortonworks HDP 2.1 - 2.3 sur Windows Server  
  - Cloudera CDH 4.3 sur Linux  
  - Cloudera CDH 5.1-5.5, 5.9-5.13 sur Linux
@@ -37,7 +38,7 @@ Tout d’abord, configurer des points d’accès pour utiliser votre fournisseur
 
    ```sql  
    -- Values map to various external data sources.  
-   -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
+   -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 and 3.0 - 3.1 on Linux,
    -- 2.1 to 2.3 on Windows Server, and Azure blob storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
@@ -65,6 +66,147 @@ Pour améliorer les performances des requêtes, activez le calcul pushdown sur v
 4. Sur le nœud de contrôle, dans le **fichier yarn.site.xml** trouver la **yarn.application.classpath** propriété. Collez la valeur de l’ordinateur Hadoop dans l’élément de valeur.  
   
 5. Pour toutes les versions 5.X de CDH, vous devez ajouter les paramètres de configuration mapreduce.application.classpath, soit à la fin de votre fichier yarn.site.xml, soit dans le fichier mapred-site.xml. HortonWorks inclut ces configurations dans les configurations yarn.application.classpath. Consultez [Configuration PolyBase](../relational-databases/polybase/polybase-configuration.md) pour voir des exemples.
+
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>Fichiers d’exemple XML pour CDH valeurs par défaut de cluster 5.X
+
+Yarn-site.xml avec la configuration yarn.application.classpath et mapreduce.application.classpath.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
+<!-- Applications' Configuration-->
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
+   </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
+-->
+</configuration>
+```
+
+Si vous choisissez d’arrêter vos deux paramètres de configuration dans le fichier mapred-site.XML et l’yarn-site.XML, les fichiers serait le suivant :
+
+**yarn-site.XML**
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+   <property>
+      <name>yarn.resourcemanager.connect.max-wait.ms</name>
+      <value>40000</value>
+   </property>
+   <property>
+      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+      <value>30000</value>
+   </property>
+<!-- Applications' Configuration-->
+   <property>
+     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+      <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+      <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+      <name>yarn.application.classpath</name>
+      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
+   </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+      <name>yarn.resourcemanager.principal</name>
+      <value></value>
+   </property>
+-->
+</configuration>
+```
+
+**mapred-site.xml**
+
+Notez que nous avons ajouté la propriété mapreduce.application.classpath. Dans CDH 5.x, vous trouverez les valeurs de configuration sous la même convention de nommage dans Ambari.
+
+```xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+   <property>
+     <name>mapred.min.split.size</name>
+       <value>1073741824</value>
+   </property>
+   <property>
+     <name>mapreduce.app-submission.cross-platform</name>
+     <value>true</value>
+   </property>
+<property>
+     <name>mapreduce.application.classpath</name>
+     <value>$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH</value>
+   </property>
+
+
+<!--kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+   <property>
+     <name>mapreduce.jobhistory.principal</name>
+     <value></value>
+   </property>
+   <property>
+     <name>mapreduce.jobhistory.address</name>
+     <value></value>
+   </property>
+-->
+</configuration>
+```
+
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>Fichiers d’exemple XML pour HDP valeurs par défaut de cluster 3.X
+
+**yarn-site.XML**
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+ <configuration>
+  <property>
+     <name>yarn.resourcemanager.connect.max-wait.ms</name>
+     <value>40000</value>
+  </property>
+  <property>
+     <name>yarn.resourcemanager.connect.retry-interval.ms</name>
+     <value>30000</value>
+  </property>
+<!-- Applications' Configuration-->
+  <property>
+    <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <name>yarn.application.classpath</name>
+     <value>$HADOOP_CONF_DIR,/usr/hdp/3.1.0.0-78/hadoop/*,/usr/hdp/3.1.0.0-78/hadoop/lib/*,/usr/hdp/current/hadoop-hdfs-client/*,/usr/hdp/current/hadoop-hdfs-client/lib/*,/usr/hdp/current/hadoop-yarn-client/*,/usr/hdp/current/hadoop-yarn-client/lib/*,/usr/hdp/3.1.0.0-78/hadoop-mapreduce/*,/usr/hdp/3.1.0.0-78/hadoop-yarn/*,/usr/hdp/3.1.0.0-78/hadoop-yarn/lib/*,/usr/hdp/3.1.0.0-78/hadoop-mapreduce/lib/*,/usr/hdp/share/hadoop/common/*,/usr/hdp/share/hadoop/common/lib/*,/usr/hdp/share/hadoop/tools/lib/*</value>
+  </property>
+
+<!-- kerberos security information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG
+  <property>
+     <name>yarn.resourcemanager.principal</name>
+     <value></value>
+  </property>
+-->
+</configuration>
+```
 
 ## <a name="configure-an-external-table"></a>Configurer une table externe
 

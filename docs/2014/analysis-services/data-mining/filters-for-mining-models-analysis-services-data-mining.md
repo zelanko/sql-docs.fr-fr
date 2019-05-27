@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -17,12 +16,12 @@ ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 213768938a4fb9497fcbebad15f1dc4b84e1dba9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722414"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084429"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
   Le filtrage de modèle basé sur les données est utile pour créer des modèles d'exploration de données qui utilisent les sous-ensembles de données d'une structure d'exploration de données. Le filtrage offre une certaine souplesse lorsque vous concevez vos structures d'exploration de données et sources de données, car vous pouvez créer une structure d'exploration de données unique basée sur une vue détaillée de la source de données. Vous pouvez créer ensuite des filtres pour utiliser uniquement une partie de ces données à des fins de formation et de test de divers modèles, au lieu de générer une structure différente et un modèle associé pour chaque sous-ensemble de données.  

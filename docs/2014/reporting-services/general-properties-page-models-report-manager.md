@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63260809"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109112"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Page Propriétés générales, Modèles (Gestionnaire de rapports)
   La page des propriétés générales des modèles de rapport vous permet de renommer, supprimer, déplacer ou remplacer le fichier de définition de modèle (.smdl). Des informations détaillées sur l'utilisateur qui a créé ou modifié le modèle et la date des modifications sont affichées en haut de la page.  

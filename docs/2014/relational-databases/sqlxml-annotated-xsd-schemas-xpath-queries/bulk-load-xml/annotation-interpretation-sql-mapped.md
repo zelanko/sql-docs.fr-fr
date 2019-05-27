@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62717756"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66013477"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   Processus de chargement en masse XML le `sql:mapped` annotation dans le schéma XSD comme prévu que, si le schéma de mappage spécifie est `sql:mapped="false"` pour n’importe quel élément ou l’attribut, le chargement en masse XML ne tente pas stocker les données associées dans la colonne correspondante.  

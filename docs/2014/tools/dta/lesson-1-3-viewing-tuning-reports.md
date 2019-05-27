@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173639"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110150"
 ---
 # <a name="viewing-tuning-reports"></a>Affichage des rapports de paramétrage
   Au cours de l'exercice précédent de cette leçon, vous avez affiché les scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de créer ou de supprimer des objets de base de données dans les recommandations de l'Assistant Paramétrage du moteur de base de données générées en résultat de la session de paramétrage MySession. La session de paramétrage MySession a été créée dans [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  
@@ -43,10 +42,10 @@ ms.locfileid: "48173639"
   
 7.  Sélectionnez d'autres rapports dans la liste **Sélectionnez un rapport** pour vous familiariser avec eux.  
   
-## <a name="summary"></a>Résumé  
+## <a name="summary"></a>Récapitulatif  
  Vous avez parcouru l'onglet **Rapports** de l'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données pour la session de paramétrage MySession. Vous pouvez suivre ces mêmes étapes pour parcourir les rapports générés pour la session de paramétrage EvaluateMySession (ÉvaluerMaSession). Double-cliquez sur **EvaluateMySession** dans le volet **Moniteur de session** pour commencer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [Leçon 3 : À l’aide de l’utilitaire d’invite de commandes dta](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

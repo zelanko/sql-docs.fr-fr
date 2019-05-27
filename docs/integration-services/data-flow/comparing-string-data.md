@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270700"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727129"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les comparaisons de chaînes représentent une partie importante des transformations réalisées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et peuvent également être utilisées pour l'évaluation d'expressions dans des variables et des expressions de propriétés. Ainsi, la transformation de tri peut comparer les valeurs d'un dataset afin de trier les données dans l'ordre croissant ou décroissant.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>Configuration des transformations pour les comparaisons de chaînes  
@@ -64,7 +68,7 @@ ms.locfileid: "58270700"
  Vous pouvez également spécifier des paramètres régionaux pour un gestionnaire de connexions de fichiers plats et un gestionnaire de connexions de fichiers plats multiples.  
   
 ## <a name="setting-comparison-options"></a>Définition des options de comparaison  
- Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. Les signes diacritiques comme l'accent sont alors ignorés ce qui conduit à considérer « a » et « á » comme identiques dans les comparaisons.  
+ Les paramètres régionaux déterminent les règles de base pour la comparaison de données chaînes. Ils indiquent par exemple la position de tri de chaque lettre dans l'alphabet. Cependant, ces règles ne suffisent pas toujours dans les comparaisons réalisées par certaines transformations et [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend en charge un ensemble d'options de comparaison avancées extrapolant les règles de comparaison des paramètres régionaux. Ces options de comparaison sont définies au niveau de la colonne. Une de ces options de comparaison permet par exemple d'ignorer les caractères sans espace. Les signes diacritiques comme l'accent sont alors ignorés avec cette option, ce qui conduit à considérer « a » et « á » comme identiques dans les comparaisons.  
   
  Le tableau qui suit décrit les options de comparaison et un style de tri.  
   
@@ -73,7 +77,7 @@ ms.locfileid: "58270700"
 |Ignorer la casse|Indique si la comparaison fait la distinction entre les lettres majuscules et minuscules. Si cette option est définie, la comparaison de chaînes ignore la casse. Par exemple, « ABC » est alors identique à « abc ».|  
 |Ignorer le type de caractères Kana|Indique si la comparaison fait la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana. Si cette option est définie, la comparaison de chaînes ignore le type Kana.|  
 |Ignorer la largeur des caractères|Indique si la comparaison fait la distinction entre un caractère sur un octet et le même caractère représenté sur deux octets. Si cette option est définie, la comparaison de chaînes traite les représentations sur un octet et sur deux octets du même caractère comme identiques.|  
-|Ignorer les caractères sans espace|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « å » est identique à « a ».|  
+|Ignorer les caractères sans espace|Indique si la comparaison fait la distinction entre les caractères avec espace et les caractères diacritiques. Si cette option est définie, la comparaison ignore les caractères diacritiques. Par exemple, « à » est identique à « a ».|  
 |Ignorer les symboles|Indique si la comparaison fait la distinction entre les lettres et les symboles comme les espaces blancs, la ponctuation, les symboles de devise et les symboles mathématiques. Si cette option est définie, la comparaison de chaînes ignore les symboles. Par exemple, «  New York »" est identique à « New York » et « *ABC » est identique à « ABC ».|  
 |Trier la ponctuation comme des symboles|Indique si la comparaison trie tous les symboles de ponctuation, à l'exception du tiret et de l'apostrophe, avant les caractères alphanumériques. Par exemple, si cette option est définie ; « .ABC » arrive avant « ABC » dans le tri.|  
   

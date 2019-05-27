@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10017"
@@ -13,12 +12,12 @@ ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6798be8db7597de1d4c8d8542fcb6abc8621606
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109460"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Informations d'identification (Générateur de rapports)
   Sélectionnez **Informations d’identification** dans la boîte de dialogue **Propriétés de la source de données** pour afficher et modifier les informations d’identification pour se connecter à une source de données incorporée dans le rapport. Les informations d'identification que vous fournissez permettent d'accéder à la source de données pour afficher un aperçu des rapports. Pour plus d’informations sur les informations d’identification, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
