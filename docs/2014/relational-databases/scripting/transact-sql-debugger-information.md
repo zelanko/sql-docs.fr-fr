@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063427"
 ---
 # <a name="transact-sql-debugger-information"></a>Informations du débogueur Transact-SQL
   Chaque fois que le débogueur suspend l'exécution du code au niveau d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifique, vous pouvez utiliser les différentes fenêtres du débogueur pour afficher l'état d'exécution actuel.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147439"
 -   Dans la barre d’outils **Déboguer** , cliquez sur **Points d’arrêt**, puis sélectionnez la fenêtre désirée.  
   
 ## <a name="transact-sql-expressions"></a>Expressions Transact-SQL  
- Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres au maximum : **Variables locales, Espion 1**, **Espion 2**, **Espion 3**et **Espion 4**.  
+ Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre de gauche du débogueur peut afficher les valeurs de données qui sont actuellement attribuées aux expressions dans jusqu'à cinq onglets ou fenêtres : **Variables locales, Espion 1**, **espion 2**, **espion 3**, et **Espion4**.  
   
  La fenêtre **Variables locales** affiche des informations sur les variables locales dans l’étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’ensemble d’expressions répertorié dans la fenêtre **Variables locales** change à mesure que le débogueur exécute les différentes parties du code.  
   

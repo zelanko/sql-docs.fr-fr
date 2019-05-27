@@ -1,23 +1,28 @@
 ---
 title: Choisir un Type de graphique d’analyse de précision et la définir Options de graphique | Microsoft Docs
-ms.date: 05/01/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: data-mining
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+helpviewer_keywords:
+- Mining Accuracy Chart [Analysis Services]
+- mining models [Analysis Services], validating
+- classification accuracy [data mining]
+- accuracy testing [data mining]
+ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 13d55fe9e4837bdacb248ddb63aad8b4064a88a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6d9f375eb2d55c396000b7c2d7a14614153861e6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62705408"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085816"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Choisir un type de graphique d'analyse de précision et définir des options de graphique
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour déterminer la validité de vos modèles d’exploration de données. Le type de graphique d'analyse de précision que vous pouvez créer pour chaque modèle ou structure dépend des facteurs suivants :  
   
 -   Le type d'algorithme utilisé pour créer le modèle  

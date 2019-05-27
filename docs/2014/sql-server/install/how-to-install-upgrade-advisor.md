@@ -1,11 +1,10 @@
 ---
-title: 'Comment : installer le Conseiller de mise à niveau | Microsoft Docs'
+title: 'Procédure : Installer le Conseiller de mise à niveau | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -16,12 +15,12 @@ ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d5be9a4514f002ebd8c9b7ffb05c6f614e2129
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112925"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094923"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Procédure : installer le Conseiller de mise à niveau
   Le Conseiller de mise à niveau prend en charge l'analyse distante de tous les composants pris en charge, à l'exception de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si vous n'analysez pas d'instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez installer le Conseiller de mise à niveau sur n'importe quel ordinateur pouvant se connecter à vos instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les composants requis du Conseiller de mise à niveau doivent également être installés sur l'ordinateur. Si vous analysez des instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez installer le Conseiller de mise à niveau sur le serveur de rapports.  
@@ -47,7 +46,7 @@ ms.locfileid: "48112925"
   
 4.  Sur le **informations d’inscription** , entrez votre nom et la société.  
   
-5.  Sur le **sélection des fonctionnalités** page, passez en revue la **chemin d’Installation** valeur. Si nécessaire, utilisez le **Parcourir** bouton pour modifier l’emplacement. Cliquez sur **Suivant**.  
+5.  Sur le **sélection des fonctionnalités** page, passez en revue la **chemin d’Installation** valeur. Si nécessaire, utilisez le **Parcourir** bouton pour modifier l’emplacement. Cliquer sur **Suivant**.  
   
 6.  Sur le **prêt à installer le programme** , cliquez sur **installer** pour installer le Conseiller de mise à niveau.  
   
