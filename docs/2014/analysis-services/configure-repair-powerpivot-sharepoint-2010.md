@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680471"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087384"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurer ou réparer PowerPivot pour SharePoint 2010 (outil de configuration de PowerPivot)
   Utilisez l'Outil de configuration de PowerPivot pour configurer ou réparer une installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot pour SharePoint 2010. L'outil de configuration commence par analyser le système, puis retourne une liste d'actions nécessaires pour achever ou réparer votre installation. L'Assistant Installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] installe l'outil de configuration de PowerPivot pour SharePoint 2010 et un outil de configuration de PowerPivot pour SharePoint 2013. Cette rubrique décrit l'outil de configuration de PowerPivot pour SharePoint 2010. Pour plus d’informations sur SharePoint 2010, consultez [configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de Configuration PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -89,7 +88,7 @@ ms.locfileid: "62680471"
   
  Le tableau suivant décrit les valeurs utilisées pour configurer le serveur.  
   
-|Radiomessagerie|Valeur d'entrée|Source|Description|  
+|Radiomessagerie|Valeur d'entrée|`Source`|Description|  
 |----------|-----------------|------------|-----------------|  
 |**Configurer ou réparer PowerPivot pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour configurer l'application de service PowerPivot, le service Banque d'informations sécurisé, Excel Services, l'identité du pool d'applications Web, l'administrateur de collection de sites, et le compte d'actualisation sans assistance des données PowerPivot.<br /><br /> Par défaut, l'outil utilise le compte de domaine de l'utilisateur actuel. À moins de configurer un serveur à des fins d'évaluation, vous devez le remplacer par un autre compte d'utilisateur de domaine.<br /><br /> Vous pouvez aussi modifier les identités de service ultérieurement, à l'aide de l'Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de PowerPivot, vous pouvez spécifier des comptes dédiés pour ce qui suit :<br /><br /> Application Web, à l'aide de la page **Créer une application Web par défaut** (en supposant que l'outil crée une application Web pour la batterie).<br /><br /> Compte d’actualisation des données sans assistance, à l’aide de PowerPivot le **créer un compte sans assistance pour l’actualisation des données** page dans cet outil.|  
 ||Serveur de base de données|Instance nommée PowerPivot locale, si disponible|Si une instance du moteur de base de données est installée en tant qu'instance nommée PowerPivot, l'outil renseignera le champ du serveur de base de données avec cette instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide. Vous devez fournir une instance. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|  

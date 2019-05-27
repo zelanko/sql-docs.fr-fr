@@ -20,16 +20,16 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705797"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980424"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +49,13 @@ PRINT msg_str | @local_variable | string_expr
  Chaîne de caractères ou constante de chaîne Unicode. Pour plus d’informations, consultez [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Variable de tout type de données caractères valide. **@**_local\_variable_ doit être de type **char**, **nchar**, **varchar** ou **nvarchar**, ou il doit pouvoir être implicitement converti dans ces types de données.  
+ Variable de tout type de données caractères valide. **@** _local\_variable_ doit être de type **char**, **nchar**, **varchar** ou **nvarchar**, ou il doit pouvoir être implicitement converti dans ces types de données.  
   
  *string_expr*  
  Expression qui retourne une chaîne. Cet argument peut inclure des valeurs littérales concaténées, des fonctions et des variables. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes   
- Une chaîne de message peut contenir jusqu'à 8 000 caractères s'il s'agit d'une chaîne non-Unicode, et 4 000 caractères s'il s'agit d'une chaîne Unicode. Les chaînes plus longues sont tronquées. Les types de données **varchar(max)** et **nvarchar(max)** sont tronqués en types de données qui ne dépassent pas **varchar(8000)** et **nvarchar(4000)**.  
+ Une chaîne de message peut contenir jusqu'à 8 000 caractères s'il s'agit d'une chaîne non-Unicode, et 4 000 caractères s'il s'agit d'une chaîne Unicode. Les chaînes plus longues sont tronquées. Les types de données **varchar(max)** et **nvarchar(max)** sont tronqués en types de données qui ne dépassent pas **varchar(8000)** et **nvarchar(4000)** .  
   
  L'instruction RAISERROR peut également être utilisée pour retourner des messages. Elle présente trois avantages par rapport à l'instruction PRINT :  
   

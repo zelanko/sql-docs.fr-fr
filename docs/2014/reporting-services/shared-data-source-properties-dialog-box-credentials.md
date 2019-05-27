@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.credentials.f1
@@ -13,12 +12,12 @@ ms.assetid: c08d1a5f-206b-4d53-ab1a-368b651ee5bb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90ee103d7f176ea4a61703450cc250dd517f7481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cf21cc35bb41837b65d2a2b3c2c946ffae34864f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223149"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101257"
 ---
 # <a name="shared-data-source-properties-dialog-box-credentials"></a>Boîte de dialogue Propriétés de la source de données partagée, Informations d'identification
   Sélectionnez **Informations d’identification** dans la boîte de dialogue **Propriétés de la source de données partagée** pour afficher et modifier les informations d’identification pour se connecter à une source de données partagée dans le rapport. Les informations d'identification que vous fournissez sont utilisées pour accéder à la source de données et pour mettre en cache une copie des données pour afficher un aperçu des rapports. Pour plus d’informations sur la mise en cache de l’aperçu des données, consultez [Aperçu des rapports](reports/previewing-reports.md). Pour plus d’informations sur les informations d’identification, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

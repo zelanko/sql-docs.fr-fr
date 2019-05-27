@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985866"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091217"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Vérifier que la croissance automatique est activée pour tous les fichiers de données et fichiers journaux pendant le processus de mise à niveau
   Le Conseiller de mise à niveau a détecté des fichiers de données ou des fichiers journaux pour lesquels la croissance automatique n'est pas activée. Fonctionnalités nouvelles et améliorées nécessitent un espace disque supplémentaire pour les bases de données utilisateur et le **tempdb** base de données système. Pour vous assurer de ressources peuvent s’adapter aux augmentations de taille au cours de mise à niveau et les opérations de production suivantes, nous vous recommandons de l’option croissance automatique pour tous les fichiers de données et journaux utilisateur et le **tempdb** données et fichiers journaux avant la mise à niveau.  

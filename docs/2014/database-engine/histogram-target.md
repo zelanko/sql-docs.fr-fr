@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
@@ -15,12 +14,12 @@ ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62778887"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064698"
 ---
 # <a name="histogram-target"></a>Cible d'histogramme
   Une cible d'histogramme regroupe les occurrences d'un type d'événement spécifique en fonction de données d'événement. Les regroupements d'événements sont comptabilisés en fonction d'une colonne d'événement ou d'une action spécifiée. Vous pouvez utiliser la cible d'histogramme pour résoudre les problèmes de performance. En identifiant les événements qui se produisent le plus souvent, vous pouvez trouver des « zones réactives » qui indiquent la cause probable d'un problème de performance.  

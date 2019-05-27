@@ -26,16 +26,16 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 392f5138e580f35f030ce51ce5eed1150f7d0be7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801453"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982757"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] incrémente le nombre de transactions pour une instruction d'une unité seulement lorsque ce nombre est égal à 0 au début de l'instruction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -107,7 +107,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>b. Validation d'une transaction imbriquée  
+### <a name="b-committing-a-nested-transaction"></a>B. Validation d'une transaction imbriquée  
 **S’APPLIQUE À :** SQL Server et Azure SQL Database    
 
 L’exemple suivant crée une table, génère trois niveaux de transactions imbriquées, puis valide la transaction imbriquée. Bien que chaque instruction `COMMIT TRANSACTION` comporte un paramètre *transaction_name*, il n’existe aucune relation entre les instructions `COMMIT TRANSACTION` et `BEGIN TRANSACTION`. Les paramètres *transaction_name* aident simplement le programmeur à vérifier que le nombre correct de validations a été codé pour décrémenter `@@TRANCOUNT` jusqu’à 0, ce qui valide la transaction externe. 

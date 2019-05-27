@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
@@ -17,12 +16,12 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62775019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089325"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Options (Page de requête résultats de SQL Server-général)
   Utilisez cette page pour déterminer le comportement par défaut du volet Résultats de la requête. Pour afficher ces paramètres, dans le menu **Outils**, cliquez sur **Options**, développez le dossier **Résultats de la requête**, sélectionnez **SQL Server**, puis cliquez sur **Général**. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou, dans une fenêtre de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], cliquez avec le bouton droit et sélectionnez **Options de requête**.  

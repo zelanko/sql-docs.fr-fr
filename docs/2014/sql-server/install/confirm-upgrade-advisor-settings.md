@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzing system [Upgrade Advisor], review settings
@@ -17,12 +16,12 @@ ms.assetid: 07a4d94b-df0e-4662-9604-221664762ee8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fff4f3a299d813ecc7daf39bf392379b07f1ac38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141793"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096067"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Confirmer les paramètres du Conseiller de mise à niveau
   Dans cette page, vous pouvez examiner les options et paramètres de l'Assistant Analyse du Conseiller de mise à niveau que vous avez entrés. Après avoir examiné les options et paramètres, cliquez sur **exécuter** pour démarrer l’analyse.  
@@ -31,7 +30,7 @@ ms.locfileid: "48141793"
  **Paramètres du Conseiller de mise à niveau**  
  Vous pouvez examiner toutes les informations et les paramètres que vous avez entrés pour chaque composant, et les paramètres qui s'appliquent à l'ensemble du Conseiller de mise à niveau. Les options de création de rapport, y compris le répertoire de sortie, sont répertoriées.  
   
- **Envoyer les rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports peuvent contenir des informations personnelles.**  
+ **Envoyer des rapports à [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports peuvent contenir des informations personnelles.**  
  Cette option envoie votre analyse à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] équipe. Ces informations sont utilisées dans le but d'améliorer les versions ultérieures.  
   
  **Afficher la déclaration de confidentialité.**  

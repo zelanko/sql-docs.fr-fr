@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -19,12 +18,12 @@ ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956155"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064432"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutoriel : Évaluation des bonnes pratiques à l’aide de la Gestion basée sur des stratégies
   Bienvenue dans le didacticiel d'évaluation des meilleures pratiques à l'aide de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais ne connaissant pas la Gestion basée sur des stratégies. Le système de gestion basée sur des stratégies permet de définir des stratégies qui peuvent être utilisées pour appliquer des normes d'administration de site. Il comprend un jeu de stratégies des meilleures pratiques que vous pouvez utiliser pour analyser une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin de déterminer si l'instance répond aux indications et recommandations des meilleures pratiques.  
@@ -37,7 +36,7 @@ ms.locfileid: "62956155"
  [Leçon 1 : Évaluez les recommandations de manière à la demande](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
  Dans cette leçon, vous effectuez une évaluation à la demande des stratégies sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
  Dans cette leçon, vous configurez l'exécution des stratégies des meilleures pratiques de façon planifiée. La leçon indique comment configurer des stratégies planifiées sur une instance unique et comment déployer des stratégies planifiées d'un emplacement centralisé vers plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements"></a>Configuration requise  

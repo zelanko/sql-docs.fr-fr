@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271195"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723669"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Utilisez-le pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d’autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul ordinateur.    
     
@@ -119,6 +123,6 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
 -   **Composants supplémentaires facultatifs**. Vous pouvez éventuellement télécharger des composants tiers supplémentaires à partir du SQL Server Feature Package.
 
-    -   Microsoft® Connector pour SAP BW pour Microsoft SQL Server®. Pour obtenir ces composants, consultez [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft® Connector for SAP BW pour Microsoft SQL Server®. Pour obtenir ces composants, consultez [Feature Pack de Microsoft® SQL Server® 2017](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Connector Version 5.0 pour Oracle by Attunity et Microsoft Connector Version 5.0 for Teradata by Attunity. Pour obtenir ces composants, consultez [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).

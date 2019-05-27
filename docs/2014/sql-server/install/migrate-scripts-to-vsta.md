@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS Script task, converting scripts
@@ -16,12 +15,12 @@ ms.assetid: d685098b-86a1-46bf-939a-63d56951e009
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7fe4d4baf37cc681844ee7180896409d07608edf
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093984"
 ---
 # <a name="migrate-scripts-to-vsta"></a>Migrer des scripts vers VSTA
   Lorsque vous mettez à niveau [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] des packages vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] migre les scripts des tâches de Script ou des composants de Script à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA est l'environnement de script que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilise. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l’environnement de script pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA).  

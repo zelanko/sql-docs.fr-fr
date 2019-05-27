@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081170"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filtrer, boîte de dialogue (Graphique d'analyse de précision de l'exploration de données)
   La boîte de dialogue **Filtre** vous permet de générer des conditions que vous pouvez appliquer à un jeu de données. Le jeu de données peut être un jeu de données externe utilisé pour le test, ou les données de cas utilisées pour l'apprentissage d'un modèle d'exploration de données. Cette boîte de dialogue vous permet de générer des critères que vous pouvez enregistrer comme parties intégrantes de critères de filtre plus complexes dans la boîte de dialogue **Filtre de jeu de données** ou dans la boîte de dialogue **Filtre de modèle** .  

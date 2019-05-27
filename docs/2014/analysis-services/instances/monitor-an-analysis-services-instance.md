@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [Analysis Services - multidimensional data]
@@ -16,12 +15,12 @@ ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703275"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079747"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Analyser une instance Analysis Services
   Surveillez les performances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en utilisant [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou l’Analyseur de performances, une application parfois désignée sous l’appellation **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de créer et de gérer des traces, ainsi que d’analyser et relire les résultats de trace. L'Analyseur de performances rend compte de l'état du serveur, indexé en fonction de certains compteurs qui sont présentés dans la prochaine section.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bbb093ae1fdb2534f3de0f627d8041ecee1bb18f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 0f2731a89364dcf51f617c5490c0e46a16977ba2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962115"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099761"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour migrer le contenu entre des serveurs de rapports
   Cette rubrique inclut et décrit un exemple de script RSS [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui copie les éléments de contenu et les paramètres d’un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vers un autre serveur de rapports au moyen de l’utilitaire **RS.exe** . RS.exe est installé avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], en mode natif et SharePoint. Le script copie les éléments de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , par exemple les rapports et les abonnements, de serveur à serveur. Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif.  
@@ -104,7 +103,7 @@ ms.locfileid: "59962115"
 |Abonnements|Oui|Oui||  
 |Paramètres d'historique|Oui|Oui|Les paramètres d'historique sont migrés, cependant les informations d'historique NE SONT PAS migrées.|  
 |options de traitement|Oui|Oui||  
-|options d'actualisation du cache|Oui|Oui|Les paramètres dépendants sont migrés en tant qu'éléments du catalogue. Ce qui suit est un exemple hors du script car il migre un rapport (.rdl) et les paramètres liés tels que les options d'actualisation du cache :<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migration d’abonnements pour report TitleOnly.rdl : 1 élément trouvé.<br /><br /> Migration de l’abonnement d’enregistrement dans \\\server\public\savedreports as TitleOnly... SUCCESS<br /><br /> Migration des paramètres historique pour report TitleOnly.rdl … SUCCESS<br /><br /> Options de traitement migration pour report TitleOnly.rdl … 0 éléments trouvés.<br /><br /> Options d’actualisation du cache pour report TitleOnly.rdl migration... SUCCESS<br /><br /> Plans d’actualisation du cache pour report TitleOnly.rdl migration : 1 élément trouvé.<br /><br /> Migration titleonly_refresh735amM2F de plan d’actualisation du cache... SUCCESS|  
+|options d'actualisation du cache|Oui|Oui|Les paramètres dépendants sont migrés en tant qu'éléments du catalogue. Ce qui suit est un exemple hors du script car il migre un rapport (.rdl) et les paramètres liés tels que les options d'actualisation du cache :<br /><br /> Migrating parameters for report TitleOnly.rdl 0 items found.<br /><br /> Migration d’abonnements pour report TitleOnly.rdl : 1 élément trouvé.<br /><br /> Migration de l’abonnement d’enregistrement dans \\\server\public\savedreports as TitleOnly... SUCCESS<br /><br /> Migration des paramètres historique pour report TitleOnly.rdl … SUCCESS<br /><br /> Options de traitement migration pour report TitleOnly.rdl … 0 élément.<br /><br /> Options d’actualisation du cache pour report TitleOnly.rdl migration... SUCCESS<br /><br /> Plans d’actualisation du cache pour report TitleOnly.rdl migration : 1 élément trouvé.<br /><br /> Migration titleonly_refresh735amM2F de plan d’actualisation du cache... SUCCESS|  
 |Plans d’actualisation du cache|Oui|Oui||  
 |Images|Oui|Oui||  
 |Parties de rapports|Oui|Oui||  
@@ -116,7 +115,7 @@ ms.locfileid: "59962115"
   
 -   **Autorisations requises en Mode SharePoint :** ViewListItems  
   
-|Élément ou ressource|Source|Cible|  
+|Élément ou ressource|`Source`|Cible|  
 |----------------------|------------|------------|  
 |Éléments du catalogue|<xref:ReportService2010.ReportingService2010.ListChildren%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetProperties%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetDataSourceContents%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemLink%2A>|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.SetItemDataSources%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetItemReferences%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateDataSource%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateLinkedItem%2A><br /><br /> <xref:ReportService2010.ReportingService2010.CreateFolder%2A>|  
 |Role|<xref:ReportService2010.ReportingService2010.ListRoles%2A><br /><br /> <xref:ReportService2010.ReportingService2010.GetRoleProperties%2A>|<xref:ReportService2010.ReportingService2010.CreateRole%2A>|  

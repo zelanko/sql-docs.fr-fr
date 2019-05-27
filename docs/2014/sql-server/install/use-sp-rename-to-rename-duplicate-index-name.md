@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc6b4ec763457996309caf1884829638367e9b18
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987330"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091357"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>Utiliser sp_rename pour renommer le nom d'index en double
   Le Conseiller de mise à niveau a détecté des noms d'index de table ou de vue en double. Renommez les index afin de supprimer les doublons avant la mise à niveau.  

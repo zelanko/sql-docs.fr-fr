@@ -17,15 +17,15 @@ helpviewer_keywords:
 - symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a0cecfdf5aa6e8ab6dd90bb975c0a89fd360afc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55721b2b1f843ee78e8b69e4a1b99e39737ebb64
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745117"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948932"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ contenant la phrase secrète utilisée pour générer la clé de déchiffrement.
 Chaîne de données chiffrées avec la clé. *ciphertext* a le type de données **varbinary**.  
  
 @ciphertext  
-Variable de type **varbinary** contenant des données chiffrées avec la clé. La variable*@ciphertext* a une taille maximale de 8 000 octets.  
+Variable de type **varbinary** contenant des données chiffrées avec la clé. La variable *@ciphertext* a une taille maximale de 8 000 octets.  
   
 *add_authenticator*  
 Indique si le processus de chiffrement d’origine comprend et chiffre un authentificateur avec le texte en clair. *add_authenticator* a la valeur 1 si le processus de chiffrement utilise un authentificateur. *add_authenticator* a le type de données **int**.  

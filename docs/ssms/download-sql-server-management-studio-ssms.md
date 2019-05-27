@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: f5769ea232a554e8dffab197cdb7ac5b09968413
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: a9fbef681f2b6202c973f31c8c7dd4489133556a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65102806"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993928"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,15 +105,11 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 - L’**Assistant de création de runtime d’intégration de SSIS** affiche uniquement les bases de données SQL sous un abonné lorsque le compte client appartient à plusieurs abonnés.
 
-## <a name="previous-releases"></a>Versions antérieures
+## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
 
 [Versions antérieures de SQL Server Management Studio](../ssms/release-notes-ssms.md#previous-ssms-releases)
 
-## <a name="feedback"></a>Commentaires
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
-
-[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
 
 ## <a name="see-also"></a> Voir aussi
 
@@ -123,5 +119,3 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 - [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-Si vous avez des commentaires ou des suggestions, ou si vous souhaitez signaler des problèmes, la meilleure façon de contacter l’équipe SSMS est de passer par [UserVoice](https://aka.ms/sqlfeedback).

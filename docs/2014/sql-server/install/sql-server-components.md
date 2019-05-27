@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -22,12 +21,12 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098651"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092093"
 ---
 # <a name="sql-server-components"></a>Composants SQL Server
   Vous pouvez exécuter l’Assistant analyse du Conseiller de mise à niveau sur un ordinateur local ou distant qui a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installé. La première étape de l'analyse de pré-mise à niveau consiste à identifier l'ordinateur et les composants à analyser.  
@@ -51,7 +50,7 @@ ms.locfileid: "48098651"
   
  Lors de l'analyse de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez spécifier le nom de l'ordinateur local. Le Conseiller de mise à niveau analyse uniquement les serveurs de rapports locaux.  
   
- **Détecter**  
+ **Detect**  
  Le **détecter** bouton accède à l’ordinateur spécifié et détecte les composants à analyser :  
   
 -   Si vous analysez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant, vous devez activer les services Registre distant sur l'ordinateur distant.  
