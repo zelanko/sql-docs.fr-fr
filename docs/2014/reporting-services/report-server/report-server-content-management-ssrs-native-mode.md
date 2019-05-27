@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -16,12 +15,12 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25ee10bbda10329a3f28171eb0027df9769e9fde
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103520"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
   Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu.  

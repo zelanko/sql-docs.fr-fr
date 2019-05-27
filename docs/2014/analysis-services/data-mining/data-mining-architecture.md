@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722651"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085079"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
   Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  

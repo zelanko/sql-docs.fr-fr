@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727403"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077463"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
   Vous ajoutez une action à une base de données à l'aide de la vue Actions du Concepteur de cube. Cette vue est accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé une action, elle devient disponible aux utilisateurs une fois que vous avez retraité le cube approprié. Pour plus d'informations, consultez [Processing Analysis Services Objects](processing-analysis-services-objects.md).  

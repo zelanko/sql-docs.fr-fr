@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.holdout.f1
@@ -13,12 +12,12 @@ ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679867"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086789"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
   Utilisez la page **Créer un jeu de test** pour spécifier la quantité des données à utiliser pour l’apprentissage et celle à réserver au jeu de test. La séparation des données dans un jeu d'apprentissage et de test lorsque vous créez une structure d'exploration de données facilite énormément l'évaluation de l'exactitude des modèles d'exploration de données que vous créez ultérieurement.  

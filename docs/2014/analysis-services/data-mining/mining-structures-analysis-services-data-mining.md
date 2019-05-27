@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -22,12 +21,12 @@ ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733339"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083379"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
   La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  

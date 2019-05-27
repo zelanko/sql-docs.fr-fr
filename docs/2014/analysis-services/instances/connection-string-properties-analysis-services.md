@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ee2c99e0e5a58bda4b3bc7cb090e3705b7d9cc5c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703792"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080156"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
   Cette rubrique documente les propriétés de chaîne de connexion que vous pouvez définir dans le concepteur ou les outils d'administration, ou voir dans les chaînes de connexion générées par les applications clientes qui se connectent aux données Analysis Services et interrogent ces dernières. Par conséquent, elle couvre uniquement un sous-ensemble des propriétés disponibles. La liste complète inclut de nombreuses propriétés de serveur et de base de données, vous permettant de personnaliser une connexion à une application spécifique, indépendamment de la façon dont l'instance ou la base de données est configurée sur le serveur.  

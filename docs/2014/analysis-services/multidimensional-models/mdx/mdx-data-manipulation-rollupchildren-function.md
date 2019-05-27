@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
@@ -16,12 +15,12 @@ ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699761"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074264"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilisation de la fonction RollupChildren (MDX)
   Le MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) (fonction) [Script pour rechercher et remplacer] des enfants d’un membre, en appliquant un opérateur unaire différent à chaque enfant et retourne la valeur de ce cumul sous la forme d’un nombre. L'opérateur unaire peut être fourni par une propriété de membre associée au membre enfant, ou être une expression de type chaîne directement fournie à la fonction.  

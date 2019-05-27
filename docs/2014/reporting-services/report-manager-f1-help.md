@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
@@ -13,12 +12,12 @@ ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967955"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104467"
 ---
 # <a name="report-manager-f1-help"></a>Aide F1 du Gestionnaire de rapports
   Les rubriques ci-dessous fournissent de l'aide sur les pages du Gestionnaire de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il existe une rubrique pour chaque page de l'application. Certaines pages risquent de ne pas être disponibles. Les paramètres de sécurité déterminent les pages auxquelles vous avez accès. Pour accéder à ces rubriques à partir du Gestionnaire de rapports, cliquez sur **Aide** dans la barre d'outils principale.  

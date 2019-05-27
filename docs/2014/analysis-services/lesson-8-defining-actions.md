@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728178"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078228"
 ---
 # <a name="lesson-8-defining-actions"></a>Leçon 8 : Définition des actions
   Dans cette leçon, vous allez apprendre à définir des actions dans votre projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Une action est simplement une instruction MDX (Multidimensional Expressions) qui est stockée dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et peut être incorporée dans des applications clientes et démarrée par un utilisateur.  

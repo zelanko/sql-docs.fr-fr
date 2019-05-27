@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 040bcc41137bce095d4db3ec2cbf8d8a22610f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727123"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077408"
 ---
 # <a name="configure-attribute-types"></a>Configurer des types d'attributs
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalité métier. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39ff0244059cd8c33473f31f8a5822332bf12e7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131170"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012347"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Côté client et Mise en forme XML côté serveur (SQLXML 4.0)
   Cette rubrique décrit les principales différences entre la mise en forme XML côté client et côté serveur dans SQLXML.  

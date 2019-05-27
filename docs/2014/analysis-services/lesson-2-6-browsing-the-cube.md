@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11369983a3fd977db2f7ba09e4a4c69fd09abc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078981"
 ---
 # <a name="browsing-the-cube"></a>Exploration du cube
   Une fois le cube déployé, il est possible d'afficher les données de cube sous l'onglet **Navigateur** du Concepteur de cube et les données de dimension sous l'onglet **Navigateur** du Concepteur de dimensions. L'exploration du cube et des données de dimension permet de vérifier votre travail de façon incrémentielle. Vous pouvez vérifier que de petites modifications apportées aux propriétés, aux relations et d'autres objets ont l'effet souhaité une fois que l'objet est traité. Lorsque l'onglet Navigateur est utilisé pour afficher à la fois le cube et les données de dimension, l'onglet fournit différentes fonctions en fonction de l'objet parcouru.  

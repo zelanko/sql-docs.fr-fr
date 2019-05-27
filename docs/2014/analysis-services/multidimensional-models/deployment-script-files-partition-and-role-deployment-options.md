@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -23,12 +22,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075349"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Spécification des options de déploiement de partitions et de rôles
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit les options de déploiement de rôles et de partitions à partir de la \< *nom_projet*> .deploymentoptions fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les options de déploiement de partitions et de rôles du courant de projet lorsque le \< *nom_projet*> .deploymentoptions fichier est créé. Pour plus d'informations sur les paramètres de configuration, consultez [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md).  

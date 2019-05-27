@@ -11,15 +11,15 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62524471"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014295"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Créer, construire et interroger des instances geography
   Le type de données spatiales géographiques, `geography`, représente des données dans un système de coordonnées de monde sphérique. Ce type est implémenté en tant que type de données CLR (Common Language Runtime) .NET dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` type de données stocke des données ellipsoïdes (monde sphérique), telles que des coordonnées de latitude et de longitude GPS.  

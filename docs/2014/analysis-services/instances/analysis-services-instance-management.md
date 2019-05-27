@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad91ac53d2ff041c3da32fd9a609e67e8b9d1c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080349"
 ---
 # <a name="analysis-services-instance-management"></a>Gestion d'instances Analysis Services
   Une instance d'Analysis Services est une copie de l'exécutable `msmdsrv.exe` qui s'exécute en tant que service du système d'exploitation. Chaque instance est entièrement indépendante des autres instances situées sur le même serveur et dispose de ses propres paramètres de configuration, autorisations, ports, comptes de démarrage, stockage de fichier, et propriétés de mode serveur.  

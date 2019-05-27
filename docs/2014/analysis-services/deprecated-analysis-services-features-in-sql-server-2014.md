@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
@@ -16,12 +15,12 @@ ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 04d12aab677e38d17d4e869e6885eb470854d824
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732221"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081920"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Fonctionnalités Analysis Services déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  

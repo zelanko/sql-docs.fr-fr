@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62699934"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075822"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Définir des attributions et d'autres commandes de script
   Sous l’onglet **Calculs** du Concepteur de cube, cliquez sur l’icône **Nouvelle commande de script** dans la barre d’outils pour créer un script vide. Quand vous créez un script, il s’affiche au départ avec un titre vide dans le volet **Organisateur de script** de l’onglet Calculs. Les caractères que vous tapez dans le volet des expressions de calcul s’affichent en tant que nom de l’élément dans **l’organisateur de script**. Par conséquent, vous pouvez avoir intérêt à taper un nom commenté sur la première ligne pour pouvoir identifier plus facilement le script dans le volet **Organisateur de script** . Pour plus d’informations, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Pour plus d’informations sur les problèmes de performances liés aux calculs et des requêtes MDX, consultez la section « Écriture efficace MDX » dans la [Guide des performances SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

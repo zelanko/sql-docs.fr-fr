@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -34,12 +33,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700085"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076082"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
   Les cubes, les dimensions et autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peuvent être liés à une source de données. Une source de données peut être l'un des objets suivants :  
@@ -61,7 +60,7 @@ ms.locfileid: "62700085"
 |---------------------------------|-----------------|  
 |BigInt|Entier signé de 64 bits. Ce type de données est mappé au type de données Int64 dans Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I8 dans OLE DB.|  
 |Bool|Valeur booléenne. Ce type de données est mappé au type de données Boolean dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_BOOL dans OLE DB.|  
-|Monétaire (Currency)|Valeur monétaire comprise entre -263 (ou -922,337,203,685,477.5808) et 263-1 (ou +922,337,203,685,477.5807) avec une précision d'un dix-millième d'une unité monétaire. Ce type de données est mappé au type de données Decimal dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_CY dans OLE DB.|  
+|Currency|Valeur monétaire comprise entre -263 (ou -922,337,203,685,477.5808) et 263-1 (ou +922,337,203,685,477.5807) avec une précision d'un dix-millième d'une unité monétaire. Ce type de données est mappé au type de données Decimal dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_CY dans OLE DB.|  
 |Date|Données de date stockées sous la forme d'un nombre à virgule flottante double précision. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 tandis que la partie fractionnaire désigne une fraction d'un jour. Ce type de données est mappé sur le type de données DateTime dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_DATE dans OLE DB.|  
 |Double|Nombre à virgule flottante double précision compris entre -1.79E +308 et 1.79E +308. Ce type de données est mappé au type de données Double dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_R8 dans OLE DB.|  
 |Entier|Entier signé de 32 bits. Ce type de données est mappé sur le type de données Int32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_I4 dans OLE DB.|  

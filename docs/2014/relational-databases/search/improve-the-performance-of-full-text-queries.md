@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 0658dc74-25eb-4486-bbd6-e85c1f92c272
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ff22023f9f6f8bcbe1d2a1d0f57557676cea1cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353010"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011265"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Améliorer les performances des requêtes de texte intégral
   La liste suivante comprend des recommandations destinées à améliorer les performances des requêtes de texte intégral.  
@@ -48,7 +48,7 @@ ms.locfileid: "53353010"
 -   Pour les applications qui contiennent des prédications de relation sélectives, les requêtes qui utilisent des prédicats relationnels sélectifs et des prédicats de texte intégral non sélectifs peuvent s'exécuter de manière optimale lorsqu'elles sont écrites pour utiliser l'optimiseur de requête. Cela permet à l'optimiseur de requête de déterminer s'il peut exploiter le prédicat ou le menu déroulant de plage pour produire un plan de requête effectif. Cette approche est plus simple et souvent plus efficace que l'indexation des données relationnelles comme données de texte intégral.  
   
 ## <a name="related-resources"></a>Ressources connexes  
- [SQL Server 2008 Full-Text Search : Données internes et améliorations](https://go.microsoft.com/fwlink/?LinkId=129544)  
+ [Recherche en texte intégral de SQL Server 2008 : Mécanismes internes et améliorations](https://go.microsoft.com/fwlink/?LinkId=129544)  
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   

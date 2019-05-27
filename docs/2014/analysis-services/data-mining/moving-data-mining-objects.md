@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
@@ -17,12 +16,12 @@ ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a73a9b7fa99e42ff9846faafee6de5258e03ba7c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733407"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083296"
 ---
 # <a name="moving-data-mining-objects"></a>Déplacement d'objets d'exploration de données
   Les scénarios les plus courants de déplacement des objets d'exploration de données consistent à déployer un modèle d'un environnement de test ou d'analyse vers un environnement de production, ou à partager des modèles avec d'autres utilisateurs.  

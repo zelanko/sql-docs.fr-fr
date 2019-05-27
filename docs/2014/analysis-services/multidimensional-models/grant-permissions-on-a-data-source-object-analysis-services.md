@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -19,12 +18,12 @@ ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725853"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075000"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Octroyer des autorisations sur un objet de source de données (Analysis Services)
   Généralement, la plupart des utilisateurs d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'ont pas besoin d'accéder aux sources de données d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . D'ordinaire, les utilisateurs interrogent simplement les données d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Toutefois, dans le contexte de l'exploration de données, lors de l'exécution de prévisions en fonction d'un modèle d'exploration, par exemple, l'utilisateur doit joindre les données connues d'un modèle d'exploration de données avec les données fournies par l'utilisateur. Pour se connecter à la source de données qui contient les données fournies par l’utilisateur, celui-ci doit utiliser une requête DMX (Data Mining Extensions) qui contient la clause [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) ou la clause [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  

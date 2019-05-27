@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728105"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078428"
 ---
 # <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
   Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique.   Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  

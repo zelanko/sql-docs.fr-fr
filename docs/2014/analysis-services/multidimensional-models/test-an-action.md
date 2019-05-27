@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7cf922fb0182c2905ac855daef0f90cd80ddf55
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9d2ba009efa61cd4694ca0d008d8885ae7ae6c48
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740917"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072807"
 ---
 # <a name="test-an-action"></a>Tester une action
   Vous testez une action à l'aide de la vue Navigateur dans le Concepteur de cube. Le Concepteur de cube est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Après avoir créé l'action, vous devez traiter le cube avant que l'action puisse être testée. Pour plus d’informations, consultez [traitement d’un objet de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md).  

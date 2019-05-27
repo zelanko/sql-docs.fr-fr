@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c5348d022c5921a34280e9f9b608017035ebc4fc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874869"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010290"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Créer, modifier et supprimer des FileTables
   Décrit la procédure de création d'un nouveau FileTable, ou de modification ou de suppression d'un FileTable existant.  
@@ -35,7 +35,7 @@ ms.locfileid: "62874869"
   
 -   Noms à utiliser pour les 3 contraintes uniques et de clé primaire qui sont créées automatiquement.  
   
-###  <a name="HowToCreate"></a> Comment : Créer un FileTable  
+###  <a name="HowToCreate"></a> Procédure : Créer un FileTable  
  **Créer un FileTable à l'aide de Transact-SQL**  
  Créez un FileTable en appelant l’instruction [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) avec l’option **AS FileTable**. Puisqu'un FileTable dispose d'un schéma fixe, vous n'avez pas à spécifier une liste de colonnes. Vous pouvez spécifier les paramètres suivants pour le nouveau FileTable :  
   
@@ -107,7 +107,7 @@ GO
   
  Pour plus d’informations sur l’utilisation de l’instruction ALTER TABLE pour activer ou désactiver l’espace de noms FileTable, dont les contraintes définies par le système, consultez [Gérer des FileTables](manage-filetables.md).  
   
-###  <a name="HowToChange"></a> Comment : Modifier le répertoire d’un FileTable  
+###  <a name="HowToChange"></a> Procédure : modifier le répertoire d’un FileTable  
  **Modifier le répertoire d'un FileTable à l'aide de Transact-SQL**  
  Appelez l’instruction ALTER TABLE et fournissez une nouvelle valeur valide pour l’option SET **FILETABLE_DIRECTORY** .  
   

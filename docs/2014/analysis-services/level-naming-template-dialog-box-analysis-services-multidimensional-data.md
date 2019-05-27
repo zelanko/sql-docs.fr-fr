@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.levelnamingtemplatedialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 96cad715-213e-4eac-9003-130a2f5fc985
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 37afa05887059607edc257c3957495a8db335d3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728145"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078060"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Modèle de nom de niveau (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Modèle de nom de niveau** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un modèle de nom de niveau pour un attribut parent d'une dimension. Pour plus d’informations sur ces modèles de nom de niveau, consultez [Élément NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Vous pouvez afficher le **modèle d’affectation de noms de niveau** boîte de dialogue en cliquant sur le bouton de sélection (**...** ) sur le `NamingTemplate` valeur d’une traduction pour un attribut dans le **détails des traductions** volet sur le **traductions** onglet de **Concepteur de dimensions**.  

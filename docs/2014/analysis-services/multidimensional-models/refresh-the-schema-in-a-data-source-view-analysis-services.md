@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
@@ -15,12 +14,12 @@ ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 32c9db875afff68125fcc14ef1587c7c4f80302e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62737093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073251"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualiser le schéma dans une vue de source de données (Analysis Services)
   Après avoir défini une vue de source de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], le schéma d’une source de données sous-jacente peut être différent. Ces modifications ne sont pas détectés ni mises à jour automatiquement dans un projet de développement. De plus, si vous avez déployé le projet sur un serveur, vous rencontrerez maintenant des erreurs de traitement si Analysis Services ne peut plus se connecter à la source de données externe.  

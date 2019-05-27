@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dca06ce28f496c2ac85417c9ca4326d2ff66cf7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074894"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Octroyer des autorisations Lire la définition sur des métadonnées d'objets (Analysis Services)
   L'autorisation de lire une définition d'objets ou des métadonnées sur des objets sélectionnés permet à un administrateur d'accorder l'autorisation d'afficher des informations sur les objets sans accorder l'autoriser de modifier les définitions des objets, modifier la structure des objets ou afficher les données des objets. `Read Definition` autorisations peuvent être accordées à la base de données source de données, dimension, structure d’exploration de données et les niveaux de modèle d’exploration de données. Si vous avez besoin `Read Definition` autorisations pour un cube, vous devez activer `Read Definition` pour la base de données. N’oubliez pas que les autorisations sont additives. Par exemple, imaginez qu'un rôle accorde l'autorisation de lire les métadonnées d'un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de lire les métadonnées d'une dimension. Les autorisations des deux rôles se combinent et permettent à l'utilisateur de lire les métadonnées du cube et celles de la dimension dans cette base de données.  

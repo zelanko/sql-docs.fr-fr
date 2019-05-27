@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679717"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086765"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête de traitement (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête de traitement** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête de traitement dans l'onglet **Notifications** de la boîte de dialogue **Options de stockage** . Une requête de traitement retourne un ensemble de lignes qui contient les modifications apportées à une table associée à un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] depuis la dernière interrogation de la table de façon à effectuer une mise à jour incrémentielle de la mémoire cache OLAP multidimensionnelle (MOLAP) de l'objet. Analysis Services utilise une autre requête, baptisée requête d'interrogation, pour interroger une table associée à un objet et déterminer si la table a été modifiée. Les requêtes de traitement ne sont pas nécessaires lors de la mise à jour complète de la mémoire cache MOLAP de l'objet.  

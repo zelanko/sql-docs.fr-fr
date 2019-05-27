@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62700536"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074728"
 ---
 # <a name="autoexists"></a>Autoexists
   La fonctionnalité d’auto-existence, ou *autoexists*, limite l’espace du cube aux cellules qui existent réellement dans le cube, par opposition à celles qui pourraient exister en créant toutes les combinaisons possibles de membres de la hiérarchie d’attribut à partir de la même hiérarchie. En effet, les membres d'une hiérarchie d'attribut ne peuvent coexister avec les membres d'une autre hiérarchie d'attribut au sein de la même dimension. Lorsque deux hiérarchies d'attribut, ou plus, de la même dimension sont utilisées dans une instruction SELECT, Analysis Services évalue les expressions des attributs pour s'assurer que les membres de ces attributs sont correctement limités afin de répondre aux critères de tous les autres attributs.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
@@ -14,12 +13,12 @@ ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073291"
 ---
 # <a name="processing-analysis-services-objects"></a>Traitement des objets Analysis Services
   Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  

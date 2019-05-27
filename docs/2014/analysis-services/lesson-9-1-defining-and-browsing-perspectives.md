@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a599a1ad2b4a2da7b3078b42b87f859b0f6bdfd4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728249"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078217"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Définition et exploration de perspectives
   Une perspective peut simplifier l'affichage d'un cube à des fins spécifiques. Par défaut, les utilisateurs peuvent voir tous les éléments d'un cube auquel ils sont autorisés à accéder. Ce que les utilisateurs voient lorsqu'ils affichent l'intégralité d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est la perspective par défaut du cube. Il peut s'avérer très difficile de naviguer à travers une vue du cube tout entier, surtout pour les utilisateurs auxquels il suffit d'interagir avec une petite partie du cube pour satisfaire leurs besoins en matière de décisionnel et de rapports.  

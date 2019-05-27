@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
@@ -14,12 +13,12 @@ ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726602"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074886"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Octroyer des autorisations de traitement (Analysis Services)
   En tant qu'administrateur, vous pouvez créer un rôle dédié aux opérations de traitement Analysis Services, ce qui vous permet de déléguer cette tâche spécifique à d'autres utilisateurs ou à des applications utilisées pour le traitement planifié sans assistance. Les autorisations de traitement peuvent être accordées au niveau de la base de données, du cube, de la dimension et de la structure d'exploration de données. À moins de travailler sur une base de données de cube ou tabulaire très grande, nous vous recommandons d'accorder des droits de traitement au niveau de la base de données, y compris à tous les objets (même à ceux ayant des dépendances les uns envers les autres).  

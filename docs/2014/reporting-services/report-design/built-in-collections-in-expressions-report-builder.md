@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e572e6bd7070247c8e872283964f50ad734d4e32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106417"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Collections intégrées dans les expressions (Générateur de rapports et SSRS)
   Dans une expression d’un rapport, vous pouvez inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables et des champs prédéfinis pour des informations globales comme le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  

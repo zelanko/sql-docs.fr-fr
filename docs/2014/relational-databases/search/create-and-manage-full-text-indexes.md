@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022496"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011547"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
   Les informations contenues dans les index de recherche en texte intégral sont utilisées par le Moteur d'indexation et de recherche en texte intégral pour compiler des requêtes de texte intégral qui permettent de rechercher rapidement certains mots ou combinaisons de mots dans une table. Un index de recherche en texte intégral stocke les informations se rapportant aux mots significatifs et à leur emplacement dans une ou plusieurs colonnes d'une table de base de données. Un index de recherche en texte intégral est un type spécial d'index fonctionnel par jeton qui est construit et géré par le Moteur d'indexation et de recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le processus de création d'un index de texte intégral diffère du processus de création des autres types d'index. Au lieu de construire une structure d'arbre B (B-tree) en fonction d'une valeur stockée dans une ligne particulière, le Moteur d'indexation et de recherche en texte intégral crée une structure d'index inversée, empilée, compressée et basée sur des jetons individuels provenant du texte indexé.  La taille d’un index de recherche en texte intégral est limitée uniquement par les ressources mémoire dont dispose l’ordinateur sur lequel l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.  

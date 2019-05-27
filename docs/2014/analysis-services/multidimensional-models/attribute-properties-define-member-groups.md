@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - member groups [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 389439143ddd5f56d565cdebff42a91e241e16fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62727093"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077302"
 ---
 # <a name="define-member-groups"></a>Définir des groupes de membres
   Si un attribut possède un grand nombre de membres, vous pouvez décider de grouper ces membres dans des compartiments afin de réduire le nombre de membres visibles lorsque les utilisateurs parcourent les données d'une hiérarchie. Vous pouvez également déterminer le nombre de compartiments dans lesquels sont groupés les membres et définir un schéma d'attribution de noms pour les compartiments. Pour plus d’informations, consultez [Regrouper des membres d’un attribut &#40;discrétisation&#41;](attribute-properties-group-attribute-members.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discrimination [Analysis Services]
@@ -23,12 +22,12 @@ ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e90593dc605d700ed766d089e4605bd8cd243399
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086031"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)
   La Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés avec l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes). L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes est un algorithme de classification qui est fortement adaptable aux tâches de modélisation prédictive. Pour plus d’informations sur cet algorithme, consultez [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md).  

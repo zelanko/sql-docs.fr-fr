@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680556"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087420"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurer le compte d'actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)
   Le compte d'actualisation des données PowerPivot sans assistance est un compte désigné pour l'exécution de travaux d'actualisation des données PowerPivot dans une batterie de serveurs SharePoint. En configurant, vous activez le **utilisation de l’actualisation des données configuré par l’administrateur de compte** option dans une page de planification d’actualisation des données (voir ci-dessous). Les auteurs de classeurs qui planifient l'actualisation des données peuvent choisir cette option s'ils souhaitent utiliser le compte d'actualisation des données PowerPivot sans assistance pour exécuter un travail d'actualisation des données. Pour plus d’informations sur comment afficher les options d’informations d’identification dans une planification d’actualisation des données, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  

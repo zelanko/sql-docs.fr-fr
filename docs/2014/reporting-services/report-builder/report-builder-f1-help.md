@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10426"
@@ -17,12 +16,12 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ee42f145440c553422c2fac7f90a441ea00d9cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97cb83d54694a1c8334ef7a9f5dd9cd2bddc5d6d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107733"
 ---
 # <a name="report-builder-f1-help"></a>Aide du Générateur de rapports obtenue via la touche F1
   Cette section contient l’aide d’Assistants, vues, volets et boîtes de dialogue Générateur de rapports. Vous pouvez également ouvrir l’aide en appuyant sur F1 ou en cliquant sur le bouton Aide dans une boîte de dialogue.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d702e1dcf8bc710324e7593ebe469317d9f43e68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237903"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010935"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
   Cette rubrique explique comment définir le compte du service du Lanceur de démon de filtre de texte intégral SQL (MSSQLFDLauncher) à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le service du Lanceur de démon de filtre de texte intégral SQL est utilisé par la recherche en texte intégral ssNoVersion pour démarrer le processus hôte de démon de filtre, qui gère les césures de mots et le filtrage de recherche en texte intégral. Ce service doit être en cours d'exécution pour que la recherche en texte intégral puisse être utilisée.  

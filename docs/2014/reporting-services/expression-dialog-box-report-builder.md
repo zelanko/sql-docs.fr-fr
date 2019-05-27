@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,12 +14,12 @@ ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6f12a39c1456c179187654445947de9ee7d87a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63164388"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109144"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Boîte de dialogue Expression (Générateur de rapports)
   Utilisez le **Expression** boîte de dialogue pour écrire [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriétés d’un élément expressions pour les rapports. Vous pouvez utiliser des expressions pour définir un grand nombre de propriétés, notamment la couleur, la police et les bordures. Au moment de l'exécution, le processeur de rapports évalue les expressions et remplace le résultat de la valeur de la propriété.  

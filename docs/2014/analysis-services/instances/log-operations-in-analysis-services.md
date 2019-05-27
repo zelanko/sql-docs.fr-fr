@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079762"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
   Une instance Analysis Services enregistrera les notifications du serveur, les erreurs et avertissements dans le fichier msmdsrv.log - un pour chaque instance que vous installez. Les administrateurs se réfèrent à ce fichier journal pour en savoir plus sur les événements ordinaires et extraordinaires. Dans les versions récentes, la journalisation a été améliorée pour inclure davantage d'informations. Désormais, les enregistrements de journaux incluent des informations sur la version et l'édition du produit, ainsi que sur des événements du processeur, de la mémoire, de la connectivité et de blocage. L'article [Améliorations apportées à la journalisation](https://support.microsoft.com/kb/2965035)fournit une liste de tous les changements.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
@@ -15,12 +14,12 @@ ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b550291b06918cce7adb430b0b05d1f37018fd78
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62704006"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086379"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Ajouter un modèle d'exploration de données à une structure d'exploration de données existante
   Vous pouvez ajouter des modèles d'exploration de données à une structure d'exploration de données après avoir ajouté un premier modèle. Chaque modèle doit contenir des colonnes qui existent dans la structure, mais vous pouvez définir l'utilisation des colonnes différemment pour chaque modèle d'exploration de données. Pour plus d’informations sur la définition des colonnes des modèles d’exploration de données, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  

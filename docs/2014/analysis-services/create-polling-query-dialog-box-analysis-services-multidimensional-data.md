@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b58e73b7757e8288ff90f462be1868cb60e3af5b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679727"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086830"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête d'interrogation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête d’interrogation** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête d’interrogation sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. En règle générale, une requête d'interrogation est une requête singleton qui retourne une valeur que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser pour déterminer si les modifications ont été apportées à une table ou à un autre objet relationnel. Vous pouvez afficher la boîte de dialogue **Créer la requête d’interrogation** en cliquant sur le bouton de sélection (**...**) dans la colonne **Requête d’interrogation** de la grille de l’option **Interrogation planifiée** sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. Pour plus d’informations sur l’onglet **Notifications**la boîte de dialogue **Options de stockage**, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  

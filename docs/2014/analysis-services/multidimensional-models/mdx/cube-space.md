@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725584"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074708"
 ---
 # <a name="cube-space"></a>Espace du cube
   L'espace du cube est le produit des membres des hiérarchies d'attribut d'un cube associés aux mesures du cube. Par conséquent, l'espace du cube est déterminé par le produit combinatoire de tous les membres de la hiérarchie d'attribut dans le cube et par les mesures du cube, et définit la taille maximale du cube. Il est important de noter que cet espace inclut toutes les combinaisons possibles de membres de la hiérarchie d'attribut ; même les combinaisons qui peuvent être jugées comme impossibles dans le monde réel, c'est-à-dire les combinaisons où la ville est Paris et les pays sont l'Angleterre, l'Espagne, le Japon, l'Inde ou ailleurs.  

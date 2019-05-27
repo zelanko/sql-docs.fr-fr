@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
@@ -18,12 +17,12 @@ ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725963"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075028"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
   Un cube ou modèle tabulaire est le principal objet de requête dans un modèle de données Analysis Services. Lors de la connexion à des données tabulaires ou multidimensionnelles à partir d'Excel pour l'exploration de données ad hoc, les utilisateurs commencent en général par sélectionner un cube ou modèle tabulaire spécifique comme structure de données derrière l'objet de rapport de tableau croisé dynamique. Cette rubrique explique comment accorder les autorisations nécessaires pour l'accès aux données tabulaires ou de cube.  

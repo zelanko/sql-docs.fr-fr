@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_SEQUENCE_STATES parameter
@@ -17,12 +16,12 @@ ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 176bbc3f3078619541e14e21d03271d90f4c4c19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62734932"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66083836"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MSC (Microsoft Sequence Clustering)
   L'algorithme MSC (Microsoft Sequence Clustering) est un algorithme hybride qui utilise l'analyse en chaîne de Markov pour identifier les séquences ordonnées et associe les résultats de cette analyse aux techniques de clustering pour générer des clusters basés sur les séquences et les autres attributs du modèle. Cette rubrique décrit l'implémentation de l'algorithme, la personnalisation de l'algorithme et les besoins spéciaux pour les modèles Sequence Clustering.  

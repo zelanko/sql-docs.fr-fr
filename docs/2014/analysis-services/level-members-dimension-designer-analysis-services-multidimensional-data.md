@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
@@ -13,12 +12,12 @@ ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62728156"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078109"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Niveau et membres (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez ce volet pour parcourir les membres correspondant à la hiérarchie et à la langue sélectionnée. Pour sélectionner une hiérarchie ou une langue à consulter, utilisez les options **Hiérarchie** et **Langue** du volet **Barre d'outils** . Pour plus d’informations sur le volet Barre d’outils, consultez [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  

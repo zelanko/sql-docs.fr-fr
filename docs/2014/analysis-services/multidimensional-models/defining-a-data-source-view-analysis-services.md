@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
@@ -16,12 +15,12 @@ ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726389"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075399"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
   Une vue de source de données contient le modèle logique du schéma utilisé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données multidimensionnelle objets à savoir les cubes, dimensions et les structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  

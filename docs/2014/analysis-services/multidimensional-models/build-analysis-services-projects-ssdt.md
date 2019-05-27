@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
@@ -14,12 +13,12 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726861"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66076774"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la procédure de génération d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est semblable à celle que vous suivez pour générer un projet de programmation dans Visual Studio. Lorsque vous générez le projet, un ensemble de fichiers XML est créé dans le répertoire de sortie. Ces fichiers XML utilisent le langage ASSL (Analysis Services Scripting Language), qui correspond au dialecte XML utilisé par les applications clientes telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour communiquer avec une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer ou de modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ils permettent de déployer des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance spécifique d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

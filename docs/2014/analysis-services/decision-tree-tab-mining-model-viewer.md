@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
@@ -13,12 +12,12 @@ ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732680"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082301"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Onglet Arbre de décision (Visionneuse de modèle d'exploration de données)
   Le volet **Arbre de décision** affiche une représentation visuelle des règles de décision créées dans un modèle d’arbre de décision. Les règles de décision décrivent les chemins d'accès vers certains résultats.  

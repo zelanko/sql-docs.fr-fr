@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], read/write
@@ -14,12 +13,12 @@ ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1cd0b6d1af8d6a059742a257071a78f7b5002c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726483"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075873"
 ---
 # <a name="database-readwritemodes"></a>Base de données ReadWriteModes
   Il existe souvent des situations où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite modifier une base de données en lecture/écriture en une base de données en lecture seule, ou inversement. Ces situations sont souvent dues à des impératifs de fonctionnement, tels que le partage du même dossier de base de données entre plusieurs serveurs pour la montée en puissance d'une solution et l'amélioration des performances. Pour ces situations, le `ReadWriteMode` active de la propriété de base de données le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba facilement modifier le mode de fonctionnement de base de données.  

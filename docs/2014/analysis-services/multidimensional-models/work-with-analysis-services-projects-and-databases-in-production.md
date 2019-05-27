@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
@@ -13,12 +12,12 @@ ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 46f9cc26759470630c51cd50521f7c3705791939
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f46a518acb4ba647b5b7bf5503ef76af7b6b90d8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743711"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072429"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>Utilisation de projets et de bases de données Analysis Services dans un environnement de production
   Après avoir développé et déployé une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous devez décider de la façon dont vous souhaitez modifier les objets dans la base de données déployée. Certaines modifications, telles que celles associées aux rôles de sécurité, au partitionnement et aux paramètres de stockage, peuvent être effectuées à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. D’autres modifications peuvent être effectuées uniquement en utilisant [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en mode projet ou en mode en ligne (comme ajouter des attributs ou des hiérarchies définies par l’utilisateur).  

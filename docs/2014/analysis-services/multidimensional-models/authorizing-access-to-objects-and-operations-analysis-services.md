@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
@@ -20,12 +19,12 @@ ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726996"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077021"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisation de l'accès à des objets et des opérations (Analysis Services)
   L'accès utilisateur non-administratif aux cubes, aux dimensions et aux modèles d'exploration de données au sein d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est octroyé via l'appartenance à un ou à plusieurs rôles de base de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les administrateurs créent ces rôles de base de données, octroient des autorisations en lecture ou en lecture/écriture sur des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis ajoutent des groupes et des utilisateurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour chaque rôle.  

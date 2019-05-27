@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d7ab0a864d99e3cade96b7715adf7d307ca355c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb9ca011cdbbe32ebd6c71cb9ca64967cfbccb9e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729475"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079310"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
   Dans cette leçon, vous allez créer un nouveau projet de modèle tabulaire vide dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Une fois que votre projet est créé, vous pouvez commencer à ajouter des données à l'aide de l'Assistant Importation de table. En plus de créer un nouveau projet, cette leçon inclut également une brève introduction à l'environnement de création de modèles tabulaires dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
@@ -64,6 +63,6 @@ ms.locfileid: "62729475"
  Explorez les boîtes de dialogue et les emplacements des fonctionnalités spécifiques à la création des modèles tabulaires. Bien que certains éléments ne soient pas toujours actifs, vous pouvez avoir une bonne idée de l'environnement de création des modèles tabulaires.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 2 : Ajouter des données](lesson-2-add-data.md).  
   
   

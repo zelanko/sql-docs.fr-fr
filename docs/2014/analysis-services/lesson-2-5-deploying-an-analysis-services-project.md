@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729382"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078984"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Déploiement d'un projet Analysis Services
   Pour afficher les données du cube et de dimension pour les objets du cube Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans le projet Didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez déployer le projet sur une instance spécifiée d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puis traiter le cube et ses dimensions. Le *déploiement* d'un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entraîne la création des objets définis dans une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le*traitement* des objets dans une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copie les données à partir des sources de données sous-jacentes dans les objets du cube. Pour plus d’informations, consultez [Déployer des projets Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) et [Configurer les propriétés d’un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62990062"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107840"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
   L'extension de rendu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport et les flux de données des régions de données d'un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l'extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  

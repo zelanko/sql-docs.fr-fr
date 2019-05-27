@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploy [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 29490a5b-1573-4a35-9277-10c6a6e4ef0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25bacf8c94e9393943948a3a7816f192818e8058
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b6c79c2ea4355e9d889e235c8185a2460c0ed8c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62726233"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66075388"
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Déployer des projets Analysis Services (SSDT)
   En phase de développement d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous déployez fréquemment le projet sur un serveur de déploiement pour créer la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définie par le projet. Cette opération est nécessaire pour tester le projet ; par exemple, pour explorer les cellules d'un cube, explorer les membres de dimension ou vérifier les formules des indicateurs de performances clés (KPI).  

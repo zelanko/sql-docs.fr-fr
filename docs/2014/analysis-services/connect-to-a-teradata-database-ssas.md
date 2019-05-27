@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connterradb.f1
@@ -13,12 +12,12 @@ ms.assetid: 875ad4a3-a2b3-4b68-8c1c-6507e9f25b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6254610e6d42c33e1a46c48080db27f208f5bbf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dc6712598452b1957857509e6b3ff6f659a16c4b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680270"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087190"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Connexion à une base de données Teradata (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de spécifier des paramètres pour vous connecter à une base de données Teradata. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

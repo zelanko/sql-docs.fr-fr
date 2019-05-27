@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
@@ -13,12 +12,12 @@ ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081848"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
   Le volet **Conception** contient le Générateur de requêtes de prédiction qui peut servir à créer des prédictions d’exploration de données. Vous pouvez concevoir des requêtes de prédiction qui utilisent des tables de données d'entrée d'une vue de source de données, pour générer des prédictions en bloc, ou vous pouvez créer des requêtes singleton de prédiction qui vous permettent de fournir des valeurs individuelles.  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - format files [SQL Server], skipping data fields
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bad791f1eab5fbb31976236e6d79c08e8b9adc97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f880dcacbd4571c188d0368a0378a89c45787af2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155817"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011717"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Utiliser un fichier de format pour ignorer un champ de données (SQL Server)
   Le nombre de champs contenus dans un fichier de données peut être supérieur au nombre de colonnes dans la table. Cette rubrique explique comment modifier les fichiers de format non-XML et XML en mappant les colonnes de la table avec les champs de données correspondants et en ignorant les champs supplémentaires afin de prendre en charge un fichier de données contenant davantage de champs.  
