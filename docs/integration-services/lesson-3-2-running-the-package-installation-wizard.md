@@ -11,14 +11,18 @@ ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290285"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721973"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
   
 L'Assistant Installation de package va vous guider tout au long de l'installation et de la configuration des packages. Vous allez installer les packages dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur de destination (ordinateur où vous avez copié l'application de déploiement). Vous allez aussi créer un dossier, C:\DeploymentTutorialInstall, où l'Assistant va installer les fichiers non-package.  
@@ -82,11 +86,11 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
     Étant donné que les valeurs des variables d'environnement sur l'ordinateur de destination sont différentes des valeurs des variables d'environnement sur l'ordinateur de développement, plusieurs avertissements s'affichent dans la page Validation des packages. Attendez-vous à quatre avertissements :  
   
-    -   Le nom de fichier de configuration « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
-    -   Le nom de fichier de configuration « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62671037"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088314"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de calcul (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Propriétés de calcul** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour afficher ou modifier les paramètres de calcul du dossier d'affichage et du groupe de mesures associé définis dans l'onglet **Calculs** du Concepteur de cube pour le cube sélectionné. Pour afficher la boîte de dialogue **Propriétés de calcul** , cliquez sur **Propriétés de calcul** dans le volet **Barre d'outils** de l'onglet **Calculs** du Concepteur de cube.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
@@ -18,12 +17,12 @@ ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 26c555b22ae219eeec9e0b1670f407c2504ac7f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837248"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061980"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Ajouter une itération à un flux de contrôle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut le conteneur de boucles For, élément de flux de contrôle qui permet de facilement inclure un bouclage assurant la répétition conditionnelle d’un flux de contrôle dans un package. Pour plus d’informations, consultez [Conteneur de boucles For](control-flow/for-loop-container.md).  

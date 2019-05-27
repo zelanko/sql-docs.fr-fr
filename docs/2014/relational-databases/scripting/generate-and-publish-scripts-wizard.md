@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
@@ -43,12 +42,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7c1da71445659d61fa95dc30bc7f128a1e1d40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225440"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063990"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
   Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
@@ -193,7 +192,7 @@ ms.locfileid: "63225440"
   
 -   **Script USE DATABASE** -ajoute la `USE DATABASE` instruction au script. Pour vous assurer que les objets de base de données sont créés dans la base de données correcte, incluez l'instruction `USE DATABASE`. Lorsque le script est censé être utilisé dans une autre base de données, sélectionnez **False** pour omettre la `USE DATABASE` instruction. La valeur par défaut est **True**. Pour plus d’informations, consultez [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Types de données à scripter** -sélectionne ce qui doit être généré : **Uniquement les données**, **Schema only**, ou les deux. La valeur par défaut est **Schéma uniquement**.  
+-   **Types de données à inclure dans le script** : sélectionne ce qui doit être inclus dans le script : **Données uniquement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma uniquement**.  
   
  **Options de table/vue** - Les options suivantes s’appliquent uniquement aux scripts des tables et des vues.  
   
@@ -261,7 +260,7 @@ ms.locfileid: "63225440"
   
 11. **Liaisons de scripts** - Inclut la liaison pour les objets de règle et les objets par défaut dans le script envoyé au fournisseur pour la publication. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) et [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Types de données à publier** -sélectionne ce qui doit être généré : **Uniquement les données**, **Schema Only**, ou les deux. La valeur par défaut est **Schéma et données**.  
+12. **Types de données à publier** : sélectionne ce qui doit être inclus dans le script : **Données uniquement**, **Schéma uniquement** ou les deux. La valeur par défaut est **Schéma et données**.  
   
  **Options de publication** - Spécifie s’il faut utiliser des transactions lors de la publication dans le fournisseur de serveur web.  
   

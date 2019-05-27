@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, about Analysis Services - Multidimensional Data
@@ -19,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 241bb57ffd0ce05f1daa289cc7ae78c365a27cc9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62638808"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062338"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est un moteur de données analytiques en ligne utilisé dans des solutions de décisionnel (BI) et d'aide à la décision. Il fournit des données analytiques utilisées dans des rapports et des applications clientes tels qu'Excel, les rapports Reporting Services et d'autres outils BI tiers. Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], un flux de travail typique comprend la création d'un modèle de données OLAP ou tabulaires, le déploiement de ce modèle en tant que base de données vers une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le traitement de la base de données en vue de son chargement et des données qu'elle contient, puis l'attribution d'autorisations d'accès aux données. Quand il est prêt, le modèle de données polyvalent est accessible depuis n'importe quelle application cliente prenant en charge [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en tant que source données.  

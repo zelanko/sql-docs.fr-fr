@@ -1,7 +1,7 @@
 ---
 title: Se connecter au moteur de base de données à l’aide de la protection étendue | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774544"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015008"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774544"
      La variable **SPN NTLM acceptés** est requise lorsqu'un serveur est connu de plusieurs SPN. Lorsqu'un client essaie de se connecter au serveur à l'aide d'un SPN valide que le serveur ne connaît pas, la liaison de service échoue. Pour éviter ce problème, les utilisateurs peuvent spécifier plusieurs SPN qui représentent le serveur à l'aide de **SPN NTLM acceptés**. **SPN NTLM acceptés** est une série de SPN séparés par des points-virgules. Par exemple, pour autoriser les SPN **MSSQLSvc/ NomHôte1.Contoso.com** et **MSSQLSvc/ NomHôte2.Contoso.com**, tapez **MSSQLSvc/NomHôte1.Contoso.com;MSSQLSvc/NomHôte2.Contoso.com** dans la zone **SPN NTLM acceptés** . La variable a une longueur maximale de 2 048 caractères. **SPN NTLM acceptés** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Activation de la protection étendue pour le moteur de base de données  
- Pour utiliser la **protection étendue**, le serveur et le client doivent tous deux avoir un système d'exploitation qui prend en charge la **protection étendue**, et la **protection étendue** doit être activée sur le système d'exploitation. Pour plus d’informations sur l’activation de la **protection étendue** pour le système d’exploitation, consultez [Protection étendue de l’authentification](https://support.microsoft.com/kb/968389).  
+ Pour utiliser la **protection étendue**, le serveur et le client doivent tous deux avoir un système d'exploitation qui prend en charge la **protection étendue**, et la **protection étendue** doit être activée sur le système d'exploitation. Pour plus d’informations sur l’activation de la **protection étendue** pour le système d’exploitation, consultez [Protection étendue de l’authentification](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue** de quelques versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera disponible dans de futures mises à jour. Après avoir activé la **protection étendue** sur le serveur, procédez comme suit pour activer la **protection étendue**:  
   
 1.  Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, pointez sur **Microsoft SQL Server** , puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<_nom_instance*>*, puis cliquez sur **Propriétés**.  
+2.  Développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<_nom_instance *>* , puis cliquez sur **Propriétés**.  
   
 3.  Pour la liaison de service et la liaison de canal, sous l'onglet **Avancé** , affectez le paramètre approprié à **Protection étendue** .  
   

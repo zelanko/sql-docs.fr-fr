@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.associationrules.itemsets.f1
@@ -13,12 +12,12 @@ ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079557"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Onglet Jeux d'éléments (Visionneuse de modèle d'exploration de données)
   Vous pouvez utiliser le volet **Jeux d’éléments** pour afficher les jeux d’éléments fréquents contenus dans un modèle d’exploration de données de règles d’association. Étant donné qu'un modèle d'association peut contenir un grand nombre de jeux d'éléments, des contrôles sont fournis dans la visionneuse pour vous aider à filtrer les jeux d'éléments affichés dans la visionneuse.  
