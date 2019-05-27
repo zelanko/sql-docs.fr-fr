@@ -17,16 +17,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830097"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944470"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,10 +46,10 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Expression qui contient le numéro d'identification d'objet de la table ou de la vue indexée dont les informations de propriété d'index doivent être fournies. *object_ID* est de type **int**.  
   
  *index_or_statistics_name*  
- Expression qui contient le nom de l'index ou des statistiques dont les informations de propriété doivent être retournées. *index_or_statistics_name* est de type **nvarchar(128)**.  
+ Expression qui contient le nom de l'index ou des statistiques dont les informations de propriété doivent être retournées. *index_or_statistics_name* est de type **nvarchar(128)** .  
   
  *property*  
- Expression contenant le nom de la propriété de base de données à renvoyer. *property* est de type **varchar(128)**, et peut prendre l’une des valeurs suivantes.  
+ Expression contenant le nom de la propriété de base de données à renvoyer. *property* est de type **varchar(128)** , et peut prendre l’une des valeurs suivantes.  
   
 > [!NOTE]  
 >  Sauf indication contraire, la valeur NULL est renvoyée lorsque *property* n’est pas un nom de propriété valide, lorsque *object_ID* n’est pas un ID d’objet valide, lorsque *object_ID* est un type d’objet qui n’est pas pris en charge pour la propriété spécifiée ou lorsque l’appelant n’est pas autorisé à consulter les métadonnées de l’objet.  

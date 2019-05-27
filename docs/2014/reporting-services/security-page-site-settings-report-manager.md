@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6ee97841337cff96d636ed90754274623064e2f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025758"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102180"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Page Sécurité (Paramètres du site. Gestionnaire de rapports)
   La page Sécurité vous permet d'afficher les attributions de rôles système qui contrôlent l'accès au site du serveur de rapports. Les attributions de rôle système existent en dehors de l'étendue de l'espace de noms ou de l'arborescence des dossiers du serveur de rapports. Ils sont globaux et ne peuvent pas être différents pour des éléments spécifiques. Les opérations prises en charge par le biais des attributions de rôles système incluent la création et l'utilisation des planifications partagées, l'utilisation du Générateur de rapports et la définition de valeurs par défaut pour certaines fonctionnalités de serveur.  

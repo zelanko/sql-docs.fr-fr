@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: d8812b5cdaaf2271a0071d798ddd530266ebc8a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728018"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014917"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tâche Azure Data Lake Analytics
 
@@ -60,8 +60,8 @@ La configuration U-SQL comporte deux paramètres : **SourceType** et des option
 |SourceType|Options dynamiques|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Tapez directement la requête U-SQL à envoyer dans la zone des options, ou sélectionnez le bouton Parcourir (…) pour la taper dans la boîte de dialogue **Entrer une requête U-SQL**.|  
-|**SourceType = FileConnection**|Sélectionnez un gestionnaire de connexions de fichiers existant ou <**Nouvelle connexion…**> pour créer une connexion de fichiers. Pour des informations connexes, consultez : [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Sélectionnez une variable existante, ou \<**Nouvelle variable...**> pour en créer une. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) et [Ajouter une Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Sélectionnez un gestionnaire de connexions de fichiers existant ou <**Nouvelle connexion…** > pour créer une connexion de fichiers. Pour des informations connexes, consultez : [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md) et [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
+|**SourceType = Variable**|Sélectionnez une variable existante, ou \<**Nouvelle variable...** > pour en créer une. Pour des informations connexes, consultez [Integration Services &#40;SSIS&#41; Variables](../../integration-services/integration-services-ssis-variables.md) et [Ajouter une Variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Configuration des travaux

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62828650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059907"
 ---
 # <a name="data-flow-taps"></a>Drainage des flux de données
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] introduit une nouvelle fonctionnalité qui vous permet d'ajouter un drainage des données au niveau du chemin d'accès d'un flux de données d'un package au moment de l'exécution et diriger la sortie à partir du drainage des données vers un fichier externe. Pour utiliser cette fonctionnalité, vous devez déployer votre projet SSIS à l'aide du modèle de déploiement de projet sur un serveur SSIS. Après avoir déployé le package sur le serveur, vous devez exécuter des scripts T-SQL sur la base de données SSISDB pour ajouter des drainages de données avant d'exécuter le package. Voici un exemple de scénario :  

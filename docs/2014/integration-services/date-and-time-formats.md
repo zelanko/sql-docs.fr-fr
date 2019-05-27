@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
@@ -16,12 +15,12 @@ ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769946"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059644"
 ---
 # <a name="date-and-time-formats"></a>Formats de date et d'heure
   L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. L'analyse rapide prend en charge les formats suivants de types de données de date et d'heure.  

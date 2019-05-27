@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0817db540c9db8f17fbc71da68f43cc68645190
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729482"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079198"
 ---
 # <a name="lesson-11-create-partitions"></a>Leçon 11 : Créer des partitions
   Dans cette leçon, vous allez créer des partitions pour diviser la table Internet Sales en parties logiques plus petites pouvant être traitées (actualisées) indépendamment d'autres partitions. Par défaut, chaque table que vous incluez dans votre modèle comporte une partition qui inclut toutes les colonnes et les lignes de la table. Pour la table Internet Sales, nous souhaitons diviser les données par année ; une seule partition pour chacune des cinq années de la table.  Chaque partition peut ensuite être traitée indépendamment. Pour plus d’informations, consultez [Partitions &#40;SSAS Tabulaire&#41;](tabular-models/partitions-ssas-tabular.md).  

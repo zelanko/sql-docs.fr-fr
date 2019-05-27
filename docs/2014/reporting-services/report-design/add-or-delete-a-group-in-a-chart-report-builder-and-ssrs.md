@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206489"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106558"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Ajouter ou supprimer un groupe dans un graphique (Générateur de rapports et SSRS)
   Cliquez dans la région de données de graphique pour afficher le **données du graphique** volet. Créez des groupes en faisant glisser des champs de dataset vers les zones **Groupes de séries** et **Groupes de catégories** . Pour ajouter des groupes imbriqués, ajoutez plusieurs champs à la zone.  

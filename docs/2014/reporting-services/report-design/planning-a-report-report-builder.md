@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -14,12 +13,12 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215728"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105459"
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer de nombreux types de rapports. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  
@@ -36,7 +35,7 @@ ms.locfileid: "63215728"
   
      Le Générateur de rapports fournit de nombreux éléments de rapports que vous pouvez ajouter à votre rapport afin d'en faciliter la lecture, de souligner des informations clés, d'aider les utilisateurs à parcourir le rapport, et ainsi de suite. Le fait de savoir quelle apparence vous souhaitez donner au rapport peut déterminer si vous devez utiliser des éléments de rapports tels que des zones de texte, des rectangles, des images ou des lignes. Vous souhaiterez peut-être également afficher ou masquer des éléments, ajouter un explorateur de documents, inclure des rapports ou des sous-rapports d'extraction, ou établir des liaisons vers d'autres rapports. Pour plus d’informations, consultez [Images, zones de texte, rectangles et lignes &#40;&Générateur de rapports et SSRS#41;](rectangles-and-lines-report-builder-and-ssrs.md) et [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
+-   **Quelles données voulez-vous présenter aux lecteurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
   
      Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   

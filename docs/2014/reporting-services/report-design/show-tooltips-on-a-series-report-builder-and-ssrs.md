@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4c9606ff-e1c3-4cf7-a4e7-bb16f1a9e8ab
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e9e02af6adf0e674d6af2775cb427440b4471c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215191"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104927"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Afficher des info-bulles dans une série (Générateur de rapports et SSRS)
   Vous pouvez ajouter une info-bulle à chaque point de données sur la série d'un graphique pour afficher des informations en rapport avec le point de données, par exemple, le nom du groupe, la valeur du point de données ou le pourcentage du point de données par rapport au total de la série lorsque les utilisateurs placent le pointeur sur le point de données dans un rapport rendu.  

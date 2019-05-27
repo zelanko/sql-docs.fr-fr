@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -17,12 +16,12 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20d800cc906a3953fe2f5143e980fd2e869ec318
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306517"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101668"
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
   Vous pouvez définir la sécurité pour des rapports et des ressources individuels afin de contrôler le degré d'accès dont disposent les utilisateurs à ces éléments. Par défaut, seuls les utilisateurs qui sont membres du groupe intégré **Administrateurs** peuvent exécuter les rapports, afficher les ressources, modifier les propriétés et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un rapport ou une ressource.  

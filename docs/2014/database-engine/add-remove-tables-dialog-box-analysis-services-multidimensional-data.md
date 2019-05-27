@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
@@ -15,12 +14,12 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792129"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065240"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter ou supprimer les Tables (Analysis Services - données multidimensionnelles)
   Utilisez la boîte de dialogue **Ajouter/Supprimer des tables** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour ajouter des tables dans une source de données d’une vue de source de données, ou en supprimer. Pour afficher la boîte de dialogue **Ajouter/Supprimer des tables**, vous pouvez procéder de deux manières :  

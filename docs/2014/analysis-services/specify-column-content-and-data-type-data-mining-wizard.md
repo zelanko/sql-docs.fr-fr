@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0634be64-4c38-4381-9b19-fe9a5889306c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5625919d0a7b8cbc729a001caa649604de7b16e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746282"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068467"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Spécifier type de contenu et de données des colonnes (Assistant Exploration de données)
   Utilisez la page **Spécifier type de contenu et de données des colonnes**  pour spécifier l’utilisation et le type de données de chaque colonne que vous avez sélectionnée dans la page précédente de l’Assistant. Si vous voulez ignorer la colonne, cliquez sur **Précédent** pour revenir à la page **Spécifier les données d’apprentissage**, puis décochez toutes les cases.  

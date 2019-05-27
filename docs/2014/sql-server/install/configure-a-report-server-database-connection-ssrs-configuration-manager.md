@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62762026"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096193"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

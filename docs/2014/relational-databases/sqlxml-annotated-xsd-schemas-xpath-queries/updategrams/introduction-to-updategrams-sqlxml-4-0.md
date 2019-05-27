@@ -19,15 +19,15 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63060297"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014802"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Présentation des codes de mise à jour (SQLXML 4.0)
   Vous pouvez modifier (insérer, mettre à jour ou supprimer) une base de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’un XML existant de document à l’aide d’une mise à jour ou OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] (fonction).  

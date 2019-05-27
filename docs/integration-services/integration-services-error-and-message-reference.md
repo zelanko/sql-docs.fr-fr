@@ -15,14 +15,18 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290885"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723639"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Cette liste peut être utile lorsque vous rencontrez un code d'erreur sans sa description. La liste ne comporte actuellement aucune information de dépannage.  
@@ -2125,7 +2129,7 @@ ms.locfileid: "58290885"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|La valeur « %1 » du composant %2 est introuvable. Impossible de trouver la valeur CurrentVersion du composant. Cette erreur se produit si le composant n'a pas défini ses informations de Registre pour contenir une valeur CurrentVersion dans la section DTSInfo. Ce message apparaît au cours du développement du composant ou lorsque le composant est utilisé dans un package, si le composant n'est pas correctement enregistré.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Le gestionnaire de tampons n'a pas pu obtenir un nom de fichier temporaire.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Le gestionnaire de tampons n'a pas pu créer un fichier temporaire dans le chemin d'accès « %1 ». Ce chemin ne sera plus utilisé pour le stockage temporaire.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warning: impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Avertissement : impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Une ligne partielle a été trouvée à la fin du fichier.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|La fin du fichier de données a été atteinte au cours de la lecture des lignes d'en-tête. Assurez-vous que le séparateur de lignes d'en-tête et que le nombre de lignes d'en-tête à ignorer sont corrects.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Impossible de récupérer les infos de la page de codes de la colonne à partir du fournisseur OLE DB.  Si le composant prend en charge la propriété « %1 », la page de codes de cette propriété sera utilisée.  Modifiez la valeur de la propriété si les valeurs de la page de codes de la chaîne actuelle sont incorrectes.  Si le composant ne prend pas en charge la propriété, la page de codes provenant de l'ID des paramètres régionaux du composant sera utilisée.|  

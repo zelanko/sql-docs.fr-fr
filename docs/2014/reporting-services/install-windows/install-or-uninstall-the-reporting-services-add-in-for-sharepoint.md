@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46fdd38274cb1400742d0bcda8654ebb7fd77b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108817"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SharePoint 2010 et SharePoint 2013)
   Exécutez le package d’installation du complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint (rsSharePoint.msi) sur les serveurs SharePoint pour activer les fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans un déploiement SharePoint. Ces fonctionnalités incluent Power View, un composant WebPart visionneuse de rapports, un point de terminaison de proxy d'URL, des types de contenu et des pages d'application qui vous permettent de créer, d'afficher et de gérer des rapports, des modèles de rapport, des sources de données et tout autre contenu du serveur de rapports sur un site SharePoint. Le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint est un composant requis pour un serveur de rapports qui s'exécute en mode SharePoint. Le complément peut être installé à partir de l'Assistant Installation [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou en téléchargeant le fichier rsSharePoint.msi du Feature Pack [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour obtenir la liste des versions du complément et les pages de téléchargement, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  

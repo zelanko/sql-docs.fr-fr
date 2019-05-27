@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a6ba0d74b07c21234d7e0f20cb7d9664ee7157f2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63144775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090300"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
   Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "63144775"
 ### <a name="permissions"></a>Autorisations  
  Les opérations que vous réalisez dans un éditeur de codes sont soumises aux autorisations accordées au compte d'authentification que vous avez utilisé pour vous connecter. Par exemple, si vous ouvrez une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l'aide de l'authentification Windows, vous ne pouvez pas exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui font référence à des objets pour lesquels votre compte de connexion Windows ne dispose pas d'autorisation d'accès.  
   
-## <a name="how-to-open-editors"></a>Procédure : Ouvrir des éditeurs  
+## <a name="how-to-open-editors"></a>Procédure : Ouvrir les éditeurs  
  Cette section explique comment ouvrir les différents éditeurs dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Utilisation du menu Fichier/Nouveau  

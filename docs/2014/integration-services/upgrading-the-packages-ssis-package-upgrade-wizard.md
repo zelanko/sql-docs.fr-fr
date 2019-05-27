@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
@@ -13,12 +12,12 @@ ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cc27106e3aa749f9462659190f006bcc8f5627b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766132"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054735"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Mise à niveau des packages (Assistant Mise à niveau de packages SSIS)
   Utilisez la page **Mise à niveau des packages** pour afficher la progression de la mise à niveau de packages et pour interrompre le processus de mise à niveau. L'Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] met à niveau, un par un, les packages sélectionnés.  

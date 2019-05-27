@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachitemcolumns.f1
@@ -15,12 +14,12 @@ ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6e1b3a7b0be7e158ff2594a9d629cd82aaff95e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058549"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Colonnes For Each Item
   Utilisez la boîte de dialogue **Colonnes For Each Item** pour définir les colonnes des éléments énumérés par l'énumérateur Foreach Item.  

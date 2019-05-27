@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242610"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101944"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
   La protection étendue est un ensemble d'améliorations apportées aux dernières versions du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protection étendue améliore la manière dont les applications protègent les informations d'identification et l'authentification. La fonctionnalité ne fournit pas directement de protection contre des attaques spécifiques telles que le transfert d'informations d'identification, mais offre une infrastructure aux applications telles que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] afin d'appliquer la protection étendue de l'authentification.  

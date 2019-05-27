@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722821"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085141"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algorithmes d'exploration de données (Analysis Services - Exploration de données)
   Un *algorithme d’exploration de données* est un ensemble d’heuristiques et de calculs qui crée un modèle d’exploration de données à partir des données. Pour créer un modèle, l'algorithme analyse d'abord les données que vous fournissez, à la recherche de types spécifiques de modèles ou de tendances. L'algorithme utilise les résultats de cette analyse afin de définir les paramètres optimaux pour la création du modèle d'exploration de données. Ensuite, ces paramètres sont appliqués au jeu de données entier pour extraire des modèles utilisables et des statistiques détaillées.  

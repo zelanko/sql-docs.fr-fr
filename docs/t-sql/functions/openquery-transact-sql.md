@@ -20,15 +20,15 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f89a979716e944a4fff4f6d3021a34c7a51973aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fd7377f622d5d986ddb7b665f4f920365d5189f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768527"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944894"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ OPENQUERY ( linked_server ,'query' )
 ## <a name="remarks"></a>Notes   
  OPENQUERY n'accepte pas de variables pour ses arguments.  
   
- Vous ne pouvez pas utiliser OPENQUERY pour exécuter des procédures stockées étendues sur un serveur lié. Par contre, une procédure stockée étendue peut être exécutée sur un serveur lié en utilisant un nom en quatre parties. Exemple :  
+ Vous ne pouvez pas utiliser OPENQUERY pour exécuter des procédures stockées étendues sur un serveur lié. Par contre, une procédure stockée étendue peut être exécutée sur un serveur lié en utilisant un nom en quatre parties. Par exemple :  
   
 ```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
@@ -61,7 +61,7 @@ EXEC SeattleSales.master.dbo.xp_msver
   
  Tout appel à OPENDATASOURCE, OPENQUERY ou OPENROWSET dans la clause FROM est évalué séparément et indépendamment de tout appel à ces fonctions utilisé comme cible de la mise à jour, même si des arguments identiques sont fournis aux deux appels. En particulier, les conditions de filtre ou de jointure appliquées sur le résultat de l'un de ces appels n'ont aucun effet sur les résultats de l'autre.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter OPENQUERY. Les autorisations utilisées pour la connexion au serveur distant sont obtenues à partir des paramètres définis pour le serveur lié.  
   
 ## <a name="examples"></a>Exemples  

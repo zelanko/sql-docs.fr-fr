@@ -1,7 +1,7 @@
 ---
 title: Type et colonnes de données XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511576"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836158"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cette rubrique présente les avantages et les limites du type de données **XML** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et vous aide à choisir comment stocker des données XML.  
   
@@ -175,6 +176,8 @@ ms.locfileid: "58511576"
 -   Il ne peut pas être utilisé en tant que paramètre d'une fonction scalaire intégrée autre que ISNULL, COALESCE et DATALENGTH.  
   
 -   Il ne peut pas être utilisé en tant que colonne clé dans un index. En revanche, il peut être inclus en tant que donnée dans un index cluster ou ajouté explicitement à un index non-cluster à l'aide du mot clé INCLUDE lors de la création d'un index non-cluster.  
+
+- Les éléments XML peuvent avoir jusqu’à 128 niveaux d'imbrication.
   
 ## <a name="see-also"></a> Voir aussi  
  [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

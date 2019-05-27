@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
@@ -13,12 +12,12 @@ ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62637011"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062737"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modélisation avancée (Compléments d'exploration de données pour Excel)
   Vous pouvez utiliser la **avancé** options pour créer des modèles et structures d’exploration de données personnalisées avec des paramètres différents de ceux créés par les Assistants de modélisation de données. Les deux Assistants décrits de cette section vous aident à créer une nouvelle structure d'exploration de données et un nouveau modèle d'exploration de données à appliquer à une structure d'exploration de données existante.  

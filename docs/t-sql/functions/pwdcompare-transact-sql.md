@@ -17,15 +17,15 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782367"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943272"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>Arguments  
  **'** *clear_text_password* **'**  
- Mot de passe non chiffré. *clear_text_password* est de type **sysname** (**nvarchar(128)**).  
+ Mot de passe non chiffré. *clear_text_password* est de type **sysname** (**nvarchar(128)** ).  
   
  *password_hash*  
- Hachage de chiffrement d'un mot de passe. *password_hash* est de type **varbinary(128)**.  
+ Hachage de chiffrement d'un mot de passe. *password_hash* est de type **varbinary(128)** .  
   
  *version*  
  Paramètre obsolète auquel la valeur 1 peut être affectée si *password_hash* représente une valeur d’un compte de connexion antérieur à [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui a été migrée vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou version ultérieure, mais n’a jamais été converti vers le système [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. *version* est de type **int**.  
@@ -66,7 +66,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  **PWDCOMPARE** ne peut pas être utilisé avec les mots de passe des utilisateurs de bases de données autonomes. Il n'existe aucun équivalent de base de données autonome.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  PWDENCRYPT est accessible publiquement.  
   
  L'autorisation CONTROL SERVER est requise pour examiner la colonne password_hash de sys.sql_logins.  

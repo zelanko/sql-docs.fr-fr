@@ -16,16 +16,16 @@ helpviewer_keywords:
 - LEAD function
 - analytic functions, LEAD
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 335e923b802e98545ab6cb100d292dfe695202b0
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: a39292725feff65dd98b25fba95d80bd68313805
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572832"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946927"
 ---
 # <a name="lead-transact-sql"></a>LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,7 +51,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  *default*  
  Valeur à retourner quand *offset* est au-delà de l’étendue de la partition. Si aucune valeur par défaut n'est spécifiée, la valeur NULL est renvoyée. *default* peut être une colonne, une sous-requête ou une autre expression, mais ne peut pas être une fonction analytique. *default* doit être compatible en matière de type avec *scalar_expression*.
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre des données avant que la fonction soit appliquée. Quand *partition_by_clause* est spécifié, il détermine l’ordre des données dans chaque partition. *order_by_clause* est requis. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
@@ -86,7 +86,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 275              2006        1324000.00            0.00  
 ```  
   
-### <a name="b-compare-values-within-partitions"></a>b. Comparer des valeurs dans des partitions  
+### <a name="b-compare-values-within-partitions"></a>B. Comparer des valeurs dans des partitions  
  L'exemple suivant utilise la fonction LEAD pour comparer les ventes annuelles cumulées entre les employés. La clause PARTITION BY est spécifiée pour partitionner les lignes du jeu de résultats par secteur de vente. La fonction LEAD est appliquée à chaque partition séparément et le calcul redémarre pour chaque partition. La clause ORDER BY spécifiée dans la clause OVER classe les lignes de chaque partition avant que la fonction soit appliquée. La clause ORDER BY dans l'instruction SELECT classe les lignes dans le jeu de résultats entier. Notez que la valeur par défaut zéro (0) est retournée en raison de l'absence d'une valeur de tête pour la dernière ligne.  
   
 ```sql  

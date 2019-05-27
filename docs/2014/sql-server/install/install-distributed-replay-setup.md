@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f83e13aa6ed85293bf20b006ad6c5c8e9a9a62f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b5b2b43d899041d501039ade4d0493a7fdbf0164
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545378"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094627"
 ---
 # <a name="install-distributed-replay-setup"></a>Installer Distributed Replay (programme d'installation)
   Installer les fonctionnalités [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay avec l’Assistant Installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Pour décider de l'emplacement où installer ces fonctionnalités, tenez compte des éléments suivants :  
@@ -87,7 +86,7 @@ ms.locfileid: "52545378"
   
     -   Pour installer le service client, sélectionnez **Distributed Replay Client**.  
   
-     **Important**: lorsque vous configurez Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
+     **Important**: Lorsque vous configurez Distributed Replay controller, vous pouvez spécifier un ou plusieurs comptes d’utilisateur qui seront utilisés pour exécuter les services Distributed Replay client. Vous trouverez ci-dessous la liste des comptes pris en charge :  
   
     -   Compte d'utilisateur de domaine  
   

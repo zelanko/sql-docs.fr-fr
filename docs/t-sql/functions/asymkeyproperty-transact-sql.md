@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dadfaeaf4debeba4b2da3f478b31fcb9bd5d3b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: de7e95ab26102c0b3bbe1e33c57ae9491a5b9a2c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664108"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945891"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ID d'une clé asymétrique dans la base de données. Si vous connaissez uniqueme
 Spécifie que la sortie retourne la description de l'algorithme de la clé asymétrique. Uniquement disponible pour les clés asymétriques créées à partir d'un module EKM.
   
 **'** string_sid **'**  
-Spécifie que la sortie retourne le SID de la clé asymétrique au format **nvarchar()**.
+Spécifie que la sortie retourne le SID de la clé asymétrique au format **nvarchar()** .
   
 **'** sid **'**  
 Spécifie que la sortie retourne le SID de la clé asymétrique au format binaire.
@@ -54,7 +53,7 @@ Spécifie que la sortie retourne le SID de la clé asymétrique au format binair
 ## <a name="return-types"></a>Types de retour  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite une ou des autorisations appropriées sur la clé asymétrique et que l'autorisation VIEW sur la clé asymétrique n’ait pas été refusée à l’appelant. Consultez [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md) pour plus d’informations sur les autorisations sur une clé asymétrique.
   
 ## <a name="examples"></a>Exemples  

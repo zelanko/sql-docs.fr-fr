@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
@@ -15,12 +14,12 @@ ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63272791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102589"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Ouvrir et fermer un rapport (Gestionnaire de rapports)
   Vous pouvez utiliser le Gestionnaire de rapports pour afficher les rapports publiés sur un serveur de rapports. Par défaut, tous les rapports s'ouvrent au format HTML. Une fois qu'un rapport est ouvert, vous pouvez l'exporter pour l'afficher dans d'autres formats d'application. Si le rapport contient des fonctionnalités interactives, ou s'il s'agit d'un rapport du Générateur de rapports qui contient des données interactives, vous pouvez cliquer sur les liens pour afficher des rapports ou des données supplémentaires.  

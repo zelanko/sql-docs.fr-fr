@@ -1,23 +1,32 @@
 ---
 title: Indicateurs de Performance (KPI) dans les modèles multidimensionnels clés | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: multidimensional-models
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+helpviewer_keywords:
+- viewing Key Performance Indicators
+- Key Performance Indicators [Analysis Services]
+- KPIs [Analysis Services]
+- OLAP objects [Analysis Services], performance indicators
+- weights [Analysis Services]
+- displaying Key Performance Indicators
+- parent KPIs [Analysis Services]
+- child KPIs
+ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2ba0c1cef60658bc5509ae1f29396d5797b3c435
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074796"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicateurs de performance clés (KPI) dans les modèles multidimensionnels
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dans la terminologie d'entreprise, un indicateur de performance clé (KPI) est une mesure quantifiable des performances d'une activité économique.  
   
  Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un KPI est un ensemble de calculs associés à un groupe de mesures dans un cube qui servent à évaluer les performances de l’entreprise. Généralement, ces calculs sont une combinaison d'expressions MDX (Multidimensional Expressions) ou de membres calculés. Les indicateurs de performance clés contiennent également des métadonnées supplémentaires qui fournissent des informations sur la manière dont les applications clientes doivent afficher les résultats des calculs d'un indicateur de performance clé.  

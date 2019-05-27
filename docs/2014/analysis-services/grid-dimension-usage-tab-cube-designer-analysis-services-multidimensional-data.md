@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04ba5a515c83bc17b858d463cd6718db47b07a24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730775"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080807"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grille (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Grille** de l'onglet **Utilisation de la dimension** du Concepteur de cube pour afficher et modifier les relations de dimension entre des dimensions d'un cube et des groupes de mesures. Chaque relation de dimension est représentée sous forme d'une cellule d'une grille dans laquelle les groupes de mesures figurent en colonnes et les dimensions en lignes.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
@@ -15,12 +14,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63210353"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105539"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
   L'Assistant Carte et l'Assistant Couche automatisent la tâche de création d'une carte, d'ajout d'une couche ou de modification des options de couche sur une couche existante.  
@@ -125,7 +124,7 @@ ms.locfileid: "63210353"
  La bibliothèque de cartes contient des cartes de rapports stockés dans le dossier Bibliothèque de cartes pour l'environnement de création de rapports. Les cartes de la bibliothèque fournissent un point de départ pratique pour ajouter rapidement une carte à votre rapport. Les cartes prédéfinies de la bibliothèque sont fournies par un fournisseur de cartes.  
   
 > [!NOTE]  
->  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Fichiers de forme TIGER/Line sont disponibles sans frais aux États-Unis. Recensement des États-Unis. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées des États-Unis. des États-Unis.  
+>  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Les fichiers de forme TIGER/Line sont mis à disposition gratuitement par le Bureau de recensement des États-Unis. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md).  
   

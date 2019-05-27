@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectdefinition.f1
@@ -13,12 +12,12 @@ ms.assetid: 20cb0018-56dd-497e-b019-8f7cc3610cba
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747144"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069205"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Sélectionner la méthode de définition (Assistant Exploration de données)
   Utilisez la page **Sélectionner la méthode de définition** pour sélectionner la source de création du nouveau modèle d’exploration de données. Votre progression dans l'Assistant sera différente selon vos sélections, car une structure d'exploration de données basée sur un cube impose des étapes différentes pour sa construction par rapport à une structure d'exploration de données basée sur une source de données relationnelle.  

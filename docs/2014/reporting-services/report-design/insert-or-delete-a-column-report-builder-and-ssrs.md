@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9db79e2-7e7d-4359-a706-cb746c94182a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f3d77e65361081a2c06e9e10c25b1bf6757d5d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e1d5f5d846a690676942e0d4ffcba0475a35595a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209264"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105678"
 ---
 # <a name="insert-or-delete-a-column-report-builder-and-ssrs"></a>Insérer ou supprimer une colonne (Générateur de rapports et SSRS)
   Vous pouvez ajouter ou supprimer des colonnes dans une région de données de tableau matriciel. Cette région peut être une table, une matrice ou une liste. Les procédures suivantes ne s'appliquent pas aux régions de données de graphique ou de jauge.  

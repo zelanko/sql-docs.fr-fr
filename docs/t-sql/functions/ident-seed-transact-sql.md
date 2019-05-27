@@ -17,20 +17,20 @@ helpviewer_keywords:
 - seed values [SQL Server]
 - IDENT_SEED function
 ms.assetid: e4cb8eb8-affb-4810-a8a9-0110af3c247a
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef3bfdbb21839bd7f4f60ba1a731e39ec1f42c1f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079305"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946397"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne la valeur de départ d’origine (sous la forme **numeric**(**@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d’une colonne d’identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
+  Retourne la valeur de départ d’origine (sous la forme **numeric**( **@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue. La modification de la valeur actuelle d’une colonne d’identité en utilisant DBCC CHECKIDENT ne modifie pas la valeur retournée par cette fonction.  
   
  ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ SELECT IDENT_SEED('Person.Address') AS Identity_Seed;
 GO  
 ```  
   
-### <a name="b-returning-the-seed-value-from-multiple-tables"></a>b. Renvoi de la valeur initiale de plusieurs tables  
+### <a name="b-returning-the-seed-value-from-multiple-tables"></a>B. Renvoi de la valeur initiale de plusieurs tables  
  L’exemple suivant retourne les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui contiennent une colonne d’identité avec une valeur de départ.  
   
 ```  

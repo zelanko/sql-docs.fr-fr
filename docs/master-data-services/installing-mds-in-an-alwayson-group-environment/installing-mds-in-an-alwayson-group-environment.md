@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982113"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015099"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -304,15 +304,15 @@ Un groupe de disponibilité ne peut être créé que sur des bases de données e
 
     Pour chaque réplica, configurez les paramètres **Validation synchrone**, **Basculement automatique** et **Secondaire accessible en lecture**. Voir figure 17.
 
-    **Validation synchrone** : si une transaction est validée sur le réplica principal d’une base de données, la transaction est également validée sur tous les autres réplicas synchrones. Ne pouvant pas garantir cela, la validation asynchrone risque d’être en retard par rapport au réplica principal.
+**Validation synchrone** : si une transaction est validée sur le réplica principal d’une base de données, la transaction est également validée sur tous les autres réplicas synchrones. Ne pouvant pas garantir cela, la validation asynchrone risque d’être en retard par rapport au réplica principal.
 
-    En règle générale, vous ne devez activer la validation synchrone que si les deux nœuds se trouvent dans le même centre de données. S’ils se trouvent dans des centres de données différents, la validation synchrone risque de ralentir les performances de la base de données.
+En règle générale, vous ne devez activer la validation synchrone que si les deux nœuds se trouvent dans le même centre de données. S’ils se trouvent dans des centres de données différents, la validation synchrone risque de ralentir les performances de la base de données.
 
-    Si cette case n’est pas cochée, la validation asynchrone est utilisée.
+Si cette case n’est pas cochée, la validation asynchrone est utilisée.
 
-    **Basculement automatique** : quand le réplica principal est arrêté et que le basculement automatique est activé, le groupe de disponibilité bascule automatiquement vers son réplica secondaire. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
+**Basculement automatique** : quand le réplica principal est arrêté et que le basculement automatique est activé, le groupe de disponibilité bascule automatiquement vers son réplica secondaire. Cette option ne peut être activée que sur les réplicas avec validations synchrones.
 
-    **Secondaire accessible en lecture :** par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
+**Secondaire accessible en lecture :** par défaut, les utilisateurs ne peuvent se connecter à aucun réplica secondaire. Cette option permet aux utilisateurs de se connecter au réplica secondaire avec un accès en lecture seule.
 
 8.  Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 

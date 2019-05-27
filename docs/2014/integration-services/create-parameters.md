@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.parameterwindow.f1
@@ -13,12 +12,12 @@ ms.assetid: cd5d675b-dd5d-49cc-8b1f-dc717a973f99
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e1cc5bfb5388cd71ca3217bd060e3dde0428f36
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62832098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060143"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
@@ -40,7 +39,7 @@ ms.locfileid: "62832098"
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Nom|Nom du paramètre.|  
+    |Créer une vue d’abonnement|Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  

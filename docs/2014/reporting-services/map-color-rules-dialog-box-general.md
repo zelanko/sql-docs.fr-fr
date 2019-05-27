@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
@@ -14,12 +13,12 @@ ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461863"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108318"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Boîte de dialogue Règles de couleur de la carte, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés des règles de couleur** pour définir des options de couleur pour les éléments cartographiques de cette couche. Les éléments cartographiques peuvent être des polygones, des lignes ou des points. Les règles de couleur peuvent être appliquées lorsque vous avez créé une relation entre des éléments cartographiques basés sur des données spatiales et des données analytiques provenant d'un champ de dataset ou d'un champ de source de données spatiales.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 52aae6defa5817236c4298d7c8e4cb44361a8284
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757432"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067380"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Sources de données prises en charge (SSAS Tabulaire)
   Cette rubrique décrit les types de sources de données qui peuvent être utilisées avec les modèles tabulaires.  
@@ -34,7 +33,7 @@ ms.locfileid: "62757432"
   
 |||||  
 |-|-|-|-|  
-|Source|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
+|`Source`|Versions|Type de fichier|Fournisseurs <sup>1</sup>|  
 |Bases de données Access|Microsoft Access 2003, 2007, 2010.|.accdb ou .mdb|Fournisseur OLE DB ACE 14|  
 |Bases de données relationnelles SQL Server|Microsoft SQL Server 2005, 2008, 2008 R2 ; SQL Server 2012, Microsoft SQL Azure Database <sup>2</sup>|(non applicable)|Fournisseur OLE DB pour SQL Server<br /><br /> Fournisseur OLE DB SQL Server Native Client<br /><br /> Fournisseur OLE DB SQL Server Native Client 10.0<br /><br /> Fournisseur de données .NET Framework pour SQL Client|  
 |SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(non applicable)|Fournisseur OLE DB pour SQL Server PDW|  

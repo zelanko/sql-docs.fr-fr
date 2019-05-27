@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], data-driven
@@ -14,12 +13,12 @@ ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 964549d535fec50c0ec6e8dc17dd0ef2a1dda221
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62510920"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100865"
 ---
 # <a name="data-driven-subscriptions"></a>abonnements pilotés par les données
   Un abonnement piloté par les données constitue un moyen d'utiliser des données d'abonnement dynamiques extraites à partir d'une source de données externe au moment de l'exécution. Un abonnement piloté par les données peut également utiliser du texte statique et des valeurs par défaut que vous spécifiez au moment de définir l'abonnement. Vous pouvez vous servir d'abonnements pilotés par les données pour effectuer les opérations suivantes :  

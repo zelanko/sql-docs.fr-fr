@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 21c2b8cb-b9ca-4bc0-bf49-50ba432562f6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c85692c3ae50df88c59d2622fc1ca06925413ba2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 517f5c5dddd809ee71037a95d04109a005968132
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185586"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106221"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Regrouper des petits secteurs sur un graphique à secteurs (Générateur de rapports et SSRS)
   Lorsqu'un graphique à secteurs présente de nombreux points de données, son aspect devient rapidement confus. Pour résoudre ce problème, vous pouvez afficher toutes les données inférieures à une certaine valeur dans un même secteur du graphique à secteurs.  

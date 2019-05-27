@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03ac60e59b1859ed4e77f3db5e355a1fb9f556f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7dae06129ee5dc9962538e8d025dca9966325f5d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186513"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106188"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Contrôle des sauts de page, des en-têtes, des colonnes et des lignes (Générateur de rapports et SSRS)
   Un saut de page divise un rapport en pages distinctes à des fins d'affichage et d'impression. Les sauts de page déterminent la façon dont le contenu est ajusté sur une page de rapport pour un affichage optimal lorsque affichez l'aperçu d'un rapport ou que vous l'exportez dans un format de fichier différent.  

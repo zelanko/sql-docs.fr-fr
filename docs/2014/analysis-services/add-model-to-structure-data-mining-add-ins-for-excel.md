@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
@@ -13,12 +12,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62632936"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062877"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Ajouter le modèle à la structure (Compléments d'exploration de données pour Excel)
   ![Ajouter un modèle au bouton de la Structure](media/dmc-addmodel.gif "ajouter le modèle à un bouton de la Structure")  

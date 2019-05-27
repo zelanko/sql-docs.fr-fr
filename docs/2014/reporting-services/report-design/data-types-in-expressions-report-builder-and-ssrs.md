@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956105"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106068"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -34,7 +33,7 @@ ms.locfileid: "59956105"
 |String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
 |Booléen|Valeur par défaut : Booléen|  
 |Entier|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Valeur par défaut : Datetime<br /><br /> DateTimeOffset|  
+|DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
 |float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
 |Binaire|Valeur par défaut : Byte[]|  
 |Variant|Une des valeurs ci-dessus à l'exception de Byte[]|  

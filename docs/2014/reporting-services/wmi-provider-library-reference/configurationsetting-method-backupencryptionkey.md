@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4d05dd66aa795579172aba5472a0f38c5f320bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f31a95815c3a6c365d179a350846ec6f9a8bb795
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647053"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098605"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Méthode BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Sauvegarde la clé de chiffrement de l'instance du serveur de rapports spécifiée. Un chiffrement par mot de passe est utilisé pour le stockage de la clé de chiffrement.  

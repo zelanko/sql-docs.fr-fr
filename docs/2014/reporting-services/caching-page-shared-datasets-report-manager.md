@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b816af806e419cab0f6eb0997c6ec7f08bc7b93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266335"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109911"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Page Mise en cache, datasets partagés (Gestionnaire de rapports)
   Utilisez la page de propriétés de mise en cache pour définir les options de mise en cache d'un dataset partagé.  

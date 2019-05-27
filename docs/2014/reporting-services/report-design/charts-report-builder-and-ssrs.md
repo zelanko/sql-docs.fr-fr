@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -21,12 +20,12 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185762"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106248"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
   Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser immédiatement un graphique, consultez la barre de colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels &#40;Générateur de rapports&#41; ](../report-builder-tutorials.md) ou la barre et les didacticiels de graphique à secteurs dans [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

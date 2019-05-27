@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0eed8032957a3741d7c1804d21cd08b72ef87657
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 13340064a3fa95a307fc3ad53b7f253f002ec231
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63279046"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108352"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Rapports en mode local et rapports en mode connecté dans la Visionneuse de rapports (Reporting Services en mode SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peuvent être configurés pour être exécutés en *mode local* ou en *mode connecté*, qui utilise un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] repou ent server. À la place, vous pouvez utiliser la Visionneuse de rapports pour effectuer le rendu des rapports directement à partir de SharePoint lorsque l'extension de données prend en charge la création de rapports en mode local. Cette approche est appelée *mode local*. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la batterie de serveurs SharePoint devait être connectée à un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configuré en mode SharePoint pour que le contrôle Visionneuse de rapports puisse effectuer le rendu des rapports. Cette approche est appelée *mode distant* ou *mode connecté*.  

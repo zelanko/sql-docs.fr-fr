@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215424"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105351"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
   Le nombre, la taille et l'emplacement des éléments de rapport affectent la façon dont les convertisseurs mettent en page le corps du rapport. Vous trouverez ci-dessous une description de la façon dont les éléments de rapport sont rendus.  

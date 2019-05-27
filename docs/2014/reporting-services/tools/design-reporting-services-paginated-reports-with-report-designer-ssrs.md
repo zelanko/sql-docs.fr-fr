@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
@@ -13,12 +12,12 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62691687"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100347"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  

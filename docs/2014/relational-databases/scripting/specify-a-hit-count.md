@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -15,12 +14,12 @@ ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25648aca519534d7b7fdea1177f227275e7b4d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060879"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063708"
 ---
 # <a name="specify-a-hit-count"></a>Spécifier un nombre d'accès
   Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] chaque fois que le point d'arrêt est atteint. Si le nombre d'accès spécifié est atteint et si les conditions de point d'arrêt spécifiées sont satisfaites, le débogueur effectue l'action spécifiée pour le point d'arrêt.  
@@ -71,6 +70,6 @@ ms.locfileid: "48060879"
 4.  Cliquez sur **OK** ou sur **Annuler** pour fermer la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d’arrêt](specify-a-breakpoint-condition.md)  
+ [Spécifier une condition de point d'arrêt](specify-a-breakpoint-condition.md)  
   
   

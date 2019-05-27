@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62666904"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063640"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utiliser l'utilitaire sqlcmd
   L'utilitaire `sqlcmd` est un utilitaire de ligne de commande destiné à l'exécution ad hoc et interactive des instructions et des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] et à l'automatisation des tâches de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser `sqlcmd` de façon interactive ou pour créer des fichiers de script destinés à être exécutés avec `sqlcmd`, les utilisateurs doivent connaître [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilitaire `sqlcmd` est généralement utilisé des façons suivantes :  
