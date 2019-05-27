@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STRING_SPLIT function
 ms.assetid: 3273dbf3-0b4f-41e1-b97e-b4f67ad370b9
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 1c2fe6751662ece91fac02f026f36f1733f0d612
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57988795"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947477"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 
@@ -52,7 +52,7 @@ STRING_SPLIT ( string , separator )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de n’importe quel type de caractère (par exemple, **nvarchar**, **varchar**, **nchar** ou **char**).  
   
  *separator*  
- [Expression](../../t-sql/language-elements/expressions-transact-sql.md) d’un seul caractère de n’importe quel type de caractère (par exemple **nvarchar(1)**, **varchar(1)**, **nchar(1)** ou **char(1)**) qui est utilisée comme séparateur pour les sous-chaînes concaténées.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md) d’un seul caractère de n’importe quel type de caractère (par exemple **nvarchar(1)** , **varchar(1)** , **nchar(1)** ou **char(1)** ) qui est utilisée comme séparateur pour les sous-chaînes concaténées.  
   
 ## <a name="return-types"></a>Types de retour  
 
@@ -99,7 +99,7 @@ WHERE RTRIM(value) <> '';
 
 STRING_SPLIT retourne une chaîne vide si aucun élément ne figure entre les séparateurs. La condition RTRIM(value) <> '' supprime les jetons vides.  
   
-### <a name="b-split-comma-separated-value-string-in-a-column"></a>b. Diviser une chaîne de valeurs séparées par des virgules dans une colonne
+### <a name="b-split-comma-separated-value-string-in-a-column"></a>B. Diviser une chaîne de valeurs séparées par des virgules dans une colonne
 
 La table de produits a une colonne avec une liste de balises séparées par des virgules, illustrée dans l’exemple suivant :  
   

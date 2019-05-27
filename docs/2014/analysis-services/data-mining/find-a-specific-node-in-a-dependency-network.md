@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nodes [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722491"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084377"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
   Un réseau de dépendances dans un modèle d’exploration de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut contenir plusieurs nœuds, ce qui rend difficile la recherche des données qui vous intéressent. Pour résoudre ce problème, vous pouvez utiliser la boîte de dialogue **Rechercher un nœud** de l’onglet **Réseau de dépendances** du Concepteur d’exploration de données.  

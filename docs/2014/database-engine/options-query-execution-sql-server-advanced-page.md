@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
@@ -13,12 +12,12 @@ ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62774383"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089371"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Options (Exécution de la requête : SQL Server : Page Avancé)
   Plusieurs options sont disponibles lors de l'utilisation de la commande SET. Cette page vous permet de spécifier une option **set** pour l'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'éditeur de requête SQL Server. Elles n'ont aucun effet sur les autres éditeurs de code. Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour modifier les options des requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou dans le menu contextuel de la fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Sous **Exécution**, cliquez sur **Avancé**. Pour plus d'informations sur chaque option, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

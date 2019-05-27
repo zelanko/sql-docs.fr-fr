@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: e22eb6e805cf7090c38d1d466d09fe8d3614d2a2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 8b91a1572e5c7cd477d8e112b68b8f9a46fb1153
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720593"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012328"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Exécuter des packages SSIS (SQL Server Integration Services) déployés sur Azure
 
@@ -51,11 +51,11 @@ Dans SSMS (SQL Server Management Studio), vous pouvez cliquer avec le bouton dro
 
 Dans tout environnement à partir duquel vous pouvez vous connecter à Azure SQL Database et exécuter du code Transact-SQL, vous pouvez exécuter un package en appelant les procédures stockées suivantes :
 
-1. **[catalog].[create_execution]**. Pour plus d’informations, consultez [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md).
+1. **[catalog].[create_execution]** . Pour plus d’informations, consultez [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md).
 
-2. **[catalog].[set_execution_parameter_value]**. Pour plus d’informations, consultez [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).
+2. **[catalog].[set_execution_parameter_value]** . Pour plus d’informations, consultez [catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md).
 
-3. **[catalog].[start_execution]**. Pour plus d’informations, consultez [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md).
+3. **[catalog].[start_execution]** . Pour plus d’informations, consultez [catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md).
 
 Pour plus d’informations, consultez les exemples suivants :
 

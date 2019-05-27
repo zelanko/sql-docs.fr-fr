@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9470cc5f4a0567d211e0678b32aec05d12b5b239
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ae552c12c3d4773d6a05a6d61c7644eb245b68ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094994"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instructions d'utilisation des fonctionnalités BI de SQL Server dans une batterie de serveurs SharePoint 2010
   Cette rubrique récapitule la disponibilité des fonctionnalités selon les versions et les éditions du logiciel utilisé. Elle décrit également la configuration requise pour l'installation de SharePoint 2010 avec des fonctionnalités spécifiques de SQL Server. Pour plus d’informations sur SharePoint 2013, consultez [Deployment Topologies for SQL Server BI Features in SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "53374841"
   
 -   les Reporting Services incluent un complément pour les produits SharePoint. Les configurations prises en charge pour le complément et le serveur de rapports sont disponibles à un niveau de granularité plus fin que ce qui est indiqué ici. Pour plus d’informations, consultez [pris en charge les combinaisons de SharePoint et le serveur Reporting Services et complément &#40;SQL Server 2014&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
--   Les outils de développement SharePoint ne prennent en charge qu'une configuration autonome SharePoint.  Pour plus d'informations, consultez la documentation de SharePoint : [Configuration requise pour développer des Solutions SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
+-   Les outils de développement SharePoint ne prennent en charge qu'une configuration autonome SharePoint.  Pour plus d’informations, consultez la documentation de SharePoint : [Configuration requise pour développer des Solutions SharePoint](https://msdn.microsoft.com/library/ee231582.aspx).  
   
 ##  <a name="bkmk_vers"></a> Prise en charge des éditions de SharePoint et des fonctionnalités BI  
  Certaines fonctionnalités de Business Intelligence [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sont prises en charge uniquement sur les éditions spécifiques des produits SharePoint.  
@@ -66,9 +65,9 @@ ms.locfileid: "53374841"
 > [!NOTE]  
 >  Sur une batterie de serveurs existante, vous devez utiliser une des opérations suivantes **supplémentaires** mise à niveau des étapes à effectuer de SharePoint SP1. Pour plus d’informations, consultez [problèmes connus lorsque vous installez Office 2010 SP1 et SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126) et [Description de SharePoint Server 2010 SP1](https://support.microsoft.com/kb/2460045):  
   
--   **Assistant Configuration des produits SharePoint :** Exécutez l'Assistant pour terminer la configuration et la mise à niveau du SP1.  
+-   **Assistant Configuration des produits SharePoint :** Exécutez l’Assistant pour terminer la configuration et la mise à niveau SP1.  
   
--   **Effectuez la mise à niveau avec psconfig :** Exécutez la commande `psconfig -upgrade` pour effectuer la mise à niveau du SP1  
+-   **Effectuez la mise à niveau avec psconfig :** Exécutez la commande `psconfig -upgrade` pour effectuer la mise à niveau SP1  
   
  Pour plus d’informations, consultez la section « mise à niveau » de [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) et [centre de ressources : Mises à jour pour les produits SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)  
   

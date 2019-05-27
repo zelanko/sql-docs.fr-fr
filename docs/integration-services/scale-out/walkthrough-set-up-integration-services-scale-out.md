@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Configurer SQL Server Integration Services Scale Out | Microsoft Docs'
+title: 'Procédure pas à pas : Configurer SQL Server Integration Services Scale Out | Microsoft Docs'
 description: Cet article vous guide dans l’installation et la configuration de SSIS Scale Out.
 ms.custom: performance
 ms.date: 12/13/2017
@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620567"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718492"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer SSIS (SQL Server Integration Services) Scale Out
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Configurez [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out en effectuant les tâches suivantes. 
 
 > [!TIP]
@@ -69,7 +73,7 @@ Pour installer la fonctionnalité Scale Out Master, utilisez l’Assistant Insta
 
     ![Configuration de Master 2](media/master-config-2.PNG "Configuration de Master 2")
   
-5.  Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5.  Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Installer Scale Out Master à partir de l’invite de commandes
 
@@ -124,7 +128,7 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
     > [!NOTE]
     > Quand le certificat SSL utilisé par Scale Out Master est auto-signé, un certificat SSL client correspondant doit être installé sur l’ordinateur avec Scale Out Worker. Si vous fournissez le chemin de fichier du certificat client SSL dans la page **Configuration d’Integration Services Scale Out Worker**, le certificat est installé automatiquement. Sinon, vous devez installer le certificat manuellement plus tard. 
      
-5. Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. Terminez l’Assistant Installation de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Installer Scale Out Worker à partir de l’invite de commandes
 

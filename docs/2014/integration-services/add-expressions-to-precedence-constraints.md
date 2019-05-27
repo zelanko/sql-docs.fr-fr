@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence executables [Integration Services]
@@ -18,12 +17,12 @@ ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06bd12161065c6961581a2a29a2c02af6e27dcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837275"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66061897"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Ajouter des expressions aux contraintes de précédence
   Une contrainte de précédence peut utiliser une expression pour définir la contrainte entre deux exécutables : l'exécutable de précédence et l'exécutable contraint. Les exécutables peuvent être des tâches ou des conteneurs. L'expression peut être utilisée seule ou en combinaison avec le résultat d'exécution de l'exécutable de précédence. Le résultat d'exécution d'un exécutable est soit succès, soit échec. Lorsque vous configurez le résultat d'exécution d'une contrainte de précédence, vous pouvez lui affecter la valeur `Success`, `Failure` ou `Completion`. `Success` exige que l'exécutable de précédence réussisse, `Failure` exige que l'exécutable de précédence échoue et `Completion` indique que l'exécutable contraint doit s'exécuter, que la tâche de précédence réussisse ou échoue. Pour plus d’informations, consultez [Contraintes de précédence](control-flow/precedence-constraints.md).  

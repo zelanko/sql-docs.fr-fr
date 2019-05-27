@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b12e453dcabb88363cf78e86a33bc4773b3c9a52
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801633"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982535"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Interdit les mises à jour par l'intermédiaire de ce curseur. Le curseur ne peut pas être référencé dans une clause `WHERE CURRENT OF` d’une instruction `UPDATE` ou `DELETE`. Cette option remplace la possibilité par défaut de mise à jour d'un curseur.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF <column_name> [, <... n>] est spécifié, seules les colonnes listées autorisent les modifications. Si vous spécifiez `UPDATE` sans liste de colonnes, toutes les colonnes peuvent être mises à jour.  
   
 *cursor_name*  
@@ -135,7 +135,7 @@ Spécifie que les mises à jour ou les suppressions positionnées effectuées vi
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement le curseur en un autre type si les clauses de l’instruction *select_statement* sont incompatibles avec la fonctionnalité du type de curseur demandé. Pour plus d'informations, consultez la rubrique Conversions implicites de curseur.  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Définit les colonnes qui peuvent être mises à jour par le curseur. Si `OF <column_name> [, <... n>]` est fourni, seules les colonnes listées permettent les modifications. Si vous spécifiez `UPDATE`sans liste de colonnes, toutes les colonnes peuvent être mises à jour, sauf si l’option de concurrence `READ_ONLY` a été spécifiée.  
   
 ## <a name="remarks"></a>Notes   
@@ -166,7 +166,7 @@ Une fois un curseur déclaré, les procédures stockées système suivantes peuv
   
  Les variables peuvent être utilisées dans l’instruction *select_statement* qui déclare un curseur. Les valeurs de variable de curseur ne changent pas après la déclaration d'un curseur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations `DECLARE CURSOR` sont octroyées par défaut à tout utilisateur qui a des autorisations `SELECT` sur les vues, les tables et les colonnes utilisées par le curseur.
  
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
@@ -186,7 +186,7 @@ OPEN vend_cursor
 FETCH NEXT FROM vend_cursor;  
 ```  
   
-### <a name="b-using-nested-cursors-to-produce-report-output"></a>b. Utilisation de curseurs imbriqués pour la production d'un rapport  
+### <a name="b-using-nested-cursors-to-produce-report-output"></a>B. Utilisation de curseurs imbriqués pour la production d'un rapport  
  L'exemple suivant montre comment les curseurs peuvent être imbriqués pour produire des rapports complexes. Le curseur interne est déclaré pour chaque fournisseur.  
   
 ```sql  

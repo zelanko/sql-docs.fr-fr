@@ -18,15 +18,17 @@ ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: a9088b3502a010ce6b46f29516eefee5aa8934d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 53739518c40221b752d63016faf369b9e3e71587
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012040"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576316"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 **OPENJSON** est une fonction table qui analyse du texte JSON et retourne des objets et propriétés à partir de l’entrée JSON sous forme de lignes et de colonnes. Autrement dit, **OPENJSON** offre une vue de l’ensemble de lignes d’un document JSON. Vous pouvez spécifier explicitement les colonnes dans l’ensemble de lignes et les chemins de propriétés JSON utilisés pour remplir les colonnes. Étant donné que **OPENJSON** retourne un ensemble de lignes, vous pouvez utiliser **OPENJSON** dans la clause `FROM` d’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], tout comme vous pouvez utiliser n’importe quel autre table, vue ou fonction table.  
   
@@ -38,14 +40,14 @@ Utilisez **OPENJSON** pour importer des données JSON dans [!INCLUDE[ssNoVersion
 > Vous pouvez vérifier le niveau de compatibilité dans la vue `sys.databases` ou dans les propriétés de base de données. Vous pouvez changer le niveau de compatibilité d’une base de données à l’aide de la commande suivante :  
 > 
 > `ALTER DATABASE DatabaseName SET COMPATIBILITY_LEVEL = 130`
->   
+>
 > Le niveau de compatibilité 120 peut être la valeur par défaut, même dans une nouvelle base de données Azure SQL Database.  
   
  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -65,8 +67,10 @@ Par défaut, la fonction table **OPENJSON** retourne trois colonnes qui contienn
 
 *with_clause* contient la liste des colonnes avec leurs types que **OPENJSON** doit retourner. Par défaut, **OPENJSON** fait correspondre les clés dans *jsonExpression* avec les noms de colonne dans *with_clause* (dans ce cas, les clés correspondantes impliquent un respect de la casse). Si un nom de colonne ne correspond pas à un nom de clé, vous pouvez fournir un *column_path* facultatif, qui est une [expression de chemin JSON](../../relational-databases/json/json-path-expressions-sql-server.md) qui fait référence à une clé dans *jsonExpression*. 
 
-## <a name="arguments"></a>Arguments  
-### <a name="jsonexpression"></a>*jsonExpression*  
+## <a name="arguments"></a>Arguments
+
+### <a name="jsonexpression"></a>*jsonExpression*
+
 Expression de caractères Unicode contenant du texte JSON.  
   
 OPENJSON effectue une itération sur les éléments du tableau ou les propriétés de l’objet dans l’expression JSON et renvoie une seule ligne pour chaque élément ou propriété. L’exemple suivant retourne chaque propriété de l’objet fourni en tant que *jsonExpression* :  
@@ -86,7 +90,7 @@ SELECT *
 FROM OPENJSON(@json)
 ```  
   
-**Résultats**  
+**Résultats**
   
 |Clé|valeur|Type|  
 |---------|-----------|----------|  
@@ -98,7 +102,8 @@ FROM OPENJSON(@json)
 |ArrayValue|["a","r","r","a","y"]|4|  
 |ObjectValue|{"obj":"ect"}|5|  
 
-### <a name="path"></a>*path*  
+### <a name="path"></a>*path*
+
 Expression de chemin JSON facultative qui fait référence à un objet ou un tableau dans *jsonExpression*. **OPENJSON** recherche dans le texte JSON à la position spécifiée et analyse uniquement le fragment référencé. Pour plus d’informations, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).
 
 Dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)], vous pouvez fournir une variable comme valeur de *path*.
@@ -127,12 +132,13 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 |2|de-AT|  
 |3|es-AR|  
 |4|sr-Cyrl|  
- 
+
 Quand **OPENJSON** analyse un tableau JSON, la fonction retourne les index des éléments dans le texte JSON en tant que clés.
 
 La comparaison utilisée pour faire correspondre les étapes de chemin aux propriétés de l’expression JSON respecte la casse et ne tient pas compte du classement (autrement dit, il s’agit d’une comparaison BIN2). 
 
 ### <a name="withclause"></a>*with_clause*
+
 Définit explicitement le schéma de sortie pour la fonction **OPENJSON** à retourner. *with_clause* peut contenir les éléments suivants :
 
 *colName* est le nom de la colonne de sortie.  
@@ -157,9 +163,9 @@ Pour plus d’informations sur les chemins, consultez [Expressions de chemin JSO
 *AS JSON*  
 Utilisez l’option **AS JSON** dans une définition de colonne pour spécifier que la propriété référencée contient un objet ou tableau JSON interne. Si vous spécifiez l’option **AS JSON**, le type de la colonne doit être NVARCHAR(MAX).
 
--   Si vous ne spécifiez pas **AS JSON** pour une colonne, la fonction retourne une valeur scalaire (par exemple, int, string, true, false) à partir de la propriété JSON spécifiée dans le chemin spécifié. Si le chemin représente un objet ou un tableau et que la propriété est introuvable dans le chemin spécifié, la fonction retourne la valeur Null en mode lax ou une erreur en mode strict. Ce comportement est semblable à celui de la fonction **JSON_VALUE**.  
+- Si vous ne spécifiez pas **AS JSON** pour une colonne, la fonction retourne une valeur scalaire (par exemple, int, string, true, false) à partir de la propriété JSON spécifiée dans le chemin spécifié. Si le chemin représente un objet ou un tableau et que la propriété est introuvable dans le chemin spécifié, la fonction retourne la valeur Null en mode lax ou une erreur en mode strict. Ce comportement est semblable à celui de la fonction **JSON_VALUE**.  
   
--   Si vous spécifiez **AS JSON** pour une colonne, la fonction retourne un fragment JSON à partir de la propriété JSON spécifiée dans le chemin spécifié. Si le chemin représente une valeur scalaire et que la propriété est introuvable dans le chemin spécifié, la fonction retourne la valeur Null en mode lax ou une erreur en mode strict. Ce comportement est semblable à celui de la fonction **JSON_QUERY**.  
+- Si vous spécifiez **AS JSON** pour une colonne, la fonction retourne un fragment JSON à partir de la propriété JSON spécifiée dans le chemin spécifié. Si le chemin représente une valeur scalaire et que la propriété est introuvable dans le chemin spécifié, la fonction retourne la valeur Null en mode lax ou une erreur en mode strict. Ce comportement est semblable à celui de la fonction **JSON_QUERY**.  
   
 > [!NOTE]  
 > Si vous voulez renvoyer un fragment JSON imbriqué à partir d’une propriété JSON, vous devez fournir l’indicateur **AS JSON**. Sans cette option, si la propriété est introuvable, OPENJSON retourne une valeur NULL au lieu de l’objet ou du tableau JSON référencé, ou bien une erreur d’exécution est renvoyée en mode strict.  
@@ -203,15 +209,14 @@ WITH (
  )
 ```  
   
-**Résultats**  
+**Résultats**
   
 |Number|Date|Customer|Quantité|JSON|  
 |------------|----------|--------------|--------------|-----------|  
 |SO43659|2011-05-31T00:00:00|AW29825|1|{"Number":"SO43659","Date":"2011-05-31T00:00:00"}|  
 |SO43661|2011-06-01T00:00:00|AW73565|3|{"Number":"SO43661","Date":"2011-06-01T00:00:00"}|  
   
-
-## <a name="return-value"></a>Valeur retournée  
+## <a name="return-value"></a>Valeur retournée
 Les colonnes que la fonction OPENJSON retourne dépendent de l’option WITH.  
   
 1. Lorsque vous appelez OPENJSON avec le schéma par défaut (autrement dit, lorsque vous ne spécifiez pas un schéma explicite dans la clause WITH), la fonction retourne une table comportant les colonnes suivantes :  
@@ -236,8 +241,8 @@ Les colonnes que la fonction OPENJSON retourne dépendent de l’option WITH.
 
 Le chemin *json_path* utilisé dans le deuxième argument **OPENJSON** ou dans *with_clause* peut commencer par le mot clé **lax** ou **strict**.
 
--   En mode **lax**, **OPENJSON** ne déclenche pas d’erreur si l’objet ou la valeur dans le chemin spécifié est introuvable. Si le chemin est introuvable, **OPENJSON** retourne un jeu de résultats vide ou une valeur NULL.
--   En mode **strict**, **OPENJSON** renvoie une erreur si le chemin est introuvable.
+- En mode **lax**, **OPENJSON** ne déclenche pas d’erreur si l’objet ou la valeur dans le chemin spécifié est introuvable. Si le chemin est introuvable, **OPENJSON** retourne un jeu de résultats vide ou une valeur NULL.
+- En mode **strict**, **OPENJSON** renvoie une erreur si le chemin est introuvable.
 
 Certains exemples de cette page spécifient explicitement le mode path, lax ou strict. Le mode path est facultatif. Si vous ne spécifiez pas explicitement un mode path, le mode lax est la valeur par défaut. Pour plus d’informations sur le mode path et les expressions de chemin, consultez [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md).    
 
@@ -257,8 +262,9 @@ Les noms de colonne dans *with_clause* sont mis en correspondance avec les clés
 
 ## <a name="examples"></a>Exemples  
   
-### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>Exemple 1 : convertir un tableau JSON en table temporaire  
-L’exemple suivant fournit la liste des identificateurs sous la forme d’un tableau JSON de nombres. La requête convertit le tableau JSON en table des identificateurs et filtre tous les produits correspondant aux ID spécifiés.  
+### <a name="example-1---convert-a-json-array-to-a-temporary-table"></a>Exemple 1 : convertir un tableau JSON en table temporaire
+
+L’exemple suivant fournit la liste des identificateurs sous la forme d’un tableau JSON de nombres. La requête convertit le tableau JSON en table des identificateurs et filtre tous les produits avec les ID spécifiés.  
   
 ```sql  
 DECLARE @pSearchOptions NVARCHAR(4000) = N'[1,2,3,4]'
@@ -277,7 +283,8 @@ FROM products
 WHERE product.productTypeID IN (1,2,3,4)
 ```  
   
-### <a name="example-2---merge-properties-from-two-json-objects"></a>Exemple 2 : fusionner des propriétés de deux objets JSON  
+### <a name="example-2---merge-properties-from-two-json-objects"></a>Exemple 2 : fusionner des propriétés de deux objets JSON
+
 L’exemple suivant sélectionne une union de toutes les propriétés de deux objets JSON. Les deux objets ont une propriété *name* en double. L’exemple utilise la valeur de clé pour exclure la ligne en double des résultats.  
   
 ```sql  
@@ -295,7 +302,8 @@ FROM OPENJSON(@json2)
 WHERE [key] NOT IN (SELECT [key] FROM OPENJSON(@json1))
 ```  
   
-### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>Exemple 3 : joindre des lignes avec des données JSON stockées dans les cellules d’une table à l’aide de CROSS APPLY  
+### <a name="example-3---join-rows-with-json-data-stored-in-table-cells-using-cross-apply"></a>Exemple 3 : joindre des lignes avec des données JSON stockées dans les cellules d’une table à l’aide de CROSS APPLY
+
 Dans l’exemple suivant, la table `SalesOrderHeader` a une colonne de texte `SalesReason` qui contient un tableau de `SalesOrderReasons` au format JSON. Les objets `SalesOrderReasons` contiennent des propriétés telles que *Quality* et *Manufacturer*. L’exemple crée un rapport qui joint chaque ligne de commande client au motif de vente associé. L’opérateur OPENJSON développe le tableau JSON des motifs de vente comme si les motifs étaient stockés dans une table enfant distincte. Ensuite, l’opérateur CROSS APPLY joint chaque ligne de commande client aux lignes retournées par la fonction table OPENJSON.  
   
 ```sql  
@@ -317,7 +325,8 @@ FROM Sales.SalesOrderHeader
   
 Dans cet exemple, le chemin `$` fait référence à chaque élément du tableau. Pour caster explicitement la valeur retournée, vous pouvez utiliser ce type de requête.  
   
-### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>Exemple 4 : combiner des lignes relationnelles et des éléments JSON avec CROSS APPLY  
+### <a name="example-4---combine-relational-rows-and-json-elements-with-cross-apply"></a>Exemple 4 : combiner des lignes relationnelles et des éléments JSON avec CROSS APPLY
+
 La requête suivante combine des lignes relationnelles et des éléments JSON dans les résultats présentés dans le tableau suivant.  
   
 ```sql  
@@ -329,14 +338,15 @@ CROSS APPLY OPENJSON(store.jsonCol, 'lax $.location')
      AS location
 ```  
   
-**Résultats**  
+**Résultats**
   
 |title|street|code postal|lon|lat|  
 |-----------|------------|--------------|---------|---------|  
 |Whole Food Markets|17991 Redmond Way|WA  98052|47.666124|-122.10155|  
 |Sears|148th Ave NE|WA  98052|47.63024|-122.141246,17|  
   
-### <a name="example-5---import-json-data-into-sql-server"></a>Exemple 5 : importer des données JSON dans SQL Server  
+### <a name="example-5---import-json-data-into-sql-server"></a>Exemple 5 : importer des données JSON dans SQL Server
+
 L’exemple suivant charge l’intégralité d’un objet JSON dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```sql  
@@ -353,16 +363,16 @@ DECLARE @json NVARCHAR(max)  = N'{
   INSERT INTO Person  
   SELECT *   
   FROM OPENJSON(@json)  
-  WITH (id int,  
+  WITH id int,  
         firstName nvarchar(50), lastName nvarchar(50),   
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi
+
  [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Convertir des données JSON en lignes et colonnes avec OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
  [Utiliser OPENJSON avec le schéma par défaut &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
  [Utiliser OPENJSON avec un schéma explicite &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
-  
   

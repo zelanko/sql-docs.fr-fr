@@ -1,7 +1,7 @@
 ---
 title: Niveau de compatibilité ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583372"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626691"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -237,9 +237,9 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 |Lorsque la relation contenant-contenu de la base de données a la valeur partielle, la validation du champ `$action` dans la clause `OUTPUT` d’une instruction `MERGE` peut retourner une erreur de classement.|Le classement des valeurs retournées par la clause `$action` d’une instruction `MERGE` est le classement de la base de données et non celui du serveur, et aucune erreur de conflit de classement n’est retournée.|
 |Une instruction `SELECT INTO` crée toujours une opération d'insertion monothread.|Une instruction `SELECT INTO` peut créer une opération d'insertion parallèle. Lors de l'insertion d'un grand nombre de lignes, l'opération parallèle peut améliorer les performances.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Différences entre les niveaux de compatibilité inférieurs et les niveaux 110 et 120
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Différences entre les niveaux de compatibilité inférieurs et les niveaux 100 et 110
 
-Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 110. Cette section s'applique également au niveau 120.
+Cette section décrit les nouveaux comportements introduits avec le niveau de compatibilité 110. Cette section s’applique également aux niveaux de compatibilité au-dessus de 110.
 
 |Paramètre de niveau de compatibilité inférieur ou égal à 100|Paramètre de niveau de compatibilité d'au moins 110|
 |--------------------------------------------------|--------------------------------------------------|
