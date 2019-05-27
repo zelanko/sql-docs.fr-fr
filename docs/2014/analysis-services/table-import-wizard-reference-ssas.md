@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableimportwizard.f1
@@ -13,12 +12,12 @@ ms.assetid: 2ac05e89-c002-4adc-86c7-438df70e9ed5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef0cb7dfe9b3fbbca1cda3833506e56cc6bb9681
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757793"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067910"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Référence de l'Assistant Importation de table (SSAS)
   Cette section fournit de l'aide sur l' **Assistant Importation de table**. Cet Assistant vous permet d'importer des données à partir de diverses sources de données. Pour accéder à l'Assistant depuis le générateur de modèles, dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

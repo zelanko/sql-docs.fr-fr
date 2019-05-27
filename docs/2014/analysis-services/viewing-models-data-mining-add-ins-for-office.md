@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visio]
@@ -16,12 +15,12 @@ ms.assetid: 2054d1b0-3828-443e-b60e-529adb9afa7f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 265b3353d3b91f053a431da9929d010bc823fb2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9fbd8b24b490123c337c9f7510899da12bcae749
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756001"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065531"
 ---
 # <a name="viewing-models-data-mining-add-ins-for-office"></a>Affichage des modèles (Compléments d'exploration de données pour Office)
   Les compléments d'exploration de données pour Excel proposent les méthodes suivantes pour explorer les modèles analytiques que vous avez créés :  
