@@ -1,6 +1,6 @@
 ---
 title: Mettre en cache les datasets partagés (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582214"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175598"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Mettre en cache les datasets partagés (SSRS)
   Les résultats de la requête pour un dataset partagé peuvent être copiés vers un cache afin de fournir des données cohérentes pour plusieurs rapports et améliorer le temps de réponse pour la requête de dataset. Comme pour les rapports, vous pouvez configurer un dataset partagé à mettre en cache lors de la première utilisation ou en spécifiant une planification.  
@@ -51,7 +51,7 @@ ms.locfileid: "65582214"
   
  Pendant que les résultats de la requête pour une combinaison de paramètres spécifique sont dans le cache, chaque rapport lancé pour le traitement et qui inclut une référence au dataset partagé avec ces valeurs de paramètre utilisera les données en mémoire cache.  
   
- Vous pouvez spécifier la durée pendant laquelle conserver les données dans le cache avant leur expiration. Pour plus d’informations, consultez [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Vous pouvez spécifier la durée pendant laquelle conserver les données dans le cache avant leur expiration. Pour plus d’informations, consultez [Utilisation des jeux de données partagés](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="preloading-the-cache"></a>Préchargement du cache  
  Vous pouvez précharger le cache en créant un plan d'actualisation du cache. Avec un plan d'actualisation, vous pouvez spécifier la fréquence d'actualisation du cache à l'aide d'une planification spécifique par élément ou d'une planification partagée. Pour éviter qu'il y ait plusieurs entrées du cache pour le même élément, la planification que vous spécifiez doit permettre suffisamment de temps pour le traitement des requêtes sur la source de données externe. Par exemple, si la requête prend 20 minutes pour s'exécuter, la planification d'actualisation doit être supérieure à 20 minutes. Pour plus d'informations, consultez [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "65582214"
   
 -   Vous devez avoir des autorisations ReadPolicy et UpdatePolicy sur le dataset partagé.  
   
- Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Les plans d'actualisation du cache s'appliquent aux datasets partagés et aux rapports. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Conditions entraînant l'expiration du cache  
  Les conditions suivantes peuvent provoquer le fait qu'un cache de dataset partagé devienne non valide.  
@@ -93,7 +93,7 @@ ms.locfileid: "65582214"
   
  Les mises à jour apportées aux plans d'actualisation du cache pour les datasets partagés n'affectent pas les rapports qui sont déjà traités. La mise à jour d'un plan d'actualisation du cache affecte uniquement les futurs lancements de rapports qui font référence au dataset partagé.  
   
-## <a name="see-also"></a> Voir aussi  
- [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>Voir aussi
   
+ [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md)  
   

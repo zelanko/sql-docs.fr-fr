@@ -1,6 +1,6 @@
 ---
 title: Octroi d’autorisations sur un serveur de rapports en mode natif | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175634"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Octroi d'autorisations sur un serveur de rapports en mode natif
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'autorisation basée sur les rôles et un sous-système d'authentification pour déterminer qui est habilité à effectuer des opérations et à accéder aux éléments d'un serveur de rapports. L'autorisation basée sur les rôles catégorise en rôles l'ensemble des actions qu'un utilisateur ou groupe peut effectuer. L'authentification repose sur l'authentification Windows intégrée ou sur un module d'authentification personnalisé que vous fournissez. Vous pouvez utiliser des rôles prédéfinis ou personnalisés avec chacun de ces types d'authentifications.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579824"
   
 2.  Identifiez les utilisateurs et les groupes qui doivent accéder au serveur de rapports, et à quel niveau. Le rôle **Lecteur** ou le rôle **Générateur de rapports** doit être attribué à la plupart des utilisateurs. Le rôle **Serveur de publication** doit être attribué à un nombre restreint d'utilisateurs. Le rôle **Gestionnaire de contenu**ne doit être attribué qu'à un nombre très limité d'utilisateurs.  
   
-3.  Utilisez le Gestionnaire de rapports pour assigner des rôles sur le dossier de base (il s'agit du dossier à la racine de l'arborescence des dossiers du serveur de rapports) à chaque utilisateur ou groupe qui requiert l'accès.  
+3.  Utilisez le portail web pour attribuer des rôles sur le dossier de base (il s'agit du dossier du niveau supérieur dans l’arborescence des dossiers des serveurs de rapports) à chaque utilisateur ou groupe qui requiert l'accès.  
   
-4.  Au niveau du site, dans la page Paramètres du site du Gestionnaire de rapports, créez une attribution de rôles au niveau système pour chaque utilisateur ou groupe en utilisant les rôles prédéfinis **Utilisateur système** et **Administrateur système**.  
+4.  Au niveau du site, dans la page Paramètres du site du portail web, créez une attribution de rôles au niveau système pour chaque utilisateur et groupe en utilisant les rôles prédéfinis **Utilisateur système** et **Administrateur système**.  
   
 5.  Créez autant d'attributions de rôles supplémentaires que nécessaire pour des dossiers, des rapports et d'autres éléments spécifiques. Évitez de créer un grand nombre d'attributions de rôles. Si vous en créez trop, il sera difficile de gérer les différents niveaux d'autorisation pour chaque utilisateur.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "65579824"
 |Outil|Tâches|  
 |----------|-----------|  
 |Management Studio – Permet d'afficher, modifier, créer et supprimer des définitions de rôles.|[Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Gestionnaire de rapports – Permet d'assigner des utilisateurs et des groupes aux rôles.|[Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Le portail web : permet d'attribuer des rôles aux utilisateurs et aux groupes.|[Octroyer un accès utilisateur à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modifier ou supprimer une attribution de rôle](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   

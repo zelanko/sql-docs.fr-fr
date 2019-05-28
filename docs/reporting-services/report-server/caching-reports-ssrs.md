@@ -1,6 +1,6 @@
 ---
 title: Mise en cache des rapports | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580450"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175592"
 ---
 # <a name="caching-reports-ssrs"></a>Mise en cache de rapports (SSRS)
   Un serveur de rapports peut mettre en mémoire cache la copie d'un rapport traité et retourner cette copie lorsqu'un utilisateur ouvre le rapport. Pour cet utilisateur, la date et l'heure de l'exécution du rapport sont les seules informations qui lui permettent de savoir que ce rapport est une copie en cache. Si la date ou l'heure n'est pas celle en cours et que le rapport n'est pas un instantané, ceci signifie que le rapport a été extrait du cache.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580450"
   
  Si un rapport ne peut pas faire l'objet d'un rendu à partir d'une instance mise en cache pour une raison quelconque (par exemple, si les valeurs de paramètres spécifiées par un utilisateur sont différentes de celles utilisées pour produire le rapport mis en cache), le serveur de rapports réexécute le rapport.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Précharger le cache &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Précharger le cache](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Mettre en cache les datasets partagés &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Options d’actualisation du cache &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   
