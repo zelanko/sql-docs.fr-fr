@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de862ffdc0ca3e1c975fd386ba3da464219ead50
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015030"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354583"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "66015030"
 |**SQLDescribeCol**|Retourne le nom de type, précision, échelle et possibilité de valeur null de la colonne de résultat donné. **Remarque :  SQLDescribeCol** signale les colonnes calculées en tant que SQL_VARCHAR.|  
 |**SQLDisconnect**|Ferme une connexion. Si le regroupement de connexions est activé pour un environnement partagé et une application appelle **SQLDisconnect** sur une connexion dans cet environnement, la connexion est retournée au pool de connexions et est toujours disponible à d’autres composants à l’aide de le même environnement partagé.|  
 |**SQLError**|Retourne des informations d’erreur ou d’état sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour le *hstmt*, *pas*, et *henv* arguments, en fonction de la l’appel à **SQLError**  est effectuée. La file d’attente de l’erreur est vidé après chaque instruction. Généralement extrait un message d’erreur Oracle cas contraire elle est vide.|  
-|**SQLExecDirect**|Exécute une instruction SQL de nouvelle, non préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si tous les paramètres existent dans l’instruction. Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`. \`Mon Field1\`, \`Ma Table\`.\` Mon Field2\` FROM \`ma Table'\|  
+|**SQLExecDirect**|Exécute une instruction SQL de nouvelle, non préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si tous les paramètres existent dans l’instruction. Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`. \`Mon Field1\`, \`Ma Table\`.\` Mon Field2\` FROM \`ma Table\`|  
 |**SQLExecute**|Exécute une instruction SQL préparée (une instruction déjà préparée par **SQLPrepare**). Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si tous les paramètres existent dans l’instruction.|  
 |**SQLFetch**|Récupère une ligne à partir d’un jeu de résultats dans les emplacements spécifiés par les appels précédents à **SQLBindCol**. Prépare le pilote pour un appel à **SQLGetData** pour les colonnes indépendantes.|  
 |**SQLFreeConnect**|Libère un handle de connexion et libère toute la mémoire allouée pour le handle.|  
@@ -49,7 +49,7 @@ ms.locfileid: "66015030"
 |**SQLFreeStmt**|Arrête le traitement associé à un hstmt spécifique, ferme tous les curseurs ouverts, associés à la hstmt, ignore les résultats en attente et éventuellement libère toutes les ressources associées au descripteur d’instruction.|  
 |**SQLGetCursorName**|Retourne le nom du curseur associé à la hstmt donné.|  
 |**SQLNumResultCols**|Retourne le nombre de colonnes dans un curseur de jeu de résultats.|  
-|**SQLPrepare**|Prépare une instruction SQL par la planification de l’optimiser et exécutez l’instruction. L’instruction SQL est compilée pour l’exécution par **SQLExecDirect**.<br /><br /> Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`.\` Mon champ\` FROM \`ma Table »<br /><br /> Pour plus d’informations sur l’utilisation de jeux de résultats contenant des tableaux en tant que paramètres formels, consultez [retournant des paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md). \|  
+|**SQLPrepare**|Prépare une instruction SQL par la planification de l’optimiser et exécutez l’instruction. L’instruction SQL est compilée pour l’exécution par **SQLExecDirect**.<br /><br /> Si votre table, vue ou noms de champs contiennent des espaces, placez les noms à l’arrière guillemet marques. Par exemple, si votre base de données contient une table nommée *My Table* et le champ *mon champ*, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma Table\`.\` Mon champ\` FROM \`ma Table\`<br /><br /> Pour plus d’informations sur l’utilisation de jeux de résultats contenant des tableaux en tant que paramètres formels, consultez [retournant des paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
 |**SQLRowCount**|Oracle ne fournit pas un moyen de déterminer le nombre de lignes un jeu de résultats jusqu'à ce qu’une fois que vous lisez la dernière ligne, par conséquent, elle retourne -1.|  
 |**SQLSetCursorName**|Associe un nom de curseur avec un descripteur d’instruction active, *hstmt*.|  
 |**SQLSetParam**|Remplacé par SQLBindParameter dans ODBC 2. *x*.|  

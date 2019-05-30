@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534651"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270156"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Utilisé lors de la résolution des incidents pour définir le numéro séquentiel dans le journal de la transaction suivante que doit appliquer l'Agent de distribution au niveau de l'Abonné, ce qui permet à l'Agent d'ignorer une transaction qui a échoué. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné. Non pris en charge pour les Abonnés non-SQL Server.  
+  Utilisé pendant le dépannage pour spécifier la dernière transaction fournie à l’aide du numéro de séquence de journal (LSN), ce qui permet de l’Agent de Distribution lors de la transaction suivante. Lors du redémarrage, l’Agent de Distribution renvoie transactions supérieure à cette limite (LSN) à partir du cache de base de données de Distribution (msrepl_commands). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné. Non pris en charge pour les Abonnés non-SQL Server.  
   
 > [!CAUTION]  
 >  Si vous n'utilisez pas correctement cette procédure stockée ou si vous spécifiez une valeur de numéro d'enregistrement incorrecte, l'Agent de distribution annule les modifications appliquées au niveau de l'Abonné ou ignore toutes les modifications restantes.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>En savoir plus
+
+[Blog : Comment ignorer une transaction](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  
