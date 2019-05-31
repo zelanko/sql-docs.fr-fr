@@ -43,16 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c764f90d21300ee5c537265de86a10971d9c0991
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828239"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175311"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||
 |---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_ ** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -200,16 +200,16 @@ Vous pouvez restaurer une sauvegarde du fichier journal jusqu’à une date et h
 > [!NOTE]
 > Après une sauvegarde de fichier journal standard, certains enregistrements du journal des transactions deviennent inactifs, sauf si vous spécifiez `WITH NO_TRUNCATE` ou `COPY_ONLY`. Le journal est tronqué une fois que tous les enregistrements d'un ou de plusieurs fichiers journaux virtuels sont devenus inactifs. Si le journal n'est pas tronqué après des sauvegardes normales du journal, il se peut que quelque chose retarde la troncation du journal. Pour plus d’informations, consultez [Facteurs pouvant retarder la troncation du journal](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).
 
-{ _database\_name_ | **@**_database\_name\_var_ } Spécifie la base de données à partir de laquelle le journal des transactions, la base de données partielle ou la base de données complète sont sauvegardés. S’il est fourni comme variable (**@**_database\_name\_var_), ce nom peut être spécifié comme constante de chaîne (**@**_database\_name\_var_**=**_database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
+{ _database\_name_ |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle le journal des transactions, la base de données partielle ou la base de données complète sont sauvegardés. S’il est fourni comme variable ( **@** _database\_name\_var_), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
 > [!NOTE]
 > La base de données miroir d'un partenariat de mise en miroir de bases de données ne peut pas être sauvegardée.
 
-\<file_or_filegroup> [ **,**...*n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers, ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
+\<file_or_filegroup> [ **,** ...*n* ] Utilisé uniquement avec BACKUP DATABASE, cet argument spécifie un fichier ou groupe de fichiers de base de données à inclure dans une sauvegarde de fichiers, ou spécifie un fichier ou groupe de fichiers en lecture seule à inclure dans une sauvegarde partielle.
 
-FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ } Spécifie le nom logique d’un fichier ou une variable dont la valeur correspond au nom logique d’un fichier à inclure dans la sauvegarde.
+FILE **=** { *logical_file_name* | **@** _logical\_file\_name\_var_ } Spécifie le nom logique d’un fichier ou une variable dont la valeur correspond au nom logique d’un fichier à inclure dans la sauvegarde.
 
-FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers à inclure dans la sauvegarde. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.
+FILEGROUP **=** { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers à inclure dans la sauvegarde. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.
 
 > [!NOTE]
 > Pensez à utiliser des sauvegardes de fichiers lorsque la taille de la base de données et les exigences en matière de performances rendent la sauvegarde de la base de données totalement inadaptée. L’appareil NULL peut être utilisé pour tester les performances des sauvegardes, mais il ne doit pas être utilisé dans les environnements de production.
@@ -218,28 +218,28 @@ FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_v
 
 Pour plus d’informations, consultez les articles [Sauvegardes de fichiers complètes](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegarder des fichiers et des groupes de fichiers](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ] Spécifie une sauvegarde partielle. Une sauvegarde partielle inclut tous les fichiers en lecture/écriture dans une base de données : le groupe de fichiers primaire, tous les groupes de fichiers secondaires en lecture/écriture, ainsi que les fichiers ou groupes de fichiers en lecture seule qui ont été spécifiés.
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ |  **@** _logical\_filegroup\_name\_var_ } [ **,** ..._n_ ] ] Spécifie une sauvegarde partielle. Une sauvegarde partielle inclut tous les fichiers en lecture/écriture dans une base de données : le groupe de fichiers primaire, tous les groupes de fichiers secondaires en lecture/écriture, ainsi que les fichiers ou groupes de fichiers en lecture seule qui ont été spécifiés.
 
 READ_WRITE_FILEGROUPS Spécifie que tous les groupes de fichiers en lecture/écriture doivent être sauvegardés dans la sauvegarde partielle. Si la base de données est en lecture seule, READ_WRITE_FILEGROUPS inclut uniquement le groupe de fichiers primaire.
 
 > [!IMPORTANT]
 > Si, au lieu d'utiliser READ_WRITE_FILEGROUPS, vous listez de manière explicite les groupes de fichiers en lecture/écriture en utilisant FILEGROUP, vous allez créer une sauvegarde de fichiers.
 
-FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers en lecture seule ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers en lecture seule à inclure dans la sauvegarde partielle. Pour plus d’informations, reportez-vous à « \<file_or_filegroup> », plus haut dans cette rubrique.
+FILEGROUP = { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ } Spécifie le nom logique d’un groupe de fichiers en lecture seule ou une variable dont la valeur correspond au nom logique d’un groupe de fichiers en lecture seule à inclure dans la sauvegarde partielle. Pour plus d’informations, reportez-vous à « \<file_or_filegroup> », plus haut dans cette rubrique.
 
 *n* Correspond à un espace réservé indiquant qu’il est possible de spécifier plusieurs groupes de fichiers en lecture seule dans une liste séparée par des virgules.
 
 Pour plus d’informations sur les sauvegardes partielles, consultez l’article [Sauvegardes partielles](../../relational-databases/backup-restore/partial-backups-sql-server.md).
 
-TO \<backup_device> [ **,**...*n* ] Indique que le jeu des [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d’un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
+TO \<backup_device> [ **,** ...*n* ] Indique que le jeu des [unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md) associé est soit un support de sauvegarde non miroir, soit le premier miroir d’un support de sauvegarde miroir (pour lequel une ou plusieurs clauses MIRROR TO sont déclarées).
 
 \<backup_device>
 
 Spécifie l'unité de sauvegarde logique ou physique à utiliser pour l'opération de sauvegarde.
 
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_**=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
+{ *logical_device_name* |  **@** _logical\_device\_name\_var_ } **S’applique à :** SQL Server Spécifie le nom logique de l’unité de sauvegarde dans laquelle la base de données est sauvegardée. Le nom logique doit se conformer aux règles en vigueur pour les identificateurs. Fourni comme variable (@*logical_device_name_var*), le nom de l’unité de sauvegarde peut être spécifié sous la forme d’une constante de chaîne (@_logical\_device\_name\_var_ **=** logical backup device name) ou d’une variable de type chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server.
+{ DISK | TAPE | URL} **=** { **'** _physical\_device\_name_ **'**  |  **@** _physical\_device\_name\_var_ | 'NUL' } **S’applique à :** DISK, TAPE et URL s’appliquent à SQL Server.
 Spécifie un fichier sur disque ou support à bandes, ou un service de stockage Blob Microsoft Azure. Le format d’URL est utilisé pour créer des sauvegardes dans le service de stockage Microsoft Azure. Pour plus d’informations et d’exemples, consultez [Sauvegarde et restauration SQL Server avec le service de stockage Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Pour suivre un tutoriel, consultez [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
 > [!NOTE]
@@ -261,7 +261,7 @@ Pour plus d’informations, consultez l’article [Unités de sauvegarde](../../
 
 *n* Correspond à un espace réservé indiquant qu’il est possible de spécifier jusqu’à 64 unités de sauvegarde dans une liste séparée par des virgules.
 
-MIRROR TO \<backup_device> [ **,**...*n* ] Spécifie un jeu constitué au maximum de trois unités de sauvegarde, dont chacune est le miroir des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doit spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.
+MIRROR TO \<backup_device> [ **,** ...*n* ] Spécifie un jeu constitué au maximum de trois unités de sauvegarde, dont chacune est le miroir des unités de sauvegarde spécifiées dans la clause TO. La clause MIRROR TO doit spécifier le même type et le même nombre d’unités de sauvegarde que la clause TO. Vous pouvez spécifier jusqu'à trois clauses MIRROR TO.
 
 Cette option est disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -342,25 +342,25 @@ COMPRESSION Active explicitement la compression des sauvegardes.
 
 NO_COMPRESSION Désactive explicitement la compression des sauvegardes.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } Spécifie le texte en forme libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Spécifie le texte en forme libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.
 
-{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** _days_ } Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être remplacé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.
+{ EXPIREDATE **='** _date_ **'** | RETAINDAYS **=** _days_ } Spécifie la date à laquelle le jeu de sauvegarde de cette sauvegarde peut être remplacé. Si ces options sont toutes les deux utilisées, RETAINDAYS l'emporte sur EXPIREDATE.
 
 Si aucune de ces options n’est spécifiée, la date d’expiration est déterminée par le paramètre de configuration **mediaretention**. Pour plus d’informations, consultez l’article [Options de configuration du serveur](../../database-engine/configure-windows/server-configuration-options-sql-server.md).
 
 > [!IMPORTANT]
 > Ces options empêchent seulement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'écraser un fichier. Le contenu des bandes peut être écrasé par d'autres méthodes, et les fichiers sur disque peuvent être supprimés à partir du système d'exploitation. Pour plus d'informations sur le contrôle du délai d'expiration, consultez SKIP et FORMAT dans cette rubrique.
 
-EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ } Spécifie la date à laquelle le jeu de sauvegarde expire et peut donc être remplacé. Si elle est fournie en tant que variable (@_date\_var_), cette date doit suivre le format **datetime** configuré par le système et prendre l’une des formes suivantes :
+EXPIREDATE **=** { **'** _date_ **'**  |  **@** _date\_var_ } Spécifie la date à laquelle le jeu de sauvegarde expire et peut donc être remplacé. Si elle est fournie en tant que variable (@_date\_var_), cette date doit suivre le format **datetime** configuré par le système et prendre l’une des formes suivantes :
 
 - Une constante de chaîne (@_date\_var_ **=** date)
 - Une variable de type chaîne de caractères (à l’exception des types de données **ntext** ou **text**)
 - Un **smalldatetime**
 - Une variable **datetime**
 
-Exemple :
+Par exemple :
 
 - `'Dec 31, 2020 11:59 PM'`
 - `'1/1/2021'`
@@ -370,7 +370,7 @@ Pour plus d’informations sur la spécification des valeurs **datetime**, consu
 > [!NOTE]
 > Pour ignorer la date d’expiration, utilisez l’option `SKIP`.
 
-RETAINDAYS **=** { *days* | **@**_days\_var_ } Spécifie le nombre de jours qui doivent s’écouler avant que ce support de sauvegarde puisse être remplacé. S’il est fourni en tant que variable (**@**_days\_var_), sa valeur doit être un entier.
+RETAINDAYS **=** { *days* |  **@** _days\_var_ } Spécifie le nombre de jours qui doivent s’écouler avant que ce support de sauvegarde puisse être remplacé. S’il est fourni en tant que variable ( **@** _days\_var_), sa valeur doit être un entier.
 
 **Options du support de sauvegarde**
 
@@ -415,11 +415,11 @@ FORMAT Indique qu’un nouveau support de sauvegarde est créé. Si FORMAT est u
 
 La spécification de FORMAT implique `SKIP`. `SKIP` n’a pas besoin d’être explicitement spécifié.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } Indique le texte descriptif en forme libre (255 caractères maximum) du support de sauvegarde.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Indique le texte descriptif en forme libre (255 caractères maximum) du support de sauvegarde.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } Spécifie le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si `MEDIANAME` est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Spécifie le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si `MEDIANAME` est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } Indique, en octets, la taille de bloc physique. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } Indique, en octets, la taille de bloc physique. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.
 
 Si vous effectuez une sauvegarde que vous envisagez de copier sur un CD-ROM pour la restaurer à partir de celui-ci, spécifiez BLOCKSIZE=2048.
 
@@ -428,14 +428,14 @@ Si vous effectuez une sauvegarde que vous envisagez de copier sur un CD-ROM pour
 
 **Options de transfert de données**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } Spécifie le nombre total de tampons d’E/S à utiliser pour l’opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Spécifie le nombre total de tampons d’E/S à utiliser pour l’opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.
 
 L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount/maxtransfersize*.
 
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Lors de la création de sauvegardes à l’aide du service SQL Writer, si la base de données est configurée avec [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), ou si elle comprend des [groupes de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), la valeur de `MAXTRANSFERSIZE` au moment de la restauration doit être supérieure ou égale à celle du `MAXTRANSFERSIZE` qui a été utilisée lors de la création de la sauvegarde.
@@ -689,7 +689,7 @@ L'instruction BACKUP n'est pas autorisée dans une transaction explicite ou impl
 
 Les opérations de sauvegarde inter-plateformes, impliquant éventuellement des types de processeurs différents, peuvent être réalisées tant que le classement de la base de données est pris en charge par le système d'exploitation.
 
-Lorsque vous utilisez la compression de sauvegarde avec des bases de données ne comprenant qu’un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, il est recommandé d’utiliser pour le paramètre `MAXTRANSFERSIZE` une valeur **supérieure à 65 536 (64 Ko)**.
+Lorsque vous utilisez la compression de sauvegarde avec des bases de données ne comprenant qu’un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, il est recommandé d’utiliser pour le paramètre `MAXTRANSFERSIZE` une valeur **supérieure à 65 536 (64 Ko)** .
 Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, cela permet l’utilisation d’un algorithme de compression optimisé pour les bases de données chiffrées avec TDE, qui chiffre d’abord une page, la compresse, puis la chiffre de nouveau. Si vous utilisez `MAXTRANSFERSIZE = 65536` (64 Ko), la compression de sauvegarde pour les bases de données chiffrées avec TDE va directement compresser les pages chiffrées et peut ne pas fournir de bons taux de compression. Pour plus d’informations, consultez [Backup Compression for TDE-enabled Databases](https://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/).
 
 > [!NOTE]
@@ -730,7 +730,7 @@ Si une restauration est effectuée et si le jeu de sauvegarde n’est pas encore
 
 À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les options `PASSWORD` et `MEDIAPASSWORD` ne sont plus disponibles pour la création de sauvegardes. Il est encore possible de restaurer des sauvegardes créées avec des mots de passe.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .
 
@@ -741,7 +741,7 @@ Des problèmes de propriété et d'autorisations sur le fichier physique de l'un
 Cette section contient les exemples suivants :
 
 - A. [Sauvegarde d'une base de données complète](#backing_up_db)
-- b. [Sauvegarde de la base de données et du journal](#backing_up_db_and_log)
+- B. [Sauvegarde de la base de données et du journal](#backing_up_db_and_log)
 - C. [Création d’une sauvegarde de fichiers complète à partir de groupes de fichiers secondaires](#full_file_backup)
 - D. [Création d’une sauvegarde de fichiers différentielle à partir de groupes de fichiers secondaires](#differential_file_backup)
 - E. [Création et sauvegarde sur un support de sauvegarde miroir d’une seule famille](#create_single_family_mirrored_media_set)
@@ -749,6 +749,7 @@ Cette section contient les exemples suivants :
 - G. [Sauvegarde dans un support de sauvegarde miroir existant](#existing_mirrored_media_set)
 - H. [Création d’une sauvegarde compressée sur un nouveau support de sauvegarde](#creating_compressed_backup_new_media_set)
 - I. [Sauvegarde dans le service Stockage Blob Microsoft Azure](#url)
+- J. [Suivi de la progression de l’instruction de sauvegarde](#backup_progress)
 
 > [!NOTE]
 > Les rubriques de procédures de sauvegarde contiennent des exemples supplémentaires. Pour plus d’informations, consultez l’article [Vue d’ensemble de la sauvegarde](../../relational-databases/backup-restore/backup-overview-sql-server.md).
@@ -895,7 +896,18 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5;
 ```
 
-## <a name="see-also"></a> Voir aussi
+### <a name="backup_progress"></a> J. Suivi de la progression de l’instruction de sauvegarde
+
+La requête suivante retourne des informations sur les instructions de sauvegarde en cours d’exécution :
+```sql
+SELECT query = a.text, start_time, percent_complete,
+    eta = dateadd(second,estimated_completion_time/1000, getdate())
+FROM sys.dm_exec_requests r
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) a
+WHERE r.command LIKE 'BACKUP%'
+```
+
+## <a name="see-also"></a>Voir aussi
 
 - [Unités de sauvegarde](../../relational-databases/backup-restore/backup-devices-sql-server.md)
 - [Jeux de supports, familles de supports et jeux de sauvegarde](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
@@ -919,7 +931,7 @@ WITH STATS = 5;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instance managée<br />SQL Database \*_ ** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -970,7 +982,7 @@ DATABASE Spécifie une sauvegarde complète de la base de données. Au cours d�
 
 Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques d’instance managée Azure SQL Database, consultez [Restauration de base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)
 
-{ *database_name* | **@**_database\_name\_var_ } Spécifie la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable (**@**_database\_name\_var_), ce nom peut être spécifié comme constante de chaîne (**@**_database\_name\_var_**=**_database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
+{ *database_name* |  **@** _database\_name\_var_ } Spécifie la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable ( **@** _database\_name\_var_), ce nom peut être spécifié comme constante de chaîne ( **@** _database\_name\_var_ **=** _database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.
 
 Pour plus d’informations, consultez les articles [Sauvegardes de fichiers complètes](../../relational-databases/backup-restore/full-file-backups-sql-server.md) et [Sauvegarder des fichiers et des groupes de fichiers](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).
 
@@ -1014,26 +1026,26 @@ COMPRESSION Active explicitement la compression des sauvegardes.
 
 NO_COMPRESSION Désactive explicitement la compression des sauvegardes.
 
-DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ } Spécifie le texte en forme libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
+DESCRIPTION **=** { **'** _text_ **'**  |  **@** _text\_variable_ } Spécifie le texte en forme libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.
 
-NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ } Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.
+NAME **=** { *backup_set_name* |  **@** _backup\_set\_var_ } Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.
 
-MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } Indique le texte descriptif en forme libre (255 caractères maximum) du support de sauvegarde.
+MEDIADESCRIPTION **=** { *text* | **@** _text\_variable_ } Indique le texte descriptif en forme libre (255 caractères maximum) du support de sauvegarde.
 
-MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ } Spécifie le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si `MEDIANAME` est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.
+MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_ } Spécifie le nom du support de sauvegarde complet. Le nom du support ne doit pas dépasser 128 caractères. Si `MEDIANAME` est spécifié, il doit correspondre au nom spécifié précédemment existant sur les volumes de sauvegarde. Si elle n'est pas spécifiée, ou si l'option SKIP l'est, aucune vérification du nom de support n'est effectuée.
 
-BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ } Indique, en octets, la taille de bloc physique. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.
+BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ } Indique, en octets, la taille de bloc physique. Les tailles prises en charge sont 512, 1024, 2048, 4096, 8192, 16384, 32768 et 65536 (64 Ko) octets. La valeur par défaut est 65536 pour les périphériques à bandes, 512 sinon. En règle générale, cette option est superflue car BACKUP sélectionne automatiquement une taille de bloc appropriée pour le périphérique. Si vous spécifiez explicitement une taille de bloc, la sélection automatique est annulée et remplacée.
 
 **Options de transfert de données**
 
-BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ } Spécifie le nombre total de tampons d’E/S à utiliser pour l’opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.
+BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Spécifie le nombre total de tampons d’E/S à utiliser pour l’opération de sauvegarde. Vous pouvez spécifier n'importe quel entier positif ; toutefois, un nombre élevé de tampons peut provoquer des erreurs liées à une insuffisance de mémoire. En effet, l'espace d'adressage virtuel peut s'avérer inapproprié dans la tâche Sqlservr.exe.
 
 L’espace total utilisé par les mémoires tampons est déterminé par : *buffercount/maxtransfersize*.
 
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Pour les bases de données comprenant un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, la valeur `MAXTRANSFERSIZE` par défaut est 65 536 (64 Ko). Pour les bases de données non chiffrées à l’aide de TDE, la valeur `MAXTRANSFERSIZE` par défaut est 1 048 576 (1 Mo) lors d’une sauvegarde vers DISK, et 65 536 (64 Ko) lors d’une sauvegarde vers VDI ou TAPE.
@@ -1079,7 +1091,7 @@ La taille maximale d’une bande de sauvegarde est de 195 Go (taille maximale de
 
 ## <a name="security"></a>Sécurité
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Les autorisations BACKUP DATABASE reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator**.
 
@@ -1095,7 +1107,7 @@ TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_
 WITH STATS = 5, COPY_ONLY;
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Restaurer la base de données](restore-statements-transact-sql.md)
 
@@ -1104,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
 
 &nbsp;
 
@@ -1151,11 +1163,11 @@ TO DISK = '\\\\*UNC_path*\\*backup_directory*' Chemin réseau et répertoire dan
 - La longueur maximale du chemin UNC et du nom du répertoire de sauvegarde est de 200 caractères.
 - Le serveur ou l’hôte doivent être spécifiés comme une adresse IP. Vous ne pouvez pas le spécifier comme le nom de l’hôte ou du serveur.
 
-DESCRIPTION = **'**_text_**'** Spécifie une description textuelle de la sauvegarde. La longueur maximale du texte est de 255 caractères.
+DESCRIPTION = **'** _text_ **'** Spécifie une description textuelle de la sauvegarde. La longueur maximale du texte est de 255 caractères.
 
 La description est stockée dans les métadonnées et s’affiche lorsque l’en-tête de sauvegarde est restauré avec RESTORE HEADERONLY.
 
-NAME = **'**_backup \_name_**'** Spécifie le nom de la sauvegarde. Le nom de la sauvegarde peut être différent de celui de la base de données.
+NAME = **'** _backup \_name_ **'** Spécifie le nom de la sauvegarde. Le nom de la sauvegarde peut être différent de celui de la base de données.
 
 - Les noms peuvent contenir jusqu'à 128 caractères.
 - Ne peut pas inclure un chemin.
@@ -1166,13 +1178,13 @@ Le nom est stocké dans les métadonnées et s’affiche lorsque l’en-tête de
 
 DIFFERENTIAL Spécifie l’exécution d’une sauvegarde différentielle pour une base de données utilisateur. Si vous ne spécifiez pas de valeur, une sauvegarde complète est exécutée par défaut. Le nom de la sauvegarde différentielle ne doit pas nécessairement être le même que celui de la sauvegarde complète. Pour effectuer le suivi de la sauvegarde différentielle et de la sauvegarde complète correspondante, il est conseillé d’utiliser le même nom suivi de « complète » et de « diff ».
 
-Exemple :
+Par exemple :
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`
 
 `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l’autorisation **BACKUP DATABASE** ou l’appartenance au rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un utilisateur standard ayant reçu le rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un **administrateur système**, un administrateur d’infrastructure ou un membre du rôle serveur fixe **sysadmin**.
 
@@ -1270,7 +1282,7 @@ Pour créer une sauvegarde, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] doit d
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';
 ```
 
-### <a name="b-remove-network-credentials-for-the-backup-location"></a>b. Supprimer les informations d’identification réseau pour l’emplacement de sauvegarde
+### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Supprimer les informations d’identification réseau pour l’emplacement de sauvegarde
 
 L’exemple suivant montre comment supprimer de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les informations d’identification d’un utilisateur de domaine.
 
@@ -1321,7 +1333,7 @@ WITH (
 ;
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [RESTORE DATABASE - Parallel Data Warehouse](../../t-sql/statements/restore-statements-transact-sql.md)
 

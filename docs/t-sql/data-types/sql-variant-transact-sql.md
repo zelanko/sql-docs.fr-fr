@@ -21,12 +21,12 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4baff479bdd7145cc2fd65f07fd2c476a20311a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d809a311458cb1fbd3a92243f5daeabd34ebc99b
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013500"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982076"
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Type de données qui stocke les valeurs de divers types de données pris en char
 sql_variant  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 **sql_variant** peut être utilisé dans les colonnes, paramètres, variables et valeurs de retour des fonctions définies par l’utilisateur. **sql_variant** permet à ces objets de base de données de prendre en charge les valeurs des autres types de données.
   
 Une colonne de type **sql_variant** peut contenir des lignes de types de données différents. Par exemple, une colonne définie en tant que **sql_variant** peut stocker des valeurs **int**, **binary** et **char**.
@@ -109,7 +109,9 @@ Le tableau suivant répertorie les types de valeurs qui ne peuvent pas être sto
 |**image**|**rowversion** (**timestamp**)|  
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
-|Types définis par l'utilisateur|**datetimeoffset**|  
+|Types définis par l'utilisateur|**datetimeoffset**<sup>1</sup>| 
+
+<sup>1</sup> SQL Server versions 2012 et supérieures ne restreignent pas **datetimeoffset**.
 
 ## <a name="examples"></a>Exemples  
 
@@ -136,7 +138,7 @@ decimal      8           2
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-a-sqlvariant-as-a-variable"></a>b. Utilisation d’un type sql_variant comme variable   
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>B. Utilisation d’un type sql_variant comme variable   
  L’exemple suivant crée une variable avec le type de données sql_variant et récupère ensuite des informations `SQL_VARIANT_PROPERTY` sur une variable nommée @v1.  
   
 ```sql    
