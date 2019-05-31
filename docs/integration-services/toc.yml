@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Tâche de chargement Azure SQL Data Warehouse
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: Tâche de fichier flexible
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: Tâche Sauvegarder la base de données
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: tâche d'insertion en bloc
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Destination Azure Data Lake Store
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: Source de fichier flexible
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: Destination de fichier flexible
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: Composants de flux CDC
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:
@@ -440,7 +446,7 @@
 - name: Destination de traitement de dimension
   href: ../integration-services/data-flow/dimension-processing-destination.md
   items:
-    - name: Propriétés personnalisées de la destination de traitement de dimension
+    - name: 'Destination de traitement de dimension, propriétés personnalisées'
       href: ../integration-services/data-flow/dimension-processing-destination-custom-properies.md
 - name: Source Excel
   href: ../integration-services/data-flow/excel-source.md
