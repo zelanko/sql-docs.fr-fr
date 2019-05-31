@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e4b457cc59602c9c4c1fc2306446cbb7f47c173
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: 269f90b796a6c7ead0e7801235645b897df70e66
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984120"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413321"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriétés des chaînes de connexion (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "52984120"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Application Name**|Définit le nom de l'application associée à la connexion. Cette valeur peut être utile pour surveiller les événements de suivi, notamment lorsque vous disposez de plusieurs applications accédant aux mêmes bases de données. Par exemple, ajouter Application Name = 'test' à une connexion chaîne entraîne l’affichage 'test' dans une trace SQL Server Profiler, comme illustré dans la capture d’écran suivante :<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Les alias pour cette propriété sont **sspropinitAppName**, **AppName**. Pour plus d'informations, consultez [Utiliser le paramètre de nom d'application lors de la connexion à SQL Server](http://go.microsoft.com/fwlink/?LinkId=301699).|  
+|**Application Name**|Définit le nom de l'application associée à la connexion. Cette valeur peut être utile pour surveiller les événements de suivi, notamment lorsque vous disposez de plusieurs applications accédant aux mêmes bases de données. Par exemple, ajouter Application Name = 'test' à une connexion chaîne entraîne l’affichage 'test' dans une trace SQL Server Profiler, comme illustré dans la capture d’écran suivante :<br /><br /> ![SSAS_AppNameExcample](../../analysis-services/instances/media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Les alias pour cette propriété sont **sspropinitAppName**, **AppName**. Pour plus d'informations, consultez [Utiliser le paramètre de nom d'application lors de la connexion à SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  
 |**AutoSyncPeriod**|Définit la fréquence (en millisecondes) de la synchronisation du cache client et serveur. ADOMD.NET facilite la mise en cache client pour les objets souvent utilisés avec une charge minimale de mémoire. Cela permet de réduire le nombre d'allers-retours au serveur. La valeur par défaut est 10 000 millisecondes (dix secondes). Si la valeur est Null ou 0, la synchronisation automatique est désactivée.|  
 |**Character Encoding**|Définit la manière dont les caractères sont encodés dans la demande. Les valeurs valides sont Default ou UTF-8 (les deux sont équivalentes), et UTF-16| 
 |**CommitTimeout**|Propriété XMLA. Détermine le délai d’attente, exprimé en millisecondes, observé dans la phase de validation d’une commande en cours d’exécution avant d’effectuer une restauration. Quand la valeur est supérieure à 0, remplace la valeur de la propriété CommitTimeout correspondante dans la configuration de serveur. |   

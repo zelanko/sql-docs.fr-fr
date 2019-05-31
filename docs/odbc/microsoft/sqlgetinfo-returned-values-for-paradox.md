@@ -17,12 +17,12 @@ ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a06cfce6ca1afb23f0257c64c5acdd8695cac68b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3bdeddbd8e2b94fe28f3086c7d2f4a96318cc8ab
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63267853"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403221"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Valeurs retournées par SQLGetInfo pour Paradox
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *de référence du programmeur ODBC*.  
@@ -112,7 +112,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_GETDATA_EXTENSIONS|Valeurs multiples|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|« ' » (guillemet arrière)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|«\`» (guillemet arrière)|  
 |SQL_KEYWORDS|Valeurs multiples|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -157,7 +157,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|« PARADOX »|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  
 |SQL_SYSTEM_FUNCTIONS|0|  

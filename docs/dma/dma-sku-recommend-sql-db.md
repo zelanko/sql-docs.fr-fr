@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106066"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413632"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence (SKU) de Azure SQL Database/Managed Instance droite pour votre base de données locale
 
@@ -41,7 +41,7 @@ Vous trouverez ci-dessous des instructions pour vous aider à déterminer les re
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Téléchargez et installez la dernière version de [DMA](https://aka.sm/get-dma). Si vous avez déjà une version antérieure de l’outil, ouvrez-le et vous êtes invité à mettre à niveau le DMA.
+- Téléchargez et installez la dernière version de [DMA](https://aka.ms/get-dma). Si vous avez déjà une version antérieure de l’outil, ouvrez-le et vous êtes invité à mettre à niveau le DMA.
 - Assurez-vous que votre ordinateur dispose [PowerShell Version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) ou version ultérieure, qui est requise pour exécuter tous les scripts. Pour plus d’informations sur findoug les version de PowerShell est installée sur votre ordinateur, consultez l’article [télécharger et installer Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Assurez-vous que votre ordinateur dispose du Module Azure Powershell installé. Pour plus d’informations, consultez l’article [installer le module Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Vérifiez que le fichier PowerShell **SkuRecommendationDataCollectionScript.ps1**, qui est nécessaire pour collecter les compteurs de performances, est installé dans le dossier DMA.

@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243583"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413343"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Jointure de SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -139,7 +139,7 @@ Cette méthode joint l’hôte SQL Server à un domaine AD à l’aide **realmd*
 
 Utilisez les étapes suivantes pour joindre un ordinateur hôte SQL Server à un domaine Active Directory :
 
-1. Utilisez [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) pour joindre votre ordinateur hôte à votre domaine Active Directory. Vous devez d’abord installer les deux le **realmd** et packages de client Kerberos sur l’ordinateur hôte de SQL Server à l’aide du Gestionnaire de package de votre distribution Linux :
+1. Utilisez [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) pour joindre votre ordinateur hôte à votre domaine Active Directory. Vous devez d’abord installer les deux le **realmd** et packages de client Kerberos sur l’ordinateur hôte de SQL Server à l’aide du Gestionnaire de package de votre distribution Linux :
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ Utilisez les étapes suivantes pour joindre un ordinateur hôte SQL Server à un
 
    SQL Server utilise SSSD et NSS pour le mappage des comptes d’utilisateurs et groupes pour les identificateurs de sécurité (SID). SSSD doit être configuré et en cours d’exécution pour SQL Server créer les connexions AD avec succès. **realmd** généralement cela automatiquement dans le cadre de joindre le domaine, mais dans certains cas, vous devez le faire séparément.
 
-   Pour plus d’informations, consultez Comment [configurer manuellement les SSSD](https://access.redhat.com/articles/3023951), et [configurer NSS pour travailler avec SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Pour plus d’informations, consultez Comment [configurer manuellement les SSSD](https://access.redhat.com/articles/3023951), et [configurer NSS pour travailler avec SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Vérifiez que vous pouvez maintenant collecter des informations sur un utilisateur à partir du domaine, et que vous pouvez acquérir un ticket Kerberos en tant que cet utilisateur. L’exemple suivant utilise **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), et [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) commandes pour cela.
 
