@@ -18,15 +18,15 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 32310359f0ecd72349a5ebf3a4f0abcc1a72f5bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49b8dbf08dc6611666f90d4127260e49761b7fdb
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653387"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982610"
 ---
 # <a name="comparison-operators-transact-sql"></a>Opérateurs de comparaison (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47653387"
 |[\!> (Non supérieur à)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Non supérieur à (hors norme ISO)|  
   
 ## <a name="boolean-data-type"></a>Type de données Boolean  
- Le résultat d’un opérateur de comparaison est de type **booléen**. et peut prendre trois valeurs : TRUE, FALSE et UNKNOWN. Les expressions qui retournent un type de données **booléen** sont dites expressions booléennes.  
+ Le résultat d’un opérateur de comparaison est de type **booléen**. Il peut prendre trois valeurs : TRUE, FALSE ou UNKNOWN. Les expressions qui retournent un type de données **booléen** sont dites expressions booléennes.  
   
  À la différence des autres types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le type de données **booléen** ne peut pas être spécifié pour une colonne de table ou une variable et il ne peut pas être retourné dans un jeu de résultats.  
   
@@ -65,7 +65,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

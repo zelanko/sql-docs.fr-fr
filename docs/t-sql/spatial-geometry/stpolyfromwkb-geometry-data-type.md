@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromWKB (geometry Data Type)
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e27aab88b7931fa94771fd56046d8cd2bce1e6c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9e5f6fe32a3a7652a87f9ff6fe5edf849b06e0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670177"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938293"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_polygon*  
- Représentation WKB de l’instance **geometryPolygon** à retourner. *WKB_polygon* est une expression **varbinary(max)**.  
+ Représentation WKB de l’instance **geometryPolygon** à retourner. *WKB_polygon* est une expression **varbinary(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryPolygon** à retourner.  
@@ -49,9 +49,9 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
- Type OGC : **Polygon**  
+ Type OGC : **Polygone**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +63,7 @@ SET @g = geometry::STPolyFromWKB(0x010300000001000000040000000000000000001440000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

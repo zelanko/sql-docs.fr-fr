@@ -17,15 +17,15 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6211f2b47aebc2c4087cc2ed4fe5b068a8686292
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980545"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943975"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Pour l’argument *id*, l’argument *property* spécifie le type des informatio
 |Valeur|Description|Valeur retournée|  
 |---|---|---|
 |**AllowsNull**|Autorise les valeurs NULL|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**ColumnId**|Valeur d’identificateur de colonne correspondant à **sys.columns.column_id**.|ID de la colonne<br /><br /> **Remarque :** Lors de requêtes sur plusieurs colonnes, des écarts peuvent apparaître dans l'ordre des valeurs d'identificateur de colonne.|  
+|**ColumnId**|Valeur d’identificateur de colonne correspondant à **sys.columns.column_id**.|ID de la colonne<br /><br /> **Remarque :** Lors de requêtes sur plusieurs colonnes, des écarts peuvent apparaître dans l’ordre des valeurs d’identificateur de colonne.|  
 |**FullTextTypeColumn**|TYPE COLUMN de la table qui contient les informations sur le type de document de la *colonne*.|Identificateur de TYPE COLUMN en texte intégral pour l’expression du nom de colonne passée comme second paramètre de cette fonction.|  
 |**GeneratedAlwaysType**|Valeur de la colonne générée par le système. Correspond à **sys.columns.generated_always_type**|**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0 : Toujours non générée<br /><br /> 1 : Toujours générée en début de ligne<br /><br /> 2 : Toujours générée en fin de ligne|  
 |**IsColumnSet**|La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
@@ -86,7 +86,7 @@ Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir 
   
 Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, comme `COLUMNPROPERTY`, peuvent retourner NULL si l’utilisateur ne dispose pas de l’autorisation appropriée sur l’objet. Pour plus d’informations, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Quand vous vérifiez la propriété déterministe d’une colonne, testez d’abord si la colonne est une colonne calculée. L’argument **IsDeterministic** retourne NULL pour les colonnes non calculées. Les colonnes calculées peuvent être spécifiées sous la forme de colonnes d'index.
   
 ## <a name="examples"></a>Exemples  

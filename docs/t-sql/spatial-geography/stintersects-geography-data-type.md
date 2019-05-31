@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects method
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 617edb15f042478982f62846947fad5caf5a0714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 355fd415dac0399385bd13bcabfe2eb095e08ed0
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740237"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936838"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47740237"
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne toujours **NULL** si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
@@ -67,7 +67,7 @@ ms.locfileid: "47740237"
  END;
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 1bd0fd55824edfde8f3216516f9e93a7ec385baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a780172818bd41fa3cff4804437b4d26ad8c95c5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767087"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937738"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "47767087"
   
  Type CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  `IsNull` permet de tester si une instance **geography** a une valeur Null. Les résultats peuvent prêter à confusion, la méthode retournant 0 si l'instance n'est pas Null, mais Null si l'instance est Null.  
   
  Cette méthode est principalement utilisée par l’infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est recommandé d’utiliser le prédicat T-SQL IS NULL pour tester si une instance **geography** a une valeur Null. Pour plus d’informations sur le prédicat T-SQL IS NULL, consultez [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

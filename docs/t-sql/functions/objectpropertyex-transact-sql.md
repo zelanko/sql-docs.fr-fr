@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bad16e6907cc256dbc3312cca33267a04c7714c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28581b5468557c19b44381a2527b76830f04216b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733946"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948942"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ OBJECTPROPERTYEX ( id , property )
  Expression représentant l'ID de l'objet dans la base de données active. *id* est de type **int** et est considéré comme un objet étendu aux schémas dans le contexte de la base de données active.  
   
  *property*  
- Expression contenant les informations à retourner pour l'objet spécifié par id. Le type de retour est **sql_variant**. Le tableau qui suit indique le type de données de base pour chaque valeur de propriété.  
+ Expression contenant les informations à retourner pour l’objet spécifié par id. Le type de retour est **sql_variant**. Le tableau qui suit indique le type de données de base pour chaque valeur de propriété.  
   
 > [!NOTE]  
 >  Sauf indication contraire, la valeur NULL est retournée lorsque *property* n’est pas un nom de propriété valide, lorsque *id* n’est pas un ID d’objet valide, lorsque *id* est un type d’objet qui n’est pas pris en charge pour la propriété *property* spécifiée ou lorsque l’appelant n’est pas autorisé à consulter les métadonnées de l’objet.  
@@ -126,8 +126,8 @@ OBJECTPROPERTYEX ( id , property )
 |TableFullTextBackgroundUpdateIndexOn|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> L'index de mise à jour d'arrière-plan en texte intégral (suivi des modifications automatiques) est activé pour la table.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Type de données de base : **int**|  
 |TableFulltextCatalogId|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID du catalogue de texte intégral dans lequel résident les données d'indexation de texte intégral de la table.<br /><br /> Différent de zéro = ID de catalogue de texte intégral associé à l'index unique qui identifie les lignes dans une table indexée en texte intégral.<br /><br /> 0 = Table sans index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
 |TableFullTextChangeTrackingOn|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le suivi des modifications de texte intégral est activé pour la table.<br /><br /> 1 = TRUE<br /><br /> 0 = FALSE<br /><br /> Type de données de base : **int**|  
-|TableFulltextDocsProcessed|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de lignes traitées depuis le démarrage de l'indexation de texte intégral. Dans une table en cours d'indexation pour une recherche en texte intégral, toutes les colonnes d'une ligne sont considérées comme faisant partie d'un même document à indexer.<br /><br /> 0 = Aucune analyse ou indexation de texte intégral active n'est terminée.<br /><br /> > 0 = une des valeurs suivantes (A ou B) : A) nombre de documents traités par les opérations d’insertion ou de mise à jour depuis le démarrage de l’alimentation du suivi des modifications complet, incrémentiel ou manuel ; (B) nombre de lignes traitées par les opérations d’insertion ou de mise à jour depuis l’activation de l’alimentation du suivi des modifications avec index de mise à jour en arrière-plan, depuis la modification du schéma d’index de recherche en texte intégral, depuis la reconstruction du catalogue de recherche en texte intégral ou depuis le redémarrage de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et ainsi de suite.<br /><br /> NULL = La table n'a pas d'index de recherche en texte intégral.<br /><br /> Type de données de base : **int**<br /><br /> **Remarque** Cette propriété ne contrôle pas et ne compte pas les lignes supprimées.|  
-|TableFulltextFailCount|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de lignes que la recherche en texte intégral n'a pas indexées.<br /><br /> 0 = Le remplissage est terminé.<br /><br /> > 0 = une des valeurs suivantes (A ou B) : A) nombre de documents qui n’ont pas été indexés depuis le démarrage de l’alimentation du suivi des modifications complet, incrémentiel ou manuel ; B) pour le suivi des modifications avec index de mise à jour en arrière-plan, nombre de lignes qui n’ont pas été indexées depuis le démarrage ou le redémarrage de l’alimentation. Ceci peut être provoqué par une modification du schéma, une reconstruction du catalogue, un redémarrage du serveur, etc.<br /><br /> NULL = Table sans index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
+|TableFulltextDocsProcessed|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de lignes traitées depuis le démarrage de l'indexation de texte intégral. Dans une table en cours d'indexation pour une recherche en texte intégral, toutes les colonnes d'une ligne sont considérées comme faisant partie d'un même document à indexer.<br /><br /> 0 = Aucune analyse ou indexation de texte intégral active n'est terminée.<br /><br /> > 0 = une des valeurs suivantes (A ou B) : A) nombre de documents traités par les opérations d’insertion ou de mise à jour depuis le démarrage de l’alimentation du suivi des modifications complet, incrémentiel ou manuel ; B) nombre de lignes traitées par les opérations d’insertion ou de mise à jour depuis l’activation de l’alimentation du suivi des modifications avec index de mise à jour en arrière-plan, depuis la modification du schéma d’index de recherche en texte intégral, depuis la reconstruction du catalogue de recherche en texte intégral ou depuis le redémarrage de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et ainsi de suite.<br /><br /> NULL = La table n'a pas d'index de recherche en texte intégral.<br /><br /> Type de données de base : **int**<br /><br /> **Remarque** Cette propriété ne contrôle pas et ne compte pas les lignes supprimées.|  
+|TableFulltextFailCount|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de lignes que la recherche en texte intégral n'a pas indexées.<br /><br /> 0 = Le remplissage est terminé.<br /><br /> >0 = une des valeurs suivantes (A ou B) : A) nombre de documents qui n’ont pas été indexés depuis le démarrage de l’alimentation du suivi des modifications complet, incrémentiel ou manuel ; B) pour le suivi des modifications avec index de mise à jour en arrière-plan, nombre de lignes qui n’ont pas été indexées depuis le démarrage ou le redémarrage de l’alimentation. Ceci peut être provoqué par une modification du schéma, une reconstruction du catalogue, un redémarrage du serveur, etc.<br /><br /> NULL = Table sans index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
 |TableFulltextItemCount|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nonnull = Nombre de lignes qui ont été correctement indexées en texte intégral.<br /><br /> NULL = La table n'a pas d'index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
 |TableFulltextKeyColumn|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de la colonne associée à l'index de colonne unique qui fait partie de la définition d'un index de recherche en texte intégral et d'un index sémantique.<br /><br /> 0 = Table sans index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
 |TableFulltextPendingChanges|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre d'entrées de suivi des modifications en attente de traitement.<br /><br /> 0 = Le suivi des modifications n'est pas activé.<br /><br /> NULL = La table n'a pas d'index de recherche en texte intégral.<br /><br /> Type de données de base : **int**|  
@@ -157,8 +157,8 @@ OBJECTPROPERTYEX ( id , property )
 |TableIsLockedOnBulkLoad|Table de charge de travail|La table est verrouillée en raison d’un travail **bcp** ou BULK INSERT.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Type de données de base : **int**|  
 |TableIsMemoryOptimized|Table de charge de travail|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La table est optimisée en mémoire<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> Type de données de base : **int**<br /><br /> Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).|  
 |TableIsPinned|Table de charge de travail|La table est épinglée pour être conservée dans le cache de données.<br /><br /> 0 = False<br /><br /> Cette fonctionnalité n'est pas prise en charge par [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures.|  
-|TableTextInRowLimit|Table de charge de travail|Cette table comporte un jeu d'options text in row.<br /><br /> > 0 = Nombre maximal d'octets autorisé pour text in row.<br /><br /> 0 = l'option text in row n'est pas définie.<br /><br /> Type de données de base : **int**|  
-|TableUpdateTrigger|Table de charge de travail|La table comporte un déclencheur UPDATE.<br /><br /> > 1 = ID du premier déclencheur du type spécifié.<br /><br /> Type de données de base : **int**|  
+|TableTextInRowLimit|Table de charge de travail|Cette table comporte un jeu d'options text in row.<br /><br /> > 0 = Nombre maximal d’octets autorisé pour text in row.<br /><br /> 0 = l'option text in row n'est pas définie.<br /><br /> Type de données de base : **int**|  
+|TableUpdateTrigger|Table de charge de travail|La table comporte un déclencheur UPDATE.<br /><br /> > 1 = ID du premier déclencheur du type spécifié.<br /><br /> Type de données de base : **int**|  
 |TableUpdateTriggerCount|Table de charge de travail|La table comporte le nombre spécifié de déclencheurs UPDATE.<br /><br /> > 0 = Nombre de déclencheurs UPDATE.<br /><br /> Type de données de base : **int**|  
 |UserDataAccess|Fonction, vue|Indique que l'objet a accès aux données utilisateur, aux tables utilisateur, dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Lecture<br /><br /> 0 = Aucun<br /><br /> Type de données de base : **int**|  
 |TableHasColumnSet|Table de charge de travail|La table comporte un jeu de colonnes.<br /><br /> 0 = False<br /><br /> 1 = True<br /><br /> Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|  
@@ -173,7 +173,7 @@ OBJECTPROPERTYEX ( id , property )
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECTPROPERTYEX, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Une requête référençant un *object_id* dans une autre base de données retourne NULL ou des résultats incorrects. Par exemple, dans la requête qui suit, le contexte de base de données actuel est la base de données MASTER. [!INCLUDE[ssDE](../../includes/ssde-md.md)] va tenter de renvoyer la valeur de propriété de l’*object_id* spécifié dans cette base de données et non pas dans la base de données spécifiée dans la requête. La requête retourne des résultats incorrects car la vue `vEmployee` ne se trouve pas dans la base de données MASTER.  
   
 ```  
@@ -238,7 +238,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-finding-the-base-type-of-an-object"></a>D. Recherche du type de base d’un objet  
+### <a name="d-finding-the-base-type-of-an-object"></a>D : Recherche du type de base d'un objet  
  L’exemple suivant retourne le type de base de l’objet `dbo.DimReseller`.  
   
 ```  
@@ -255,7 +255,7 @@ BaseType
 U   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   

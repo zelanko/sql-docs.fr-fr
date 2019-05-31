@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802196"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982682"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,11 +49,11 @@ _expression_
 ## <a name="return-types"></a>Types de retour  
 Retourne le type de données de l’_expression_ dont la priorité est la plus élevée. Si aucune des expressions n'acceptent les valeurs NULL, le résultat est typé comme n'acceptant pas les valeurs NULL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si tous les arguments ont la valeur `NULL`, `COALESCE` retourne `NULL`. Au moins une des valeurs Null doit être une valeur `NULL` typée.  
   
 ## <a name="comparing-coalesce-and-case"></a>Comparaison de COALESCE et de CASE  
-L’expression `COALESCE` est un raccourci syntaxique de l’expression `CASE`.  Autrement dit, le code `COALESCE`(_expression1_,_...n_) est réécrit par l’optimiseur de requête sous la forme de l’expression `CASE` suivante :  
+L’expression `COALESCE` est un raccourci syntaxique de l’expression `CASE`.  Autrement dit, le code `COALESCE`(_expression1_, _...n_) est réécrit par l’optimiseur de requête sous la forme de l’expression `CASE` suivante :  
   
 ```sql  
 CASE  
@@ -125,7 +125,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>b. Exécution d'un exemple complexe  
+### <a name="b-running-a-complex-example"></a>B. Exécution d'un exemple complexe  
 Dans l'exemple suivant, la table `wages` comporte trois colonnes qui contiennent des informations sur les salaires annuels des employés : salaire horaire, salaire et commission. Cependant, chaque employé ne perçoit qu'un seul type de salaire. Pour déterminer le montant total versé à tous les employés, utilisez `COALESCE` afin de recevoir seulement la valeur non NULL trouvée dans `hourly_wage`, `salary` et `commission`.  
   
 ```sql  
@@ -294,7 +294,7 @@ Total Salary
 120000.00
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [ISNULL &#40;Transact-SQL&#41;](../../t-sql/functions/isnull-transact-sql.md)   
 [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)  
   

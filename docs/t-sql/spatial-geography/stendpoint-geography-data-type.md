@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEndpoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: cbb7249cba8ca5700fdddf0ab8d3bb2f6b7d82ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5202c1c61b7d7531737de828de935a14289a902d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782777"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936992"
 ---
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47782777"
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  STEndPoint() équivaut à [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
  Cette méthode retourne une valeur Null si elle est appelée sur une instance **geography** vide.  
@@ -58,7 +58,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STEndPoint().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

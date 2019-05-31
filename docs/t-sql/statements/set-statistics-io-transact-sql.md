@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760122"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983085"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "55760122"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si l’option STATISTICS IO est activée, les informations statistiques sont affichées et, si l’option est désactivée, ces informations ne sont pas affichées.   
   
  Une fois l’option activée, toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] retournent les informations statistiques jusqu’à ce que l’option soit désactivée.  
@@ -61,16 +61,16 @@ SET STATISTICS IO { ON | OFF }
 |**Lectures logiques**|Nombre de pages lues à partir du cache de données.|  
 |**Lectures physiques**|Nombre de pages lues depuis le disque.|  
 |**Lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  
-|**Lectures logiques LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) lues à partir du cache de données.|  
-|**Lectures physiques LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur lues à partir du disque.|  
-|**Lectures anticipées LOB**|Nombre de pages **text**, **ntext**, **image** ou de type grande valeur placées dans le cache pour la requête.|  
-  
- L'option SET STATISTICS IO est définie lors de l'exécution, et non pas durant l'analyse.  
-  
+|**Lectures logiques LOB**|Nombre de pages lues à partir du cache de données. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|  
+|**Lectures physiques LOB**|Nombre de pages lues depuis le disque. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|  
+|**Lectures anticipées LOB**|Nombre de pages placées dans le cache pour la requête. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|
+
+ L'option SET STATISTICS IO est définie lors de l'exécution, et non pas durant l'analyse.
+
 > [!NOTE]  
->  Lorsque des instructions Transact-SQL extraient des colonnes LOB, certaines opérations d'extraction peuvent entraîner le parcours de l'arbre LOB à de multiples reprises. L'option SET STATISTICS IO peut alors signaler un nombre de lectures logiques plus élevé que prévu.  
-  
-## <a name="permissions"></a>Permissions  
+> Lorsque des instructions Transact-SQL extraient des colonnes LOB, certaines opérations d'extraction peuvent entraîner le parcours de l'arbre LOB à de multiples reprises. L'option SET STATISTICS IO peut alors signaler un nombre de lectures logiques plus élevé que prévu.
+
+## <a name="permissions"></a>Autorisations  
  Pour utiliser SET STATISTICS IO, les utilisateurs doivent disposer des autorisations appropriées pour exécuter l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’autorisation SHOWPLAN n’est pas nécessaire.  
   
 ## <a name="examples"></a>Exemples  
@@ -97,7 +97,7 @@ reads 0, read-ahead reads 0, lob logical reads 0, lob physical reads 0,
 lob read-ahead reads 0.  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
  [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)  

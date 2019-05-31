@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d657869e71b93d5cb5d915ab15b2751c88e6eacf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689417"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939017"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Retourne une approximation polygonale d’une instance **geometry** contenant de
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Retourne une instance **GeometryCollection** vide pour les variables d’instance **geometry** vides, et retourne **NULL** pour les variables **geometry** non initialisées.  
   
  L’approximation polygonale que la méthode retourne dépend de l’instance **geometry** que vous utilisez pour appeler la méthode :  
@@ -96,7 +96,7 @@ Retourne une approximation polygonale d’une instance **geometry** contenant de
  SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md)   
  [STLength &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STNumPoints &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - base-10 logarithms
 - logarithm of expression
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acc465deb385ba0061a2d2a1e1307b4fe1e59e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a1ebb2b6a5c7fe2d6f71ce73e5e6b9af0924fc0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594310"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949191"
 ---
 # <a name="log10-transact-sql"></a>LOG10 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ LOG10 ( float_expression )
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les fonctions LOG10 et POWER sont inversement proportionnelles. Par exemple, 10 ^ LOG10(*n*) = *n*.  
   
 ## <a name="examples"></a>Exemples  
@@ -90,7 +90,7 @@ SELECT POWER (10, LOG10(5));
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C. Calcul du logarithme en base 10 d’une variable.  
+### <a name="c-calculating-the-base-10-logarithm-for-a-value"></a>C : Calcul du logarithme en base 10 d’une variable.  
  L’exemple suivant calcule le `LOG10` de la valeur spécifiée.  
   
 ```  
@@ -104,7 +104,7 @@ SELECT LOG10(145.175642);
 2.16
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [POWER &#40;Transact-SQL&#41;](../../t-sql/functions/power-transact-sql.md)   
  [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)  

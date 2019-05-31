@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e727fa9d1042fc40b70872b948f1723c7eaaddcf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 29c669ec831ffefe3aebe463fa7819e4e16d276a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212368"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948996"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +57,10 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>Types de retour  
  **nvarchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Comme l'instruction RAISERROR, FORMATMESSAGE modifie le message en substituant les valeurs de paramètre fournies par des variables d'espace réservé dans le message. Pour plus d’informations concernant les espaces réservés autorisés dans les messages d’erreur et le processus de modification, consultez [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
- FORMATMESSAGE recherche le message dans le langage courant de l'utilisateur. S'il n'existe pas de version localisée du message, la version américaine (U.S. English) est utilisée.  
+ FORMATMESSAGE recherche le message dans le langage courant de l'utilisateur. S’il n’existe pas de version localisée du message, la version américaine (U.S. English) est utilisée.  
   
  Pour les messages localisés, les valeurs de paramètres fournies doivent correspondre aux espaces réservés des paramètres de la version américaine. Ainsi, le paramètre 1 dans la version localisée doit correspondre au paramètre 1 dans la version américaine (U.S. English), le paramètre 2 doit correspondre au paramètre 2 de cette dernière, et ainsi de suite.  
   
@@ -76,7 +76,7 @@ SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');
 SELECT @var1;  
 ```  
   
-### <a name="b-example-with-a-message-string"></a>b. Exemple avec une chaîne de message  
+### <a name="b-example-with-a-message-string"></a>B. Exemple avec une chaîne de message  
   
 **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
@@ -107,7 +107,7 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 SELECT FORMATMESSAGE('Hello %-20s!', 'TEST');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   

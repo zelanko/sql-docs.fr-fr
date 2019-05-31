@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull method (geography)
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6f44a22b200eba0948ceb1bd036d51ceff884442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c823f686909be54890b3c1686da615233c3e9da2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666857"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937130"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47666857"
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Retourne un objet `FullGlobe` pour l’instance **geography** qui a un angle d’enveloppe supérieur à 90 degrés.  
   
  Retourne une collection **geography** vide pour une instance **geography** vide.  

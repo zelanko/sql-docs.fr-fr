@@ -19,16 +19,16 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1137ad372bd3b78bb8909dd3233481a2dcde059
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e1bb6c94452194b75260c531a043c3e00c1bcc93
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802016"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980068"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ WHILE Boolean_expression
  CONTINUE  
  Provoque le redémarrage de la boucle WHILE, en ignorant toutes les instructions qui suivent le mot clé CONTINUE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si plusieurs boucles WHILE sont imbriquées, le BREAK à l'intérieur de la boucle provoque le retour à la boucle précédente. Avant que la boucle précédente ne prenne le relais, toutes les instructions situées après la fin de la boucle intérieure sont d'abord exécutées.  
   
 ## <a name="examples"></a>Exemples  
@@ -93,7 +93,7 @@ END
 PRINT 'Too much for the market to bear';  
 ```  
   
-### <a name="b-using-while-in-a-cursor"></a>b. Utilisation de WHILE dans un curseur  
+### <a name="b-using-while-in-a-cursor"></a>B. Utilisation de WHILE dans un curseur  
  L'exemple suivant utilise `@@FETCH_STATUS` pour contrôler les activités d'un curseur dans une boucle `WHILE`.  
   
 ```  
@@ -131,7 +131,7 @@ END
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

@@ -23,16 +23,16 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba7d702a9e7a6e89bb76c23fd570efee1b4e470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 211d229c767d2c4dbf21d9d813f4a825316efa34
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705937"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948546"
 ---
 # <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,12 +50,12 @@ SYSTEM_USER
 ## <a name="return-types"></a>Types de retour  
  **nchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la fonction SYSTEM_USER avec des contraintes DEFAULT dans les instructions CREATE TABLE et ALTER TABLE. Vous pouvez aussi l'utiliser comme n'importe quelle fonction standard.  
   
  Si le nom d'utilisateur et le nom de connexion sont différents, SYSTEM_USER retourne le nom de connexion.  
   
- Si l’utilisateur actuel s’est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows, SYSTEM_USER renvoie le nom d’identification de la connexion Windows sous la forme : *DOMAINE*\\*nom_connexion_utilisateur*. Toutefois, s'il s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification SQL Server, SYSTEM_USER retourne le nom d'identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `WillisJo` si l'utilisateur s'est connecté en tant que `WillisJo`.  
+ Si l’utilisateur actuel s’est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’authentification Windows, SYSTEM_USER retourne le nom d’identification de la connexion Windows, sous la forme suivante : *DOMAIN*\\*nom_connexion_utilisateur*. Toutefois, s'il s'est connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'authentification SQL Server, SYSTEM_USER retourne le nom d'identification de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple `WillisJo` si l'utilisateur s'est connecté en tant que `WillisJo`.  
   
  SYSTEM_USER retourne le nom du contexte qui s'exécute actuellement. Si l'instruction EXECUTE AS a été utilisée pour changer de contexte, SYSTEM_USER retourne le nom du contexte emprunté.  
   
@@ -130,14 +130,14 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C. Utilisation de SYSTEM_USER pour renvoyer le nom d’utilisateur système actuel  
+### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C : Utilisation de SYSTEM_USER pour retourner le nom d'utilisateur système actuel  
  L’exemple suivant renvoie la valeur actuelle de `SYSTEM_USER`.  
   
 ```  
 SELECT SYSTEM_USER;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   

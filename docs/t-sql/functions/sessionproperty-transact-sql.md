@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SESSIONPROPERTY function
 - sessions [SQL Server], SET options settings
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 36fb5844c7255aff7b8527ff5cc462ec5a573977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba08b2273102d43eed26d7b383a285d6568a63d2
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642907"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942885"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SESSIONPROPERTY (option)
   
 |Option|Description|  
 |------------|-----------------|  
-|ANSI_NULLS|Indique si la conformité à la norme ISO est appliquée ou non en ce qui concerne le comportement des opérateurs d'égalité (=) et de différence (<>) avec des valeurs nulles.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
+|ANSI_NULLS|Indique si la conformité à la norme ISO est appliquée ou non en ce qui concerne le comportement des opérateurs d’égalité (=) et de différence (<>) avec des valeurs nulles.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |ANSI_PADDING|Contrôle le mode de stockage par la colonne des valeurs dont la longueur est inférieure à la taille définie pour la colonne, et des espaces de fin dans les données de type caractère et binaire.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |ANSI_WARNINGS|Indique si la conformité à la norme ISO est appliquée ou non dans les messages d'erreur ou les avertissements relatifs à certaines conditions, notamment la division par zéro et le dépassement arithmétique.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
 |ARITHABORT|Détermine la fin ou non de la requête lorsqu'un dépassement arithmétique ou une division par zéro se produit durant son exécution.<br /><br /> 1 = activé<br /><br /> 0 = désactivé|  
@@ -59,7 +59,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>Types de retour  
  **sql_variant**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les options SET sont représentées en combinant les options de niveau serveur, de niveau base de données, et les options spécifiées par l'utilisateur.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +69,7 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

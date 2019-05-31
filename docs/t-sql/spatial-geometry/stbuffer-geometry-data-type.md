@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8d49fa09e703c186664a46f1daa8fe0b6283d33b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979475"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939077"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  `STBuffer()` calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *tolerance* = distance \* 0,001, et *relative* = **false**.  
   
  Quand *distance* > 0, une instance **Polygon** ou **MultiPolygon** est retournée.  
@@ -79,7 +79,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Appel de STBuffer() avec parameter_value < 0 sur une instance Polygon  
  L'exemple suivant retourne une instance `Polygon` avec une mémoire tampon négative :  
   
 ```
@@ -163,7 +163,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Les deux premières instructions **SELECT** retournent une instance `MultiPolygon`, car le paramètre *distance* est inférieur ou égal à 1/2 de la distance entre les deux points (1 1) et (1 4). La troisième instruction **SELECT** retourne une instance `Polygon`, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BufferWithTolerance &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -16,21 +16,21 @@ helpviewer_keywords:
 - PERCENTILE_DISC function
 - analytic functions,PERCENTILE_DISC
 ms.assetid: b545413d-c4f7-4c8e-8617-607599a26680
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ae6754923dcb22a64251b351f013069b3a681fb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6a514a1d1e3db96e3943b600b3de17d2184e9955
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291817"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943515"
 ---
 # <a name="percentiledisc-transact-sql"></a>PERCENTILE_DISC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Calcule un centile spécifique pour les valeurs triées dans la totalité d’un ensemble de lignes ou dans des partitions distinctes de l’ensemble dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une valeur de centile donnée *P*, PERCENTILE_DISC trie les valeurs de l’expression dans la clause ORDER BY. Il retourne ensuite la valeur ayant la plus petite valeur CUME_DIST donnée (pour la même spécification de tri) supérieure ou égale à *P*. Par exemple, PERCENTILE_DISC (0,5) calcule le cinquantième percentile (autrement dit, la valeur médiane) d'une expression. PERCENTILE_DISC calcule le centile à partir d’une distribution discrète des valeurs de la colonne. Le résultat est égal à une valeur spécifique dans la colonne.  
+  Calcule un centile spécifique pour les valeurs triées dans la totalité d’un ensemble de lignes ou dans des partitions distinctes de l’ensemble dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une valeur de centile donnée *P*, PERCENTILE_DISC trie les valeurs de l’expression dans la clause ORDER BY. Il retourne ensuite la valeur ayant la plus petite valeur CUME_DIST donnée (pour la même spécification de tri) supérieure ou égale à *P*. Par exemple, PERCENTILE_DISC (0.5) calcule le cinquantième percentile (autrement dit, la valeur médiane) d’une expression. PERCENTILE_DISC calcule le centile à partir d’une distribution discrète des valeurs de la colonne. Le résultat est égal à une valeur spécifique dans la colonne.  
   
  ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions syntaxiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -128,7 +128,7 @@ Human Resources        17.427850    16.5865
 Shipping and Receiving  9.250000     9.0000
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)  
   
   

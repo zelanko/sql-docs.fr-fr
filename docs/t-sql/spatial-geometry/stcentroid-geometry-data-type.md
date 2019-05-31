@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCentroid (geometry Data Type)
 ms.assetid: 4dc5a004-7a53-4cce-81dd-9f5e1dd0db78
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6392c0a2b8707f27031367a785693157ee14220b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3693c6a80c6482ec6677a21983f53d338da500f9
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813557"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939062"
 ---
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retourne le centre géométrique d’une instance **geometry** qui comprend un o
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  `STCentroid()` retourne une valeur Null si l’instance **geometry** n’est pas de type **Polygon, CurvePolygon** ou **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemples  
@@ -66,7 +66,7 @@ SELECT @g.STCentroid().ToString();
  SELECT @g.STCentroid().ToString() AS Centroid
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

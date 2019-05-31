@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100894"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948959"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,7 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUniqueCnst|Tout objet étendu aux schémas|Contrainte UNIQUE.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsUserTable|Table de charge de travail|Table définie par l'utilisateur.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|Affichage|Vue.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :**  Le propriétaire du schéma n'est pas nécessairement le propriétaire de l'objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
+|OwnerId|Tout objet étendu aux schémas|Propriétaire de l'objet.<br /><br /> **Remarque :**  Le propriétaire du schéma n’est pas nécessairement le propriétaire de l’objet. Par exemple, les objets enfants (ceux où *parent_object_id* est non-NULL) retournent toujours le même ID de propriétaire que leur parent.<br /><br /> Non NULL = ID utilisateur de base de données du propriétaire de l'objet.|  
 |TableDeleteTrigger|Table de charge de travail|La table comporte un déclencheur DELETE.<br /><br /> >1 = ID du premier déclencheur du type spécifié.|  
 |TableDeleteTriggerCount|Table de charge de travail|La table comporte le nombre de déclencheurs DELETE spécifié.<br /><br /> >0 = Nombre de déclencheurs DELETE.|  
 |TableFullTextMergeStatus|Table de charge de travail|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique s'il s'agit d'une table qui a un index de recherche en texte intégral qui est en cours de fusion.<br /><br /> 0 = La table n'a pas d'index de recherche en texte intégral ou l'index de recherche en texte intégral n'est pas en cours de fusion.<br /><br /> 1 = L'index de recherche en texte intégral est en cours de fusion.|  
@@ -166,7 +166,7 @@ OBJECTPROPERTY ( id , property )
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECTPROPERTY, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Une requête référençant un *object_id* dans une autre base de données retourne NULL ou des résultats incorrects. Par exemple, dans la requête qui suit, le contexte de la base de données active est la base de données MASTER. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tentera de renvoyer la valeur de la propriété de l’argument *object_id* spécifié dans cette base de données et non dans la base de données spécifiée dans la requête. La requête retourne des résultats incorrects car la vue `vEmployee` ne se trouve pas dans la base de données MASTER.  
   
 ```  
@@ -200,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Vérification du déterminisme d'une fonction définie par l'utilisateur à valeur scalaire  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Vérification du déterminisme d'une fonction définie par l'utilisateur à valeur scalaire  
  L’exemple suivant teste si la fonction `ufnGetProductDealerPrice` (à valeur scalaire et définie par l’utilisateur), qui retourne une valeur **money**, est déterministe.  
   
 ```  
@@ -245,7 +245,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)   

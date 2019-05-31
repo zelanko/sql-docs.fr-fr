@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STDisjoint
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 57071fc6530f8fdcb6d2a0eab83fea1bf43ac42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 900b264798a8cfc55b38587cf786f2b4effac796
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687329"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937042"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47687329"
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Deux instances **geography** sont disjointes si l’intersection de leurs ensembles de points est vide.  
   
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geography** ne correspondent pas.  
@@ -62,7 +62,7 @@ SET @h = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.STDisjoint(@h);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

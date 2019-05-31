@@ -17,16 +17,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b502e1d930f8cfdd118e12f74921347c342601e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045008"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943767"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>Arguments  
 *database*  
-Expression spécifiant le nom de la base de données pour laquelle `DATABASEPROPERTYEX` retourne des informations sur la propriété nommée. Le type de données de *database* est **nvarchar(128)**.  
+Expression spécifiant le nom de la base de données pour laquelle `DATABASEPROPERTYEX` retourne des informations sur la propriété nommée. Le type de données de *database* est **nvarchar(128)** .  
 
 Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` a besoin du nom de la base de données active. Elle retourne la valeur NULL pour toutes les propriétés si un nom de base de données différent lui est donné.
   
@@ -111,7 +111,7 @@ Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir 
   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, comme `OBJECT_ID`, peuvent retourner NULL si l’utilisateur ne dispose d’aucune autorisation sur l’objet. Pour plus d’informations, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DATABASEPROPERTYEX` retourne un seul paramètre de propriété à la fois. Pour afficher plusieurs paramètres de propriété, utilisez la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
@@ -130,7 +130,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>b. Récupération du classement par défaut d'une base de données  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>B. Récupération du classement par défaut d'une base de données  
 Cet exemple retourne plusieurs attributs de la base de données `AdventureWorks`.
   
 ```sql

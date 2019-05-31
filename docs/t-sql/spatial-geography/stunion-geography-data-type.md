@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STUnion method
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3e5021b710d780c5f6f35221099f41fc993c492c
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: d47e5a70a784ba7946b7f6548dee1e8a6ccfff26
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979755"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935762"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53979755"
 ## <a name="exceptions"></a>Exceptions  
  Cette méthode lève **ArgumentException** si l’instance contient une arête antipodale.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne toujours une valeur Null si les SRID (identificateurs de référence spatiale) des instances **geography** ne correspondent pas.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge des instances spatiales qui sont plus grandes qu'un hémisphère. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le jeu de résultats possibles retourné sur le serveur a été étendu aux instances **FullGlobe**.  
@@ -71,7 +71,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-producing-a-fullglobe-result"></a>b. Génération d'un résultat FullGlobe  
+### <a name="b-producing-a-fullglobe-result"></a>B. Génération d'un résultat FullGlobe  
  L'exemple suivant produit un `FullGlobe` lorsque `STUnion()` combine deux instances `Polygon`.  
   
 ```
@@ -89,7 +89,7 @@ SELECT @g.STUnion(@h).ToString();
  SELECT @g.STUnion(@h).ToString();
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 323ef47423e796443a50761e9ac1e1fb6153cb03
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420957"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947365"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Fonctions de configuration Transact SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "55420957"
 ## <a name="return-types"></a>Types de retour  
  **nvarchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les résultats de @@VERSION sont présentés sous la forme d’une chaîne nvarchar individuelle. Vous pouvez utiliser la fonction [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) pour récupérer les valeurs de propriétés individuelles.  
   
  Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les informations suivantes sont retournées.  
@@ -58,7 +58,7 @@ ms.locfileid: "55420957"
   
 -   Déclaration de copyright  
   
--   Édition de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+-   Édition de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   Version du système d'exploitation  
   
@@ -93,13 +93,13 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>b. Renvoi de la version actuelle de [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Renvoi de la version actuelle de [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)  
   
   

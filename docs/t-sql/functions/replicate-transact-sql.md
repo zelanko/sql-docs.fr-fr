@@ -17,16 +17,16 @@ helpviewer_keywords:
 - REPLICATE function
 - repeating character expressions
 ms.assetid: 0cd467fb-3f22-471a-892c-0039d9f7fa1a
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a074e7ad5f443a4aaac722b3c15383b6c0078e6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558d1a1f3d5d0cbb204c5dfd80833ce82a02d0c0
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756947"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945839"
 ---
 # <a name="replicate-transact-sql"></a>REPLICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ REPLICATE ( string_expression ,integer_expression )
  Correspond à une expression d'un type de données binaire ou de chaîne de caractères. *string_expression* peut correspondre à des données binaires ou caractères.  
   
 > [!NOTE]  
->  Si *string_expression* n’est pas de type **varchar(max)** ni **nvarchar(max)**, REPLICATE tronque la valeur renvoyée à 8 000 octets. Pour renvoyer des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers le type de données de valeur de grande taille approprié.  
+>  Si *string_expression* n’est pas de type **varchar(max)** ni **nvarchar(max)** , REPLICATE tronque la valeur renvoyée à 8 000 octets. Pour renvoyer des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers le type de données de valeur de grande taille approprié.  
   
  *integer_expression*  
  Expression de n’importe quel type entier, y compris **bigint**. Si *integer_expression* est négatif, la valeur NULL est renvoyée.  
@@ -120,7 +120,7 @@ Varchar Column        Char Column
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-replicate"></a>C. Utilisation de REPLICATE  
+### <a name="c-using-replicate"></a>C : Utilisation de REPLICATE  
  L’exemple suivant réplique un caractère `0` quatre fois devant une valeur `ItemCode`.  
   
 ```  
@@ -146,7 +146,7 @@ AWC Logo Cap             CA-1098        0000CA-1098
 BB Ball Bearing          BE-2349        0000BE-2349
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SPACE &#40;Transact-SQL&#41;](../../t-sql/functions/space-transact-sql.md)  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: e00d4a4c91aeda1cb53731f9e3808a895d79194c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805705"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945385"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "54805705"
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent définir la valeur de @@ROWCOUNT comme suit :  
   
 -   En attribuant à @@ROWCOUNT le nombre de lignes affectées ou lues. Les lignes peuvent être, ou ne pas être, envoyées au client.  
@@ -54,7 +54,7 @@ ms.locfileid: "54805705"
   
 -   En réinitialisant @@ROWCOUNT à 0 sans renvoyer la valeur au client.  
   
- Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent : SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() or SELECT **'***Generic Text***'**.  
+ Les instructions qui réalisent une affectation simple attribuent toujours à @@ROWCOUNT la valeur 1. Aucune ligne n'est envoyée au client. Parmi ces instructions figurent : SET @*local_variable*, RETURN, READTEXT, ainsi que les instructions de sélection sans requête telles que SELECT GETDATE() or SELECT **'***Generic Text***'** .  
   
  Les instructions qui effectuent une affectation dans une requête ou qui utilisent RETURN dans une requête attribuent à @@ROWCOUNT le nombre de lignes affectées ou lues par la requête ; par exemple : SELECT @*local_variable* = c1 FROM t1.  
   
@@ -82,7 +82,7 @@ PRINT 'Warning: No rows were updated';
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   

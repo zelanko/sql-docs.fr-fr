@@ -17,15 +17,15 @@ helpviewer_keywords:
 - FULLTEXTCATALOGPROPERTY function
 - status information [SQL Server], full-text catalogs
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9b590e2a1ba1c3362b86b195c4b1a5fcb7d63bd
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662793"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948972"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ Expression contenant le nom de la propriété de catalogue de texte intégral. L
 |**LogSize**|Pris en charge pour la compatibilité descendante uniquement. Retourne toujours 0.<br /><br /> Taille en octets du jeu combiné de journaux d'erreurs associés à un catalogue de texte intégral du service de Recherche [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**MergeStatus**|Indique si une fusion principale est en cours.<br /><br /> 0 = Aucune fusion principale en cours<br /><br /> 1 = Fusion principale en cours|  
 |**PopulateCompletionAge**|Différence en secondes entre la fin du remplissage du dernier index de texte intégral et le 01/01/1990 00:00:00<br /><br /> Propriété uniquement mise à jour pour des analyses complètes ou incrémentielles. Renvoie la valeur 0 si aucun remplissage ne s'est produit.|  
-|**PopulateStatus**|0 = Inactif <br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause <br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu.<br /><br /> 9 = Suivi des modifications|  
+|**PopulateStatus**|0 = Inactif<br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause<br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu.<br /><br /> 9 = Suivi des modifications|  
 |**UniqueKeyCount**|Nombre de clés uniques dans le catalogue de texte intégral.|  
 |**ImportStatus**|Indique si le catalogue de texte intégral est en cours d’importation.<br /><br /> 0 = Le catalogue de texte intégral n’est pas en cours d’importation.<br /><br /> 1 = Indique que le catalogue de texte intégral est en cours d'importation.|  
   
@@ -72,7 +72,7 @@ Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir 
   
 Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un utilisateur ne peut qu’afficher les métadonnées des sécurisables. Ces sécurisables sont ceux dont il est propriétaire ou pour lesquels il dispose des autorisations nécessaires. Par conséquent, les fonctions intégrées générant des métadonnées, telles que FULLTEXTCATALOGPROPERTY, peuvent retourner la valeur NULL si l’utilisateur ne dispose d’aucune autorisation sur l’objet. Pour plus d’informations, consultez [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') n’examine que les fragments ayant l’état 4 ou 6, comme indiqué dans [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Ces fragments font partie de l'index logique. Par conséquent, la propriété **IndexSize** ne retourne que la taille de l’index logique. 
 
 Pendant une fusion d'index, toutefois, la taille d'index réelle peut être le double de sa taille logique. Pour rechercher la taille réelle consommée par un index de recherche en texte intégral pendant une fusion, utilisez la procédure stockée système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Cette procédure examine tous les fragments associés à un index de recherche en texte intégral. 
@@ -93,7 +93,7 @@ SELECT fulltextcatalogproperty('Cat_Desc', 'ItemCount');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
 [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
 [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  

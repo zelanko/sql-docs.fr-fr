@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 30d79fb58a59d98e2e83aea97cecfb0371af7114
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979925"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935949"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Retourne un objet géométrique qui représente l’union de toutes les valeurs 
 > [!NOTE]  
 >  Dans la mesure où *tolerance* est de type **float**, `System.Runtime.InteropServices.COMException` peut être levé si la valeur de tolérance est très petite en raison de problèmes d’arrondi avec les types à virgule flottante.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand *distance* > 0, une instance **Polygon** ou **MultiPolygon** est retournée.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STBuffer &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

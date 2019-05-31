@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB method
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 71ad47204df46702f63de27d0f30ad6978023073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0ca85d39df85fc48a9aad779414db1dcc1b4de6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676407"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936911"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_geography*  
- Représentation WKB de l’instance **geography** à retourner. *WKB_geography* est une expression **varbinary(max)**.  
+ Représentation WKB de l’instance **geography** à retourner. *WKB_geography* est une expression **varbinary(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geography** à retourner.  
@@ -51,7 +51,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le type OGC de l’instance **geography** retournée par `STGeomFromText()` a comme valeur l’entrée WKB correspondante.  
   
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
@@ -67,7 +67,7 @@ SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

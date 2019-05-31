@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822507"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983126"
 ---
 # <a name="get-full-memory-dump"></a>Obtenir l’image mémoire complète
 
@@ -88,6 +88,15 @@ Pour capturer des informations de diagnostic pour résoudre une OutOfMemoryExcep
     * « C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll »
 
 9. Compresser le dossier.
+
+## <a name="share-the-information"></a>Partager les informations
+
+1. Pour partager les informations avec l’équipe de SSMS, signalez le problème sur https://aka.ms/sqlfeedback.
+
+2. Ensuite, partagez le fichier de vidage de la mémoire collecté sur OneDrive (ou équivalent) à un endroit où le fichier peut être collecté.
+
+    > [!Important]
+    > Les fichiers de vidage de la mémoire peuvent contenir des informations sensibles.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

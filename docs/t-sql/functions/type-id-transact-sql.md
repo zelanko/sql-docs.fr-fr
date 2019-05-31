@@ -18,16 +18,16 @@ helpviewer_keywords:
 - type IDs [SQL Server]
 - data types [SQL Server], IDs
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f822fc5dc4a115b5277c33c6578b0870137bbdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658107"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946905"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ TYPE_ID ( [ schema_name ] type_name )
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que TYPE_ID, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  TYPE_ID renvoie la valeur NULL si le nom du type n'est pas valide ou si l'appelant ne dispose pas de droits suffisants pour référencer le type.  
   
 ## <a name="examples"></a>Exemples  
@@ -87,7 +87,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C. Recherche de la valeur TYPE ID d’un type de données système  
+### <a name="c-looking-up-the-type-id-of-a-system-data-type"></a>C : Recherche de la valeur TYPE ID d'un type de données système  
  L'exemple suivant renvoie la valeur `TYPE ID` pour le type de données système `datetime`.  
   
 ```  
@@ -95,7 +95,7 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

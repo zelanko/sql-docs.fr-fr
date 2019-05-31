@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f5dc6b841fd0f19f418a6c1b479231fe2cbc3539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5dc363a4b22bbd8fb8cd808d615174072fe26cc
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661097"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936625"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_multipoint*  
- Représentation WKB de l’instance **geographyMultiPoint** à retourner. *WKB_multipoint* est une expression **varbinary(max)**.  
+ Représentation WKB de l’instance **geographyMultiPoint** à retourner. *WKB_multipoint* est une expression **varbinary(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiPoint** à retourner.  
@@ -51,7 +51,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Type OGC : **MultiPoint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +63,7 @@ SET @g = geography::STMPointFromWKB(0x0104000000020000000101000000D7A3703D0A975E
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

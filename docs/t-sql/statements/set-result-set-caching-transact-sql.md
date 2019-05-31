@@ -15,12 +15,12 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cd0141a6fbd21c11f7401fa2c45dae0cc75b983d
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 0b932c1fa3aa8575f8f12ef5f164841788f74c1a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65561492"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948744"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>DÉFINIR LA MISE EN CACHE DU JEU DE RÉSULTATS (Transact-SQL)
 
@@ -36,10 +36,12 @@ Entraine la mise en cache des jeux de résultats de requête par Azure SQL Data 
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
+
+> [!Note]
+> Bien que cette fonctionnalité soit déployée dans toutes les régions, vérifiez la version déployée sur votre instance et les dernières [notes de publication sur Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour savoir si vous disposez de cette fonctionnalité.
   
-Cette commande doit être exécutée lorsque vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest
-) pour afficher le paramètre de mise en cache de résultats pour une base de données.  
+Cette commande doit être exécutée lorsque vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) pour afficher le paramètre de mise en cache de résultats pour une base de données.  
 
 **ACTIF** Spécifie que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
 
@@ -129,7 +131,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)

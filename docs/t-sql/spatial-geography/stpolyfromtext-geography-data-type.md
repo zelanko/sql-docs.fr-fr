@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 02232606ccfba5c03793dd6a3bff515efd0c8e6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 347411d840e2019a2a0553340ebf5b821455deea
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744507"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936076"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *polygon_tagged_text*  
- Représentation WKT de l’instance **geographyPolygon** à retourner. *polygon_tagged_text* est une expression **nvarchar(max)**.  
+ Représentation WKT de l’instance **geographyPolygon** à retourner. *polygon_tagged_text* est une expression **nvarchar(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyPolygon** à retourner.  
@@ -49,9 +49,9 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  Type de retour CLR : **SqlGeography**  
   
- Type OGC : **Polygon**  
+ Type OGC : **Polygone**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +63,7 @@ SET @g = geography::STPolyFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

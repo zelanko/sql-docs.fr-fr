@@ -16,22 +16,22 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1d5542501325fb84b31c0133aaa04aa0097c077b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698378"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937835"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Construit une instance **geography** en fonction d’une représentation du sous-ensemble [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du langage GML (Geography Markup Language).
   
-Pour plus d’informations sur le langage GML, consultez les spécifications OGC (Open Geospatial Consortium) suivantes : [OGC Specifications, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
+Pour plus d’informations sur GML, consultez les spécifications Open Geospatial Consortium suivantes : [Spécifications OGC, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.
   
@@ -54,7 +54,7 @@ GeomFromGml ( GML_input, SRID )
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
  Cette méthode lève **ArgumentException** si l’entrée contient une arête antipodale.  
@@ -80,7 +80,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

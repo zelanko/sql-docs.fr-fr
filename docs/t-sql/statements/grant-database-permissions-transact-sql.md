@@ -1,7 +1,7 @@
 ---
 title: GRANT - Octroyer des autorisations de base de données (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828399"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993475"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT – octroi d'autorisations de base de données (Transact-SQL)
 
@@ -62,7 +62,7 @@ permission | ALL [ PRIVILEGES ]
 
 *permission* Spécifie une autorisation qui peut être accordée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.
 
-ALL Cette option n’accorde pas toutes les autorisations possibles. Elle revient à accorder les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, et CREATE VIEW.
+ALL Cette option n’accorde pas toutes les autorisations possibles. Elle revient à accorder les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
 
 PRIVILEGES Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.
 
@@ -101,10 +101,10 @@ Spécifie un utilisateur de base de données mappé à une clé asymétrique.
 
 *Database_user_with_no_login* Spécifie un utilisateur de base de données sans principal au niveau du serveur correspondant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
-> Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l'exécuter. Dans ce cas, l'utilisateur doit également disposer d'une autorisation SELECT sur la colonne calculée.
+> Dans certains cas, une combinaison d'autorisations ALTER et REFERENCE pourrait autoriser le bénéficiaire des autorisations à afficher des données ou à exécuter des fonctions non autorisées. Par exemple : un utilisateur avec une autorisation ALTER sur une table et une autorisation REFERENCE sur une fonction peut créer une colonne calculée sur une fonction et l’exécuter. Dans ce cas, l'utilisateur doit également disposer d'une autorisation SELECT sur la colonne calculée.
 
 Une base de données est un élément sécurisable contenu par le serveur qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible d'accorder sur une base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.
 
@@ -175,6 +175,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |Suppression|CONTROL|CONTROL SERVER|
 |Exécutez|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **S'applique à**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**S'applique à**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -189,7 +190,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.
 
@@ -222,7 +223,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO
 ```
 
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>b. Octroi d'une autorisation SHOWPLAN à un rôle d'application
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Octroi d'une autorisation SHOWPLAN à un rôle d'application
 
  Dans l'exemple ci-dessous, l'autorisation `SHOWPLAN` sur la base de données `AdventureWorks2012` est accordée au rôle d'application `AuditMonitor`.
 
@@ -254,7 +255,7 @@ GRANT CONTROL ON DATABASE:AdventureWorks2012 TO Sarah;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

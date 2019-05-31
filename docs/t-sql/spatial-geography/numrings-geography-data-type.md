@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - NumRings method
 ms.assetid: 0e4e4fa2-b608-4cc4-98ba-0845ddb4214c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6a553dc687ec9f1aef15e1455e80106f3612dd9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad07cdaffd8e7cd207691e218ad8eaabf293b0db
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750567"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937553"
 ---
 # <a name="numrings-geography-data-type"></a>NumRings (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47750567"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne NULL s’il ne s’agit pas d’une instance **Polygon**, et retourne 0 si l’instance est vide. Cette méthode est précise.  
   
 ## <a name="examples"></a>Exemples  
@@ -54,7 +54,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.NumRings();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

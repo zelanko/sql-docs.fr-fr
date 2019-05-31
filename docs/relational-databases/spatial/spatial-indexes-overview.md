@@ -9,16 +9,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 619f32c1a12e5a00a553cb41434dcf4802020c1c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659753"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939208"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "51659753"
   
  Par exemple, considérez l'illustration précédente, qui montre un octogone qui s'adapte parfaitement à la cellule 15 de la grille de niveau 1. Dans l'illustration, la cellule 15 a été pavée, l'octogone ayant été disséqué en neuf cellules de niveau 2. Cette illustration suppose que la limite de cellules par objet est supérieure ou égale à 9. Si la limite de cellules par objet était inférieure ou égale à 8, la cellule 15 ne serait pas pavée et seule cette cellule 15 serait comptée pour l'objet.  
   
- Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Cependant, l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge une clause CELLS_PER_OBJECT**=**_n_ qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192 (inclus).  
+ Par défaut, la limite de cellules par objet est de 16, ce qui constitue un compromis satisfaisant entre l'espace et la précision pour la plupart des index spatiaux. Cependant, l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] prend en charge une clause CELLS_PER_OBJECT **=** _n_ qui vous permet de spécifier une limite de cellules par objet comprise entre 1 et 8192 (inclus).  
   
 > [!NOTE]  
 >  Le paramètre **cells_per_object** d’un index spatial est visible dans l’affichage catalogue [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -109,7 +109,7 @@ ms.locfileid: "51659753"
 #### <a name="deepest-cell-rule"></a>Règle de cellule la plus profonde  
  La règle de cellule la plus profonde exploite le fait que chaque cellule de niveau inférieur appartient à la cellule située au-dessus d'elle : une cellule de niveau 4 appartient à une cellule de niveau 3, une cellule de niveau 3 appartient à une cellule de niveau 2 et une cellule de niveau 2 appartient à une cellule de niveau 1. Par exemple, un objet qui appartient à la cellule 1.1.1.1 appartient également à la cellule 1.1.1, à la cellule 1.1 et à la cellule 1. La connaissance de telles relations de hiérarchie de cellule est intégrée au processeur de requêtes. Par conséquent, seules les cellules les plus profondes doivent être enregistrées dans l'index, ce qui réduit la quantité d'informations que l'index doit stocker.  
   
- Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules suivantes du niveau 1 au niveau 3 : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
+ Dans l'illustration suivante, un polygone en losange relativement petit est pavé. L'index utilise la limite de cellules par objet par défaut de 16, qui n'est pas atteinte pour ce petit objet. Par conséquent, le pavage continue jusqu'au niveau 4. Le polygone réside dans les cellules du niveau 1 au niveau 3 suivantes : 4, 4.4 et 4.4.10 et 4.4.14. Toutefois, avec la règle de cellule la plus profonde, le pavage compte uniquement les douze cellules de niveau 4 : 4.4.10.13-15 et 4.4.14.1-3, 4.4.14.5-7 et 4.4.14.9-11.  
   
  ![Optimisation de la cellule la plus profonde](../../relational-databases/spatial/media/spndx-opt-deepest-cell.gif "Optimisation de la cellule la plus profonde")  
   
@@ -130,7 +130,7 @@ ms.locfileid: "51659753"
 >  Vous pouvez spécifier explicitement ce schéma de pavage à l’aide de la clause USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>Cadre englobant  
- Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)**, qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
+ Les données géométriques occupent un plan qui peut être infini. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, un index spatial requiert un espace fini. Pour établir un espace fini pour la décomposition, le schéma de pavage de grille géométrique requiert un *cadre englobant*rectangulaire. Le cadre englobant est défini par quatre coordonnées, **(** _x-min_ **,** _y-min_ **)** et **(** _x-max_ **,** _y-max_ **)** , qui sont stockées en tant que propriétés de l’index spatial. Ces coordonnées représentent les éléments suivants :  
   
 -   *x-min* est la coordonnée x de l’angle inférieur gauche du cadre englobant.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "51659753"
 > [!NOTE]  
 >  Ces coordonnées sont spécifiées par la clause BOUNDING_BOX de l’instruction [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Les coordonnées **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)** déterminent la position et les dimensions du cadre englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
+ Les coordonnées **(** _x-min_ **,** _y-min_ **)** et **(** _x-max_ **,** _y-max_ **)** déterminent la position et les dimensions du cadre englobant. L'espace en dehors du cadre englobant est traité comme une cellule unique affectée du numéro 0.  
   
  L'index spatial décompose l'espace à l'intérieur du cadre englobant. La grille de niveau 1 de la hiérarchie de grille remplit le cadre englobant. Pour placer un objet géométrique dans la hiérarchie de grille, l'index spatial compare les coordonnées de l'objet à celles du cadre englobant.  
   
- L’illustration suivante montre les points définis par les coordonnées **(**_x-min_**,**_y-min_**)** et **(**_x-max_**,**_y-max_**)** du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
+ L’illustration suivante montre les points définis par les coordonnées **(** _x-min_ **,** _y-min_ **)** et **(** _x-max_ **,** _y-max_ **)** du cadre englobant. Le niveau supérieur de la hiérarchie de grille est illustré comme une grille 4x4. À des fins d'illustration, les niveaux inférieurs sont omis. L'espace en dehors de la zone englobante est indiqué par un zéro (0). Notez que l'objet 'A' s'étend en partie au-delà du cadre et que l'objet 'B' se trouve complètement à l'extérieur du cadre dans la cellule 0.  
   
  ![Rectangle englobant affichant les coordonnées et la cellule 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Rectangle englobant affichant les coordonnées et la cellule 0.")  
   
@@ -182,7 +182,7 @@ ms.locfileid: "51659753"
 ##  <a name="methods"></a> Méthodes prises en charge par les index spatiaux  
   
 ###  <a name="geometry"></a> Méthodes géométriques prises en charge par les index spatiaux  
- Les index spatiaux prennent en charge les méthodes géométriques suivantes basées sur les ensembles sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+ Les index spatiaux prennent en charge les méthodes de géométrie basées sur les ensembles suivantes sous certaines conditions : STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() et STWithin(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE ou JOIN ON d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -207,7 +207,7 @@ ms.locfileid: "51659753"
 -   *geometry1*.[STWithin](../../t-sql/spatial-geometry/stwithin-geometry-data-type.md)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Méthodes géographiques prises en charge par les index spatiaux  
- Sous certaines conditions, les index spatiaux prennent en charge les méthodes géographiques suivantes basées sur les ensembles : STIntersects(),STEquals(), and STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
+ Sous certaines conditions, les index spatiaux prennent en charge les méthodes de géographie basées sur les ensembles suivantes : STIntersects(),STEquals() et STDistance(). Pour être prises en charge par un index spatial, ces méthodes doivent être utilisées dans la clause WHERE d'une requête et elles doivent se produire dans un prédicat de la forme générale suivante :  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   
@@ -243,7 +243,7 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c071df768fa18e153bfac1c2dcd738bbaafa538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781138"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982736"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (Caractère générique - recherche de correspondance d'un seul caractère) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Utilisez le trait de soulignement _ pour recherche un caractère unique dans une
   
 ## <a name="examples"></a>Exemples  
 
-## <a name="a-simple-example"></a>A. Exemple simple   
+## <a name="a-simple-example"></a>A : Exemple simple   
 
 L’exemple suivant retourne tous les noms de base de données qui commencent par la lettre `m` et dont la troisième lettre est `d`. Le caractère de soulignement indique que le deuxième caractère du nom peut être n’importe quelle lettre. Les bases de données `model` et `msdb` répondent à ces critères. La base de données `master` n’y répond pas.
 
@@ -55,7 +55,7 @@ Vous pouvez avoir d’autres bases de données qui répondent à ces critères.
 
 Vous pouvez utiliser plusieurs traits de soulignement pour représenter plusieurs caractères. Si vous modifiez les critères `LIKE` de sorte à inclure deux traits de soulignement `'m__%`, alors la base de données MASTER est incluse dans les résultats.
 
-### <a name="b-more-complex-example"></a>B. Exemple plus complexe
+### <a name="b-more-complex-example"></a>B : Exemple plus complexe
  Cet exemple utilise l’opérateur _ pour rechercher toutes les personnes figurant dans la table `Person` qui ont un prénom en trois lettres se terminant par `an`.  
   
 ```sql  
@@ -66,7 +66,7 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C. Échappement du caractère de soulignement   
+## <a name="c-escaping-the-underscore-character"></a>C : Échappement du caractère de soulignement   
 L’exemple suivant retourne les noms des rôles de base de données fixes comme `db_owner` et `db_ddladmin`, mais elle retourne également l’utilisateur `dbo`. 
 
 ```sql
@@ -92,7 +92,7 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (Caractère générique - Caractères à rechercher)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   

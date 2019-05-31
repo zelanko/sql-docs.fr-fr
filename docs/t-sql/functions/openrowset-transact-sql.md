@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531094"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944805"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -149,11 +149,11 @@ OPENROWSET
  Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.  
   
  Le fichier d'erreur est créé au début de l'exécution de la commande. Une erreur est signalée si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d’erreur et propose un diagnostic. Lorsque les erreurs sont corrigées, les données peuvent être chargées.  
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` peut se trouver dans Stockage Blob Azure. 
 
 'errorfile_data_source_name'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreur contenant les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
   
  FIRSTROW =*first_row*  
@@ -192,10 +192,10 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
   
  Si les lignes réelles du fichier de données ne sont pas triées d'après l'ordre spécifié ou si l'indicateur UNIQUE est spécifié et si des clés en double sont présentes, une erreur est retournée.  
   
- Les alias de colonnes sont requis lorsque ORDER est utilisé. La liste d'alias de colonnes doit référencer la table dérivée à laquelle accède la clause BULK. Les noms de colonnes qui sont spécifiés dans la clause ORDER font référence à cette liste d'alias de colonnes. Il n’est pas possible de spécifier des colonnes de types de valeur élevée (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml**) et de types LOB (**text**, **ntext** et **image**).  
+ Les alias de colonnes sont requis lorsque ORDER est utilisé. La liste d'alias de colonnes doit référencer la table dérivée à laquelle accède la clause BULK. Les noms de colonnes qui sont spécifiés dans la clause ORDER font référence à cette liste d'alias de colonnes. Il n’est pas possible de spécifier des colonnes de types de valeur élevée (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml**) et de types LOB (**text**, **ntext** et **image**).  
   
  SINGLE_BLOB  
- Retourne le contenu de *data_file* sous la forme d’un ensemble de lignes à une seule ligne et une seule colonne de type **varbinary(max)**.  
+ Retourne le contenu de *data_file* sous la forme d’un ensemble de lignes à une seule ligne et une seule colonne de type **varbinary(max)** .  
   
 > [!IMPORTANT]  
 > Nous vous recommandons d'importer des données XML seulement au moyen de l'option SINGLE_BLOB, au lieu de SINGLE_CLOB et SINGLE_NCLOB, parce que seule l'option SINGLE_BLOB prend en charge toutes les conversions d'encodage de Windows.  
@@ -209,7 +209,7 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
 ### <a name="input-file-format-options"></a>Options de format de fichier d’entrée
   
 FORMAT **=** 'CSV'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Spécifie un fichier de valeurs séparées par des virgules conforme à la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
  FORMATFILE ='*format_file_path*'  
@@ -219,20 +219,20 @@ Spécifie un fichier de valeurs séparées par des virgules conforme à la norme
   
  Pour plus d’informations sur les fichiers de format, consultez [Utiliser un fichier de format pour importer des données en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
 
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans Stockage Blob Azure. Pour obtenir des exemples, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
 
 FIELDQUOTE **=** 'field_quote'   
-**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+**S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de caractère guillemet tel que défini dans la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  `OPENROWSET` ne peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB uniquement si l’option de Registre **DisallowAdhocAccess** est explicitement définie sur 0 pour le fournisseur spécifié et que l’option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
   
  Lors de l'accès à des sources de données OLE DB distantes, l'identité des connexions approuvées n'est pas automatiquement déléguée du serveur auquel le client est connecté au serveur qui est interrogé. Il est nécessaire de configurer la délégation de l'authentification.  
   
- Les noms de catalogues et de schémas sont requis si le fournisseur OLE DB prend en charge plusieurs catalogues et schémas dans la source de données spécifiée. Les valeurs de _catalog_ et )_schema_ peuvent être omises si le fournisseur OLE DB ne les prend pas en charge. Si le fournisseur prend en charge uniquement les noms de schémas, il est nécessaire de spécifier un nom en deux parties, sous la forme _schéma_**.**_objet_. Si le fournisseur prend en charge uniquement les noms de catalogues, il est nécessaire de spécifier un nom en trois parties, sous la forme _catalogue_**.**_schéma_**.**_objet_. Vous devez spécifier des noms en trois parties pour les requêtes directes qui utilisent le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB. Pour plus d’informations, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Les noms de catalogues et de schémas sont requis si le fournisseur OLE DB prend en charge plusieurs catalogues et schémas dans la source de données spécifiée. Les valeurs de _catalog_ et )_schema_ peuvent être omises si le fournisseur OLE DB ne les prend pas en charge. Si le fournisseur prend en charge uniquement les noms de schémas, il est nécessaire de spécifier un nom en deux parties, sous la forme _schéma_ **.** _objet_. Si le fournisseur prend en charge uniquement les noms de catalogues, il est nécessaire de spécifier un nom en trois parties, sous la forme _catalogue_ **.** _schéma_ **.** _objet_. Vous devez spécifier des noms en trois parties pour les requêtes directes qui utilisent le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB. Pour plus d’informations, consultez [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  `OPENROWSET` n’accepte pas de variables pour ses arguments.  
   
@@ -265,7 +265,7 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 > Lorsque vous utilisez `OPENROWSET`, il est important que vous compreniez la manière dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l’emprunt d’identité. Pour plus d’informations sur la sécurité, consultez [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>L'importation en bloc de données SQLCHAR, SQLNCHAR ou SQLBINARY  
- OPENROWSET(BULK...) suppose que, si elle n'est pas spécifiée, la longueur maximale des données SQLCHAR, SQLNCHAR ou SQLBINARY ne dépasse pas 8 000 octets. Si les données importées figurent dans un champ de données LOB qui contient des objets **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** qui dépassent 8 000 octets, vous devez utiliser un fichier de format XML qui définit la longueur maximale du champ de données. Pour spécifier la longueur maximale, modifiez le fichier de format et déclarez l'attribut MAX_LENGTH.  
+ OPENROWSET(BULK...) suppose que, si elle n'est pas spécifiée, la longueur maximale des données SQLCHAR, SQLNCHAR ou SQLBINARY ne dépasse pas 8 000 octets. Si les données importées figurent dans un champ de données LOB qui contient des objets **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** qui dépassent 8 000 octets, vous devez utiliser un fichier de format XML qui définit la longueur maximale du champ de données. Pour spécifier la longueur maximale, modifiez le fichier de format et déclarez l'attribut MAX_LENGTH.  
   
 > [!NOTE]  
 > Un fichier de format généré automatiquement ne spécifie pas la longueur ou la longueur maximale d'un champ LOB. Toutefois, vous pouvez modifier un fichier de format et spécifier manuellement la longueur ou la longueur maximale.  
@@ -279,13 +279,13 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations `OPENROWSET` sont conditionnées par les autorisations associées au nom d’utilisateur passé au fournisseur OLE DB. L’utilisation de l’option `BULK` nécessite l’autorisation `ADMINISTER BULK OPERATIONS`.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Utilisation de OPENROWSET avec SELECT et le fournisseur SQL Server Native Client OLE DB  
- L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB pour accéder à la table `HumanResources.Department` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur distant `Seattle1`. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Une instruction `SELECT` définit l'ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
+ L’exemple suivant utilise le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB pour accéder à la table `HumanResources.Department` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sur le serveur distant `Seattle1`. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Une instruction `SELECT` définit l’ensemble de lignes retourné. La chaîne de caractères du fournisseur contient les mots clés `Server` et `Trusted_Connection`. Ces mots clés sont reconnus par le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.  
   
 ```sql  
 SELECT a.*  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>b. Utilisation du fournisseur Microsoft OLE DB pour Jet  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Utilisation du fournisseur Microsoft OLE DB pour Jet  
  L'exemple suivant accède à la table `Customers` de la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` via le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour Jet.  
   
 > [!NOTE]  
@@ -448,7 +448,7 @@ Pour obtenir des exemples `OPENROWSET` complets, illustrant notamment la configu
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

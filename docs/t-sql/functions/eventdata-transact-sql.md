@@ -22,15 +22,15 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: aed9a65000724b1b3ac7750fde45dddebbe3682d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979845"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946115"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Cette fonction retourne des informations sur les événements de serveur et de b
 EVENTDATA( )  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `EVENTDATA` ne retourne des données que si elles sont référencées directement au sein d’un déclencheur DDL ou d’ouverture de session. `EVENTDATA` retourne la valeur Null si d’autres routines l’appellent, même si un déclencheur DDL ou d’ouverture de session appelle ces routines.
   
 Les données retournées par `EVENTDATA` ne sont pas valides après une transaction qui :
@@ -112,9 +112,9 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour retourner des données d’événement, utilisez la méthode XQuery **value()** plutôt que la méthode **query()**. La méthode **query()** renvoie des instances XML et CR/LF (retour chariot/saut de ligne) à séquence d’échappement perluète dans la sortie, tandis que la méthode **value()** retourne des instances CR/LF invisibles dans la sortie.  
+>  Pour retourner des données d’événement, utilisez la méthode XQuery **value()** plutôt que la méthode **query()** . La méthode **query()** renvoie des instances XML et CR/LF (retour chariot/saut de ligne) à séquence d’échappement perluète dans la sortie, tandis que la méthode **value()** retourne des instances CR/LF invisibles dans la sortie.  
   
-### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>b. Création d'une table de journal avec données d'événements dans un déclencheur DDL  
+### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. Création d'une table de journal avec données d'événements dans un déclencheur DDL  
 Cet exemple crée une table pour stocker des informations sur tous les événements de niveau base de données, et la remplit avec un déclencheur DDL. La requête XQuery effectuée sur les données XML générées par `EVENTDATA` a pour effet de capturer le type d’événement et l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -151,7 +151,7 @@ DROP TABLE ddl_log;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser la fonction EVENTDATA](../../relational-databases/triggers/use-the-eventdata-function.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notifications d'événements](../../relational-databases/service-broker/event-notifications.md)   

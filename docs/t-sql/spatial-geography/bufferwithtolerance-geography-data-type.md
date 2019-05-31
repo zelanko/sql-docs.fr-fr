@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9d82d7a24c032be93ebdd4d9cef1239f3d1b511b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 2e3208d3a70c0970e34e84723c5a95e85c55e859
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662713"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937270"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **ge
   
 Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Cette méthode lève **ArgumentException** si _distance_ est une valeur NAN (n’est pas un nombre), ou si _distance_ est un infini positif ou négatif.  Cette méthode lève également **ArgumentException** si _tolerance_ est égal à zéro (0), est une valeur NAN (n’est pas un nombre), est une valeur négative, ou est un infini positif ou négatif.  
   
 `STBuffer()` retourne une instance **FullGlobe** dans certains cas ; par exemple `STBuffer()` retourne une instance **FullGlobe** sur deux pôles quand la distance de mémoire tampon est supérieure à la distance entre l’équateur et les pôles.  
@@ -84,7 +84,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [STBuffer &#40;type de données geography&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
 [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

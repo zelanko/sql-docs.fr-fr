@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768470"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980079"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN retourne **TRUE** si la valeur de *test_expression* est inférieure à la valeur de *begin_expression* ou supérieure à la valeur de *end_expression*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour spécifier un intervalle exclusif, employez les opérateurs « supérieur à » (>) et « inférieur à » (<). Si l'un des paramètres fournis avec le prédicat BETWEEN ou NOT BETWEEN a la valeur NULL, le résultat est UNKNOWN.  
   
 ## <a name="examples"></a>Exemples  
@@ -182,7 +182,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  La requête récupère les lignes attendues car les valeurs de date dans la requête et les valeurs **datetime** stockées dans la colonne `RateChangeDate` ont été spécifiées sans la partie heure de la date. Lorsque la partie heure n'est pas spécifiée, la valeur par défaut est 12:00 A.M. Notez qu'une ligne qui contient une heure ultérieure à 12h00 le 5 janvier 2002 ne serait pas retournée par cette requête car cette date se situe hors de la plage.  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [&#62; &#40;Supérieur à&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [&#60; &#40;Inférieur à&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

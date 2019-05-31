@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695797"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937316"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "47695797"
   
 -   **NULL** est passé à la méthode, par exemple `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant affiche les résultats retournés pour différentes valeurs de distance.  
   
 |Valeur de distance|Dimensions de type|Type spatial retourné|  
@@ -72,7 +72,7 @@ ms.locfileid: "47695797"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Appel de BufferWithCurves() avec une valeur de paramètre < 0 sur instance géographique unidimensionnelle  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>A. Appel de BufferWithCurves() avec une valeur de paramètre < 0 sur une instance géographique unidimensionnelle  
  L'exemple suivant retourne une instance `GeometryCollection` vide :  
   
  ```sql
@@ -140,7 +140,7 @@ ms.locfileid: "47695797"
   
  Notez que les deux exemples précédents ont passé un littéral de chaîne à la méthode `BufferWithCurves()`. Le premier exemple fonctionne car le littéral de chaîne peut être converti en valeur numérique. Toutefois, le deuxième exemple lève un `ArgumentException`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

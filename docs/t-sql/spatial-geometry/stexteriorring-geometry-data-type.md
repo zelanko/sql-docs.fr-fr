@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STExteriorRing (geometry Data Type)
 ms.assetid: b402b36f-05bf-4c6d-8cd6-76c0fff19db2
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f90bcc20761f3fb3ac4aa7c4ec5e32bd715da176
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 808651c889985586e28132694f02b3f4c35b39f2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763987"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938929"
 ---
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Retourne l’anneau extérieur d’une instance **geometry** qui est un polygone
   
  Type OGC (Open Geospatial Consortium) : **LineString**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne **null** si l’instance **geometry** n’est pas un polygone.  
   
 ## <a name="examples"></a>Exemples  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STExteriorRing().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

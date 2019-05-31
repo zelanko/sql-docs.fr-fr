@@ -17,16 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical variance
 - VAR function [Transact-SQL]
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae1dc46bc51b00a9b6b3cb4bc6980c39e395e765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cbee19e0b2f2b176663b76b565285eab167c18d
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794797"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946303"
 ---
 # <a name="var-transact-sql"></a>VAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,13 +55,13 @@ VAR ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit**. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. _order\_by\_clause_ détermine l’ordre logique dans lequel l’opération est effectuée. _order\_by\_clause_ est obligatoire. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si VAR est utilisé sur tous les éléments d'une instruction SELECT, chaque valeur du jeu de résultats est incluse dans le calcul. VAR ne peut être utilisé qu'avec des colonnes numériques. Les valeurs NULL sont ignorées.  
   
  VAR est une fonction déterministe lorsqu'elle est utilisée sans les clauses OVER et ORDER BY. Elle n'est pas déterministe avec les clauses OVER et ORDER BY. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -121,7 +121,7 @@ Year  Quarter  SalesQuota              Variance
 2002  4        154000.0000             1580250000.00
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   

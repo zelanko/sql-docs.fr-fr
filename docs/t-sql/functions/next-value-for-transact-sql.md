@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525730"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944128"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Types de retour  
  Retourne un nombre à l'aide du type de la séquence.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction **NEXT VALUE FOR** peut être utilisée dans les procédures stockées et les déclencheurs.  
   
  Lorsque la fonction **NEXT VALUE FOR** est utilisée dans une requête ou une contrainte par défaut, si le même objet séquence est utilisé plusieurs fois, ou si le même objet séquence est utilisé à la fois dans l’instruction qui fournit les valeurs et dans une contrainte par défaut en cours d’exécution, la même valeur est retournée pour toutes les colonnes qui référencent la même séquence dans une ligne dans le jeu de résultats.  
@@ -152,7 +152,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **UPDATE** sur l’objet séquence ou le schéma de la séquence. Pour obtenir un exemple d'octroi d'une autorisation, consultez l'exemple F dans la suite de cette rubrique.  
   
 ### <a name="ownership-chaining"></a>Chaînage des propriétés  
@@ -301,7 +301,7 @@ GO
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Numéros de séquence](../../relational-databases/sequence-numbers/sequence-numbers.md)  

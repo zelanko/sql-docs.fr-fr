@@ -17,16 +17,16 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70bfded9597cd7e0d8d8f54ecc3fa636e2d41d3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24bc60e00fa628a0c984302a4d91c806eab09b4b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704890"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949152"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,12 +61,12 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Par défaut, **LOG()** renvoie le logarithme népérien. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez changer la base du logarithme à l’aide du paramètre facultatif *base*.  
   
  Le logarithme népérien est le logarithme en base **e**, où **e** est une constante irrationnelle environ égale à 2,718281828.  
   
- Le logarithme népérien de l’exponentiel d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. De même, l’exponentiel du logarithme népérien d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
+ Le logarithme naturel de la valeur exponentielle d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. Et la valeur exponentielle du logarithme naturel d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -121,7 +121,7 @@ SELECT LOG(10);
  2.30
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [EXP &#40;Transact-SQL&#41;](../../t-sql/functions/exp-transact-sql.md)   
  [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  

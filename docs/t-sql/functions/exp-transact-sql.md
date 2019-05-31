@@ -16,16 +16,16 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3725fccd59dea96571a3f5b1b50338ec2adb2dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b62046f315c6921a03cdf692561d8336398792ec
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508520"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946097"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,12 +47,12 @@ EXP ( float_expression )
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La constante **e** (2,718281…), est la base des logarithmes naturels.  
   
  L’exposant d’un nombre correspond à la constante **e** élevée à la puissance de ce nombre. Par exemple, EXP(1,0) = e^1,0 = 2,71828182845905 et EXP(10) = e^10 = 22026,4657948067.  
   
- La valeur exponentielle du logarithme népérien d’un nombre est le nombre lui-même : EXP (LOG (*n*)) = *n*. De même, le logarithme népérien de la valeur exponentielle d’un nombre est le nombre lui-même : LOG (EXP (*n*)) = *n*.  
+ La valeur exponentielle du logarithme naturel d’un nombre est le nombre lui-même : EXP (LOG (*n*)) = *n*. Et le logarithme naturel de la valeur exponentielle d’un nombre est le nombre lui-même : LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -121,7 +121,7 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions mathématiques &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
  [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  

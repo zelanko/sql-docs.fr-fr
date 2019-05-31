@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromWKB (geometry Data Type)
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2b5b18e6b28da5d905c5a8cafa4ac766f8c0f8b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd85de28fd8f757c7c8b389fe5e5e5934162751
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716847"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938871"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_geometry*  
- Représentation WKB de l’instance **geometry** à retourner. *WKB_geometry* est une expression **varbinary(max)**.  
+ Représentation WKB de l’instance **geometry** à retourner. *WKB_geometry* est une expression **varbinary(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometry** à retourner.  
@@ -49,7 +49,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le type OGC de l’instance **geometry** retournée par `STGeomFromText()` a comme valeur l’entrée WKB correspondante.  
   
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
@@ -63,7 +63,7 @@ SET @g = geometry::STGeomFromWKB(0x010200000003000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

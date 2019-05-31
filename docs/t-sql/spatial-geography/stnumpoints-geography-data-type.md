@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STNumPoints method
 ms.assetid: 25ff7ad1-ba5f-4cfb-816a-59255ac1591d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: aaa1556f32bf7b04040327df178da9b7e7a9d2f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92fa22099ef88861986be34832d3bde1165d2d77
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762647"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935736"
 ---
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47762647"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode compte les points dans la description d’une instance **geography**. Les points en double sont comptés ; toutefois, les points de connexion entre les segments ne sont comptés qu'une seule fois. Si cette instance est une collection, cette méthode retourne le nombre total de points dans la collection.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,7 +73,7 @@ SELECT @g.STNumPoints();
  SELECT @g.STNumPoints();
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

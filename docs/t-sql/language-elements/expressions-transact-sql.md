@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124099"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982331"
 ---
 # <a name="expressions-transact-sql"></a>Expressions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,11 +86,11 @@ ms.locfileid: "54124099"
 |----------|----------------|  
 |*constant*|Symbole représentant une valeur de données spécifique et unique. Pour plus d’informations, consultez [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Unité de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] qui fournit un service spécifique et retourne une valeur unique. *scalar_function* peut correspondre à des fonctions scalaires intégrées, comme les fonctions SUM, GETDATE ou CAST, ou bien à des fonctions scalaires définies par l’utilisateur.|  
-|[ _table_name_**.** ]|Nom ou alias d'une table.|  
+|[ _table_name_ **.** ]|Nom ou alias d'une table.|  
 |*column*|Nom d’une colonne. Seul le nom de la colonne est autorisé dans une expression.|  
 |*variable*|Nom d'une variable ou d'un paramètre. Pour plus d’informations, consultez [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** _expression_  **)**|Toute expression valide définie dans cette rubrique. Les parenthèses regroupent des opérateurs et garantissent que tous les opérateurs de l'expression entre parenthèses sont traités avant que l'expression qui en résulte ne soit combinée avec une autre.|  
-|**(** _scalar_subquery_ **)**|Sous-requête qui renvoie une valeur. Exemple :<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|Sous-requête qui renvoie une valeur. Par exemple :<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Les opérateurs unaires ne s'appliquent qu'à des expressions qui évaluent un type de données de la catégorie des types de données numériques. Opérateur qui n'a qu'un seul opérande :<br /><br /> + indique un nombre positif ;<br /><br /> - indique un nombre négatif ;<br /><br /> ~ indique l'opérateur de complément.|  
 |{ *binary_operator* }|Opérateur qui définit la manière de combiner deux expressions pour parvenir à un résultat unique. *binary_operator* peut être un opérateur arithmétique, l’opérateur d’assignation (=), un opérateur au niveau du bit, un opérateur de comparaison, un opérateur logique, l’opérateur de concaténation de chaînes (+) ou un opérateur unaire. Pour plus d’informations sur les opérateurs, consultez [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Toute fonction de classement [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations, consultez [Fonctions de classement &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
@@ -99,13 +99,13 @@ ms.locfileid: "54124099"
 ## <a name="expression-results"></a>Résultats des expressions  
  Pour une expression simple composée d'une seule constante ou variable ou d'une seule fonction scalaire ou nom de colonne : les type de données, classement, précision, échelle et valeur de l'expression sont ceux de l'élément référencé.  
   
- Lorsque deux expressions sont combinées avec des opérateurs logiques ou de comparaison, il en résulte un type de données booléen ayant l'une des trois valeurs suivantes : TRUE, FALSE ou UNKNOWN. Pour plus d’informations sur les types de données booléens, consultez [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ Quand deux expressions sont combinées avec des opérateurs logiques ou de comparaison, il en résulte un type de données booléen ayant l’une des trois valeurs suivantes : TRUE, FALSE ou UNKNOWN. Pour plus d’informations sur les types de données booléens, consultez [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
   
  Lorsque deux expressions sont combinées avec des opérateurs arithmétiques, de niveau bit ou de chaîne de caractères, l'opérateur détermine le type de donnée du résultat.  
   
  Les expressions complexes constituées de nombreux symboles et opérateurs conduisent à un résultat à valeur unique. Le type de données, le classement, la précision et la valeur de l'expression qui en résulte sont déterminés en combinant deux par deux les expressions, et ce jusqu'à l'obtention du résultat final. La séquence selon laquelle les expressions sont combinées est définie par le degré de priorité des opérateurs dans l'expression.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un opérateur peut combiner deux expressions si elles ont toutes deux un type de données pris en charge par l'opérateur et si au moins l'une des conditions suivantes est vraie :  
   
 -   les expressions ont le même type de données ;  
@@ -118,7 +118,7 @@ ms.locfileid: "54124099"
   
  Le classement de toute expression qui s'évalue à une chaîne de caractères est défini d'après les règles de priorité des classements. Pour plus d’informations, consultez [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
- Dans un langage de programmation tel que C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], une expression s’évalue toujours à un résultat unique. Cette règle varie pour les expressions dans une liste de sélection [!INCLUDE[tsql](../../includes/tsql-md.md)] : l'expression est évaluée individuellement pour chaque ligne dans l'ensemble de résultats. Une même expression peut avoir une valeur différente dans chaque ligne du jeu de résultats, mais chaque ligne n'a qu'une seule valeur pour l'expression. Par exemple, dans l'instruction `SELECT` suivante, `ProductID` et `1+2` dans la liste de sélection sont tous deux des expressions :  
+ Dans un langage de programmation tel que C ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], une expression s’évalue toujours à un résultat unique. Cette règle varie pour les expressions dans une liste de sélection [!INCLUDE[tsql](../../includes/tsql-md.md)] : l’expression est évaluée individuellement pour chaque ligne dans l’ensemble de résultats. Une même expression peut avoir une valeur différente dans chaque ligne du jeu de résultats, mais chaque ligne n'a qu'une seule valeur pour l'expression. Par exemple, dans l'instruction `SELECT` suivante, `ProductID` et `1+2` dans la liste de sélection sont tous deux des expressions :  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,7 +130,7 @@ GO
   
  L'expression `1+2` s'évalue à `3` dans chaque ligne du jeu de résultats. Bien que l'expression `ProductID` génère une valeur différente dans chaque ligne du jeu de résultats, chaque ligne n'a qu'une seule valeur pour `ProductID`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

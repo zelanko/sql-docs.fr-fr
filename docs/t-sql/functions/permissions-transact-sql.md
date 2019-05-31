@@ -22,15 +22,15 @@ helpviewer_keywords:
 - testing permissions
 - PERMISSIONS function
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 28078c267d7d4a6ec1b5601c5982b20db006e56c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641507"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943428"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction PERMISSIONS peut servir à déterminer si l'utilisateur actuel possède les autorisations nécessaires pour exécuter une instruction ou pour accorder une autorisation (GRANT) à un autre utilisateur.  
   
  Les informations sur les autorisations sont renvoyées sous forme d'un fichier bitmap 32 bits.  
@@ -107,7 +107,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
  Une valeur NULL est renvoyée si l’un des paramètres spécifiés est NULL ou non valide (par exemple, un argument *objectid* ou une colonne n’existe pas). Les valeurs des bits des autorisations qui ne s'appliquent pas (par exemple l'autorisation EXECUTE sur une table, bit 0x20) ne sont pas définies.  
   
- Pour déterminer chaque bit défini dans le fichier bitmap retourné par la fonction PERMISSIONS, utilisez l'opérateur de bits AND (&).  
+ Pour déterminer chaque bit défini dans le fichier bitmap retourné par la fonction PERMISSIONS, utilisez l’opérateur de bits AND (&).  
   
  Vous pouvez également utiliser la procédure stockée système sp_helprotect pour retourner la liste des autorisations pour un utilisateur de la base de données active.  
   
@@ -143,7 +143,7 @@ ELSE
    PRINT 'You may not GRANT INSERT permissions on Person.Address.';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   

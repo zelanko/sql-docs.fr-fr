@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - HasM geometry
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ab164bf204b7fa7d65e5a8a879422a95b208f0ec
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bdb9ed030baaaac3f414d5b3079844c09785b6cd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800963"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937983"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "56800963"
   
  Type de retour CLR : **Booléen**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="examples"></a>Exemples  
   
@@ -49,7 +49,7 @@ SELECT @p.HasM
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
   

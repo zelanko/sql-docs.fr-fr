@@ -1,7 +1,7 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d21557ca1157c8331ce9a5175619097b962d13f2
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0cc7033845f55a6df33a58d7b100c8a59926821
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175096"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. Elle peut être également utilisée dans les instructions d'assignation.
+Une requête SELECT retourne les résultats sous la forme d'un ensemble de lignes. Vous pouvez si vous le souhaitez récupérer les résultats d'une requête SQL sous forme de code XML en spécifiant la clause FOR XML dans la requête. La clause FOR XML peut être utilisée dans les requêtes de premier niveau et dans les sous-requêtes. La clause FOR XML de premier niveau ne peut être utilisée que dans l'instruction SELECT. Dans les sous-requêtes, FOR XML peut être utilisée dans les instructions INSERT, UPDATE et DELETE. FOR XML peut être également utilisée dans les instructions d’assignation.
 
 Dans une clause FOR XML, vous spécifiez l'un des modes suivants :
 
@@ -55,7 +55,7 @@ Ces modes ne s'appliquent qu'aux requêtes pour lesquelles ils sont définis. Il
 
 La clause FOR XML n'est pas valide en cas de sélection comportant une clause FOR BROWSE.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 L’instruction `SELECT` suivante récupère des informations des tables `Sales.Customer` et `Sales.SalesOrderHeader` de la base de données `AdventureWorks2012` . Cette requête spécifie le mode `AUTO` dans la clause `FOR XML` :
 
@@ -69,7 +69,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## <a name="the-for-xml-clause-and-server-names"></a>La clause FOR XML et les noms de serveurs
@@ -88,7 +88,7 @@ SELECT TOP 1 LastName
 
 **Serveur local** : &nbsp; Quand `ServerName` est un serveur local, la requête renvoie :
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -96,7 +96,7 @@ SELECT TOP 1 LastName
 
 **Serveur réseau** : &nbsp; Quand `ServerName` est un serveur réseau, la requête renvoie :
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -112,11 +112,11 @@ SELECT TOP 1 LastName
 
 Maintenant, une fois l’ambiguïté levée, la requête renvoie :
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Syntaxe de base de la clause FOR XML](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)  
 [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  

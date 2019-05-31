@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 03187cc9deebd78a87638a9ce7bb7c7e8f9b296f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154934"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937853"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **ge
   
 Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Cette méthode retourne un **point**. En cas d’utilisation avec `EnvelopeAngle()`, `EnvelopeCenter()` retourne un cercle englobant d’une instance **geography**.  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeCenter().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
 [EnvelopeAngle &#40;type de données geography&#41;](../../t-sql/spatial-geography/envelopeangle-geography-data-type.md)  
   

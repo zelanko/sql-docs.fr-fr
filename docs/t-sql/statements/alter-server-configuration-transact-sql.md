@@ -1,7 +1,7 @@
 ---
 title: ALTER SERVER CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: aad389a5b54918a65b7eedab225c35425e404bf8
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 2de44a8eec9b2cf4428cb40db79f0c08f9a1afbf
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570792"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993467"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,6 +50,7 @@ SET <optionspec>
    | <hadr_cluster_context>  
    | <buffer_pool_extension>  
    | <soft_numa>  
+   | <memory_optimized>
 }  
   
 <process_affinity> ::=   
@@ -98,8 +99,17 @@ SET <optionspec>
         { size [ KB | MB | GB ] }  
   
 <soft_numa> ::=  
-    SET SOFTNUMA  
+    SOFTNUMA  
     { ON | OFF }  
+
+<memory-optimized> ::=   
+   MEMORY_OPTIMIZED   
+   {   
+     ON 
+   | OFF
+   | [ TEMPDB_METADATA = { ON [(RESOURCE_POOL='resource_pool_name')] | OFF }
+   | [ HYBRID_BUFFER_POOL = { ON | OFF }
+   }  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -186,7 +196,7 @@ Valeur du délai d'attente qui définit la durée pendant laquelle la DLL de res
   
 **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-HADR CLUSTER CONTEXT **=** { **'**_remote\_windows\_cluster_**'** | LOCAL }  
+HADR CLUSTER CONTEXT **=** { **'** _remote\_windows\_cluster_ **'** | LOCAL }  
 Remplace le contexte de cluster HADR de l'instance de serveur par le cluster de basculement Windows Server (WSFC) spécifié. Le *contexte de cluster HADR* détermine le cluster de basculement Windows Server (WSFC) qui gère les métadonnées pour les réplicas de disponibilité hébergés par l’instance de serveur. N'utilisez l'option SET HADR CLUSTER CONTEXT que pendant une migration entre clusters de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] vers une instance de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], ou d'une version supérieure, sur un nouveau cluster WSFC.  
   
 Vous pouvez basculer le contexte de cluster HADR uniquement du cluster WSFC local vers un cluster WSFC distant. Ensuite, vous pouvez choisir de basculer du cluster WSFC distant vers le cluster WSFC local. Il est possible de basculer le contexte de cluster HADR vers un cluster distant uniquement lorsque l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'héberge pas un réplica de disponibilité.  
@@ -245,14 +255,35 @@ Désactive le partitionnement logiciel automatique des nœuds NUMA matériels vo
 > 4) Démarrez l’instance de SQL Server Agent.  
   
 **Informations supplémentaires :** Si vous exécutez ALTER SERVER CONFIGURATION avec SET SOFTNUMA avant que le service SQL Server redémarre, alors, quand le service SQL Server Agent s’arrête, il exécute une commande T-SQL RECONFIGURE qui restaure les paramètres SOFTNUMA en vigueur avant l’exécution d’ALTER SERVER CONFIGURATION. 
-  
+
+**\<memory_optimized> ::=**
+
+**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et ultérieur
+
+ON <br>
+Active toutes les fonctionnalités de niveau instance qui font partie de la famille de fonctionnalités [Base de données en mémoire](../../relational-databases/in-memory-database.md). Cela inclut les [métadonnées tempdb à mémoire optimisée](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) et le [pool de mémoires tampons hybride](../../database-engine/configure-windows/hybrid-buffer-pool.md). Nécessite un redémarrage.
+
+OFF <br>
+Désactive toutes les fonctionnalités de niveau instance qui font partie de la famille de fonctionnalités Base de données en mémoire. Nécessite un redémarrage.
+
+TEMPDB_METADATA = ON | OFF <br>
+Active ou désactive uniquement les métadonnées tempdb à mémoire optimisée. Nécessite un redémarrage. 
+
+RESOURCE_POOL='resource_pool_name' <br>
+Quand il est combiné avec TEMPDB_METADATA = ON, spécifie le pool de ressources défini par l’utilisateur qui doit être utilisé pour tempdb. S’il n’est pas spécifié, tempdb utilise le pool par défaut. Le pool doit déjà exister. Si le pool n’est pas disponible quand le service est redémarré, tempdb utilise le pool par défaut.
+
+
+HYBRID_BUFFER_POOL = ON | OFF <br>
+Active ou désactive le pool de mémoires tampons hybride au niveau de l’instance. Nécessite un redémarrage.
+
+
 ## <a name="general-remarks"></a>Remarques d'ordre général  
 Cette instruction ne nécessite pas un redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf spécification contraire. Dans le cas d'une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle ne requiert pas un redémarrage de la ressource de cluster [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
 Cette instruction ne prend pas en charge les déclencheurs DDL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Requiert des autorisations ALTER SETTINGS pour l'option d'affinité de processus. Requiert des autorisations ALTER SETTINGS et VIEW SERVER STATE pour les options de propriété de cluster de basculement et de journal de diagnostics, et des autorisations CONTROL SERVER pour l'option de contexte de cluster HADR.  
   
 Nécessite l’autorisation ALTER SERVER STATE pour l’option d’extension du pool de mémoires tampons.  
@@ -267,7 +298,9 @@ La DLL de ressource du [!INCLUDE[ssDE](../../includes/ssde-md.md)][!INCLUDE[ssNo
 |[Définition des options du journal de diagnostics](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
 |[Définition des propriétés de cluster de basculement](#Failover)|HealthCheckTimeout|  
 |[Modification du contexte de cluster d’un réplica de disponibilité](#ChangeClusterContextExample)|**’** *windows_cluster* **’**|  
-|[Définition de l’extension du pool de mémoires tampons](#BufferPoolExtension)|BUFFER POOL EXTENSION|  
+|[Définition de l’extension du pool de mémoires tampons](#BufferPoolExtension)|BUFFER POOL EXTENSION| 
+|[Définition des options de base de données en mémoire](#MemoryOptimized)|MEMORY_OPTIMIZED|
+
   
 ###  <a name="Affinity"></a> Définition de l’affinité de processus  
 Les exemples de cette section montrent comment définir l'affinité de processus sur les unités centrales et les nœuds NUMA. Dans les exemples suivants, on part de l'hypothèse que le serveur contient 256 unités centrales qui sont réparties dans quatre groupes de 16 nœuds NUMA chacun. Les threads ne sont attribués à aucun nœud NUMA ou UC.  
@@ -285,7 +318,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=0 TO 63, 128 TO 191;  
 ```  
   
-#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>b. Définition de l'affinité sur toutes les unités centrales dans les nœuds NUMA 0 et 7  
+#### <a name="b-setting-affinity-to-all-cpus-in-numa-nodes-0-and-7"></a>B. Définition de l'affinité sur toutes les unités centrales dans les nœuds NUMA 0 et 7  
 L'exemple suivant définit l'affinité UC sur les nœuds `0` et `7` uniquement.  
   
 ```  
@@ -329,7 +362,7 @@ L'exemple suivant démarre la journalisation de données de diagnostics.
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-#### <a name="b-stopping-diagnostic-logging"></a>b. Fin de la journalisation des diagnostics  
+#### <a name="b-stopping-diagnostic-logging"></a>B. Fin de la journalisation des diagnostics  
 L'exemple suivant met fin à la journalisation des données de diagnostics.  
   
 ```  
@@ -387,7 +420,7 @@ SET BUFFER POOL EXTENSION ON
     (FILENAME = 'F:\SSDCACHE\Example.BPE', SIZE = 50 GB);  
 ```  
   
-#### <a name="b-modifying-buffer-pool-extension-parameters"></a>b. Modifier les paramètres de l'extension du pool de mémoires tampons  
+#### <a name="b-modifying-buffer-pool-extension-parameters"></a>B. Modifier les paramètres de l'extension du pool de mémoires tampons  
 L'exemple suivant modifie la taille du fichier d'extension du pool de mémoires tampons. L'option d'extension du pool de mémoires tampons doit être désactivée avant de modifier les paramètres.  
   
 ```  
@@ -404,8 +437,38 @@ SET BUFFER POOL EXTENSION ON
 GO  
   
 ```  
-  
-## <a name="see-also"></a> Voir aussi  
+
+### <a name="MemoryOptimized"></a> Définition des options de base de données en mémoire
+
+**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et ultérieur
+
+#### <a name="a-enable-all-in-memory-database-features-with-default-options"></a>A. Activer toutes les fonctionnalités de base de données en mémoire avec les options par défaut
+
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED ON;
+GO
+```
+
+#### <a name="b-enable-memory-optimized-tempdb-metadata-using-the-default-resource-pool"></a>B. Activer les métadonnées tempdb à mémoire optimisée à l’aide du pool de ressources par défaut
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
+GO
+```
+
+#### <a name="c-enable-memory-optimized-tempdb-metadata-with-a-user-defined-resource-pool"></a>C. Activer les métadonnées tempdb à mémoire optimisée à l’aide du pool de ressources défini par l’utilisateur
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+GO
+```
+
+#### <a name="d-enable-hybrid-buffer-pool"></a>D. Activer le pool de mémoires tampons hybride
+```
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;
+GO
+```
+
+
+## <a name="see-also"></a>Voir aussi  
 [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)   
 [Changer le contexte de cluster HADR de l’instance de serveur &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/change-the-hadr-cluster-context-of-server-instance-sql-server.md)   
 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - DECLARE statement
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01de83dc56a14fca265bd73b5d5df357f869a50a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9191be9659f2cbdb42d0b92adef23972292070ed
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801863"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980184"
 ---
 # <a name="declare-localvariable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,7 +119,7 @@ Définit le type de données **table**. La déclaration de table inclut des déf
  Spécifie que la colonne est un type de données scalaire.  
   
  *computed_column_expression*  
- Expression définissant la valeur d’une colonne calculée. Elle est calculée à partir d'une expression qui utilise d'autres colonnes de la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price \* qty**. L'expression peut être un nom de colonne non calculée, une constante, une fonction intégrée ou une combinaison de ces éléments connectés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou une fonction définie par l'utilisateur. L'expression ne peut pas faire référence à un type CLR défini par l'utilisateur.  
+ Expression définissant la valeur d’une colonne calculée. Elle est calculée à partir d'une expression qui utilise d'autres colonnes de la même table. Par exemple, une colonne calculée peut avoir la définition **cost** AS **price \* qty**. L’expression peut être un nom de colonne non calculée, une constante, une fonction intégrée ou une combinaison de ces éléments connectés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou une fonction définie par l'utilisateur. L'expression ne peut pas faire référence à un type CLR défini par l'utilisateur.  
   
  [ COLLATE *collation_name*]  
  Indique le classement de la colonne. *collation_name* peut être soit un nom de classement Windows, soit un nom de classement SQL et s’applique uniquement aux colonnes des types de données **char**, **varchar**, **text**, **nchar**, **nvarchar** et **ntext**. Si cette valeur n'est pas spécifiée, la colonne reçoit le classement du type de données utilisateur (si la colonne est de type de données utilisateur), ou le classement de la base de données active.  
@@ -133,7 +133,7 @@ Définit le type de données **table**. La déclaration de table inclut des déf
  Constante, valeur NULL ou fonction système utilisée comme valeur par défaut pour une colonne.  
   
  IDENTITY  
- Indique que la nouvelle colonne est une colonne d'identité. Lorsqu'une nouvelle ligne est ajoutée à la table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une valeur incrémentielle unique pour la colonne. Les colonnes d'identité sont normalement utilisées avec les contraintes PRIMARY KEY comme identificateur unique de ligne pour la table. La propriété IDENTITY peut être affectée à des colonnes **tinyint**, **smallint**, **int**, **decimal(p,0)** ou **numeric(p,0)**. Une seule colonne d'identité peut être créée par table. Il n'est pas possible d'utiliser des valeurs par défaut liées et des contraintes DEFAULT avec une colonne d'identité. Vous devez spécifier à la fois la valeur initiale et l'incrément, ou bien aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
+ Indique que la nouvelle colonne est une colonne d'identité. Lorsqu'une nouvelle ligne est ajoutée à la table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une valeur incrémentielle unique pour la colonne. Les colonnes d'identité sont normalement utilisées avec les contraintes PRIMARY KEY comme identificateur unique de ligne pour la table. La propriété IDENTITY peut être affectée à des colonnes **tinyint**, **smallint**, **int**, **decimal(p,0)** ou **numeric(p,0)** . Une seule colonne d'identité peut être créée par table. Il n'est pas possible d'utiliser des valeurs par défaut liées et des contraintes DEFAULT avec une colonne d'identité. Vous devez spécifier à la fois la valeur initiale et l'incrément, ou bien aucun des deux. Si vous n'en spécifiez aucun, la valeur par défaut est (1,1).  
   
  *seed*  
  Valeur utilisée pour la toute première ligne chargée dans la table.  
@@ -159,7 +159,7 @@ Définit le type de données **table**. La déclaration de table inclut des déf
  *logical_expression*  
  Expression logique qui retourne TRUE ou FALSE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les variables locales sont souvent utilisées dans un traitement ou une procédure comme compteurs pour une boucle WHILE, LOOP ou pour un bloc IF...ELSE.  
   
  Les variables ne peuvent être utilisées que dans des expressions et pas la place de noms d'objets ou de mots clés. Pour créer des instructions dynamiques SQL, utilisez EXECUTE.  
@@ -224,7 +224,7 @@ Manzanares          Tomas                   1 (11) 500 555-0178
 (3 row(s) affected)
 ```  
   
-### <a name="b-using-declare-with-two-variables"></a>b. Utilisation de DECLARE avec deux variables  
+### <a name="b-using-declare-with-two-variables"></a>B. Utilisation de DECLARE avec deux variables  
  L'exemple suivant extrait les noms des vendeurs de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] qui se trouvent sur le secteur de vente North American et qui génèrent un chiffre d'affaires annuel minimum de 2 000 000 de dollars.  
   
 ```  
@@ -314,7 +314,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

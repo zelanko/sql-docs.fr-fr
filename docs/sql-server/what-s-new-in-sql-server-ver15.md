@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,34 +9,78 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09e1a4203ef519fb9939df2ba1892b85509f1324
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775481"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198196"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou dans le cloud. Cet article résume les nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. 
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou dans le cloud. Cet article résume les nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Cet article récapitule les fonctionnalités de chaque version et redirige vers plus de détails pour chacune d’entre elles. La section [Détails](#details) fournit des détails techniques concernant les fonctionnalités qui peuvent ne pas être disponibles dans la documentation de base. Les autres sections de cet article fournissent des informations sur toutes les fonctionnalités publiées à ce jour pour cette préversion [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 Pour obtenir plus d’informations et découvrir les problèmes connus, consultez les [Notes de publication de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
 
-**Essayez [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] !**
-
-- [![Télécharger à partir du Centre d’évaluation](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Téléchargez [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en vue de l’installer sur Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Installer sur Linux pour [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) et [Ubuntu](../linux/quickstart-install-connect-ubuntu.md).
-- [Exécuter [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] sur Docker](../linux/quickstart-install-connect-docker.md).
-
 **Utilisez les [derniers outils](#tools) pour une expérience optimale avec [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-25-april-2019"></a>CTP 2.5 avril 2019
+## <a name="ctp-30-may-2019"></a>CTP 3.0 mai 2019
 
-CTP (Community Technology Preview) 2.5 est la dernière version publique de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cette version inclut des améliorations des versions précédentes de CTP qui corrigent des bogues, renforcent la sécurité et optimisent les performances. De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.5.
+CTP (Community Technology Preview) 3.0 est la dernière version publique de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cette version inclut des améliorations des versions précédentes de CTP qui corrigent des bogues, renforcent la sécurité et optimisent les performances.
+
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
+
+Pour connaître des fonctionnalités spécifiques exclues de la prise en charge, consultez les [notes de publication](sql-server-ver15-release-notes.md).
+
+De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.0.
+
+### <a name="big-data-clusters"></a>Clusters Big Data
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+| Mises à jour de **mssqlctl** | Plusieurs [mises à jour de commande et de paramètre](../big-data-cluster/reference-mssqlctl.md) **mssqlctl**. Ces dernières incluent une mise à jour de la commande **mssqlctl login**, qui cible désormais le nom d’utilisateur et le point de terminaison du contrôleur. |
+| Améliorations du stockage | Prise en charge de différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster Big Data a été réduit. |
+| Plusieurs instances de pool de calcul | Prise en charge de plusieurs instances de pool de calcul. |
+| Nouveaux comportement et fonctionnalités pour les pools | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool de données et de pool de stockage dans une distribution **ROUND_ROBIN** uniquement. Le pool de données peut désormais utiliser un nouveau type de distribution **REPLICATED**, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
+| Améliorations des tables externes | Les tables externes de type de source de données HADOOP prennent maintenant en charge la lecture des lignes d’une taille maximale de 1 Mo. Dans les tables externes (ODBC, pool de stockage, pool de données), les lignes peuvent désormais être aussi larges que dans une table SQL Server. |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Moteur de base de données
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Inscrire les langages externes|Un nouveau DDL, `CREATE EXTERNAL LANGUAGE`, inscrit les langages externes, tels que Java, dans SQL Server. Consultez [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
+|Davantage de types de données pris en charge pour Java|Consultez [Types de données Java](../language-extensions/how-to/java-to-sql-data-types.md).|
+|Stratégie de capture personnalisée pour le Magasin des requêtes|Quand cette fonctionnalité est activée, vous pouvez affiner la collecte de données dans un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes disponibles sous un nouveau paramètre de stratégie de capture pour le Magasin des requêtes. Pour plus d’informations, consultez l’article [Options SET d’ALTER DATABASE](../t-sql/statements/alter-database-transact-sql-set-options.md).|
+|La fonctionnalité de [base de données en mémoire](../relational-databases/in-memory-database.md) introduit une nouvelle syntaxe DDL pour le contrôle du pool de mémoires tampons hybride. <sup>2</sup>|Avec le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md), les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire.|
+|Nouvelle fonctionnalité de base de données en mémoire, ajout de métadonnées tempdb à mémoire optimisée.|Consultez [Métadonnées tempdb à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
+|Les serveurs liés prennent en charge le codage de caractères UTF-8. |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
+|`sys.dm_exec_query_plan_stats` retourne plus d’informations sur le degré de parallélisme et les allocations de mémoire pour les plans de requête. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
+| &nbsp; | &nbsp; |
+
+><sup>1</sup> Il s’agit d’une fonctionnalité à activer qui nécessite l’activation de l’[indicateur de trace](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451.
+>
+><sup>2</sup> Un indicateur de trace n’est plus nécessaire pour activer le pool de mémoires tampons hybride.
+
+### [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] prend en charge les bases de données à instance managée Azure SQL Database.| Hébergement de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] sur une instance managée. Consultez [Installation et configuration de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).
+| &nbsp; | &nbsp; |
+
+### <a name="analysis-services"></a>Analysis Services
+
+| Nouvelle fonctionnalité ou mise à jour | Détails |
+|:---|:---|
+|Prise en charge des requêtes MDX pour les modèles tabulaires avec des groupes de calcul. |Cette version supprime une limitation antérieure dans les [groupes de calcul](#calc-ctp24). |
+|Mise en forme dynamique des mesures à l’aide de groupes de calcul. |Cette fonctionnalité vous permet de changer conditionnellement des chaînes de format pour les mesures avec des [groupes de calcul](#calc-ctp24). Par exemple, avec la conversion monétaire, une mesure peut être affichée à l’aide de différents formats de devises étrangères.|
+
+## <a name="ctp-25-april-2019"></a>CTP 2.5 avril 2019
 
 ### <a name="big-data-clusters"></a>Clusters Big Data
 
@@ -125,7 +169,7 @@ CTP (Community Technology Preview) 2.5 est la dernière version publique de [!IN
 |Prise en charge de la possibilité de forcer le plan du Magasin des requêtes pour l’avance rapide et les curseurs statiques.|[Prise en charge de la possibilité de forcer le plan pour l’avance rapide et les curseurs statiques](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23) |
 |Recompilations réduites pour les charges de travail qui utilisent des tables temporaires sur plusieurs étendues. |[Recompilations réduites pour les charges de travail](../relational-databases/tables/tables.md#ctp23) |
 |Scalabilité du point de contrôle indirect améliorée. |[Scalabilité du point de contrôle indirect améliorée](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
-|Prise en charge d’UTF-8 : il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (`UTF8_BIN2`). |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
+|il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (`UTF8_BIN2`). |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
 |Définir les actions de suppression en cascade au niveau d’une contrainte d’arête dans une base de données de graphe. |[Contraintes d’arête](../relational-databases/tables/graph-edge-constraints.md) |
 |Activer ou désactiver `LIGHTWEIGHT_QUERY_PROFILING` avec la nouvelle configuration étendue aux bases de données. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
 | &nbsp; | &nbsp; |
@@ -276,7 +320,7 @@ CTP (Community Technology Preview) 2.5 est la dernière version publique de [!IN
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) prend en charge la connexion et la gestion des clusters Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |[Qu’est-ce qu’Azure Data Studio](../azure-data-studio/what-is.md)|
 |Prend en charge des scénarios utilisant des clusters Big Data SQL Server. |[Extension de SQL Server 2019 (préversion)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
+|[**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
 |Prise en charge d’Always Encrypted avec enclaves sécurisées. |[Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -723,7 +767,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > Pour connaître les dernières améliorations apportées à Azure Data Studio, consultez les [notes de publication Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
-- [**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+- [**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
   - Lancement d’Azure Data Studio à partir de SSMS. (CTP 2.3)
   - Prise en charge d’Always Encrypted avec enclaves sécurisées. (CTP 2.0)

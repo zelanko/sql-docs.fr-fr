@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265266"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982147"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ Utilisez KILL _UOW_ pour arrêter les transactions distribuées orphelines. Ces 
 WITH STATUSONLY  
 Génère un rapport de progression sur un _ID de session_ ou _UOW_ spécifié qui est restauré en raison d’une instruction KILL préalable. KILL WITH STATUSONLY ne met pas fin l’_ID de session_ ou à _UOW_ et ne les restaure pas non plus. La commande ne fait qu’afficher la progression actuelle de la restauration.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 KILL est couramment utilisé pour mettre fin à un processus qui bloque d’autres processus importants avec des verrous. KILL peut également être utilisé pour arrêter un processus qui exécute une requête utilisant des ressources système nécessaires. Il n'est pas possible de mettre fin aux processus système et aux processus exécutant une procédure stockée étendue.  
   
 Utilisez l’instruction KILL avec précaution, particulièrement lorsque des processus critiques sont en cours d’exécution. Vous ne pouvez pas tuer votre propre processus. Vous ne devez pas non plus arrêter les processus suivants :  
@@ -123,8 +123,8 @@ Cette erreur se produit également si aucun ID de session ni aucun UOW ne sont e
 
 Le même rapport d’état peut être obtenu en répétant la même instruction KILL _session ID_|_UOW_ sans utiliser l’option WITH STATUSONLY. Toutefois, il n’est pas recommandé de répéter l’option de cette façon. Si vous répétez une instruction KILL _session ID_, il est possible que le nouveau processus s’arrête si la restauration est achevée et que l’ID de session a été réaffecté à une nouvelle tâche avant l’exécution de la nouvelle instruction KILL. Empêchez le nouveau processus de s’arrêter en spécifiant WITH STATUSONLY.  
   
-## <a name="permissions"></a>Permissions  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Nécessite l'autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
+## <a name="permissions"></a>Autorisations  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Nécessite l’autorisation ALTER ANY CONNECTION. ALTER ANY CONNECTION est incluse avec appartenance au rôle de serveur fixe sysadmin ou processadmin.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** Nécessite l’autorisation KILL DATABASE CONNECTION. La connexion du principal au niveau du serveur a l’autorisation KILL DATABASE CONNECTION.  
   
@@ -138,7 +138,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Utilisation de l'instruction KILL ID de session WITH STATUSONLY pour obtenir un rapport de progression  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Utilisation de l'instruction KILL ID de session WITH STATUSONLY pour obtenir un rapport de progression  
 L'exemple suivant génère un état sur le processus de restauration d'un ID de session spécifique.  
   
 ```sql  
@@ -158,7 +158,7 @@ KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';
 ```  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)   
 [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
 [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

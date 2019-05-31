@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid (geometry Data Type)
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 28871e1c4558c62ec1262b93902eb62ba375c92f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b966741a1a6183379f7f2b1f4fa45c37e8044eb
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673697"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937529"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Convertit une instance **geometry** non valide en instance **geometry** ayant un
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode peut entraîner un changement de type de l’instance **geometry**, ainsi qu’un léger décalage des points d’une instance **geometry**.  
   
 ## <a name="examples"></a>Exemples  
@@ -80,7 +80,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 1 1, 1 1)';
 SELECT @g.MakeValid().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 299ccb67b03a654a348492f81ea62f086229efab
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 49919caaf30bb425e90b286cb3c8e7877067ae6d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265276"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936240"
 ---
 # <a name="starea-geography-data-type"></a>STArea (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **fl
   
 Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 STArea() retourne 0 si l’instance **geography** est vide ou contient uniquement des figures à zéro et une dimension.  
   
 > [!NOTE]  
@@ -57,6 +57,6 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

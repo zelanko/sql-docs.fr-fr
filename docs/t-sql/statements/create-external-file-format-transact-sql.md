@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9759e2d623e2d9eca94ba7b5d17b7990c96366b
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 4018857b93a828e5ed756a80ba23f425a26790c8
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161640"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175030"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -171,7 +171,7 @@ PolyBase utilise uniquement le format de date personnalisé pour l’importation
   
 -   DateTimeOffset : 'yyyy-MM-dd HH:mm:ss'  
   
--   une heure donnée : 'HH:mm:ss'  
+-   Time : 'HH:mm:ss'  
   
 Des **exemples de formats de date** se trouvent dans le tableau suivant :
   
@@ -183,7 +183,7 @@ Remarques sur ce tableau :
   
 -   La mention du matin ou de l’après-midi (tt) n’est pas obligatoire. Par défaut, l’heure du matin (AM) est utilisée.
   
-|Type de date| Exemple|Description|  
+|Type de date|Exemple|Description|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 24 heures, de 00 à 59 minutes, de 00 à 59 secondes, ainsi que 3 chiffres pour les millisecondes.|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Outre l’année, le mois et le jour, ce format de date inclut de 00 à 12 heures, de 00 à 59 minutes, de 00 à 59 secondes, 3 chiffres pour les millisecondes, ainsi que la mention AM, am, PM ou pm. |  
@@ -244,7 +244,7 @@ Remarques sur ce tableau :
  Stockez toutes les valeurs manquantes en tant que valeurs NULL. Toutes les valeurs NULL qui sont stockées à l’aide du mot NULL dans le fichier texte délimité sont importées en tant que chaînes NULL.
   
    Encodage = {'UTF8' | 'UTF16'}  
- Dans Azure SQL Data Warehouse, PolyBase peut lire les fichiers texte délimité aux formats UTF8 et UTF16-LE. Dans SQL Server et PDW, PolyBase ne prend pas en charge la lecture des fichiers UTF16.
+ Dans Azure SQL Data Warehouse et PDW (APS CU7.4), PolyBase peut lire les fichiers texte délimité aux formats UTF8 et UTF16-LE. Dans SQL Server, PolyBase ne prend pas en charge la lecture des fichiers UTF16.
   
  DATA_COMPRESSION = *data_compression_method*  
  Spécifie la méthode de compression appliquée aux données externes. Lorsque DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>b. Créer un format de fichier externe RCFile  
+### <a name="b-create-an-rcfile-external-file-format"></a>B. Créer un format de fichier externe RCFile  
  Cet exemple crée un format de fichier externe pour un RCFile qui utilise la méthode de sérialisation/désérialisation org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Il spécifie également l’utilisation du Codec par défaut pour la méthode de compression des données. Si DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
   
 ```  
@@ -367,7 +367,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 )
 ```   
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

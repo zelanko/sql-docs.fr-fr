@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783527"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937642"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "47783527"
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode peut changer le type de l’instance **geography**. De plus, les points d’une instance **geography** peuvent se déplacer légèrement. Les résultats de certaines méthodes telles que NumPoint() peuvent changer.  
   
  Dans les cas où l’instance spatiale non valide croise l’équateur et où EnvelopeAngle() = 180, une instance **FullGlobe** est retournée. La méthode de type de données de `MakeValid()`**geography** tente de retourner des instances valides, mais l’exactitude ou la précision des résultats n’est pas garantie.  
   
 > [!NOTE]  
->  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutées sur des instances non valides (les instances pour lesquelles STIsValid() retourne False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
+>  Les objets qui ne sont pas valides peuvent être stockés dans la base de données. Les méthodes qui peuvent être exécutées sur des instances non valides (ces instances pour lesquelles STIsValid() retourne False) sont des méthodes qui vérifient la validité ou permettent l’exportation : STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() et AsGml().  
   
  Cette méthode n'est pas précise.  
   
@@ -81,7 +81,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

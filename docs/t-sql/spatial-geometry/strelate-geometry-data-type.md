@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9c54da346320a8d4472b64df9bd879ceffac11bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4c4e589ef3f658cee65812e9263a68a3489d2a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721917"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938313"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47721917"
  *intersection_pattern_matrix*  
  Chaîne de type **nchar (9)** qui code des valeurs acceptables pour l’appareil de matrice de modèle DE-9IM entre les deux instances **geometry**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Cette méthode lève **ArgumentException** si la matrice n’est pas bien formée.  
   
 ## <a name="return-types"></a>Types de retour  
@@ -63,7 +63,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

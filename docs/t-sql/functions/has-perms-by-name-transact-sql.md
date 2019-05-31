@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169209"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947954"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur lui-même, cette valeur doit être définie avec NULL. *securable* est une expression scalaire de type **sysname**. Il n'y a pas de valeur par défaut.  
   
  *securable_class*  
- Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar(60)**.  
+ Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar(60)** .  
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument securable_class doit avoir l’une des valeurs suivantes : **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expression scalaire facultative de type **sysname** qui représente le nom de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
   
 > [!NOTE]  
->  Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les éléments sécurisables sub ne peuvent pas utiliser des crochets sous la forme **'[**_sub name_**]'**. Utilisez **'**_sub name_**'** à la place.  
+>  Dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les éléments sécurisables sub ne peuvent pas utiliser des crochets sous la forme **'[** _sub name_ **]'** . Utilisez **'** _sub name_ **'** à la place.  
   
  *sub-securable_class*  
  Expression scalaire facultative de type **nvarchar(60)** qui représente la classe de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
@@ -73,7 +73,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Renvoie NULL lorsque la requête échoue.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction intégrée teste si le principal actif a une autorisation effective sur un élément sécurisable spécifié. HAS_PERMS_BY_NAME retourne 1 lorsque l'utilisateur dispose d'autorisation effective sur l'élément sécurisable, 0 lorsque l'utilisateur n'a pas cette autorisation et NULL si la classe sécurisable ou l'autorisation n'est pas valide. Une autorisation effective peut être :  
   
 -   une autorisation accordée directement au principal et non refusée ;  
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Les classements suivants sont utilisés :  
   
--   Classement de la base de données active : éléments sécurisables au niveau base de données qui comprennent des éléments sécurisables non contenus dans un schéma ; éléments sécurisables sur l'étendue d'un schéma en une ou deux parties ; base de données cible lors de l'utilisation d'un nom en trois parties.  
+-   Classement de la base de données actuelle : éléments sécurisables au niveau base de données qui comprennent des éléments sécurisables non contenus dans un schéma ; éléments sécurisables sur l’étendue d’un schéma en une ou deux parties ; base de données cible lors de l’utilisation d’un nom en trois parties.  
   
--   Classement de la base de données master : éléments sécurisables au niveau serveur.  
+-   Classement de la base de données MASTER : éléments sécurisables au niveau serveur.  
   
 -   « ANY » n'est pas pris en charge pour les contrôles au niveau colonne. Vous devez spécifier l'autorisation appropriée.  
   
@@ -180,7 +180,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

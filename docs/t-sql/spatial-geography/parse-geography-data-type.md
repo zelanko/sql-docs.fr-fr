@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Parse method
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0b2e42f61e3926845930b1bd0d3429f2f83c9685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 023af0279bdb848e299ec1dbe31ff82305ad109a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710897"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935906"
 ---
 # <a name="parse-geography-data-type"></a>Parse (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Parse ( 'geography_tagged_text' )
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le type OGC de l’instance **geography** retournée par `Parse()` a comme valeur l’entrée WKT correspondante.  
   
  La chaîne « Null » est interprétée en tant qu’instance **geography** ayant une valeur Null.  
@@ -62,7 +62,7 @@ SET @g = geography::Parse('LINESTRING(-122.360 47.656, -122.343 47.656)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)   
  [STGeomFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   

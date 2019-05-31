@@ -2,7 +2,7 @@
 title: tempdb, base de données | Microsoft Docs
 description: Cette rubrique fournit des détails sur la configuration et l’utilisation de la base de données tempdb dans SQL Server et Azure SQL Database
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265366"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994241"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 
@@ -158,7 +158,7 @@ Les opérations suivantes ne peuvent pas être effectuées sur la base de donné
 - Affectation de la valeur OFFLINE à la base de données
 - Affectation de la valeur READ_ONLY à la base de données ou au groupe de fichiers primaire
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Tous les utilisateurs peuvent créer des objets temporaires dans tempdb. Les utilisateurs n'ont accès qu'aux objets qu'ils possèdent, sauf s'ils ont reçu des autorisations supplémentaires. Il est possible de révoquer l’autorisation de connexion à tempdb pour empêcher un utilisateur d’utiliser tempdb, mais cela n’est pas recommandé, car certaines opérations courantes nécessitent l’utilisation de tempdb.  
 
@@ -215,6 +215,43 @@ Placez la base de données tempdb sur des disques différents de ceux employés 
 Pour plus d’informations sur les améliorations des performances dans tempdb, consultez l’article de blog suivant :
 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
+
+## <a name="memory-optimized-tempdb-metadata"></a>Métadonnées tempdb à mémoire optimisée
+
+La contention de métadonnées tempdb a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit dans la famille de fonctionnalités [Base de données en mémoire](../in-memory-database.md) une nouvelle fonctionnalité, les métadonnées tempdb à mémoire optimisée, qui supprime efficacement ce goulot d’étranglement et déverrouille un nouveau niveau de scalabilité pour les charges de travail de base de données tempdb lourdes. Dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les tables système impliquées dans la gestion des métadonnées de table temporaire peuvent être déplacées dans des tables à mémoire optimisée non durables dépourvues de verrous. Pour pouvoir bénéficier de cette nouvelle fonctionnalité, utilisez le script suivant :
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+Cette modification de la configuration nécessite un redémarrage du service.
+
+Certaines limitations de cette implémentation méritent votre attention :
+
+1. L’activation et la désactivation de la fonctionnalité ne sont pas dynamiques. En raison des modifications intrinsèques qui doivent être apportées à la structure de tempdb, un redémarrage est nécessaire pour activer ou désactiver la fonctionnalité.
+2. Une transaction ne peut pas accéder aux tables à mémoire optimisée dans plus d’une base de données.  Cela signifie que toute transaction qui implique une table à mémoire optimisée dans une base de données utilisateur ne peut pas parallèlement accéder à des vues système tempdb.  Si vous tentez d’accéder à des vues système tempdb dans la même transaction qu’une table à mémoire optimisée dans une base de données utilisateur, vous recevez l’erreur suivante :
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    Exemple :
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. Les requêtes sur les tables à mémoire optimisée ne prennent pas en charge les indicateurs de verrouillage et d’isolation ; les requêtes sur les vues de catalogue tempdb à mémoire optimisée ne respectent donc pas les indicateurs de verrouillage et d’isolation. Comme avec les autres vues de catalogue système dans SQL Server, toutes les transactions sur des vues système sont effectuées au niveau de l’isolation READ COMMITTED (ou dans ce cas READ COMMITTED SNAPSHOT).
+4. Il peut y avoir certains problèmes avec les index columnstore sur les tables temporaires quand les métadonnées tempdb à mémoire optimisée sont activées. Pour cette préversion, il est préférable d’éviter les index columnstore sur les tables temporaires lors de l’utilisation de métadonnées tempdb à mémoire optimisée.
+
+> [!NOTE] 
+> Ces limitations s’appliquent uniquement quand vous référencez des vues système TempDB ; si vous le souhaitez, vous pouvez créer une table temporaire dans la même transaction quand vous accédez à une table à mémoire optimisée dans une base de données utilisateur.
+
+Vous pouvez vérifier si TempDB est à mémoire optimisée à l’aide de la commande T-SQL suivante :
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Planification de la capacité de tempdb dans SQL Server
 
@@ -281,7 +318,7 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [Déplacer des fichiers de bases de données](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Utilisation de tempdb dans SQL Server 2005](https://technet.microsoft.com/library/cc966545.aspx)  
 - [Résolution des problèmes d’espace disque insuffisant dans tempdb](https://msdn.microsoft.com/library/ms176029.aspx)

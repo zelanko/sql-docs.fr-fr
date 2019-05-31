@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802246"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981121"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,13 +134,13 @@ COMMIT TRAN T1;
   
  « BEGIN TRAN M2 WITH MARK ...; »  
   
- "Serveur : Msg 3920, Niveau 16, État 1, Ligne 3"  
+ « Serveur : Msg 3920, Niveau 16, État 1, Ligne 3 »  
   
  « L'option WITH MARK s'applique uniquement à la première instruction BEGIN TRAN WITH MARK. »  
   
  « L'option est ignorée. »  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -157,7 +157,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>b. Restauration d’une transaction
+### <a name="b-rolling-back-a-transaction"></a>B. Restauration d’une transaction
 **S’APPLIQUE À :** SQL Server (à compter de 2008) Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse
 
 L’exemple suivant montre l’effet de la restauration d’une transaction. Dans cet exemple, l’instruction ROLLBACK restaure l’instruction INSERT, mais la table créée continue d’exister.
@@ -208,7 +208,7 @@ COMMIT TRANSACTION CandidateDelete;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

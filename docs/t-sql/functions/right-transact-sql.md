@@ -17,16 +17,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670237"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944712"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ RIGHT ( character_expression , integer_expression )
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) de données binaires ou caractères. *character_expression* peut être une constante, une variable ou une colonne. *character_expression* peut être de n’importe quel type de données, à l’exception de **text** et **ntext**, qui peut être converti implicitement en **varchar** ou **nvarchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *character_expression*.  
   
  *integer_expression*  
- Entier positif qui spécifie le nombre de caractères de *character_expression* à retourner. Si *integer_expression* est négatif, une erreur est retournée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)**.  
+ Entier positif qui spécifie le nombre de caractères de *character_expression* à retourner. Si *integer_expression* est négatif, une erreur est retournée. Si *integer_expression* est de type **bigint** et contient une valeur de grande taille, *character_expression* doit être d’un type de données de grande taille, tel que **varchar(max)** .  
   
 ## <a name="return-types"></a>Types de retour  
  Retourne **varchar** quand *character_expression* est un type de données caractères non-Unicode.  
@@ -58,7 +58,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-right-with-a-column"></a>A. Utilisation de RIGHT avec une colonne  
+### <a name="a-using-right-with-a-column"></a>A : Utilisation de RIGHT avec une colonne  
  L'exemple suivant retourne les cinq derniers caractères les plus à droite du prénom de chaque personne dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -123,7 +123,7 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
 fg
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  

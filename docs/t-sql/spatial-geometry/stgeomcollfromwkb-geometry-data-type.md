@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromWKB (geometry Data Type)
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 5693d4673cc589507e7dde73dbdf68198a03cf0e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 4177e4b5d41352d511743c422864454a889771b4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230936"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938915"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_geometrycollection*  
- Représentation WKB de l’instance **geometrycollection** à retourner. *WKB_geometrycollection* est une expression **varbinary(max)**.  
+ Représentation WKB de l’instance **geometrycollection** à retourner. *WKB_geometrycollection* est une expression **varbinary(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometry** à retourner.  
@@ -49,7 +49,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le type OGC de l’instance **geometry** retournée par `STGeomCollFromWKB()` a la valeur **GeomCollection**, **MultiPolygon**, **MultiLineString** ou **MultiPoint**, en fonction de l’entrée WKB correspondante.  
   
  Cette méthode lève une exception FormatException si l'entrée n'est pas correctement mise en forme.  
@@ -63,6 +63,6 @@ SET @g = geometry::STGeomCollFromWKB(0x01070000000200000001030000000100000004000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

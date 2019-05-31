@@ -24,15 +24,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], distributed transactions
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 866b1e7f94645fb9336ce75e48afa8f8fb437895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5866bee12907bbcd9765639fe6a54b94698b0a9c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746763"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980576"
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Nom d'une variable définie par l'utilisateur qui contient un nom de transaction utilisé pour suivre la transaction distribuée dans les utilitaires MS DTC. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exécutant l'instruction BEGIN DISTRIBUTED TRANSACTION est le créateur de la transaction et contrôle également l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la session, l'instance de contrôle demande à MS DTC de gérer l'exécution de la transaction distribuée sur toutes les instances concernées.  
   
  L'isolement d'instantané au niveau de la transaction ne prend pas en charge les transactions distribuées.  
@@ -77,7 +77,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Pour plus d'informations sur l'environnement et le traitement des transactions distribuées, consultez la documentation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MSDTC).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -100,7 +100,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

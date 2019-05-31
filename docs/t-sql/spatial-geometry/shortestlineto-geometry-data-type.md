@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f2d92d90c363cd17844d905a7d0108b0f148a007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52f8a04ec251283655ef8d50037b2be8e09bb2c7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631847"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937355"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Retourne une instance **LineString** avec deux points qui représentent la dista
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode retourne une instance **LineString** avec des points de terminaison situés sur les bordures des deux instances **geometry** sans intersection qui sont comparées. La longueur du **LineString** retourné est égale à la distance la plus courte entre les deux instances **geometry**. Une instance **LineString** vide est retournée quand les deux instances **geometry** se croisent.  
   
 ## <a name="examples"></a>Exemples  
@@ -66,7 +66,7 @@ Retourne une instance **LineString** avec deux points qui représentent la dista
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ShortestLineTo &#40;type de données geography&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   

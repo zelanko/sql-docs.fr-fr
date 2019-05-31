@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b38318d9ca38f5774f15cdac66b9407f2ce4a968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b145ec8bda61645521fcf69e6a40bba1659e54
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832600"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938072"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ Dans les cas où un index n’est pas disponible ou n’est pas utilisé, la mé
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode n'est pas déterministe et n'est pas précise.  
   
 ## <a name="examples"></a>Exemples  
@@ -75,7 +75,7 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   

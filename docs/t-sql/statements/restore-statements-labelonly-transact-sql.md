@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a4d9aee8f248dfdf9ce259442ae34a5107750610
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241560"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947101"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Instructions RESTORE - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -90,7 +90,7 @@ FROM <backup_device>
 |**SoftwareName**|**nvarchar(128)**|Nom du logiciel de sauvegarde qui a permis l'écriture de l'étiquette du support de sauvegarde.|  
 |**SoftwareVendorId**|**Int**|Numéro d'identification du fournisseur du logiciel qui a permis l'écriture de la sauvegarde.|  
 |**MediaDate**|**datetime**|Date et heure d’écriture de l’étiquette.|  
-|**Mirror_Count**|**Int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d'un jeu sont identiques.|  
+|**Mirror_Count**|**Int**|Nombre de miroirs dans le jeu (1-4).<br /><br /> Remarque : Les étiquettes créées pour différents miroirs d’un jeu sont identiques.|  
 |**IsCompressed**|**bit**|Indique si la sauvegarde est compressée :<br /><br /> 0 = non compressée<br /><br /> 1 =compressée|  
   
 > [!NOTE]  
@@ -103,12 +103,12 @@ FROM <backup_device>
  Une opération de sauvegarde peut éventuellement spécifier les mots de passe d'un support de sauvegarde. Si un mot de passe est défini dans un support de sauvegarde, vous devez spécifier le mot de passe approprié dans l'instruction RESTORE. Le mot de passe empêche les opérations non autorisées de restauration et d’ajout de jeux de sauvegarde sur le support à l’aide d’outils [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En revanche, un mot de passe n'empêche pas d'écraser les supports en cas d'utilisation de l'option FORMAT de l'instruction BACKUP.  
   
 > [!IMPORTANT]  
->  La protection assurée par ce mot de passe est plutôt faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La bonne pratique en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d’accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  
+>  Le niveau de protection de ce mot de passe est faible. Son but est d'éviter que des utilisateurs autorisés ou non autorisés effectuent une restauration incorrecte à l'aide des outils [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En aucun cas, elle n'empêche la lecture des données de la sauvegarde par d'autres moyens ou le remplacement du mot de passe. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La bonne pratique en matière de protection des sauvegardes consiste à stocker les bandes de sauvegarde dans un emplacement sûr ou à sauvegarder les fichiers disque protégés par une liste de contrôle d’accès (ACL). La liste de contrôle d'accès doit être définie à la racine du répertoire dans lequel les sauvegardes sont effectuées.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures, l'obtention d'informations relatives à un jeu de sauvegarde ou une unité de sauvegarde requiert l'autorisation CREATE DATABASE. Pour plus d’informations, consultez [GRANT – octroi d’autorisations de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: b8fb77ad04ee14db19ffde93a6c92cca938115a5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154834"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937895"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Type de retour CLR : **SqlGeography**
 ## <a name="exceptions"></a>Exceptions  
 Si tolerance est <= 0, une exception **ArgumentOutOfRange** est levée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Cette méthode permet de spécifier une valeur de tolérance d’erreur pour le **LineString** résultant.  
   
 La méthode **CurveToLineWithTolerance** retourne une instance **LineString** pour une instance **CircularString** ou **CompoundCurve**, et une instance **Polygon** pour une instance **CurvePolygon**.  
@@ -68,7 +68,7 @@ SET @g = geography::Parse('CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122
 SELECT @g.CurveToLineWithTolerance(0.1,0).STNumPoints(), @g.CurveToLineWithTolerance(0.01, 0).STNumPoints();
 ```  
   
-### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>b. Utilisation de la méthode sur une instance MultiLineString qui contient un LineString  
+### <a name="b-using-the-method-on-a-multilinestring-instance-containing-one-linestring"></a>B. Utilisation de la méthode sur une instance MultiLineString qui contient un LineString  
 L'exemple suivant montre ce qui est retourné d'une instance `MultiLineString` qui contient uniquement une instance `LineString` :  
   
 ```
@@ -94,7 +94,7 @@ DECLARE @g geography = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.65
 SELECT @g.CurveToLineWithTolerance(.5,1).ToString();
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - switching execution context
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a729dac9bba3f8ace1f117b6317d24ec541fcc19
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 558dbcfa3556099877406d8082f3cb909d6a22a1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641020"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982356"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -328,7 +328,7 @@ Si vous passez un seul mot qui ne commence pas par `@` et qui n’est pas entour
   
  Le jeu de résultats réel qui est retourné pendant l'exécution peut différer du résultat défini à l'aide de la clause WITH RESULT SETS de l'une des manières suivantes : nombre de jeux de résultats, nombre de colonnes, nom de colonne, possibilité de valeur NULL et type de données. Si le nombre de jeu de résultats diffère, une erreur se produit et le lot est abandonné.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez fournir les paramètres à l’aide de *value* ou à l’aide de @*parameter_name*=*value.* Un paramètre ne fait pas partie d’une transaction. Ainsi, si vous modifiez l’un d’eux dans une transaction et que vous restaurez cette dernière par la suite, le paramètre ne reprend pas sa valeur initiale. La valeur renvoyée à l'appelant est toujours la valeur au moment du renvoie du module.  
   
  L'imbrication a lieu lorsqu'un module en appelle un autre ou exécute du code managé en faisant référence à un module CLR (Common Language Runtime), un type défini par l'utilisateur ou un agrégat. Le niveau d'imbrication augmente au début de l'exécution du module appelé ou de la référence au code managé ; il diminue à la fin de l'exécution du module appelé ou de la référence au code managé. Au-delà de 32 niveaux d'imbrication, l'ensemble de la chaîne d'appel échoue. Le niveau d’imbrication actuel est stocké dans la fonction système @@NESTLEVEL.  
@@ -374,7 +374,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>Bonnes pratiques  
  Spécifiez une connexion ou un utilisateur qui possède les privilèges minimum requis pour effectuer les opérations définies dans l'instruction ou le module. Par exemple, ne spécifiez pas un nom de connexion qui a des autorisations au niveau serveur, si seules des autorisations au niveau base de données sont requises. Ne spécifiez pas non plus le compte d'un propriétaire de base de données, excepté si ces autorisations sont exigées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Aucune autorisation n'est requise pour exécuter l'instruction EXECUTE. Cependant, des autorisations sont requises sur les éléments sécurisables référencés dans la chaîne EXECUTE. Par exemple, si la chaîne contient une instruction INSERT, l'appelant de l'instruction EXECUTE doit posséder l'autorisation INSERT sur la table cible. Les autorisations sont vérifiées au moment où l'instruction EXECUTE est rencontrée, même si celle-ci est incluse dans un module.  
   
  Les autorisations EXECUTE pour un module sont accordées par défaut au propriétaire du module, qui peut les transmettre à d'autres utilisateurs. Lorsqu'un module qui exécute une chaîne est lancé, les autorisations sont vérifiées dans le contexte non pas de l'utilisateur qui a créé le module, mais de celui qui exécute le module. Cependant, si le même utilisateur est propriétaire du module appelant et du module appelé, la vérification de l'autorisation EXECUTE n'a pas lieu pour le second module.  
@@ -661,7 +661,7 @@ WITH RESULT SETS
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="example-o-basic-procedure-execution"></a>Exemple O : Exécution d’une procédure de base  
+### <a name="example-o-basic-procedure-execution"></a>Exemple O : exécution d’une procédure simple  
  Exécution d’une procédure stockée :  
   
 ```  
@@ -680,7 +680,7 @@ EXEC ('EXEC ' + @var);
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>Exemple P : Exécution de chaînes  
+### <a name="example-p-executing-strings"></a>Example P : exécution de chaînes  
  Exécution d’une chaîne SQL :  
   
 ```  
@@ -701,7 +701,7 @@ SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>Exemple Q : Procédures avec des paramètres  
+### <a name="example-q-procedures-with-parameters"></a>Example Q : procédures avec des paramètres  
  L’exemple suivant crée une procédure avec des paramètres et montre 3 façons de l’exécuter :  
   
 ```  
@@ -725,7 +725,7 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   

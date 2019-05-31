@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromText method
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: ffa6eb3ef24c9b31da43097444abf5f174cac5c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbb07f0854f775d1f4a64bc561b49fb9654dc140
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798687"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936629"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
 ## <a name="arguments"></a>Arguments  
  *multipoint_tagged_text*  
- Représentation WKT de l’instance **geographyMultiPoint** à retourner. *multipoint_tagged_text* est une expression **nvarchar(max)**.  
+ Représentation WKT de l’instance **geographyMultiPoint** à retourner. *multipoint_tagged_text* est une expression **nvarchar(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiPoint** à retourner.  
@@ -51,7 +51,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  Type OGC : **MultiPoint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +63,7 @@ SET @g = geography::STMPointFromText('MULTIPOINT(-122.360 47.656, -122.343 47.65
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

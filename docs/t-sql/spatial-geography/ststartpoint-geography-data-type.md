@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STStartPoint method
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 80b78fbd1aff4490ae71198bc86b26926448f6f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2af68b46abc31d7025e0b8b03fa6b18f5e9403c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615927"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939151"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47615927"
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  STStartPoint() équivaut à [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`.  
   
 ## <a name="examples"></a>Exemples  
@@ -56,7 +56,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

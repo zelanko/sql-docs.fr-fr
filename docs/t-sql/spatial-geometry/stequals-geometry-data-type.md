@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STEquals (geometry Data Type)
 ms.assetid: 808f0e25-9e68-4ba7-9329-07ec950698f3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 174e69a9756b1d55832b56e6b4bbd7f216f9e59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8be1233035f643b40db334aa905504a3dee62bd
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660327"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938949"
 ---
 # <a name="stequals-geometry-data-type"></a>STEquals (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Retourne 1 si une instance **geometry** représente le même ensemble de points
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
   
 ## <a name="examples"></a>Exemples  
@@ -60,7 +60,7 @@ SET @h = geometry::STGeomFromText('MULTILINESTRING((4 2, 2 0), (0 2, 2 0))', 0);
 SELECT @g.STEquals(@h);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

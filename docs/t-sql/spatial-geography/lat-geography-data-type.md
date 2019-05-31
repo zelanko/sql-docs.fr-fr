@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Lat method
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fda04401334546cde33ca14034d344c8b444e138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e9aa242fd76579f17090c17257a865ebb927ef
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804309"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937675"
 ---
 # <a name="lat-geography-data-type"></a>Lat (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47804309"
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans le modèle OpenGIS, Lat est défini uniquement sur les instances **geography** composées d’un seul point. Cette propriété retourne NULL si les instances **geography** contiennent plusieurs points. Cette propriété est précise et en lecture seule.  
   
 ## <a name="examples"></a>Exemples  
@@ -53,7 +53,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Lat;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

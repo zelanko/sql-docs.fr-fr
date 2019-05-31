@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STTouches (geometry Data Type)
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d04746833ce8077261cf9b5b624e17556ee4a093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18ea5efe0a0bc0ef4e84a5fa9d773a47f5eb99a4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665137"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935647"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Retourne 1 si une instance **geometry** touche spatialement une autre instance 
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Deux instances **geometry** se touchent si leurs ensembles de points se croisent, mais que leurs intérieurs ne se croisent pas.  
   
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  
@@ -62,7 +62,7 @@ SET @h = geometry::STGeomFromText('POINT(1 1)', 0);
 SELECT @g.STTouches(@h);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsValid (geometry Data Type)
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b3d22ecff8c4cc4598f6c991a3c695c5d098bff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd15742428c99db099878a800c8d2bd178fd5411
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700907"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938777"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Retourne true si une instance **geometry** est bien formée, en fonction de son 
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez déterminer le type OGC d’une instance **geometry** en appelant [STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produit uniquement des instances **geometry** valides, mais permet le stockage et la récupération d’instances non valides. Une instance valide qui représente le même ensemble de points de toute instance non valide peut être extraite à l'aide de la méthode `MakeValid()`.  
@@ -56,7 +56,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STIsValid();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STGeometryType &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md)   
  [MakeValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/makevalid-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
