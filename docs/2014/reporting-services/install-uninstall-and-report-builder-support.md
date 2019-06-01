@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108950"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454598"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
   Le Générateur de rapports est un outil de création de rapports permettant de créer, mettre à jour et partager des rapports, des parties de rapports et des datasets partagés. Le Générateur de rapports est disponible dans deux versions : autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La version autonome est installée sur votre ordinateur par vos propres soins ou par un administrateur. La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est installée automatiquement avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et téléchargée sur votre ordinateur à partir du Gestionnaire de rapports ou d'un site SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -152,7 +152,7 @@ ms.locfileid: "66108950"
   
  Toutefois, après une configuration supplémentaire, le serveur de rapports est accessible aux utilisateurs du Générateur de rapports version. Vous pouvez ajouter des URL [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aux sites approuvés. Par défaut, Internet Explorer 7.0 ou version ultérieure s'exécute en mode protégé sur Windows Vista, Windows Server 2008 et Windows 7. Le mode protégé est une fonctionnalité qui empêche les requêtes du navigateur d'atteindre les processus de niveau supérieur qui s'exécutent sur le même ordinateur. Vous pouvez désactiver le mode protégé pour les applications du serveur de rapports en les ajoutant comme Sites de confiance. Vous devez disposer d'une autorisation d'administrateur pour apporter cette modification.  
   
- Pour plus d’informations sur la configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Gestionnaire de Configuration de Reporting Services &#40;del&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) dans le [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
+ Pour plus d’informations sur la configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez [Gestionnaire de Configuration de Reporting Services &#40;del&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) dans le [documentation de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) sur msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> Bases de données exemple SQL Server  

@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489724"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429035"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Gestion des informations d'entreprise en associant SSIS, MDS et DQS [Didacticiel]
   La gestion des informations dans une entreprise implique généralement l'intégration des données au sein de l'entreprise et avec l'extérieur, le nettoyage des données, leur correspondance pour supprimer tous les doublons, leur normalisation, leur enrichissement, rendre les données conformes aux exigences juridiques et de conformité, et enfin, le stockage des données dans un emplacement centralisé avec tous les paramètres de sécurité nécessaires.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489724"
   
 5.  Installer **complément Master Data Services pour Excel** (32 bits ou 64 bits basé sur la version d’Excel que vous avez sur votre ordinateur) à partir de [ici](https://www.microsoft.com/download/details.aspx?id=29064). Pour rechercher la version d’Excel installée sur votre ordinateur, exécutez **Excel**, cliquez sur **fichier** sur la barre de menus, cliquez sur **aide** pour afficher la version dans le volet droit. Notez que vous devez installer Visual Studio 2010 Tools pour Office Runtime avant d’installer la macro complémentaire Excel.  
   
-6.  (Facultatif) Créez un compte avec [Windows Azure Marketplace](https://datamarket.azure.com/). Une des tâches dans le didacticiel, vous devez avoir un **place de marché Azure** (à l’origine nommé **Data Market**) compte. Vous pouvez ignorer cette tâche, si vous préférez, et passer à la tâche suivante.  
+6.  (Facultatif) Créez un compte avec [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Une des tâches dans le didacticiel, vous devez avoir un **place de marché Azure** (à l’origine nommé **Data Market**) compte. Vous pouvez ignorer cette tâche, si vous préférez, et passer à la tâche suivante.  
   
-7.  Téléchargez le fichier Suppliers.xls à partir de [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Téléchargez le fichier Suppliers.xls à partir de [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS ne vous permet pas exporter le nettoyage ou la mise en correspondance les résultats vers un fichier Excel si vous utilisez **version 64 bits d’Excel**. Il s'agit d'un problème connu. Pour le contourner, procédez comme suit :  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65489724"
 |Leçon|Brève description|Durée estimée (en minutes).|  
 |------------|-----------------------|------------------------------------------------|  
 |[Leçon 1 : Création de la Base de connaissances DQS nommée fournisseurs](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|Dans cette leçon, vous créez une base de connaissances DQS nommée **fournisseurs**.|60|  
-|[Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Dans cette leçon, vous créez et exécutez un projet DQS pour nettoyer les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de Base de connaissances.|45|  
+|[Leçon 2 : Nettoyage des données des fournisseurs à l’aide de la Base de connaissances fournisseurs](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|Dans cette leçon, vous créez et exécutez un projet DQS pour nettoyer les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de Base de connaissances.|45|  
 |[Leçon 3 : Correspondance des données pour supprimer les doublons de la liste des fournisseurs](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|Dans cette leçon, vous allez créer un projet DQS pour effectuer une activité de correspondance et identifier et supprimer les doublons de la liste des fournisseurs nettoyée.|45|  
 |[Leçon 4 : Stockage des données des fournisseurs dans MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|Dans cette leçon, vous chargez les données des fournisseurs nettoyées et mises en correspondance à Master Data Services (MDS) à l’aide de la **complément MDS pour Excel**.|45|  
 |[Leçon 5 : Automatisation du nettoyage et la mise en correspondance avec SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|Dans cette leçon, vous allez créer une solution SSIS qui nettoie les données d'entrée à l'aide de DQS, fait correspondre les données nettoyées pour supprimer les doublons, et stocke dans MDS les données nettoyées et mises en correspondance de manière automatisée.|75|  

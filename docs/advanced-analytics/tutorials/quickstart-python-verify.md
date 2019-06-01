@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 25bf5a7e7d18810c782d1ce2f4986fc433421395
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 09b96f6934fec9e24ca4a254a1d14c23327ebe5b
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577929"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454709"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>Démarrage rapide : Vérifier que Python existe dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +62,7 @@ Si vous obtenez des erreurs, il existe une variété de choses à que faire pour
 
 Tout d’abord, éliminer tout problème d’installation. Configuration de post-installation est nécessaire pour permettre l’utilisation des bibliothèques de code externe. Consultez [installer SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). De même, assurez-vous que le service Launchpad est en cours d’exécution.
 
-Vous devez également ajouter le groupe d’utilisateurs Windows `SQLRUserGroup` en tant que connexion sur l’instance, pour vous assurer que Launchpad peut assurer la communication entre Python et SQL Server. (Le même groupe est utilisé pour les deux R et l’exécution de code Python.) Pour plus d’informations, consultez [l’authentification implicite activé](../security/add-sqlrusergroup-to-database.md).
+Vous devez également ajouter le groupe d’utilisateurs Windows `SQLRUserGroup` en tant que connexion sur l’instance, pour vous assurer que Launchpad peut assurer la communication entre Python et SQL Server. (Le même groupe est utilisé pour les deux R et l’exécution de code Python.) Pour plus d’informations, consultez [créer une connexion pour SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 En outre, vous devrez peut-être activer les protocoles réseau qui ont été désactivées, ou ouvrir le pare-feu pour que SQL Server peut communiquer avec des clients externes. Pour plus d’informations, consultez [dépannage de l’installation](../common-issues-external-script-execution.md).
 

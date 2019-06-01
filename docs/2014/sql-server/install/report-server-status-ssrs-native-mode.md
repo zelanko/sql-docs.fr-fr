@@ -12,12 +12,12 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d9f59bde50c325f0694cc6cdd9441d80ea61f02
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 52291c866e00100280c63253ef36b31bd8763948
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66092699"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428989"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>État du serveur de rapports (SSRS en mode natif)
   Utilisez cette page pour afficher les informations sur l'instance du serveur de rapports à laquelle vous êtes connecté. Cette page est la page de démarrage pour la configuration du serveur de rapports. Des pages supplémentaires sont disponibles pour configurer les URL, le compte de service, la base de données du serveur de rapports, la remise des messages électroniques du serveur de rapports, le déploiement avec montée en puissance parallèle et les clés de chiffrement.  
@@ -72,7 +72,7 @@ ms.locfileid: "66092699"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques d’aide F1 Gestionnaire de Configuration de Reporting Services &#40;SSRS en Mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Gestionnaire de Configuration de Reporting Services &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Gestionnaire de Configuration de Reporting Services &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

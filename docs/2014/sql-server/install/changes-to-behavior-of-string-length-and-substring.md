@@ -10,12 +10,12 @@ ms.assetid: 2119b7ba-2e52-44bf-ac57-82c2d46a48ff
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c29b1bd036debc4285f8b0fa0b3cc68bdeb3449
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 18643dfc11d2b1b1d875a19c478f9ec8cbdd5be6
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66096632"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428849"
 ---
 # <a name="changes-to-behavior-of-string-length-and-substring"></a>Modifications du comportement de string-length et substring
   Le [fonction string-length &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-string-length) et [substring (fonction) &#40;XQuery&#41; ](/sql/xquery/functions-on-string-values-substring) fonctions peuvent renvoyer des résultats différents lorsqu’il est utilisé avec les bases de données XML contenant caractères de substitution.  
@@ -27,6 +27,6 @@ ms.locfileid: "66096632"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

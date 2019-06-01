@@ -13,12 +13,12 @@ ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c722d1d40d206ab300b4b6c90fdf6648575c356b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66093004"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428875"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Supprimer les instructions qui modifient les objets système
   Le Conseiller de mise à niveau a détecté des instructions qui mettent à jour le catalogue système. Les mises à jour directes du catalogue système ne sont pas autorisées. Modifiez vos scripts SQL pour utiliser des API officielles et documentées.  
@@ -38,6 +38,6 @@ ms.locfileid: "66093004"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

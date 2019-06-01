@@ -11,18 +11,18 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450021"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454728"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
 
-## <a name="may-2019"></a>Mai 2019
+## <a name="may-2019"></a>Mai 2019
 
 Le 8 mai 2019 &nbsp;  /  &nbsp; version : 1.7.0 
 
@@ -101,7 +101,7 @@ Le 13 février 2019 &nbsp;  /  &nbsp; version : 1.4.5
 
 | Modifier | Détails |
 | :----- | :------ |
-| Ajouté **pack d’administration pour SQL Server** pack d’extension. | Cela rend plus facile d’installer les extensions dépendant de l’administrateur de SQL Server. Cela inclut :<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Ajouté **pack d’administration pour SQL Server** pack d’extension. | Cela rend plus facile d’installer les extensions dépendant de l’administrateur de SQL Server. Cela inclut :<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Filtrage ajouté étendu la prise en charge des événements dans l’extension de Profiler. | &nbsp; |
 | Added enregistrer en tant que fonctionnalité XML qui peut enregistrer des résultats de T-SQL au format XML. | &nbsp; |
 | Améliorations de l’Assistant d’Application de couche données ajoutées. | &bull; &nbsp; Bouton Générer un script ajouté<br/>&bull; &nbsp; Ajout d’affichage pour donner des avertissements de perte de données pendant le déploiement. |
@@ -281,7 +281,7 @@ _0.32.8 contient des correctifs pour quelques régression trouvée dans 0.32.7 (
 - [Problème #2371](https://github.com/Microsoft/azuredatastudio/issues/2371) enregistrer comme Excel uniquement enregistre première ligne de données
 - [Problème #2150](https://github.com/Microsoft/azuredatastudio/issues/2150): Impossible de se connecter sur Ubuntu 16.04 to SQL dans un conteneur
 
-## <a name="july-2018"></a>Juillet 2018
+## <a name="july-2018"></a>Juillet 2018
 
 Le 19 juillet 2018 &nbsp;  /  &nbsp; version : 0.31.4 &nbsp;  /  &nbsp; version préliminaire publique
 

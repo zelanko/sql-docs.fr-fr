@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503840"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454675"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gérer et intégrer des charges de travail machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ Comptes de privilèges sont créés pendant l’installation et placés dans un 
 Comme un DBA, sécurité des données de SQL Server vous permet de spécifier qui est autorisé à exécuter des scripts, et que les données utilisées dans les travaux sont gérées sous les mêmes rôles de sécurité qui contrôlent accéder via des requêtes T-SQL. En tant qu’un administrateur système, vous pouvez refuser explicitement le **SQLRUserGroup** accès aux données sensibles sur le serveur local en créant des ACL.
 
 >[!NOTE]
-> Par défaut, le **SQLRUserGroup** n’a pas d’une connexion ou les autorisations dans SQL Server lui-même. Comptes de travail doivent ont besoin d’une connexion pour accéder aux données, vous devez la créer vous-même. Un scénario qui appelle spécifiquement pour la création d’une connexion consiste à prendre en charge des demandes à partir d’un script dans l’exécution, pour des opérations sur l’instance du moteur de base de données ou des données lors de l’identité de l’utilisateur est un utilisateur de Windows et la chaîne de connexion spécifie un utilisateur approuvé. Pour plus d’informations, consultez [SQLRUserGroup d’ajouter en tant qu’un utilisateur de base de données](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> Par défaut, le **SQLRUserGroup** n’a pas d’une connexion ou les autorisations dans SQL Server lui-même. Comptes de travail doivent ont besoin d’une connexion pour accéder aux données, vous devez la créer vous-même. Un scénario qui appelle spécifiquement pour la création d’une connexion consiste à prendre en charge des demandes à partir d’un script dans l’exécution, pour des opérations sur l’instance du moteur de base de données ou des données lors de l’identité de l’utilisateur est un utilisateur de Windows et la chaîne de connexion spécifie un utilisateur approuvé. Pour plus d’informations, consultez [SQLRUserGroup d’ajouter en tant qu’un utilisateur de base de données](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="disable-script-execution"></a>Désactiver l’exécution du script
 

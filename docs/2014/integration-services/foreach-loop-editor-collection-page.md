@@ -12,12 +12,12 @@ ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10132f54e7ce9cf094cb8fef5f98b1f67c83c7a4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66058505"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428796"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Éditeur de boucle Foreach (page de collection)
   La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
@@ -72,7 +72,7 @@ ms.locfileid: "66058505"
 >   
 >  Lorsque vous spécifiez une extension de nom de fichier, l'énumérateur retourne également des fichiers qui ont la même extension avec des caractères supplémentaires ajoutés. (Ce comportement est identique à celui de la commande **dir** dans le système d’exploitation, qui compare aussi les noms de fichiers 8.3 à des fins de compatibilité descendante.) Ce comportement de l'énumérateur peut générer des résultats inattendus. Par exemple, vous souhaitez énumérer uniquement des fichiers Excel 2003 et vous spécifiez "*.xls". Toutefois, l'énumérateur retournera également des fichiers Excel 2007 parce que ces fichiers ont l'extension ".xlsx".  
 >   
->  Vous pouvez utiliser une expression pour spécifier les fichiers à inclure dans une collection. Pour cela, développez **Expressions** dans la page **Collection**, sélectionnez la propriété **FileSpec**, puis cliquez sur le bouton de sélection (...) pour ajouter l’expression de propriété. Pour plus d’informations sur la sélection dynamique de fichiers spécifiés, consultez [SSIS défini dynamiquement masque de fichier : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
+>  Vous pouvez utiliser une expression pour spécifier les fichiers à inclure dans une collection. Pour cela, développez **Expressions** dans la page **Collection**, sélectionnez la propriété **FileSpec**, puis cliquez sur le bouton de sélection (...) pour ajouter l’expression de propriété. Pour plus d’informations sur la sélection dynamique de fichiers spécifiés, consultez [SSIS défini dynamiquement masque de fichier : FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html)  
   
  **Complet**  
  Permet de récupérer les chemins d'accès complets des noms de fichiers indiqués. Si des caractères étoile (*) sont mentionnés dans l'option Fichiers, les chemins d'accès complets retournés par la fonction sont ceux correspondant au filtre spécifié.  
@@ -115,7 +115,7 @@ ms.locfileid: "66058505"
  Vous utilisez l'énumérateur ADO Foreach pour énumérer les lignes ou les tables d'un objet ADO ou ADO.NET qui est stocké dans une variable. Par exemple, si la boucle Foreach inclut une tâche de script qui écrit un dataset dans une variable, vous pouvez utiliser l'énumérateur ADO Foreach pour énumérer les lignes du dataset. Si la variable contient un dataset ADO.NET, l'énumérateur peut être configuré pour énumérer les lignes de plusieurs tables ou pour énumérer des tables.  
   
  **Variable source de l’objet ADO**  
- Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
 > [!NOTE]  
 >  La variable doit être de type Objet ; dans le cas contraire, une erreur se produit.  
@@ -135,7 +135,7 @@ ms.locfileid: "66058505"
  Vous utilisez l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer un schéma pour une source de données spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer des schémas tels que les colonnes de la base de données **AdventureWorks** , et la tâche d'exécution SQL pour obtenir les autorisations de schéma.  
   
  **Connexion**  
- Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions ADO.NET doit utiliser un fournisseur .NET pour OLE DB. Lors de la connexion à SQL Server, il est recommandé d'utiliser le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, répertorié dans la section **Fournisseurs .Net pour OleDb** de la boîte de dialogue **Gestionnaire de connexions** .  
@@ -154,7 +154,7 @@ ms.locfileid: "66058505"
  L'énumérateur Foreach à partir d'une variable permet d'énumérer les objets énumérables contenus dans la variable spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL qui exécute une requête et enregistre le résultat dans une variable, vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour énumérer les résultats de la requête.  
   
  **Variable**  
- Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -177,11 +177,11 @@ ms.locfileid: "66058505"
  **DocumentSource**  
  Si **DocumentSourceType** est défini sur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton représentant des points de suspension (...) pour fournir le code XML nécessaire via la boîte de dialogue **Éditeur de source de document**.  
   
- Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -207,7 +207,7 @@ ms.locfileid: "66058505"
  `OuterXPathString`  
  Si **OuterXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **OuterXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **OuterXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -230,11 +230,11 @@ ms.locfileid: "66058505"
  `InnerXPathString`  
  Si **InnerXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **InnerXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **InnerXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **InnerXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66058505"
  L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
   
  **Connexion**  
- Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  Rubriques connexes : [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Configurer le gestionnaire de connexions ADO.NET](configure-ado-net-connection-manager.md)  
   
@@ -292,7 +292,7 @@ Spécifie si la recherche doit être récursive au sein du répertoire spécifi�
   
 -   Entrée de blog, [SSIS For Each Node List Enumerator](https://go.microsoft.com/fwlink/?LinkId=220671), sur bidn.com.  
   
--   Entrée de blog, [SSIS défini dynamiquement masque de fichier : FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154), sur beyondrelational.com.  
+-   Entrée de blog, [SSIS défini dynamiquement masque de fichier : FileSpec](https://rajsudeep.blogspot.com/2010/09/ssisdynamically-set-file-mask-filespec.html).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

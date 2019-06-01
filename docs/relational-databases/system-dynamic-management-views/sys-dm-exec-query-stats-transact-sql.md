@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072353"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429028"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 |**min_spills**|**bigint**|Le nombre minimal de pages de cette requête a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Le nombre maximal de pages que cette requête a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution.<br /><br /> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Nombre total de lectures de serveur de pages à distance effectuées par les exécutions de ce plan depuis sa compilation.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure |  
+|**last_page_server_reads**|**bigint**|Nombre de lectures de page à distance serveur effectuée la dernière fois que le plan a été exécuté.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure |  
+|**min_page_server_reads**|**bigint**|Nombre minimal de serveur de pages à distance lit que ce plan effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure |  
+|**max_page_server_reads**|**bigint**|Nombre maximal de serveur de pages à distance lit que ce plan effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure |  
 > [!NOTE]
 > <sup>1</sup> pour les procédures stockées compilées en mode natif lors de la collecte de statistiques est activée, des temps de travail est collecté en millisecondes. Si la requête s’exécute en moins d’une milliseconde, la valeur sera 0.  
   
@@ -152,7 +155,7 @@ GROUP BY query_stats.query_hash
 ORDER BY 2 DESC;  
 ```  
   
-### <a name="b-returning-row-count-aggregates-for-a-query"></a>b. Retour des agrégats de nombre de lignes à une requête  
+### <a name="b-returning-row-count-aggregates-for-a-query"></a>B. Retour des agrégats de nombre de lignes à une requête  
  L'exemple suivant retourne les informations d'agrégation du nombre de lignes (nombre total de lignes, nombre minimal de lignes, nombre maximal de lignes et dernières lignes) pour les requêtes.  
   
 ```sql  
