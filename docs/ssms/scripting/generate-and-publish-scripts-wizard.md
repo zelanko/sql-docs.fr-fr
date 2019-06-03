@@ -44,18 +44,18 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70a528bcf2e6f714b4ded8128d3a0757f3016607
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2d6226b6b5c21f1c233c41157ac85b8cfb48c690
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65820809"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454768"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.  
 
-Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Didacticiel : Assistant Générer des scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option).
+Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Didacticiel : Assistant Générer des scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
 
 
   
@@ -126,7 +126,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
 
   ![Enregistrer](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton (**...**) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
+-   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton ( **...** ) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
   
 -   **Enregistrer dans le Presse-papiers** - Permet d’enregistrer le script Transact-SQL dans le Presse-papiers.  
   
@@ -177,7 +177,7 @@ Pour un didacticiel plus détaillé sur l’utilisation de l’Assistant Génér
   
 -   **Valeurs de script par défaut** - Inclut les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de table. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md).  
   
--   **Générer un script de création/suppression (DROP/CREATE)** - Avec **Générer un script de création (CREATE)**, les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont incluses pour créer les objets. Avec **Générer un script de suppression (DROP)**, les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont incluses pour supprimer les objets. Avec **Générer un script de création/suppression (DROP/CREATE)**, l'instruction de suppression [!INCLUDE[tsql](../../includes/tsql-md.md)] est incluse dans le script, suivie de l'instruction de création, pour chaque objet faisant l'objet d'un script. La valeur par défaut est **Générer un script de création (CREATE)**.  
+-   **Générer un script de création/suppression (DROP/CREATE)** - Avec **Générer un script de création (CREATE)** , les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont incluses pour créer les objets. Avec **Générer un script de suppression (DROP)** , les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont incluses pour supprimer les objets. Avec **Générer un script de création/suppression (DROP/CREATE)** , l'instruction de suppression [!INCLUDE[tsql](../../includes/tsql-md.md)] est incluse dans le script, suivie de l'instruction de création, pour chaque objet faisant l'objet d'un script. La valeur par défaut est **Générer un script de création (CREATE)** .  
   
 -   **Générer un script pour les propriétés étendues** - Inclut les propriétés étendues dans le script, si l’objet en possède. La valeur par défaut est **True**.  
   
@@ -366,7 +366,7 @@ Si vous définissez [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] en tant qu�
 
 Les options définies à l’étape 4 ne seront pas mémorisées. Si vous préférez qu’elles le soient, suivez les instructions données dans **Comment définir les options de script par défaut sur SQL Data Warehouse**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installation de SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [Copier des bases de données sur d'autres serveurs](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198072"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428998"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -100,7 +100,7 @@ La version en disponibilité générale (DG) de SSMS 18.0 est disponible. Si vou
 |Classification des données|Ajout d’une nouvelle fonctionnalité de « classification des données » à SMO. L’objet Column expose de nouvelles propriétés : SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId et IsClassified (en lecture seule). Pour plus d’informations, consultez [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) |
 |Classification des données|Ajout d’un nouvel élément de menu « Rapport de classification » au menu volant « Classification des données ».|
 |Classification des données| Recommandations mises à jour.|
-|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous **<Database name>** > **Tâches** > **Mise à niveau de la base de données**. Celle-ci démarre le nouvel **Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant :<br>Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données.<br>Mise à niveau vers le niveau de compatibilité de la base de données souhaité.<br>Collecte d’un deuxième passage de données de performances sur la même charge de travail.<br>Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.<br>Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
+|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous **<Database name>**  > **Tâches** > **Mise à niveau de la base de données**. Celle-ci démarre le nouvel **Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant :<br>Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données.<br>Mise à niveau vers le niveau de compatibilité de la base de données souhaité.<br>Collecte d’un deuxième passage de données de performances sur la même charge de travail.<br>Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.<br>Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
 |Assistant Application de la couche Données|Ajout de la prise en charge de l’importation/exportation de l’application de la couche Données avec des tables de graphe.|
 |Assistant Importation d’un fichier plat|Ajout d’une logique pour notifier l’utilisateur que l’importation peut avoir abouti à un renommage des colonnes.|
 |Integration Services (SSIS)|Les clients peuvent désormais planifier des packages SSIS sur les runtimes d’intégration Azure-SSIS qui se trouvent dans le cloud Azure Government.|
@@ -231,7 +231,7 @@ La version en disponibilité générale (DG) de SSMS 18.0 est disponible. Si vou
 |Explorateur d’objets|Extension à tous les objets de schéma de la logique de la demande de confirmation du renommage d’une base de données (vous pouvez paramétrer cette fonctionnalité).|
 |Explorateur d’objets|Ajout de la séquence d’échappement appropriée pour le filtrage de l’Explorateur d’objets. Pour plus d'informations, consultez https://feedback.azure.com/forums/908035/suggestions/36678803. |
 |Explorateur d’objets|Correction/amélioration de la vue dans les Détails de l’Explorateur d’objets pour afficher les nombres avec les séparateurs appropriés. Pour plus d'informations, consultez https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Explorateur d’objets|Correction liée au menu contextuel au niveau du nœud « Tables » lors d’une connexion à SQL Express, où il manquait le menu volant « Nouveau » et la table avec versions gérées par le système, et où les tables de graphe n’étaient pas correctement répertoriées. Pour plus d'informations, consultez https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Explorateur d’objets|Correction liée au menu contextuel au niveau du nœud « Tables » lors d’une connexion à SQL Express, où il manquait le menu volant « Nouveau » et la table avec versions gérées par le système, et où les tables de graphe n’étaient pas correctement répertoriées. Pour plus d'informations, consultez https://feedback.azure.com/forums/908035/suggestions/37245529. |
 |Scripts d’objets|Amélioration globale des performances - La génération de scripts de WideWorldImporters prend moitié moins de temps qu’avec SSMS 17.7.|
 |Scripts d’objets|Pendant la génération de scripts pour des objets, les configurations au niveau de la base de données qui comportent des valeurs par défaut sont omises.|
 |Scripts d’objets|Absence de génération de code T-SQL dynamique pendant la génération de scripts. Consultez https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |
@@ -475,7 +475,7 @@ Always Encrypted :
 
 ### <a name="known-issues"></a>Problèmes connus
 
-- Si l’utilisateur clique sur le bouton *Script* après avoir modifié une propriété du groupe de fichiers dans la fenêtre *Propriétés*, deux scripts sont générés : l’un avec une instruction *USE<database>* et l’autre avec une instruction *USE master*.  Le script avec *USE master* est généré par erreur et doit être ignoré. Exécutez le script qui contient l’instruction *USE<database>*.
+- Si l’utilisateur clique sur le bouton *Script* après avoir modifié une propriété du groupe de fichiers dans la fenêtre *Propriétés*, deux scripts sont générés : l’un avec une instruction *USE<database>* et l’autre avec une instruction *USE master*.  Le script avec *USE master* est généré par erreur et doit être ignoré. Exécutez le script qui contient l’instruction *USE<database>* .
 - Certaines boîtes de dialogue affichent une erreur d’édition non valide quand les nouvelles éditions *Usage général* ou *Critique pour l’entreprise* d’Azure SQL Database sont utilisées.
 - Il peut se produire une latence dans l’observateur XEvents. Il s’agit d’un [problème connu de .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Passez à la version NetFx 4.7.2.
 

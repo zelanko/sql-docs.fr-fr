@@ -14,12 +14,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3dce0805933c63f6562b687a9a4be429ad6ab681
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: a7f8e0577a7edd885084e117bcac801970993caa
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776021"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428854"
 ---
 # <a name="polybase-transact-sql-reference"></a>Informations de référence sur Transact-SQL PolyBase
 
@@ -319,7 +319,7 @@ CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)
     );
 ```
 
-**4. Créer un schéma** 
+**3. Créer un schéma** 
 
 ```sql
      CREATE SCHEMA sqlserver;
@@ -554,6 +554,6 @@ CREATE STATISTICS CustomerCustKeyStatistics ON sqlserver.customer (C_CUSTKEY) WI
 ## <a name="next-steps"></a>Étapes suivantes  
 Pour découvrir des exemples de requêtes, consultez [Requêtes PolyBase](../../relational-databases/polybase/polybase-queries.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)   
 [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md)

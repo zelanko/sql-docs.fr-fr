@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718417"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454581"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -68,11 +68,11 @@ Pour configurer la prise en charge de SSISDB pour Always On, suivez les instruct
 Vous devez également créer un écouteur de groupe de disponibilité pour le groupe de disponibilité auquel vous ajoutez SSISDB. Consultez [Créer ou configurer un écouteur de groupe de disponibilité](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Mettre à jour le fichier de configuration du service Scale Out Master
-Mettez à jour le fichier de configuration du service Scale Out Master (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) sur le nœud principal et chaque nœud secondaire. Définissez **SqlServerName** sur *nom DNS de l’écouteur de groupe de disponibilité],[port]*.
+Mettez à jour le fichier de configuration du service Scale Out Master (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) sur le nœud principal et chaque nœud secondaire. Définissez **SqlServerName** sur *nom DNS de l’écouteur de groupe de disponibilité],[port]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Activer la journalisation de l’exécution des packages
 
-La journalisation dans SSISDB est effectuée par la connexion **##MS_SSISLogDBWorkerAgentLogin##**. Le mot de passe est généré automatiquement pour cette connexion. Pour effectuer la journalisation de tous les réplicas de SSISDB, effectuez les opérations suivantes
+La journalisation dans SSISDB est effectuée par la connexion **##MS_SSISLogDBWorkerAgentLogin##** . Le mot de passe est généré automatiquement pour cette connexion. Pour effectuer la journalisation de tous les réplicas de SSISDB, effectuez les opérations suivantes
 
 ### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 Changer le mot de passe de **##MS_SSISLogDBWorkerAgentLogin##** sur l’instance SQL Server principale
 
@@ -99,7 +99,7 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
 
 Sur les machines virtuelles Azure, cette opération de configuration nécessite des étapes supplémentaires. L’explication complète de ces concepts et de ces étapes dépasse le cadre de cet article.
 
-1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

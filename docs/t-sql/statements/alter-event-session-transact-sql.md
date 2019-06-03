@@ -17,15 +17,15 @@ helpviewer_keywords:
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-author: CarlRabeler
-ms.author: carlrab
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f55b028c8fa1506bd6076bf5bdad2f90e074727
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5ae1d8f24be52ed89e762f7a1a8963ba766b1cb5
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392852"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270150"
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -123,14 +123,14 @@ ON SERVER
 |*event_session_name*|Nom d'une session d'événements existante.|  
 |STATE = START &#124; STOP|Démarre ou arrête la session d'événements. Cet argument est valide uniquement lorsque ALTER EVENT SESSION est appliqué à un objet de la session d'événements.|  
 |ADD EVENT \<event_specifier>|Associe l’événement identifié par \<event_specifier> à la session d’événements.|
-|[*event_module_guid*]*.event_package_name.event_name*|Nom d'un événement d'un package d'événement, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *event_name* est l’objet d’événement.<br /><br /> Les événements apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « événement ».|  
+|[*event_module_guid*] *.event_package_name.event_name*|Nom d'un événement d'un package d'événement, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *event_name* est l’objet d’événement.<br /><br /> Les événements apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « événement ».|  
 |SET { *event_customizable_attribute*= \<value> [ ,...*n*] }|Spécifie des attributs personnalisables pour l'événement. Les attributs personnalisables s’affichent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *event_name*.|  
-|ACTION ( { [*event_module_guid*]*.event_package_name.action_name* [ **,**...*n*] } )|Action à associer à la session d'événements, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *action_name* est l’objet d’action.<br /><br /> Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « action ».|  
+|ACTION ( { [*event_module_guid*] *.event_package_name.action_name* [ **,** ...*n*] } )|Action à associer à la session d'événements, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *action_name* est l’objet d’action.<br /><br /> Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « action ».|  
 |WHERE \<predicate_expression>|Spécifie l'expression de prédicat utilisée pour déterminer si un événement doit être traité. Si \<predicate_expression> est true, le traitement de l’événement par les actions et les cibles pour la session se poursuit. Si \<predicate_expression> est false, l’événement est supprimé par la session avant d’être traité par les actions et les cibles pour la session. Les expressions de prédicat sont limitées à 3 000 caractères, ce qui limite les arguments de chaîne.|
 |*event_field_name*|Nom du champ d'événement qui identifie la source de prédicat.|  
 |[event_module_guid].event_package_name.predicate_source_name|Nom de la source de prédicat globale, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet de prédicat.<br />-   *predicate_source_name* est défini dans la vue sys.dm_xe_objects en tant qu’object_type « pred_source ».|  
 |[*event_module_guid*].*event_package_name*.*predicate_compare_name*|Nom de l'objet de prédicat à associer à l'événement, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet de prédicat.<br />-   *predicate_compare_name* est une source globale définie dans la vue sys.dm_xe_objects en tant qu’object_type « pred_compare ».|  
-|DROP EVENT \<event_specifier>|Supprime l’événement identifié par *\<event_specifier>*. \<event_specifier> doit être valide dans la session d’événements.|  
+|DROP EVENT \<event_specifier>|Supprime l’événement identifié par *\<event_specifier>* . \<event_specifier> doit être valide dans la session d’événements.|  
 |ADD TARGET \<event_target_specifier>|Associe la cible identifiée par \<event_target_specifier> à la session d’événements.|
 |[*event_module_guid*].*event_package_name*.*target_name*|Nom d'une cible de la session d'événements, où :<br /><br /> -   *event_module_guid* est le GUID du module qui contient l’événement.<br />-   *event_package_name* est le package qui contient l’objet d’action.<br />-   *target_name* est l’action. Les actions apparaissent dans la vue sys.dm_xe_objects en tant qu'object_type « cible ».|  
 |SET { *target_parameter_name*= \<value> [, ...*n*] }|Définit un paramètre cible. Les paramètres cibles apparaissent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *target_name*.<br /><br /> **REMARQUE** Si vous utilisez la cible de mémoire tampon en anneau, il est préférable de configurer le paramètre cible max_memory avec 2 048 kilo-octets (Ko) pour éviter les éventuelles données tronquées dans le résultat XML. Pour plus d’informations sur le moment où les différents types de cibles doivent être utilisés, consultez [Cibles des événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).|  
@@ -142,10 +142,10 @@ ON SERVER
 |TRACK_CAUSALITY = { ON &#124; **OFF** }|Spécifie si la causalité est suivie ou non. Si cette option est activée, la causalité permet à des événements associés de différentes connexions au serveur d'être corrélés.|  
 |STARTUP_STATE = { ON &#124; **OFF** }|Spécifie si cette session d'événements doit être lancée automatiquement au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si STARTUP_STATE = ON, la session d’événements est lancée uniquement si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, puis redémarré.<br /><br /> ON= La session d’événements est lancée au démarrage.<br /><br /> **OFF** = La session d’événements n’est PAS lancée au démarrage.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les arguments `ADD` et `DROP` ne peuvent pas être utilisés dans la même instruction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Exemples  
@@ -169,7 +169,7 @@ ADD EVENT sqlserver.database_transaction_end;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [Cibles des Événements étendus SQL Server](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   

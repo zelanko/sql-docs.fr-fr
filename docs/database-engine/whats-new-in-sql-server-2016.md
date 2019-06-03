@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872309"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413612"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nou
 
 #### <a name="try-it-out"></a>À votre tour d’essayer
 
-- Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![télécharger](../analysis-services/media/download.png "télécharger").
+- Pour télécharger [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], accédez au **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![télécharger](../analysis-services/media/download.png "télécharger").
 
 - Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
 
@@ -444,9 +444,9 @@ Télécharger la dernière version de [SQL Server Management Studio (SSMS)](../s
 ### <a name="upgrade-advisor"></a>Conseiller de mise à niveau
 SQL Server 2016 Upgrade Advisor Preview est un outil autonome qui permet aux utilisateurs de versions antérieures d’exécuter un ensemble de règles de mise à niveau sur leur base de données SQL Server. Les utilisateurs peuvent ainsi identifier les modifications avec rupture, les changements de comportement et les fonctionnalités déconseillées, mais aussi recevoir de l’aide sur l’adoption des nouvelles fonctionnalités telles que Stretch Database.
 
- Vous pouvez télécharger Upgrade Advisor Preview [ici](https://www.microsoft.com/download/details.aspx?id=48119) ou l’installer à l’aide de Web Platform Installer.
+ Vous pouvez télécharger Upgrade Advisor Preview [ici](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) ou l’installer à l’aide de Web Platform Installer.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
 [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
