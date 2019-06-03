@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 52935abf74fcf3ad7a4f7c8d78faa6b9b21d47e5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: bc9762470b6e2a836c29f53ebfc3ffeadbcc381f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65095942"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454691"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Installer SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +71,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 3. Sur le **sélection des fonctionnalités** page, sélectionnez les options suivantes :
 
    - Sélectionnez **Services moteur de base de données**. Le moteur de base de données est requise dans chaque instance qui utilise l’apprentissage.
-   - Sélectionnez **R Services (en base de données)**. Installe la prise en charge pour l’utilisation de la base de données de R.
+   - Sélectionnez **R Services (en base de données)** . Installe la prise en charge pour l’utilisation de la base de données de R.
     
      ![Sélection des fonctionnalités de R Services](media/2016setup-rsvcs-features.png "sélectionner ces fonctionnalités pour R Services de base de données")
 
@@ -216,7 +216,7 @@ Au niveau de l’instance, une configuration supplémentaire peut-être inclure�
 Sur la base de données, vous devrez peut-être les mises à jour de configuration suivantes :
 
 * [Autoriser les utilisateurs à SQL Server Machine Learning Services](../../advanced-analytics/security/user-permission.md)
-* [Ajouter SQLRUserGroup comme utilisateur de base de données](../../advanced-analytics/security/add-sqlrusergroup-to-database.md)
+* [Ajouter SQLRUserGroup comme utilisateur de base de données](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
 > Pas toutes les modifications répertoriées sont requises, et aucun peut être requise. Configuration requise dépend de votre schéma de sécurité, où vous avez installé SQL Server, et que les utilisateurs pour se connecter à la base de données et exécuter des scripts externes. Vous trouverez ici des conseils de dépannage supplémentaires : [FAQ sur la mise à niveau et l’installation](../r/upgrade-and-installation-faq-sql-server-r-services.md)
