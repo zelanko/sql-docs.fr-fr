@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_procedure_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e472d6f8b7b18bb7e73613a8c60a27461bb49b43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013413"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462666"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,6 +77,10 @@ ms.locfileid: "63013413"
 |**min_spills**|**bigint**|Le nombre minimal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Le nombre maximal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution.<br /><br />**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_page_server_reads**|**bigint**|Le nombre total de lectures de serveur de pages effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**last_page_server_reads**|**bigint**|Le nombre de lectures de pages de serveur effectuée la dernière exécution de la procédure stockée.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**min_page_server_reads**|**bigint**|Le nombre minimal de serveur de pages lit que cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**max_page_server_reads**|**bigint**|Le nombre maximal de serveur de pages lit que cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
   
  <sup>1</sup> pour les procédures stockées compilées en mode natif lors de la collecte de statistiques est activée, des temps de travail est collecté en millisecondes. Si la requête s'exécute en moins d'une milliseconde, la valeur est 0.  
   

@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2017
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b2a01f7c8ffa3616deb0c7f1ebcec1ea94e65dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535192"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462630"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52535192"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session associée à chaque connexion principale active. N'accepte pas la valeur NULL.|  
 |login_time|**datetime**|Heure à laquelle la session a été établie. N'accepte pas la valeur NULL.|  
-|host_name|**nvarchar(128)**|Nom de la station de travail cliente spécifique à une session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.<br /><br /> **Note de sécurité :** L'application cliente fournit le nom de la station de travail et peut fournir des données incorrectes. Ne vous fiez pas à HOST_NAME pour garantir la sécurité.|  
+|host_name|**nvarchar(128)**|Nom de la station de travail cliente spécifique à une session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.<br /><br /> **Remarque relative à la sécurité :** L'application cliente fournit le nom de la station de travail et peut fournir des données incorrectes. Ne vous fiez pas à HOST_NAME pour garantir la sécurité.|  
 |program_name|**nvarchar(128)**|Nom du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |host_process_id|**Int**|ID de processus du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |client_version|**Int**|Version du protocole TDS de l'interface utilisée par le client pour se connecter au serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
@@ -64,7 +64,7 @@ ms.locfileid: "52535192"
 |logical_reads|**bigint**|Nombre de lectures logiques qui ont été effectuées sur cette session. N'accepte pas la valeur NULL.|  
 |is_user_process|**bit**|0 si la session est une session système. Sinon, il est 1. N'accepte pas la valeur NULL.|  
 |text_size|**Int**|Paramètre TEXTSIZE pour la session. N'accepte pas la valeur NULL.|  
-|langue|**nvarchar(128)**|Paramètre LANGUAGE pour la session. Autorise la valeur NULL.|  
+|langage|**nvarchar(128)**|Paramètre LANGUAGE pour la session. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Paramètre DATEFORMAT pour la session. Autorise la valeur NULL.|  
 |date_first|**smallint**|Paramètre DATEFIRST pour la session. N'accepte pas la valeur NULL.|  
 |quoted_identifier|**bit**|Paramètre QUOTED_IDENTIFIER pour la session. N'accepte pas la valeur NULL.|  
@@ -90,6 +90,7 @@ ms.locfileid: "52535192"
 |authenticating_database_id|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de la base de données authentifiant le principal. Pour les comptes de connexion, la valeur sera de 0. Pour les utilisateurs de base de données non autonome, la valeur sera l'ID de la base de données autonome.|  
 |open_transaction_count|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de transactions ouvertes par session.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|page_server_reads|**bigint**|**S’applique à** : Très grande échelle de la base de données SQL Azure<br /><br /> Nombre de lectures de pages de serveur effectuées, par des demandes dans cette session, pendant cette session. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
 Tous les utilisateurs peuvent voir leurs propres informations de session.  
@@ -119,7 +120,7 @@ Tous les utilisateurs peuvent voir leurs propres informations de session.
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|Un-à-zéro ou un-à-plusieurs|  
-|sys.dm_exec_sessions|[Sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Un-à-zéro ou un-à-plusieurs|  
+|sys.dm_exec_sessions|[sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|Un-à-zéro ou un-à-plusieurs|  
 |sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|Un à un|  
   
 ## <a name="examples"></a>Exemples  
@@ -133,7 +134,7 @@ FROM sys.dm_exec_sessions
 GROUP BY login_name;  
 ```  
   
-### <a name="b-finding-long-running-cursors"></a>b. Recherche des curseurs longs  
+### <a name="b-finding-long-running-cursors"></a>B. Recherche des curseurs longs  
  L'exemple suivant recherche les curseurs qui sont ouverts pendant plus longtemps que la durée fixée, l'auteur des curseurs et la session à laquelle appartiennent les curseurs.  
   
 ```sql  

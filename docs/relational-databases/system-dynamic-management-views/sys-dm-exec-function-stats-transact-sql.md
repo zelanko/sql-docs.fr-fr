@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f8305dbb894ff679d26702ddd877add9eeb4f76
-ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
+ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66428955"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462547"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,10 +68,10 @@ ms.locfileid: "66428955"
 |**last_elapsed_time**|**bigint**|Temps écoulé, en microsecondes, pour la dernière exécution de cette fonction.|  
 |**min_elapsed_time**|**bigint**|Temps minimal écoulé, en microsecondes, pour tout terminé l’exécution de cette fonction.|  
 |**max_elapsed_time**|**bigint**|Temps maximal écoulé, en microsecondes, pour tout terminé l’exécution de cette fonction.|  
-|**total_page_server_reads**|**bigint**|Nombre total de lectures de serveur de pages à distance effectuées par les exécutions de cette fonction dans la mesure où il a été compilé.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
-|**last_physical_reads**|**bigint**|Nombre de lectures de pages à distance de serveur effectuées lors de la dernière exécution de la fonction.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
-|**min_physical_reads**|**bigint**|Nombre minimal de serveur de pages à distance lit que cette fonction effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
-|**max_physical_reads**|**bigint**|Nombre maximal de serveur de pages à distance lit que cette fonction effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|
+|**total_page_server_reads**|**bigint**|Nombre total de lectures de serveur de pages effectuées par les exécutions de cette fonction dans la mesure où il a été compilé.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
+|**last_page_server_reads**|**bigint**|Nombre de lectures de pages de serveur effectuées lors de la dernière exécution de la fonction.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
+|**min_page_server_reads**|**bigint**|Nombre minimal de serveur de pages lit que cette fonction effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|  
+|**max_page_server_reads**|**bigint**|Nombre maximal de serveur de pages lit que cette fonction effectuées lors d’une seule exécution.<br /><br /> **S’applique à :** Très grande échelle de la base de données SQL Azure.|
   
 ## <a name="permissions"></a>Autorisations  
 

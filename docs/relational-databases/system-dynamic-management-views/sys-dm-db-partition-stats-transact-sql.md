@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025102"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462655"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025102"
   Renvoie le nombre de pages et de lignes de chaque partition de la base de données active.  
   
 > [!NOTE]  
->  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_partition_stats**.  
+>  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_partition_stats**. Le partition_id dans sys.dm_pdw_nodes_db_partition_stats diffère de la partition_id dans la vue de catalogue sys.partitions pour Azure SQL Data Warehouse.
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. C’est la même valeur que la **partition_id** dans le **sys.partitions** affichage catalogue|  
+|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. C’est la même valeur que la **partition_id** dans le **sys.partitions** affichage à l’exception d’Azure SQL Data Warehouse catalogue.|  
 |**object_id**|**Int**|ID d'objet de la table ou de la vue indexée à laquelle appartient la partition.|  
 |**index_id**|**Int**|ID du segment de mémoire ou de l'index auquel appartient la partition.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Index cluster<br /><br /> > 1 = index non cluster|  
 |**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
 |**in_row_data_page_count**|**bigint**|Nombre de pages utilisées pour stocker les données des lignes de cette partition. Si la partition fait partie d'un segment de mémoire, la valeur de cette colonne est le nombre de pages de données dans ce segment. Si la partition fait partie d'un index, la valeur de cette colonne est le nombre de pages au niveau feuille. (Les pages non-feuille dans l’arborescence binaire ne figurent pas dans le nombre.) Pages IAM (Index Allocation Map) ne sont pas inclus dans les deux cas. Toujours 0 pour un index columnstore optimisé en mémoire xVelocity.|  
 |**in_row_used_page_count**|**bigint**|Nombre total de pages utilisées pour stocker et gérer les données des lignes de cette partition. Ce nombre inclut les pages non-feuille B-tree, les pages IAM et toutes les pages incluses dans le **in_row_data_page_count** colonne. Toujours 0 pour un index columnstore.|  
 |**in_row_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer les données des lignes de cette partition, que les pages soient utilisées ou non. Toujours 0 pour un index columnstore.|  
-|**lob_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)** , **varbinary (max)**, et **xml** colonnes au sein de la partition. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB utilisés pour stocker et gérer l'index columnstore dans la partition.|  
-|**lob_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)**,  **nvarchar (max)**, **varbinary (max)**, et **xml** colonnes au sein de la partition, que les pages soient en cours d’utilisation ou non. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB réservés pour le stockage et la gestion d'un index columnstore dans la partition.|  
+|**lob_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , et **xml** colonnes au sein de la partition. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB utilisés pour stocker et gérer l'index columnstore dans la partition.|  
+|**lob_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer out of row **texte**, **ntext**, **image**, **varchar (max)** ,  **nvarchar (max)** , **varbinary (max)** , et **xml** colonnes au sein de la partition, que les pages soient en cours d’utilisation ou non. Les pages IAM sont incluses.<br /><br /> Nombre total d'objets LOB réservés pour le stockage et la gestion d'un index columnstore dans la partition.|  
 |**row_overflow_used_page_count**|**bigint**|Nombre de pages utilisées pour stocker et gérer le dépassement de ligne **varchar**, **nvarchar**, **varbinary**, et **sql_variant** colonnes dans la partition. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
 |**row_overflow_reserved_page_count**|**bigint**|Nombre total de pages réservées pour stocker et gérer le dépassement de ligne **varchar**, **nvarchar**, **varbinary**, et **sql_variant** colonnes dans la partition, que les pages soient en cours d’utilisation ou non. Les pages IAM sont incluses.<br /><br /> Toujours 0 pour un index columnstore.|  
 |**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculée en tant que **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  

@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 2a0a1f82685cb107902c8065f2f696f615ad3930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62744071"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462775"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Le **sys.server_resource_stats** vue a des définitions différentes selon la ve
 
  
 > [!TIP]  
->  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [les niveaux de service de Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [les niveaux de service de Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à la **master** base de données.  
@@ -79,4 +79,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Voir aussi  
- [Gérés des niveaux de service d’Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [Gérés des niveaux de service d’Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

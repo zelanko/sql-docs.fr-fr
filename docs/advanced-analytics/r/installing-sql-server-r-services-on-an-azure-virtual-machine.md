@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.openlocfilehash: 01fb7962a5be08f40fe1c790b335c24d34979a2a
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454761"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462552"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installer les Services SQL Server Machine Learning avec R et Python sur une machine virtuelle Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Vous pouvez installer l’intégration de R et Python à Machine Learning Servic
  
 Pour obtenir des instructions étape par étape, consultez [comment approvisionner une machine virtuelle de Windows SQL Server dans le portail Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision).
 
-Le [paramètres de configuration de SQL server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#4-configure-sql-server-settings) étape consiste où vous ajoutez apprentissage à votre instance.
+Le [paramètres de configuration de SQL server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) étape consiste où vous ajoutez apprentissage à votre instance.
 
 <a name="firewall"></a>
 

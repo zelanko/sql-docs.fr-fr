@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072233"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462523"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -67,7 +67,7 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |writes|**bigint**|Nombre d'écritures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |logical_reads|**bigint**|Nombre de lectures logiques effectuées par la demande. N'accepte pas la valeur NULL.|  
 |text_size|**Int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
-|langue|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
+|langage|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Valeur du paramètre DATEFORMAT pour la demande. Autorise la valeur NULL.|  
 |date_first|**smallint**|Valeur du paramètre DATEFIRST pour la demande. N'accepte pas la valeur NULL.|  
 |quoted_identifier|**bit**|1 = QUOTED_IDENTIFIER est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
@@ -95,7 +95,8 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |parallel_worker_count |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le nombre de travailleurs parallèles réservés, s’il s’agit d’une requête parallèle.  |  
 |external_script_request_id |**uniqueidentifier** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> L’ID de demande de script externe associé à la requête actuelle. |  
 |is_resumable |**bit** |**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
-|page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Une représentation hexadécimale sur 8 octets de la ressource de page si le `wait_resource` colonne contiendrait une page. |
+|page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Une représentation hexadécimale sur 8 octets de la ressource de page si le `wait_resource` colonne contiendrait une page. |  
+|page_server_reads|**bigint**|**S’applique à** : Très grande échelle de la base de données SQL Azure<br /><br /> Nombre de lectures de serveur de pages effectuées par la demande. N'accepte pas la valeur NULL.|  
 
 ## <a name="remarks"></a>Notes 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
@@ -123,7 +124,7 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>b. Recherche de tous les verrous maintenus par un lot en cours d'exécution
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. Recherche de tous les verrous maintenus par un lot en cours d'exécution
 
 L’exemple suivant interroge **sys.dm_exec_requests** pour rechercher le lot vous intéresse et copie son `transaction_id` à partir de la sortie.
 

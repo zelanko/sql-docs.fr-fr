@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403534"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462706"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,6 +68,11 @@ ms.locfileid: "52403534"
 |**last_spills**|**bigint**|Le nombre de pages répandues la dernière fois que le déclencheur a été exécuté.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Le nombre minimal de pages de ce déclencheur a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Le nombre maximal de pages que ce déclencheur a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**bigint**|Le nombre total de lectures de serveur de pages effectuées par les exécutions de ce déclencheur depuis sa compilation.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**last_page_server_reads**|**bigint**|Le nombre de lectures de pages de serveur effectuée la dernière fois que le déclencheur a été exécuté.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**min_page_server_reads**|**bigint**|Le nombre minimal de serveur de pages lit que ce déclencheur effectuées lors d’une seule exécution.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+|**max_page_server_reads**|**bigint**|Le nombre maximal de serveur de pages lit que ce déclencheur effectuées lors d’une seule exécution.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
+
   
 ## <a name="remarks"></a>Notes  
  Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.  
@@ -96,7 +101,7 @@ ORDER BY [total_worker_time] DESC;
 [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
 [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[Sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993392"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462797"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -87,7 +87,7 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
    | **Utilisateur du contrôleur** | Nom d’utilisateur pour l’utilisateur du contrôleur (par défaut : **administrateur**). |
 
    > [!IMPORTANT]
-   > La valeur par défaut **Standard_L8s** taille de machine ne peut pas être disponible dans chaque région Azure. Si vous sélectionnez une taille de l’autre ordinateur, assurez-vous que le nombre total de disques pouvant être connectés entre les nœuds du cluster est supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, cluster big data requiert des revendications de volume persistant 24. Par exemple, le [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) taille de l’ordinateur prend en charge 32 disques attachés, vous êtes en mesure d’évaluer les clusters de données volumineuses avec un seul nœud de cette taille de machine.
+   > La valeur par défaut **Standard_L8s** taille de machine ne peut pas être disponible dans chaque région Azure. Si vous sélectionnez une taille de l’autre ordinateur, assurez-vous que le nombre total de disques pouvant être connectés entre les nœuds du cluster est supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, cluster big data requiert des revendications de volume persistant 24. Par exemple, le [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) taille de l’ordinateur prend en charge 32 disques attachés, vous êtes en mesure d’évaluer les clusters de données volumineuses avec un seul nœud de cette taille de machine.
 
    > [!NOTE]
    > Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après avoir créé le déploiement, la `MSSQL_SA_PASSWORD` variable d’environnement est détectable en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur de l’instance principale. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe sur l’instance principale après le déploiement. Pour plus d’informations, consultez [modifier le mot de passe SA](../linux/quickstart-install-connect-docker.md#sapassword).
