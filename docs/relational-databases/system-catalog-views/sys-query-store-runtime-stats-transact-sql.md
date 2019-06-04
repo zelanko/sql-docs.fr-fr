@@ -1,7 +1,7 @@
 ---
 title: sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/23/2019
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9df0a31b6a15bfedd02e281b6e9bc5367144e9a9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65980052"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462722"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,7 +93,12 @@ ms.locfileid: "65980052"
 |**last_log_bytes_used**|**bigint**|Nombre d’octets dans le journal de base de données utilisée par la dernière exécution du plan de requête, dans l’intervalle d’agrégation.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
 |**min_log_bytes_used**|**bigint**|Nombre minimal d’octets dans le journal de base de données utilisé par le plan de requête, dans l’intervalle d’agrégation.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
 |**max_log_bytes_used**|**bigint**|Nombre maximal d’octets dans le journal de base de données utilisé par le plan de requête, dans l’intervalle d’agrégation.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
-|**stdev_log_bytes_used**|**float**|Écart type du nombre d’octets dans le journal de base de données utilisé par un plan de requête, au sein de l’intervalle d’agrégation.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|
+|**stdev_log_bytes_used**|**float**|Écart type du nombre d’octets dans le journal de base de données utilisé par un plan de requête, au sein de l’intervalle d’agrégation.<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**avg_page_server_io_reads**|**float**|Nombre moyen de page lit les e/s du serveur pour le plan de requête dans l’intervalle d’agrégation. (exprimée en nombre de pages de 8 Ko lues).<br><br/>**Remarque :** S’applique à : Très grande échelle de la base de données SQL Azure</br> Azure SQL Data Warehouse, base de données SQL Azure, MI (non hyperscale) retourne toujours zéro (0).|
+|**last_page_server_io_reads**|**bigint**|Dernier nombre d’e/s de pages server lit du plan de requête dans l’intervalle d’agrégation. (exprimée en nombre de pages de 8 Ko lues).<br><br/>**Remarque :** S’applique à : Très grande échelle de la base de données SQL Azure </br> Azure SQL Data Warehouse, base de données SQL Azure, MI (non hyperscale) retourne toujours zéro (0).|
+|**min_page_server_io_reads**|**bigint**|Nombre minimal de page lit les e/s du serveur pour le plan de requête dans l’intervalle d’agrégation. (exprimée en nombre de pages de 8 Ko lues).<br><br/>**Remarque :** S’applique à : Très grande échelle de la base de données SQL Azure </br> Azure SQL Data Warehouse, base de données SQL Azure, MI (non hyperscale) retourne toujours zéro (0).|
+|**max_page_server_io_reads**|**bigint**|Nombre maximal de page lit les e/s du serveur pour le plan de requête dans l’intervalle d’agrégation. (exprimée en nombre de pages de 8 Ko lues).<br><br/>**Remarque :** S’applique à : Très grande échelle de la base de données SQL Azure </br> Azure SQL Data Warehouse, base de données SQL Azure, MI (non hyperscale) retourne toujours zéro (0).|
+|**stdev_page_server_io_reads**|**float**|Nombre de serveur de pages d’e/s lectures écart type pour le plan de requête dans l’intervalle d’agrégation. (exprimée en nombre de pages de 8 Ko lues).<br><br/>**Remarque :** S’applique à : Très grande échelle de la base de données SQL Azure </br> Azure SQL Data Warehouse, base de données SQL Azure, MI (non hyperscale) retourne toujours zéro (0).|
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW DATABASE STATE** autorisation.  
