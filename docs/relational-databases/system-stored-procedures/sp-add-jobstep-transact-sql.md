@@ -1,7 +1,7 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -18,15 +18,16 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afa9128537cf699277385de3b7dce6aabd900191
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494411"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500356"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Ajoute une étape (opération) à un travail.  
   
@@ -34,8 +35,7 @@ ms.locfileid: "58494411"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```
 sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'   
      [ , [ @step_id = ] step_id ]   
      { , [ @step_name = ] 'step_name' }   
@@ -67,11 +67,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
-`[ @step_id = ] step_id` Le numéro d’identification de séquence pour l’étape de travail. Début de numéros d’identification à l’étape **1** et incrémentés sans intervalle. Si une étape est insérée dans une séquence existante, les numéros de cette séquence sont ajustés automatiquement. Une valeur est fournie si *id_de_l* n’est pas spécifié. *l’argument id_étape*est **int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Le numéro d’identification de séquence pour l’étape de travail. Début de numéros d’identification à l’étape **1** et incrémentés sans intervalle. Si une étape est insérée dans une séquence existante, les numéros de cette séquence sont ajustés automatiquement. Une valeur est fournie si *id_de_l* n’est pas spécifié. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'` Le nom de l’étape. *nom_de_l*est **sysname**, sans valeur par défaut.  
+`[ @step_name = ] 'step_name'` Le nom de l’étape. *nom_de_l* est **sysname**, sans valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'` Sous-système utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)**, et peut prendre l’une des valeurs suivantes.  
+`[ @subsystem = ] 'subsystem'` Sous-système utilisé par le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -88,7 +88,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |«**PowerShell**»|script PowerShell|  
 |«**TSQL**» (valeur par défaut)|Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
-`[ @command = ] 'command'` Les commandes doit être exécuté par **SQLServerAgent** service via *sous-système*. *commande* est **nvarchar (max)**, avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
+`[ @command = ] 'command'` Les commandes doit être exécuté par **SQLServerAgent** service via *sous-système*. *commande* est **nvarchar (max)** , avec NULL comme valeur par défaut. L'Agent SQL Server effectue une substitution de jetons qui offre la même souplesse que les variables lorsque vous écrivez des logiciels.  
   
 > [!IMPORTANT]  
 >  Une macro d’échappement doit désormais accompagner tous les jetons utilisés dans les étapes de travail, sans quoi ces étapes de travail échoue. De plus, vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
@@ -98,15 +98,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  Pour plus d’informations sur ces jetons et la mise à jour des étapes de travail pour utiliser la nouvelle syntaxe de jeton, consultez [utiliser des jetons dans les étapes de travail](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(**_propriété_**)**. Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+>  Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 >  Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *paramètres* est **ntext**, avec NULL comme valeur par défaut.  
   
-`[ @cmdexec_success_code = ] code` La valeur retournée par un **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code*est **int**, avec une valeur par défaut **0**.  
+`[ @cmdexec_success_code = ] code` La valeur retournée par un **CmdExec** commande du sous-système pour indiquer que *commande* exécutée avec succès. *code* est **int**, avec une valeur par défaut **0**.  
   
-`[ @on_success_action = ] success_action` L’action à effectuer si l’étape réussit. *action_succès*est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @on_success_action = ] success_action` L’action à effectuer si l’étape réussit. *action_succès* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -115,9 +115,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Passez à l'étape suivante|  
 |**4**|Passez à l’étape *id_étape_succès*|  
   
-`[ @on_success_step_id = ] success_step_id` ID de l’étape du travail à exécuter si l’étape réussit et *action_succès*est **4**. *id_étape_succès*est **int**, avec une valeur par défaut **0**.  
+`[ @on_success_step_id = ] success_step_id` ID de l’étape du travail à exécuter si l’étape réussit et *action_succès* est **4**. *id_étape_succès* est **int**, avec une valeur par défaut **0**.  
   
-`[ @on_fail_action = ] fail_action` L’action à effectuer si l’étape échoue. *action_échec*est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @on_fail_action = ] fail_action` L’action à effectuer si l’étape échoue. *action_échec* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (action)|  
 |-----------|----------------------------|  
@@ -126,21 +126,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**3**|Passez à l'étape suivante|  
 |**4**|Passez à l’étape *id_étape_échec*|  
   
-`[ @on_fail_step_id = ] fail_step_id` ID de l’étape du travail à exécuter si l’étape échoue et *action_échec*est **4**. *id_étape_échec*est **int**, avec une valeur par défaut **0**.  
+`[ @on_fail_step_id = ] fail_step_id` ID de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec une valeur par défaut **0**.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur*est **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (30)** , avec NULL comme valeur par défaut.  
   
 `[ @database_name = ] 'database'` Le nom de la base de données dans lequel exécuter un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *base de données* est **sysname**, avec une valeur NULL par défaut, auquel cas la **master** base de données est utilisée. Les noms placés entre crochets ([ ]) ne sont pas autorisés. Pour une étape de travail ActiveX, le *base de données* est le nom de l’étape utilise le langage de script.  
   
 `[ @database_user_name = ] 'user'` Le nom du compte d’utilisateur à utiliser lors de l’exécution un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *utilisateur* est **sysname**, avec NULL comme valeur par défaut. Lorsque *utilisateur* est NULL, l’étape est exécutée dans le contexte de l’utilisateur du propriétaire du travail sur *base de données*.  L'Agent SQL Server inclut ce paramètre uniquement si le propriétaire du travail est un sysadmin SQL Server. Dans ce cas, l'étape Transact-SQL donnée est exécutée dans le contexte du nom d'utilisateur SQL Server spécifié. Si le propriétaire du travail n’est pas un administrateur système SQL Server, l’étape Transact-SQL sera toujours être exécuté dans le contexte de la connexion qui possède ce travail, et le @database_user_name paramètre sera ignoré.  
   
-`[ @retry_attempts = ] retry_attempts` Le nombre de nouvelles tentatives à utiliser si cette étape échoue. *retry_attempts*est **int**, avec une valeur par défaut **0**, lequel indiquant aucune tentative.  
+`[ @retry_attempts = ] retry_attempts` Le nombre de nouvelles tentatives à utiliser si cette étape échoue. *retry_attempts* est **int**, avec une valeur par défaut **0**, lequel indiquant aucune tentative.  
   
-`[ @retry_interval = ] retry_interval` La quantité de temps en minutes entre chaque tentative. *intervalle_entre_reprises*est **int**, avec une valeur par défaut **0**, ce qui indique un **0**-intervalle de minutes.  
+`[ @retry_interval = ] retry_interval` La quantité de temps en minutes entre chaque tentative. *intervalle_entre_reprises* est **int**, avec une valeur par défaut **0**, ce qui indique un **0**-intervalle de minutes.  
   
 `[ @os_run_priority = ] run_priority` Réservé.  
   
-`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name*est **nvarchar (200)**, avec NULL comme valeur par défaut. *file_name*peut inclure un ou plusieurs jetons répertoriés sous *commande*. Ce paramètre est valide uniquement avec les commandes en cours d’exécution le [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sous-systèmes.  
+`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est **nvarchar (200)** , avec NULL comme valeur par défaut. *file_name* peut inclure un ou plusieurs jetons répertoriés sous *commande*. Ce paramètre est valide uniquement avec les commandes en cours d’exécution le [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ou [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sous-systèmes.  
   
 `[ @flags = ] flags` Est une option qui contrôle le comportement. *indicateurs* est **int**, et peut prendre l’une des valeurs suivantes.  
   
@@ -192,14 +192,14 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Cet exemple suppose que le `Weekly Sales Data Backup` travail existe déjà.  
   
-```  
+```sql
 USE msdb;  
 GO  
 EXEC sp_add_jobstep  
     @job_name = N'Weekly Sales Data Backup',  
     @step_name = N'Set database to read only',  
     @subsystem = N'TSQL',  
-    @command = N'ALTER DATABASE SALES SET READ_ONLY',   
+    @command = N'ALTER DATABASE SALES SET READ_ONLY',
     @retry_attempts = 5,  
     @retry_interval = 5 ;  
 GO  
