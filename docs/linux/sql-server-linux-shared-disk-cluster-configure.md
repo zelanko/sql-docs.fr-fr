@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62635677"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712926"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -43,7 +42,7 @@ Pour terminer le scénario de bout en bout suivant, vous avez besoin de deux ord
 
 La première étape consiste à configurer le système d’exploitation sur les nœuds de cluster. Sur chaque nœud du cluster, configurer une distribution linux. Utilisez la distribution et la version même sur les deux nœuds. Utilisez une ou l’autre des distributions suivantes :
     
-*  RHEL avec un abonnement valide pour le module complémentaire de haute disponibilité
+* RHEL avec un abonnement valide pour le module complémentaire de haute disponibilité
 
 ## <a name="install-and-configure-sql-server"></a>Installer et configurer SQL Server
 
@@ -74,7 +73,7 @@ La première étape consiste à configurer le système d’exploitation sur les 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   Vous pouvez aussi définir les autorisations à un niveau plus granulaire. La connexion Pacemaker nécessite `VIEW SERVER STATE` pour demander l’état d’intégrité avec sp_server_diagnostics, `setupadmin` et `ALTER ANY LINKED SERVER` pour mettre à jour le nom de l’instance FCI avec le nom de ressource en exécutant sp_dropserver et sp_addserver.  
+   Vous pouvez aussi définir les autorisations à un niveau plus granulaire. La connexion Pacemaker nécessite `VIEW SERVER STATE` pour demander l’état d’intégrité avec sp_server_diagnostics, `setupadmin` et `ALTER ANY LINKED SERVER` pour mettre à jour le nom de l’instance FCI avec le nom de ressource en exécutant sp_dropserver et sp_addserver. 
 
 1. Sur le nœud principal, arrêtez et désactivez SQL Server. 
 
@@ -186,7 +185,7 @@ Cet exemple crée une instance FCI dans le groupe NewLinFCIGrp. Le nom du groupe
 
     \<FolderToMountiSCSIDIsk > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-    \<FileSystemType > serait EXT4 ou XFS en fonction de la façon dont les choses ont été mises en forme et de ce que la distribution prend en charge.  
+    \<FileSystemType > serait EXT4 ou XFS en fonction de la façon dont les choses ont été mises en forme et de ce que la distribution prend en charge. 
 
     **NFS**
 
