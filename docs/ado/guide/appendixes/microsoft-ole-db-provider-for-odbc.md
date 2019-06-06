@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853328"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701328"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez des interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette façon. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui sont accessibles via ODBC.
@@ -65,7 +65,7 @@ MSDASQL
 
  Le fournisseur ne prend pas en charge les paramètres de connexion spécifiques en plus de ceux définis par ADO. Toutefois, le fournisseur passe des paramètres de connexion non ADO pour le Gestionnaire de pilotes ODBC.
 
- Étant donné que vous pouvez omettre le **fournisseur** paramètre, vous pouvez composer une chaîne de connexion ADO est identique à une chaîne de connexion ODBC pour la même source de données. Utilisez les mêmes noms de paramètre (**pilote =**, **base de données =**, **DSN =**, et ainsi de suite), valeurs et la syntaxe que vous le feriez lors de composer une chaîne de connexion ODBC. Vous pouvez vous connecter avec ou sans un nom de source de données prédéfinis (DSN) ou un FileDSN.
+ Étant donné que vous pouvez omettre le **fournisseur** paramètre, vous pouvez composer une chaîne de connexion ADO est identique à une chaîne de connexion ODBC pour la même source de données. Utilisez les mêmes noms de paramètre (**pilote =** , **base de données =** , **DSN =** , et ainsi de suite), valeurs et la syntaxe que vous le feriez lors de composer une chaîne de connexion ODBC. Vous pouvez vous connecter avec ou sans un nom de source de données prédéfinis (DSN) ou un FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Syntaxe avec un DSN ou un FileDSN :
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Notes
  Si vous utilisez un **DSN** ou **FileDSN**, il doit être défini via l’administrateur de sources de données ODBC dans le panneau de configuration Windows. Dans Microsoft Windows 2000, l’administrateur ODBC se trouve sous Outils d’administration. Dans les versions antérieures de Windows, l’icône de l’administrateur ODBC est nommé **ODBC 32 bits** ou simplement **ODBC**.
 
- Comme alternative au paramètre un **DSN**, vous pouvez spécifier le pilote ODBC (**pilote =**), tels que « SQL Server » ; le nom du serveur (**SERVER =**) ; et le nom de la base de données (**Base de données =**).
+ Comme alternative au paramètre un **DSN**, vous pouvez spécifier le pilote ODBC (**pilote =** ), tels que « SQL Server » ; le nom du serveur (**SERVER =** ) ; et le nom de la base de données (**Base de données =** ).
 
- Vous pouvez également spécifier un nom de compte d’utilisateur (**UID =**) et le mot de passe du compte d’utilisateur (**PWD =**) dans les paramètres spécifiques à ODBC ou dans la norme définis par ADO *utilisateur* et *mot de passe* paramètres.
+ Vous pouvez également spécifier un nom de compte d’utilisateur (**UID =** ) et le mot de passe du compte d’utilisateur (**PWD =** ) dans les paramètres spécifiques à ODBC ou dans la norme définis par ADO *utilisateur* et *mot de passe* paramètres.
 
  Bien qu’un **DSN** définition spécifie déjà une base de données, vous pouvez spécifier *un* *base de données* paramètre outre un **DSN** pour se connecter pour une base de données différents. Il est judicieux de toujours inclure *le* *base de données* paramètre lorsque vous utilisez un **DSN**. Cela garantit que vous vous connectez à la base de données si un autre utilisateur modifié le paramètre de base de données par défaut depuis votre dernière vérification le **DSN** définition.
 

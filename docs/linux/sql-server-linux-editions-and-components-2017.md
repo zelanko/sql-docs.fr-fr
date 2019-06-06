@@ -1,6 +1,5 @@
 ---
 title: Éditions et fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Microsoft Docs
-ms.custom: sql-linux
 ms.date: 09/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -27,12 +26,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07aae4f4e619e38d41cd16a08e1e8f7267f5ed29
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533562"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713176"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour SQL Server 2017 sous Linux
 
@@ -52,10 +51,10 @@ Pour obtenir la liste des fonctionnalités de SQL Server non disponibles sur Lin
     
 [Télécharger SQL Server 2017](https://www.microsoft.com/sql-server/sql-server-2017)
 
-## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>Éditions de[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)]  
  Le tableau ci-dessous décrit les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
   
-|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
+|Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Définition|  
 |---------------------------------------|----------------|  
 |Enterprise|L’offre premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise edition offre des fonctionnalités de centre de données haut de gamme complète avec l’activation de haut niveau de service pour les charges de travail critiques des performances très rapides.|  
 |Standard|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard edition propose une gestion de base de données pour les départements et les petites entreprises peuvent exécuter leurs applications et prend en charge des outils de développement courants pour locaux et cloud - activation de la gestion de base de données efficace avec des ressources informatiques minimales.|  
@@ -184,7 +183,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctionnalité|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Oui|Oui|Oui|Oui|   
-|Magasin de requêtes|Oui|Oui|Oui|Oui|   
+|Magasin des requêtes|Oui|Oui|Oui|Oui|   
 |Temporal|Oui|Oui|Oui|Oui|   
 |Prise en charge XML native|Oui|Oui|Oui|Oui| 
 |Indexation XML|Oui|Oui|Oui|Oui| 

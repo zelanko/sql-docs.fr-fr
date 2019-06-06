@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: db5be65f007a667d23f7d94b3a7ae17eb6d2f36c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315678"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719103"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek (méthode) et Index, exemple de propriété (VB)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode) et [Index](../../../ado/reference/ado-api/index-property.md) propriété conjointement avec une donnée ***ID d’employé***, localiser nom de l’employé dans le ***employés*** table de la base de données Nwind.mdb.  

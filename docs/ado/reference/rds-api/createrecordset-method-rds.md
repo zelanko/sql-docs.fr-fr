@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298917"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712584"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un vide, déconnecté [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,7 +50,7 @@ object.CreateRecordset(ColumnInfos)
 |Attribute|Description|  
 |---------------|-----------------|  
 |Créer une vue d’abonnement|Nom de l’en-tête de colonne.|  
-|Type|Entier du type de données.|  
+|type|Entier du type de données.|  
 |Size|Entier de la largeur en caractères, quel que soit le type de données.|  
 |Possibilité de valeurs nulles|Valeur booléenne.|  
 |Mise à l’échelle (facultatif)|Cet attribut facultatif définit l’échelle pour les champs numériques. Si cette valeur n’est pas spécifiée, des valeurs numériques sont tronquées à une échelle de trois. Précision n’est pas affectée, mais le nombre de chiffres après la virgule décimale est tronqué à trois.|  

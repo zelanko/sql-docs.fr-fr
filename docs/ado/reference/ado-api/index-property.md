@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63027972"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694796"
 ---
 # <a name="index-property"></a>Index, propriété
 Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -46,7 +46,7 @@ Indique le nom de l’index actuellement en vigueur pour un [Recordset](../../..
   
  Si l’index peut être défini et le [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propriété est **adLockPessimistic** ou **adLockOptimistic**, puis implicite [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) opération est effectuée. Cela libère les groupes actuels et affectés. Un filtre existant est libéré, et la position de ligne actuelle est modifiée pour la première ligne de réorganisés **Recordset**.  
   
- Le **Index** propriété est utilisée conjointement avec la [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode). Si le fournisseur sous-jacent ne prend pas en charge la **Index** propriété et donc le **Seek** (méthode), envisagez d’utiliser le [trouver](../../../ado/reference/ado-api/find-method-ado.md) (méthode) à la place. Déterminer si le **Recordset** objet prend en charge les index avec la [prend en charge](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** (méthode).  
+ Le **Index** propriété est utilisée conjointement avec la [recherche](../../../ado/reference/ado-api/seek-method.md) (méthode). Si le fournisseur sous-jacent ne prend pas en charge la **Index** propriété et donc le **Seek** (méthode), envisagez d’utiliser le [trouver](../../../ado/reference/ado-api/find-method-ado.md) (méthode) à la place. Déterminer si le **Recordset** objet prend en charge les index avec la [prend en charge](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** (méthode).  
   
  Intégrés **Index** propriété n’est pas liée à la dynamique [optimiser](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriété, bien que les deux portent sur les index.  
   

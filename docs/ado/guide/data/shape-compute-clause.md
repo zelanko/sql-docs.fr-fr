@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062815"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700334"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constituées d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation sur l’enfant **Recordset** précédemment finies ou **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans facultatif par clause.  

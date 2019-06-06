@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211738"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705207"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 
@@ -138,9 +137,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 CRÉER SalesFilter de stratégie de sécurité   
-Ajouter Security.fn_securitypredicate(SalesPersonID) de PRÉDICAT de filtre    
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   SUR Sales.SalesOrderHeader,   
-Ajouter Security.fn_securitypredicate(SalesPersonID) de PRÉDICAT de bloc    
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
   SUR Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -161,7 +160,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 ALTER SalesFilter de stratégie de sécurité   
-AVEC (ÉTAT = OFF) ;    
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -183,7 +182,7 @@ CRÉER utilisateur TestUser sans connexion ;
 GRANT SELECT ON Person.EmailAddress à TestUser ;    
  
 EXÉCUTER en tant qu’utilisateur = « TestUser » ;   
-Sélectionnez EmailAddressID, EmailAddress à partir de Person.EmailAddress ;       
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
 RÉTABLIR ;    
 ```
  
@@ -224,7 +223,7 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CRÉER LA CLÉ PRINCIPALE LE CHIFFREMENT PAR MOT DE PASSE = ' ***';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
 CRÉER le certificat MyServerCert avec l’objet = 'Ma base de données clé certificat de chiffrement' ;  
@@ -266,7 +265,7 @@ par
   ENCRYPTION   
    (  
    ALGORITHME = AES_256,  
-   CERTIFICAT de serveur = BackupEncryptCert  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

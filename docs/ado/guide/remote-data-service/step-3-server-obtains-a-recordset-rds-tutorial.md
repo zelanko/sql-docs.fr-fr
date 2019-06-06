@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: eb0afbbe470a1cc9cddbf9e9f2f892deb7ce0864
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316771"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704169"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Étape 3 : Le serveur obtient un recordset (tutoriel RDS)
 Le programme de serveur utilise le texte de chaîne et la commande connect pour interroger la source de données pour les lignes souhaitées. ADO est généralement utilisé pour récupérer cette information **Recordset**, bien que les autres Microsoft d’accès aux données interfaces, telles que OLE DB, peut être utilisé.  

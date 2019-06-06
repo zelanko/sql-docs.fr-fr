@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea282362853ca25a761f870970a288585a00160e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: bc9dc5f19dacfb6fbdab8c2e0dd8278cbc4b97b3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63275903"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719278"
 ---
 # <a name="error-object"></a>Error, objet
 Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.  
@@ -62,4 +62,4 @@ Contient des détails sur les erreurs d’accès aux données qui se rapportent 
  [Description, HelpContext, HelpFile, NativeError, nombre, Source et SQLState, propriétés-exemple (VC ++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

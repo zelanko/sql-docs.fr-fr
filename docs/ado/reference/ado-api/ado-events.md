@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50bdb3117b01d68f03208d6db501d44f05a849ce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e9f8d1031f12972ebe1e48506143aea720b43d63
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248935"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696689"
 ---
 # <a name="ado-events"></a>Événements ADO
 
@@ -51,7 +51,7 @@ ms.locfileid: "63248935"
  [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Annexe b : Erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Annexe B : Erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md)   
  [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   

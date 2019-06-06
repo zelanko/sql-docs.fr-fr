@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 65dfd9ed8fa7d3e2ccff52f4f9f9a8dde55252c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161612"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718696"
 ---
 # <a name="errors-ado"></a>Erreurs (ADO)
 Toute opération impliquant des objets ADO peut générer une ou plusieurs erreurs de fournisseur. Lorsqu’une erreur survient, un ou plusieurs **erreur** objets sont placés dans le **erreurs** collection de la **connexion** objet. Pour plus d’informations sur la gestion des avertissements et erreurs dans votre application ADO, consultez [gestion des erreurs](../../../ado/guide/data/error-handling.md).  

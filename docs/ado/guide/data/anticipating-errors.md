@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91741ef8d6b0f7f984958837df3234b0bbc1e009
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6e555f00964ae6bdc7eb91a8701f2447d91b37d3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472863"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702405"
 ---
 # <a name="anticipating-errors"></a>Anticipation des erreurs
 Prévention des erreurs est au moins aussi importante que la gestion des erreurs. Cette dernière section contient une liste courte de précautions que votre application peut prendre pour rendre le nombre d’erreurs se produisent.  

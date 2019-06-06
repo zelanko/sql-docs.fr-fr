@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 08ef2f2f9989f9b8dc8dc33b94c73f6ab579eab5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308577"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695524"
 ---
 # <a name="count-property-example-vc"></a>Count, exemple de propriété (VC++)
 Cet exemple montre la [nombre](../../../ado/reference/ado-api/count-property-ado.md) propriété avec deux collections dans le ***employé*** base de données. La propriété obtient le nombre d’objets dans chaque collection et définit la limite supérieure pour les boucles qui énumèrent ces collections.  

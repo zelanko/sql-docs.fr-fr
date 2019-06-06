@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7741cc84b27991cc0831e5e28f397f46d22020a6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719755"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701213"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft Data Shaping Service pour une vue d’ensemble OLE DB
 > [!IMPORTANT]
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Pour plus d’informations sur la mise en forme des données, consultez [mise en forme des données](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

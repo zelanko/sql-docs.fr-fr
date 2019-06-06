@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a64460b2d04f1d6957a181657af7255d64cc829
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524906"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705067"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurer l’instance de cluster de basculement - iSCSI - SQL Server sur Linux
 
@@ -53,7 +52,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
 
     - iface.net_ifacename est le nom de la carte réseau comme indiqué dans le système d’exploitation.
     - iface.hwaddress est l’adresse MAC du nom unique qui sera créé pour cette interface ci-dessous.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Observez l'exemple suivant :
@@ -224,7 +223,7 @@ Pour plus d’informations sur l’initiateur iSCSI pour les distributions prise
     chgrp mssql /var/opt/mssql/data
     ``` 
 
-   *    Basculez vers l’utilisateur mssql.  Vous ne recevrez pas d’accusé de réception en cas de réussite.
+   *    Basculez vers l’utilisateur mssql. Vous ne recevrez pas d’accusé de réception en cas de réussite.
 
     ```bash
     su mssql

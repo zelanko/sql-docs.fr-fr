@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: ee1b1e45970be6501f8ab40dcc92c6675c0bc10b
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: 6ff0e1eb50f7e7af831ed58b4de05b520fd3f06a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626671"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712854"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Résoudre les problèmes de SQL Server sur Linux
 
@@ -96,8 +95,7 @@ Vous pouvez arrêter ou redémarrer le service SQL Server en fonction des besoin
 
 ## <a name="access-the-log-files"></a>Accéder aux fichiers journaux
    
-SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker.
- Vous devez être en mode de « superutilisateur » pour parcourir ce répertoire.
+SQL Server stocke ses journaux dans le fichier /var/opt/mssql/log/errorlog dans les installations sous Linux et Docker. Vous devez être en mode de « superutilisateur » pour parcourir ce répertoire.
 
 Le programme d’installation enregistre ici : / var/opt/mssql/le programme d’installation-< horodatage représentant le moment de l’installation > vous pouvez parcourir les fichiers du journal des erreurs avec n’importe quel outil compatible UTF-16 comme « vim » ou « cat » comme suit : 
 

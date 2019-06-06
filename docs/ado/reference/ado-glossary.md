@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206372"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709973"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.  
@@ -264,7 +264,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  Un ensemble de lignes à partir d’une source de données, tous ayant le même schéma de champ. Un ensemble de lignes peut représenter tout ou partie des champs d’une table. Un ensemble de lignes peut également représenter une table virtuelle, créée par une requête ou une jointure de deux ou plusieurs tables. Dans ADO, les ensembles de lignes sont représentés par **Recordset** objets.  
   
 ## <a name="s"></a>S  
- Portée  
+ `Scope`  
  La plage de référence pour un objet ou une variable ou une plage d’enregistrements dans une table ou vue. Par exemple, les variables locales peuvent être référencées uniquement dans la procédure dans laquelle elles ont été définies. Variables publiques sont accessibles à partir de n’importe où dans l’application. Objets, tels que la base de données en cours sont dans la portée si elles se trouvent dans le chemin d’accès de recherche définis. Plages d’enregistrement peuvent être spécifiés avec une clause d’étendue dans de nombreuses commandes.  
   
  fournisseur de services  

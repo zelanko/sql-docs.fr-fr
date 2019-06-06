@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3aee61c7-a9b7-4596-b78e-5828a00d0281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edafc34bc4a2e9e860edd1101b5ce17bddd02a37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 82b85c42b56c97a59d34c0ed9a98fe5d4bc73e0b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720008"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701544"
 ---
 # <a name="capture-ado-error-codes"></a>Capturer les Codes d’erreur ADO
 En plus des erreurs de fournisseur renvoyées dans le [erreur](../../../ado/reference/ado-api/error-object.md) les objets de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO peut renvoyer des erreurs au mécanisme de gestion des exceptions de votre environnement d’exécution. Utiliser, le mécanisme d’interception des erreurs votre langage de programmation, tels que le **en cas d’erreur** instruction dans Microsoft® Visual Basic, ou la **try-catch** bloquer dans Microsoft Visual C++®, pour capturer les erreurs ADO.

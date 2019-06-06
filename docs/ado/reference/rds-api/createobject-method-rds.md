@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281060"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712312"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. Les packages et marshale données proxy pour le stub côté serveur pour les communications avec l’objet métier envoyer des demandes et les données sur Internet. Pour les objets de composant in-process, aucun proxy ne sont utilisés, un pointeur vers l’objet est fourni.  

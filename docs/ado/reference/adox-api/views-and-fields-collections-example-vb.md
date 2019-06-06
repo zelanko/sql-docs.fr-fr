@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d221287fc0a945b0325ef9bbb92c89888e130c7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6d0c9af0bf459c77414c5c7f63d176d396b9e671
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63281422"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712263"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Views et Fields, exemples de collections (VB)
 Le code suivant montre comment utiliser le [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété et la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet à récupérer les informations de champ pour la vue.  

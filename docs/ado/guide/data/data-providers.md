@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3b8a4ac0da80303a63bd62f7b4d6f51faab1fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 30d1e1515ed3e84640fe1ca004cb7cbf4383ce97
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472566"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718718"
 ---
 # <a name="data-providers"></a>Fournisseurs de données
 Fournisseurs de données représentent diverses sources de données telles que les bases de données SQL, des fichiers à accès séquentiel indexé, des feuilles de calcul, banques de documents et fichiers de courrier. Fournisseurs présentent les données uniformément à l’aide d’une abstraction commune appelée l’ensemble de lignes.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f46bc9aceeec0e03329572814653a94ea64aa50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0dbbe360864c401d5d8378d2e5c816cfe1a4120c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62708803"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705962"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures, exemple de méthode Refresh (VB)
 Le code suivant montre comment actualiser le [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire avant [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) objets à partir de la **catalogue** sont accessibles.  

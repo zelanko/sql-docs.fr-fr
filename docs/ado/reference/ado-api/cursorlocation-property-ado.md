@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3860434236f5a0751ddb857c6b8bce1cf54d19ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 344956b349e51a448a768988ff5062bfbc532562
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308692"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698424"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation, propriété (ADO)
 Indique l’emplacement du service de curseur.  
@@ -49,4 +49,4 @@ Indique l’emplacement du service de curseur.
 |[Connection, objet (ADO MD)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

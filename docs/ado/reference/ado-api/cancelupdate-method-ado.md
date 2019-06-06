@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9320afb2592a37360d65b4645eb68a999a21db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b53fa2e9d69b39218d846b57070b78ae230d81cf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241172"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698814"
 ---
 # <a name="cancelupdate-method-ado"></a>CancelUpdate, méthode (ADO)
 Annule toutes les modifications apportées à la ligne actuelle ou nouvelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet, ou le [champs](../../../ado/reference/ado-api/fields-collection-ado.md) collection d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, avant d’appeler le [mise à jour ](../../../ado/reference/ado-api/update-method.md) (méthode).  

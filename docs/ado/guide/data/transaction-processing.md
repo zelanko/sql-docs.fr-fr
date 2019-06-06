@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 032677452fa80502d37383af8172ff9475dea363
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472188"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704814"
 ---
 # <a name="transaction-processing"></a>Traitement des transactions
 Un *transaction* délimite le début et la fin d’une série d’opérations d’accès aux données exécutée sur une connexion. Selon les fonctionnalités transactionnelles de votre source de données, le **connexion** objet vous permet également de créer et gérer des transactions. Par exemple, si vous utilisez le fournisseur Microsoft OLE DB pour SQL Server pour accéder à une base de données sur Microsoft SQL Server, vous pouvez créer plusieurs transactions imbriquées pour les commandes que vous exécutez.  

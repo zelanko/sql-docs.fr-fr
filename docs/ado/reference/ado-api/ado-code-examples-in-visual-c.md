@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f03d615bf17cf4086482d02dfca001230276b1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249021"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696884"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Exemples de code ADO dans Visual C++
 Utilisez les exemples de code suivants pour apprendre à utiliser les méthodes ADO, les propriétés et les événements lors de l’écriture dans Microsoft Visual C++.  
@@ -149,4 +149,4 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les méthodes 
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de Code ADO dans Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [VBScript exemples de Code ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [Annexe d : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Annexe D : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

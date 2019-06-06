@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c248afac72fac013759ad80f69dea199756a4010
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 16130f9e96dfc70ef464e3ff48301c9f71c0bb06
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214888"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704335"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configuration de serveurs virtuels sur IIS
 Lorsque vous créez des serveurs virtuels dans Internet Information Services 4.0, les deux étapes supplémentaires suivantes sont nécessaires pour configurer le serveur virtuel pour travailler avec les services Bureau à distance :  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 538fcdf67654ad509e826fcfaaf141fb4f8e32ec
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910860"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710617"
 ---
 # <a name="type-property-example-property-vc"></a>Type, exemple de propriété (objet Property) (VC++)
 Cet exemple montre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété. C’est un modèle d’utilitaire permettant de répertorier les noms et types d’une collection, par exemple [propriétés](../../../ado/reference/ado-api/properties-collection-ado.md), [champs](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

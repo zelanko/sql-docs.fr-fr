@@ -7,26 +7,25 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444234"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713338"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **Red Hat (RHEL)**.
+Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **SUSE (SLES)**.
+Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -40,7 +39,7 @@ Cet article décrit comment configurer le référentiel approprié pour les mise
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package de moteur de base de données, **mssql-server**et les packages SQL Server. Il existe actuellement trois référentiels principales :
 
-| Référentiel | Créer une vue d’abonnement | Description |
+| Référentiel | Nom | Description |
 |---|---|---|
 | **Version préliminaire (2017)** | **mssql-server** | Référentiel SQL Server 2017 CTP et RC (supprimée). |
 | **Version préliminaire (2019)** | **mssql-server-preview** | Version préliminaire de SQL Server 2019 et référentiel RC. |
@@ -51,7 +50,7 @@ Lorsque vous installez SQL Server sur Linux, vous devez configurer un référent
 
 Il est important de noter qu’il existe deux types principaux de référentiel pour chaque distribution :
 
-- **Mises à jour cumulatives (CU)**: Le référentiel de mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations depuis cette version. Mises à jour cumulatives sont spécifiques à une version release, telles que SQL Server 2017. Elles sont publiées régulièrement.
+- **Mises à jour cumulatives (CU)** : Le référentiel de mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations depuis cette version. Mises à jour cumulatives sont spécifiques à une version release, telles que SQL Server 2017. Elles sont publiées régulièrement.
 
 - **GDR**: Le référentiel GDR contient les packages de mise en production de base SQL Server et uniquement les correctifs critiques et mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutés à la prochaine version CU.
 

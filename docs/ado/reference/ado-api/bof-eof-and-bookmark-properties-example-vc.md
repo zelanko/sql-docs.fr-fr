@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 445374eabceb3534f2b5791c1fb67ba6a22d4c33
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316809"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696546"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF et Bookmark, propriétés-exemple (VC ++)
 La première fonction dans cet exemple utilise le [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriétés pour afficher un message si un utilisateur tente de dépasser le premier ou dernier enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il utilise le [signet](../../../ado/reference/ado-api/bookmark-property-ado.md) propriété pour permettre à l’utilisateur de marquer un enregistrement dans un **Recordset** et y revenir plus tard.  

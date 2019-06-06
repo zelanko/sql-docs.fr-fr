@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162094"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700635"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData : une application ADO simple
 Les étapes de cette application simple à travers chacune des quatre principales opérations ADO : obtention, examen, la modification et la mise à jour des données. Ces opérations sont exécutées sur la base de données Northwind fournie avec Microsoft® SQL Server. Pour vous concentrer sur les notions de base d’ADO et éviter l’encombrement du code, la gestion des erreurs dans l’exemple est minime.  
@@ -49,7 +49,7 @@ Les étapes de cette application simple à travers chacune des quatre principale
 ||Hauteur|6500|  
 ||Largeur|6500|  
 |MS DataGrid|Nom|grdDisplay1|  
-|TextBox|Créer une vue d’abonnement|txtDisplay1|  
+|TextBox|Nom|txtDisplay1|  
 ||Multiligne|true|  
 |Bouton de commande|Nom|cmdGetData|  
 ||Légende|Get Data|  

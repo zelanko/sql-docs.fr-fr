@@ -1,27 +1,26 @@
 ---
 title: Utiliser l’instance de cluster de basculement - SQL Server sur Linux | Microsoft Docs
-description: ''
+description: Cet article explique comment utiliser une instance de cluster de basculement (FCI) SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: fa7d516484f7950c63c9455cae81ed31fa981f75
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: 86ba2672ee1ddb7d7c801556c817d93e6d2e0ceb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982811"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712914"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article explique comment utiliser une instance de cluster de basculement (FCI) SQL Server sur Linux. Si vous n’avez pas créé une instance de cluster SQL Server sur Linux, consultez[instance de cluster de basculement configurer - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure.md)(sql-server-linux-shared-disk-cluster-configure.md).  
+Cet article explique comment utiliser une instance de cluster de basculement (FCI) SQL Server sur Linux. Si vous n’avez pas créé une instance de cluster SQL Server sur Linux, consultez[instance de cluster de basculement configurer - SQL Server sur Linux](sql-server-linux-shared-disk-cluster-configure.md)(sql-server-linux-shared-disk-cluster-configure.md). 
 
 ## <a name="failover"></a>Basculement
 

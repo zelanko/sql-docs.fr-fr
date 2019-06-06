@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826084"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705669"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Chiffrement des connexions à SQL Server sur Linux
 
@@ -30,7 +29,7 @@ Avant de commencer, vous devez vous assurer que vos certificats de respecter les
 - L’heure système actuelle doit être postérieure la valide à partir de la propriété du certificat et avant le valide à la propriété du certificat.
 - Le certificat doit être destiné à une authentification serveur. Cela nécessite la propriété utilisation améliorée de la clé du certificat pour spécifier l’authentification du serveur (1.3.6.1.5.5.7.3.1).
 - Le certificat doit être créé à l’aide de l’option KeySpec de AT_KEYEXCHANGE. En règle générale, la propriété du certificat utilisation de la clé (KEY_USAGE) inclut également le chiffrage de clés (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- La propriété Subject du certificat doit indiquer que le nom commun (CN) est le même que le nom d’hôte ou le nom de domaine complet (FQDN) de l’ordinateur serveur. Remarque : Certificats génériques sont pris en charge.
+- La propriété Subject du certificat doit indiquer que le nom commun (CN) est le même que le nom d’hôte ou le nom de domaine complet (FQDN) de l’ordinateur serveur. Remarque : Certificats génériques sont pris en charge.
 
 ## <a name="configuring-the-openssl-libraries-for-use-optional"></a>Configuration de la bibliothèque OpenSSL pour une utilisation (facultative)
 Vous pouvez créer des liens symboliques dans le `/opt/mssql/lib/` directory qui font référence à laquelle `libcrypto.so` et `libssl.so` bibliothèques doivent être utilisées pour le chiffrement. Cela est utile si vous souhaitez forcer SQL Server à utiliser une version d’OpenSSL spécifique autre que la valeur par défaut fourni par le système. Si ces liens symboliques ne sont pas présents, SQL Server charge les bibliothèques OpenSSL par défaut configuré sur le système.
@@ -69,7 +68,7 @@ TLS est utilisé pour chiffrer les connexions à partir d’une application clie
         - **RHEL**: Certificat de copie à ```/etc/pki/ca-trust/source/anchors/``` utiliser ```update-ca-trust``` pour l’activer en tant que certificat d’autorité de certification de système.
         - **SUSE**: Certificat de copie à ```/usr/share/pki/trust/anchors/``` utiliser ```update-ca-certificates``` pour l’activer en tant que certificat d’autorité de certification de système.
         - **Windows** :  Importer le fichier .pem en tant que certificat sous utilisateur actuel -> approuvé autorités de certification racine -> certificats
-        - **macOS**: 
+        - **macOS** : 
            - Copiez le certificat à ```/usr/local/etc/openssl/certs```
            - Exécutez la commande suivante pour obtenir la valeur de hachage : ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
            - Renommer le certificat à la valeur. Par exemple : ```mv mssql.pem dc2dd900.0```. Assurez-vous que dc2dd900.0 se trouve dans ```/usr/local/etc/openssl/certs```
@@ -135,5 +134,5 @@ TLS est utilisé pour chiffrer les connexions à partir d’une application clie
 |--- |--- |
 |La chaîne de certificats a été émise par une autorité qui n’est pas approuvée.  |Cette erreur se produit lorsque les clients ne peuvent pas vérifier la signature sur le certificat présenté par SQL Server pendant la négociation TLS. Assurez-vous que le client approuve soit le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] certificat directement, ou l’autorité de certification qui a signé le certificat SQL Server. |
 |Le nom de principal de cible est incorrect.  |Vérifiez que champ de nom commun de certificat SQL Server correspond au nom de serveur spécifié dans la chaîne de connexion du client. |  
-|Une connexion existante a dû être fermée par l’hôte distant. |Cette erreur peut se produire lorsque le client ne prend pas en charge la version du protocole TLS requise par SQL Server. Par exemple, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est configuré pour exiger TLS 1.2, assurez-vous que vos clients prennent également en charge le protocole TLS 1.2. |
+|une connexion existante a dû être fermée par l’hôte distant. |Cette erreur peut se produire lorsque le client ne prend pas en charge la version du protocole TLS requise par SQL Server. Par exemple, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est configuré pour exiger TLS 1.2, assurez-vous que vos clients prennent également en charge le protocole TLS 1.2. |
 | | |   

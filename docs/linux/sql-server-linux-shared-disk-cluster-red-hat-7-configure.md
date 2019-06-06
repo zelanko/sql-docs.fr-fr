@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 1801551b179cf7040f1eb5cbaa05d8eb3bebc564
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 73dff2be37cade58991078fec4663a9ac351f49b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62634010"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712892"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 
@@ -319,7 +318,7 @@ Pour plus d’informations sur l’utilisation NFS, consultez les ressources sui
    sudo pcs cluster start --all
    ```
 
-   > Un module complémentaire HA RHEL a clôtures agents pour KVM et VMWare. Délimitation doit être désactivée sur tous les autres hyperviseurs. La désactivation des agents de délimitation n’est pas recommandée dans les environnements de production. À compter de la plage de temps, il n’existe aucun agent de délimitation pour les environnements Hyper-v ou le cloud. Si vous exécutez une de ces configurations, vous devez désactiver la délimitation. \**Cela n’est pas recommandée dans un système de production !**
+   > Un module complémentaire HA RHEL a clôtures agents pour KVM et VMWare. Délimitation doit être désactivée sur tous les autres hyperviseurs. La désactivation des agents de délimitation n’est pas recommandée dans les environnements de production. À compter de la plage de temps, il n’existe aucun agent de délimitation pour les environnements Hyper-v ou le cloud. Si vous exécutez une de ces configurations, vous devez désactiver la délimitation. \**Cela n’est pas recommandée dans un système de production !* *
 
    La commande suivante désactive les agents de délimitation.
 

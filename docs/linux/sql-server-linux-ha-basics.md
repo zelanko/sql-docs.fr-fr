@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658404"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719370"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
@@ -84,7 +83,7 @@ Enfin, à l’aide d’un partage NFS (system) de fichiers réseau est une optio
 ### <a name="configure-the-firewall"></a>Configurer le pare-feu
 Comme pour Windows, les distributions Linux présentent un pare-feu intégré. Si votre entreprise utilise un pare-feu externe pour les serveurs, la désactivation du pare-feu dans Linux peut être acceptable. Toutefois, quel que soit l’endroit où le pare-feu est activé, les ports doivent être ouverts. Le tableau suivant décrit les ports courants, requis pour hautement disponible [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] déploiements sur Linux.
 
-| Numéro de port | Type     | Description                                                                                                                 |
+| Numéro de port | type     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si utilisé) - le mappeur de Point de terminaison                                                                                          |
@@ -164,7 +163,7 @@ Cette section décrit les concepts et la terminologie liée à une implémentati
 #### <a name="node"></a>Nœud
 Un nœud est un serveur faisant partie du cluster. Un cluster Pacemaker prend nativement en charge jusqu'à 16 nœuds. Ce nombre peut être dépassé si Corosync n’est pas en cours d’exécution sur les nœuds supplémentaires, mais Corosync est requis pour [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Par conséquent, le nombre maximal de nœuds d’un cluster peut avoir pour toute [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-configuration de base est 16 ; il correspond à la limite de Pacemaker et n’a rien à voir avec les limites maximales pour les groupes de disponibilité ou les instances fci imposées par [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Ressource
+#### <a name="resource"></a>Resource
 Un cluster WSFC et un cluster Pacemaker présentent le concept d’une ressource. Une ressource est une fonctionnalité spécifique qui s’exécute dans le contexte du cluster, comme un disque ou une adresse IP. Par exemple, sous Pacemaker ICF et le groupe de disponibilité des ressources peuvent être créés. Ce n’est pas différent de ce qui se fait dans un cluster WSFC, où vous voyez un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ressource pour une FCI ou un groupe de disponibilité lors de la configuration d’un groupe de disponibilité, mais n’est pas exactement les mêmes en raison des différences sous-jacentes dans la manière dont [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] s’intègre à Pacemaker.
 
 Pacemaker dispose des ressources standard et le clone. Ressources de clone sont ceux qui s’exécutent simultanément sur tous les nœuds. Un exemple serait une adresse IP qui s’exécute sur plusieurs nœuds pour des raisons d’équilibrage de charge. N’importe quelle ressource qui est créé pour les instances fci utilise une ressource standard, dans la mesure où un seul nœud peut héberger une instance FCI à tout moment donné.

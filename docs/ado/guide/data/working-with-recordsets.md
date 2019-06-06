@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184823"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704434"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
 Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de vous réorganiser l’ordre des données dans le jeu de résultats, pour rechercher un enregistrement spécifique en fonction de critères que vous fournissez et d’optimiser ces opérations de recherche à l’aide d’index. Si ces fonctionnalités sont disponibles pour une utilisation dépend du fournisseur et dans certains cas - tels que celui de la [Index](../../../ado/reference/ado-api/index-property.md) propriété - la structure de la source de données.  
@@ -54,7 +54,7 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
   
  Uniquement un seul nom de colonne peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches sur plusieurs colonnes.  
   
- L’opérateur de comparaison pour le critère peut être "**>**" (supérieur à), "**\<**" (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), » <> » (différent de), ou « LIKE » (critères spéciaux).  
+ L’opérateur de comparaison pour le critère peut être " **>** " (supérieur à), " **\<** " (inférieur à), « = » (égal), « > = » (supérieur ou égal à), « < = » (inférieur ou égal à), » <> » (différent de), ou « LIKE » (critères spéciaux).  
   
  La valeur du critère peut être une chaîne, un nombre à virgule flottante ou une date. Valeurs de chaîne sont délimitées par des guillemets simples ou « # » (signe dièse) (par exemple, « état = 'WA' » ou « état = #WA # »). Valeurs de date sont séparés par des signes « # » (signe dièse) (par exemple, « start_date > #7/22/97 # »).  
   
@@ -63,7 +63,7 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
  Astérisques peuvent être utilisés uniquement à la fin d’une chaîne de critères ou conjointement au début et à la fin d’une chaîne de critères, comme indiqué précédemment. Vous ne pouvez pas utiliser l’astérisque comme caractère générique de début ('* str') ou incorporé s\*r »). Cela entraîne une erreur.  
   
 ### <a name="seek-and-index"></a>Rechercher et d’Index  
- Utilisez le **recherche** méthode avec le **Index** propriété si le fournisseur sous-jacent prend en charge les index sur la **Recordset** objet. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** méthode pour déterminer si le fournisseur sous-jacent prend en charge **recherche**et le **supports (adIndex)** méthode pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge **recherche** et **Index**.)  
+ Utilisez le **recherche** méthode avec le **Index** propriété si le fournisseur sous-jacent prend en charge les index sur la **Recordset** objet. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** méthode pour déterminer si le fournisseur sous-jacent prend en charge **recherche**et le **supports (adIndex)** méthode pour déterminer si le fournisseur prend en charge les index. (Par exemple, le [fournisseur OLE DB pour Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) prend en charge **recherche** et **Index**.)  
   
  Si **recherche** n’a pas de rechercher la ligne souhaitée, aucune erreur ne se produit et la ligne est placé à la fin de la **Recordset**. Définir le **Index** index à la propriété souhaitée avant d’exécuter cette méthode.  
   
@@ -88,12 +88,12 @@ Le **Recordset** objet dispose de fonctionnalités intégrées qui permettent de
   
 -   *FieldName* doit être un nom de champ valide à partir de la **Recordset**. Si le nom du champ contienne des espaces, vous devez placer le nom entre crochets.  
   
--   *Opérateur* doit être une des opérations suivantes : **\<**, **>**, **\< =**, **>=** , **<>**, **=**, ou **comme**.  
+-   *Opérateur* doit être une des opérations suivantes : **\<** , **>** , **\< =** , **>=** , **<>** , **=** , ou **comme**.  
   
 -   *Valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, `'Smith'`, `#8/24/95#`, `12.345`, ou `$50.00`). Utilisez des guillemets simples (') avec des chaînes et les signes dièse (`#`) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si *opérateur* est **comme**, *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque (\*) et symbole de pourcentage (%) caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. *Valeur* ne peut pas être null.  
   
     > [!NOTE]
-    >  Pour inclure des guillemets simples (') dans le filtre *valeur*, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur *o ' Malley*, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, placer la chaîne entre les signes dièse (#). Par exemple, pour filtrer sur *'1'*, la chaîne de critères doit être `"col1 = #'1'#"`.  
+    >  Pour inclure des guillemets simples (') dans le filtre *valeur*, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur *o ' Malley*, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, placer la chaîne entre les signes dièse (#). Par exemple, pour filtrer sur *'1'* , la chaîne de critères doit être `"col1 = #'1'#"`.  
   
  Il n’existe aucun ordre de priorité **AND** et **ou**. Clauses peuvent être regroupées dans les parenthèses. Toutefois, vous ne pouvez pas regrouper des clauses jointes par une **ou** puis joindre le groupe à une autre clause avec un AND, comme suit.  
   

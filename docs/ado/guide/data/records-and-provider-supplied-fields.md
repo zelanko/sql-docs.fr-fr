@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910463"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700442"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en association avec une ouverture [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
@@ -56,7 +56,7 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
 ## <a name="resource-recordset-columns"></a>Colonnes de jeu d’enregistrements de ressources  
  Un *jeu d’enregistrements de ressource* se compose des colonnes suivantes.  
   
-|Nom de colonne|Type|Description|  
+|Nom de colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|En lecture seule. Indique l’URL de la ressource.|  
 |RESOURCE_PARENTNAME|AdVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
@@ -79,4 +79,4 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
   
 ## <a name="see-also"></a>Voir aussi  
  [Enregistrement objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Annexe a : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

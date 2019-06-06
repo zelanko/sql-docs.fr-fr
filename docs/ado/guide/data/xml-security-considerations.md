@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e80a0bbb70a626ff01043592896ecfbe3c21f189
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184812"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704428"
 ---
 # <a name="xml-security-considerations"></a>Considérations relatives à la sécurité de XML
 ADO enregistrer les méthodes Open sur l’objet Recordset ne sont pas considérés comme des opérations sécurisées avec Internet Explorer. Par conséquent, si ces méthodes sont utilisées dans un code de script qui s’exécute dans une application ou un contrôle qui est hébergé dans un navigateur, la configuration de sécurité du navigateur aura un effet sur son comportement.  

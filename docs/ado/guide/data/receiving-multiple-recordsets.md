@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 78e6ed78e8c61a9ce14e30f0eb286d55da0e63b9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700746"
 ---
 # <a name="receiving-multiple-recordsets"></a>Réception de plusieurs recordsets
 Le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) prend en charge de retourner plusieurs **Recordset** objets pour une commande unique contenant plusieurs instructions SQL, un **Recordset**par l’instruction SQL. L’ordre dans lequel le **Recordset**sont renvoyées suit l’ordre dans lequel les instructions SQL sont placées dans le texte de commande.  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: ef9ee77366b5087ea0beda81eb756d281f495b78
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7d31490369b1562db91820d0e47f5935b5b42911
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398983"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713128"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrer une base de données SQL Server à partir de Windows pour Linux à l’aide de la sauvegarde et restauration
 
@@ -48,7 +47,7 @@ Les conditions préalables suivantes sont nécessaires pour suivre ce didacticie
 
 Il existe plusieurs façons de créer un fichier de sauvegarde d’une base de données sur Windows. Les étapes suivantes utilisent SQL Server Management Studio (SSMS).
 
-1. Démarrez **SQL Server Management Studio** sur votre ordinateur Windows. 
+1. Démarrez **SQL Server Management Studio** sur votre ordinateur Windows.
 
 1. Dans la boîte de dialogue de connexion, entrez **localhost**.
 
@@ -120,7 +119,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
    sudo su
    ```
 
-1. Créez un nouveau répertoire de sauvegarde. Le paramètre -p ne fait rien si le répertoire existe déjà. 
+1. Créez un nouveau répertoire de sauvegarde. Le paramètre -p ne fait rien si le répertoire existe déjà.
 
    ```bash
    mkdir -p /var/opt/mssql/backup

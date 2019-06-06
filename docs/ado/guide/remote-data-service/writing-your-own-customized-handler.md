@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155915"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699402"
 ---
 # <a name="writing-your-own-customized-handler"></a>Écriture d’un gestionnaire personnalisé
 Vous souhaiterez écrire votre propre gestionnaire si vous êtes un administrateur de serveur IIS qui souhaite que la valeur par défaut prennent en charge des services Bureau à distance, mais plus de contrôle sur les demandes des utilisateurs et droits d’accès.  
@@ -32,7 +32,7 @@ Vous souhaiterez écrire votre propre gestionnaire si vous êtes un administrate
 ## <a name="idatafactoryhandler-interface"></a>String  
  Cette interface comporte deux méthodes, **GetRecordset** et **reconnexion**. Les deux méthodes requièrent que le [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriété être définie sur **adUseClient**.  
   
- Les deux méthodes acceptent des arguments qui apparaissent après la première virgule dans le "**gestionnaire =**" mot clé. Par exemple, `"Handler=progid,arg1,arg2;"` transmettra une chaîne d’argument `"arg1,arg2"`, et `"Handler=progid"` un argument null.  
+ Les deux méthodes acceptent des arguments qui apparaissent après la première virgule dans le "**gestionnaire =** " mot clé. Par exemple, `"Handler=progid,arg1,arg2;"` transmettra une chaîne d’argument `"arg1,arg2"`, et `"Handler=progid"` un argument null.  
   
 ## <a name="getrecordset-method"></a>Méthode GetRecordset  
  Cette méthode interroge la source de données et crée un nouveau [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) de l’objet à l’aide des arguments fournis. Le **Recordset** doit être ouvert avec **adLockBatchOptimistic** et ne doit pas être ouvert de façon asynchrone.  

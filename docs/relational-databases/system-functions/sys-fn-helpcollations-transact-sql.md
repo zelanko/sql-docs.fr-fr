@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -20,40 +20,41 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83c9efd36bbcec788ef18b19552446877c5e36c8
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629612"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719429"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Retourne une liste de tous les classements pris en charge.  
-  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```
 fn_helpcollations ()  
 ```  
   
-## <a name="tables-returned"></a>Tables retournées  
+## <a name="tables-returned"></a>Tables retournées
+
  **fn_helpcollations** renvoie les informations suivantes.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Nom   |**sysname**|Nom de classement standard|  
+|Créer une vue d’abonnement|**sysname**|Nom de classement standard|  
 |Description|**nvarchar(1000)**|Description du classement|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge un nombre limité (<80) de classements appelés classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été développés avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prenne en charge les classements Windows. Les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont encore pris en charge à des fins de compatibilité descendante, mais ne doivent pas être utilisés pour les nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge un nombre limité (< 80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements, qui ont été développés avant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doit pas être utilisés pour les nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
+## <a name="examples"></a>Exemples
 
-## <a name="examples"></a>Exemples  
  L'exemple suivant retourne le nom de tous les classements commençant par la lettre `L` et correspondant à des classements de tri binaire.  
   
 ```sql  
@@ -63,7 +64,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
+ ```
  Name                   Description  
  -------------------    ------------------------------------  
  Lao_100_BIN            Lao-100, binary sort  
@@ -75,10 +76,10 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  Lithuanian_100_BIN     Lithuanian-100, binary sort  
   
  (7 row(s) affected)  
- ```    
+ ```
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir aussi
+
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Prise en charge du classement de base de données pour Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
-

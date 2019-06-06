@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a17ed52371a6c7eae057332a3e80bd215131d287
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214791"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704346"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuration de RDS sur Windows 2000
 Si vous rencontrez des difficultés pour faire fonctionner correctement une fois que vous mettez à niveau vers Windows 2000 RDS, suivez ces étapes pour résoudre le problème :  

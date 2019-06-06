@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812148"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713136"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copie de données en bloc avec bcp vers/depuis SQL Server sous Linux
 
@@ -81,7 +80,7 @@ Les éléments suivants doivent s'afficher dans la fenêtre de terminal :
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importer des données à partir du fichier de données source
-Copiez et collez les commandes suivantes dans la fenêtre de terminal. Cette commande utilise `bcp` pour se connecter à l’instance de SQL Server locale (**localhost**) et importer les données à partir du fichier de données (**~/test_data.txt**) dans la table (**TestEmployees** ) dans la base de données (**BcpSampleDB**). N’oubliez pas de remplacer le nom d’utilisateur et `<your_password>` si nécessaire avant d’exécuter les commandes.
+Copiez et collez les commandes suivantes dans la fenêtre de terminal. Cette commande utilise `bcp` pour se connecter à l’instance de SQL Server locale (**localhost**) et importer les données à partir du fichier de données ( **~/test_data.txt**) dans la table (**TestEmployees** ) dans la base de données (**BcpSampleDB**). N’oubliez pas de remplacer le nom d’utilisateur et `<your_password>` si nécessaire avant d’exécuter les commandes.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','

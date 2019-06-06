@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472823"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702348"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Jeu d’enregistrements** prend en charge la **BOF** et **EOF** propriétés pour délimiter le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** sous forme d’enregistrements « fantômes » qui sont placés au début et à la fin de la **Recordset**. Comptage **BOF** et **EOF**, notre exemple **Recordset** ressemblerait maintenant à ceci :  

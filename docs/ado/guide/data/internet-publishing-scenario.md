@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6310afd5fb029a81da8751009297aa1ae76a26aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b5902adad5f9f419b553e4b73c976ae64a4e129f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161499"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700875"
 ---
 # <a name="internet-publishing-scenario"></a>Scénario de publication Internet
 Cet exemple de code montre comment utiliser ADO avec le fournisseur Microsoft OLE DB pour la publication Internet. Dans ce scénario, vous allez créer une application Visual Basic qui utilise **Recordset**, **enregistrement**, et **Stream** objets pour afficher le contenu des ressources publiées avec le fournisseur de publications Internet.  

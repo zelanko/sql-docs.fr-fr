@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723197"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713155"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Utilisez SQL Server Management Studio sur Windows pour gérer SQL Server sur Linux
 
@@ -67,7 +66,7 @@ Pour vous connecter, utilisez les étapes fondamentales suivantes :
 
     ![SQL Server Management Studio : Se connecter au serveur de base de données SQL](./media/sql-server-linux-manage-ssms/connect.png)
 
-1. Cliquez sur **Se connecter**.
+1. Cliquer sur **Se connecter**.
 
     > [!TIP]
     > Si vous obtenez un échec de connexion, essayez d'abord de diagnostiquer le problème à partir du message d'erreur. Passez ensuite en revue les [recommandations en matière de résolution des problèmes de connexion](sql-server-linux-troubleshooting-guide.md#connection).
@@ -145,6 +144,6 @@ Lorsqu’un volet est développé, le moniteur d’activité interroge l’insta
 ## <a name="see-also"></a>Voir aussi
 - [Qu’est-ce que SSMS ?](../ssms/sql-server-management-studio-ssms.md)
 - [Exporter et importer une base de données avec SSMS](sql-server-linux-migrate-ssms.md)
-- [Didacticiel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
-- [Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Analyse des performances et surveillance de l’activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)
+- [Tutoriel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
+- [Tutoriel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
+- [Analyse des performances et surveillance de l'activité du serveur](../relational-databases/performance/server-performance-and-activity-monitoring.md)

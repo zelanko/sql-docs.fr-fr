@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d0b6a1b83b09d504f8f3394a32ee10d556fcd18c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184905"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699741"
 ---
 # <a name="using-cachesize"></a>Utilisation de CacheSize
 Utilisez le **CacheSize** propriété pour contrôler le nombre d’enregistrements à récupérer en une seule fois dans la mémoire locale à partir du fournisseur. Par exemple, si le **CacheSize** est 10, après la première ouverture du **Recordset** de l’objet, le fournisseur extrait les 10 premiers enregistrements dans la mémoire locale. À mesure que vous parcourez le **Recordset** de l’objet, le fournisseur retourne les données à partir de la mémoire tampon locale. Dès que vous déplacez au-delà du dernier enregistrement dans le cache, le fournisseur récupère les 10 enregistrements suivants à partir de la source de données dans le cache.  

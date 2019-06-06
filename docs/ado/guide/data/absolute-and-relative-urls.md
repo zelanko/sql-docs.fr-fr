@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802938"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702653"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite *.*  
@@ -53,7 +53,7 @@ Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en r�
   
  Avec ADO 2.7 ou version ultérieure, une URL absolue peut également définir un contexte. Par exemple, quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert avec une URL absolue, un **connexion** objet est implicitement créé pour représenter la ressource spécifiée par l’URL.  
   
- Une URL absolue qui définit un contexte peut être spécifiée dans le *ActiveConnection* paramètre de la **enregistrement** objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Une URL absolue peut également être spécifiée comme valeur de le « URL**=**» mot clé dans le **connexion** objet [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode  *ConnectionString* paramètre et le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode *ActiveConnection* paramètre.  
+ Une URL absolue qui définit un contexte peut être spécifiée dans le *ActiveConnection* paramètre de la **enregistrement** objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Une URL absolue peut également être spécifiée comme valeur de le « URL **=** » mot clé dans le **connexion** objet [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode  *ConnectionString* paramètre et le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode *ActiveConnection* paramètre.  
   
  Le contexte peut également être défini en ouvrant un **enregistrement** ou **Recordset** objet qui représente un répertoire, étant donné que ces objets ont déjà un implicitement ou explicitement déclaré **connexion**  objet qui spécifie le contexte.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Schémas d’URL fournis par le fournisseur OLE DB  
  Le début d’une URL complète est la *schéma* qui est utilisé pour accéder à la ressource identifiée par le reste de l’URL. Exemples : HTTP (Hypertext Transfer Protocol) et FTP (File Transfer Protocol).  
   
- ADO prend en charge les fournisseurs OLE DB qui reconnaissent leurs propres schémas d’URL. Par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* qui accède aux fichiers de Windows 2000 « publiés », reconnaît le schéma HTTP existant.  
+ ADO prend en charge les fournisseurs OLE DB qui reconnaissent leurs propres schémas d’URL. Par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* qui accède aux fichiers de Windows 2000 « publiés », reconnaît le schéma HTTP existant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

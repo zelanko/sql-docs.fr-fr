@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156431"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704032"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand, exemple de propriété (VB)
 Cet exemple montre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété.  
@@ -93,7 +93,7 @@ End Sub
   
  Le **ActiveCommandXprint** routine reçoit uniquement un **Recordset** de l’objet, mais elle doit imprimer le texte de la commande et le paramètre créé le **Recordset**. Cela est possible, car le **Recordset** l’objet **ActiveCommand** propriété produit associé [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  
   
- Le **commande** l’objet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété génère la commande paramétrable qui a créé le **Recordset**. Le **commande** l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection génère la valeur qui a été remplacée par un espace réservé de paramètre de la commande ("**?**").  
+ Le **commande** l’objet [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriété génère la commande paramétrable qui a créé le **Recordset**. Le **commande** l’objet [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection génère la valeur qui a été remplacée par un espace réservé de paramètre de la commande (" **?** ").  
   
  Enfin, un message d’erreur ou son nom et l’ID sont imprimés.  
   

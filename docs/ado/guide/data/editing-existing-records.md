@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161715"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702062"
 ---
 # <a name="editing-existing-records"></a>Modification d’enregistrements existants
 Pour modifier les enregistrements existants, passer à la ligne que vous souhaitez modifier et de modifier le **valeur** propriété des champs que vous souhaitez modifier. Pour plus d’informations sur la **champ** l’objet **valeur** propriété, consultez [examen des données](../../../ado/guide/data/examining-data.md). Selon votre type de curseur, vous allez utiliser **mise à jour** ou **UpdateBatch** pour renvoyer les modifications à la source de données. Pour plus d’informations, consultez [mise à jour et persistance des données](../../../ado/guide/data/updating-and-persisting-data.md).  

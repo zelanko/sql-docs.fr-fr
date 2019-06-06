@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 78bb9a95-7ac4-44b6-818b-d1787f952ed7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0db3b07328e4b528ed923ea10e0b74550345b0d5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: df85810e45ff63de0b12cb8995294e4de6dc4349
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249189"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696895"
 ---
 # <a name="ado-code-examples-vbscript"></a>Exemples de code ADO dans VBScript
 Utilisez les exemples de code suivants pour en savoir plus sur comment utiliser les méthodes ADO lors de l’écriture dans Microsoft® Visual Basic® Scripting Edition (VBScript).  
@@ -48,4 +48,4 @@ Utilisez les exemples de code suivants pour en savoir plus sur comment utiliser 
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de Code ADO dans Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [Exemples de Code ADO dans Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Annexe d : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Annexe D : Exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

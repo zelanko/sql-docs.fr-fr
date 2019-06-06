@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddceb73d278dd87849e65cb2904b73c9e535f711
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32e51d3e459bc9c1698b731618cf139d602cd586
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248118"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696392"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Attributs et des exemples de propriétés de nom (VC ++)
 Cet exemple affiche la valeur de la [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété pour [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [champ](../../../ado/reference/ado-api/field-object.md), et [propriété](../../../ado/reference/ado-api/property-object-ado.md) objets. Il utilise le [nom](../../../ado/reference/ado-api/name-property-ado.md) propriété pour afficher le nom de chaque **champ** et **propriété** objet.  

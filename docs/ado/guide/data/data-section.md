@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472546"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702137"
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes sans aucune donnée peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  
@@ -35,7 +35,7 @@ La section de données définit les données de l’ensemble de lignes ainsi que
 ## <a name="binary"></a>Binaire  
  Données binaires sont bin.hex encodé (autrement dit, un octet correspond à deux caractères, un caractère par quartet).  
   
-## <a name="datetime"></a>Datetime  
+## <a name="datetime"></a>DateTime  
  Le format VT_DATE variant n’est pas directement pris en charge par les types de données XML-Data. Le format correct pour les dates avec le composant à la fois une date et l’heure est aaaa-mm-jjThh.  
   
  Pour plus d’informations sur les formats de date spécifiée par XML, consultez le [spécification W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

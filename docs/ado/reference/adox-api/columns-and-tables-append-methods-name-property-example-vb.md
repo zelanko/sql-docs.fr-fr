@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8fafc8b9e9d3043fb84e0a7d7155dc3d61445ffa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183950"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707813"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Append, méthode des collections Columns et Tables, Name (exemple de propriété) (VB)
 Le code suivant montre comment créer une nouvelle table.  

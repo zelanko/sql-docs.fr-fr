@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7726cb0aeeade66870b1b3d175a9489a93bad09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b19713028bcc5569a6a4aace4528e7c725cf7d0e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184950"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704543"
 ---
 # <a name="using-a-connection-object"></a>Utilisation d’un objet Connection
 Avant d’ouvrir un **connexion** de l’objet, vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations est détenue par le *ConnectionString* paramètre de la [Open, méthode](../../../ado/reference/ado-api/open-method-ado-connection.md) sur le **connexion** objet, ou par le [ConnectionString propriété](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur le **connexion** objet. Une chaîne de connexion se compose d’une liste de paires argument/valeur séparées par des points-virgules, avec les valeurs encadrées de guillemets simples. Exemple :  

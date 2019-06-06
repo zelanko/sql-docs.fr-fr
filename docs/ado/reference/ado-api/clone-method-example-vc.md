@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cfb5c03a9de4a5864984fb10d92d7069d8f38fbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f16080935fb7ddb82cd04a9a0431eed4c1cd6886
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302463"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696236"
 ---
 # <a name="clone-method-example-vc"></a>Clone, exemple de méthode (VC++)
 Cet exemple utilise le [Clone](../../../ado/reference/ado-api/clone-method-ado.md) méthode pour créer des copies d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  

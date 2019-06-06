@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6f244c40ec005f07b6b310f01f3027f80d7862bc
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63183872"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703571"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
 Définition de la [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriété **rien** doit « fermer » le catalogue. Regroupements associés sera vides. Tous les objets qui ont été créés à partir des objets de schéma dans le catalogue sont orphelins. Toutes les propriétés sur les objets qui ont été mis en cache sera toujours disponibles, mais une tentative de lecture des propriétés qui nécessitent un appel au fournisseur échouera.  

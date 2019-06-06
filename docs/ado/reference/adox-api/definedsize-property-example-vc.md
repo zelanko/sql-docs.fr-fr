@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c16f76e086dfc78ffed967ef33300a09630a798
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+manager: jroth
+ms.openlocfilehash: 8638449e89701638e215ebfd79eae2ab216a56e4
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63464972"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697131"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize, exemple de propriété (VC++)
 Cet exemple montre la [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la **employés** table de la *Northwind* base de données. Ensuite, la modification dans les valeurs de prénom [champ](../../../ado/reference/ado-api/field-object.md) d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) selon le **employés** table s’affiche. Notez que, par défaut, le champ FirstName se remplit d’espaces une fois que vous redéfinissez le **DefinedSize** propriété.  

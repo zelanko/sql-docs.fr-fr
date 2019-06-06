@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 010093a600b5432ae7ff7454cacba914d5bb8442
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 36dd327ec4c35ed1d3c846b4052741dcfc21a21b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184200"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708066"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes, exemple de propriété (VB)
 Cet exemple montre la [attributs](../../../ado/reference/adox-api/attributes-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md). La valeur **adColNullable** permet à l’utilisateur définir la valeur d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [champ](../../../ado/reference/ado-api/field-object.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement dont les données sont inconnues et un enregistrement où les données ne s’applique pas.  

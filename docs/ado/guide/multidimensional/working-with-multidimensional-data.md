@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a284254c058eae0362fe23860e1b406a97f0bf49
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: afe8ff8c788a740ca98eca385146ecc71b6e1e95
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222494"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704396"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilisation de données multidimensionnelles
 Un *cellset* est le résultat d’une requête sur des données multidimensionnelles. Il se compose d’une collection d’axes, généralement pas plus de quatre axes et généralement deux ou trois. Un *axe* est une collection de membres à partir d’une ou plusieurs dimensions, ce qui permet de rechercher ou de filtrer des valeurs spécifiques dans un cube.  

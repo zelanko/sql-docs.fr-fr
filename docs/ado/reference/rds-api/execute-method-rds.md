@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 618c02f2b63746c0b8e5dfe00f4a231db3dc66f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5c0fa79bdf5acc89b7d884afa604ab08e926d9e1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606239"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707707"
 ---
 # <a name="execute-method-rds"></a>Execute, méthode (RDS)
 Exécute la requête et crée un objet recordset ADO pour une utilisation dans ADO 2.5 et versions ultérieures.  
@@ -41,7 +41,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *HandlerString*  
  Une chaîne de deux parties qui identifie le gestionnaire à utiliser avec cette exécution. La chaîne contient deux parties. La première partie contient le nom (ProgID) du gestionnaire à utiliser. La deuxième partie contient des arguments à passer au gestionnaire. Les détails de l’interprétation de la chaîne d’arguments sont spécifiques à chaque gestionnaire. Les deux parties sont séparées par la première instance d’une virgule dans la chaîne. La chaîne d’arguments peut contenir des virgules supplémentaires. Les arguments sont facultatifs.  
   
- *Chaîne de requête*  
+ *QueryString*  
  Une commande dans le langage de commande pris en charge par le fournisseur OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs SQL, *QueryString* peut contenir une instruction de la commande Transact-SQL, mais pour les fournisseurs non-SQL (par exemple, MSDataShape) peut différer un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction de requête.  
   
  Si un gestionnaire est utilisé, le gestionnaire peut modifier ou remplacez la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* avec une chaîne de requête à partir de son fichier .ini. Par défaut, le fichier Msdfmap.ini est utilisé.  

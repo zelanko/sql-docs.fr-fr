@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 939cc21d8f89d93dca9249efcad82a85874a00c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62509901"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701397"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Fournisseur Microsoft OLE DB pour une vue d’ensemble de la publication Internet
 Le fournisseur Microsoft OLE DB pour la publication Internet permet à ADO pour accéder aux ressources prises en charge par Microsoft FrontPage ou Microsoft Internet Information Server. Les ressources incluent les fichiers de sources de web tels que les fichiers HTML ou des dossiers web de Windows 2000.

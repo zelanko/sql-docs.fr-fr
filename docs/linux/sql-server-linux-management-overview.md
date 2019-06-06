@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: sql-linux
-ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: f1f949db84689fae7e362f81cb686824f249c564
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874295"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705224"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Choisir l’outil approprié pour gérer SQL Server sur Linux
 
@@ -23,7 +22,7 @@ ms.locfileid: "48874295"
 
 Il existe plusieurs façons de gérer SQL Server sur Linux. La section suivante fournit une vue d’ensemble rapide des outils d’administration différents et des techniques avec des pointeurs vers d’autres ressources.
 
-## <a name="mssql-conf"></a>MSSQL-conf 
+## <a name="mssql-conf"></a>mssql-conf 
 
 Le **mssql-conf** outil configure SQL Server sur Linux. Pour plus d’informations, consultez [configurer SQL Server sur Linux avec mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
@@ -31,7 +30,7 @@ Le **mssql-conf** outil configure SQL Server sur Linux. Pour plus d’informatio
 
 Presque tout ce que vous pouvez faire dans un outil client également possible avec les instructions Transact-SQL. SQL Server fournit [des vues de gestion dynamique (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) qui interrogent l’état et la configuration de SQL Server. Il existe également [commandes Transact-SQL](../t-sql/language-reference.md) pour les tâches de gestion de base de données. Vous pouvez exécuter ces commandes dans n’importe quel outil client qui prend en charge la connexion à SQL Server et l’exécution des requêtes Transact-SQL, par exemple [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md).
 
-## <a name="azure-data-studio"></a>Studio de données Azure
+## <a name="azure-data-studio"></a>Azure Data Studio
 
 Le nouveau Studio de données Azure est un outil multiplateforme pour la gestion de SQL Server. Pour plus d’informations, consultez [Azure Data Studio](../azure-data-studio/what-is.md).
 
@@ -39,7 +38,7 @@ Le nouveau Studio de données Azure est un outil multiplateforme pour la gestion
 
 SQL Server Management Studio (SSMS) est une application Windows qui fournit une interface utilisateur graphique pour la gestion de SQL Server. Bien qu’il s’exécute actuellement uniquement sur Windows, vous pouvez l’utiliser pour se connecter à distance à vos instances Linux SQL Server. Pour plus d’informations sur l’utilisation de SSMS pour gérer SQL Server, consultez [utiliser SSMS pour gérer SQL Server sur Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>MSSQL-cli (version préliminaire)
+## <a name="mssql-cli-preview"></a>mssql-cli (preview)
 
 Microsoft a publié un nouvel outil de script inter-plateformes pour SQL Server, [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Cet outil est actuellement en version préliminaire.
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 361d29ca1051fd045e36fb1f23f9a5c08abef925
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9def60d45f0c83973f3d22b87dc874028e52127a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710101"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706370"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters (collection), Command (exemple de propriété) (VC++)
 Le code suivant montre comment utiliser le [commande](../../../ado/reference/adox-api/command-property-adox.md) propriété avec le [commande](../../../ado/reference/ado-api/command-object-ado.md) objet à récupérer les informations de paramètre pour la procédure.  

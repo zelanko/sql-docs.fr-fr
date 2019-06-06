@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248981"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718556"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemple de modèle d’événements ADO (VC ++)
 La section Visual C++ de [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de guide pratique pour instancier le modèle d’événement ADO. Voici un exemple spécifique de l’instanciation du modèle d’événement dans l’environnement créé par le **#import** directive.  
@@ -29,7 +29,7 @@ La section Visual C++ de [instanciation des événements ADO par langage](../../
   
 -   Le **#import** directive résout **typedef**du, types de données de signature de méthode et les modificateurs pour leurs formes fondamentales.  
   
--   Les méthodes virtuelles pures qui doivent être écrasées portent tous le préfixe "**raw_**".  
+-   Les méthodes virtuelles pures qui doivent être écrasées portent tous le préfixe "**raw_** ".  
   
  Partie du code reflète simplement le style de codage.  
   

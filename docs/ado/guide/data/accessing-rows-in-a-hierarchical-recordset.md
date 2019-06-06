@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ed329c1ddab0f8f3b6481bb0b001599528534aeb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63294361"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701107"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accès aux lignes dans un Recordset hiérarchique (par exemple)
 L’exemple suivant montre les étapes nécessaires pour accéder aux lignes dans une liste hiérarchique [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c529e6d4d03ad8ac476894a7442589c06c772b95
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 506862694a725e19ecfc893b0ed88d4ad7ca89b0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239569"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707235"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema, exemple de méthode (VC++)
 Cet exemple utilise le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) méthode pour afficher le nom et le type de chaque table dans le ***Pubs*** base de données.  

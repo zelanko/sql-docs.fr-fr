@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f7dfa941d02ac86f31f8d5d93fa55be6130ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8a8885669a58673cc6c9a1d1448b7c2389206cb9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156328"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718305"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand, exemple de propriété (JScript)
 Cet exemple montre la [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriété. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **ActiveCommandJS.asp**.  
