@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 636b2f541ebd5d3624e205a3442cf1618cdf78a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0416ea7890b3afd430dfd1892cdfc3cd03ca3cfa
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028166"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694865"
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand, méthode
 Retourne le sous-jacent commande OLE DB, tout d’abord propageant les informations de paramètre défini sur la commande ADO à la commande OLE DB.  

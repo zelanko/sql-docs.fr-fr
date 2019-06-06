@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 4db08a718f834d03ddef103b2a4dc16a2c3733b8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494391"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719400"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
 
@@ -395,7 +394,7 @@ La première capture phase est contrôlée par le **coredump.coredumptype** para
 
     Le tableau suivant répertorie les possibles **coredump.coredumptype** valeurs.
 
-    | Type | Description |
+    | type | Description |
     |-----|-----|
     | **mini** | Mini est le plus petit type de fichier de vidage. Il utilise les informations de système Linux pour déterminer les threads et les modules dans le processus. L’image mémoire contient uniquement les modules et les piles de threads d’environnement hôte. Il ne contient pas de références de mémoire indirect ou des variables globales. |
     | **miniplus** | MiniPlus est similaire à mini, mais il inclut la mémoire supplémentaire. Il comprend les mécanismes internes de SQLPAL et de l’environnement hôte, en ajoutant les régions de mémoire suivantes pour le vidage :</br></br> -Globals divers</br> -Toute la mémoire supérieures à 64 To</br> -All nommé trouvées dans des régions **$ / proc / pid/mappages**</br> -Mémoire indirecte des threads et de piles</br> -Informations sur le thread</br> -Associé du Teb et de Peb</br> -Module informations</br> -VMM et VAD arborescence |
