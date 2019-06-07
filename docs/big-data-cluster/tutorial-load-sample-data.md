@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a270274d252a657d5eac8935b6f5d1b2e8b7f71e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473514"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743829"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server
 
@@ -71,7 +71,7 @@ Les étapes suivantes décrivent comment utiliser un client Windows pour charger
    | <KNOX_PASSWORD> | Le mot de passe pour la passerelle HDFS/Spark. |
 
    > [!TIP]
-   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**).
+   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-big-data-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**). Le nom par défaut d’un cluster est **mssql-cluster**.
 
 1. Exécutez le script de démarrage.
 
@@ -107,7 +107,7 @@ Les étapes suivantes décrivent comment utiliser un client Linux pour charger l
    | <KNOX_PASSWORD> | Le mot de passe pour la passerelle HDFS/Spark. |
 
    > [!TIP]
-   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**).
+   > Utilisez [kubectl](cluster-troubleshooting-commands.md) pour trouver les adresses IP pour l’instance principale de SQL Server et la Knox. Exécutez `kubectl get svc -n <your-big-data-cluster-name>` et examinez les adresses IP externe pour l’instance principale (**master-svc-external**) et Knox (**passerelle-svc-external**). Le nom par défaut d’un cluster est **mssql-cluster**.
 
 1. Exécutez le script de démarrage.
 

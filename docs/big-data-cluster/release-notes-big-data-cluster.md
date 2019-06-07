@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014991"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744148"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -33,11 +33,11 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| **mssqlctl** updates | Plusieurs **mssqlctl** [mises à jour de commande et paramètre](../big-data-cluster/reference-mssqlctl.md). Cela inclut une mise à jour le **mssqlctl connexion** commande, qui cible désormais le nom d’utilisateur du contrôleur et le point de terminaison. |
-| Améliorations du stockage | Prise en charge différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster de données volumineuses a été réduit. |
+| **mssqlctl** updates | Plusieurs [mises à jour de commande et de paramètre](../big-data-cluster/reference-mssqlctl.md) **mssqlctl**. Ces dernières incluent une mise à jour de la commande **mssqlctl login**, qui cible désormais le nom d’utilisateur et le point de terminaison du contrôleur. |
+| Améliorations du stockage | Prise en charge de différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster Big Data a été réduit. |
 | Plusieurs instances de pool de calcul | Prise en charge de plusieurs instances de pool de calcul. |
-| Fonctionnalités et le nouveau comportement de pool | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool des données et le pool de stockage dans un **ROUND_ROBIN** distribution uniquement. Le pool de données peut désormais utiliser un nouveau nouveau **RÉPLIQUÉ** type de distribution, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
-| Améliorations de la table externe | Les tables externes de la source de données HADOOP Tapez maintenant prend en charge la lecture des lignes jusqu'à 1 Mo de taille. Lignes de prise en charge désormais les tables externes (ODBC, pool de stockage, pool de données) aussi larges que d’une table SQL Server. |
+| Nouveaux comportement et fonctionnalités pour les pools | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool de données et de pool de stockage dans une distribution **ROUND_ROBIN** uniquement. Le pool de données peut désormais utiliser un nouveau type de distribution **REPLICATED**, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
+| Améliorations des tables externes | Les tables externes de type de source de données HADOOP prennent maintenant en charge la lecture des lignes d’une taille maximale de 1 Mo. Dans les tables externes (ODBC, pool de stockage, pool de données), les lignes peuvent désormais être aussi larges que dans une table SQL Server. |
 
 ### <a name="known-issues"></a>Problèmes connus
 
@@ -497,7 +497,7 @@ Les sections suivantes décrivent les problèmes connus et les limitations de ce
 Le portail d’administration de cluster n’affiche pas le point de terminaison pour l’instance principale de SQL Server. Pour trouver l’adresse IP et le port de l’instance principale, utilisez la commande suivante **kubectl** commande :
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>Tables externes

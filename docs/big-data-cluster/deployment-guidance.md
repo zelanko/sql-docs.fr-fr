@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993988"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743931"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -92,8 +92,10 @@ Vous pouvez déployer un cluster de données volumineux en exécutant **de créa
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> Dans cet exemple, vous êtes invité pour tous les paramètres qui ne font pas partie de la configuration par défaut, tels que les mots de passe. Notez que les informations de Docker sont fournies pour vous par Microsoft dans le cadre de la 2019 de serveur SQL [programme d’Adoption anticipée](https://aka.ms/eapsignup).
+Dans ce scénario, vous êtes invité pour tous les paramètres qui ne font pas partie de la configuration par défaut, tels que les mots de passe. Notez que les informations de Docker sont fournies pour vous par Microsoft dans le cadre de la 2019 de serveur SQL [programme d’Adoption anticipée](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> Le nom par défaut du cluster big data est **mssql-cluster**. Il est important de connaître pour exécuter un de la **kubectl** commandes qui spécifient l’espace de noms Kubernetes avec le `-n` paramètre.
 
 ## <a id="customconfig"></a> Configurations personnalisées
 
@@ -220,8 +222,11 @@ Une fois le script de déploiement terminée, vous pouvez obtenir les adresses I
 1. Après le déploiement, recherchez l’adresse IP du point de terminaison de contrôleur en examinant la sortie de l’adresse IP externe des éléments suivants **kubectl** commande :
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Si vous n’avez pas modifié le nom par défaut au cours du déploiement, utilisez `-n mssql-cluster` dans la commande précédente. **MSSQL-cluster** est le nom par défaut pour le cluster de données volumineuses.
 
 1. Connectez-vous au cluster big data avec **mssqlctl connexion**. Définir le **--contrôleur de point de terminaison** paramètre à l’adresse IP externe du point de terminaison de contrôleur.
 
@@ -267,7 +272,7 @@ minikube ip
 Quelle que soit la plateforme vous s’exécutent votre cluster Kubernetes, pour obtenir tous les points de terminaison service déployés pour le cluster, exécutez la commande suivante :
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Connectez-vous au cluster

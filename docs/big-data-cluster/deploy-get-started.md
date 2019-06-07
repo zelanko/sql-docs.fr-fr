@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774766"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743980"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters de données volumineuses de SQL Server
 
@@ -39,7 +39,7 @@ Autres outils sont nécessaires pour différents scénarios. Chaque article doit
 
 Les clusters de données volumineuses sont déployés comme une série de conteneurs reliés entre eux qui sont gérés dans [Kubernetes](https://kubernetes.io/docs/home). Vous pouvez héberger Kubernetes de plusieurs façons. Même si vous disposez déjà d’un environnement Kubernetes existant, vous devez examiner les spécifications connexes pour les clusters de données volumineuses.
 
-- **Azure Kubernetes Service (AKS)**: AKS permet de déployer un cluster Kubernetes géré dans Azure. Vous uniquement gérez et tenir à jour les nœuds d’agent. Avec AKS, vous n’êtes pas obligé de configurer votre propre matériel pour le cluster. Il est également facile d’utiliser un cluster de données volumineux [script de déploiement](quickstart-big-data-cluster-deploy.md) pour créer le cluster AKS et de déployer le cluster de données volumineux en une seule étape. Pour plus d’informations sur l’utilisation d’ACS avec les clusters de données volumineuses, consultez [configurer le Service Azure Kubernetes pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)** : AKS permet de déployer un cluster Kubernetes géré dans Azure. Vous uniquement gérez et tenir à jour les nœuds d’agent. Avec AKS, vous n’êtes pas obligé de configurer votre propre matériel pour le cluster. Il est également facile d’utiliser un cluster de données volumineux [script de déploiement](quickstart-big-data-cluster-deploy.md) pour créer le cluster AKS et de déployer le cluster de données volumineux en une seule étape. Pour plus d’informations sur l’utilisation d’ACS avec les clusters de données volumineuses, consultez [configurer le Service Azure Kubernetes pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data](deploy-on-aks.md).
 
 - **Plusieurs machines**: Vous pouvez également déployer Kubernetes sur plusieurs machines Linux, ce qui pourrait être des serveurs physiques ou virtuels. Le [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) outil peut être utilisé pour créer le cluster Kubernetes. Cette méthode fonctionne bien si vous disposez déjà d’une infrastructure existante que vous souhaitez utiliser pour votre cluster big data. Pour plus d’informations sur l’utilisation de **kubeadm** déploiements avec les clusters de données volumineuses, consultez [Kubernetes de configuration sur plusieurs ordinateurs pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data](deploy-with-kubeadm.md).
 
@@ -51,7 +51,7 @@ Après avoir configuré Kubernetes, vous déployez un cluster de données volumi
 
 - Si vous déployez dans un environnement de développement et de test, vous pouvez choisir d’utiliser une de la [configurations par défaut](deployment-guidance.md#deploy) fourni par **mssqlctl**.
 
-- Pour personnaliser votre déploiement, vous pouvez créer et utiliser votre propre [les fichiers de configuration de déploiement](deployment-guidance.md#configfile). 
+- Pour personnaliser votre déploiement, vous pouvez créer et utiliser votre propre [les fichiers de configuration de déploiement](deployment-guidance.md#configfile).
 
 - Pour une installation entièrement sans assistance, vous pouvez transmettre tous les autres paramètres dans les variables d’environnement. Pour plus d’informations, consultez [des déploiements sans assistance](deployment-guidance.md#unattended).
 

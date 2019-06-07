@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.openlocfilehash: a385a2691d37bf31186a3530e91bdf937ac4dc05
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462797"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744200"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -82,7 +82,7 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
    | **Région Azure** | La région Azure pour le nouveau cluster AKS (par défaut **westus**). |
    | **Taille de machine** | Le [taille de la machine](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds du cluster AKS (par défaut **Standard_L8s**). |
    | **Nœuds de travail** | Le nombre de nœuds de travail dans le cluster AKS (par défaut **1**). |
-   | **Nom du cluster** | Le nom de cluster AKS et le cluster de données volumineux. Le nom de votre cluster doit être uniquement des caractères alphanumériques minuscules et sans espaces. (par défaut **sqlbigdata**). |
+   | **Nom du cluster** | Le nom de cluster AKS et le cluster de données volumineux. Le nom de votre cluster big data doit être uniquement des caractères alphanumériques minuscules et sans espaces. (par défaut **sqlbigdata**). |
    | **Mot de passe** | Mot de passe pour le contrôleur, une passerelle HDFS/Spark et une instance principale (par défaut **MySQLBigData2019**). |
    | **Utilisateur du contrôleur** | Nom d’utilisateur pour l’utilisateur du contrôleur (par défaut : **administrateur**). |
 
@@ -118,7 +118,7 @@ Au bout de 10 à 20 minutes, vous devez averti que le pod de contrôleur est en 
 
 ## <a name="inspect-the-cluster"></a>Inspecter le cluster
 
-À tout moment au cours du déploiement, vous pouvez utiliser kubectl ou le portail d’Administration de Cluster pour inspecter l’état et les détails sur le cluster de données volumineux en cours d’exécution.
+À tout moment au cours du déploiement, vous pouvez utiliser **kubectl** ou **mssqlctl** pour inspecter l’état et les détails sur le cluster de données volumineux en cours d’exécution.
 
 ### <a name="use-kubectl"></a>Utiliser kubectl
 
@@ -127,42 +127,32 @@ Ouvrez une nouvelle fenêtre de commande à utiliser **kubectl** pendant le proc
 1. Exécutez la commande suivante pour obtenir un résumé de l’état de l’ensemble du cluster :
 
    ```
-   kubectl get all -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Si vous n’avez pas modifié le nom de cluster de données volumineuses, le script par défaut est **sqlbigdata**.
 
 1. Vérifiez que les services kubernetes et leurs points de terminaison internes et externes par le code suivant **kubectl** commande :
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
 1. Vous pouvez également examiner l’état des pods kubernetes avec la commande suivante :
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
    ```
 
 1. Découvrez plus d’informations sur un pod spécifique avec la commande suivante :
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
 > Pour plus d’informations sur comment surveiller et résoudre les problèmes d’un déploiement, consultez [analyse et résoudre les problèmes de clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).
-
-### <a name="use-the-cluster-administration-portal"></a>Utilisez le portail d’Administration de Cluster
-
-Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez également utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `mgmtproxy-svc-external` (par exemple : **https://\<ip-address\>: 30777/portail**). Les informations d’identification utilisées pour se connecter au portail correspondent aux valeurs pour **utilisateur du contrôleur** et **mot de passe** que vous avez spécifié dans le script de déploiement.
-
-Vous pouvez obtenir l’adresse IP de la **mgmtproxy-svc-external** service en exécutant cette commande dans une fenêtre bash ou cmd :
-
-```bash
-kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
-```
-
-> [!NOTE]
-> Dans CTP 3.0, vous verrez un avertissement de sécurité lorsque vous accédez à la page web, car les clusters de données volumineuses est actuellement à l’aide de certificats SSL générés automatiquement.
 
 ## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
 

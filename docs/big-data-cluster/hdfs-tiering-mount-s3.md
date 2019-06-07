@@ -10,12 +10,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4254c1c47e64013533574345c14518fdc2afcb7c
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fa7e12e433199f9cef344724ff185abf3fa58586
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993961"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743959"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -51,7 +51,7 @@ Maintenant que vous avez préparé un fichier d’informations d’identificatio
 1. Utilisez **kubectl** pour rechercher l’adresse IP du point de terminaison **contrôleur-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
 1. Se connecter avec **mssqlctl** à l’aide de l’adresse IP externe du point de terminaison contrôleur avec votre nom d’utilisateur du cluster et le mot de passe :

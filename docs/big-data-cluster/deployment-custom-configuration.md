@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed86e7d293ba72eb178c65b53865b62ca419a6d2
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 105b69b8326b29a5515da38304fb8ba455ac136a
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993996"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743945"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>Configurer les paramètres de déploiement pour les clusters de données volumineuses
 
@@ -50,7 +50,7 @@ mssqlctl cluster config section set -c custom.json -j ".metadata.name=test-clust
 ```
 
 > [!IMPORTANT]
-> Le nom de votre cluster doit être uniquement alphanumériques minuscules, sans espaces. Tous les artefacts de Kubernetes (conteneurs, pods, les jeux avec état, services) pour le cluster seront créées dans un espace de noms avec le même nom que le cluster de nom spécifié.
+> Le nom de votre cluster big data doit être uniquement alphanumériques minuscules, sans espaces. Tous les artefacts de Kubernetes (conteneurs, pods, les jeux avec état, services) pour le cluster seront créées dans un espace de noms avec le même nom que le cluster de nom spécifié.
 
 ## <a id="ports"></a> Ports de point de terminaison de mise à jour
 

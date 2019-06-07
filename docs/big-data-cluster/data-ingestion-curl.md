@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994050"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743952"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Utilisez curl pour charger des données dans HDFS sur les clusters de données volumineuses de SQL Server
 
@@ -25,14 +25,14 @@ Cet article explique comment utiliser **curl** pour charger des données dans HD
 
 ## <a name="obtain-the-service-external-ip"></a>Obtenir l’adresse IP externe de service
 
-WebHDFS est démarré lorsque le déploiement est terminé et que son accès traverse Knox. Le point de terminaison Knox est exposée via un service Kubernetes appelé **passerelle-svc-external**.  Pour créer l’URL WebHDFS nécessaire pour télécharger des fichiers, vous devez le **passerelle-svc-external** adresse IP externe et le nom de votre cluster de service. Vous pouvez obtenir le **passerelle-svc-external** adresse IP externe de service en exécutant la commande suivante :
+WebHDFS est démarré lorsque le déploiement est terminé et que son accès traverse Knox. Le point de terminaison Knox est exposée via un service Kubernetes appelé **passerelle-svc-external**.  Pour créer l’URL WebHDFS nécessaire pour télécharger des fichiers, vous devez le **passerelle-svc-external** adresse IP externe et le nom de votre cluster big data service. Vous pouvez obtenir le **passerelle-svc-external** adresse IP externe de service en exécutant la commande suivante :
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> Le `<cluster name>` ici est le nom du cluster que vous avez spécifié dans le fichier de configuration de déploiement. Le nom par défaut est `mssql-cluster`.
+> Le `<big data cluster name>` ici est le nom du cluster que vous avez spécifié dans le fichier de configuration de déploiement. Le nom par défaut est `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Construire l’URL pour accéder à WebHDFS
 

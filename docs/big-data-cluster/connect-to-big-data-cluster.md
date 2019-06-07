@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994053"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743996"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
 
@@ -37,8 +37,11 @@ Pour vous connecter à un cluster de données volumineux avec Azure Data Studio,
 1. À partir de la ligne de commande, recherchez l’adresse IP de votre instance principale avec la commande suivante :
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Par défaut, nom de cluster les données big **mssql-cluster** , sauf si vous avez personnalisé le nom d’un fichier de configuration de déploiement. Pour plus d’informations, consultez [configurer les paramètres de déploiement pour les clusters de données volumineuses](deployment-custom-configuration.md#clustername).
 
 1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
 
