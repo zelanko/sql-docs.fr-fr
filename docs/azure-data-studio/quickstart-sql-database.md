@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: a961cd08baab13b87241492df4adef52d5846daf
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620360"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778285"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger la base de données SQL Azure
 
@@ -45,7 +45,7 @@ Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une c
 
 2. Cet article utilise l’authentification dans SQL, mais prend également en charge l’authentification Windows. Renseignez les champs suivants à l’aide du nom du serveur, le nom d’utilisateur et le mot de passe pour votre serveur SQL Azure :
 
-   | Paramètre       | Valeur suggérée |  Description |
+   | Paramètre       | Valeur suggérée | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nom du serveur** | Nom complet du serveur | Quelque chose comme : **nomserveur.basededonnées.Windows.NET**. |
    | **Authentification** | Connexion SQL| Ce didacticiel utilise l’authentification SQL. |
