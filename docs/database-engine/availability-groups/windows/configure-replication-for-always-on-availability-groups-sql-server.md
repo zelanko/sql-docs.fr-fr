@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367237"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793617"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configurer la réplication avec les groupes de disponibilité Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   La configuration de la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des groupes de disponibilité Always On implique sept étapes. Chaque étape est décrite plus en détail dans les sections qui suivent.  
-  
-1.  [Configurez les publications et les abonnements de la base de données.](#step1)  
-  
-2.  [Configurez le groupe de disponibilité Always On.](#step2)  
-  
-3.  [Vérifiez que tous les hôtes de réplica secondaire sont configurés pour la réplication.](#step3)  
-  
-4.  [Configurez les hôtes de réplica secondaire comme des serveurs de publication de réplication.](#step4)  
-  
-5.  [Redirigez le serveur de publication d'origine sur le nom du port d'écoute du groupe de disponibilité.](#step5)  
-  
-6.  [Exécutez la procédure stockée de validation pour vérifier la configuration.](#step6)  
-  
-7.  [Ajoutez un serveur de publication d'origine au moniteur de réplication.](#step7)  
-  
- Les étapes 1 et 2 peuvent être effectuées dans n'importe quel ordre.  
   
 ##  <a name="step1"></a> 1. Configurez les publications et les abonnements de la base de données.  
  **Configurer le serveur de distribution**  
@@ -240,7 +224,7 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
   
 -   [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Groupes de disponibilité Always On : Interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   

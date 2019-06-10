@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135769"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775772"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Services SCM - Se connecter à un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "54135769"
   
 1.  Dans le menu **Démarrer** , cliquez avec le bouton droit sur **Poste de travail**, puis cliquez sur **Gérer**.  
   
-2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
+2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
   
 3.  Dans la boîte de dialogue **Sélectionner un ordinateur** , dans la zone de texte **Un autre ordinateur** , tapez le nom de l'ordinateur que vous voulez gérer et cliquez sur **OK**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "54135769"
   
 8.  Dans la fenêtre **Ajouter/Supprimer un composant logiciel enfichable** , cliquez sur **OK**.  
   
-9. Développez **Gestion de l’ordinateur (**_\<nom_ordinateur>_**)**, puis **Services et applications**.  
+9. Développez **Gestion de l’ordinateur (** _\<nom_ordinateur>_ **)** , puis **Services et applications**.  
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54135769"
 > [!CAUTION]  
 >  Si vous utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un ordinateur distant, le nom de l'ordinateur ne va pas de soi et il est possible d'arrêter ou de configurer accidentellement un ordinateur. Sous l'onglet **Service** , activez la case à cocher **Nom de l'hôte** pour confirmer le nom de l'ordinateur avant de modifier un service.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer WMI pour afficher l'état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

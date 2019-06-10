@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c11918f1f6c0d57b799e78cf2d653c9c445673fa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619507"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771779"
 ---
 # <a name="server-properties---advanced-page"></a>Propriétés du serveur - page Avancé
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47619507"
  Après avoir attaché, restauré ou copié une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données est immédiatement disponible et est ensuite automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau des index de recherche en texte intégral** . Si l’option de mise à niveau a la valeur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne sont pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez également que quand l’option de mise à niveau est **Importer**, si un catalogue de texte intégral n’est pas disponible, les index de recherche en texte intégral associés sont reconstruits. Pour plus d’informations sur l’affichage ou la modification du paramètre de la propriété **Option de mise à niveau des index de recherche en texte intégral** , consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Max Text Replication Size**  
- Spécifie la taille maximale (en octets) des données **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**et **image** susceptibles d’être ajoutées à une colonne répliquée ou capturée dans une instruction INSERT, UPDATE, WRITETEXT ou UPDATETEXT. Toute modification apportée à ce paramètre prend effet immédiatement. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Spécifie la taille maximale (en octets) des données **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **xml**et **image** susceptibles d’être ajoutées à une colonne répliquée ou capturée dans une instruction INSERT, UPDATE, WRITETEXT ou UPDATETEXT. Toute modification apportée à ce paramètre prend effet immédiatement. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Scan For Startup Procs**  
  Spécifie que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherchera l'exécution automatique des procédures stockées au démarrage. Si vous attribuez la valeur **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche et exécute toutes les procédures stockées exécutées automatiquement définies sur le serveur. Si vous attribuez la valeur **False** (valeur par défaut), aucune recherche n’est exécutée. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  
@@ -129,7 +129,7 @@ ms.locfileid: "47619507"
  **Query Wait**  
  Spécifie le nombre de secondes (de 0 à 2 147 483 647) pendant lequel une requête peut attendre des ressources avant d'expirer. Si la valeur par défaut -1 est utilisée, le délai d'attente est calculé comme étant 25 fois le coût estimé de la requête. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur query wait](../../database-engine/configure-windows/configure-the-query-wait-server-configuration-option.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

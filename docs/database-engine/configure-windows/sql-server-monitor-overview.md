@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 767c8f3eb96182fad541cac224759e065ae4ac3a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 8e53116f762763daac818ff52ae38b0f3841c55b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131269"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775461"
 ---
 # <a name="sql-server-monitor-overview"></a>Vue d'ensemble du moniteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "54131269"
 > [!NOTE]  
 >  Pour plus d’informations sur ces moniteurs, consultez [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md) et [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
   
 -   Moniteur de réplication  
   
@@ -57,13 +57,13 @@ ms.locfileid: "54131269"
   
 -   Mise en miroir de bases de données  
   
--   REPLICATION  
+-   Réplication  
   
  **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

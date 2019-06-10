@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 5fd3ec3c17e20980b695fbcdd2364e49065732e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015008"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767936"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "66015008"
   
  Lors de l'utilisation d'IIS pour accéder aux données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'aide d'une connexion HTTP ou HTTPs, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut tirer parti de la protection étendue fournie par IIS. Pour plus d'informations sur la configuration d'IIS pour utiliser la protection étendue, consultez [Configure Extended Protection in IIS 7.5](https://go.microsoft.com/fwlink/?LinkId=181105)(en anglais).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)   
  [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md)   
  [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   

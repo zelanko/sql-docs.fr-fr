@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee6ecf05e0ecff96b60f8ffd586461989cb9e151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bbfe553830e0879ade8796eec13e5b35f2bbe695
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743127"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795230"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Configurer une base de données miroir pour utiliser la propriété Trustworthy (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47743127"
   
     -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriété de base de données TRUSTWORTHY](../../relational-databases/security/trustworthy-database-property.md)   
  [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

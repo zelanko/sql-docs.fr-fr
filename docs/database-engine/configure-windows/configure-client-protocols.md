@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 659d5a18ecce49c6d0f1db169b0be453797ae8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 204617360c30dd4ea7201c86486af2483482fa08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738427"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799483"
 ---
 # <a name="configure-client-protocols"></a>configurer des protocoles clients
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "47738427"
   
  Vous pouvez activer le protocole de mémoire partagée séparément en cochant la case **Activer le protocole de mémoire partagée**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer l’option de configuration du serveur remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
   
   

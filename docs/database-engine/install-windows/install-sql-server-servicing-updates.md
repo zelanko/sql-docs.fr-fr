@@ -10,13 +10,13 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: e23e27ea5806e40e3cea3d97552b59db3915732e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 6e27dc247648e8fd69ed372a5ddd2a8566240efd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412756"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794900"
 ---
 # <a name="install-sql-server-servicing-updates"></a>Installer des mises à jour de maintenance de SQL Server
 
@@ -54,7 +54,7 @@ Les mises à jour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont
   
 Lorsque vous recevez une mise à jour par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, il met à jour toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers la version la plus récente en mode sans assistance. Si vous avez besoin de plus de souplesse ou n’avez pas de connexion Internet ni d’accès à WSUS, vous devez vous procurer les mises à jour à partir du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Installer SQL Server à partir de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
 [Ajouter des fonctionnalités à une instance de SQL Server &#40;programme d’installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
 [Réparer une installation de SQL Server qui a échoué](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  

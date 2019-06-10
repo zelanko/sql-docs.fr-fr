@@ -13,13 +13,13 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 9aa75a4d0ca9b66c37cb57ee603d513c6912b751
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209067"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794970"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
 
@@ -102,15 +102,15 @@ Ces étapes doivent être effectuées sur un PC exécutant l’édition cliente 
   
 1. Ouvrez **Gestion de l’ordinateur**. Pour ouvrir **Gestion de l’ordinateur**, cliquez sur **Démarrer**, tapez `compmgmt.msc` puis cliquez sur **OK**.    
   
-2. Dans l’arborescence de la console, cliquez avec le bouton droit sur **Gestion de l’ordinateur** puis cliquez sur **Se connecter à un autre ordinateur...**.  
+2. Dans l’arborescence de la console, cliquez avec le bouton droit sur **Gestion de l’ordinateur** puis cliquez sur **Se connecter à un autre ordinateur...** .  
   
 3. Dans la boîte de dialogue **Sélectionner un ordinateur**, tapez le nom de la machine Server Core que vous voulez gérer, ou cliquez sur **Parcourir** pour la localiser, puis cliquez sur **OK**.  
   
 4. Dans l’arborescence de la console, sous **Gestion de l’ordinateur** de la machine Server Core, cliquez sur **Services et applications**.  
   
-5. Double-cliquez sur **Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+5. Double-cliquez sur **Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-6. Dans le **Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, cliquez sur **Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<nom_instance>), où \<nom_instance> est le nom d’une instance de serveur local pour laquelle vous voulez activer les groupes de disponibilité AlwaysOn, puis cliquez sur Propriétés.  
+6. Dans le **Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , cliquez sur **Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<nom_instance>), où \<nom_instance> est le nom d’une instance de serveur local pour laquelle vous voulez activer les groupes de disponibilité AlwaysOn, puis cliquez sur Propriétés.  
   
 7. Sélectionnez l'onglet **Haute disponibilité AlwaysOn** .  
   
@@ -228,7 +228,7 @@ $Tcp
   
  Vous pouvez lancer l’utilitaire dans l’invite de commandes d’administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans l’article : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server sur Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md)   
  [Articles de procédures relatives à l’installation](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

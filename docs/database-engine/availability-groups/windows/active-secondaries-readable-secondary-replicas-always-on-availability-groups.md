@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 653171f45dff58afe617f1d70380e4ce9f3ee600
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e64c26d781bc7200540f6482185cc71e6214c64b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206268"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783708"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Décharger une charge de travail en lecture seule vers un réplica secondaire d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -187,7 +187,7 @@ ms.locfileid: "53206268"
 -   Le suffixe _readonly_database_statistic est réservé aux statistiques générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous ne pouvez pas utiliser ce suffixe lorsque vous créez des statistiques sur une base de données primaire. Pour plus d'informations, consultez [Statistics](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="bkmk_AccessInMemTables"></a> Accès aux tables optimisées en mémoire sur un réplica secondaire  
- Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Exemple :  
+ Les niveaux d’isolation de la transaction qui peuvent être utilisés avec des tables optimisées en mémoire sur un réplica secondaire sont les mêmes que sur le réplica principal. Il est recommandé de définir le niveau d’isolation au niveau de la session sur READ COMMITTED et de définir l’option au niveau de la base de données MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT sur ON. Par exemple :  
   
 ```sql  
 ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
@@ -239,7 +239,7 @@ GO
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   

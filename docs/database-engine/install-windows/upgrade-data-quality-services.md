@@ -10,13 +10,13 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2049dc558264b2b231a7d6a12109b833cccaddfe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 63b3f49f191cb1c7e20c398ab1ca1d6cf79a5ba3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208829"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794772"
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
 
@@ -97,7 +97,7 @@ Cet article fournit des informations sur la mise à niveau de votre installation
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAINE\nom d’utilisateur>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAINE\nom d’utilisateur>|2||  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Supprimer des objets Data Quality Server](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Mise à niveau vers SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc62539432599cf6273772d5db9fca0a296b5980
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: acd91330934f2d9bc87064d593202ef1b58814ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669857"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795289"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "47669857"
   
  Le mode Haute sécurité avec basculement automatique est conçu pour un réseau de haute capacité équipé d'une connexion dédiée ou d'une configuration réseau relativement simple qui minimise les sources possibles de défaillance du réseau. Ce type d'environnement réseau de haute qualité est nécessaire au mode haute sécurité avec basculement automatique et est recommandé pour toutes les sessions de mise en miroir de bases de données. Toutefois, les modes Haute performance et Haute sécurité sans basculement automatique sont beaucoup moins tributaires de la fiabilité du réseau.  
   
- Par conséquent, pour les environnements de production, nous vous invitons à suivre les instructions de déploiement ci-dessous :  
+ Par conséquent, pour les environnements de production, nous vous invitons à suivre les instructions de déploiement ci-dessous :  
   
 1.  Lancez l'exécution en mode Haute performance, asynchrone. Ce mode est le moins sensible à l'environnement réseau et fournit la meilleure configuration pour explorer le fonctionnement de la mise en miroir. Nous vous recommandons d'exécuter votre système en mode asynchrone avant d'être certain que votre bande passante prend en charge la mise en miroir et pour vous permettre d'approfondir vos connaissances sur la configuration de la mise en miroir et sur les performances du mode asynchrone dans votre environnement. Pour plus d'informations, voir [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
@@ -114,7 +114,7 @@ ms.locfileid: "47669857"
 3.  N'activez pas le basculement automatique avant de vous être assuré que le mode Haute sécurité sans basculement automatique répond aux besoins de l'entreprise et que les erreurs réseau ne provoquent pas de défaillances. Pour plus d’informations, consultez [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

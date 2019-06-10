@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d19f811faffda3584287ec29a4e4c03349586949
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: c08b28bfd888345e1fa5a88ef2a0e3d8aa912ac7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214810"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798239"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Options (SQL Server Always On, page Tableau de bord)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53214810"
  **Activez votre stratégie Always On définie par l’utilisateur.**  
  Si vous avez défini votre propre stratégie Always On, cliquez sur cette option pour activer cette stratégie.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

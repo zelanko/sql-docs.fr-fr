@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28b6ad5f5f348966993f0a0a766b657d60fc78dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5e5c6ff900079e0dec26d49919f51ebe7c1128f5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841689"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772035"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Services SCM - Changer le compte de démarrage du service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47841689"
   
 3.  Dans le volet d’informations, cliquez avec le bouton droit sur le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dont vous souhaitez modifier le compte de démarrage de service, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>**, cliquez sur l’onglet **Ouvrir une session** et sélectionnez un type de compte **Ouvrir une session en tant que**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>** , cliquez sur l’onglet **Ouvrir une session** et sélectionnez un type de compte **Ouvrir une session en tant que**.  
   
 5.  Après avoir sélectionné le nouveau compte de démarrage de service, cliquez sur **OK**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47841689"
   
 6.  Cliquez sur **Oui**, puis fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Configurer WMI pour afficher l'état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   

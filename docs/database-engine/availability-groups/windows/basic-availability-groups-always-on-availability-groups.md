@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+manager: jroth
+ms.openlocfilehash: 302359d2b5c03a114590e096e89d2299426673e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671205"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796689"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Groupes de disponibilité Always On de base pour une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "59671205"
 > [!NOTE]  
 >  Les limitations des groupes de disponibilité de base s’appliquent à la commande **CREATE AVAILABILITY GROUP** lorsque **WITH BASIC** est spécifiée. Par exemple, vous obtiendrez une erreur si vous essayez de créer un groupe de disponibilité de base qui permet un accès en lecture. Les autres limitations s’appliquent de la même manière. Reportez-vous à la section Limitations de cette rubrique pour plus d’informations.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

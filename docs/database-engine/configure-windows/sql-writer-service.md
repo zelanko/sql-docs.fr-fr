@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c75f96d2c4d00214ccbeda5fae69f9d3bde4e76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8289c73f40bbf832ef9134748fc7bbebf269956e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623878"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775329"
 ---
 # <a name="sql-writer-service"></a>Service SQL Writer
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ ms.locfileid: "47623878"
 ## <a name="virtual-backup-device-interface-vdi"></a>Interface d'unité de sauvegarde virtuelle  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une API appelée « Interface d’unité de sauvegarde virtuelle » qui permet aux éditeurs de logiciels indépendants d’intégrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans leurs produits pour la prise en charge des opérations de sauvegarde et de restauration. Conçues pour fournir une fiabilité et des performances optimales, ces API prennent en charge l'éventail complet de fonctions de sauvegarde et de restauration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y compris la gamme totale des sauvegardes à chaud et instantanées.  
   
-## <a name="permissions"></a>Permissions  
- Le service SQL Writer doit s'exécuter sous le compte **système local** . Le service SQL Writer utilise la connexion **NT Service\SQLWriter** pour la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait d’utiliser la connexion **NT Service\SQLWriter** permet au processus SQL Writer de s’exécuter à un niveau de droits inférieur dans un compte indiqué comme étant **sans connexion**, ce qui limite la vulnérabilité. Si le service SQL Writer est désactivé, les utilitaires qui s'appuient sur les instantanés VSS, tels que System Center Data Protection Manager, ainsi que certains autres produits tiers, seront rompus ou pire, risquent d'effectuer des sauvegardes de bases de données qui ne sont pas cohérentes. Si ni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le système sur lequel il s'exécute, ni le système hôte (dans le cas d'une machine virtuelle), ne doit utiliser un élément autre que la sauvegarde [!INCLUDE[tsql](../../includes/tsql-md.md)] , le service SQL Writer peut être désactivé en toute sécurité et la connexion supprimée.  Notez que le service SQL Writer peut être appelé par une sauvegarde au niveau du système ou du volume, que la sauvegarde repose directement sur des instantanés ou non. Certains logiciels de sauvegarde système utilisent VSS pour éviter d’être bloqués par des fichiers ouverts ou verrouillés. Le service SQL Writer nécessite des autorisations élevées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En effet, au cours de ses activités, il fige brièvement toutes les E/S pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="permissions"></a>Autorisations  
+ Le service SQL Writer doit s'exécuter sous le compte **système local** . Le service SQL Writer utilise la connexion **NT Service\SQLWriter** pour la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le fait d’utiliser la connexion **NT Service\SQLWriter** permet au processus SQL Writer de s’exécuter à un niveau de droits inférieur dans un compte indiqué comme étant **sans connexion**, ce qui limite la vulnérabilité. Si le service SQL Writer est désactivé, les utilitaires qui s'appuient sur les instantanés VSS, tels que System Center Data Protection Manager, ainsi que certains autres produits tiers, seront rompus ou pire, risquent d'effectuer des sauvegardes de bases de données qui ne sont pas cohérentes. Si ni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le système sur lequel il s'exécute, ni le système hôte (dans le cas d'une machine virtuelle), ne doit utiliser un élément autre que la sauvegarde [!INCLUDE[tsql](../../includes/tsql-md.md)] , le service SQL Writer peut être désactivé en toute sécurité et la connexion supprimée.  Notez que le service SQL Writer peut être appelé par une sauvegarde au niveau du système ou du volume, que la sauvegarde repose directement sur des instantanés ou non. Certains logiciels de sauvegarde système utilisent VSS pour éviter d’être bloqués par des fichiers ouverts ou verrouillés. Le service SQL Writer nécessite des autorisations élevées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En effet, au cours de ses activités, il fige brièvement toutes les E/S pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="features"></a>Fonctionnalités  
  SQL Writer prend en charge les possibilités suivantes :  
@@ -77,6 +77,6 @@ ms.locfileid: "47623878"
   
 -   Restauration de pages  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Le service SQL Writer est distinct du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et partagé entre différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et différentes instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le même serveur.  Le fichier du service SQL Writer est inclus dans le package d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], avec le même numéro de version que le moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il accompagne.  Lorsqu’une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée sur un serveur ou qu’une instance existante est mise à niveau, si le numéro de version de l’instance concernée est supérieur à celui du service SQL Writer qui se trouve actuellement sur le serveur, ce fichier est remplacé par celui du package d’installation.  Notez que, si le service SQL Writer a été mis à jour par un Service Pack ou une mise à jour cumulative et qu’une version finale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’installation, il est possible de remplacer une version récente du service SQL Writer par une ancienne version, à condition que l’installation ait un numéro de version majeure supérieur.  Par exemple, le service SQL Writer a été mis à jour dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2.  Si cette instance est mise à niveau vers la version finale [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], le service SQL Writer mis à jour est remplacé par une version antérieure.  Dans ce cas, vous devrez appliquer la dernière version CU à la nouvelle instance afin d’obtenir la dernière version du service SQL Writer.
 

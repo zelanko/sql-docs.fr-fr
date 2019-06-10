@@ -15,12 +15,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 07470283d3f6028fae4b6435d6134813601009e0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 735822224ef24dc609ca0f84c3265e89f1f63240
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012877"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462605"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Analytics
 
@@ -45,7 +45,7 @@ Le gestionnaire de connexions Data Lake Analytics est un composant de [SQL Serve
    A. Si vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD** :
    
       i. Renseignez les champs **Nom d’utilisateur** et **Mot de passe**.    
-      ii. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur client ou vous-même n’avez pas déjà autorisé SSIS à accéder à votre compte Data Lake Analytics, sélectionnez **Accepter** à l’invite. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+      ii. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur client ou vous-même n’avez pas déjà autorisé SSIS à accéder à votre compte Data Lake Analytics, sélectionnez **Accepter** à l’invite. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Lorsque vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD**, l’authentification multifacteur et l’authentification de compte Microsoft ne sont pas prises en charge.

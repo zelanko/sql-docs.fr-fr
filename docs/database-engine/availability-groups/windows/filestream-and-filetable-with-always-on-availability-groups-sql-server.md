@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214860"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800781"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Utiliser FILESTREAM et FileTable avec les groupes de disponibilité Always On
 
@@ -32,16 +32,6 @@ ms.locfileid: "53214860"
  L'intégralité des fonctionnalités FILESTREAM est prise en charge. Après un basculement, les données FILESTREAM sont accessibles à la fois sur les réplicas secondaires avec accès en lecture et sur le nouveau réplica principal.  
   
  La fonctionnalité FileTable n'est prise en charge que partiellement. Après un basculement, les données FileTable sont accessibles sur le réplica principal, mais pas sur les réplicas secondaires avec accès en lecture.  
-  
- **Dans cette rubrique :**  
-  
--   [Conditions préalables](#Prerequisites)  
-  
--   [Utilisation de noms de réseau virtuel (VNN) pour l'accès à FILESTREAM et FileTable](#vnn)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -89,7 +79,7 @@ ms.locfileid: "53214860"
 ##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

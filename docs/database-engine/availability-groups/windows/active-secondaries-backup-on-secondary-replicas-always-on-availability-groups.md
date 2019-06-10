@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209438"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801351"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Décharger les sauvegardes prises en charge vers des réplicas secondaires d’un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,7 @@ ms.locfileid: "53209438"
 > [!NOTE]  
 >  Les instructions RESTORE ne sont pas autorisées sur les bases de données primaire ou secondaire d'un groupe de disponibilité.  
   
--   [Types de sauvegarde pris en charge](#SupportedBuTypes)  
-  
--   [CConfiguration de l'emplacement d'exécution des travaux de sauvegarde](#WhereBuJobsRun)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> Types de sauvegardes pris en charge sur les réplicas secondaires  
   
 -   **BACKUP DATABASE** prend en charge uniquement la copie seule des sauvegardes complètes de la base de données, des fichiers ou des groupes de fichiers lorsqu’elle est exécutée sur les réplicas secondaires. Notez que les sauvegardes de type copie seule n'affectent pas la séquence de journaux de transactions consécutifs ou n'effacent pas la bitmap différentielle.  
@@ -76,7 +71,7 @@ Dans un groupe de disponibilité distribué, les sauvegardes peuvent être effec
   
 -   [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Sauvegardes de type copie seule &#40;SQL Server&#41;](../../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   

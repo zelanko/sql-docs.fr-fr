@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ae2965531ac92a24dafb836b824ad566a9da4a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3f9506f97af3f1a276efef01f4c77d2b86f6a7de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784767"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795339"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47784767"
 >  Pour plus d'informations sur les points de contrôle et la troncature du journal, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ##  <a name="AvoidFullLog"></a> Éviter la saturation du journal des transactions  
- Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
+ Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
   
 -   Reprendre la session de mise en miroir de base de données avant que le journal ne soit plein, ou ajouter un espace journal supplémentaire. La reprise de la mise en miroir de bases de données permet au serveur principal d'envoyer son journal actif cumulé au serveur miroir et met la base de données miroir en état SYNCHRONIZING. Le serveur miroir peut alors renforcer le journal sur le disque et commencer à le refaire.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47784767"
   
 -   [Supprimer une mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  

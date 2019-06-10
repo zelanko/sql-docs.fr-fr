@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc21969541334a1cf07887e0a5bc5074d1083bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd0527188ebdf3bbe5f0e2504ddd696f92038faa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692957"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794609"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Surveiller la copie des journaux de transaction (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47692957"
 |[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Extrait les paramètres des bases de données secondaires depuis les tables **log_shipping_secondary**, **log_shipping_secondary_databases** et **log_shipping_monitor_secondary** tables.|Serveur secondaire|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Cette procédure stockée récupère les paramètres d'une base de données primaire donnée sur le serveur secondaire.|Serveur secondaire|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher le rapport de la copie des journaux de transaction &#40;SQL Server Management Studio&#41;](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [Tables et procédures stockées de copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

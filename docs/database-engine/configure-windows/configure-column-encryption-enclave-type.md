@@ -9,14 +9,14 @@ ms.technology: configuration
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
+manager: jroth
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 961cf4a634f134f3bd41858a8157db0e8f6cb45f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1031bdfa3aa6c728d3e33b500fe942d5e52c5fdc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782387"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799469"
 ---
 # <a name="column-encryption-enclave-type-server-configuration-option"></a>Type d’enclave de chiffrement de colonne - Option de configuration de serveur
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -53,7 +53,7 @@ RECONFIGURE;
 GO  
 ```  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  

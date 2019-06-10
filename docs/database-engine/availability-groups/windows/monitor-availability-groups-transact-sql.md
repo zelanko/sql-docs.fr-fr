@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209428"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779168"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,27 +32,8 @@ ms.locfileid: "53209428"
 > [!TIP]  
 >  La plupart de ces vues peuvent être jointes à l'aide de leurs colonnes ID afin de retourner des informations émanant de plusieurs vues à l'aide d'une requête unique.  
   
- **Dans cette rubrique :**  
   
--   [Autorisations](#Permissions)  
-  
--   **Utilisation de Transact-SQL pour surveiller :**  
-  
-     [Fonctionnalité de groupes de disponibilité Always On sur une instance de serveur](#AoAgFeatureOnSI)  
-  
-     [Groupes de disponibilité sur le cluster WSFC](#WSFC)  
-  
-     [Groupes de disponibilité](#AvGroups)  
-  
-     [Réplicas de disponibilité](#AvReplicas)  
-  
-     [Bases de données de disponibilité](#AvDbs)  
-  
-     [Écouteurs de groupe de disponibilité](#AGlisteners)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nécessitent l'autorisation VIEW ANY DEFINITION sur l'instance de serveur. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Surveillance de la fonctionnalité de groupes de disponibilité Always On sur une instance de serveur  
@@ -189,7 +170,7 @@ ms.locfileid: "53209428"
 >  L'emplacement du réplica principal constitue la source d'autorité pour un groupe de disponibilité.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour superviser l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour superviser l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)** , **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Surveillance des écouteurs de groupe de disponibilité  
  Pour surveiller les écouteurs de groupe de disponibilité sur les sous-réseaux du cluster WSFC, utilisez les vues suivantes :  
@@ -292,7 +273,7 @@ ms.locfileid: "53209428"
   
 -   [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Surveillance des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  

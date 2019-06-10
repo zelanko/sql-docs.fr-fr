@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612887"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795260"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "47612887"
   
 ||Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Basculement automatique|non|non|Oui|  
-|basculement manuel|non|Oui|Oui|  
-|Service forcé|Oui|Oui|non|  
+|Basculement automatique|Non|Non|Oui|  
+|basculement manuel|Non|Oui|Oui|  
+|Service forcé|Oui|Oui|Non|  
   
  Après un basculement de rôle, certaines métadonnées doivent exister sur les deux partenaires pour garantir que tous les utilisateurs de base de données peuvent accéder à la nouvelle base de données principale. De plus, des travaux de sauvegarde doivent être créés sur le nouveau serveur principal pour garantir que la base de données continue d'être sauvegardée régulièrement. Pour plus d’informations, consultez [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47612887"
 -   Le serveur principal a perdu la communication avec le reste de la configuration de mise en miroir de base de données, tandis que le serveur miroir et le serveur témoin conservent le quorum. Toutefois, si toutes les instances de serveur perdent la communication et si le serveur témoin et le serveur miroir rétablissent ultérieurement la communication, le basculement automatique n'a pas lieu.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Le serveur miroir a détecté la perte du serveur principal.  
   
@@ -312,9 +312,9 @@ ms.locfileid: "47612887"
   
 -   [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Défaillances possibles pendant la mise en miroir de bases de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312843"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798070"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres des utilisateurs et espace de travail
 
@@ -31,7 +31,7 @@ Il est facile de configurer [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
 
 La commande de menu **fichier** > **préférences** > **paramètres** (**Code**  >  **Préférences** > **paramètres** sur Mac) fournit le point d’entrée pour configurer les paramètres utilisateur et l’espace de travail. Vous sont fournis avec une liste de paramètres par défaut. Copier les paramètres que vous souhaitez modifier appropriés `settings.json` fichier. Les onglets à droite vous permettent de basculer rapidement entre les fichiers de paramètres utilisateur et l’espace de travail.
 
-Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : Ouvrez les paramètres utilisateur** et **préférences : Ouvrir les paramètres de l’espace de travail** ou utilisez le raccourci clavier (**Ctrl +,**).
+Vous pouvez également ouvrir les paramètres utilisateur et l’espace de travail à partir de la **Palette de commandes** (**Ctrl + Maj + P**) avec **préférences : Ouvrez les paramètres utilisateur** et **préférences : Ouvrir les paramètres de l’espace de travail** ou utilisez le raccourci clavier (**Ctrl +,** ).
 
 L’exemple suivant désactive les numéros de ligne dans l’éditeur et configure les lignes de code pour être mises en retrait automatiquement.
 

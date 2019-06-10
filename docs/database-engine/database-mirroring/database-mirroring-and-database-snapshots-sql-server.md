@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e03a85102928b3b56f2c5b705b61f47c1a428717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7e1eacf9068e6e55cb8c9a9a6a01fe0a62485d23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774908"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Mise en miroir et instantanés de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47708148"
 > [!NOTE]  
 >  Pour une solution de création de rapports dotée d'une bonne capacité de déploiement horizontal, envisagez la réplication. Pour plus d’informations, consultez [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple créé des instantanés de bases de données sur une base de données miroir.  
   
  Imaginons que la base de données d'une session de mise en miroir de base de données soit la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cet exemple crée trois instantanés de base de données sur la copie miroir de la base de données `AdventureWorks` qui réside sur le lecteur `F` . Les noms des instantanés sont `AdventureWorks_0600`, `AdventureWorks_1200`et `AdventureWorks_1800` ; ils identifient les heures de création approximatives des captures.  
@@ -80,7 +80,7 @@ ms.locfileid: "47708148"
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

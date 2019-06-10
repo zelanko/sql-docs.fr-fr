@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+manager: jroth
+ms.openlocfilehash: c08bd2303f08470fd7a7cab65c5fd669ca36d9be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226556"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789531"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Gestion basée sur des stratégies pour les problèmes opérationnels avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ ms.locfileid: "54226556"
   
 -   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administration d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   

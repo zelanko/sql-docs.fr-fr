@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fa577f1d2e995e870ab1ec3fabcd64266427dc7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 43fc46517ffbf639cfc9328510ad4550e048cbc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772072"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47788157"
 |0|Indique que seules les connexions locales sont autorisées à utiliser la connexion administrateur dédiée.|  
 |1|Indique que les connexions à distance sont autorisées à utiliser la connexion administrateur dédiée.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant active la connexion administrateur dédiée à partir d'un ordinateur distant.  
   
 ```  
@@ -48,7 +48,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
   
   

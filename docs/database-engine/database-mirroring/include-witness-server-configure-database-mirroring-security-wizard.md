@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02781455ba687d9c88b73c55df1f15124edee832
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4e6918227b7aa76bac8dfed8d9eb8845da93cb0b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795419"
 ---
 # <a name="include-witness-server-configure-database-mirroring-security-wizard"></a>Inclure un serveur témoin (Configurer l'Assistant Sécurité de mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47758007"
  **Non**  
  Cliquez sur Non pour ne pas inclure de serveur témoin dans la configuration de sécurité.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés de la base de données &#40;page Mise en miroir&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)  

@@ -16,44 +16,25 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1c8c5fe88e1b3c95abd435558b0565960ba25ebf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213548"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801016"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Supprimer une base de données secondaire d'un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment supprimer une base de données secondaire d’un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   
   
--   **Avant de commencer :**  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour supprimer une base de données secondaire, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Suivi :**  [Après la suppression d’une base de données secondaire d’un groupe de disponibilité](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
+##  <a name="Prerequisites"></a> Conditions préalables requises et restrictions  
   
 -   Cette tâche est prise en charge sur les réplicas secondaires uniquement. Vous devez être connecté à l'instance de serveur qui héberge le réplica secondaire duquel la base de données doit être supprimée.  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -130,7 +111,7 @@ ms.locfileid: "53213548"
   
      Pour plus d’informations, consultez [Récupérer une base de données sans restauration des données &#40;Transact-SQL&#41;](../../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Supprimer une base de données primaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)  
   

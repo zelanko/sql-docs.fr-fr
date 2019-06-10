@@ -13,24 +13,18 @@ helpviewer_keywords:
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91df6ddd18ca1bdd194788da94e3cca761dcbca1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: b93c4c91051284a944e3b234da3f4523b3092623
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208888"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793550"
 ---
 # <a name="use-contained-databases-with-always-on-availability-groups"></a>Utiliser des bases de données autonomes avec les groupes de disponibilité Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique contient des informations sur l'utilisation d'une base de données autonome avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
- **Dans cette rubrique :**  
-  
--   [Conditions préalables](#Prerequisites)  
-  
--   [Tâches associées](#RelatedTasks)  
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
   
@@ -40,7 +34,7 @@ ms.locfileid: "53208888"
   
 -   [Options de configuration de serveur &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Bases de données autonomes](../../../relational-databases/databases/contained-databases.md)  
   

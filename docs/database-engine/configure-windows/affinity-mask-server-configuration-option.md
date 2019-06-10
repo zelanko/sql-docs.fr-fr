@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 27af9f6cab45c6859a755578d5dfa93c2506016d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8b31f79f4b5e6218d27d2f8562204223c2f21d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789067"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786846"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47789067"
 > [!CAUTION]  
 >  Évitez de configurer l'affinité de processeur dans le système d'exploitation Windows et le masque d'affinité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces paramètres tentent d'obtenir le même résultat et, si les configurations sont incohérentes, les résultats risquent d'être imprévisibles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il est préférable de configurer l’affinité de processeur à l’aide de l’option sp_configure dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Par exemple, pour définir l'option affinity mask, si les processeurs 1, 2 et 5 sont sélectionnés comme étant disponibles et si les bits 1, 2 et 5 ont la valeur 1 alors que les bits 0, 3, 4, 6 et 7 ont la valeur 0, une valeur hexadécimale égale à 0x26 ou l'équivalent décimal `38` est spécifiée. Numérotez les bits de droite à gauche. L'option affinity mask commence à compter les processeurs de 0 à 31, de sorte que dans l'exemple suivant, le compteur `1` représente le deuxième processeur sur le serveur.  
   
 ```  
@@ -133,7 +133,7 @@ GO
 ### <a name="reconfigure"></a>Reconfiguration  
  Si un masque d'affinité spécifié ne respecte pas la stratégie de licences lors de l'exécution de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE, un message d'erreur est envoyé à la session cliente et est consigné dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , exigeant ainsi que l'administrateur de la base de données reconfigure le masque d'affinité. Aucune commande RECONFIGURE WITH OVERRIDE n'est acceptée dans ce cas.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

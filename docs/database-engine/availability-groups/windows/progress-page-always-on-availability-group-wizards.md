@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147af9a2eecfe58cfc329fd8ce22b0452e21c59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7701002d1e293e8c92be9226c7a483d79ac59758
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210485"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801057"
 ---
 # <a name="progress-page-always-on-availability-group-wizards"></a>Page Progression (Assistants de groupe de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53210485"
  **Plus de détails**  
  Cliquez sur la flèche bas pour afficher une grille de progression qui répertorie toutes les étapes effectuées, dans l'ordre, suivies de l'opération en cours actuelle. Cette grille comporte les colonnes suivantes :  
   
- **Nom**  
+ **Name**  
  Affiche une expression qui décrit une étape spécifique.  
   
  **État**  
@@ -60,7 +60,7 @@ ms.locfileid: "53210485"
   
 -   [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 54eac961-5c7a-4481-982d-f93a64b5c2f4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80336b3b96f5a196e3c44469f635180869f4988b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 457ed25c0c1360d250cd87860e5542adffa5ec9f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589303"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772059"
 ---
 # <a name="run-sql-server-with-or-without-a-network"></a>Exécuter SQL Server avec ou sans réseau
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53589303"
   
  Quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode autonome à partir d’une station cliente locale telle que **sqlcmd**, par exemple, vous ignorez le réseau et vous accédez directement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’un canal de communication local. La différence entre un canal de communication local et un canal de communication réseau réside dans l'utilisation ou non d'un réseau. Les canaux de communication local et réseau établissent une connexion avec une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du canal standard (\\\\.\pipe\sql\query), sauf instructions contraires.  
   
- Quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale sans spécifier le nom d'un serveur, vous utilisez un canal de communication local. Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale en spécifiant explicitement le nom d'un serveur, vous utilisez soit un canal réseau, soit un autre mécanisme de réseau IPC, comme IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) (si vous avez configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une utilisation multi-réseau). Comme une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome ne gère pas les canaux de communication réseau, vous devez omettre l’argument **/**_<nom_serveur>_, devenu inutile, quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un client. Par exemple, pour vous connecter à une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de **osql**, tapez :  
+ Quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale sans spécifier le nom d'un serveur, vous utilisez un canal de communication local. Lorsque vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale en spécifiant explicitement le nom d'un serveur, vous utilisez soit un canal réseau, soit un autre mécanisme de réseau IPC, comme IPX/SPX (Internetwork Packet Exchange/Sequenced Packet Exchange) (si vous avez configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une utilisation multi-réseau). Comme une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autonome ne gère pas les canaux de communication réseau, vous devez omettre l’argument **/** _<nom_serveur>_ , devenu inutile, quand vous vous connectez à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’un client. Par exemple, pour vous connecter à une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de **osql**, tapez :  
   
  **osql /Usa /P** _\<Mot_de_passe_sa>_  
   

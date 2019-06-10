@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 28a2c9bd527fb4996730630a6121d205fbaebf04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 210572e30dc1115fa52cfab4da293533a051d634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429345"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767433"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activer les connexions chiffrées dans le moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "59429345"
  Le client doit être en mesure de vérifier la propriété du certificat employé par le serveur. Si le client dispose du certificat de clé publique de l'autorité de certification qui a signé le certificat de serveur, aucune configuration supplémentaire n'est requise. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comprend les certificats de clé publique d'un grand nombre d'autorités de certification. Si le certificat de serveur a été signé par une autorité de certification publique ou privée pour laquelle le client ne dispose pas de certificat de clé publique, vous devez installer le certificat de clé publique de l'autorité de certification ayant signé le certificat de serveur.  
   
 > [!NOTE]  
-> Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Si, par exemple, vous disposez d’un cluster à deux nœuds nommés test1.*\<votre_société>*.com et test2.*\<votre_société>*.com, ainsi que d’un serveur virtuel nommé virtsql, vous devez installer un certificat pour virtsql.*\<votre_société>*.com sur les deux nœuds. Vous pouvez affecter à l’option **ForceEncryption** la valeur **Yes**.
+> Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Si, par exemple, vous disposez d’un cluster à deux nœuds nommés test1. *\<votre_société>* .com et test2. *\<votre_société>* .com, ainsi que d’un serveur virtuel nommé virtsql, vous devez installer un certificat pour virtsql. *\<votre_société>* .com sur les deux nœuds. Vous pouvez affecter à l’option **ForceEncryption** la valeur **Yes**.
 
 > [!NOTE]
 > Si vous créez des connexions chiffrées entre un indexeur de la Recherche Azure et SQL Server sur une machine virtuelle Azure, consultez [Configurer une connexion à partir d’un indexeur de la Recherche Azure à SQL Server sur une machine virtuelle Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
@@ -52,7 +52,7 @@ Pour que SQL Server charge un certificat SSL, ce dernier doit remplir les condit
 - Le certificat doit figurer soit dans le magasin de certificats de l'ordinateur local, soit dans le magasin de certificats de l'utilisateur actuel.
 - Le compte de service SQL Server doit avoir l’autorisation nécessaire pour accéder au certificat SSL.
 - L'heure actuelle du système doit être postérieure à la propriété **Valid from** du certificat et antérieure à la propriété Valide to du certificat.
-- Le certificat doit être destiné à une authentification serveur. Pour cela, la propriété **Utilisation améliorée de la clé** du certificat doit indiquer l’**authentification du serveur (1.3.6.1.5.5.7.3.1)**.
+- Le certificat doit être destiné à une authentification serveur. Pour cela, la propriété **Utilisation améliorée de la clé** du certificat doit indiquer l’**authentification du serveur (1.3.6.1.5.5.7.3.1)** .
 - Le certificat doit être créé avec l'option **KeySpec** de **AT_KEYEXCHANGE**. Habituellement, la propriété d'utilisation de la clé du certificat (**KEY_USAGE**) inclut également un chiffrement de clé (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 - La propriété **Subject** du certificat doit indiquer que le nom courant (CN) est le même que le nom de domaine ou le nom de domaine complet (FQDN, Fully Qualified Domain Name) de l'ordinateur serveur. Si SQL Server s'exécute sur un cluster de basculement, le nom courant doit correspondre au nom d'hôte (ou FQDN) du serveur virtuel, et les certificats doivent être fournis sur tous les nœuds dans le cluster de basculement.
 - SQL Server 2008 R2 et SQL Server 2008 R2 Native Client prennent en charge les certificats à caractères génériques. Les autres clients ne prennent pas toujours en charge les certificats génériques. Pour plus d’informations, consultez la documentation du client et [KB258858](http://support.microsoft.com/kb/258858).
@@ -95,9 +95,9 @@ Pour que SQL Server charge un certificat SSL, ce dernier doit remplir les condit
   
 ## <a name="to-configure-the-server-to-force-encrypted-connections"></a>Pour configurer le serveur afin qu’il force les connexions chiffrées  
   
-1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_, puis sélectionnez **Propriétés**.  
+1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_ , puis sélectionnez **Propriétés**.  
   
-2. Dans la boîte de dialogue **Propriétés de** **Protocoles pour** _\<nom_instance>_, sous l’onglet **Certificat**, sélectionnez le certificat voulu dans la liste déroulante de la zone **Certificat**, puis cliquez sur **OK**.  
+2. Dans la boîte de dialogue **Propriétés de** **Protocoles pour** _\<nom_instance>_ , sous l’onglet **Certificat**, sélectionnez le certificat voulu dans la liste déroulante de la zone **Certificat**, puis cliquez sur **OK**.  
   
 3. Sur l'onglet **Indicateurs** , dans la zone **ForceEncryption** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   
@@ -131,6 +131,6 @@ Pour que SQL Server charge un certificat SSL, ce dernier doit remplir les condit
   
 3. Sous l'onglet **Propriétés de connexion** , cliquez sur **Chiffrer la connexion**.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244)

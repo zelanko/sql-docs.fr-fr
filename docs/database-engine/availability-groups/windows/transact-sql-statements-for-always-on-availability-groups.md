@@ -12,33 +12,20 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b7bca3c8d49950fa58dc128192c817f0def36ee2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506553"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803526"
 ---
 # <a name="transact-sql-statements-for-always-on-availability-groups"></a>Instructions Transact-SQL pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique présente les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui prennent en charge le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , ainsi que la création et la gestion d'un groupe de disponibilité donné, d'un réplica de disponibilité et d'une base de données de disponibilité.  
   
- **Dans cette rubrique :**  
-  
--   [CREATE ENDPOINT](#CreateEndpoint)  
-  
--   [CREATE AVAILABILITY GROUP](#CreateAG)  
-  
--   [ALTER AVAILABILITY GROUP](#AlterAG)  
-  
--   [Options ALTER DATABASE SET HADR](#AlterDb)  
-  
--   [DROP AVAILABILITY GROUP](#DropAG)  
-  
--   [Restrictions sur les instructions Transact-SQL AVAILABILITY GROUP](#Restrictions)  
-  
+ 
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  [CREATE ENDPOINT ... FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) crée un point de terminaison de mise en miroir de bases de données, s’il n’en existe aucun sur l’instance de serveur. Chaque instance de serveur sur laquelle vous envisagez de déployer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données requiert un point de terminaison de mise en miroir de bases de données.  
   
@@ -73,7 +60,7 @@ ms.locfileid: "52506553"
   
 -   Si une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] est exécutée alors qu'une autre récupération ou action de groupe de disponibilité est en cours, l'instruction retourne une erreur. Attendez la fin de l'action ou de la récupération, puis réessayez l'instruction, si nécessaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

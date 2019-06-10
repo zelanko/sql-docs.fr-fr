@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0aa939d36a97f6d4b7f0587bd06470189b91ff3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+manager: jroth
+ms.openlocfilehash: 39967c68efa3f514759c3c7c910674f62097e3ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017991"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783860"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Configurer l’option de configuration de serveur remote data archive
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "56017991"
   
  L’exécution de **sp_configure** pour définir la valeur de l’option **Archive de données distante** nécessite des autorisations sysadmin ou serveradmin.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant affiche tout d’abord le paramètre actuel de l’option **remote data archive** . L’exemple active ensuite l’option **remote data archive** en définissant sa valeur sur 1.  
   
 ```  
@@ -46,7 +46,7 @@ GO
   
  Pour désactiver l'option, affectez-lui la valeur 0.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

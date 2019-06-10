@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 2fa73136dfc026f158cbe7a81a08d68cf9142114
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125959"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803340"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ ms.locfileid: "54125959"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Pour configurer le moteur de base de données SQL Server de manière à écouter sur un port TCP supplémentaire  
   
-1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour**_<nom_instance>_.  
+1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<nom_instance>_ .  
   
-2.  Développez **Protocoles pour**_<nom_instance>_, puis cliquez sur **TCP/IP**.  
+2.  Développez **Protocoles pour** _<nom_instance>_ , puis cliquez sur **TCP/IP**.  
   
 3.  Dans le volet droit, cliquez avec le bouton droit sur chaque adresse IP désactivée à activer, puis cliquez sur **Activer**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54125959"
   
 6.  Dans le volet gauche, cliquez sur **Services SQL Server**.  
   
-7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>**_SQL Server_, puis cliquez sur **Redémarrer**.  
+7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>** _SQL Server_, puis cliquez sur **Redémarrer**.  
   
      Lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] redémarre, le journal des erreurs répertorie les ports sur lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est à l'écoute.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "54125959"
     sqlcmd -SACCT,1500  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [Autorisations GRANT sur point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   

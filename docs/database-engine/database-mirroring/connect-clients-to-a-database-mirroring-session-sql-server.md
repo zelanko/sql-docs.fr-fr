@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 510fa333b4dff71fc38bc60f91509d3daa67adb2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131849"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775023"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Attribut Server  
  La chaîne de connexion doit contenir un attribut **Server** indiquant le nom du serveur partenaire initial, lequel doit identifier l'instance du serveur principal actuel.  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom : *<nom_serveur>*[**\\**_<nom_instance_SQL_Server>_]. Par exemple :  
+ La façon la plus simple d’identifier l’instance de serveur consiste à spécifier son nom : *<nom_serveur>* [ **\\** _<nom_instance_SQL_Server>_ ]. Par exemple :  
   
  `Server=Partner_A;`  
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Il est nécessaire d'effectuer une requête SQL Server Browser si la chaîne de connexion spécifie le nom de l'instance nommée et pas le port.  
   
- Pour spécifier l’adresse IP et le port, l’attribut **Server** doit se présenter sous la forme suivante : `Server=`*<adresse_ip>*`,`*\<port>*. Par exemple :  
+ Pour spécifier l’adresse IP et le port, l’attribut **Server** doit se présenter sous la forme suivante : `Server=` *<adresse_ip>* `,` *\<port>* . Par exemple :  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  Cette chaîne omet les informations d'authentification.  
   
 > [!IMPORTANT]  
->  L’intégration du préfixe du protocole avec l’attribut **Server** (`Server=tcp:`*\<nom_serveur>*) est incompatible avec l’attribut **Network**. Si vous spécifiez le protocole aux deux emplacements, vous obtiendrez probablement une erreur. Nous vous recommandons de faire en sorte qu’une chaîne de connexion spécifie le protocole à l’aide de l’attribut **Network** et spécifie uniquement le nom du serveur dans l’attribut **Server** (`"Network=dbmssocn; Server=`*\<nom_serveur>*`"`).  
+>  L’intégration du préfixe du protocole avec l’attribut **Server** (`Server=tcp:` *\<nom_serveur>* ) est incompatible avec l’attribut **Network**. Si vous spécifiez le protocole aux deux emplacements, vous obtiendrez probablement une erreur. Nous vous recommandons de faire en sorte qu’une chaîne de connexion spécifie le protocole à l’aide de l’attribut **Network** et spécifie uniquement le nom du serveur dans l’attribut **Server** (`"Network=dbmssocn; Server=` *\<nom_serveur>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Attribut partenaire de basculement  
  Outre le nom du serveur partenaire initial, le client peut aussi spécifier le nom du partenaire de basculement, lequel doit identifier l'instance du serveur miroir actuel. Le partenaire de basculement est spécifié par l'un des mots clés pour l'attribut de partenaire de basculement. Le mot clé de cet attribut dépend de l'API que vous utilisez. La table suivante répertorie ces mots clés :  
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |Pilote ODBC|**Failover_Partner**|  
 |ActiveX Data Objects (ADO)|**Failover Partner**|  
   
- La façon la plus simple d’identifier l’instance de serveur consiste à employer son nom système : *<nom_serveur>*[**\\**_<nom_instance_SQL_Server>_].  
+ La façon la plus simple d’identifier l’instance de serveur consiste à employer son nom système : *<nom_serveur>* [ **\\** _<nom_instance_SQL_Server>_ ].  
   
  Il est également possible de fournir l’adresse IP et le numéro de port dans l’attribut **Failover Partner** . Si la tentative de connexion initiale échoue au cours de la première connexion à la base de données, la tentative de connexion au partenaire de basculement ne sera pas tributaire de DNS et de SQL Server Browser. Une fois qu'une connexion est établie, le nom du partenaire de basculement sera remplacé par le nom du partenaire de basculement, si bien qu'en cas de basculement, les connexions redirigées feront appel à DNS et à SQL Server Browser.  
   
@@ -169,13 +169,13 @@ Server=123.34.45.56,4724;
   
  Le délai entre deux tentatives est calculé au moyen de la formule suivante :  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;** _LoginTimeout_ **)**  
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
  Par exemple, si vous utilisez le délai d’expiration de connexion par défaut de 15 secondes, *LoginTimeout* *= 15*. Dans ce cas, les délais entre deux tentatives alloués lors des trois premiers essais sont les suivants :  
   
-|Arrondi|Calcul de*RetryTime* |Délai entre chaque tentative|  
+|Arrondi|Calcul de*RetryTime*|Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondes|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondes|  
@@ -247,7 +247,7 @@ Server=123.34.45.56,4724;
 |Le service est manuellement basculé vers Partner_C (déconnexion des clients).|Partner_C|Partner_B|Le client tente tout d'abord de se connecter à Partner_A, puis à Partner_B. Ces deux noms échouent et la demande de connexion finit par expirer et par échouer.|  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Défaillances possibles pendant la mise en miroir d’une base de données](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)  
   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6b92cc60a6a5d84eb2971b5f03f506688310db86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a73d25596d8815d773bdcdfcd0d1ee43d65340c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798488"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795369"
 ---
 # <a name="mirroring-states-sql-server"></a>États de la mise en miroir (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47798488"
 |PENDING_FAILOVER|Cet état est observé uniquement sur le serveur principal lorsqu'un basculement a commencé, mais que le serveur n'est pas passé par le rôle de miroir.<br /><br /> Une fois le basculement déclenché, la base de données principale passe à l'état PENDING_FAILOVER, met rapidement un terme à toutes les connexions utilisateur et adopte le rôle de miroir peu de temps après.|  
 |DISCONNECTED|Le partenaire a perdu la communication avec l'autre partenaire.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

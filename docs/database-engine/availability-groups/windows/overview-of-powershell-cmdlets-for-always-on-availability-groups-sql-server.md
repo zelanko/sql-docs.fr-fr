@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203768"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798221"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Vue d’ensemble des applets de commande PowerShell pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203768"
   
 > [!NOTE]  
 >  Une applet de commande PowerShell peut s'effectuer en initiant correctement une action. Cela n'indique pas si le travail prévu, tel que le basculement d'un groupe de disponibilité, est terminé. Lors de l'écriture sous forme de script d'une séquence d'actions, vous devrez peut-être vérifier l'état des actions et attendre la fin de leur exécution.  
-  
- Cette rubrique présente les applets de commande pour les ensembles de tâches suivants :  
-  
--   [Configuration d’une instance de serveur pour les groupes de disponibilité Always On](#ConfiguringServerInstance)  
-  
--   [Sauvegarde et restauration de bases de données et de journaux de transactions](#BnRcmdlets)  
-  
--   [Création et gestion d'un groupe de disponibilité](#DeployManageAGs)  
-  
--   [Création et gestion d'un écouteur de groupe de disponibilité](#AGlisteners)  
-  
--   [Création et gestion d'un réplica de disponibilité](#DeployManageARs)  
-  
--   [Ajout et gestion d'une base de données de disponibilité](#DeployManageDbs)  
-  
--   [Surveillance de l'intégrité d'un groupe de disponibilité](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  Pour obtenir la liste des rubriques de la documentation en ligne [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] qui expliquent comment utiliser les applets de commande pour effectuer des tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , consultez la section « Tâches associées » de l’article [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
@@ -122,7 +106,7 @@ ms.locfileid: "53203768"
   
  Pour plus d’informations, consultez [Utiliser les stratégies Always On pour afficher l’intégrité d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Obtenir de l’aide sur SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779511"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794104"
 ---
 # <a name="sql-server-express-localdb"></a>Base de données locale SQL Server Express
 
@@ -34,7 +34,7 @@ L'installation de LocalDB copie l'ensemble minimal des fichiers nécessaires pou
 
 ## <a name="try-it-out"></a>Essayez-le. 
 
-- Pour télécharger et installer SQL Server Express LocalDB, accédez à **[Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. Dans **Visual Studio Installer**, vous pouvez installer SQL Server Express LocalDB dans le cadre de la charge de travail **Développement .NET Desktop**, ou l’installer comme un composant seul.
+- Pour télécharger et installer SQL Server Express LocalDB, accédez à **[Téléchargements SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB est une fonctionnalité que vous sélectionnez lors de l’installation et qui est disponible quand vous téléchargez le média. Si vous téléchargez le média, choisissez le package **Express Advanced** ou LocalDB. Dans **Visual Studio Installer**, vous pouvez installer SQL Server Express LocalDB dans le cadre de la charge de travail **Développement .NET Desktop**, ou l’installer comme un composant seul.
 
  >[!TIP]
  > Vous pouvez également installer LocalDB dans le cadre de l’installation de Visual Studio. Pendant l’installation de Visual Studio, sélectionnez la charge de travail **Développement .NET Desktop**, qui comprend SQL Server Express LocalDB.
@@ -123,7 +123,7 @@ REM Gather information about the instance of LocalDB
 |Nom du canal de l'instance|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->Si votre application utilise une version de .NET antérieure à 4.0.2, vous devez vous connecter directement au canal nommé de LocalDB. La valeur Nom du canal de l’instance est le canal nommé sur lequel l’instance de LocalDB écoute. La partie du nom du canal de l’instance après LOCALDB# change chaque fois que l’instance de LocalDB est démarrée. Pour se connecter à l’instance de LocalDB à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], entrez le nom du canal de l’instance dans la zone **Nom du serveur** de la boîte de dialogue **Se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)]**. Depuis votre programme personnalisé, vous pouvez établir la connexion à l'instance de LocalDB à l'aide d'une chaîne de connexion semblable à `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
+>Si votre application utilise une version de .NET antérieure à 4.0.2, vous devez vous connecter directement au canal nommé de LocalDB. La valeur Nom du canal de l’instance est le canal nommé sur lequel l’instance de LocalDB écoute. La partie du nom du canal de l’instance après LOCALDB# change chaque fois que l’instance de LocalDB est démarrée. Pour se connecter à l’instance de LocalDB à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], entrez le nom du canal de l’instance dans la zone **Nom du serveur** de la boîte de dialogue **Se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)]** . Depuis votre programme personnalisé, vous pouvez établir la connexion à l'instance de LocalDB à l'aide d'une chaîne de connexion semblable à `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Se connecter à une instance partagée de LocalDB
 
@@ -140,6 +140,6 @@ Une instance de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]Local
 >[!NOTE]
 >LocalDB s’exécute toujours dans le contexte de sécurité des utilisateurs. Autrement dit, LocalDB ne s’exécute jamais avec les informations d’identification du groupe des administrateurs local. Cela signifie que tous les fichiers de base de données utilisés par une instance LocalDB doivent être accessibles à l’aide du compte Windows de l’utilisateur propriétaire, sans prendre en compte l’appartenance au groupe des administrateurs local.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilitaire SqlLocalDB](../../tools/sqllocaldb-utility.md)

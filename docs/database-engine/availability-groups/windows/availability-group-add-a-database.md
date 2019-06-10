@@ -14,28 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 262a4538774d2827d60367d1d96a12fb15e2d0f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860440"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789425"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Ajouter une base de données à un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment ajouter une base de données à un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Avant de commencer :**  
-  
-     [Prérequis et restrictions](#prerequisites-and-restrictions)    
-     [Autorisations](#Permissions)    
--   **Pour ajouter une base de données à un groupe de disponibilité, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)    
-     [Transact-SQL](#TsqlProcedure)    
-     [PowerShell](#PowerShellProcedure)  
-  
+
   
 ## <a name="prerequisites-and-restrictions"></a>Conditions préalables requises et restrictions  
   
@@ -43,8 +34,7 @@ ms.locfileid: "58860440"
   
 -   La base de données doit résider sur l'instance de serveur qui héberge le réplica principal et se conformer aux conditions préalables requises et aux restrictions applicables aux bases de données de disponibilité. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Sécurité  
-  
+ 
 ##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
@@ -139,7 +129,7 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Utiliser le tableau de bord Always On &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   

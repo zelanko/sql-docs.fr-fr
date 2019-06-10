@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fb1c490f8a20da4df987c003a4aa1d89619ed94
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+manager: jroth
+ms.openlocfilehash: 67648accafa07d3814e066f7202f9e8d273ffee7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "62826247"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800998"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Supprimer un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "62826247"
   
 2.  Utilisez l'instruction [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md) , comme suit :  
   
-     ALTER AVAILABILITY GROUP *nom_groupe* REMOVE LISTENER **'**_nom_dns_**'**  
+     ALTER AVAILABILITY GROUP *nom_groupe* REMOVE LISTENER **'** _nom_dns_ **'**  
   
      où *nom_groupe* est le nom du groupe de disponibilité et *nom_dns* est le nom DNS de l’écouteur du groupe de disponibilité.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62826247"
   
 -   [Afficher les propriétés d’écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   

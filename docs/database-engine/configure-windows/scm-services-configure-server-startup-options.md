@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 688339a6f598ed43e6128f7b40be9d1ec91dc8c8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 0b85c75d024edd1e7e53eee08e21683aa7412bbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131220"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775738"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Services SCM - Configurer les options de démarrage du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "54131220"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  La configuration des options de démarrage du serveur est limitée aux utilisateurs qui peuvent modifier les entrées associées dans le Registre. Notamment :  
   
 -   les membres du groupe Administrateurs local ;  
@@ -63,7 +63,7 @@ ms.locfileid: "54131220"
   
 2.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (**_<nom_instance>_**)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (** _<nom_instance>_ **)** , puis cliquez sur **Propriétés**.  
   
 4.  Sous l'onglet **Paramètres de démarrage** , dans la zone **Spécifiez un paramètre de démarrage** , tapez le paramètre, puis cliquez sur **Ajouter**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "54131220"
     > [!WARNING]  
     >  Au terme de l’utilisation du mode mono-utilisateur, dans la zone Paramètres de démarrage, sélectionnez le paramètre **-m** dans la zone **Paramètres existants** , puis cliquez sur **Supprimer**. Redémarrez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour rétablir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode multi-utilisateur habituel.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Se connecter à SQL Server quand les administrateurs système n’y ont plus accès](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

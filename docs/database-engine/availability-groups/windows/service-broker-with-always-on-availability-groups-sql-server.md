@@ -12,24 +12,19 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607109"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787841"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique contient des informations sur la configuration de Service Broker afin d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **Dans cette rubrique :**  
-  
--   [Spécifications pour qu'un service dans un groupe de disponibilité reçoive les messages distants](#ReceiveRemoteMessages)  
-  
--   [Spécifications pour l'envoi de messages à un service distant dans un groupe de disponibilité](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Spécifications pour qu'un service dans un groupe de disponibilité reçoive les messages distants  
   
@@ -118,7 +113,7 @@ ms.locfileid: "51607109"
   
 -   [Configurer des comptes de connexion pour la mise en miroir de bases de données ou les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  

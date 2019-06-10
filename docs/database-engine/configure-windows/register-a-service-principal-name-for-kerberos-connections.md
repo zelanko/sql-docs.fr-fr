@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772156"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  L'Authentification Windows est la méthode recommandée pour authentifier les utilisateurs sur SQL Server. Les clients qui utilisent l'Authentification Windows sont authentifiés à l'aide de NTLM ou Kerberos. Dans un environnement Active Directory, l'authentification Kerberos est toujours tentée en premier. L'authentification Kerberos n'est pas disponible pour les clients [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] utilisant des canaux nommés.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Lorsque le service du [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il tente d'enregistrer le nom de principal du service (SPN). Si le compte qui démarre SQL Server n’a pas l’autorisation d’enregistrer un SPN dans les services de domaine Active Directory, cet appel échouera et un message d’avertissement sera consigné dans le journal des événements de l’application ainsi que dans le journal des erreurs SQL Server. Pour inscrire le SPN, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit s'exécuter sous un compte intégré, tel que Système local (non recommandé) ou SERVICE RÉSEAU, ou sous un compte qui a l'autorisation d'inscrire un SPN, tel qu'un compte d'administrateur de domaine. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur le système d'exploitation  [!INCLUDE[win7](../../includes/win7-md.md)] ou  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , vous pouvez exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide d'un compte virtuel ou d'un compte de service administré (MSA). Les comptes virtuels et les comptes de service administré peuvent inscrire un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas sous l’un de ces comptes, le SPN n’est pas inscrit lors du démarrage et l’administrateur de domaine doit l’inscrire manuellement.  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instance nommée**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<nom_instance>]**, où :  
+-   **MSSQLSvc/\<FQDN>:[\<port> | \<nom_instance>]** , où :  
   
     -   **MSSQLSvc** est le service en cours d’inscription.  
   
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instance par défaut**  
   
--   **MSSQLSvc/\<FQDN>:\<port>** | **MSSQLSvc/\<FQDN>**, où :  
+-   **MSSQLSvc/\<FQDN>:\<port>**  | **MSSQLSvc/\<FQDN>** , où :  
   
     -   **MSSQLSvc** est le service en cours d’inscription.  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > Dans le cas d'une connexion TCP/IP, où le port TCP est inclus dans le SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit activer le protocole TCP afin de permettre à un utilisateur de se connecter à l'aide de l'authentification Kerberos. 
 
 ##  <a name="Auto"></a> Inscription automatique des SPN  
- Lors du démarrage d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’inscrire le nom SPN du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de l’arrêt de l’instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’annuler l’inscription du nom SPN. Pour une connexion TCP/IP, le nom de principal du service (SPN) est inscrit au format *MSSQLSvc/\<FQDN>*:*\<port_tcp>*. Les instances nommées et l’instance par défaut sont inscrites en tant que *MSSQLSvc* et seule la valeur de *\<port_tcp>* différencie les instances.  
+ Lors du démarrage d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’inscrire le nom SPN du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de l’arrêt de l’instance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’annuler l’inscription du nom SPN. Pour une connexion TCP/IP, le nom de principal du service (SPN) est inscrit au format *MSSQLSvc/\<FQDN>* : *\<port_tcp>* . Les instances nommées et l’instance par défaut sont inscrites en tant que *MSSQLSvc* et seule la valeur de *\<port_tcp>* différencie les instances.  
   
- Pour les autres connexions qui prennent en charge Kerberos, le nom SPN est inscrit au format *MSSQLSvc/\<FQDN>*/*\<nom_instance>* pour une instance nommée. Le format pour l’inscription de l’instance par défaut est *MSSQLSvc/\<FQDN>*.  
+ Pour les autres connexions qui prennent en charge Kerberos, le nom SPN est inscrit au format *MSSQLSvc/\<FQDN>* / *\<nom_instance>* pour une instance nommée. Le format pour l’inscription de l’instance par défaut est *MSSQLSvc/\<FQDN>* .  
   
  Une intervention manuelle peut être requise pour inscrire ou annuler l'inscription du SPN si le compte de service ne possède pas les autorisations requises pour ces actions.  
   
@@ -177,7 +177,7 @@ WHERE session_id = @@SPID;
   
  Si l'annulation de l'inscription du SPN échoue pendant l'arrêt, cet échec est consigné dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'arrêt se poursuit.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Noms de principaux du service &#40;noms SPN&#41; dans les connexions clientes &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

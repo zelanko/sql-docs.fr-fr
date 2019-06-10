@@ -14,41 +14,26 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3de9c31febeecca588464cfb386543347ddad852
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f710800d3ee7cbbb7a1fadef330289c26afe0d56
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126579"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793752"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurer une stratégie de basculement automatique flexible pour un groupe de disponibilité Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Cette rubrique explique comment configurer la stratégie de basculement flexible pour un groupe de disponibilité Always On à l’aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Une stratégie de basculement flexible vous offre un contrôle granulaire sur les conditions qui entraînent un basculement automatique d'un groupe de disponibilité. En changeant les conditions d'échec qui déclenchent un basculement automatique et la fréquence des contrôles d'intégrité, vous pouvez augmenter ou diminuer la probabilité d'un basculement automatique pour assurer le contrat de niveau de service relatif à la haute disponibilité.  
-  
--   **Avant de commencer :**  
-  
-     [Limitations relatives aux basculements automatiques](#Limitations)  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour configurer la stratégie de basculement flexible à l'aide de :**  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+ 
     > [!NOTE]  
-    >  La stratégie de basculement flexible d'un groupe de disponibilité ne peut pas être configurée à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Limitations"></a> Limitations relatives aux basculements automatiques  
+ 
+## <a name="Limitations"></a> Limitations relatives aux basculements automatiques  
   
 -   Pour qu'un basculement automatique se produise, le réplica principal et un réplica secondaire doivent être configurés pour le mode de disponibilité avec validation synchrone et basculement automatique et le réplica secondaire doit être synchronisé avec le réplica principal.  
   
@@ -56,15 +41,13 @@ ms.locfileid: "54126579"
   
 -   Si un groupe de disponibilité dépasse le seuil d'échec WSFC, le cluster WSFC ne tente pas un basculement automatique du groupe de disponibilité. En outre, le groupe de ressources WSFC du groupe de disponibilité reste à l'état d'échec jusqu'à ce que l'administrateur de cluster mette manuellement le groupe de ressources en ligne ou jusqu'à ce que l'administrateur de base de données exécute un basculement manuel du groupe de disponibilité. Le *seuil d'échec WSFC* est le nombre maximal d'échecs autorisés pour le groupe de disponibilité au cours d'une période donnée. La période par défaut est de six heures, et la valeur par défaut du nombre maximal d’échecs au cours de cette période est *n*-1, où *n* est le nombre de nœuds de WSFC. Pour modifier les valeurs de seuil/d'échec pour un groupe de disponibilité donné, utilisez la console du gestionnaire de basculement WSFC.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
+   
+##  <a name="Permissions"></a> Autorisations  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
-  
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer la stratégie de basculement flexible pour un nouveau groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier la stratégie d'un groupe de disponibilité existant|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -152,7 +135,7 @@ ms.locfileid: "54126579"
   
 -   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

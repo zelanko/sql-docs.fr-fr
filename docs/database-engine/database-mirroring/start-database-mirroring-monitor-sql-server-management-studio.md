@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de3acb2eb2d8d6e805e098ffa8a5f4d439c2d09c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d8c6f397892475177e26a9e55c5b22fb048484dd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214240"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795167"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>Démarrer le moniteur de mise en miroir de bases de données (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53214240"
   
  Pour plus d’informations sur le moniteur de mise en miroir de bases de données, consultez [Vue d’ensemble du moniteur de mise en miroir de bases de données](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   

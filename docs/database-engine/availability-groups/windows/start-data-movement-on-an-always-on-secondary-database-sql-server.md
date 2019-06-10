@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da9aa6724aadb63112414cd2a0055ccf5d865d81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06184565c25288a2b280ab6ae67d2f59b03eef7d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595557"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803539"
 ---
-# <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Démarrer un déplacement de données sur une base de données secondaire AlwaysOn (SQL Server) 
+# <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Démarrer un déplacement de données sur une base de données secondaire AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Cette rubrique contient des informations sur le démarrage de la synchronisation des données après avoir ajouté une base de données à un groupe de disponibilité Always On. Pour chaque nouveau réplica principal, les bases de données secondaires doivent être préparées sur les instances de serveur qui hébergent les réplicas secondaires. Puis, chacune de ces bases de données secondaires doit être attachée manuellement au groupe de disponibilité.  
@@ -62,7 +62,7 @@ ms.locfileid: "47595557"
   
 -   [Utiliser l’Assistant Ajouter une base données au groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

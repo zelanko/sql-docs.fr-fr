@@ -16,12 +16,12 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d1cc86315446a7744693a39105ea5e542f6885
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 3c9a7827c70f99db24c50704f2591b8288124d45
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65724390"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469674"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Amélioration d'une sortie d'erreur à l'aide du composant Script
 
@@ -35,7 +35,7 @@ ms.locfileid: "65724390"
 > [!NOTE]  
 >  Si vous souhaitez créer un composant que vous pouvez réutiliser plus facilement dans plusieurs tâches de flux de données et plusieurs packages, utilisez le code présenté dans cet exemple de composant Script comme point de départ pour un composant de flux de données personnalisé. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple indiqué ici utilise un composant Script configuré en tant que transformation pour ajouter la description d’erreur et le nom de colonne à des données de sortie d’erreur existantes dans le flux de données.  
   
  Pour plus d’informations sur la configuration du composant Script en vue de son utilisation comme transformation dans le flux de données, consultez [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) et [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -80,9 +80,12 @@ Public Class ScriptMain      ' VB
 
         If componentMetaData130 IsNot Nothing Then
 
-            If 0 = Row.ErrorColumn Then
+            If Row.ErrorColumn = 0 Then
                 ' 0 means no specific column is identified by ErrorColumn, this time.
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint."
+            ELSE If Row.ErrorColumn = -1 Then
+                ' -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables."
             Else
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn)
             End If
@@ -107,6 +110,11 @@ public class ScriptMain:      // C#
             {
                 Row.ColumnName = "Check the row for a violation of a foreign key constraint.";
             }
+            // -1 means you are using Table Lock for a Memory Optimised destination table which is not supported.
+            else if (Row.ErrorColumn == -1)
+            {
+                Row.ColumnName = "Table lock is not compatible with Memory Optimised tables.";
+            }
             else
             {
                 Row.ColumnName = componentMetaData130.GetIdentificationStringByID(Row.ErrorColumn);
@@ -116,7 +124,7 @@ public class ScriptMain:      // C#
 }
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)   
  [Utilisation de sorties d’erreur dans un composant de flux de données](../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   

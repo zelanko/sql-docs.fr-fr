@@ -13,13 +13,13 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 9deb380eb4c92b283afac6f1bdcbe3c85c98beb1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533967"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794740"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
 
@@ -139,9 +139,9 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
 -   **Mettre à jour les statistiques** - Afin d’optimiser les performances des requêtes, il est recommandé de mettre à jour les statistiques sur toutes les bases de données après une mise à niveau. Utilisez la procédure stockée **sp_updatestats** pour mettre à jour les statistiques des tables définies par l’utilisateur dans les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
+-   **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations sur la configuration de la surface d'exposition, consultez le fichier Lisezmoi de cette version.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilité descendante_supprimé](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

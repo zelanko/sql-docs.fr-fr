@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08986df74a5df440bf1cfb589cbe39680bce8a56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a5def9aacdd9b85b547246ca602a2355e55937b6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788837"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775757"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>Services SCM - Définir le démarrage automatique d’une instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "47788837"
   
 3.  Dans le volet d’informations, cliquez avec le bouton droit sur le nom de l’instance qui devra démarrer automatiquement, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>**, définissez **Mode de démarrage** sur **Automatique**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server \<***nom_instance***>** , définissez **Mode de démarrage** sur **Automatique**.  
   
 5.  Cliquez sur **OK**, puis fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Empêcher le démarrage automatique d’une instance de SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)   
  [Se connecter à un autre ordinateur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)   
  [Configurer WMI pour afficher l'état du serveur dans les outils SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  

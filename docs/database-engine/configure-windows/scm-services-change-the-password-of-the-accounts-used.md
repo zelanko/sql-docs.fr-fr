@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7860afbb60d0911c61c479bb19e2b39c5b1e75e9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8f9b16bf035d2666eb3f6237a6a04aa49dd8a0fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606569"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775825"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Services SCM - Changer le mot de passe des comptes utilisés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606569"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez être administrateur de l'ordinateur pour modifier le mot de passe utilisé par un service.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
@@ -57,9 +57,9 @@ ms.locfileid: "51606569"
   
 2.  Dans le Gestionnaire de configuration SQL Server, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (**\<nom_instance>**)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (** \<nom_instance> **)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (**\<nom_instance>**)**, sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (** \<nom_instance> **)** , sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
   
      Le mot de passe prend effet immédiatement, sans qu'il soit nécessaire de redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,13 +69,13 @@ ms.locfileid: "51606569"
   
 2.  Dans le Gestionnaire de configuration SQL Server, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server Agent (**\<nom_instance>**)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server Agent (** \<nom_instance> **)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server Agent (**\<nom_instance>**)**, sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server Agent (** \<nom_instance> **)** , sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
   
      Sur une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le mot de passe prend effet immédiatement, sans redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sur une instance cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion, et nécessite un redémarrage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures concernant la gestion des services &#40;Gestionnaire de configuration SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 6e92c372d4e71401e101b4f915bf4c6807cf0064
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126349"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795560"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "54126349"
   
 -   les derniers rôles connus de chaque partenaire (principal ou miroir).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour surveiller la mise en miroir de bases de données, vous devez être membre du rôle de serveur fixe **sysadmin** ou membre du rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** sur l’instance de serveur. Si vous êtes membre de **sysadmin** ou **dbm_monitor** sur une seule des instances de serveur partenaire, le moniteur peut se connecter uniquement à ce partenaire ; il ne peut pas extraire d’informations de l’autre partenaire.  
   
  Si vous êtes uniquement membre de **dbm_monitor** sur une instance de serveur, vous disposez d’autorisations limitées sur cette instance de serveur. Vous pourrez afficher uniquement la ligne du dernier état. Si vous vous connectez à une instance de serveur en utilisant les autorisations **dbm_monitor** , le moniteur de mise en miroir de bases de données vous informe que vous disposez d’autorisations limitées.  
@@ -66,9 +66,9 @@ ms.locfileid: "54126349"
  *<PRINCIPAL_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur principal. Ce nom respecte le format suivant :  
   
- *<NOM_SYSTÈME>*[**\\**_<nom_instance>_]  
+ *<NOM_SYSTÈME>* [ **\\** _<nom_instance>_ ]  
   
- où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : _<NOM_SYSTÈME>_**\\**_<nom_instance>_.  
+ où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : _<NOM_SYSTÈME>_ **\\** _<nom_instance>_ .  
   
  *<MIRROR_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur miroir. Le format est identique à celui du serveur principal.  
@@ -83,7 +83,7 @@ ms.locfileid: "54126349"
   
  Un administrateur système peut afficher la configuration actuelle des avertissements pour la base de données en sélectionnant la page à onglets **Avertissements** . À partir de là, l’administrateur peut lancer la boîte de dialogue **Définir les seuils d’avertissement** pour activer et configurer un ou plusieurs seuils d’avertissement.  
   
- Dans la bannière située au-dessus des onglets, le volet d’information indique l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :**_\<date>\<heure>_. En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
+ Dans la bannière située au-dessus des onglets, le volet d’information indique l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :** _\<date>\<heure>_ . En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
   
 ## <a name="action-menu"></a>Menu Action  
  Le menu **Action** comprend toujours les commandes suivantes :  
@@ -104,7 +104,7 @@ ms.locfileid: "54126349"
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   

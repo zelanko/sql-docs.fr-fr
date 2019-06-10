@@ -23,20 +23,20 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334456"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719441"
 ---
 # <a name="hints-transact-sql---join"></a>Indicateurs (Transact-SQL) - Jointure
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Les indicateurs de jointure spécifient l'application, par l'optimiseur de requête, d'une stratégie de jointure entre deux tables dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour obtenir des informations générales sur les jointures et la syntaxe de jointure, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
-> [!IMPORTANT]  
->  Étant donné que l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d’exécution pour une requête, nous vous recommandons d’utiliser les indicateurs, y compris \<join_hint>, uniquement en dernier recours et si vous êtes un administrateur de base de données ou un développeur expérimenté.
+> [!CAUTION]  
+>  Étant donné que l'optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionne généralement le meilleur plan d'exécution pour une requête, nous vous recommandons de ne recourir à ces conseils qu'en dernier ressort et seulement si vous êtes un développeur ou un administrateur de base de données expérimenté.
   
  **S’applique à :**  
   
@@ -69,7 +69,7 @@ ms.locfileid: "57334456"
   
  REMOTE ne peut être utilisé que pour les opérations INNER JOIN.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les indicateurs de jointure sont spécifiés dans la clause FROM d'une requête. Les indicateurs de jointure appliquent une stratégie de jointure entre deux tables. Si un indicateur de jointure est spécifié pour deux tables, l'optimiseur de requêtes applique automatiquement l'ordre de jointure de toutes les tables jointes de la requête, d'après la position des mots clés ON. Lorsqu'une jointure CROSS JOIN est utilisée sans la clause ON, l'ordre de jointure peut être indiqué au moyen de parenthèses.  
   
 ## <a name="examples"></a>Exemples  
@@ -85,7 +85,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>b. Utilisation d'LOOP  
+### <a name="b-using-loop"></a>B. Utilisation d'LOOP  
  L'exemple suivant spécifie que l'opération `JOIN` figurant dans la requête est effectuée par une jointure `LOOP`. L'exemple utilise la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -108,7 +108,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

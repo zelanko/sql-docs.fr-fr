@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042438"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798144"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042438"
 > [!IMPORTANT]  
 >  Vérifiez que votre environnement est correctement configuré pour se connecter à un groupe de disponibilité. Pour plus d’informations, consultez [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Recommandations pour les ordinateurs qui hébergent des réplicas de disponibilité (système Windows)  
+##  <a name="ComputerRecommendations"></a> Recommandations pour les ordinateurs qui hébergent des réplicas de disponibilité (système Windows)  
   
 -   **Systèmes comparables :**  Pour un groupe de disponibilité donné, tous les réplicas de disponibilité doivent s’exécuter sur des systèmes comparables qui peuvent gérer des charges de travail identiques.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042438"
   
 3.  Utilisez l’applet de commande **Get-ClusterResource** pour rechercher la ressource de nom de réseau, puis utilisez l’applet de commande **Set-ClusterParameter** pour définir la valeur de **HostRecordTTL** , comme suit :  
   
-     Get-ClusterResource "*NomRessourceRésesau>\<*" | Set-ClusterParameter HostRecordTTL *\<DuréeEnSecondes>*  
+     Get-ClusterResource "*NomRessourceRésesau>\<* " | Set-ClusterParameter HostRecordTTL *\<DuréeEnSecondes>*  
   
      L'exemple PowerShell suivant définit HostRecordTTL sur 300 secondes pour une ressource de nom réseau nommée `SQL Network Name (SQL35)`.  
   
@@ -389,7 +389,7 @@ ms.locfileid: "59042438"
   
 -   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Connectivité client Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  

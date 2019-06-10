@@ -18,13 +18,13 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 089464d0c92154a68c50f1c9d1e5c4a2156f5bed
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+manager: jroth
+ms.openlocfilehash: eaa665f77bf549cbe956c2bf658585f12a8be0fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49419414"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794685"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Afficher et lire les fichiers journaux d’installation de SQL Server
 
@@ -64,7 +64,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ## <a name="summarytxt-file"></a>Fichier Summary.txt 
   
-### <a name="overview"></a>Vue d'ensemble  
+### <a name="overview"></a>Vue d’ensemble  
  Ce fichier montre les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détectés au cours de l'installation, l'environnement du système d'exploitation, les valeurs des paramètres de ligne de commande (si elles sont spécifiées) et l'état d'ensemble de chaque fichier MSI/MSP exécuté.
   
  Le journal comprend les sections suivantes :
@@ -92,7 +92,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ## <a name="summarymachinenameyyyymmddhhmmsstxt-file"></a>Fichier Summary_\<NomOrdinateur>_AAAAMMJJ_HHMMss.txt
   
-### <a name="overview"></a>Vue d'ensemble  
+### <a name="overview"></a>Vue d’ensemble  
  Le fichier de base summary_engine est semblable au fichier résumé et est généré au cours du flux de travail principal.
   
 ### <a name="location"></a>Emplacement  
@@ -101,7 +101,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ## <a name="detailtxt-file"></a>Fichier Detail.txt
   
-### <a name="overview"></a>Vue d'ensemble
+### <a name="overview"></a>Vue d’ensemble
  Detail.txt est généré pour le flux de travail principal, par exemple l'installation ou la mise à niveau, et fournit les détails de l'exécution. Les journaux contenus dans le fichier sont générés en fonction de l’heure à laquelle chaque action d’installation a été appelée. Le fichier texte indique l’ordre d’exécution des actions, ainsi que leurs dépendances.  
   
 ### <a name="location"></a>Emplacement  
@@ -111,7 +111,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
     
 ## <a name="msi-log-files"></a>Fichiers journaux MSI
   
-### <a name="overview"></a>Vue d'ensemble  
+### <a name="overview"></a>Vue d’ensemble  
  Les fichiers journaux MSI fournissent des détails sur le processus du package d'installation. Ils sont générés par le programme MSIEXEC lors de l'installation du package spécifié.  
   
  Types de fichiers journaux MSI :
@@ -127,7 +127,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ## <a name="configurationfileini-file"></a>Fichier ConfigurationFile.ini
   
-### <a name="overview"></a>Vue d'ensemble  
+### <a name="overview"></a>Vue d’ensemble  
  Le fichier de configuration contient les paramètres d'entrée fournis au cours de l'installation. Vous pouvez l'utiliser pour redémarrer l'installation sans entrer les paramètres manuellement. Toutefois, les mots de passe pour les comptes, PID et certains paramètres ne sont pas enregistrés dans le fichier de configuration. Les paramètres peuvent être soit ajoutés au fichier, soit fournis à l'aide de la ligne de commande ou de l'interface utilisateur du programme d'installation. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ### <a name="location"></a>Emplacement  
@@ -135,7 +135,7 @@ Les sections suivantes décrivent les fichiers journaux d'installation de [!INCL
   
 ## <a name="systemconfigurationcheckreporthtm-file"></a>Fichier SystemConfigurationCheck_Report.htm
   
-### <a name="overview"></a>Vue d'ensemble  
+### <a name="overview"></a>Vue d’ensemble  
  Le rapport de vérification de la configuration du système contient une brève description de chaque rôle exécuté et de l'état d'exécution.
   
 ### <a name="location"></a>Emplacement  

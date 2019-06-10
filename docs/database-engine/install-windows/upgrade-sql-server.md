@@ -12,13 +12,13 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 3cbb53753c9a91ee67dfcd479fa121c9b2a8586a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 80d9fbfdd790b7102148cd0f8485168cc4660881
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802345"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794710"
 ---
 # <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +47,7 @@ Cette section contient les articles suivants :
 -   [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 -   [Mettre à niveau vers une autre édition de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md)   
  [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)   
  [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   

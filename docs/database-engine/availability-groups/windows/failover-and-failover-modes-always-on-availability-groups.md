@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e20ad7cab67a87dd7bb76be0117ee87752e3e66f
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+manager: jroth
+ms.openlocfilehash: 88ead09e44eec80ae387ad65b721b2fa62227c02
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765790"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -353,7 +353,7 @@ ms.locfileid: "54226666"
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   

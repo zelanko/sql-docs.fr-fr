@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429335"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767717"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Nombre maximum de threads de travail  
  Le changement prend effet immédiatement après l’exécution de [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

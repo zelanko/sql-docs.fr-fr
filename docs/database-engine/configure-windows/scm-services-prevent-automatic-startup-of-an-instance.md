@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: c2116101f7e9b0ab51cf3e7c5e4066f0e55a0d1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590275"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771880"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Services SCM - Empêcher le démarrage automatique d'une instance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "53590275"
   
 3.  Dans le volet d’informations, cliquez avec le bouton droit sur **MSSQLServer**, puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server \<**_nom_instance_**>**, sous l’onglet **Service**, dans la zone **Général**, définissez la valeur de **Mode de démarrage** sur **Manuel**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server \<** _nom_instance_ **>** , sous l’onglet **Service**, dans la zone **Général**, définissez la valeur de **Mode de démarrage** sur **Manuel**.  
   
-5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de SQL Server \<**_nom_instance_**>** et fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de SQL Server \<** _nom_instance_ **>** et fermez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

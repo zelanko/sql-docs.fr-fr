@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255374"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775231"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Afficher ou modifier des propriétés de serveur (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "54255374"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
@@ -155,14 +155,14 @@ GO
   
 2.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<**_nom_instance_**>)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (\<** _nom_instance_ **>)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<**_nom_instance_**>)**, modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (\<** _nom_instance_ **>)** , modifiez les propriétés du serveur sous l’onglet **Service** ou **Avancé**, puis cliquez sur **OK**.  
   
 ##  <a name="FollowUp"></a> Suivi : Après avoir modifié les propriétés du serveur  
  Pour certaines propriétés, le serveur doit être redémarré afin d'appliquer les modification.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   

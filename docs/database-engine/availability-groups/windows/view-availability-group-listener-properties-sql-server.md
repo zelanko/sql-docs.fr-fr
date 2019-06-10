@@ -13,23 +13,17 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddfbbbac696ca55d3e114a34f567bd1712bde22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c111300429215baaa787611ffebb9103d7757a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667322"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780124"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment afficher les propriétés d’un *écouteur de groupe de disponibilité* Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
-  
--   **Pour afficher les propriétés d'un écouteur, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  **Pour afficher les propriétés d'un écouteur, procédez comme suit :**  
@@ -94,7 +88,7 @@ ms.locfileid: "47667322"
   
 -   [Supprimer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

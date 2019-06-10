@@ -18,51 +18,28 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133221"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793798"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configurer des sauvegardes sur des réplicas secondaires d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment configurer la sauvegarde sur des réplicas secondaires pour un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Pour avoir une présentation de la sauvegarde sur des réplicas secondaires, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Pour avoir une présentation de la sauvegarde sur des réplicas secondaires, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Avant de commencer :**  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour configurer la sauvegarde sur les réplicas secondaires à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Suivi :**  [Après la configuration de la sauvegarde sur les réplicas secondaires](#FollowUp)  
-  
--   [Pour obtenir des informations sur les paramètres de préférence de la sauvegarde](#ForInfoAboutBuPref)  
-  
--   [Contenu connexe](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
  Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
-###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
   
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour configurer la sauvegarde sur les réplicas secondaires en créant un groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un groupe de disponibilité ou un réplica de disponibilité|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -217,7 +194,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   

@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306166"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789434"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un réplica secondaire dans un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans SQL Server 2012 et 2014, la seule façon d’initialiser un réplica secondaire dans un groupe de disponibilité SQL Server Always On est d’utiliser la sauvegarde, la copie et la restauration. SQL Server 2016 introduit une nouvelle fonctionnalité pour initialiser un réplica secondaire : l’*amorçage automatique*. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette nouvelle fonctionnalité peut être utilisée lors de la création initiale d’un groupe de disponibilité ou quand une base de données lui est ajoutée. L’amorçage automatique est disponible dans toutes les éditions de SQL Server prenant en charge les groupes de disponibilité Always On et peut être utilisé avec les groupes de disponibilité traditionnels et les [groupes de disponibilité distribués](distributed-availability-groups.md).
 
-## <a name="considerations"></a>Observations
+## <a name="security"></a>Sécurité
 
-Voici des considérations sur l’utilisation de l’amorçage automatique :
+Les autorisations de sécurité varient selon le type de réplica à initialiser :
 
-* [Impact en termes de performances et de journal des transactions sur le réplica principal](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Disposition du disque](#disklayout)
-* [Sécurité](#security)
+* Pour un groupe de disponibilité traditionnel, les autorisations doivent être accordées au groupe de disponibilité sur le réplica secondaire quand il est joint au groupe de disponibilité. Dans Transact-SQL, utilisez la commande `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* Pour un groupe de disponibilité distribué où les bases de données du réplica à créer sont sur le réplica principal du deuxième groupe de disponibilité, aucune autorisation supplémentaire n’est nécessaire, car il s’agit déjà d’un réplica principal.
+* Pour un réplica secondaire sur le deuxième groupe de disponibilité d’un groupe de disponibilité distribué, vous devez utiliser la commande `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Ce réplica secondaire est amorcé à partir du réplica principal du deuxième groupe de disponibilité.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impact en termes de performances et de journal des transactions sur le réplica principal
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impact en termes de performances et de journal des transactions sur le réplica principal
 
 L’amorçage automatique peut ou non être pratique pour initialiser un réplica secondaire, selon la taille de la base de données, la vitesse du réseau et la distance entre le réplica principal et les réplicas secondaires. Prenons l’exemple suivant :
 
@@ -49,7 +48,7 @@ L’amorçage automatique est un processus monothread qui peut gérer jusqu’à
 
 La compression peut être utilisée pour l’amorçage automatique, mais elle est désactivée par défaut. L’activation de la compression réduit la bande passante réseau et accélère éventuellement le processus, mais l’inconvénient est une charge supplémentaire pour le processeur. Pour utiliser la compression pendant l’amorçage automatique, activez l’indicateur de trace 9567. Consultez [Régler la compression pour un groupe de disponibilité](tune-compression-for-availability-group.md).
 
-### <a name = "disklayout"></a> Disposition des disques
+## <a name = "disklayout"></a> Disposition des disques
 
 Dans SQL Server 2016 et antérieur, le dossier où la base de données est créée par l’amorçage automatique doit déjà exister et avoir le même chemin que sur le réplica principal. 
 
@@ -81,13 +80,6 @@ Si vous mélangez des chemins par défaut et non par défaut sur les réplicas p
 
 Pour rétablir le comportement de SQL Server 2016 et antérieur, activez l’indicateur de trace 9571. Pour plus d’informations sur la façon d’activer des indicateurs de trace, consultez [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Sécurité
-
-Les autorisations de sécurité varient selon le type de réplica à initialiser :
-
-* Pour un groupe de disponibilité traditionnel, les autorisations doivent être accordées au groupe de disponibilité sur le réplica secondaire quand il est joint au groupe de disponibilité. Dans Transact-SQL, utilisez la commande `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* Pour un groupe de disponibilité distribué où les bases de données du réplica à créer sont sur le réplica principal du deuxième groupe de disponibilité, aucune autorisation supplémentaire n’est nécessaire, car il s’agit déjà d’un réplica principal.
-* Pour un réplica secondaire sur le deuxième groupe de disponibilité d’un groupe de disponibilité distribué, vous devez utiliser la commande `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Ce réplica secondaire est amorcé à partir du réplica principal du deuxième groupe de disponibilité.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Créer un groupe de disponibilité par amorçage automatique
 
@@ -160,7 +152,7 @@ Si le réplica secondaire a utilisé l’amorçage automatique quand il a été 
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>Changer le mode d’amorçage d’un réplica
 
-Le mode d’amorçage d’un réplica peut être changé après la création du groupe de disponibilité : l’amorçage automatique peut donc être activé ou désactivé. L’activation de l’amorçage automatique après la création permet de créer une base de données à ajouter au groupe de disponibilité en utilisant l’amorçage automatique si elle a été créée avec la sauvegarde, la copie et la restauration. Exemple :
+Le mode d’amorçage d’un réplica peut être changé après la création du groupe de disponibilité : l’amorçage automatique peut donc être activé ou désactivé. L’activation de l’amorçage automatique après la création permet de créer une base de données à ajouter au groupe de disponibilité en utilisant l’amorçage automatique si elle a été créée avec la sauvegarde, la copie et la restauration. Par exemple :
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]

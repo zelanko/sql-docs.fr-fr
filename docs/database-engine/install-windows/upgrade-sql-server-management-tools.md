@@ -12,13 +12,13 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b15e0448bb230ff209b17cbe5c0bc719686193f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: acb334972a7d0fabf656fb5e34bff179f2c50f2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600719"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794756"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Mettre à jour les outils d'administration SQL Server
 
@@ -50,7 +50,7 @@ Considérez les points suivants avant de procéder à une mise à niveau vers [!
   
 -   La messagerie de base de données, également appelée SQLiMail, est mise à niveau avec le composant [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Par défaut, la messagerie sera désactivée après la mise à niveau. Toutes les mises à jour de schéma doivent être harmonisées avec un script de mise à jour après la mise à niveau.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilité descendante_supprimé](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  

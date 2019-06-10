@@ -9,13 +9,13 @@ ms.technology: high-availability
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f45b0a5b792f3fb8de9f2ee46fb15984ed520b24
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+manager: jroth
+ms.openlocfilehash: 6f43477ebb45812fb4e71ca501296518ed3950c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533392"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795506"
 ---
 # <a name="database-mirroring-system-object-reference"></a>Objet système de mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "59533392"
 | &nbsp; | &nbsp; |
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
 
   

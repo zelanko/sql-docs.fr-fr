@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801993"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775260"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56801993"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des programmes exécutables qui s'exécutent en tant que service Windows. Les programmes qui s'exécutent en tant que service Windows peuvent continuer à fonctionner sans afficher d'activité sur l'écran de l'ordinateur.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] service**  
- Processus exécutable qui est le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être l'instance par défaut (avec une limite d'une par ordinateur), ou peut être l'une des nombreuses instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour déterminer quelles instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installées sur l'ordinateur. L’instance par défaut (si vous l’installez) est répertoriée sous **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. Les instances nommées (si vous les installez) sont répertoriées sous **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nom_instance>)**. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé en tant que **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**.  
+ Processus exécutable qui est le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être l'instance par défaut (avec une limite d'une par ordinateur), ou peut être l'une des nombreuses instances nommées du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Utilisez le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour déterminer quelles instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installées sur l'ordinateur. L’instance par défaut (si vous l’installez) est répertoriée sous **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** . Les instances nommées (si vous les installez) sont répertoriées sous **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nom_instance>)** . Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé en tant que **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** .  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Agent**  
  Service Windows qui exécute des tâches administratives planifiées, appelées travaux et alertes. Pour plus d’informations, consultez [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "56801993"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Par défaut, seuls les membres du groupe des administrateurs locaux peuvent démarrer, arrêter, interrompre, reprendre ou redémarrer un service. Pour accorder aux non-administrateurs la capacité de gérer des services, consultez [Comment accorder aux utilisateurs des droits de gestion des services dans Windows Server 2003](https://support.microsoft.com/kb/325349). (le processus est semblable sur d'autres versions de Windows).  
   
  L’arrêt du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à l’aide de la commande [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** requiert l’appartenance aux rôles serveur fixes **sysadmin** ou **serveradmin** , et n’est pas transférable.  
@@ -354,7 +354,7 @@ ms.locfileid: "56801993"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d'ensemble de la documentation d'installation de SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)   
  [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)   

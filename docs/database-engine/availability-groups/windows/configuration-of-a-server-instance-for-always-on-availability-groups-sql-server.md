@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86082ab7b584e2aa0cccce1165617a574ca9b080
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 65feba8f50d4f293e97f9443c0ff006bf40b5029
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973448"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772617"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>Activer la fonctionnalité de groupe de disponibilité Always On pour une instance de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +28,7 @@ ms.locfileid: "57973448"
   
 > [!IMPORTANT]  
 >  Pour obtenir des informations de base sur la configuration requise pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les restrictions pour les nœuds de clustering de basculement Windows Server (WSFC) et pour les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
- **Dans cette rubrique :**  
-  
--   [Termes et définitions](#TermsAndDefinitions)  
-  
--   [Pour configurer une instance de serveur pour la prise en charge des groupes de disponibilité Always On](#ConfigSI)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
-  
+   
 ##  <a name="TermsAndDefinitions"></a> Termes et définitions  
  [Groupes de disponibilité AlwaysOn](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  Solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert.  
@@ -97,7 +87,7 @@ ms.locfileid: "57973448"
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   

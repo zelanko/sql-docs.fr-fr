@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421186"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462502"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Une table optimisée en mémoire qui contient 200 Go de données nécessite plus
 
 Dans le cas d’une base de données hébergée dans le service cloud Azure SQL Database, le niveau de service que vous choisissez a un impact sur la quantité de mémoire active que votre base de données est autorisée à consommer. Vous devez prévoir de surveiller l’utilisation de la mémoire de votre base de données à l’aide d’une alerte. Pour plus d’informations, consultez :
 
-- Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
+- Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Surveiller le stockage OLTP en mémoire](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de table optimisées en mémoire
@@ -118,7 +118,7 @@ Pour savoir si les fonctionnalités OLTP en mémoire peuvent améliorer les perf
 
 
 
-## <a name="b-unsupported-features"></a>b. Fonctionnalités non prises en charge
+## <a name="b-unsupported-features"></a>B. Fonctionnalités non prises en charge
 
 Les fonctionnalités qui ne sont pas prises en charge dans certains scénarios OLTP en mémoire sont décrites dans :
 
@@ -214,9 +214,9 @@ Pour une présentation des index de tables optimisées en mémoire, consultez :
 
 #### <a name="hash-indexes"></a>Index de hachage
 
-Les index de hachage peuvent être les plus rapides pour accéder à une ligne spécifique par le biais de la valeur exacte de sa clé primaire, à l’aide de l’opérateur '**=**'.
+Les index de hachage peuvent être les plus rapides pour accéder à une ligne spécifique par le biais de la valeur exacte de sa clé primaire, à l’aide de l’opérateur ' **=** '.
 
-- Les opérateurs inexacts comme '**!=**', '**>**' ou '**BETWEEN**' nuiront aux performances si vous les utilisez avec un index de hachage.
+- Les opérateurs inexacts comme ' **!=** ', ' **>** ' ou '**BETWEEN**' nuiront aux performances si vous les utilisez avec un index de hachage.
 
 - Un index de hachage peut ne pas constituer le meilleur choix si la vitesse de duplication de la valeur de clé est trop élevée.
 

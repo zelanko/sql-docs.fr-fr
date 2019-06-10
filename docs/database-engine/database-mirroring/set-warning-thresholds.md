@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfebc4164264e2deeb02ab5f8e9f8b8b6ef64655
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753907"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795204"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47753907"
 -   **Connecté à**  *nom_instance_serveur*  
   
     > [!NOTE]  
-    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)**.  
+    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)** .  
   
  Le nom de chaque instance de serveur partenaire est affiché dans un champ d' *instance de serveur et d'état de la connexion* distinct. Le premier champ affiche le serveur principal au démarrage du moniteur.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "47753907"
  **OK**  
  Quand vous cliquez sur **OK** , cette boîte de dialogue se ferme et les valeurs actuellement spécifiées pour les seuils d’avertissement s’affichent dans la grille **Seuils** de la page à onglets **Avertissements**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un seuil est applicable à un seul partenaire à la fois, mais nous vous recommandons de définir un seuil pour un événement donné sur les deux partenaires, afin de vous assurer que l'avertissement persiste lors du basculement de la base de données. Le seuil approprié pour chaque partenaire dépend des capacités de performance du système du partenaire.  
   
  Un événement est écrit dans le journal des événements pour une performance uniquement si sa valeur est identique ou supérieure au seuil au moment de la mise à jour de la table d'état. Si une valeur maximale atteint momentanément le seuil entre des mises à jour d'état, cette valeur est ignorée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

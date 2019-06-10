@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780272"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Utiliser l’Assistant Basculement d’un groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "54255924"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -60,7 +60,7 @@ ms.locfileid: "54255924"
   
 4.  Les informations présentées dans la page d' **Introduction** varient selon qu'un réplica secondaire est éligible ou non à un basculement planifié. Si cette page indique «**Effectuer un basculement planifié pour ce groupe de disponibilité**», vous pouvez basculer le groupe de disponibilité sans perte de données.  
   
-5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Dans un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (**_#_**)**  », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
+5.  Dans la page **Sélectionner le nouveau réplica principal** , vous pouvez afficher l’état du réplica principal actuel et du quorum WSFC avant de choisir le réplica secondaire qui deviendra le nouveau réplica principal ( *cible de basculement*). Pour un basculement manuel planifié, veillez à sélectionner un réplica secondaire dont la valeur **Disponibilité du basculement** est «**Aucune perte de données**». Dans un basculement forcé, pour toutes les cibles de basculement possibles, cette valeur sera « **Perte de données, avertissements (** _#_ **)**  », où *#* indique le nombre d’avertissements qui existent pour un réplica secondaire donné. Pour afficher les avertissements d’une cible de basculement donnée, cliquez sur sa valeur « Disponibilité de basculement ».  
   
      Pour plus d'informations, consultez la [page Sélectionner le nouveau réplica principal](#SelectNewPrimaryReplica), plus loin dans cette rubrique.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "54255924"
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Se connecter au réplica** , l'annulation de l'Assistant provoque sa fermeture sans effectuer aucune action.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

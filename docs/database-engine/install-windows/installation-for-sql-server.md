@@ -16,13 +16,13 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: e85f782e8229d6f1515ba9265cfe3e7c8910318a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 230626368ee6ec7048a0a906c5cbe0c404dbe1c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801023"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794843"
 ---
 # <a name="sql-server-installation"></a>Installation de SQL Server
 
@@ -85,6 +85,6 @@ Décrit comment préparer l'ordinateur pour [!INCLUDE[ssNoVersion](../../include
   
 Consultez le [Centre de mise à jour SQL Server](https://msdn.microsoft.com/library/ff803383.aspx) pour obtenir des liens et des informations concernant toutes les versions de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]prises en charge.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Nouveautés liées à l'installation de SQL Server](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
 [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  

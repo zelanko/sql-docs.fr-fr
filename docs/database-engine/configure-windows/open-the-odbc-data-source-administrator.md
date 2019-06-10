@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 15635f99ee6ecc20fd0341f04f6cf5caaac74914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676780"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772200"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Ouvrir l'Administrateur de la source de données ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,18 @@ ms.locfileid: "47676780"
   
 2.  Dans le **Panneau de configuration**, cliquez sur **Outils d'administration**.  
   
-3.  Dans **Outils d’administration**, cliquez sur **Sources de données (ODBC)**.  
+3.  Dans **Outils d’administration**, cliquez sur **Sources de données (ODBC)** .  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Pour ouvrir l'Administrateur de la source de données ODBC dans Windows Server 2008  
   
-1.  Dans le menu **Démarrer** , pointez sur **Outils d’administration**, puis cliquez sur **Sources de données (ODBC)**.  
+1.  Dans le menu **Démarrer** , pointez sur **Outils d’administration**, puis cliquez sur **Sources de données (ODBC)** .  
 
 
 > [!NOTE]  
 >  Pour les connexions à l’authentification Azure Active Directory pour SQL Database, installez le pilote le plus récent, tel que le [Pilote ODBC 13.1 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vérifier la version du pilote ODBC pour SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a990088feab172954f82b3be34a505202626c7d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3f3b6bfdb766ab2007591ed661fe89e81b813c04
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132799"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799507"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurer un serveur pour l’écoute sur un port TCP spécifique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../include
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Dans la zone **Port TCP**_, dans_ **Properties** area box, in the **TCP Port** box, type the port number you want this Port TCP address to listen on, and then click **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
+4.  Dans la zone **Port TCP** _, dans_ **Properties** area box, in the **TCP Port** box, type the port number you want this Port TCP address to listen on, and then click **OK**. Plusieurs ports peuvent être spécifiés en les séparant par une virgule.
 
     > [!NOTE] 
     > Si le paramètre **Écouter tout** sous l’onglet **Protocole** a la valeur « Oui », seules les valeurs **Port TCP** et **TCP Dynamic Port** (Port TCP dynamique) sous la section **IPAll** seront utilisées et les sections **IP**_n_ individuelles seront ignorées dans leur intégralité. Si le paramètre **Écouter tout** a la valeur « Non », les paramètres **Port TCP** et **Port TCP dynamique** sous la section **IPAll** seront ignorés et les paramètres **Port TCP**, **Port TCP dynamique** et **Activé** des sections **IP**_n_ individuelles seront utilisés à la place.
@@ -64,7 +64,7 @@ Comme le port 1433 est la norme connue pour [!INCLUDE[ssNoVersion](../../include
   
 5.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   
-6.  Dans le volet Détails, cliquez avec le bouton droit sur **SQL Server (**\<nom_instance>**)** puis cliquez sur **Redémarrer** pour arrêter et redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  Dans le volet Détails, cliquez avec le bouton droit sur **SQL Server (** \<nom_instance> **)** puis cliquez sur **Redémarrer** pour arrêter et redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="connecting"></a>Connecting  
 Après avoir configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour écouter un port spécifique, il existe trois manières de vous connecter à un port spécifique avec une application cliente :  
@@ -73,7 +73,7 @@ Après avoir configuré [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 -   Créez un alias sur le client, en spécifiant le numéro du port.  
 -   Programmer le client pour une connexion à l'aide d'une chaîne de connexion personnalisée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer ou modifier un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Service SQL Server Browser](../../tools/configuration-manager/sql-server-browser-service.md)  
   

@@ -15,51 +15,29 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cde3691b20ff9a674a64e4f7f997a8919594c93a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201918"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801007"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Supprimer un réplica secondaire d'un groupe de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment supprimer un réplica secondaire d’un groupe de disponibilité Always On à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ 
+   
+##  <a name="Restrictions"></a> Limitations et restrictions  
   
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Configuration requise](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour supprimer un réplica secondaire, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Suivi :**  [Après avoir supprimé un réplica secondaire](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a> Limitations et restrictions  
-  
--   Cette tâche est prise en charge uniquement sur le réplica principal.  
-  
+-   Cette tâche est prise en charge uniquement sur le réplica principal.    
 -   Seul un réplica secondaire peut être supprimé d'un groupe de disponibilité.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+## <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal du groupe de disponibilité.  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -124,7 +102,7 @@ ms.locfileid: "53201918"
   
  La suppression d'un réplica provoque l'arrêt de la réception des données. Après qu'un réplica secondaire a confirmé qu'il a été supprimé du magasin global, le réplica supprime les paramètres de groupe de disponibilité de ses bases de données, lesquelles demeurent sur l'instance de serveur locale dans l'état RECOVERING.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)   
  [Supprimer un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  

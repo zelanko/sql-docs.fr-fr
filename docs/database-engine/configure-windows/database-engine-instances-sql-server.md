@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807937"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799077"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "47807937"
 |Explique comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler pour capturer les traces de demandes d'applications arrivant à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ces traces peuvent être relues pour des activités telles que le test des performances ou le diagnostic de problèmes.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Décrit les fonctionnalités de capture de données modifiées (CDC) et de suivi des modifications, ainsi que la manière d'utiliser ces fonctionnalités pour effectuer le suivi des modifications apportées aux données d'une base de données.|[Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Explique comment utiliser la visionneuse du fichier journal pour rechercher et afficher les erreurs et les messages de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans différents journaux, tels que l'historique des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les journaux SQL Server et les journaux d'événements Windows.|[Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)|  
-|Explique comment utiliser l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour analyser les bases de données et faire des recommandations en vue de résoudre les problèmes potentiels liés aux performances.|[Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Explique comment utiliser l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour analyser les bases de données et faire des recommandations en vue de résoudre les problèmes potentiels liés aux performances.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Explique comment les administrateurs de base de données de production peuvent établir une connexion de diagnostic aux instances lorsque les connexions standard ne sont pas acceptées.|[Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Explique comment utiliser la fonctionnalité des serveurs distants déconseillés pour autoriser l'accès d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une autre. Le mécanisme recommandé pour cette fonctionnalité est un serveur lié.|[Serveurs distants](../../database-engine/configure-windows/remote-servers.md)|  
 |Décrit les fonctionnalités de Service Broker pour les applications de messagerie et de file d'attente et fournit des pointeurs vers la documentation de Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Décrit comment utiliser l'extension du pool de mémoires tampons pour permettre l'intégration transparente du stockage d'accès aléatoire non volatile (disques SSD) au pool de mémoires tampons du moteur de base de données de façon à améliorer considérablement le débit d'E/S.|[Fichier d'extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Application sqlservr](../../tools/sqlservr-application.md)   
  [Fonctionnalités de base de données](../../relational-databases/database-features.md)   
  [Fonctionnalités entre les instances du moteur de base de données](../../relational-databases/database-engine-cross-instance-features.md)  

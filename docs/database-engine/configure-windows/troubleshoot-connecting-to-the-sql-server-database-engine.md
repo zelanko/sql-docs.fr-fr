@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d8610467022235207baca20b318971d33671998
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+manager: jroth
+ms.openlocfilehash: d54ee0a26e82c660c93e8c1f185c4e60e8b75805
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775252"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ Avant de résoudre un problème de connexion à partir d’un autre ordinateur, 
 2. Dans la page de démarrage, tapez **SQL Server Management Studio**ou, sur des versions plus anciennes de Windows, dans le menu Démarrer, pointez sur **Tous les programmes**, sur **Microsoft SQL Server**, puis cliquez sur **SQL Server Management Studio**.
 3. Dans la zone **Type de serveur** de la boîte de dialogue **Se connecter au serveur** , sélectionnez **Moteur de base de données**. Dans la zone **Authentification** , sélectionnez **Authentification Windows**. Dans la boîte **Nom du serveur**, tapez l’un des types de connexion suivants :
 
-   |Connexion à|Type| Exemple|
+   |Connexion à|Type|Exemple|
    |:-----------------|:---------------|:-----------------|
    |Instance par défaut|`<computer name>`|`ACCNT27`|
    |Instance nommée|`<computer name\instance name>`|`ACCNT27\PAYROLL`|

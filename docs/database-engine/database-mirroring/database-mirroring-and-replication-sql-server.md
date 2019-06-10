@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40035d23d7414aa00f44f22411244ca7452ccafd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: c10d9627e09630270779c00cbe5739885ae8c94e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124869"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774806"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Mise en miroir de bases de données et réplication (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "54124869"
 |Mode hautes performances|Si le miroir n'est pas disponible, la base de données principale s'exécute sans filet (elle n'est pas mise en miroir). Toutefois, l'Agent de lecture du journal réplique les transactions renforcées sur le miroir. Si le service est forcé et que le serveur miroir joue le rôle de principal, l'Agent de lecture du journal travaille en fonction du miroir et commence à collecter les nouvelles transactions.<br /><br /> Sachez que la durée de latence de la réplication augmente si le miroir se trouve derrière le principal.|  
 |Mode haute sécurité sans basculement automatique|Toutes les transactions validées sont renforcées sur le disque dur du miroir. L'Agent de lecture du journal ne réplique que les transactions renforcées du miroir. Si le miroir n'est pas disponible, le principal empêche toute autre activité dans la base de données. L'Agent de lecture du journal n'a plus aucune transaction à répliquer.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)   
  [Copie des journaux de transaction et réplication &#40;SQL Server&#41;](../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)  
   

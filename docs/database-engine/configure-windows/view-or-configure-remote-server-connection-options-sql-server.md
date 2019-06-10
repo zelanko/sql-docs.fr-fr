@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d6ca34183b63054b851cf3ef15ca32f7ed7a80
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: fd6f49f4e3c27491382723c3fdcfad995e379fbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775153"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Afficher ou configurer des options de connexion au serveur distant (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "54255554"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  L’exécution de **sp_serveroption** nécessite l’autorisation ALTER ANY LINKED SERVER sur le serveur.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -53,7 +53,7 @@ ms.locfileid: "54255554"
   
 1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur un serveur, puis cliquez sur **Propriétés**.  
   
-2.  Dans la boîte de dialogue **Propriétés de SQL Server - \<**_nom_serveur_**>**, cliquez sur **Connexions**.  
+2.  Dans la boîte de dialogue **Propriétés de SQL Server - \<** _nom_serveur_ **>** , cliquez sur **Connexions**.  
   
 3.  Sur la page **Connexions** , vérifiez les paramètres **Connexions au serveur distant** et au besoin modifiez-les.  
   
@@ -91,7 +91,7 @@ EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré des options de connexion au serveur distant  
  Le serveur distant doit être arrêté et redémarré pour que le paramètre puisse prendre effet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Serveurs distants](../../database-engine/configure-windows/remote-servers.md)   
  [Serveurs liés &#40;moteur de base de données&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   

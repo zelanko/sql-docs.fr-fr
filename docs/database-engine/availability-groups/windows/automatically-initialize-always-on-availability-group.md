@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 35786f1c468e5f4c90e5615d64d527a1df673f00
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207528"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789394"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +146,7 @@ Les vues système suivantes indiquent l’état de l’amorçage automatique SQL
 
 **sys.dm_hadr_automatic_seeding** 
 
-Sur le réplica principal, interrogez `sys.dm_hadr_automatic_seeding` pour vérifier l’état du processus d’amorçage automatique. La vue retourne une seule ligne pour chaque processus d’amorçage. Exemple :
+Sur le réplica principal, interrogez `sys.dm_hadr_automatic_seeding` pour vérifier l’état du processus d’amorçage automatique. La vue retourne une seule ligne pour chaque processus d’amorçage. Par exemple :
 
 ```sql
 SELECT start_time, 
@@ -238,7 +238,7 @@ Le tableau suivant répertorie les événements étendus liés à l’amorçage 
 
 **Surveillance lors de l’amorçage automatique**
 
-Interrogez `sys.dm_hadr_physical_seeding_stats` pour connaître les processus d’amorçage automatique en cours d’exécution. La vue retourne une seule ligne pour chaque base de données. Exemple :
+Interrogez `sys.dm_hadr_physical_seeding_stats` pour connaître les processus d’amorçage automatique en cours d’exécution. La vue retourne une seule ligne pour chaque base de données. Par exemple :
 
 ```sql
 SELECT local_database_name, 

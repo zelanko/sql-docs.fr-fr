@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5cbc26b45f5845cf563bb1cc8855ecf6b600b999
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 630df054d6025d70e2dcc2b90d339d1499dbc237
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795178"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53588703"
 ##  <a name="Syntax"></a> Syntaxe d'une adresse réseau de serveur  
  La syntaxe d'une adresse réseau de serveur est de la forme :  
   
- TCP<strong>://</strong>*\<adresse-système>*<strong>:</strong>*\<port>*  
+ TCP<strong>://</strong> *\<adresse-système>* <strong>:</strong> *\<port>*  
   
  où  
   
@@ -41,15 +41,15 @@ ms.locfileid: "53588703"
   
     -   Si les systèmes sont dans le même domaine, vous pouvez utiliser le nom du système informatique ; par exemple, `SYSTEM46`.  
   
-    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[**_<adresse_IPv6>_**]**.  
+    -   Pour pouvoir utiliser une adresse IP, elle doit être unique dans votre environnement. Nous vous recommandons d'utiliser une adresse IP seulement si elle est statique. L'adresse IP peut être une adresse IP Version 4 (IPv4) ou IP Version 6 (IPv6). Une adresse IPv6 doit être placée entre crochets, par exemple : **[** _<adresse_IPv6>_ **]** .  
   
          Pour connaître l'adresse IP d'un système, à l'invite de commandes Windows, entrez la commande **ipconfig** .  
   
     -   L'utilisation du nom de domaine complet garantit un fonctionnement correct. Il s'agit d'une chaîne d'adresse définie localement qui présente des formes différentes dans des emplacements différents. Souvent, mais pas systématiquement, un nom de domaine complet correspond à un nom composé qui inclut le nom de l'ordinateur et une série de segments de domaine séparés par des points, de la forme :  
   
-         _nom_ordinateur_ **.** _segment_domaine_[...**.**_segment_domaine_]  
+         _nom_ordinateur_ **.** _segment_domaine_[... **.** _segment_domaine_]  
   
-         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[...**.**_segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
+         où *nom_ordinateur*correspond au nom réseau de l’ordinateur qui exécute l’instance de serveur et *segment_domaine*[... **.** _segment_domaine_] représente les autres informations de domaine du serveur ; par exemple : `localinfo.corp.Adventure-Works.com`.  
   
          Le contenu et le nombre de segments de domaine sont déterminés au sein de la société ou de l'organisation. Si vous ne connaissez pas le nom de domaine complet de votre serveur, contactez votre administrateur système.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "53588703"
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilisation d'un nom de domaine complet  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilisation d'un nom de domaine complet  
  L'adresse réseau de serveur suivante spécifie un nom de domaine complet, `DBSERVER8.manufacturing.Adventure-Works.com`, et un port, `7024`.  
   
 ```  
@@ -134,7 +134,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

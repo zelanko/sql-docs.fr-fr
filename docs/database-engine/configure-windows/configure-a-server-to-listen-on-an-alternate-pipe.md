@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f480c19522982f99496dfe50d21578312a2d8ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7b595eb58dba9f76c2fcb7e825cfc4e0597d739e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686917"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799503"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Configurer un serveur pour l’écoute d’un canal de remplacement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47686917"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Pour configurer le canal nommé utilisé par le moteur de base de données SQL Server  
   
-1.  Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**, puis cliquez pour développer **Protocoles pour** *\<nom_instance>*.  
+1.  Dans le Gestionnaire de configuration SQL Server, dans le volet de la console, développez **Configuration du réseau SQL Server**, puis cliquez pour développer **Protocoles pour** *\<nom_instance>* .  
   
 2.  Dans le volet d’informations, cliquez avec le bouton droit sur **Canaux nommés**, puis cliquez sur **Propriétés**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47686917"
   
 4.  Dans le volet de la console, cliquez sur **Services SQL Server**.  
   
-5.  Dans le volet Détails, cliquez avec le bouton droit sur **SQL Server (**\<nom_instance>**)** puis cliquez sur **Redémarrer** pour arrêter et redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Dans le volet Détails, cliquez avec le bouton droit sur **SQL Server (** \<nom_instance> **)** puis cliquez sur **Redémarrer** pour arrêter et redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute un autre canal, il y a trois manières de se connecter à un canal nommé spécifique avec une application cliente :  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47686917"
   
 -   Programmer le client pour une connexion à l'aide d'une chaîne de connexion personnalisée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer ou modifier un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)  
   

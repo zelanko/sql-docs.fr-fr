@@ -14,13 +14,13 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: ba80e05e88811e0f6ceb2171250e623150c59f7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 1d5cc341dfdf35bafdd8cca63e5b7fd330890551
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537862"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795039"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Ajouter des fonctionnalités à une instance de SQL Server (programme d’installation)
 
@@ -37,7 +37,7 @@ ms.locfileid: "52537862"
 >  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  
   
 > [!NOTE]  
->  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+>  Lorsque vous ajoutez des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les paramètres de rapport d'utilisation existants sont appliqués aux fonctionnalités ajoutées récemment. Pour modifier ces paramètres, utilisez l’outil **Rapports d’erreurs et d’utilisation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** du menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52537862"
   
 6.  L'outil d'analyse de configuration système vérifiera l'état système de votre ordinateur avant que le programme d'installation ne se poursuive.  
   
-7.  Dans la page Type d’installation, sélectionnez l’option **Ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, puis sélectionnez l’instance à mettre à jour.  
+7.  Dans la page Type d’installation, sélectionnez l’option **Ajouter des fonctionnalités à une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , puis sélectionnez l’instance à mettre à jour.  
   
 8.  Dans la page Sélection de fonctionnalités, sélectionnez les composants que vous voulez installer. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. Vous pouvez choisir n'importe quelle combinaison de cases à cocher. Pour plus d’informations, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md). Chaque composant ne peut être installé qu'une seule fois sur une instance donnée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer plusieurs composants, vous devez installer une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -148,7 +148,7 @@ ms.locfileid: "52537862"
   
 -   Pour réduire la surface d'exposition d'un système, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe et active de façon sélective les services et les fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Valider une installation SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   
  [Réparer une installation défectueuse de SQL Server 2016](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)   

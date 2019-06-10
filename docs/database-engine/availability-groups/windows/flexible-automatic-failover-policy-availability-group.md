@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 271cc9c581823fbb06fad90ae0041178beb7cc1a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: a28e7f6a105d26d1dc68d295798e04c3d32edfd8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203318"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772601"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Configurer une stratégie de basculement automatique flexible pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "53203318"
   
 |Level|Condition d'échec|[!INCLUDE[tsql](../../../includes/tsql-md.md)] Valeur|Valeur PowerShell|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|Un|Le serveur est arrêté. Spécifie qu’un basculement automatique est initialisé lorsque l’une des situations suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Il s'agit du niveau le moins restrictif.|1|**OnServerDown**|  
+|Un|Le serveur est arrêté. Spécifie qu’un basculement automatique est initialisé lorsque l’une des situations suivantes se produit :<br /><br /> Le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est fermé.<br /><br /> Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n'est reçu de l'instance de serveur. Pour plus d’informations, consultez [How It Works: délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> <br /><br /> Il s'agit du niveau le moins restrictif.|1|**OnServerDown**|  
 |Deux|Le serveur ne répond pas. Spécifie qu’un basculement automatique est initialisé lorsque l’une des situations suivantes se produit :<br /><br /> L'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne se connecte pas au cluster et le seuil du délai d'attente de contrôle d'intégrité spécifié par l'utilisateur pour le groupe de disponibilité est dépassé.<br /><br /> Le réplica de disponibilité est dans un état d'échec.|2|**OnServerUnresponsive**|  
 |Trois|Erreur critique du serveur. Spécifie qu'un basculement automatique est initialisé en cas d'erreurs internes critiques [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles que les verrouillages spinlock orphelins, les violations graves d'accès en écriture, ou en cas de trop de vidages.<br /><br /> C'est le niveau par défaut.|3|**OnCriticalServerError**|  
 |Quatre|Erreur de serveur modérée. Spécifie qu'un basculement automatique est initialisé en cas d'erreurs internes modérées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , telles qu'une condition persistante de mémoire insuffisante dans le pool de ressources interne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|4|**OnModerateServerError**|  
@@ -80,7 +80,7 @@ ms.locfileid: "53203318"
   
 -   [Fonctionnement : délai d’expiration de bail Always On SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Modes de disponibilité &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)   
  [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   

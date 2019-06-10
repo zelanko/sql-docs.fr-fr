@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+manager: jroth
+ms.openlocfilehash: 6e25840a2dfe52bb6d6c9e1584e12aceaa862f0a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53206368"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781057"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Différences entre les modes de disponibilité pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ Pour plus d’informations sur l’examen de la latence de restauration par prog
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Basculement et modes de basculement &#40;Groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
