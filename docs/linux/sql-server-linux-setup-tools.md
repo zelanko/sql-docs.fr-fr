@@ -5,18 +5,18 @@ description: Cet article décrit comment installer les outils SQL Server sur Lin
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/28/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 86a452237628df8952beaa09277a79b1de507aa1
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.openlocfilehash: d6e10c384d799ee416facee150e5e2318b381ea6
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265401"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810276"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installer sqlcmd et bcp les outils de ligne de commande de SQL Server sur Linux
 
@@ -39,7 +39,7 @@ Cet article décrit comment installer les outils de ligne de commande. Si vous r
 
 ## <a name="a-idrhelainstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Installer les outils sur RHEL 7
 
-Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red Hat Enterprise Linux.  
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red Hat Enterprise Linux. 
 
 1. Activer le mode Super utilisateur.
 
@@ -95,7 +95,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red
 
 ## <a id="ubuntu"></a>Installer les outils sur Ubuntu 16.04
 
-Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu.  
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu. 
 
 1. Importez les clés publiques GPG de référentiel.
 
@@ -140,7 +140,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
 
 ## <a id="SLES"></a>Installer les outils sur SLES 12
 
-Utilisez les étapes suivantes pour installer le package **mssql-tools** sur SUSE Linux Enterprise Server.  
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur SUSE Linux Enterprise Server. 
 
 1. Ajouter le référentiel Microsoft SQL Server à Zypper.
 
