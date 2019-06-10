@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Cet article décrit le pool de stockage dans un cluster de données volumineux de SQL Server 2019.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b0775ac479b45dcb0fc0df23460b0fda0b783545
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7ff8b16ec5f1ea0d1df401cee9657eb8d564863a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860570"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782988"
 ---
 # <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>Qu’est le pool de stockage (données volumineuses des clusters SQL Server) ?
 
