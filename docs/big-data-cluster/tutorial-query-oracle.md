@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment interroger des données Oracle à partir d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans Oracle et puis exécutez une requête.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 036118c3c5620b9685a9971b1aa8c22bdb2b6b9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859980"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770793"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server
 

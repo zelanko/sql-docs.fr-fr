@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: Cet article décrit comment utiliser l’accélérateur de Code PROSE dans Azure Data Studio pour générer automatiquement le code pour les tâches courantes de retraitement des données.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: HT
+ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935337"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770782"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de données à l’aide de la PROSE Code accélérateur
 
