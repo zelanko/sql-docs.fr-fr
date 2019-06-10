@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 27bfc5a5654042be3dde68a2a03c1dd4e6a6d4a3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801758"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’
 
 Pour plus d’informations sur l’authentification des ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients Linux avec Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) et [Bonnes pratiques pour intégrer OS X à Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 026160c3e65255321691ec24fc331f8c7ab09b5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600379"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803175"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,12 +28,12 @@ La récupération de données sous forme de flux est disponible uniquement dans 
   
 Le pilote SQLSRV tire parti des flux PHP pour récupérer de grandes quantités de données à partir du serveur. L’exemple de cette rubrique montre comment récupérer des données caractères sous la forme d’un flux.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant récupère une ligne de la table *Production.ProductReview* de la base de données AdventureWorks. Le champ *Comments* de la ligne retournée est récupéré sous la forme d’un flux et affiché à l’aide de la fonction [fpassthru](https://php.net/manual/function.fpassthru.php) PHP.  
   
 La récupération de données sous la forme d’un flux s’effectue à l’aide de [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) et [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de retour spécifié en tant que flux de caractères. Le type de retour est spécifié à l’aide de la constante **SQLSRV_PHPTYPE_STREAM**. Pour plus d’informations sur les constantes **sqlsrv**, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -92,7 +92,7 @@ sqlsrv_close( $conn);
   
 Étant donné qu’aucun type de retour PHP n’est spécifié pour les trois premiers champs, chaque champ est retourné selon son type PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la spécification des types de retour PHP, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

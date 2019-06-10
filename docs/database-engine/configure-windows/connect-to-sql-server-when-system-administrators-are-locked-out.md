@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2b2b22a5a728ab5ca1e6f8ac5d06296ec338a869
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: jroth
+ms.openlocfilehash: 6d493629c8b0564467155c3eae6ac05e25c5105c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120046"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767973"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "49120046"
 > [!NOTE]  
 >  Lorsque vous démarrez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur, arrêtez au préalable le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Sinon, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut se connecter en premier et vous empêcher de vous connecter en tant que second utilisateur.  
   
- Quand vous utilisez l’option **-m** avec **sqlcmd** ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez limiter les connexions à une application cliente spécifiée. Par exemple, **-m"sqlcmd"** limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd** . Utilisez cette option lorsque vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur et qu'une application cliente inconnue utilise la seule connexion disponible. Pour vous connecter par le biais de l’éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez **-m"Microsoft SQL Server Management Studio - Query"**.  
+ Quand vous utilisez l’option **-m** avec **sqlcmd** ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous pouvez limiter les connexions à une application cliente spécifiée. Par exemple, **-m"sqlcmd"** limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd** . Utilisez cette option lorsque vous démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur et qu'une application cliente inconnue utilise la seule connexion disponible. Pour vous connecter par le biais de l’éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez **-m"Microsoft SQL Server Management Studio - Query"** .  
   
 > [!IMPORTANT]  
 >  N'utilisez pas cette option comme fonctionnalité de sécurité. L'application cliente fournit le nom d'application cliente et peut fournir un nom erroné dans la chaîne de connexion.  
@@ -117,7 +117,7 @@ ms.locfileid: "49120046"
   
  Vous devez désormais être en mesure de vous connecter normalement avec l'un des comptes qui est maintenant membre du rôle serveur fixe **sysadmin** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
   

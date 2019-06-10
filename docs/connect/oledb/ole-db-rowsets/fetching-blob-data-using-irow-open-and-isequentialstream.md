@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c71488ab4e92e241ac7de9873febbe5e6537421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7db9b5da3a7f627070739d3e9e4e0530aae3650a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803199"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::Open et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  Les données volumineuses peuvent être liées ou récupérées à l’aide de l’interface **ISequentialStream**. Pour les colonnes dépendantes, l'indicateur d'état indique si les données sont tronquées en définissant DBSTATUS_S_TRUNCATED.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extraction de données Blob à l’aide d’IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

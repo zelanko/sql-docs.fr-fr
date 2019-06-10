@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dfff3358-f391-4af6-84c1-b94c029f506d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b91a7096d44f6919211bbb08d529d47d97b4a6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 89d44d44bc2c5417f5d88a4f3083b9580af02b4e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613339"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802829"
 ---
 # <a name="executequery-method-sqlserverpreparedstatement"></a>executeQuery, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "47613339"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[executeQuery ()](../../../connect/jdbc/reference/executequery-method.md)|Exécute la requête SQL dans cet objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), puis retourne l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) généré par la requête.|  
 |[executeQuery (java.lang.String)](../../../connect/jdbc/reference/executequery-method-java-lang-string.md)|Exécute l’instruction SQL donnée et retourne un seul objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

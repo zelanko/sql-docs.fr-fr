@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198036"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801736"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -347,7 +347,7 @@ Pour obtenir la valeur de texte en clair d’une clé ECEK, le pilote obtient d�
 
 ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés intégrés suivants :
 
-| Nom | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
+| Créer une vue d’abonnement | Description | Nom du fournisseur (de métadonnées) |Disponibilité|
 |:---|:---|:---|:---|
 |Coffre de clé Azure |Stocke les clés CMK dans un coffre de clés Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
 |Magasin de certificats Windows|Stocke les clés CMK localement dans le magasin de clés Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
@@ -402,7 +402,7 @@ ODBC Driver for SQL Server sur Windows inclut un fournisseur de magasin de clés
 
 ODBC Driver for SQL Server prend également en charge les fournisseurs de magasins de clés tiers personnalisés à l’aide de l’interface CEKeystoreProvider. Cela permet à une application de charger, d’interroger et de configurer des fournisseurs de magasin de clés afin que le pilote puisse les utiliser pour accéder aux colonnes chiffrées. Les applications peuvent également interagir directement avec un fournisseur de magasin de clés afin de chiffrer des clés CEK pour le stockage dans SQL Server, et effectuer des tâches au-delà de l’accès aux colonnes chiffrées avec ODBC. Pour plus d’informations, consultez [Fournisseurs de magasins de clés personnalisés](../../connect/odbc/custom-keystore-providers.md).
 
-Deux attributs de connexion sont utilisés pour interagir avec les fournisseurs de magasins de clés personnalisés. Il s’agit de :
+Deux attributs de connexion sont utilisés pour interagir avec les fournisseurs de magasins de clés personnalisés. Celles-ci sont les suivantes :
 
 - `SQL_COPT_SS_CEKEYSTOREPROVIDER`
 
@@ -438,7 +438,7 @@ Le pilote tente de charger la bibliothèque identifiée par le paramètre ValueP
 > [!NOTE]
 > Le programmeur d’application doit s’assurer que les fournisseurs personnalisés soient chargés avant qu’une requête ayant besoin d’eux soit envoyée par le biais d’une connexion. L’échec de cette opération entraîne l’erreur :
 
-| Erreur | Description |
+| Error | Description |
 |:--|:--|
 |`CE200`|Le fournisseur de magasins de clés %1 est introuvable. Assurez-vous que la bibliothèque du fournisseur de magasins de clés appropriée a été chargée.|
 
@@ -557,7 +557,7 @@ Le tableau suivant fournit un résumé des actions en cas d’opération sur une
 
 |`ColumnEncryption`|Direction BCP|Description|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (vers le client)|Récupère le texte chiffré. Le type de données observé est **varbinary(max)**.|
+|`Disabled`|OUT (vers le client)|Récupère le texte chiffré. Le type de données observé est **varbinary(max)** .|
 |`Enabled`|OUT (vers le client)|Récupère le texte en clair. Le pilote déchiffre les données de colonne.|
 |`Disabled`|IN (vers le serveur)|Insère le texte chiffré. A pour but de déplacer de manière opaque des données chiffrées sans exiger leur déchiffrement. L’opération échoue si l’option `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` n’est pas définie sur l’utilisateur, ou si BCPMODIFYENCRYPTED n’est pas défini sur le handle de connexion. Pour plus d’informations, voir ci-dessous.|
 |`Enabled`|IN (vers le serveur)|Insère le texte en clair. Le pilote chiffre les données de colonne.|
@@ -572,7 +572,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 ### <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion
 
-|Nom|Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |`ColumnEncryption`|Les valeurs acceptées sont `Enabled`/`Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
@@ -608,7 +608,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 |-|-|-|
 |`BCPMODIFYENCRYPTED` (21)|FALSE|Quand la valeur est TRUE, autorise l’insertion de valeurs varbinary(max) dans une colonne chiffrée. Quand la valeur est FALSE, empêche l’insertion, sauf si les métadonnées de chiffrement et le type correct sont fournis.|
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog sur Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)

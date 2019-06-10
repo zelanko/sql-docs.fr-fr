@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd30a7f645aa4e8513056ed53c97587a45ccaae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a454567f031d935b6bfcdd8d5d32a6d2bead380f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722917"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803134"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>Constructeur SQLServerClob (SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public SQLServerClob(SQLServerConnection connection,
   
  Données CLOB.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, constructeurs](../../../connect/jdbc/reference/sqlserverclob-constructors.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  

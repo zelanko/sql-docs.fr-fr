@@ -15,13 +15,13 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 205e24b2187ad84887868acc452e66503900af98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ea763a377b42d5f4ea4f80b775907baed2d40100
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610997"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794774"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
 
@@ -99,7 +99,7 @@ Le tableau ci-dessous répertorie les scénarios de mise à niveau pris en charg
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Web|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Express <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/> |  
-|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] version d’évaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] version d’évaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
+|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] version d’évaluation|[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise <br/><br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Web <br/> <br/> [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Developer|  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] version Release Candidate (RC)* |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise |  
 |[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] Developer |[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Enterprise | 
 
@@ -172,7 +172,7 @@ En outre vous pouvez également effectuer une mise à niveau d'édition entre [!
   
 -   [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Evaluation vers [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] Standard.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)     
 [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)     

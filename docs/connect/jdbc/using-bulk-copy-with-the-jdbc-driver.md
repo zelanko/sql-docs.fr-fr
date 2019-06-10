@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b81937878a4c9e733b6a7c23a6156221c356e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: df92d111897336fdcb40fad59cb5aafec3a52b6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860640"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803360"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilisation de la copie en bloc avec le pilote JDBC
 
@@ -139,7 +139,7 @@ L'approche la plus simple pour effectuer une opération de copie en bloc SQL Se
 > [!CAUTION]  
 > Il est préférable que les types de données des colonnes source et cible correspondent. Si les types de données ne correspondent pas, SQLServerBulkCopy essaie de convertir chaque valeur source en type de données cible. Les conversions peuvent affecter les performances et entraîner des erreurs inattendues. Par exemple, un type de données double peut être converti en type de données décimal la plupart du temps, mais pas toujours.  
   
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 L'application suivante montre comment charger des données à l'aide de la classe SQLServerBulkCopy. Dans cet exemple, un ResultSet est utilisé pour copier des données de la table Production.Product de la base de données SQL Server AdventureWorks dans une table semblable de la même base de données.  
   
@@ -795,6 +795,6 @@ Notes et limitations de l'implémentation :
 | Void setTimeWithTimezoneFormat(DateTimeFormatter dateTimeFormatter)                                   | Définit le format pour l'analyse des données d'heure du fichier en tant que java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Définit le format pour l'analyse des données d'heure du fichier en tant que java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

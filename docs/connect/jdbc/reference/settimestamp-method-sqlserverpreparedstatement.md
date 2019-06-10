@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1de95320-3085-4b34-b722-a02aaa2dd6b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f055c3cf5ac08ff5e8742757bf6f1fe80447d88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7a05236bba1121a7e3b3916d77d95531bb441daa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597587"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803028"
 ---
 # <a name="settimestamp-method-sqlserverpreparedstatement"></a>setTimestamp, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,12 +30,12 @@ ms.locfileid: "47597587"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[setTimestamp (int, java.sql.Timestamp)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp.md)|Définit le paramètre désigné selon la valeur d'horodateur spécifiée.|  
 |[setTimestamp (int, java.sql.Timestamp, java.util.Calendar)](../../../connect/jdbc/reference/settimestamp-method-int-java-sql-timestamp-java-util-calendar.md)|Définit le paramètre désigné selon les valeurs d'horodateur et de calendrier spécifiées.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

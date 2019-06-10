@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 8029d83fd51d126a4ca6bdc8ae69e61536c2aa3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582892"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802360"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -81,7 +81,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 ## <a name="return-value"></a>Valeur retournée  
 Ressource d’instruction. Si la ressource d’instruction ne peut pas être créée, la valeur **false** est retournée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Quand vous préparez une instruction qui utilise des variables comme paramètres, les variables sont liées à l’instruction. Cela signifie que si vous mettez à jour les valeurs des variables, la prochaine fois que vous exécuterez l’instruction elle s’exécutera avec les valeurs de paramètres mises à jour.  
   
 La combinaison de **sqlsrv_prepare** et **sqlsrv_execute** sépare la préparation et l’exécution de l’instruction en deux appels de fonction. De plus, elle peut être utilisée pour exécuter des requêtes paramétrables. Cette fonction est idéale pour exécuter une instruction plusieurs fois avec différentes valeurs de paramètres pour chaque exécution.  
@@ -90,8 +90,8 @@ Pour découvrir d’autres stratégies d’écriture et de lecture de grandes qu
   
 Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant prépare et exécute une instruction. L’instruction, quand elle est exécutée (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant prépare et exécute une instruction. L’instruction, quand elle est exécutée (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -137,8 +137,8 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -225,7 +225,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```
@@ -250,7 +250,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)
