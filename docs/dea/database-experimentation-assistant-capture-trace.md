@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015169"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794500"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans l’Assistant expérimentation de base de données
 
@@ -39,8 +39,8 @@ Mise en cache de requête dans SQL Server peut affecter les résultats de l’é
     - **Nom de l’instance SQL Server**: Entrez un nom pour l’ordinateur exécutant SQL Server sur lequel vous souhaitez capturer une trace de serveur.
     - **Nom de la base de données**: Entrez un nom pour une base de données sur laquelle démarrer une trace de la base de données. Si vous ne spécifiez pas une base de données, la trace est capturée sur toutes les bases de données sur le serveur.
     - **Nom de fichier de trace**: Entrez un nom pour le fichier de trace pour votre capture.
-    - **Taille de fichier maximale (Mo)**: Sélectionnez la taille de la substitution de fichiers. Un nouveau fichier est créé en fonction des besoins à la taille de fichier que vous sélectionnez. La taille recommandée de substitution est de 200 Mo.
-    - **Durée (en mn)**: Sélectionnez la durée (en minutes) que vous souhaitez la capture de trace s’exécute.
+    - **Taille de fichier maximale (Mo)** : Sélectionnez la taille de la substitution de fichiers. Un nouveau fichier est créé en fonction des besoins à la taille de fichier que vous sélectionnez. La taille recommandée de substitution est de 200 Mo.
+    - **Durée (en mn)** : Sélectionnez la durée (en minutes) que vous souhaitez la capture de trace s’exécute.
     - **Chemin d’accès pour stocker le fichier de sortie de**: Sélectionnez le chemin d’accès de destination pour le fichier de trace. 
 
     > [!NOTE]
