@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015122"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794451"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Relire une trace dans l’Assistant expérimentation de base de données
 
@@ -65,7 +65,7 @@ Dans la DEA, sélectionnez l’icône de menu. Dans le menu développé, sélect
 ### <a name="replay-a-trace"></a>Relire une trace
 
 1.  **Nom de fichier de trace**: Entrez un nom de fichier de trace.
-1.  **Taille de fichier maximale (Mo)**: Entrez une valeur de taille de la substitution de fichier trace. La valeur par défaut est de 200 Mo. Vous pouvez entrer une valeur personnalisée.
+1.  **Taille de fichier maximale (Mo)** : Entrez une valeur de taille de la substitution de fichier trace. La valeur par défaut est de 200 Mo. Vous pouvez entrer une valeur personnalisée.
 1.  **Chemin d’accès pour stocker la sortie de trace de relecture**: Entrez le chemin d’accès du fichier de sortie .trc.
 1.  **Nom de l’instance SQL Server**:  Entrez le nom de l’instance de SQL Server sur lequel relire les traces.
 1.  Sélectionnez **Démarrer**.
