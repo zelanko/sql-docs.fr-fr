@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8a6b2b6313a0e4292d1860e8102218d2cc8b24e0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486452"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802136"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurer les niveaux de gravité pour les fichiers journaux DQS
 
@@ -58,7 +58,7 @@ ms.locfileid: "65486452"
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Configuration**.  
   
-3.  Ensuite, cliquez sur l'onglet **Paramètres de journal** . Vous pouvez sélectionner un niveau de gravité pour les activités DQS suivantes : **Gestion de l’arborescence du domaine**, **Découverte des connaissances**, **Projet de nettoyage (par exemple, RDS)**, **Stratégie de correspondance et Projet de correspondance** et **RDS**.  
+3.  Ensuite, cliquez sur l'onglet **Paramètres de journal** . Vous pouvez sélectionner un niveau de gravité pour les activités DQS suivantes : **Gestion de l’arborescence du domaine**, **Découverte des connaissances**, **Projet de nettoyage (par exemple, RDS)** , **Stratégie de correspondance et Projet de correspondance** et **RDS**.  
   
 4.  Pour une activité DQS, sélectionnez le niveau de gravité qui doit être enregistré. Vous pouvez sélectionner une valeur parmi les suivantes : **Irrécupérable**, **Erreur**, **Avertir**, **Informations** et **Déboguer**. Par exemple, si vous voulez que seuls les messages d'erreur irrécupérable soient écrits dans les fichiers journaux DQS pour l'activité de découverte des connaissances, sélectionnez **Irrécupérable** dans la liste déroulante pour l'activité **Découverte des connaissances** .  
   
