@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Découvrez comment installer les outils utilisés avec les clusters de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860480"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797917"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de données volumineuses de SQL Server 2019
 
