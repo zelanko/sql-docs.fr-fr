@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089685"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797925"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutoriel : Ajouter le *cinq requêtes les plus lentes* widget exemple au tableau de bord de base de données
 
@@ -129,7 +129,7 @@ Pour ajouter le *ralentir le widget de requêtes* à votre tableau de bord, vous
 
 ## <a name="view-insight-details-for-more-information"></a>Afficher les détails d’un aperçu pour plus d’informations
 
-1. Pour afficher des informations supplémentaires pour un widget d’un aperçu, cliquez sur le bouton de sélection (**...** ) dans le coin supérieur droit et sélectionnez **afficher les détails**.
+1. Pour afficher des informations supplémentaires pour un widget d’un aperçu, cliquez sur le bouton de sélection ( **...** ) dans le coin supérieur droit et sélectionnez **afficher les détails**.
 2. Pour afficher plus de détails sur un élément, sélectionnez un élément de **données du graphique** liste.
 
    ![Boîte de dialogue Détail Insight](./media/tutorial-qds-sql-server/insight-details-dialog.png)

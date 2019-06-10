@@ -10,15 +10,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 1d10e3c4e9c1e1b2a6ce316902d4f70bbfac3740
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748472"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798015"
 ---
-# <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs de gestion centralisée de SQL Server (version préliminaire)
+# <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs SQL Server Central Management (préversion)
 L’extension de serveurs de gestion centralisée permet aux utilisateurs de stocker une liste d’instances de SQL Server qui est organisée en un ou plusieurs groupes. Actions qui sont effectuées à l’aide d’un groupe CMS agissent sur tous les serveurs dans le groupe de serveurs.
 
 Cette expérience est actuellement dans sa version préliminaire. Signaler des problèmes et demandes de fonctionnalités [ici](https://github.com/microsoft/azuredatastudio/issues).
