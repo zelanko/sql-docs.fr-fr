@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c60b0c86d1356dd4d15d2854184d0116316b823c
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: bebfb6270d334305ae5684d7cca0c9e6571217e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671255"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781832"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Questions fréquentes (FAQ) sur le pilote JDBC
 
@@ -135,6 +135,6 @@ Si vous utilisez des produits SAP et que vous devez assurer la prise en charge d
 **Le pilote peut-il communiquer à l’aide d’algorithmes validés par FIPS ?**  
 Le pilote Microsoft JDBC Driver ne contient aucun algorithme de chiffrement. Si un client exploite des algorithmes du système d’exploitation, d’applications et JVM jugés conformes aux normes FIPS (Federal Information Processing Standards) et qu’il configure le pilote de telle sorte qu’il utilise ces algorithmes, le pilote utilise uniquement les algorithmes désignés pour la communication.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)

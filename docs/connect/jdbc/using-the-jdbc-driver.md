@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 971b1aa8e8b3f2d75aa2178e109b4c8fb556c45d
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
-ms.translationtype: HT
+manager: jroth
+ms.openlocfilehash: 25eee029d202f18af8d5bc9282b9b15d6015afb4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671245"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798526"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilisation du pilote JDBC
 
@@ -206,6 +206,6 @@ Lorsque la méthode getConnection de la classe DriverManager est appelée, un pi
 
 Pour savoir comment se connecter avec des sources de données et utiliser une URL de connexion, voir [Créer l’URL de connexion](../../connect/jdbc/building-the-connection-url.md) et [Définir les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

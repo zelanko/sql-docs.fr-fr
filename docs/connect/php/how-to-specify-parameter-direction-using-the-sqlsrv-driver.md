@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33613a90ee21069b2ef7d2f9908ed13bd4f040e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642367"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799680"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -83,8 +83,8 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     sqlsrv_query($conn, $tsql, $params);  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Comment : récupérer des paramètres d’entrée et sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

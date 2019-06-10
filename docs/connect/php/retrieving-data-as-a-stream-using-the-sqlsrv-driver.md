@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe04b5fbe8d5bd0ab16ca81fc503ac72ff7a1966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d5d1d7e62709af773ca251a389c8cfaa4981ce58
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787399"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797053"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Les étapes suivantes récapitulent la manière de récupérer des données sous
 |[Procédure : récupérer des données caractères sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données caractères sous la forme d’un flux.|  
 |[Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Montre comment récupérer des données binaires sous la forme d’un flux.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

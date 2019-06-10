@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7eac30ff1391ba5c56099cf7c59fa89b1368f115
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+manager: jroth
+ms.openlocfilehash: 605a2564bff66a3cf8de4c8c8abb92b101e5b2d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105880"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762032"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ $*statement*: chaîne qui contient l’instruction SQL.
 ## <a name="return-value"></a>Valeur retournée
 En cas de réussite, retourne un objet PDOStatement. En cas d’échec, retourne un objet PDOException, ou false en fonction de la valeur de `PDO::ATTR_ERRMODE`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] n’évalue pas les instructions préparées avant leur exécution.
 
 Le tableau suivant répertorie les valeurs possibles de *key_pair*.
@@ -73,7 +73,7 @@ Vous pouvez fermer un objet PDOStatement en appelant `unset` :
 unset($stmt);
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 Cet exemple montre comment utiliser PDO::prepare avec des marqueurs de paramètres et un curseur avant uniquement.
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 Cet exemple montre comment utiliser PDO::prepare avec un curseur statique côté serveur. Pour obtenir un exemple de curseur côté client, consultez [Types de curseurs &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -142,7 +142,7 @@ print_r($row);
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple montre comment utiliser PDO::prepare avec `PDO::ATTR_EMULATE_PREPARES` défini sur true.
 
@@ -229,7 +229,7 @@ Comme vous pouvez le voir, la liaison est effectuée en interne par le pilote. U
     - Quand une instruction préparée appelle une procédure stockée avec un espace réservé comme argument pour un paramètre de sortie, aucune exception n’est levée, car le pilote ne peut pas détecter le paramètre de sortie. Toutefois, la variable fournie par l’utilisateur pour le paramètre de sortie restera inchangée.
 - Les espaces réservés en double pour un paramètre encodé en binaire ne fonctionneront pas.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)

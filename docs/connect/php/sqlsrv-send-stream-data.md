@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99bdc51c54850927aa51b32318ff2b859ead49e3
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+manager: jroth
+ms.openlocfilehash: 5d20cba8eb5e6b9cd5a6c30142ac3b06d2ad57af
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227321"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782771"
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,8 +46,8 @@ sqlsrv_send_stream_data( resource $stmt)
 ## <a name="return-value"></a>Valeur retournée  
 Valeur booléenne : **true** s’il y a davantage de données à envoyer. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant ouvre une évaluation de produit sous forme de flux et l’envoie au serveur. Le comportement par défaut qui consiste à envoyer toutes les données de flux au moment de l’exécution est désactivé. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant ouvre une évaluation de produit sous forme de flux et l’envoie au serveur. Le comportement par défaut qui consiste à envoyer toutes les données de flux au moment de l’exécution est désactivé. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -94,7 +94,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

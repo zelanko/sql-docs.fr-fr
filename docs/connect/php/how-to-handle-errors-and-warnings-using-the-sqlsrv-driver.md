@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18aef50a23c7452e371abb30e6897b3ec11b48f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796105"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Procédure : gérer les erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ Par défaut, le pilote SQLSRV traite les avertissements comme des erreurs ; un a
 > [!NOTE]  
 > Il existe quelques exceptions au comportement par défaut consistant à traiter les avertissements comme des erreurs. Les avertissements qui correspondent aux valeurs SQLSTATE 01000, 01001, 01003 et 01S02 ne sont jamais traités comme des erreurs.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple de code suivant utilise deux fonctions définies par l’utilisateur, **DisplayErrors** et **DisplayWarnings**, pour gérer les erreurs et les avertissements. L’exemple montre comment gérer séparément les avertissements et les erreurs en procédant comme suit :  
   
 1.  Désactive le comportement par défaut consistant à traiter les avertissements comme des erreurs.  
@@ -43,7 +43,7 @@ Dans le premier appel d’une fonction **sqlsrv** ([sqlsrv_configure](../../conn
   
 Notez également que l’exemple de code vérifie les erreurs après chaque appel à une fonction **sqlsrv** . Il s’agit de la pratique recommandée.  
   
-Cet exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande. Quand l’exemple est exécuté sur une nouvelle installation de la base de données AdventureWorks, il génère trois avertissements et deux erreurs. Les deux premiers avertissements sont des avertissements standard émis quand vous vous connectez à une base de données. Le troisième avertissement se produit parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à zéro. Les erreurs se produisent parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à -40 heures, ce qui constitue une violation d’une contrainte sur la table.  
+Cet exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande. Quand l’exemple est exécuté sur une nouvelle installation de la base de données AdventureWorks, il génère trois avertissements et deux erreurs. Les deux premiers avertissements sont des avertissements standard émis quand vous vous connectez à une base de données. Le troisième avertissement se produit parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à zéro. Les erreurs se produisent parce que les heures de congé disponibles d’un employé sont mises à jour vers une valeur inférieure à -40 heures, ce qui constitue une violation d’une contrainte sur la table.  
   
 ```  
 <?php  
@@ -200,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

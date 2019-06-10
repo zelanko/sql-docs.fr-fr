@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 059c949b11c0cd571fdf3c6ff2575476c477ef04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 8c7dc2a48414d4ea9cc74d2672442e1a11b7a50d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788076"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797744"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Pilote Microsoft ODBC pour SQL Server sur Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +51,7 @@ Cette documentation sur Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../.
 - [Blog de l’équipe Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Forum d'accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 - [À propos de SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
 - [Génération d'applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [Forum aux questions sur SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d646a58c09fcc580fcc1f95acfd251bd17f4f290
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574953"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500120"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes textuel (Générateur de rapports)
   Utilisez le Concepteur de requêtes textuel pour spécifier une requête à l'aide du langage de requête pris en charge par la source de données, exécuter la requête et afficher les résultats au moment de la conception. Vous pouvez spécifier plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , une syntaxe de requête ou de commande pour les extensions pour le traitement des données personnalisées et des requêtes spécifiées en tant qu'expressions. Comme le Concepteur de requêtes textuel n'effectue pas de prétraitement de la requête et peut accepter tout type de syntaxe de requête, il s'agit de l'outil du Concepteur de requêtes par défaut pour de nombreux types de sources de données.  
@@ -53,7 +53,7 @@ ms.locfileid: "65574953"
 |Requête|Affiche le texte de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce volet permet d'écrire ou de modifier une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
-#### <a name="example"></a> Exemple  
+#### <a name="example"></a>Exemple  
  La requête suivante renvoie la liste des noms à partir de la table **ContactType** de la base de données AdventureWorks2014 pour le schéma **Person** .  
   
 ```  
@@ -76,14 +76,14 @@ SELECT Name FROM Person.ContactType
 |Requête|Affiche le nom de la procédure stockée et tout paramètres d'entrée.|  
 |Résultats|Affiche les résultats de la requête. Pour exécuter la requête, cliquez avec le bouton droit dans un volet et cliquez sur **Exécuter**, ou cliquez sur le bouton **Exécuter** dans la barre d’outils.|  
   
-#### <a name="example"></a> Exemple  
+#### <a name="example"></a>Exemple  
  La requête ci-après appelle la procédure stockée AdventureWorks2014 **uspGetWhereUsedProductID**. Vous devez entrer une valeur pour le paramètre du numéro d'identification de produit lorsque vous exécutez la requête.  
   
 ```  
 uspGetWhereUsedProductID  
 ```  
   
- Cliquez sur le bouton **Exécuter** (**!**). Lorsque vous êtes invité à indiquer les paramètres de la requête, utilisez le tableau suivant pour entrer les valeurs.  
+ Cliquez sur le bouton **Exécuter** ( **!** ). Lorsque vous êtes invité à indiquer les paramètres de la requête, utilisez le tableau suivant pour entrer les valeurs.  
   
 |||  
 |-|-|  
@@ -95,15 +95,15 @@ uspGetWhereUsedProductID
 ### <a name="command-type-tabledirect"></a>Type de commande TableDirect  
  Quand vous sélectionnez le **Type de commande TableDirect**, le concepteur de requêtes textuel présente deux volets : Requête et Résultats. Lorsque vous entrez une table et cliquez sur le bouton **Exécuter** , toutes les colonnes pour cette table sont retournées.  
   
-#### <a name="example"></a> Exemple  
+#### <a name="example"></a>Exemple  
  Pour un type de source de données OLE DB, la requête de jeu de données suivante renvoie un jeu de résultats pour tous les types de contacts dans la base de données AdventureWorks2014.  
   
  `Person.ContactType`  
   
  Lorsque vous entrez le nom de table Person.ContactType, cela revient à créer l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Person.ContactType`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Outils de création de requêtes &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

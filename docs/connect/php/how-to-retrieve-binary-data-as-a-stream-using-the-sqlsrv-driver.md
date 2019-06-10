@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4bf2ae4330a98d810d0d3291f0045834b8927d3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799326"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ La récupération de données sous forme de flux est disponible uniquement dans 
   
 L’utilisation de flux pour récupérer des données binaires, comme des images, permet d’éviter l’utilisation de grandes quantités de mémoire de script en récupérant des blocs de données au lieu de charger l’objet entier dans la mémoire de script.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant récupère des données binaires, à savoir une image dans ce cas, à partir de la table *Production.ProductPhoto* de la base de données AdventureWorks. L’image est récupérée sous forme de flux et affichée dans le navigateur.  
   
 La récupération de données d’image sous forme de flux s’effectue à l’aide de [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) et [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de retour spécifié en tant que flux binaire. Le type de retour est spécifié à l’aide de la constante **SQLSRV_PHPTYPE_STREAM**. Pour plus d’informations sur les constantes **sqlsrv**, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
@@ -90,7 +90,7 @@ sqlsrv_close( $conn);
   
 La spécification du type de retour dans l’exemple montre comment spécifier le type de retour PHP en tant que flux binaire. Techniquement, cela n’est pas obligatoire dans l’exemple, car le champ *LargePhoto* est de type SQL Server varbinary(max), et il est donc retourné en tant que flux binaire par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la spécification des types de retour PHP, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [Récupération des données sous la forme d’un flux à l’aide du pilote SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

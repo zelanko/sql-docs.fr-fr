@@ -10,12 +10,12 @@ manager: kfile
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 60387cff118b0e809bba1e659be496c4ca2c00cc
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578222"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500556"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
   Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
@@ -40,7 +40,7 @@ ms.locfileid: "65578222"
 -   **Source de données externe** Emplacement où récupérer les données du rapport, par exemple une base de données, un fichier, un cube ou un service web.  
   
 > [!NOTE]  
->  Lorsque vous n'êtes pas connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées avec le Générateur de rapports. Vous accédez aux données en tant qu'utilisateur unique à l'aide des informations d'identification spécifiques à votre ordinateur. Lorsque vous êtes connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées sur le serveur de rapports. Vous accédez aux données en tant qu'utilisateur faisant partie des multiples utilisateurs qui exécutent le rapport, et vous utilisez les informations d'identification du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Lorsque vous n'êtes pas connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées avec le Générateur de rapports. Vous accédez aux données en tant qu'utilisateur unique à l'aide des informations d'identification spécifiques à votre ordinateur. Lorsque vous êtes connecté à un serveur de rapports, vous pouvez choisir l'une des extensions de données installées sur le serveur de rapports. Vous accédez aux données en tant qu'utilisateur faisant partie des multiples utilisateurs qui exécutent le rapport, et vous utilisez les informations d'identification du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="ReportData"></a> Fonctionnement des données de rapport  
  Dans sa forme la plus simple, un rapport affiche les données d'un dataset de rapport dans une région de données de la page de rapport, autrement dit, dans un tableau, un graphique ou une matrice unique, ou tout autre type de région de données du rapport. Les données d'un dataset de rapport proviennent du premier jeu de résultats retourné par une commande de requête unique qui s'exécute à partir d'un accès en lecture seule à une source de données externe. Chaque région de données s'étend en fonction de toutes les données du dataset à afficher.  
@@ -98,15 +98,15 @@ ms.locfileid: "65578222"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Fournit une vue d'ensemble de l'accès aux données pour votre rapport.|  
-|[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Fournit des informations sur les connexions de données et les sources de données.|  
+|[Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Fournit des informations sur les connexions de données et les sources de données.|  
 |[Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Fournit des informations sur les datasets incorporés et partagés.|  
 |[Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Fournit des informations sur la collection de champs de dataset générée par la requête.|  
 |[Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [documentation en ligne](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Fournit des informations détaillées sur la prise en charge des plateformes et des versions pour chaque extension de données.|  
 |[Vue d’ensemble des extensions pour le traitement des données](../../reporting-services/extensions/data-processing/data-processing-extensions-overview.md) dans la section [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312).|Fournit des informations détaillées sur les extensions de données pour les utilisateurs expérimentés.|  
   
   
-## <a name="see-also"></a> Voir aussi  
- [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+## <a name="see-also"></a>Voir aussi  
+ [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
+ [Outils de création de requêtes &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

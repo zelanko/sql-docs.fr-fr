@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87d572b8a0eff92cbdbadba1bec002970d1f7b20
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+manager: jroth
+ms.openlocfilehash: 5402742793877d8e022eff4d207c49cf31f42256
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776119"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761802"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ bool PDO::setAttribute ( $attribute, $value );
 ## <a name="return-value"></a>Valeur retournée  
 Retourne true en cas de réussite ; sinon, false.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 |Attribute|Traité par|Valeurs prises en charge|Description|  
 |-------------|----------------|--------------------|---------------|  
@@ -60,7 +60,7 @@ PDO traite certains des attributs prédéfinis et exige que le pilote en traite 
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple montre comment définir l’attribut PDO::ATTR_ERRMODE.  
   
 ```  
@@ -84,7 +84,7 @@ Cet exemple montre comment définir l’attribut PDO::ATTR_ERRMODE.
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

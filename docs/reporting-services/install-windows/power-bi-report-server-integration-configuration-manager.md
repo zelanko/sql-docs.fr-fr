@@ -1,18 +1,18 @@
 ---
 title: Intégration de Power BI Report Server (Gestionnaire de configuration) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c99eb7091cd72be40f2acb45e5e7bebf8a71526e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506556"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499611"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
@@ -113,7 +113,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 1. Les utilisateurs prévisualisent les rapports dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la première fois qu’ils cliquent pour épingler un élément de rapport dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
-2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Ils sont redirigés vers la page de connexion Azure AD. Ils peuvent également se connecter à partir de la page [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Lorsque des utilisateurs se connectent au client géré Azure, une relation est établie entre leur compte Azure et les autorisations [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Pour plus d’informations, consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Un jeton de sécurité utilisateur est renvoyé au serveur de rapports.
 
@@ -125,7 +125,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
 7. Un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est créé pour gérer l’actualisation planifiée de l’élément de rapport sur la vignette de tableau de bord. L’abonnement utilise le jeton de sécurité créé lors de la connexion de l’utilisateur.
 
-     Le jeton est valable **90 jours**, après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). pour plus d'informations.
+     Le jeton est valable **90 jours**, après quoi les utilisateurs doivent se reconnecter pour en créer un. Une fois le jeton expiré, les vignettes épinglées restent affichées sur le tableau de bord, mais les données ne sont plus actualisées.  Les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilisés pour les éléments épinglés génèrent une erreur tant qu’un nouveau jeton n’est pas créé. Consultez [Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md). pour plus d'informations.
 
 Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étapes 1 à 4 sont ignorées. L’ID d’application et les URL sont récupérés auprès de la base de données ReportServer et la procédure reprend à l’étape 5.
 
@@ -153,7 +153,7 @@ Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étape
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Mes paramètres pour l’intégration de Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[Mes paramètres pour l’intégration de Power BI &#40;portail web&#41;](../my-settings-for-power-bi-integration-web-portal.md)  
 [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Tableaux de bord Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a447f804474cc845b58c87832e965223d6cd873d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573119"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500453"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Boîte de dialogue Propriétés du dataset, Requête (Générateur de rapports)
  
@@ -63,9 +63,9 @@ Cette option apparaît lorsque vous choisissez l'option de type de commande Proc
  **Actualiser les champs**  
  Exécutez la commande de requête pour mettre à jour la liste de champs dans la page **Boîte de dialogue Propriétés du dataset, Champs**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
 [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
-[Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+[Outils de création de requêtes &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 65cc1f358a7bb6507e0a4d869fdd623c35f27949
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.openlocfilehash: e75714085c7eb515de60d35af0dafabe04755e12
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65935390"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500379"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Données des rapports dans SQL Server Reporting Services (SSRS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65935390"
   
 - **Définition de source de données.** Un fichier qui contient la représentation XML d'une source de données de rapport. Lorsqu'un rapport est publié, ses sources de données sont enregistrées sur le serveur de rapports ou le site SharePoint en tant que définitions de source de données, indépendamment de la définition de rapport. Par exemple, un administrateur de serveur de rapports peut mettre à jour la chaîne de connexion ou les informations d'identification. Sur un serveur de rapports natif, le type de fichier est .rds. Sur un site SharePoint, le type de fichier est .rsds.  
   
-- **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Connexions de données, sources de données et chaînes de connexion](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+- **Chaîne de connexion.** Une chaîne de connexion est une version de chaîne des propriétés de connexion nécessaires à la connexion à une source de données. Les propriétés de connexion diffèrent selon le type de connexion de données. Pour obtenir des exemples, consultez [Connexions de données, sources de données et chaînes de connexion](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 - **Source de données partagée.** Source de données disponible sur un serveur de rapports ou un site SharePoint, et qui est utilisable par plusieurs rapports.  
   

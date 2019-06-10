@@ -11,13 +11,13 @@ helpviewer_keywords:
 - known issues
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 504b5264f44109060bff3b6e5e9a6fd4fca448e9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 86b87d03a5b0a66ba1e77260a0ec0b43125fa98b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042308"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798757"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problèmes connus dans cette version du pilote
 
@@ -35,7 +35,7 @@ D’autres problèmes seront publiés sur le [blog de l’équipe du pilote Micr
 
 Par exemple, si votre encodage est UTF-8 et que vous spécifiez 1 pour *BufferLength* et *ColumnSize* dans **SQLBindParameter** pour un paramètre de sortie, puis que vous essayez de récupérer le caractère précédent stocké dans une colonne `char(1)` sur le serveur (à l’aide de CP-1252), le pilote tente de le convertir dans l’encodage UTF-8 sur 3 octets, mais ne peut pas faire tenir le résultat dans une mémoire tampon d’un octet. Dans l’autre sens, il compare *ColumnSize* à *BufferLength* dans **SQLBindParameter** avant d’effectuer la conversion entre les différentes pages de codes sur le client et le serveur. Étant donné qu’une *ColumnSize* de 1 est inférieure à une *BufferLength* de 3 (par exemple), le pilote génère une erreur. Pour éviter cette erreur, vérifiez que la longueur des données après la conversion est adaptée à la colonne ou mémoire tampon spécifiée. Notez que *ColumnSize* ne peut pas être supérieure à 8000 pour le type `varchar(n)`.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)  
 [Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
 

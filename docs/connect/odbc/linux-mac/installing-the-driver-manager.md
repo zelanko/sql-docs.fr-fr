@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: cd45cc3b0db61e87c8d9ce506e141cc9ad8c97c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041918"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798789"
 ---
 # <a name="installing-the-driver-manager"></a>Installation du Gestionnaire de pilotes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,11 +72,11 @@ Si le script d’installation ne peut pas se terminer, configurez et générez l
   
 4.  Accédez au répertoire unixODBC-2.3.0.  
   
-5.  À l’invite de commandes, exécutez la commande : **CPPFLAGS="-DSIZEOF_LONG_INT=8"**.  
+5.  À l’invite de commandes, exécutez la commande : **CPPFLAGS="-DSIZEOF_LONG_INT=8"** .  
   
 6.  À l’invite de commandes, exécutez la commande : **export CPPFLAGS**.  
   
-7.  À l’invite de commandes, exécutez la commande : **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
+7.  À l’invite de commandes, exécutez la commande : **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"** .  
   
 8.  À l’invite de commandes (connecté en tant que racine), exécutez la commande suivante : **make**.  
   
@@ -84,7 +84,7 @@ Si le script d’installation ne peut pas se terminer, configurez et générez l
 
 Vous êtes maintenant prêt à installer le pilote. Pour plus d’informations, consultez [l’installation de Microsoft ODBC Driver for SQL Server sur Linux et macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Installation de Microsoft ODBC Driver for SQL Server sur Linux et macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Problèmes connus dans cette version du pilote](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

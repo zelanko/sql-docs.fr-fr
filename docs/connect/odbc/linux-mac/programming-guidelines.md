@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042368"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798749"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
@@ -131,7 +131,7 @@ Dans ODBC Driver 13 et 13.1, quand des caractères multioctets UTF-8 ou des subs
     
 2.  Le Gestionnaire de pilotes UnixODBC retourne « Identificateur d’option/d’attribut non valide » pour tous les attributs d’instruction quand ils sont passés par le biais de SQLSetConnectAttr. Sur Windows, quand SQLSetConnectAttr reçoit une valeur d’attribut d’instruction, le pilote est amené à définir cette valeur sur toutes les instructions actives qui sont des enfants du handle de connexion.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Questions fréquentes (FAQ)](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [Problèmes connus dans cette version du pilote](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, additional resources
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4b5b45a0f4844575e136703fe240132d7a8496cb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a35699360e9ca40d8ac0fdc7649be5c70d3df10d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605939"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796027"
 ---
 # <a name="finding-more-ole-db-driver-for-sql-server-information"></a>Recherche d’informations supplémentaires sur OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51605939"
  Le Kit de développement logiciel (SDK) Windows DAC contient la documentation pour ActiveX Data Objects (ADO), OLE DB et Open Database Connectivity (ODBC).  
   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver pour SQL Server](../oledb/oledb-driver-for-sql-server.md)  
   
   

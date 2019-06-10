@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571145"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499944"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -130,7 +130,7 @@ ms.locfileid: "65571145"
   
 -   Inscrivez un nom de principal du service (SPN) pour le service Report Server sous le compte d'utilisateur de domaine. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Changez de compte de service pour qu'il s'exécute sous un compte intégré tel que le compte de service réseau. Les comptes intégrés mappent le nom de principal du service (SPN) HTTP au nom de principal du service (SPN) hôte, lequel est défini lorsque vous joignez un ordinateur à votre réseau. Pour plus d’informations, consultez [Configurer un compte de service &#40;Gestionnaire de configuration de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Changez de compte de service pour qu'il s'exécute sous un compte intégré tel que le compte de service réseau. Les comptes intégrés mappent le nom de principal du service (SPN) HTTP au nom de principal du service (SPN) hôte, lequel est défini lorsque vous joignez un ordinateur à votre réseau. Pour plus d’informations, consultez [Configurer un compte de service &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Utilisez NTLM. NTLM fonctionnera généralement dans les cas où l'authentification Kerberos échoue. Pour utiliser NTLM, supprimez **RSWindowsNegotiate** du fichier RSReportServer.config et vérifiez que seul **RSWindowsNTLM** est spécifié. Si vous choisissez cette approche, vous pouvez continuer à utiliser un compte d'utilisateur de domaine pour le service Report Server même si vous ne définissez pas de nom de principal du service (SPN) pour ce compte.  
   
@@ -204,7 +204,7 @@ ms.locfileid: "65571145"
   
 -   Pour plus d'informations concernant Kerberos et les serveurs de rapports, consultez [Deploying a Business Intelligence Solution Using SharePoint, Reporting Services, and PerformancePoint Monitoring Server with Kerberos (en anglais).](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

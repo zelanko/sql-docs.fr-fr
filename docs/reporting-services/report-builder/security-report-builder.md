@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed74bb929a41256117858cce3c1da79a5610cedb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578009"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500531"
 ---
 # <a name="security-report-builder"></a>Sécurité (Générateur de rapports)
   Le Générateur de rapports est une application cliente de création de rapports conçue pour être utilisée conjointement avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Le serveur de rapports peut être configuré pour être utilisé en mode natif en tant que serveur autonome ou en mode intégré SharePoint afin de prendre en charge les rapports sur un site SharePoint.  
@@ -94,7 +94,7 @@ ms.locfileid: "65578009"
   
 -   [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Pour plus d’informations sur les sources de données, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Fonctionnement des modèles et des filtres de sécurité  
@@ -113,8 +113,8 @@ ms.locfileid: "65578009"
  Une fois les éléments publiés sur un serveur de rapports, l'administrateur du serveur de rapports peut contribuer à les sécuriser à l'aide d'une sécurité basée sur les rôles ou d'une sécurité au niveau des éléments et des dossiers. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md) dans la documentation relative à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la [documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](https://go.microsoft.com/fwlink/?linkid=121312).  
   
   
-## <a name="see-also"></a> Voir aussi  
- [Installer et désinstaller le Générateur de rapports](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+## <a name="see-also"></a>Voir aussi  
+ [Installer le générateur de rapports](../install-windows/install-report-builder.md)  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

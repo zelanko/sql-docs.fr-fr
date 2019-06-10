@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 329d9b5e-1c5d-40b0-9127-1051d0646fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46b6c9be6566b3b4857f58d779838356fe3b689e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+manager: jroth
+ms.openlocfilehash: 8c58b4c59140feb37e339930b1b045c2512d5b23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774976"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799133"
 ---
 # <a name="pdostatementsetattribute"></a>PDOStatement::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ $*value* : valeur (mixte) à définir pour le $*attribute* spécifié.
 ## <a name="return-value"></a>Valeur retournée  
 TRUE en cas de réussite, FALSE dans le cas contraire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le tableau suivant contient la liste des attributs disponibles :  
   
 |attribute|Valeurs|Description|  
@@ -50,7 +50,7 @@ Le tableau suivant contient la liste des attributs disponibles :
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|True ou False|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire. Si elle est définie, cette option active l’option PDO::SQLSRV_ATTR_DECIMAL_PLACES pour mettre en forme les types monétaires. Si vous conservez la valeur false, le comportement par défaut qui consiste à retourner la précision exacte et à omettre les zéros non significatifs pour les valeurs inférieures à 1 est utilisé.<br /><br />Vous pouvez aussi définir cette option au niveau de la connexion. Dans ce cas, cette option remplace l’option au niveau de la connexion.<br /><br />Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Entier|Définit le délai d’expiration de la requête, en secondes.<br /><br />Par défaut, le pilote attend indéfiniment les résultats. Les nombres négatifs ne sont pas autorisés.<br /><br />0 signifie aucun délai d’attente.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -69,7 +69,7 @@ echo $stmt->getAttribute( constant( "PDO::SQLSRV_ATTR_QUERY_TIMEOUT" ) );
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
