@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Cet article fournit des commandes utiles pour surveiller et dépanner un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994091"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800741"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Surveillance et de résoudre les problèmes de clusters de données volumineuses de SQL Server
 
@@ -242,9 +242,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Si vous obtenez l’erreur suivante : *Impossible d’écouter sur le port 8001 : Échec de tous les écouteurs créer et les erreurs suivantes : Impossible de créer l’écouteur : Erreur écouter tcp4 127.0.0.1:8001 : > lier : Qu’une seule utilisation de chaque adresse de socket (adresse réseau/protocole/port) est normalement autorisée. Impossible de créer l’écouteur : Erreur écouter tcp6 : adresse [[ :: 1]] : 8001 : manquant de port dans > résolution des problèmes : Impossible d’écouter sur un des ports demandées : [{8001 9090}]*, assurez-vous que vous n’avez pas démarré le tableau de bord déjà d’une autre fenêtre.
+> Si vous obtenez l’erreur suivante : *Impossible d’écouter sur le port 8001 : Échec de tous les écouteurs créer et les erreurs suivantes : Impossible de créer l’écouteur : Erreur écouter tcp4 127.0.0.1:8001 : > lier : Qu’une seule utilisation de chaque adresse de socket (adresse réseau/protocole/port) est normalement autorisée. Impossible de créer l’écouteur : Erreur écouter tcp6 : adresse [[ :: 1]] : 8001 : manquant de port dans > résolution des problèmes : Impossible d’écouter sur un des ports demandées : [{8001 9090}]* , assurez-vous que vous n’avez pas démarré le tableau de bord déjà d’une autre fenêtre.
 
-Lorsque vous lancez le tableau de bord sur votre navigateur, vous pouvez obtenir des avertissements d’autorisation en raison de RBAC étant activé par défaut dans les clusters AKS, et le compte de service utilisé par le tableau de bord n’a pas d’autorisations suffisantes pour accéder à toutes les ressources (par exemple,  *PODS est interdite : Utilisateur « système : serviceaccount:kube-système : kubernetes-tableau de bord « Impossible de répertorier le nombre de pods dans l’espace de noms « default »*). Exécutez la commande suivante pour accorder les autorisations nécessaires pour `kubernetes-dashboard`, puis redémarrez le tableau de bord :
+Lorsque vous lancez le tableau de bord sur votre navigateur, vous pouvez obtenir des avertissements d’autorisation en raison de RBAC étant activé par défaut dans les clusters AKS, et le compte de service utilisé par le tableau de bord n’a pas d’autorisations suffisantes pour accéder à toutes les ressources (par exemple,  *PODS est interdite : Utilisateur « système : serviceaccount:kube-système : kubernetes-tableau de bord « Impossible de répertorier le nombre de pods dans l’espace de noms « default »* ). Exécutez la commande suivante pour accorder les autorisations nécessaires pour `kubernetes-dashboard`, puis redémarrez le tableau de bord :
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

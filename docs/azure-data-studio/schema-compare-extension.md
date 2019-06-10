@@ -10,15 +10,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 836884e69fcc841f30f02f871b54d791d27d566b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+manager: jroth
+ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748462"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798084"
 ---
-# <a name="schema-compare-extension-preview"></a>Extension de comparaison de schéma (version préliminaire)
+# <a name="schema-compare-extension-preview"></a>Extension de comparaison de schéma (préversion)
 L’extension de comparaison de schémas fournit une expérience facile à utiliser pour comparer les bases de données et fichiers .dacpac et appliquer les modifications à partir de la source à la cible.
 
 Cette expérience est actuellement dans sa version préliminaire. Signaler des problèmes et demandes de fonctionnalités [ici.](https://github.com/microsoft/azuredatastudio/issues)
