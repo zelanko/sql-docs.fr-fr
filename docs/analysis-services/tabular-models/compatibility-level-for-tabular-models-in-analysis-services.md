@@ -1,6 +1,6 @@
 ---
 title: Niveau de compatibilité pour les modèles tabulaires dans Analysis Services | Microsoft Docs
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175124"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826830"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Niveau de compatibilité pour les modèles tabulaires Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  Le *niveau de compatibilité* fait référence aux comportements spécifiques à chaque version dans le moteur Analysis Services. Par exemple, DirectQuery et les métadonnées d’objet tabulaire ont des implémentations différentes selon le niveau de compatibilité. En général, vous devez choisir le dernier niveau de compatibilité pris en charge par vos serveurs.
+  Le *niveau de compatibilité* fait référence à des améliorations de fonctionnalités et de fonctionnalités dans le moteur Analysis Services, ainsi que dans les métadonnées de modèle tabulaire. En général, vous devez choisir le dernier niveau de compatibilité pris en charge par vos serveurs. 
 
   **Le dernier niveau de compatibilité pris en charge est 1400** 
   
 Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suivantes :
 
 *  Nouvelle infrastructure pour la connectivité des données et les importer dans les modèles tabulaires avec prise en charge de TOM APIs et des scripts TMSL. Cela permet la prise en charge des sources de données supplémentaires telles que le stockage Blob Azure. Données supplémentaires sources seront inclus dans de futures mises à jour.
-*  Transformation des données et des fonctionnalités de mashup des données en utilisant des expressions M et obtenir des données dans SSDT.
-*  Mesures prennent désormais en charge une propriété de lignes de détails avec une expression DAX, l’activation des outils décisionnels comme Microsoft Excel zoom aux données détaillées à partir d’un rapport agrégé. Par exemple, lorsque les utilisateurs finaux afficher le total des ventes pour une région et un mois, ils peuvent afficher les détails de la commande associée. 
+*  Transformation des données et des fonctionnalités de mashup des données à l’aide d’expressions M et obtenir des données dans SQL Server Data Tools (SSDT).
+*  Mesure maintenant la prise en charge une propriété de lignes de détails avec une expression DAX, activer une analyse Décisionnelle des outils tels que de simulation de Microsoft Excel pour les données à partir d’un rapport agrégé détaillées. Par exemple, lorsque les utilisateurs consultent le total des ventes pour une région et un mois, ils peuvent afficher les détails de la commande associée. 
 *  Sécurité au niveau objet pour les noms de table et de colonne, en plus des données qu’ils contiennent.
 *  Prise en charge améliorée pour les hiérarchies irrégulières.
 *  Analyse des performances et améliorations.
@@ -35,6 +35,8 @@ Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suiv
   
 ## <a name="supported-compatibility-levels-by-version"></a>Niveaux de compatibilité pris en charge par version
   
+Niveaux de compatibilité inférieurs sont prises en charge vers l’arrière compatibilité. 
+
 |||  
 |-|-|- 
 |**Niveau de compatibilité**|**Version du serveur**| 
@@ -44,7 +46,7 @@ Principales fonctionnalités dans le niveau de compatibilité 1400 sont les suiv
 |1103|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\* niveaux de compatibilité 1100 et 1103 sont déconseillées dans SQL Server 2017.
+\* niveaux de compatibilité 1100 et 1103 sont déconseillées dans SQL Server 2017 et versions ultérieures.
   
 ## <a name="set-compatibility-level"></a>Définir un niveau de compatibilité 
  Lorsque vous créez un nouveau projet de modèle tabulaire dans SQL Server Data Tools (SSDT), vous pouvez spécifier le niveau de compatibilité sur les **Générateur de modèles tabulaires** boîte de dialogue. 
