@@ -1,6 +1,6 @@
 ---
 title: Configurer un serveur de rapports en mode natif pour l’administration locale (SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c0c170a76ee14b609ebc98fdc2232b611a11749e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 35355b32c8e4b59618cf146d9de04f3242ec6e6a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580423"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403262"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [Installer SQL Server avec l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "65580423"
   
 -   [Présentation des modifications de configuration](#bkmk_configuraiton_overview)  
   
--   [Pour configurer un serveur de rapports local et l'administration du gestionnaire de rapports](#bkmk_configure_local_server)  
+-   [Pour configurer un serveur de rapports local et l'administration du portail web](#bkmk_configure_local_server)  
   
 -   [Pour configurer SQL Server Management Studio (SSMS) pour l'administration du serveur de rapports local](#bkmk_configure_ssms)  
   
@@ -64,18 +64,18 @@ ms.locfileid: "65580423"
   
 -   Créez les attributions de rôle qui vous accordent en tant qu'administrateur du serveur de rapports l'autorisation de gérer le contenu et les opérations sans devoir utiliser la fonctionnalité **Exécuter en tant qu'administrateur** sur Internet Explorer. En créant des attributions de rôle pour votre compte d'utilisateur Windows, vous accédez à un serveur de rapports avec les autorisations Gestionnaire de contenu et Administrateur système via des attributions de rôle explicites qui remplacent les attributions de rôle prédéfinies et intégrées créées par Reporting Services.  
   
-##  <a name="bkmk_configure_local_server"></a> Pour configurer un serveur de rapports local et l'administration du gestionnaire de rapports  
+##  <a name="bkmk_configure_local_server"></a> Pour configurer un serveur de rapports local et l'administration du portail web  
  Complétez les étapes de configuration de cette section si vous souhaitez accéder à un serveur de rapports local et vous voyez des erreurs semblables à la suivante :  
   
 -   L'utilisateur `'Domain\[user name]`» ne dispose pas des autorisations requises. Vérifiez que les autorisations suffisantes ont été accordées et qu'aucune restriction liée au contrôle de compte d'utilisateur (UAC) Windows ne pose problème.  
   
 ###  <a name="bkmk_site_settings"></a> Paramètres du site de confiance dans le navigateur  
   
-1.  Ouvrez une fenêtre du navigateur avec les autorisations Exécuter en tant qu'administrateur. Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, cliquez avec le bouton droit sur **Internet Explorer**et sélectionnez **Exécuter en tant qu’administrateur**.  
+1.  Ouvrez une fenêtre du navigateur avec les autorisations Exécuter en tant qu'administrateur. Dans le menu **Démarrer**, cliquez avec le bouton de droite sur **Internet Explorer** et sélectionnez **Exécuter en tant qu’administrateur**.  
   
-2.  Cliquez sur **Autoriser** pour continuer.  
+2.  Sélectionnez **Oui** lorsque vous êtes invité à continuer.  
   
-3.  Dans l'adresse URL, entrez l'URL du Gestionnaire de rapports. Pour obtenir des instructions, consultez [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+3.  Dans l'adresse URL, entrez l'URL du portail web. Pour obtenir des instructions, consultez [Le portail web d’un serveur de rapports &#40;Mode natif SSRS&#41;](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
 4.  Cliquez sur **Outils**.  
   
@@ -93,51 +93,48 @@ ms.locfileid: "65580423"
   
 11. Cliquez sur **Ajouter**.  
   
-12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+12. Sélectionnez **OK**.  
   
-###  <a name="bkmk_configure_folder_settings"></a> Paramètres du dossier du gestionnaire de rapports  
+###  <a name="bkmk_configure_folder_settings"></a> Paramètres du dossier de portail Web  
   
-1.  Dans le Gestionnaire de rapports, sur la page d'accueil, cliquez sur **Paramètres du dossier**.  
+1.  Dans le portail web, sur la page d’accueil, cliquez sur **Gérer le dossier**.  
   
-2.  Dans la page Paramètres du dossier, cliquez sur **Sécurité**.  
+2.  Dans la page du dossier **Gérer**, cliquez sur **Sécurité**, puis sélectionnez **Ajouter un groupe ou utilisateur**.  
   
-3.  Cliquez sur **Nouvelle attribution de rôle**.  
-  
-4.  Dans le champ **Nom d'utilisateur ou de groupe** entrez votre compte d'utilisateur Windows au format : `<domain>\<user>`.  
+3.  Dans la page **Nouvelle attribution de rôle**, dans le champ **Groupe ou utilisateur**, entrez votre compte d'utilisateur Windows au format : `<domain>\<user>`.  
   
 5.  Sélectionnez **Gestionnaire de contenu**.  
   
-6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+6.  Sélectionnez **OK**.  
   
-###  <a name="bkmk_configure_site_settings"></a> Paramètres du site du gestionnaire de rapports  
+###  <a name="bkmk_configure_site_settings"></a> Paramètres du site de portail Web  
   
-1.  Ouvrez votre navigateur avec des privilèges d'administrateur et accédez au gestionnaire de rapports, `https://<server name>/reports`.  
+1.  Ouvrez votre navigateur avec des privilèges d'administrateur et accédez au portail web, `https://<server name>/reports`.  
   
-2.  Cliquez sur **Paramètres du site** dans l'angle supérieur de la page d'accueil.  
+2.  Sélectionnez l’icône Engrenage dans le coin supérieur droit de la page d’accueil, puis **Paramètres du site** dans le menu déroulant. 
   
-    > [!TIP]  
-    >  **Remarque :** si vous ne voyez pas l’option **Paramètre du site** , fermez et rouvrez votre navigateur et accédez au gestionnaire de rapports avec des privilèges d’administrateur.  
+    ![icône Engrenage](../media/ssrsgearmenu.png).
+    >[!TIP]  
+    >**Remarque :** si vous ne voyez pas l’option **Paramètre du site**, fermez et rouvrez votre navigateur et accédez au portail web avec des privilèges d’administrateur.  
   
-3.  Cliquez sur **Sécurité**.  
+3.  Dans la page Paramètres du Site, sélectionnez **Sécurité**, puis sélectionnez **Ajouter un groupe ou utilisateur**.  
   
-4.  Cliquez sur **Nouvelle attribution de rôle**.  
+4.  Dans le champ **Nom d'utilisateur ou de groupe** entrez votre compte d'utilisateur Windows au format : `<domain>\<user>`.  
+
+5.  Sélectionnez **Administrateur système**.  
   
-5.  Dans le champ **Nom d'utilisateur ou de groupe** entrez votre compte d'utilisateur Windows au format : `<domain>\<user>`.  
+6.  Sélectionnez **OK**.  
   
-6.  Sélectionnez **Administrateur système**.  
+7.  Fermez le portail web.  
   
-7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
-8.  Fermez le Gestionnaire de rapports.  
-  
-9. Rouvrez le Gestionnaire de rapports dans Internet Explorer, sans utiliser **Exécuter en tant qu’administrateur**.  
+8. Rouvrez le portail web dans Internet Explorer, sans utiliser **Exécuter en tant qu’administrateur**.  
   
 ##  <a name="bkmk_configure_ssms"></a> Pour configurer SQL Server Management Studio (SSMS) pour l'administration du serveur de rapports local  
  Par défaut, vous ne pouvez accéder à toutes les propriétés du serveur de rapports disponibles dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] à moins de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des privilèges d'administrateur.  
   
  **Pour configurer les propriétés et attributions de rôles [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , vous n'avez donc pas besoin de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des autorisations élevées chaque fois :  
   
--   Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, sur **SQL Server 2014**, cliquez avec le bouton droit sur **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
+-   Dans le menu **Démarrer**, cliquez avec le bouton de droite sur **Microsoft SQL Server [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** , puis cliquez sur **Exécuter en tant qu’administrateur**.  
   
 -   Connectez-vous à votre serveur local [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -151,7 +148,7 @@ ms.locfileid: "65580423"
   
 -   Fermez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
--   Pour ajouter un utilisateur au rôle système « administrateur système », consultez la section [Paramètres du site du gestionnaire de rapports](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
+-   Pour ajouter un utilisateur au rôle système « administrateur système », consultez la section [Paramètres du site du portail web](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
   
  Maintenant, lorsque vous ouvrez [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et vous ne sélectionnez pas explicitement **Exécuter en tant qu'administrateur** , vous avez accès aux propriétés du serveur de rapports.  
   
@@ -164,22 +161,20 @@ ms.locfileid: "65580423"
   
  **Pour exécuter avec des autorisations élevées chaque fois que vous ouvrez SSDT :**  
   
-1.  Dans l’écran de démarrage, tapez **sql server** , puis cliquez avec le bouton droit sur **SQL Server Data Tools**. Cliquez sur **Exécuter en tant qu’administrateur**  
+1.  Dans le menu de démarrage, sélectionnez **Microsoft sql server**, puis cliquez avec le bouton de droite sur **SQL Server Data Tools**. Cliquez sur **Exécuter en tant qu’administrateur**  
   
-2.  Cliquez sur **Continuer**.  
+2.  Sélectionnez **Oui** lorsque vous êtes invité à continuer.  
   
-3.  Cliquez sur **Exécuter le programme**.  
-  
- Vous devez maintenant être en mesure de déployer les rapports et autres éléments sur un serveur de rapports local.  
+Vous devez maintenant être en mesure de déployer les rapports et autres éléments sur un serveur de rapports local.  
   
  **Pour configurer les propriétés et attributions de rôles [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous n'avez donc pas besoin de démarrer SSDT avec des autorisations élevées chaque fois :**  
   
--   Consultez les sections [Paramètres du dossier du gestionnaire de rapports](#bkmk_configure_folder_settings) et [Paramètres du site du gestionnaire de rapports](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
+-   Consultez les sections [Paramètres du dossier du portail web](#bkmk_configure_folder_settings) et [Paramètres du site du portail web](#bkmk_configure_site_settings) plus haut dans cette rubrique.  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> Informations supplémentaires  
  Une étape de configuration supplémentaire et courante pour l'administration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à ouvrir le port 80 dans le Pare-feu Windows pour autoriser l'accès à l'ordinateur du serveur de rapports. Pour obtenir des instructions, consultez [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md).  
   
-## <a name="see-also"></a> Voir aussi  
- [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Gérer un serveur de rapports Reporting Services en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

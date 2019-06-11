@@ -1,6 +1,6 @@
 ---
 title: Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server | Microsoft Docs
-ms.date: 02/28/2016
+ms.date: 05/28/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e44d8dde3f93a946a25cc8fe269a26f70a7432a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: eda9f349cf53d77af14df10c842c9619fb6d370a
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574116"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403180"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server
 Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, voir [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -31,7 +31,7 @@ Cette situation se produit lorsque des informations d'identification sont transm
 Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server). Cette erreur est retournée par l’instance du moteur de base de données qui héberge la base de données du serveur de rapports. Dans la plupart des cas, cette erreur se produit à la suite d’un arrêt du service SQL Server. Si vous utilisez SQL Server Express with Advanced Services ou une instance nommée, cette erreur se produit si l’URL du serveur de rapports ou la chaîne de connexion à la base de données du serveur de rapports ne sont pas correctes. Pour résoudre ces problèmes, procédez comme suit :  
   
 * Vérifiez que le service SQL Server (**MSSQLSERVER**) a démarré. Sur l’ordinateur qui héberge l’instance du moteur de base de données, cliquez sur Démarrer, Outils d’administration, Services, puis faites défiler la liste jusqu’à SQL Server (**MSSQLSERVER**). Si le service n’a pas démarré, cliquez dessus avec le bouton droit, puis sélectionnez Propriétés. Dans Type de démarrage, sélectionnez Automatique, puis cliquez successivement sur Appliquer, Démarrer, puis OK.   
-* Assurez-vous que l'URL du serveur de rapports et la chaîne de connexion à la base de données du serveur de rapports sont correctes. Si les services Reporting Services ou le moteur de base de données ont été installés en tant qu’instance nommée, la chaîne de connexion par défaut créée pendant l’installation comprend le nom d’instance. Par exemple, si vous avez installé une instance par défaut de SQL Server Express with Advanced Services sur un serveur nommé DEVSRV01, l’URL du Gestionnaire de rapports est DEVSRV01\Reports$SQLEXPRESS. En outre, le nom du serveur de base de données dans la chaîne de connexion ressemble à DEVSRV01\SQLEXPRESS. Pour plus d’informations sur les URL et les chaînes de connexion à la source de données pour SQL Server Express, voir [Reporting Services dans SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Pour vérifier la chaîne de connexion de la base de données du serveur de rapports, démarrez l’outil de configuration de Reporting Services, puis consultez la page Installation de la base de données.  
+* Assurez-vous que l'URL du serveur de rapports et la chaîne de connexion à la base de données du serveur de rapports sont correctes. Si les services Reporting Services ou le moteur de base de données ont été installés en tant qu’instance nommée, la chaîne de connexion par défaut créée pendant l’installation comprend le nom d’instance. Par exemple, si vous avez installé une instance par défaut de SQL Server Express with Advanced Services sur un serveur nommé DEVSRV01, l’URL du portail web est DEVSRV01\Reports$SQLEXPRESS. En outre, le nom du serveur de base de données dans la chaîne de connexion ressemble à DEVSRV01\SQLEXPRESS. Pour plus d’informations sur les URL et les chaînes de connexion à la source de données pour SQL Server Express, voir [Reporting Services dans SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Pour vérifier la chaîne de connexion de la base de données du serveur de rapports, démarrez l’outil de configuration de Reporting Services, puis consultez la page Installation de la base de données.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Impossible d'établir une connexion. Vérifiez que le serveur fonctionne.  
 Cette erreur est retournée par le fournisseur ADOMD.NET. Cette erreur peut se produire pour différentes raisons. Si vous avez spécifié le serveur comme hôte local (« localhost »), essayez de spécifier le nom du serveur à la place. Cette erreur peut également se produire s'il est impossible d'allouer de la mémoire à la nouvelle connexion. Pour plus d’informations, voir l’ [l’Article 912017 de Base de connaissances CORRECTIF, Message d’erreur lorsque vous vous connectez à une instance de SQL Server 2005 Analysis Services :](https://support.microsoft.com/kb/912017).  
@@ -50,7 +50,7 @@ Pour résoudre cette erreur, vous pouvez modifier la chaîne de connexion de man
 3. Sélectionnez **Protocoles pour MSSQLSERVER**.  
 4. Cliquez avec le bouton droit sur **TCP/IP**, puis sélectionnez **Activer**.  
 5. Sélectionnez **Services SQL Server**.  
-6. Cliquez avec le bouton droit sur **SQL Server (MSSQLSERVER)**, puis sélectionnez **Redémarrer**.  
+6. Cliquez avec le bouton droit sur **SQL Server (MSSQLSERVER)** , puis sélectionnez **Redémarrer**.  
   
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Erreur WMI lors de la connexion à un serveur de rapports dans Management Studio  
 Par défaut, Management Studio utilise le fournisseur WMI (Windows Management Instrumentation) de Reporting Services pour établir une connexion au serveur de rapports. Si le fournisseur WMI n'est pas installé correctement, vous obtiendrez l'erreur suivante lors de la tentative de connexion au serveur de rapports :  
@@ -76,7 +76,7 @@ Cette erreur se produit lorsque le serveur de rapports ne peut pas se connecter 
   
 Cette erreur peut également se produire si l’instance du moteur de base de données qui héberge la base de données du serveur de rapports n’est pas configurée pour les connexions à distance. La connexion a distance est activée par défaut dans certaines éditions de SQL Server. Pour vérifier si elle est activée sur l’instance du moteur de base de données SQL Server que vous utilisez, exécutez l’outil Gestionnaire de Configuration SQL Server. Vous devez activer à la fois TCP/IP et les canaux nommés. Un serveur de rapports utilise les deux protocoles. Pour obtenir des instructions sur la manière d’activer des connexions distantes, voir la section « Comment configurer des connexions distantes à la base de données du serveur de rapports » dans [Configurer un serveur de rapports pour l’administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-Si l’erreur inclut le texte supplémentaire « Une erreur s’est produite lors de l’établissement d’une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n’autorisent pas les connexions à distance. (**fournisseur : interfaces réseau SQL Server, erreur : 26 - Erreur lors de la localisation du serveur/de l’instance spécifiés).**», cela signifie que le mot de passe a expiré sur le compte utilisé pour exécuter l’instance du moteur de base de données . Pour résoudre cette erreur, réinitialisez le mot de passe.   
+Si l’erreur inclut le texte supplémentaire « Une erreur s’est produite lors de l’établissement d’une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n’autorisent pas les connexions à distance. (**fournisseur : interfaces réseau SQL Server, erreur : 26 - Erreur lors de la localisation du serveur/de l’instance spécifiés).** », cela signifie que le mot de passe a expiré sur le compte utilisé pour exécuter l’instance du moteur de base de données . Pour résoudre cette erreur, réinitialisez le mot de passe.   
   
 ## <a name="rpc-server-is-not-listening"></a>« Le serveur RPC n'est pas à l'écoute »  
 Le service Report Server utilise le serveur RPC (Remote Procedure Call) pour certaines opérations. Si vous obtenez le message d'erreur « Le serveur RPC n'est pas à l'écoute », assurez-vous que le service Report Server est en cours d'exécution.  
@@ -109,7 +109,7 @@ Il existe deux solutions de contournement pour ce problème.
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Impossible de se connecter aux répertoires /reports et /reportserver lorsque les bases de données du serveur de rapports sont créées sur un serveur SQL Server virtuel qui s'exécute dans un cluster Microsoft Cluster Services (MSCS)  
 Lorsque vous créez les bases de données du serveur de rapports, **ReportServer** et **ReportServerTempDB**, sur un serveur SQL Server virtuel s’exécutant dans un cluster MSCS, il se peut que le nom distant au format `<domain>\<computer_name>$` ne soit pas inscrit dans SQL Server en tant que connexion. Si vous avez configuré le compte de service du serveur de rapports en tant que compte nécessitant ce nom distant pour les connexions, les utilisateurs ne peuvent pas se connecter aux répertoires /reports et /reportserver dans Reporting Services. Par exemple, le compte Windows intégré NetworkService requiert ce nom distant. Pour éviter ce problème, utilisez un compte de domaine explicite ou un compte de connexion SQL Server pour vous connecter aux bases de données du serveur de rapports.  
     
-  ## <a name="see-also"></a> Voir aussi  
+  ## <a name="see-also"></a>Voir aussi  
 [Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
