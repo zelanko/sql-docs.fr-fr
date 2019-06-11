@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983ba238c0c5d5a0e355f49af734a72ae946ee79
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980395"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413422"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ip4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+        'ip4_address', 'pv4_mask'  
       | 'ipv6_address'  
      }  
   
@@ -228,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Pour plus d’informations sur les prérequis pour les nœuds WSFC et les instances de serveur, consultez [Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie le chemin de l’URL du [point de terminaison de mise en miroir de bases de données](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica de disponibilité que vous définissez dans votre clause REPLICA ON actuelle.  
   
  La clause ENDPOINT_URL est obligatoire. Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie une URL pour spécifier une URL de point de terminaison ou l'URL de routage en lecture seule. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -316,10 +316,10 @@ CREATE AVAILABILITY GROUP group_name
   
  Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
   
- Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'**).  
+ Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'** ).  
   
  Pour plus d’informations sur le calcul de l’URL de routage en lecture seule pour un réplica, consultez [Calcul de l’URL de routage en lecture seule pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx).  
   
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du comportement par défaut.  
   
- READ_ONLY_ROUTING_LIST **=** { **(‘**\<server_instance>**’** [ **,**...*n* ] **)** | NONE } Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité, qui répondent aux conditions suivantes lors de l’exécution sous le rôle secondaire :  
+ READ_ONLY_ROUTING_LIST **=** { **(‘** \<server_instance> **’** [ **,** ...*n* ] **)** | NONE } Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité, qui répondent aux conditions suivantes lors de l’exécution sous le rôle secondaire :  
   
 -   Être configurés pour autoriser les connexions ou connexions en lecture seule (voir l'argument ALLOW_CONNECTIONS de l'option de SECONDARY_ROLE, ci-dessus).  
   
@@ -372,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name > Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie le chemin de l’URL de l’écouteur associé au groupe de disponibilité.  
   
  La clause LISTENER est obligatoire.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie une URL pour l’écouteur associé au groupe de disponibilité. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Spécifie l’amorçage manuel (par défaut). Cette méthode vous oblige à créer une sauvegarde de la base de données sur le réplica principal et de restaurer manuellement cette sauvegarde sur le ou les réplicas du groupe de disponibilité secondaire.  
   
- LISTENER **‘**_dns\_name_**’(** \<listener_option\> **)** Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. LISTENER est un argument facultatif.  
+ LISTENER **‘** _dns\_name_ **’(** \<listener_option\> **)** Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. LISTENER est un argument facultatif.  
   
 > [!IMPORTANT]
 >  Avant de créer votre premier écouteur, nous vous recommandons vivement de lire [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -436,27 +436,27 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER prend l’une des options \<listener_option> suivantes : 
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Spécifie que l’écouteur du groupe de disponibilité utilise le protocole DHCP (Dynamic Host Configuration Protocol).  Utilisez éventuellement la clause ON pour identifier le réseau sur lequel cet écouteur est créé. DHCP est limité à un seul sous-réseau utilisé pour chaque instance de serveur qui héberge un réplica dans le groupe de disponibilité.  
   
 > [!IMPORTANT]  
 >  Nous vous déconseillons d'utiliser DHCP dans un environnement de production. Lorsqu'un temps mort se produit et que le bail IP DHCP arrive à expiration, une période de temps supplémentaire est requise pour enregistrer la nouvelle adresse IP de réseau DHCP associée au nom DNS de l'écouteur et cela a un impact sur la connectivité client. Toutefois, DHCP peut tout à fait être utilisé pour configurer un environnement de développement et de test dans le but de vérifier les fonctions de base des groupes de disponibilité et l'intégration avec vos applications.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Spécifie que l’écouteur du groupe de disponibilité utilise une ou plusieurs adresses IP statiques au lieu d'utiliser DHCP. Pour créer un groupe de service sur plusieurs sous-réseaux, chaque sous-réseau requiert une adresse IP statique dans la configuration de l'écouteur. Pour un sous-réseau donné, l'adresse IP statique peut être une adresse IPv4 ou une adresse IPv6. Contactez votre administrateur réseau pour obtenir une adresse IP statique pour chaque sous-réseau qui héberge un réplica pour le nouveau groupe de disponibilité.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ip4_address*  
  Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `255.255.254.0`.  
   
  *ipv6_address*  
@@ -476,7 +476,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -569,7 +569,7 @@ GO
   
 -   [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

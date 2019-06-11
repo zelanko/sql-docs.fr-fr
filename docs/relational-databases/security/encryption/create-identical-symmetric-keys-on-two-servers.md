@@ -1,7 +1,7 @@
 ---
 title: Créer des clés symétriques identiques sur deux serveurs | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 7158694719e11cca4ea355c5fe3b94359e00b952
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997561"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428824"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Créer des clés symétriques identiques sur deux serveurs
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53997561"
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ANY SYMMETRIC KEY sur la base de données. Si la clause AUTHORIZATION est spécifiée, l'autorisation IMPERSONATE sur l'utilisateur de base de données ou l'autorisation ALTER sur le rôle d'application est requise. Si le chiffrement s'effectue par certificat ou clé asymétrique, l'autorisation VIEW DEFINITION est requise sur le certificat ou la clé asymétrique. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les rôles d'application sont les seuls à pouvoir posséder des clés symétriques. Les groupes et les rôles ne peuvent pas posséder de clés symétriques.  
   
 ## <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
@@ -90,9 +90,23 @@ ms.locfileid: "53997561"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- Pour plus d'informations, consultez les documents suivants :  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>Modification du chiffrement dans SQL Server 2017 CU2
+
+SQL Server 2016 utilise l’algorithme de hachage SHA1 pour son travail de chiffrement. À compter de SQL Server 2017, SHA2 est utilisé à la place. Cela signifie que des étapes supplémentaires peuvent être nécessaires pour que votre installation de SQL Server 2017 puisse déchiffrer les éléments qui ont été chiffrées par SQL Server 2016. Voici les étapes supplémentaires :
+
+- Vérifiez que votre ordinateur SQL Server 2017 dispose au minimum de la Mise à jour cumulative 2 (CU2).
+  - Pour obtenir des informations importantes, consultez [Mise à jour cumulative 2 (CU2) pour SQL Server 2017](https://support.microsoft.com/help/4052574).
+- Après avoir installé CU2, activez l’indicateur de trace 4631 dans SQL Server 2017 : `DBCC TRACEON(4631, -1);`
+  - L’indicateur de trace 4631 est une nouveauté dans SQL Server 2017. L’indicateur de trace 4631 doit être `ON` globalement avant que vous créiez la clé principale, le certificat ou la clé symétrique dans SQL Server 2017. Ainsi, ces éléments créés peuvent interopérer avec SQL Server 2016 et versions antérieures.
+
+Pour plus d’informations, consultez :
+
+- [CORRECTIF : SQL Server 2017 ne peut pas déchiffrer les données chiffrées par les versions antérieures de SQL Server à l’aide de la même clé symétrique](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [Les clés symétriques identiques ne fonctionnent pas entre SQL Server 2017 et une autre version de SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>Informations supplémentaires
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

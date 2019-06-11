@@ -1,7 +1,7 @@
 ---
 title: Serveurs liés (Moteur de base de données) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -20,16 +20,24 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f9e1a278e51c2ace53932fcc48ef3759baa307d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512724"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354373"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Configurez un serveur lié pour permettre à [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] d'exécuter des commandes sur des sources de données OLE DB situées en dehors de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, y compris [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access et Excel. Les serveurs liés offrent les avantages suivants :  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  Les serveurs liés permettent au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et à [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) de lire des données à partir des sources de données distantes et d’exécuter des commandes sur les serveurs de base de données distants (par exemple des sources de données OLE DB) en dehors de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel et Azure CosmosDB.
+
+> [!NOTE]
+> Les serveurs liés sont disponibles dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et Azure SQL Database Managed Instance. Ils ne sont pas activés dans les pools élastiques et Singleton Azure SQL Database. Il existe certaines [contraintes dans Managed Instance qui sont décrites ici](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+
+## <a name="when-to-use-linked-servers"></a>Quand utiliser des serveurs liés ?
+
+  Les serveurs liés permettent d’implémenter des bases de données distribuées qui peuvent extraire et mettre à jour des données dans d’autres bases de données. Ils constituent une bonne solution dans les scénarios où vous devez implémenter le partitionnement de base de données sans avoir à créer de code d’application personnalisé ou à charger directement à partir de sources de données distantes. Les serveurs liés offrent les avantages suivants :  
   
 -   la possibilité d'accéder à des données extérieures à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
@@ -48,7 +56,7 @@ Vous pouvez configurer un serveur lié en utilisant [!INCLUDE[ssManStudioFull](.
   
 Un *fournisseur OLE°DB* représente une DLL qui gère une source de données spécifique et interagit avec elle. Une *source de données OLE DB* identifie la base de données spécifique accessible via OLE DB. Bien que les sources de données interrogées au moyen des définitions de serveurs liés soient d'ordinaire des bases de données, des fournisseurs OLE°DB existent pour différents fichiers et formats de fichiers, dont les fichiers texte, les données incluses dans des feuilles de calcul et les résultats de recherches de contenu.  
   
-Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) est le fournisseur OLE DB officiel pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Le fournisseur OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (PROGID : SQLNCLI11) est le fournisseur OLE DB officiel pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a été testé qu’avec le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et certains autres fournisseurs.  
@@ -82,7 +90,7 @@ Vous pouvez utiliser des procédures stockées et des affichages catalogue pour 
   
 Vous pouvez également définir des serveurs liés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **Objets serveur**et sélectionnez **Nouveau**, puis **Serveur lié**. Pour supprimer une définition de serveur lié, vous pouvez cliquer avec le bouton droit sur le nom du serveur lié, puis sélectionner **Supprimer**.  
   
- Lorsque vous exécutez une requête distribuée sur un serveur lié, veillez à inclure pour chaque source de données à interroger un nom de table en quatre parties complet. Ce nom en quatre parties doit être au format _nom\_serveur\_lié.catalog_**.**_schéma_**.**_nom\_objet_.  
+ Lorsque vous exécutez une requête distribuée sur un serveur lié, veillez à inclure pour chaque source de données à interroger un nom de table en quatre parties complet. Ce nom en quatre parties doit être au format _nom\_serveur\_lié.catalog_ **.** _schéma_ **.** _nom\_objet_.  
   
 > [!NOTE]  
 > Les serveurs liés peuvent être définis de façon à repointer (en bouclage) vers le serveur sur lequel ils sont définis. Les serveurs en boucle sont particulièrement utiles pour tester une application utilisant des requêtes distribuées sur un réseau comportant un seul serveur. Les serveurs liés en boucle sont conçus à des fins de test et ne sont pas pris en charge pour de nombreuses opérations, telles que les transactions distribuées.  

@@ -1,7 +1,7 @@
 ---
 title: Conteneur de boucles Foreach | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727707"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403049"
 ---
 # <a name="foreach-loop-container"></a>Conteneur de boucles Foreach
 
@@ -68,6 +68,8 @@ ms.locfileid: "65727707"
 -   Énumérateur d’objets blob Azure Foreach pour énumérer les objets blob dans un conteneur d’objets blob dans Azure Storage.  
 
 -   Énumérateur ForEach ADLS File pour énumérer les fichiers d’un répertoire dans Azure Data Lake Store.
+
+-   Énumérateur ForEach Data Lake Storage Gen2 File pour énumérer les fichiers d’un répertoire dans Azure Data Lake Store Gen2.
   
  Le schéma suivant montre un conteneur de boucles Foreach ayant une tâche de système de fichiers. La boucle Foreach utilise l'énumérateur de fichier Foreach, tandis que la tâche de système de fichiers est configurée pour copier un fichier. Si le dossier spécifié par l'énumérateur contient quatre fichiers, la boucle se répète quatre fois et copie quatre fichiers.  
   
@@ -98,6 +100,7 @@ ms.locfileid: "65727707"
 |Énumérateur Foreach File HDFS|Spécifiez un dossier et les fichiers à énumérer, le format du nom des fichiers extraits, et indiquez si l'opération doit parcourir les sous-dossiers.|  
 |Objet blob Azure foreach|Spécifiez le conteneur d'objets blob Azure qui contient les objets blob à énumérer.|  
 |Foreach ADLS File|Spécifiez le répertoire Azure Data Lake Store qui contient les fichiers à énumérer.|
+|Foreach Data Lake Storage Gen2 File|Spécifiez le répertoire Azure Data Lake Storage Gen2 qui contient les fichiers à énumérer, ainsi que d’autres options.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Ajouter une énumération à un flux de contrôle avec un conteneur de boucles Foreach
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut le conteneur de boucles Foreach, un élément de flux de contrôle qui permet de facilement inclure une construction de boucle énumérant les fichiers et objets du flux de contrôle d’un package. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -215,6 +218,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
 |**Énumérateur Foreach File HDFS**|Énumérez les fichiers HDFS dans l’emplacement HDFS spécifié. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur de fichiers HDFS Foreach**.|  
 |**Énumérateur Foreach Azure Blob**|Énumérez les fichiers d’objets blob à l’emplacement spécifié des objets blob. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur d’objets blob Azure Foreach**.|  
 |**Énumérateur Foreach ADLS File**|Permet d’énumérer les fichiers du répertoire Data Lake Store spécifié. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur Foreach ADLS File**.|
+|**Énumérateur Foreach Data Lake Storage Gen2 File**|Permet d’énumérer les fichiers du répertoire Data Lake Storage Gen2 spécifié. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Énumérateur Foreach Data Lake Storage Gen2 File**.|
   
  **Expressions**  
  Cliquez sur **Expressions** ou développez ce groupe pour afficher la liste des expressions de propriété existantes. Cliquez sur le bouton représentant des points de suspension **(...)** pour ajouter une expression de propriété à une propriété d’énumérateur, ou modifiez et évaluez une expression de propriété existante.  
@@ -291,7 +295,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Vous utilisez l'énumérateur ADO Foreach pour énumérer les lignes ou les tables d'un objet ADO ou ADO.NET qui est stocké dans une variable. Par exemple, si la boucle Foreach inclut une tâche de script qui écrit un dataset dans une variable, vous pouvez utiliser l'énumérateur ADO Foreach pour énumérer les lignes du dataset. Si la variable contient un dataset ADO.NET, l'énumérateur peut être configuré pour énumérer les lignes de plusieurs tables ou pour énumérer des tables.  
   
  **Variable source de l’objet ADO**  
- Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable définie par l’utilisateur dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
 > [!NOTE]  
 >  La variable doit être de type Objet ; dans le cas contraire, une erreur se produit.  
@@ -311,7 +315,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  Vous utilisez l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer un schéma pour une source de données spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur d'ensemble de lignes du schéma ADO.NET Foreach pour énumérer des schémas tels que les colonnes de la base de données **AdventureWorks** , et la tâche d'exécution SQL pour obtenir les autorisations de schéma.  
   
  **Connexion**  
- Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions ADO.NET dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions ADO.NET doit utiliser un fournisseur .NET pour OLE DB. Lors de la connexion à SQL Server, il est recommandé d'utiliser le fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, répertorié dans la section **Fournisseurs .Net pour OleDb** de la boîte de dialogue **Gestionnaire de connexions** .  
@@ -330,7 +334,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  L'énumérateur Foreach à partir d'une variable permet d'énumérer les objets énumérables contenus dans la variable spécifiée. Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL qui exécute une requête et enregistre le résultat dans une variable, vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour énumérer les résultats de la requête.  
   
  **Variable**  
- Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -353,11 +357,11 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **DocumentSource**  
  Si **DocumentSourceType** est défini sur **Entrée directe**, indiquez le code XML ou cliquez sur le bouton représentant des points de suspension (...) pour fournir le code XML nécessaire via la boîte de dialogue **Éditeur de source de document**.  
   
- Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -383,7 +387,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **OuterXPathString**  
  Si **OuterXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **OuterXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **OuterXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -406,11 +410,11 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **InnerXPathString**  
  Si **InnerXPathStringSourceType** est défini sur **Entrée directe**, fournissez la chaîne XPath.  
   
- Si **InnerXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Si **InnerXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Si **InnerXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -418,7 +422,7 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d’exécution SQL, vous pouvez utiliser l’énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
   
  **Connexion**  
- Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  Rubriques connexes : [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurer le gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
@@ -470,6 +474,9 @@ Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle For
  **Répertoire d’objets blob**  
  Spécifiez le répertoire d’objets blob qui contient les fichiers d’objets blob à énumérer. Le répertoire d’objets blob est une structure hiérarchique virtuelle.  
   
+ **Rechercher de manière récursive**  
+ Spécifiez s’il faut rechercher de manière récursive dans les sous-répertoires.
+
  **Filtre de noms d’objets blob**  
  Spécifier un filtre de noms pour énumérer les fichiers avec un certain modèle de nom. Par exemple, `MySheet*.xls\*` inclut les fichiers MySheet001.xls et MySheetABC.xlsx.  
   
@@ -490,6 +497,18 @@ Spécifie un filtre de nom de fichier. Seuls les fichiers dont le nom correspond
   
 **SearchRecursively**  
 Spécifie si la recherche doit être récursive au sein du répertoire spécifié.  
+
+####  <a name="ForeachBlobFsFile"></a> Énumérateur = énumérateur Foreach Data Lake Storage Gen2 File 
+L’**énumérateur Foreach Data Lake Storage Gen2 File** permet à un package SSIS d’énumérer les fichiers dans Azure Data Lake Storage Gen2.
+
+**AzureStorageConnection**  
+Spécifie un gestionnaire de connexions Stockage Azure existant ou en crée un qui référence un service Data Lake Storage Gen2.
+
+**FolderPath**  
+Spécifie le chemin du dossier dont il faut énumérer les fichiers.
+
+**SearchRecursively**  
+Spécifie si la recherche doit être récursive au sein du dossier spécifié.  
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Page Mappage de variables - Éditeur de boucle Foreach
  Utilisez la page **Mappage de variables** de la boîte de dialogue **Éditeur de boucle Foreach** pour mapper les variables à la valeur de la collection. La valeur de cette variable est mise à jour avec les valeurs de la collection à chaque itération de la boucle.  
@@ -576,7 +595,7 @@ Utilisez la boîte de dialogue **Sélectionner l’énumération SMO** pour spé
   
  Pour éviter les conséquences négatives d'une synchronisation non déterminante d'une exécution parallèle de tâches dans la boucle, le package doit être configuré pour exécuter un seul exécutable à la fois. Par exemple, si un package peut exécuter plusieurs tâches simultanément, un conteneur de boucles Foreach qui énumère les fichiers dans le dossier, récupère les noms de fichiers, puis utilise une tâche d'exécution SQL pour insérer les noms de fichiers dans une table peut provoquer des conflits d'écriture lorsque deux instances de la tâche d'exécution SQL tentent d'écrire simultanément. Pour plus d’informations, consultez [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   

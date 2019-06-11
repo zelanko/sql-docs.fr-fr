@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580122"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413643"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -209,7 +209,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] prend en charge le format de nom en trois parties nom_bd.[nom_schéma].nom_table_ou_vue quand nom_bd est la base de données active ou la base de données tempdb et quand nom_table_ou_vue commence par #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Index à reconstruire d'après les mêmes colonnes, le même type d'index, le même attribut assurant son unicité ainsi que le même ordre de tri. Cette clause équivaut à [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD permet de réactiver un index désactivé. La reconstruction portant sur un index cluster n'entraîne pas celle des index non cluster associés, à moins que le mot clé ALL ne soit spécifié. Si les options d’index ne sont pas spécifiées, leurs valeurs existantes stockées dans [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) sont celles qui sont appliquées. Si une valeur d’option d’index n’est pas stockée dans **sys.indexes**, celle indiquée par défaut dans la définition de l’argument de l’option s’applique.  
   
  Si l'option ALL est indiquée et que la table sous-jacente correspond à un segment de mémoire, l'opération de reconstruction n'a alors aucun effet sur la table. Tous les index non cluster associés à la table sont donc reconstruits.  
@@ -248,7 +248,7 @@ PARTITION
   
  Numéro de partition d'un index partitionné à reconstruire ou à réorganiser. *partition_number* est une expression de constante qui peut référencer des variables. Cela inclut les fonctions ou variables de types définies par l'utilisateur et les fonctions définies par l'utilisateur, mais exclut l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* doit exister, sinon l’instruction échoue.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +309,7 @@ COMPRESS_ALL_ROW_GROUPS offre un moyen de forcer les rowgroups delta OPEN ou CLO
   
 -   OFF force tous les rowgroups CLOSED dans le columnstore.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Indique des options d'index sans pour autant reconstruire ou réorganiser l'index. SET ne peut pas être spécifié pour un index désactivé.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +423,7 @@ FILLFACTOR = *fillfactor*
   
 -   sous-ensemble d'un index partitionné (un index partitionné entier peut être reconstruit en ligne).  
 
--  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] avant la version V12 et SQL Server avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne prennent pas en charge l’option `ONLINE` pour les opérations de construction et de reconstruction d’index cluster quand la table de base contient des colonnes **varchar(max)** ou **varbinary(max)**.
+-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] avant la version V12 et SQL Server avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne prennent pas en charge l’option `ONLINE` pour les opérations de construction et de reconstruction d’index cluster quand la table de base contient des colonnes **varchar(max)** ou **varbinary(max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -529,7 +529,7 @@ La valeur par défaut est 0 minute.
   
  Pour plus d’informations sur la compression, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -625,7 +625,7 @@ ABORT
 
 Abandonnez une opération d’index en cours d’exécution ou en pause qui a été déclarée comme pouvant être reprise. Vous devez exécuter explicitement une commande **ABORT** pour mettre fin à une opération de reconstruction d’index pouvant être reprise. L’échec ou la mise en pause d’une opération d’index pouvant être reprise n’arrête pas son exécution, mais la laisse dans un état de pause indéterminée.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 ALTER INDEX ne peut pas être utilisé pour recréer la partition d'un index ou le déplacer vers un autre groupe de fichiers. Cette instruction ne peut pas être utilisée pour modifier la définition de l'index, comme l'ajout ou la suppression de colonnes ou la modification de l'ordre des colonnes. Exécutez CREATE INDEX avec la clause DROP_EXISTING afin de procéder aux opérations suivantes.  
   
 Si une option n'est pas spécifiée de façon explicite, le paramètre actuel s'applique. Par exemple, si un paramètre FILLFACTOR n'est pas indiqué dans la clause REBUILD, la valeur de facteur de remplissage stockée dans le catalogue système est utilisée lors du processus de reconstruction. Pour voir les paramètres des options d’index actuels, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -663,7 +663,7 @@ Pour reconstruire un index cluster columnstore, [!INCLUDE[ssNoVersion](../../inc
   
 1. Nécessite de l'espace sur le support physiques pour stocker deux copies de l'index columnstore pendant que la reconstruction est en cours. Lorsque la reconstruction est terminée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime l'index columnstore cluster d'origine.
 
-1. Pour une table Azure SQL Data Warehouse avec un index cluster columnstore ordonné, ALTER INDEX REBUILD trie à nouveau les données.  
+1. Pour une table Azure SQL Data Warehouse avec un index cluster columnstore ordonné, ALTER INDEX REBUILD trie à nouveau les données. Supervisez tempdb pendant les opérations de reconstruction. Si vous avez besoin de davantage d’espace tempdb, vous pouvez effectuer un scale up de l’entrepôt de données. Réeffectuez un scale down une fois la reconstruction d’index terminée.
   
 ## <a name="reorganizing-indexes"></a> Réorganisation des index
 La réorganisation d'un index utilise des ressources système minimes. En effet, elle défragmente le niveau feuille des index cluster et non cluster sur les tables et les vues en retriant les pages de niveau feuille de façon physique afin de resuivre l'ordre logique, c'est-à-dire de gauche à droite, des nœuds. Cette opération compacte également les pages d'index. Le compactage s'appuie sur la valeur du facteur de remplissage existante. Pour afficher le paramètre du facteur de remplissage, utilisez [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
@@ -1171,7 +1171,7 @@ Pour obtenir d’autres exemples de compression de données, consultez [Compres
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [CREATE XML INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   

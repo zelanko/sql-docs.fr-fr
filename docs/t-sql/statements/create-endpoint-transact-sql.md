@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124579"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413444"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Les arguments suivants s'appliquent uniquement à l'option du protocole TCP.  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  Spécifie le numéro du port écouté pour les connexions par le protocole TCP/IP Service Broker. Par convention, 4022 est utilisé mais n'importe quel numéro entre 1024 et 32767 est valide.  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  Spécifie l'adresse IP que le point de terminaison va écouter. La valeur par défaut est ALL. Ce qui signifie que l'écouteur acceptera une connexion sur n'importe quelle adresse IP valide.  
   
  Si vous configurez la mise en miroir de bases de données avec une adresse IP au lieu d'un nom de domaine complet (`ALTER DATABASE SET PARTNER = partner_IP_address` ou `ALTER DATABASE SET WITNESS = witness_IP_address`), vous devez spécifier `LISTENER_IP =IP_address` au lieu de `LISTENER_IP=ALL` lorsque vous créez des points de terminaison de mise en miroir.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Annule les messages destinés à des services situés ailleurs. Il s'agit du paramètre par défaut.  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  Indique l'espace de stockage maximal, en mégaoctets, à allouer au point de terminaison lors du stockage des messages à transférer.  
   
  **Options DATABASE_MIRRORING**  
@@ -257,7 +257,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Aucun port par défaut n'est associé à DATABASE_MIRRORING.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les instructions ENDPOINT DDL ne peuvent pas être exécutées au sein d'une transaction utilisateur. Les instructions ENDPOINT DDL n'échouent pas, même si une transaction active au niveau d'isolement d'instantané utilise le point de terminaison faisant l'objet d'une modification.  
   
  Les requêtes peuvent être exécutées sur un ENDPOINT par :  
@@ -268,15 +268,15 @@ FOR DATABASE_MIRRORING (
   
 -   les utilisateurs ou groupes disposant de l'autorisation CONNECT sur le point de terminaison.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe **sysadmin** . Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="creating-a-database-mirroring-endpoint"></a>Création d'un point de terminaison pour la mise en miroir de bases de données  
  L'exemple suivant crée un point de terminaison pour la mise en miroir de bases de données. Le point de terminaison utilise le port numéro `7022`, bien que tout numéro de port disponible convienne. Ce point est configuré en vue d'utiliser l'authentification Windows associée uniquement à Kerberos. L'option `ENCRYPTION` est paramétrée sur la valeur non définie par défaut `SUPPORTED` afin de prendre en charge les données chiffrées ou non. Le point de terminaison est configuré pour prendre en charge les rôles de partenaire et de témoin.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>Créer un point de terminaison qui pointe vers une adresse IPv4 et un port spécifiques
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>Créer un point de terminaison qui pointe vers une adresse IPv6 et un port spécifiques
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

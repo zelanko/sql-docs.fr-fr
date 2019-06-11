@@ -23,12 +23,12 @@ ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1bfefddd741f385fdcd465e93099f05c11ca5473
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 3675362cefae97ce453e80dccd5ed79113a257a5
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980265"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413543"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +141,7 @@ ALTER AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ipv4_address', 'ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
@@ -279,7 +279,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
   
  ENDPOINT_URL est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON.  Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie une URL pour spécifier une URL de point de terminaison ou l'URL de routage en lecture seule. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -337,7 +337,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  MANUAL  
  Spécifie l’amorçage manuel (par défaut). Cette méthode vous oblige à créer une sauvegarde de la base de données sur le réplica principal et à restaurer manuellement cette sauvegarde sur le réplica secondaire.  
   
- BACKUP_PRIORITY **=**_n_  
+ BACKUP_PRIORITY **=** _n_  
  Spécifie la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur est un entier compris entre 0 et 100. Ces valeurs ont les significations suivantes :  
   
 -   1..100 indique que le réplica de disponibilité peut être choisi pour effectuer des sauvegardes. 1 indique la priorité la plus faible, 100 la priorité la plus élevée. Si BACKUP_PRIORITY = 1, le réplica de disponibilité est choisi pour l'exécution des sauvegardes uniquement si aucun réplica de disponibilité ayant une priorité plus élevée n'est actuellement disponible.  
@@ -363,12 +363,12 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
   
- Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;Groupes de disponibilité AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
   
- Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'**).  
+ Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'** ).  
   
  Pour plus d’informations sur le calcul de l’URL de routage en lecture seule pour un réplica de disponibilité, consultez [Calcul de l’URL de routage en lecture seule pour AlwaysOn](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx).  
   
@@ -389,7 +389,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du comportement par défaut.  
   
- READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
  Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité qui répondent aux conditions suivantes lors de l'exécution sous le rôle secondaire :  
   
 -   Être configurés pour autoriser les connexions ou connexions en lecture seule (voir l'argument ALLOW_CONNECTIONS de l'option de SECONDARY_ROLE, ci-dessus).  
@@ -408,7 +408,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  Aucune  
  Spécifie que lorsque ce réplica de disponibilité est le réplica principal, le routage en lecture seule ne sera pas pris en charge. Il s'agit du comportement par défaut. Lorsqu'elle est utilisée avec MODIFY REPLICA ON, cette valeur désactive une liste existante (le cas échéant).  
   
- SESSION_TIMEOUT **=**_seconds_  
+ SESSION_TIMEOUT **=** _seconds_  
  Spécifie le délai d'expiration de la session en secondes. Si vous ne précisez pas de valeur, le délai défini par défaut est 10 secondes. La valeur minimale est de 5 secondes.  
   
 > [!IMPORTANT]  
@@ -459,7 +459,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
  Pour plus d’informations sur les limitations, les prérequis et les recommandations pour forcer un basculement, ainsi que sur l’effet d’un basculement forcé sur les anciennes bases de données principales dans le groupe de disponibilité, consultez [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **'**_dns\_name_**'(** \<add_listener_option> **)**  
+ ADD LISTENER **'** _dns\_name_ **'(** \<add_listener_option> **)**  
  Définit un nouvel écouteur de groupe de disponibilité pour ce groupe de disponibilité. Pris en charge uniquement sur le réplica principal.  
   
 > [!IMPORTANT]
@@ -486,12 +486,12 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  \<ag_name>  
  Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie le chemin de l’URL de l’écouteur associé au groupe de disponibilité.  
   
  La clause LISTENER est obligatoire.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie une URL pour l’écouteur associé au groupe de disponibilité. Les paramètres d'URL sont les suivants :  
   
  *system-address*  
@@ -519,7 +519,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
  Le basculement automatique vers le groupe de disponibilité secondaire n’est pas pris en charge.  
   
- SEEDING_MODE**=** { AUTOMATIC | MANUAL }  
+ SEEDING_MODE **=** { AUTOMATIC | MANUAL }  
  Spécifie comment le groupe de disponibilité secondaire est initialement amorcé.  
   
  AUTOMATIC  
@@ -543,27 +543,27 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  \<add_listener_option>  
  ADD LISTENER prend l'une des options suivantes :  
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Spécifie que l'écouteur du groupe de disponibilité utilise le protocole DHCP (Dynamic Host Configuration Protocol).  Utilisez éventuellement la clause ON pour identifier le réseau sur lequel cet écouteur sera créé. DHCP est limité à un seul sous-réseau utilisé pour chaque instance de serveur qui héberge un réplica de disponibilité dans le groupe de disponibilité.  
   
 > [!IMPORTANT]  
 >  Nous vous déconseillons d'utiliser DHCP dans un environnement de production. Lorsqu'un temps mort se produit et que le bail IP DHCP arrive à expiration, une période de temps supplémentaire est requise pour enregistrer la nouvelle adresse IP de réseau DHCP associée au nom DNS de l'écouteur et cela a un impact sur la connectivité client. Toutefois, DHCP peut tout à fait être utilisé pour configurer un environnement de développement et de test dans le but de vérifier les fonctions de base des groupes de disponibilité et l'intégration avec vos applications.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Spécifie que l'écouteur du groupe de disponibilité utilisera une ou plusieurs adresses IP statiques au lieu d'utiliser DHCP. Pour créer un groupe de service sur plusieurs sous-réseaux, chaque sous-réseau requiert une adresse IP statique dans la configuration de l'écouteur. Pour un sous-réseau donné, l'adresse IP statique peut être une adresse IPv4 ou une adresse IPv6. Contactez votre administrateur réseau pour obtenir une adresse IP statique pour chaque sous-réseau qui hébergera un réplica de disponibilité pour le nouveau groupe de disponibilité.  
   
- Exemple :  
+ Par exemple :  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ipv4_address*  
  Spécifie une adresse IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Spécifie un masque IPv4 en quatre parties pour un écouteur du groupe de disponibilité. Par exemple, `255.255.254.0`.  
   
  *ipv6_address*  
@@ -576,22 +576,22 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
  Par exemple : `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **'**_dns\_name_**'(** \<modify\_listener\_option\> **)**  
+ MODIFY LISTENER **'** _dns\_name_ **'(** \<modify\_listener\_option\> **)**  
  Modifie un écouteur du groupe de disponibilité existant pour ce groupe de disponibilité. Pris en charge uniquement sur le réplica principal.  
   
  \<modify\_listener\_option\>  
  MODIFY LISTENER prend l'une des options suivantes :  
   
- ADD IP { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4_mask_**')** \| <b>('</b>dns\_name*ipv6\_address*__')__ }  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
  Ajoute l’adresse IP spécifiée à l’écouteur de groupe de disponibilité spécifié par *dns\_name*.  
   
  PORT **=** *listener_port*  
  Une description de cet argument est fournie plus haut dans cette section.  
   
- RESTART LISTENER **'**_dns\_name_**'**  
+ RESTART LISTENER **'** _dns\_name_ **'**  
  Redémarre l'écouteur associé au nom DNS spécifié. Pris en charge uniquement sur le réplica principal.  
   
- REMOVE LISTENER **'**_dns\_name_**'**  
+ REMOVE LISTENER **'** _dns\_name_ **'**  
  Supprime l'écouteur associé au nom DNS spécifié. Pris en charge uniquement sur le réplica principal.  
   
  OFFLINE  
@@ -608,7 +608,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  Nécessite également l’autorisation ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Exemples  
@@ -629,7 +629,7 @@ ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [DROP AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-availability-group-transact-sql.md)   

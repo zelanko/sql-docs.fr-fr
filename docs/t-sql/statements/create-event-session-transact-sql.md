@@ -1,7 +1,7 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457672"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354516"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  Autorise les attributs personnalisables pour l'événement à définir. Les attributs personnalisables s’affichent dans la vue sys.dm_xe_object_columns sous la forme column_type 'customizable' et object_name = *event_name*.  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
  Action à associer à la session d'événements, où :  
   
 -   *event_module_guid* est le GUID du module qui contient l’événement.  
@@ -237,10 +237,10 @@ ON SERVER
  **OFF**  
  La session d'événements n'est pas lancée au démarrage.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L’ordre de priorité des opérateurs logiques est `NOT`(la plus élevée), puis `AND`, puis `OR`.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation `ALTER ANY EVENT SESSION`.  
   
 ## <a name="examples"></a>Exemples  
@@ -259,8 +259,12 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);  
 GO  
 ```  
-  
-## <a name="see-also"></a> Voir aussi  
+
+### <a name="code-examples-can-differ-for-azure-sql-database"></a>Les exemples de code peuvent être différents pour Azure SQL Database
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
+## <a name="see-also"></a>Voir aussi  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   
  [sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)   

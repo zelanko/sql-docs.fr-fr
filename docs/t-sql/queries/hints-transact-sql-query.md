@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: f5e268e821713e52a48b31bf7afa9553e2dc9712
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556154"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429011"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Indique que les vues indexées doivent être développées, et que l’optimiseu
   
 Cet indicateur de requête interdit virtuellement l'utilisation directe de vues indexées et d'index sur des vues indexées dans le plan de requête.  
   
-La vue indexée reste condensée si une référence directe y est faite dans la partie SELECT de la requête, ou si WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX(valeur\_index_ [ **,**_…n_ ] ) ) est spécifié. Pour plus d’informations sur l’indicateur de requête NOEXPAND, consultez [Utilisation de NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+La vue indexée reste condensée si une référence directe y est faite dans la partie SELECT de la requête, ou si WITH (NOEXPAND) ou WITH (NOEXPAND, INDEX(valeur\_index_ [ **,** _…n_ ] ) ) est spécifié. Pour plus d’informations sur l’indicateur de requête NOEXPAND, consultez [Utilisation de NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 L'indicateur n’a d’incidence que sur les vues de la partie SELECT des instructions, y compris celles figurant dans des instructions INSERT, UPDATE, MERGE et DELETE.  
   
@@ -257,27 +257,27 @@ Force l'optimiseur de requête à essayer un plan capable de prendre en charge l
   
 Si un tel plan n'est pas possible, l'optimiseur de requête retourne une erreur plutôt que de différer la détection de l'erreur au moment de l'exécution de la requête. Les lignes peuvent contenir des colonnes de longueur variable. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] permet de définir des lignes d’une taille maximale potentielle que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas en mesure de traiter. En règle générale, en dépit de la taille maximale potentielle, une application stocke des lignes dont la taille réelle est comprise dans les limites gérées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] rencontre une ligne trop longue, il retourne une erreur d'exécution.  
  
-<a name="use_hint"></a> USE HINT ( **'**_nom\_indicateur_**'** )    
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'** _nom\_indicateur_ **'** )    
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Fournit au processeur de requêtes un ou plusieurs indicateurs supplémentaires, spécifiés par un nom **entre guillemets simples**.   
 
 Les noms d’indicateur suivants sont pris en charge :    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple, au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de l’optimiseur de requête fourni dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou ultérieur. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan de requête qui utilise l’hypothèse de relation contenant-contenu simple, au lieu de l’hypothèse par défaut de relation contenant-contenu de base pour les jointures, avec le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) de l’optimiseur de requête fourni dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou ultérieur. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan qui utilise la sélectivité minimale lors de l’évaluation des prédicats AND des filtres pour la prise en compte de la corrélation. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 avec le modèle d’estimation de la cardinalité de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (ou version antérieure), et a un effet similaire lorsque [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 est utilisé avec le modèle d’estimation de la cardinalité de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (ou version ultérieure).
+   Indique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de générer un plan qui utilise la sélectivité minimale lors de l’évaluation des prédicats AND des filtres pour la prise en compte de la corrélation. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 avec le modèle d’estimation de la cardinalité fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures, ou à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 avec le modèle d’estimation de la cardinalité disponible dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou versions ultérieures.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
+   Désactive les jointures adaptatives en mode batch. Pour plus d’informations, consultez [Jointures adaptatives en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
+   Désactive les retours d’allocation de mémoire en mode batch. Pour plus d’informations, consultez [Retour d’allocation de mémoire en mode batch](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+  Désactive la compilation différée de variable de table. Pour plus d'informations, consultez [Compilation différée de variable de table](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
+   Désactive l’exécution entrelacée pour les fonctions table à instructions multiples. Pour plus d’informations, voir [Exécution entrelacée pour les fonctions table à instructions multiples](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
-   Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+   Indique au processeur de requêtes de ne pas appliquer d’opération de tri (tri par lots) sur les jointures de boucles imbriquées optimisées au moment de la génération d’un plan de requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
    Indique à SQL Server de générer un plan qui n’utilise pas les modifications de l’objectif des lignes avec des requêtes contenant ces mots clés : 
    
@@ -286,23 +286,23 @@ Les noms d’indicateur suivants sont pris en charge :
    * IN
    * EXISTS
    
-   Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+   Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
-   Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration de portée de base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
+   Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `PARAMETER_SNIFFING = OFF`.
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
+  Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  Désactive l’incorporation des fonctions UDF scalaires. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+  Désactive l’incorporation des fonctions UDF scalaires. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](../../relational-databases/user-defined-functions/scalar-udf-inlining.md). **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * 'DISALLOW_BATCH_MODE'    
-  Désactive l’exécution en mode batch. Pour plus d’informations, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+  Désactive l’exécution en mode batch. Pour plus d’informations, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
-   Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+   Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
-   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives SQL Server). Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration de portée de base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) QUERY_OPTIMIZER_HOTFIXES=ON.
+   Active les correctifs de l’optimiseur de requête (modifications publiées dans les Service Packs et mises à jour cumulatives SQL Server). Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `QUERY_OPTIMIZER_HOTFIXES = ON`.
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
-   Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur substitue [l’indicateur de trace](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 9481 ou le paramètre de [configuration au niveau base de données](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+   Force l’optimiseur de requête à utiliser le modèle [d’estimation de la cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) qui correspond au niveau de compatibilité de la base de données. Cet indicateur remplace le paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON` ou l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration de portée de base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON.
+   Force l’optimiseur de requête à utiliser le modèle [Estimation de cardinalité](../../relational-databases/performance/cardinality-estimation-sql-server.md) fourni dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et les versions antérieures. Ce nom d’indicateur équivaut à l’[indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 ou au paramètre de [configuration au niveau base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Force le comportement de l’optimiseur de requête au niveau de la requête, comme si celle-ci était compilée avec le niveau de compatibilité de la base de données _n_, où _n_ est un niveau pris en charge. Consultez [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) pour obtenir la liste des valeurs actuellement prises en charge pour _n_. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
@@ -328,10 +328,10 @@ Vous pouvez obtenir la liste de tous les noms d’indicateur USE HINT pris en ch
 > [!IMPORTANT] 
 > Certains indicateurs USE HINT peuvent être en conflit avec des indicateurs de trace activés au niveau global ou session, ou avec des paramètres de configuration au niveau base de données. Dans ce cas, l’indicateur de niveau requête (USE HINT) est toujours prioritaire. En présence d’un conflit entre l’indicateur USE HINT et un autre indicateur de requête ou un indicateur de trace activé au niveau requête (par exemple, par QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur quand vous tentez d’exécuter la requête. 
 
- USE PLAN N **'**_xml\_plan_**'**     
- Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **'**_xml\_plan_**'**. Il n’est pas possible de spécifier USE PLAN avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
+ USE PLAN N **'** _xml\_plan_ **'**      
+ Force l’optimiseur de requête à utiliser un plan de requête existant pour une requête spécifiée par **'** _xml\_plan_ **'** . Il n’est pas possible de spécifier USE PLAN avec des instructions INSERT, UPDATE, MERGE ou DELETE.  
   
-TABLE HINT **(**_nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [**,** ]…_n_ ] ] **)** 
+TABLE HINT **(** _nom\_objet\_exposé_ [ **,** \<indicateur_table> [ [ **,** ]…_n_ ] ] **)** 
 Applique l’indicateur de table spécifié à la table ou à la vue correspondant à _nom\_objet\_exposé_. Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md).  
   
  _nom\_objet\_exposé_ peut être l’une des références suivantes :  
@@ -342,7 +342,7 @@ Applique l’indicateur de table spécifié à la table ou à la vue corresponda
   
  Si _nom\_objet\_exposé_ est spécifié sans indicateur de table, tous les index indiqués dans la requête dans le cadre d’un indicateur de table de l’objet sont ignorés. L’optimiseur de requête détermine ensuite l’utilisation de l’index. Vous pouvez utiliser cette technique pour éliminer l'effet d'un indicateur de table INDEX lorsque vous ne pouvez pas modifier la requête d'origine. Voir l'exemple J.  
   
-**\<indicateur_table> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,…_n_ ] ) | INDEX = ( _valeur\_index_ ) | FORCESEEK [**(**_valeur\_index_**(**_nom\_colonne\_index_ [**,**… ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
+**\<indicateur_table> ::=** { [ NOEXPAND ] { INDEX ( _valeur\_index_ [ ,…_n_ ] ) | INDEX = ( _valeur\_index_ ) | FORCESEEK [ **(** _valeur\_index_ **(** _nom\_colonne\_index_ [ **,** … ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
 Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_objet_exposé* comme indicateur de requête. Pour obtenir une description de ces indicateurs, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Les indicateurs de table autres que INDEX, FORCESCAN et FORCESEEK sont interdits comme indicateurs de requête, à moins que la requête n'ait déjà une clause WITH qui spécifie l'indicateur de table. Pour plus d'informations, consultez la section Notes.  
@@ -350,7 +350,7 @@ Indicateur de table à appliquer à la table ou à la vue correspondant à *nom_
 > [!CAUTION] 
 > Le fait de spécifier FORCESEEK avec des paramètres limite davantage le nombre de plans qui peuvent être considérés par l'optimiseur que le fait de spécifier FORCESEEK sans paramètre. Cela peut provoquer une erreur « Impossible de générer le plan » dans davantage de cas. Dans une version ultérieure, il se peut que des modifications internes de l'optimiseur autorisent la prise en considération de davantage de plans.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il n’est pas possible de spécifier des indicateurs de requête dans une instruction INSERT, sauf si celle-ci contient une clause SELECT.  
   
  Les indicateurs de requête ne peuvent être spécifiés que dans une requête de niveau supérieur et non pas dans des sous-requêtes. Lorsqu’un indicateur de table est spécifié comme indicateur de requête, il peut se trouver dans la requête de premier niveau ou dans une sous-requête. Toutefois, la valeur spécifiée pour _nom\_objet\_exposé_ dans la clause TABLE HINT doit correspondre exactement au nom exposé dans la requête ou la sous-requête.  
@@ -387,7 +387,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>b. Utilisation de OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>B. Utilisation de OPTIMIZE FOR  
  L’exemple suivant indique à l’optimiseur de requête d’utiliser la valeur `'Seattle'` pour la variable locale `@city_name`, mais aussi d’utiliser des données statistiques pour déterminer la valeur de la variable locale `@postal_code` lors de l’optimisation de la requête. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -549,7 +549,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Spécification d'indicateurs de table affectant la sémantique  
-L'exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique et INDEX, qui n'affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. En parallèle de l'indicateur NOLOCK, spécifiez les indicateurs INDEX et FORCESEEK pour remplacer l'indicateur INDEX sans effet sur la sémantique dans la requête lors de la compilation et de l’optimisation de l'instruction. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+L’exemple suivant contient deux indicateurs de table dans la requête : NOLOCK, qui affecte la sémantique, et INDEX, qui n’affecte pas la sémantique. Pour préserver la sémantique de la requête, l'indicateur NOLOCK est spécifié dans la clause OPTIONS du repère de plan. En parallèle de l'indicateur NOLOCK, spécifiez les indicateurs INDEX et FORCESEEK pour remplacer l'indicateur INDEX sans effet sur la sémantique dans la requête lors de la compilation et de l’optimisation de l'instruction. L'exemple utilise la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   
@@ -594,7 +594,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
 [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

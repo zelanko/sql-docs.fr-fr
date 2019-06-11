@@ -1,7 +1,7 @@
 ---
 title: Chargement d’objets blob Azure, tâche | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3f35e1178af11111cdbdd00d1cbdba51660c098
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: b65a6d6616d844f01ffdb245a81daba04c88dddd
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728026"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403245"
 ---
 # <a name="azure-blob-upload-task"></a>Tâche de chargement d’objets blob Azure
 
@@ -33,15 +33,13 @@ Pour ajouter une **tâche de chargement d’objets blob Azure**, faites-la gliss
  La **tâche de chargement d’objets blob Azure** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
   
  Le tableau suivant décrit les champs de cette boîte de dialogue.  
-  
-|||  
-|-|-|  
+
 |**Field**|**Description**|  
+|---|---|  
 |AzureStorageConnection|Spécifiez un gestionnaire de connexions Azure Storage existant ou créez-en un qui fait référence à un compte Azure Storage et pointe vers l’emplacement où les fichiers d’objets blob sont hébergés.|  
 |BlobContainer|Spécifie le nom du conteneur d’objets blob qui contient les fichiers chargés en tant qu’objets blob.|  
 |BlobDirectory|Spécifie le répertoire d’objets blob dans lequel le fichier chargé est stocké en tant qu’objet blob de bloc. Le répertoire d’objets blob est une structure hiérarchique virtuelle. Si l’objet blob existe déjà, il est remplacé.|  
 |LocalDirectory|Spécifie le répertoire local qui contient les fichiers à charger.|  
+|SearchRecursively|Spécifiez s’il faut rechercher de manière récursive dans les sous-répertoires.|  
 |FileName|Spécifie un filtre de nom pour sélectionner des fichiers avec le modèle de nom spécifié. Par exemple, `MySheet*.xls\*` inclut des fichiers tels que `MySheet001.xls` et `MySheetABC.xlsx`.|  
 |TimeRangeFrom/TimeRangeTo|Spécifie un filtre d’intervalle de temps. Les fichiers modifiés après **TimeRangeFrom** et avant **TimeRangeTo** sont inclus.|  
-  
-  

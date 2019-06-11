@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21bb0bc1abe1a2a77af2d06bc6659312c0313581
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306097"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413475"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Permuter des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ L’administrateur de la sécurité génère une nouvelle clé principale de col
 |Étape 2. Créer une clé principale de colonne dans un magasin de clés.<br><br>**Remarque :** Le module SqlServer ne prend pas en charge cette étape. Pour accomplir cette tâche à partir d’une ligne de commande, vous devez utiliser les outils propres au type de votre magasin de clés.|[Création et stockage des clés principales de colonne (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)| Oui | Non
 |Étape 3. Démarrer un environnement PowerShell et importer le module SqlServer. | [Importer le module SQL Server](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Non | Non
 |Étape 4. Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre **ancienne** clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). |New-SqlColumnMasterKeySettings| Non | Non
-|Étape 5. Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre **nouvelle** clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Pour le créer, utilisez l’applet de commande propre à votre magasin de clés. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759816.aspx)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| Non | Non
+|Étape 5. Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre **nouvelle** clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Pour le créer, utilisez l’applet de commande propre à votre magasin de clés. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| Non | Non
 |Étape 6. S’authentifier auprès d’Azure, si votre ancienne clé principale de colonne (actuelle) ou votre nouvelle clé principale de colonne est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
 |Étape 7. Rechiffrer chaque valeur de la clé de chiffrement de colonne, qui est actuellement protégée avec l’ancienne clé principale de colonne, à l’aide de la nouvelle clé principale de colonne. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Remarque :** quand vous appelez cette cmdlet, passez les objets SqlColumnMasterKeySettings de l’ancienne et de la nouvelle clé principale de colonne à chiffrer, ainsi qu’une valeur de la clé de chiffrement de colonne.|Oui|Non
 |Étape 8. Partager avec votre administrateur de base de données l’emplacement de la nouvelle clé principale de colonne (nom du fournisseur et chemin d’accès à la clé principale de colonne) et l’ensemble des nouvelles valeurs chiffrées des clés de chiffrement de colonne.| Consultez les exemples ci-dessous. | Non | Non

@@ -1,7 +1,7 @@
 ---
 title: Feature Pack SQL Server Integration Services (SSIS) pour Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 003cfeefbea35d635264793555d771c5fddcead0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 29e30a8a7da41bcb7c75c61ef5ed78d0e3096536
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65729410"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403170"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 
@@ -72,6 +72,8 @@ Les pages de téléchargement incluent également des informations sur les prér
 
     -   [Tâche de chargement Azure SQL Data Warehouse](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Tâche de fichier flexible](../integration-services/control-flow/flexible-file-task.md)
+
 -   Composants de flux de données
 
     -   [Source des objets blob Azure](../integration-services/data-flow/azure-blob-source.md)
@@ -82,7 +84,11 @@ Les pages de téléchargement incluent également des informations sur les prér
     
     -   [Destination Azure Data Lake Store](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Énumérateur de fichiers Azure Data Lake Store et d’objets blob Azure. Voir [Conteneur de boucles Foreach](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
+    -   [Source de fichier flexible](../integration-services/data-flow/flexible-file-source.md)
+
+    -   [Destination de fichier flexible](../integration-services/data-flow/flexible-file-destination.md)
+
+-   Énumérateur de fichier Data Lake Storage Gen2, Azure Data Lake Store et Objets Blob Azure. Voir [Conteneur de boucles Foreach](../integration-services/control-flow/foreach-loop-container.md).
 
 ## <a name="scenario-processing-big-data"></a>Scénario : traitement du Big Data
  Utilisez le connecteur Azure pour accomplir le travail suivant de traitement de données volumineuses :

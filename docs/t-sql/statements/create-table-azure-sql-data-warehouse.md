@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4a048347773b5bf9cba7288e482ed08ea3f4757c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574890"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413329"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -36,7 +36,7 @@ Pour comprendre les tables et savoir comment les utiliser, consultez [Les tables
 
 ## <a name="syntax"></a>Syntaxe
   
-```  
+```
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -166,12 +166,12 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 
 ### <a name="ordered-clustered-columnstore-index-option-preview"></a>Option index columnstore en cluster ordonné (préversion)
 
-L’index columnstore en cluster est la valeur par défaut pour la création de tables dans Azure SQL Data Warehouse.  La spécification ORDER se transforme par défaut en clés COMPOUND.  Le tri sera toujours être en ordre croissant. Si aucune clause ORDER n’est spécifiée, columnstore n’est pas trié.
+L’index columnstore en cluster est la valeur par défaut pour la création de tables dans Azure SQL Data Warehouse.  La spécification ORDER se transforme par défaut en clés COMPOUND.  Le tri sera toujours être en ordre croissant. Si aucune clause ORDER n’est spécifiée, columnstore n’est pas trié. En raison de la procédure d’ordonnancement, une table avec index columnstore en cluster ordonnée peut présenter des durées de chargement des données plus longues que les index columnstore en cluster non ordonnés. Si vous avez besoin de davantage d’espace tempdb lors du chargement des données, vous pouvez réduire la quantité de données par insertion.
 
 Durant la version préliminaire, vous pouvez exécuter cette requête pour vérifier la ou les colonnes avec ORDER activée.  Une vue de catalogue est fournie plus loin pour fournir ces informations et le numéro si plusieurs colonnes sont spécifiées dans ORDER.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.* 
+SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
 FROM sys.objects o 
 INNER JOIN sys.columns c ON o.object_id = c.object_id 
 INNER JOIN sys.partitions p ON o.object_id = p.object_id   
