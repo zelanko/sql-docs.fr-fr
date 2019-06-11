@@ -84,13 +84,13 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 26c2c1c06da727a063d25520497c4b352ea3837e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+manager: jroth
+ms.openlocfilehash: 8c8dd90ae08cae3f62be07443af5bdae68cfee2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993701"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794960"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installer SQL Server à partir de l'invite de commandes
 
@@ -213,7 +213,7 @@ Utilisez les instructions suivantes pour développer des commandes d'installatio
 |PolyBase|/PBDMSSVCPASSWORD<br /><br /> **Facultatif**|Spécifie le mot de passe du compte du service de moteur.|  
 |PolyBase|/PBENGSVCSTARTUPTYPE<br /><br /> **Facultatif**|Spécifie le mode de démarrage du service de moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
 |PolyBase|/PBPORTRANGE<br /><br /> **Facultatif**|Spécifie une plage de ports avec au moins 6 ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
-|PolyBase|/PBSCALEOUT<br /><br /> **Facultatif**|Spécifie si l’instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] est utilisée dans le cadre du groupe de calcul PolyBase Scale-out. Valeurs prises en charge : **True**, **False**|  
+|PolyBase|/PBSCALEOUT<br /><br /> **Facultatif**|Spécifie si l’instance [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] est utilisée dans le cadre du groupe de calcul PolyBase Scale-out. Utilisez cette option si vous configurez un groupe de calcul PolyBase Scale-out, notamment le nœud principal. Valeurs prises en charge : **True**, **False**|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/PID<br /><br /> **Facultatif**|Spécifie la clé de produit pour l’édition de SQL Server. Si ce paramètre n'est pas spécifié, Evaluation est utilisée.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/Q ou /QUIET<br /><br /> **Facultatif**|Spécifie que le programme d'installation s'exécute en mode silencieux sans interface utilisateur. Il s'agit du mode utilisé pour les installations sans assistance. Le paramètre/Q remplace l’entrée du paramètre /QS.|  
 |Contrôle d’installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/QS ou /QUIETSIMPLE <br /><br /> **Facultatif**|Spécifie que le programme d'installation s'exécute et affiche sa progression via l'interface utilisateur ; toutefois, aucune entrée n'est acceptée et aucun message d'erreur n'est affiché.|  
@@ -276,7 +276,7 @@ Utilisez les instructions suivantes pour développer des commandes d'installatio
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [Obligatoire](#Accounts)|Spécifie le mot de passe du compte de démarrage pour le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **Facultatif**|Spécifie le mode de [démarrage](#Accounts) pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Python/Machine Learning Services (dans la base de données)|MPYCACHEDIRECTORY|Réservé pour un usage ultérieur. Utilisez %TEMP% pour stocker les fichiers .CAB Python pour une installation sur un ordinateur ne disposant pas de connexion Internet. |  
-|R/Machine Learning Services (dans la base de données)|MRCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/r-services/installing-r-components-without-internet-access).|  
+|R/Machine Learning Services (dans la base de données)|MRCACHEDIRECTORY|Utilisez ce paramètre afin de spécifier le répertoire du cache pour la prise en charge de Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server (autonome) ou de la fonctionnalité R dans SQL Server 2017 Machine Learning Services ou Machine Learning Server (autonome). Ce paramètre est généralement utilisé pendant l’installation des composants R à partir de la [ligne de commande sur un ordinateur sans accès à Internet](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access).|  
   
 ###### <a name="sample-syntax"></a>Exemple de syntaxe :  
  Pour installer une nouvelle instance autonome avec les composants [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], Réplication et Recherche en texte intégral et activer l’initialisation instantanée de fichiers pour [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 

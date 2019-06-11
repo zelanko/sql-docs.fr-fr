@@ -22,22 +22,69 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ebad80ec47c9d66e4079c76c1ca06e805ca259ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154654"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775404"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native des applications de messagerie et de mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette opération permet aux développeurs de créer plus facilement des applications perfectionnées qui utilisent des composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates. Les développeurs peuvent utiliser [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour créer facilement des applications fiables et distribuées.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit la prise en charge native de la messagerie et des files d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Les développeurs peuvent créer plus facilement des applications perfectionnées qui utilisent les composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates, et créer des applications fiables et distribuées.  
   
- Les développeurs d'applications qui utilisent [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent distribuer les charges de données sur plusieurs bases de données sans développer des mécanismes de messagerie et de communication complexes. Il est ainsi possible de réduire le travail de développement et de test puisque [!INCLUDE[ssSB](../../includes/sssb-md.md)] gère les chemins de communication dans le contexte d'une conversation. Les performances sont aussi meilleures. Par exemple, les bases de données frontales prenant en charge les sites Web peuvent enregistrer des informations et mettre des tâches intensives en file d'attente dans des bases de données principales. [!INCLUDE[ssSB](../../includes/sssb-md.md)] garantit que toutes les tâches sont gérées dans le contexte des transactions afin d’assurer une fiabilité et une cohérence techniques.  
+## <a name="when-to-use-service-broker"></a>Quand utiliser Service Broker ?
+
+ Utilisez les composants de Service Broker pour implémenter des fonctionnalités natives de traitement des messages asynchrones dans la base de données. Les développeurs d'applications qui utilisent [!INCLUDE[ssSB](../../includes/sssb-md.md)] peuvent distribuer les charges de données sur plusieurs bases de données sans développer des mécanismes de messagerie et de communication complexes. Service Broker réduit le travail de développement et de test car [!INCLUDE[ssSB](../../includes/sssb-md.md)] gère les chemins de communication dans le contexte d’une conversation. Les performances sont aussi meilleures. Par exemple, les bases de données frontales prenant en charge les sites Web peuvent enregistrer des informations et mettre des tâches intensives en file d'attente dans des bases de données principales. [!INCLUDE[ssSB](../../includes/sssb-md.md)] garantit que toutes les tâches sont gérées dans le contexte des transactions afin d’assurer une fiabilité et une cohérence techniques.  
   
+## <a name="overview"></a>Vue d’ensemble
+
+  Service Broker est un framework de remise de message qui vous permet de créer des applications natives orientées service dans la base de données. Contrairement aux fonctionnalités de traitement des requêtes classiques qui lisent constamment les données à partir des tables et les traitent au cours du cycle de vie de requête, dans une application orientée service vous avez des services de base de données qui échangent des messages. Chaque service dispose d’une file d’attente où les messages sont placés jusqu’à ce qu’ils soient traités.
+  
+![Service Broker](media/service-broker.png)
+  
+  Les messages dans les files d’attente peuvent être extraits à l’aide de la commande Transact-SQL `RECEIVE` ou par la procédure d’activation qui est appelée chaque fois que le message arrive dans la file d’attente.
+  
+### <a name="creating-services"></a>Création de services
+ 
+  La création des services de base de données s’effectue à l’aide de l’instruction Transact-SQL [CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md). Le service peut être associée à la file d’attente de message créée à l’aide de l’instruction [CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) :
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>Envoi de messages
+  
+  Les messages sont envoyés sur la conversation entre les services à l’aide de l’instruction Transact-SQL [SEND](../../t-sql/statements/send-transact-sql.md). Une conversation est un canal de communication établi entre les services à l’aide de l’instruction Transact-SQL `BEGIN DIALOG`. 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   Le message est envoyé vers `ExpenssesService` et placé dans `dbo.ExpenseQueue`. Comme aucune procédure d’activation n’est associée à cette file d’attente, le message reste dans la file d’attente jusqu’à ce qu’un utilisateur le lise.
+
+### <a name="processing-messages"></a>Traitement des messages
+
+   Les messages placés dans la file d’attente peuvent être sélectionnés à l’aide d’une requête `SELECT` standard. L’instruction `SELECT` ne modifie pas la file d’attente et ne supprime pas les messages. Pour lire et extraire les messages de la file d’attente, vous pouvez utiliser l’instruction Transact-SQL [RECEIVE](../../t-sql/statements/receive-transact-sql.md).
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  Une fois que vous avez traité tous les messages de la file d’attente, vous devez fermer la conversation à l’aide de l’instruction Transact-SQL [END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md).
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Emplacement de la documentation de Service Broker  
  La documentation de référence pour [!INCLUDE[ssSB](../../includes/sssb-md.md)] est incluse dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cette documentation de référence comprend les sections suivantes :  
   
