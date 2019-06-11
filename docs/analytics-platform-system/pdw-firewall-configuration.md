@@ -1,7 +1,7 @@
 ---
 title: Configuration du pare-feu PDW - Analytique Platform System | Microsoft Docs
 description: La page pare-feu du Gestionnaire de Configuration PDW SQL Server vous permet d’activer ou désactiver les règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur l’appliance Analytique Platform System.
-aauthor: mzaman1
+author: mzaman1
 manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62639535"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822429"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuration du pare-feu entrepôt de données parallèle d’Analytique Platform System
+
 Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet d’activer ou désactiver les règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur l’appliance Analytique Platform System.  
   
 ## <a name="to-manage-ports-and-firewall-rules-for-appliance-nodes"></a>Pour gérer des ports et de règles de pare-feu pour les nœuds d’appliance  
@@ -45,6 +46,7 @@ Les ports suivants sont ouverts pour les connexions client provenant en dehors d
 |Flux de contrôle SQL Server PDW charge - informations d’identification Windows|8002|LISTE CTL|  
 |_Kerberos|88|AD01 et AD02,|  
 |_ldap|389|AD01 et AD02|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="internal-ports"></a>Ports internes  
 Les ports suivants sont utilisés par PDW pour la communication interne, mais ne sont pas ouverts pour les connexions en provenance d’en dehors de l’appliance PDW.  
@@ -58,10 +60,12 @@ Les ports suivants sont utilisés par PDW pour la communication interne, mais ne
 |État de basculement (moteur)|15001|CMP|  
 |Plage de ports dynamiques (éphémère)|20000-65535|CTL, CMP|  
 |Plages de ports SQL Server (TDS)|1433, 1500-1508|CTL, CMP|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 > [!NOTE]  
 > Création de tables externes ou des sources de données externe utilise le port TCP 8020 par défaut. Ces instructions peuvent être configurées pour utiliser les autres ports à la place. Le port par défaut de Hortonworks JOB_TRACKER_LOCATION est 50300. L’intégration avec d’autres systèmes et les outils peut-être nécessiter des ports supplémentaires.  
   
 <!-- MISSING LINKS ## See Also  
-[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)  -->  
+[HDInsight Firewall Configuration &#40;Analytics Platform System&#41;](hdinsight-firewall-configuration.md)
+-->
   

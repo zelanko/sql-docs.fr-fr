@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527921"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822479"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime une connexion distante mappée sur une connexion locale utilisée pour exécuter des procédures stockées distantes sur le serveur local exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +39,6 @@ ms.locfileid: "58527921"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
@@ -70,21 +71,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. Suppression de toutes les connexions distantes d'un serveur distant  
  Le code exemple suivant supprime l'entrée du serveur distant `ACCOUNTS`, supprimant ainsi tous les mappages entre les connexions sur le serveur local et les connexions distantes sur le serveur distant.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### <a name="b-dropping-a-login-mapping"></a>B. Suppression d'un mappage de connexion  
  Le code exemple suivant supprime l'entrée qui mappe des connexions distantes du serveur distant `ACCOUNTS` sur la connexion locale `Albert`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### <a name="c-dropping-a-remote-user"></a>C. Suppression d'un utilisateur distant  
  Le code exemple suivant supprime la connexion de l'utilisateur distant `Chris` sur le serveur distant `ACCOUNTS` qui a été mappée sur l'utilisateur local `salesmgr`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   

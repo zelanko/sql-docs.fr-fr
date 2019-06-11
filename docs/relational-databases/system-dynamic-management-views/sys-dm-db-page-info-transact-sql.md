@@ -16,18 +16,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_page_info dynamic management view
-author: ''
+author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 03d284ad2dc8ac41e13ca6c90b38a65297ec7fcd
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507713"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822248"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Retourne des informations sur une page dans une base de données.  La fonction retourne une ligne qui contient les informations d’en-tête à partir de la page, y compris le `object_id`, `index_id`, et `partition_id`.  Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas.

@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grantdbaccess
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
+author: VanMSFT
 manager: craigg
-ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 285f1c5f2ab868bbf21db80e68ebbf5d71100f14
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62636443"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822609"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ajoute un utilisateur à la base de données active.  
@@ -37,7 +39,6 @@ ms.locfileid: "62636443"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_grantdbaccess [ @loginame = ] 'login'  
     [ , [ @name_in_db = ] 'name_in_db' [ OUTPUT ] ]  
 ```  
@@ -61,7 +62,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="examples"></a>Exemples  
  L’exemple suivant utilise `CREATE USER` pour ajouter un utilisateur de base de données pour la connexion Windows `Edmonds\LolanSo` à la base de données actuelle. Le nouvel utilisateur se nomme `Lolan`. Il s'agit de la méthode recommandée pour la création d'un utilisateur de base de données.  
   
-```  
+```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  
 GO  
 ```  

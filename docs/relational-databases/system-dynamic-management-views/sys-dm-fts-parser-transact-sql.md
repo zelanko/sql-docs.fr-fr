@@ -16,18 +16,19 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-auauthor: pmasl
+author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65944233"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822365"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne le résultat final de création de jetons après avoir appliqué une donnée [lexical](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [dictionnaire des synonymes](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md), et [liste de mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) combinaison pour une entrée de chaîne de requête. Le résultat de la segmentation du texte en unités lexicales équivaut à la sortie du Moteur d'indexation et de recherche en texte intégral pour la chaîne de requête spécifiée.  
@@ -37,7 +38,6 @@ ms.locfileid: "65944233"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)  
 ```  
   
@@ -69,7 +69,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |mot clé|**varbinary(128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas lisible, mais il est utile de concernant un mot-clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
-|group_id|**Int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1: Serveur<br />2: BdD<br />3: BdD|  
+|group_id|**Int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1 : Serveur<br />2 : BdD<br />3: BdD|  
 |phrase_id|**Int**|Contient une valeur entière qui est utile pour différencier les cas dans lesquels les formes alternatives de mots composés, tels que le texte intégral, sont émises par l'analyseur lexical. Il peut arriver qu'en présence de mots composés (« multi-million ») des formes alternatives soient émises par l'analyseur lexical. Ces formes alternatives (expressions) doivent parfois être différenciées.<br /><br /> Par exemple, « `multi-million` » produit les valeurs phrase_id suivantes en anglais :<br /><br /> 1 pour `multi`<br />1 pour `million`<br />2 pour `multimillion`|  
 |occurrence|**Int**|Indique l'ordre de chaque terme dans le résultat de l'analyse. Par exemple, pour l'expression « `SQL Server query processor` », l'occurrence contiendrait les valeurs d'occurrence suivantes pour les termes de l'expression, en anglais :<br /><br /> 1 pour `SQL`<br />2 pour `Server`<br />3 pour `query`<br />4 pour `processor`|  
 |special_term|**nvarchar(4000)**|Contient des informations sur les caractéristiques du terme émis par l'analyseur lexical, informations qui peuvent être l'une des suivantes :<br /><br /> Concordance exacte<br /><br /> Mot parasite<br /><br /> Fin de phrase<br /><br /> Fin de paragraphe<br /><br /> Fin de chapitre|  
@@ -136,7 +136,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
  Le respect des accents est désactivé.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
@@ -147,7 +147,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0,
   
  Le respect des accents est désactivé.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS revenue" ', 1033, 77, 0);  
 ```  
   
@@ -158,7 +158,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
   
  L'exemple spécifie le LCID pour la langue française, `1036` et l'ID d'une liste de mots vides définie par l'utilisateur, `5` Le respect des accents est activé.  
   
-```  
+```sql
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   

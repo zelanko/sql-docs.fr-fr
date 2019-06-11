@@ -14,15 +14,17 @@ helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 2128e980384561a128eb4c2683043190f27a84b2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537881"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822215"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Supprime du serveur de publication un Agent anonyme destiné à la surveillance de la réplication sur le serveur de distribution. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication.  
@@ -32,7 +34,6 @@ ms.locfileid: "58537881"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   

@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030790"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822369"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Effectuer une évaluation à la demande à l'aide des serveurs inscrits
+
   Vous pouvez effectuer une évaluation à la demande des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l'aide des serveurs inscrits. Vous pouvez utiliser des groupes de serveurs locaux ou un serveur d'administration centralisée.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030790"
   
     -   Pour évaluer les stratégies sur un serveur spécifique ou un groupe de serveurs, développez **groupes de serveurs locaux** ou le nom, cliquez sur le serveur ou du groupe que vous souhaitez évaluer les stratégies par rapport à, puis cliquez sur le serveur d’administration centralisée **Évaluer les stratégies**.  
   
-4.  Dans le **évaluer les stratégies** boîte de dialogue, ensuite la **Source** , cliquez sur le bouton de sélection (**...** ) bouton.  
+4.  Dans le **évaluer les stratégies** boîte de dialogue, ensuite la **Source** , cliquez sur le bouton de sélection ( **...** ) bouton.  
   
 5.  Dans le **sélectionner une Source** boîte de dialogue, vous pouvez sélectionner **fichiers** ou **Server** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **Server**, vous pouvez effectuer une évaluation de la demande de n’importe quel stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur un serveur local ou distant. Dans ce didacticiel, vous devrez cliquer sur **fichiers**, puis sélectionnez les fichiers de stratégie individuels que vous souhaitez évaluer. Pour cela, procédez comme suit :  
   
     1.  Cliquez sur **fichiers**.  
   
-    2.  Regard **fichiers**, cliquez sur le bouton de sélection (**...** ) bouton.  
+    2.  Regard **fichiers**, cliquez sur le bouton de sélection ( **...** ) bouton.  
   
     3.  Sélectionnez un ou plusieurs fichiers de stratégie .xml à évaluer, puis cliquez sur **Open**.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "56030790"
 8.  Pour afficher les résultats détaillés pour une stratégie, cliquez sur la stratégie dans le **résultats** table. Le **détails sur les cibles** table affiche les détails pour chaque instance.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller et appliquer les bonnes pratiques à l’aide de gestion basée sur des stratégies](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

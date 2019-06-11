@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535581"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822631"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Répertorie des associations entre les principaux de sécurité et les proxys.  
@@ -34,7 +36,6 @@ ms.locfileid: "58535581"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entité de sécurité, login, rôle de serveur, ou **msdb** rôle de base de données pour énumérer les serveurs proxy. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entité de sécurité, login, rôle de serveur, ou **msdb** rôle de base de données pour énumérer les serveurs proxy. Le nom est **nvarchar (256)** , avec NULL comme valeur par défaut.  
   
 `[ @proxy_id = ] id` Le numéro d’identification du proxy à répertorier des informations. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|Nom du proxy.|  
 |**nom**|**sysname**|Nom du principal de sécurité pour l'association.|  
 |**flags**|**Int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_enum_login_for_proxy** répertorie des informations sur toutes les connexions dans l’instance pour chaque serveur proxy.  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. Création de la liste de toutes les associations  
  L'exemple suivant répertorie toutes les autorisations établies entre des connexions et des proxys dans l'instance en cours.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>B. Création de la liste des proxys pour une connexion spécifique  
  L'exemple suivant répertorie les proxys auxquels la connexion `terrid` peut accéder.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
