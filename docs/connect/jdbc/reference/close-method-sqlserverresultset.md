@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec9b51d08e10df0f829308d163b573c0670c78e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5994cc3e2e8ed10759985571c195f783b95dac4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637257"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800111"
 ---
 # <a name="close-method-sqlserverresultset"></a>Méthode close (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,14 +38,14 @@ public void close()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode close est spécifiée par la méthode close de l’interface java.sql.ResultSet.  
   
  Un objet SQLServerResultSet est automatiquement fermé par l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) l’ayant généré lorsque cet objet SQLServerStatement est fermé, réexécuté ou utilisé pour récupérer le résultat suivant d’une séquence comportant plusieurs résultats. Un objet SQLServerResultSet est également fermé automatiquement lorsqu’il est récupéré par le récupérateur de mémoire.  
   
  Lors de l'exécution d'une instruction qui produit un ensemble unique et important de résultats avant uniquement, en lecture seule, un ensemble initial de lignes uniquement doit vous intéresser dans le jeu de résultats retourné. Dans ce cas, l’application peut appeler la méthode [cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md) de l’objet d’instruction associé avant de fermer le jeu de résultats, afin de réduire le temps de traitement nécessaire pour ignorer les lignes restantes inutiles. Nous vous recommandons de faire la part entre le temps de traitement gagné et le temps, ainsi que l'aller-retour jusqu'au serveur requis pour annuler l'exécution, lorsque la décision doit être prise d'utiliser cette technique ou pas.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

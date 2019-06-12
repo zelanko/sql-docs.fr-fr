@@ -1,5 +1,5 @@
 ---
-title: Déploiement du pilote JDBC | Microsoft Docs
+title: Utiliser le pilote JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c677cd46b4d3366b997e4d1effe5c056ec62a158
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: b688e5b014915578df5c56ec5e6af2fc8fe26b16
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529605"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781981"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Déploiement du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Lorsque vous déployez une application qui dépend du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vous devez redistribuer le pilote JDBC avec votre application. Contrairement à Windows DAC (Windows Data Access Components), qui est un composant du système d'exploitation de Windows, le pilote JDBC est considéré comme un composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Quand vous déployez une application qui dépend du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], vous devez redistribuer le pilote JDBC avec votre application. Contrairement à Windows DAC (Windows Data Access Components), qui est un composant du système d’exploitation de Windows, le pilote JDBC est considéré comme un composant de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Il existe deux méthodes pour déployer le pilote JDBC avec votre application. La première consiste à inclure les fichiers du pilote JDBC dans votre propre package d'installation. La seconde implique l’utilisation du package d’installation JDBC fourni par Microsoft, que vous pouvez télécharger à partir du [Centre de développement Microsoft JDBC Driver for SQL Server](https://go.microsoft.com/fwlink/?LinkId=70166).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52529605"
 >  Quand vous utilisez l’option `/auto`, il ne s’agit pas réellement d’une installation en mode silencieux, car une boîte de dialogue WinZip s’affiche néanmoins sur l’écran de l’utilisateur. Cependant, vous devez l'ignorer ; cette boîte de dialogue se fermera dès que l'opération de décompression sera terminée.  
   
 ## <a name="deploying-the-driver-on-unix-systems"></a>Déploiement du pilote sur les systèmes UNIX  
- Lorsque vous déployez le pilote JDBC sur des systèmes d'exploitation UNIX, vous devez utiliser la version du fichier gzip du package d'installation, qui est généralement appelée `sqljdbc_<version>_<language>.tar.gz`.  
+ Quand vous déployez le pilote JDBC sur des systèmes d’exploitation UNIX, vous devez utiliser la version du fichier gzip du package d’installation, qui est généralement appelée `sqljdbc_<version>_<language>.tar.gz`.  
   
  Avant d'installer le pilote JDBC, assurez-vous que les utilitaires gzip et tar sont installés sur le système de l'utilisateur et que les dossiers contenant les exécutables des deux utilitaires sont ajoutés à la variable d'environnement PATH.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52529605"
   
  `tar -xf sqljdbc_<version>_<language>.tar`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: jroth
+ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905009"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782511"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Présentation des types de données de pilote JDBC
 
@@ -41,6 +41,6 @@ Les rubriques de cette section décrivent comment utiliser les types de données
 | [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Décrit l'interface SQLXML. Explique également comment lire et écrire des données XML dans la base de données relationnelle avec le type de données Java **SQLXML**.                                                                                                             |
 | [Wrappers et interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Présente les interfaces utilisant les méthodes et constantes spécifiques du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] qui permettent à un serveur d’applications de créer un proxy de la classe. Présente également la prise en charge de l’interface `java.sql.Wrapper`. |
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

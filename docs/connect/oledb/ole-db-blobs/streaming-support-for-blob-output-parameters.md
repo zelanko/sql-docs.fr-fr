@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 70befe255703441e9eea8e837f0787a756eb5bab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5e3f4043dcdb24be56619a9c8a66281011218689
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635277"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795797"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "47635277"
   
  Vos paramètres de sortie peuvent apparaître bloqués dans IMultipleResults::GetResult en recevant la valeur de retour DB_E_OBJECTOPEN. L’appelant doit rechercher les paramètres d’objet BLOB en attente, puis les lire entièrement ou les libérer.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="code"></a>Code  
   
@@ -513,7 +513,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

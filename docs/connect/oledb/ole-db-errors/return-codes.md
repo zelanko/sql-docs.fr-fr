@@ -22,13 +22,13 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0f09f9e2f9ad166edb764aa33a8b20623e11cf08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7bb86d9e9c43b6d8c73f8018e80eebd5a0a54f5e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600669"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786055"
 ---
 # <a name="return-codes"></a>Codes de retour
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51600669"
   
  Le pilote OLE DB pour les fonctions de membre de SQL Server ne renvoient pas le code de réussite S_FALSE. Tous les pilote OLE DB pour les fonctions de membre SQL Server retournent toujours S_OK pour indiquer la réussite.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  
   
   

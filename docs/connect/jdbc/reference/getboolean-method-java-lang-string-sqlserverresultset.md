@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ba98a27b-722d-4904-ac65-0f082fde1fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6da577181e6602ac988d0e2adcb1d00cbf677ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6d10e44472d5a40007d7ead9f464af89e5cf8734
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777471"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>getBoolean, méthode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +46,13 @@ public boolean getBoolean(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getBoolean est spécifiée par la méthode getBoolean dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getBoolean est spécifiée par la méthode getBoolean de l’interface java.sql.CallableStatement.  
   
  Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Elle convertit les valeurs « 1 », 1, et «**true**» à **true**et les valeurs « 0 », 0, et «**false**» à **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
   
-## <a name="see-also"></a> Voir aussi  
- [Méthode getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Voir aussi  
+ [updateBoolean, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

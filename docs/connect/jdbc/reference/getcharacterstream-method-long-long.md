@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d70f502f-f60f-436a-83e6-797a0ed71bf3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d875e82b4db5e1725f43307348d27a6701e2a88d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2881f3a9e0d3a4179334256aa7d2917917cf97f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697787"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781330"
 ---
 # <a name="getcharacterstream-method-long-long"></a>Méthode getCharacterStream (long, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Points de vente*  
+ *pos*  
   
  Un **long** qui indique le décalage vers le premier caractère de la valeur partielle à récupérer.  
   
@@ -41,15 +41,15 @@ public java.io.Reader getCharacterStream(long pos,
  Un **long** qui indique la longueur en caractères de la valeur partielle à récupérer.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de lecteur qui contient le **Clob** données.  
+ Objet Reader contenant les données **NCLOB**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream dans l’interface java.sql.Clob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getCharacterStream, méthode &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverclob.md)   
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)  
