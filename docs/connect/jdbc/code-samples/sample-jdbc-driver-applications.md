@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e250baaf4e0d52c447fdd7d36614ba741bc664
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cbab5a72d076e6a66b306ec9bf11c13b56c599e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598571"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769889"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Exemples d'applications du pilote JDBC
 
@@ -42,6 +42,6 @@ Tous les exemples d'applications sont contenus dans les fichiers de code *.java 
 | [Utilisation de données volumineuses](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Ces exemples d’applications montrent comment utiliser la mise en mémoire tampon adaptative pour récupérer des données de valeur élevée d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la charge mémoire associée aux curseurs côté serveur.                                                         |
 | [Découverte et classification des données SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Cet exemple d’application montre comment récupérer les informations de Classification et de découverte de données contenues dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données à partir d’un objet de jeu de résultats à l’aide du pilote JDBC.                                            |
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble du pilote JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cc17d30338f90d74079458209f9c54046e09261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3a841477eef5fc4f58a94ba3f581324358afea90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828087"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769929"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Extraction de l'exemple de données du jeu de résultats
 
@@ -35,9 +35,9 @@ Le fichier de code de cet exemple s’appelle RetrieveResultSet.java et se trouv
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] est également nécessaire. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, l’exemple de code établit une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Ensuite, en utilisant une instruction SQL avec l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), il exécute l’instruction SQL et place les données retournées dans un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).
 
@@ -120,6 +120,6 @@ public class RetrieveRS {
 
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation de jeux de résultats](../../../connect/jdbc/code-samples/working-with-result-sets.md)

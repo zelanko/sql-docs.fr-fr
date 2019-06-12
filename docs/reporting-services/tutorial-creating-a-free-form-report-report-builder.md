@@ -1,28 +1,28 @@
 ---
-title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 78f733d5f34c1c0bf6f89b40ef0346c85f1638b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294977"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499562"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
 Dans ce didacticiel, vous créez un rapport paginé qui fait office de newsletter. Chaque page affiche du texte statique, des éléments visuels de synthèse et des exemples de données de ventes détaillées.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
 
 Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous commencez avec une région de données de liste comme base du rapport de forme libre, puis vous ajoutez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
   
-Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -48,13 +48,13 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Source de données**.  
   
-2.  Dans la zone **Nom**, tapez : **ListDataSource**  
+2.  Dans la zone **Nom** , tapez **ListDataSource**.  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
+4.  Vérifiez que le type de connexion est Microsoft SQL Server, puis, dans la zone **Chaîne de connexion**, tapez **Data Source = \<nom_serveur>**  
   
-    **\<nom_serveur>**, par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
+    **\<nom_serveur>** , par exemple Rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Dans la mesure où les données du rapport ne sont pas extraites d’une base de données SQL Server, vous n’avez pas besoin d’inclure le nom d’une base de données. La base de données par défaut sur le serveur spécifié est utilisée seulement pour analyser la requête.  
   
 5.  Cliquez sur **Informations d'identification**, puis entrez les informations d'identification requises pour se connecter à l'instance du moteur de base de données SQL Server.  
   
@@ -64,7 +64,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 1.  Dans le volet Données du rapport, cliquez sur **Nouveau** > **Dataset**.  
   
-2.  Dans la zone **Nom**, tapez : **ListDataset**.  
+2.  Dans la zone **Nom** , tapez **ListDataset**.  
   
 3.  Cliquez sur **Utiliser un dataset incorporé dans mon rapport**, puis vérifiez que la source de données est **ListDataSource**.  
   
@@ -199,7 +199,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
   
 2.  Sous l’onglet **Insérer** > **Zone de texte**. Cliquez en haut à gauche de la liste, à l’intérieur du rectangle que vous avez ajouté, et faites glisser pour dimensionner la zone de texte sur 3,45 pouces de large et 5 pouces de haut.  
   
-3.  Placez le curseur dans la zone de texte et tapez : **Newsletter for**. Ajoutez un espace après le mot « for », pour séparer le texte du champ que vous ajouterez à l’étape suivante.   
+3.  Placez le curseur dans la zone de texte et tapez **Newsletter for** . Ajoutez un espace après le mot « for », pour séparer le texte du champ que vous ajouterez à l’étape suivante.   
   
     ![Ajouter un texte de titre au bulletin d’informations](../reporting-services/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")  
   
@@ -215,7 +215,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
     *  **20 pt**.
     *  **Tomate**.  
   
-9. Placez le curseur sous le texte que vous avez tapé à l'étape 3, puis tapez : **Hello**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante.  
+9. Placez le curseur sous le texte que vous avez entré à l’étape 3 et tapez : **Bonjour** avec un espace après le mot, pour séparer le texte et le champ que vous ajouterez à l’étape suivante.  
  
 10. Faites glisser le champ `[FullName]` de ListDataSet dans le volet Données du rapport vers la zone de texte et placez-le après « Hello », puis tapez une virgule (,).  
    
@@ -244,7 +244,7 @@ Vous pouvez ajouter des zones de texte pour afficher le texte statique qui est r
       *  **10 pt**.
       *  **Noir**.  
  
-20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
+20. Placez le curseur à l’intérieur de la zone de texte sous le texte sans signification et tapez : **Congratulations on your total sales of**, avec un espace après le mot pour séparer le texte et le champ que vous ajouterez à l’étape suivante. 
   
 21. Faites glisser le champ Ventes dans la zone de texte, placez-le après le texte que vous avez tapé à l’étape précédente, puis tapez un point d’exclamation (!).  
 
@@ -405,7 +405,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 9. Faites glisser le graphique à l'intérieur du rectangle.  
    
-10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
+10. Sélectionnez le titre du graphique et tapez : **Product Quantities Sold**.  
   
 12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
@@ -444,7 +444,7 @@ Les rectangles vous aident à contrôler le rendu du rapport. Placez un graphiqu
   
 9. Faites glisser le graphique à l'intérieur du rectangle, sous le graphique à secteurs.  
    
-10. Sélectionnez le titre du graphique et tapez : **Product Sales**.  
+10. Sélectionnez le titre du graphique et tapez : **Ventes de produits**.  
   
 12. Sous l’onglet **Accueil** > **Police**, choisissez pour le titre :
     * **Police** **Segoe UI Semibold**.
@@ -505,9 +505,9 @@ Pour plus d’informations sur les listes, consultez :
 * [Créer des factures et des formulaires avec des listes](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Cellules, lignes et colonnes de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) et [Interface utilisateur du concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Pour plus d’informations sur les concepteurs de requêtes, consultez [Concepteurs de requêtes &#40;Générateur de rapports&#41;](report-data/query-design-tools-ssrs.md) et [Interface utilisateur du concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
   
 

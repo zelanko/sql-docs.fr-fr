@@ -1,5 +1,5 @@
 ---
-title: Méthode getColumnTypeName (SQLServerResultSetMetaData) | Microsoft Docs
+title: getColumnTypeName Method (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68d7389cc50f69c94d28265dc988937e9191063e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 72d51d7830cdcdb14208550974fe432a48a67b1f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755437"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763272"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>Méthode getColumnTypeName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public java.lang.String getColumnTypeName(int column)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getColumnTypeName est spécifiée par la méthode getColumnTypeName dans l’interface java.sql.ResultSetMetaData.  
   
  Le comportement de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 a changé pour la colonne TYPE_NAME. Pour plus d’informations, consultez [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, membres](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData, classe](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   

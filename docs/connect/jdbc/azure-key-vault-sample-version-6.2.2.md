@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69231e7464f46903b3e50f6a0b7108b32b6cded2
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 457dd90b386cf606462e61229aa14ad4a6f7dfbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566488"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770419"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Exemple Azure Key Vault version 6.2.2
 
@@ -188,7 +188,7 @@ public class AKV_6_2_2 {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Exemple Azure Key Vault version 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Exemple Azure Key Vault version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)

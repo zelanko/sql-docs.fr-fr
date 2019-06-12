@@ -10,12 +10,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 21daadd4301444b75f80961949396741f0ad04e8
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574006"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500220"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
 
@@ -47,7 +47,7 @@ Les événements suivants du serveur de rapports sont consignés dans le journal
 |119|Error|Activation|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source>* n’a pas obtenu l’autorisation d’accéder au contenu de la base de données du serveur de rapports.|  
 |120|Error|Activation|Serveur de rapports|Impossible de déchiffrer la clé symétrique. Le compte sous lequel le service est exécuté a vraisemblablement été modifié. Pour plus d’informations, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Error|Démarrage/Fermeture|Serveur de rapports|Échec de démarrage du service d'appel de procédure distante (RPC).|  
-|122|Avertissement|Remise|Processeur de planification et de remise|Le processeur de planification et de remise ne peut pas se connecter au serveur SMTP qui est utilisé pour la remise du courrier électronique. Pour plus d’informations sur les connexions au serveur SMTP, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).|  
+|122|Avertissement|Remise|Processeur de planification et de remise|Le processeur de planification et de remise ne peut pas se connecter au serveur SMTP qui est utilisé pour la remise du courrier électronique. Pour plus d’informations sur les connexions au serveur SMTP, consultez [paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de Configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |123|Avertissement|Journalisation|Serveur de rapports<br /><br /> Gestionnaire de rapports|Le serveur de rapports n'a pas réussi à écrire dans le journal des traces. Pour plus d’informations sur les journaux des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).|  
 |124|Informations|Activation|Serveur de rapports|Le service Report Server est initialisé. Pour plus d’informations, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).|  
 |125|Informations|Activation|Serveur de rapports|Extraction réussie de la clé utilisée pour chiffrer les données. Pour plus d’informations sur les clés, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  

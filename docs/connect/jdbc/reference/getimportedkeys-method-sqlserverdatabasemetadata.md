@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbb50cd617ba1ce85851c08764f3f80cd90cbe67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774427"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Méthode getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,12 +56,12 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getImportedKeys est spécifiée par la méthode getImportedKeys dans l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getImportedKeys contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés primaires.|  
 |PKTABLE_SCHEM|**String**|Nom du schéma de la table de clés primaires.|  
@@ -81,7 +81,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getImportedKeys, consultez la rubrique « sp_fkeys (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getImportedKeys pour retourner des informations sur toutes les clés primaires qui référencent les clés étrangères de la table Person.Address dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -107,7 +107,7 @@ public static void executeGetImportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

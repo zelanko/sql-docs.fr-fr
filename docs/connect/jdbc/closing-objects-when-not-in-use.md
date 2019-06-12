@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce8f9b35-c761-4b0c-9a46-985eef2c2e0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47ad0a6d69ccf19b34ff0e15e7afa39b2dfcce41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8c5beda08263c98e519c9c8fc6c636d3aad550be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687420"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770205"
 ---
 # <a name="closing-objects-when-not-in-use"></a>Fermeture d'objets inutilisés
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47687420"
   
  La fermeture des objets est particulièrement importante pour conserver un bon accès simultané sur le serveur lorsque vous utilisez des arrêts de défilement. Les arrêts de défilement dans la dernière mémoire tampon d'extraction accédée sont maintenus jusqu'à la fermeture du jeu de résultats. De même, les handles préparés par instruction sont maintenus jusqu'à ce que l'instruction soit fermée. Si vous réutilisez une connexion pour plusieurs instructions, le fait de fermer les instructions avant de leur permettre de sortir de portée permettra au serveur de nettoyer plus tôt les handles préparés.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

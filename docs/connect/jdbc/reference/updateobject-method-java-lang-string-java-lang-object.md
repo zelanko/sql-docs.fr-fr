@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f6999d9c-eab6-4e4d-96d8-e0fa4b4b87e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ddb398bbdcac228b3d0bc4df68364ec32cbeed7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4ac83576a7cea47f4e2c85d4fc8f29c1761abcee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682667"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774320"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>Méthode updateObject (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +48,10 @@ public void updateObject(java.lang.String columnName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateObject est spécifiée par la méthode updateObject dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateObject, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

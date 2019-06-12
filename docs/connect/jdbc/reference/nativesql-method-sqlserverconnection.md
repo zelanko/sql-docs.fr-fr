@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 994a15cd8ac69c49306612582cb69413e035a1fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a975b9ce32262cc5c4f998a27d6a1b71782238c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778487"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779536"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>Méthode nativeSQL (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +49,10 @@ public java.lang.String nativeSQL(java.lang.String sql)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode nativeSQL est spécifiée par la méthode nativeSQL dans l’interface java.sql.Connection.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

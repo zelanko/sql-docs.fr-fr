@@ -10,18 +10,18 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ad914ce3b446ce9c660f96caa1c0548b7ed2944d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65576690"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499616"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
 
 ::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
 ::: moniker-end
 
@@ -168,7 +168,7 @@ Créez manuellement un paramètre à partir du volet des données de rapport. Vo
   
 -   Pour les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , différentes sources de données prennent en charge différentes syntaxes pour les paramètres. La prise en charge comprend les paramètres identifiés dans la requête par position ou par nom. Pour plus d’informations, consultez les rubriques relatives aux types de sources de données externes spécifiques dans [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). Dans le concepteur de requêtes relationnelles, vous devez sélectionner l'option de paramètre pour un filtre afin de créer une requête paramétrable. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Concepteurs de requêtes &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) qui correspond à l’extension de données.  
+-   Pour les requêtes basées sur une source de données multidimensionnelle telle que Microsoft SQL Server Analysis Services, SAP NetWeaver BI ou Hyperion Essbase, vous pouvez définir s'il faut créer un paramètre en fonction d'un filtre que vous spécifiez dans le concepteur de requêtes. Pour plus d’informations, consultez la rubrique relative au concepteur de requêtes dans [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../report-data/query-design-tools-ssrs.md) qui correspond à l’extension de données.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Gestion des paramètres pour un rapport publié  
  Lorsque vous concevez un rapport, les paramètres de rapport sont enregistrés dans la définition de rapport. Lorsque vous publiez un rapport, les paramètres de rapport sont enregistrés et gérés indépendamment de la définition de rapport.  

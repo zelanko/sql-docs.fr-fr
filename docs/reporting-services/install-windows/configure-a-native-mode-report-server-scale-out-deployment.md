@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b1ca1f19741002cee1ca9025582c6436f1522a5
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 65182936a6ea686b7b0089827ce1fb2f26e86b98
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65503039"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500579"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -146,8 +146,8 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Configurer un compte de service](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
-[Configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[Configurer un compte de Service](configure-the-report-server-service-account-ssrs-configuration-manager.md)
+[configurer une URL](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
 [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [Configurer des URL de serveurs de rapports](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

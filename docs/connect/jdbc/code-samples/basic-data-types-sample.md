@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9294dde51348ea32be818671f797b866d5a7e70a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0b0473bdaa1682acbb42cf68550b632d95e034a9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795547"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770192"
 ---
 # <a name="basic-data-types-sample"></a>Exemple de types de données de base
 
@@ -35,9 +35,9 @@ Le fichier de code de cet exemple, BasicDataTypes.java, se trouve à l’emplace
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, le code établit une connexion à la base de données, puis récupère une seule ligne de données de la table de test DataTypesTable. La méthode personnalisée displayRow est alors appelée pour afficher toutes les données du jeu de résultats avec différentes méthodes get\<Type> de la classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
@@ -155,7 +155,7 @@ public class BasicDataTypes {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Utiliser des types de données &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

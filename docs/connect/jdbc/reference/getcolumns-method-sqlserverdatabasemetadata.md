@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51d9188328c8053188a52f6d96ab900916c11b94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733647"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763392"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Méthode getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,15 +61,15 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getColumns est spécifiée par la méthode getColumns de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getColumns contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Le nom de schéma de table.|  
+|TABLE_SCHEM|**String**|Schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
 |COLUMN_NAME|**String**|Nom de la colonne.|  
 |DATA_TYPE|**smallint**|Type de données SQL de java.sql.Types.|  
@@ -171,7 +171,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |datetime2|-9|93|  
 |datetimeoffset|-9|-155|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getColumns pour retourner des informations pour la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -205,7 +205,7 @@ public class c1 {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581063"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499885"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements
   Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cette rubrique couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Certaines approches ne sont pas possibles avec les deux modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les tableaux suivants récapitulent les méthodes et les modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
@@ -156,13 +156,13 @@ ForEach ($subscription in $subscriptions)
   
 -   Bibliothèque SharePoint (disponible uniquement à partir d'un site SharePoint intégré à un serveur de rapports en mode intégré SharePoint)  
   
- La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour en savoir plus, consultez [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ La remise par messagerie électronique doit être configurée avant de pouvoir être utilisée. Si vous ne la configurez pas, elle n'est pas disponible. Pour plus d’informations, consultez [paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de Configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
- Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier **RSReportServer.config** . Pour plus d’informations, consultez [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) et [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier **RSReportServer.config** . Pour plus d’informations, consultez [fichiers de Configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) et [paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de Configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le Gestionnaire de rapports, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   

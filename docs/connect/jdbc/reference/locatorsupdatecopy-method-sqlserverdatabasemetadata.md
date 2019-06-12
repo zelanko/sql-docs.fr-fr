@@ -1,5 +1,5 @@
 ---
-title: Méthode locatorsUpdateCopy (SQLServerDatabaseMetaData) | Microsoft Docs
+title: locatorsUpdateCopy Method (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e98a27b0afb23d0631d6d0bc0b5569324dea5d73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 01cf5c8d9d4d4b40e4f76040725a81e6424bb254
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758017"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779628"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>Méthode locatorsUpdateCopy (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean locatorsUpdateCopy()
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode locatorsUpdateCopy est spécifiée par la méthode locatorsUpdateCopy dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

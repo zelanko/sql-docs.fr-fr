@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70a19f97f3949fd43b0fba86b876f0da606a114b
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+manager: jroth
+ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159107"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770269"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -74,7 +74,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instances SQL Server nommées et multiples  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d'installer plusieurs instances de bases de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour établir une connexion avec une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez soit spécifier le numéro de port de l’instance nommée (recommandé), soit spécifier le nom d’instance comme propriété d’URL JDBC ou comme propriété **datasource**. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet d’installer plusieurs instances de bases de données par serveur. Chaque instance est identifiée par un nom spécifique. Pour établir une connexion avec une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez soit spécifier le numéro de port de l’instance nommée (recommandé), soit spécifier le nom d’instance comme propriété d’URL JDBC ou comme propriété **datasource**. Si aucune propriété de nom d'instance ou de numéro de port n'est spécifiée, une connexion à l'instance par défaut est établie. Observez les exemples suivants :  
   
  Pour utiliser un numéro de port, procédez comme suit :  
   
@@ -97,7 +97,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  Les fichiers sqljdbc_auth.dll sont installés à l'emplacement suivant :  
   
- \<*répertoire d’installation*> \sqljdbc_\<*version*>\\<*langage*> \auth\  
+ \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
  Pour n’importe quel système d’exploitation pris en charge par le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consultez [à l’aide de l’authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) pour obtenir une description de la fonctionnalité ajoutée dans [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] qui permet à une application pour se connecter à un base de données à l’aide de l’authentification intégrée avec le Kerberos Type 4.  
   
@@ -123,7 +123,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

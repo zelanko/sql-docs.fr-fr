@@ -1,6 +1,6 @@
 ---
 title: Fichier de configuration ReportingServicesService | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581326"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506630"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>fichier de configuration ReportingServicesService
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581326"
 Le fichier ReportingServicesService.exe.config contient les paramètres de configuration de la trace.  
   
 ## <a name="file-location"></a>Emplacement du fichier  
- Ce fichier est situé dans le dossier \Reporting Services\Report Server\Bin.  
-  
+Ce fichier peut se trouver dans un des chemins d’accès ci-dessous :  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>Instructions de modification  
  Vous pouvez modifier ce fichier pour renommer le fichier journal ou pour augmenter ou réduire les niveaux de trace. Ne modifiez aucun autre paramètre. Pour obtenir des instructions, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Pour plus d’informations sur les journaux des traces, consultez [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -85,8 +90,7 @@ Le fichier ReportingServicesService.exe.config contient les paramètres de confi
 |**Components**|Spécifie les composants pour lesquels des journaux de trace sont créés. La valeur par défaut est **Tous**. Ce paramètre accepte aussi comme valeur les noms de composants internes. Ne modifiez pas cette valeur.|  
 |**Runtime**|Spécifie les paramètres de configuration qui prennent en charge la compatibilité descendante avec la version précédente. Des paramètres d'exécution sont utilisés pour rediriger vers la nouvelle version les demandes qui ciblent la version précédente de Microsoft.ReportingServices.Interfaces.<br /><br /> Tous les paramètres de configuration de cette section sont décrits dans la documentation de produit du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Pour plus d'informations, recherchez « Runtime Schema Settings » (en anglais) sur le site Web MSDN ou dans la documentation du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a> Voir aussi  
- [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Journal des traces du service Report Server](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+## <a name="see-also"></a>Voir aussi  
+[Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[Journal de suivi de service du serveur de rapports](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cfb43430-88bf-4386-847a-10ea1e5ce7db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f766d9bee1841c157be28c4b5c18c146525933c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 587dbb2e00782b1549a643a1c171bd75867e761b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835357"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764326"
 ---
 # <a name="supportslikeescapeclause-method-sqlserverdatabasemetadata"></a>Méthode supportsLikeEscapeClause (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean supportsLikeEscapeClause()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode supportsLikeEscapeClause est spécifiée par la méthode supportsLikeEscapeClause dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

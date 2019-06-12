@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6daf6d4d9f4c0d9ec018a9a1ff135760d64b63e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7386a03b56b319f6299d6d52d0f1736b74a75565
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763299"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,14 +45,14 @@ public int getConcurrency()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getConcurrency est spécifiée par la méthode getConcurrency dans l’interface java.sql.ResultSet.  
   
  La concurrence utilisée est déterminée par l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) qui a créé le jeu de résultats.  
   
  Cette méthode permet de déterminer la concurrence réelle. Si l'application a sélectionné CONCUR_READ_ONLY ou CONCUR_UPDATABLE, ces options seront retournées. Si l'application a utilisé la concurrence par défaut, c'est CONCUR_READ_ONLY qui est retourné.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

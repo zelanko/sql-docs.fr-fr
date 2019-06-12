@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab7b884e79b3ffe32415bde6aa6b64c57d12bc6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7dc1817f8cf46edf8639ff5ad2abeb33235086f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662709"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770258"
 ---
 # <a name="caching-result-set-data-sample"></a>Mise en cache de l'exemple de données du jeu de résultats
 
@@ -45,9 +45,9 @@ Le fichier de code de cet exemple est nommé CacheResultSet.java et se trouve à
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Vous devez également pouvoir accéder à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes mssql-jdbc à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, l’exemple de code établit une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]. Ensuite, il utilise des instructions SQL avec l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md),spécifie le type de curseur côté serveur, exécute l’instruction SQL et place les données retournées dans un objet SQLServerResultSet.
 
@@ -126,6 +126,6 @@ public class CacheResultSet {
 
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation de jeux de résultats](../../connect/jdbc/working-with-result-sets.md)

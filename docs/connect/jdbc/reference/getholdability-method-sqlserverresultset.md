@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cf27049e45c8e52c8a63a419327f377dd1f558f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 150876193af526044d19efcee250e7702bc4fe84
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841397"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774470"
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>Méthode getHoldability (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public int getHoldability()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getHoldability est spécifiée par la méthode getHoldability dans l’interface java.sql.ResultSet.  
   
  Pour définir la capacité de mise en attente du jeu de résultats, les applications peuvent utiliser la méthode [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md). Une fois la méthode [setHoldability](../../../connect/jdbc/reference/setholdability-method-sqlserverconnection.md) appelée, l’objet d’instruction et son objet de jeu de résultats créés, et l’instruction exécutée, l’application doit dans certains cas modifier à nouveau la capacité de mise en attente.  
@@ -49,7 +49,7 @@ public int getHoldability()
   
  Lorsque la fonctionnalité est réinitialisée et la méthode getHoldability est appelée sur objet de jeu de résultats créé précédemment, la valeur retournée par cette méthode peut être différente de celui de la valeur de la mise en attente retournée par les méthodes suivantes : Statement.getResultSetHoldability , Connection.getHoldability ou DatabaseMetaData.getResultSetHoldability.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

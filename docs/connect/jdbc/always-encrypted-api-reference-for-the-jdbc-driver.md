@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+manager: jroth
+ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361669"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770475"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Informations de référence sur l’API Always Encrypted pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -194,7 +194,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  Si Always Encrypted est désactivé pour une requête et la requête retourne des résultats à partir des colonnes chiffrées, la requête retournera les valeurs chiffrées. Les valeurs chiffrées aura le type de données varbinary.  
   
- ## <a name="see-also"></a> Voir aussi  
+ ## <a name="see-also"></a>Voir aussi  
  [Utilisation du chiffrement intégral avec le pilote JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fa94368a4242e7a02781a5283d5cbf15f25b2a2
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+manager: jroth
+ms.openlocfilehash: 3dc2ea73b7def7bb1e91f56b094bc34af594700b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567538"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770357"
 ---
 # <a name="azure-key-vault-sample"></a>Exemple de coffre de clés Azure
 
@@ -244,7 +244,7 @@ public class AKV {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Exemple de version Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
 [Exemple Azure Key Vault version 6.0.0](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md)  
