@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae60cb90c0459b5a221f88f463cfda0a520f47e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600857"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763004"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Méthode getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Un **chaîne** qui contient le nom de la table de la table qui contient la clé primaire.  
   
- *Cat2*  
+ *cat2*  
   
  Un **chaîne** qui contient le nom du catalogue de la table qui contient la clé étrangère.  
   
@@ -61,7 +61,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  Un **chaîne** qui contient le nom de schéma de la table qui contient la clé étrangère.  
   
- *Tab2*  
+ *tab2*  
   
  Un **chaîne** qui contient le nom de la table de la table qui contient la clé étrangère.  
   
@@ -71,12 +71,12 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getCrossReference est spécifiée par la méthode getCrossReference dans l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getCrossReference contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|Nom du catalogue qui contient la table de clés primaires.|  
 |PKTABLE_SCHEM|**String**|Nom du schéma de la table de clés primaires.|  
@@ -96,7 +96,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getCrossReference, consultez « sp_fkeys (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getCrossReference pour retourner des informations sur les relations de clés primaires et étrangères entre les tables Person.Contact et HumanResources.Employee dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -122,7 +122,7 @@ public static void executeGetCrossReference(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

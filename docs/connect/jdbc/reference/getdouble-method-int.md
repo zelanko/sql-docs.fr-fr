@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c0ed63bb-5ebe-4155-9f91-8fbfeac9c3b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d85d1b8bd9b9a7e1a6000a6610197a6b65d8097e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a16f5b70eeeb762f222c3bc1d7248e99a7f207d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768501"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768935"
 ---
 # <a name="getdouble-method-int"></a>Méthode getDouble (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public double getDouble(int index)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getDouble est spécifiée par la méthode getDouble de l’interface java.sql.CallableStatement.  
   
  Cette méthode retourne tous les types de données numériques avec la fidélité **double** Java.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getDouble, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

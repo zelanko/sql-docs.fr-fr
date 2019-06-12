@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8997ab61-e948-4d54-8d32-fc080d55525c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9aa14dfba76af243ee91c044c89993ca6cfec05
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 0100c20c2a6ebaaa0eecdcf0bfe21829740e2d65
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606149"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780551"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,14 +33,14 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>Valeur retournée  
 true en cas de réussite ; sinon, false.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 closeCursor a un effet quand l’option de connexion MultipleActiveResultSets a la valeur False.  Pour plus d’informations sur l’option de connexion MultipleActiveResultSets, consultez [Guide pratique pour désactiver MARS (Multiple Active Result Set)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Au lieu d’appeler closeCursor, vous pouvez simplement affecter la valeur null au handle d’instruction.  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -65,7 +65,7 @@ print_r($result);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

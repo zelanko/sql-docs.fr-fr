@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d0a88a70cc6ed4b6bf1df83eb00806714324b0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4cda7aba62051a42656fd10c6ff8f785b81b96a3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783017"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778432"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,14 +38,14 @@ public void updateRow()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateRow est spécifiée par la méthode updateRow dans l’interface java.sql.ResultSet.  
   
  Cette méthode ne peut pas être appelée lorsque le curseur se trouve sur la ligne d'insertion.  
   
  Si cette méthode est appelée alors qu'aucune valeur de colonne n'a changé, une exception est levée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

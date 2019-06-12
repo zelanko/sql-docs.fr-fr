@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736990"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798594"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -36,7 +36,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] permet de défi
 - **useTicketCache = true**
 - **doNotPrompt = true**
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications pouvaient spécifier l’authentification intégrée (à l’aide de Kerberos ou NTLM, selon ce qui est disponible) à l’aide de la **integratedSecurity** propriété de connexion et en référençant  **sqljdbc_auth.dll**, comme décrit dans [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
 
@@ -160,7 +160,7 @@ Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.kr
 
 ```
 
-## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Vérification de l'accessibilité de SQL Server via Kerberos
+## <a name="verifying-that-sql-server-can-be-accessed-via-kerberos"></a>Vérification de l'accessibilité de SQL Server via Kerberos
 
 Exécutez la requête suivante dans SQL Server Management Studio :
 
@@ -195,7 +195,7 @@ La propriété de nom d’utilisateur ne nécessite pas de domaine si l’utilis
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>À l’aide de l’authentification Kerberos à partir d’ordinateurs Unix sur le même domaine
 
-Ce guide suppose un travail de l’installation de Kerberos existe déjà. Exécutez le code suivant sur un ordinateur Windows avec l’utilisation de l’authentification Kerberos pour vérifier si la valeur est true. Le code imprimera « schéma d’authentification : KERBEROS » dans la console en cas de réussite. Aucun des indicateurs d’exécution supplémentaires, des dépendances ou paramètres du pilote ne sont nécessaires en dehors de celles fournies. Le même bloc de code peut être exécuté sur Linux pour vérifier les connexions réussies.
+Ce guide suppose un travail de l’installation de Kerberos existe déjà. Exécutez le code suivant sur un ordinateur Windows avec l’utilisation de l’authentification Kerberos pour vérifier si la valeur est true. Le code imprimera « Authentification schéma : KERBEROS » dans la console en cas de réussite. Aucun des indicateurs d’exécution supplémentaires, des dépendances ou paramètres du pilote ne sont nécessaires en dehors de celles fournies. Le même bloc de code peut être exécuté sur Linux pour vérifier les connexions réussies.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();
@@ -220,6 +220,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Vérifiez les informations d’identification dans le ticket via `klist` et confirmez les informations d’identification sont celles que vous souhaitez utiliser pour l’authentification.
 6. Exécutez l’exemple de code ci-dessus et confirmez la réussite de l’authentification Kerberos.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

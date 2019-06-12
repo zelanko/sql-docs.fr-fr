@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8fa50941e4d540f567f237491215d826bde0712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cc8d0b925c1ae7bf1a4775fd50862647eb2a84ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774807"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765384"
 ---
 # <a name="rollback-method-sqlserverxaresource"></a>Méthode rollback (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,17 +36,17 @@ public void rollback(javax.transaction.xa.Xid xid)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *XID*  
+ *xid*  
   
  Un objet Xid.  
   
 ## <a name="exceptions"></a>Exceptions  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode rollback est spécifiée par la méthode rollback de l’interface javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

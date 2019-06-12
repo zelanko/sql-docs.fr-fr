@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736940"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788427"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 
@@ -27,7 +27,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge
 > [!WARNING]  
 > Microsoft JDBC Driver 4.2 pour SQL (et versions ultérieures) inclut de nouvelles options de délai d’attente pour la fonctionnalité existante de restauration automatique des transactions non préparées. Consultez [configuration des paramètres de délai d’attente côté serveur pour la restauration automatique des transactions non préparées](../../connect/jdbc/understanding-xa-transactions.md#BKMK_ServerSide) plus loin dans cette rubrique pour plus de détails.  
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les classes pour l'implémentation des transactions distribuées sont les suivantes :  
   
@@ -118,7 +118,7 @@ Il existe trois façons de vérifier la version actuellement installée de sqljd
 ### <a name="BKMK_ServerSide"></a> Configuration des paramètres du délai d’attente côté serveur pour la restauration automatique des transactions non préparées  
 
 > [!WARNING]  
-> Il s’agit d’une nouvelle option côté serveur proposée par Microsoft JDBC Driver 4.2 (et versions ultérieures) pour SQL Server. Pour obtenir le comportement mis à jour, vérifiez que le fichier sqljdbc_xa.dll est mis à jour. Pour plus d’informations sur la définition des délais d’expiration côté client, voir [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Il s’agit d’une nouvelle option côté serveur proposée par Microsoft JDBC Driver 4.2 (et versions ultérieures) pour SQL Server. Pour obtenir le comportement mis à jour, assurez-vous que le fichier sqljdbc_xa.dll est mis à jour sur le serveur. Pour plus d’informations sur la définition des délais d’expiration côté client, voir [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Il existe deux paramètres du Registre (valeurs DWORD) pour contrôler le comportement du délai d'attente des transactions distribuées :  
   
@@ -160,7 +160,7 @@ Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser 
 > [!IMPORTANT]  
 > Vous devez mettre à niveau le fichier sqljdbc_xa.dll dans une fenêtre de maintenance ou quand aucune transaction MS DTC n’est en cours.
   
-1. Décharger le fichier sqljdbc_xa.dll à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande **DBCC sqljdbc_xa (FREE)**.  
+1. Décharger le fichier sqljdbc_xa.dll à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande **DBCC sqljdbc_xa (FREE)** .  
   
 2. Copiez le nouveau fichier sqljdbc_xa.dll à partir du répertoire d’installation du pilote JDBC vers le répertoire Binn de chaque ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptible de participer à des transactions distribuées.  
   
@@ -180,7 +180,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
 
 Les rôles définis par l'utilisateur SQL sont définis par base de données. Pour des raisons de sécurité, si vous souhaitez créer votre propre rôle, vous devrez le définir dans chaque base de données et ajouter les utilisateurs base de données par base de données. Le rôle SqlJDBCXAUser est strictement défini dans la base de données MASTER, car il est utilisé pour accorder l'accès aux procédures stockées étendues SQL JDBC s’y trouvant. Vous devrez d'abord accorder à l'utilisateur un accès à la base de données MASTER, puis un accès au rôle SqlJDBCXAUser en étant connecté à la base de données MASTER.  
 
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 
 ```java
 import java.net.Inet4Address;
@@ -348,6 +348,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Réalisation de transactions avec le pilote JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

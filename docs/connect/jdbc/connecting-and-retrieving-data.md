@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf605cce603888369dddedd146fd56790e60c1c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f76b740c9ba64439719a12d016cadaa7db2a7cc3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768611"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778252"
 ---
 # <a name="connecting-and-retrieving-data"></a>Connexion et extraction de données
 
@@ -38,7 +38,7 @@ Les rubriques de cette section décrivent les différentes façons de se connect
 | [Exemple d’URL de connexion](../../connect/jdbc/connection-url-sample.md) | Décrit l'utilisation d'une URL de connexion pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et l'utilisation d'une instruction SQL pour extraire des données. |
 | [Exemple de source de données](../../connect/jdbc/data-source-sample.md)       | Décrit l'utilisation d'une source de données pour se connecter à SQL Server et l'utilisation d'une procédure stockée pour extraire des données.                                                 |
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Exemples d’applications JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a5535cbc5d2417cfabfba1a3a001deee2ec27fe5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2f07f68e179dcac33a67778dd3671442d0b78b6d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615437"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785006"
 ---
 # <a name="truncate-method-sqlserverclob"></a>Méthode truncate (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +43,10 @@ public void truncate(long len)
 ## <a name="exceptions"></a>Exceptions  
  java.sql.SQLException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode truncate est spécifiée par la méthode truncate dans l’interface java.sql.Clob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  

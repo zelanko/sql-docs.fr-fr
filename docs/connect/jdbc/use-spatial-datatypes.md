@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: ce3df0755799e907bb286e10f5711a58a48135bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737010"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782473"
 ---
 # <a name="using-spatial-datatypes"></a>Utilisation des types de données spatiales
 
@@ -102,7 +102,7 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |Geography getGeography (colunIndex int)| Retourne la valeur de la colonne désignée dans la ligne actuelle de cet objet de jeu de résultats en tant qu’objet com.microsoft.sqlserver.jdbc.Geography dans le langage de programmation Java.
 |Geography getGeography (columnName chaîne)| Retourne la valeur de la colonne désignée dans la ligne actuelle de cet objet de jeu de résultats en tant qu’objet com.microsoft.sqlserver.jdbc.Geography dans le langage de programmation Java.
 
-### <a name="geometry"></a>Géométrie
+### <a name="geometry"></a>Geometry
 
 |Méthode|Description|
 |:------|:----------|
@@ -116,9 +116,9 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |byte[] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geometry.
 |hasM() booléenne| Retourne si l’objet contient une valeur M (mesure).
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
-|GetX() double| Retourne la valeur de coordonnée X.
-|GetY() double| Retourne la valeur de coordonnée Y.
-|GetM() double| Retourne la valeur M (mesure) de l’objet.
+|Double getZ()| Retourne la valeur de coordonnée X.
+|Double getZ()| Retourne la valeur de coordonnée Y.
+|Double getZ()| Retourne la valeur M (mesure) de l’objet.
 |Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geometry est null.
@@ -143,7 +143,7 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
 |Double getLatitude()| Retourne la valeur de latitude.
 |Double getLongitude()| Retourne la valeur de longitude.
-|GetM() double| Retourne la valeur M (mesure) de l’objet.
+|Double getZ()| Retourne la valeur M (mesure) de l’objet.
 |Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geography est null.
@@ -160,6 +160,6 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 
 3. Procédures stockées, TVP et BulkCopy opérations ne sont actuellement pas prises en charge avec les types de données spatiales.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Exemple de types de données spatiales (JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

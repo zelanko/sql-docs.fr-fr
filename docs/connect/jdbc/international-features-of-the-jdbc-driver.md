@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398332"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781662"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caractéristiques internationales du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] offre les fonctionnalités d’internationalisation suivantes :  
+  Les fonctionnalités d’internationalisation du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] incluent ce qui suit :  
   
 -   Prise en charge d’une version complètement localisée dans les mêmes langues que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Prise en charge des conversions de langage Java pour les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sensibles aux paramètres régionaux  
+-   Prise en charge des conversions du langage Java pour les données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] respectant les paramètres régionaux.  
   
 -   Prise en charge des langues internationales, quel que soit le système d’exploitation  
   
 -   Prise en charge des noms de domaine internationaux (à compter du pilote Microsoft JDBC 6.0 pour SQL Server)  
   
-## <a name="handling-of-character-data"></a>Gestion des données caractères  
+## <a name="handling-of-character-data"></a>Gestion des données de type caractères  
  Les données de type caractère dans Java sont traitées par défaut en tant qu’Unicode ; l’objet Java **String**représente des données de type caractère Unicode. Dans le pilote JDBC, les méthodes getter et setter du flux de données ASCII constituent la seule exception à cette règle ; il s'agit de cas à part, car ces méthodes utilisent des flux d'octets en se basant sur l'hypothèse implicite de pages de codes uniques et bien connues (ASCII).  
   
  En outre, le pilote JDBC fournit la **sendStringParametersAsUnicode** propriété chaîne de connexion. Cette propriété peut être utilisée pour spécifier que les paramètres préparés pour les données caractères sont envoyés en tant que caractères ASCII ou en tant que jeu de caractères multioctets (MBCS), et non en tant que caractères Unicode. Pour plus d’informations sur la **sendStringParametersAsUnicode** propriété de chaîne de connexion, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "52398332"
 > [!NOTE]  
 >  La plupart des logiciels de résolution écrits pour les plateformes autres que Windows sont basés sur les normes DSN Internet. Il est donc plus probable qu’ils utilisent le format Punycode pour les noms de domaines internationaux, alors qu’un serveur DNS Windows sur un réseau privé peut être configuré pour autoriser l’utilisation des caractères UTF-8 en fonction du serveur.  Pour plus d’informations, consultez [Prise en charge des caractères Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 8f0894b3e7f9cd0775419e44d102eee345cabf5a
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 7007e931b1af2d7076534ef07c7b653d95f68722
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57972898"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800899"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Génération d’applications avec OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,6 @@ ms.locfileid: "57972898"
  [Stratégies de prise en charge d’OLE DB Driver pour SQL Server](../../oledb/applications/support-policies-for-oledb-driver-for-sql-server.md)  
  Décrit les divers composants d’accès aux données peuvent être utilisés avec différentes versions de pilote OLE DB pour SQL Server.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Rubriques de procédures OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

@@ -1,6 +1,6 @@
 ---
 title: OLE DB Driver pour la programmation de SQL Server | Microsoft Docs
-description: Programmation du pilote OLE DB pour SQL Server
+description: Programmation OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 54d0a800c3b651162edbf583c8f5e49005ed2628
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795993"
 ---
-# <a name="ole-db-driver-for-sql-server-programming"></a>Programmation du pilote OLE DB pour SQL Server
+# <a name="ole-db-driver-for-sql-server-programming"></a>Programmation OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52535115"
   
 -   [Rubriques de procédures liées à OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

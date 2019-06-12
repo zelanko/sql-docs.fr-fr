@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736820"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790355"
 ---
 # <a name="using-advanced-data-types"></a>Utilisation des types de données avancés
 
@@ -24,7 +24,7 @@ ms.locfileid: "55736820"
 
 Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] utilise les types de données avancés JDBC pour convertir les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un format compréhensible par le langage de programmation Java.  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Le tableau suivant liste les mappages par défaut entre les types de données avancés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], JDBC et du langage de programmation Java.  
   
@@ -48,17 +48,17 @@ Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et de
 Le pilote JDBC implémente toutes les méthodes des interfaces java.sql.Blob, java.sql.Clob et java.sql.NClob.  
   
 > [!NOTE]  
-> Les valeurs CLOB peuvent être utilisées avec les types de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou version ultérieure) de grande valeur. Plus précisément, les types CLOB peuvent être utilisés avec la **varchar (max)** et **nvarchar (max)** des types de données, types d’objets BLOB peuvent être utilisés avec **varbinary (max)** et **image**  types de données et les types NCLOB peuvent être utilisés avec **ntext** et **nvarchar (max)**.  
+> Les valeurs CLOB peuvent être utilisées avec les types de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (ou version ultérieure) de grande valeur. Plus précisément, les types CLOB peuvent être utilisés avec la **varchar (max)** et **nvarchar (max)** des types de données, types d’objets BLOB peuvent être utilisés avec **varbinary (max)** et **image**  types de données et les types NCLOB peuvent être utilisés avec **ntext** et **nvarchar (max)** .  
 
 ## <a name="large-value-data-types"></a>Types de données de grande valeur
 
-Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisation de types de données de grande valeur nécessitait un traitement spécial. Les types de données à valeur élevée sont ceux qui dépassent la taille de ligne maximale de 8 Ko. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit un spécificateur max pour les types de données **varchar**, **nvarchar** et **varbinary**, qui permet le stockage de valeurs pouvant atteindre 2^31 octets. Les colonnes de table et les variables [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent spécifier des types de données **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.  
+Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisation de types de données de grande valeur nécessitait un traitement spécial. Les types de données à valeur élevée sont ceux qui dépassent la taille de ligne maximale de 8 Ko. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] introduit un spécificateur max pour les types de données **varchar**, **nvarchar** et **varbinary**, qui permet le stockage de valeurs pouvant atteindre 2^31 octets. Les colonnes de table et les variables [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent spécifier des types de données **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** .  
 
 Les principaux scénarios de travail sur des types de données de grande valeur impliquent l'extraction d'une base de données ou l'ajout à une base de données. Les sections suivantes décrivent les différentes approches de réalisation de ces tâches.  
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>Extraction de types de données de grande valeur d'une base de données
 
-Pour récupérer un type de données à valeur élevée non binaire, par exemple **varchar(max)**, dans une base de données, une approche consiste à lire ces données sous forme de flux de caractères. L'exemple suivant utilise la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour extraire des données de la base de données et les retourner dans un jeu de résultats. Ensuite, la méthode [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) est appelée pour lire les données de grande valeur dans le jeu de résultats.  
+Pour récupérer un type de données à valeur élevée non binaire, par exemple **varchar(max)** , dans une base de données, une approche consiste à lire ces données sous forme de flux de caractères. L'exemple suivant utilise la méthode [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour extraire des données de la base de données et les retourner dans un jeu de résultats. Ensuite, la méthode [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) de la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) est appelée pour lire les données de grande valeur dans le jeu de résultats.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -69,7 +69,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > Cette même approche peut également être utilisée pour le **texte**, **ntext**, et **nvarchar (max)** des types de données.  
 
-Pour récupérer un type de données à valeur élevée binaire, par exemple **varbinary(max)**, dans une base de données, plusieurs approches sont possibles. La plus efficace consiste à lire les données en tant que flux de données binaire, comme suit :  
+Pour récupérer un type de données à valeur élevée binaire, par exemple **varbinary(max)** , dans une base de données, plusieurs approches sont possibles. La plus efficace consiste à lire les données en tant que flux de données binaire, comme suit :  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -104,7 +104,7 @@ pstmt.executeUpdate();
 > [!NOTE]  
 > Cette approche peut également être utilisée pour les valeurs qui sont stockés dans **texte**, **ntext**, et **nvarchar (max)** colonnes.  
 
-Si vous disposez d'une bibliothèque d'images sur le serveur et que vous devez charger des fichiers image binaires entiers dans une colonne **varbinary(max)**, la méthode la plus efficace impliquant le pilote JDBC consiste à utiliser directement les flux, comme dans l’exemple suivant :  
+Si vous disposez d'une bibliothèque d'images sur le serveur et que vous devez charger des fichiers image binaires entiers dans une colonne **varbinary(max)** , la méthode la plus efficace impliquant le pilote JDBC consiste à utiliser directement les flux, comme dans l’exemple suivant :  
 
 ```java
 try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)")) { 
@@ -179,6 +179,6 @@ Pour plus d’informations sur le type de données sql_variant, consultez [à l�
 
 Pour plus d’informations sur les types de données spatiales, consultez [types de données spatiales à l’aide de](../../connect/jdbc/use-spatial-datatypes.md).  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

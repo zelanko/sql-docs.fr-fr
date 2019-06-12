@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b59df324948ff1d8745fc104fd9c4f7ffebd5b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a6451896913876c3694a72e877c449109c61ac0b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834377"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776679"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>Méthode updateNString (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,19 +36,19 @@ public void updateNString(java.lang.String columnLabel,
   
  **String** contenant l’étiquette de colonne.  
   
- *Nchaîne*  
+ *nString*  
   
  Un **chaîne** objet.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateNString est spécifiée par la méthode updateNString dans l’interface java.sql.ResultSet.  
   
- Cette méthode passe Java **chaîne** à la sélection **nchar**, **nvarchar (max)**, **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode passe Java **chaîne** à la sélection **nchar**, **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateNString, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

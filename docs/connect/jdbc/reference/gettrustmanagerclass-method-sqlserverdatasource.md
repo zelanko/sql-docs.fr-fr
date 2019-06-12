@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ee98a6a58a9f42e31aeaf128ddf1c3d4688d605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 327dcad497c934c787d509a41f0068691bf5588a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828037"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786217"
 ---
 # <a name="gettrustmanagerclass-method-sqlserverdatasource"></a>getTrustManagerClass, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.lang.String getTrustManagerClass()
 ## <a name="return-value"></a>Valeur retournée  
  Un **chaîne** qui contient la valeur de la propriété de connexion TrustManagerClass, ou null si aucune valeur n’est définie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la propriété TrustManagerClass n’est pas définie, le [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md) méthode retourne la valeur null.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

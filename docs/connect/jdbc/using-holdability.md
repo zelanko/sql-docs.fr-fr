@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 520468faa2398bcb11dc237826859e12cb027815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cc47a271ea3cf1cc8553322dc58eb32f0db6c16e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780234"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798649"
 ---
 # <a name="using-holdability"></a>Utilisation de la fonctionnalité de mise en attente
 
@@ -36,6 +36,6 @@ Dans l’exemple suivant, la fonctionnalité de mise en attente du jeu de résul
 
 [!code[JDBC#UsingHoldability1](../../connect/jdbc/codesnippet/Java/using-holdability_1.java)]
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Réalisation de transactions avec le pilote JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

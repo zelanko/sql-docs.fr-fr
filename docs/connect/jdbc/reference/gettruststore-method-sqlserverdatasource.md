@@ -1,5 +1,5 @@
 ---
-title: Méthode getTrustStore (SQLServerDataSource) | Microsoft Docs
+title: getXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 561148cb1492457c4528bd1fdbf60e66233c6b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2af5dfa8b6f4fc5c509af26209962a246372bd3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708867"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786101"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>Méthode getTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.lang.String getTrustStore()
 ## <a name="return-value"></a>Valeur retournée  
  **String** contenant le chemin (y compris le nom de fichier) du fichier trustStore de certificat, ou Null si aucune valeur n’est définie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la propriété trustStore n’est pas définie, la méthode [getTrustStore](../../../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md) retourne la valeur Null.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

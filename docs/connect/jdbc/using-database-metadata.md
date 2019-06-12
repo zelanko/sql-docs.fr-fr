@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58e5e403bb33663654c3cd5f0f884c13957d04f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711269"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798666"
 ---
 # <a name="using-database-metadata"></a>Utilisation des métadonnées de base de données
 
@@ -30,6 +30,6 @@ Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Gestion des métadonnées avec le pilote JDBC](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

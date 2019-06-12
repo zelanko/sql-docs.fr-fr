@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615247"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797774"
 ---
 # <a name="data-source-wizard-screen-3"></a>Assistant Source de données, écran 3
 
@@ -72,7 +72,7 @@ Si votre application se connecte à un groupe de disponibilité des récupérati
 
 ### <a name="transparent-network-ip-resolution"></a>Résolution transparente d’adresses IP réseau.
 
-Modifie le comportement de **basculement de sous-réseaux multiples** pour permettre une reconnexion plus rapide pendant le basculement. Consultez [résolution d’adresses IP de réseau Transparent à l’aide de](../../../connect/odbc/using-transparent-network-ip-resolution.md) pour plus d’informations.
+Modifie le comportement de **basculement de sous-réseaux multiples** pour permettre une reconnexion plus rapide pendant le basculement. Pour plus d’informations, consultez [Utilisation de la résolution d’adresses IP réseau transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Chiffrement de colonnes.
 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 38d85e88e8095cc5e2f41af045c36f230fbd43de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9fce6bcc5b77f33d8c901f897dd2a017a1fcd6a9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810157"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772938"
 ---
 # <a name="sqlservercallablestatement-class"></a>Classe SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47810157"
 public final class SQLServerCallableStatement  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SQLServerCallableStatement permet de spécifier le nom de la procédure stockée à appeler avec des paramètres d’entrée et de sortie. SQLServerCallableStatement fournit également la possibilité de récupérer la valeur de retour d’état avec le `? = call( ?, ..)` syntaxe.  
   
  Cette classe prend en charge la Désencapsulation dans la classe SQLServerCallableStatement, interface ISQLServerCallableStatement, interface java.sql.CallableStatement et les classes et interfaces prises en charge par SQLServerPreparedStatement pour la Désencapsulation. Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
@@ -45,7 +45,7 @@ public final class SQLServerCallableStatement
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 est conforme à la recommandation JDBC 4.0, selon laquelle un jeu de résultats et des mises à jour multiples doivent être récupérés avant les paramètres OUT. Si les paramètres OUT sont récupérés avant que le jeu de résultats et les mises à jour n'aient été complètement traités, les résultats et les mises à jour qui n'auront pas été traités seront perdus.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

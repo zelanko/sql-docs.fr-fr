@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 287a05727bf62de813afec4ad285ef47f3b65943
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801637"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774631"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getFunctionColumns est spécifiée par la méthode getFunctionColumns dans l’interface java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getColumns est spécifiée par la méthode getColumns de l’interface java.sql.DatabaseMetaData.  
   
  Cette méthode retourne uniquement les fonctions et paramètres qui correspondent au nom de schéma, de fonction et de paramètre spécifié avec le catalogue spécifié.  
   
  Chaque ligne du jeu de résultats inclut les colonnes suivantes pour une description de paramètre, une description de colonne ou un type de retour :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |FUNCTION_CAT|**String**|Nom de la base de données qui contient la fonction.|  
 |FUNCTION_SCHEM|**String**|Schéma pour la fonction.|  
@@ -94,7 +94,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |SS_XML_SCHEMACOLLECTION_NAME|**String**|Nom du schéma qui contient le type défini par l'utilisateur (UDT).|  
 |SS_DATA_TYPE|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues.<br /><br /> **Remarque** : Pour plus d’informations sur les types de données retournés par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez la rubrique « Types de données (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   

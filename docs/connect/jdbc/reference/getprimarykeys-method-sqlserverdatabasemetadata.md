@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73c1f5576d440cc9c98708882b98c5b6d9ceff42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd6249f11c9026c1ec036d3ccf11b010dafda2e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809977"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771218"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Méthode getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,12 +56,12 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getPrimaryKeys est spécifiée par la méthode getPrimaryKeys dans l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getPrimaryKeys contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|String|Nom de la base de données qui contient la table spécifiée.|  
 |TABLE_SCHEM|String|Schéma de la table.|  
@@ -73,7 +73,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getPrimaryKeys, consultez « sp_pkeys (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getPrimaryKeys pour retourner des informations sur les clés primaires de la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -99,7 +99,7 @@ public static void executeGetPrimaryKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

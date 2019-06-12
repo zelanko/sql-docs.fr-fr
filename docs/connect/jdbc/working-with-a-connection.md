@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687964"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761631"
 ---
 # <a name="working-with-a-connection"></a>Utilisation d'une connexion
 
@@ -40,7 +40,7 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Cette technique crée une connexion de base de données via le premier pilote disponible dans la liste des pilotes capables de se connecter avec succès à l'URL donnée.
 
 > [!NOTE]  
-> Lors de l’utilisation de la bibliothèque de classes sqljdbc4.jar, les applications n’ont pas besoin d’inscrire ni de charger explicitement le pilote à l’aide de la méthode Class.forName. Lorsque la méthode getConnection de la classe DriverManager est appelée, un pilote approprié est localisé parmi l’ensemble des pilotes JDBC inscrits. Pour plus d'informations, consultez Utilisation du pilote JDBC.
+> Lors de l’utilisation de la bibliothèque de classes sqljdbc4.jar, les applications n’ont pas besoin d’inscrire ni de charger explicitement le pilote à l’aide de la méthode Class.forName. Lorsque la méthode getConnection de la classe DriverManager est appelée, un pilote correspondant est localisé parmi l’ensemble des pilotes JDBC inscrits. Pour plus d'informations, consultez Utilisation du pilote JDBC.
 
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Création d'une connexion via la classe SQLServerDriver
 
@@ -125,6 +125,6 @@ Cela libère les ressources de base de données utilisées par l’objet SQLServ
 > [!NOTE]  
 > L’appel de la méthode close entraîne également l’annulation des transactions en attente.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

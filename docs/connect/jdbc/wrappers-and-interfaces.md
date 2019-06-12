@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e05ce22eb38bf0274ff515af3c20edfb8f46478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 398a8f072fd264307c1da08af5a187490813e8ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655339"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780832"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrappers et interfaces
 
@@ -76,7 +76,7 @@ Les interfaces suivantes ont été ajoutées :
 
 - [ISQLServerStatement](../../connect/jdbc/reference/isqlserverstatement-interface.md)
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ### <a name="description"></a>Description
 
@@ -112,6 +112,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

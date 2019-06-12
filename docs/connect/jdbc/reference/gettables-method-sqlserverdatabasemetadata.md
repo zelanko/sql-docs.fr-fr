@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caabbe281791120a4f3b162029cb86dd340ffc28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 81cb6429cbf1c3f1dd1d97a0aee9458fff637f15
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730467"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779070"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Méthode getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,17 +61,17 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getTables est spécifiée par la méthode getTables de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getTables contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom de la base de données qui contient la table spécifiée.|  
-|TABLE_SCHEM|**String**|Le nom de schéma de table.|  
+|TABLE_SCHEM|**String**|Schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
-|TABLE_TYPE|**String**|Le type de table.|  
+|TABLE_TYPE|**String**|TT = Type de table|  
 |REMARKS|**String**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |TYPE_CAT|**String**|Non pris en charge par le pilote JDBC.|  
 |TYPE_SCHEM|**String**|Non pris en charge par le pilote JDBC.|  
@@ -82,7 +82,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTables, consultez « sp_tables (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getTables pour retourner des informations de description de la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -108,7 +108,7 @@ public static void executeGetTables(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

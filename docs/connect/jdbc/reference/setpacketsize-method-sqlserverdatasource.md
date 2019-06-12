@@ -1,5 +1,5 @@
 ---
-title: Méthode setPacketSize (SQLServerDataSource) | Microsoft Docs
+title: getXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d2346b1d64db708a94c45ac1a643d2dfcaf5fed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694930"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788120"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>Méthode setPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void setPacketSize(int packetSize)
   
  Valeur **int** contenant la taille de paquet réseau.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La plage acceptable de valeurs de cette propriété est [-1 | 0 | 512..32767]. Si cette propriété est définie sur une valeur située en dehors des limites acceptables, une exception se produit.  
   
  L'application peut souhaiter définir la propriété packetSize pendant la connexion à l'aide du chiffrement SSL (Secure Sockets Layer). Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] négocie la taille de paquet avec le serveur. Si la propriété encrypt a la valeur « **true** » et que la taille négociée du paquet est supérieure à la taille de l’enregistrement SSL du fournisseur de sécurité par défaut de la machine virtuelle Java (JVM), le pilote génère une erreur et met fin à la connexion.  
@@ -49,7 +49,7 @@ public void setPacketSize(int packetSize)
   
  Pour plus d’informations sur l’utilisation de SSL, consultez [utilisation du chiffrement SSL](../../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

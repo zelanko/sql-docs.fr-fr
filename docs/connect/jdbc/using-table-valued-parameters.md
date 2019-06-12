@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57fa8d097b2a6cedc5bf96dc4ee75471c7d27266
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: a5d2db7479e3a8cdce00dca62f04bf2c64989b48
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737020"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798497"
 ---
 # <a name="using-table-valued-parameters"></a>Utilisation de paramètres table
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes de données d’une application cliente vers SQL Server sans avoir recours à plusieurs allers-retours ou à une logique spéciale côté serveur pour traiter les données. Vous pouvez utiliser des paramètres table pour encapsuler des lignes de données dans une application cliente et envoyer les données au serveur dans une commande paramétrable unique. Les lignes de données entrantes sont stockées dans une variable de table qui peut ensuite être traitée à l’aide de Transact-SQL.  
+Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes de données d’une application cliente vers SQL Server sans avoir recours à plusieurs allers-retours ou à une logique spéciale côté serveur pour traiter les données. Vous pouvez utiliser des paramètres table pour encapsuler des lignes de données dans une application cliente et envoyer les données au serveur dans une commande paramétrable unique. Les lignes de données entrantes sont stockées dans une variable de table que vous pouvez ensuite utiliser à l’aide de Transact-SQL.  
   
 Les valeurs de colonne dans les paramètres table sont accessibles à l’aide d’instructions Transact-SQL SELECT standard. Paramètres table sont fortement typés et leur structure est automatiquement validée. La taille des paramètres table est limitée uniquement par la mémoire du serveur.  
   
@@ -313,6 +313,6 @@ Les méthodes suivantes ont été ajoutées à cette classe pour prendre en char
 | setStructured finale public void (paratemeterName de chaîne, chaîne tvpName, tvpResultSet du jeu de résultats)             | Remplit un paramètre table est passé à une procédure stockée avec un jeu de résultats récupéré à partir d’une autre table. paratemeterName est le nom du paramètre, tvpName est le nom du type TVP et tvpResultSet est l’objet source de l’ensemble de résultats.                                                                              |
 | setStructured finale public void (paratemeterName de chaîne, chaîne tvpName, ISQLServerDataRecord tvpDataRecord) | Remplit un paramètre table est passé à une procédure stockée avec un objet ISQLServerDataRecord. ISQLServerDataRecord est utilisé pour la diffusion des données et l’utilisateur décide comment l’utiliser. paratemeterName est le nom du paramètre, tvpName est le nom du type TVP et tvpDataRecord est un objet ISQLServerDataRecord. |
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

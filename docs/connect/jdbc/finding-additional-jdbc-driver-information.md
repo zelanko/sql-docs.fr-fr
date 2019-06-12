@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e0329385-c3ab-481d-81b5-6703955a91a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 149491bc8ce0df9556d6d5703ab917bf71a814ee
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: 8fc67bcaa395e265414d029849eb01a519ed73bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405759"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781942"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Recherche d'informations supplémentaires sur le pilote JDBC
 
@@ -24,7 +24,7 @@ ms.locfileid: "54405759"
 
   Pour plus d’informations sur le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] et le développement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en général, consultez les ressources en ligne suivantes :  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 |Ressource|Description|  
 |--------------|-----------------|  
@@ -33,6 +33,6 @@ ms.locfileid: "54405759"
 |[Forum sur l’accès aux données SQL Server](https://go.microsoft.com/fwlink/?LinkId=70651)|Ce site sert de forum de la communauté pour l’accès aux données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via le client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], OLE DB, ODBC, ADO, MDAC, JDBC ou SOAP/HTTP.|  
 |[Blog JDBC](https://go.microsoft.com/fwlink/?LinkId=124746)|Ce blog est utilisé pour fournir des informations sur le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

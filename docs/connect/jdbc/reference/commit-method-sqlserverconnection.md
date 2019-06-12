@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c7346165-51bf-4844-b64c-29833c147236
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6350dc135971f2f7d37154d4728c5d4922954047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dafb8b3c5016d0be191e06eefb5b5ca80b9ec0de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819417"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777386"
 ---
 # <a name="commit-method-sqlserverconnection"></a>commit, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,14 +38,14 @@ public void commit()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode commit est spécifiée par la méthode commit de l’interface java.sql.Connection.  
   
  Cette méthode doit être utilisée uniquement lorsque le mode de validation automatique a été désactivé.  
   
  Notez que cette méthode échoue et lève une exception si le client démarre une transaction manuelle, et si, pour une quelconque raison, SQL Server restaure ensuite cette transaction manuelle. Par exemple, une exception est levée si le client appelle une procédure stockée qui appelle explicitement ROLLBACK TRANSACTION, puis qu’il appelle la méthode commit. De plus, si SQL Server génère une erreur de gravité suffisante (16 ou plus) pour restaurer la transaction manuelle initiée par le client, l’appel suivant à la méthode commit lève une exception.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

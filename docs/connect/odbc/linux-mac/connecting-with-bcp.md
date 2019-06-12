@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527534"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789869"
 ---
 # <a name="connecting-with-bcp"></a>Connexion avec bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ L’utilitaire [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) est disponi
 > [!NOTE]  
 > Une barre oblique inverse « \\ » dans un argument de ligne de commande doit être placée entre guillemets ou précédée d’un caractère d’échappement. Par exemple, pour spécifier un saut de ligne en tant que marque de fin de ligne personnalisée, vous devez utiliser l»un des mécanismes suivants :  
 >   
-> -   r -\\\n  
+> -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Options disponibles
 Dans la version actuelle, la syntaxe et les options suivantes sont disponibles :  
 
-[_base de données_**.**] _schéma_**.** _table_ **dans** _données\_fichier_ | **out** _données\_fichier_
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Spécifie le nombre d’octets, par paquet réseau, envoyés depuis/vers le serveur.  
@@ -79,7 +79,7 @@ Spécifie le numéro de la première ligne à exporter à partir d’une table o
 Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut.  
   
 - -l  
-Spécifie un délai de connexion. L’option –l spécifie le nombre de secondes au terme duquel une connexion de bcp à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quand vous tentez de vous connecter à un serveur. Le délai d’expiration de la connexion par défaut est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. La valeur 0 spécifie un délai d’attente infini.
+Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes au terme duquel une connexion de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à  expire quand vous tentez de vous connecter à un serveur. Le délai d’expiration de la connexion par défaut est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. La valeur 0 spécifie un délai d’attente infini.
   
 - -L *last_row*  
 Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données.  
@@ -146,6 +146,6 @@ Utilise les types de données d’une version antérieure de [!INCLUDE[ssNoVersi
 - -X  
 Utilisé avec les options format et -f formal_file, génère un fichier au format XML à la place du fichier au format non-XML par défaut.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion avec **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5a8af0b67c7998a9696f2451659901c79baaa8d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813647"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769193"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Établissement d'une connexion à une source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47813647"
   
  S'il existe plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui s'exécutent sur l'ordinateur, le nom du serveur est spécifié sous la forme NomServeur\NomInstance.  
   
- L’objet de source de données expose également l’interface **IDBInitialize**. Une fois les propriétés définies, la connexion à la source de données est établie en appelant la méthode **IDBInitialize::Initialize**. Exemple :  
+ L’objet de source de données expose également l’interface **IDBInitialize**. Une fois les propriétés définies, la connexion à la source de données est établie en appelant la méthode **IDBInitialize::Initialize**. Par exemple :  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -173,7 +173,7 @@ _ExitInitialize:
 }
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une application OLE DB Driver pour SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

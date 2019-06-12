@@ -16,13 +16,13 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a2477e18f1ae9aa78d195a45f28494b4b909934d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 6778b08e106416a009e854c3b88c3f7a13efc88a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744519"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768580"
 ---
 # <a name="initialization-and-authorization-properties"></a>Propriétés d'initialisation et d'autorisation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "56744519"
  Dans l’ensemble de la propriété spécifique au fournisseur DBPROPSET_SQLSERVERDATASOURCEINFO, le pilote OLE DB pour SQL Server définit les propriétés supplémentaires ; consultez [propriétés d’informations de Source de données](../../oledb/ole-db-data-source-objects/data-source-information-properties.md) pour plus d’informations.  
   
 ## <a name="the-ole-db-driver-for-sql-server-string"></a>Chaîne du pilote OLE DB pour SQL Server  
- Le pilote OLE DB pour SQL Server reconnaît une syntaxe ODBC dans les valeurs de propriété de chaîne de fournisseur. La propriété de chaîne du fournisseur est fournie en tant que valeur de la propriété d'initialisation OLE DB DBPROP_INIT_PROVIDERSTRING lorsqu'une connexion est établie à la source de données OLE DB. Cette propriété indique les données de connexion OLE DB spécifiques au fournisseur, qui sont requises pour implémenter une connexion à la source de données OLE DB. Dans la chaîne, les éléments sont délimités à l'aide d'un point-virgule. Le dernier élément de la chaîne doit se terminer par un point-virgule. Chaque élément comprend un mot clé, le signe égal et la valeur passée lors de l'initialisation. Exemple :  
+ Le pilote OLE DB pour SQL Server reconnaît une syntaxe ODBC dans les valeurs de propriété de chaîne de fournisseur. La propriété de chaîne du fournisseur est fournie en tant que valeur de la propriété d'initialisation OLE DB DBPROP_INIT_PROVIDERSTRING lorsqu'une connexion est établie à la source de données OLE DB. Cette propriété indique les données de connexion OLE DB spécifiques au fournisseur, qui sont requises pour implémenter une connexion à la source de données OLE DB. Dans la chaîne, les éléments sont délimités à l'aide d'un point-virgule. Le dernier élément de la chaîne doit se terminer par un point-virgule. Chaque élément comprend un mot clé, le signe égal et la valeur passée lors de l'initialisation. Par exemple :  
   
 ```  
 Server=MyServer;UID=MyUserName;  
@@ -94,7 +94,7 @@ Server=MyServer;UID=MyUserName;
   
  Pour obtenir la liste de mots clés disponibles dans le pilote OLE DB pour SQL Server, consultez [à l’aide de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

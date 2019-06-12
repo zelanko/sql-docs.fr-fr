@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2df0607162f5f2cb90ff6b0525fdc530b7be66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211819"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781538"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Pilote JDBC pour la prise en charge de la haute disponibilité et de la récupération d'urgence
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -70,7 +70,7 @@ Veuillez noter que :
   
 -   La connexion à une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurée avec plus de 64 adresses IP provoque un échec de connexion.  
   
--   Le comportement d'une application qui utilise la propriété de connexion **multiSubnetFailover** n'est pas affecté par le type d'authentification : Authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Authentification Kerberos ou Authentification Windows.  
+-   Le comportement d’une application qui utilise la propriété de connexion **multiSubnetFailover** peut ne pas être affecté en fonction du type d’authentification : authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], authentification Kerberos ou authentification Windows.  
   
 -   Augmentez la valeur de **loginTimeout** pour tenir compte du temps de basculement et réduire les nouvelles tentatives de connexion de l’application.  
   
@@ -115,7 +115,7 @@ Veuillez noter que :
 ## <a name="ssl-certificate-validation"></a>Validation du certificat SSL  
  Un groupe de disponibilité se compose de plusieurs serveurs physiques. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] prend désormais en charge **Autre nom du sujet** dans les certificats SSL de manière à permettre l’association de plusieurs hôtes à un même certificat. Pour plus d’informations sur SSL, consultez [prise en charge SSL de présentation](../../connect/jdbc/understanding-ssl-support.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   
  [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md)  
   

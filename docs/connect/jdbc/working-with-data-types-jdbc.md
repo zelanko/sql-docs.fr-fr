@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a160da53ddc8a634953fc7f7b75028075ce3d691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783264"
 ---
 # <a name="working-with-data-types-jdbc"></a>Travail sur des types de données (JDBC)
 
@@ -39,6 +39,6 @@ Les rubriques de cette section décrivent comment utiliser les types de données
 |[Exemple de type de données SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Explique comment stocker des données XML dans une base de données relationnelle, comment récupérer des données XML à partir d’une base de données et comment analyser des données XML à l’aide du type de données Java **SQLXML**.|  
 |[Exemple de types de données spatiales](../../connect/jdbc/spatial-data-types-sample.md)|Décrit comment stocker et récupérer des données avec les types de données spatiales 'Geometry' et 'Geography' de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la base de données **Geometry** et **Geography** types Java définies par le pilote JDBC de Microsoft.|
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Exemples d’applications JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)  
