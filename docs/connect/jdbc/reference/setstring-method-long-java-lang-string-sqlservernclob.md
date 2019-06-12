@@ -1,5 +1,5 @@
 ---
-title: Méthode setString (long, java.lang.String) - NClob | Microsoft Docs
+title: setString, méthode (long, java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 151ff8f36ad3397321dc168b46a949de38e10bd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f9ca7497c14da33d9e25b1c6a5ed934b7d96181
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689897"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771581"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>Méthode setString (long, java.lang.String) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Points de vente*  
+ *pos*  
   
  Position à laquelle commencera l’écriture dans le **NCLOB** ; la première position est 1.  
   
@@ -46,10 +46,10 @@ public int setString(long pos,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode setString est spécifiée par la méthode setString dans l’interface java.sql.NClob.  
+## <a name="remarks"></a>Notes  
+ Cette méthode setString est spécifiée par la méthode setString de l’interface java.sql.PreparedStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob, classe](../../../connect/jdbc/reference/sqlservernclob-class.md)  

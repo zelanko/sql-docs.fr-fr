@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 672171ac-976f-4605-9bee-2a5e141d92cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76c5831547178b33854465d38cfe97dc87684d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4129ebee2be0ca043be349dc57ca8612ab7d0b5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684607"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792192"
 ---
 # <a name="getschemas-method-string-string"></a>Méthode getSchemas (String, String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,19 +46,19 @@ public ResultSet getSchemas(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getSchemas est spécifiée par la méthode getSchemas de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getSchemas contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Nom du schéma.|  
 |TABLE_CATALOG|**String**|Nom de catalogue pour le schéma.|  
   
  Les résultats sont classés par TABLE_CATALOG, puis par TABLE_SCHEM. Chaque ligne inclut TABLE_SCHEM comme première colonne et TABLE_CATALOG comme deuxième.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

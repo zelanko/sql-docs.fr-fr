@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778047"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Utilisation d’ADO avec OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47711197"
  Pour permettre à ADO d’utiliser les nouvelles fonctionnalités des récentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], certaines améliorations ont été apportées à OLE DB Driver pour SQL Server afin d’étendre les fonctionnalités principales d’OLE DB. Ces améliorations permettent aux applications ADO d’utiliser les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les plus récentes et de consommer deux types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] : **xml** et **udt**. Ces améliorations exploitent également des optimisations apportées aux types de données **varchar**, **nvarchar** et **varbinary**. OLE DB Driver pour SQL Server ajoute la propriété d’initialisation SSPROP_INIT_DATATYPECOMPATIBILITY au jeu de propriétés DBPROPSET_SQLSERVERDBINIT pour une utilisation par les applications ADO afin que les nouveaux types de données soient exposés d’une manière compatible avec ADO. En outre, le pilote OLE DB pour SQL Server définit également un mot-clé de chaîne de connexion nommé **DataTypeCompatibility** qui est définie dans la chaîne de connexion.  
 
 > [!NOTE]  
->  Les applications ADO existantes peuvent accéder et mettre à jour des valeurs de champ binaire et texte XML, UDT et de grande valeur à l'aide du fournisseur SQLOLEDB. Les nouveaux types de données plus grands **varchar(max)**, **nvarchar(max)** et **varbinary(max)** sont retournés respectivement en tant que types ADO **adLongVarChar**, **adLongVarWChar** et **adLongVarBinary**. Les colonnes XML sont retournées comme **adLongVarChar** et les colonnes UDT sont retournées comme **adVarBinary**. Toutefois, si vous utilisez le pilote OLE DB pour SQL Server (MSOLEDBSQL) au lieu de SQLOLEDB, vous devez vous assurer d’affecter le **DataTypeCompatibility** mot clé « 80 » afin que les nouveaux types de données mappent correctement aux types de données ADO.  
+>  Les applications ADO existantes peuvent accéder et mettre à jour des valeurs de champ binaire et texte XML, UDT et de grande valeur à l'aide du fournisseur SQLOLEDB. Les nouveaux types de données plus grands **varchar(max)** , **nvarchar(max)** et **varbinary(max)** sont retournés respectivement en tant que types ADO **adLongVarChar**, **adLongVarWChar** et **adLongVarBinary**. Les colonnes XML sont retournées comme **adLongVarChar** et les colonnes UDT sont retournées comme **adVarBinary**. Toutefois, si vous utilisez le pilote OLE DB pour SQL Server (MSOLEDBSQL) au lieu de SQLOLEDB, vous devez vous assurer d’affecter le **DataTypeCompatibility** mot clé « 80 » afin que les nouveaux types de données mappent correctement aux types de données ADO.  
 
 ## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Activation de OLE DB Driver pour SQL Server à partir d’ADO  
  Pour activer l’utilisation d’OLE DB Driver pour SQL Server, les applications ADO doivent implémenter les mots clés suivants dans leurs chaînes de connexion :  
@@ -42,7 +42,7 @@ ms.locfileid: "47711197"
 
 -   `DataTypeCompatibility=80`  
 
- Pour plus d’informations sur le ADO de chaîne de connexion mots clés pris en charge dans OLE DB Driver pour SQL Server, consultez [à l’aide de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Voici un exemple d’établissement d’une chaîne de connexion ADO entièrement compatible avec OLE DB Driver pour SQL Server, dont l’activation de la fonctionnalité MARS :  
 
@@ -167,5 +167,5 @@ Set con = Nothing
 
  Dans les versions antérieures du fournisseur OLE DB, ce code provoquait la création d'une connexion implicite lors de la deuxième exécution car un seul jeu de résultats actif par connexion pouvait être ouvert. La connexion implicite n'étant pas mise dans le pool de connexions OLE DB, cela provoquait une charge supplémentaire. Avec la fonctionnalité MARS exposée par OLE DB Driver pour SQL Server, vous obtenez des résultats actifs multiples sur une connexion unique.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

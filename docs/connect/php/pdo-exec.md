@@ -1,5 +1,5 @@
 ---
-title: PDO::EXEC | Microsoft Docs
+title: PDO::exec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 359a87c6-c13a-4518-8f23-a922e7f3b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96b3597c8b8d4fa61b76a96278697f2678b7d9aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5b6d3341dd3ade106495c606896b6496a9bc2f6c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600359"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762127"
 ---
 # <a name="pdoexec"></a>PDO::exec
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +36,12 @@ int PDO::exec ($statement)
 ## <a name="return-value"></a>Valeur retournée  
 Entier indiquant le nombre de lignes affectées.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si *$statement* contient plusieurs instructions SQL, le nombre de lignes affectées est indiqué pour la dernière instruction uniquement.  
   
 PDO::exec ne retourne pas de résultats pour une instruction SELECT.  
   
-Les attributs suivants affectent le comportement de PDO::exec :  
+Les attributs suivants affectent le comportement de PDO::exec :  
   
 -   PDO::ATTR_DEFAULT_FETCH_MODE  
   
@@ -53,7 +53,7 @@ Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple supprime les lignes dans Table1 qui comportent « xxxyy » dans col1. L’exemple indique ensuite le nombre de lignes qui ont été supprimées.  
   
 ```  
@@ -66,7 +66,7 @@ Cet exemple supprime les lignes dans Table1 qui comportent « xxxyy » dans col1
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

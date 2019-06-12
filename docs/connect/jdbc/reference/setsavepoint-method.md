@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 11013055-4fd3-45a9-b2da-28b2908dad52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc2a4613efe6ba8bdc40d124b058e2a47114669a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf2c9920545d4d17bb8df6979410d849c125e20c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815897"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796742"
 ---
 # <a name="setsavepoint-method-"></a>Méthode setSavepoint ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public java.sql.Savepoint setSavepoint()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setSavePoint est spécifiée par la méthode setSavePoint dans l’interface java.sql.Connection.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setSavepoint, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

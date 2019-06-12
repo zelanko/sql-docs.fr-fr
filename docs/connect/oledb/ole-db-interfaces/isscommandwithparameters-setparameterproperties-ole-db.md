@@ -15,13 +15,13 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8298de4362b0c38b56d56d7cbd46822a53b4ddbb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030046"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783871"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  La méthode **ISSCommandWithParameters::SetParameterProperties** retourne les mêmes codes d’erreur que la méthode OLE DB **ICommandProperties::SetProperties** principale.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La définition des propriétés de paramètre avec cette méthode est autorisée pour chaque paramètre par ordinal, ou avec un appel unique à **ISSCommandWithParameters::SetParameterProperties**, une fois SSPARAMPROPS créé à partir du tableau de propriétés.  
   
  Vous devez appeler la méthode **SetParameterInfo** avant d’appeler la méthode **ISSCommandWithParameters::SetParameterProperties**. Le fait d'appeler `SetParameterProperties(0, NULL)` efface toutes les propriétés de paramètre spécifiées, tandis que l'appel de `SetParameterInfo(0,NULL,NULL)` efface toutes les informations sur les paramètres y compris toutes les propriétés qui peuvent être associées à un paramètre.  
@@ -82,7 +82,7 @@ HRESULT SetParameterProperties(
 |*cPropertySets*|Nombre de structures DBPROPSET dans *rgPropertySets*.|  
 |*rgPropertySets*|Pointeur vers la mémoire dans lequel retourner un tableau de structures DBPROPSET.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

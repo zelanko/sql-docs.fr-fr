@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dc427bf8c12b8e80d0b7d66507d9f0d595e2369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 35039fae2f3e3215a0df254f7b1d4619e97d3634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837877"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793995"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>Méthode setCursorName (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +46,10 @@ public final void setCursorName(java.lang.String name)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setCursorName est spécifiée par la méthode setCursorName dans l’interface java.sql.Statement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7110f6c5-4af3-4b50-a4d4-1bae1876c70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 107b130fe6aab9c630d659b154679def6862dc04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ee0bca5c0b92c21aabffe0253a00a0cdb17ae1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793817"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788106"
 ---
 # <a name="setobject-method-sqlservercallablestatement"></a>Méthode setObject (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "47793817"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[setObject (java.lang.String, java.lang.Object)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object.md)|Définit la valeur du paramètre désigné à l’aide de l’objet spécifique.|  
 |[setObject (java.lang.String, java.lang.Object, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int.md)|Définit la valeur du paramètre désigné à l'aide de l'objet et du type de cible spécifiés.|  
 |[setObject (java.lang.String, java.lang.Object, int, int)](../../../connect/jdbc/reference/setobject-method-java-lang-string-java-lang-object-int-int.md)|Définit la valeur du paramètre désigné à l'aide de l'objet, du type de cible et de l'échelle spécifiés.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

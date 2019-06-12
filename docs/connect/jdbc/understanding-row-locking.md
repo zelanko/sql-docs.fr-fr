@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2bb0038320ccefe0e143ca7c18fbf7e117c4a75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d286046f40ea96863302b97d2c1d8289985dab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719657"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788537"
 ---
 # <a name="understanding-row-locking"></a>Présentation du verrouillage de ligne
 
@@ -32,6 +32,6 @@ Le verrouillage est utilisé pour garantir l'intégrité transactionnelle et la 
 > [!NOTE]  
 > Pour plus d’informations sur le verrouillage de ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la rubrique « Verrouillage du [!INCLUDE[ssDE](../../includes/ssde_md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Gestion des jeux de résultats avec le pilote JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

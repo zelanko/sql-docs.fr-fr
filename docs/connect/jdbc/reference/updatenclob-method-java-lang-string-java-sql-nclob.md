@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a025d124-3634-49fa-8bb5-e9b98f2d5de3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dca56a83f46664c8a4f059c37210122c798faf50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ff1732e9ea7d146fdd129dc86030039afbf97444
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667977"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776721"
 ---
 # <a name="updatenclob-method-javalangstring-javasqlnclob"></a>Méthode updateNClob (java.lang.String, java.sql.NClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +43,12 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode updateNClob est spécifiée par la méthode updateNClob dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
   
- Cette méthode est prise en charge uniquement sur **nvarchar (max)**, **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
+ Cette méthode est prise en charge uniquement sur **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateNClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12b5d0940ea161e3650dc5126a10783c1afc3e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812847"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798549"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Utilisation d'instructions avec des procédures stockées
 
@@ -57,6 +57,6 @@ Les rubriques composant cette section décrivent comment appeler des procédures
 |[Utilisation d’une procédure stockée avec retour d’état](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées contenant des valeurs de retour d'état.|  
 |[Utilisation d’une procédure stockée avec un compteur des mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Décrit la méthode d'utilisation du pilote JDBC pour exécuter des procédures stockées qui retournent des nombres de mises à jour.|  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

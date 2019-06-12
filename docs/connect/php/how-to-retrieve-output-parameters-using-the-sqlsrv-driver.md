@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700457"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799308"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ L’exemple suivant appelle une procédure stockée qui retourne les ventes de l
 > [!NOTE]  
 > Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [Appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -150,7 +150,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)

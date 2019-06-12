@@ -11,13 +11,13 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6dc7a5a5e19f7baa335055d1f6c2038b4660f721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642807"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772970"
 ---
 # <a name="sqlservercallablestatement-members"></a>Membres de SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47642807"
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
-|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Héritée de SQLServerPreparedStatement.) Ajoute un ensemble de paramètres au lot de commandes pour cet objet de CallableStatement.|  
+|[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Ajoute un ensemble de paramètres au lot de commandes de cet objet Statement.|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Annule l’instruction SQL actuellement exécutée par cet objet CallableStatement.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Vide la liste actuelle de commandes SQL de cet objet CallableStatement.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Efface immédiatement les valeurs des paramètres actuels.|  
@@ -58,7 +58,7 @@ ms.locfileid: "47642807"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre maximal d’octets pouvant être retournés pour des valeurs de colonne de caractères ou binaire dans un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) produit par cet objet CallableStatement.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre maximal de lignes que peut contenir un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) produit par cet objet CallableStatement.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Récupère un objet [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) contenant des informations sur les colonnes de l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) retourné à l’exécution de cet objet CallableStatement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Hérité de SQLServerStatement.) Passe au résultat suivant de cet objet de CallableStatement.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Passe au résultat suivant de cet objet de CallableStatement.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Récupère le nombre, les types et les propriétés des paramètres de cet objet CallableStatement.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet Array.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme de flux de caractères **ASCII**.|  
@@ -101,7 +101,7 @@ ms.locfileid: "47642807"
 |[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)|Inscrit le paramètre OUT.|  
 |[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Définit le numéro de paramètre désigné selon l’objet Array donné.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)|Définit le nombre de paramètres désignés selon le flux d'entrée donné.|  
-|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Définit le numéro du paramètre désigné à l’objet BigDecimal donné.|  
+|[setBigDecimal](../../../connect/jdbc/reference/setbigdecimal-method-sqlservercallablestatement.md)|Définit le numéro de paramètre désigné selon l’objet Array donné.|  
 |[setBinaryStream](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)|Définit le paramètre désigné selon le flux d'entrée spécifié.|  
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Définit le paramètre désigné selon l’objet Blob donné.|  
 |[setboolean](../../../connect/jdbc/reference/setboolean-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **booléenne** donnée.|  
@@ -115,7 +115,7 @@ ms.locfileid: "47642807"
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **double** donnée.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  
-|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires. |  
+|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires.|  
 |[setFloat](../../../connect/jdbc/reference/setfloat-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **float** spécifiée.|  
 |[setInt](../../../connect/jdbc/reference/setint-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **int** spécifiée.|  
 |[setLong](../../../connect/jdbc/reference/setlong-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **long** spécifiée.|  
@@ -151,7 +151,7 @@ ms.locfileid: "47642807"
 |java.sql.Statement|addBatch, cancel, clearBatch, clearWarnings, close, execute, executeBatch, executeQuery, executeUpdate, getConnection, getFetchDirection, getFetchSize, getGeneratedKeys, getMaxFieldSize, getMaxRows, getMoreResults, getQueryTimeout, getResultSet, getResultSetConcurrency, getResultSetHoldability, getResultSetType, getUpdateCount, getWarnings, setCursorName, setEscapeProcessing, setFetchDirection, setFetchSize, setMaxFieldSize, setMaxRows, setQueryTimeout|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

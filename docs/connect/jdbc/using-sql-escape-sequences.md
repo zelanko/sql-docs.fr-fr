@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841724"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798607"
 ---
 # <a name="using-sql-escape-sequences"></a>Utilisation de séquences d'échappement SQL
 
@@ -62,7 +62,7 @@ Le pilote JDBC prend en charge les séquences d'échappement de fonction dans le
 {fn functionName}  
 ```
 
-où `functionName` est une fonction prise en charge par le pilote JDBC. Exemple : 
+où `functionName` est une fonction prise en charge par le pilote JDBC. Par exemple : 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -93,7 +93,7 @@ où `literal-type` est l’un des éléments suivants :
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | aaaa-mm-jj hh:mm:ss[.f...] |
   
-Exemple :  
+Par exemple :  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
@@ -131,7 +131,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 où `table-reference` est un nom de table et `search-condition` est la condition de jointure que vous souhaitez utiliser pour les tables.  
   
-Exemple :  
+Par exemple :  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
@@ -160,6 +160,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 La syntaxe d’échappement comporte deux parties : \<*rows*> est obligatoire et spécifie le nombre de lignes à retourner. OFFSET et \<*row offset*> sont facultatifs et spécifient le nombre de lignes à ignorer avant de commencer à retourner des lignes. Le pilote JDBC prend en charge uniquement la partie obligatoire en transformant la requête pour qu'elle utilise la clause TOP au lieu de LIMIT. SQL Server ne prend pas en charge la clause LIMIT. **Le pilote JDBC ne prend pas en charge la partie \<row offset> facultative et lève une exception si elle est utilisée**.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation d’instructions avec le pilote JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

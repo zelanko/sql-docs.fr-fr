@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1705a738f327ec07641d6d6dbf960ab37c30b9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 79cb8dd94e3c3c2ad8f5462e7ca984df3726479a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639667"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795705"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>Méthode setCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,14 +53,14 @@ public final void setCharacterStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream dans l’interface java.sql.CallableStatement.  
   
  Si la longueur du flux diffère de celle spécifiée dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [setCharacterStream, méthode (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md) lorsque l’application veut mettre à jour la colonne à partir d’un flux de longueur inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

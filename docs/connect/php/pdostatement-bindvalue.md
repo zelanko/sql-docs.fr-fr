@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7ae069a5bb485f4b74a11b066f5871aba2f30ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 93cf012017e6614bc0ae4d81150e90ddab5b424a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606279"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780673"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,11 +40,11 @@ $*data_type* : type de données (entier) facultatif représenté par une consta
 ## <a name="return-value"></a>Valeur retournée  
 TRUE en cas de réussite ; sinon, FALSE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple montre qu’une fois que la valeur de $contact est liée, sa modification ne change pas la valeur transmise dans la requête.  
   
 ```  
@@ -77,10 +77,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> Il est recommandé d’utiliser des chaînes en tant qu’entrées lors de la liaison des valeurs à un [colonne decimal ou numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour vérifier la précision et l’exactitude que PHP est limitée à la précision pour [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Va de même pour des colonnes bigint, en particulier lorsque les valeurs sont en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a> Exemple  
-Cet exemple de code montre comment lier une valeur décimale en tant que paramètre d’entrée.  
+## <a name="example"></a>Exemple  
+Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```
 <?php  
@@ -97,7 +97,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

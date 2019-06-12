@@ -15,13 +15,13 @@ helpviewer_keywords:
 - ISSAsynchStatus interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b3da83d81f62fa001638ca9830512c94cce76da7
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 2ad9f5ad8912d6e820c237d51c02ff10066a302a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030145"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784008"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51030145"
 |[ISSAsynchStatus::GetStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)|Retourne l'état d'une opération s'exécutant de manière asynchrone.|  
 |[ISSAsynchStatus::WaitForAsynchCompletion &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)|Attend que l'opération s'exécutant de façon asynchrone se termine ou qu'un délai d'expiration soit dépassé.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'implémentation **ISSAsynchStatus** de la méthode **ISSAsynchStatus::GetStatus** est identique à la méthode **IDBAsynchStatus::GetStatus** , à la différence près que si l'initialisation d'un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (bien que **ISSAsynchStatus::WaitForAsynchCompletion** retourne DB_E_CANCELED). Cela est dû au fait que l’objet source de données ne reste pas dans l’état habituel après une opération d’abandon, de façon que d’autres tentatives d’initialisation puissent avoir lieu.  
   
  Les méthodes suivantes prennent en charge l'utilisation d'une exécution asynchrone dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -47,7 +47,7 @@ ms.locfileid: "51030145"
   
 -   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)    
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)  
   

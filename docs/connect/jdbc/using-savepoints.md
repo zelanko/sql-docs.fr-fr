@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd1ab1ab51a1fa7214d704ab6152af9368c0c67a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd9903438f2bc52d6f3ac87bfc6628bf08e3b9f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695927"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798626"
 ---
 # <a name="using-savepoints"></a>Utilisation de points d'enregistrement
 
@@ -24,7 +24,7 @@ ms.locfileid: "47695927"
 
 Les points d'enregistrement constituent un mécanisme permettant d'annuler certaines parties de transactions. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez créer un point de sauvegarde à l’aide de l’instruction SAVE TRANSACTION savepoint_name. Par la suite, vous pourrez exécuter une instruction ROLLBACK TRANSACTION nom_point_enregistrement pour revenir au point d'enregistrement au lieu de revenir au début de la transaction.
 
-Les points d'enregistrement sont particulièrement utiles lorsque des erreurs sont peu susceptibles de se produire. L'utilisation d'un point d'enregistrement pour annuler une partie d'une transaction en cas d'erreur non fréquente peut s'avérer plus efficace que de tester chaque transaction afin de voir si une mise à jour est valide avant de l'implémenter. Les mises à jour et les restaurations étant des opérations coûteuses, les points d'enregistrement ne sont efficaces que si la probabilité de rencontrer l'erreur est faible et si le coût de vérification préalable de la validité d'une mise à jour est relativement élevé.
+Les points d'enregistrement sont utiles dans les situations où des erreurs sont susceptibles de se produire. L'utilisation d'un point d'enregistrement pour annuler une partie d'une transaction en cas d'erreur non fréquente peut s'avérer plus efficace que de tester chaque transaction afin de voir si une mise à jour est valide avant de l'implémenter. Les mises à jour et les restaurations étant des opérations coûteuses, les points d'enregistrement ne sont efficaces que si la probabilité de rencontrer l'erreur est faible et si le coût de vérification préalable de la validité d'une mise à jour est relativement élevé.
 
 Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation de points de sauvegarde à l’aide de la méthode [setSavepoint](../../connect/jdbc/reference/setsavepoint-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La méthode setSavepoint permet de créer un point de sauvegarde nommé ou non à l’intérieur de la transaction en cours et retourne un objet [SQLServerSavepoint](../../connect/jdbc/reference/sqlserversavepoint-class.md). Il est possible de créer plusieurs points d'enregistrement à l'intérieur d'une transaction. Pour annuler une transaction jusqu’à un point de sauvegarde donné, vous pouvez transmettre l’objet SQLServerSavepoint à la méthode [rollback (java.sql.Savepoint)](../../connect/jdbc/reference/rollback-method-java-sql-savepoint.md).
 
@@ -32,6 +32,6 @@ Dans l’exemple suivant, un point de sauvegarde est utilisé lors de l’exécu
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Réalisation de transactions avec le pilote JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

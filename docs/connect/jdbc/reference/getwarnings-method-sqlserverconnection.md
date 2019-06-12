@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b57d4a5f49bd292ea76ab0047b8ddf871aed6c08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f816cab36fbed46dbf25c83df3063a024e4abbbb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812877"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780080"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public java.sql.SQLWarning getWarnings()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getWarnings est spécifiée par la méthode getWarnings dans l’interface java.sql.Connection.  
   
  Les avertissements ultérieurs sont chaînés à la première SQLWarning et appelées avec la méthode getNextWarning. Si elle est appelée sur une connexion fermée, une exception est levée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

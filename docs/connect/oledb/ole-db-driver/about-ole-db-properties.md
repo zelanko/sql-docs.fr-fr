@@ -15,13 +15,13 @@ helpviewer_keywords:
 - property values [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 903ce31cec6ce738fb478661da651f73a072e39d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 332b9a6599d74344e7de885ea08fe6ec74060aa9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601529"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769229"
 ---
 # <a name="about-ole-db-properties"></a>À propos des propriétés OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51601529"
   
 7.  Appel d'une méthode pour définir des propriétés et passer le nombre et le tableau de structures DBPROPSET.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une application de pilote OLE DB pour SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [Propriétés (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

@@ -1,6 +1,6 @@
 ---
 title: Créer un rapport lié | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19a78d5909d62054903a61d18c89d975cde1befe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571621"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506644"
 ---
 # <a name="create-a-linked-report"></a>Créer un rapport lié
   Un rapport lié est un élément de serveur de rapports qui fournit un point d'accès à un rapport existant. Au niveau conceptuel, il est assimilable au raccourci d'un programme que vous utilisez pour exécuter une application ou ouvrir un fichier.  
@@ -26,26 +26,26 @@ ms.locfileid: "65571621"
   
  Bien que les rapports liés soient généralement basés sur des rapports paramétrés, il n'est pas obligatoire de recourir à des rapports paramétrés. Vous pouvez créer des rapports liés dès lors que vous souhaitez déployer un rapport existant avec des paramètres différents.  
   
-### <a name="to-create-a-linked-report"></a>Pour créer un rapport lié  
+## <a name="to-create-a-linked-report"></a>Pour créer un rapport lié  
   
-1.  Dans le Gestionnaire de rapports, accédez au dossier qui contient le rapport à lier, puis ouvrez le menu d’options et cliquez sur **Créer un rapport lié**.  
+1. Dans le portail web, accédez à l’état souhaité, avec le bouton droit dessus et sélectionnez **gérer** dans le menu déroulant.
+
+2. Sur le **gérer <reportname>**  page, sélectionnez **créer un rapport lié**.  
   
-2.  Indiquez un nom pour le nouveau rapport lié. Tapez éventuellement une description.  
+3. Indiquez un nom pour le nouveau rapport lié. Entrez éventuellement une description.  
   
-3.  Pour sélectionner un autre dossier pour le rapport, cliquez sur **Modifier l’emplacement**. Cliquez ensuite sur le dossier à utiliser ou tapez son nom dans la zone **Emplacement** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Si vous ne sélectionnez aucun dossier, le rapport lié est créé dans le dossier actif (où est stocké le rapport sur lequel il est basé).  
+4. Pour sélectionner un autre dossier pour le rapport, sélectionnez le bouton de sélection (...) à droite de ***emplacement***.  Accédez au nouveau dossier pour le rapport, puis sélectionnez **sélectionnez**. Si vous ne sélectionnez pas un autre dossier, le rapport lié est créé dans le dossier actif.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Le rapport lié s’ouvre.  
+5. Sélectionnez **Créer**. Le rapport lié est créé.  
+
+6. Sous **avancé**, sélectionnez un autre **délai d’attente de rapport** valeur si vous le souhaitez, puis sélectionnez **appliquer** pour enregistrer les modifications.
   
      L'icône d'un rapport lié est différente des autres éléments gérés par un serveur de rapports. L'icône ci-après indique un rapport lié :  
   
      ![Icône Rapport lié](../../reporting-services/report-server/media/hlp-16linked.gif "Icône Rapport lié")  
   
-## <a name="see-also"></a> Voir aussi  
- [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Page Nouveau rapport lié &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Page Choisir l’emplacement de l’élément &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+## <a name="see-also"></a>Voir aussi  
+ [Ouvrir et fermer un rapport &#40;portail web&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

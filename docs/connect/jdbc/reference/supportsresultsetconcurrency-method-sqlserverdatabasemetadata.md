@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c20b22e7eac31b66055e01c9442725d889f3309a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 098b696ea160a768b424c17275253baf60207b6b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825977"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797411"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>Méthode supportsResultSetConcurrency (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -81,10 +81,10 @@ public boolean supportsResultSetConcurrency(int type,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode supportsResultSetConcurrency est spécifiée par la méthode supportsResultSetConcurrency dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

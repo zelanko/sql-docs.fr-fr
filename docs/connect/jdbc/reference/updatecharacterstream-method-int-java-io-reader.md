@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be9761b346eaa2e29bbffb12cb79ec2da13316b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7f27f2eadeb1c9743a83ef3ae78b011da5edf13c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798807"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784047"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>Méthode updateCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,14 +43,14 @@ public void updateCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java.sql.ResultSet.  
   
- Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes **binary**, **varbinary**, **varbinary(max)**, **image** et **xml**, mais pas les colonnes **udt**.  
+ Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes **binary**, **varbinary**, **varbinary(max)** , **image** et **xml**, mais pas les colonnes **udt**.  
   
  À l’aide de cette méthode pour le **image**, **texte**, et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données peuvent affecter les performances.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

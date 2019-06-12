@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ae32c7693b724deec25c8d923e02cdf929e893ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796975"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,14 +51,14 @@ sqlsrv_configure( string $setting, mixed $value )
 ## <a name="return-value"></a>Valeur retournée  
 Si **sqlsrv_configure** est appelé avec un paramètre ou une valeur non pris en charge, la fonction retourne **false**. Sinon, elle retourne **true**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 (1) Pour plus d’informations sur les requêtes côté client, voir [Types de curseurs &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 (2) Pour plus d’informations sur la journalisation de l’activité, voir [Journalisation de l’activité](../../connect/php/logging-activity.md).  
   
 (3) Pour plus d’informations sur la configuration de la gestion des erreurs et des avertissements, voir [Guide pratique pour configurer la gestion des erreurs et des avertissements avec le pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 

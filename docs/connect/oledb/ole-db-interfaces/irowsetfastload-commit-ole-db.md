@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Commit method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f4f4ff01e34dff092f87b3dc1f972a5ab31ca6c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 1c1ac06ce8fe0d76858e10506d4ff6c054517f68
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031426"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761509"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ HRESULT Commit(
  E_UNEXPECTED  
  La méthode a été appelée sur un ensemble de lignes de copie en bloc précédemment invalidé par la méthode **IRowsetFastLoad::Commit**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un pilote OLE DB pour les lignes de copie en bloc SQL Server se comporte comme un ensemble de lignes en mode de mise à jour retardée. Quand l’utilisateur insère des données de ligne dans l’ensemble de lignes, les lignes insérées sont traitées de la même façon que les insertions en attente sur un ensemble de lignes prenant en charge **IRowsetUpdate**.  
   
  Le consommateur doit appeler la méthode **Commit** sur l’ensemble de lignes de copie en bloc pour écrire les lignes insérées dans la table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de la même façon que la méthode **IRowsetUpdate::Update** est utilisée pour soumettre des lignes en attente à une instance de SQL Server.  
@@ -61,7 +61,7 @@ HRESULT Commit(
   
  Le consommateur peut insérer des lignes par lot en appelant la méthode **Commit** avec l’argument *fDone* défini sur FALSE. Quand *fDone* est défini sur TRUE, l’ensemble de lignes devient non valide. Un ensemble de lignes de copie en bloc non valide prend en charge seulement l’interface **ISupportErrorInfo** et la méthode **IRowsetFastLoad::Release**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

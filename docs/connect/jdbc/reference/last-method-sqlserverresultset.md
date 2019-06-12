@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 808b09c349ce571c490e7a1aeff7acd9661ecd25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825947"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790029"
 ---
 # <a name="last-method-sqlserverresultset"></a>last, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean last()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode last est spécifiée par la méthode last de l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03ce063437879db5c93ca83e512dc5f807bba40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d178f847ae9de2ca8ec9af07433c88b950fddc2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769797"
 ---
 # <a name="updating-large-data-sample"></a>Exemple de mise à jour de données volumineuses
 
@@ -35,9 +35,9 @@ Le fichier de code pour cet exemple se nomme UpdateLargeData.java et se trouve �
 Pour exécuter cet exemple d’application, l’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] est nécessaire. Définissez aussi le classpath de façon à inclure le fichier sqljdbc4.jar. Si l'instruction classpath n'a pas d'entrée pour sqljdbc4.jar, l'exemple d'application lève l'exception usuelle « Classe introuvable ». Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar, à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Cet exemple utilise les méthodes [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) et [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), qui sont introduites dans l’API JDBC 4.0, pour accéder aux méthodes de mise en mémoire tampon des réponses spécifiques aux pilotes. Pour pouvoir compiler et exécuter cet exemple, vous devez disposer de la bibliothèque de classes sqljdbc4.jar, qui assure la prise en charge de JDBC 4.0. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fournit les fichiers de bibliothèques de classes sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar, à utiliser en fonction de vos paramètres JRE (Java Runtime Environment). Cet exemple utilise les méthodes [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) et [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md), qui sont introduites dans l’API JDBC 4.0, pour accéder aux méthodes de mise en mémoire tampon des réponses spécifiques aux pilotes. Pour pouvoir compiler et exécuter cet exemple, vous devez disposer de la bibliothèque de classes sqljdbc4.jar, qui assure la prise en charge de JDBC 4.0. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, le code établit une connexion à la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. L’exemple de code crée ensuite un objet Statement et utilise la méthode [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) pour vérifier si l’objet Statement est un wrapper pour la classe [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) spécifiée. La méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) permet d’accéder aux méthodes de mise en mémoire tampon des réponses spécifiques aux pilotes.
 
@@ -51,6 +51,6 @@ Le comportement par défaut du pilote est « **adaptatif** ». Cependant, pour l
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation de données volumineuses](../../../connect/jdbc/code-samples/working-with-large-data.md)

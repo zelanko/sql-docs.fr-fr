@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7e59ca60471e89da883b9fbaa4cf269ac33a0e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7dbb398a1b280b413739b4464d859e85cc7d6811
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654797"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787256"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>Méthode updateBlob (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +48,10 @@ public void updateBlob(int columnIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateBlob est spécifiée par la méthode updateBlob dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateBlob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

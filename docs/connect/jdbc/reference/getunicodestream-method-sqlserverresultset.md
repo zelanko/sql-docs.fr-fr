@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80a3b4ae3f35bd1e53d7fba68794e177ac855431
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f225dafb0316775e7491036f84e24a03bc326546
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717997"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790555"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "47717997"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[getUnicodeStream, méthode &#40;int&#41;](../../../connect/jdbc/reference/getunicodestream-method-int.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de flux de caractères Unicode.|  
 |[getUnicodeStream, méthode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de flux de caractères Unicode.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

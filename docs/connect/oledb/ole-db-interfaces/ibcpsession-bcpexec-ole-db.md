@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPExec method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 905f22f3a4d33104db517d10c34292df653ada00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 087987f64cf3da6e7f14b30c6014fdcd6e35e243
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602459"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790976"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ HRESULT BCPExec(
       DBROWCOUNT *pRowsCopied);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode **BCPExec** copie des données à partir d’un fichier utilisateur vers une table de base de données ou vice versa, selon la valeur du paramètre *eDirection* utilisé avec la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
  Avant d'appeler **BCPExec**, appelez la méthode **BCPInit** avec un nom de fichier utilisateur valide. L'échec de cette opération entraîne une erreur. La seule exception est si une requête doit être utilisée pour une opération de copie en bloc sortante. Dans ce cas, spécifiez NULL pour le nom de table dans la méthode **BCPInit** , puis spécifiez la requête à l'aide de l'option BCP_OPTION_HINTS.  
@@ -71,7 +71,7 @@ HRESULT BCPExec(
  DB_S_ERRORSOCCURRED  
  Des erreurs se sont produites pendant l'opération de copie en bloc et certaines lignes n'ont pas pu être copiées. Le nombre d'erreurs est inférieur au nombre maximal d'erreurs autorisé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md)  
   

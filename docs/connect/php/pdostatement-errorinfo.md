@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fc81be8628145c63a3d9c2296846ca19b0cc39b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7bcce0c5006be65137cd04da28a5c3e2c8844551
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605619"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768184"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,10 +41,10 @@ Tableau d’informations d’erreur sur la dernière opération effectuée sur l
   
 En l’absence d’erreur, ou si la valeur SQLSTATE n’est pas définie, les champs propres au pilote ont la valeur NULL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Dans cet exemple, l’instruction SQL comporte une erreur, qui est par la suite signalée.  
   
 ```  
@@ -57,7 +57,7 @@ print_r ($stmt->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

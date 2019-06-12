@@ -12,13 +12,13 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: deab7936f6ba3eacb455cc19622d4232ed8617e5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600079"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791560"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51600079"
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   
--   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**-**>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
+-   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**- **>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -46,14 +46,14 @@ ms.locfileid: "51600079"
   
 4.  Exécutez IRow::GetColumns() jusqu'à ce que vous accédiez à toutes les colonnes dont vous avez besoin. Vous devez accéder aux colonnes de manière consécutive.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser l'interface IRow pour permettre d'accéder directement aux colonnes d'une ligne unique dans le jeu de résultats. L'exemple montre :  
   
 -   comment extraire un groupe de colonnes de manière consécutive.  
   
 -   Comment accéder deux fois à une colonne : la première fois au moment de l'obtention de la largeur de colonne réelle, puis ultérieurement, au moment de l'accès aux données effectives.  
   
- Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et cbMaxLen est définie sur 0, l'appel à IRow->GetColumns retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour récupérer les données effectives. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
+ Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et que cbMaxLen est défini sur 0, l’appel à IRow>GetColumns() retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns() sur la même colonne pour extraire les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
@@ -521,7 +521,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures liées à OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 22424e6c8cac92ec0bada0ed3dab13e9b6938c14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600499"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799338"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ HRESULT GetErrorInfo(
  E_OUTOFMEMORY  
  Le pilote OLE DB pour SQL Server n’a pas pu allouer suffisamment de mémoire pour terminer la demande.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le pilote OLE DB pour SQL Server alloue de la mémoire pour les chaînes SSERRORINFO et OLECHAR retournées via les pointeurs passés par le consommateur. Le consommateur doit désallouer cette mémoire avec la méthode **IMalloc::Free** quand il n’est plus nécessaire d’accéder aux données d’erreur.  
   
  La structure SSERRORINFO est définie comme suit :  
@@ -90,7 +90,7 @@ SSERRORINFO;
   
  Pointeurs dans les adresses de type référence de la structure de la chaîne retournée dans l’argument *ppErrorStrings*.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

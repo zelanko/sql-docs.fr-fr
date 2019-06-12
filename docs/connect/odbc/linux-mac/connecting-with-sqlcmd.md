@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579259"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789889"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -65,7 +65,7 @@ Dans la version actuelle, les options suivantes sont disponibles :
 - -k Supprimer ou remplacer des caractères de contrôle.  
   
 - **-K**_application\_intent_  
-Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [pilote ODBC sur Linux et macOS - haute disponibilité et récupération d’urgence](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > L’option **-K** n’est pas prise en charge dans le CTP pour SUSE Linux. Vous pouvez toutefois spécifier le mot clé **ApplicationIntent=ReadOnly** dans un fichier DSN passé à `sqlcmd`. Pour plus d’informations, consultez « Prise en charge du nom de source de données dans `sqlcmd` et `bcp` » à la fin de cette rubrique.  
@@ -98,7 +98,7 @@ Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de dis
   
 - s - *column_separator_char* spécifier le caractère de séparation des colonnes.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 Spécifiez l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour se connecter à, ou si -D est utilisé, une source de données. Le pilote ODBC sur Linux et macOS nécessite - S. Notez que **tcp** est le seul protocole valide.  
   
 - -t *délai_expiration_requête* Spécifier le nombre de secondes accordées pour l’exécution d’une commande (ou une instruction SQL).  
@@ -210,22 +210,22 @@ Les entrées suivantes sont prises en charge dans un nom de source de données s
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Base de données =**_base de données\_nom_  
+-   **Base de données =** _base de données\_nom_  
   
 -   **Pilote = ODBC Driver 11 pour SQL Server** ou **pilote = ODBC Driver 13 pour SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server=**_server\_name\_or\_IP\_address_  
+-   **Server=** _server\_name\_or\_IP\_address_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mais pour établir une connexion à un serveur, `sqlcmd` ou `bcp` a besoin de la valeur de l’entrée SERVER.  
 
-Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur (**-U**) et le mot de passe (**-P**), s’ils sont fournis, sont ignorés.
+Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur ( **-U**) et le mot de passe ( **-P**), s’ils sont fournis, sont ignorés.
 
 Vous pouvez modifier les scripts qui appellent `isql` pour qu’ils utilisent `sqlcmd` en définissant l’alias suivant : `alias isql="sqlcmd -D"`.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Connexion avec **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

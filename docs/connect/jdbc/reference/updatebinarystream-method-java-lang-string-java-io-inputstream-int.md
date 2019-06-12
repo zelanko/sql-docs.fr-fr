@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9be246a7-85fa-49fc-ad79-aabe97f5b280
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41b3c59bdec9a2cbeb9c2dc3ce777e455ade2beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a03a2ff79af2472af5d0bed31be3ad6d35f525bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804957"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798839"
 ---
 # <a name="updatebinarystream-method-javalangstring-javaioinputstream-int"></a>Méthode updateBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 #### <a name="parameters"></a>Paramètres  
  *columnLabel*  
   
- AStringthat contient l’étiquette de colonne.  
+ String contenant l’étiquette de colonne.  
   
  *x*  
   
@@ -53,7 +53,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateBinaryStream est spécifiée par la méthode updateBinaryStream dans l’interface java.sql.ResultSet.  
   
  Cette méthode passe les octets à partir d’un objet InputStream à des colonnes binaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sélectionnées, telles que binary, varbinary, varbinary(max), image, xml et udt. La mise à jour de colonnes de caractères n'est pas prise en charge avec cette méthode. Pour mettre à jour des colonnes de caractères avec InputStream, utilisez la méthode [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
@@ -62,7 +62,7 @@ public void updateBinaryStream(java.lang.String columnLabel,
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [updateBinaryStream, méthode &#40;java.lang.String, java.io.InputStream&#41;](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md) quand l’application veut mettre à jour la colonne à partir d’un flux dont la longueur est inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateBinaryStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

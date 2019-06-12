@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 36396dc9-f109-4da0-bd64-726704046bbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3d32bdf91cfe9ddbbdc8e3bb85e101943aebcf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 928a3528150fa4901f1f8666fe711c5c5633b6c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736268"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790411"
 ---
 # <a name="setncharacterstream-method-int-javaioreader-long"></a>Méthode setNCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public final void setNCharacterStream(int parameterIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java.sql.PreparedStatement.  
   
  Cette méthode doit être utilisée pour **NCHAR**, **NVARCHAR**, **NTEXT**, et **XML** types de données.  
@@ -57,7 +57,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [setNCharacterStream, méthode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-int-java-io-reader.md) quand l’application veut mettre à jour la colonne à partir d’un flux de longueur inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setNCharacterStream, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff964eebb92eb6b4642b2dde7d7f19cdbaf742b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 01cf9fcfcf888054edc7faf350eb27957bcc971a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618717"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800007"
 ---
 # <a name="getasciistream-method-javalangstring"></a>Méthode getAsciiStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +46,10 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getAsciiStream est spécifiée par la méthode getAsciiStream dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getAsciiStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

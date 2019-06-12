@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9c25ec01087c5a4808f7143f1e3d8706129c46ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842907"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765968"
 ---
 # <a name="metadata-discovery"></a>Découverte des métadonnées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,8 +29,8 @@ ms.locfileid: "47842907"
   
  Si vous développez une application avec OLE DB Driver pour SQL Server, mais que vous vous connectez à une version du serveur antérieure à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], les fonctionnalités de découverte des métadonnées correspondront à la version du serveur.  
   
-## <a name="remarks"></a>Notes    
- Les fonctions membres OLE DB suivantes ont été améliorées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pour fournir une fonctionnalité améliorée de découverte des métadonnées :  
+## <a name="remarks"></a>Notes   
+ Les fonctions membres OLE DB suivantes ont été améliorées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] pour fournir une fonctionnalité améliorée de découverte des métadonnées :  
   
 -   IColumnsInfo::GetColumnInfo  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47842907"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Execute method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 86de5c5e985d038ec4e2640fcd9d4d87b56546d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24ecb2e2089780ee9aed25853e0933bab1a4664c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773820"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781317"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>Création d'ensembles de lignes avec ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47773820"
   
  Défilement OLE DB Driver pour les ensembles de lignes de SQL Server sont prises en charge par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les curseurs. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impose des limitations aux curseurs qui sont sensibles aux modifications effectuées par d'autres utilisateurs de la base de données. En particulier, dans certains curseurs, les lignes ne peuvent pas être triées ; en outre, toute tentative de création d'un ensemble de lignes à l'aide d'une commande qui contient une clause SQL ORDER BY peut échouer. Pour plus d’informations, consultez [Ensembles de lignes et curseurs SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

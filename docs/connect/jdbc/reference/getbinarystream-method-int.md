@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddd2f46d67285d95150f185319e0fb327d34e8dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d45d0ce6b5d6509ffd7b561352a41c69592f86b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826797"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799810"
 ---
 # <a name="getbinarystream-method-int"></a>Méthode getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getBinaryStream est spécifiée par la méthode getBinaryStream dans l’interface java.sql.ResultSet.  
   
  Cette méthode peut être utilisée seulement avec des types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) et image. Si vous essayez de l'utiliser avec d'autres types de données, une exception est levée.  
@@ -56,7 +56,7 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 > [!NOTE]  
 >  Toutes les données figurant dans le flux retourné doivent être lues avant d'obtenir la valeur de toute autre colonne. L'appel suivant à une méthode getter fermera implicitement le flux. De même, un flux peut retourner 0 quand la méthode InputStream.available est appelée, que des données soient ou non disponibles.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getBinaryStream, méthode (SQLServerResultSet)](../../../connect/jdbc/reference/getbinarystream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

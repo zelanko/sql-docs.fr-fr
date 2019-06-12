@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c472f5c15be78a35291487e433e0f81a5d7aa60
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633937"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797129"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procédure : envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,8 +39,8 @@ Pour envoyer ou récupérer des données encodées en UTF-8 sur le serveur :
   
 Vous pouvez transmettre UTF-8 ou SQLSRV_ENC_CHAR à **CharacterSet**, mais pas transmettre SQLSRV_ENC_BINARY. L’encodage par défaut est SQLSRV_ENC_CHAR.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. Notez que la colonne Comments est de type **nvarchar(3850)**. Notez également que, avant d’être envoyées au serveur, les données sont encodées en UTF-8 avec la fonction **utf8_encode** PHP. Cette opération est effectuée à des fins de démonstration uniquement. Dans un scénario d’application réelle, vous débuteriez avec des données encodées en UTF-8.  
+## <a name="example"></a>Exemple  
+L’exemple suivant montre comment envoyer et récupérer des données encodées en UTF-8 en spécifiant le jeu de caractères UTF-8 au moment de l’établissement de la connexion. L’exemple met à jour la colonne Comments de la table Production.ProductReview pour un ID d’évaluation spécifié. L’exemple récupère également les données qui viennent d’être mises à jour et les affiche. Notez que la colonne Comments est de type **nvarchar(3850)** . Notez également que, avant d’être envoyées au serveur, les données sont encodées en UTF-8 avec la fonction **utf8_encode** PHP. Cette opération est effectuée à des fins de démonstration uniquement. Dans un scénario d’application réelle, vous débuteriez avec des données encodées en UTF-8.  
   
 L’exemple part du principe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
   
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
   
 Pour plus d’informations sur le stockage des données Unicode, voir [Utiliser des données Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant est similaire au premier exemple, mais au lieu de spécifier le jeu de caractères UTF-8 sur la connexion, il montre comment spécifier le jeu de caractères UTF-8 sur la colonne.  
   
 ```  
@@ -219,7 +219,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [Utilisation de données ASCII dans non Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)

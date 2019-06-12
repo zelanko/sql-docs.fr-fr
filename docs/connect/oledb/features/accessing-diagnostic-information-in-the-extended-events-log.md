@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2e4951665996143a56acf55fb0f90e24d3ba3e4c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: dd9db627fcf79114c010cc33c2552886fb7a6dc2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602679"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777926"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51602679"
 > [!NOTE]  
 >  Cette fonctionnalité n'est conçue qu'à des fins de dépannage et de diagnostic et peut ne pas convenir à des fins d'audit ou de sécurité.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour les opérations de connexion OLE DB Driver pour SQL Server envoie un client ID de connexion. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d'envoyer le paquet de préconnexion, un ID de connexion client ne sera pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion client dans la cible de sortie d’événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Vous pouvez activer le traçage de l’accès aux données et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace d’accès aux données pour une opération ayant échoué, si vous avez besoin d’une aide supplémentaire pour le diagnostic.  
    
   
@@ -216,7 +216,7 @@ class Bid2Etw_MSOLEDBSQL_1_Trace_TextW : Bid2Etw_MSOLEDBSQL_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../oledb/ole-db-errors/errors.md)  
   
   

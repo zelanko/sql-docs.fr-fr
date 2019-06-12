@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510708"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790278"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ Microsoft JDBC Driver for SQL Server est fourni avec les fournisseurs de magasin
 
 | Classe                                                 | Description                                        | Nom de fournisseur (pour la recherche)  | Est déjà inscrit ? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un fournisseur pour un magasin de clés Azure Key Vault. | AZURE_KEY_VAULT         | non                 |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un fournisseur pour un magasin de clés Azure Key Vault. | AZURE_KEY_VAULT         | Non                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Fournisseur du magasin de certificats Windows.      | MSSQL_CERTIFICATE_STORE | Oui                |
 | **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Un fournisseur pour le magasin de clés Java                   | MSSQL_JAVA_KEYSTORE     | Oui                |
 
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Si vous utilisez le fournisseur de magasin de clés Azure Key Vault, l’implémentation d’Azure Key Vault du pilote JDBC a des dépendances sur ces bibliothèques (à partir de GitHub) qui doivent être inclus avec votre application :
 >
->  [Azure sdk pour java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [bibliothèques Azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Pour obtenir un exemple montrant comment inclure ces dépendances dans un projet Maven, consultez [télécharger ADAL4J et AKV dépendances avec Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -360,14 +360,14 @@ ds.setColumnEncryptionSetting("Enabled");
 SQLServerConnection con = (SQLServerConnection) ds.getConnection();
 ```
 
-Always Encrypted peut également être activé pour les requêtes individuelles. Pour plus d’informations, consultez [contrôlant l’impact sur les performances d’Always Encrypted](#controlling-the-performance-impact-of-always-encrypted). L’activation d’Always Encrypted ne suffit pas à la réussite du chiffrement ou du déchiffrement. Vous devez également vérifier ce qui suit :
+Always Encrypted peut également être activé pour les requêtes individuelles. Pour plus d’informations, consultez [Contrôle de l’impact d’Always Encrypted sur les performances](#controlling-the-performance-impact-of-always-encrypted) ci-dessous. L’activation d’Always Encrypted ne suffit pas à la réussite du chiffrement ou du déchiffrement. Vous devez également vérifier ce qui suit :
 - L’application dispose des autorisations de base de données *VIEW ANY COLUMN MASTER KEY DEFINITION* et *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* qui sont nécessaires pour accéder aux métadonnées des clés Always Encrypted dans la base de données. Pour plus d’informations, consultez [Autorisations dans Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
 - L’application peut accéder à la clé principale de colonne qui protège les clés de chiffrement de colonne, qui chiffrent les colonnes de base de données interrogées. Pour utiliser le fournisseur de Java clé Store, vous devez fournir les informations d’identification supplémentaires dans la chaîne de connexion. Pour plus d’informations, consultez [fournisseur de Store de clé Java Using](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuration du mode d’envoi des valeurs java.sql.Time au serveur
 La propriété de connexion **sendTimeAsDatetime** est utilisée pour configurer la manière dont la valeur java.sql.Time est envoyée au serveur. Lorsque cette propriété a la valeur false, la valeur d’heure est envoyée en tant qu’un type d’heure SQL Server. Lorsque cette propriété a la valeur true, l’heure d’envoi de la valeur en un type datetime. Si une colonne time est chiffrée, le **sendTimeAsDatetime** propriété doit être défini sur false, comme des colonnes chiffrées ne prennent pas en charge la conversion à partir de l’heure en date/heure. Notez également que cette propriété est true par défaut, lorsque vous utilisez des colonnes chiffrées de temps vous devez donc affectez-lui la valeur false. Sinon, le pilote lève une exception. À partir de la version 6.0 du pilote, la classe SQLServerConnection a deux méthodes pour configurer la valeur de cette propriété par programmation :
  
-* setSendTimeAsDatetime void publique (sendTimeAsDateTimeValue booléenne)
+* public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 * public boolean getSendTimeAsDatetime()
 
 Pour plus d’informations sur cette propriété, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
@@ -650,6 +650,6 @@ Grâce à SQLServerBulkCopy, les données qui sont déjà chiffrées et stockée
 > [!NOTE]
 > Faites attention quand vous spécifiez AllowEncryptedValueModifications, car cette option peut endommager la base de données. En effet, Microsoft JDBC Driver pour SQL Server ne vérifie pas si les données sont chiffrées, ou si elles sont correctement chiffrées à l’aide du même type de chiffrement, du même algorithme et de la même clé que la colonne cible.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

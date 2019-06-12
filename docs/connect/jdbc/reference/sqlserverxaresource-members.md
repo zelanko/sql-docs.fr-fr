@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9d55da45733e15a9b2aa98f7c6d8fa386b1e4e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c8b3e731fdc3480d646e141cbd53b777407015f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682687"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768265"
 ---
 # <a name="sqlserverxaresource-members"></a>Membres de SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47682687"
   
 ## <a name="fields"></a>Champs  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Utilisé pour permettre les transactions XA étroitement couplées, qui ont des ID de transaction de branche XA (XID) différents mais le même ID de transaction global (GTRID).|  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47682687"
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Valide la transaction globale spécifiée par l’objet Xid donné.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Termine le travail effectué pour le compte d'une branche de transaction.|  
@@ -59,7 +59,7 @@ ms.locfileid: "47682687"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

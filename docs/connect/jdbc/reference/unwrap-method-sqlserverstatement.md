@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a6823a9f6f57e1ebf1348f35d4a1478100962bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cadd692cb6fe3cdedcad04f462dc46e6a8070b94
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785546"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790003"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>Méthode unwrap (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) est définie par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
   
  Les applications devront peut-être accéder à des extensions de l’API JDBC propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la désencapsulation dans les classes publiques étendues par cet objet, si les classes exposent des extensions de fournisseur.  
@@ -52,7 +52,7 @@ public <T> T unwrap(Class<T> iface)
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [isWrapperFor, méthode &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

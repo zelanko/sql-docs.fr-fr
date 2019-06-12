@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, command execution
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9f163f1518b5dc89b6fe7e8e670f5b840aded8b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 876ce5b140ab590fd1a599f9a05391a236021f68
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656357"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796008"
 ---
 # <a name="executing-a-command"></a>Exécution d'une commande
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47656357"
   
  La commande **Execute** est utilisée pour exécuter la commande. La commande peut être un nom de procédure ou une instruction SQL. Toutes les commandes ne génèrent pas un objet de jeu de résultats (ensemble de lignes). Les commandes, telles que SELECT * FROM Authors, produisent un jeu de résultats.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une application OLE DB Driver pour SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
   

@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a7387890ef61348ed473bee7928a4bebc38d882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f01ffdced922414f83c18a86ff3d4d2c059e44d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618757"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797030"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Commence une transaction sur une connexion spécifiée. La transaction actuelle comprend toutes les instructions sur la connexion spécifiée qui ont été exécutées après l’appel à **sqlsrv_begin_transaction** et avant tous les appels à [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) ou [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
+Commence une transaction sur une connexion spécifiée. La transaction actuelle contient toutes les instructions sur la connexion spécifiée qui ont été exécutées après l’appel à **sqlsrv_begin_transaction** et avant tous les appels à [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) ou [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
   
 > [!NOTE]  
 > Le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] est en mode de validation automatique par défaut. Cela signifie que toutes les requêtes sont validées automatiquement en cas de réussite, sauf si elles ont été désignées comme faisant partie d’une transaction explicite à l’aide de **sqlsrv_begin_transaction**.  
@@ -49,12 +49,12 @@ sqlsrv_begin_transaction( resource $conn)
 ## <a name="return-value"></a>Valeur retournée  
 Valeur booléenne : **true** si la transaction a été correctement commencée. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple ci-après exécute deux requêtes dans le cadre d’une transaction. Si les deux requêtes réussissent, la transaction est validée. Si l’une des requêtes (ou les deux) échoue, la transaction est annulée.  
   
 La première requête de l’exemple insère une nouvelle commande dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. La commande concerne cinq unités du produit dont l’ID est 709. La seconde requête réduit de cinq unités la quantité de stock du produit dont l’ID est 709. Ces requêtes sont incluses dans une transaction, car elles doivent toutes les deux réussir pour que la base de données reflète avec exactitude l’état des commandes et la disponibilité du produit.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -122,9 +122,9 @@ sqlsrv_close( $conn);
 Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est incluse dans l’exemple ci-dessus. Pour une application de production, nous vous recommandons de vérifier s’il existe des erreurs et de les gérer en conséquence dans tout appel à la fonction **sqlsrv** .  
   
 > [!NOTE]  
-> N’utilisez pas Transact-SQL incorporé pour effectuer des transactions. Par exemple, n’exécutez pas une instruction avec “BEGIN TRANSACTION” en tant que requête Transact-SQL pour commencer une transaction. Le comportement transactionnel attendu ne peut pas être garanti durant l’utilisation d’une requête Transact-SQL incorporée pour effectuer des transactions.  
+> N’utilisez pas Transact-SQL incorporé pour effectuer des transactions. Par exemple, n’exécutez pas une instruction avec « BEGIN TRANSACTION » en tant que requête Transact-SQL pour commencer une transaction. Le comportement transactionnel attendu ne peut pas être garanti durant l’utilisation d’une requête Transact-SQL incorporée pour effectuer des transactions.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Guide pratique pour effectuer des transactions](../../connect/php/how-to-perform-transactions.md)

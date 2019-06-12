@@ -12,13 +12,13 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7e323d3a8fdeb5ecd59185a9ea2a5d396f12b918
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: cd3369e685b495fa775a350a9b5fc7dcae2a5f57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603049"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791336"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Extraire des lignes à partir d'un jeu de résultats (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51603049"
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
  Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
@@ -380,7 +380,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives au traitement des résultats &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

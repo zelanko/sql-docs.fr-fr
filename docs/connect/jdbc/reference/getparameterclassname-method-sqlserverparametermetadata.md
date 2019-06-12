@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcbcac8f48c47f2144127ecd2aa41a5402bf6f38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4b793759b1b8144b5df49868d79c7a443aed9f00
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818162"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765642"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>Méthode getParameterClassName (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +46,10 @@ public java.lang.String getParameterClassName(int param)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getParameterClassName est spécifiée par la méthode getParameterClassName dans l’interface java.sql.ParameterMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, méthodes](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [SQLServerParameterMetaData, membres](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData, classe](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

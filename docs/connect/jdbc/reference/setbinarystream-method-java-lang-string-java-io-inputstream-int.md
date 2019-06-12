@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff592c731de82a142ad1babf9d842d2b668cf0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7bc5c323cb87ab0b5033baf4616a96276c0de2c3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769473"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764711"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>Méthode setBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,14 +53,14 @@ public void setBinaryStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java.sql.CallableStatement.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [setBinaryStream (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setbinarystream-method-java-lang-string-java-io-inputstream.md) quand l’application veut mettre à jour la colonne à partir d’un flux dont la longueur est inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setBinaryStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setbinarystream-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

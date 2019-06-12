@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759407"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790084"
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 
@@ -51,10 +51,10 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | texte               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| timestamp          | BINARY                                             | byte[]                       |
+| TIMESTAMP          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
@@ -127,6 +127,6 @@ Si vous devez récupérer des paramètres d’une procédure stockée, vous deve
   
 Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres de sortie, consultez [à l’aide d’une procédure stockée avec paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

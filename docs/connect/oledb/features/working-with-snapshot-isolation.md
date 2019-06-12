@@ -21,13 +21,13 @@ helpviewer_keywords:
 - SQLSetConnectAttr function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a70489259d8636d424f24927cab4ebc5ff090bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 74c80e0db7a6059e9a871553f2e11c6a16360ec3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759367"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796019"
 ---
 # <a name="working-with-snapshot-isolation"></a>Utilisation de l’isolement de capture instantanée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47759367"
  Pour plus d’informations sur la façon dont l’isolement d’instantané est pris en charge dans les transactions, consultez [prenant en charge les Transactions locales](../../oledb/ole-db-transactions/supporting-local-transactions.md).  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [Propriétés et comportements des ensembles de lignes](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   

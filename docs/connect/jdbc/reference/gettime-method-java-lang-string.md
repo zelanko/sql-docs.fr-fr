@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd885dd500a6608772a4e91e731e2d1db5b57ef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637143"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778811"
 ---
 # <a name="gettime-method-javalangstring"></a>Méthode getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
  Consultez le graphique intitulé « Conversions de méthode d’accesseur get » dans [Conversions de types de données de présentation](../../../connect/jdbc/understanding-data-type-conversions.md) pour voir quelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les types de données peuvent être récupérés avec cette méthode.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c7da4795d3485f5165ac7844f00d5a46f0a29cc9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 488713eb92d079afe58cfd508d5d6cdeeb5b99a9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603666"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777839"
 ---
 # <a name="date-and-time-improvements"></a>Améliorations des types de données date et heure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "51603666"
 ### <a name="use-datetimedatetimedatetimeoffset-data-with-client-side-conversions-consistent-with-existing-conversions"></a>Utiliser les données de type Date/Time/Datetime/Datetimeoffset avec des conversions côté client cohérentes avec les conversions existantes  
  Les conversions sont étendues de manière cohérente afin d’inclure celles entre tous les types relatifs à la date et à l’heure introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

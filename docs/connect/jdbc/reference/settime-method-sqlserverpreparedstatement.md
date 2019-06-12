@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b3a83ea3-6636-4096-842b-71b37340fa07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2507d59c64d63e8b8b4965baa8ce75aea59d26ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c7b5ee4f45f339dc1bffc2fcbf02794e4aa004f0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784849"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767051"
 ---
 # <a name="settime-method-sqlserverpreparedstatement"></a>setTime, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "47784849"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[setTime (int, java.sql.Time)](../../../connect/jdbc/reference/settime-method-int-java-sql-time.md)|Définit le paramètre désigné sur la valeur d’heure donnée.|  
 |[setTime (int, java.sql.Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-int-java-sql-time-java-util-calendar.md)|Définit le paramètre désigné selon les valeurs d'heure et de calendrier spécifiées.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

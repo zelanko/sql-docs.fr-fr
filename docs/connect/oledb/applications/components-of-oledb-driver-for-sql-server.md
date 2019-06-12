@@ -14,13 +14,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 164b87135257f812898c254fd7fd4f5c762c72ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 23b190bdeb478d5909ca235cf2801a98fb954e9c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735247"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800886"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>Composants OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,5 +36,5 @@ ms.locfileid: "47735247"
 |msoledbsql.h|Le pilote OLE DB pour le fichier d’en-tête SQL Server qui contient toutes les nouvelles définitions nécessaires pour pouvoir utiliser le pilote OLE DB pour SQL Server. Ce fichier d’en-tête remplace le fichier d’en-tête sqloledb.h.<br /><br /> Remarque : Vous pouvez référencer msoledbsql.h et sqloledb.h dans même programme tant que sqloledb.h soit défini en premier.|  
 |msoledbsql.lib|Le fichier bibliothèque nécessaire pour appeler directement la [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) (fonction) qui fait partie du pilote OLE DB pour SQL Server.<br /><br /> Remarque : Si vous référencez le fichier msoledbsql.lib dans votre code de programmation, vous devez vérifier que le fichier msoledbsql.dll se trouve dans votre chemin système et dans le chemin système des utilisateurs qui emploient votre application.|  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

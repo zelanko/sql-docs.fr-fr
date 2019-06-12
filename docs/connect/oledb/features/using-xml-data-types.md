@@ -30,13 +30,13 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391456"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796072"
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "52391456"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour permettre la prise en charge du type de données **xml** via OLE DB, OLE DB Driver pour SQL Server implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes.  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue (base de données) dans lequel une collection de schémas XML est définie. Une des trois parties qui composent l’identificateur de nom SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma XML dans la collection de schémas. Une des trois parties qui composent l'identificateur de nom SQL.|  
@@ -181,7 +181,7 @@ ms.locfileid: "52391456"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans l’interface **ITableDefinition**, OLE DB Driver pour SQL Server ajoute trois nouvelles colonnes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom du catalogue où le schéma XML est stocké. Pour les autres types de colonnes, cette propriété retourne une chaîne vide.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Pour les colonnes XML typées, cette propriété est une chaîne qui spécifie le nom de schéma XML qui définit cette colonne.|  
@@ -230,7 +230,7 @@ ms.locfileid: "52391456"
  La méthode **IRowsetFind::FindNextRow** ne fonctionne pas avec le type de données **xml**. Quand vous appelez **IRowsetFind::FindNextRow** et que l’argument *hAccessor* spécifie une colonne de type DBTYPE_XML, la valeur DB_E_BADBINDINFO est retournée. Cette situation se produit quel que soit le type de colonne recherché. Pour tous les autres types de liaisons, la méthode **FindNextRow** échoue avec DB_E_BADCOMPAREOP si la colonne dans laquelle effectuer la recherche affiche le type de données **xml**.  
  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

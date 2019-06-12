@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b48291a8b8ceed008d40048f1a27a3d5ba3c4b02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 15cd2ab23a46bb9fa18a4b0fbf77b8ae3d958199
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733267"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797040"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Spécification d’un type de curseur et sélection de lignes
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,6 +30,6 @@ Vous pouvez créer un jeu de résultats avec des lignes auxquelles vous pouvez a
   
 -   [Types de curseur &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

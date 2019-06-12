@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcf136c399f3d1578cd1548c3809586d6279aeb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 51db61a1ea139878269e90291d27b2acce778d86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792349"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>Méthode getMaxTablesInSelect (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getMaxTablesInSelect()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getMaxTablesInSelect est spécifiée par la méthode getMaxTablesInSelect dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

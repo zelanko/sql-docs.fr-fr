@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ccd38f36f9ad009c433672c8a5d522eae61aa886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e0df5adcaa4fc08afacd2c5714d2207d12100c5f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811757"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792905"
 ---
 # <a name="getmaxcatalognamelength-method-sqlserverdatabasemetadata"></a>Méthode getMaxCatalogNameLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getMaxCatalogNameLength()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getMaxCatalogNameLength est spécifiée par la méthode getMaxCatalogNameLength dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

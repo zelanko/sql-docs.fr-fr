@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5b86b9aaed42c21e63734985c3f873e844eb3b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c666fda3df96e32736c4bfd8c32a92e759142c70
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658317"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773341"
 ---
 # <a name="settime-method-int-javasqltime-javautilcalendar"></a>Méthode setTime (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,21 +46,21 @@ public final void setTime(int n,
   
  Un objet de temps.  
   
- *licence d’accès client*  
+ *cal*  
   
  Un objet de calendrier.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setTime est spécifiée par la méthode setTime dans l’interface java.sql.PreparedStatement.  
   
  À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 3.0 du pilote JDBC, le comportement de cette méthode est modifié par le **sendTimeAsDatetime** propriété de connexion ([définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Pour plus d’informations, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setTime, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

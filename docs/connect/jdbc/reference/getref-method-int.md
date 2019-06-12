@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d75bf52e220d5c7c5273ab99dbfca5c6e9b2d050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3e9f964f6a9ace8984e63018f556550c1631bc1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726587"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800214"
 ---
 # <a name="getref-method-int"></a>Méthode getRef (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +46,10 @@ public java.sql.Ref getRef(int i)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getRef est spécifiée par la méthode getRef de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getRef, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

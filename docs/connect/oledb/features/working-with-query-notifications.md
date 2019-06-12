@@ -21,13 +21,13 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d65583e80dc367e974e68a70dc36990b4a80278d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7139e6a80e05fbe3671acc9246d42a1354da714f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602709"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796036"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51602709"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Exemple :  
+ Par exemple :  
   
  `service=mySSBService;local database=mydb`  
   
@@ -78,7 +78,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
  Pour prendre en charge les notifications de requêtes via OLE DB, OLE DB Driver pour SQL Server ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l’utilisateur et n’a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
@@ -86,7 +86,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  L'abonnement aux notifications est toujours validé, que l'instruction ait été exécutée dans une transaction utilisateur ou en mode de validation automatique, ou que la transaction dans laquelle l'instruction s'est exécutée ait été validée ou restaurée. La notification du serveur est déclenchée lorsque l'une des conditions de notification non valides suivantes se produit : modification des données sous-jacentes ou du schéma ou expiration du délai d'attente imparti (selon l'opération qui se produit en premier). Les inscriptions de notification sont supprimées dès qu'elles sont déclenchées. Par conséquent, lorsque l'application reçoit des notifications, l'application doit encore s'abonner au cas où elle souhaiterait obtenir d'autres mises à jour.  
   
- Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Exemple :  
+ Une autre connexion ou un autre thread peut vérifier la file d'attente de destination pour les notifications. Par exemple :  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -111,7 +111,7 @@ RECEIVE * FROM MyQueue
   
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)     
   
   

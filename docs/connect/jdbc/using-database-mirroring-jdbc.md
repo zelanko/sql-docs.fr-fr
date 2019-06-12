@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638639"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798657"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Utilisation de la mise en miroir de bases de données (JDBC)
 
@@ -57,7 +57,7 @@ AND db.database_id = m.database_id
 
 Vous devez envisager de mettre en cache les informations du partenaire afin de mettre à jour la chaîne de connexion ou concevoir une stratégie de nouvelle tentative en cas d'échec de la première tentative de création d'une connexion.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l'exemple suivant, une tentative est réalisée en premier lieu pour établir une connexion au serveur de principe. En cas d'échec et de génération d'une exception, une tentative est réalisée pour établir une connexion au serveur miroir, qui peut avoir été promu serveur de principe. Remarquez l'utilisation de la propriété failoverPartner dans la chaîne de connexion.
 
@@ -109,6 +109,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

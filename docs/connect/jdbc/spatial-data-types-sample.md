@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29d141d9dd2eaf889eb5c4597c3fd0dd853ec31d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b05182b5dbed154aafd86feec9f73e433f569791
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743627"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798348"
 ---
 # <a name="spatial-data-types-sample"></a>Exemple de types de données spatiales
 
@@ -34,9 +34,9 @@ Le fichier de code de cet exemple, SpatialDataTypes.java, se trouve à l’empla
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).  
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, l’exemple de code crée une table appelée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes « Geometry » et 'Geography'.
 
@@ -96,7 +96,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Utilisation des Types de données JDBC](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

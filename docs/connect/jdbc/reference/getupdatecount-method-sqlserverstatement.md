@@ -1,5 +1,5 @@
 ---
-title: getUpdateCount, méthode (SQLServerStatement) | Microsoft Docs
+title: getUpdateCount Method (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c4dadcaa4bfb0c2bf4698cf7b4e0be02a7d4ccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f05796220e305a0d6e06e15a58f780048d49a53
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790527"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public final int getUpdateCount()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getUpdateCount est spécifiée par la méthode getUpdateCount dans l’interface java.sql.Statement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

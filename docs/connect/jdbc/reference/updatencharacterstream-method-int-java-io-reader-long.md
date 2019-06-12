@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fad76cca594595a5efbf16a334975869684a039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624867"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798450"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Méthode updateNCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,16 +48,16 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java.sql.ResultSet.  
   
- Cette méthode passe les caractères Unicode à partir d’un objet lecteur sélectionné **nchar**, **nvarchar (max)**, **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode passe les caractères Unicode à partir d’un objet lecteur sélectionné **nchar**, **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [updateNCharacterStream, méthode &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md) quand l’application veut mettre à jour la colonne à partir d’un flux de longueur inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateNCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

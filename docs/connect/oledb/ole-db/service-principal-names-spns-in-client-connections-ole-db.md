@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1e00183ef3558cbad211fabeb063a81f25d5f29f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b2a42af2355270fd20bc0c12b47ea2d2920858b3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702227"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795912"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Noms de principaux du service (SPN) dans les connexions clientes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47702227"
 ## <a name="data-source-initialization-properties"></a>Propriétés d'initialisation de la source de données  
  Les propriétés suivantes dans le **DBPROPSET_SQLSERVERDBINIT** jeu de propriétés permettent aux applications de spécifier les noms principaux de service.  
   
-|Nom   |Type|Utilisation|  
+|Créer une vue d’abonnement|Type|Utilisation|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, lecture/écriture|Spécifie le nom principal de service du serveur. La valeur par défaut est une chaîne vide, ce qui entraîne le pilote OLE DB pour SQL Server à utiliser la valeur par défaut, généré par le fournisseur SPN.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, lecture/écriture|Spécifie le nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide, ce qui entraîne le pilote OLE DB pour SQL Server à utiliser la valeur par défaut, généré par le fournisseur SPN.|  
@@ -45,7 +45,7 @@ ms.locfileid: "47702227"
 ## <a name="data-source-properties"></a>Propriétés de la source de données  
  Les propriétés suivantes dans le **DBPROPSET_SQLSERVERDATASOURCEINFO** jeu de propriétés permettent aux applications de découvrir la méthode d’authentification.  
   
-|Nom   |Type|Utilisation|  
+|Créer une vue d’abonnement|Type|Utilisation|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, lecture seule|Retourne la méthode d'authentification utilisée pour la connexion. La valeur retournée à l’application est la valeur Windows retourne à OLE DB Driver pour SQL Server. Les valeurs possibles sont les suivantes : <br />« NTLM », lorsqu'une connexion est ouverte à l'aide de l'authentification NTLM.<br />« Kerberos », lorsqu'une connexion est ouverte à l'aide de l'authentification Kerberos.<br /><br /> Si une connexion a été ouverte et si la méthode d'authentification ne peut pas être déterminée, VT_EMPTY est retourné.<br /><br /> Cette propriété ne peut être lue que lorsqu'une source de données a été initialisée. Si vous essayez de lire la propriété avant qu’une source de données ait été initialisée, IDBProperties::GetProperies retourne DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, selon le cas, et DBPROPSTATUS_NOTSUPPORTED est défini dans DBPROPSET_PROPERTIESINERROR pour cette propriété. Ce comportement est conforme à la spécification principale OLE DB.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, lecture seule|Retourne VARIANT_TRUE si les serveurs de la connexion ont été authentifiés mutuellement ; sinon, retourne VARIANT_FALSE.<br /><br /> Cette propriété ne peut être lue que lorsqu'une source de données a été initialisée. Si une tentative de lecture de la propriété est faite avant qu’une source de données ait été initialisée, IDBProperties::GetProperies retourne DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, selon le cas, et DBPROPSTATUS_NOTSUPPORTED est défini dans DBPROPSET_PROPERTIESINERROR pour cette propriété. Ce comportement est conforme à la spécification principale d’OLE DB.<br /><br /> Si cet attribut est interrogé pour une connexion n'ayant pas utilisé l'authentification Windows, VARIANT_FALSE est retourné.|  
@@ -62,7 +62,7 @@ ms.locfileid: "47702227"
 |IDBProperties::GetPropertyInfo|IdbProperties::GetPropertyInfo inclut les propriétés d’initialisation de la nouvelle source de données (SSPROP_INIT_SERVERSPN et SSPROP_INIT_FAILOVERPARTNERSPN) ou les propriétés de la nouvelle source de données (SSPROP_AUTHENTICATION_METHOD et SSPROP_MUTUALLYAUTHENTICATED).|  
 |IDBProperties::SetProperties|IDBProperties::SetProperties peut être appelé pour définir les valeurs des propriétés d’initialisation de la nouvelle source de données (SSPROP_INITSERVERSPN et SSPROP_INIT_FAILOVERPARTNERSPN).<br /><br /> Ces propriétés peuvent être définies à tout moment, mais si la source de données est déjà ouverte, l'erreur suivante est retournée : DB_E_ERRORSOCCURRED, « Une opération OLE DB en plusieurs étapes a généré des erreurs. Vérifiez chaque valeur d'état OLE DB disponible. Aucun travail n'a été effectué. »|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

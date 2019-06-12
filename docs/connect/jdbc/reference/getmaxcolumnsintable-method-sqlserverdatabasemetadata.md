@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dbcad2e1-7508-49ff-9f6d-db11200d87b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb14b68223193f137e06a65ddf4271d2aa0b4bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2f148968bd005d692871c8a2549687451fc3ee33
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701447"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792674"
 ---
 # <a name="getmaxcolumnsintable-method-sqlserverdatabasemetadata"></a>Méthode getMaxColumnsInTable (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getMaxColumnsInTable()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getMaxColumnsInTable est spécifiée par la méthode getMaxColumnsInTable dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

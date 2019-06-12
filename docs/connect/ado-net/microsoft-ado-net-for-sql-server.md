@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602279"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770658"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET pour SQL Server
 
-![Téléchargement-bas encerclé](../../ssdt/media/download.png)[télécharger ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Télécharger-FlècheBas dans un cercle](../../ssdt/media/download.png)[Pour télécharger le pilote ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET est la technologie principale d’accès aux données pour les langages .NET. Utilisez l’espace de noms System.Data.SqlClient pour accéder à SQL Server ou aux fournisseurs d’autres éditeurs pour accéder à leurs magasins. Utilisez System.Data.Odbc ou System.Data.Oledb pour accéder aux données à partir des langages .NET en utilisant d’autres technologies d’accès aux données. Utilisez System.Data.Dataset quand vous avez besoin d’un cache de données hors connexion dans des applications clientes. Il fournit également la persistance locale et les fonctionnalités XML qui peuvent être utiles dans des services web.  
   

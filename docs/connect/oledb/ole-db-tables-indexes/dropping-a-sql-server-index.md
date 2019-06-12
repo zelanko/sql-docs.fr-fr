@@ -17,13 +17,13 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 990318037a3f1b35e311a983859507a364c52127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a426352059f0ca400091aec14589742ec592ea97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669167"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801278"
 ---
 # <a name="dropping-a-sql-server-index"></a>Suppression d'un index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47669167"
   
  Les consommateurs spécifient le nom d’index comme une chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pIndexID*. Le membre *eKind* de *pIndexID* doit être DBKIND_NAME. Le pilote OLE DB pour SQL Server ne prend pas en charge la fonctionnalité OLE DB qui permet de supprimer tous les index d’une table lorsque *pIndexID* a la valeur Null. Si *pIndexID* a la valeur Null, E_INVALIDARG est retourné.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables et index](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  

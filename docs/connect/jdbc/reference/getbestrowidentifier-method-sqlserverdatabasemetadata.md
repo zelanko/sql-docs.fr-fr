@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730319"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799940"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Méthode getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,12 +72,12 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getBestRowIdentifier est spécifiée par la méthode getBestRowIdentifier dans l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getBestRowIdentifier contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SCOPE|short|Étendue des résultats retournés. Il peut avoir une des valeurs suivantes :<br /><br /> bestRowTemporary (0)<br /><br /> bestRowTransaction (1)<br /><br /> bestRowSession (2)|  
 |COLUMN_NAME|String|Nom de la colonne.|  
@@ -88,7 +88,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 |DECIMAL_DIGITS|short|Échelle de la colonne.|  
 |PSEUDO_COLUMN|short|Indique si la colonne est une pseudo-colonne. Il peut avoir une des valeurs suivantes :<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getBestRowIdentifier pour retourner des informations sur le meilleur identificateur de ligne pour la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -114,7 +114,7 @@ public static void executeGetBestRowIdentifier(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

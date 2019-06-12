@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8aa867b0-e6f0-49eb-93d3-817ae2ed8f77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24eef3e97f87d60db624605b19420e5fd562360b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 35a357edee6293f40663628fd0cb66817d042b97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213778"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798522"
 ---
 # <a name="validating-user-input"></a>Validation de l'entrée utilisateur
 
@@ -28,6 +28,6 @@ La validation de l'entrée utilisateur dans le code client est importante afin d
 
 Pour plus d’informations sur l’injection SQL et sur la façon de l’éviter, consultez la rubrique relative à l’injection SQL dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la validation des paramètres de procédure stockée, consultez « Procédures stockées ([!INCLUDE[ssDE](../../includes/ssde_md.md)]) » et les rubriques subalternes dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

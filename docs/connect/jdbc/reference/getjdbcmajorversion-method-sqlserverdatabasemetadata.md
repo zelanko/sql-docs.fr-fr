@@ -1,5 +1,5 @@
 ---
-title: Méthode getJDBCMajorVersion (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getJDBCMajorVersion Method (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 67b2bb4b-9714-4ba5-8739-50c632830451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a803748a8bdf5f9fcb8bb8fc2c765d4300437395
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4233b011af9df0b646f19965d636f7384887cd95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597537"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781097"
 ---
 # <a name="getjdbcmajorversion-method-sqlserverdatabasemetadata"></a>Méthode getJDBCMajorVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getJDBCMajorVersion()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getJDBCMajorVersion est spécifiée par la méthode getJDBCMajorVersion dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

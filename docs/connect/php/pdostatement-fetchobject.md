@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c65d059d786d33f324ba254f23216269c0ca0f80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 94e7c29f10e2d04c77fb340b2dee6f4ecf54fa4e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604390"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799188"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,10 +38,10 @@ $*ctor_args* : tableau facultatif avec les arguments d’un constructeur de cla
 ## <a name="return-value"></a>Valeur retournée  
 En cas de réussite, retourne un objet avec une instance de la classe. Les propriétés correspondent aux colonnes. Retourne la valeur false en cas d’échec.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -55,7 +55,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

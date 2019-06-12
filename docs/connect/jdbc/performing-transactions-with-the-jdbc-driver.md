@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: afbb776f-05dc-4e79-bb25-2c340483e401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d18f5c550bbf60446ac47961d16c1bbdb7cb2e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8471493fb68df8369084046075f88a1e7b4f2e3e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770343"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794102"
 ---
 # <a name="performing-transactions-with-the-jdbc-driver"></a>Exécution de transactions avec le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47770343"
 |[Utilisation de points de sauvegarde](../../connect/jdbc/using-savepoints.md)|Décrit la manière d'utiliser le pilote JDBC avec des points d'enregistrement de transactions.|  
 |[Utilisation de la fonctionnalité de mise en attente](../../connect/jdbc/using-holdability.md)|Décrit la manière d'utiliser le pilote JDBC avec la fonction holdability du jeu de résultats.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

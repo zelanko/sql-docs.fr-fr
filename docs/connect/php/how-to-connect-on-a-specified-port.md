@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d19077a4a0b676875a9b82acf529cc8720f31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680018"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796127"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Procédure : se connecter sur un port spécifié
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,12 +44,12 @@ Cette rubrique explique comment se connecter à SQL Server sur un port spécifi�
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[Mise en route avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 

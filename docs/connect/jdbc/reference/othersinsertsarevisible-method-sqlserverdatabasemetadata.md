@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b124003525af7f461057d3183b5ed185f54410c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fda3463dcdd2a14c94205c2a703addedd05ed557
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690307"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789186"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>Méthode othersInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -64,10 +64,10 @@ public boolean othersInsertsAreVisible(int type)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode othersInsertsAreVisible est spécifiée par la méthode othersInsertsAreVisible dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

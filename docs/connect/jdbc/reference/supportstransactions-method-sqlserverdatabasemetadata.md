@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6ecfa9d1c43244967030284a5fd034d522583b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dbba0cb5d79f8e15c195dd92b9d52353d85a4ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842527"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797233"
 ---
 # <a name="supportstransactions-method-sqlserverdatabasemetadata"></a>Méthode supportsTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean supportsTransactions()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode supportsTransactions est spécifiée par la méthode supportsTransactions dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

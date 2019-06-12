@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5bbe2c3bc3aa3b75a32e5567ee4e1891b303e52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6a5d32c29368dc141a12ae6eb300137b91935fb3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604749"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780469"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,10 +33,10 @@ string PDOStatement::errorCode();
 ## <a name="return-value"></a>Valeur retournée  
 Retourne une valeur SQLSTATE à cinq caractères sous la forme d’une chaîne, ou NULL si aucune opération n’a eu lieu sur le handle d’instruction.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple montre une requête SQL qui comporte une erreur.  Le code d’erreur est ensuite indiqué.  
   
 ```  
@@ -49,7 +49,7 @@ print $stmt->errorCode();
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : récupérer des paramètres d’e/s à l’aide du pilote SQLSRV | Microsoft Docs'
+title: Guide pratique pour récupérer des paramètres de sortie avec le pilote SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c865207156703d87ae827a3274e788b7b8bda270
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27dc3cddc8dac57edc4afdcc2f4191934e243f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629927"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799317"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ L’exemple suivant appelle une procédure stockée qui soustrait des heures de 
 > [!NOTE]  
 > Appeler les procédures stockées à l’aide de la syntaxe canonique est la pratique recommandée. Pour plus d’informations sur la syntaxe canonique, consultez [Appel d’une procédure stockée](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -152,7 +152,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
 [Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)

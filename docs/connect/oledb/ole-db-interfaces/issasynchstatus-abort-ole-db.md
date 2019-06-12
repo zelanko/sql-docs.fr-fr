@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 662aa55260c2fe4f09eaab3e91eb7c8e70a61aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505116"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789743"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,12 +73,12 @@ HRESULT Abort(
   
  **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes qui a été annulé de manière asynchrone dans sa phase d'initialisation. L'ensemble de lignes se trouve dans un état zombie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'abandon de l'initialisation d'un ensemble de lignes ou d'un objet source de données peut laisser l'ensemble de lignes ou l'objet source de données dans un état zombie, de telle sorte que toutes les méthodes autres que **IUnknown** retournent E_UNEXPECTED. Lorsque cela se produit, la seule action possible pour le consommateur est de libérer l'ensemble de lignes ou l'objet source de données.  
   
  Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas pour autant que l’opération soit terminée ou annulée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)  
   
   

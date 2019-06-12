@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b5170751-fbe1-433b-96f5-4f237ba55f60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 451e4bbd85e5e3743ac137da3b4a2257e6a8c53c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b7b602b0f23c1791ba76df3846fcc223716a0dd9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643858"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800184"
 ---
 # <a name="updatesqlxml-method-int-javasqlsqlxml"></a>Méthode updateSQLXML (int, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +43,10 @@ public void updateSQLXML(int columnIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateSQLXML est spécifiée par la méthode updateSQLXML dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateSQLXML, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5987ca7b01022d30df0ee9bcded83ec4f65078ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532455"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790737"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|L'argument n'était pas valide.|  
 |**E_OUTOFMEMORY**|Erreur de mémoire insuffisante.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  IBCPSession2::BCPSetBulkMode peut être utilisé pour copier en une requête ou une table de bloc. Lorsque IBCPSession2::BCPSetBulkMode est utilisé pour copier en bloc une instruction de requête, il doit être appelé avant d’appeler `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` pour spécifier l’instruction de requête.  
   
  Vous devez éviter de combiner la syntaxe d'appel RPC avec la syntaxe de requête de lot (`{rpc func};SELECT * from Tbl`, par exemple) dans un texte de commande simple.  Cela entraîne ICommandPrepare::Prepare retourner une erreur et vous empêche de récupérer les métadonnées. Utilisez la syntaxe ODBC CALL (`{call func}; SELECT * from Tbl`, par exemple) si vous devez combiner l'exécution d'une procédure stockée et une requête de lot dans un texte de commande simple.  
@@ -139,7 +139,7 @@ BCPControl(BCP_OPTION_DELAYREADFMT, true);
 BCPSetColFmt();  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant crée quatre fichiers à l'aide de paramètres différents d'IBCPSession2::BCPSetBulkMode.  
   
 ```cpp  
@@ -363,7 +363,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

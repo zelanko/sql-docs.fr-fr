@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e7941234243c06ecd894b250327e6fcc367f9cd5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 5d93d2114ff462eddd45fb5520a976d148cc96ac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605529"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790834"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ HRESULT BCPWriteFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels aux méthodes [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) et [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) définissent le format du fichier de données. La méthode **BCPWriteFmt** enregistre cette définition dans le fichier référencé par l'argument pwszFormatFile.  
   
  La méthode **BCPWriteFmt** peut enregistrer les fichiers de format dans un format XML ou texte. Vous devez l'indiquer au moyen de l'option de contrôle BCP_OPTION_XML avec la méthode [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) .  
@@ -62,7 +62,7 @@ HRESULT BCPWriteFmt(
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md) 
   

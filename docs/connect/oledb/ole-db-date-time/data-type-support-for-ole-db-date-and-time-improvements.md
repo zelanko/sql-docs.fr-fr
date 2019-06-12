@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e3c40921343f7b762c6e844ecb2eb45581da28c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597398"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769396"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -184,7 +184,7 @@ enum SQLVARENUM {
   
  Lorsqu’une application spécifie DBTYPE_DBTIMESTAMP dans *wType*, il peut remplacer le mappage à **datetime2** en fournissant un nom de type dans *pwszTypeName*. Si **datetime** est spécifié, *bScale* doit être 3. Si **smalldatetime** est spécifié, *bScale* doit être 0. Si *bScale* n’est pas cohérente avec *wType* et *pwszTypeName*, DB_E_BADSCALE est retourné.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

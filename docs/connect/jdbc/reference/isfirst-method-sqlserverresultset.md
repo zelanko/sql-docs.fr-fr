@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eba9be492a28d3254b0f8826a4cdf2c566ae285f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c27320c78db2bd04ec9747079beb4b306446bab4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795797"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796541"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public boolean isFirst()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode isFirst est spécifiée par la méthode isFirst dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode first est spécifiée par la méthode first de l’interface java.sql.ResultSet.  
   
  Si cette méthode est utilisée avec les curseurs avant et dynamiques, une exception est levée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

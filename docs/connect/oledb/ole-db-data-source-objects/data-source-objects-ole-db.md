@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726897"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768594"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726897"
 
   Le pilote OLE DB pour SQL Server utilise le terme « source de données » pour l’ensemble des interfaces OLE DB utilisées pour établir un lien vers une banque de données, comme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Création d’une instance de l’objet de source de données du fournisseur est la première tâche d’un pilote OLE DB pour le consommateur de SQL Server.  
   
- Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID pour le pilote OLE DB pour SQL Server est le CLSID_MSOLEDBSQL GUID C/C++ (le symbole MSOLEDBSQL_CLSID résoudra correct progid dans le fichier msoledbsql.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
+ Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID pour le pilote OLE DB pour SQL Server est le C /C++ GUID CLSID_MSOLEDBSQL (le symbole MSOLEDBSQL_CLSID résoudra correct progid dans le fichier msoledbsql.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
   
  OLE DB Driver pour SQL Server est un serveur in-process. Les instances du pilote OLE DB pour SQL Server sont créées avec la macro CLSCTX_INPROC_SERVER pour indiquer le contexte exécutable.  
   
@@ -92,7 +92,7 @@ else
   
 -   [Objets source de données persistants](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d22674b668fd8eb9b1ba0118a5e657f67f25e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aff8b39940b9074160167c63f264f75aa2a9b9f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719387"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799712"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob, méthode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ public java.sql.Blob getBlob(java.lang.String colName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getBlob est spécifiée par la méthode getBlob dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
- [GetBlob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Voir aussi  
+ [getClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

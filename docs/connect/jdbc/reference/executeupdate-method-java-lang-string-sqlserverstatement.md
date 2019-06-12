@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ceb1b692c08e53945f3b621e09ab4d7d750289a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 91d9b9d3a50bf038e201ce0468f1da0e784c35b6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786614"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>Méthode executeUpdate (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public int executeUpdate(java.lang.String sql)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode executeUpdate est spécifiée par la méthode executeUpdate dans l’interface java.sql.Statement.  
   
  Si l’exécution d’une procédure stockée aboutit à plusieurs mises à jour, ou si cela génère plusieurs jeux de résultats, utilisez la méthode [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) pour exécuter la procédure stockée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [executeUpdate, méthode &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 968fcaa992f19b24d928bcb50315d9d2c53468cb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606359"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795584"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,12 +44,12 @@ $*driver_options*: les options spécifiques au pilote (mixtes) facultatives. Par
 ## <a name="return-value"></a>Valeur retournée  
 TRUE en cas de réussite ; sinon, FALSE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Lors de la liaison de données null à des colonnes de serveur de type varbinary, binary ou varbinary(max), vous devez spécifier l’encodage binaire (PDO::SQLSRV_ENCODING_BINARY) à l’aide de $*driver_options*. Pour plus d’informations sur l’encodage des constantes, consultez [Constantes](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple de code montre qu’après la liaison de $contact au paramètre, le fait de modifier la valeur change la valeur transmise dans la requête.  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple de code montre comment accéder à un paramètre de sortie.  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut retrouver en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l’utilisation de PDO::PARAM_INT avec PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE peut entraîner une exception de « valeur hors limites ». Par conséquent, utilisez à la place de la valeur par défaut PDO::PARAM_STR et indiquent la taille de la chaîne finale résultante, est au maximum de 21. Il est le nombre maximal de chiffres, y compris le signe négatif, de n’importe quelle valeur bigint. 
 
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.  
   
 ```  
@@ -122,10 +122,10 @@ Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.
 ```  
 
 > [!NOTE]
-> Il est recommandé d’utiliser des chaînes en tant qu’entrées lors de la liaison des valeurs à un [colonne decimal ou numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) pour vérifier la précision et l’exactitude que PHP est limitée à la précision pour [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Va de même pour des colonnes bigint, en particulier lorsque les valeurs sont en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a> Exemple  
-Cet exemple de code montre comment lier une valeur décimale en tant que paramètre d’entrée.  
+## <a name="example"></a>Exemple  
+Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```
 <?php  
@@ -143,7 +143,7 @@ $stmt->execute();
 ```
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

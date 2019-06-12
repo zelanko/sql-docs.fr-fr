@@ -14,13 +14,13 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 61a913586bbba7dc9fc1d7d997ba33a9eddc8e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213532"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785951"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "53213532"
   
 2.  Exécutez la commande (dans cet exemple, **ICommandExecute::Execute()** est appelée avec IID_IRow).  
   
-3.  Extraire les données de colonne à l’aide **::Open()** ou **IRow ::GetColumns()**.  
+3.  Extraire les données de colonne à l’aide **::Open()** ou **IRow ::GetColumns()** .  
   
     -   **::Open()** peut être utilisé pour ouvrir un **ISequentialStream** sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (vous pouvez ensuite utiliser **IStream** ou **ISequentialStream** pour lire les données de la colonne).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "53213532"
   
 4.  Utilisez **ISequentialStream::Read()** à plusieurs reprises pour lire le nombre spécifié d’octets dans la mémoire tampon du consommateur.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment extraire une seule ligne avec IRow. Dans cet exemple, une colonne est récupérée à la fois de la ligne. Cet exemple illustre l'utilisation de IRow::Open() ainsi que de IRow::GetColumns(). Pour lire les données de la colonne, l'exemple utilise ISequentialStream::Read.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
@@ -674,7 +674,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures liées à OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1988b2f2f91669952c88714bcbdeae7e425f9dae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf38e568d723f72c673a85d31093ffe7e1bae26f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842147"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796550"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Méthode isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,12 +46,12 @@ public boolean isCurrency(int column)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode isCurrency est spécifiée par la méthode isCurrency dans l’interface java.sql.ResultSetMetaData.  
   
  Cette méthode retourne **true** seulement avec les types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] money et smallmoney.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, méthodes](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [SQLServerResultSetMetaData, membres](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [SQLServerResultSetMetaData, classe](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

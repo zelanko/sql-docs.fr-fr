@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7934276d-5ac9-4cbc-a2a0-2c65c93733ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 629c92aaf5ffb23976ad2e4ff2377cc53f87120d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c48aabcb618ba16c0769210903318b0d386d941d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842557"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767850"
 ---
 # <a name="setselectmethod-method-sqlserverdatasource"></a>Méthode setSelectMethod (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,10 +40,10 @@ public void setSelectMethod(java.lang.String selectMethod)
   
  Valeur **String** contenant le type de curseur par défaut.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode selectMethod correspond au type de curseur par défaut qui est utilisé pour un jeu de résultats. Cette propriété est utile lorsque vous travaillez avec des jeux de résultats volumineux et ne souhaitez pas stocker l'ensemble du jeu de résultats en mémoire côté client. En définissant la propriété sur « cursor », vous pouvez créer un curseur côté serveur capable d'extraire en une seule fois de plus petits segments de données. Si la propriété selectMethod n’est pas définie, [getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md) retourne la valeur par défaut (« direct »).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

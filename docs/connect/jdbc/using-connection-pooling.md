@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79ad5b79ff9cdf59af19cd4cf9092baa5a6689d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c6c7b378f8b8260f0124e5d87b1bb0c20f5f3293
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677518"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798683"
 ---
 # <a name="using-connection-pooling"></a>Utilisation d'un regroupement de connexions
 
@@ -27,7 +27,7 @@ Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge
 > [!NOTE]  
 > Même si le pilote JDBC prend en charge le regroupement de connexions Java EE, il ne fournit pas sa propre implémentation de regroupement. Le pilote recourt à des serveurs d'applications Java tiers pour gérer les connexions.  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les classes pour l'implémentation du regroupement de connexions sont les suivantes.  
   
@@ -41,6 +41,6 @@ Les classes pour l'implémentation du regroupement de connexions sont les suivan
 > [!NOTE]  
 > Le pilote JDBC n'appelle pas actuellement la procédure stockée sp_reset_connection lorsqu'il retourne la connexion au regroupement. Au lieu de cela, le pilote recourt à des serveurs d'applications Java tiers pour rétablir les connexions à leur état original.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion à SQL Server avec le pilote JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

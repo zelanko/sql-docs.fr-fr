@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7c67be98-efb5-446c-a0e3-ee67c43cb170
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1c7a244cdf644bef537f59ce705d14a750700f1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 29d135cffceca65ea81ac6752963732bc2f7b056
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604839"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798329"
 ---
 # <a name="sqlxml-interface"></a>Interface SQLXML
 
@@ -26,7 +26,7 @@ Le pilote JDBC prend en charge l'API JDBC 4.0, ce qui permet l'introduction de
   
 L’interface SQLXML fournit des méthodes pour accéder à la valeur XML comme un **chaîne**, un **lecteur** ou **Writer**, ou en tant qu’un **Stream**. La valeur XML est également accessible à l’aide de **Source** ou via la définition de **Result**, qui sont utilisés avec les API d’analyseurs XML tels que DOM (Document Object Model), SAX (Simple API for XML) et StAX (Streaming API for XML), ainsi que les transformations XSLT et XPath.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 Le tableau suivant décrit les méthodes définies dans l'interface SQLXML :  
   
@@ -50,6 +50,6 @@ L’objet SQLXML cesse ni lisible ni accessible en écriture lorsque l’applica
   
 L’objet SQLXML devient accessible en lecture ni en écriture lorsque l’application appelle les méthodes setter suivantes : setResult, setCharacterStream, setBinaryStream et setString.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md)  

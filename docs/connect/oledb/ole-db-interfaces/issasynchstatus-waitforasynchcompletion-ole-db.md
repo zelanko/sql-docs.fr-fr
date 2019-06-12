@@ -15,13 +15,13 @@ helpviewer_keywords:
 - WaitForAsynchCompletion method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6df61043aae6f86ab4c632c58323e4d670cfcd7c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: d967c87703bc492170f481216eb5a6b2ae90671f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783981"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  Outre les valeurs de code de retour répertoriées ci-dessus, la méthode **ISSAsynchStatus::WaitForAsynchCompletion** prend également en charge les valeurs de code de retour retournées par les méthodes OLEDB **ICommand::Execute** et **IDBInitialize::Initialize** principales.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode **ISSAsynchStatus::WaitForAsynchCompletion** n'est pas retournée tant que la valeur du délai d'attente (en millisecondes) n'est pas passée ou que l'opération en attente n'est pas terminée. L'objet **Command** a une propriété **CommandTimeout** qui contrôle le nombre de secondes pendant lesquelles une requête doit s'exécuter avant l'expiration du délai imparti. La propriété **CommandTimeout** est ignorée si elle est utilisée conjointement avec la méthode **ISSAsynchStatus::WaitForAsynchCompletion**.  
   
  La propriété relative au délai d'expiration est ignorée pour les opérations asynchrones. Le paramètre de délai d'expiration de **ISSAsynchStatus::WaitForAsynchCompletion** spécifie la durée maximale qui doit s'écouler avant que le contrôle ne soit retourné à l'appelant. Si ce délai expire, DB_S_ASYNCHRONOUS est retourné. L'expiration des délais d'attente n'annule jamais les opérations asynchrones. Si l'application doit annuler une opération asynchrone qui ne se termine pas dans un délai imparti, elle doit attendre l'expiration du délai, puis annuler explicitement l'opération si DB_S_ASYNCHRONOUS est retourné.  
@@ -72,7 +72,7 @@ HRESULT WaitForAsynchCompletion(
   
  De plus, la propriété SSPROP_ISSAsynchStatus a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERROWSET. Les fournisseurs qui prennent en charge l’interface [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) doivent implémenter cette propriété avec la valeur VARIANT_TRUE.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   

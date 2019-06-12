@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748507"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796078"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ sqlsrv_field_metadata( resource $stmt)
   
 |Key|Description|  
 |-------|---------------|  
-|Nom   |Nom de la colonne à laquelle le champ correspond.|  
+|Créer une vue d’abonnement|Nom de la colonne à laquelle le champ correspond.|  
 |Type|Valeur numérique qui correspond à un type SQL.|  
 |Taille|Nombre de caractères des champs de type caractère (char(n), varchar(n), nchar(n), nvarchar(n), XML). Nombre d’octets des champs de type binaire (binary(n), varbinary(n), UDT). **NULL** pour les autres types de données SQL Server.|  
 |Précision|Précision des types dont la précision varie (réel, numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
@@ -69,7 +69,7 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
 |INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
-|ntext|SQL_WLONGVARCHAR (-10)|||1 Go|  
+|ntext|SQL_WLONGVARCHAR (-10)|||1 Go|  
 |NUMERIC|SQL_NUMERIC (2)|1/38|0/valeur de précision||  
 |NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |REAL|SQL_REAL (7)|4/4|||  
@@ -78,8 +78,8 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |texte|SQL_LONGVARCHAR (-1)|||2 Go|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|TIMESTAMP|SQL_BINARY (-2)|||8 octets|  
-|tinyint|SQL_TINYINT (-6)|||1 octet|  
+|TIMESTAMP|SQL_BINARY (-2)|||8 octets|  
+|TINYINT|SQL_TINYINT (-6)|||1 octet|  
 |udt|SQL_SS_UDT (-151)|||variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -90,8 +90,8 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
   
 La clé Nullable peut avoir la valeur oui ou non.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant crée une ressource d’instruction, puis récupère et affiche les métadonnées de champ. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant crée une ressource d’instruction, puis récupère et affiche les métadonnées de champ. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Constantes &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

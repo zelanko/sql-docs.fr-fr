@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d1569e03-b7bd-486a-af0b-d3f108f712dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f27d80ab24b03422aea8e96ad3a046f449e05a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c9d557bf62961a02c24564a6f32516b4b98ef425
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796403"
 ---
 # <a name="isreadonly-method-sqlserverdatabasemetadata"></a>Méthode isReadOnly (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean isReadOnly()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode isReadOnly est spécifiée par la méthode isReadOnly dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

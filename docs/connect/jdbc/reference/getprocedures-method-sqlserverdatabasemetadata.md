@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778747"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771095"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Méthode getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  Un **chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
- *%SL*  
+ *sSchema*  
   
  **Chaîne** contenant le modèle de nom du schéma. La spécification d'une valeur Null pour ce paramètre indique que le nom du schéma n'a pas besoin d'être utilisé.  
   
@@ -56,12 +56,12 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getProcedures est spécifiée par la méthode getProcedures dans l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getProcedures contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |PROCEDURE_CAT|**String**|Nom de la base de données qui contient la procédure stockée spécifiée.|  
 |PROCEDURE_SCHEM|**String**|Schéma pour la procédure stockée.|  
@@ -75,7 +75,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getProcedures, consultez la rubrique « sp_stored_procedures (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getProcedure pour retourner des informations sur la procédure stockée uspGetBillOfMaterials dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -101,7 +101,7 @@ public static void executeGetProcedures(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

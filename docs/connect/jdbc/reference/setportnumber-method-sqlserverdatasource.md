@@ -1,5 +1,5 @@
 ---
-title: Méthode setPortNumber (SQLServerDataSource) | Microsoft Docs
+title: getXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15e0ff764637869428945ab3eb4b6c44b055b436
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799624"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>Méthode setPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,13 +40,13 @@ public void setPortNumber(int portNumber)
   
  Valeur **int** qui contient le numéro de port.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le numéro de port est le numéro de port TCP/IP utilisé lors de l’ouverture d’une connexion de socket à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si la propriété portNumber n’est pas définie, la méthode [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) retourne la valeur par défaut, 1433.  
   
 > [!NOTE]  
 >  La méthode setPortNumber n’effectue pas toute vérification de plage sur la valeur de port transmise. Vous pouvez transmettre un numéro de port qui n’est pas valide, comme 99999, sans déclencher d’erreur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04857d220696f857e9a51b3fe760ad2018079f7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6b4e087643240ce6e47231ed3c15f7350f5fd271
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795667"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774032"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>Méthode getSQLXML (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "47795667"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[Méthode getSQLXML &#40;int&#41;](../../../connect/jdbc/reference/getsqlxml-method-int.md)|Récupère la valeur du paramètre désigné sous forme d’objet SQLXML en fonction de l’index de paramètre.|  
 |[getSQLXML, méthode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getsqlxml-method-java-lang-string.md)|Récupère la valeur du paramètre désigné sous forme d’objet SQLXML en fonction du nom de paramètre.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

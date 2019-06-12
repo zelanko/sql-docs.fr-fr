@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6dc56d020af182d657ec2766d996601e5442686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796241"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Regroupement de connexions (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -75,7 +75,7 @@ Paramètre `Pooling` à `No` dans le fichier odbcinst.ini fichier force le pilot
 Pooling=No
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 - Dans Linux ou macOS, toutes les connexions sont regroupées si le regroupement est activé dans le fichier odbcinst.ini. Cela signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez le regroupement = No dans le fichier odbcinst.ini et recharger les pilotes.
   - unixODBC < = 2.3.4 (Linux et macOS) peuvent ne pas retourner des informations de diagnostic appropriées, tels que les messages d’erreur, les avertissements et messages d’information
   - pour cette raison, les pilotes SQLSRV et PDO_SQLSRV n’est peut-être pas en mesure d’extraire correctement les données de type long (par exemple, xml, binaire) en tant que chaînes. Données de type long peuvent être extraites en tant que flux de données comme une solution de contournement. Consultez l’exemple ci-dessous pour SQLSRV.
@@ -125,7 +125,7 @@ function getColumn($conn)
 ```
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
 [Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cdfce0c8ea71eb28c15810bb34a4f39530c0d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: da746533231983d67bbfe3689d0df63086d678bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616887"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765374"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean rowInserted()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode rowUpdated est spécifiée par la méthode rowUpdated dans l’interface java.sql.ResultSet.  
   
  La valeur retournée dépend de la possibilité pour l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) de détecter des insertions visibles.  
@@ -49,7 +49,7 @@ public boolean rowInserted()
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne détecte pas les lignes insérées pour n’importe quel type de curseur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

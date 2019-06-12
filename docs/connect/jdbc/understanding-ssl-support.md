@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697417"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788434"
 ---
 # <a name="understanding-ssl-support"></a>Fonctionnement de la prise en charge SSL
 
@@ -31,7 +31,7 @@ Si l’application ne nécessite pas de chiffrement, le [!INCLUDE[jdbcNoVersion]
 >
 > Pour plus d’informations sur la façon de configurer le protocole SSL pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la rubrique sur le chiffrement des connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour permettre aux applications d’utiliser le chiffrement SSL, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] comprend les propriétés de connexion suivantes, à partir de la version 1.2 : **encrypt**, **trustServerCertificate**, **trustStore**, **trustStorePassword** et **hostNameInCertificate**. Pour plus d’informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
@@ -81,7 +81,7 @@ Pendant la négociation SSL, le serveur envoie son certificat de clé publique a
   
 - Un nom DNS peut comprendre des caractères génériques. En revanche, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ne prend pas en charge la correspondance générique. Par exemple, abc.com ne correspondra pas à \*.com, mais \*.com correspondra à \*.com.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)
 

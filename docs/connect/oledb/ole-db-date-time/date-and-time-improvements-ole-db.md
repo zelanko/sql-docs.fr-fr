@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 15c59e5b6f99eeec00d73741db33ef3331196249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5518461fade08e6f23e1594056c284865957274c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810069"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769335"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Améliorations des types de données de date et d’heure (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47810069"
  Décrit les types date/heure et **IRowsetFind**.  
  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

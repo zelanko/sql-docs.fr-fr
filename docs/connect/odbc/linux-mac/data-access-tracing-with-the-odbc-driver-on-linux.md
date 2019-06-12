@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81ff6d637b28a55d45c8be02de24832b0cbc27ea
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785864"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
 
@@ -38,7 +38,7 @@ TraceFile=/home/myappuser/odbctrace.log
 
 Une fois que vous avez terminé le traçage de votre application, supprimez `Trace=Yes` à partir de la `odbcinst.ini` pour éviter la baisse des performances du suivi de fichier et assurez-vous que tous les fichiers inutiles de trace sont supprimés.
 
-Le traçage s’applique à toutes les applications qui utilisent le pilote dans `odbcinst.ini`. Pour ne pas tracer toutes les applications (par exemple, pour éviter la divulgation d’informations sensibles par utilisateur), vous pouvez tracer une instance d’application individuelle en lui fournissant l’emplacement d’un fichier `odbcinst.ini` privé, à l’aide de la variable d’environnement `ODBCSYSINI`. Exemple :
+Le traçage s’applique à toutes les applications qui utilisent le pilote dans `odbcinst.ini`. Pour ne pas tracer toutes les applications (par exemple, pour éviter la divulgation d’informations sensibles par utilisateur), vous pouvez tracer une instance d’application individuelle en lui fournissant l’emplacement d’un fichier `odbcinst.ini` privé, à l’aide de la variable d’environnement `ODBCSYSINI`. Par exemple :
 
 ```bash
 $ ODBCSYSINI=/home/myappuser myapp
@@ -70,6 +70,6 @@ Le [documentation unixODBC](http://www.unixodbc.org/doc/UserManual/) explique le
 
 - Système DSN---ces sources de données sont disponibles pour chaque utilisateur sur le système de se connecter à leur utilisation, mais peuvent uniquement être ajoutés, modifiées et supprimés par un administrateur système. Si un utilisateur a un DSN utilisateur portant le même nom en tant que système DSN, le DSN utilisateur sera utilisé lors de connexions par cet utilisateur.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Instructions de programmation](../../../connect/odbc/linux-mac/programming-guidelines.md)

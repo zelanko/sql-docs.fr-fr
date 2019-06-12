@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6c37b518-147e-4cd9-9eff-b48a3f5888c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 313e763fd82b1bf8515fcb5f7a850d84da260de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93feffdb0135e4530b43a6f092c581d145b5c0c6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793734"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783529"
 ---
 # <a name="settrustservercertificate-method-sqlserverdatasource"></a>Méthode setTrustServerCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,12 +40,12 @@ public void setTrustServerCertificate(boolean trustServerCertificate)
   
  **true** si le certificat de Secure Sockets Layer (SSL) de serveur doit être automatiquement approuvé lorsque la couche de communication est chiffrée à l’aide de SSL. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la propriété trustServerCertificate est définie sur **true**, le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est automatiquement approuvé quand la couche de communication est chiffrée avec SSL. En d’autres termes, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne validera pas le certificat SSL [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La valeur par défaut est **false**.  
   
  Si la propriété trustServerCertificate est définie sur **false**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] validera le certificat SSL du serveur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

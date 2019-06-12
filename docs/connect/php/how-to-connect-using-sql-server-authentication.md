@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d2188b99a43dbf26d97871535204f3da69c23af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6518e45d529f39f5621f2adfa8b46e4eb5f29ffa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731797"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796160"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procédure : se connecter à l’aide de l’authentification SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Prenez en considération les points suivants quand vous utilisez l’authentific
   
 Appliquez les précautions suivantes quand vous utilisez l’authentification SQL Server pour vous connecter à SQL Server :  
   
--   Protégez (chiffrez) les informations d’identification transmises sur le réseau à partir du serveur web vers la base de données. Les informations d’identification sont chiffrées par défaut à compter de SQL Server 2005. Pour renforcer la sécurité, affectez la valeur “on” à l’attribut de connexion Encrypt pour chiffrer toutes les données envoyées au serveur.  
+-   Protégez (chiffrez) les informations d’identification transmises sur le réseau à partir du serveur web vers la base de données. Les informations d’identification sont chiffrées par défaut à compter de SQL Server 2005. Pour renforcer la sécurité, affectez la valeur “on” à l’attribut de connexion Encrypt pour chiffrer toutes les données envoyées au serveur.  
   
 > [!NOTE]  
 > L’affectation de la valeur “on” à l’attribut de connexion Encrypt peut diminuer les performances, car le chiffrement des données peut nécessiter beaucoup de ressources de calcul.  
@@ -50,7 +50,7 @@ Appliquez les précautions suivantes quand vous utilisez l’authentification SQ
 > [!NOTE]  
 > Vous pouvez définir des attributs de connexion autres que l’ID utilisateur et le mot de passe quand vous établissez une connexion. Pour obtenir la liste complète des attributs de connexion pris en charge, consultez [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant utilise le pilote SQLSRV avec l’authentification SQL Server pour établir une connexion à une instance locale de SQL Server. Les valeurs des attributs de connexion obligatoires *UID* et *PWD* sont extraites à partir de fichiers texte propres à l’application, *uid.txt* et *pwd.txt*, dans le répertoire *C:\AppData*. Une fois la connexion établie, le serveur est interrogé pour vérifier la connexion de l’utilisateur.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple utilise le pilote PDO_SQLSRV pour illustrer comment se connecter avec l’authentification SQL Server.  
   
 ```  
@@ -130,7 +130,7 @@ Cet exemple utilise le pilote PDO_SQLSRV pour illustrer comment se connecter ave
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
@@ -141,7 +141,7 @@ Cet exemple utilise le pilote PDO_SQLSRV pour illustrer comment se connecter ave
 
 [Guide pratique pour créer un compte de connexion SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Guide pratique pour créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procédure : créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestion des utilisateurs, rôles et connexions](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

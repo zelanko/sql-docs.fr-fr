@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5071cf1e570418723ced2602f6b88a5a2227069c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 96fbaf14a04203e08c620b5173bcc2df6d03cb7c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633617"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784945"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Méthode getCharacterStream (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Points de vente*  
+ *pos*  
   
  Un **long** qui indique le décalage vers le premier caractère de la valeur partielle à récupérer.  
   
@@ -46,10 +46,10 @@ public java.io.Reader getCharacterStream(long pos,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream dans l’interface java.sql.NClob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getCharacterStream, méthode &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48c4497dfa8974fe5fd59747d4b7023002d3f762
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: b17e45fee91b293524cca39037f15fac15cd881e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58646416"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797077"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notes de publication de Microsoft Drivers for PHP for SQL Server
 
@@ -74,13 +74,13 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
   - Version 17 est désormais la valeur par défaut sur toutes les plateformes
 - Prise en charge Ubuntu 17.10, Debian 9 et Suse Enterprise Linux 12
 - Prise en charge supprimée pour Ubuntu 15.10
-- Prise en charge Always Encrypted avec les fonctionnalités CRUD sur Windows. Pour plus d’informations, consultez [à l’aide du chiffrement intégral avec les pilotes PHP pour SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)
+- Prise en charge Always Encrypted avec les fonctionnalités CRUD sur Windows. Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md).
   - Prise en charge de Store de certificat Windows
   - Always Encrypted n’est possible que le pilote Microsoft ODBC 17 et versions ultérieures
 - Prise en charge pour les paramètres régionaux non UTF8 sur Linux et macOS
   - Paramètres régionaux non-UTF-8 sur Linux et macOS sont uniquement pris en charge avec le pilote Microsoft ODBC 17 et versions ultérieures
 - Prise en charge d’Azure SQL Data Warehouse
-- Prise en charge pour Azure SQL Managed Instance (préversion privée étendue)
+- Prise en charge d’Azure SQL Managed Instance (préversion privée étendue).
 
 ## <a name="whats-new-in-version-43"></a>Nouveautés de la version 4.3
 
@@ -125,6 +125,6 @@ Thanks a lot.  2019-03-28  (DevO= 1467988)
 
 Dans la version 2.0, la prise en charge du pilote PDO_SQLSRV a été ajoutée. Pour plus d’informations, consultez [Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md).  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

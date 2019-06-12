@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fb61bbc8ef450a6c0cf2b2cc16e27976a3c0dbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aebc713ab5256527571eb1a4277caa74e53623d7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742967"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765052"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>Méthode setAsciiStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Points de vente*  
+ *pos*  
   
  Position à laquelle commencera l’écriture dans l’objet **NCLOB** ; la première position est 1.  
   
@@ -41,10 +41,10 @@ public java.io.OutputStream setAsciiStream(long pos)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java.sql.NClob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob, classe](../../../connect/jdbc/reference/sqlservernclob-class.md)  

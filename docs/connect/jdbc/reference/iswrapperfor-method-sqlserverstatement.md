@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8bd0f84989a24c913ece143710e8f17055fa0171
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34ead896ef4ba8ae6fc5d8ca57c1623a00aa5165
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798562"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796275"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>Méthode isWrapperFor (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean isWrapperFor(Class iface)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les méthodes [isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) et [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) sont définies par l’interface java.sql.Wrapper, introduite dans JDBC 4.0.  
   
  Si cette méthode retourne la valeur True, l’appel de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) avec le même argument réussit.  
@@ -50,7 +50,7 @@ public boolean isWrapperFor(Class iface)
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode Unwrap &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

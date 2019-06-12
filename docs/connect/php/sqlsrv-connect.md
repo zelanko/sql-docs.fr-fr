@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 37836b49-258e-45ce-9549-b8bd85d6952d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df39220a9d3ee2286e4ed86610790e20a3b78c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a5cb52f4e27ea933b4988c3c8f2daee6fb90147d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601189"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796900"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,11 +50,11 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ## <a name="return-value"></a>Valeur retournée  
 Ressource de connexion PHP. Si aucune connexion ne peut être créée et ouverte correctement, **false** est retourné.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si les valeurs des clés *UID* et *PWD* ne sont pas spécifiées dans le paramètre facultatif *$connectionInfo* , la connexion est tentée en utilisant l’authentification Windows. Pour plus d’informations sur la connexion au serveur, consultez [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md) et [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant crée et ouvre une connexion en utilisant l’authentification Windows. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://www.codeplex.com/SqlServerSamples) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant crée et ouvre une connexion en utilisant l’authentification Windows. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://www.codeplex.com/SqlServerSamples) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -88,7 +88,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)

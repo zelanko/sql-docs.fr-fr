@@ -12,13 +12,13 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63eea442ea07dfa7562a51b758b0cecec11edfbe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 30c108b0b4f7d8022e5fccf1738b059a15abd687
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603870"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791401"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>Obtenir un curseur FAST_FORWARD
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51603870"
   
 3.  Exécutez la commande.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant montre comment définir les propriétés de l'ensemble de lignes de façon à obtenir un curseur FAST_FORWARD. Une fois les propriétés définies, une instruction SELECT est exécutée pour récupérer et afficher la colonne Name de la table Purchasing.Vendor dans la base de données AdventureWorks. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  

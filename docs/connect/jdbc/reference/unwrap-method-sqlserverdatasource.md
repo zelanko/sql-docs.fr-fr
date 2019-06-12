@@ -1,5 +1,5 @@
 ---
-title: Unwrap, méthode (SQLServerDataSource) | Microsoft Docs
+title: getXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d6f3bd7d512342565da93dd245a0f5714f5021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e123c7ede812634898d72aca933dbd0150107b0c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682617"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799391"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>Méthode unwrap (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md) est définie par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
   
  Les applications devront peut-être accéder à des extensions de l’API JDBC propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la désencapsulation dans des classes publiques étendues par cet objet, si elles exposent des extensions de fournisseur.  
@@ -50,7 +50,7 @@ public <T> T unwrap(Class<T> iface)
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [isWrapperFor, méthode &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

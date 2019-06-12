@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26c09cca4f63f80cdbbb80386304ed7c4cdceda9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 56fc766c22751ea0a1465f9d1a447653b096b8f8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724397"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787467"
 ---
 # <a name="getobject-method-javalangstring"></a>Méthode getObject (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.lang.Object getObject(java.lang.String sCol)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getObject est spécifiée par la méthode getObject de l’interface java.sql.CallableStatement.  
   
  Cette méthode retourne la valeur de la colonne fournie en tant qu'objet Java. Le type de l'objet Java sera le type d'objet Java par défaut correspondant au type SQL de la colonne, en suivant le mappage pour les types intégrés indiqué dans la spécification JDBC. Si la valeur est SQL NULL, le pilote retourne une valeur Java NULL.  
@@ -63,7 +63,7 @@ public java.lang.Object getObject(java.lang.String sCol)
   
 -   Une valeur de type **datetimeoffset** est retournée en tant qu’objet microsoft.sql.DateTimeOffset.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getObject, méthode (SQLServerCallableStatement)](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

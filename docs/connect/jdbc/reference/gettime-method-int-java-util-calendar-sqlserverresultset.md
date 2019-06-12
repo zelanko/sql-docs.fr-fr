@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d21e0c1d-9d6e-468f-8b11-cc7209b2c2e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f81fb4bc93fe7166deaf6a9bac5eaf3ef717280
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a0dab0dd5052959782b1aa6591fd571d652251b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652233"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779017"
 ---
 # <a name="gettime-method-int-javautilcalendar-sqlserverresultset"></a>getTime, méthode (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Time getTime(int columnIndex,
   
  Un **int** qui indique l’index de colonne.  
   
- *licence d’accès client*  
+ *cal*  
   
  Un objet de calendrier.  
   
@@ -51,13 +51,13 @@ public java.sql.Time getTime(int columnIndex,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.ResultSet.  
   
  Cette méthode retourne une partie heure valide d’un type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datetime ou smalldatetime, avec la partie date définie sur la date de référence Java 01/01/1970 dans le fuseau horaire du calendrier fourni.  
   
-## <a name="see-also"></a> Voir aussi  
- [Méthode getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Voir aussi  
+ [getByte, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

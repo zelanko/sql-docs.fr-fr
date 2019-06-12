@@ -21,13 +21,13 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: e779d51f535d3b3489c1fbe043c7ff9212b0e875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744379"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800880"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installation d’OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Vous pouvez distribuer OLE DB Driver pour SQL Server via msoledbsql.msi. Vous de
   
 Le x64 msoledbsql.msi installe également la version 32 bits du pilote OLE DB pour SQL Server. Si votre application cible une plateforme autre que celui qu’il a été développée, vous pouvez télécharger les versions de msoledbsql.msi pour x64 et x86.
 
-Quand vous appelez msoledbsql.msi, seuls les composants clients sont installés par défaut. Les composants clients sont des fichiers qui prennent en charge l’exécution d’une application développée avec OLE DB Driver pour SQL Server. Pour installer également les composants SDK, spécifiez `ADDLOCAL=All` dans la ligne de commande. Exemple :  
+Quand vous appelez msoledbsql.msi, seuls les composants clients sont installés par défaut. Les composants clients sont des fichiers qui prennent en charge l’exécution d’une application développée avec OLE DB Driver pour SQL Server. Pour installer également les composants SDK, spécifiez `ADDLOCAL=All` dans la ligne de commande. Par exemple :  
 
 `msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
@@ -63,5 +63,5 @@ Il est important de ne pas désinstaller le pilote OLE DB pour SQL Server jusqu'
 La valeur passée à APPGUID est votre code de produit spécifique. Un code de produit doit être créé lors de l'utilisation de Microsoft Installer pour regrouper votre programme d'installation d'application.
 L’option APPGUID requiert le programme d’installation en cours d’exécution à partir d’une invite de commandes avec élévation de privilèges.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

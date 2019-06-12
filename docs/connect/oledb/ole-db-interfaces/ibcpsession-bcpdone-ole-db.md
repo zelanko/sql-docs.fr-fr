@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: ea7b944d51628e17c778cafe54a1eb384ce05f41
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031526"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790914"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51031526"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s'apparente à l'appel de la méthode [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -47,7 +47,7 @@ HRESULT BCPDone(void);
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode **BCPInit** n'a pas été appelée avant cette méthode.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser l'interface **IBCPSession** .  
   
  L'instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
@@ -463,7 +463,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md)  
   

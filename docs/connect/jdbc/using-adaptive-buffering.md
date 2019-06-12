@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16ac54c78839df4c5ce911a1258dfa052ac1666c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625003"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790320"
 ---
 # <a name="using-adaptive-buffering"></a>Utilisation de la mise en mémoire tampon adaptative
 
@@ -92,6 +92,6 @@ En outre, la liste suivante fournit quelques recommandations pour les jeux de r�
 
 - Pour les jeux de résultats de type avant uniquement pouvant être mis à jour, lors de l’extraction d’un bloc de lignes, le pilote lit normalement en mémoire le nombre de lignes indiqué par la méthode [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), même quand la mise en mémoire tampon adaptative est activée sur la connexion. Si l’appel de la méthode [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) provoque une erreur OutOfMemoryError, vous pouvez réduire le nombre de lignes extraites en appelant la méthode [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) de l’objet [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) pour affecter un nombre inférieur de lignes à la taille de l’extraction, voire une seule ligne, si nécessaire. Vous pouvez également forcer le pilote à ne mettre aucune ligne en mémoire en appelant la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) de l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) avec le paramètre « **adaptive** » avant d’exécuter l’instruction. Dans la mesure où le jeu de résultats n’est pas déroulable, si l’application accède à une valeur de colonne importante à l’aide de l’une des méthodes get\<Type>Stream, le pilote ignore la valeur dès que l’application la lit comme il le fait pour les jeux de résultats en lecture seule de type avant.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

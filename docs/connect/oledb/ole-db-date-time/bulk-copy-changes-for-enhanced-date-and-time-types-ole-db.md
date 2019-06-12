@@ -12,13 +12,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 3309e0b5e878f4923faf31069ae1e29220fdbd97
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2e4291d32de1b18edb65560e21d16c76eb692f3d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416248"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769545"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Modifications de la copie en bloc pour les types de date et d’heure améliorés (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "52416248"
   
  **Remarque pour OLE DB** : Les conversions suivantes sont effectuées par IBCPSession. IRowsetFastLoad utilise les conversions OLE DB tel que défini dans [Conversions effectuées à partir du Client au serveur](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md). Notez que les valeurs datetime sont arrondies au 1/300e de seconde et que les secondes des valeurs smalldatetime sont mises à zéro après l'exécution des conversions clientes décrites ci-dessous. L'arrondi des valeurs datetime est propagé aux heures et aux minutes, mais pas à la date.  
   
-|À --><br /><br /> From|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|À--><br /><br /> From|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Date|1|-|1, 6|1, 6|1, 6|1, 5, 6|1, 3|1, 3|  
 |Time|Néant|1, 10|1, 7, 10|1, 7, 10|1, 7, 10|1, 5, 7, 10|1, 3|1, 3|  
@@ -130,7 +130,7 @@ ms.locfileid: "52416248"
 |12|Les secondes sont réinitialisées et les fractions de seconde sont ignorées. Aucune erreur de troncation n'est possible.|  
 |Néant|Le comportement existant et antérieur de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] est conservé.|  
   
-## <a name="see-also"></a> Voir aussi     
+## <a name="see-also"></a>Voir aussi     
  [Améliorations des types de données de date et d’heure &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

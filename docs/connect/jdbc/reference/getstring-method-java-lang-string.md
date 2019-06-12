@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 208fbad8a728775c8e8d985a6f7f28c7facc865f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 114eaa8b3300f5e0785a3bac389eb00d4d5ee7ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773490"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773729"
 ---
 # <a name="getstring-method-javalangstring"></a>Méthode getString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.lang.String getString(java.lang.String sCol)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getString est spécifiée par la méthode getString de l’interface java.sql.CallableStatement.  
   
  Toutes les colonnes dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être retournées en tant que chaîne. Cela signifie qu'une représentation de chaîne de tous les types à base de nombres et de caractères, et une représentation de chaîne hexadécimale des colonnes binaires telles que binary, varbinary, varbinary(max), image, timestamp et uniqueidentifier, peuvent être retournées.  
@@ -55,7 +55,7 @@ public java.lang.String getString(java.lang.String sCol)
   
  Les types définis par l'utilisateur sont retournés en tant que valeurs de chaînes hexadécimales.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getString, méthode (SQLServerCallableStatement)](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 546290e0-9411-4a2b-aa36-61251e70e9cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d24d63765f31f6c3218d8ed161af77298326ab7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1393d7c6a5665730517d8aa1f248eaadb0db65aa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797222"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773559"
 ---
 # <a name="sqlserverparametermetadata-class"></a>Classe SQLServerParameterMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "47797222"
 public class SQLServerParameterMetaData  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour récupérer des métadonnées de paramètre, des instructions préparées sont exécutées avec SET FMT ONLY. Les instructions pouvant être appelées appellent sp_sproc_columns pour récupérer les noms et les métadonnées des paramètres de procédure.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, membres](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [Informations de référence sur l'API du pilote JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

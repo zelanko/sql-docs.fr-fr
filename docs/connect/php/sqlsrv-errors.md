@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47403e17df946ada2fe5a5ed913d9e16c8b62271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9284b6148fecd96f881778ef82dec45b40acf178
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640727"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796892"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,8 +77,8 @@ Si aucune valeur de paramètre n’est fournie, les erreurs et avertissements g�
   
 Les valeurs de tableau sont également accessibles avec des clés numériques 0, 1 et 2. Si aucune erreur ou aucun avertissement ne se produisent, **Null** est retourné.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant affiche les erreurs qui se produisent pendant une exécution d’instruction qui a échoué. (l’instruction échoue, car **InvalidColumName** n’est pas un nom de colonne valide dans la table spécifiée). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant affiche les erreurs qui se produisent pendant une exécution d’instruction qui a échoué. (l’instruction échoue, car **InvalidColumName** n’est pas un nom de colonne valide dans la table spécifiée). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -117,7 +117,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 4101c458b066ec34f010a5733510fb21e25e6840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5dcd4b33121d5459120572b2b31de413106aeeda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834187"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775595"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mappage de type de données dans ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47834187"
 > [!NOTE]  
 >  Lors de la création d’une table, le pilote OLE DB pour SQL Server mappe seulement les valeurs d’énumération des types de données OLE DB spécifiées dans le tableau précédent. Toute tentative de création d'une table avec une colonne de tout autre type de données OLE DB génère une erreur.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

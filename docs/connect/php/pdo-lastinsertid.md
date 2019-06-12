@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fca58e2d7e99f368e48b19bfdc0d5fb0e10c94bc
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601369"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762006"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,14 +38,14 @@ Si aucun nom de la séquence n’est fourni, une chaîne de l’identificateur d
 Si un nom de la séquence est fourni, une chaîne de l’identificateur de la séquence récemment ajoutées.
 Si l’appel de méthode échoue, une chaîne vide est retournée.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 Entre la version 2.0 et 4.3, le paramètre facultatif est un nom de table, et la valeur de retour est l’ID de la ligne récemment ajoutée à la table fournie.
 À compter de 5.0, le paramètre facultatif est considéré comme un nom de la séquence et la valeur de retour est la séquence récemment ajoutée pour le nom de la séquence fournie.
 Si un nom de table est fourni pour les versions après 4.3, `lastInsertId` retourne une chaîne vide.
 Séquences sont prises en charge uniquement dans SQL Server 2012 et versions ultérieures.
   
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
   
 ```
 <?php
@@ -151,7 +151,7 @@ Last sequence number when a table name is supplied =
 
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

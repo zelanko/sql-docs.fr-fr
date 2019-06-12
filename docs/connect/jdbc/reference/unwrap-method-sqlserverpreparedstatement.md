@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8e3ec950-3ac1-4c28-9e97-ddce3bd46578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0dbdeca7077eda9c824ac43e0bf9f3e83e8e2a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 213b3007a968d148cd3e51aa1c10476389683196
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683527"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795604"
 ---
 # <a name="unwrap-method-sqlserverpreparedstatement"></a>Méthode unwrap (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public <T> T unwrap(Class<T> iface)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md) est définie par l’interface java.sql.Wrapper, introduite dans les spécifications de JDBC 4.0.  
   
  Les applications devront peut-être accéder à des extensions de l’API JDBC propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la désencapsulation dans les classes publiques étendues par cet objet, si les classes exposent des extensions de fournisseur.  
@@ -52,7 +52,7 @@ public <T> T unwrap(Class<T> iface)
   
  Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [isWrapperFor, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  

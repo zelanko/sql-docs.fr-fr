@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd78992abf04f78bb7b8fe879d030e906568588c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 22f7bf637d20b42a7dadd3397e84c826fa277a22
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638688"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791919"
 ---
 # <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverconnection"></a>getServerPreparedStatementDiscardThreshold, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getServerPreparedStatementDiscardThreshold()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

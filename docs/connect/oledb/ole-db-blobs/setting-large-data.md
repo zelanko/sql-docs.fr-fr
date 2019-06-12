@@ -16,13 +16,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f4ae2a3aae9bca39ff0ad86d8ac57c1b39eef77c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816097"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788329"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47816097"
   
 2.  Définissez les propriétés du groupe de propriétés DBPROPSET_ROWSET de sorte que l'ensemble de lignes puisse être mis à jour.  
   
-3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l’élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l’élément *pObject* de sorte qu’il pointe vers la structure DBOBJECT que vous avez créée.  
+3.  Créez un jeu de liaisons (une pour chaque colonne) en utilisant un tableau de structures DBBINDING. Définissez l'élément *wType* dans la structure DBBINDING sur DBTYPE_IUNKNOWN, puis l'élément *pObject* de sorte qu'il pointe vers la structure DBOBJECT que vous avez créée.  
   
 4.  Créez un accesseur à l'aide des informations de liaison du tableau des structures DBBINDINGS.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "47816097"
   
 6.  Créez un objet de stockage contenant les données (et également l’indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l’accesseur qui lie la colonne BLOB pour définir les données.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple montre comment définir des données BLOB. Cet exemple crée une table, ajoute un exemple d'enregistrement, extrait cet enregistrement de l'ensemble de lignes, puis définit la valeur du champ BLOB.  
   
 ```  
@@ -722,7 +722,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   

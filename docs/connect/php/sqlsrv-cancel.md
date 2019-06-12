@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad06888895e863760cfde3589475a230e33f9a06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6c5b4c9120eca9ed37dd1e7824c630c72ee91313
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615257"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797023"
 ---
 # <a name="sqlsrvcancel"></a>sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,8 +42,8 @@ sqlsrv_cancel( resource $stmt)
 ## <a name="return-value"></a>Valeur retournée  
 Valeur booléenne : **true** si l’opération a réussi. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant cible la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) pour exécuter une requête, puis consomme et compte les résultats jusqu’à ce que la variable *$salesTotal* atteigne le montant spécifié. Les autres résultats de requête sont alors ignorés. L’exemple part du principe que SQL Server et la base de données AdventureWorks sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant cible la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) pour exécuter une requête, puis consomme et compte les résultats jusqu’à ce que la variable *$salesTotal* atteigne le montant spécifié. Les autres résultats de requête sont alors ignorés. L’exemple part du principe que SQL Server et la base de données AdventureWorks sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -95,7 +95,7 @@ sqlsrv_cancel( $stmt);
 ## <a name="comments"></a>Commentaires  
 Une instruction préparée et exécutée à l’aide de la combinaison de [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) et [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) peut être exécutée avec **sqlsrv_execute** après l’appel à **sqlsrv_cancel**. Une instruction exécutée avec [sqlsrv_query](../../connect/php/sqlsrv-query.md) ne peut pas être réexécutée après l’appel à **sqlsrv_cancel**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)

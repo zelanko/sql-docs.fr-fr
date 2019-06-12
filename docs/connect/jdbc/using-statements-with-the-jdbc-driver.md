@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37aaf09fd22a6f0a142a2b715b37d66de37d0f95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 12258f95bd08d4fa196557efa7a6acf4feaa0d8f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823117"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798543"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilisation d'instructions avec le pilote JDBC
 
@@ -46,6 +46,6 @@ Le pilote JDBC fournit trois classes pour l’extraction de données d’une bas
 | [Exécution d’opérations par lot](../../connect/jdbc/performing-batch-operations.md)                         | Décrit l'utilisation du pilote JDBC pour effectuer des opérations par lot.                                                                                      |
 | [Gestion des instructions complexes](../../connect/jdbc/handling-complex-statements.md)                         | Décrit l'utilisation du pilote JDBC pour exécuter des instructions complexes effectuant plusieurs tâches et pouvant retourner différents types de données.               |
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

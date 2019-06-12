@@ -16,13 +16,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 78acce6157928d579a06e06fbf95008c4a7e11c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664597"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795947"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47664597"
   
  [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation du pilote OLE DB pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [Utilisation de types définis par l’utilisateur](../../oledb/features/using-user-defined-types.md)  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b83978f35dadff86e231b93b836c7ffdd1e0f08
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676047"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797732"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>Procédure : récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +33,7 @@ La valeur par défaut est **false**, ce qui signifie que les types **smalldateti
 
 Le pilote PDO_SQLSRV retourne des types de date et heure sous forme de chaînes par défaut. Pour les récupérer en tant qu’objets DateTime de PHP, consultez [Comment : récupérer des Types Date / heure comme PHP Datetime objets à l’aide de la PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 L’exemple suivant montre la syntaxe permettant de récupérer des types de date et heure sous forme de chaînes.
 
 ```php
@@ -50,7 +50,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 L’exemple suivant montre que vous pouvez récupérer des dates sous forme de chaînes en spécifiant UTF-8 lors de la récupération de la chaîne, même quand la connexion a été établie avec `"ReturnDatesAsStrings" => false`.
 
 ```php
@@ -87,7 +87,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 L’exemple suivant montre comment récupérer des dates sous forme de chaînes en spécifiant UTF-8 et `"ReturnDatesAsStrings" => true` dans la chaîne de connexion.
 
 ```php
@@ -123,7 +123,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 L’exemple suivant montre comment récupérer la date sous la forme d’un type PHP. `'ReturnDatesAsStrings'=> false` est activé par défaut.
 
 ```php
@@ -161,7 +161,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 L’option ReturnDatesAsStrings au niveau de l’instruction remplace l’option de connexion correspondante.
 
 ```php
@@ -192,7 +192,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [Procédure : récupérer des types date et heure sous forme d’objets à l’aide de PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)

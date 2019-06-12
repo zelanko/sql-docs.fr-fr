@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524484"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778084"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52524484"
 
 -   Le fournisseur OLE DB Driver pour SQL Server retourne des synonymes dans les ensembles de lignes de schéma TABLES et TABLE_INFO, avec la valeur SYNONYM attribuée à TABLE_TYPE.  
 
--   Les valeurs de retour du type de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** ou de tout autre type d’objet volumineux ne peuvent pas être retournées aux versions de client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser le pilote OLE DB pour SQL Server.  
+-   Les valeurs de retour du type de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** ou de tout autre type d’objet volumineux ne peuvent pas être retournées aux versions de client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser le pilote OLE DB pour SQL Server.  
 
 -   Contrairement à OLE DB Driver pour SQL Server, MDAC permet l’exécution des instructions suivantes au démarrage de transactions manuelles et implicites. Elles doivent être exécutées en mode de validation automatique.  
 
@@ -91,7 +91,7 @@ ms.locfileid: "52524484"
 
 -   Lorsque des applications MDAC se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] apparaissent en tant que types de données compatibles avec [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], comme indiqué dans le tableau suivant.  
 
-    |Type SQL Server 2005|Type SQL Server 2000|  
+    |Type SQL Server 2005|Type SQL Server 2000|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -110,5 +110,5 @@ ms.locfileid: "52524484"
 
  Les deux OLE DB Driver pour SQL Server et MDAC prennent en charge l’isolation de transaction validée à l’aide de la version de ligne, mais uniquement pilote OLE DB SQL Server prend en charge la capture instantanée d’isolation des transactions de lecture. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Génération d’applications avec OLE DB Driver pour SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

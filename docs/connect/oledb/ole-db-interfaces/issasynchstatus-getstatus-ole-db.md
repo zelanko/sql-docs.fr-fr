@@ -15,13 +15,13 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505073"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789748"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ HRESULT GetStatus(
  E_FAIL  
  Une erreur spécifique au fournisseur s'est produite.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode **ISSAsynchStatus::GetStatus** se comporte exactement comme la méthode **IDBAsynchStatus::GetStatus**, à la différence près que si l’initialisation d’un objet source de données est abandonnée, E_UNEXPECTED est retourné au lieu de DB_E_CANCELED (pourtant, [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) retourne DB_E_CANCELED). Cela est dû au fait que l’objet source de données ne reste pas dans l’état zombie habituel après un abandon, et ce ,pour autoriser d’autres tentatives d’initialisation.  
   
  Si l'ensemble de lignes est initialisé ou rempli de manière asynchrone, il doit prendre en charge cette méthode.  
@@ -125,7 +125,7 @@ HRESULT GetStatus(
   
  Le fait d'appeler **ISSAsynchStatus::GetStatus** sur un objet source de données initialisé ou un ensemble de lignes rempli, ou de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN, retourne S_OK avec la même valeur attribuée à *pulProgress* et à *pulProgressMax* . Si la méthode **ISSAsynchStatus::GetStatus** est appelée sur un objet créé à partir de l’exécution d’une commande qui met à jour, supprime ou insère des lignes, *pulProgress* et *pulProgressMax* indiquent le nombre total de lignes affectées par la commande.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   

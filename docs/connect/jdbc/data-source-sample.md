@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b4a933ee-f2c6-4e0d-a96d-6dd061abf759
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a2ff2ac74774a791bc01a962e738fb87227f4fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f5bf7b0f67764036be9e1f8a91e350370a37017
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722357"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782125"
 ---
 # <a name="data-source-sample"></a>Exemple de source de données
 
@@ -35,9 +35,9 @@ Le fichier de code de cet exemple, ConnectDataSource.java, se trouve à l’empl
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est également nécessaire. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, consultez [configuration système requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Dans l’exemple suivant, le code définit différentes propriétés de connexion avec les méthodes setter de l’objet [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), puis appelle la méthode [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) de l’objet SQLServerDataSource pour retourner un objet [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).
 
@@ -86,6 +86,6 @@ public class ConnectDataSource {
 }
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Connexion et récupération de données](../../connect/jdbc/connecting-and-retrieving-data.md)

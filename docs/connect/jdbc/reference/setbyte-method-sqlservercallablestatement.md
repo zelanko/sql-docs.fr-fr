@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5149bbd4e1bf85f4a1e1e7ff923f59d1578814de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 38dea38205d2eba003f1cdeb4c8af5718311f591
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797650"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>Méthode setByte (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +48,10 @@ public void setByte(java.lang.String sCol,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setByte est spécifiée par la méthode setByte de l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

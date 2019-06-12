@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8682d8bf38dc32f9eddc50c8bf32113ebf9e516
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+manager: jroth
+ms.openlocfilehash: 0b34c2398fceb8ea59744234d3bbd889a749804b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397528"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796191"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Exemple d’application (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment envoyer des données sous la forme d’un flux.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
 Placez le code suivant dans un fichier nommé adventureworks_demo.php :  
@@ -492,7 +492,7 @@ function FormatErrors( $errors )
 </html>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
 Placez le code suivant dans un fichier nommé photo.php :  
@@ -556,7 +556,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Comparaison des fonctions d’exécution](../../connect/php/comparing-execution-functions.md)

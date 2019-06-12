@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 328a8c247fda6d67d40426cfa0f36ac47f686f11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 18518e92896223201c24982c6b6f0955ea81aa6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516681"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768617"
 ---
 # <a name="data-source-information-properties"></a>Propriétés des informations de la source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52516681"
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|Type : VT_BSTR R/W: Read/Write (Lecture/écriture)<br /><br /> Description : le résultat d'une requête FOR XML ne peut pas être un document bien formé. Lorsque cette propriété est spécifiée, le résultat d'une requête 'select … for XML' est encapsulée dans la balise racine fournie par la propriété pour retourner un document XML bien formé. Si la requête est exécutée dans le navigateur, il se peut que le navigateur affiche les erreurs de l'analyseur lors du chargement du résultat. Pour éviter l'erreur, SQL ISAPI prend en charge le mot clé ROOT. Ce mot clé est mappé avec la propriété SSPROP_STREAM_XMLROOT.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

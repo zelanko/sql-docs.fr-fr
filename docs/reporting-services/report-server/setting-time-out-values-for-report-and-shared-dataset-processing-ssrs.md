@@ -1,6 +1,6 @@
 ---
 title: Définition des valeurs de délai d’attente pour le traitement d’un rapport et d’un jeu de données partagé (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580956"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506439"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
   Vous pouvez spécifier, à l’aide de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] des valeurs de délai d’attente pour fixer des limites à l’utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
   
--   Une valeur de délai d'attente de requête de dataset incorporé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur est définie dans un rapport.  
+- Une valeur de délai d'attente de requête de dataset incorporé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur est définie dans un rapport.  
   
--   Une valeur de délai d'attente de requête de dataset partagé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur fait partie de la définition de dataset partagée et peut être modifiée lorsque vous gérez le dataset partagé sur le serveur de rapports.  
+- Une valeur de délai d'attente de requête de dataset partagé, qui est le nombre de secondes pendant lequel le serveur de rapports attend une réponse de la base de données. Cette valeur fait partie de la définition de dataset partagée et peut être modifiée lorsque vous gérez le dataset partagé sur le serveur de rapports.  
   
--   Une valeur de délai d'attente pour l'exécution de rapport représente le nombre maximal de secondes pendant lequel le traitement de rapport peut se poursuivre avant d'être arrêté. Cette valeur est définie au niveau système. Ce paramètre est modifiable pour chaque rapport.  
+- Une valeur de délai d'attente pour l'exécution de rapport représente le nombre maximal de secondes pendant lequel le traitement de rapport peut se poursuivre avant d'être arrêté. Cette valeur est définie au niveau système. Ce paramètre est modifiable pour chaque rapport.  
   
  La plupart des erreurs liées au délai d'attente se produisent pendant le traitement des requêtes. Si vous rencontrez des erreurs de ce type, essayez d'augmenter la valeur du délai d'attente de la requête. Veillez à ce que la valeur du délai d'attente pour l'exécution du rapport soit supérieure au délai d'attente de la requête. Le temps imparti doit être suffisamment long pour permettre aux traitements de la requête et du rapport de s'effectuer.  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580956"
  Notez que si vous spécifiez une valeur d'expiration inférieure à 60 secondes, le rapport peut s'exécuter intégralement si le traitement démarre et se termine pendant la partie inactive du cycle, alors que le serveur de rapports n'est pas en train d'évaluer les travaux en cours d'exécution. Par exemple, si vous définissez une valeur d'expiration de 10 secondes pour un rapport dont l'exécution en prend 20, le rapport sera entièrement traité si son exécution commence au début du cycle des 60 secondes.  
   
 > [!NOTE]  
->  Vous pouvez définir le paramètre **RunningRequestsDbCycle** du fichier RSReportServer.config pour changer la fréquence d’évaluation des travaux en cours d’exécution.  
+> Vous pouvez définir le paramètre **RunningRequestsDbCycle** du fichier RSReportServer.config pour changer la fréquence d’évaluation des travaux en cours d’exécution.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Gérer un processus en cours d'exécution](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   

@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5e2f63185ff0092e2df3814e634b5178ca79dcf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c85b34035d81657a7cbfff3808bb30e46d900618
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634117"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791387"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "47634117"
   
  Pour plus d’informations sur les noms de principaux du service et l’authentification Kerberos, consultez [Prise en charge du nom de principaux du service dans les connexions clientes](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   
-## <a name="example"></a> Exemple  
- Vous devez spécifier un serveur. Dans le fichier .cpp, remplacez « MyServer » par un nom d'ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou version ultérieure).  
+## <a name="example"></a>Exemple  
+ Vous devez spécifier un serveur. Dans le fichier .cpp, remplacez « MyServer » par un nom d'ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou version ultérieure).  
   
  Vous devez également spécifier un SPN fourni par le client. Dans le fichier .cpp, modifiez « CPSPN » par un SPN fourni par client.  
   

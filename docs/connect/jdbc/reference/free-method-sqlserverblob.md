@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 18a5732f-a246-4483-bcfb-169f25917467
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0f2f818f947311236232ce251b6fac9cacc5386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97318184d819cd60635fa034b02c54dbeb0d05c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597229"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799048"
 ---
 # <a name="free-method-sqlserverblob"></a>Méthode free (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +33,10 @@ public void free()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode free est spécifiée par la méthode free de l’interface java.sql.Blob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerBlob, méthodes](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob, membres](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [SQLServerBlob, classe](../../../connect/jdbc/reference/sqlserverblob-class.md)  

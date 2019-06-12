@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0209c50b19e46e90db3738fc94f5927f8aa619ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611996"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792124"
 ---
 # <a name="getschemas-method-"></a>Méthode getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public java.sql.ResultSet getSchemas()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getSchemas est spécifiée par la méthode getSchemas de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getSchemas contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_SCHEM|**String**|Nom du schéma.|  
 |TABLE_CATALOG|**String**|Nom de catalogue pour le schéma.|  
@@ -56,7 +56,7 @@ public java.sql.ResultSet getSchemas()
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getSchemas, consultez la rubrique « sys.schemas (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getSchemas pour retourner des informations sur le catalogue et ses noms de schémas associés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand l’argument de connexion spécifie la base de données à utiliser.  
   
 ```  
@@ -82,7 +82,7 @@ public static void executeGetSchemas(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

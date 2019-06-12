@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de25969712c8b91494aeccfea120bbe4350cbcde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641617"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796086"
 ---
 # <a name="how-to-perform-transactions"></a>Procédure : effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ Consultez [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) pou
   
 Le reste de cette rubrique explique et montre comment utiliser le pilote SQLSRV pour effectuer des transactions.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les étapes d’exécution d’une transaction peuvent se résumer comme suit :  
   
 1.  Commencez la transaction avec **sqlsrv_begin_transaction**.  
@@ -60,7 +60,7 @@ Les étapes d’exécution d’une transaction peuvent se résumer comme suit :
   
     Les fonctions **sqlsrv** répertoriées précédemment doivent être utilisées pour effectuer des transactions.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
 L’exemple suivant exécute plusieurs requêtes dans le cadre d’une transaction. Si toutes les requêtes réussissent, la transaction est validée. Si l’une des requêtes échoue, la transaction est restaurée.  
@@ -71,7 +71,7 @@ La première requête de l’exemple récupère les ID de produit et les quantit
   
 Les requêtes ultérieures (suppression de la commande client et mise à jour des quantités de stock des produits) font partie de la transaction.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ### <a name="code"></a>Code  
   
@@ -153,7 +153,7 @@ function perform_trans_ops($conn, $orderId)
 ### <a name="comments"></a>Commentaires  
 Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous recommandons de vérifier tout appel à une **sqlsrv** fonctionner pour les erreurs et les gérer en conséquence.
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
 [Transactions (moteur de base de données)](https://msdn.microsoft.com/library/ms190612.aspx)

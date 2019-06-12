@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb2d80b8906a43ab2e2ea056d3d3d4e9d2813555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 131910bfaa6e119588f708305bb1008c7b36d6e1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798358"
 ---
 # <a name="sparse-columns"></a>Colonnes éparses
 
@@ -34,7 +34,7 @@ Le fichier de code de cet exemple, SparseColumns.java, se trouve à l’emplacem
 
 Les jeux de colonnes sont des colonnes calculées qui retournent toutes les colonnes fragmentées sous la forme XML non typée. Vous devez envisager d'utiliser des jeux de colonnes lorsque le nombre de colonnes dans une table est élevé ou supérieur à 1 024 et qu'il serait trop long d'opérer individuellement sur des colonnes fragmentées. Un jeu de colonnes peut contenir jusqu'à 30 000 colonnes.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ### <a name="description"></a>Description
 
@@ -159,6 +159,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

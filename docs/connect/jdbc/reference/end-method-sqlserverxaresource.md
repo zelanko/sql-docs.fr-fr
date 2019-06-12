@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e6418b27-793b-4b36-8dfb-756aec7bcbba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 411c3599735c3dc40b7211d5195ef7835b8cfde6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: da3e368517f41e3eed5d00b51753e0c90a981674
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786440"
 ---
 # <a name="end-method-sqlserverxaresource"></a>Méthode end (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void end(javax.transaction.xa.Xid xid,
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *XID*  
+ *xid*  
   
  Un objet Xid.  
   
@@ -48,10 +48,10 @@ public void end(javax.transaction.xa.Xid xid,
 ## <a name="exceptions"></a>Exceptions  
  javax.transaction.xa.XAException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode end est spécifiée par la méthode end de l’interface javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

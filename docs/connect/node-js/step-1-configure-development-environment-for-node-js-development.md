@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 823177f8fef91dda8cf879f6be84ef6706224fad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49522e397789c5193ed8f218a5fdf776ba62f001
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600237"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799361"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Node.js
 Vous devez configurer votre environnement de développement avec la configuration requise pour développer une application en utilisant le pilote Node.js pour SQL Server.  La méthode la plus courante consiste à utiliser le Gestionnaire de package node (npm) pour installer le module fastidieux, mais vous pouvez télécharger le module fastidieux directement à l’adresse [Github](https://github.com/pekim/tedious) si vous préférez.  

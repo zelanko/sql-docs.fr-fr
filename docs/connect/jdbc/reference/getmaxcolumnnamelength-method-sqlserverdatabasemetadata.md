@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 67fb5407-55b9-48b6-87f3-112700f304ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc09f60866983807946d314a4f2234f5528da148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 84e99b5c30ce67b80947e5ba5ddda8ef1b5b0f0d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792814"
 ---
 # <a name="getmaxcolumnnamelength-method-sqlserverdatabasemetadata"></a>Méthode getMaxColumnNameLength (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public int getMaxColumnNameLength()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getMaxColumnNameLength est spécifiée par la méthode getMaxColumnNameLength dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: afc794e19ecc93f7275427760df78004a0f1fb13
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: ebaaf0da2a051106b690f80d4524e675358450c4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211548"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777793"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53211548"
 
 FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d’informations sur la prise en charge améliorée de FILESTREAM, consultez [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
-Quand une connexion de base de données est ouverte, la valeur -1 (« illimité ») est affectée par défaut à **@@TEXTSIZE**.  
+Quand une connexion de base de données est ouverte, la valeur -1 (« illimité ») est affectée par défaut à **@@TEXTSIZE** .  
   
 Il est également possible d'accéder et de mettre à jour des colonnes FILESTREAM à l'aide d'API de système de fichiers Windows.  
   
@@ -67,7 +67,7 @@ Pour les clients qui utilisent SQLOLEDB ou d’autres fournisseurs publiés avan
 -  Pour OLE DB, la vérification associées aux valeurs de ISequentialStream sera assouplie. Lorsque *wType* est **DBTYPE_IUNKNOWN** dans le **DBBINDING** struct, vérification de la longueur peut être désactivée en omettant **DBPART_LENGTH** à partir de *dwPart* ou en définissant la longueur des données (à l’offset *obLength* dans le tampon de données) à ~ 0. Dans ce cas, le fournisseur ne vérifiera pas la longueur de la valeur et demandera et retournera toutes les données disponibles par le biais du flux de données. Cette modification sera appliquée à tous les types d'objets volumineux (LOB) et XML, mais uniquement en cas de connexion à des serveurs [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (ou ultérieurs). Cela offrira une plus grande souplesse aux développeurs, tout en maintenant la cohérence et la compatibilité descendante des applications existantes et des serveurs de niveau inférieur.  Cette modification affecte toutes les interfaces qui transfèrent des données, principalement IRowset::GetData ICommand::Execute et IRowsetFastLoad::InsertRow.
  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

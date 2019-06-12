@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9e5e177c-7ed7-4d0c-8fa8-0e13daf46f4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1933ed19c28940057a183d31cbc3f6584f76bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 141eb9e3285a0aae0575405418b55d94228f35ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743557"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784128"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-long"></a>Méthode updateCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java.sql.ResultSet.  
   
  Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes binary, varbinary, varbinary(max), image et XML, mais pas les colonnes UDT.  
@@ -57,7 +57,7 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  Si la longueur du flux est inconnue, le paramètre *length* peut être défini sur -1 pour indiquer que le pilote doit accepter le flux, quelle que soit sa longueur. Avec sqljdbc4.jar, nous vous recommandons d’utiliser la méthode JDBC 4.0 [updateCharacterStream, méthode &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader.md) quand l’application veut mettre à jour la colonne à partir d’un flux dont la longueur est inconnue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

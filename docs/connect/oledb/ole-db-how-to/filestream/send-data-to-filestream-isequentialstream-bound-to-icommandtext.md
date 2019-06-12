@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5b678ee8bdd709583359fd2c6c9574676fe1c83f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5c3279e71c3ab206922e396541587702c1805ed1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210038"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791484"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Envoyer des données à FILESTREAM - ISequentialStream lié à ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53210038"
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  

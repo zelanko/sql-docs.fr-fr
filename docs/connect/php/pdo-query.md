@@ -1,5 +1,5 @@
 ---
-title: PDO::Query | Microsoft Docs
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600509"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761982"
 ---
 # <a name="pdoquery"></a>PDO::Query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ Si l’appel réussit, PDO::query retourne un objet PDOStatement. Si l’appel �
 ## <a name="exceptions"></a>Exceptions  
 PDOException.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Une requête exécutée avec PDO::query peut soit exécuter une instruction préparée, soit s’exécuter directement, selon le paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
 PDO::SQLSRV_ATTR_QUERY_TIMEOUT affecte également le comportement de PDO::exec. Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
@@ -62,7 +62,7 @@ Si toutes les données d’un jeu de résultats ne sont pas récupérées, l’a
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple illustre plusieurs requêtes.  
   
 ```  
@@ -118,8 +118,8 @@ $stmt = null;
 ?>  
 ```
 
-## <a name="example"></a> Exemple
-Cet exemple de code montre comment créer une table de [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) types et l’extraction des données insérées.
+## <a name="example"></a>Exemple
+Cet exemple de code montre comment créer une table de types [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) et extraire les données insérées.
 
 ```
 <?php
@@ -156,7 +156,7 @@ try {
 ?>
 ```
 
-La sortie attendue serait :
+La sortie attendue est :
 
 ```
 Array
@@ -166,7 +166,7 @@ Array
 )
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

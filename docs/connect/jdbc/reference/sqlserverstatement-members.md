@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 828cbaa9-ea7a-4986-95c3-5ba0d7d01d83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e1f3b9c38aa5866561d146016d0a457cb506bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 07935ce3af347cf88666865068540a27bbec2c9b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643147"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796929"
 ---
 # <a name="sqlserverstatement-members"></a>Membres de SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47643147"
   
 ## <a name="inherited-fields"></a>Champs hérités  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |java.sql.Statement|CLOSE_ALL_RESULTS, CLOSE_CURRENT_RESULT, EXECUTE_FAILED, KEEP_CURRENT_RESULT, NO_GENERATED_KEYS, RETURN_GENERATED_KEYS, SUCCESS_NO_INFO|  
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverstatement.md)|Ajoute la commande SQL donnée à la liste actuelle de commandes de cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
 |[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|Annule l’instruction SQL actuellement exécutée par cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).|  
@@ -69,7 +69,7 @@ ms.locfileid: "47643147"
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|Définit le nom de curseur SQL selon la chaîne donnée, qui est exécutée par les méthodes d'exécution suivantes.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  
-|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires. |  
+|[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)|Fournit un conseil au pilote JDBC concernant le nombre de lignes qui doivent être extraites depuis la base de données, lorsque davantage de lignes sont nécessaires.|  
 |[setMaxFieldSize](../../../connect/jdbc/reference/setmaxfieldsize-method-sqlserverstatement.md)|Définit le nombre maximal d’octets dans une colonne [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) qui stocke des valeurs de caractères ou binaires selon le nombre d’octets donné.|  
 |[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|Définit la limite du nombre maximal de lignes que tout objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) peut contenir sur le nombre donné.|  
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|Demande qu'une instruction soit regroupée ou non.|  
@@ -84,7 +84,7 @@ ms.locfileid: "47643147"
 |java.lang.Object|clone, equals, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   
   

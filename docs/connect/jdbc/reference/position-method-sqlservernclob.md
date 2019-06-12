@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6882083b270825623253d4635afd3077a5a2d75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4c9634bb19ffa2194e225370f05f00f040a276dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810557"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801318"
 ---
 # <a name="position-method-sqlservernclob"></a>Méthode position (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,12 +25,12 @@ ms.locfileid: "47810557"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[position, méthode &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|Récupère la position de caractère à laquelle spécifié **NClob** objet *searchstr* s’affiche dans ce **NClob** objet.|  
 |[Méthode position &#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|Récupère la position de caractère à laquelle la sous-chaîne spécifiée *searchstr* s’affiche dans le **NCLOB** valeur représentée par ce **NClob** objet.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob, classe](../../../connect/jdbc/reference/sqlservernclob-class.md)  

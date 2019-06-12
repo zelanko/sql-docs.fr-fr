@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: f71e501c-ccd7-4a1e-b6ea-4d47a81c18c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2eefa7cc5c2c46f93d1c9bc1230143fe74236fb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7396b679dce0e655ae6124b1198afc306151ac97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798967"
 ---
 # <a name="getapplicationname-method-sqlserverdatasource"></a>Méthode getApplicationName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public java.lang.String getApplicationName()
 ## <a name="return-value"></a>Valeur retournée  
  Un **chaîne** qui contient le nom de l’application, ou « [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]» si aucune valeur n’est définie.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le nom d’application est utilisé pour identifier l’application spécifique dans différents de profilage et de journalisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le nom d’application n’est pas défini, la méthode getApplicationName retourne la chaîne non localisée « [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ».  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

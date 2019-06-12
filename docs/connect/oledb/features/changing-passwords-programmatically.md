@@ -20,13 +20,13 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e59c536a369dd1d68e6f3af2b02b2032aa81c3b8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605890"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777892"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "51605890"
  Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERDBINIT, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

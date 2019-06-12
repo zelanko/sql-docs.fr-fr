@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5424315950e33bda642b4c0e39474b3a87a63fbd
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 596c7b648d0d6812859fc688657dfba4f7567b1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602169"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799670"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procédure : spécifier des types de données PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,10 +36,10 @@ Les étapes suivantes récapitulent la manière de spécifier des types de donn�
   
     Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le champ *ReviewDate* est récupéré sous forme de chaîne et le champ *Comments* sous forme de flux. Les données de flux apparaissent à l’aide de la fonction [fpassthru](https://php.net/manual/en/function.fpassthru.php) PHP.  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -105,7 +105,7 @@ La récupération du quatrième champ (*Comments*) sous forme de flux est indiqu
 > [!NOTE]  
 > La fonction [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) fournit un moyen d’obtenir des informations de champ, ainsi que des informations de type, avant d’exécuter une requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)

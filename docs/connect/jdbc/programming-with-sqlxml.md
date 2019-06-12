@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 399100d6e718138012453e47fdfe8d11386f8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754897"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794049"
 ---
 # <a name="programming-with-sqlxml"></a>Programmation à l'aide de SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "47754897"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Prise en charge de la mise en mémoire tampon adaptative et de SQLXML  
  Les flux de données aux formats binaire et caractère retournés par l'objet SQLXML obéissent aux modes de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Par ailleurs, si les analyseurs XML ne sont pas des flux, ils n'obéissent pas aux paramètres de mise en mémoire tampon adaptative ou de mise en mémoire tampon complète. Pour plus d’informations sur la mise en mémoire tampon adaptative, consultez [à l’aide de mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des données XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

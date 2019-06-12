@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 625d64d3-6e7c-41c2-912a-38fdf6695922
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9bd82cc6b6de3fed5acfe9fd496e457f2cef381
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: af922c074a303f73b157cd8fb744e5b0ca315393
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736860"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772447"
 ---
 # <a name="redistributing-the-microsoft-jdbc-driver"></a>Redistribution du pilote Microsoft JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +31,7 @@ Les pilotes JDBC 4.1, 4.2, 6.0, 6.2, 6.4, 7.0 et 7.2 peuvent être redistribués
   
  [Licence de redistribution pour Microsoft JDBC Driver 4.0 pour SQL Server](https://msdn.microsoft.com/sqlserver/jj589698)  
   
- Remarque : Microsoft utilise le compte Microsoft pour l’inscription et l’authentification sécurisée. Quand vous vous inscrivez pour les droits de redistribution du pilote JDBC pour SQL Server via un compte Microsoft, vous devez fournir des informations qui feront partie de votre profil sécurisé.  
+ Remarque : Microsoft utilise compte Microsoft pour l’inscription et l’authentification sécurisée. Quand vous vous inscrivez pour les droits de redistribution du pilote JDBC pour SQL Server via un compte Microsoft, vous devez fournir des informations qui feront partie de votre profil sécurisé.  
   
  Si vous n’avez pas un déjà, vous pouvez obtenir un [compte Microsoft](https://signup.live.com/)  
   

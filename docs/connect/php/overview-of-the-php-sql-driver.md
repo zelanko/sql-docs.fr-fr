@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2129745a8732fba882da6da1caf22e80df11f47
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+manager: jroth
+ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645481"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768109"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Vue d’ensemble des pilotes Microsoft pour PHP pour SQL Server
 
@@ -42,9 +42,9 @@ Pour utiliser le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous
 [Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
-[Mise en route avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 451b2b52f44af44176ab5470992d30e24df70582
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600269"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790831"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ HRESULT BCPReadFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode **BCPReadFmt** est utilisée pour lire les données d'un fichier de format qui spécifie le format des données dans le fichier de données. Cette méthode est capable de détecter la version correcte du fichier de format. Elle peut détecter automatiquement si le fichier de format est au format xml ou dans un ancien format et qu'il se comporte en conséquence. Les versions de fichiers de format pris en charge par le pilote OLE DB pour SQL Server BCP sont 6.0 ou version ultérieure.  
   
  Après avoir lu les valeurs de format, la méthode **BCPReadFmt** effectue les appels appropriés aux méthodes [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) et [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md). L'utilisateur n'a pas besoin d'analyser un fichier de format et d'effectuer ces appels.  
@@ -64,7 +64,7 @@ HRESULT BCPReadFmt(
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) n’a pas été appelée avant d’appeler cette méthode.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md)  
   

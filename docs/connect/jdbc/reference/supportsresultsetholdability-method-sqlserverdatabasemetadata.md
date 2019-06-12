@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ab575792-fd11-4ff3-8847-1368e7a322c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 701fb1118f8ddd129a944d3ad68b38afe2eac79a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 361ac4fb0da38c88b78746749f0888b14dac4b97
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621257"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797392"
 ---
 # <a name="supportsresultsetholdability-method-sqlserverdatabasemetadata"></a>Méthode supportsResultSetHoldability (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,10 +50,10 @@ public boolean supportsResultSetHoldability(int holdability)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode supportsResultSetHoldability est spécifiée par la méthode supportsResultSetHoldability dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

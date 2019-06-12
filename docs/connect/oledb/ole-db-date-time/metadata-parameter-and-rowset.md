@@ -12,13 +12,13 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2f25a79e503560ebf027b5bb002584b646c08783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834597"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769252"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,7 +146,7 @@ ms.locfileid: "47834597"
   
  Un nouvel indicateur, DBCOLUMNFLAGS_SS_ISVARIABLESCALE, est fourni dans *dwFlags* pour permettre à une application de déterminer le type de serveur des colonnes, où *wType* est DBTYPE_DBTIMESTAMP. *bScale* doit aussi être utilisé pour identifier le type de serveur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des types de données pour les améliorations de date et heure OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52c6b133-f7ed-468d-8f34-bc2e4b81553e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e850f15ab1e9e690c11c863e9719e1231c8f7201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f83002b2fcbf1620049e10c7fa8948ce554483d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796841"
 ---
 # <a name="sqlserverdatasourceobjectfactory-members"></a>Membres de SQLServerDataSourceObjectFactory
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47701987"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[SQLServerDataSourceObjectFactory ()](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-constructor.md)|Initialise une nouvelle instance de la classe [SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md).|  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47701987"
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)|Récupère une instance de l'objet source de données spécifié.|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47701987"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSourceObjectFactory, classe](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)  
   
   

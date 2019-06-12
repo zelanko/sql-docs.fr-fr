@@ -15,13 +15,13 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f9599b4e35cf54a14c04bf4675b61f962e9d0fb9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785997"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53211098"
   
 7.  Appelez **IRowsetFastLoad::InsertRow** pour copier en bloc les données dans la table.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la table utilisée par l'application.  

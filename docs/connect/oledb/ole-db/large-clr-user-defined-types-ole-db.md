@@ -12,13 +12,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b5c071a36cebacc8ce0dea5c1633bf3f92b28599
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409606"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795976"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52409606"
 |Type de paramètre|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|"DBTYPE_UDT"|*n*|non défini|non défini|clear|  
-|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|"DBTYPE_UDT"|~ 0|non défini|non défini|jeu|  
+|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|"DBTYPE_UDT"|~0|non défini|non défini|jeu|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Les informations fournies dans la structure DBPARAMBINDINFO doivent respecter les conditions suivantes :  
@@ -67,7 +67,7 @@ ms.locfileid: "52409606"
 |Type de paramètre|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|ignoré|ignoré|Doit être défini si le paramètre doit être passé à l'aide de DBTYPE_IUNKNOWN.|  
-|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~ 0|ignoré|ignoré|ignoré|  
+|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|ignoré|ignoré|ignoré|  
   
 ## <a name="isscommandwithparameters"></a>ISSCommandWithParameters  
  Les applications utilisent **ISSCommandWithParameters** pour obtenir et définir les propriétés de paramètre définies dans la section Propriétés du paramètre.  
@@ -78,7 +78,7 @@ ms.locfileid: "52409606"
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
 |DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|NULL|NULL|Désactiver|DB_ALL_EXCEPT_LIKE|n|  
-|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~ 0|NULL|NULL|Définissez|DB_ALL_EXCEPT_LIKE|0|  
+|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|NULL|NULL|Définissez|DB_ALL_EXCEPT_LIKE|0|  
   
  Les colonnes suivantes sont également définies pour les types UDT :  
   
@@ -94,8 +94,8 @@ ms.locfileid: "52409606"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~ 0|~ 0|Désactiver|  
-|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~ 0|~ 0|~ 0|Définissez|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~0|~0|Désactiver|  
+|DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|~0|~0|Définissez|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Ensemble de lignes COLUMNS (ensembles de lignes de schéma)  
  Les valeurs de colonnes suivantes sont retournées pour les types UDT :  
@@ -174,7 +174,7 @@ ms.locfileid: "52409606"
   
  Quand **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) est défini sur 80, les types UDT volumineux apparaissent aux clients de la même façon que pour les clients de bas niveau.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types CLR volumineux définis par l’utilisateur](../../oledb/features/large-clr-user-defined-types.md)  
   
   

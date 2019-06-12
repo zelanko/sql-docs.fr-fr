@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cda57aaa1271182540ed83acc9d21856f7c1f013
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab00d886cb8d30dbf61ed4de4d9911b42a4dd584
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727467"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796153"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,12 +42,12 @@ La valeur de **WarningsReturnAsErrors** peut également être définie dans le f
   
 Pour plus d’informations sur la récupération d’informations d’erreur et d’avertissement, consultez [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) et [Procédure : gérer les erreurs et avertissements](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple de code suivant montre comment désactiver le comportement de gestion des erreurs par défaut. L’exemple utilise la commande Transact-SQL PRINT pour générer un avertissement. Pour plus d’informations sur la commande PRINT, consultez [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 L’exemple montre d’abord le comportement de gestion des erreurs par défaut en exécutant une requête qui génère un avertissement. Cet avertissement est traité comme une erreur. Après avoir modifié la configuration de la gestion des erreurs, la même requête est exécutée. Cet avertissement n’est pas traité comme une erreur.  
   
-L’exemple part du principe que SQL Server est installé sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server est installé sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -98,7 +98,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Journalisation de l’activité](../../connect/php/logging-activity.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

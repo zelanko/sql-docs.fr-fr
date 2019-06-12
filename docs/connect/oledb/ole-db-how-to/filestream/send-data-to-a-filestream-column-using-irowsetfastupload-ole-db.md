@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: aaedd5bf7370a4a95f163bca26dbbadd8d49b34b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: efeae71efacdf7a47bbdde6f1eeca2cb2e63d99f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212098"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791463"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "53212098"
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  

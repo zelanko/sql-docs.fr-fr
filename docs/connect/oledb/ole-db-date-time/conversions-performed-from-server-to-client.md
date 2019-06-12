@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d6e71a8175cdddf63ad5e55124a63b40117b3be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407046"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769373"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "52407046"
 |12|La chaîne est analysée comme littéral ISO et convertie dans le type cible. En cas d'échec, la chaîne est analysée comme littéral de date OLE (qui possède aussi des composants heure) et convertie d'une date OLE (DBTYPE_DATE) en type cible. La chaîne doit se conformer à la syntaxe des littéraux autorisés du type cible pour que l'analyse du format ISO réussisse. Pour que l'analyse OLE réussisse, la chaîne doit se conformer à la syntaxe reconnue par OLE. Si la chaîne ne peut pas être analysée, DBSTATUS_E_CANTCONVERTVALUE est défini. Si les valeurs d'un composant sont hors limites, DBSTATUS_E_DATAOVERFLOW est défini.|  
 |13|La chaîne est analysée comme littéral ISO et convertie dans le type cible. En cas d'échec, la chaîne est analysée comme littéral de date OLE (qui possède aussi des composants heure) et convertie d'une date OLE (DBTYPE_DATE) en type cible. La chaîne doit se conformer à la syntaxe des littéraux datetime, à moins que la destination ne soit DBTYPE_DATE ou DBTYPE_DBTIMESTAMP. Si tel est le cas, un littéral datetime ou time est autorisé pour que l'analyse de format ISO réussisse. Pour que l'analyse OLE réussisse, la chaîne doit se conformer à la syntaxe reconnue par OLE. Si la chaîne ne peut pas être analysée, DBSTATUS_E_CANTCONVERTVALUE est défini. Si les valeurs d'un composant sont hors limites, DBSTATUS_E_DATAOVERFLOW est défini.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Liaisons et conversions &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

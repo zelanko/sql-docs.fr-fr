@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6f2ced5a-1c7d-439a-aaa5-472b9f4fdeab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d397098ba86fb891b4703f6e15970a75f9266dcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3035a4cfefa7138de79d585e5aef22e8a0d1c981
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783047"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781389"
 ---
 # <a name="updatearray-method-javalangstring-javasqlarray"></a>Méthode updateArray (java.lang.String, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,15 +43,15 @@ public void updateArray(java.lang.String columnName,
   
  *x*  
   
- Un objet tableau.  
+ Tableau d'objets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode updateArray est spécifiée par la méthode updateArray dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [updateArray, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

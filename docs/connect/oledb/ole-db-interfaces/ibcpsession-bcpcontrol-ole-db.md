@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPControl method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0b483941a5907842500ba58f2af5312c7e1f9e0c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 49c26fdaf7912fe0cf67d35ac8fa6f581319cbe5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600825"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790957"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode **BCPControl** définit différents paramètres de contrôle pour les opérations de copie en bloc, y compris le nombre d'erreurs autorisées avant l'annulation de la copie en bloc, les numéros des première et dernière lignes à copier à partir d'un fichier de données, et la taille du lot.  
   
  Cette méthode est également utilisée pour spécifier l'instruction SELECT à utiliser lors de la copie en bloc de données à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Vous pouvez affecter à l'argument **eOption** la valeur BCP_OPTION_HINTS et à l'argument **iValue** un pointeur vers une chaîne de caractères larges contenant l'instruction SELECT.  
@@ -86,7 +86,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  Erreur de mémoire insuffisante.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md)  
   

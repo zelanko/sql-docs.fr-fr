@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfa9190cc945a6df49582b47aa52815dd331bcd3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795631"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Méthode setClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,13 +45,13 @@ public final void setClob(int parameterIndex,
   
  Un **long** qui indique le nombre de caractères dans la valeur du paramètre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setClob est spécifiée par la méthode setClob de l’interface java.sql.PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setClob, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

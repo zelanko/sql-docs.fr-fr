@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b1fe358652ed237a5e0cd3bbb235e85e937ad21
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602081"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794251"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Méthode setMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public final void setMaxRows(int max)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setMaxRows est spécifiée par la méthode setMaxRows dans l’interface java.sql.Statement.  
   
  Cette méthode setMaxRows n’a pas d’effet sur les curseurs dynamiques avec défilement. L'application doit utiliser la syntaxe SQL SELECT TOP N pour limiter le nombre de lignes retournées à partir de jeux de résultats potentiellement importants.  
@@ -52,7 +52,7 @@ public final void setMaxRows(int max)
   
  Pour plus d’informations sur l’instruction SQL SET ROWCOUNT, consultez la rubrique [SET ROWCOUNT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=139522) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

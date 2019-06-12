@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737030"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775967"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l’authentification Azure Active Directory
 
@@ -39,7 +39,7 @@ Propriétés de connexion pour prendre en charge l’authentification Azure Acti
     * **NotSpecified**
         * Utilisez `authentication=NotSpecified` ou conservez la valeur par défaut quand aucune de ces méthodes d’authentification sont nécessaires.
 
-*   **/AccessToken:** Utilisez cette propriété de connexion pour se connecter à une base de données SQL à l’aide d’un jeton d’accès. accessToken peut uniquement être défini avec le paramètre de propriétés de la méthode getConnection() dans la classe DriverManager. Il ne peut pas être utilisé dans l’URL de connexion.  
+*   **accessToken**: utilisez cette propriété de connexion pour se connecter à une base de données SQL à l’aide d’un jeton d’accès. accessToken peut uniquement être défini avec le paramètre de propriétés de la méthode getConnection() dans la classe DriverManager. Il ne peut pas être utilisé dans l’URL de connexion.  
 
 Pour plus d’informations, consultez la propriété de l’authentification sur le [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md) page.  
 
@@ -164,7 +164,7 @@ Vous devez configurer un ticket Kerberos liant votre utilisateur actuel à un co
 #### <a name="windows"></a>Windows
 JDK est fourni avec `kinit`, que vous pouvez utiliser pour obtenir un ticket TGT dans le centre de Distribution de clés (KDC) sur un domaine joint à un ordinateur qui est fédéré avec Azure Active Directory.
 
-##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Étape 1 : Récupération de Ticket Granting Ticket
+##### <a name="step-1-ticket-granting-ticket-retrieval"></a>Étape 1 : Récupération de Ticket Granting Ticket
 - **Exécuter sur**: Windows
 - **Action** :
   - Utilisez la commande `kinit username@DOMAIN.COMPANY.COM` pour obtenir un ticket TGT de KDC, puis il vous demandera votre mot de passe de domaine.
@@ -178,7 +178,7 @@ JDK est fourni avec `kinit`, que vous pouvez utiliser pour obtenir un ticket TGT
 ##### <a name="requirements"></a>Spécifications
 Accès à un ordinateur joint au domaine Windows pour interroger votre contrôleur de domaine Kerberos.
 
-##### <a name="step-1-find-kerberos-kdc"></a>Étape 1 : Rechercher le KDC Kerberos
+##### <a name="step-1-find-kerberos-kdc"></a>Étape 1 : Rechercher le KDC Kerberos
 - **Exécuter sur**: ligne de commande Windows
 - **Action**: `nltest /dsgetdc:DOMAIN.COMPANY.COM` (où « DOMAIN.COMPANY.COM » est mappé à un nom de votre domaine)
 - **Résultat de l'exemple**
@@ -192,7 +192,7 @@ Accès à un ordinateur joint au domaine Windows pour interroger votre contrôle
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Étape 2 : Configuration KDC dans krb5.conf
 - **Exécuter sur**: Linux/Mac
-- **Action** : Modifier le /etc/krb5.conf dans un éditeur de votre choix. Configurez les clés suivantes
+- **Action**: modifier le /etc/krb5.conf dans un éditeur de votre choix. Configurez les clés suivantes
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM
@@ -207,7 +207,7 @@ Accès à un ordinateur joint au domaine Windows pour interroger votre contrôle
 > [!NOTE]
 >  Domaine doit être en majuscules.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Étape 3 : Tester la récupération de Ticket Granting Ticket
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Étape 3 : Tester la récupération de Ticket Granting Ticket
 - **Exécuter sur**: Linux/Mac
 - **Action** :
   - Utilisez la commande `kinit username@DOMAIN.COMPANY.COM` pour obtenir un ticket TGT de KDC, puis il vous demandera votre mot de passe de domaine.

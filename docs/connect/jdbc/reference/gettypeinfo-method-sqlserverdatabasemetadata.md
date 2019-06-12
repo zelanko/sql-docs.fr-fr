@@ -1,5 +1,5 @@
 ---
-title: Méthode getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getTypeInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682717"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788632"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Méthode getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +41,12 @@ public java.sql.ResultSet getTypeInfo()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getTypeInfo est spécifiée par la méthode getTypeInfo dans l’interface java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getTables est spécifiée par la méthode getTables de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getTypeInfo contient les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Nom du type de données.|  
 |DATA_TYPE|**short**|Type de données SQL de java.sql.Types.|  
@@ -72,7 +72,7 @@ public java.sql.ResultSet getTypeInfo()
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTypeInfo, consultez « sp_datatype_info (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getTypeInfo pour retourner des informations sur les types de données utilisés dans une base de données [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (ou ultérieur).  
   
 ```  
@@ -98,7 +98,7 @@ public static void executeGetTypeInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

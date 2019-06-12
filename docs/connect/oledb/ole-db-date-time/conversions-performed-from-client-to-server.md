@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827019"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769313"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,20 +65,20 @@ ms.locfileid: "47827019"
 |9|La chaîne est analysée comme littéral ISO et convertie dans le type cible. En cas d'échec, la chaîne est analysée comme littéral de date OLE (qui possède aussi des composants heure) et convertie d'une date OLE (DBTYPE_DATE) en type cible.<br /><br /> Si le type cible est DBTIMESTAMP, **smalldatetime**, **datetime**ou **datetime2**, la chaîne doit se conformer à la syntaxe pour la date, l'heure ou les littéraux **datetime2** , ou à la syntaxe reconnue par OLE. Si la chaîne est un littéral date, tous les composants heure sont définis avec la valeur zéro. Si la chaîne est un littéral heure, la date est définie avec la date en cours.<br /><br /> Pour tous les autres types cibles, la chaîne doit se conformer à la syntaxe des littéraux du type cible.|  
 |10|S'il se produit une troncation des fractions de seconde avec perte de données, DBSTATUS_E_DATAOVERFLOW est défini. Pour les conversions de chaîne, le contrôle du dépassement de capacité n'est possible que lorsque la chaîne est conforme à la syntaxe ISO. Si la chaîne est un littéral date OLE, les fractions de seconde sont arrondies.<br /><br /> Pour la conversion de DBTIMESTAMP (datetime) en smalldatetime, le pilote OLE DB pour SQL Server tronque sans rien indiquer la valeur des secondes, au lieu de générer l’erreur DBSTATUS_E_DATAOVERFLOW.|  
 |11|Le nombre de chiffres des fractions de seconde (l’échelle) est déterminé à partir de la taille de la colonne de destination, conformément au tableau ci-dessous. Pour les tailles de colonne supérieures à la plage du tableau, une échelle de 9 est nécessaire. Cette conversion accepte jusqu'à neuf chiffres de fractions de seconde, valeur maximale autorisée par OLE DB.<br /><br /> Cependant, si le type source est DBTIMESTAMP et que les fractions de seconde sont nulles, aucun chiffre de fraction de seconde ou virgule décimale n'est généré. Ce comportement garantit la compatibilité descendante pour les applications développées à l'aide de fournisseurs OLE DB plus anciens.<br /><br /> Une taille de colonne de ~0 implique une taille illimitée dans OLE DB (9 chiffres, à moins que la règle de 3 chiffres pour DBTIMESTAMP ne s'applique).|  
-|12|La sémantique des conversions antérieures à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour DBTYPE_DATE est conservée. Les fractions de seconde sont tronquées à une longueur nulle.|  
+|12|La sémantique de conversion antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour DBTYPE_DATE est conservée. Les fractions de seconde sont tronquées à une longueur nulle.|  
 |13|La sémantique des conversions antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour DBTYPE_FILETIME est conservée. Si vous utilisez l’API Windows FileTimeToSystemTime, la précision en fractions de seconde est limitée à 1 milliseconde.|  
-|14|La sémantique des conversions antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour **smalldatetime** est conservée. Les secondes sont définies avec la valeur 0.|  
-|15|La sémantique des conversions antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour **datetime** est conservée. Les secondes sont arrondies au 300ème de seconde le plus proche.|  
+|14|La sémantique de conversion antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour **smalldatetime** est conservée. Les secondes sont définies avec la valeur 0.|  
+|15|La sémantique de conversion antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour **datetime** est conservée. Les secondes sont arrondies au 300ème de seconde le plus proche.|  
 |16|Le comportement de conversion d'une valeur (d'un type donné) incorporée à un struct client SSVARIANT est identique à celui des mêmes valeur et type non incorporés à un struct client SSVARIANT.|  
   
 ||||  
 |-|-|-|  
 |Type|Longueur (en caractères)|Échelle|  
-|DBTIME2|8, 10..18|0, 1..9|  
-|DBTIMESTAMP|19, 21..29|0, 1..9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0, 1..9|  
+|DBTIME2|8, 10..18|0,1..9|  
+|DBTIMESTAMP|19, 21..29|0,1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Liaisons et conversions &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

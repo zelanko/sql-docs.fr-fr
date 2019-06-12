@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605779"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798259"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "51605779"
   
  Le tableau suivant décrit chacun des niveaux de journalisation disponibles pour les catégories de journalisation publiques.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |SEVERE|Indique un échec grave ; il s'agit du niveau de journalisation le plus élevé. Dans le pilote JDBC, ce niveau permet de signaler des erreurs et des exceptions.|  
 |WARNING|Indique un problème potentiel.|  
@@ -54,7 +54,7 @@ ms.locfileid: "51605779"
   
  Le tableau suivant décrit chacun des niveaux de journalisation disponibles pour les catégories de journalisation internes.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |SEVERE|Indique un échec grave ; il s'agit du niveau de journalisation le plus élevé. Dans le pilote JDBC, ce niveau permet de signaler des erreurs et des exceptions.|  
 |WARNING|Indique un problème potentiel.|  
@@ -68,7 +68,7 @@ ms.locfileid: "51605779"
 ## <a name="logging-categories"></a>Catégories de journalisation  
  Quand vous créez un objet Logger, vous devez lui indiquer l’entité nommée ou la catégorie pour laquelle vous souhaitez obtenir des informations de journal. Le pilote JDBC prend en charge les catégories de journalisation publiques suivantes, qui sont toutes définies dans le package du pilote com.microsoft.sqlserver.jdbc.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |Connexion|Journalise les messages dans la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Les applications peuvent affecter le niveau de journalisation FINER.|  
 |.|Journalise les messages dans la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Les applications peuvent affecter le niveau de journalisation FINER.|  
@@ -78,7 +78,7 @@ ms.locfileid: "51605779"
   
  À partir de la version 2.0 du pilote JDBC Microsoft, le pilote fournit également le package com.microsoft.sqlserver.jdbc.internals, qui inclut la prise en charge de la journalisation pour les catégories de journalisation internes suivantes.  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |AuthenticationJNI|Messages des journaux concernant le Windows intégré des problèmes d’authentification (lorsque le **authenticationScheme** propriété de connexion est implicitement ou explicitement définie sur **NativeAuthentication**).<br /><br /> Les applications peuvent affecter le niveau de journalisation FINEST et FINE.|  
 |SQLServerConnection|Journalise les messages dans la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Les applications peuvent affecter le niveau de journalisation FINE et FINER.|  
@@ -93,7 +93,7 @@ ms.locfileid: "51605779"
 |TDS.Channel|Cette catégorie effectue le suivi des actions du canal de communication TCP avec SQL Server. Les messages journalisés incluent l'ouverture et la fermeture de sockets ainsi que les lectures et écritures. Elle effectue également le suivi des messages relatifs à l'établissement d'une connexion SSL (Secure Sockets Layer) à SQL Server.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINE, FINER ou FINEST.|  
 |TDS.Writer|Cette catégorie effectue le suivi des écritures dans le canal TDS. À noter que seule la longueur des écritures, et non le contenu, fait l'objet d'un suivi. Cette catégorie effectue également le suivi des problèmes lorsqu'un signal d'avertissement est envoyé au serveur pour annuler l'exécution d'une instruction.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.Reader|Cette catégorie effectue le suivi de certaines opérations de lecture à partir du canal TDS au niveau FINEST. Au niveau FINEST, le suivi peut être détaillé. Aux niveaux WARNING et SEVERE, cette catégorie effectue le suivi lorsque le pilote reçoit un protocole TDS non valide de SQL Server avant qu'il ne ferme la connexion.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINER et FINEST.|  
-|TDS.Command|Cette catégorie effectue le suivi des transitions d'état de bas niveau et d'autres informations associées à l'exécution de commandes TDS, telles que les exécutions d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], les extractions de curseurs ResultSet, les validations, etc.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
+|TDS.Command|Cette catégorie effectue le suivi des transitions d’état de bas niveau et d’autres informations associées à l’exécution de commandes TDS, telles que les exécutions d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], les extractions de curseurs ResultSet, les validations, et ainsi de suite.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
 |TDS.TOKEN|Cette catégorie ne journalise que les jetons des paquets TDS et est moins claire que la catégorie TDS.DATA. Elle peut uniquement être activée en affectant le niveau de journalisation FINEST.<br /><br /> Au niveau FINEST, cette catégorie effectue le suivi des jetons TDS lors de leur traitement dans la réponse. Au niveau SEVERE, cette catégorie effectue le suivi en cas de jeton TDS non valide.|  
 |SQLServerDatabaseMetaData|Journalise les messages dans la classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerResultSetMetaData|Journalise les messages dans la classe [SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
@@ -159,7 +159,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  Vous pouvez définir les propriétés dans le fichier `logging.properties` à l’aide de l’objet LogManager figurant dans java.util.logging.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Diagnostic des problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

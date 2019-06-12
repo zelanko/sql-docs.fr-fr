@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19411e6c-c456-4533-8252-54569a2a6b1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01fa56d2afb8465f582cf5fda5579565f04013c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cdf1c9d983a167df0fc3e0c65ba15569bdecf953
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727497"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798983"
 ---
 # <a name="getapplicationintent-method-sqlserverdatasource"></a>getApplicationIntent, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,10 +32,10 @@ public java.lang.String getApplicationIntent();
 ## <a name="return-value"></a>Valeur retournée  
  Retourne la valeur de la **applicationIntent** propriété de connexion.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur la **applicationIntent** propriété de connexion, consultez [définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource.setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)   
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

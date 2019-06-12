@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c47579114bab412a68698ef4c589ba32673328a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fb2962f6514fec7211b6d3a5ccd5f3af09a1f066
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824007"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782923"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>setServerPreparedStatementDiscardThreshold, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,10 +37,10 @@ public void setServerPreparedStatementDiscardThreshold(int enablePrepareOnFirstP
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

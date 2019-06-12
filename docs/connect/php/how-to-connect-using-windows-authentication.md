@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18294f43eceabb531d61c919303b5e874ba63a99
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759941"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796136"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procédure : se connecter avec l’authentification Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Préférez l’authentification Windows pour la connexion à SQL Server dès lor
   
 Si l’authentification Windows n’est pas possible d’un point de vue pratique, consultez [How to: Connect Using SQL Server Authentication](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 En utilisant le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l’exemple suivant a recours à l’authentification Windows pour établir une connexion à une instance locale de SQL Server. Une fois la connexion établie, le serveur est interrogé pour déterminer la connexion de l’utilisateur qui accède à la base de données.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant utilise le pilote PDO_SQLSRV pour accomplir la même tâche que l’exemple précédent.  
   
 ```  
@@ -105,7 +105,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
@@ -114,7 +114,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 
 [Guide pratique pour créer un compte de connexion SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Guide pratique pour créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Procédure : créer un utilisateur de base de données](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gestion des utilisateurs, rôles et connexions](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

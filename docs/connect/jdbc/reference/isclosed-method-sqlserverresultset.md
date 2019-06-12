@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c17ec2b88d5f86d94c918dc1a02d4cc2c5a0fdc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 935deba631fdebd5d118c399e498a30fe8c64144
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736187"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796577"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>Méthode isClosed (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +36,10 @@ public boolean isClosed()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode isClosed est spécifiée par la méthode isClosed dans l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 624f5efe97333fd76e934f94517588aede030f38
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: afd2f2fc098e23685dca1b913e010dced40cece9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605259"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799174"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,13 +40,13 @@ $*cursor_offset* : symbole (entier) facultatif qui spécifie la ligne à récup
 ## <a name="return-value"></a>Valeur retournée  
 Valeur mixte qui retourne une ligne ou la valeur false.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le curseur s’avance automatiquement à l’appel de fetch. Le tableau suivant contient la liste des valeurs $*fetch_style* possibles.  
   
 |$*fetch_style*|Description|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|Spécifie un tableau indexé par nom de colonne.|  
-|PDO::FETCH_BOTH|Spécifie un tableau indexé par nom de colonne et dans l’ordre à partir de 0. Il s’agit du paramètre par défaut.|  
+|PDO::FETCH_BOTH|Spécifie un tableau indexé par nom de colonne et dans l’ordre à partir de 0. Il s'agit du paramètre par défaut.|  
 |PDO::FETCH_BOUND|Retourne true et attribue les valeurs comme les spécifie [PDOStatement::bindColumn](../../connect/php/pdostatement-bindcolumn.md).|  
 |PDO::FETCH_CLASS|Crée une instance et mappe les colonnes sur des propriétés nommées.<br /><br />Appelez [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) avant d’appeler fetch.|  
 |PDO::FETCH_INTO|Actualise une instance de la classe demandée.<br /><br />Appelez [PDOStatement::setFetchMode](../../connect/php/pdostatement-setfetchmode.md) avant d’appeler fetch.|  
@@ -71,7 +71,7 @@ Si la valeur spécifiée pour $*cursor_offset* ou $*cursor_orientation* donne un
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -141,7 +141,7 @@ La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDr
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

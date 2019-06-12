@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 50fcc0c3-36a1-47b2-b18c-7aa2ac9b27d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b51437d4e5ea8b7177a69c2b8d848f0fbfad61a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3380b26cb0401e35c59b50b349c279566612c50f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598067"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771652"
 ---
 # <a name="getboolean-method-int-sqlserverresultset"></a>getBoolean, méthode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +46,13 @@ public boolean getBoolean(int columnIndex)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getBoolean est spécifiée par la méthode getBoolean dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getBoolean est spécifiée par la méthode getBoolean de l’interface java.sql.CallableStatement.  
   
  Cette méthode est prise en charge uniquement sur les types de données de nombres et de caractères. Elle convertit les valeurs « 1 », 1, et «**true**» à **true**et les valeurs « 0 », 0, et «**false**» à **false**. Pour toutes les autres valeurs, le comportement n'est pas défini.  
   
-## <a name="see-also"></a> Voir aussi  
- [Méthode getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Voir aussi  
+ [updateBoolean, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

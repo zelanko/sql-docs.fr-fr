@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3144eb103a1197d36ddc165d15bf16f828ebd9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610149"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798511"
 ---
 # <a name="working-with-result-sets"></a>Travail sur des jeux de résultats
 
@@ -39,7 +39,7 @@ Les rubriques de cette section décrivent différentes façons d’utiliser un j
 | [Exemple de modification des données du jeu de résultats](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | Décrit l’utilisation d’un jeu de résultats pour insérer, extraire et modifier des données dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].                                                      |
 | [Exemple de mise en cache de données du jeu de résultats](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | Décrit l’utilisation d’un jeu de résultats pour extraire de grandes quantités de données à partir d’une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et pour contrôler la manière dont ces données sont mises en cache sur le client. |
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Exemples d’applications JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

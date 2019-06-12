@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 50b431ed5b3f02f1032d4176c129d3b6599b4b9e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599460"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796175"
 ---
 # <a name="handling-errors-and-warnings"></a>Gestion des erreurs et des avertissements
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,6 +39,6 @@ Les rubriques de cette section fournissent des informations sur la gestion des e
   
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

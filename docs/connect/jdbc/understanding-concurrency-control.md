@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654347"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798266"
 ---
 # <a name="understanding-concurrency-control"></a>Fonctionnement du contrôle concurrentiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,16 +26,16 @@ ms.locfileid: "47654347"
 > [!NOTE]  
 >  Pour plus d’informations sur l’accès simultané [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Gestion de l’accès concurrentiel aux données » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le pilote JDBC prend en charge les types d'accès simultanés suivants :  
   
 |Type d'accès simultané|Caractéristiques|Verrous de lignes|Description|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Lecture seule|non|Les mises à jour effectuées à l'aide du curseur ne sont pas autorisées et aucun verrou n'est maintenu sur les lignes constituant le jeu de résultats.|  
-|CONCUR_UPDATABLE|Lecture/écriture optimistes|non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison d'horodateurs.|  
+|CONCUR_READ_ONLY|Lecture seule|Non|Les mises à jour effectuées à l'aide du curseur ne sont pas autorisées et aucun verrou n'est maintenu sur les lignes constituant le jeu de résultats.|  
+|CONCUR_UPDATABLE|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison d'horodateurs.|  
 |CONCUR_SS_SCROLL_LOCKS|Lecture/écriture pessimistes|Oui|La base de données suppose que la contention de ligne est probable. L'intégrité de ligne est garantie avec le verrouillage de ligne.|  
-|CONCUR_SS_OPTIMISTIC_CC|Lecture/écriture optimistes|non|La base de données suppose que la contention de ligne est improbable, mais possible. L’intégrité de ligne est vérifiée avec une comparaison d’horodateurs.<br /><br /> Pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, le serveur remplace ceci par CONCUR_SS_OPTIMISTIC_CCVAL, si la table ne contient pas de colonne timestamp.<br /><br /> Pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], si la table sous-jacente a une colonne timestamp, OPTIMISTIC WITH ROW VERSIONING est utilisé même si OPTIMISTIC WITH VALUES est spécifié. Si OPTIMISTIC WITH ROW VERSIONING est spécifié et que la table ne possède pas d'horodateurs, OPTIMISTIC WITH VALUES est utilisé.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Lecture/écriture optimistes|non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison des données brutes.|  
+|CONCUR_SS_OPTIMISTIC_CC|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L’intégrité de ligne est vérifiée avec une comparaison d’horodateurs.<br /><br /> Pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, le serveur remplace ceci par CONCUR_SS_OPTIMISTIC_CCVAL, si la table ne contient pas de colonne timestamp.<br /><br /> Pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], si la table sous-jacente a une colonne timestamp, OPTIMISTIC WITH ROW VERSIONING est utilisé même si OPTIMISTIC WITH VALUES est spécifié. Si OPTIMISTIC WITH ROW VERSIONING est spécifié et que la table ne possède pas d'horodateurs, OPTIMISTIC WITH VALUES est utilisé.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Lecture/écriture optimistes|Non|La base de données suppose que la contention de ligne est improbable, mais possible. L'intégrité de ligne est vérifiée avec une comparaison des données brutes.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Jeux de résultats qui ne peuvent pas être mis à jour  
  Un jeu de résultats pouvant être mis à jour est un jeu de résultats dans lequel des lignes peuvent être insérées, mises à jour et supprimées. Dans les cas suivants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer de curseur pouvant être mis à jour. L'exception générée est « Le jeu de résultat ne peut pas être mis à jour ».  
@@ -46,7 +46,7 @@ ms.locfileid: "47654347"
 |L'instruction est créée à l'aide de TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un curseur instantané statique. Celui-ci est déconnecté des lignes de table sous-jacentes afin d'aider à protéger le curseur contre les mises à jour de ligne par d'autres utilisateurs.|Utilisez TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC ou TYPE_FORWARD_ONLY avec CONCUR_UPDATABLE pour éviter de créer un curseur statique.|  
 |Le mode Création de table n'autorise pas la présence d'un curseur KEYSET ou DYNAMIC|La table sous-jacente n’a pas de clés uniques pour permettre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’identifier une ligne de manière unique.|Ajoutez des clés uniques à la table afin de fournir une identification unique de chaque ligne.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des jeux de résultats avec le pilote JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

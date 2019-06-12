@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2ace2903fb64eefb764ce600983e573dc778c80b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c1e21c1e936b9da10fd1adfcc5afab901b0027bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654367"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791474"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Récupérer des données d'une colonne FILESTREAM à l'aide d'ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47654367"
   
  Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   
  Utilisez l'un des exemples suivants pour créer la table à partir de laquelle cet exemple lit :  
