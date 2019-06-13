@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583222"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033396"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Démarrage rapide : Gérer les entrées et sorties à l’aide de Python dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Jetons un œil à la valeur par défaut des variables d’entrée et de sortie de sp_execute_external_script : `InputDataSet` et `OutputDataSet`.
 
-1. Vous pouvez obtenir les données à partir de la table en tant qu’entrée pour votre script R. Exécutez l’instruction ci-dessous. Il obtient les données de la table, effectue un aller-retour via le runtime R et retourne les valeurs avec le nom de colonne *NewColName*.
+1. Vous pouvez obtenir les données à partir de la table en tant qu’entrée à votre script Python. Exécutez l’instruction ci-dessous. Il obtient les données de la table, effectue un aller-retour via le runtime Python et retourne les valeurs avec le nom de colonne *NewColName*.
 
-    Les données retournées par la requête sont transmises au runtime R, qui retourne les données à la base de données SQL comme une trame de données. La clause WITH RESULT SETS définit le schéma de la table de données retournées pour la base de données SQL.
+    Les données retournées par la requête sont passées à l’exécution de Python, qui retourne les données à base de données SQL sous la forme d’une trame de données pandas. La clause WITH RESULT SETS définit le schéma de la table de données retournées pour la base de données SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ Jetons un œil à la valeur par défaut des variables d’entrée et de sortie d
 
     ![Sortie de script Python qui retourne des données à partir d’une table](./media/python-output-pythontestdata.png)
 
-2. Nous allons modifier le nom des variables d’entrée ou de sortie. Le script ci-dessus utilisé l’entrée par défaut et les noms de variables de sortie _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées _InputDatSet_, vous utilisez le *@input_data_1* variable.
+2. Nous allons modifier le nom des variables d’entrée ou de sortie. Le script ci-dessus utilisé l’entrée par défaut et les noms de variables de sortie _InputDataSet_ et _OutputDataSet_. Pour définir les données d’entrée associées _InputDataSet_, vous utilisez le *@input_data_1* variable.
 
     Dans ce script, les noms des variables d’entrée et sortie de la procédure stockée ont été modifiés pour *SQL_out* et *SQL_in*:
 
