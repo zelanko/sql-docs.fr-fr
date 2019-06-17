@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108799"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Installation côte à côte de Reporting Services et d'Internet Information Services (SSRS en mode natif)
@@ -43,9 +43,9 @@ ms.locfileid: "66108799"
   
 |Exemple|Demande|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Reçoit toutes les requêtes sont envoyées à http://123.234.345.456/reports ou http://\<nom_ordinateur > /Reports si un service de nom de domaine peut résoudre l’adresse IP vers ce nom d’hôte.|  
+|http://123.234.345.456:80/reports|Reçoit toutes les requêtes sont envoyées à http://123.234.345.456/reports ou http://\< nom_ordinateur > /Reports si un service de nom de domaine peut résoudre l’adresse IP vers ce nom d’hôte.|  
 |http://+:80/reports|Reçoit toutes les requêtes envoyées à une adresse IP ou un nom d'hôte valide pour cet ordinateur, tant que l'URL contient le nom de répertoire virtuel « reports ».|  
-|http://123.234.345.456:80|Reçoit les requêtes qui spécifient http://123.234.345.456 ou http://\<nom_ordinateur > Si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
+|http://123.234.345.456:80|Reçoit les requêtes qui spécifient http://123.234.345.456 ou http://\< nom_ordinateur > Si un service de nom de domaine peut convertir l’adresse IP vers ce nom d’hôte.|  
 |http://+:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour tous les points de terminaison d'application mappés à **Assigné**.|  
 |http://*:80|Reçoit les requêtes qui ne sont pas déjà reçues par d'autres applications, pour les points de terminaison d'application mappés à **Non assigné**.|  
   

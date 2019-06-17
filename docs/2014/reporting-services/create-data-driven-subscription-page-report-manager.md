@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109619"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Page Créer un abonnement piloté par les données (Gestionnaire de rapports)
@@ -151,7 +151,7 @@ ms.locfileid: "66109619"
  Définit une planification qui s'exécute toutes les heures.  
   
  **Quotidienne**  
- Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque  *\<jour >*, tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+ Définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque  *\<jour >* , tous les jours ouvrables et chaque  *\<nombre >* jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
  **Hebdomadaire**  
  Définit une planification qui s'exécute de façon hebdomadaire à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  

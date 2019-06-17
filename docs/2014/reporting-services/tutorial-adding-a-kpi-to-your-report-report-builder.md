@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a1b158b6fc504a0917e0c268846da93be3aa59b9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098977"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutoriel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports)
@@ -273,7 +273,7 @@ ms.locfileid: "66098977"
   
 9. Cliquez sur **valeur et états**.  
   
-10. Dans la liste déroulante valeur, sélectionnez **[SUM (Sales)]**, mais ne modifiez pas les autres options.  
+10. Dans la liste déroulante valeur, sélectionnez **[SUM (Sales)]** , mais ne modifiez pas les autres options.  
   
      Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1**, le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation** .  
   

@@ -15,20 +15,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9d66e6e5317bef72be6bba254ccca0cc82aa026
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100039"
 ---
 # <a name="project-property-pages-dialog-box"></a>Pages de propriétés du projet, boîte de dialogue
-  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_**Propriétés**.  
+  Utilisez les pages de propriétés du projet pour configurer les propriétés de déploiement d'un projet Report Server. Pour ouvrir cette boîte de dialogue, dans le menu **Projet**, cliquez sur _\<Nom du projet de rapport>_ **Propriétés**.  
   
  Après avoir défini les propriétés de configuration, sélectionnez une configuration dans la liste déroulante **Configurations de solutions** de la barre d’outils.  
   
 ## <a name="options"></a>Options  
  **Configuration**  
- Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Déboguer**, **DebugLocal**, et **version**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)**.  
+ Sélectionnez la configuration à modifier. Initialement, les configurations suivantes sont disponibles : **Déboguer**, **DebugLocal**, et **version**. La configuration active apparaît d’abord, par exemple, **Active(Débogage)** .  
   
  Pour consulter simultanément les propriétés de plusieurs configurations, sélectionnez **Toutes les configurations** ou **Configurations multiples**.  
   
@@ -60,21 +60,21 @@ ms.locfileid: "66100039"
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode natif, spécifiez le chemin complet de la hiérarchie des dossiers à partir de la racines. Par exemple, Dossier1/Dossier2/Dossier3.  
   
- Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http://*\<servername > /\<site >*  /Documents/MonDossier.  
+ Lors de la publication sur un serveur de rapports s’exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http:// *\<servername > /\<site >*  /Documents/MonDossier.  
   
  **TargetReportFolder**  
  Nom du dossier dans lequel stocker les rapports publiés. Par défaut, il s'agit du nom du projet de rapport. Si le dossier n'existe pas sur le serveur de rapports, le Générateur de rapports le crée lors de la publication des rapports.  
   
  Lors de la publication sur un serveur de rapports s'exécutant en mode natif, spécifiez le chemin complet de la hiérarchie des dossiers à partir de la racines. Si un dossier se trouve dans un autre dossier, incluez un chemin d'accès vers le dossier à partir de la racine, par exemple Folder1/Folder2/Folder3.  
   
- Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http://*\<nom_serveur >*/*\<site >*  /Documents/MonDossier.  
+ Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez une URL de la bibliothèque SharePoint. Par exemple, http:// *\<nom_serveur >* / *\<site >*  /Documents/MonDossier.  
   
  **TargetServerURL**  
  URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide.  
   
  Lors de la publication sur un serveur de rapports s’exécutant en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports. Par exemple, http://\<serveur > / reportserver. Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports. Par défaut, le serveur de rapports est installé dans un répertoire virtuel nommé « reportserver ».  
   
- Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez aucun site, le site de premier niveau par défaut est utilisé. Par exemple, http://\<*nom_serveur >*, http://&lt*nom_serveur*/\<*site >* ou http://\< *nom_serveur >*/\<*site >*/\<*sous-site >*.  
+ Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez aucun site, le site de premier niveau par défaut est utilisé. Par exemple, http://\<*nom_serveur >* , http://&lt*nom_serveur*/\<*site >* ou http://\< *nom_serveur >* /\<*site >* /\<*sous-site >* .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Publier des rapports](../publish-reports.md)   

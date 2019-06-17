@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175037"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader du chargeur de ligne de commande pour Parallel Data Warehouse
@@ -398,7 +398,7 @@ Le chargeur insère des lignes à la fin des lignes existantes dans la table de 
 fastappend  
 Le chargeur insère des lignes directement, sans utiliser une table temporaire, à la fin des lignes existantes dans la table de destination. fastappend nécessite la transaction multi (-m) option. Une base de données intermédiaire ne peut pas être spécifié lors de l’utilisation de fastappend. Il n’existe aucune restauration avec fastappend, ce qui signifie que la récupération à partir d’une charge de l’échec ou abandonnée doit être gérée par votre propre processus de chargement.  
   
-upsert **-K***merge_column* [,...*n* ]    
+upsert **-K***merge_column* [,...*n* ]  
 Le chargeur utilise l’instruction de fusion SQL Server pour mettre à jour les lignes existantes et insérer de nouvelles lignes.  
   
 L’option -K spécifie l’ou les colonnes de la fusion de base sur. Ces colonnes forment une clé de fusion, qui doit représenter une ligne unique. Si la clé de fusion existe dans la table de destination, la ligne est mise à jour. Si la clé de fusion n’existe pas dans la table de destination, la ligne est ajoutée.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098860"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutoriel : Rapport cartographique (Générateur de rapports)
@@ -191,7 +191,7 @@ ms.locfileid: "66098860"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**).  
+9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ).  
   
      Le jeu de résultats affiche sept colonnes : StoreKey, StoreName, SellingArea, City, County, Sales et SpatialLocation. Ces données représentent un ensemble de magasins de l'État de New York qui vendent des biens de consommation. Chaque ligne du jeu de résultats contient un identificateur de magasin, le nom du magasin, la zone disponible pour l'affichage des produits, la ville et le comté dans lesquels il se trouve, le chiffre d'affaires total et l'emplacement spatial en longitude et en latitude. La surface d'exposition varie entre 455 pieds carrés (environ 42 mètres carrés) et 1 125 pieds carrés (environ 104 mètres carrés).  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098860"
   
 19. Ajoutez un titre de légende. Cliquez avec le bouton droit sur le titre de légende, puis cliquez sur **Propriétés du titre de légende**.  
   
-20. Supprimez le titre, puis tapez **Surface d'exposition (en pieds carrés)**.  
+20. Supprimez le titre, puis tapez **Surface d'exposition (en pieds carrés)** .  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098860"
   
 4.  Cliquez sur **Visibilité**.  
   
-5.  Dans l'option **Transparence (%)**, tapez **30**.  
+5.  Dans l'option **Transparence (%)** , tapez **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -433,7 +433,7 @@ ms.locfileid: "66098860"
   
 6.  Cliquez sur **Titre** sur la légende pour sélectionner le titre de légende.  
   
-7.  Cliquez encore sur **Titre** pour passer en mode d'insertion pour le texte. Remplacez **Titre** par **Ventes (en milliers)**, puis cliquez à l'extérieur du texte.  
+7.  Cliquez encore sur **Titre** pour passer en mode d'insertion pour le texte. Remplacez **Titre** par **Ventes (en milliers)** , puis cliquez à l'extérieur du texte.  
   
  La légende est développée pour afficher le titre.  
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096838"
 ---
 # <a name="accept-license-terms"></a>Accepter les termes du contrat de licence
@@ -46,7 +46,7 @@ ms.locfileid: "66096838"
   
  Les informations sur l'utilisation des fonctionnalités sont envoyées à [!INCLUDE[msCoName](../../includes/msconame-md.md)], puis stockées avec un accès limité.  
   
- Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez l’outil **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rapports d’erreurs et d’utilisation** dans le menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+ Pour désactiver la création de rapports CEIP une fois l’installation terminée, utilisez l’outil **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Rapports d’erreurs et d’utilisation** dans le menu **Outils de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
  Pour les actions du programme d'installation, telles que l'installation, la mise à niveau, la réparation, entre autres, les informations sont recueillies et téléchargées uniquement pendant l'exécution du programme d'installation  
   

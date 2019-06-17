@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357509"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planifier des tâches administratives SSAS avec SQL Server Agent
@@ -81,7 +81,7 @@ ms.locfileid: "65357509"
   
 6.  Dans la boîte de dialogue **Nouvelle étape de travail** , tapez un nom pour l'étape dans **Nom de l'étape**.  
   
-7.  Dans **Serveur**, tapez **localhost** pour une instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et **localhost\\**\<*nom_instance*> pour une instance nommée.  
+7.  Dans **Serveur**, tapez **localhost** pour une instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et **localhost\\** \<*nom_instance*> pour une instance nommée.  
   
      Si vous allez exécuter le travail à partir d'un ordinateur distant, utilisez le nom du serveur et le nom de l'instance où le travail s'exécutera. Utilisez le format \< *nom du serveur*> pour une instance par défaut, et \< *nom du serveur*>\\<*instance nom*> pour une instance nommée.  
   

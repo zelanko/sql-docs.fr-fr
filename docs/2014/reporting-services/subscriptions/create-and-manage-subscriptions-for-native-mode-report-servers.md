@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100991"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Créer, modifier et supprimer les abonnements standard (Reporting Services en mode natif)
@@ -79,7 +79,7 @@ ms.locfileid: "66100991"
   
 8.  Dans Format du rendu, sélectionnez un format de sortie du rapport pour la remise de fichier. Choisissez un format qui correspond à l'application bureautique qui sera utilisée pour ouvrir le rapport. Évitez les formats qui n'effectuent pas le rendu d'un rapport en un seul flux ou qui introduisent une interactivité non prise en charge dans un fichier statique (par exemple le format HTML 4.0).  
   
-9. Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>*\\*\<nom_utilisateur>* pour le nom d’utilisateur.  
+9. Dans les zones de texte **Nom d’utilisateur** et **Mot de passe**, indiquez les informations d’identification nécessaires pour accéder au partage de fichiers en respectant le format *\<domaine>* \\ *\<nom_utilisateur>* pour le nom d’utilisateur.  
   
 10. Spécifiez les options de remplacement. En activant l'option **Ne pas remplacer le fichier si une version précédente existe**, vous empêchez la remise d'avoir lieu si un fichier existant est détecté. Si vous cliquez sur **Incrémenter les noms des fichiers au fur et à mesure que des versions plus récentes sont ajoutées**, le serveur de rapports ajoute un numéro au nom du fichier pour le distinguer des fichiers existants qui portent le même nom.  
   
