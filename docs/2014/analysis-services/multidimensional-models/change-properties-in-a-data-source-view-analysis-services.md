@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076735"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
@@ -77,7 +77,7 @@ ms.locfileid: "66076735"
 |Description|Fournit la description de la colonne. Si la colonne de base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de colonne dans une table ou une vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une colonne dans une table ou une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des colonnes de tables ou de vues. Vous pouvez modifier cette propriété.|  
 |Longueur|Indique la longueur maximale de la colonne, en fonction des données de la colonne dans la vue ou la table sous-jacente.|  
-|Nom|Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
+|Créer une vue d’abonnement|Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   

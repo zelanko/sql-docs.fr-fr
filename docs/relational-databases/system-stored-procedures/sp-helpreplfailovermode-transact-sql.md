@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865281"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retourne la valeur entière du mode de basculement et est un **sortie** paramètre. *failover_mode_id* est un **tinyint** avec une valeur par défaut **0**. Elle retourne **0** pour la mise à jour immédiate et **1** en file d’attente de la mise à jour.  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+ [ **@failover_mode=** ] **'***failover_mode***'OUTPUT**  
  Renvoie le mode dans lequel les modifications sont effectuées au niveau de l'Abonné. *failover_mode* est un **nvarchar (10)** avec NULL comme valeur par défaut. Est un **sortie** paramètre.  
   
 |Value|Description|  

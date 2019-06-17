@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626772"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
@@ -62,10 +62,10 @@ ms.locfileid: "65626772"
 |memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire du planificateur. Cette colonne n'accepte pas la valeur NULL.|  
 |task_memory_object_address|**varbinary(8)**|Adresse mémoire de l'objet mémoire de la tâche. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expose le quantum de planificateur utilisé par SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures <br><br> Temps processeur total consommé par ce planificateur, comme indiqué par les travailleurs non préemptif. N'accepte pas la valeur NULL.|
+| total_cpu_usage_ms |**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur <br><br> Temps processeur total consommé par ce planificateur, comme indiqué par les travailleurs non préemptif. N'accepte pas la valeur NULL.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indique la limitation basée sur [Service Level Objective](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sera toujours 0 pour les versions non-Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autorise la valeur NULL.|
-|total_scheduler_delay_ms|**bigint**|**S’applique aux**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures <br><br> Délai entre un travailleur du basculement et un autre changement dans. Peut être dû travailleurs preemptive, ce qui peut retarder la planification du processus de travail non préemptif suivant, ou en raison du système d’exploitation planifier des threads à partir d’autres processus. N'accepte pas la valeur NULL.|
-|ideal_workers_limit|**Int**|**S’applique aux**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures <br><br> Nombre de travaux doit idéalement être sur le planificateur. Si les travaux en cours dépassent la limite en raison de la charge de la tâche déséquilibré, une fois qu’ils deviennent inactifs, ils seront supprimés. N'accepte pas la valeur NULL.|
+|total_scheduler_delay_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur <br><br> Délai entre un travailleur du basculement et un autre changement dans. Peut être dû travailleurs preemptive, ce qui peut retarder la planification du processus de travail non préemptif suivant, ou en raison du système d’exploitation planifier des threads à partir d’autres processus. N'accepte pas la valeur NULL.|
+|ideal_workers_limit|**Int**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et ultérieur <br><br> Nombre de travaux doit idéalement être sur le planificateur. Si les travaux en cours dépassent la limite en raison de la charge de la tâche déséquilibré, une fois qu’ils deviennent inactifs, ils seront supprimés. N'accepte pas la valeur NULL.|
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations

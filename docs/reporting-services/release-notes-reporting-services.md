@@ -1,20 +1,20 @@
 ---
 title: Notes de publication pour (SSRS) 2017 et versions ultérieures | Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283292"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037850"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notes de publication de SQL Server Reporting Services (SSRS) 2017 et versions ultérieures
 
@@ -86,7 +86,7 @@ Le problème suivant a été résolu :
 | La taille du texte ne s’adapte pas si pageHeight est inférieur à 0,5 pouce. | &nbsp; |
 | Un blocage se produit dans la base de données du catalogue SSRS lorsqu’il est utilisé avec CRM. | &nbsp; |
 | Les en-têtes de colonne alignés verticalement s’affichent mal lors du défilement vers le bas dans un rapport. | &nbsp; |
-| Les utilisateurs ajoutés au rôle de création de rapports SCOM ne peuvent pas accéder au portail web SSRS. | &nbsp; |
+| Les utilisateurs ajoutés au rôle de création de rapports de System Center Operations Manager ont accès bloqué au portail web SSRS. | &nbsp; |
 | Caractères thaïlandais n’est pas été correctement exportés dans le fichier PDF. | &nbsp; |
 | Changement de comportement du rôle Visiteur. | &nbsp; |
 | rc:Toolbar=false ne fonctionne pas dans Express Edition. | &nbsp; |

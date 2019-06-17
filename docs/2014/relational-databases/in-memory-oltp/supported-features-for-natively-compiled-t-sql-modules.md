@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155717"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
@@ -172,7 +172,7 @@ ms.locfileid: "63155717"
 ##  <a name="los"></a> Limitations sur le tri  
  Vous pouvez trier plus de 8000 lignes dans une requête qui utilise [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Toutefois, sans [Clause ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) peut trier jusqu’à 8000 lignes (moins s’il existe des jointures).  
   
- Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, vous obtenez le message d’erreur : **Msg 41398, niveau 16, état 1, procédure  *\<Nom_procédure >*, ligne  *\<lineNumber >* l’opérateur TOP peut retourner un maximum de 8 192 lignes ;  *\<nombre >* a été demandée.**  
+ Si votre requête utilise à la fois l’opérateur [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) et une [Clause ORDER BY&#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), vous pouvez spécifier jusqu’à 8192 lignes pour l’opérateur TOP. Si vous spécifiez plus de 8 192 lignes, vous obtenez le message d’erreur : **Msg 41398, niveau 16, état 1, procédure  *\<Nom_procédure >* , ligne  *\<lineNumber >* l’opérateur TOP peut retourner un maximum de 8 192 lignes ;  *\<nombre >* a été demandée.**  
   
  Si vous n'avez pas de clause TOP, triez les lignes avec ORDER BY.  
   

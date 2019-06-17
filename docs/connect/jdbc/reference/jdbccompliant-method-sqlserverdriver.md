@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9735b94f6b888f3ee83f7c9e807d4d8ecef22cdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672847"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803205"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Méthode jdbcCompliant (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +38,10 @@ public boolean jdbcCompliant()
 ## <a name="return-value"></a>Valeur retournée  
  **true** si le pilote JDBC répond à la configuration minimale requise. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode jdbcCompliant est spécifiée par la méthode jdbcCompliant dans l’interface java.sql.Driver.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver, membres](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

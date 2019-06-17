@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155369"
 ---
 # <a name="create-clustered-indexes"></a>Créer des index cluster
@@ -80,11 +80,11 @@ ms.locfileid: "63155369"
   
 1.  Dans l'Explorateur d'objets, développez la table sur laquelle vous souhaitez créer un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...** .  
   
 3.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 5.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la case de la colonne de la table à ajouter à l’index cluster.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63155369"
   
 1.  Dans l'Explorateur d'objets, développez la base de données sur laquelle vous souhaitez créer une table avec un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Tables** et sélectionnez **Nouvelle table...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Tables** et sélectionnez **Nouvelle table...** .  
   
 3.  Créez une table comme vous le feriez normalement. Pour plus d’informations, consultez [Créer des tables &#40;moteur de base de données&#41;](../tables/create-tables-database-engine.md).  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62957152"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
@@ -43,7 +43,7 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @action = ] 'action'` L’action à entreprendre pour la connexion spécifiée. *action* est **varchar (10)**, sans valeur par défaut. Lorsque *action*est **supprimer**, **sp_manage_jobs_by_login** supprime tous les travaux détenus par *nom_connexion_propriétaire_actuel*. Lorsque *action* est **RÉAFFECTER**, tous les travaux sont affectés à *nom_connexion_nouveau_propriétaire*.  
+`[ @action = ] 'action'` L’action à entreprendre pour la connexion spécifiée. *action* est **varchar (10)** , sans valeur par défaut. Lorsque *action*est **supprimer**, **sp_manage_jobs_by_login** supprime tous les travaux détenus par *nom_connexion_propriétaire_actuel*. Lorsque *action* est **RÉAFFECTER**, tous les travaux sont affectés à *nom_connexion_nouveau_propriétaire*.  
   
 `[ @current_owner_login_name = ] 'current_owner_login_name'` Le nom de connexion du propriétaire du travail en cours. *nom_connexion_propriétaire_actuel* est **sysname**, sans valeur par défaut.  
   

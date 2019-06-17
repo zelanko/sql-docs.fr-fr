@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855343"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Création d'une solution et d'une source de données (Didacticiel sur l'exploration de données intermédiaire)
@@ -69,13 +69,13 @@ ms.locfileid: "62855343"
   
 |Scénario|Données incluses dans la vue de source de données|  
 |--------------|-------------------------------------------|  
-|[Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|États des ventes mensuels pour les versions de vélos dans les différentes régions, collectés comme une seule vue.|  
+|[Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|États des ventes mensuels pour les versions de vélos dans les différentes régions, collectés comme une seule vue.|  
 |[Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Une table contenant la liste des commandes clients, et une table imbriquée affichant les achats individuels pour chaque client.|  
 |[Leçon 4 : Création d’un scénario Sequence Clustering &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Les mêmes données que celles utilisées pour l'analyse du panier d'achat, avec en plus un identificateur qui affiche l'ordre dans lequel les éléments ont été achetés.|  
 |[Leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Une seule table contenant des données de suivi des performances préliminaires provenant d'un centre d'appels.|  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Projets d’exploration de données](../../2014/analysis-services/data-mining/data-mining-projects.md)   

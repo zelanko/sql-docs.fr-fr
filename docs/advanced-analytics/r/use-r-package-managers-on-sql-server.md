@@ -3,17 +3,17 @@ title: Utilisation des gestionnaires de package R - Services de SQL Server Machi
 description: Utiliser des commandes R standards comme install.packages pour ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/29/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6012fb1a3376c00a64239e0fbf10115b8a4367d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642265"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140776"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Utiliser des gestionnaires de packages R pour installer des packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ Cette procédure utilise RGui, mais vous pouvez utiliser RTerm ou tout autre R d
 
 ## <a name="install-a-package-using-rgui"></a>Installer un package à l’aide de RGui
 
-1. [Déterminer l’emplacement de la bibliothèque de l’instance](installing-and-managing-r-packages.md). Accédez au dossier où sont installés les outils R. Par exemple, le chemin d’accès par défaut pour une instance par défaut de SQL Server 2017 est comme suit : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Déterminer l’emplacement de la bibliothèque de l’instance](../package-management/default-packages.md). Accédez au dossier où sont installés les outils R. Par exemple, le chemin d’accès par défaut pour une instance par défaut de SQL Server 2017 est comme suit : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. Cliquez sur RGui.exe, puis sélectionnez **exécuter en tant qu’administrateur**. Si vous n’avez pas les autorisations requises, contactez l’administrateur de base de données et fournir une liste des packages que vous avez besoin.
 

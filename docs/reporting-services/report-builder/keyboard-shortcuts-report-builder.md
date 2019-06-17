@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581185"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037863"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Quand vous créez et modifiez des rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l’environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  
@@ -89,9 +89,8 @@ ms.locfileid: "65581185"
 |Effectuer un zoom arrière sur la zone de la vue cartographique lorsqu'un point de vue de la carte est sélectionné.|Ctrl+Signe moins (-)|  
 |Mode d'accélérateur pour les fonctions de panoramique et de zoom avant sur la zone de la vue cartographique lorsqu'un point de vue de la carte est sélectionné.|Ctrl+clic gauche|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Vue Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glossaire &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+ [Mode Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+
   

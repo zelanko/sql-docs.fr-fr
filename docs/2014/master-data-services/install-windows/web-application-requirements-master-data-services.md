@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65482885"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
@@ -81,7 +81,7 @@ ms.locfileid: "65482885"
   
 ### <a name="accounts-and-permissions"></a>Comptes et autorisations  
   
-|Type|Description|  
+|type|Description|  
 |----------|-----------------|  
 |Compte Windows|Vous devez ouvrir une session sur l'ordinateur serveur Web avec un compte Windows qui a l'autorisation de configurer des rôles, des services de rôle et des fonctionnalités Windows, et créer et gérer des pools d'applications, des sites Web et des applications Web dans IIS sur l'ordinateur local.|  
 |Compte de service|Lorsque vous créez l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], vous devez spécifier une identité pour le pool d'applications dans lequel elle s'exécute. Ce compte peut être différent du compte de service spécifié lors de la création de la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Cette identité doit être un compte d'utilisateur de domaine et est ajoutée au rôle de base de données mds_exec dans la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour l'accès aux bases de données. Pour plus d’informations, consultez [Connexions, utilisateurs et rôles de base de données &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). Ce compte est également ajouté à un groupe Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], **MDS_ServiceAccounts**, qui est autorisé à accéder au répertoire de compilation temporaire, **MDSTempDir**, dans le système de fichiers. Pour plus d’informations, consultez [Autorisations d’accès aux dossiers et aux fichiers &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> Le compte du pool d'applications a besoin de l'autorisation VIEW SERVER STATE pour éviter les erreurs de serveur. Par exemple, la commande MDS Validate Version échoue avec une erreur de serveur. Pour plus d'informations, consultez [Échec de la commande MDS Validate Version avec une erreur de serveur dans SQL Server 2012 et SQL Server 2014](https://go.microsoft.com/fwlink/p/?LinkId=526304)|  
