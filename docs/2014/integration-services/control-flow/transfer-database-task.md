@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62830148"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
@@ -32,7 +32,7 @@ ms.locfileid: "62830148"
 ## <a name="transfer-of-databases-between-versions-of-sql-server"></a>Transférer des bases de données entre des versions de SQL Server  
  La tâche de transfert de bases de données peut transférer une base de données entre des instances de différentes versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  La tâche de transfert de bases de données n'indique pas les stades intermédiaires de l'avancement du transfert des messages d'erreur : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873407"
 ---
 # <a name="system-data-collection-set-reports"></a>Rapports de jeux d'éléments de collecte de données système
@@ -56,7 +56,7 @@ ms.locfileid: "62873407"
  La table située au-dessous du graphique répertorie les heures de collecte de données et les données d'utilisation correspondantes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sous-rapport Utilisation du disque pour la base de données : <nom_base_de_données>  
- Le sous-rapport **Utilisation du disque pour la base de données :**_<nom_base_de_données>_ s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
+ Le sous-rapport **Utilisation du disque pour la base de données :** _<nom_base_de_données>_ s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
   
 |Category|Définition|  
 |--------------|----------------|  

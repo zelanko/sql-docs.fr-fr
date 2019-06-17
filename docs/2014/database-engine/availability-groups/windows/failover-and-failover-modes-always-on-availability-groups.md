@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814494"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité AlwaysOn)
@@ -66,7 +66,7 @@ ms.locfileid: "62814494"
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Basculement automatique|Non|Non|Oui|  
 |Basculement manuel planifié|Non|Oui|Oui|  
-|basculement forcé|Oui|Oui|Oui**<sup>*</sup>**|  
+|basculement forcé|Oui|Oui|Oui **<sup>*</sup>**|  
   
  **<sup>*</sup>**  Si vous exécutez une commande de basculement forcé sur un réplica secondaire synchronisé, le réplica secondaire comporte de la même manière que pour un basculement manuel.  
   

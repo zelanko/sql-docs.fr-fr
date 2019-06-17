@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62788340"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
@@ -146,7 +146,7 @@ ms.locfileid: "62788340"
  Spécifiez vos préférences d'écouteur pour ce groupe de disponibilité, comme suit :  
   
  **Nom DNS de l'écouteur**  
- Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets (**-**) et des traits d’union (**_**), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
+ Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets ( **-** ) et des traits d’union ( **_** ), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
   
 > [!IMPORTANT]  
 >  Si vous entrez un nom d’écouteur DNS (ou un numéro de port) non valide dans l’onglet **Écouteur** , le bouton **Suivant** est désactivé dans la page **Spécifier les réplicas** .  
@@ -165,10 +165,10 @@ ms.locfileid: "62788340"
   
  Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. Notez que la grille est vide tant que vous n'avez pas ajouté le premier sous-réseau.  
   
- Colonne**Sous-réseau**   
+ Colonne**Sous-réseau**  
  Affiche l'adresse de sous-réseau que vous avez sélectionnée pour chaque sous-réseau ajouté pour l'écouteur.  
   
- Colonne**Adresse IP**   
+ Colonne**Adresse IP**  
  Affiche l'adresse IPv4 ou IPv6 que vous avez spécifiée pour un sous-réseau donné.  
   
  **Ajouter**  

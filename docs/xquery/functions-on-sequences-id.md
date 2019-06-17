@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62933693"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
@@ -177,7 +177,7 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la version à deux arguments de **id()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la version à deux arguments de **id()** .  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nécessite que le type d’argument de **id()** pour être un sous-type de xs : IDREF *.  
   

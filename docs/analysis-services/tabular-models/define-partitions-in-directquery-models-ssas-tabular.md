@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019299"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Définition de partitions dans les modèles DirectQuery
@@ -69,7 +69,7 @@ ms.locfileid: "63019299"
   
  Il existe deux options de traitement pour la partition DirectQuery. Pour définir cette propriété, utilisez le **Gestionnaire de partitions** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis sélectionnez la propriété **Option de traitement** . Le tableau suivant répertorie les valeurs de cette propriété, et décrit les effets de chaque valeur lorsqu'elle est associée à la propriété DirectQueryUsage sur la chaîne de connexion :  
   
-|Propriété**Chaîne de connexion** |Propriété**Option de traitement** |Remarques|  
+|Propriété**Chaîne de connexion**|Propriété**Option de traitement**|Remarques|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|Ne jamais traiter cette partition|Lorsque le modèle utilise DirectQuery uniquement, le traitement n'est jamais nécessaire.<br /><br /> Dans les modèles hybrides, vous pouvez configurer la partition DirectQuery de façon à ce qu'elle ne soit jamais traitée. Par exemple, si vous effectuez une opération sur un jeu de données très volumineux et vous ne souhaitez pas que les résultats complets soient ajoutés dans le cache, vous pouvez spécifier que la partition DirectQuery inclut l'union des résultats pour toutes les autres partitions dans la table, et ne jamais traiter l'union. Les requêtes transmises à la source relationnelle ne sont pas affectées, et les requêtes sur des données en mémoire cache associent les données des autres partitions.|  
 |DataView=Sample<br /><br /> S’applique aux modèles tabulaires à l’aide d’exemples de vues de données|Autoriser le traitement de la partition|Si le modèle utilise des exemples de données, vous pouvez traiter la table pour retourner un jeu de données filtré qui fournit des signaux visuels pendant la conception du modèle.|  
