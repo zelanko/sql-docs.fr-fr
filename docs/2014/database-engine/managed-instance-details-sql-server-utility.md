@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774341"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Détails de l'instance gérée (utilitaire SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62774341"
   
  La séquence des colonnes en mode Liste peut être modifiée en les faisant glisser vers la gauche ou la droite. Les colonnes en mode Liste peuvent être ajoutées ou supprimées en cliquant avec le bouton droit sur leurs en-tête et en les sélectionnant ou désélectionnant. Le menu contextuel offre également des options de tri. Le tri peut également être activé en cliquant en haut d'un nom de colonne.  
   
- Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)**. Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Pour accéder aux options de filtre du mode Liste de l’utilitaire, cliquez avec le bouton droit sur le nœud **Instances managées** dans le volet de navigation de l’Explorateur de l’utilitaire et sélectionnez **Filtre**. Une fois que les paramètres de filtrage sont implémentés, le nœud **Instances managées** de l’Explorateur de l’utilitaire est étiqueté **Instances managées (filtré)** . Pour plus d’informations, consultez [Paramètres de filtre &#40;Explorateur d’objets et Explorateur de l’utilitaire&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  Par défaut, les colonnes suivantes affichent des informations sur l'état d'intégrité de chaque instance managée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

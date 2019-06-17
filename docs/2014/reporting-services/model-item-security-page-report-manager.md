@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f45169a2fdc8fdc4d56cb27a8bf6348a3c3c1a29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108228"
 ---
 # <a name="model-item-security-page-report-manager"></a>Page Sécurité de l'élément de modèle (Gestionnaire de rapports)
@@ -71,7 +71,7 @@ ms.locfileid: "66108228"
  Sélectionnez cette option pour hériter des paramètres de sécurité de l'élément parent.  
   
  **Affecter une autorisation de lecture pour les utilisateurs et groupes suivants (séparés par des points-virgules)**  
- Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes sous ce format :  *\<domaine >\\< compte\>*.  
+ Sélectionnez cette option pour spécifier le compte d'utilisateur ou de groupe pour lequel vous définissez l'accès. Si vous utilisez la sécurité par défaut, les comptes d'utilisateur et de groupe sont des comptes de domaine Windows. Spécifiez les comptes sous ce format :  *\<domaine >\\< compte\>* .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide du serveur de rapports dans Management Studio via la touche F1](tools/report-server-in-management-studio-f1-help.md)  
