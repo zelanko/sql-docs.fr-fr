@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988099"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
@@ -40,7 +40,7 @@ ms.locfileid: "62988099"
 |--------------|-----------------|  
 |Source de données|Indique la source de données dans la vue de source de données dont vous consultez les propriétés|  
 |Description|Fournit la description de la vue de source de données.|  
-|Nom|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
+|Créer une vue d’abonnement|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
 |NameMatchingCriteria|Critères de correspondance de noms pour la source de données. La valeur par défaut est (none) si des relations clé primaire/clé étrangère ont été détectées par l'Assistant Vue de source de données. Que cette propriété ait été définie ou non par l'Assistant Vue de source de données, vous pouvez spécifier une valeur ici. S'il existe des relations de base de données et que vous spécifiez des critères de correspondance de noms, les deux seront utilisés pour déterminer les relations entre les tables existantes et les nouvelles tables ajoutées.|  
 |RetrieveRelationships|Indique si les relations sont récupérées dans la base de données. La valeur par défaut est True.|  
 |SchemaRestriction|Indique les restrictions, le cas échéant, sur les schémas récupérés dans une source de données. Par défaut, aucune restriction de schéma n'est définie.|  
@@ -54,7 +54,7 @@ ms.locfileid: "62988099"
 |DataSource|Définit la source de données de l'objet. Vous ne pouvez pas modifier cette propriété.|  
 |Description|Fournit la description de la table, la vue ou la requête nommée. Si la vue ou la table de la base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de table ou de vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une table ou d’une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des tables ou des vues. Vous pouvez modifier cette propriété.|  
-|Créer une vue d’abonnement|Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
+|Nom|Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
 |QueryDefinition|Définit une requête nommée. Cette propriété ne s'applique qu'aux requêtes nommées et vous ne pouvez pas la modifier directement. Pour modifier cette propriété, vous devez modifier la requête nommée.|  
 |schéma|Indique le schéma de base de données applicable à la table, la vue ou la requête nommée. Cette propriété n’est pas modifiable.|  
 |TableType|Indique le type de table de la table, de la vue ou de la requête nommée. Cette propriété n’est pas modifiable.|  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072849"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
@@ -100,7 +100,7 @@ ms.locfileid: "66072849"
      **Dossier de destination**  
      Affiche le nom du dossier de l’instance de destination de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans lequel la partition locale doit être synchronisée. Si cette colonne contient la valeur « (Par défaut) », l'emplacement par défaut de l'instance de destination contient la partition locale.  
   
-     Cliquez sur le bouton avec des points de suspension (**...**) pour ouvrir la boîte de dialogue **Rechercher un dossier distant** et spécifier un dossier sur l’instance de destination dans lequel synchroniser les partitions locales stockées à l’emplacement sélectionné.  
+     Cliquez sur le bouton avec des points de suspension ( **...** ) pour ouvrir la boîte de dialogue **Rechercher un dossier distant** et spécifier un dossier sur l’instance de destination dans lequel synchroniser les partitions locales stockées à l’emplacement sélectionné.  
   
     > [!NOTE]  
     >  Cette colonne ne peut pas être modifiée pour les partitions locales stockées dans l'emplacement par défaut pour l'instance source.  
@@ -144,12 +144,12 @@ ms.locfileid: "66072849"
      **Serveur de destination**  
      Affiche le nom de l’instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle les partitions distantes stockées à l’emplacement spécifié dans **Serveur source** et **Dossier source** doivent être synchronisées.  
   
-     Cliquez sur le bouton avec des points de suspension (**...**) pour ouvrir la boîte de dialogue **Gestionnaire de connexions** et spécifier une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle synchroniser les partitions distantes stockées à l’emplacement spécifié.  
+     Cliquez sur le bouton avec des points de suspension ( **...** ) pour ouvrir la boîte de dialogue **Gestionnaire de connexions** et spécifier une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans laquelle synchroniser les partitions distantes stockées à l’emplacement spécifié.  
   
      **Dossier de destination**  
      Affiche le nom du dossier de l'instance de destination [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers lequel la partition distante doit être synchronisée. Si cette colonne contient la valeur « (Par défaut) », l'emplacement par défaut de l'instance de destination doit contenir la partition distante.  
   
-     Cliquez sur le bouton avec des points de suspension (**...**) pour ouvrir la boîte de dialogue **Rechercher un dossier distant** et spécifier un dossier sur l’instance de destination dans lequel synchroniser les partitions distantes stockées à l’emplacement sélectionné.  
+     Cliquez sur le bouton avec des points de suspension ( **...** ) pour ouvrir la boîte de dialogue **Rechercher un dossier distant** et spécifier un dossier sur l’instance de destination dans lequel synchroniser les partitions distantes stockées à l’emplacement sélectionné.  
   
      **Taille**  
      Affiche la taille estimée des partitions distantes stockées dans l'emplacement.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076554"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
@@ -61,7 +61,7 @@ ms.locfileid: "66076554"
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées qui correspondent aux tables de dimension dans le nouveau cube.  
   
- Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit (**>**) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches (**>>**) pour déplacer toutes les dimensions dans la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez une ou plusieurs dimensions dans la liste **Dimensions partagées** et cliquez sur le bouton fléché droit ( **>** ) pour les déplacer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches ( **>>** ) pour déplacer toutes les dimensions dans la liste.  
   
  Si une dimension existante n'apparaît pas dans la liste et que vous pensez qu'elle le devrait, vous pouvez cliquer sur **Précédent** et modifier les paramètres de type de table pour une ou plusieurs tables. Une dimension existante doit également être liée à au moins une des tables de faits du cube pour apparaître dans la liste des **dimensions partagées** .  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66076554"
   
  Pour supprimer un objet dans l'arborescence du cube, désactivez la case à cocher en regard de celle-ci. Désactiver la case à cocher en regard d'un objet supprime également tous les objets situés sous celui-ci. Les dépendances entre les objets sont appliquées. Par conséquent, si vous supprimez un attribut, tous les niveaux de la hiérarchie dépendants de l'attribut sont également supprimés. Par exemple, la désactivation d'une case à cocher en regard d'une hiérarchie efface les cases à cocher en regard de tous les niveaux de la hiérarchie et supprime les niveaux ainsi que les hiérarchies. Il n'est pas possible de supprimer l'attribut clé d'une dimension.  
   
- Vous pouvez renommer une dimension, attribut, hiérarchie ou un niveau soit en cliquant sur le nom ou en cliquant sur le nom, puis sur le menu contextuel en cliquant sur **renommer \<objet >**, où  **\< objet >** est **Dimension**, **attribut**, ou **niveau**.  
+ Vous pouvez renommer une dimension, attribut, hiérarchie ou un niveau soit en cliquant sur le nom ou en cliquant sur le nom, puis sur le menu contextuel en cliquant sur **renommer \<objet >** , où  **\< objet >** est **Dimension**, **attribut**, ou **niveau**.  
   
  Il n’existe pas nécessairement une relation un-à-un entre le nombre de tables de dimension définies dans la page **Identifier les tables de faits et de dimension** de l’Assistant et le nombre de dimensions répertoriées dans cette page de l’Assistant. Selon les relations entre les tables dans la vue de source de données, l'Assistant peut utiliser deux tables ou plus pour générer une dimension (comme requis, par exemple, par un schéma en flocons).  
   

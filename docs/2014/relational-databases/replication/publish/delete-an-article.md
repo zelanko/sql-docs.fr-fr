@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960868"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
@@ -35,13 +35,13 @@ ms.locfileid: "62960868"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Pour supprimer un article d'une publication transactionnelle ou d'instantané  
   
-1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication**. Affectez la valeur **1** à **@force_invalidate_snapshot**.  
+1.  Exécutez [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication** . Affectez la valeur **1** à **@force_invalidate_snapshot** .  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Pour supprimer un article d'une publication de fusion  
   
-1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication**. Si nécessaire, affectez la valeur **1** à **@force_invalidate_snapshot** et la valeur **1** à **@force_reinit_subscription**.  
+1.  Exécutez [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) pour supprimer un article spécifié par **@article** d’une publication spécifiée par **@publication** . Si nécessaire, affectez la valeur **1** à **@force_invalidate_snapshot** et la valeur **1** à **@force_reinit_subscription** .  
   
 2.  (Facultatif) Pour supprimer entièrement l'objet publié de la base de données, exécutez la commande `DROP <objectname>` au niveau du serveur de publication dans la base de données de publication.  
   

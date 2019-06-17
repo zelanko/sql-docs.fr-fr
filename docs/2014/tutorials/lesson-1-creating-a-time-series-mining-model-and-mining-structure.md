@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678450"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : Création d’une structure d’exploration de données et de modèle d’exploration de données de série chronologique
@@ -195,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  Dans la leçon suivante, vous allez ajouter un modèle d’exploration de données pour le **Forecasting_MIXED** structure d’exploration de données que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

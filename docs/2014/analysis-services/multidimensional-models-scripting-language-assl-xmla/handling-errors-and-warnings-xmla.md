@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702132"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
@@ -50,7 +50,7 @@ ms.locfileid: "62702132"
 ### <a name="fault-code-information"></a>Informations de code d'erreur  
  Le tableau suivant présente les informations de code d'erreur XMLA contenues dans la section détaillée de la réponse SOAP. Les colonnes représentent les attributs d'une erreur dans la section détaillée d'une erreur SOAP.  
   
-|Nom de colonne|Type|Description|Null autorisé<sup>1</sup>|  
+|Nom de colonne|type|Description|Null autorisé<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
 |`ErrorCode`|`UnsignedInt`|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Non|  
 |`WarningCode`|`UnsignedInt`|Code de retour qui indique une condition d'avertissement. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Oui|  

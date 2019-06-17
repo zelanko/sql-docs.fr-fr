@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010935"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Définir le compte du service du Lanceur de démon de filtre de texte intégral
@@ -32,7 +32,7 @@ ms.locfileid: "66010935"
   
 1.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-2.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit **Lanceur de démon de filtre de recherche en texte intégral SQL (*`instance name`*)** , puis cliquez sur **propriétés**.  
+2.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit **Lanceur de démon de filtre de recherche en texte intégral SQL ( *`instance name`* )** , puis cliquez sur **propriétés**.  
   
 3.  Cliquez sur l’onglet **Ouvrir une session** de la boîte de dialogue, puis sélectionnez ou entrez le nom du compte sous lequel chaque processus créé par le service du Lanceur de démon de filtre de texte intégral SQL doit s’exécuter.  
   

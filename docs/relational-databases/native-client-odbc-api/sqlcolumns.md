@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014611"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
@@ -42,7 +42,7 @@ ms.locfileid: "63014611"
 |Nom de colonne|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les **varchar (max)** des types de données.|  
-|TYPE_NAME|Retourne « varchar », « varbinary » ou « nvarchar » pour le **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** des types de données.|  
+|TYPE_NAME|Retourne « varchar », « varbinary » ou « nvarchar » pour le **varchar (max)** , **varbinary (max)** , et **nvarchar (max)** des types de données.|  
 |COLUMN_SIZE|Retourne SQL_SS_LENGTH_UNLIMITED pour **varchar (max)** types de données indiquant que la taille de la colonne est illimitée.|  
 |BUFFER_LENGTH|Retourne SQL_SS_LENGTH_UNLIMITED pour **varchar (max)** types de données indiquant que la taille de la mémoire tampon est illimitée.|  
 |SQL_DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les **varchar (max)** des types de données.|  

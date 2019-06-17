@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771192"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
@@ -183,7 +183,7 @@ ms.locfileid: "62771192"
 |seq_num|Numéro de la ligne **xcbcdc_staged_transactions** pour la transaction active (commence par 0).|  
 |data_start_cn|Numéro de modification (CN) pour la première modification des données de cette ligne.|  
 |data_end_cn|Numéro de modification (CN) pour la dernière modification des données de cette ligne.|  
-|données|Modifications intermédiaires pour la transaction sous forme d'un objet BLOB.|  
+|data|Modifications intermédiaires pour la transaction sous forme d'un objet BLOB.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur de capture de données modifiées pour Oracle par Attunity](change-data-capture-designer-for-oracle-by-attunity.md)  
