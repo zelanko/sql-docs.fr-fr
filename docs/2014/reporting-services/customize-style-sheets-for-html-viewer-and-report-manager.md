@@ -1,24 +1,20 @@
 ---
 title: Personnaliser des feuilles de Style pour la visionneuse HTML et le Gestionnaire de rapports | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568268"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit de style en cascade par défaut des fichiers de feuilles (.css) qui définissent des styles pour le **rapport** barre d’outils dans la visionneuse HTML et pour le Gestionnaire de rapports. Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.  
@@ -37,9 +33,6 @@ ms.locfileid: "63264856"
 |-----------------|-----------------|  
 |Htmlviewer.css|Est un exemple de feuille de style que vous pouvez utiliser comme modèle pour créer des styles personnalisés pour la barre d'outils **rapport** dans la visionneuse HTML.<br /><br /> Les styles par défaut utilisés par la visionneuse HTML sont compilés dans le serveur de rapports. Le fichier Htmlviewer.css constitue un exemple des styles que la visionneuse utilise.|  
 |ReportingServices.css|Définit des styles pour le Gestionnaire de rapports.|  
-  
-> [!NOTE]  
->  Les feuilles de style suivantes sont utilisées pour la documentation en ligne du Gestionnaire de rapports et ne doivent jamais être modifiés : SQL.CSS et Mailto.css. D'autres feuilles de style définissent des styles pour les rapports et le Gestionnaire de rapports qui s'ouvrent dans des composants WebPart SharePoint. Ces feuilles de styles sont Rswebparts.css, Sp_full.css et Sp_small.css. La modification de ces feuilles de style n'est pas recommandée. Pour plus d’informations sur la façon dont les composants WebPart sont utilisées, consultez [afficher et Explorer Native Mode rapports à l’aide de composants WebPart SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configuration de Reporting Services pour l'utilisation d'une feuille de style personnalisée  
  La feuille de style doit être un fichier de feuille de style en cascade (.css) valide et doit se trouver dans le dossier Styles. Par défaut, le dossier Styles se trouve dans \< *lecteur*> : \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  

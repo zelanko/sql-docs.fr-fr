@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f89ba75ab8d13960b3c86193862f5061f6727bb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079943"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
@@ -249,7 +249,7 @@ ms.locfileid: "66079943"
  Les étapes nécessaires à la mise à niveau des classeurs créés dans les versions antérieures de PowerPivot dépendent de la version de PowerPivot dans laquelle le classeur a été créé. Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Au-delà de l’Installation à serveur unique - PowerPivot pour Microsoft SharePoint  
- **Serveur Web frontal (WFE)** ou **intermédiaire :**: Pour utiliser un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint dans une batterie de serveurs SharePoint supérieure et installer des fonctionnalités PowerPivot supplémentaires dans la batterie de serveurs, exécutez le package de programme d’installation **spPowerPivot.msi** sur chacun des serveurs SharePoint. Le fichier spPowerPivot.msi installe les fournisseurs de données requis et l'outil de configuration PowerPivot pour SharePoint 2013.  
+ **Serveur Web frontal (WFE)** ou **intermédiaire :** : Pour utiliser un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint dans une batterie de serveurs SharePoint supérieure et installer des fonctionnalités PowerPivot supplémentaires dans la batterie de serveurs, exécutez le package de programme d’installation **spPowerPivot.msi** sur chacun des serveurs SharePoint. Le fichier spPowerPivot.msi installe les fournisseurs de données requis et l'outil de configuration PowerPivot pour SharePoint 2013.  
   
  Pour plus d'informations sur l'installation et la configuration du niveau intermédiaire, consultez :  
   

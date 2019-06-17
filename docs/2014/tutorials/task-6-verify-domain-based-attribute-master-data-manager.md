@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488951"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Tâche 6 : Vérification que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager
@@ -38,7 +38,7 @@ ms.locfileid: "65488951"
   
 8.  Répétez les étapes précédentes pour les autres États.  
   
-    |Code|Créer une vue d’abonnement|  
+    |Code|Nom|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  
@@ -56,7 +56,7 @@ ms.locfileid: "65488951"
     |NY|New York|  
     |OH|Ohio|  
     |OK|Oklahoma|  
-    |- ou -|Oregon|  
+    |\- ou -|Oregon|  
     |PA|Pennsylvanie|  
     |SC|Caroline du Nord|  
     |KS|Kansas|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 288f9e0d5a86e34db2fdd81163f229eff5275606
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064337"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>Modifications de comportement des fonctionnalités Analysis Services dans SQL Server 2014
@@ -102,7 +102,7 @@ ms.locfileid: "66064337"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>Le nouveau paramètre par défaut pour les demandes d'équilibrage de la charge a été modifié de Tourniquet (round robin) à Selon l'intégrité  
  Une application de service PowerPivot possède des paramètres par défaut qui déterminent la façon dont les demandes de données PowerPivot sont réparties entre plusieurs serveurs PowerPivot pour SharePoint dans une batterie. Dans la version précédente, le paramètre par défaut était **Tourniquet (round robin)** et les demandes étaient distribuées séquentiellement entre les serveurs disponibles. Dans cette version, la valeur par défaut est **Selon l'intégrité.** L'application de service PowerPivot utilise des statistiques d'intégrité du serveur, telles que la mémoire ou l'UC disponible, pour déterminer quelle instance de serveur obtient la demande xt.  
   
- Si vous avez mis à niveau votre serveur à partir de la version précédente, l'application de service PowerPivot conserve le paramètre par défaut précédent (**Tourniquet (round robin)**). Pour utiliser le paramètre de la méthode d'allocation **Selon l'intégrité** , vous devez modifier les paramètres de configuration. Pour plus d’informations, consultez [Créer et configurer une application de service PowerPivot](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
+ Si vous avez mis à niveau votre serveur à partir de la version précédente, l'application de service PowerPivot conserve le paramètre par défaut précédent (**Tourniquet (round robin)** ). Pour utiliser le paramètre de la méthode d'allocation **Selon l'intégrité** , vous devez modifier les paramètres de configuration. Pour plus d’informations, consultez [Créer et configurer une application de service PowerPivot](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compatibilité descendante](../../2014/getting-started/backward-compatibility.md)   

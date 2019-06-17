@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193039"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
@@ -167,7 +167,7 @@ ms.locfileid: "63193039"
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
--   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()**. Vous pouvez appliquer `xml` méthodes de type de données sur la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
+-   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()** . Vous pouvez appliquer `xml` méthodes de type de données sur la sortie de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Schémas XML individuels de la collection peuvent être obtenus en tant que `xml` instances du type de données en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
+ Schémas XML individuels de la collection peuvent être obtenus en tant que `xml` instances du type de données en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()** . Cela est illustré par l'exemple suivant.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : Extraction d’un schéma spécifique d’une collection de schémas XML  
  L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « <https://www.microsoft.com/books> » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
