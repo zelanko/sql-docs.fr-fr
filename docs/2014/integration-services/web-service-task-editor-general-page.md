@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054539"
 ---
 # <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
@@ -28,7 +28,7 @@ ms.locfileid: "66054539"
   
 ## <a name="options"></a>Options  
  **HTTPConnection**  
- Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  

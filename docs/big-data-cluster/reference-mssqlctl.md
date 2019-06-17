@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779239"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -56,7 +56,7 @@ Nom du cluster.
 #### `--controller-username -u`
 Compte d’utilisateur. Si vous ne souhaitez pas utiliser cette arg, vous pouvez définir la variable d’environnement CONTROLLER_USERNAME.
 #### `--controller-endpoint -e`
-Point de terminaison de contrôleur de cluster « https://host:port». Si vous ne souhaitez pas utiliser cette arg, vous pouvez utiliser la configuration de kube sur votre ordinateur. Vérifiez que la configuration se trouve à l’emplacement par défaut de <user home>/.kube/config ou utilisez le KUBECONFIG env-var.
+Point de terminaison de contrôleur de cluster « https://host:port ». Si vous ne souhaitez pas utiliser cette arg, vous pouvez utiliser la configuration de kube sur votre ordinateur. Vérifiez que la configuration se trouve à l’emplacement par défaut de <user home>/.kube/config ou utilisez le KUBECONFIG env-var.
 #### `--accept-eula -a`
 Acceptez-vous les termes du contrat de licence ? Oui/non. Si vous ne souhaitez pas utiliser cette arg, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « Oui »
 ### <a name="global-arguments"></a>Arguments globaux

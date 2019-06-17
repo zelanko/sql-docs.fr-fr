@@ -12,10 +12,10 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 93b02908a1341af18044c1c8a86dfd2e6024f8f3
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265360"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Démarrage rapide : Installer SQL Server et la création d’une base de données sous Ubuntu
@@ -156,7 +156,7 @@ Pour configurer SQL Server sur Ubuntu, exécutez les commandes suivantes dans un
 
 Pour créer une base de données, vous devez vous connecter avec un outil qui peut exécuter des instructions Transact-SQL sur le serveur SQL Server. Les étapes suivantes permettent d'installer les outils de ligne de commande de SQL Server : [sqlcmd](../tools/sqlcmd-utility.md) et [bcp](../tools/bcp-utility.md).
 
-Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu.  
+Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubuntu. 
 
 1. Importez les clés publiques GPG de référentiel.
 

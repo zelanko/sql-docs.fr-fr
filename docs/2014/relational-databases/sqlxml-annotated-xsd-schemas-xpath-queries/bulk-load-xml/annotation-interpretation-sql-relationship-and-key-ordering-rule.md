@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013508"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship et la règle de tri par clé (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013508"
 </xsd:schema>  
 ```  
   
- Comme le  **\<client >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement est conservé jusqu'à ce que le chargement en masse XML lit  **\</Customer >**. Dans le traitement du  **\<ordre >** nœud d’élément, le chargement en masse XML utilise `<sql:relationship>` pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de la **\<client >** élément, parent, car le  **\<ordre >** élément ne spécifie pas le **CustomerID** attribut. Cela signifie que la définition dans le  **\<client >** élément, vous devez spécifier le **CustomerID** attribut dans le schéma avant de le spécifier `<sql:relationship>`. Sinon, lorsque un  **\<ordre >** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder, et lorsque le code XML en bloc charge atteint le  **\</Order >** fin de balise, il envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la valeur de colonne de clé étrangère CustomerID.  
+ Comme le  **\<client >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement est conservé jusqu'à ce que le chargement en masse XML lit  **\</Customer >** . Dans le traitement du  **\<ordre >** nœud d’élément, le chargement en masse XML utilise `<sql:relationship>` pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de la **\<client >** élément, parent, car le  **\<ordre >** élément ne spécifie pas le **CustomerID** attribut. Cela signifie que la définition dans le  **\<client >** élément, vous devez spécifier le **CustomerID** attribut dans le schéma avant de le spécifier `<sql:relationship>`. Sinon, lorsque un  **\<ordre >** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder, et lorsque le code XML en bloc charge atteint le  **\</Order >** fin de balise, il envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la valeur de colonne de clé étrangère CustomerID.  
   
  Enregistrez le schéma fourni dans cet exemple sous le nom SampleSchema.xml.  
   

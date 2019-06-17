@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078902"
 ---
 # <a name="modifying-measures"></a>Modification des mesures
@@ -28,7 +28,7 @@ ms.locfileid: "66078902"
   
      Il est plus facile de modifier les propriétés de plusieurs éléments à la fois dans le cube lorsque la fenêtre des propriétés reste ouverte.  
   
-3.  Dans la fenêtre Propriétés, cliquez sur la liste **FormatString** , puis tapez **#,#**.  
+3.  Dans la fenêtre Propriétés, cliquez sur la liste **FormatString** , puis tapez **#,#** .  
   
 4.  Dans la barre d'outils de l'onglet **Structure de cube** , cliquez sur l'icône **Afficher la grille de mesures** à gauche.  
   

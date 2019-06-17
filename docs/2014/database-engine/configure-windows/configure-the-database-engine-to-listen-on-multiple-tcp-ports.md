@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811543"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
@@ -74,9 +74,9 @@ ms.locfileid: "62811543"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Pour configurer le moteur de base de données SQL Server de manière à écouter sur un port TCP supplémentaire  
   
-1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour**_<nom_instance>_.  
+1.  Dans le Gestionnaire de configuration SQL Server, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<nom_instance>_ .  
   
-2.  Développez **Protocoles pour**_<nom_instance>_, puis cliquez sur **TCP/IP**.  
+2.  Développez **Protocoles pour** _<nom_instance>_ , puis cliquez sur **TCP/IP**.  
   
 3.  Dans le volet droit, cliquez avec le bouton droit sur chaque adresse IP désactivée à activer, puis cliquez sur **Activer**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62811543"
   
 6.  Dans le volet gauche, cliquez sur **Services SQL Server**.  
   
-7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>**_SQL Server_, puis cliquez sur **Redémarrer**.  
+7.  Dans le volet droit, cliquez avec le bouton droit sur **<nom_instance>** _SQL Server_, puis cliquez sur **Redémarrer**.  
   
      Lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] redémarre, le journal des erreurs répertorie les ports sur lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est à l'écoute.  
   

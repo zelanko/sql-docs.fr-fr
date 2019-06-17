@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994114"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
@@ -35,7 +35,7 @@ Si vous souhaitez une vue d’ensemble de l’organisation des données dans [!I
 Pour obtenir des liens vers des vidéos et d’autres ressources de formation concernant [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consultez [En savoir plus sur Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Télécharger**  
-> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Pour télécharger [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** pour lancer une machine virtuelle avec SQL Server déjà installé.  
 > 
 > **Vous ne parvenez pas à créer un site web MDS ?**
@@ -44,7 +44,7 @@ Pour obtenir des liens vers des vidéos et d’autres ressources de formation co
 
 ## <a name="internet-explorer-and-silverlight"></a>Internet Explorer et Silverlight
 - Quand vous installez [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine Windows Server 2012, vous pouvez être amené à configurer la sécurité renforcée d’Internet Explorer pour autoriser le script du site de l’application web. Sinon, la navigation sur le site sur le serveur échoue.
-- Pour fonctionner dans l’application web, Silverlight 5 doit être installé sur l’ordinateur client. Si vous n’avez pas la version requise de Silverlight, vous êtes invité à l’installer quand vous accédez à une partie de l’application web qui l’utilise. Vous pouvez installer Silverlight 5 à partir de **[cet emplacement](https://www.microsoft.com/silverlight/)**.
+- Pour fonctionner dans l’application web, Silverlight 5 doit être installé sur l’ordinateur client. Si vous n’avez pas la version requise de Silverlight, vous êtes invité à l’installer quand vous accédez à une partie de l’application web qui l’utilise. Vous pouvez installer Silverlight 5 à partir de **[cet emplacement](https://www.microsoft.com/silverlight/)** .
 
 ## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure
 Par défaut, quand vous lancez une machine virtuelle Azure avec [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] déjà installé, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] est également installé. 
@@ -94,7 +94,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
-10. Dans le volet gauche, cliquez sur **Rôle Web Server (IIS)**, puis cliquez sur **Services de rôle**.
+10. Dans le volet gauche, cliquez sur **Rôle Web Server (IIS)** , puis cliquez sur **Services de rôle**.
 11. Dans la page **Services de rôle**, vérifiez que les services suivants sont sélectionnés, puis cliquez sur **Suivant**. Ces services sont requis pour [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] sur [!INCLUDE[winblue_server_2](../includes/winblue-server-2-md.md)].
 
     > [!WARNING]  

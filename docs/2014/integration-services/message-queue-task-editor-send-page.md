@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66323ccdb91076496f9796245c368697d9ebc8c3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057602"
 ---
 # <a name="message-queue-task-editor-send-page"></a>Éditeur de tâche MSMQ (page Envoyer)
@@ -28,7 +28,7 @@ ms.locfileid: "66057602"
   
 ## <a name="options"></a>Options  
  **UseEncryption**  
- Indiquez si le message doit être chiffré. La valeur par défaut est `False`.  
+ Indiquez si le message doit être chiffré. La valeur par défaut est `False`.  
   
  **EncryptionAlgorithm**  
  Si vous utilisez le chiffrement, définissez le nom de l'algorithme de chiffrement à utiliser. La tâche MSMQ peut utiliser les algorithmes RC2 et RC4. La valeur par défaut est **RC2**.  

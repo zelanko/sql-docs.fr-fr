@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259256"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL à C : Horodateur
@@ -51,4 +51,4 @@ Le tableau suivant présente les types de données à laquelle les données time
   
  [f] Il s’agit de la taille du type de données C correspondant.  
 
-Lorsque les données SQL timestamp sont converti en données caractères C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh* :*mm*:*ss*[.*f...*] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de secondes, tout le format doit être utilisé, quel que soit la précision du type de données timestamp SQL.)
+Lorsque les données SQL timestamp sont converti en données caractères C, la chaîne résultante est dans le «*aaaa*-*mm*-*jj* *hh* :*mm*:*ss*[.*f...* ] « format, où jusqu'à neuf chiffres peut être utilisé pour les fractions. Ce format n’est pas affecté par le paramètre de pays Windows®. (À l’exception de la virgule décimale et les fractions de secondes, tout le format doit être utilisé, quel que soit la précision du type de données timestamp SQL.)

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067301"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Déployer à partir de SQL Server Data Tools (SSAS Tabulaire)
@@ -54,7 +54,7 @@ ms.locfileid: "66067301"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Pour déployer une solution de modèle tabulaire  
   
--   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le **Build** menu, cliquez sur **déployer \<nom_projet >**.  
+-   Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], dans le **Build** menu, cliquez sur **déployer \<nom_projet >** .  
   
      La boîte de dialogue **Déployer** apparaît et indique l’état du déploiement des métadonnées et du traitement (sauf si la propriété Option de traitement a la valeur Ne pas traiter) de chaque table incluse dans le modèle. Lorsque le déploiement est terminé, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour vous connecter à l'instance d'Analysis Services et vérifier que le nouvel objet de base de données model a été créé ou utilisez une application de création de rapports cliente pour vous connecter au modèle déployé.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689063"
 ---
 # <a name="bcpinit"></a>bcp_init
@@ -91,7 +91,7 @@ eDirection
   
 -   Lors de la copie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la position ordinale d'une colonne du fichier de données doit être identique à la position ordinale de la colonne de la table de base de données. Lors de la copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** place les données selon la position ordinale de la colonne dans la table de base de données.  
   
--   Si un type de données de base de données est variable en longueur (par exemple, **varbinary (22)**) ou si une colonne de base de données peut contenir des valeurs null, les données dans le fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
+-   Si un type de données de base de données est variable en longueur (par exemple, **varbinary (22)** ) ou si une colonne de base de données peut contenir des valeurs null, les données dans le fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
   
  Pour modifier les valeurs de format de données spécifiés pour un fichier de données, appelez [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md).  
   

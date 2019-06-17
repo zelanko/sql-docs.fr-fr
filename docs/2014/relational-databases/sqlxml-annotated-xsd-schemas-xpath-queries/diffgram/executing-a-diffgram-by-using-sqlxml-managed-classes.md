@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3d8756bb3dc7b030541159c2aa127162907aa4b5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013051"
 ---
 # <a name="executing-a-diffgram-by-using-sqlxml-managed-classes"></a>Exécution d'un DiffGram à l'aide des classes managées SQLXML
@@ -52,7 +52,7 @@ ms.locfileid: "66013051"
 </ROOT>  
 ```  
   
- Le  **\<avant >** bloc inclut un  **\<client >** élément (**diffgr : ID = « Customer1 »**). Le  **\<DataInstance >** bloc inclut le correspondantes  **\<client >** élément avec même **id**. Le  **\<client >** élément dans le  **\<NewDataSet >** spécifie également **diffgr : HasChanges = « modified »**. Cela indique une opération de mise à jour et l'enregistrement de client de la table Cust est mis à jour en conséquence. Notez que si le **diffgr : HasChanges** attribut n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuées.  
+ Le  **\<avant >** bloc inclut un  **\<client >** élément (**diffgr : ID = « Customer1 »** ). Le  **\<DataInstance >** bloc inclut le correspondantes  **\<client >** élément avec même **id**. Le  **\<client >** élément dans le  **\<NewDataSet >** spécifie également **diffgr : HasChanges = « modified »** . Cela indique une opération de mise à jour et l'enregistrement de client de la table Cust est mis à jour en conséquence. Notez que si le **diffgr : HasChanges** attribut n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuées.  
   
  Voici le code pour un didacticiel application c# qui montre comment utiliser les Classes managées SQLXML pour exécuter le DiffGram précité et mettre à jour deux tables (Cust, Ord) vous créerez également dans le **tempdb** base de données.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083623"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
@@ -33,7 +33,7 @@ ms.locfileid: "66083623"
   
  ![structure du contenu pour le modèle de régression logistique](../media/skt-modelcontentstructure-logregc.gif "structure du contenu pour le modèle de régression logistique")  
   
- Par défaut, un modèle de régression logistique est affiché dans la **Visionneuse de l'algorithme MNN (Microsoft Neural Network)**. Avec cette visionneuse personnalisée, vous pouvez filtrer les attributs d'entrée et leurs valeurs, et consulter des graphiques qui illustrent comment ils affectent les sorties. Les info-bulles de la visionneuse montrent la probabilité et la finesse associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
+ Par défaut, un modèle de régression logistique est affiché dans la **Visionneuse de l'algorithme MNN (Microsoft Neural Network)** . Avec cette visionneuse personnalisée, vous pouvez filtrer les attributs d'entrée et leurs valeurs, et consulter des graphiques qui illustrent comment ils affectent les sorties. Les info-bulles de la visionneuse montrent la probabilité et la finesse associées à chaque paire de valeurs d'entrée et de sortie. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md).  
   
  Pour explorer la structure des entrées et des sous-réseaux, et pour consulter des statistiques détaillées, vous pouvez utiliser la Visionneuse de l'arborescence de contenu générique Microsoft. Vous pouvez cliquer sur n'importe quel nœud pour le développer et voir les nœuds enfants, ou consulter les poids et autres statistiques contenues dans le nœud.  
   

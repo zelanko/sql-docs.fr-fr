@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5ac76e77d1bd5eebd2e796a6a72463564cb3df3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896185"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
@@ -52,7 +52,7 @@ ms.locfileid: "62896185"
   
 3.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.  
   
-4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez vous connecter une source directement vers une destination sans transformation.) Pour garantir le bon fonctionnement de cet exemple, la sortie du composant en amont doit inclure au moins les colonnes **AddressID** et **City** de la table **Person.Address** de l’exemple de base de données **AdventureWorks**.  
+4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Pour garantir le bon fonctionnement de cet exemple, la sortie du composant en amont doit inclure au moins les colonnes **AddressID** et **City** de la table **Person.Address** de l’exemple de base de données **AdventureWorks**.  
   
 5.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**.  
   

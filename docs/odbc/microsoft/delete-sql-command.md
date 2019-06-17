@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198575"
 ---
 # <a name="delete---sql-command"></a>DELETE, commande SQL
@@ -34,7 +34,7 @@ DELETE FROM [DatabaseName!]TableName
 ```  
   
 ## <a name="arguments"></a>Arguments  
- À partir de [ *DatabaseName !*] *TableName*  
+ À partir de [ *DatabaseName !* ] *TableName*  
  Spécifie la table dans laquelle les enregistrements sont marqués pour suppression.  
   
  *DatabaseName !* Spécifie le nom d’une base de données qui contient la table si la base de données qui le contient n’est pas la base de données spécifié avec la source de données. Vous devez inclure le nom d’une base de données qui contient la table si la base de données n’est pas la base de données spécifié avec la source de données. Inclure le séparateur de point d’exclamation ( !) après le nom de la base de données et avant le nom de table.  

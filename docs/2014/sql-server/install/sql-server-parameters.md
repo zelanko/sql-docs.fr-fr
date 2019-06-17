@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091881"
 ---
 # <a name="sql-server-parameters"></a>Paramètres du serveur SQL Server
-  Dans cette page, définir les paramètres utilisés par l’analyseur pour [!INCLUDE[ssDE](../../includes/ssde-md.md)] analysis.  ous pouvez analyser une, plusieurs ou toutes les bases de données, des fichiers de trace créés à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] et des fichiers de commandes SQL.  
+  Dans cette page, définir les paramètres utilisés par l’analyseur pour [!INCLUDE[ssDE](../../includes/ssde-md.md)] analysis. ous pouvez analyser une, plusieurs ou toutes les bases de données, des fichiers de trace créés à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] et des fichiers de commandes SQL.  
   
 > [!NOTE]  
 >  Certains problèmes de mise à niveau ne peuvent être détectés que si vous faites analyser des fichiers de trace ou des fichiers de commandes SQL.  

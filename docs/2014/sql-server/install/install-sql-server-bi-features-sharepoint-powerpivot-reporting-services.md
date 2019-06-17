@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 436d90b75a5995ac8f455a52ebfffe662b1f9b7f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094461"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installer des fonctionnalités SQL Server BI avec SharePoint (PowerPivot et Reporting Services)
@@ -61,7 +61,7 @@ ms.locfileid: "66094461"
 |1|SharePoint uniquement|Fonctionnalités natives d'Excel Services|Excel Services et autres services fournis avec SharePoint Server 2013.|  
 |**2**|SharePoint avec Analysis Services en mode SharePoint|Classeurs PowerPivot interactifs dans le navigateur|Installez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint.<br /><br /> Inscrivez le serveur Analysis Services dans Excel Services.|  
 |**3**|SharePoint avec Reporting Services en mode SharePoint|Power View|Installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.<br /><br /> Installez le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **(rsSharePoint.msi)** pour SharePoint. Pour plus d’informations, consultez [installer ou désinstaller le logiciel complément Reporting Services pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)|  
-|**4**|Toutes les fonctionnalités de PowerPivot|Accédez aux classeurs comme source de données provenant de l'extérieur de la batterie.<br /><br /> Actualisation planifiée des données.<br /><br /> Galerie PowerPivot.<br /><br /> Tableau de bord de gestion.<br /><br /> Type de contenu de fichier de liaison BISM.|Déployez le complément PowerPivot pour SharePoint 2013 **(spPowerPivot.msi)**. Pour plus d'informations, consultez les documents suivants :<br /><br /> [Installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> Pour plus d'informations sur le téléchargement de **spPowerPivot.msi**, consultez [Télécharger SQL Server 2014 PowerPivot pour SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
+|**4**|Toutes les fonctionnalités de PowerPivot|Accédez aux classeurs comme source de données provenant de l'extérieur de la batterie.<br /><br /> Actualisation planifiée des données.<br /><br /> Galerie PowerPivot.<br /><br /> Tableau de bord de gestion.<br /><br /> Type de contenu de fichier de liaison BISM.|Déployez le complément PowerPivot pour SharePoint 2013 **(spPowerPivot.msi)** . Pour plus d'informations, consultez les documents suivants :<br /><br /> [Installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)<br /><br /> Pour plus d'informations sur le téléchargement de **spPowerPivot.msi**, consultez [Télécharger SQL Server 2014 PowerPivot pour SharePoint](https://go.microsoft.com/fwlink/?LinkID=296473).|  
   
  Pour plus d’informations sur l’activation de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fonctionnalités, consultez [The SQL Server BI mise en évidence d’histoire pour SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx).  
   

@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b614422d3670dc30e0714b18bbf42ed87f1886af
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483275"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>Boîte de dialogue Créer un compte et un profil de messagerie de base de données (Gestionnaire de configuration des services de données de référence)
@@ -40,7 +40,7 @@ ms.locfileid: "65483275"
 |**Adresse de messagerie**|Tapez le nom de l'adresse de messagerie du compte. Il s’agit de l’adresse e-mail à partir de laquelle cet e-mail est envoyé, dont le format doit être *nom_e-mail*@*nom_domaine*. Un exemple d’adresse e-mail est sales@contoso.com.|  
 |**Nom complet**|Paramètre facultatif. Tapez le nom à afficher sur les messages électroniques envoyés à partir de ce compte. Un exemple de nom complet est Contoso Sales Group.|  
 |**Adresse de messagerie pour la réponse**|Paramètre facultatif. Tapez l'adresse de messagerie à utiliser pour répondre aux messages envoyés à partir de ce compte. Un exemple d’adresse de réponse est admin@contoso.com.|  
-|**Serveur SMTP**|Tapez le nom ou l’adresse IP du serveur SMTP utilisé par le compte pour envoyer des e-mails. Est un format de serveur SMTP d’exemple `smtp.` *< nom_société >*`.com`. Pour plus d'informations, contactez l'administrateur de messagerie.|  
+|**Serveur SMTP**|Tapez le nom ou l’adresse IP du serveur SMTP utilisé par le compte pour envoyer des e-mails. Est un format de serveur SMTP d’exemple `smtp.` *< nom_société >* `.com`. Pour plus d'informations, contactez l'administrateur de messagerie.|  
 |**Numéro de port**|Tapez le numéro de port du serveur SMTP de ce compte. Le port SMTP par défaut est le port 25.|  
 |**Ce serveur demande une connexion sécurisée (SSL)**|Chiffre la communication au moyen de SSL (Secure Sockets Layer).|  
   

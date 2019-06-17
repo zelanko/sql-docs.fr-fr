@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021947"
 ---
 # <a name="other-non-sql-server-subscribers"></a>Autres abonnés non SQL Server
@@ -40,15 +40,15 @@ ms.locfileid: "63021947"
 ## <a name="replicating-using-ole-db-interfaces"></a>Réplication à l'aide d'interfaces OLE DB  
  Les fournisseurs OLE DB doivent prendre en charge les objets suivants pour la réplication transactionnelle :  
   
--   Objet**DataSource**   
+-   Objet**DataSource**  
   
--   Objet**Session**   
+-   Objet**Session**  
   
--   Objet**Command**   
+-   Objet**Command**  
   
--   Objet**Rowset**   
+-   Objet**Rowset**  
   
--   Objet**Error**   
+-   Objet**Error**  
   
 ### <a name="datasource-object-interfaces"></a>Interfaces de l'objet DataSource  
  Les interfaces suivantes sont nécessaires pour se connecter à une source de données :  

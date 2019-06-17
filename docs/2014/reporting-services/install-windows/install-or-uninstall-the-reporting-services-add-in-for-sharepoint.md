@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108817"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SharePoint 2010 et SharePoint 2013)
@@ -139,7 +139,7 @@ Rssharepoint.msi /?
   
     1.  Naviguez vers le dossier qui contient le fichier `rsCustomAction.exe`. Ce fichier est copié sur votre ordinateur pendant l'installation des fichiers seuls du complément. `rsCustomAction.exe` se trouve dans le **%temp%** directory. Pour naviguer jusqu'au fichier, entrez ce qui suit à partir de l'invite de commandes :  
   
-         **CD %temp%**.  
+         **CD %temp%** .  
   
          Le fichier doit se trouver à l’emplacement suivant : **\Users\\<votre_nom\>\AppData\Local\Temp**  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017847"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**, qui nettoie les métadonnées pour toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%** , qui nettoie les métadonnées pour toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` Spécifie s’il faut réinitialiser l’abonné. *abonné* est **nvarchar (5)**, peut être **TRUE** ou **FALSE**, avec une valeur par défaut **TRUE**. Si **TRUE**, les abonnements sont marqués pour réinitialisation. Si **FALSE**, les abonnements ne sont pas marqués pour réinitialisation.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Spécifie s’il faut réinitialiser l’abonné. *abonné* est **nvarchar (5)** , peut être **TRUE** ou **FALSE**, avec une valeur par défaut **TRUE**. Si **TRUE**, les abonnements sont marqués pour réinitialisation. Si **FALSE**, les abonnements ne sont pas marqués pour réinitialisation.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Après avoir **sp_mergecleanupmetadata** est exécutée, par défaut, tous les abonnements au niveau des abonnés de publications qui ont des métadonnées stockées dans **MSmerge_genhistory**, **MSmerge_contents**  et **MSmerge_tombstone** sont marqués pour réinitialisation, les modifications en attente sur l’abonné sont perdues, et l’instantané actuel est marqué comme obsolète.  
 > 
 > [!NOTE]
->  S’il existe plusieurs publications sur une base de données, et l’une des publications utilise une période de rétention de publication infinie (**@retention**=**0**), il est en cours d’exécution  **sp_mergecleanupmetadata** ne nettoie pas les métadonnées pour la base de données de suivi de modification de la réplication de fusion. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
+>  S’il existe plusieurs publications sur une base de données, et l’une des publications utilise une période de rétention de publication infinie ( **@retention** =**0**), il est en cours d’exécution  **sp_mergecleanupmetadata** ne nettoie pas les métadonnées pour la base de données de suivi de modification de la réplication de fusion. C'est pour cette raison qu'il faut utiliser la période de rétention infinie avec prudence.  
   
  Lors de l’exécution de cette procédure, vous pouvez choisir s’il faut réinitialiser les abonnés en définissant le **@reinitialize_subscriber** paramètre **TRUE** (la valeur par défaut) ou **FALSE**. Si **sp_mergecleanupmetadata** est exécutée avec le **@reinitialize_subscriber** paramètre défini sur **TRUE**, un instantané est réappliqué sur l’abonné même si l’abonnement a été créé sans un instantané (par exemple, si les données d’instantané et le schéma ont été appliquées manuellement ou existe déjà sur l’abonné) initial. Définition du paramètre à **FALSE** doit être utilisée avec précaution, car la publication n’est pas réinitialisée, vous devez vous assurer que les données sur le serveur de publication et l’abonné sont synchronisées.  
   
- Quelle que soit la valeur de **@reinitialize_subscriber**, **sp_mergecleanupmetadata** processus tentent de télécharger les modifications vers un serveur de publication ou à un abonné de republication de fusion échoue s’il existe en cours l’appel de la procédure stockée.  
+ Quelle que soit la valeur de **@reinitialize_subscriber** , **sp_mergecleanupmetadata** processus tentent de télécharger les modifications vers un serveur de publication ou à un abonné de republication de fusion échoue s’il existe en cours l’appel de la procédure stockée.  
   
  **Exécution de sp_mergecleanupmetadata avec @reinitialize_subscriber = TRUE :**  
   

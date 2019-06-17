@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959622"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
@@ -43,15 +43,15 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @article_resolver = ] 'article_resolver'` Spécifie le nom de la logique métier personnalisée en cours de désinscription. *article_resolver* est **nvarchar (255)**, sans valeur par défaut. Si la logique d'entreprise en cours de suppression est un composant COM, ce paramètre est le nom convivial qui lui est octroyé. Si la logique d'entreprise est un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ce paramètre est le nom de cet assembly.  
+`[ @article_resolver = ] 'article_resolver'` Spécifie le nom de la logique métier personnalisée en cours de désinscription. *article_resolver* est **nvarchar (255)** , sans valeur par défaut. Si la logique d'entreprise en cours de suppression est un composant COM, ce paramètre est le nom convivial qui lui est octroyé. Si la logique d'entreprise est un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ce paramètre est le nom de cet assembly.  
   
-`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valeur CLSID de l’objet COM associé au nom de la logique métier personnalisée spécifiée dans le *article_resolver* paramètre. *resolver_clsid* est **nvarchar (50)**, avec NULL comme valeur par défaut.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valeur CLSID de l’objet COM associé au nom de la logique métier personnalisée spécifiée dans le *article_resolver* paramètre. *resolver_clsid* est **nvarchar (50)** , avec NULL comme valeur par défaut.  
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Spécifie le type de logique métier personnalisée en cours d’inscription. *is_dotnet_assembly* est **bits**, avec 0 comme valeur par défaut. **1** indique que la logique métier personnalisée en cours d’inscription est un gestionnaire de logique métier Assembly ; **0** indique qu’il s’agit d’un composant COM.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Est le nom de l’assembly qui implémente le Gestionnaire de logique métier. *dotnet_assembly_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Est le nom de l’assembly qui implémente le Gestionnaire de logique métier. *dotnet_assembly_name* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Est le nom de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour implémenter le Gestionnaire de logique métier. *dotnet_class_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Est le nom de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour implémenter le Gestionnaire de logique métier. *dotnet_class_name* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 `[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Utilisez ce paramètre lorsque la procédure stockée n'est pas appelée depuis le serveur de publication. Si le serveur local n'est pas spécifié, on suppose qu'il s'agit du serveur de publication.  
   
@@ -69,7 +69,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Seuls les membres de la **db_owner** rôle de base de données fixe sur la base de données de publication peut exécuter **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Détection et résolution des conflits de réplication de fusion avancée](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Exécuter la logique métier lors de la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implémenter un gestionnaire de logique métier pour un article de fusion](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [Spécifier un résolveur d’articles de fusion](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

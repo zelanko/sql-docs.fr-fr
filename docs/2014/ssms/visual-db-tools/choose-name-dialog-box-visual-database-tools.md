@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c1916c87eae6a884775ae612e42381a12586d894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509961"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>Boîte de dialogue Choisir un nom (Visual Database Tools)
-  Cette boîte de dialogue apparaît lorsque vous choisissez **enregistrer \<TableName**>, **enregistrer \<nom diagramme >**, ou **enregistrer \<ViewName >** à partir de la **fichier** menu.  
+  Cette boîte de dialogue apparaît lorsque vous choisissez **enregistrer \<TableName**>, **enregistrer \<nom diagramme >** , ou **enregistrer \<ViewName >** à partir de la **fichier** menu.  
   
  **Entrez un nom pour la table, le diagramme ou la vue.**  
  Fournit une zone de texte vous permettant de taper un nom pour la table, le diagramme ou la vue.  

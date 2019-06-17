@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106232"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Column Charts (Report Builder and SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106232"
   
 -   **Empilé**. Histogramme où plusieurs séries sont empilées verticalement. Si le graphique ne comporte qu'une seule série, l'histogramme empilé affichera la même chose qu'un histogramme.  
   
--   **Empilé 100 %**. Histogramme où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
+-   **Empilé 100 %** . Histogramme où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
   
 -   **Groupé 3D**. Histogramme qui affiche les séries individuelles en lignes séparées sur un graphique 3D.  
   

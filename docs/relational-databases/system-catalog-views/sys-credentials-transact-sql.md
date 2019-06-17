@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ab6e80c80e2fab306b1b890f62546de07d6be108
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049860"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "63049860"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |credential_id|**Int**|ID de l'information d'identification. Unique dans le serveur.|  
-|NAME|**sysname**|Nom de l'information d'identification. Unique dans le serveur.|  
+|name|**sysname**|Nom de l'information d'identification. Unique dans le serveur.|  
 |credential_identity|**nvarchar(4000)**|Nom de l'identité à utiliser. Il s'agit généralement d'un utilisateur Windows. Il n'est pas nécessaire qu'elle soit unique.|  
 |create_date|**datetime**|Heure de création de l'information d'identification.|  
 |modify_date|**datetime**|Heure de la dernière modification de l'information d'identification.|  

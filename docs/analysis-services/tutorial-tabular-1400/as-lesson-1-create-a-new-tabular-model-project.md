@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148984"
 ---
 # <a name="create-a-tabular-model-project"></a>Créer un projet de modèle tabulaire
 
@@ -47,7 +47,7 @@ Cet article est la première leçon du didacticiel de conception de modèle tabu
   
     L’espace de travail héberge une base de données de modèle tabulaire portant le même nom que le projet lors de la création de modèles. Espace de travail intégré signifie que Visual Studio utilise une instance intégrée, éliminant le besoin d’installer une instance de serveur Analysis Services distincte uniquement pour la création du modèle.
       
-6.  Dans **niveau de compatibilité**, sélectionnez **SQL Server 2017 / Azure Analysis Services (1400)**.   
+6.  Dans **niveau de compatibilité**, sélectionnez **SQL Server 2017 / Azure Analysis Services (1400)** .   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
@@ -81,7 +81,7 @@ Explorez les boîtes de dialogue et les emplacements des fonctionnalités spéci
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 2 : Obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md).
+[Leçon 2 : Obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md).
 
   
   

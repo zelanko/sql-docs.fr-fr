@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100440"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
@@ -45,7 +45,7 @@ ms.locfileid: "66100440"
   
 2.  Cliquez sur **Se connecter** pour afficher la liste des types de serveurs, puis sélectionnez **Reporting Services**.  
   
-3.  Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom de l’instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]*.  
+3.  Dans la boîte de dialogue **Se connecter au serveur** , entrez le nom de l’instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]* .  
   
 4.  Sélectionnez le type d'authentification. Si vous utilisez l'authentification Windows, vous devez vous connecter à l'aide de vos informations d'identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100440"
   
 4.  Dans la zone **Nom du serveur**, entrez une valeur. La valeur que vous devez spécifier varie selon le mode du serveur :  
   
-    -   Pour un serveur de rapports en mode natif, tapez le nom de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]*.  
+    -   Pour un serveur de rapports en mode natif, tapez le nom de l'instance du serveur de rapports. Les noms des instances du serveur de rapports sont basés sur les noms des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par défaut, le nom d'instance d'une instance de serveur de rapports locale est simplement le nom de l'ordinateur. Si vous avez installé le serveur de rapports en tant qu’instance nommée, utilisez la syntaxe suivante pour spécifier le serveur : *\<nom_serveur>[\\<nom_instance\>]* .  
   
     -   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, le serveur de connexion est le site SharePoint auquel le serveur de rapports est connecté. La connexion au site SharePoint est nécessaire afin que vous puissiez consulter les niveaux d'autorisation qui contrôlent l'accès au contenu et aux opérations du serveur de rapports. Vous pouvez spécifier n'importe quel site dans la collection de sites. L’exemple suivant illustre la syntaxe : http://mysharepointsite.  
   

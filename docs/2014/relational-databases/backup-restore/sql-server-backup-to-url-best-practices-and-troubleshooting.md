@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619588"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
@@ -94,7 +94,7 @@ ms.locfileid: "65619588"
 -   En cas de restauration d'une sauvegarde compressée, vous pouvez rencontrer l'erreur suivante :  
   
     -   **Une exception SqlException 3284 s’est produite. Gravité : 16 état : 5**  
-        **Marque de fichier de message sur le périphérique 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
+        **Marque de fichier de message sur le périphérique 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' n’est pas alignée. Réexécutez l’instruction Restore avec la même taille de bloc utilisée pour créer le jeu de sauvegarde : « 65536 » semble une valeur possible.**  
   
          Pour résoudre cette erreur, réexécutez l'instruction `BACKUP` en spécifiant `BLOCKSIZE = 65536`.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619588"
   
  Les serveurs proxy peuvent avoir des paramètres qui limitent le nombre de connexions par minute. Le processus de sauvegarde vers l'URL est un processus multithread et, par conséquent, il peut dépasser cette limite. Si cela se produit, le serveur proxy supprime la connexion. Pour résoudre ce problème, modifiez les paramètres du proxy afin que SQL Server n'utilise pas le proxy.   Voici quelques exemples des types d'erreur ou des messages qui peuvent s'afficher dans le journal des erreurs :  
   
--   Écriture sur « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak» a échoué : La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
+-   Écriture sur « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak » a échoué : La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
   
--   Une erreur d’E/S non récupérable s’est produite sur le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ». L’erreur n’a pas pu être collectée à partir du point de terminaison distant.  
+-   Une erreur d’E/S non récupérable s’est produite sur le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:  ». L’erreur n’a pas pu être collectée à partir du point de terminaison distant.  
   
      Msg 3013, Niveau 16, État 1, Ligne 2  
   
      La sauvegarde de base de données s'est terminée anormalement.  
   
--   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
+-   BackupIoRequest::ReportIoError : échec d’écriture sur l’unité de sauvegarde 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Erreur de système d'exploitation. La sauvegarde vers l'URL a reçu une exception du point de terminaison distant. Message d’exception : Impossible de lire les données à partir de la connexion de transport : La connexion a été fermée.  
   
  Si vous activez la journalisation détaillée à l'aide de l'indicateur de trace 3051, vous pouvez également voir le message suivant dans les journaux :  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619588"
   
  **Les paramètres du proxy par défaut ne sont pas sélectionnés :**  
   
- Parfois, les paramètres par défaut ne sont pas sélectionnés et provoquent des erreurs d’authentification du proxy telles que celle affichée ci-dessous :*Une erreur d’E/S non récupérable s’est produite dans le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: » La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (407)*  **Authentification proxy requise**.  
+ Parfois, les paramètres par défaut ne sont pas sélectionnés et provoquent des erreurs d’authentification du proxy telles que celle affichée ci-dessous :*Une erreur d’E/S non récupérable s’est produite dans le fichier « http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:  » La sauvegarde vers l’URL a reçu une exception du point de terminaison distant. Message d’exception : Le serveur distant a retourné une erreur : (407)*  **Authentification proxy requise**.  
   
  Pour résoudre ce problème, créez un fichier de configuration qui permet au processus de sauvegarde vers l'URL d'utiliser les paramètres du proxy par défaut à l'aide des étapes suivantes :  
   
