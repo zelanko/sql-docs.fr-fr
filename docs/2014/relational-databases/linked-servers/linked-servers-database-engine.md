@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743500"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
@@ -46,7 +46,7 @@ ms.locfileid: "62743500"
   
  Un *fournisseur OLE°DB* représente une DLL qui gère une source de données spécifique et interagit avec elle. Une *source de données OLE DB* identifie la base de données spécifique accessible via OLE DB. Bien que les sources de données interrogées au moyen des définitions de serveurs liés soient d'ordinaire des bases de données, des fournisseurs OLE°DB existent pour différents fichiers et formats de fichiers, dont les fichiers texte, les données incluses dans des feuilles de calcul et les résultats de recherches de contenu.  
   
- Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client (PROGID : SQLNCLI11) est le fournisseur OLE DB officiel pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Le fournisseur OLE DB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (PROGID : SQLNCLI11) est le fournisseur OLE DB officiel pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont été conçues pour être utilisées avec tout fournisseur OLE DB qui implémente les interfaces OLE DB requises. Toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'a été testé qu’avec le fournisseur OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et certains autres fournisseurs.  
@@ -78,7 +78,7 @@ ms.locfileid: "62743500"
   
  Vous pouvez également définir des serveurs liés à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **Objets serveur**et sélectionnez **Nouveau**, puis **Serveur lié**. Pour supprimer une définition de serveur lié, vous pouvez cliquer avec le bouton droit sur le nom du serveur lié, puis sélectionner **Supprimer**.  
   
- Lorsque vous exécutez une requête distribuée sur un serveur lié, veillez à inclure pour chaque source de données à interroger un nom de table en quatre parties complet. Ce nom en quatre parties doit être sous la forme _nom_serveur_lié.Catalog_**. _`schema`_.** _object_name_.  
+ Lorsque vous exécutez une requête distribuée sur un serveur lié, veillez à inclure pour chaque source de données à interroger un nom de table en quatre parties complet. Ce nom en quatre parties doit être sous la forme _nom_serveur_lié.Catalog_ **. _`schema`_ .** _object_name_.  
   
 > [!NOTE]  
 >  Les serveurs liés peuvent être définis de façon à repointer (en bouclage) vers le serveur sur lequel ils sont définis. Les serveurs en boucle sont particulièrement utiles pour tester une application utilisant des requêtes distribuées sur un réseau comportant un seul serveur. Les serveurs liés en boucle sont conçus à des fins de test et ne sont pas pris en charge pour de nombreuses opérations, telles que les transactions distribuées.  

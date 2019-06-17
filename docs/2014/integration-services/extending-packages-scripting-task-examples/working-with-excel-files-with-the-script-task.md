@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894783"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
@@ -87,7 +87,7 @@ ms.locfileid: "62894783"
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelFile` variable.  
+    -   Cliquez sur le bouton de sélection ( **...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelFile` variable.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62894783"
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelFileExists` variable.  
+    -   Cliquez sur le bouton de sélection ( **...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelFileExists` variable.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -157,7 +157,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelTable` et `ExcelFile` variables.  
+    -   Cliquez sur le bouton de sélection ( **...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelTable` et `ExcelFile` variables.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
@@ -165,7 +165,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelTableExists` variable.  
+    -   Cliquez sur le bouton de sélection ( **...** ) bouton en regard du champ de propriété, puis dans le **sélectionner des variables** boîte de dialogue, sélectionnez le `ExcelTableExists` variable.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -264,7 +264,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFolder.  
+    -   Cliquez sur le bouton de sélection ( **...** ) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFolder.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
@@ -272,7 +272,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFiles.  
+    -   Cliquez sur le bouton de sélection ( **...** ) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFiles.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -339,7 +339,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFile.  
+    -   Cliquez sur le bouton de sélection ( **...** ) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelFile.  
   
 3.  Cliquez sur **ReadWriteVariables** et entrez la valeur de propriété à l’aide de l’une des méthodes suivantes :  
   
@@ -347,7 +347,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelTables.  
+    -   Cliquez sur le bouton de sélection ( **...** ) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez la variable ExcelTables.  
   
 4.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   
@@ -452,7 +452,7 @@ public class ScriptMain
   
          -ou-  
   
-    -   Cliquez sur le bouton de sélection (**...**) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez les variables.  
+    -   Cliquez sur le bouton de sélection ( **...** ) en regard du champ de propriété, puis dans la boîte de dialogue **Sélectionner des variables**, sélectionnez les variables.  
   
 5.  Cliquez sur **Modifier le script** pour ouvrir l’éditeur de script.  
   

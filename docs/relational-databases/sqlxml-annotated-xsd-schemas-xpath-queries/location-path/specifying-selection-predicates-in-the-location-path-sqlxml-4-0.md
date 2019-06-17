@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720032"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "62720032"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer` est le test de nœud (TRUE si `Customer` est un  **\<nœud d’élément >**, car  **\<élément >** est le type de nœud principal pour le `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (TRUE si **CustomerID** est un attribut du nœud de contexte, car  **\<attribut >** est le principal type de nœud de **attribut** axe).  
+ Dans cette requête XPath, `child` et `attribute` sont les noms d'axes. `Customer` est le test de nœud (TRUE si `Customer` est un  **\<nœud d’élément >** , car  **\<élément >** est le type de nœud principal pour le `child` axe). `attribute::CustomerID="ALFKI"` est le prédicat. Dans le prédicat, `attribute` est l’axe et `CustomerID` est le test de nœud (TRUE si **CustomerID** est un attribut du nœud de contexte, car  **\<attribut >** est le principal type de nœud de **attribut** axe).  
   
  À l'aide de la syntaxe abrégée, la requête XPath peut également être spécifiée de la façon suivante :  
   
