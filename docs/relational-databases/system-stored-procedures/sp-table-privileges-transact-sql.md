@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688367"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Arguments  
  [ @table_name=] '*table_name*'  
- Table utilisée pour retourner les informations de catalogue. *table_name* est **nvarchar (** 384 **)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+ Table utilisée pour retourner les informations de catalogue. *table_name* est **nvarchar (** 384 **)** , sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
  [ @table_owner=] '*table_owner*'  
- Est le propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *TABLE_OWNER*est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
+ Est le propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *TABLE_OWNER*est **nvarchar (** 384 **)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
   
  Si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom*, cette procédure recherche une table avec la valeur *table_name* détenus par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   

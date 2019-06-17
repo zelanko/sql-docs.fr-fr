@@ -15,13 +15,13 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 603bbe774c115f9a5119f34bd1e9941549baf572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803930"
 ---
 # <a name="getting-large-data"></a>Obtention de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47773777"
   
  Le pilote OLE DB pour SQL Server ne récupère pas de données volumineuses depuis [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jusqu'à ce que la demande par le consommateur. Le consommateur doit lier toutes les données de type short dans un accesseur, puis utiliser un ou plusieurs accesseurs temporaires pour extraire des valeurs de données volumineuses en fonction des besoins.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple extrait une valeur de données volumineuses d'une colonne unique :  
   
 ```  
@@ -150,7 +150,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets BLOB et OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   

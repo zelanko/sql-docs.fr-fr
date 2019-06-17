@@ -63,7 +63,7 @@
       href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
     - name: Fonctions table CLR
       href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
-    - name: 'Agrégats CLR définis par l''utilisateur '
+    - name: Agrégats CLR définis par l'utilisateur
       href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
     - name: Conditions requises pour les agrégats CLR définis par l'utilisateur
       href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md

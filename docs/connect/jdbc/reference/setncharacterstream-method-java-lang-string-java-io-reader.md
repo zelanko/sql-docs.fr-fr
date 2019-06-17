@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fd19fbb8-a878-4d98-a584-e4969d649844
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd76c54e9d40f85c2b74944ee37cdf5a9248d276
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 361193c9f85034da5a40c6dac6d1865a77c34612
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732287"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800468"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader"></a>Méthode setNCharacterStream (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +43,12 @@ public final void setNCharacterStream(java.lang.String parameterName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java.sql.CallableStatement.  
   
  Cette méthode doit être utilisée pour **NCHAR**, **NVARCHAR**, **NTEXT**, et **XML** types de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [setNCharacterStream, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

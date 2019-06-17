@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805576"
 ---
 # <a name="create-custom-templates"></a>Créer des modèles personnalisés
@@ -67,7 +67,7 @@ ms.locfileid: "62805576"
   
 10. Dans l’Éditeur de requête, tapez **EXECUTE dbo.WorkOrdersForBlade**et appuyez sur F5 pour exécuter la requête. Vérifiez si le volet **Résultats** affiche la liste des bons de travaux pour les lames.  
   
-11. Modifiez le script du modèle (le script à l’étape 7) en remplaçant le nom du produit Blade par le paramètre  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nom*>*</strong> , en quatre endroits.  
+11. Modifiez le script du modèle (le script à l’étape 7) en remplaçant le nom du produit Blade par le paramètre  <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>nom *>* </strong> , en quatre endroits.  
   
     > [!NOTE]  
     >  Les paramètres nécessitent trois éléments : le nom du paramètre à remplacer, le type de données du paramètre et une valeur par défaut pour le paramètre.  
