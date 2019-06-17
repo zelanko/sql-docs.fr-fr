@@ -1,7 +1,7 @@
 ---
-title: Implémentation d’une jointure externe | Microsoft Docs
+title: OUTER JOIN en mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,16 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4af1249e55c174153f060a8d3220144aa09fce73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040676e2d5ab0f3203ef29a74fe10b249538fba6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775357"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462477"
 ---
 # <a name="implementing-an-outer-join"></a>Implémentation d'une jointure externe
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   LEFT et RIGHT OUTER JOIN sont pris en charge dans les modules T-SQL compilés en mode natif à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-  
+Pour plus d’informations sur OUTER JOIN, consultez [Clause FROM plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).

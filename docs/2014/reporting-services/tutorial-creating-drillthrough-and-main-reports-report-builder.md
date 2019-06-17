@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098880"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutoriel : Création d’une extraction et de rapports principaux (Générateur de rapports)
@@ -110,7 +110,7 @@ ms.locfileid: "66098880"
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance d’Analysis Services.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66098880"
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66098880"
   
 5.  Faites glisser la mesure Sales Amount vers le volet de données, puis placez-la à droite de Product Subcategory Name.  
   
-6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)**.  
+6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
   
 7.  Cliquer sur **Suivant**.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66098880"
   
      Le tableau est ajouté à l'aire de conception.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ##  <a name="DFormat"></a> 2. Mettre en forme les données en tant que devises  
  Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
@@ -304,7 +304,7 @@ ms.locfileid: "66098880"
   
 12. Dans le volet Données du graphique, cliquez sur l’icône **Ajouter un champ** , puis sur Sales_Return_Amount.  
   
-13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ##  <a name="DReportTitle"></a> 4. Ajouter un titre de rapport avec le nom d'une catégorie de produit  
  Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
@@ -315,7 +315,7 @@ ms.locfileid: "66098880"
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Tapez **Sales and Returns for Category:**.  
+3.  Tapez **Sales and Returns for Category:** .  
   
 4.  Cliquez avec le bouton droit, puis sélectionnez **Créer un espace réservé**.  
   
@@ -329,7 +329,7 @@ ms.locfileid: "66098880"
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
  Le titre du rapport inclut le nom de la première catégorie de produit. Par la suite, après avoir exécuté ce rapport en tant que rapport d'extraction, le nom de la catégorie de produit changera de manière dynamique afin de refléter le nom de la catégorie de produit sur lequel l'utilisateur a cliqué dans le rapport principal.  
   
@@ -411,7 +411,7 @@ ms.locfileid: "66098880"
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -442,7 +442,7 @@ ms.locfileid: "66098880"
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -529,7 +529,7 @@ ms.locfileid: "66098880"
   
 4.  À partir de Membres calculés, faites glisser Net Sales vers le volet de données, puis placez-le à droite de `Net QTY`.  
   
-5.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)**.  
+5.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
   
      Passez en revue le jeu de résultats de la requête.  
   
@@ -574,7 +574,7 @@ ms.locfileid: "66098880"
   
 2.  Cliquez sur **Terminer**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ##  <a name="MGrandTotal"></a> 2. Supprimer la ligne de total général  
  Les valeurs de données sont affichées sous forme d'états d'indicateur, avec les totaux des groupes de colonnes. Supprimez la ligne qui affiche le total général.  
@@ -585,7 +585,7 @@ ms.locfileid: "66098880"
   
 2.  Cliquez sur la ligne Total (la dernière ligne dans la matrice), cliquez avec le bouton droit, puis cliquez sur **Supprimer les lignes**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ##  <a name="MDrillthrough"></a> 3. Configurer une action de zone de texte pour l'extraction  
  Pour activer l'extraction, spécifiez une action sur une zone de texte dans le rapport principal.  
@@ -644,7 +644,7 @@ ms.locfileid: "66098880"
   
 4.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_QTY`.  
+5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_QTY`.  
   
 6.  Répétez les étapes 2 à 5 pour la cellule `[Sum(Net QTY)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
@@ -656,7 +656,7 @@ ms.locfileid: "66098880"
   
 3.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_Sales`.  
+4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_Sales`.  
   
 5.  Répétez les étapes 1 à 4 pour la cellule `[Sum(Net_Sales)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098880"
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **2009 Product Category Sales: Online and Reseller Category:**.  
+2.  Tapez **2009 Product Category Sales: Online and Reseller Category:** .  
   
 3.  Sélectionnez le texte que vous avez tapé.  
   

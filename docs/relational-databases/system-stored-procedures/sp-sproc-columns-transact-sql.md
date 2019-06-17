@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032747"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @procedure_name = ] 'name'` Est le nom de la procédure utilisée pour retourner des informations de catalogue. *nom* est **nvarchar (** 390 **)**, avec une valeur par défaut %, ce qui signifie que toutes les tables dans la base de données actuelle. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @procedure_name = ] 'name'` Est le nom de la procédure utilisée pour retourner des informations de catalogue. *nom* est **nvarchar (** 390 **)** , avec une valeur par défaut %, ce qui signifie que toutes les tables dans la base de données actuelle. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @procedure_owner = ] 'owner'` Est le nom du propriétaire de la procédure. *propriétaire*est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
+`[ @procedure_owner = ] 'owner'` Est le nom du propriétaire de la procédure. *propriétaire*est **nvarchar (** 384 **)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
   
  Si l'utilisateur actuel possède une procédure du nom spécifié, les informations relatives à cette procédure sont retournées. Si *propriétaire*n’est pas spécifié et l’utilisateur actuel ne possède pas une procédure portant le nom spécifié, **sp_sproc_columns** rechercher une procédure portant le nom spécifié qui est possédée par le propriétaire de la base de données. Si la procédure existe, les informations relatives à ses colonnes sont renvoyées.  
   
 `[ @procedure_qualifier = ] 'qualifier'` Est le nom du qualificateur de procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-`[ @column_name = ] 'column_name'` Est une colonne unique et est utilisé lorsque vous souhaitez qu’une seule colonne d’informations de catalogue. *column_name* est **nvarchar (** 384 **)**, avec NULL comme valeur par défaut. Si *column_name* est omis, toutes les colonnes sont retournées. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard ISO (caractères génériques % et _).  
+`[ @column_name = ] 'column_name'` Est une colonne unique et est utilisé lorsque vous souhaitez qu’une seule colonne d’informations de catalogue. *column_name* est **nvarchar (** 384 **)** , avec NULL comme valeur par défaut. Si *column_name* est omis, toutes les colonnes sont retournées. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard ISO (caractères génériques % et _).  
   
 `[ @ODBCVer = ] 'ODBCVer'` Est la version d’ODBC utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2, ce qui indique ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0, reportez-vous à ODBC **SQLProcedureColumns** spécification pour ODBC version 3.0  
   
