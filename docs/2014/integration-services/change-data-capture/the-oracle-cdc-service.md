@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771075"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
@@ -71,7 +71,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Si un algorithme différent est utilisé, cette clé peut être supprimée et une nouvelle portant le même nom et chiffrée par le même mot de passe peut être créée.  
   
- Le mot de passe de la clé asymétrique est le principal mot de passe qui est enregistré dans le Registre sous le chemin **HKLM\Software\Microsoft\XDBCDCSVC\\<nom_service>**. Cette clé est accessible uniquement aux administrateurs locaux et au compte de service Windows de capture de données modifiées Oracle. La clé contient une valeur binaire chiffrée **AsymmetricKeyPassword** qui a stocké le mot de passe de la clé asymétrique. L'accès à cette clé de Registre est requis pour pouvoir accéder aux informations d'identification d'exploration de données de journaux Oracle.  
+ Le mot de passe de la clé asymétrique est le principal mot de passe qui est enregistré dans le Registre sous le chemin **HKLM\Software\Microsoft\XDBCDCSVC\\<nom_service>** . Cette clé est accessible uniquement aux administrateurs locaux et au compte de service Windows de capture de données modifiées Oracle. La clé contient une valeur binaire chiffrée **AsymmetricKeyPassword** qui a stocké le mot de passe de la clé asymétrique. L'accès à cette clé de Registre est requis pour pouvoir accéder aux informations d'identification d'exploration de données de journaux Oracle.  
   
  Pour utiliser la clause ENCRYPTION BY PASSWORD, le mot de passe doit satisfaire aux critères de la stratégie de mot de passe Windows de l'ordinateur qui exécute l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette opération s'effectue en sélectionnant le mot de passe de la clé asymétrique d'après cette stratégie.  
   

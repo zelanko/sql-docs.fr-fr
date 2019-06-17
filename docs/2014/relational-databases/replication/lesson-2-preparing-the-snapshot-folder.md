@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721020"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d’instantané
@@ -36,9 +36,9 @@ ms.locfileid: "62721020"
   
 6.  Sur l'onglet **Sécurité** , cliquez sur **Modifier**.  
   
-7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé à la leçon 1, sous la forme \<_nom_ordinateur>_**\repl_snapshot**, où \<*nom_ordinateur>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
+7.  Dans la boîte de dialogue **Autorisations** , cliquez sur **Ajouter**. Dans la zone de texte **Sélectionnez Utilisateurs, Ordinateurs, Compte de service ou Groupes**, tapez le nom du compte d’Agent d’instantané créé à la leçon 1, sous la forme \<_nom_ordinateur>_ **\repl_snapshot**, où \<*nom_ordinateur>* est le nom du serveur de publication. Cliquez sur **Vérifier les noms**, puis sur **OK**.  
   
-8.  Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme \<_nom_ordinateur>_**\repl_distribution**, et pour l’Agent de fusion, sous la forme \<_nom_ordinateur>_**\repl_merge**.  
+8.  Répétez l’étape précédente pour ajouter des autorisations pour l’Agent de distribution, sous la forme \<_nom_ordinateur>_ **\repl_distribution**, et pour l’Agent de fusion, sous la forme \<_nom_ordinateur>_ **\repl_merge**.  
   
 9. Vérifiez que les autorisations suivantes sont accordées :  
   

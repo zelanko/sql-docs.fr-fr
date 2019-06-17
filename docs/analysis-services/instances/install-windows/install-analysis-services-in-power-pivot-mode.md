@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054789"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installation d’Analysis Services en mode Power Pivot
@@ -262,7 +262,7 @@ ms.locfileid: "63054789"
  Les étapes nécessaires à la mise à niveau des classeurs créés dans les versions antérieures de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dépendent de la version de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dans laquelle le classeur a été créé. Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Au-delà de l’Installation de serveur unique - Power Pivot pour Microsoft SharePoint  
- **Serveur Web frontal (WFE)** ou **intermédiaire :**: Pour utiliser un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint dans une batterie de serveurs SharePoint supérieure et à installer d’autres [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] fonctionnalités dans la batterie de serveurs, exécutez le package de programme d’installation **spPowerPivot16.msi (SharePoint 2016) ou spPowerPivot.msi (SharePoint 2013),** sur chacun des serveurs SharePoint. Le fichier spPowerPivot16.msi ou spPowerPivot.msi installe les fournisseurs de données nécessaires et l'outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2016 ou 2013.  
+ **Serveur Web frontal (WFE)** ou **intermédiaire :** : Pour utiliser un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] serveur en mode SharePoint dans une batterie de serveurs SharePoint supérieure et à installer d’autres [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] fonctionnalités dans la batterie de serveurs, exécutez le package de programme d’installation **spPowerPivot16.msi (SharePoint 2016) ou spPowerPivot.msi (SharePoint 2013),** sur chacun des serveurs SharePoint. Le fichier spPowerPivot16.msi ou spPowerPivot.msi installe les fournisseurs de données nécessaires et l'outil de configuration [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2016 ou 2013.  
   
  Pour plus d'informations sur l'installation et la configuration du niveau intermédiaire, consultez :  
   

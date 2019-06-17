@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161686"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462715"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -421,9 +421,9 @@ Le plan d'exécution des procédures stockées et des déclencheurs est exécut�
 Les plans d'exécution de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprennent les composants principaux suivants : 
 
 - **Plan d’exécution de requête**     
-  Le corps du plan d'exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d'utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
+  Le corps du plan d’exécution est une structure de données réentrante et en lecture seule qui peut être utilisée par un nombre quelconque d’utilisateurs. Il constitue le plan de requête. Aucun contexte d'utilisateur n'est stocké dans le plan de requête. Il n'y a jamais plus d'une ou deux copies du plan de requête en mémoire : une copie pour toutes les exécutions en série et une autre pour toutes les exécutions en parallèle. La copie en parallèle couvre toutes les exécutions en parallèle, indépendamment de leur degré de parallélisme. 
 - **Contexte d’exécution**     
-  Chaque utilisateur exécutant actuellement la requête dispose d'une structure de données qui contient les données spécifiques à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
+  Chaque utilisateur exécutant actuellement la requête dispose d’une structure de données qui contient les données propres à son exécution, telles que la valeur des paramètres. Cette structure de données constitue le contexte d'exécution. Les structures de données du contexte d'exécution sont réutilisées. Si un utilisateur exécute une requête et qu'une des structures n'est pas en cours d'utilisation, elle est réinitialisée avec le contexte du nouvel utilisateur. 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
@@ -625,7 +625,7 @@ Lorsque l’option `PARAMETERIZATION` a la valeur `FORCED`, toute valeur littér
 * Les instructions internes au corps de procédures stockées, de déclencheurs ou de fonctions définies par l’utilisateur. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] réutilise les plans de requête pour ces routines.
 * Les instructions préparées ayant déjà été paramétrées dans l'application cliente.
 * Les instructions contenant des appels de méthode XQuery, où la méthode apparaît dans un contexte nécessitant généralement que ses arguments soient paramétrés (clause `WHERE` , par exemple). Si la méthode figure dans un contexte où le paramétrage de ses arguments n'est pas requis, le reste de l'instruction est paramétré.
-* Les instructions à l'intérieur d'un curseur [!INCLUDE[tsql](../includes/tsql-md.md)]. (Les instructions`SELECT` à l’intérieur des curseurs API sont paramétrables.)
+* Les instructions à l’intérieur d’un curseur [!INCLUDE[tsql](../includes/tsql-md.md)]. (Les instructions`SELECT` à l’intérieur des curseurs API sont paramétrables.)
 * Constructions de requêtes déconseillées.
 * Toute instruction exécutée dans le contexte de `ANSI_PADDING` ou `ANSI_NULLS` ayant la valeur `OFF`.
 * Les instructions contenant plus de 2 097 littéraux pouvant être paramétrables.
@@ -652,7 +652,7 @@ En outre, les clauses de requête suivantes ne sont pas paramétrables. Notez qu
 Le paramétrage est effectué au niveau des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] individuelles. En d'autres termes, les instructions individuelles d'un traitement sont paramétrables. Une fois la compilation terminée, la requête paramétrable est exécutée dans le contexte du traitement pour lequel elle a été initialement soumise. Dans le cas d’un plan d’exécution mis en cache, vous pouvez déterminer si la requête a été paramétrée en référençant la colonne sql de la vue de gestion dynamique sys.syscacheobjects. Si la requête est paramétrable, les noms et les types de données des paramètres sont spécifiés avant le texte du lot soumis dans cette colonne, par exemple, (\@1 tinyint).
 
 > [!NOTE]
-> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau du Service Pack : Les noms des paramètres, le choix des littéraux paramétrés et l'espacement dans le texte paramétré.
+> Les noms des paramètres sont arbitraires. Les utilisateurs et les applications ne doivent par conséquent pas se fier à un ordre particulier d'affectation des noms. En outre, les éléments suivants peuvent varier entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les mises à niveau du Service Pack : Les noms des paramètres, le choix des littéraux paramétrés et l’espacement dans le texte paramétré.
 
 #### <a name="data-types-of-parameters"></a>Types de données des paramètres
 
@@ -728,6 +728,8 @@ Les valeurs de paramètres sont détectées pendant la compilation ou la recompi
 -  Procédures stockées
 -  Requêtes soumises par l’intermédiaire de sp_executesql 
 -  Requêtes préparées
+
+Pour plus d’informations sur la résolution des problèmes de détection de paramètre incorrect, consultez [Résoudre les problèmes de requête liés aux plans d’exécution de requête sensibles aux paramètres](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues).
 
 > [!NOTE]
 > Pour les requêtes utilisant l’indicateur `RECOMPILE`, les valeurs de paramètres et les valeurs actuelles des variables locales sont détectées. Les valeurs détectées (des paramètres et variables locales) sont celles présentes dans le lot juste avant l’instruction avec l’indicateur `RECOMPILE`. Pour les paramètres en particulier, les valeurs fournies avec l’appel du lot ne sont pas détectées.
@@ -926,7 +928,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
    Le nom de serveur lié peut également être spécifié dans une instruction `OPENQUERY` afin d’ouvrir un ensemble de lignes à partir d’une source de données OLE DB. Cet ensemble de lignes peut ensuite être référencé en tant que table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 * Noms de connecteurs appropriés  
-  Dans le cas de références rares à une source de données, la fonction `OPENROWSET` ou `OPENDATASOURCE` est spécifiée avec les informations nécessaires à la connexion au serveur lié. Il est donc possible de faire référence à l'ensemble de lignes comme à une table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] : 
+  Dans le cas de références rares à une source de données, la fonction `OPENROWSET` ou `OPENDATASOURCE` est spécifiée avec les informations nécessaires à la connexion au serveur lié. Il est donc possible de faire référence à l’ensemble de lignes comme à une table dans les instructions [!INCLUDE[tsql](../includes/tsql-md.md)] : 
   
   ```sql
   SELECT *
@@ -935,11 +937,11 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise OLE DB pour la communication entre le moteur relationnel et le moteur de stockage. Le moteur relationnel décompose chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)] en une série d'opérations sur des ensembles de lignes OLE DB simples ouverts par le moteur de stockage à partir des tables de base. En d'autres termes, le moteur relationnel peut également ouvrir des ensembles de lignes OLE DB simples dans n'importe quelle source de données OLE DB.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise OLE DB pour la communication entre le moteur relationnel et le moteur de stockage. Le moteur relationnel décompose chaque instruction [!INCLUDE[tsql](../includes/tsql-md.md)] en une série d’opérations sur des ensembles de lignes OLE DB simples ouverts par le moteur de stockage à partir des tables de base. En d'autres termes, le moteur relationnel peut également ouvrir des ensembles de lignes OLE DB simples dans n'importe quelle source de données OLE DB.  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 Le moteur relationnel utilise l'API OLE DB pour ouvrir les ensembles de lignes sur les serveurs liés, pour extraire les lignes et pour gérer les transactions.
 
-Pour chaque source de données OLE DB à laquelle vous accédez en tant que serveur lié, un fournisseur OLE DB doit être présent sur le serveur exécutant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L'ensemble d'opérations [!INCLUDE[tsql](../includes/tsql-md.md)] qui peut être utilisé sur une source de données OLE DB spécifique dépend des capacités du fournisseur OLE DB.
+Pour chaque source de données OLE DB à laquelle vous accédez en tant que serveur lié, un fournisseur OLE DB doit être présent sur le serveur exécutant [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. L’ensemble d’opérations [!INCLUDE[tsql](../includes/tsql-md.md)] qui peut être utilisé sur une source de données OLE DB spécifique dépend des capacités du fournisseur OLE DB.
 
 Pour chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les membres du rôle serveur fixe `sysadmin` peuvent activer ou désactiver l’utilisation de noms de connecteurs ad hoc pour un fournisseur OLE DB à l’aide de la propriété [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess`. Si l’accès approprié est activé, tout utilisateur connecté à cette instance peut exécuter des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] contenant des noms de connecteurs appropriés, en faisant référence à n’importe quelle source de données sur le réseau accessible par le biais du fournisseur OLE DB. Afin de contrôler l’accès aux sources de données, les membres du rôle `sysadmin` peuvent désactiver l’accès ad hoc pour ce fournisseur OLE DB, limitant ainsi l’accès des utilisateurs aux sources de données référencées par les noms de serveurs liés définis par les administrateurs. Par défaut, ce type d'accès approprié est activé pour le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais désactivé pour tous les autres fournisseurs OLE DB.
 

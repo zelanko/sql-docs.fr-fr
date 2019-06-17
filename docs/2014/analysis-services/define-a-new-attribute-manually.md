@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082340"
 ---
 # <a name="define-a-new-attribute-manually"></a>Définir un nouvel attribut manuellement
@@ -31,7 +31,7 @@ ms.locfileid: "66082340"
   
      Cliquez sur le **attributs** volet, pointez sur **afficher les attributs dans**, puis cliquez sur **grille**.  
   
-3.  Faites défiler vers la dernière ligne de la grille, puis cliquez sur  **\<nouvel attribut >**.  
+3.  Faites défiler vers la dernière ligne de la grille, puis cliquez sur  **\<nouvel attribut >** .  
   
 4.  Tapez le nom de l'attribut pour définir la propriété `Name`, puis appuyez sur Entrée.  
   

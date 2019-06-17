@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a40d8209fd01c6f5e3c4ec2c3d4344d2b62ee35
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125949"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787985"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -198,7 +198,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
     -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
+    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l’abonné doivent s’exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
   
 -   Les instances de serveur de publication satisfont toutes les conditions préalables pour faire partie d’un groupe de disponibilité Always On. Pour plus d’informations, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -208,7 +208,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
 |||||  
 |-|-|-|-|  
 ||**Serveur de publication**|**Serveur de distribution**|**Abonné**|  
-|**Transactionnelle**|Oui<br /><br /> Remarque : N’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
+|**Transactionnelle**|Oui<br /><br /> Remarque : N’inclut pas la prise en charge de la réplication transactionnelle bidirectionnelle et réciproque.|Oui|Oui| 
 |**P2P**|Non|Non|Non|  
 |**Fusion**|Oui|Non|Non|  
 |**Snapshot**|Oui|Non|Oui|

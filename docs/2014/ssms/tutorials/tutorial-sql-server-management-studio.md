@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753431"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutoriel : SQL Server Management Studio
@@ -42,7 +42,7 @@ ms.locfileid: "62753431"
  [Leçon 1 : Navigation de base dans SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  Dans cette leçon, vous allez apprendre à utiliser les composants de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], reconfigurer la disposition d'environnement et restaurer la disposition par défaut.  
   
- [Leçon 2 : Écriture d’instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Leçon 2 : Écriture d’instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
  Dans cette leçon, vous allez apprendre à ouvrir l'éditeur de requête, gérer du code et utiliser les autres nouvelles fonctionnalités de l'éditeur de requête.  
   
  [Leçon 3 : Utilisation des modèles, des Solutions et projets de Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  

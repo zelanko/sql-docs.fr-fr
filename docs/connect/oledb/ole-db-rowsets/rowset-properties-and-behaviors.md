@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754827"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803812"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propriétés et comportements de l'ensemble de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,10 +101,10 @@ ms.locfileid: "47754827"
 |SSPROP_MAXBLOBLENGTH|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_I4<br /><br /> Valeur par défaut : le fournisseur ne restreint pas la taille du texte retourné par le serveur et la valeur de propriété est définie à sa valeur maximale. Par exemple 2 147 483 647.<br /><br /> Description : le pilote OLE DB pour SQL Server exécute une instruction SET TEXTSIZE pour restreindre la longueur des données d’objet BLOB (Binary Large Object) retournées dans une instruction SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Colonne : NoCount<br /><br /> Lecture/Écriture : lecture seule<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : valeur booléenne représentant l'état de SET NOCOUNT ON/OFF dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :<br /><br /> VARIANT_TRUE : avec SET NOCOUNT ON<br /><br /> VARIANT_FALSE : avec SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR (entre 1 et 2 000 caractères sont autorisés)<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : texte du message de notification de requête. Il est défini par l'utilisateur et n'a aucun format spécifique.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : chaîne vide<br /><br /> Description : options de notifications de requêtes. Elles sont spécifiées dans une chaîne avec `name=value`. L'utilisateur est chargé de créer le service et de lire les notifications de la file d'attente. La syntaxe de la chaîne des options de notifications de requêtes est :<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Par exemple :<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_UI4<br /><br /> Valeur par défaut : 432 000 secondes (5 jours)<br /><br /> Valeur minimale : 1 seconde<br /><br /> Valeur maximale : 2^31-1 secondes<br /><br /> Description : nombre de secondes pendant lesquelles la notification de requête doit rester active.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

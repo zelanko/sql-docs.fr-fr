@@ -2,17 +2,17 @@
 title: Conseils pour l’utilisation de packages R sont installés dans les bibliothèques utilisateur - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642285"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140511"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Conseils d’utilisation des packages R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Packages de R s’exécutent sur plusieurs plates-formes informatiques. N’oubl
 
 Si vous avez déjà modifié l’environnement R sur l’ordinateur, avant d’installer quoi que ce soit, vérifiez que la variable d’environnement R `.libPath` utilise qu’un seul chemin d’accès.
 
-Ce chemin d’accès doit pointer vers le dossier R_SERVICES de l’instance. Pour plus d’informations, notamment comment déterminer quels packages sont déjà installés, consultez [packages par défaut de R et Python dans SQL Server](installing-and-managing-r-packages.md).
+Ce chemin d’accès doit pointer vers le dossier R_SERVICES de l’instance. Pour plus d’informations, notamment comment déterminer quels packages sont déjà installés, consultez [packages par défaut de R et Python dans SQL Server](../package-management/default-packages.md).
 
 ## <a name="new-to-sql-server"></a>Nouveauté pour SQL Server
 
@@ -73,7 +73,7 @@ Cela ne fonctionne pas lors de l’exécution des solutions R dans SQL Server, �
 
 + Mettre à jour votre code pour supprimer des références directes aux chemins des packages R ou les bibliothèques R. 
 
-+ Savoir quelle bibliothèque de package est associée à l’instance. Pour plus d’informations, consultez [packages par défaut de R et Python dans SQL Server](installing-and-managing-r-packages.md).
++ Savoir quelle bibliothèque de package est associée à l’instance. Pour plus d’informations, consultez [packages par défaut de R et Python dans SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Voir aussi
 

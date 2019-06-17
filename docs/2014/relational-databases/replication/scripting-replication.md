@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55407c52c5fb7bf0c9537eaf8fb7a7d31d2675e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250521"
 ---
 # <a name="scripting-replication"></a>Création de scripts de réplication
@@ -82,7 +82,7 @@ ms.locfileid: "63250521"
   
 3.  Cliquez avec le bouton droit sur une publication ou un abonnement, puis cliquez sur **Générer des scripts**.  
   
-4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>**.  
+4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>** .  
   
 5.  Cliquez sur **Générer un script sur fichier**.  
   

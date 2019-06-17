@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66e8ddb357c33998960b2a9a10d3d874d231676b
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+manager: jroth
+ms.openlocfilehash: 281799b3a7e7015e9fd2a545fb47840a5c62e5b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419864"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801449"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>Exemple d’application (pilote PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment récupérer des données.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
 Placez le code suivant dans un fichier nommé adventureworks_demo_pdo.php :  
@@ -452,7 +452,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
 Placez le code suivant dans un fichier nommé photo_pdo.php :  
@@ -504,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)
 
 [Comparaison des fonctions d’exécution](../../connect/php/comparing-execution-functions.md)

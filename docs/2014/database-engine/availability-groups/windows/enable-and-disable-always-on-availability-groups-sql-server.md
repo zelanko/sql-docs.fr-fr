@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9fc5fc211d0f0c843ad16fb377fad2082bcf02c1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791936"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Activer et désactiver les groupes de disponibilité AlwaysOn (SQL Server)
@@ -131,7 +131,7 @@ ms.locfileid: "62791936"
   
 2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit de SQL Server (**<*`instance name`*>)**, où **< *`instance name`* >** est le nom d’une instance de serveur local pour lequel vous souhaitez activer les groupes de disponibilité AlwaysOn, et Cliquez sur **propriétés.**  
+3.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit de SQL Server ( **< *`instance name`* >)** , où **< *`instance name`* >** est le nom d’une instance de serveur local pour lequel vous souhaitez activer les groupes de disponibilité AlwaysOn, et Cliquez sur **propriétés.**  
   
 4.  Sélectionnez l'onglet **Haute disponibilité AlwaysOn** .  
   
@@ -195,7 +195,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
-3.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit de SQL Server (**<*`instance name`*>)**, où **< *`instance name`* >** est le nom d’une instance de serveur local pour lequel vous souhaitez désactiver les groupes de disponibilité AlwaysOn, et Cliquez sur **propriétés**.  
+3.  Dans **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server Services**, avec le bouton droit de SQL Server ( **< *`instance name`* >)** , où **< *`instance name`* >** est le nom d’une instance de serveur local pour lequel vous souhaitez désactiver les groupes de disponibilité AlwaysOn, et Cliquez sur **propriétés**.  
   
 4.  Sur l’onglet**Haute disponibilité AlwaysOn**, décochez la case **Activer les groupes de disponibilité AlwaysOn** , puis cliquez sur **OK**.  
   
