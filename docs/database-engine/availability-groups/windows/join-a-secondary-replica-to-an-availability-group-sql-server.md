@@ -16,50 +16,29 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c56c6586330830c0dbda3ece592db7a3bc71d4f0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 36f74a3e4ca4806260f71353cee4d53bd629526e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213153"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799292"
 ---
 # <a name="join-a-secondary-replica-to-an-always-on-availability-group"></a>Joindre un réplica secondaire à un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment joindre un réplica secondaire à un groupe de disponibilité AlwaysOn à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Une fois qu’un réplica secondaire a été ajouté à un groupe de disponibilité AlwaysOn, le réplica secondaire doit être joint au groupe de disponibilité. L'opération de jointure du réplica doit être effectuée sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica secondaire.  
+
   
--   **Avant de commencer :**  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour préparer une base de données secondaire, utilisez :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Suivi :** [Configurer les bases de données secondaires](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Prerequisites"></a> Conditions préalables  
-  
--   Le réplica principal du groupe de disponibilité doit être actuellement en ligne.  
-  
--   Vous devez être connecté à l'instance de serveur qui héberge un réplica secondaire qui n'a pas encore été joint au groupe de disponibilité.  
-  
+-   Le réplica principal du groupe de disponibilité doit être actuellement en ligne.    
+-   Vous devez être connecté à l'instance de serveur qui héberge un réplica secondaire qui n'a pas encore été joint au groupe de disponibilité.    
 -   L'instance de serveur local doit être en mesure de se connecter au point de terminaison de mise en miroir de bases de données de l'instance de serveur qui héberge le réplica principal.  
   
 > [!IMPORTANT]  
 >  Si aucune condition préalable n'est satisfaite, l'opération de jointure échoue. Après l'échec d'une tentative de jointure, vous devrez peut-être vous connecter à l'instance de serveur qui héberge le réplica principal afin de supprimer et de rajouter le réplica secondaire avant de pouvoir le joindre au groupe de disponibilité. Pour plus d’informations, consultez [Supprimer un réplica secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) et [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

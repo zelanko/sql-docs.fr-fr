@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ddef6de92c0bb5329e84011f9996368ef6b452dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e60261790ce1597c9968fb9c6c3c15403f71a93c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690141"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786953"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>ad hoc distributed queries (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47690141"
 >  L'activation de l'utilisation de noms ad hoc signifie que toute connexion authentifiée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut accéder au fournisseur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les administrateurs doivent activer cette fonctionnalité pour les fournisseurs accessibles en toute sécurité via une connexion locale.  
   
 ## <a name="remarks"></a>Notes   
- Toute tentative d’établissement d’une connexion ad hoc alors que l’option **Requêtes distribuées ad hoc** n’est pas activée génère une erreur : Msg 7415, Niveau 16, État 1, Ligne 1  
+ Toute tentative d’établissement d’une connexion ad hoc alors que l’option **Requêtes distribuées ad hoc** n’est pas activée génère une erreur : Msg 7415, Niveau 16, État 1, Ligne 1  
   
  L'accès d'égal à égal au fournisseur OLE DB « Microsoft.ACE.OLEDB.12.0 » a été refusé. Vous devez accéder à ce fournisseur par le biais d'un serveur lié.  
   

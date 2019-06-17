@@ -10,13 +10,13 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513771"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794882"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installer SQL Server à l’aide de SysPrep
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 3. Créez le cluster de basculement Windows. 
   
-4. Exécutez setup.exe avec **/ACTION=PrepareFailoverCluster** sur tous les nœuds. Exemple :  
+4. Exécutez setup.exe avec **/ACTION=PrepareFailoverCluster** sur tous les nœuds. Par exemple :  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -88,7 +88,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
-4. Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** . 
+4. Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** . 
   
 5. Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée. 
   
@@ -154,7 +154,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 7. Dans la page **Sélectionner une instance préparée** , sélectionnez l'instance préparée que vous souhaitez finaliser dans la zone de liste déroulante. Sélectionnez l’instance non configurée dans la liste **ID de l’instance** . 
   
-     **Instances installées :** Cette grille affiche toutes les instances, y compris toute instance préparée sur cet ordinateur. 
+     **Instances installées :** cette grille affiche toutes les instances, y compris toute instance préparée sur cet ordinateur. 
   
 8. Dans la page **Vérification des fonctionnalités** sont répertoriés les fonctionnalités et composants sélectionnés inclus dans l'installation pendant l'étape de préparation. Si vous souhaitez ajouter davantage de fonctionnalités à votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non incluses dans l'instance préparée, vous devez d'abord effectuer cette étape pour finaliser l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis ajouter les fonctionnalités à partir de **Ajouter des fonctionnalités** dans le **Centre d'installation**. 
   

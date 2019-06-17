@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062260"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analyser les facteurs d'influence clés (Outils d'analyse de table pour Excel)
@@ -46,7 +46,7 @@ ms.locfileid: "66062260"
   
 6.  Si aucune séquence n'est détectée, l'Assistant crée une nouvelle feuille de calcul qui contient une description du problème.  
   
-7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est intitulé **facteurs d’influence clés pour \<colonne >**. Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
+7.  Si des séquences sont détectées, l'Assistant crée un rapport sur une nouvelle feuille de calcul qui affiche les séquences. Le rapport est intitulé **facteurs d’influence clés pour \<colonne >** . Vous pouvez personnaliser le rapport comme indiqué dans la procédure suivante.  
   
 #### <a name="create-a-custom-report"></a>Créer un rapport personnalisé  
   

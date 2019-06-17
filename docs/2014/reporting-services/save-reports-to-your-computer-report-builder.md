@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102309"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Enregistrer des rapports sur votre ordinateur (Générateur de rapports)
@@ -22,7 +22,7 @@ ms.locfileid: "66102309"
   
 ### <a name="to-save-a-report"></a>Pour enregistrer un rapport  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous**_\<élément de rapport>_ s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer**. La boîte de dialogue **Enregistrer sous** _\<élément de rapport>_ s’affiche.  
   
     > [!NOTE]  
     >  Si vous réenregistrez un rapport, il est automatiquement stocké à son emplacement précédent. Utilisez l’option **Enregistrer sous** pour modifier l’emplacement.  
@@ -35,7 +35,7 @@ ms.locfileid: "66102309"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Pour enregistrer un rapport sous un nom différent  
   
-1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous**_\<élément de rapport>_ s’affiche.  
+1.  À partir du bouton Générateur de rapports, cliquez sur **Enregistrer sous**. La boîte de dialogue **Enregistrer sous** _\<élément de rapport>_ s’affiche.  
   
 2.  Sur votre ordinateur, accédez à l'emplacement où vous souhaitez enregistrer le rapport.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086600"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Boîte de dialogue de propriétés du cube ou du modèle (SSAS)
@@ -41,7 +41,7 @@ ms.locfileid: "66086600"
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées du cube ou du modèle.|  
 |**Mode de traitement du Cache de script**|Permet de sélectionner le mode de traitement à utiliser pour le cache des scripts du cube ou du modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Mode de traitement**|Permet de sélectionner le mode de traitement à utiliser pour le cube ou le modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Emplacement de stockage**|Tapez le nom du dossier à utiliser comme emplacement de stockage par défaut pour les groupes de mesures et les partitions associés au cube ou au modèle, ou cliquez sur le bouton représentant des points de suspension (**...**) pour afficher la boîte de dialogue **Rechercher un dossier distant** et sélectionner un dossier. Pour plus d'informations sur la boîte de dialogue **Rechercher un dossier distant**, consultez [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services - Données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**Emplacement de stockage**|Tapez le nom du dossier à utiliser comme emplacement de stockage par défaut pour les groupes de mesures et les partitions associés au cube ou au modèle, ou cliquez sur le bouton représentant des points de suspension ( **...** ) pour afficher la boîte de dialogue **Rechercher un dossier distant** et sélectionner un dossier. Pour plus d'informations sur la boîte de dialogue **Rechercher un dossier distant**, consultez [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services - Données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**État**|Affiche l'état du traitement du cube ou du modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Affiche la date et l'heure du dernier traitement du cube ou du modèle.|  
   

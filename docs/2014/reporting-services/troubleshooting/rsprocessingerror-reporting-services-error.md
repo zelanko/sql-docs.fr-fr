@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099143"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
@@ -98,11 +98,11 @@ ms.locfileid: "66099143"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossible de comparer des types de données pour un filtre  
  Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
   
--   Impossible d’effectuer le traitement de *\<type_élément_rapport>* pour l’élément *\<nom_élément_rapport>*. Impossible de comparer les données de types *\<type>* et *\<type>*. Vérifiez le type de données retourné par l’élément *\<nom_élément_rapport>*.  
+-   Impossible d’effectuer le traitement de *\<type_élément_rapport>* pour l’élément *\<nom_élément_rapport>* . Impossible de comparer les données de types *\<type>* et *\<type>* . Vérifiez le type de données retourné par l’élément *\<nom_élément_rapport>* .  
   
--   Échec de l’évaluation de *\<nom de propriété>*.  
+-   Échec de l’évaluation de *\<nom de propriété>* .  
   
--   Échec de l’évaluation de *\<nom de propriété>*. Il fait référence à un champ de dataset qui contient une erreur : *\<>*.  
+-   Échec de l’évaluation de *\<nom de propriété>* . Il fait référence à un champ de dataset qui contient une erreur : *\<>* .  
   
  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -113,11 +113,11 @@ ms.locfileid: "66099143"
   
 -   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* « *\<nom_élément_rapport>*  » n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
--   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* '*\<nom_élément_rapport>*' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
+-   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* ' *\<nom_élément_rapport>* ' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   
  Pour les fonctions d'agrégation qui calculent des totaux cumulés (`Previous`, `RunningValue` ou `RowNumber`), vous pouvez spécifier un paramètre d'étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   `Previous`, `RunningValue` ou `RowNumber` agréger les fonctions utilisées dans les cellules de données de la  *\<type d’élément de rapport >* '*\<nom_élément_rapport >*» font référence à des étendues de regroupement dans les colonnes et les lignes de la  *\<type_élément_rapport >*. Les paramètres d’étendue de toutes les `Previous`, `RunningValue` et `RowNumber` fonctions au sein d’agrégation un  *\<type_élément_rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
+-   `Previous`, `RunningValue` ou `RowNumber` agréger les fonctions utilisées dans les cellules de données de la  *\<type d’élément de rapport >* ' *\<nom_élément_rapport >* » font référence à des étendues de regroupement dans les colonnes et les lignes de la  *\<type_élément_rapport >* . Les paramètres d’étendue de toutes les `Previous`, `RunningValue` et `RowNumber` fonctions au sein d’agrégation un  *\<type_élément_rapport >* peuvent faire référence à des regroupements de lignes ou des regroupements de colonnes de données, mais pas les deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   

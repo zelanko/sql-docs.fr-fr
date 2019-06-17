@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647777"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799089"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Configurer l'option de configuration de serveur scan for startup procs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47647777"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option scan for startup procs](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option scan for startup procs](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47647777"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -88,7 +88,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option scan for startup procs  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option scan for startup procs  
  Le serveur doit être redémarré pour que le paramètre puisse être effet.  
   
 ## <a name="see-also"></a> Voir aussi  

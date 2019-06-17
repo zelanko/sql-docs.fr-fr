@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00f2dd9628419bf517c683358bfae89d8625c702
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+manager: jroth
+ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936357"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794139"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Configurer l'option de configuration de serveur max degree of parallelism
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l’option de configuration de serveur  **max degree of parallelism (MAXDOP)** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un ordinateur doté de plusieurs microprocesseurs ou UC, elle détecte le degré de parallélisme optimal, qui correspond au nombre de processeurs employés pour exécuter une seule instruction, pour chaque exécution d'un plan parallèle. Vous pouvez utiliser l'option **max degree of parallelism** pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en compte les plans d’exécution parallèle pour les requêtes, les opérations du langage de définition de données (DDL) d’index, l’insertion parallèle, la modification de colonne en ligne, la collecte de statistiques parallèle et l’alimentation des curseurs statiques et de jeux de clés.
+  Cette rubrique explique comment configurer l’option de configuration de serveur **max degree of parallelism (MAXDOP)** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsqu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un ordinateur doté de plusieurs microprocesseurs ou UC, elle détecte le degré de parallélisme optimal, qui correspond au nombre de processeurs employés pour exécuter une seule instruction, pour chaque exécution d'un plan parallèle. Vous pouvez utiliser l'option **max degree of parallelism** pour limiter le nombre de processeurs à utiliser lors de l'exécution des plans parallèles. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en compte les plans d’exécution parallèle pour les requêtes, les opérations du langage de définition de données (DDL) d’index, l’insertion parallèle, la modification de colonne en ligne, la collecte de statistiques parallèle et l’alimentation des curseurs statiques et de jeux de clés.
 
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -54,9 +54,9 @@ Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], suivez les directives 
 
 ||||
 |----------------|-----------------|-----------------|
-|Serveur avec un seul nœud NUMA|Moins de 16 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
-|Serveur avec un seul nœud NUMA|Plus de 16 processeurs logiques|Conservez MAXDOP à la moitié du nombre de processeurs logiques avec une valeur MAX de 16|
-|Serveur avec plusieurs nœuds NUMA|Moins de 16 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
+|Serveur avec un seul nœud NUMA|Inférieur ou égal à 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
+|Serveur avec un seul nœud NUMA|Supérieur à 8 processeurs logiques|Conservez MAXDOP à 8|
+|Serveur avec plusieurs nœuds NUMA|Inférieur ou égal à 16 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
 |Serveur avec plusieurs nœuds NUMA|Plus de 16 processeurs logiques par nœud NUMA|Conservez MAXDOP à la moitié du nombre de processeurs logiques par nœud NUMA avec une valeur MAX de 16|
   
 > [!NOTE]
@@ -67,9 +67,9 @@ De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] à [!INCLUDE[ssSQL14](../
 
 ||||
 |----------------|-----------------|-----------------|
-|Serveur avec un seul nœud NUMA|Moins de 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
+|Serveur avec un seul nœud NUMA|Inférieur ou égal à 8 processeurs logiques|Conserver MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques|
 |Serveur avec un seul nœud NUMA|Supérieur à 8 processeurs logiques|Conservez MAXDOP à 8|
-|Serveur avec plusieurs nœuds NUMA|Moins de 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
+|Serveur avec plusieurs nœuds NUMA|Inférieur ou égal à 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à une valeur égale ou inférieure au nombre de processeurs logiques par nœud NUMA|
 |Serveur avec plusieurs nœuds NUMA|Supérieur à 8 processeurs logiques par nœud NUMA|Conservez MAXDOP à 8|
   
 ###  <a name="Security"></a> Sécurité  
@@ -115,7 +115,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option max degree of parallelism  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

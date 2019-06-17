@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011475"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
@@ -29,7 +29,7 @@ ms.locfileid: "66011475"
   
 -   Paramètre de signes diacritiques  
   
-     Pour un dictionnaire des synonymes donné, tous les modèles de recherche sont sensibles ou insensibles aux signes diacritiques comme un tilde (**~**), marque d’accent aigu (**??** ), ou des trémas (**??** ) (autrement dit, *especter les accents* ou *respect des accents, non-respect de*). Par exemple, supposons que vous spécifiez le modèle « caf ?? » à remplacer par d’autres modèles dans une requête de recherche en texte intégral. Si le dictionnaire des synonymes sont non-respect des accents, recherche en texte intégral remplace le modèles « caf ?? » et « CAFE ». Si le dictionnaire des synonymes respecte les accents, recherche en texte intégral remplace seulement le modèle « caf ?? ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
+     Pour un dictionnaire des synonymes donné, tous les modèles de recherche sont sensibles ou insensibles aux signes diacritiques comme un tilde ( **~** ), marque d’accent aigu ( **??** ), ou des trémas ( **??** ) (autrement dit, *especter les accents* ou *respect des accents, non-respect de*). Par exemple, supposons que vous spécifiez le modèle « caf ?? » à remplacer par d’autres modèles dans une requête de recherche en texte intégral. Si le dictionnaire des synonymes sont non-respect des accents, recherche en texte intégral remplace le modèles « caf ?? » et « CAFE ». Si le dictionnaire des synonymes respecte les accents, recherche en texte intégral remplace seulement le modèle « caf ?? ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
   
 -   Jeu d'expansion  
   

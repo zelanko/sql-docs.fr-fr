@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107435"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Générer une requête dans le concepteur de requêtes relationnelles (Générateur de rapports et SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107435"
   
 ### <a name="to-view-a-query-result-set"></a>Pour afficher un jeu de résultats de requête  
   
-1.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter la requête (!)**.  
+1.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter la requête (!)** .  
   
     > [!NOTE]  
     >  Le concepteur de requêtes utilise des informations d'identification au moment de la conception pour exécuter la requête et récupérer le jeu de résultats. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md).  

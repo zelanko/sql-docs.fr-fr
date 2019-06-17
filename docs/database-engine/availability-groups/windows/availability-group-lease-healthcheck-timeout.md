@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a581e981829d6a2bbd8ed0181decc2d2af5e316
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+manager: jroth
+ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742099"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761840"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -79,7 +79,7 @@ Le niveau de condition d’échec du groupe de disponibilité modifie les condit
 |:---|---
 | 1 : OnServerDown | Le contrôle d’intégrité n’entreprend aucune action si l’une des ressources échoue, en dehors du groupe de disponibilité. Si les données du groupe de disponibilité ne sont pas reçues au bout de 5 intervalles ou 5/3 \* HealthCheckTimeout
 | 2 : OnServerUnresponsive | Si aucune donnée n’est reçue de `sp_server_diagnostics` pour HealthCheckTimeout
-| 3: OnCriticalServerError | (Par défaut) Si le composant Système signale une erreur
+| 3 : OnCriticalServerError | (Par défaut) Si le composant Système signale une erreur
 | 4 : OnModerateServerError | Si le composant Ressource signale une erreur 
 | 5 :  OnAnyQualifiedFailureConitions |  Si le composant Traitement des requêtes signale une erreur
 

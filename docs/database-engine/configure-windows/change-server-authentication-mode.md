@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b70487d9d9f89defb77eeed4adc9633b734cc40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733237"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799409"
 ---
 # <a name="change-server-authentication-mode"></a>Changer le mode d'authentification du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,15 +73,27 @@ ms.locfileid: "47733237"
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L’exemple suivant active la connexion sa et définit un nouveau mot de passe.  
+3.  Copiez et collez l'un des exemples suivants dans la fenêtre de requête, puis cliquez sur **Exécuter**. 
+
+
+    -  L’exemple suivant active la connexion sa et définit un nouveau mot de passe.  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
-  
-    ```  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  L’exemple suivant change l’authentification du serveur du mode mixte (Windows + SQL) à Windows uniquement.
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
 ## <a name="see-also"></a> Voir aussi  
  [Mots de passe forts](../../relational-databases/security/strong-passwords.md)   

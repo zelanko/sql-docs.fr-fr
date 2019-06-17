@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078842"
 ---
 # <a name="modifying-the-product-dimension"></a>Modification de la dimension Product
@@ -57,19 +57,19 @@ ms.locfileid: "66078842"
   
 2.  Dans le volet **Attributs** de l’onglet **Structure de dimension** , sélectionnez **Product Line**.  
   
-3.  Dans la fenêtre de propriétés sur le côté droit de l’écran, cliquez sur le **NameColumn** propriété champ en bas de la fenêtre, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue. (Il peut être nécessaire de cliquer sur l’onglet **Propriétés** à droite de l’écran pour ouvrir la fenêtre Propriétés.)  
+3.  Dans la fenêtre de propriétés sur le côté droit de l’écran, cliquez sur le **NameColumn** propriété champ en bas de la fenêtre, puis cliquez sur le bouton de navigation ( **...** ) pour ouvrir la **colonne nom** boîte de dialogue. (Il peut être nécessaire de cliquer sur l’onglet **Propriétés** à droite de l’écran pour ouvrir la fenêtre Propriétés.)  
   
 4.  Sélectionnez `ProductLineName` en bas de la **colonne Source** liste, puis cliquez sur **OK**.  
   
-     Le champ NameColumn contient maintenant le texte, **Product.ProductLineName (WChar)**. Les membres de la hiérarchie d’attributs **Product Line** affichent maintenant le nom complet de la ligne de produits et non plus le nom abrégé.  
+     Le champ NameColumn contient maintenant le texte, **Product.ProductLineName (WChar)** . Les membres de la hiérarchie d’attributs **Product Line** affichent maintenant le nom complet de la ligne de produits et non plus le nom abrégé.  
   
 5.  Dans le volet **Attributs** de l’onglet **Structure de dimension** , sélectionnez **Product Key**.  
   
-6.  Dans la fenêtre Propriétés, cliquez sur le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
+6.  Dans la fenêtre Propriétés, cliquez sur le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation ( **...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 7.  Sélectionnez **EnglishProductName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
-     Le champ NameColumn contient maintenant le texte **Product.EnglishProductName (WChar)**.  
+     Le champ NameColumn contient maintenant le texte **Product.EnglishProductName (WChar)** .  
   
 8.  Dans la fenêtre Propriétés, faites défiler vers le haut, cliquez sur le **nom** champ de propriété, puis appuyez sur `Product Name`.  
   

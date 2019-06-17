@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 152d4b274fe2e966a30ffe09ba2939ba4cafef39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: e44e40d6c1fc01a012054223ce027e78363f33b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202478"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800979"
 ---
 # <a name="add-a-replica-to-your-always-on-availability-group-using-the-availability-group-wizard-in-sql-server-management"></a>Ajouter un réplica à un groupe de disponibilité Always On à l’aide de l’Assistant Groupe de disponibilité dans SQL Server Management
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53202478"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Si vous n’avez jamais ajouté de réplica de disponibilité à un groupe de disponibilité, consultez les sections « Instances de serveur » et « Groupes de disponibilité et réplicas » dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
   
@@ -56,10 +56,8 @@ ms.locfileid: "53202478"
     -   Vous devez spécifier un partage réseau pour que l'assistant crée des sauvegardes et puisse y accéder. Pour le réplica principal, le compte utilisé pour démarrer le [!INCLUDE[ssDE](../../../includes/ssde-md.md)] doit disposer d'autorisations de système de fichiers en lecture et en écriture sur un partage réseau. Pour les réplicas secondaires, le compte doit disposer d'une autorisation en lecture sur le partage réseau.  
   
      Si vous ne pouvez pas utiliser l'Assistant pour effectuer la synchronisation des données initiale complète, vous devez préparer vos bases de données secondaires manuellement. Vous pouvez le faire avant ou après l'exécution de l'Assistant. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
-  
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
+   
+## <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
  Nécessite également l'autorisation CONTROL ON ENDPOINT si vous souhaitez autoriser l'Assistant Ajouter un réplica au groupe de disponibilité à gérer le point de terminaison de mise en miroir de bases de données.  
@@ -80,7 +78,7 @@ ms.locfileid: "53202478"
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un nouveau réplica secondaire.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement.<br /><br /> <br /><br /> Remarque : Si une instance de serveur s'exécute sous un compte d'utilisateur qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier le point de terminaison de mise en miroir de bases de données existant, le cas échéant, pour chaque nouveau réplica secondaire. Si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, l'Assistant tente de créer le point de terminaison automatiquement.<br /><br /> <br /><br /> Remarque : Si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir poursuivre l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, si vous souhaitez modifier le paramètre actuel, et pour indiquer vos priorités de sauvegarde pour les différents réplicas de disponibilité.|  
   
 6.  Si les réplicas sélectionnés contiennent des bases de données comportant une clé principale de base de données, entrez les mots de passe pour les clés principales de base de données dans la colonne **Mot de passe**. La colonne **État** indique **Mot de passe requis** pour les bases de données qui comportent une clé principale de base de données. L’option **Suivant** est grisée jusqu’à ce que le mot de passe correct soit entré dans la colonne **Mot de passe**. Après avoir entré les mots de passe, cliquez sur **Actualiser**. Si les mots de passe entrés sont corrects, la colonne État indique **Mot de passe entré** et **Suivant** devient disponible.  

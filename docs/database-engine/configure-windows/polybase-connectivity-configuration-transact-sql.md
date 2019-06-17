@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: aa90cb3f34b3aecd236a832a62144914ac2dd249
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415249"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772225"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -57,29 +57,29 @@ RECONFIGURE
   
  Voici les paramètres de connectivité Hadoop et leurs sources de données Hadoop prises en charge correspondantes. Un seul paramètre peut être activé à la fois. Les options 1, 4 et 7 permettent de créer plusieurs types de sources de données externes et de les utiliser dans toutes les sessions sur le serveur.  
   
--   Option 0 : désactiver la connectivité Hadoop  
+-   Option 0 : désactiver la connectivité Hadoop  
   
--   Option 1 : Hortonworks HDP 1.3 sur Windows Server  
+-   Option n°1 : Hortonworks HDP 1.3 sur Windows Server  
   
--   Option 1 : stockage d’objets blob Azure (WASB[S])  
+-   Option n°1 : Azure Storage Blob (WASB[S])  
   
--   Option 2 : Hortonworks HDP 1.3 sur Linux  
+-   Option n°2 : Hortonworks HDP 1.3 sur Linux  
   
--   Option 3 : Cloudera CDH 4.3 sur Linux  
+-   Option 3 : Cloudera CDH 4.3 sur Linux  
   
--   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
+-   Option 4 : Hortonworks HDP 2.0 sur Windows Server  
   
--   Option 4 : stockage d’objets blob Azure (WASB[S])  
+-   Option 4 : Azure Storage Blob (WASB[S])  
   
--   Option 5 : Hortonworks HDP 2.0 sur Linux  
+-   Option 5 : Hortonworks HDP 2.0 sur Linux  
   
--   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
+-   Option 6 : Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11, 5.12 et 5.13 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
+-   Option 7 : Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 3.0 sur Linux  
   
--   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
+-   Option 7 : Hortonworks 2.1, 2.2 et 2.3 sur Windows Server  
   
--   Option 7 : stockage d’objets blob Azure (WASB[S])  
+-   Option 7 : Azure Storage Blob (WASB[S])  
   
  **RECONFIGURE**  
  Met à jour la valeur d'exécution (run_value) afin qu’elle corresponde à la valeur de configuration (config_value). Pour connaître les définitions des valeurs run_value et config_value, consultez [Jeux de résultats](#ResultSets) . La nouvelle valeur de configuration définie par sp_configure n’est pas effective tant que la valeur d'exécution n’a pas été définie par l'instruction RECONFIGURE.  
@@ -107,7 +107,7 @@ Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], après exécution de RECONFI
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  RECONFIGURE n'est pas autorisée dans une transaction explicite ou implicite.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tous les utilisateurs peuvent exécuter **sp_configure** sans paramètres ou avec le paramètre @configname .  
   
  Nécessite une autorisation **ALTER SETTINGS** au niveau du serveur ou l’appartenance rôle de serveur **sysadmin** pour modifier une valeur de configuration ou pour exécuter RECONFIGURE.  

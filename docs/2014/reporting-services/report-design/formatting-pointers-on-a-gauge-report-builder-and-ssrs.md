@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105824"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66105824"
 ##  <a name="DisplayingMultiple"></a> Affichage de plusieurs pointeurs sur la jauge  
  Vous pouvez ajouter plusieurs pointeurs à la jauge pour représenter plusieurs valeurs sur la même échelle. Cela peut être utile pour afficher une valeur basse et une valeur haute en même temps. Pour spécifier plusieurs pointeurs sur la jauge pour la même échelle, cliquez avec le bouton droit n’importe où à l’intérieur de la jauge et cliquez sur **Ajouter un pointeur** dans le menu contextuel. Vous pouvez également ajouter une échelle en cliquant avec le bouton droit n’importe où dans la jauge et en cliquant sur **Ajouter une échelle**. Vous pouvez ensuite ajouter un nouveau pointeur, qui sera automatiquement associé à la dernière échelle.  
   
- Lorsque des pointeurs se chevauchent, l'ordre de dessin des pointeurs est déterminé par l'ordre dans lequel ils sont ajoutés à la jauge. Vous ne pouvez pas modifier l'ordre des pointeurs en modifiant l'ordre des champs dans le volet des données. Pour modifier l’ordre de dessin de plusieurs pointeurs, ouvrez le volet Propriétés et cliquez sur **Pointeurs (...)**. Modifiez l'ordre des pointeurs dans la collection de pointeurs.  
+ Lorsque des pointeurs se chevauchent, l'ordre de dessin des pointeurs est déterminé par l'ordre dans lequel ils sont ajoutés à la jauge. Vous ne pouvez pas modifier l'ordre des pointeurs en modifiant l'ordre des champs dans le volet des données. Pour modifier l’ordre de dessin de plusieurs pointeurs, ouvrez le volet Propriétés et cliquez sur **Pointeurs (...)** . Modifiez l'ordre des pointeurs dans la collection de pointeurs.  
   
   
 ##  <a name="SettingGradients"></a> Définition des dégradés sur la base d'une aiguille  

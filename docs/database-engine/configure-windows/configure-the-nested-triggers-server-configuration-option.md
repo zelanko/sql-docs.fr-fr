@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ab81f5c32f2e5253279f69eb1f2af056b95b2f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 249ff2d99b5d682f863e4d698b35b9e951da13b4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695067"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802500"
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Configurer l'option de configuration de serveur nested triggers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "47695067"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option Déclencheurs imbriqués](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option nested triggers](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -80,7 +80,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option nested triggers  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option nested triggers  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a> Voir aussi  

@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214700"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799298"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et de fonctionnalité de basculement d'application.  
+  Cet article contient des informations sur les éléments à prendre en compte en matière de connectivité client [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et de fonctionnalité de basculement d’application.  
   
 > [!NOTE]  
 >  Pour la majorité des configurations habituelles d'écouteur, vous pouvez créer le premier écouteur de groupe de disponibilité simplement à l'aide d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou d'applets de commande PowerShell. Pour plus d'informations, consultez [Tâches associées](#RelatedTasks), plus loin dans cette rubrique.  
   
- **Dans cette rubrique :**  
-  
--   [Écouteurs de groupe de disponibilité](#AGlisteners)  
-  
--   [Utilisation d'un écouteur pour se connecter au réplica principal](#ConnectToPrimary)  
-  
--   [Utilisation d'un écouteur pour se connecter à un réplica secondaire en lecture seule (routage en lecture seule)](#ConnectToSecondary)  
-  
-    -   [Pour configurer des réplicas de disponibilité pour le routage en lecture seule](#ConfigureARsForROR)  
-  
-    -   [Intention de l'application en lecture seule et routage en lecture seule](#ReadOnlyAppIntent)  
-  
--   [Contournement des écouteurs de groupe de disponibilité](#BypassAGl)  
-  
--   [Comportement des connexions clientes lors du basculement](#CCBehaviorOnFailover)  
-  
--   [Prise en charge de basculements de sous-réseaux multiples de groupe de disponibilité](#SupportAgMultiSubnetFailover)  
-  
--   [Écouteurs de groupe de disponibilité et certificats SSL](#SSLcertificates)  
-  
--   [Écouteurs de groupe de disponibilité et noms de principal de serveur (SPN)](#SPNs)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> Écouteurs de groupe de disponibilité  
  Vous pouvez fournir la connectivité client à la base de données d'un groupe de disponibilité donné en créant un écouteur de groupe de disponibilité. Un écouteur de groupe de disponibilité est un nom de réseau virtuel (VNN) auquel les clients peuvent se connecter afin d’accéder à une base de données dans un réplica principal ou secondaire d’un groupe de disponibilité Always On. Un écouteur de groupe de disponibilité permet à un client de se connecter à un réplica de disponibilité sans connaître le nom de l'instance physique de SQL Server à laquelle il se connecte.  Il est inutile de modifier la chaîne de connexion du client pour se connecter à l'emplacement actuel du réplica principal.  
@@ -67,13 +42,8 @@ ms.locfileid: "53214700"
   
  Pour obtenir des informations essentielles sur les écouteurs de groupe de disponibilité, consultez [Créer ou configurer un écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **Dans cette section :**  
   
--   [Configuration de l'écouteur de groupe de disponibilité](#AGlConfig)  
-  
--   [Sélection d'un port d'écoute de groupe de disponibilité](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> Configuration de l'écouteur de groupe de disponibilité  
+##  <a name="AGlConfig"></a> Configuration de l'écouteur de groupe de disponibilité  
  Un écouteur de groupe de disponibilité est défini par les élément suivants :  
   
  Un nom DNS unique.  
@@ -95,7 +65,7 @@ ms.locfileid: "53214700"
   
  Les configurations réseau hybrides et le recours au protocole DHCP sur plusieurs sous-réseaux ne sont pas pris en charge pour les écouteurs de groupe de disponibilité. Cela est dû au fait que, lorsqu'un basculement a lieu, une adresse IP dynamique peut expirer ou être libérée, ce qui compromet la haute disponibilité globale.  
   
-###  <a name="SelectListenerPort"></a> Sélection d'un port d'écoute de groupe de disponibilité  
+##  <a name="SelectListenerPort"></a> Sélection d'un port d'écoute de groupe de disponibilité  
  Lors de la configuration d'un écouteur de groupe de disponibilité, vous devez indiquer un port.  Vous pouvez configurer le port par défaut sur 1433, afin de permettre de simplifier les chaînes de connexion du client. Si vous utilisez 1433, vous n'avez pas besoin d'indiquer un numéro de port dans une chaîne de connexion.   De plus, étant donné que chaque écouteur de groupe de disponibilité portera un nom de réseau virtuel distinct, chaque écouteur de groupe de disponibilité configuré sur un même WSFC pourra être configuré pour référencer le même port par défaut 1433.  
   
  Vous pouvez également indiquer un port d'écoute non standard ; toutefois, cela signifie que vous devrez également spécifier explicitement un port cible dans votre chaîne de connexion lors de chaque connexion à l'écouteur de groupe de disponibilité.  Vous devrez également ouvrir l'autorisation sur le pare-feu pour le port non standard.  
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   La chaîne de connexion fait référence à un écouteur de groupe de disponibilité, et l’intention de l’application de la connexion entrante est définie en lecture seule (par exemple, à l’aide du mot clé **Application Intent=ReadOnly** dans les chaînes de connexion ODBC ou OLEDB, ou dans les attributs ou les propriétés de connexion). Pour plus d’informations, consultez [Intention de l’application en lecture seule et routage en lecture seule](#ReadOnlyAppIntent), plus loin dans cette section.  
   
-###  <a name="ConfigureARsForROR"></a> Pour configurer des réplicas de disponibilité pour le routage en lecture seule  
+##  <a name="ConfigureARsForROR"></a> Pour configurer des réplicas de disponibilité pour le routage en lecture seule  
  Un administrateur de base de données doit configurer les réplicas de disponibilité comme suit :  
   
 1.  Pour chaque réplica de disponibilité à configurer comme réplica secondaire accessible en lecture, un administrateur de base de données doit configurer les paramètres suivants, qui prennent effet uniquement sous le rôle secondaire :  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> Intention de l'application en lecture seule et routage en lecture seule  
+##  <a name="ReadOnlyAppIntent"></a> Intention de l'application en lecture seule et routage en lecture seule  
  La propriété de chaîne de connexion de l’intention d’application exprime le souhait de l’application cliente d’être redirigée vers une version en lecture-écriture ou en lecture seule d’une base de données de groupe de disponibilité. Pour utiliser le routage en lecture seule, un client doit utiliser une intention d'application en lecture seule dans la chaîne de connexion pour la connexion à l'écouteur de groupe de disponibilité. Sans intention d'application en lecture seule, les connexions à l'écouteur de groupe de disponibilité sont dirigées vers la base de données sur le réplica principal.  
   
  L’attribut d’intention d’application est stocké dans la session du client lors de la connexion. L’instance de SQL Server traite ensuite cette intention et détermine ce qu’il faut faire, selon la configuration du groupe de disponibilité et l’état en lecture-écriture actuel de la base de données cible dans le réplica secondaire.  
@@ -167,11 +137,11 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="BypassAGl"></a> Contournement des écouteurs de groupe de disponibilité  
  Alors que les écouteurs de groupe de disponibilité permettent la prise en charge de la redirection de basculement et le routage en lecture seule, les connexions clientes ne sont pas requises pour les utiliser. Une connexion cliente peut également faire directement référence à l'instance de SQL Server au lieu de se connecter à l'écouteur du groupe de disponibilité.  
   
- Pour l'instance de SQL Server, cela ne fait aucune différence si une connexion est établie à l'aide de l'écouteur du groupe de disponibilité ou avec un autre point de terminaison d'instance.  L'instance de SQL Server vérifie l'état de la base de données ciblée, puis autorise ou interdit la connectivité, selon la configuration du groupe de disponibilité et l'état actuel de la base de données sur l'instance.  Par exemple, si une application cliente se connecte directement à une instance de port SQL Server et se connecte à une base de données cible hébergée dans un groupe de disponibilité, et que la base de données cible se trouve dans l'état primaire et en ligne, la connectivité aboutit.  Si la base de données cible est hors connexion ou dans un état de transition, la connectivité à la base de données échoue.  
+ Pour l’instance de SQL Server, cela ne fait aucune différence si une connexion est établie à l’aide de l’écouteur du groupe de disponibilité ou avec un autre point de terminaison d’instance.  L'instance de SQL Server vérifie l'état de la base de données ciblée, puis autorise ou interdit la connectivité, selon la configuration du groupe de disponibilité et l'état actuel de la base de données sur l'instance.  Par exemple, si une application cliente se connecte directement à une instance de port SQL Server et se connecte à une base de données cible hébergée dans un groupe de disponibilité, et que la base de données cible se trouve à l’état primaire et en ligne, la connectivité aboutit.  Si la base de données cible est hors connexion ou dans un état de transition, la connectivité à la base de données échoue.  
   
  Autrement, lors d'une migration depuis une mise en miroir de bases de données vers [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], les applications peuvent spécifier la chaîne de connexion de mise en miroir de bases de données dans la mesure où il existe un seul réplica secondaire et qu'il n'autorise pas les connexions utilisateur. Pour plus d’informations, consultez [Utilisation des chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité](#DbmConnectionString), plus loin dans cette section.  
   
-###  <a name="DbmConnectionString"></a> Utilisation des chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité  
+##  <a name="DbmConnectionString"></a> Utilisation des chaînes de connexion de mise en miroir de bases de données avec des groupes de disponibilité  
  Si un groupe de disponibilité possède uniquement un réplica secondaire et est configuré avec ALLOW_CONNECTIONS = READ_ONLY ou ALLOW_CONNECTIONS = NONE pour le réplica secondaire, les clients peuvent se connecter au réplica principal à l'aide d'une chaîne de connexion de mise en miroir de bases de données. Cette approche peut être utile lors de la migration d'une application existante depuis la mise en miroir de bases de données vers un groupe de disponibilité, tant que vous limitez le groupe de disponibilité à deux réplicas de disponibilité (un réplica principal et un réplica secondaire). Si vous ajoutez des réplicas secondaires supplémentaires, vous devrez créer un écouteur de groupe de disponibilité pour le groupe de disponibilité et mettre à jour vos applications pour utiliser le nom DNS de l'écouteur du groupe de disponibilité.  
   
  Lors de l'utilisation de chaînes de connexion de mise en miroir de bases de données, le client peut soit utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La chaîne de connexion fournie par un client doit fournir au minimum le nom d'une instance de serveur, le *nom du partenaire initial*, pour identifier l'instance de serveur qui héberge initialement le réplica de disponibilité auquel vous envisagez de vous connecter. Éventuellement, la chaîne de connexion peut également fournir le nom d'une autre instance de serveur, le *nom du partenaire de basculement*, pour identifier l'instance de serveur qui héberge initialement le réplica secondaire comme nom de partenaire de basculement.  

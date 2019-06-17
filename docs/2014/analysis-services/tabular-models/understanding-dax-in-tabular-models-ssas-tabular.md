@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e02123703295d13a0be9bcb74382ce4a7ed9dd66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066272"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Fonctionnement de DAX dans les modèles tabulaires (SSAS Tabulaire)
@@ -104,7 +104,7 @@ ms.locfileid: "66066272"
 |Booléen|Booléen|Valeur True ou valeur False.|  
 |Text|String|Chaîne de données caractères au format Unicode. Il peut s'agir de chaînes, de nombres ou de dates représentés dans un format texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
-|Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
+|Currency|Currency|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  Les modèles tabulaires incluent également le type de données Table comme entrée ou sortie dans de nombreuses fonctions DAX. Par exemple, la fonction FILTER prend une table en entrée et génère en sortie une autre table qui contient uniquement les lignes qui répondent aux conditions de filtre. En associant des fonctions de table à des fonctions d'agrégation, vous pouvez effectuer des calculs complexes sur des jeux de données définis de façon dynamique.  

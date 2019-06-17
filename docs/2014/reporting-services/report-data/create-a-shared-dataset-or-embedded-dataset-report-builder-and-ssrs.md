@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107426"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "66107426"
   
 4.  Dans le Concepteur de requêtes, spécifiez les champs à inclure au dataset.  
   
-5.  Cliquez sur **Exécuter** (**!**) pour exécuter la requête.  
+5.  Cliquez sur **Exécuter** ( **!** ) pour exécuter la requête.  
   
 6.  Sur le bouton **Générateur de rapports** , cliquez sur **Enregistrer** ou **Enregistrer sous** pour enregistrer le dataset partagé sur le serveur de rapports.  
   

@@ -10,13 +10,13 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605986"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794845"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Installation de mises à jour à partir de l'invite de commandes
 
@@ -25,9 +25,9 @@ ms.locfileid: "51605986"
 Testez et modifiez les scripts d'installation selon les besoins de votre organisation. 
  
 ## <a name="sample-syntax-for-installation"></a>Exemple de syntaxe pour l'installation 
-Le nom du package de mise à jour peut varier et inclure une langue, une édition et un processeur. Appliquez une mise à jour à partir de l'invite de commandes en remplaçant <nom_package> par le nom de votre package de mise à jour : 
+Le nom du package de mise à jour peut varier et inclure une langue, une édition et un processeur. Appliquez une mise à jour à partir de l'invite de commandes en remplaçant <nom_package> par le nom de votre package de mise à jour : 
  
-- Mettez à jour une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et tous les composants partagés, tels que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et Outils d'administration : vous pouvez spécifier l'instance à l'aide du paramètre InstanceName ou InstanceID. Pour mettre à jour une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le paramètre InstanceID.
+- Mettez à jour une seule instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et tous les composants partagés, comme [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et Outils d’administration : Vous pouvez spécifier l'instance à l'aide du paramètre InstanceName ou du paramètre InstanceID. Pour mettre à jour une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le paramètre InstanceID.
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance
@@ -78,7 +78,7 @@ Le nom du package de mise à jour peut varier et inclure une langue, une éditio
 |Commutateur|Description| 
 |------------|-----------------| 
 |**/?**|Affiche de l'aide sur l'invite de commandes d'une installation sans assistance| 
-|**/action=Patch ou /action=RemovePatch**|Spécifie l'action d'installation : Patch ou RemovePatch.| 
+|**/action=Patch ou /action=RemovePatch**|Spécifie l’action d’installation : Patch ou RemovePatch.| 
 |**/allinstances**|Applique la mise à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à toutes les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partagés ne dépendant pas des instances.| 
 |**/instancename=InstanceName***|Applique la mise à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommée InstanceName et à tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partagés ne dépendant pas des instances.| 
 |**/InstanceID=Inst1**|Applique la mise à jour de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inst1 et à tous les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] partagés ne dépendant pas des instances.| 

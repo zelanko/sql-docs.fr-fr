@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872259"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794999"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,11 @@ Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.m
 -   Environnement de développement sans configuration à haute disponibilité.  
   
 -   Environnement de production non stratégique pouvant tolérer un temps mort et s’exécutant sur du matériel des logiciels récents. La durée du temps d’arrêt dépend de la taille de votre base de données et de la vitesse de votre sous-système d’E/S. Une mise à niveau de SQL Server 2014 quand les tables optimisées en mémoire sont en cours d’utilisation prend plus de temps. Pour plus d’informations, consultez [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> Pour obtenir un exemple de la façon dont Microsoft a utilisé cette stratégie, consultez le billet de blog suivant : [To upgrade or not to upgrade](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/) (Mettre à niveau ou ne pas mettre à niveau). 
+
+
 > [!WARNING]  
 >  Lorsque vous exécutez le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêtée, puis redémarrée dans le cadre de l’exécution des vérifications préalables à la mise à niveau.  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c3e45ca68561bcc3da35fca0264294284fe039ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 97c8e394552e3fe1984367a57bcaa88a9cfd9752
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619168"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794149"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurer l'option de configuration de serveur media retention
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Cette rubrique explique comment configurer l'option de configuration de serveur **media retention** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **media retention** spécifie la durée de rétention de chaque jeu de sauvegarde. Cette option permet d'éviter l'écrasement des sauvegardes pendant le nombre de jours spécifié. Après avoir configuré l'option  **media retention** , il est inutile de spécifier la durée de rétention des sauvegardes système à chaque sauvegarde. La valeur par défaut est de 0 jour et la valeur maximum de 365 jours.  
+  Cette rubrique explique comment configurer l'option de configuration de serveur **media retention** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **media retention** spécifie la durée de rétention de chaque jeu de sauvegarde. Cette option permet d'éviter l'écrasement des sauvegardes pendant le nombre de jours spécifié. Après avoir configuré l'option **media retention**, il est inutile de spécifier la durée de rétention des sauvegardes système à chaque sauvegarde. La valeur par défaut est de 0 jour et la valeur maximum de 365 jours.  
   
  **Dans cette rubrique**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47619168"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option media retention](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l’option media retention](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47619168"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations d’exécution de **sp_configure** , sans paramètre ou avec le premier paramètre uniquement, sont accordées par défaut à tous les utilisateurs. Pour exécuter **sp_configure** avec les deux paramètres afin de modifier une option de configuration ou d’exécuter l’instruction RECONFIGURE, un utilisateur doit disposer de l’autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -98,7 +98,7 @@ GO
   
  Pour plus d’informations, consultez [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option media retention  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option media retention  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
 ## <a name="see-also"></a> Voir aussi  

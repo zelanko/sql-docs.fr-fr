@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095717"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de données (SSRS en mode natif)
@@ -47,7 +47,7 @@ ms.locfileid: "66095717"
  Détermine les informations d'identification utilisées par le serveur de rapports pour la connexion à la base de données du serveur de rapports. Les types d'informations d'identification que vous pouvez spécifier incluent le compte de service, un utilisateur de domaine Windows, un utilisateur local Windows ou une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la sélection des informations d’identification, consultez [configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nom d'utilisateur**  
- Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, indiquez-les dans ce format :  *\<domaine >\\< compte\>*.  
+ Spécifie un compte d'utilisateur du domaine si vous utilisez les informations d'identification Windows ou une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous utilisez les informations d'identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous utilisez des informations d’identification Windows, indiquez-les dans ce format :  *\<domaine >\\< compte\>* .  
   
  **Mot de passe**  
  Spécifie le mot de passe du compte.  

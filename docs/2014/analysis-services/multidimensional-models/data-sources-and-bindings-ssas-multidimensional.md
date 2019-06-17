@@ -34,10 +34,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66076082"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
@@ -168,7 +168,7 @@ ms.locfileid: "66076082"
   
  Les liaisons hors de-lignes sont spécifiées en incluant l'objet de collection `Bindings` facultatif avec la commande de traitement. La collection `Bindings` facultative contient les éléments suivants.  
   
-|Propriété|Cardinalité|Type|Description|  
+|Propriété|Cardinalité|type|Description|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|Fournit une collection de nouvelles liaisons.|  
 |`DataSource`|0-1|`DataSource`|Remplace l'élément `DataSource` du serveur qui aurait été utilisé.|  
@@ -177,7 +177,7 @@ ms.locfileid: "66076082"
  Tous les éléments qui sont en rapport avec les liaisons hors-ligne sont facultatifs. Pour tous les éléments non spécifiés, ASSL utilise la spécification contenue dans le DDL de l'objet rendu persistant. La spécification de `DataSource` ou de `DataSourceView` dans la commande `Process` est facultative. Si `DataSource` ou `DataSourceView` sont spécifiés, ils ne sont pas instanciés et ne sont pas rendus persistants une fois la commande `Process` terminée.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Définition du type de liaison hors ligne  
- À l'intérieur de la collection `Bindings` hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément `Binding` pour chacun. Chaque élément `Binding` a une référence d'objet étendue, qui est semblable à la référence d'objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique de la `Object` élément `Process` commandes, sauf que le \< *objet*>\<*/objet*> les balises ne sont pas présents.  
+ À l'intérieur de la collection `Bindings` hors ligne, ASSL prévoit une collection de liaisons pour les objets multiples, autorisant un élément `Binding` pour chacun. Chaque élément `Binding` a une référence d'objet étendue, qui est semblable à la référence d'objet mais qui peut également faire référence à des objets mineurs (par exemple, des attributs de dimension et des attributs de groupe de mesures). Cet objet prend la forme à deux dimensions typique de la `Object` élément `Process` commandes, sauf que le \< *objet*>\< */objet*> les balises ne sont pas présents.  
   
  Chaque objet pour lequel la liaison est spécifiée est identifié par un élément XML sous la forme \< *objet*> ID (par exemple, `DimensionID`). Une fois que vous avez identifié l’objet aussi précisément que possible avec le formulaire \< *objet*> ID, vous identifiez l’élément pour lequel la liaison est spécifiée, qui est généralement `Source`. Un scénario commun est celui où `Source` est une propriété de `DataItem`, ce qui est le cas pour les liaisons de colonne dans un attribut. Dans ce cas, vous ne spécifiez pas la balise `DataItem` ; au lieu de cela, vous spécifiez simplement la propriété `Source`, comme si elle était directement sur la colonne à lier.  
   

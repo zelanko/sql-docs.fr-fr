@@ -10,13 +10,13 @@ ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b287e4f806f02f2b86493813f29776e118017fb8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405124"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794727"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
 
@@ -113,7 +113,7 @@ ms.locfileid: "52405124"
   
  **Pour effectuer la mise à niveau avec mise à niveau du moteur de base de données**  
   
-1.  **Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] uniquement** : ouvrez **Panneau de configuration** > **Programmes et fonctionnalités** et désinstallez Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Pour [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] uniquement** : ouvrez **Panneau de configuration** > **Programmes et fonctionnalités** et désinstallez Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Mettez à niveau le moteur de base de données vers [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ou [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)]. Pour plus d’informations, consultez [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52405124"
 3.  Procédez à la mise à niveau du schéma de base de données MDS, créez une application Web et associez la nouvelle application Web à la base de données MDS mise à niveau. Pour obtenir des instructions, consultez les étapes 2 à 4 dans [Mise à niveau sans mise à niveau du moteur de base de données](#noengine)  
   
 ## <a name="troubleshooting"></a>Dépannage  
- **Problème :** quand vous ouvrez l’application web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un message d’erreur s’affiche, indiquant que la version du client n’est pas compatible avec la version de la base de données.  
+ **Problème :** quand vous ouvrez l’application web [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], un message d’erreur s’affiche, indiquant que la version du client n’est pas compatible avec la version de la base de données.  
   
  **Solution :** ce problème se produit quand une application web Master Data Manager [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tente d’accéder à une base de données qui a été mise à niveau vers [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] Master Data Services. Vous devez utiliser une application web [!INCLUDE[ssSQL16](../../includes/sssqlv14-md.md)] à la place.  
   
