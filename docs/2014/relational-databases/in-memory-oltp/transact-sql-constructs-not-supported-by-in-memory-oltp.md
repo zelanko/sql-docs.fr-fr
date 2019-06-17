@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155304"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
@@ -35,7 +35,7 @@ ms.locfileid: "63155304"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de données qui utilisent OLTP en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent apparaître dans le texte du message d'une erreur impliquant une base de données OLTP en mémoire.  
   
-|Type|Nom|Résolution|  
+|type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Option|AUTO_CLOSE|L'option de base de données AUTO_CLOSE=ON n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
 |Option|ATTACH_REBUILD_LOG|L'option de base de données CREATE ATTACH_REBUILD_LOG n'est pas prise en charge par les bases de données avec un groupe de fichiers MEMORY_OPTIMIZED_DATA.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63155304"
 ## <a name="memory-optimized-tables"></a>Tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique une table mémoire optimisée, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom|Résolution|  
+|type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction `CREATE TABLE`.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [pris en charge les Types de données](supported-data-types-for-in-memory-oltp.md).|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155304"
 ## <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index sur une table optimisée en mémoire, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Créer une vue d’abonnement|Résolution|  
+|type|Créer une vue d’abonnement|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|Index filtré|Les index filtrés ne sont pris en charge avec les tables optimisées en mémoire. Omettez la clause `WHERE` de la spécification d'index.|  
 |Fonctionnalité|UNIQUE|Les index uniques ne sont pas pris en charge pour les tables mémoire optimisées. Supprimez l'argument `UNIQUE` de la spécification d'index.|  
@@ -98,14 +98,14 @@ ms.locfileid: "63155304"
 ## <a name="nonclustered-hash-indexes"></a>Index de hachage non cluster  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique un index de hachage non cluster, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom|Résolution|  
+|type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Option|ASC/DESC|Les index de hachage non cluster ne sont pas ordonnés. Supprimez les mots clés `ASC` et `DESC` de la spécification de clé d'index.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>procédures stockées compilées en mode natif  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des procédures stockées compilées en mode natif, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Fonctionnalité|Résolution|  
+|type|Fonctionnalité|Résolution|  
 |----------|-------------|----------------|  
 |Fonctionnalité|Variables de table inline|Les types de table ne peuvent pas être déclarés inline avec des déclarations de variable. Les types de table doivent être déclarés explicitement à l'aide d'une instruction `CREATE TYPE`.|  
 |Fonctionnalité|Curseurs|Les curseurs ne sont pas pris en charge sur ou dans les procédures stockées compilées en mode natif.<br /><br /> -Lorsque vous exécutez la procédure à partir du client, utilisez RPC plutôt que l’API de curseur. Avec ODBC, évitez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE`, et spécifiez directement le nom de la procédure à la place.<br /><br /> -Lors de l’exécution de la procédure à partir d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot ou une autre procédure stockée, évitez d’utiliser un curseur avec la procédure stockée compilée en mode natif.<br /><br /> -Lors de la création d’une procédure stockée compilée en mode natif, plutôt que d’à l’aide d’un curseur, utilisez logique basée sur l’ensemble ou une `WHILE` boucle.|  
@@ -199,7 +199,7 @@ ms.locfileid: "63155304"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transactions qui accèdent aux tables mémoire optimisées  
  Le tableau suivant répertorie les fonctionnalités et les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] qui peuvent s'afficher dans le texte d'un message d'erreur qui implique des transactions qui accèdent aux tables mémoire optimisées, ainsi que l'action corrective à entreprendre pour résoudre l'erreur.  
   
-|Type|Nom|Résolution|  
+|type|Nom|Résolution|  
 |----------|----------|----------------|  
 |Fonctionnalité|point d'enregistrement|La création de points de sauvegarde dans des transactions qui accèdent aux tables mémoire optimisées n'est pas prise en charge.|  
 |Fonctionnalité|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  

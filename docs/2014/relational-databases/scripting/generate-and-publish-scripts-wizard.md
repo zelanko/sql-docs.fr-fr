@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063990"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
@@ -127,7 +127,7 @@ ms.locfileid: "66063990"
   
 -   **Avancé** - Permet d’afficher la boîte de dialogue **Options de script avancées** dans laquelle vous pouvez sélectionner des options avancées pour générer des scripts.  
   
--   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton (**...**) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
+-   **Enregistrer dans le fichier** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Cliquez sur le bouton ( **...** ) pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Cliquez sur **Fichier unique** ou **Fichier unique par objet** pour spécifier comment les scripts doivent être générés. Cliquez sur **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.  
   
 -   **Enregistrer dans le Presse-papiers** - Permet d’enregistrer le script Transact-SQL dans le Presse-papiers.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "66063990"
   
 -   **Valeurs de script par défaut** - Inclut les objets par défaut utilisés pour définir les valeurs par défaut dans les colonnes de table. La valeur par défaut est **True**. Pour plus d’informations, consultez [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
--   **Générer un script de création/suppression (DROP/CREATE)** - Avec **Générer un script de création (CREATE)**, les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sont incluses pour créer les objets. Avec **Générer un script de suppression (DROP)**, les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sont incluses pour supprimer les objets. Avec **Générer un script de création/suppression (DROP/CREATE)**, l'instruction de suppression [!INCLUDE[tsql](../../../includes/tsql-md.md)] est incluse dans le script, suivie de l'instruction de création, pour chaque objet faisant l'objet d'un script. La valeur par défaut est **Générer un script de création (CREATE)**.  
+-   **Générer un script de création/suppression (DROP/CREATE)** - Avec **Générer un script de création (CREATE)** , les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sont incluses pour créer les objets. Avec **Générer un script de suppression (DROP)** , les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] sont incluses pour supprimer les objets. Avec **Générer un script de création/suppression (DROP/CREATE)** , l'instruction de suppression [!INCLUDE[tsql](../../../includes/tsql-md.md)] est incluse dans le script, suivie de l'instruction de création, pour chaque objet faisant l'objet d'un script. La valeur par défaut est **Générer un script de création (CREATE)** .  
   
 -   **Générer un script pour les propriétés étendues** - Inclut les propriétés étendues dans le script, si l’objet en possède. La valeur par défaut est **True**.  
   

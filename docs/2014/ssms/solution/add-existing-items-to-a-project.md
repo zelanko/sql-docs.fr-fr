@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58d94afea9c6801d75a67f6f9136441d536eb696
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956152"
 ---
 # <a name="add-existing-items-to-a-project"></a>Ajouter des éléments existants à un projet
@@ -45,7 +45,7 @@ ms.locfileid: "62956152"
      Utilisez cette option pour filtrer les fichiers et les dossiers affichés. Entrez une partie ou l'intégralité du nom de fichier servant de filtre. Vous pouvez utiliser l'astérisque (`*`) comme caractère générique.  
   
     > [!NOTE]  
-    >  Vous pouvez naviguer jusqu’à un emplacement sur le web ou sur le réseau en entrant une URL ou un chemin réseau dans la zone de texte **Nom de fichier** . Par exemple, **http://mywebsite** affiche les fichiers disponibles à l’emplacement monsiteweb, tandis que **\\\myserver\myshare** affiche les fichiers disponibles à l’emplacement partage sur monserveur.  
+    >  Vous pouvez naviguer jusqu’à un emplacement sur le web ou sur le réseau en entrant une URL ou un chemin réseau dans la zone de texte **Nom de fichier** . Par exemple, **http://mywebsite** affiche les fichiers disponibles à l’emplacement monsiteweb, tandis que **\\ \myserver\myshare** affiche les fichiers disponibles à l’emplacement partage sur monserveur.  
   
      **Fichiers de type**  
      Utilisez cette option pour filtrer les fichiers selon leur extension de fichier. Chaque produit affiche la liste des filtres par défaut correspondant aux types de fichiers les plus courants.  

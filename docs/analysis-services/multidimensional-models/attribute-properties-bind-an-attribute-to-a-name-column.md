@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020432"
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propriétés d’attribut - Lier un attribut à une colonne nom
@@ -26,7 +26,7 @@ ms.locfileid: "63020432"
   
 2.  Sous l’onglet **Structure de dimension** , dans le volet **Attributes** , cliquez avec le bouton droit sur l’attribut que vous souhaitez configurer, puis cliquez sur **Propriétés**.  
   
-3.  Dans la fenêtre **Propriétés** , recherchez la propriété **NameColumn** , puis sélectionnez **(nouveau)**.  
+3.  Dans la fenêtre **Propriétés** , recherchez la propriété **NameColumn** , puis sélectionnez **(nouveau)** .  
   
 4.  Dans la boîte de dialogue **Liaison d’objets** , sélectionnez **Liaison de colonne**comme **Type de liaison**.  
   

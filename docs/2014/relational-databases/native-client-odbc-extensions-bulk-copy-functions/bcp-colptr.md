@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689151"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
@@ -54,7 +54,7 @@ idxServerCol
   
  Si *pData* a la valeur NULL et la colonne correspondant au champ lié n’est pas un type de valeur élevée, **bcp_colptr** échoue.  
   
- Pour plus d’informations sur les types de valeur élevée, consultez [bcp_bind](bcp-bind.md)**.**  
+ Pour plus d’informations sur les types de valeur élevée, consultez [bcp_bind](bcp-bind.md) **.**  
   
  *idxServerCol*  
  Position ordinale de la colonne dans la table de base de données vers laquelle les données sont copiées. La première colonne d'une table est la colonne 1. La position ordinale d'une colonne est indiquée par [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  

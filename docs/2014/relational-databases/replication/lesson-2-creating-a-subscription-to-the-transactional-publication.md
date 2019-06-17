@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721078"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Leçon 2 : Création d’un abonnement à la Publication transactionnelle
@@ -40,7 +40,7 @@ ms.locfileid: "62721078"
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **ProductReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis sur **Suivant**.  
   
-8.  Dans le **sécurité de l’Agent de Distribution** boîte de dialogue, cliquez sur le bouton de sélection (**...** ), entrez \< _nom_ordinateur >_**\repl_distribution** dans le **compte de processus** , entrez le mot de passe pour ce compte, cliquez sur **OK**, puis cliquez sur **suivant**.  
+8.  Dans le **sécurité de l’Agent de Distribution** boîte de dialogue, cliquez sur le bouton de sélection ( **...** ), entrez \< _nom_ordinateur >_ **\repl_distribution** dans le **compte de processus** , entrez le mot de passe pour ce compte, cliquez sur **OK**, puis cliquez sur **suivant**.  
   
 9. Cliquez sur **Terminer** pour accepter les valeurs par défaut des pages restantes et terminer l’Assistant.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721078"
   
 2.  Dans la page **Général** , dans la liste **Type d’utilisateur** , sélectionnez **Utilisateur Windows**.  
   
-3.  Sélectionnez le **nom d’utilisateur** puis cliquez sur le bouton de sélection (...), dans le **Entrez le nom de l’objet à sélectionner** zone, tapez < nom_ordinateur >**\repl_distribution**, cliquez sur  **Vérifier les noms**, puis cliquez sur **OK**.  
+3.  Sélectionnez le **nom d’utilisateur** puis cliquez sur le bouton de sélection (...), dans le **Entrez le nom de l’objet à sélectionner** zone, tapez < nom_ordinateur > **\repl_distribution**, cliquez sur  **Vérifier les noms**, puis cliquez sur **OK**.  
   
 4.  Dans la page **Appartenance** , dans la zone **Appartenance au rôle de base de données** , sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   

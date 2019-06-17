@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f0d131422aa9d901e6a92cb5c9e573a076b1e71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014423"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -40,7 +40,7 @@ ms.locfileid: "63014423"
   
  Le pilote ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client signale les codes de fonction dynamique supplémentaires suivants qui identifient la dernière instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tentée. Le code de fonction dynamique est retourné dans l'en-tête (enregistrement 0) du jeu d'enregistrements de diagnostic. Il est par conséquent disponible sur chaque exécution (réussi ou pas).  
   
-|Code de fonction dynamique|Source|  
+|Code de fonction dynamique|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE, instruction|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT (instruction)|  

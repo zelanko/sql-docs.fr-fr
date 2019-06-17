@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63066332"
 ---
-# <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparaison de prédictions pour les modèles de prévision (Didacticiel intermédiaire sur l'exploration de données) 
+# <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Comparaison de prédictions pour les modèles de prévision (Didacticiel intermédiaire sur l'exploration de données)
   Dans les étapes précédentes de ce didacticiel, vous avez créé plusieurs modèles de série chronologique :  
   
 -   Les prédictions de chaque combinaison de région et modèle basées uniquement sur les données pour chaque modèle et région.  

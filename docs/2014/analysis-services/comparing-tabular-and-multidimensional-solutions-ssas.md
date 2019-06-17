@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087770"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparaison des solutions tabulaires et multidimensionnelles (SSAS)
@@ -116,7 +116,7 @@ ms.locfileid: "66087770"
 |Hiérarchies définies par l'utilisateur|[Oui](multidimensional-models/user-defined-hierarchies-create.md)|Oui|  
 |Écriture différée|[Oui](multidimensional-models/set-partition-writeback.md)|Non|  
   
- * Si votre solution doit prendre en charge un très grand nombre de comptages de valeurs (par exemple, plusieurs millions d’ID client), effectuez d’abord tabulaire. Elle est généralement plus performante dans ce cas. Consultez la section sur les calculs distincts dans le livre blanc, [étude de cas Analysis Services : À l’aide de modèles tabulaires dans les Solutions commerciales à grande échelle](https://msdn.microsoft.com/library/dn751533.aspx).  
+ \* Si votre solution doit prendre en charge un très grand nombre de comptages de valeurs (par exemple, plusieurs millions d’ID client), effectuez d’abord tabulaire. Elle est généralement plus performante dans ce cas. Consultez la section sur les calculs distincts dans le livre blanc, [étude de cas Analysis Services : À l’aide de modèles tabulaires dans les Solutions commerciales à grande échelle](https://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Taille du modèle  
  La taille du modèle, en termes de nombre total d'objets, est identique par type de solution. Toutefois, les outils de conception utilisés pour générer chaque solution varient selon la façon dont ils s'adaptent au traitement d'un grand nombre d'objets. Il est plus facile de générer un modèle plus grand dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , car il fournit davantage de capacités de création de schémas et de listes des objets par type dans l'Explorateur d'objets et dans l'Explorateur de solutions.  

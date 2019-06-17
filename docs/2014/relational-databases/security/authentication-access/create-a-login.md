@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012028"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
@@ -67,7 +67,7 @@ ms.locfileid: "63012028"
   
 1.  Dans l'Explorateur d'objets, développez le dossier de l'instance du serveur où vous souhaitez créer le compte de connexion.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Connexion…**.  
+2.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Connexion…** .  
   
 3.  Dans la boîte de dialogue **Nouvelle connexion**, dans la page **Général**, entrez le nom d’un utilisateur dans la zone **Nom de la connexion**. Vous pouvez également cliquer sur **Rechercher…** pour ouvrir la boîte de dialogue **Sélectionner un utilisateur ou un groupe**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63012028"
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
-    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)**, entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  Sous **Entrez le nom de l’objet à sélectionner (exemples)** , entrez l’utilisateur ou le nom de groupe que vous souhaitez rechercher. Pour plus d'informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Cliquez sur **Avancé…** pour obtenir davantage d’options de recherche avancée. Pour plus d’informations, consultez [Boîte de dialogue Choisir des utilisateurs, des ordinateurs ou des groupes - Page Avancé](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -115,31 +115,31 @@ ms.locfileid: "63012028"
 ### <a name="server-roles"></a>Rôles de serveur  
  La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
   
- Case à cocher**bulkadmin**   
+ Case à cocher**bulkadmin**  
  Les membres du rôle serveur fixe **bulkadmin** peuvent exécuter l’instruction BULK INSERT.  
   
- Case à cocher**dbcreator**   
+ Case à cocher**dbcreator**  
  Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.  
   
- Case à cocher**diskadmin**   
+ Case à cocher**diskadmin**  
  Les membres du rôle serveur fixe **diskadmin** peuvent gérer les fichiers de disque.  
   
- Case à cocher**processadmin**   
+ Case à cocher**processadmin**  
  Les membres du rôle serveur fixe **processadmin** peuvent arrêter les processus en cours d’exécution dans une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Case à cocher**public**   
+ Case à cocher**public**  
  Tous les utilisateurs, groupes et rôles SQL Server appartiennent au rôle serveur fixe **public** par défaut.  
   
- Case à cocher**securityadmin**   
+ Case à cocher**securityadmin**  
  Les membres du rôle serveur fixe **securityadmin** gèrent les connexions et leurs propriétés. Ils peuvent assigner des autorisations GRANT, DENY et REVOKE au niveau du serveur. Ils peuvent aussi assigner des autorisations GRANT, DENY et REVOKE au niveau de la base de données. En outre, ils peuvent réinitialiser les mots de passe pour les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Case à cocher**serveradmin**   
+ Case à cocher**serveradmin**  
  Les membres du rôle serveur fixe **serveradmin** peuvent modifier les options de configuration à l’échelle du serveur et arrêter le serveur.  
   
- Case à cocher**setupadmin**   
+ Case à cocher**setupadmin**  
  Les membres du rôle serveur fixe **setupadmin** peuvent ajouter et supprimer des serveurs liés et exécuter certaines procédures stockées du système.  
   
- Case à cocher**sysadmin**   
+ Case à cocher**sysadmin**  
  Les membres du rôle serveur fixe **sysadmin** peuvent exécuter n’importe quelle activité dans le [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Mappage de l'utilisateur  
@@ -183,17 +183,17 @@ ms.locfileid: "63012028"
   
 3.  Si vous sélectionnez **Objets spécifiques…**  :  
   
-    1.  Dans la boîte de dialogue **Sélectionner les objets**, sous **Sélectionnez ces types d’objets**, cliquez sur **Types d’objets…**.  
+    1.  Dans la boîte de dialogue **Sélectionner les objets**, sous **Sélectionnez ces types d’objets**, cliquez sur **Types d’objets…** .  
   
     2.  Dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Sous **Entrez les noms d’objets à sélectionner (exemples)**, cliquez sur **Parcourir…**.  
+    3.  Sous **Entrez les noms d’objets à sélectionner (exemples)** , cliquez sur **Parcourir…** .  
   
     4.  Dans la boîte de dialogue **Rechercher des objets** , sélectionnez les objets disponibles du type sélectionné dans la boîte de dialogue **Sélectionner les types d'objets** , puis cliquez sur **OK**.  
   
     5.  Dans la boîte de dialogue **Sélectionner des objets** , cliquez sur **OK**.  
   
-4.  Si vous sélectionnez **Tous les objets des types...**, dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si vous sélectionnez **Tous les objets des types...** , dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
@@ -278,7 +278,7 @@ ms.locfileid: "63012028"
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Suivi : Étapes à suivre après avoir créé un compte de connexion  
+##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé un compte de connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](join-a-role.md).  

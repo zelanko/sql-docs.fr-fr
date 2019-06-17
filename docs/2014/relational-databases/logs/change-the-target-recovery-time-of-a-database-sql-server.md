@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62743215"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modifier la durée de récupération cible d'une base de données (SQL Server)
@@ -57,7 +57,7 @@ ms.locfileid: "62743215"
   
 2.  Utilisez l'instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)suivante, comme suit :  
   
-     TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }  
   
      *target_recovery_time*  
      Lorsque la valeur est supérieure à 0 (valeur par défaut), spécifie la limite supérieure du temps de récupération de la base de données spécifiée en cas de sinistre.  

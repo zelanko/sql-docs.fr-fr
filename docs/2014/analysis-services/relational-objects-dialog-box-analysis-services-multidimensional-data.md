@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070346"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Objets relationnels (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Objets relationnels** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner des tables, des vues ou d'autres objets dans une source de données à laquelle vous voulez appliquer la mise en cache proactive. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur le bouton avec des points de suspension (**...**) des options **Spécifier les tables de suivi** de l’onglet **Notifications** de la boîte de dialogue **Options de stockage** .  
+  Utilisez la boîte de dialogue **Objets relationnels** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner des tables, des vues ou d'autres objets dans une source de données à laquelle vous voulez appliquer la mise en cache proactive. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur le bouton avec des points de suspension ( **...** ) des options **Spécifier les tables de suivi** de l’onglet **Notifications** de la boîte de dialogue **Options de stockage** .  
   
 ## <a name="options"></a>Options  
  **Sélectionnez les objets relationnels pour lesquels vous souhaitez définir la mise en cache proactive**  

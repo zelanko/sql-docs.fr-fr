@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 96b8703f18f7867ed57101f33e2ec1c4d31b35c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62956784"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Récupération d’urgence et disponibilité PowerPivot
@@ -47,7 +47,7 @@ ms.locfileid: "62956784"
   
 -   **(3)** Les services de calcul Excel s’exécutent sur chaque serveur d’applications et permettent à l’application de service de s’exécuter sur différents serveurs d’applications. Par conséquent, si un serveur d'applications est mis hors connexion, Excel Calculation Services reste toujours disponible.  
   
--   **(4)** et **(6)** Les instances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint s’exécutent sur des serveurs en dehors de la batterie de serveurs SharePoint ; cela inclut le service Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Chacune de ces instances est inscrite auprès d’Excel Services **(3)**. Excel Services gère l'équilibrage de charge des demandes effectuées aux serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architecture de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 vous permet d'avoir plusieurs serveurs pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Vous pouvez ainsi ajouter facilement des instances, si nécessaire. Pour plus d’informations, consultez [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
+-   **(4)** et **(6)** Les instances de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode SharePoint s’exécutent sur des serveurs en dehors de la batterie de serveurs SharePoint ; cela inclut le service Windows **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** . Chacune de ces instances est inscrite auprès d’Excel Services **(3)** . Excel Services gère l'équilibrage de charge des demandes effectuées aux serveurs [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . L'architecture de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 vous permet d'avoir plusieurs serveurs pour [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Vous pouvez ainsi ajouter facilement des instances, si nécessaire. Pour plus d’informations, consultez [Gérer les paramètres de modèle de données Excel Services (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).  
   
 -   **(5)** Bases de données SQL Server utilisées pour le contenu, la configuration et les bases de données d’application. Cela inclut la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le plan de récupération d'urgence doit inclure la couche de base de données. Dans cette conception, les bases de données s’exécutent sur le même serveur que **(4)** l’une des instances [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** et **(5)** peuvent également se trouver sur des serveurs différents.  
   

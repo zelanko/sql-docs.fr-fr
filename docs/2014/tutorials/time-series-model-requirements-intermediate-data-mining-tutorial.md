@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63043050"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
@@ -31,7 +31,7 @@ ms.locfileid: "63043050"
   
 ### <a name="to-identify-the-time-key-for-the-forecasting-model"></a>Pour identifier la clé de temps pour le modèle de prévision  
   
-1.  Dans le volet, **SalesByRegion.dsv [Design]**, avec le bouton droit de la table vTimeSeries, puis sélectionnez **Explorer les données**.  
+1.  Dans le volet, **SalesByRegion.dsv [Design]** , avec le bouton droit de la table vTimeSeries, puis sélectionnez **Explorer les données**.  
   
      Un nouvel onglet s’ouvre, intitulé **Explorer la Table vTimeSeries**.  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997949"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` Est le nom de l’article dont la propriété doit être modifié. *article* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @property = ] 'property'` Est une propriété d’article à modifier. *propriété* est **nvarchar (100)**.  
+`[ @property = ] 'property'` Est une propriété d’article à modifier. *propriété* est **nvarchar (100)** .  
   
-`[ @value = ] 'value'` Est la nouvelle valeur de la propriété d’article. *valeur* est **nvarchar (255)**.  
+`[ @value = ] 'value'` Est la nouvelle valeur de la propriété d’article. *valeur* est **nvarchar (255)** .  
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|Détruit la table de destination.|  
 ||**truncate**|Tronque la table de destination.|  
 |**pub_identity_range**||Contrôle la taille des plages d'identité affectées à l'abonné. Non pris en charge pour la réplication d'égal à égal.|  
-|**schema_option**||Spécifie le bitmap de l'option de génération de schéma pour l'article considéré. *schema_option* est **Binary (8)**. Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.|  
+|**schema_option**||Spécifie le bitmap de l'option de génération de schéma pour l'article considéré. *schema_option* est **Binary (8)** . Pour plus d’informations, consultez la section Notes plus loin dans cette rubrique.|  
 ||**0x00**|Désactive les scripts de l'Agent d'instantané.|  
 ||**0x01**|Génère la création d'objets (CREATE TABLE, CREATE PROCEDURE, etc.).|  
 ||**0x02**|Génère les procédures stockées qui propagent les modifications pour l'article, si elles sont définies.|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Réplique les index sur **xml** colonnes.|  
 ||**0x8000000**|Crée tout schéma non encore présent chez l'abonné.|  
 ||**0x10000000**|Convertit **xml** colonnes à **ntext** sur l’abonné.|  
-||**0x20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)**, **varchar (max)**, et **varbinary (max)**) qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)** , **varchar (max)** , et **varbinary (max)** ) qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Réplique les autorisations.|  
 ||**0x80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
 ||**0x100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur **varbinary (max)** colonnes. Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option connexe **0 x 800000000**.|  

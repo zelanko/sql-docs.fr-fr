@@ -25,10 +25,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 35ca43c379e896072ecebf1c313c9ce9b210d73f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997869"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "62997869"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nom de l'objet.|  
+|name|**sysname**|Nom de l'objet.|  
 |object_id|**Int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
 |principal_id|**Int**|ID du propriétaire, si celui-ci est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Cependant, il est possible de spécifier un autre propriétaire à l'aide de l'instruction ALTER AUTHORIZATION qui permet de changer de propriétaire.<br /><br /> Prend la valeur NULL en l'absence d'un autre propriétaire.<br /><br /> Prend la valeur NULL si le type de l'objet est un des types suivants :<br /><br /> C = contrainte CHECK<br /><br /> D = DEFAULT (contrainte ou autonome)<br /><br /> F = Contrainte FOREIGN KEY<br /><br /> PK = Contrainte PRIMARY KEY<br /><br /> R = Règle (ancienne, autonome)<br /><br /> TA = Déclencheur d'assembly (intégration CLR)<br /><br /> TR = Déclencheur SQL<br /><br /> UQ = Contrainte UNIQUE<br /><br /> EC = contrainte d’arête |  
 |schema_id|**Int**|ID du schéma dans lequel se trouve l'objet.<br /><br /> Les objets système compris dans l'étendue du schéma sont toujours contenus dans les schémas sys ou INFORMATION_SCHEMA.|  

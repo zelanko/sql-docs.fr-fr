@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071743"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
@@ -179,7 +179,7 @@ ms.locfileid: "66071743"
   
  Le tableau suivant affiche les valeurs par défaut pour la configuration de la collecte des données d'utilisation.  
   
-|Paramètre|Valeur par défaut|Type|Plage valide|  
+|Paramètre|Valeur par défaut|type|Plage valide|  
 |-------------|-------------------|----------|-----------------|  
 |**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<enabled>|Booléen|Ces valeurs sont activées ou désactivées.|  
 |**Query Reporting interval**|300 (en secondes)|Entier|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  

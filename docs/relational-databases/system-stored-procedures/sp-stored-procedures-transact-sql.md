@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63005865"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -45,7 +45,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ## <a name="arguments"></a>Arguments  
 `[ @sp_name = ] 'name'` Est le nom de la procédure utilisée pour retourner des informations de catalogue. *nom* est **390**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @sp_owner = ] 'schema'` Est le nom du schéma auquel appartient la procédure. *schéma* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
+`[ @sp_owner = ] 'schema'` Est le nom du schéma auquel appartient la procédure. *schéma* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le schéma actif contient une procédure avec le nom spécifié, celle-ci est renvoyée. Si une procédure stockée non qualifiée est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schéma **dbo** dans la base de données active.  
   
-`[ @qualifier = ] 'qualifier'` Est le nom du qualificateur de procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables dans le formulaire (_qualificateur_**.** _schéma_**.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @qualifier = ] 'qualifier'` Est le nom du qualificateur de procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables dans le formulaire (_qualificateur_ **.** _schéma_ **.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 `[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) ou crochets []) sont interprétés comme des caractères génériques. *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   

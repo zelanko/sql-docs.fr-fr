@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060960"
 ---
 # <a name="common-properties"></a>Propriétés communes
@@ -113,7 +113,7 @@ ms.locfileid: "66060960"
 |ID|Entier|Valeur qui identifie l'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie l'entrée.|  
 |IsSorted|Booléen|Indique si les données dans l'entrée sont triées.|  
-|Nom|String|Nom de l'entrée.|  
+|Créer une vue d’abonnement|String|Nom de l'entrée.|  
 |SourceLocale|Entier|ID de paramètres régionaux (LCID) des données d'entrée.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. . Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66060960"
 |IdentificationString|String|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Booléen|Indique si la sortie est une sortie d'erreur.|  
 |IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est `False`.<br /><br /> **\*\* Important \* \***  définissant la valeur de la `IsSorted` propriété `True` ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Créer une vue d’abonnement|String|Nom de la sortie.|  
+|Nom|String|Nom de la sortie.|  
 |SynchronousInputID|Entier|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   

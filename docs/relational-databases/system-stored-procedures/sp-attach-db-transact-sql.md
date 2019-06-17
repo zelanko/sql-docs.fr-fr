@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997061"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
@@ -50,7 +50,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Arguments  
 `[ @dbname = ] 'dbnam_ '` Est le nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filename1 = ] 'filename_n'` Est le nom physique, chemin d’accès compris, d’un fichier de base de données. *Nom_de_fichier_n* est **nvarchar (260)**, avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètre commencer à **@filename1** et augmentent jusqu'à **@filename16**. La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
+`[ @filename1 = ] 'filename_n'` Est le nom physique, chemin d’accès compris, d’un fichier de base de données. *Nom_de_fichier_n* est **nvarchar (260)** , avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètre commencer à **@filename1** et augmentent jusqu'à **@filename16** . La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
   
 > [!NOTE]  
 >  Cet argument crée un mappage vers le paramètre FILENAME de l'instruction CREATE DATABASE. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
