@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078208"
 ---
 # <a name="defining-and-browsing-translations"></a>Définition et exploration de traductions
@@ -32,7 +32,7 @@ ms.locfileid: "66078208"
   
      Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue** .  
   
-3.  Cliquez sur **Espagnol (Espagne)**, puis sur **OK**.  
+3.  Cliquez sur **Espagnol (Espagne)** , puis sur **OK**.  
   
      Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66078208"
   
 6.  Dans la ligne de la **légende** de l’objet pour le **Month Name** d’attribut, tapez `Mes del Año` dans le **Espagnol (Espagne)** colonne de traduction et `Mois d'Année` dans le **Français (France)** colonne de traduction.  
   
-     Notez que lorsque vous entrez ces traductions, des points de suspension (**...** ) s’affiche. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
+     Notez que lorsque vous entrez ces traductions, des points de suspension ( **...** ) s’affiche. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
   
-7.  Cliquez sur le bouton de sélection (**...** ) pour le **Espagnol (Espagne)** traduction pour la **Month Name** attribut.  
+7.  Cliquez sur le bouton de sélection ( **...** ) pour le **Espagnol (Espagne)** traduction pour la **Month Name** attribut.  
   
      La boîte de dialogue **Traduction de données d’attribut** apparaît.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078208"
   
      ![Boîte de dialogue traduction de données attribut](../../2014/tutorials/media/l9-translations-4.gif "boîte de dialogue traduction de données d’attribut")  
   
-9. Cliquez sur **OK**, puis cliquez sur le bouton de sélection (**...** ) pour le **Français (France)** traduction pour la **Month Name** attribut.  
+9. Cliquez sur **OK**, puis cliquez sur le bouton de sélection ( **...** ) pour le **Français (France)** traduction pour la **Month Name** attribut.  
   
 10. Dans la liste **Colonnes de traduction** , sélectionnez **FrenchMonthName**, puis cliquez sur **OK**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66078208"
   
      Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue**.  
   
-3.  Sélectionnez **Espagnol (Espagne)**, puis cliquez sur **OK**.  
+3.  Sélectionnez **Espagnol (Espagne)** , puis cliquez sur **OK**.  
   
      Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   

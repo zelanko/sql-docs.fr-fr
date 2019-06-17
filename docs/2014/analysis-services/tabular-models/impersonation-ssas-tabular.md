@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067060"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
@@ -67,7 +67,7 @@ ms.locfileid: "66067060"
   
 |Option|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**Le nom d’utilisateur Windows spécifique et le mot de passe** <sup>2</sup>|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**. Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
+|**Le nom d’utilisateur Windows spécifique et le mot de passe** <sup>2</sup>|ImpersonateWindowsUserAccount|Cette option spécifie que le modèle utilise un compte d'utilisateur Windows pour importer ou traiter des données à partir de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant : **\<nom de domaine >\\< nom du compte utilisateur\>** . Lors de la création d'un modèle à l'aide de l'Assistant Importation de table, c'est l'option par défaut.|  
 |**Compte de service**|ImpersonateServiceAccount|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
   
  <sup>1</sup>ImpersonationMode spécifie la valeur de la [DataSourceImpersonationInfo élément &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propriété sur la source de données.  

@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507326"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
@@ -50,8 +50,8 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Type de données dépendant du SGBD (système de gestion de base de données)|  
 |DATA_TYPE|**smallint**|Code pour le type ODBC sur lequel toutes les colonnes de ce type sont mappées.|  
 |PRECISION|**Int**|Précision maximale du type de données de la source de données. La valeur NULL est retournée pour les types de données pour lesquels la précision n'est pas applicable. La valeur de retour pour la colonne PRECISION est en base 10.|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|Caractères utilisés devant une constante. Par exemple, un guillemet unique (**'**) pour les types de caractères et 0 x pour le fichier binaire.|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet unique (**'**) pour les types de caractères et pas de guillemets pour fichier binaire.|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|Caractères utilisés devant une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et 0 x pour le fichier binaire.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et pas de guillemets pour fichier binaire.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|Description des paramètres de création de ce type de données. Par exemple, **décimal** est « precision, scale », **float** est NULL, et **varchar** correspond à « max_length ».|  
 |NULLABLE|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = Autorise les valeurs NULL<br /><br /> 0 = N'autorise pas les valeurs NULL|  
 |CASE_SENSITIVE|**smallint**|Spécifie le respect de la casse.<br /><br /> 1 = Toutes les colonnes de ce type respectent la casse (pour les classements).<br /><br /> 0 = Toutes les colonnes de ce type ne respectent pas la casse.|  

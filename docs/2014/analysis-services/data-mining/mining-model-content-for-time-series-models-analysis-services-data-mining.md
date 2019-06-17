@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083531"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
@@ -51,7 +51,7 @@ ms.locfileid: "66083531"
  Les sections suivantes expliquent comment les nœuds sont réorganisés dans chacun de ces types de modèle.  
   
 ### <a name="structure-of-an-artxp-model"></a>Structure d'un modèle ARTXP  
- L'algorithme ARTXP crée un modèle semblable à un modèle d'arbre de décision. Il regroupe les attributs prédictibles et les divisent chaque fois que des différences significatives sont trouvées. Par conséquent, chaque modèle ARTXP contient une branche distincte pour chaque attribut prédictible. Par exemple, le didacticiel sur l'exploration de données de base crée un modèle qui prédit la quantité des ventes pour plusieurs régions. Dans le cas présent, **[Amount]** est l’attribut prédictible et une branche distincte est créée pour chaque région. Si vous aviez deux attributs prédictibles, **[Amount]** et **[Quantity]**, une branche distincte serait créée pour chaque association d’un attribut et d’une région.  
+ L'algorithme ARTXP crée un modèle semblable à un modèle d'arbre de décision. Il regroupe les attributs prédictibles et les divisent chaque fois que des différences significatives sont trouvées. Par conséquent, chaque modèle ARTXP contient une branche distincte pour chaque attribut prédictible. Par exemple, le didacticiel sur l'exploration de données de base crée un modèle qui prédit la quantité des ventes pour plusieurs régions. Dans le cas présent, **[Amount]** est l’attribut prédictible et une branche distincte est créée pour chaque région. Si vous aviez deux attributs prédictibles, **[Amount]** et **[Quantity]** , une branche distincte serait créée pour chaque association d’un attribut et d’une région.  
   
  Le nœud supérieur de la branche ARTXP contient les mêmes informations que celles présentes dans un nœud racine de l'arbre de décision. Cela inclut le nombre d'enfants de ce nœud (CHILDREN_CARDINALITY), le nombre de cas qui remplissent les conditions de ce nœud (NODE_SUPPORT) et différentes statistiques descriptives (NODE_DISTRIBUTION).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66083531"
 >  Si vous voulez afficher les formules, vous pouvez rechercher la formule de régression complète au niveau du nœud terminal, mais pas dans un nœud intermédiaire ou racine.  
   
 ### <a name="structure-of-an-arima-model"></a>Structure d'un modèle ARIMA  
- L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (tel que **[Région]**) et un attribut prédictible (tel que **[Sales Amount]**)-l’équation qui décrit le modification de l’attribut prédictible dans le temps.  
+ L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (tel que **[Région]** ) et un attribut prédictible (tel que **[Sales Amount]** )-l’équation qui décrit le modification de l’attribut prédictible dans le temps.  
   
  L'équation de chaque série est dérivée de plusieurs composants, un pour chaque structure périodique trouvée dans les données. Par exemple, si vous avez des données de ventes qui sont collectées tous les mois, l'algorithme peut détecter des structures périodiques mensuelles, trimestrielles ou annuelles.  
   

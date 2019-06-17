@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659171"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -38,7 +38,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *\<référence de colonne de table >*,  *\<une référence de colonne scalaire >*  
+ *\<référence de colonne de table >* ,  *\<une référence de colonne scalaire >*  
  Spécifie le nom de la colonne à prédire. La colonne peut contenir des données scalaires ou tabulaires.  
   
  *n*  

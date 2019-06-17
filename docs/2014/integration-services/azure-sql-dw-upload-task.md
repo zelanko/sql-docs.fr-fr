@@ -14,10 +14,10 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c310ee1d60648ac4b1eb299a0fd291adb86aea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061291"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
@@ -42,7 +42,7 @@ RetainFiles|Spécifie s’il convient de conserver les fichiers chargés sur le 
 CompressionType|Spécifie le format de compression à utiliser lors du chargement de fichiers sur le stockage Azure. La source locale n’est pas affectée.
 CompressionLevel|Spécifie le niveau de compression à utiliser pour le format de compression.
 AzureDwConnection|Spécifie un gestionnaire de connexions ADO.NET pour Azure SQL Data Warehouse.
-TableName|Spécifie le nom de la table de destination. Choisissez un nom de table existant ou créez-en un en choisissant **\<Nouvelle table ...>**.
+TableName|Spécifie le nom de la table de destination. Choisissez un nom de table existant ou créez-en un en choisissant **\<Nouvelle table ...>** .
 TableDistribution|Spécifie la méthode de distribution pour la nouvelle table. S’applique si un nouveau nom de table est spécifié pour **TableName**.
 HashColumnName|Spécifie la colonne utilisée pour la distribution de table de hachage. S’applique si la valeur **HASH** est spécifiée pour **TableDistribution**.
 

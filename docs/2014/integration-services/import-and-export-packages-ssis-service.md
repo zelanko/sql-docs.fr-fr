@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058148"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importer et exporter des packages (Service SSIS)
@@ -70,7 +70,7 @@ ms.locfileid: "66058148"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>** , puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -82,15 +82,15 @@ ms.locfileid: "66058148"
   
     -   Pour importer à partir d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis spécifiez le serveur et le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **OK**.  
   
     -   Pour importer à partir d'un système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **Ouvrir**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **Ouvrir**.  
   
     -   Pour importer à partir du magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** et spécifiez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **OK**.  
   
 7.  Si vous le souhaitez, mettez à jour le nom du package.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66058148"
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>** , puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "66058148"
   
     -   Pour exporter un package vers une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis indiquez le serveur et sélectionnez le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(...)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
   
     -   Pour exporter un package vers le système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66058148"
   
     -   Pour exporter un package vers le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** , puis indiquez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(...)**, développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Cliquez sur le bouton Parcourir **(...)** , développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   

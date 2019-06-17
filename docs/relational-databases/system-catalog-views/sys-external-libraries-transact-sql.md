@@ -20,10 +20,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637468"
 ---
 # <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
@@ -41,9 +41,9 @@ Le sys.external_libraries de vue de catalogue répertorie une ligne pour chaque 
 |Nom de colonne |Type de données | Description|
 |------|------|------|
 |external_library_id |INT | ID de l’objet de bibliothèque externe. |
-|NAME |sysname |Nom de la bibliothèque externe. Est unique au sein de la base de données par le propriétaire.|
+|name |sysname |Nom de la bibliothèque externe. Est unique au sein de la base de données par le propriétaire.|
 |principal_id |INT |ID du principal qui possède cette bibliothèque externe. |
-|langue | sysname | Nom de la langue ou le runtime qui prend en charge de la bibliothèque externe. Les valeurs valides sont « R », « Python » et « Java ». Runtimes supplémentaires peuvent être ajoutées dans les futures.|
+|langage | sysname | Nom de la langue ou le runtime qui prend en charge de la bibliothèque externe. Les valeurs valides sont « R », « Python » et « Java ». Runtimes supplémentaires peuvent être ajoutées dans les futures.|
 |portée |INT |0 pour une étendue publique ; 1 pour l’étendue privée |  
 |scope_desc |varchar(7) |Indique si le package est public ou privé|
 

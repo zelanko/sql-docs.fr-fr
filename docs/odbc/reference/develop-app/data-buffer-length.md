@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640495"
 ---
 # <a name="data-buffer-length"></a>Longueur du tampon de données
-L’application transmet la longueur d’octet de la mémoire tampon de données pour le pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie la longueur de la *ValuePtr* tampon (**sizeof (***ValuePtr***)**):  
+L’application transmet la longueur d’octet de la mémoire tampon de données pour le pilote dans un argument nommé *BufferLength* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie la longueur de la *ValuePtr* tampon (**sizeof (***ValuePtr***)** ):  
   
 ```  
 SQLCHAR      ValuePtr[50];  

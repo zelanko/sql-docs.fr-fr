@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 280e8fa3702868ff36c799443b87b0827a962a89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676088"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNN (Microsoft Neural Network)
@@ -62,7 +62,7 @@ ms.locfileid: "62676088"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variables  
- La grille dans le **Variables** onglet contient les colonnes suivantes : **Attribut**, **valeur**, **privilèges [valeur 1]**, et **privilèges [valeur 2]**. Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]**. En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
+ La grille dans le **Variables** onglet contient les colonnes suivantes : **Attribut**, **valeur**, **privilèges [valeur 1]** , et **privilèges [valeur 2]** . Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]** . En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
   
  Une barre à droite de l'attribut indique quel état de l'attribut de sortie est privilégié par l'état d'attribut d'entrée spécifié. La taille de la barre indique à quel degré l'état de sortie favorise l'état d'entrée.  
   

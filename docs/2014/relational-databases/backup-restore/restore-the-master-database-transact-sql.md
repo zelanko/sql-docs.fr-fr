@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 823a6455616b412a41179d831b565e10b3286fb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875143"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurer la base de données MASTER (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "62875143"
   
 1.  Démarrez l'instance de serveur en mode mono-utilisateur.  
   
-     Pour savoir comment spécifier le paramètre de démarrage mono-utilisateur (**-m**), consultez [Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Pour savoir comment spécifier le paramètre de démarrage mono-utilisateur ( **-m**), consultez [Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Pour restaurer une sauvegarde complète de la base de données **master**, utilisez l’instruction [RESTORE DATABASE](/sql/t-sql/statements/restore-statements-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62875143"
  Dans l'exemple suivant, la base de données `master` est restaurée sur l'instance du serveur par défaut. L'exemple suppose que l'instance du serveur s'exécute déjà en mode mono-utilisateur. L’exemple démarre `sqlcmd` et exécute une instruction `RESTORE DATABASE` qui restaure une sauvegarde complète de la base de données de `master` à partir d’une unité de disque : `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]
->  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S**_\<NomOrdinateur>_\\*\<NomInstance>*.  
+>  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S** _\<NomOrdinateur>_ \\ *\<NomInstance>* .  
   
 ```  
   

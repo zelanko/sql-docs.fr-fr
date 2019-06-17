@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655495"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -123,7 +123,7 @@ ms.locfileid: "62655495"
     -   Si des confits sont prévisibles : vous ne devez pas utiliser des contraintes de clés étrangères sur le serveur de publication ou l'abonné si vous optez pour la résolution de conflit où l'abonné prime ; vous ne devez pas utiliser des contraintes de clés étrangères sur l'abonné si vous utilisez la résolution de conflit où le serveur de publication prime.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)   
+ [Réplication transactionnelle d’égal à égal](peer-to-peer-transactional-replication.md)   
  [Réplication transactionnelle](transactional-replication.md)   
  [Publier des données et des objets de base de données](../publish/publish-data-and-database-objects.md)   
  [S'abonner à des publications](../subscribe-to-publications.md)  

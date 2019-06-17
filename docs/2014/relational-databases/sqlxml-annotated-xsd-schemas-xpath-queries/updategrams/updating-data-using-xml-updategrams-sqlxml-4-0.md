@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014674"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Mise à jour de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
@@ -263,7 +263,7 @@ ms.locfileid: "66014674"
   
  Les éléments et attributs spécifiés dans le code de mise à jour (updategram) font référence aux éléments et attributs du schéma de mappage.  
   
- Le schéma de mappage XSD suivant a  **\<client >**,  **\<ordre >**, et  **\<OD >** éléments qui mappent à la Tables Sales.Customer, Sales.SalesOrderHeader et Sales.SalesOrderDetail dans la base de données.  
+ Le schéma de mappage XSD suivant a  **\<client >** ,  **\<ordre >** , et  **\<OD >** éléments qui mappent à la Tables Sales.Customer, Sales.SalesOrderHeader et Sales.SalesOrderDetail dans la base de données.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -357,7 +357,7 @@ ms.locfileid: "66014674"
   
  Dans la mesure où un étudiant peut s'inscrire à de nombreux cours et comme un cours peut avoir de nombreux étudiants, la troisième table, la table Enrollment, est requise pour représenter cette relation M:N.  
   
- Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de la  **\<Student >**,  **\<cours >**, et  **\<l’inscription >** éléments. Le **IDREFS** attributs dans le schéma de mappage spécifient la relation entre ces éléments. Le **StudentIDList** d’attribut sur le  **\<cours >** élément est un **IDREFS** attribut de type qui fait référence à la colonne StudentID dans la table Enrollment. De même, le **EnrolledIn** d’attribut sur le  **\<Student >** élément est un **IDREFS** attribut de type qui fait référence à la colonne CourseID lors de l’inscription table.  
+ Le schéma de mappage XSD suivant fournit une vue XML des tables à l’aide de la  **\<Student >** ,  **\<cours >** , et  **\<l’inscription >** éléments. Le **IDREFS** attributs dans le schéma de mappage spécifient la relation entre ces éléments. Le **StudentIDList** d’attribut sur le  **\<cours >** élément est un **IDREFS** attribut de type qui fait référence à la colonne StudentID dans la table Enrollment. De même, le **EnrolledIn** d’attribut sur le  **\<Student >** élément est un **IDREFS** attribut de type qui fait référence à la colonne CourseID lors de l’inscription table.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

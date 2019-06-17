@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655674"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
@@ -37,11 +37,11 @@ ms.locfileid: "62655674"
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
   
--   **sp_MSins_\<** *nomdetable* **>**, qui gère les insertions.  
+-   **sp_MSins_\<** *nomdetable* **>** , qui gère les insertions.  
   
--   **sp_MSupd_\<** *nomdetable* **>**, qui gère les mises à jour.  
+-   **sp_MSupd_\<** *nomdetable* **>** , qui gère les mises à jour.  
   
--   **sp_MSdel_\<** *nomdetable* **>**, qui gère les suppressions.  
+-   **sp_MSdel_\<** *nomdetable* **>** , qui gère les suppressions.  
   
  Le **\<***nom de table***>** utilisé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
   

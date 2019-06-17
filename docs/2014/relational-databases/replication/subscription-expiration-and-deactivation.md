@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630378"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Expiration et désactivation des abonnements
@@ -61,7 +61,7 @@ ms.locfileid: "62630378"
   
     -   La réplication ne peut pas nettoyer les métadonnées dans les bases de données de publication et d'abonnement tant que la période de rétention n'est pas achevée. Soyez prudent si vous spécifiez une longue période de rétention, car cela peut affecter négativement les performances de réplication. Vous avez intérêt à spécifier une valeur faible si vous êtes certain que tous les Abonnés procéderont régulièrement à la synchronisation dans ce délai.  
   
-    -   Il est possible de spécifier que les abonnements n'expirent jamais (valeur 0 pour **@retention**), mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
+    -   Il est possible de spécifier que les abonnements n'expirent jamais (valeur 0 pour **@retention** ), mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
   
 -   La période de rétention pour tout serveur de republication doit être égale ou inférieure à la période de rétention définie sur le serveur de publication d'origine. Veillez à utiliser les mêmes valeurs de conservation des publications pour tous les serveurs de publication et leurs partenaires de synchronisation respectifs. L’utilisation de valeurs différentes peut produire une non-convergence. Pour modifier cette valeur, réinitialisez l'Abonné afin d'éviter la non-convergence des données.  
   

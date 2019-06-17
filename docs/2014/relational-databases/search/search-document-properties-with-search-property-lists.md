@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011082"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
@@ -211,7 +211,7 @@ GO
   
     1.  Pour supprimer une propriété de document, cliquez sur l’en-tête de ligne à gauche de la propriété, puis appuyez sur Suppr.  
   
-    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\***, et entrez les valeurs de la nouvelle propriété.  
+    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\*** , et entrez les valeurs de la nouvelle propriété.  
   
          Pour plus d'informations sur ces valeurs, consultez [Éditeur de liste de propriétés de recherche](../../database-engine/search-property-list-editor.md). Pour plus d’informations sur la façon d’obtenir ces valeurs pour les propriétés définies par Microsoft, consultez [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Pour plus d'informations sur les propriétés définies par un éditeur de logiciels indépendant (ISV), consultez la documentation de ce dernier.  
   

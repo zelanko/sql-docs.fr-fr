@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473200"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Affecter un travail à une catégorie de travaux
@@ -49,7 +49,7 @@ ms.locfileid: "62473200"
   
 4.  Cliquez avec le bouton droit sur le travail à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_ , dans la liste **Catégorie** , sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_ , dans la liste **Catégorie** , sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
   
 6.  Cliquez sur **OK**.  
   

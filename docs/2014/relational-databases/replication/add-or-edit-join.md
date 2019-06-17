@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625927"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
@@ -45,7 +45,7 @@ ms.locfileid: "62625927"
   
     -   Si vous ajoutez une nouvelle jointure, sélectionnez **Utiliser le générateur pour créer l'instruction** ou **Créer manuellement l'instruction de jointure**. Si vous créez une jointure manuellement, vous pouvez utiliser le générateur.  
   
-         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
+         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
   
          Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser les colonnes et les déposer dans la zone de texte **Instruction de jointure** .  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071112"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Administration et configuration d'un serveur PowerPivot dans l'Administration centrale
@@ -47,7 +47,7 @@ ms.locfileid: "66071112"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
-|Lien|Type|Description de la tâche|  
+|Lien|type|Description de la tâche|  
 |----------|----------|----------------------|  
 |[Déployer des Solutions PowerPivot pour SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Requis|Cette étape installe les fichiers solutions qui ajoutent les fichiers programme et les pages d'application à la batterie de serveurs et aux collections de sites.|  
 |[Créer et configurer une Application de Service PowerPivot dans l’Administration centrale](create-and-configure-power-pivot-service-application-in-ca.md)|Requis|Cette étape configure le service système PowerPivot.|  

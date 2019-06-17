@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523882"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Définir les options d'une étape de travail Transact-SQL
@@ -49,7 +49,7 @@ ms.locfileid: "62523882"
   
 2.  Cliquez successivement sur la page **Étapes** , sur une étape de travail et sur **Modifier**.  
   
-3.  Dans la boîte de dialogue **Propriétés de l'étape de travail** , confirmez le type de travail **Script Transact-SQL (TSQL)**, puis sélectionnez la page **Avancé** .  
+3.  Dans la boîte de dialogue **Propriétés de l'étape de travail** , confirmez le type de travail **Script Transact-SQL (TSQL)** , puis sélectionnez la page **Avancé** .  
   
 4.  Définissez l'action à exécuter si le travail aboutit en sélectionnant l'option appropriée dans la liste **Action en cas de succès** .  
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068835"
 ---
 # <a name="thread-pool-properties"></a>Propriétés du pool de threads
@@ -87,7 +87,7 @@ ms.locfileid: "66068835"
   
  Les propriétés sont répertoriées par ordre alphabétique.  
   
-|Nom|Type|Description|Par défaut|Conseils|  
+|Nom|type|Description|Par défaut|Conseils|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|Valeur à virgule flottante double précision qui détermine l'algorithme pour définir une cible sur le nombre de threads pouvant être mis en file d'attente en même temps.|2|Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> La concurrence est utilisée pour initialiser les pools de threads qui sont implémentés avec des ports de terminaison d'E/S dans Windows. Consultez [Ports de terminaison d’E/S](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) pour plus d’informations.<br /><br /> S'applique aux modèles multidimensionnels uniquement.|  
 |`IOProcess` \ `GroupAffinity`|chaîne|Tableau de valeurs hexadécimales qui correspondent aux groupes de processeurs sur le système, utilisé pour définir l'affinité des threads dans le pool de threads IOProcess avec des processeurs logiques dans chaque groupe de processeurs.|none|Vous pouvez utiliser cette propriété pour créer des affinités personnalisées. La propriété est vide par défaut.<br /><br /> Consultez [Définir GroupAffinity pour configurer l'affinité des threads à des processeurs dans un groupe de processeurs](#bkmk_groupaffinity) pour plus d'informations.<br /><br /> S'applique aux modèles multidimensionnels uniquement.|  

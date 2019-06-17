@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071460"
 ---
 # <a name="delete-powerpivot-gallery"></a>Supprimer une bibliothèque PowerPivot
@@ -33,7 +33,7 @@ ms.locfileid: "66071460"
   
 3.  Sous Administration de site, cliquez sur **Bibliothèques et listes du site**.  
   
-4.  Cliquez sur **personnaliser « Galerie PowerPivot »**.  
+4.  Cliquez sur **personnaliser « Galerie PowerPivot »** .  
   
 5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque de documents**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66071460"
   
 3.  Sous Administration de site, cliquez sur **Bibliothèques et listes du site**.  
   
-4.  Cliquez sur **personnaliser « Galerie PowerPivot »**.  
+4.  Cliquez sur **personnaliser « Galerie PowerPivot »** .  
   
 5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque**.  
   

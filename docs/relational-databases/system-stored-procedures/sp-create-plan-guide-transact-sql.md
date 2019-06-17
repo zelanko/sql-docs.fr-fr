@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62507313"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
@@ -77,9 +77,9 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  Pour un repère de plan corresponde à un lot soumis à partir d’une application, *batch_tex*t doit être fournie dans le même format caractère pour caractère, car il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Notes.  
   
- [*schema_name*.] *object_name* Spécifie le nom d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] stockées procédure, fonction scalaire, fonction table à instructions multiples, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML contenant *statement_text*. Si *schema_name* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et \@type = 'SQL', la valeur de \@module_or_batch est défini sur la valeur de \@stmt. Si \@type = ' modèle **'**, \@module_or_batch doit être NULL.  
+ [*schema_name*.] *object_name* Spécifie le nom d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] stockées procédure, fonction scalaire, fonction table à instructions multiples, ou [!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML contenant *statement_text*. Si *schema_name* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et \@type = 'SQL', la valeur de \@module_or_batch est défini sur la valeur de \@stmt. Si \@type = ' modèle **'** , \@module_or_batch doit être NULL.  
   
- [ \@params =] {N'*\@nom_paramètre data_type* [,*... n* ]' | NULL}  
+ [ \@params =] {N' *\@nom_paramètre data_type* [, *... n* ]' | NULL}  
  Spécifie les définitions de tous les paramètres qui sont incorporés dans *statement_text*. \@params s’applique uniquement lorsque une des opérations suivantes est remplie :  
   
 -   \@type = 'SQL' ou 'TEMPLATE'. Si 'TEMPLATE', \@params ne doit pas être NULL.  
@@ -88,8 +88,8 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@parameter_name data_type* doit être fourni dans le même format que celui qu’il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de sp_executesql ou soumis en interne après le paramétrage. Pour plus d'informations, consultez la section Notes. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille de \@params est limitée uniquement par la mémoire de serveur disponible.  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N’option (*query_hint* [,*... n* ])  
+ [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ N’option (*query_hint* [, *... n* ])  
  Spécifie une clause OPTION à joindre à une requête qui correspond à \@stmt. \@indicateurs doivent être syntaxiquement identique à une clause OPTION dans une instruction SELECT et peut contenir toute séquence valide d’indicateurs de requête.  
   
  N'*XML_showplan*'  
@@ -101,7 +101,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indique qu'aucun indicateur existant spécifié dans la clause OPTION de la requête n'est appliqué à la requête. Pour plus d’informations, consultez [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ## <a name="remarks"></a>Notes  
- Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si  **\@nom =** est spécifié, puis  **\@stmt =** ,  **\@type =**, et ainsi de suite, doit également être spécifié. De même, si  **\@nom =** est omis et que seule la valeur du paramètre est fournie, les noms de paramètres restants doivent également être omis, alors seules leurs valeurs. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
+ Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si  **\@nom =** est spécifié, puis  **\@stmt =** ,  **\@type =** , et ainsi de suite, doit également être spécifié. De même, si  **\@nom =** est omis et que seule la valeur du paramètre est fournie, les noms de paramètres restants doivent également être omis, alors seules leurs valeurs. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
  Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
   
@@ -113,15 +113,15 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 >  Les repères de plan ne peuvent pas être utilisés dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Les repères de plan sont visibles dans n'importe quelle édition. En outre, vous pouvez attacher une base de données qui contient des repères de plan à n'importe quelle édition. Les repères de plan demeurent intacts lorsque vous restaurez ou attachez une base de données à une version mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez vérifier les avantages des repères de plan dans chaque base de données après avoir réalisé une mise à niveau de serveur.  
   
 ## <a name="plan-guide-matching-requirements"></a>Paramétrage de la mise en correspondance du repère de plan  
- Les repères de plan qui spécifient \@type = 'SQL' ou \@type = 'TEMPLATE' pour mettre en correspondance une requête, les valeurs de *batch_text* et  *\@nom_paramètre data_type* [,*... n* ] doit être fourni exactement dans le même format que leurs homologues soumis par l’application. Par conséquent, vous devez indiquer le texte du traitement exactement de la même manière que le compilateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'a reçu. Pour saisir le texte réel du traitement et du paramètre, vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pour plus d’informations, consultez [utilisez SQL Server Profiler pour créer et les repères de Plan de Test](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ Les repères de plan qui spécifient \@type = 'SQL' ou \@type = 'TEMPLATE' pour mettre en correspondance une requête, les valeurs de *batch_text* et  *\@nom_paramètre data_type* [, *... n* ] doit être fourni exactement dans le même format que leurs homologues soumis par l’application. Par conséquent, vous devez indiquer le texte du traitement exactement de la même manière que le compilateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'a reçu. Pour saisir le texte réel du traitement et du paramètre, vous pouvez utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pour plus d’informations, consultez [utilisez SQL Server Profiler pour créer et les repères de Plan de Test](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
  Lorsque \@type = 'SQL' et \@module_or_batch est définie sur NULL, la valeur de \@module_or_batch est défini sur la valeur de \@stmt. Cela signifie que la valeur de *statement_text* doit être fourni exactement dans le même format, caractère pour caractère, car il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Aucune conversion interne n'est effectuée pour faciliter cette correspondance.  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et  *\@nom_paramètre data_type* [,*... n* ], ou si \@type = **'** objet », le texte de la requête correspondante dans *object_name*, les éléments de chaîne suivants ne sont pas considérés comme :  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspond à la valeur de *statement_text* à *batch_text* et  *\@nom_paramètre data_type* [, *... n* ], ou si \@type = **'** objet », le texte de la requête correspondante dans *object_name*, les éléments de chaîne suivants ne sont pas considérés comme :  
   
 -   les espaces (tabulations, espaces, retours chariot ou sauts de ligne) à l'intérieur de la chaîne ;  
   
--   Commentaires (**--** ou **/ \* \* /**).  
+-   Commentaires ( **--** ou **/ \* \* /** ).  
   
 -   les points-virgules situés à la fin.  
   

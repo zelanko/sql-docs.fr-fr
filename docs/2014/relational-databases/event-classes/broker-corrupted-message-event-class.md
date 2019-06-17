@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664084"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, classe d'événements
@@ -26,7 +26,7 @@ ms.locfileid: "62664084"
   
 ## <a name="brokercorrupted-message-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Corrupted Message  
   
-|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |**BigintData1**|**bigint**|Numéro de séquence de ce message.|52|Non|  
@@ -45,7 +45,7 @@ ms.locfileid: "62664084"
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
 |**ObjectName**|**nvarchar**|Nom de service de l'autre partie de la conversation et chaîne de connexion que la base de données distante a utilisée pour se connecter à cette base de données.|34|Non|  
-|**RoleName**|**nvarchar**|Rôle du point de terminaison qui reçoit ce message. Une des valeurs ci-dessous.<br /><br /> **initiateur**:<br />                  Le point de terminaison récepteur est l'initiateur de la conversation.<br /><br /> **cible**:<br />                  Le point de terminaison récepteur est la cible de la conversation.|38|Non|  
+|**RoleName**|**nvarchar**|Rôle du point de terminaison qui reçoit ce message. Une des valeurs ci-dessous.<br /><br /> **initiator** :<br />                  Le point de terminaison récepteur est l'initiateur de la conversation.<br /><br /> **target** :<br />                  Le point de terminaison récepteur est la cible de la conversation.|38|Non|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**Severity**|**Int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message en raison d'une erreur, il s'agit de la gravité de l'erreur.|29|Non|  
 |**SPID**|**Int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  

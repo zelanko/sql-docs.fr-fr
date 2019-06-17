@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655390"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Tutoriel : Réplication de données entre serveurs connectés en permanence
@@ -54,7 +54,7 @@ ms.locfileid: "62655390"
   
 -   [Leçon 1 : Publication de données à l’aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md)  
   
--   [Leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
+-   [Leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md)  
   
 -   [Leçon 3 : Validation de l’abonnement et mesure de la latence](lesson-3-validating-the-subscription-and-measuring-latency.md)  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072885"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite
@@ -51,7 +51,7 @@ ms.locfileid: "66072885"
   
 6.  Cliquez sur le **bases de données** dossier et sélectionnez **attacher...**  
   
-7.  Dans la zone de texte **dossier** , tapez l'emplacement d'origine du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...** ) pour rechercher le dossier de base de données.  
+7.  Dans la zone de texte **dossier** , tapez l'emplacement d'origine du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir ( **...** ) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le mode lecture/écriture pour la base de données.  
   

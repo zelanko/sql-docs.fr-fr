@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468349"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
@@ -29,7 +29,7 @@ ms.locfileid: "62468349"
 | [Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Lorsque vous essayez de restaurer une base de données, vous pouvez recevoir le message d’erreur : « L’opération a échoué pour la base de données de restauration '*\<databaseName >*« en raison d’une mémoire insuffisante dans le pool de ressources'*\<Nom_pool_de_ressources >*'. » Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème d'insuffisance de mémoire en augmentant la quantité de mémoire à disposition.  
+ Lorsque vous essayez de restaurer une base de données, vous pouvez recevoir le message d’erreur : « L’opération a échoué pour la base de données de restauration ' *\<databaseName >* « en raison d’une mémoire insuffisante dans le pool de ressources' *\<Nom_pool_de_ressources >* '. » Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème d'insuffisance de mémoire en augmentant la quantité de mémoire à disposition.  
   
  Pour résoudre un échec de récupération dû à une situation d'insuffisance de mémoire, augmentez la mémoire disponible à l'aide de tous les moyens à votre disposition afin de disposer temporairement d'une mémoire suffisante pour l'opération de récupération.  
   
@@ -135,7 +135,7 @@ GO
 > Consultez la rubrique [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
- Si vous recevez le message d’erreur « interdiction des allocations de page pour la base de données '*\<databaseName >*« en raison d’une mémoire insuffisante dans le pool de ressources'*\<Nom_pool_de_ressources >*'. Consultez «<https://go.microsoft.com/fwlink/?LinkId=330673>» pour plus d’informations. » dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
+ Si vous recevez le message d’erreur « interdiction des allocations de page pour la base de données ' *\<databaseName >* « en raison d’une mémoire insuffisante dans le pool de ressources' *\<Nom_pool_de_ressources >* '. Consultez «<https://go.microsoft.com/fwlink/?LinkId=330673>» pour plus d’informations. » dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  
   
  Pour corriger le problème, vous devez activer Resource Governor.  
   

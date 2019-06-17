@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667814"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
@@ -111,21 +111,21 @@ ms.locfileid: "62667814"
   
 2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Vérifiez que l'abonnement existe et que l'état est actif.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication**. Notez la valeur du paramètre de sortie **@tracer_token_id** .  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql), en spécifiant **@publication** . Notez la valeur du paramètre de sortie **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
 1.  Publiez un jeton de suivi sur la publication à l'aide de la procédure précédente.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id**. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id** . Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
   
 #### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id**.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  

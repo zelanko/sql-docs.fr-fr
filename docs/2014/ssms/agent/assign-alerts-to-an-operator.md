@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473210"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
@@ -70,7 +70,7 @@ ms.locfileid: "62473210"
   
 5.  Dans la boîte de dialogue _Propriétés_**nom_opérateur** , sous **Sélectionner une page**, sélectionnez **Notifications**.  
   
-6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Sélectionnez une ou plusieurs des cases à cocher suivantes pour définir la méthode de notification pour chaque notification en fonction des besoins : **Messagerie**, **radiomessagerie**, ou **Net send**.  
+6.  Sous **Afficher les notifications envoyées à cet utilisateur par**, sélectionnez **Alertes** pour afficher la liste des alertes envoyées à cet opérateur, ou sélectionnez **Travaux** pour afficher la liste des travaux qui envoient des notifications à cet opérateur. Cochez une ou plusieurs cases parmi les suivantes pour définir, en fonction de vos besoins, la méthode de notification pour chaque notification : **Messagerie électronique**, **Radiomessagerie** ou **Net send**.  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

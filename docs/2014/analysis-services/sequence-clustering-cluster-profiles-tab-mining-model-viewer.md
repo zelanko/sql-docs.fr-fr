@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069094"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
@@ -51,7 +51,7 @@ ms.locfileid: "66069094"
   
 -   **\<nom de l’attribut > .samples**: Les histogrammes de cette ligne affichent les séquences d’éléments qui sont représentatives de chaque cluster. En termes DMX, ce sont les cas d'exemple pour chaque cluster.  
   
--   **\<nom de l’attribut >**: Les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
+-   **\<nom de l’attribut >** : Les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
   
  **États**  
  Cette colonne du graphique est facultative et peut être affichée ou supprimée en sélectionnant l’option **Afficher la légende** . La colonne **États** fournit un guide indiquant l’état représenté par chacune des couleurs dans l’histogramme de clusters correspondant.  

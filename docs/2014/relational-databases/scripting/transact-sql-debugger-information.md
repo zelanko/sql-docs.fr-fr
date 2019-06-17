@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063427"
 ---
 # <a name="transact-sql-debugger-information"></a>Informations du débogueur Transact-SQL
@@ -40,7 +40,7 @@ ms.locfileid: "66063427"
 -   Dans la barre d’outils **Déboguer** , cliquez sur **Points d’arrêt**, puis sélectionnez la fenêtre désirée.  
   
 ## <a name="transact-sql-expressions"></a>Expressions Transact-SQL  
- Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre de gauche du débogueur peut afficher les valeurs de données qui sont actuellement attribuées aux expressions dans jusqu'à cinq onglets ou fenêtres : **Variables locales, Espion 1**, **espion 2**, **espion 3**, et **Espion4**.  
+ Les expressions sont des clauses [!INCLUDE[tsql](../../includes/tsql-md.md)] qui prennent une valeur scalaire unique, par exemple des variables ou des paramètres. La fenêtre gauche du débogueur peut afficher les valeurs de données qui sont actuellement affectées à des expressions dans cinq onglets ou fenêtres : **Variables locales, Espion1**, **Espion2**, **Espion3** et **Espion4**.  
   
  La fenêtre **Variables locales** affiche des informations sur les variables locales dans l’étendue actuelle du débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] . L’ensemble d’expressions répertorié dans la fenêtre **Variables locales** change à mesure que le débogueur exécute les différentes parties du code.  
   

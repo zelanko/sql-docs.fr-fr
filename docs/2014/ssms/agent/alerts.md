@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473130"
 ---
 # <a name="alerts"></a>Alertes
@@ -92,7 +92,7 @@ ms.locfileid: "62473130"
   
      Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à**ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
   
-     De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)**, **tombe sous**, et une **valeur** de **1000**.  
+     De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)** , **tombe sous**, et une **valeur** de **1000**.  
   
     > [!NOTE]  
     >  Les données de performances sont régulièrement échantillonnées, ce qui peut entraîner un léger décalage (de quelques secondes) entre l'atteinte du seuil et le déclenchement de l'alerte de performance.  

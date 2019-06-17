@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffcd52ff5db3d6f04f0af1d3119aabbc4f5229c2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663033"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Database Mirroring Connection, classe d’événements
@@ -22,7 +22,7 @@ ms.locfileid: "62663033"
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Mise en miroir de bases de données:Colonnes de données de la classe d'événements de connexion  
   
-|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs passées par l'application plutôt que par le nom affiché du programme.|10|Oui|  
 |**ClientProcessID**|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  

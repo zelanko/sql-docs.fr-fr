@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524049"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutoriel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Microsoft Azure
   Bienvenue dans le didacticiel Mise en route avec la sauvegarde et la restauration SQL Server dans le service de Stockage Blob Windows Azure. Ce didacticiel vous aide à comprendre comment écrire des sauvegardes et les restaurer à partir du service de stockage d'objets blob Windows Azure.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
@@ -26,7 +26,7 @@ ms.locfileid: "62524049"
  [Leçon 1 : Créer des objets de stockage Azure Windows](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  Dans cette leçon, vous allez créer un compte de stockage Windows Azure et un conteneur d'objets blob.  
   
- [Leçon 2 : Créer des informations d’identification SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [Leçon 2 : Créer des informations d’identification SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  Dans cette leçon, vous allez créer des informations d'identification afin de stocker les informations de sécurité utilisées pour accéder au compte de stockage Windows Azure.  
   
  [Leçon 3 : Écrire une sauvegarde de base de données complète dans le Service de stockage Windows Azure Blob](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  

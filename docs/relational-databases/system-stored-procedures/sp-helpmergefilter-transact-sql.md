@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62502800"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut **%**, qui renvoie le nom de tous les articles.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut **%** , qui renvoie le nom de tous les articles.  
   
-`[ @filtername = ] 'filtername'` Est le nom du filtre pour lequel retourner les informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
+`[ @filtername = ] 'filtername'` Est le nom du filtre pour lequel retourner les informations. *FilterName* est **sysname**, avec une valeur par défaut **%** , qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

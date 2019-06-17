@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62506974"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
@@ -55,8 +55,8 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Type de données dépendant du SGBD (système de gestion de base de données)|  
 |DATA_TYPE|**smallint**|Code pour le type ODBC sur lequel toutes les colonnes de ce type sont mappées.|  
 |PRECISION|**Int**|Précision maximale du type de données de la source de données. La valeur NULL est retournée pour les types de données pour lesquels la précision n'est pas applicable. La valeur de retour pour la colonne PRECISION est en base 10.|  
-|LITERAL_PREFIX|**varchar(** 32 **)**|Caractères utilisés devant une constante. Par exemple, un guillemet unique (**'**) pour les types de caractères et 0 x pour le fichier binaire.|  
-|LITERAL_SUFFIX|**varchar(** 32 **)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet unique (**'**) pour les types de caractères et pas de guillemets pour fichier binaire.|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|Caractères utilisés devant une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et 0 x pour le fichier binaire.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et pas de guillemets pour fichier binaire.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|Description des paramètres de création de ce type de données. Par exemple, **décimal** est « precision, scale », **float** est NULL, et **varchar** correspond à « max_length ».|  
 |NULLABLE|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = Autorise les valeurs NULL<br /><br /> 0 = N'autorise pas les valeurs NULL|  
 |CASE_SENSITIVE|**smallint**|Spécifie le respect de la casse.<br /><br /> 1 = Toutes les colonnes de ce type respectent la casse (pour les classements).<br /><br /> 0 = Toutes les colonnes de ce type ne respectent pas la casse.|  

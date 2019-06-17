@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666796"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
@@ -91,24 +91,24 @@ ms.locfileid: "62666796"
   
  <sup>4</sup> voir la restriction 4 ci-dessous.  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : À l’aide de comptes Non administratifs pour l’Administration multiserveur  
- Inscription des serveurs cibles pour un serveur maître peut échouer avec le message d’erreur suivant : « Échec de l’opération d’enregistrement ».  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : utilisation de comptes non administratifs pour l’administration multiserveur  
+ L’enregistrement de serveurs cibles auprès d’un serveur maître peut échouer en affichant le message d’erreur suivant : « L’opération d’enregistrement a échoué. »  
   
  Pour résoudre cette erreur, redémarrez les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Restriction 2 : À l’aide du compte système Local pour l’Administration multiserveur  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Restriction 2 : utilisation du compte système local pour l’administration multiserveur  
  L'administration multiserveur est prise en charge lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est exécuté sous le compte système local, seulement si le serveur maître et le serveur cible résident sur le même ordinateur. Si vous utilisez cette configuration, le message ci-dessous est retourné lorsque vous enregistrez les serveurs cibles auprès du serveur maître :  
   
  « Vérifiez que le compte de démarrage de l’agent pour *<nom_ordinateur_serveur_cible>* dispose des autorisations pour se connecter en tant que serveur cible. »  
   
  Vous pouvez ignorer ce message d'information. L'opération d'enregistrement doit se terminer correctement. Pour plus d’informations, consultez [Créer un environnement multiserveur](create-a-multiserver-environment.md).  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Restriction 3 : À l’aide du compte Service réseau lorsqu’il est un utilisateur SQL Server  
+### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>Restriction 3 : utilisation du compte Service réseau pour un utilisateur SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer si vous exécutez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sous le compte Service réseau et si ce dernier a l’autorisation d’ouvrir une session sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en tant qu’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela doit être effectué une seule fois.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Restriction 4 : À l’aide du compte Service réseau lorsque SQL Server Reporting Services est en cours d’exécution sur le même ordinateur  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Restriction 4 : utilisation du compte Service réseau lorsque SQL Server Reporting Services s’exécute sur le même ordinateur  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer si vous exécutez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sous le compte Service réseau, alors que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s’exécute aussi sur le même ordinateur.  
   
  Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis redémarrez les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela doit être effectué une seule fois.  

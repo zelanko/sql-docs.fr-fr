@@ -17,13 +17,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524329"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutoriel : Mise en route avec le moteur de base de données
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutoriel : Bien démarrer avec le moteur de base de données
   Bienvenue dans le didacticiel de mise en route du [!INCLUDE[ssDE](../includes/ssde-md.md)] . Ce didacticiel est destiné aux nouveaux utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposant de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Ce didacticiel sommaire vous guide dans vos premiers pas avec le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
@@ -34,7 +34,7 @@ ms.locfileid: "62524329"
  [Leçon 1 : Connexion au moteur de base de données](lesson-1-connecting-to-the-database-engine.md)  
  Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] et à autoriser d’autres personnes à se connecter.  
   
- [Leçon 2 : Connexion à partir d’un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
+ [Leçon 2 : Connexion à partir d’un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
  Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’un deuxième ordinateur, notamment en activant des protocoles et en configurant des ports et des paramètres de pare-feu.  
   
 ## <a name="requirements"></a>Configuration requise  

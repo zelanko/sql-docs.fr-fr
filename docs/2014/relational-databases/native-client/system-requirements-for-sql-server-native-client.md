@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637826"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Configuration requise pour SQL Server Native Client
@@ -70,7 +70,7 @@ ms.locfileid: "62637826"
 |varbinary(max)|varbinary|varbinary|Image|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|Xml|Xml|Xml|Ntext|  
+|xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|Image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  

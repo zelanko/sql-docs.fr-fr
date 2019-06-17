@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ae38f4258c965a3b4aedf18ed6261134bd00ac6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62626852"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>Noms de principaux du service (SPN) dans les connexions clientes (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "62626852"
 ## <a name="data-source-initialization-properties"></a>Propriétés d'initialisation de la source de données  
  Les propriétés suivantes du jeu de propriétés `DBPROPSET_SQLSERVERDBINIT` permettent aux applications de spécifier des SPN.  
   
-|Nom|Type|Utilisation|  
+|Nom|type|Utilisation|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, lecture/écriture|Spécifie le nom principal de service du serveur. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le fournisseur.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, lecture/écriture|Spécifie le nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le fournisseur.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62626852"
 ## <a name="data-source-properties"></a>Propriétés de la source de données  
  Les propriétés suivantes du jeu de propriétés `DBPROPSET_SQLSERVERDATASOURCEINFO` permettent aux applications d'identifier la méthode d'authentification.  
   
-|Créer une vue d’abonnement|Type|Utilisation|  
+|Nom|type|Utilisation|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, lecture seule|Retourne la méthode d'authentification utilisée pour la connexion. La valeur retournée à l'application est la valeur que Windows renvoie à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les valeurs possibles sont les suivantes :<br /><br /> -« NTLM », qui est retourné lorsqu’une connexion est ouverte à l’aide de l’authentification NTLM.<br />-« Kerberos », qui est retourné lorsqu’une connexion est ouverte à l’aide de l’authentification Kerberos.<br /><br /> Si une connexion a été ouverte et si la méthode d'authentification ne peut pas être déterminée, VT_EMPTY est retourné.<br /><br /> Cette propriété ne peut être lue que lorsqu'une source de données a été initialisée. Si vous essayez de lire la propriété avant qu’une source de données ait été initialisée, IDBProperties::GetProperies retourne DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, selon le cas, et DBPROPSTATUS_NOTSUPPORTED est défini dans DBPROPSET_PROPERTIESINERROR pour cette propriété. Ce comportement est conforme à la spécification principale OLE DB.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, lecture seule|Retourne VARIANT_TRUE si les serveurs de la connexion ont été authentifiés mutuellement ; sinon, retourne VARIANT_FALSE.<br /><br /> Cette propriété ne peut être lue que lorsqu'une source de données a été initialisée. Si une tentative de lecture de la propriété est faite avant qu’une source de données ait été initialisée, IDBProperties::GetProperies retourne DB_S_ERRORSOCCURRED ou DB_E_ERRORSOCCURRED, selon le cas, et DBPROPSTATUS_NOTSUPPORTED est défini dans DBPROPSET_PROPERTIESINERROR pour cette propriété. Ce comportement est conforme à la spécification principale d’OLE DB.<br /><br /> Si cet attribut est interrogé pour une connexion n'ayant pas utilisé l'authentification Windows, VARIANT_FALSE est retourné.|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b21230ddff5a3db043b533a4f921a30b02da739b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062296"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de l'assembly (Analysis Services - Données multidimensionnelles)
@@ -31,7 +31,7 @@ ms.locfileid: "66062296"
 |**Description**|Modifie la description de la référence de l'assembly.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création de la référence de l'assembly.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour de la référence de l'assembly.|  
-|**Type**|Affiche le type de la référence de l'assembly. Les valeurs suivantes s'affichent :<br /><br /> **Assembly .NET.**: La référence de l'assembly fait référence à un assembly [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework.<br /><br /> **DLL COM**: La référence de l'assembly fait référence à une bibliothèque COM.|  
+|**Type**|Affiche le type de la référence de l'assembly. Les valeurs suivantes s'affichent :<br /><br /> **Assembly .NET.** : La référence de l'assembly fait référence à un assembly [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework.<br /><br /> **DLL COM**: La référence de l'assembly fait référence à une bibliothèque COM.|  
 |**Source**|Affiche la source de la référence de l'assembly. Cette propriété contient généralement le chemin d'accès et le nom complets de l'assembly référencé par la référence de l'assembly.|  
 |**Jeu d’autorisations**|Sélectionnez le jeu d'autorisations utilisé pour déterminer l'accès à la référence de l'assembly. Pour plus d'informations sur les valeurs disponibles pour cette propriété, consultez <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>.|  
 |**Informations d'emprunt d'identité**|Sélectionnez les informations d'emprunt d'identité à utiliser pour accéder à la référence de l'assembly. Pour plus d’informations sur les valeurs disponibles pour cette propriété, consultez [Élément ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)|  
