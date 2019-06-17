@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295242"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>Ce que&#39;s de SQL Server 2014
@@ -77,7 +77,7 @@ ms.locfileid: "63295242"
 -   **Nouvelle DMF pour la récupération de mémoire tampon d’entrée dans SQL Server :** Une nouvelle DMF pour la récupération de la mémoire tampon d’entrée pour une session/requête (sys.dm_exec_input_buffer) est maintenant disponible. Il s’agit d’une fonctionnalité équivalente à DBCC INPUTBUFFER. [Consultez le blog pour plus d’informations](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Atténuation d’allocation de mémoire sous-estimée et surestimés :** Ajout nouveaux indicateurs de requête via MIN_GRANT_PERCENT et MAX_GRANT_PERCENT pour le gouverneur de ressources. Cela vous permet de tirer parti de ces indicateurs lors de l’exécution des requêtes en limitant les allocations de mémoire pour éviter la contention de mémoire. Pour plus d’informations, consultez [article de la base de connaissances KB310740](https://support.microsoft.com/en-us/kb/3107401)
 -   **Meilleurs diagnostics d’octroi de l’utilisation de mémoire :** Un nouvel événement étendu a été ajouté à la liste des fonctionnalités de suivi dans SQL Server (query_memory_grant_usage) pour effectuer le suivi des allocations de mémoire demandée et accordée. Cela fournit des meilleures capacités d’analyse et de suivi pour résoudre les problèmes de l’exécution de requête liés à des allocations de mémoire. Pour plus d’informations, consultez [l’article de la base de connaissances KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Interroger des diagnostics de l’exécution de dépassement dans tempdb :**-Hash Warning et Sort Warnings comprennent maintenant ont des colonnes supplémentaires pour effectuer le suivi des statistiques e/s physiques, mémoire utilisée et des lignes affectées. Nous avons également introduit un nouvel événement étendu hash_spill_details. Vous pouvez maintenant suivre des informations plus précises pour votre avertissements de hachage et de tri ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Cette amélioration est désormais également exposée via les Plans de requête XML sous la forme d’un nouvel attribut au type complexe SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Définir des statistiques sur maintenant montre trier les statistiques de table de travail. .
+-   **Interroger des diagnostics de l’exécution de dépassement dans tempdb :** -Hash Warning et Sort Warnings comprennent maintenant ont des colonnes supplémentaires pour effectuer le suivi des statistiques e/s physiques, mémoire utilisée et des lignes affectées. Nous avons également introduit un nouvel événement étendu hash_spill_details. Vous pouvez maintenant suivre des informations plus précises pour votre avertissements de hachage et de tri ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Cette amélioration est désormais également exposée via les Plans de requête XML sous la forme d’un nouvel attribut au type complexe SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Définir des statistiques sur maintenant montre trier les statistiques de table de travail. .
 -   **Diagnostics améliorés pour les plans d’exécution qui impliquent l’insertion d’un prédicat résiduelle :** Les lignes réelles lues va maintenant être transmis dans les plans d’exécution de requête pour aider à améliorer le dépannage des performances de requête. Cela doit inverser la nécessité de capturer SET STATISTICS IO séparément. Présent vous permet de voir les informations relatives à une insertion d’un prédicat résiduelle dans un plan de requête. Pour plus d’informations, consultez [l’article de la base de connaissances KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

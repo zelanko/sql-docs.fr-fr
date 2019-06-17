@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b28a0543208ab28414fb93def15adf904e2c078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261730"
 ---
 # <a name="publishers"></a>Serveurs de publication
@@ -26,7 +26,7 @@ ms.locfileid: "63261730"
   
 ## <a name="options"></a>Options  
  **Serveurs de publication**  
- Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton des propriétés (**...**) en regard d'un serveur de publication pour afficher et définir des propriétés supplémentaires.  
+ Sélectionnez les serveurs autorisés à utiliser ce serveur de distribution. Cliquez sur le bouton des propriétés ( **...** ) en regard d'un serveur de publication pour afficher et définir des propriétés supplémentaires.  
   
  **Ajouter**  
  Si le serveur souhaité ne figure pas dans la liste, cliquez sur **Ajouter** afin d'ajouter un serveur de publication [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Oracle Publisher à la liste des serveurs de publication disponibles.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098923"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutoriel : Création d'un rapport de matrice (Générateur de rapports)
@@ -176,13 +176,13 @@ ms.locfileid: "66098923"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur **Devise**. Le contenu des cellules est maintenant au format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur la cellule qui contient `[SalesDate]`.  
   
 5.  Dans le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
   
-     La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
+     La cellule affiche la date d’exemple **[1/31/2000]** . Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
 6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

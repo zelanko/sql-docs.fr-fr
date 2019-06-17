@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185642"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Didacticiel DMX Market Basket
@@ -89,7 +89,7 @@ ms.locfileid: "63185642"
  [Leçon 1 : Création de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE` pour créer des structures d'exploration de données.  
   
- [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `ALTER` pour ajouter des modèles d'exploration de données à une structure d'exploration de données.  
   
  [Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
@@ -105,7 +105,7 @@ ms.locfileid: "63185642"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])  
   
--   Base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
+-   Base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
  Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données exemples officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], accédez à [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417) ou sur la page d’accueil de Microsoft SQL Server Samples and Community Projects dans la section Microsoft SQL Server Product Samples. Cliquez sur **Databases**, puis cliquez sur l'onglet **Releases** et sélectionnez les bases de données souhaitées.  
   

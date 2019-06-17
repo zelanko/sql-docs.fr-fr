@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105894"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
-  Les expressions sont utilisées dans la définition de rapport pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d'élément de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d'en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
+  Les expressions sont utilisées dans la définition de rapport pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d'élément de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d'en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>** .  
   
  Les expressions peuvent être simples ou complexes. Les*expressions simples* contiennent une référence à un champ de dataset, paramètre ou champ intégré unique. Les expressions complexes peuvent contenir plusieurs références intégrées, opérateurs et appels de fonction. Par exemple, une expression complexe peut inclure la fonction Sum appliquée au champ Sales.  
   

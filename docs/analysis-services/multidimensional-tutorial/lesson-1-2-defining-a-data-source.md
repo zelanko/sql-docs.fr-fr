@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e52d6b6ef2a98089f17fe83a55d50b7693dbbc1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404011"
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Leçon 1-2 : définition d’une Source de données
@@ -37,7 +37,7 @@ Au cours de la tâche suivante, vous allez définir la base de données exemple 
   
 5.  Dans la zone de texte **Nom du serveur** , tapez **localhost**.  
   
-    Pour vous connecter à une instance nommée sur votre ordinateur local, tapez **localhost\\<instance name>**. Pour se connecter à l'ordinateur spécifique au lieu de l'ordinateur local, tapez le nom d'ordinateur ou l'adresse IP.  
+    Pour vous connecter à une instance nommée sur votre ordinateur local, tapez **localhost\\<instance name>** . Pour se connecter à l'ordinateur spécifique au lieu de l'ordinateur local, tapez le nom d'ordinateur ou l'adresse IP.  
   
 6.  Vérifiez que l’option **Utiliser l’authentification Windows** est sélectionnée. Dans la liste **Sélectionner ou entrer un nom de base de données** , sélectionnez **AdventureWorksDW2012**.  
   

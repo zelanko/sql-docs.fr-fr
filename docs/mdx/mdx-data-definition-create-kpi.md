@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181535"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - CREATE KPI
 
 
-  Crée un indicateur de performance clé (KPI, &amp;lt;legacyItalic&amp;gt;key performance indicator&amp;lt;/legacyItalic&amp;gt;). Un indicateur de performance clé est un ensemble de calculs associés à un groupe de mesures dans un cube et utilisés pour évaluer les performances de l'entreprise ou du scénario.  
+  Crée un indicateur de performance clé (KPI, &lt;legacyItalic&gt;key performance indicator&lt;/legacyItalic&gt;). Un indicateur de performance clé est un ensemble de calculs associés à un groupe de mesures dans un cube et utilisés pour évaluer les performances de l'entreprise ou du scénario.  
   
 ## <a name="syntax"></a>Syntaxe  
   

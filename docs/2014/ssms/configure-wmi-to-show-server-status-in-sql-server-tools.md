@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245665"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Configurer WMI pour afficher l'état du serveur dans les outils SQL Server
@@ -29,7 +29,7 @@ ms.locfileid: "63245665"
   
 2.  Dans le **Open** zone, tapez `wmimgmt.msc`, puis cliquez sur **OK**.  
   
-3.  Dans le programme **Windows Management Infrastructure** , cliquez avec le bouton droit sur **Contrôle WMI (local)**, puis cliquez sur **Propriétés**.  
+3.  Dans le programme **Windows Management Infrastructure** , cliquez avec le bouton droit sur **Contrôle WMI (local)** , puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés de WMI Control (Local)** , sous l’onglet **Sécurité** , développez **Root**, puis cliquez sur **CIMV2**.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63245665"
   
 6.  Ajoutez un groupe ou un utilisateur à la zone **Noms de groupes ou d’utilisateurs** et sélectionnez-le.  
   
-7.  Dans le **autorisations pour**_\<groupe ou utilisateur >_ boîte, sélectionnez le **autoriser** colonne, pour le **appel à distance autorisé** autorisation , pour les utilisateurs dont vous souhaitez à distance pour détectent l’état du service.  
+7.  Dans le **autorisations pour** _\<groupe ou utilisateur >_ boîte, sélectionnez le **autoriser** colonne, pour le **appel à distance autorisé** autorisation , pour les utilisateurs dont vous souhaitez à distance pour détectent l’état du service.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

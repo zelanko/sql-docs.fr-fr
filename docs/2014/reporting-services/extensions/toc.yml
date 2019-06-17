@@ -62,7 +62,7 @@
       href: rendering-extension/implementing-a-rendering-extension.md
     - name: Vue d'ensemble des extensions de rendu
       href: rendering-extension/rendering-extensions-overview.md
-    - name: 'Implémentation de l''interface IRenderingExtension '
+    - name: Implémentation de l'interface IRenderingExtension
       href: rendering-extension/implementing-the-irenderingextension-interface.md
     - name: Déploiement d'une extension de rendu
       href: rendering-extension/deploying-a-rendering-extension.md

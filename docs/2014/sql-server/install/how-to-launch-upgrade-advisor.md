@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094906"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Procédure : lancer le Conseiller de mise à niveau
@@ -27,7 +27,7 @@ ms.locfileid: "66094906"
   
 ### <a name="to-launch-upgrade-advisor"></a>Pour lancer le Conseiller de mise à niveau  
   
--   Pour lancer le Conseiller de mise à niveau, cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, puis cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Pour lancer le Conseiller de mise à niveau, cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , puis cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécutez le Conseiller de mise à niveau &#40;Interface utilisateur&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181416"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (pilote ODBC Visual FoxPro)
@@ -46,11 +46,11 @@ ms.locfileid: "63181416"
 |SQL_REAL|Double|  
 |SQL_SMALLINT|Entier|  
 |SQL_TIME|Non pris en charge. Il n’existe aucun Visual FoxPro *temps* type.|  
-|SQL_TIMESTAMP|Datetime|  
+|SQL_TIMESTAMP|DateTime|  
 |SQL_TINYINT|Entier|  
 |SQL_VARBINARY|Mémo (binaire) *, général|  
 |SQL_VARCHAR|Caractère|  
   
- * Type par défaut  
+ \* Type par défaut  
   
  Pour plus d’informations sur les types de données Visual FoxPro, consultez [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Pour plus d’informations sur cette fonction, consultez [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) dans le *de référence du programmeur ODBC*.

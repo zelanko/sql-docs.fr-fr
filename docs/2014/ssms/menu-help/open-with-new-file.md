@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240151"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
@@ -39,7 +39,7 @@ ms.locfileid: "63240151"
  Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’encodage linguistique) pour le type de fichier sélectionné, choisissez un programme dans la liste **Sélectionnez le programme à ouvrir** , puis cliquez sur **Par défaut**. La prochaine fois que vous allez ouvrir ce type de fichier dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le document s'ouvrira dans l'éditeur par défaut spécifié.  
   
 > [!NOTE]  
->  Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
+>  Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

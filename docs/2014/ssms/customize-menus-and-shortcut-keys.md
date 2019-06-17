@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245791"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
-  Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*\<une lettre>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
+  Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+ *\<une lettre>* . Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
   
  Les touches d’accès rapides pour les procédures stockées qui utilisent la touche Ctrl peuvent être créées dans la page **Clavier** de la boîte de dialogue **Outils**/**Options** .  
   

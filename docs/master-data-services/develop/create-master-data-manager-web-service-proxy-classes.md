@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d71d15ada91055b7aff128bd750e1fd192b6e8f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480215"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Créer des classes proxy de service Web Master Data Manager
@@ -29,7 +29,7 @@ ms.locfileid: "65480215"
   
 1.  Ouvrez le fichier Web.config [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] dans un éditeur de texte. Ce fichier se trouve dans le dossier WebApplication du chemin d'installation de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Rechercher la section **mdsWsHttpBehavior** sous **\<serviceBehaviors>**. Pour l’élément **\<serviceMetadata>**, définissez **httpGetEnabled** sur **true**.  
+2.  Rechercher la section **mdsWsHttpBehavior** sous **\<serviceBehaviors>** . Pour l’élément **\<serviceMetadata>** , définissez **httpGetEnabled** sur **true**.  
   
     > [!NOTE]  
     >  Si vous souhaitez activer des services web via SSL (Secure Sockets Layer), définissez **httpsGetEnabled** sur **true** dans la section **mdsWsHttpBehavior** du fichier web.config. Vous devez également changer **mdsWsHTTPBinding** afin qu’il soit configuré pour SSL et mettre en commentaire la section non-SSL.  
@@ -40,7 +40,7 @@ ms.locfileid: "65480215"
     « Vous avez créé un service. »  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Création de classes proxy à l'aide de Visual Studio  
- Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : `https://yourserver/MDS/service/service.svc`. Pour plus d’informations, consultez [Comment : Ajouter, mettre à jour ou supprimer une référence de Service](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : `https://yourserver/MDS/service/service.svc`. Pour plus d’informations, consultez [Procédure : Ajouter, mettre à jour ou supprimer une référence de Service](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Création de classes proxy à l'aide de Svcutil.exe  
  Vous devez avoir installé [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou le kit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK pour avoir Svcutil.exe sur votre ordinateur. Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vous devez utiliser l'invite de commandes [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour exécuter la commande. Pour plus d’informations, consultez [Outil Service Model Metadata Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) et [Génération d’un client WCF à partir de métadonnées de service](https://go.microsoft.com/fwlink/?LinkId=164821).  

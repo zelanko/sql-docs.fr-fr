@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190274"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
@@ -49,7 +49,7 @@ ms.locfileid: "63190274"
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant Installation lancera le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour ajouter un nœud à une instance de cluster de basculement existante, cliquez sur **Installation** dans le volet gauche. Sélectionnez ensuite **Ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  L'Assistant Installation lancera le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour ajouter un nœud à une instance de cluster de basculement existante, cliquez sur **Installation** dans le volet gauche. Sélectionnez ensuite **Ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63190274"
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour supprimer un nœud dans une instance de cluster de basculement existante, cliquez sur **Maintenance** dans le volet gauche, puis sélectionnez **Supprimer un nœud d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  L'Assistant Installation exécute le Centre d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour supprimer un nœud dans une instance de cluster de basculement existante, cliquez sur **Maintenance** dans le volet gauche, puis sélectionnez **Supprimer un nœud d’un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   

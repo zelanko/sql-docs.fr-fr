@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63128764"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
@@ -102,15 +102,15 @@ ms.locfileid: "63128764"
 |SELECT|Synonymes<br /><br /> Tables et colonnes<br /><br /> Fonctions table, [!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR (Common Language Runtime) et colonnes<br /><br /> Vues et colonnes|  
 |VIEW CHANGE TRACKING|Tables<br /><br /> Schémas|  
 |UPDATE|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
-|REFERENCES|Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tables et colonnes<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et colonnes<br /><br /> Types<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
+|REFERENCES|Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables et colonnes<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et colonnes<br /><br /> Types<br /><br /> Vues et colonnes<br /><br /> Objets séquence|  
 |INSERT|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes|  
 |Suppression|Synonymes<br /><br /> Tables et colonnes<br /><br /> Vues et colonnes|  
 |Exécutez|Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Synonymes<br /><br /> Types CLR|  
-|RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|VIEW DEFINITION|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
-|ALTER|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Objets séquence<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages|  
+|RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|VIEW DEFINITION|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
+|ALTER|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Objets séquence<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages|  
 |TAKE OWNERSHIP|Groupes de disponibilité<br /><br /> Rôles<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Rôles de serveur<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
-|CONTROL|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] <br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
+|CONTROL|Groupes de disponibilité<br /><br /> Procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Fonctions scalaires et d'agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Connexions, utilisateurs et rôles<br /><br /> Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]<br /><br /> Synonymes<br /><br /> Tables<br /><br /> Fonctions table ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR)<br /><br /> Affichages<br /><br /> Objets séquence|  
 |IMPERSONATE|Connexions et utilisateurs|  
   
 > [!CAUTION]  
