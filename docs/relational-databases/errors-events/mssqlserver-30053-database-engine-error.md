@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a54ed2eb35a6a7f0b5d1255e5f2841b7ace6f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945659"
 ---
 # <a name="mssqlserver30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Sélectionnez l'action utilisateur appropriée en fonction de la cause probable 
 |La configuration du processus de démon de filtre est incorrecte.|Assurez-vous que vous utilisez le mot de passe actuel et qu'une stratégie de domaine n'empêche pas le compte du démon du filtre de se connecter.|  
 |Une charge de traitement de requêtes très importante s'exécute sur l'instance de serveur.|Essayez de réexécuter la requête en condition de charge moins élevée.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Définir le compte du service du Lanceur de démon de filtre de texte intégral](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [Recherche en texte intégral](~/relational-databases/search/full-text-search.md)  
 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  

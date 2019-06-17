@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013679"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Paramétrage d’une base de données à l’aide d’une charge de travail du magasin de requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ Pour plus d’informations, consultez [Utilitaire dta](../../tools/dta/dta-utili
 ## <a name="difference-between-using-workload-from-query-store-and-plan-cache"></a>Différence entre l’utilisation d’une charge de travail du magasin de requêtes et celle du cache du plan 
 La différence entre les options Magasin de requêtes et Cache du plan est que la première contient un historique plus long des requêtes qui ont été exécutées sur la base de données, lesquelles sont conservées après les redémarrages successifs du serveur. D’autre part, le cache du plan contient uniquement un sous-ensemble de requêtes exécutées récemment dont les plans sont mis en cache dans la mémoire. Quand le serveur redémarre, les entrées du cache du sont effacées.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Didacticiel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
+[Tutoriel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [Comment le Magasin des requêtes collecte les données](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Bonnes pratiques en matière de magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)

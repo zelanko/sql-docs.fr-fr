@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025438"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,11 +63,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Syntaxe Transact-SQL permettant de réaliser une récupération jusqu'à une marque  
  Quand vous ciblez une transaction marquée à l’aide d’une instruction[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md), vous pouvez utiliser l’une des clauses suivantes pour vous arrêter à la marque ou juste avant celle-ci :  
   
--   Utilisez la clause WITH STOPATMARK = **'**_<nom_marque>_**'** pour spécifier que la transaction marquée est le point de récupération.  
+-   Utilisez la clause WITH STOPATMARK = **'** _<nom_marque>_ **'** pour spécifier que la transaction marquée est le point de récupération.  
   
      L'option STOPATMARK effectue une restauration par progression jusqu'à la marque et inclut la transaction marquée dans cette restauration.  
   
--   Utilisez la clause WITH STOPBEFOREMARK = **'**_<nom_marque>_**'** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
+-   Utilisez la clause WITH STOPBEFOREMARK = **'** _<nom_marque>_ **'** pour spécifier que l’enregistrement de journal situé juste avant la marque est le point de récupération.  
   
      L'option STOPBEFOREMARK effectue une restauration par progression jusqu'à la marque et exclut la transaction marquée de cette restauration.  
   
@@ -112,7 +112,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  Récupérez chaque base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

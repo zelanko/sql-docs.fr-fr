@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42896ae8b5c10685c14e73c07ab2dcc2441d80b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027037"
 ---
 # <a name="scripting-replication"></a>Création de scripts de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "47837067"
   
 3.  Cliquez avec le bouton droit sur une publication ou un abonnement, puis cliquez sur **Générer des scripts**.  
   
-4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>**.  
+4.  Spécifiez les options dans la boîte de dialogue **Générer un Script SQL - \<Objet_Réplication>** .  
   
 5.  Cliquez sur **Générer un script sur fichier**.  
   

@@ -38,10 +38,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 5e8cc30ef8ce51a08ce12ed28b7c03bec0fc124d
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774839"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
@@ -88,7 +88,7 @@ Spécifie si les catalogues système liés à Service Broker doivent être inclu
 BACKUP_CLONEDB  
 Crée et vérifie une sauvegarde de la base de données de clonage.  Dans le cas d’une utilisation avec VERIFY_CLONEDB, la base de données de clonage est vérifiée avant que la sauvegarde soit effectuée.  Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Les validations suivantes sont effectuées par DBCC CLONEDATABASE. La commande échoue si l’une des validations échoue.
 - La base de données source doit être une base de données utilisateur. Le clonage des bases de données système (MASTER, model, msdb, tempdb, distribution, etc.) n’est pas autorisé.
 - La base de données source doit être en ligne ou accessible en lecture.
@@ -251,7 +251,7 @@ DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, B
 GO 
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)    
 [Guide pratique pour générer un script des métadonnées de la base de données nécessaires à la création d’une base de données de statistiques uniquement dans SQL Server](https://support.microsoft.com/help/914288)   
 

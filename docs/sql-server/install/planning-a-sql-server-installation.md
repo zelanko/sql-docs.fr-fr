@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7ff5ba51b9fef1e65946da9d498e4ed95d618f2
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684872"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "54457512"
  [Installation d'un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Solutions haute disponibilité &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [Avant l'installation du clustering de basculement](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   

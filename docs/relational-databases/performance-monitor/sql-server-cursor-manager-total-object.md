@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: b5f4f653b875621da042d99cb22629b0ff21aea2
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62742033"
 ---
 # <a name="sql-server-cursor-manager-total-object"></a>Objet SQLServer:Cursor Manager Total
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "53380970"
 |**Taux de conversion des curseurs**|Nombre de conversions de curseurs par seconde.|  
 |**Vidage de curseurs**|Nombre total de recréations d'instructions à l'exécution par les curseurs.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

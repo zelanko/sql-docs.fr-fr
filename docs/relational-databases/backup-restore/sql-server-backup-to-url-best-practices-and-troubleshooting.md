@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b74e4137ebb076b1cbea37ecaf3e1ae3c26f26f6
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516147"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "58434480"
   
 -   [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
@@ -177,7 +177,7 @@ Pour résoudre ce problème, créez un fichier de configuration qui permet au pr
   
 2.  Placez le fichier de configuration dans le dossier Binn de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, si mon instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installée sur le lecteur C de l’ordinateur, placez le fichier de configuration dans `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restauration à partir de sauvegardes stockées dans Windows Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
 [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)

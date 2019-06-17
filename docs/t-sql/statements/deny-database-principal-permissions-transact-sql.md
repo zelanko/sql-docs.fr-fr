@@ -28,11 +28,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644575"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY – refus d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +71,15 @@ DENY permission [ ,...n ]
  Spécifie une autorisation qui peut être refusée sur le principal de base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  USER ::*database_user*  
- Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie la classe et le nom de l'utilisateur sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  ROLE ::*database_role*  
- Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie la classe et le nom du rôle sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  APPLICATION ROLE ::*application_role*  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie la classe et le nom du rôle d'application sur lequel l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  CASCADE  
  Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
@@ -113,7 +113,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="database-user-permissions"></a>Autorisations d'un utilisateur de base de données  
  Un utilisateur de base de données est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un utilisateur de base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -144,7 +144,7 @@ DENY permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le principal spécifié ou une autorisation plus élevée qui implique l'autorisation CONTROL.  
   
  Les bénéficiaires de l'autorisation CONTROL sur une base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent refuser une autorisation quelconque sur tout élément sécurisable inclus dans la base de données.  
@@ -160,7 +160,7 @@ DENY CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>b. Refus d'une autorisation VIEW DEFINITION sur un rôle à un utilisateur auquel l'autorisation avait été accordée avec l'option GRANT OPTION  
+### <a name="b-denying-view-definition-permission-on-a-role-to-a-user-to-which-it-was-granted-with-grant-option"></a>B. Refus d'une autorisation VIEW DEFINITION sur un rôle à un utilisateur auquel l'autorisation avait été accordée avec l'option GRANT OPTION  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`SammamishParking` est refusée à l'utilisateur de base de données `JinghaoLiu`. L'option `CASCADE` est spécifiée car l'utilisateur `JinghaoLiu` avait obtenu l'autorisation VIEW DEFINITION avec l'option GRANT OPTION.  
   
 ```  
@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Refus de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est refusée au rôle d'application [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] `AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
@@ -181,7 +181,7 @@ DENY IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT - Octroyer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

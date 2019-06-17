@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: ec9f609ed3687106ca65152496cbb20b2ff1b8f3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63051594"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
@@ -57,7 +57,7 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!IMPORTANT]
 > Azure SQL Database ne prend en charge que les identités de type signature d’accès partagé et Azure Key Vault. Les identités d’utilisateur Windows ne sont pas prises en charge.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand des informations d’identification sont modifiées, les valeurs d’*identity_name* et de *secret* sont réinitialisées. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
   
  Le secret est chiffré au moyen de la clé principale du service. Si cette clé est regénérée, le secret est à nouveau chiffré à l'aide de la nouvelle clé principale du service.  
@@ -86,7 +86,7 @@ ALTER CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   

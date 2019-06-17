@@ -20,11 +20,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645192"
 ---
 # <a name="create-statistics"></a>Créer des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53380700"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite que l’utilisateur soit le propriétaire de la table ou de la vue indexée ou qu’il soit membre d’un des rôles suivants : rôle serveur fixe **sysadmin** , rôle de base de données fixe **db_owner** ou rôle de base de données fixe **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -69,7 +69,7 @@ ms.locfileid: "53380700"
   
 3.  Cliquez sur le signe plus (+) pour développer la table dans laquelle vous souhaitez créer une statistique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Statistiques** et sélectionnez **Nouvelles statistiques...** .  
   
      Les propriétés suivantes s’affichent dans la page **Général** dans la boîte de dialogue **Nouvelles statistiques sur la table**_nom\_table_.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53380700"
      **Colonnes de statistiques**  
      Cette grille montre les colonnes décrites par ce jeu de statistiques. Toutes les valeurs contenues dans la grille sont en lecture seule.  
   
-     **Nom**  
+     **Name**  
      Affiche le nom de la colonne décrite par les statistiques. Cela peut être une colonne individuelle ou une combinaison de colonnes dans une table individuelle.  
   
      **Type de données**  
@@ -124,7 +124,7 @@ ms.locfileid: "53380700"
   
      Les propriétés suivantes s'affichent dans la boîte de dialogue **Sélectionner les colonnes** . Ces informations sont en lecture seule.  
   
-     **Nom**  
+     **Name**  
      Affiche le nom de la colonne décrite par les statistiques. Cela peut être une colonne individuelle ou une combinaison de colonnes dans une table individuelle.  
   
      **Type de données**  

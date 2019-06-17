@@ -12,11 +12,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 80266fb75780e3d1797c2609576ba84dc437d3f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714258"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47618417"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**Erreur**|**Int**|Numéro de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si cet événement signale une erreur.|31|Oui|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |**EventSubClass**|**Int**|Type de connexion utilisé par le compte de connexion. 1 = Non regroupé, 2 = Regroupé.|21|Oui|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
@@ -38,7 +38,7 @@ ms.locfileid: "47618417"
 |**TargetLoginSid**|**Int**|Pour les actions qui ciblent une connexion (l'ajout d'une nouvelle connexion, par exemple), numéro d'identification de sécurité (SID) de la connexion ciblée.|43|Oui|  
 |**TextData**|**ntext**|Informations de texte sur l'événement en texte intégral. Généralement ce champ fournit des informations sur la connexion entre le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le processus de démon de filtre de texte intégral|1|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025216"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Nom de la colonne à ajouter, modifier ou supprimer. *column_name* peut être composé de 1 à 128 caractères. Pour les nouvelles colonnes, créées avec un type de données timestamp, *column_name* peut être omis. Si aucun *column_name* n’est spécifié pour une colonne de type de données **timestamp**, le **timestamp** du nom est utilisé.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  Type de données de la colonne ajoutée et schéma auquel elle appartient.  
   
  *type_name* peut être l’un des types suivants :  
@@ -125,7 +125,7 @@ DOCUMENT
  S’applique uniquement au type de données **xml** pour l’association d’une collection de schémas XML au type. Avant d’inclure une colonne **xml** dans un schéma, vous devez d’abord créer ce dernier dans la base de données à l’aide de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 FILESTREAM  
- Spécifie éventuellement l’attribut de stockage FILESTREAM pour la colonne dont le *type_name* est **varbinary(max)**.  
+ Spécifie éventuellement l’attribut de stockage FILESTREAM pour la colonne dont le *type_name* est **varbinary(max)** .  
   
  Quand FILESTREAM est spécifié pour une colonne, la table doit également avoir une colonne avec le type de données **uniqueidentifier** qui a l’attribut ROWGUIDCOL. Cette colonne ne doit pas autoriser les valeurs Null et doit avoir une contrainte de colonne unique de type UNIQUE ou PRIMARY KEY. La valeur GUID de la colonne doit être fournie par une application quand des données sont insérées ou par une contrainte DEFAULT qui utilise la fonction NEWID().  
   
@@ -163,7 +163,7 @@ Si elle est utilisée sans que la colonne associée soit elle aussi ajoutée, el
 IDENTITY  
  Spécifie que la nouvelle colonne est une colonne d'identité. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fournit une valeur incrémentielle unique pour la colonne. Lorsque vous ajoutez des colonnes d'identificateur à des tables existantes, les numéros d'identité sont ajoutés aux lignes existantes de la table avec les valeurs de départ et d'incrément. L'ordre dans lequel les lignes sont mises à jour n'est pas garanti. Des numéros d'identité sont également générés pour toutes les nouvelles lignes qui sont ajoutées.  
   
- Les colonnes d'identité sont normalement utilisées avec les contraintes PRIMARY KEY comme identificateur unique de ligne pour la table. La propriété IDENTITY peut être affectée à une colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)**. Une seule colonne d'identité peut être créée par table. Vous ne pouvez pas utiliser le mot clé DEFAULT ni les valeurs par défaut liées avec une colonne d'identité. Vous devez spécifier à la fois la valeur de départ et l'incrément ou aucune de ces valeurs. Si aucune valeur n'est spécifiée, la valeur par défaut est de (1,1).  
+ Les colonnes d'identité sont normalement utilisées avec les contraintes PRIMARY KEY comme identificateur unique de ligne pour la table. La propriété IDENTITY peut être affectée à une colonne **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** ou **numeric(p,0)** . Une seule colonne d'identité peut être créée par table. Vous ne pouvez pas utiliser le mot clé DEFAULT ni les valeurs par défaut liées avec une colonne d'identité. Vous devez spécifier à la fois la valeur de départ et l'incrément ou aucune de ces valeurs. Si aucune valeur n'est spécifiée, la valeur par défaut est de (1,1).  
   
 > [!NOTE]  
 >  Vous ne pouvez pas modifier une colonne de table existante pour ajouter la propriété IDENTITY.  
@@ -215,7 +215,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-Doit être **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Doit être **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Pour plus d’informations, notamment sur les contraintes de fonctionnalité, consultez [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   
@@ -235,7 +235,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
   
  Pour les paramètres de fonction, consultez [Masquage dynamique des données](../../relational-databases/security/dynamic-data-masking.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une colonne ayant le type de données **uniqueidentifier** est ajoutée, elle peut être définie avec une valeur par défaut qui utilise la fonction NEWID() pour fournir les valeurs d’identificateur uniques dans la nouvelle colonne, pour chaque ligne existante de la table.  
   
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'impose pas un ordre pour la spécification de DEFAULT, IDENTITY, ROWGUIDCOL ou de contraintes de colonne dans une définition de colonne.  
@@ -245,6 +245,6 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 ## <a name="examples"></a>Exemples  
  Pour obtenir des exemples, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   

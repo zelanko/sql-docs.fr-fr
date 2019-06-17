@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 46dd5c58d666d85f6cbf03021a2faacecbc7502c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681488"
 ---
 # <a name="drop-symmetric-key-transact-sql"></a>DROP SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  REMOVE PROVIDER KEY  
  Supprime une clé EKM (Gestion de clés extensible) d'un périphérique EKM. Pour plus d’informations sur la gestion de clés extensible, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la clé est ouverte dans la session en cours, l'instruction échoue.  
   
  Si la clé asymétrique est mappée à une clé EKM (gestion de clés extensible) sur un appareil EKM et que l’option **REMOVE PROVIDER KEY** n’est pas spécifiée, la clé est supprimée de la base de données, mais pas de l’appareil, et un message d’avertissement est affiché.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +69,7 @@ DROP SYMMETRIC KEY GailSammamishKey6;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

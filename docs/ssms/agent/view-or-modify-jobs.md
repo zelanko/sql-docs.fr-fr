@@ -21,10 +21,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 71dd6352aacd7f2183c3d44cd89acba9950b571a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103191"
 ---
 # <a name="view-or-modify-jobs"></a>Afficher ou modifier les travaux
@@ -73,6 +73,6 @@ Les membres du rôle serveur fixe **sysadmin** peuvent afficher la définition o
 |Explique comment définir des limites de taille dans les journaux d’historique des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Redimensionner le journal d'historique des travaux](../../ssms/agent/resize-the-job-history-log.md)|  
 |Explique comment modifier les propriétés des travaux [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Modifier un travail](../../ssms/agent/modify-a-job.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
   

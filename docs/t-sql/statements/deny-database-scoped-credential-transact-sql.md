@@ -21,11 +21,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f58fa15ba67cfcf84a35f130fa70eff0d981c0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017734"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY – Refuser des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être refusée sur des informations d’identification délimitées à la base de données. Voir ci-dessous.  
   
- ON DATABASE SCOPED CREDENTIAL **::**_credential_name_  
+ ON DATABASE SCOPED CREDENTIAL **::** _credential_name_  
  Spécifie les informations d’identification délimitées à la base de données sur lesquelles l’autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -94,7 +94,7 @@ DENY permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les informations d’identification délimitées à la base de données sont des éléments sécurisables au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être refusées sur des informations d’identification incluses dans l’étendue de base de données sont indiquées ci-dessous, avec les autorisations plus générales qui les incluent implicitement.  
   
 |Autorisation sur des informations d’identification délimitées à la base de données|Implicite avec l’autorisation sur les informations d’identification délimitées à la base de données|Impliquée par une autorisation de base de données|  
@@ -105,10 +105,10 @@ DENY permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CONTROL sur les informations d’identification délimitées à la base de données. Si la clause AS est utilisée, le principal spécifié doit être le propriétaire des informations d’identification délimitées à la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT – Accorder des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [REVOKE – Révoquer des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)   

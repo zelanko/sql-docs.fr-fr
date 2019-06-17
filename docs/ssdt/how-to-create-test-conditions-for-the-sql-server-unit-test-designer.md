@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090265"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procédure : Créer des conditions de test pour le Concepteur de test unitaire SQL Server
@@ -179,7 +179,7 @@ La classe de la condition de test personnalisée hérite de la classe [TestCondi
 |Paramètre d'attribut|Position|Description|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Identifie la chaîne dans la zone de liste déroulante « Conditions de test ». Ce nom doit être unique. Si deux conditions portent le même nom complet, la première condition détectée sera affichée et un avertissement apparaîtra dans le Gestionnaire d'erreurs Visual Studio.|  
-|ImplementingType|2|Ce paramètre s'utilise pour identifier de manière unique l'extension. Vous devez le modifier de façon à ce qu'il corresponde au type sur lequel vous placez l'attribut. Cet exemple utilise le type **ResultSetColumnCountCondition**, donc utilisez **typeof(ResultSetColumnCountCondition)**. Si votre type est **NewTestCondition**, utilisez **typeof(NewTestCondition)**.|  
+|ImplementingType|2|Ce paramètre s'utilise pour identifier de manière unique l'extension. Vous devez le modifier de façon à ce qu'il corresponde au type sur lequel vous placez l'attribut. Cet exemple utilise le type **ResultSetColumnCountCondition**, donc utilisez **typeof(ResultSetColumnCountCondition)** . Si votre type est **NewTestCondition**, utilisez **typeof(NewTestCondition)** .|  
   
 Dans cet exemple, vous ajoutez deux propriétés. Les utilisateurs de la condition de test personnalisée peuvent utiliser la propriété ResultSet de façon à indiquer pour quel jeu de résultats le nombre de colonnes doit être vérifié. Ensuite, ils peuvent utiliser la propriété Count pour indiquer le nombre de colonnes attendu.  
   
@@ -203,6 +203,6 @@ Un seul lot est pris en charge pour chaque script de test. Par conséquent, les 
   
 Vous devez définir la bibliothèque de classes qui contient la condition de test à signer. Cette opération peut être effectuée dans les propriétés du projet sous l'onglet Signature.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

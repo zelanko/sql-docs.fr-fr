@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026728"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Gérer des connexions dans la liste d'accès à la publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "54124329"
   
 #### <a name="to-manage-logins-in-the-pal"></a>Pour gérer des noms de connexion dans la liste d'accès à la publication  
   
-1.  Dans la page **Liste d’accès à la publication** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, utilisez les boutons **Ajouter**, **Supprimer** et **Supprimer tout** pour ajouter et supprimer des connexions et des groupes dans la liste d’accès à la publication. Ne supprimez pas **distributor_admin** de la liste d'accès à la publication. Ce compte est utilisé par la réplication.  
+1.  Dans la page **Liste d’accès à la publication** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , utilisez les boutons **Ajouter**, **Supprimer** et **Supprimer tout** pour ajouter et supprimer des connexions et des groupes dans la liste d’accès à la publication. Ne supprimez pas **distributor_admin** de la liste d'accès à la publication. Ce compte est utilisé par la réplication.  
   
     > [!NOTE]  
     >  En cas d'utilisation d'un serveur de distribution distant, les comptes de la liste d'accès à la publication doivent être disponibles à la fois auprès du serveur de publication et auprès du serveur de distribution. Le compte doit être un compte de domaine ou un compte local défini sur les deux serveurs. Les mots de passe associés aux deux connexions doivent être identiques.  
@@ -62,17 +62,17 @@ ms.locfileid: "54124329"
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>Pour afficher les groupes et les connexions qui figurent dans la liste d'accès à la publication  
   
-1.  Exécutez [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication**. Cela affiche des informations sur les groupes et les connexions qui figurent dans la liste d'accès à la publication.  
+1.  Exécutez [sp_help_publication_access](../../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** . Cela affiche des informations sur les groupes et les connexions qui figurent dans la liste d'accès à la publication.  
   
 #### <a name="to-add-groups-and-logins-to-the-pal"></a>Pour ajouter des groupes et des connexions dans la liste d'accès à la publication  
   
-1.  Exécutez [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication**et le nom de la connexion ou du groupe à ajouter pour **@login**.  
+1.  Exécutez [sp_grant_publication_access](../../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** et le nom de la connexion ou du groupe à ajouter pour **@login** .  
   
 #### <a name="to-remove-groups-and-logins-from-the-pal"></a>Pour supprimer des groupes et des connexions de la liste d'accès à la publication  
   
-1.  Exécutez [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication**et le nom de la connexion ou du groupe à ajouter pour **@login**.  
+1.  Exécutez [sp_revoke_publication_access](../../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)sur la base de données de publication du serveur de publication. Spécifiez le nom de la publication pour **@publication** et le nom de la connexion ou du groupe à ajouter pour **@login** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer des connexions dans la liste d'accès à la publication](../../../relational-databases/replication/security/manage-logins-in-the-publication-access-list.md)   
  [Modèle de sécurité de l’Agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Sécuriser une topologie de réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

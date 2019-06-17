@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3005ff6aa1311b22eea25e2daa14c1d4110da32c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089030"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
@@ -94,7 +94,7 @@ ms.locfileid: "65089030"
   
 -   Ces modifications ne peuvent pas être restaurées.  
   
- Toutefois, il est également possible d’accéder à la colonne FILESTREAM d’un FileTable à l’aide de l’accès transactionnel FILESTREAM en appelant **OpenSqlFileStream()**. Ce type d'accès peut être entièrement transactionnel et respecte tous les niveaux de cohérences transactionnelles actuellement pris en charge.  
+ Toutefois, il est également possible d’accéder à la colonne FILESTREAM d’un FileTable à l’aide de l’accès transactionnel FILESTREAM en appelant **OpenSqlFileStream()** . Ce type d'accès peut être entièrement transactionnel et respecte tous les niveaux de cohérences transactionnelles actuellement pris en charge.  
   
 ###  <a name="concurrency"></a> Contrôle d'accès concurrentiel  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique le contrôle d'accès concurrentiel pour l'accès de FileTable parmi les applications de système de fichiers, ainsi qu'entre applications de système de fichiers et applications [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce contrôle d'accès concurrentiel s'effectue en prenant des verrous appropriés sur les lignes FileTable.  
@@ -127,7 +127,7 @@ ms.locfileid: "65089030"
 |**Sécurité**|Non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
 |**Journal USN**|Non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](../../relational-databases/blob/access-filetables-with-transact-sql.md)   

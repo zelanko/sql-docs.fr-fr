@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132989"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669664"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Abonnements pouvant être mis à jour pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132989"
   
 -   Les Abonnés ne peuvent pas mettre à jour ou insérer des valeurs **text**, **ntext** ou **image** , car il est impossible de lire à partir des tables insérées ou supprimées dans les déclencheurs de suivi des modifications de réplication. De même, les Abonnés ne peuvent pas mettre à jour ou insérer de valeur **text** ou **image** à l’aide de **WRITETEXT** ou **UPDATETEXT** , car les données sont écrasées par le serveur de publication. En revanche, vous pouvez partitionner les colonnes **text** et **image** dans une table distincte et modifier les deux tables à l’intérieur d’une transaction.  
   
-     Pour mettre à jour des objets volumineux sur un Abonné, utilisez respectivement les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** au lieu des types de données **text**, **ntext**et **image** .  
+     Pour mettre à jour des objets volumineux sur un Abonné, utilisez respectivement les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** au lieu des types de données **text**, **ntext**et **image** .  
   
 -   Les mises à jour de clés uniques (y compris les clés primaires) générant des doublons (comme une mise à jour de type `UPDATE <column> SET <column> =<column>+1` ) ne sont pas autorisées et sont rejetées en raison d’une violation d’unicité. En effet, les mises à jour de jeux appliquées sur l’Abonné sont propagées par la réplication en tant qu’instructions **UPDATE** individuelles pour chaque ligne concernée.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "54132989"
   
     -   Si des confits sont prévisibles : vous ne devez pas utiliser des contraintes de clés étrangères sur le serveur de publication ou l'abonné si vous optez pour la résolution de conflit où l'abonné prime ; vous ne devez pas utiliser des contraintes de clés étrangères sur l'abonné si vous utilisez la résolution de conflit où le serveur de publication prime.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Réplication transactionnelle](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   

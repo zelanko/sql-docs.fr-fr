@@ -31,10 +31,10 @@ ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: e0bf1d84d568d9c23723b0b1adead72ad9ebe2f7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104346"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
@@ -74,7 +74,7 @@ DBCC CHECKIDENT
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
  Les corrections spécifiques effectuées sur la valeur d'identité courante dépendent des spécifications de paramètres.  
   
@@ -167,7 +167,7 @@ DBCC CHECKIDENT ('dbo.ErrorLog', RESEED, 1);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5a43918612c24a6c2d7a0b39c89dacc3edc4ed6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704272"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Composants génériques et validation de contenu
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Les composants génériques sont utilisés pour accroître la flexibilité en termes d'éléments pouvant apparaître dans un modèle de contenu. Ils sont pris en charge comme suit dans le langage XSD :  
   
--   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>**.  
+-   Composants génériques éléments. Ils sont représentés par l’élément **\<xsd:any>** .  
   
--   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>**.  
+-   Composants génériques attributs. Ils sont représentés par l’élément **\<xsd:anyAttribute>** .  
   
- Ces deux éléments de caractère générique,**\<xsd:any>** et **\<xsd:anyAttribute>**, prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
+ Ces deux éléments de caractère générique, **\<xsd:any>** et **\<xsd:anyAttribute>** , prennent en charge l’utilisation d’un attribut **processContents**. Grâce à lui, vous pouvez préciser une valeur indiquant comment les applications XML vont gérer la validation du contenu des documents associé à ces éléments de caractères génériques. Les valeurs possibles et leurs effets sont décrits ci-dessous :  
   
 -   La valeur **strict** indique que le contenu est entièrement validé.  
   
@@ -78,7 +78,7 @@ SELECT @var
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

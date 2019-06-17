@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8a4df3e9ed712975aa6d372dbc9afc3ce76bbeaa
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095204"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Volet Critères (Visual Database Tools)
@@ -71,7 +71,7 @@ Si le volet Critères n'est pas visible, cliquez avec le bouton droit sur le con
 |Ajouter|INSERT FROM|Spécifie le nom de la colonne de données cible de la colonne de données associée. Lorsque vous créez une requête Insert From, le Concepteur de requêtes et de vues essaie de faire correspondre la source à une colonne de données cible appropriée. Si le Concepteur de requêtes et de vues ne peut pas choisir de correspondance, vous devez indiquer le nom de la colonne.|  
 |Nouvelle valeur|UPDATE, INSERT INTO|Spécifie la valeur à placer dans la colonne associée. Entrez une valeur littérale ou une expression.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Volet Diagramme &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
 [Règles pour l'entrée de valeurs de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  

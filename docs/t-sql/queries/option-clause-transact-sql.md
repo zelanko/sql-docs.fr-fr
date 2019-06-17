@@ -23,11 +23,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 771eaedd3c5bc723422c9fd82a1c979e331eabf0
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62506074"
 ---
 # <a name="option-clause-transact-sql"></a>Clause OPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>b. Instruction SELECT avec une étiquette dans la clause OPTION  
+### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instruction SELECT avec une étiquette dans la clause OPTION  
  L’exemple suivant montre une instruction SELECT [!INCLUDE[ssDW](../../includes/ssdw-md.md)] simple avec une étiquette dans la clause OPTION.  
   
 ```  
@@ -193,7 +193,7 @@ WHERE ID < 10
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

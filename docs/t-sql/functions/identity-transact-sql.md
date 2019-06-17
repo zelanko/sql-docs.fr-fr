@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 5763042dd9fa0bb757b66727f9e04b4b81aee85c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037375"
 ---
 # <a name="x40x40identity-transact-sql"></a>&#x40;&#x40;IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "56020070"
 ## <a name="return-types"></a>Types de retour  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  À la fin d’une instruction INSERT, SELECT INTO ou de copie par bloc, @@IDENTITY contient la dernière valeur d’identité générée par l’instruction. Si l’instruction n’a affecté aucune table contenant des colonnes d’identité, @@IDENTITY retourne la valeur NULL. Si plusieurs lignes ont été insérées, générant ainsi plusieurs valeurs d’identité, @@IDENTITY retourne la dernière valeur d’identité générée. Si l’instruction active un ou plusieurs déclencheurs chargés d’effectuer des instructions INSERT qui génèrent des valeurs d’identité, l’appel de @@IDENTITY immédiatement après l’instruction retourne la dernière valeur d’identité générée par les déclencheurs. Si un déclencheur est activé après une action d’insertion sur une table dotée d’une colonne d’identité et qu’il effectue une opération d’insertion dans une autre table dépourvue d’une colonne d’identité, @@IDENTITY retourne la valeur d’identité de la première insertion. La valeur @@IDENTITY ne revient pas à une valeur précédente en cas d’échec de l’instruction INSERT ou SELECT INTO, d’échec d’une copie par bloc ou d’une restauration de la transaction.  
   
  Les instructions et les transactions en échec peuvent modifier l'identité actuelle d'une table et créer des trous dans les valeurs des colonnes d'identité. La valeur d'identité n'est jamais annulée, même si la transaction qui a essayé d'insérer la valeur dans la table n'est pas validée. Par exemple, si une instruction INSERT échoue à cause d'une violation d'identité IGNORE_DUP_KEY, la valeur d'identité actuelle de la table augmente quand même d'une unité.  
@@ -80,7 +80,7 @@ SELECT MAX(LocationID) FROM Production.Location;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)   

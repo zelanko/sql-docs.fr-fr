@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 539cc61e73d56d4e1de8a1710294f760d109d5d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62816972"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SET ROWCOUNT { number | @number_var }
  *number* | @*number_var*  
  Nombre (entier) de lignes à traiter avant l'arrêt de la requête spécifiée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  L'utilisation de SET ROWCOUNT n'affectera en rien les instructions DELETE, INSERT et UPDATE dans la version ultérieure de SQL Server. Évitez d’utiliser SET ROWCOUNT avec les instructions DELETE, INSERT et UPDATE dans les nouvelles tâches de développement et pensez à modifier les applications qui l’utilisent actuellement. Pour un comportement semblable, utilisez la syntaxe TOP. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
@@ -65,7 +65,7 @@ SET ROWCOUNT { number | @number_var }
   
  L'option SET ROWCOUNT est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
@@ -123,7 +123,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

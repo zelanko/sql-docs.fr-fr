@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b6703906dbe133436656ca2822ac18a9df42ad4c
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034271"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT - Clause OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -229,7 +229,7 @@ GO
  8               Tsoflias                1421810.9242          98055
  ```  
   
-### <a name="b-using-the-over-clause-with-aggregate-functions"></a>b. Utilisation de la clause OVER avec des fonctions d'agrégation  
+### <a name="b-using-the-over-clause-with-aggregate-functions"></a>B. Utilisation de la clause OVER avec des fonctions d'agrégation  
  L'exemple suivant utilise la clause `OVER` avec des fonctions d'agrégation sur toutes les lignes retournées par la requête. Dans cet exemple, l'utilisation de la clause `OVER` est plus efficace que l'utilisation de sous-requêtes pour dériver les valeurs d'agrégation.  
   
 ```sql  
@@ -544,7 +544,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Fonctions analytiques &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Excellent billet de blog sur les fonctions de fenêtre et OVER publié sur sqlmag.com par Itzik Ben-Gan](https://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  

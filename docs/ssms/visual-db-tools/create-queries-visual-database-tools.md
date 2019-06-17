@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb03a941fa462f1b08157859335c94eedf31927d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097537"
 ---
 # <a name="create-queries-visual-database-tools"></a>Créer des requêtes (Visual Database Tools)
@@ -45,7 +45,7 @@ Les requêtes vous permettent de récupérer des données des tables et vues con
   
 Pour affiner davantage votre requête, vous pouvez modifier le code SQL dans le **Volet SQL** ou choisir des options telles que l’ordre de tri et les alias de colonne dans le **Volet Critères**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Enregistrer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

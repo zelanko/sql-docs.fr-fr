@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fcdc1c5cdc4dcbb7eb81236a1bb907d929aee5e0
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051545"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
@@ -53,7 +53,7 @@ COLLATE { <collation_name> | database_default }
 
 **database_default** Oblige la clause COLLATE à hériter du classement de la base de données active.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La clause COLLATE peut être spécifiée à plusieurs niveaux, Ces options en question sont les suivantes :
 
@@ -151,11 +151,11 @@ Colima
 Chiapas
 ```
 
-### <a name="b-additional-examples"></a>b. Autres exemples
+### <a name="b-additional-examples"></a>B. Autres exemples
 
 Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple **G. Créer une base de données et spécifier un nom et des options de classement** de la rubrique [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) et l’exemple **V. Modifier le classement des colonnes** de la rubrique [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
 - [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)

@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939711"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -176,12 +176,12 @@ MAXDOP = *max_degree_of_parallelism*
  \>1  
  Limite le nombre maximal de processeurs utilisés dans une opération statistique parallèle au nombre défini ou à un nombre inférieur en fonction de la charge de travail actuelle du système.  
   
- 0 (valeur par défaut)  
+ 0 (valeur par défaut)  
  Utilise le nombre réel de processeurs ou un nombre de processeurs inférieur en fonction de la charge de travail actuelle du système.  
   
  \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ### <a name="when-to-use-update-statistics"></a>Quand utiliser UPDATE STATISTICS  
  Pour plus d’informations sur les cas où utiliser `UPDATE STATISTICS`, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
@@ -227,7 +227,7 @@ update statistics t1 (a) with INCREMENTAL=ON;
 update statistics t1 (a) with stats_stream = 0x01;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `ALTER` sur la table ou la vue.  
   
 ## <a name="examples"></a>Exemples  
@@ -242,7 +242,7 @@ UPDATE STATISTICS Sales.SalesOrderDetail;
 GO  
 ```  
   
-### <a name="b-update-the-statistics-for-an-index"></a>b. Mettre à jour les statistiques d'un index  
+### <a name="b-update-the-statistics-for-an-index"></a>B. Mettre à jour les statistiques d'un index  
  L'exemple suivant illustre la mise à jour des statistiques pour l'index `AK_SalesOrderDetail_rowguid` de la table `SalesOrderDetail`.  
   
 ```sql  
@@ -300,7 +300,7 @@ UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;
 UPDATE STATISTICS Customer;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Statistiques](../../relational-databases/statistics/statistics.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   

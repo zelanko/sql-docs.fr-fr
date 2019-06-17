@@ -20,11 +20,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62930882"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -88,7 +88,7 @@ Indique l'ordre de tri binaire et assurant la compatibilité descendante à util
 **BIN2**  
 Indique l'ordre de tri binaire utilisant la sémantique de comparaison des points de code.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Selon la version du classement, certains points de code peuvent ne pas avoir de pondérations de tri et/ou de mappages majuscules/minuscules définis. Par exemple, comparez la sortie de la fonction `LOWER` quand elle reçoit le même caractère, mais dans différentes versions du même classement :
 
 ```sql
@@ -240,7 +240,7 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 
 <sup>2</sup>Comme le classement chinois (Taiwan), le chinois (Macao (R.A.S.)) utilise les règles du chinois simplifié ; contrairement au chinois (Taiwan), il utilise la page de codes 950.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en charge d'Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md)
 - [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
