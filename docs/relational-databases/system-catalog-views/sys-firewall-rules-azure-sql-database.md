@@ -20,10 +20,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631611"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys_firewall_rules (Azure SQL Database)
@@ -36,7 +36,7 @@ ms.locfileid: "62631611"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|Identificateur du paramètre de pare-feu au niveau serveur.|  
-|NAME|**NVARCHAR(128)**|Le nom que vous avez choisi pour décrire et distinguer le paramètre de pare-feu au niveau serveur.|  
+|name|**NVARCHAR(128)**|Le nom que vous avez choisi pour décrire et distinguer le paramètre de pare-feu au niveau serveur.|  
 |start_ip_address|**VARCHAR(45)**|Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`.|  
 |end_ip_address|**VARCHAR(45)**|Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau serveur. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter au serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`.<br /><br /> Remarque : Tentatives de connexion de Windows Azure sont autorisées lorsque ce champ et le **start_ip_address** champ equals `0.0.0.0`.|  
 |create_date|**DATE/HEURE**|Date et heure UTC auxquelles le paramètre de pare-feu au niveau serveur a été créé.<br /><br /> Remarque : UTC est l’acronyme de temps universel coordonné.|  

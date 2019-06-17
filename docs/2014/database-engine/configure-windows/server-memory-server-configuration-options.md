@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810060"
 ---
 # <a name="server-memory-server-configuration-options"></a>server memory (options de configuration du serveur)
@@ -134,7 +134,7 @@ ms.locfileid: "62810060"
 |-|-------------|-------------|  
 |Mémoire conventionnelle|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 2 Go<br /><br /> 3 Go avec **/3 gb** démarrage paramètre *<br /><br /> 4 Go sur WOW64\*\*|Jusqu'à la limite d'espace d'adressage virtuel de processus dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :<br /><br /> 8 To sur l'architecture x64|  
   
- ***/3gb** est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
+ * **/3gb** est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
   
  ** WOW64 (Windows on Windows 64) est un mode dans les 32 bits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un système d’exploitation 64 bits. Pour plus d'informations, consultez [MSDN Library](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)(en anglais).  
   

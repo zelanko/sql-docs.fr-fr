@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63138831"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Création de fichiers de la valeur de la Variable (AccessToSQL)
@@ -22,7 +22,7 @@ Un fichier de valeurs de Variable est un fichier XML contenant les valeurs de pa
   
 > [!NOTE]  
 > -  Les noms de variables ont le préfixe et suffixe avec le symbole $ (dollar). Si une variable n’est pas attribuée une valeur dans le fichier de la valeur de la variable, une erreur lors de l’analyse du fichier de script se produit, se traduisant par bloquées le processus d’exécution de console.  
-> -  Le caractère d’échappement **$** est **$$**. Si la valeur d’une valeur d’un paramètre de variable ou statique contient un **$** symbole (dollar), puis **$$** doit être spécifié pour le traiter comme un caractère au lieu d’une variable.  
+> -  Le caractère d’échappement **$** est **$$** . Si la valeur d’une valeur d’un paramètre de variable ou statique contient un **$** symbole (dollar), puis **$$** doit être spécifié pour le traiter comme un caractère au lieu d’une variable.  
 > -  À des fins de facilité de maintenance, les variables peuvent être déclarées à l’intérieur `'variable-group'` éléments pour une séparation logique entre les variables définies par l’utilisateur.  Utilisation de cet élément n’est pas obligatoire.  
   
 **Exemples :**  

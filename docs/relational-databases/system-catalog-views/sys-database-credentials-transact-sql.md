@@ -20,10 +20,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936735"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62936735"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |credential_id|**Int**|ID de l’information d’identification de niveau base de données. Est unique dans la base de données.|  
-|NAME|**sysname**|Nom de la base de données limitées d’informations d’identification. Est unique dans la base de données.|  
+|name|**sysname**|Nom de la base de données limitées d’informations d’identification. Est unique dans la base de données.|  
 |credential_identity|**nvarchar(4000)**|Nom de l'identité à utiliser. Il s'agit généralement d'un utilisateur Windows. Il n'est pas nécessaire qu'elle soit unique.|  
 |create_date|**datetime**|Heure à laquelle les informations d’identification de niveau base de données a été créée.|  
 |modify_date|**datetime**|Heure de dernière modification à laquelle les informations d’identification de niveau base de données.|  

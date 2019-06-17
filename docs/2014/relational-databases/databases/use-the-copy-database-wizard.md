@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871136"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
@@ -112,7 +112,7 @@ ms.locfileid: "62871136"
 2.  Sur la page **Sélectionnez un serveur source** , spécifiez le serveur sur lequel se trouve la base de données que vous souhaitez déplacer ou copier, puis entrez les informations de connexion. Une fois la méthode d'authentification sélectionnée et les informations de connexion entrées, cliquez sur **Suivant** afin d'établir la connexion au serveur source. Cette connexion reste active tout au long de la session.  
   
      **Serveur source**  
-     Sélectionnez le nom du serveur sur lequel se situent les bases de données que vous souhaitez déplacer ou copier, ou cliquez sur le bouton Parcourir (**...**) pour rechercher le serveur de votre choix. La version du serveur doit être au moins [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Sélectionnez le nom du serveur sur lequel se situent les bases de données que vous souhaitez déplacer ou copier, ou cliquez sur le bouton Parcourir ( **...** ) pour rechercher le serveur de votre choix. La version du serveur doit être au moins [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Utiliser l'authentification Windows**  
      Permettre à un utilisateur de se connecter via un compte d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -132,7 +132,7 @@ ms.locfileid: "62871136"
 3.  Sur la page **Sélectionnez un serveur de destination** , spécifiez le serveur sur lequel la base de données sera déplacée ou copiée. Si vous spécifiez la même instance de serveur pour le serveur source et le serveur de destination, la base de données sera copiée. Dans ce cas, vous devrez renommer la base de données à une étape ultérieure de l'Assistant. Le nom de la base de données source ne peut être utilisé pour la base de données copiée ou déplacée que s'il n'y a pas de conflits de nom sur le serveur de destination. En cas de conflits de noms, vous devez les résoudre manuellement sur le serveur de destination avant de pouvoir y utiliser le nom de la base de données de source.  
   
      **Serveur de destination**  
-     Sélectionnez le nom du serveur sur lequel vous souhaitez déplacer ou copier la ou les bases de données, ou cliquez sur le bouton Parcourir (**...**) pour rechercher un serveur de destination.  
+     Sélectionnez le nom du serveur sur lequel vous souhaitez déplacer ou copier la ou les bases de données, ou cliquez sur le bouton Parcourir ( **...** ) pour rechercher un serveur de destination.  
   
     > [!NOTE]  
     >  Vous pouvez utiliser une destination qui est un serveur cluster ; l'Assistant Copie de base de données s'assurera que vous sélectionnez uniquement des lecteurs partagés sur un serveur de destination cluster.  

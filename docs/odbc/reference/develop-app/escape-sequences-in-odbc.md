@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942972"
 ---
 # <a name="escape-sequences-in-odbc"></a>Séquences d’échappement dans ODBC
@@ -47,9 +47,9 @@ Un nombre de fonctionnalités de langage, tels que les jointures externes et des
  La séquence d’échappement est reconnue et analysée par les pilotes, remplacement les séquences d’échappement par la grammaire de SGBD spécifiques. Pour plus d’informations sur la syntaxe de séquence d’échappement, consultez [séquences d’échappement ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) dans l’annexe c : Grammaire SQL.  
   
 > [!NOTE]  
->  Dans ODBC 2. *x*, il s’agissait de la syntaxe standard de la séquence d’échappement : **--(\*fournisseur (**_-nom du fournisseur_**), produit (** _-nom du produit_**)**_extension_  **\*)--**  
+>  Dans ODBC 2. *x*, il s’agissait de la syntaxe standard de la séquence d’échappement : **--(\*fournisseur (** _-nom du fournisseur_ **), produit (** _-nom du produit_ **)** _extension_  **\*)--**  
 >   
->  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme : **{**_extension_**}**  
+>  En plus de cette syntaxe, une syntaxe sténographique a été définie sous la forme : **{** _extension_ **}**  
 >   
 >  Dans ODBC 3. *x*, la forme longue de la séquence d’échappement a été déconseillée et la forme abrégée est utilisée exclusivement.  
   

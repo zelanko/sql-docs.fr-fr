@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988642"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurer et afficher SharePoint et la journalisation des Diagnostics
@@ -118,11 +118,11 @@ ms.locfileid: "62988642"
   
 |Traiter|Domaine|Category|Level|Boîte de|Détails|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Démarrage de localiser un serveur d’applications pour la source de données =\<*chemin d’accès*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Locating the application server succeeded.|La requête a été allouée à une application de service [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] Service|Web frontal|Commentaires|Demande de redirection pour la \< *Redirecting source*> à la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La demande a été envoyée au [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Traitement des demandes|Commentaires|Demande de redirection pour le nom d’utilisateur\<*utilisateur SharePoint*> à la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
+|w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Traitement des demandes|Commentaires|Demande de redirection pour le nom d’utilisateur\<*utilisateur SharePoint*> à la base de données|Une connexion avec emprunt d'identité à la source de données [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] a été créée au nom de l'utilisateur SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

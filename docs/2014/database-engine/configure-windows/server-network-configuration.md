@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809476"
 ---
 # <a name="server-network-configuration"></a>Configuration réseau du serveur
@@ -39,7 +39,7 @@ ms.locfileid: "62809476"
  Lors d'une configuration pour des ports dynamiques, le port utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut changer à chaque démarrage. Lors de la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à travers un pare-feu, vous devez ouvrir le port utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configurez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour utiliser un port spécifique, de façon que vous puissiez configurer le pare-feu pour permettre une communication au serveur. Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Changement d'un canal nommé  
- Vous pouvez configurer le protocole de canal nommé de manière à écouter un canal nommé désigné. De façon générale, l’instance par défaut de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écoute sur le canal \\\\.\pipe\sql\query pour l’instance par défaut et sur \\\\.\pipe\MSSQL$*\<nom_instance>* \sql\query pour une instance nommée. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut être à l'écoute que sur un canal nommé, mais vous pouvez donner un autre nom au canal si vous le souhaitez. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser aide les clients à identifier le canal au moment de leur connexion. Pour plus d’informations, consultez [Configurer un serveur pour l’écoute d’un canal de remplacement &#40;Gestionnaire de configuration SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Vous pouvez configurer le protocole de canal nommé de manière à écouter un canal nommé désigné. De façon générale, l’instance par défaut de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] écoute sur le canal \\\\.\pipe\sql\query pour l’instance par défaut et sur \\\\.\pipe\MSSQL$ *\<nom_instance>* \sql\query pour une instance nommée. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne peut être à l'écoute que sur un canal nommé, mais vous pouvez donner un autre nom au canal si vous le souhaitez. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser aide les clients à identifier le canal au moment de leur connexion. Pour plus d’informations, consultez [Configurer un serveur pour l’écoute d’un canal de remplacement &#40;Gestionnaire de configuration SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forcer le chiffrement  
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être configuré pour imposer un chiffrement lors d'une communication avec des applications clientes. Pour plus d’informations, consultez [Activer des connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](enable-encrypted-connections-to-the-database-engine.md).  

@@ -14,10 +14,10 @@ ms.author: ajaykar
 ms.reviewer: mathoma
 manager: jroth
 ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794481"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Créer des rapports d’analyse dans l’Assistant expérimentation de base de données

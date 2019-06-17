@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b5a5e52b89765003da69f9bf7e0b691bd654616c
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66706660"
 ---
 # <a name="index-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Index
@@ -39,7 +39,7 @@ ms.locfileid: "66706660"
 ## <a name="methods"></a>Méthodes  
  Aucun.  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

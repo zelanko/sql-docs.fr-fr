@@ -10,12 +10,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d224572ce81bf260134682d86f6f0f2ce4946f55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66088746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131790"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
   Cette rubrique décrit l'utilisation de l'interface utilisateur pour afficher et analyser les données d'événements étendus :  
@@ -44,23 +44,27 @@ ms.locfileid: "66088746"
   
 -   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
-    -   Faites glisser le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
-  
+    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    
+    -   Faites glisser et déposez le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    
     -   Double-cliquez sur le fichier .XEL.  
-  
-    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur une session d'événements étendus en cours d'exécution et sélectionnez Afficher les données cibles.  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   Vous pouvez afficher plusieurs fois. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du fichier -> Ouvrir le menu.  
-  
+    
+    -   Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur une session d'événements étendus en cours d'exécution et sélectionnez Afficher les données cibles. 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
+    
+    -   Utiliser Powershell en lecture-SQLXevent dans [SQLServer.XEvent module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    
+    -   Consommer par programme des événements étendus à l’aide de la [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    
+    -   Vous pouvez afficher plusieurs fois. Fichier XEL en sélectionnant **fusionner les fichiers d’événements étendus** à partir du fichier -> Ouvrir le menu.
+
 ### <a name="watching-live-data"></a>Surveiller les données actives  
  Vous pouvez surveiller les données actives à mesure qu'elles sont capturées.  
   
 -   Dans l'Explorateur d'objets, développez les nœuds **Gestion**, **Événements étendus**, puis **Sessions** .  
-  
+
 -   Cliquez avec le bouton droit sur le nom de session, puis cliquez sur **Surveiller les données actives** pour commencer à afficher les données de suivi.  
   
      Les colonnes d'affichage par défaut sont **Nom de l'événement** et **TimeStamp**.  
@@ -68,7 +72,9 @@ ms.locfileid: "66088746"
      Pour ajouter d'autres colonnes à la fenêtre de trace, cliquez sur le bouton **Choisir les colonnes** dans la barre d'outils Événements étendus. L'onglet **Détails** affiche tous les détails de l'événement sélectionné.  
   
      Les événements sont généralement affichés en environ 30 secondes. Si vous souhaitez modifier la période de latence, vous pouvez modifier l'option **Latence maximale de répartition** dans la page **Options avancées** de la boîte de dialogue **Nouvelle session** .  
-  
+     
+-    Données actives peuvent être diffusés en continu par le [SqlServer.XEvent PowerShell module](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+     
 ### <a name="to-refresh-target-data"></a>Pour actualiser les données cibles  
  L'actualisation des données cibles n'est pas prise en charge pour les cibles event_files :  
   

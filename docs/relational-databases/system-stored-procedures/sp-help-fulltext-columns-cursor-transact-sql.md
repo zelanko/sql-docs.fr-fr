@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d158c0703190e78209c9a9550040f9bc667b371
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983053"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Arguments  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Variable de sortie de type **curseur**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
   
-`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les informations sur les index de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
+`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les informations sur les index de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)** , avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
   
 `[ @column_name = ] 'column_name'` Est le nom de la colonne pour laquelle les métadonnées de l’index de recherche en texte intégral sont souhaitée. *column_name* est **sysname** avec une valeur par défaut NULL. Si *column_name* est omis ou a la valeur NULL, les informations de colonne de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral de *table_name*. Si *table_name* est également omis ou a la valeur NULL, informations de colonne d’index de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral pour toutes les tables dans la base de données.  
   

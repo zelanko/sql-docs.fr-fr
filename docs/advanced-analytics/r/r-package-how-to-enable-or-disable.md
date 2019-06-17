@@ -3,17 +3,17 @@ title: Activer ou désactiver la gestion des packages R à distance - SQL Server
 description: Activer la gestion à distance des packages R sur SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee52fd9b7a116156f794303b828a83e9b06de6ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4ce25830c3899ca0973fafe30c86489bfcdc949a
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641810"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140495"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Activer ou désactiver la gestion des packages à distance pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -98,4 +98,4 @@ Une fois que vous avez activé cette fonctionnalité, vous pouvez utiliser la fo
 
 + [RevoScaleR permet d’installer de nouveaux packages R](use-revoscaler-to-manage-r-packages.md)
 + [Conseils pour l’installation des packages R](packages-installed-in-user-libraries.md)
-+ [Packages par défaut](installing-and-managing-r-packages.md)
++ [Packages par défaut](../package-management/default-packages.md)

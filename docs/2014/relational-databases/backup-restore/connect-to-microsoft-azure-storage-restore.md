@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876609"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Se connecter au Stockage Microsoft Azure (Restauration)
@@ -29,10 +29,10 @@ ms.locfileid: "62876609"
  **Clé de compte**  
  Spécifiez la clé d'accès du compte de stockage Windows Azure.  
   
- Case à cocher**Utiliser des points de terminaisons sécurisés (HTTPS)**   
+ Case à cocher**Utiliser des points de terminaisons sécurisés (HTTPS)**  
  Sélectionnez cette option pour établir une connexion sécurisée au stockage Windows Azure (recommandé).  
   
- Case à cocher**Enregistrer la clé de compte**   
+ Case à cocher**Enregistrer la clé de compte**  
  Cochez cette case si vous souhaitez que SQL Server se souvienne de la clé d'accès de ce compte de stockage.  
   
 ### <a name="sql-credential"></a>Informations d'identification SQL  

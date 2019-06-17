@@ -13,13 +13,13 @@ helpviewer_keywords:
 - sparse columns, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: cde5de04f06c7954ad9eb5ae721ae1c4ba04e4ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 598d640362ea164673d198b0dc57b3743350673e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606259"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802919"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51606259"
   
  En revanche, si vous faites appel à **queryout** pour l’exportation et référencez par nom les colonnes éparses membres du jeu de colonnes éparses, vous ne pouvez procéder à aucune importation directe dans une table de structure identique. Ceci est lié au fait que BCP utilise des métadonnées cohérentes avec une opération **select \*** pour l’importation et est incapable de faire correspondre les colonnes membres de **column_set** avec ces métadonnées. Pour importer individuellement des colonnes membres de **column_set**, vous devez définir une vue dans la table qui référence les colonnes de **column_set** souhaitées, puis procéder à l’opération d’importation à l’aide de la vue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver pour SQL Server](../../oledb/oledb-driver-for-sql-server.md)  
   
   

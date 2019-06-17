@@ -3,17 +3,17 @@ title: Créer des graphiques et des tracés à l’aide de SQL et R - fonctions 
 description: Didacticiel montrant comment créer des graphiques et des tracés à l’aide des fonctions du langage R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/26/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0ed226a4c11c002d048572f58a75c0c04bdf936c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b988105733d8e3a9ee2edae344947cbf9d377e5d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513166"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140388"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -101,7 +101,7 @@ En règle générale, les serveurs de base de données bloquent l’accès à In
     + Lors de la ligne commençant par `plot` s’exécute, les données rendues est resérialisé vers l’environnement R local afin que vous puissiez l’afficher dans votre client de R.
 
     > [!NOTE]
-    > Si vous utilisez SQL Server dans une machine virtuelle Azure, vous pouvez obtenir une erreur à ce stade. Une erreur se produit lorsque la règle de pare-feu par défaut dans Azure bloque l’accès au réseau par le code R. Pour plus d’informations sur la façon de corriger cette erreur, consultez [installation Machine Learning Services (R) sur une machine virtuelle Azure](../r/installing-sql-server-r-services-on-an-azure-virtual-machine.md).
+    > Si vous utilisez SQL Server dans une machine virtuelle Azure, vous pouvez obtenir une erreur à ce stade. Une erreur se produit lorsque la règle de pare-feu par défaut dans Azure bloque l’accès au réseau par le code R. Pour plus d’informations sur la façon de corriger cette erreur, consultez [installation Machine Learning Services (R) sur une machine virtuelle Azure](../install/sql-machine-learning-azure-virtual-machine.md).
 
 4. L’image suivante montre le tracé de sortie. Les emplacements de montée en taxi sont ajoutés à la carte sous forme de points rouges. Votre image peut se présenter différente, selon le nombre d’emplacements est dans la source de données que vous avez utilisé.
 

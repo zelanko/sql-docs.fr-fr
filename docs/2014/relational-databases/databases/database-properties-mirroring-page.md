@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871944"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriétés de la base de données (page Mise en miroir)
@@ -47,7 +47,7 @@ ms.locfileid: "62871944"
   
  L'adresse réseau du serveur présente la syntaxe de base suivante :  
   
- TCP **://**_nom_de_domaine_complet_**:**_port_  
+ TCP **://** _nom_de_domaine_complet_ **:** _port_  
   
  où  
   
@@ -104,7 +104,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  Cliquez sur ce bouton pour basculer manuellement de la base de données principale vers la base de données miroir.  
   
 > [!NOTE]  
->  Si la session de mise en miroir est exécutée en mode haute performance, le basculement manuel n'est pas pris en charge. Pour effectuer un basculement manuel, vous devez d’abord définir le mode d’opération sur **Haute sécurité sans basculement automatique (synchrone)**. Une fois le basculement terminé, vous pouvez restaurer le mode **Haute performance (asynchrone)** sur l’instance de serveur principal.  
+>  Si la session de mise en miroir est exécutée en mode haute performance, le basculement manuel n'est pas pris en charge. Pour effectuer un basculement manuel, vous devez d’abord définir le mode d’opération sur **Haute sécurité sans basculement automatique (synchrone)** . Une fois le basculement terminé, vous pouvez restaurer le mode **Haute performance (asynchrone)** sur l’instance de serveur principal.  
   
  Vous êtes invité à confirmer l'opération. Si vous cliquez sur **Oui**, une tentative de basculement est effectuée. Le serveur principal commence par essayer de se connecter au serveur miroir à l'aide de l'authentification Windows. Si l’authentification Windows ne fonctionne pas, le serveur principal affiche la boîte de dialogue **Se connecter au serveur** . Si le serveur miroir utilise l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez **Authentification SQL Server** dans la zone **Authentification** . Dans la zone de texte **Connexion** , spécifiez le compte de connexion à utiliser pour se connecter sur le serveur miroir puis, dans la zone de texte **Mot de passe** , spécifiez le mot de passe de ce compte.  
   
