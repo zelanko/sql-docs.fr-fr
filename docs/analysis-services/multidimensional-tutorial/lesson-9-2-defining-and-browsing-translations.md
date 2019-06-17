@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403481"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Leçon 9-2 : définition et exploration de traductions
@@ -33,7 +33,7 @@ Dans les tâches de cette rubrique, vous allez définir les traductions de méta
   
     Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue** .  
   
-3.  Cliquez sur **Espagnol (Espagne)**, puis sur **OK**.  
+3.  Cliquez sur **Espagnol (Espagne)** , puis sur **OK**.  
   
     Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   
@@ -41,13 +41,13 @@ Dans les tâches de cette rubrique, vous allez définir les traductions de méta
   
     Une autre colonne de langue apparaît pour vous permettre de définir les traductions en français.  
   
-5.  Sur la ligne de l’objet **Caption** pour la dimension **Date**, tapez **Fecha** dans la colonne de traduction **Espagnol (Espagne)** et **Date** dans la colonne de traduction **Français (France)**.  
+5.  Sur la ligne de l’objet **Caption** pour la dimension **Date**, tapez **Fecha** dans la colonne de traduction **Espagnol (Espagne)** et **Date** dans la colonne de traduction **Français (France)** .  
   
 6.  Sur la ligne de l’objet **Caption** pour l’attribut **Month Name** , tapez **Mes del Año** dans la colonne de traduction **Espagnol (Espagne)** et **Mois de l’année** dans la colonne de traduction **Français (France)** .  
   
-    Notez que lorsque vous entrez ces traductions, des points de suspension (**...** ) s’affiche. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
+    Notez que lorsque vous entrez ces traductions, des points de suspension ( **...** ) s’affiche. En cliquant sur ces points de suspension, vous pouvez spécifier une colonne de la table sous-jacente qui fournit les traductions pour chaque membre de la hiérarchie d'attribut.  
   
-7.  Cliquez sur le bouton de sélection (**...** ) pour le **Espagnol (Espagne)** traduction pour la **Month Name** attribut.  
+7.  Cliquez sur le bouton de sélection ( **...** ) pour le **Espagnol (Espagne)** traduction pour la **Month Name** attribut.  
   
     La boîte de dialogue **Traduction de données d’attribut** apparaît.  
   
@@ -55,7 +55,7 @@ Dans les tâches de cette rubrique, vous allez définir les traductions de méta
   
     ![Boîte de dialogue traduction de données attribut](../media/l9-translations-4.gif "boîte de dialogue traduction de données d’attribut")  
   
-9. Cliquez sur **OK**, puis cliquez sur le bouton de sélection (**...** ) pour le **Français (France)** traduction pour la **Month Name** attribut.  
+9. Cliquez sur **OK**, puis cliquez sur le bouton de sélection ( **...** ) pour le **Français (France)** traduction pour la **Month Name** attribut.  
   
 10. Dans la liste **Colonnes de traduction** , sélectionnez **FrenchMonthName**, puis cliquez sur **OK**.  
   
@@ -73,7 +73,7 @@ Dans les tâches de cette rubrique, vous allez définir les traductions de méta
   
     Une liste de langues apparaît dans la boîte de dialogue **Sélectionnez une langue**.  
   
-3.  Sélectionnez **Espagnol (Espagne)**, puis cliquez sur **OK**.  
+3.  Sélectionnez **Espagnol (Espagne)** , puis cliquez sur **OK**.  
   
     Dans la nouvelle colonne qui apparaît, vous allez définir les traductions en espagnol pour les objets de métadonnées que vous souhaitez traduire. Dans ce didacticiel, nous n'allons traduire qu'un petit nombre d'objets pour illustrer le processus.  
   

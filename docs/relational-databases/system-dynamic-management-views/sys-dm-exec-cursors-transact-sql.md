@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013419"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -82,7 +82,7 @@ dm_exec_cursors (session_id | 0 )
   
  Le tableau ci-dessous fournit des informations sur le type du curseur et inclut les valeurs possibles pour la colonne des propriétés.  
   
-|Type|Description|  
+|type|Description|  
 |----------|-----------------|  
 |Keyset|Le curseur est déclaré comme Keyset.|  
 |dynamique|Le curseur est déclaré comme dynamique.|  
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  Le tableau ci-dessous fournit des informations sur l'étendue du curseur et inclut les valeurs possibles pour la colonne des propriétés.  
   
-|Portée|Description|  
+|`Scope`|Description|  
 |-----------|-----------------|  
 |Local|Spécifie que l'étendue du curseur est locale pour le traitement d'instructions, la procédure stockée ou le déclencheur dans lequel il a été créé.|  
 |Global|Spécifie que l'étendue du curseur est globale pour la connexion.|  

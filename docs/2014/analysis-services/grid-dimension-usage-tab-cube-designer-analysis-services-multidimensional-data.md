@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080807"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Grille (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -26,7 +26,7 @@ ms.locfileid: "66080807"
 |------------|----------------|  
 |**Groupes de mesures**|Sélectionnez les groupes de mesures à afficher en colonnes dans le volet **Grille** . Si vous sélectionnez **(Afficher tout)** , tous les groupes de mesures disponibles s’affichent.<br /><br /> Cliquez sur un en-tête de colonne sélectionnée pour un groupe de mesures pour renommer ce dernier.|  
 |**Dimensions**|Sélectionnez les dimensions du cube à afficher en lignes dans le volet **Grille** . Si vous sélectionnez **(Afficher tout)** , toutes les dimensions du cube disponibles s’affichent.<br /><br /> Cliquez sur un en-tête de ligne sélectionnée pour une dimension pour renommer cette dernière.|  
-|**(Cell)**|Sélectionnez une cellule et cliquez sur le bouton de sélection (**...**) pour afficher la boîte de dialogue **Définir une relation** et définir une relation de dimension entre une dimension du cube et un groupe de mesures. Pour plus d’informations sur la boîte de dialogue **Définir une relation**, consultez [Boîte de dialogue Définir une relation &#40;Analysis Services - Données multidimensionnelles&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Sélectionnez une cellule et cliquez sur le bouton de sélection ( **...** ) pour afficher la boîte de dialogue **Définir une relation** et définir une relation de dimension entre une dimension du cube et un groupe de mesures. Pour plus d’informations sur la boîte de dialogue **Définir une relation**, consultez [Boîte de dialogue Définir une relation &#40;Analysis Services - Données multidimensionnelles&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Menu contextuel  
  Le menu contextuel propose les options suivantes. Vous y accédez en cliquant avec le bouton droit dans le volet **Grille** :  

@@ -279,7 +279,7 @@ L’exemple ci-dessous contient une simple application Java qui se connecte à A
     3. Cliquez sur l’onglet « Inscriptions d’application ».
     4. Dans le menu déroulant, cliquez sur « Nouvelle inscription d’application ».
     5. Entrez mytokentest sous la forme d’un nom convivial pour l’application, sélectionnez « application/API Web ».
-    6. URL de connexion est inutile. Quoi que ce soit fournir uniquement : « https://mytokentest».
+    6. URL de connexion est inutile. Quoi que ce soit fournir uniquement : « https://mytokentest ».
     7. En bas, cliquez sur « Créer ».
     9. Dans le portail Azure, cliquez sur l’onglet « Paramètres » de votre application et ouvrez l’onglet « Propriétés ».
     10. Recherchez la valeur « ID d’Application » (également appelé ID de Client) et copiez-la, car vous besoin plus tard lors de la configuration de votre application (par exemple, 1846943b-ad04-4808-aa13-4702d908b5c1). Consultez l’instantané suivant.

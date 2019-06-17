@@ -10,13 +10,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470100"
 ---
-# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Étude de cas : Création d’un écosystème d’entreprise avec Microsoft Dynamics ERP et de réplication SQL Server 2014 pour l’évolutivité et performances
+# <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Étude de cas : Création d’un écosystème d’entreprise avec Microsoft Dynamics ERP et la réplication SQL Server 2014 pour la scalabilité et les performances
 
   **Résumé :** Ce document couvre les scénarios suivants :  
 Comment utiliser la réplication transactionnelle dans SQL Server 2014 pour distribuer les transactions à partir de clients Dynamics AX sur plusieurs nœuds. Comme les données sont conservées sur les nœuds en temps réel, la réplication transactionnelle fournit la redondance des données, ce qui augmente la disponibilité des données pour une analyse des performances plus efficace.  

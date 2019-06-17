@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815750"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Stratégies Always On pour les problèmes opérationnels avec des groupes de disponibilité Always On (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "62815750"
 ##  <a name="AlwaysOnPBM"></a> Stratégies prédéfinies et problèmes rencontrés  
  Le tableau suivant récapitule les stratégies définies.  
   
-|Nom de stratégie|Problème|Catégorie**<sup>*</sup>**|Facette|  
+|Nom de stratégie|Problème|Catégorie **<sup>*</sup>**|Facette|  
 |-----------------|-----------|------------------------------|-----------|  
 |État du cluster WSFC|[Le service de cluster WSFC est hors connexion](wsfc-cluster-service-is-offline.md).|Critique|Instance de SQL Server|  
 |État en ligne du groupe de disponibilité|[Le groupe de disponibilité est hors connexion](availability-group-is-offline.md).|Critique|Groupe de disponibilité|  
