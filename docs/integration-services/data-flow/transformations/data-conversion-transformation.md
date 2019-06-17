@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cb7639f027a66e424d554a074a82a7ea2d08a827
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726177"
 ---
 # <a name="data-conversion-transformation"></a>transformation de conversion de données
@@ -90,7 +90,7 @@ ms.locfileid: "65726177"
  **Configurer l'affichage des erreurs**  
  Indiquez la façon dont les erreurs au niveau des lignes sont gérées via la boîte de dialogue [Configurer la sortie d’erreur](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyse rapide](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

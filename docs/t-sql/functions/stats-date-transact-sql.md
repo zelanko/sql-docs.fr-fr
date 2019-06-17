@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f313706aba43b939e267cee8b79deee2b8b80bc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947675"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
@@ -55,7 +55,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>Types de retour  
  Renvoie **datetime** en cas de réussite. Renvoie **NULL** si un objet blob de statistiques n’a pas été créé.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans la clause WHERE et partout où une expression peut être utilisée.  
  
  La date de mise à jour des statistiques est stockée dans l’[objet blob de statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec l’[histogramme](../../relational-databases/statistics/statistics.md#histogram) et le [vecteur de densité](../../relational-databases/statistics/statistics.md#density), et non dans les métadonnées. Quand aucune donnée n’est lue pour générer des données de statistiques, l’objet blob de statistiques n’est pas créé et la date n’est pas disponible. C’est le cas pour les statistiques filtrées pour lesquelles le prédicat ne renvoie aucune ligne, ou pour les nouvelles tables vides.
@@ -153,7 +153,7 @@ WHERE object_id = OBJECT_ID('dbo.DimCustomer');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   

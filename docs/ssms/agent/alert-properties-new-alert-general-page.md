@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ce2952af8a3f75ce8cc3e7714bb0490db33febd5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099343"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Général)
@@ -85,7 +85,7 @@ Spécifiez l'espace de noms à utiliser pour l'instruction WQL (WMI Query Langua
 **Requête**  
 Spécifiez l'instruction WQL identifiant l'événement auquel l'alerte répond.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  
 [Utilisation de WQL avec le fournisseur WMI pour les événements de serveur](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)  
 [Créer une alerte utilisant un numéro d'erreur](../../ssms/agent/create-an-alert-using-an-error-number.md)  

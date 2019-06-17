@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d134e97d5e22d86d6ab3d072b5e2be29c589cde9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944543"
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
@@ -50,7 +50,7 @@ _partition\_by\_clause_ divise le jeu de résultats généré par la clause FROM
 ## <a name="return-types"></a>Types de retour
 **float(53)**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `CUME_DIST` retourne une plage de valeurs supérieures à 0, et inférieures ou égales à 1. Les valeurs égales sont toujours évaluées à la même valeur de distribution cumulative. `CUME_DIST` inclut les valeurs NULL par défaut et les traite comme les valeurs les plus basses possibles.
   
 `CUME_DIST` n’est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).

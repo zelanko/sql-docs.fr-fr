@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729114"
 ---
 # <a name="advanced-connection-properties"></a>Propriétés avancées de connexion
@@ -36,7 +36,7 @@ ms.locfileid: "65729114"
 > [!IMPORTANT]  
 >  N'incluez pas les informations d'identification de connexion dans la boîte de dialogue **Propriétés avancées de connexion** . Ceux-ci ne seront pas chiffrés lorsqu'ils seront transmis sur le réseau.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
  [Connexion SQL Server pour la création d'une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   

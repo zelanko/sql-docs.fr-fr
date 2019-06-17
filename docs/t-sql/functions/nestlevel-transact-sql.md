@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fd01697d833b2db08f24b1f35d3d71ba649887c2
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944209"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "65944209"
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque fois qu'une procédure stockée appelle une autre procédure stockée ou exécute du code managé en référençant une agrégation, un type ou une routine CLR (Common Language Runtime), le niveau d'imbrication est incrémenté. En cas de dépassement du maximum autorisé (32), la transaction s'arrête.  
   
  Lorsque la fonction @@NESTLEVEL est exécutée dans une chaîne [!INCLUDE[tsql](../../includes/tsql-md.md)], la valeur renvoyée est 1, augmentée du niveau d’imbrication actuel. Lorsque la fonction @@NESTLEVEL est exécutée dynamiquement à l’aide de sp_executesql, la valeur renvoyée est 2, augmentée du niveau d’imbrication actuel.  
@@ -120,7 +120,7 @@ TwoGreater
 (1 row(s) affected)
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

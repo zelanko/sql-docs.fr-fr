@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2ae2ace318d49ff524379c3f825d8da272674755
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088846"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Ajouter des colonnes à des requêtes (Visual Database Tools)
@@ -42,7 +42,7 @@ Chaque fois que vous utilisez une colonne dans une requête, vous pouvez égalem
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Pour ajouter toutes les colonnes d'une table ou d'un objet table  
   
--   Dans le **Volet Diagramme**, cochez la case située en regard de **&#42;(Toutes les colonnes)**.  
+-   Dans le **Volet Diagramme**, cochez la case située en regard de **&#42;(Toutes les colonnes)** .  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Pour ajouter toutes les colonnes de l'ensemble des tables ou des objets structurés comme des tables  
   
@@ -52,7 +52,7 @@ Chaque fois que vous utilisez une colonne dans une requête, vous pouvez égalem
   
 3.  Dans la fenêtre Propriétés, cliquez sur **Sélectionne toutes les colonnes** et choisissez **Oui** ou **Non** dans la liste déroulante.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Supprimer des colonnes des résultats d’une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-query-results-visual-database-tools.md)  
 [Supprimer des colonnes des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-columns-from-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

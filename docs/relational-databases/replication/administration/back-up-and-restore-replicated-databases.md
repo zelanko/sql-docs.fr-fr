@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b583be423e6f70fa23ae105082fe0b39f221072f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665101"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Sauvegarder et restaurer des bases de données répliquées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47843597"
   
  Quelle que soit votre stratégie de récupération, conservez toujours dans un endroit sûr un script à jour de vos paramètres de réplication. En cas de panne sur un serveur, ou si vous avez besoin de créer un environnement de test, vous pouvez modifier ce script en changeant des références de nom de serveur et l'utiliser pour recréer vos paramètres de réplication. Outre vos paramètres de réplication courants, prévoyez d'intégrer dans un script l'activation et la désactivation de la réplication. Pour plus d'informations sur les scripts d'objets de réplication, consultez [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

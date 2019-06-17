@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8a5c8d11835de375adc6994edb0c26ac0991afc8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104952"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utiliser des colonnes dans des requêtes d'agrégation (Visual Database Tools)
@@ -68,7 +68,7 @@ Les principes suivants décrivent comment, dans une requête d'agrégation, réf
   
 -   Si vous utilisez une fonction d'agrégation dans une condition de recherche, cette dernière implique une synthèse. Par conséquent, elle doit faire partie de la clause HAVING.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Résumer les résultats de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   

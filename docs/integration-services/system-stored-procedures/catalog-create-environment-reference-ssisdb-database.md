@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73871d69a8fbdc56b2359aa888cbc08e572a6107
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716911"
 ---
 # <a name="catalogcreateenvironmentreference-ssisdb-database"></a>catalog.create_environment_reference (base de données SSISDB)
@@ -40,19 +40,19 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier du projet qui référence l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier du projet qui référence l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nom du projet qui référence l'environnement. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet qui référence l'environnement. *project_name* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom de l'environnement référencé. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement référencé. *environment_name* est de type **nvarchar(128)** .  
   
  [ @reference_location = ] *reference_location*  
- Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. *reference_location* est de type **char(1)**.  
+ Indique si l'environnement peut se trouver dans le même dossier que le projet (référence relative) ou dans un dossier différent (référence absolue). Utilisez la valeur `R` pour indiquer une référence relative. Utilisez la valeur `A` pour indiquer une référence absolue. *reference_location* est de type **char(1)** .  
   
  [ @environment_folder_name = ] *environment_folder_name*  
- Nom du dossier dans lequel l'environnement référencé se trouve. Cette valeur est obligatoire pour les références absolues. *environment_folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier dans lequel l'environnement référencé se trouve. Cette valeur est obligatoire pour les références absolues. *environment_folder_name* est de type **nvarchar(128)** .  
   
  [ @reference_id = ] *reference_id*  
  Retourne l'identificateur unique de la nouvelle référence. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
@@ -83,7 +83,7 @@ catalog.create_environment_reference [ @folder_name = ] folder_name
   
 -   Une référence absolue est spécifiée en utilisant le caractère `A` dans le paramètre *reference_location*, mais le nom du dossier n’a pas été spécifié avec le paramètre *environment_folder_name*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent qu'il réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et par dossier et peuvent faire référence aux environnements qui résident dans un dossier différent que le projet. Un projet peut référencer plusieurs environnements.  
   
   

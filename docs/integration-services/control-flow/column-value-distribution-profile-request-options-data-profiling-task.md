@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9251b25d0f4f353312a56a2117d1388f813d839f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727839"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Options Demande de profil de distribution de valeurs de colonne (tâche de profilage des données)
@@ -106,7 +106,7 @@ ms.locfileid: "65727839"
  **FrequentValueThreshold**  
  Spécifiez le seuil (au moyen d'une valeur comprise entre 0 et 1) au-dessus duquel la valeur de colonne doit être précisée. Cette option est désactivée quand vous sélectionnez **AllValues** comme **ValueDistributionOption**. La valeur par défaut de cette option est 0,001.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

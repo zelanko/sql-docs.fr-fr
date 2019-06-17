@@ -13,10 +13,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: f184ea911bb7731c8b5adba8010d81a91ee4ff3c
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503964"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
@@ -822,7 +822,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 Comme vous pouvez le remarquer, la cohérence des types et le maintien des propriétés de possibilité de valeur NULL au niveau de CTAS constituent une bonne pratique d’ingénierie. Elle vous permet de préserver l’intégrité de vos calculs et garantit aussi la possibilité d’un basculement de partition.
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

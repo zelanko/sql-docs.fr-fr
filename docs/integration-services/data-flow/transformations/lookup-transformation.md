@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726000"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
@@ -278,7 +278,7 @@ ms.locfileid: "65726000"
 ### <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) sur blogs.msdn.com  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   

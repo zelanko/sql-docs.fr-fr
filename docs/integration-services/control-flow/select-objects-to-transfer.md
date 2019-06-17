@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4c2e7ef3c3e4a6c61fe3250ec8d9d267503d9ae
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727492"
 ---
 # <a name="select-objects-to-transfer"></a>Sélectionner les objets à transférer
@@ -31,7 +31,7 @@ ms.locfileid: "65727492"
   
  Pour choisir des objets spécifiques à transférer, activez la case à cocher dans la première colonne de la ligne de la grille où l'objet est répertorié.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de tâche de transfert de travaux &#40;page Général&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [Éditeur de tâche de transfert de connexions &#40;page Connexions&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   

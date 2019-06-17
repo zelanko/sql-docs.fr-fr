@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729403"
 ---
 # <a name="adding-connections-programmatically"></a>Ajout de connexions par programme
@@ -214,7 +214,7 @@ End Class
 ## <a name="external-resources"></a>Ressources externes  
  Article technique, [Connection Strings](https://go.microsoft.com/fwlink/?LinkId=220743), sur carlprothman.net.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

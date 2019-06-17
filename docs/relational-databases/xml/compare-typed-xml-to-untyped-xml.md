@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760696"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Notez que vous pouvez encore utiliser une simple instruction select SQL pour extraire le type de données XML entier, même s'il contient des années négatives. Il est recommandé de remplacer les années négatives par une année comprise dans la plage nouvellement prise en charge, ou de modifier le type de l'élément ou attribut en **xs:string**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Langage de modification de données XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

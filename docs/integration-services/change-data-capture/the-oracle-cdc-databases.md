@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a4743cd96f3075915bb2ed1071f781e1787cf9b6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728513"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
@@ -190,7 +190,7 @@ ms.locfileid: "65728513"
 |data_end_cn|Numéro de modification (CN) pour la dernière modification des données de cette ligne.|  
 |données|Modifications intermédiaires pour la transaction sous forme d'un objet BLOB.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

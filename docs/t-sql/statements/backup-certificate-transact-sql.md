@@ -30,10 +30,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 192eb9d6fb313f689081c590f2881f028fd54ced
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64774899"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
@@ -87,7 +87,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  DECRYPTION BY PASSWORD = '*decryption_password*'  
  Mot de passe utilisé pour déchiffrer la clé privée avant de sauvegarder la clé. Cet argument n’est pas nécessaire si le certificat est chiffré par la clé principale. 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la clé privée est chiffrée au moyen d'un mot de passe dans la base de données, le mot de passe de déchiffrement doit être spécifié.  
   
  Lorsque vous sauvegardez la clé privée dans un fichier, un chiffrement est nécessaire. Le mot de passe utilisé pour protéger la clé privée dans le fichier est différent de celui qui sert à chiffrer la clé privée du certificat dans la base de données.  
@@ -134,7 +134,7 @@ BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  

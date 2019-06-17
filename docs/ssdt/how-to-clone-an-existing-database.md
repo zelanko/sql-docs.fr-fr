@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090112"
 ---
 # <a name="how-to-clone-an-existing-database"></a>Procédure : Cloner une base de données existante
@@ -54,6 +54,6 @@ Ces étapes vous permettront de créer facilement une base de données de dével
   
 7.  Utilisez l'Éditeur de code pour vérifier que toutes les tables de la nouvelle base de données `TradeDev` ont été remplies.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

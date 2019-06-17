@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 087abb83075b37b3002f649164485ae64cf137c3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095210"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Créer des requêtes UNION (Visual Database Tools)
@@ -51,7 +51,7 @@ Le mot clé UNION vous permet d'inclure les résultats de deux instructions SELE
   
     Votre requête UNION est à présent mise en forme par le Concepteur de requêtes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Types de requêtes pris en charge (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

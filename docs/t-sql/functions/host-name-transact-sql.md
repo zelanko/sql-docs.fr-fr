@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c781ef8b6b2b0aa883deda482c10c03fbc6f2b78
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946479"
 ---
 # <a name="hostname-transact-sql"></a>HOST_NAME (Transact-SQL)
@@ -43,7 +43,7 @@ HOST_NAME ()
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand le paramètre d'une fonction système est facultatif, la base de données active, l'ordinateur hôte, l'utilisateur du serveur ou l'utilisateur de la base de données sont pris implicitement en considération. Les fonctions intégrées doivent toujours être suivies de parenthèses.  
   
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée.  
@@ -65,7 +65,7 @@ CREATE TABLE Orders
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   

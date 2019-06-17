@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74b302ba4dcf4637acdcfebaf8c33f1b338cb36a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56853014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942834"
 ---
 # <a name="set-numericroundabort-transact-sql"></a>SET NUMERIC_ROUNDABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ Spécifie le niveau de gravité de l'erreur générée lorsqu'un arrondi effectu
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si l'option SET NUMERIC_ROUNDABORT est définie à ON (activée), une erreur se produit dès qu'une perte de précision survient dans une expression. Si la valeur est OFF, les pertes de précision ne génèrent pas de messages d'erreur. Le résultat est arrondi en fonction de la précision définie pour la colonne ou la variable contenant le résultat.  
   
 Une perte de précision se produit quand vous essayez de stocker une valeur avec une précision fixe dans une colonne ou une variable dont la précision est moindre.  
@@ -78,7 +78,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -148,7 +148,7 @@ SELECT @result;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
 [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
 [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  

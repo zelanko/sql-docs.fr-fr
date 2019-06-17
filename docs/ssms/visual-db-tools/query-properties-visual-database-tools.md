@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84745411a3a44ea75d20c6c9f304fb7fe87d4d85
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098350"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriétés de la requête (Visual Database Tools)
@@ -84,7 +84,7 @@ Spécifie que la requête doit retourner uniquement les *n* premiers pour cent d
 **Avec liens**  
 Spécifie que la vue inclura une clause WITH TIES. WITH TIES est utile si une vue inclut une clause ORDER BY et une clause TOP basée sur un pourcentage. Si cette option est activée et si le pourcentage s'arrête au milieu d'un groupe de lignes auxquelles correspondent des valeurs identiques dans la clause ORDER BY, la vue est agrandie de façon à inclure ces lignes. (S'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

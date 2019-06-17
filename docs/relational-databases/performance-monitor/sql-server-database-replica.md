@@ -17,10 +17,10 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: e9f3a9a7a51bd0ca96a21806a11334df6f264753
-ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66749142"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de données
@@ -44,7 +44,7 @@ ms.locfileid: "66749142"
 |**Taille totale de journal nécessitant une annulation**|Nombre total de kilo-octets du journal qui doivent être annulés.|Réplica secondaire|  
 |**Délai de transaction**|Délai d’attente d’accusé de réception de validation non terminée pour toutes les transactions en cours, en millisecondes. Divisez cette valeur par *Transactions d’écriture en miroir/s* pour obtenir le *délai de transaction moyen*. Pour plus d’informations, consultez [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/).|Réplica principal|  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de disponibilité](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   

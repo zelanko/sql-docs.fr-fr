@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6805a3ffbd56d722cb56da626602d8fc17a68caf
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65822045"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
@@ -37,7 +37,7 @@ ms.locfileid: "65822045"
 |Explique comment Intellisense peut identifier les deux extrémités d'une paire de délimiteurs, et comment vous pouvez alterner entre les deux extrémités de la paire.|[Correspondance automatique des paires de syntaxe](../../relational-databases/scripting/automatic-matching-of-syntax-pairs.md)|  
 |Décrit les conditions dans lesquelles Intellisense peut ne pas fonctionner.|Résolution des problèmes liés à IntelliSense (SQL Server Management Studio)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

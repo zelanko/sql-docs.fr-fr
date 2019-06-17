@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1ce6f794df17fc67d83e8a6453b7b1a0f231db26
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724582"
 ---
 # <a name="replication-developer-documentation"></a>Documentation pour le développeur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "54299716"
  Décrit comment les procédures stockées système peuvent être utilisées pour assurer un accès par programme dans une topologie de réplication.  
   
  [Concepts liés à Replication Management Objects](../../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
- Explique les concepts relatifs à l'utilisation de Replication Management Objects. Il s'agit d'un assembly de code managé qui encapsule les fonctionnalités de réplication pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].   
+ Explique les concepts relatifs à l'utilisation de Replication Management Objects. Il s'agit d'un assembly de code managé qui encapsule les fonctionnalités de réplication pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Concepts des exécutables de l’agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
  Décrit l'utilisation des fichiers exécutables de l'Agent de réplication.  

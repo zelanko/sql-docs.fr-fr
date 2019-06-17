@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 011dcadf2fba4343ae5b0a4642d243faabc6ea3c
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821196"
 ---
 # <a name="specify-a-breakpoint-action"></a>Spécifier une action de point d'arrêt
@@ -66,6 +66,6 @@ ms.locfileid: "65821196"
   
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
  [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa21219ef5946ec4d4b95aff1a201aca9b453a2e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724588"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Développement d'objets personnalisés pour Integration Services
@@ -115,7 +115,7 @@ ms.locfileid: "65724588"
   
 -   Entrée de blog, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), sur blogs.msdn.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Persistance des objets personnalisés](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

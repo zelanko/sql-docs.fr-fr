@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5aec8974f2b21bd28869b2c06be9eadbf5cd239c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728696"
 ---
 # <a name="how-to-use-the-cdc-service-command-line-interface"></a>Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b636a0af28ad002de6b41a3d4dcdd78e38498e46
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65801363"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
@@ -76,7 +76,7 @@ ms.locfileid: "65801363"
 ### <a name="adding-variables"></a>Ajout de variables  
  S'il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété **ReadOnlyVariables** et **ReadWriteVariables** dans la page **Script** de l' **Éditeur de transformation de script**.  
   
- Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur le bouton de sélection (**...**) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
+ Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur le bouton de sélection ( **...** ) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -391,7 +391,7 @@ ms.locfileid: "65801363"
     }  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)   
  [Développement d’un composant source personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)  
   

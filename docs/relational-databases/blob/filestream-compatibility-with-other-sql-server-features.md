@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2b2f9e434e1e88d893478c558078c8139e1bb0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094249"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilité de FILESTREAM avec d'autres fonctionnalités SQL Server
@@ -53,7 +53,7 @@ ms.locfileid: "65094249"
  Vous pouvez utiliser la transformation d'importation de colonne pour charger des fichiers du système de fichiers dans une colonne FILESTREAM. Vous pouvez également utiliser la transformation d'exportation de colonne pour extraire des fichiers d'une colonne FILESTREAM à un autre emplacement dans le système de fichiers.  
   
 ##  <a name="distqueries"></a> Requêtes distribuées et serveurs liés  
- Vous pouvez utiliser des données FILESTREAM dans vos requêtes distribuées et sur les serveurs liés en les traitant comme des données **varbinary(max)** . Vous ne pouvez pas utiliser la fonction FILESTREAM **PathName()** dans les requêtes distribuées qui utilisent un nom en quatre parties, même quand le nom fait référence au serveur local. En revanche, vous pouvez utiliser **PathName()** dans la requête interne d’une requête directe qui utilise **OPENQUERY()**.  
+ Vous pouvez utiliser des données FILESTREAM dans vos requêtes distribuées et sur les serveurs liés en les traitant comme des données **varbinary(max)** . Vous ne pouvez pas utiliser la fonction FILESTREAM **PathName()** dans les requêtes distribuées qui utilisent un nom en quatre parties, même quand le nom fait référence au serveur local. En revanche, vous pouvez utiliser **PathName()** dans la requête interne d’une requête directe qui utilise **OPENQUERY()** .  
   
 ##  <a name="encryption"></a> Chiffrement  
  Les données FILESTREAM ne sont pas chiffrées, même lorsque le chiffrement transparent des données est activé.  
@@ -68,7 +68,7 @@ ms.locfileid: "65094249"
  `Could not continue scan with NOLOCK due to data movement.`  
   
 ##  <a name="Replication"></a> Réplication  
- Une colonne **varbinary(max)** qui a l’attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l’attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>**, ou du paramètre @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ou [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Les données répliquées sur une colonne **varbinary(max)** qui n’a pas l’attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d’exécution est générée. Nous vous recommandons de répliquer l'attribut FILESTREAM, à moins que vous ne répliquiez des données sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur des abonnés [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] n'est pas prise en charge, quelle que soit l'option de schéma définie.  
+ Une colonne **varbinary(max)** qui a l’attribut FILESTREAM activé sur le serveur de publication peut être répliquée sur un abonné avec ou sans l’attribut FILESTREAM. Spécifiez la façon dont la colonne est répliquée à l’aide de la boîte de dialogue **Propriétés de l’article - \<Article>** , ou du paramètre @schema_option de [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) ou [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Les données répliquées sur une colonne **varbinary(max)** qui n’a pas l’attribut FILESTREAM ne doivent pas dépasser la limite de 2 Go pour ce type de données, autrement une erreur d’exécution est générée. Nous vous recommandons de répliquer l'attribut FILESTREAM, à moins que vous ne répliquiez des données sur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur des abonnés [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] n'est pas prise en charge, quelle que soit l'option de schéma définie.  
   
 > [!NOTE]  
 >  La réplication de grandes valeurs de données à partir d'Abonnés [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est limitée à des valeurs de données de 256 Mo maximum. Pour plus d'informations, consultez [Spécifications de capacité maximale](https://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -121,7 +121,7 @@ ms.locfileid: "65094249"
   
  Vous pouvez définir l’autonomie de la base de données sur PARTIAL si vous souhaitez utiliser certaines fonctionnalités des bases de données autonomes, telles que les utilisateurs autonomes. Dans ce cas, toutefois, vous devez savoir qu'une partie des paramètres de la base de données ne sont pas contenus dans la base de données et ne sont pas automatiquement déplacés avec celle-ci.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   
   

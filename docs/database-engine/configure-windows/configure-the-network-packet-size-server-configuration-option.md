@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 90cef82fd04294022e6ab41ec07526deb8c438cc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66802479"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Configurer l'option de configuration de serveur network packet size
@@ -111,7 +111,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option network packet size  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

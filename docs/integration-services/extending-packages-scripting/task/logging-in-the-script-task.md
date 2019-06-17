@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e3774939a655bceff3ceb49653b9dd47bf4fe5e9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724100"
 ---
 # <a name="logging-in-the-script-task"></a>Journalisation dans la tâche de script
@@ -101,7 +101,7 @@ public class ScriptMain
   
 -   Entrée de blog, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=165644), sur dougbert.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Journalisation Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

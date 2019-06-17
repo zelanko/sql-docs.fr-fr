@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8d27e26eced538718492d0239af875968eed4777
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096448"
 ---
 # <a name="handle-multiple-job-steps"></a>Gérer plusieurs étapes de travail
@@ -49,7 +49,7 @@ Les étapes de travail doivent être autonomes. En d'autres termes, un travail n
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent enregistre dans l’historique des travaux les informations relatives aux travaux et aux étapes de travail.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sp_add_job](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)  
 [sysjobhistory](../../relational-databases/system-tables/dbo-sysjobhistory-transact-sql.md)  
 [sysjobs (Transact-SQL)](https://msdn.microsoft.com/e244a6a5-54c2-47a6-8039-dd1852b0ae59)  

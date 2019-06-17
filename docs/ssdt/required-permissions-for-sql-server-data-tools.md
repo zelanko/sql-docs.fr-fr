@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101854"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Autorisations nécessaires pour SQL Server Data Tools
@@ -98,7 +98,7 @@ Le tableau suivant répertorie les autorisations nécessaires pour déployer ou 
 > [!IMPORTANT]  
 > Dans tous les cas, le propriétaire de l'assembly doit être l'utilisateur utilisé pour déployer l'assembly ou le propriétaire doit être un rôle dont l'utilisateur est membre. Cette condition s'applique à tous les assemblys référencés par l'assembly déployé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
   

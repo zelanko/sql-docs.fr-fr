@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 57ff486a239436dd8686970052ae73f3fed2ebb6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774753"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
@@ -46,7 +46,7 @@ ms.locfileid: "66774753"
     > [!NOTE]  
     >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : l’authentification Windows ou l’authentification basée sur les certificats. Pour plus d’informations, consultez [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
-     Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires de sessions de mise en miroir, vous pouvez attribuer le rôle de partenaire au point de terminaison (ROLE**=** PARTNER). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
+     Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires de sessions de mise en miroir, vous pouvez attribuer le rôle de partenaire au point de terminaison (ROLE **=** PARTNER). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
   
      Pour exécuter une instruction SET PARTNER, le paramètre STATE des points de terminaison des deux partenaires doit avoir la valeur STARTED.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66774753"
   
 4.  Pour définir le serveur principal comme partenaire sur la base de données miroir, connectez-vous au serveur miroir et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *\<nom_base_de_données\>* SET PARTNER **=**_\<adresse\_réseau\_serveur\>_  
+     ALTER DATABASE *\<nom_base_de_données\>* SET PARTNER **=** _\<adresse\_réseau\_serveur\>_  
   
      où _\<nom\_base_de_données\>_ correspond au nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et _\<adresse\_réseau\_serveur\>_ est l’adresse réseau du serveur principal.  
   
      La syntaxe pour une adresse réseau de serveur est la suivante :  
   
-     TCP<b>\://</b>_\<adresse_système\>_<b>\:</b>_\<port\>_  
+     TCP<b>\://</b> _\<adresse_système\>_ <b>\:</b> _\<port\>_  
   
      où _\<adresse-système>_ est une chaîne qui identifie de façon non ambiguë l’ordinateur de destination et _\<port>_ est le numéro de port utilisé par le point de terminaison de la mise en miroir de l’instance de serveur partenaire. Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66774753"
   
 5.  Pour définir le serveur miroir comme partenaire sur la base de données principale, connectez-vous au serveur principal et exécutez l'instruction suivante :  
   
-     ALTER DATABASE _\<nom\_base_de_données\>_ SET PARTNER **=**_\<adresse\_réseau\_serveur\>_  
+     ALTER DATABASE _\<nom\_base_de_données\>_ SET PARTNER **=** _\<adresse\_réseau\_serveur\>_  
   
      Pour plus d'informations, consultez l'étape 4.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "66774753"
         > [!NOTE]  
         >  En mode hautes performances, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 > [!NOTE]  
 >  L'exemple suivant établit une session de mise en miroir de base de données entre partenaires d'une base de données miroir existante. Pour plus d’informations sur la création d’une base de données miroir, consultez [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
@@ -211,7 +211,7 @@ ms.locfileid: "66774753"
 > [!NOTE]  
 >  Pour voir un exemple illustrant la configuration de la sécurité, la préparation de la base de données miroir, la définition des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Autoriser l’accès sur le réseau à un point de terminaison de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   

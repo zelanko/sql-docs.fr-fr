@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23d09ae4eaefb7228e0eb0f7593b8d844ef66a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859975"
 ---
 # <a name="mssqlserver1406"></a>MSSQLSERVER_1406
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ne peut pas for
 ## <a name="user-action"></a>Action de l'utilisateur  
 Supprimez la mise en miroir de bases de données. Vous pouvez ensuite récupérer la base de données miroir pour y accéder.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Forcer le service dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](~/database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)  
 [Suppression d’une mise en miroir des bases de données &#40;SQL Server&#41;](~/database-engine/database-mirroring/removing-database-mirroring-sql-server.md)  
   

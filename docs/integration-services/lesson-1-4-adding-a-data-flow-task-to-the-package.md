@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723332"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Leçon 1-4 : Ajouter une tâche de flux de données au package
@@ -42,7 +42,7 @@ Après avoir créé des gestionnaires de connexions pour les données sources et
   
     Affectez des noms uniques à tous les composants que vous ajoutez à une zone de conception. Afin d'utiliser et de maintenir les composants plus facilement, il est conseillé de leur affecter des noms décrivant leur fonction. Le respect de ces consignes de nommage permet une auto-documentation de vos packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . L'autre méthode permettant de documenter vos packages, consiste à utiliser des annotations. Pour plus d’informations sur les annotations, consultez [Utilisation des annotations dans les packages](../integration-services/use-annotations-in-packages.md).  
   
-4.  Cliquez avec le bouton droit sur la tâche de flux de données, sélectionnez **Propriétés** puis, dans la fenêtre Propriétés, vérifiez que la propriété **LocaleID** est définie sur **Anglais (États-Unis)**.  
+4.  Cliquez avec le bouton droit sur la tâche de flux de données, sélectionnez **Propriétés** puis, dans la fenêtre Propriétés, vérifiez que la propriété **LocaleID** est définie sur **Anglais (États-Unis)** .  
   
 ## <a name="go-to-next-task"></a>Passer à la tâche suivante
 [Étape 5 : Ajouter et configurer la source du fichier plat](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

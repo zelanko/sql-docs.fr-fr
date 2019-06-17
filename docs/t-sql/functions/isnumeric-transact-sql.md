@@ -25,10 +25,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a823574180cb7bddd23b9e4118253d0d7024f007
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949213"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC (Transact-SQL)
@@ -51,7 +51,7 @@ ISNUMERIC ( expression )
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ISNUMERIC retourne 1 lorsque l'expression entrée correspond à un type de données numérique valide ; dans le cas contraire, ISNUMERIC retourne 0. Parmi les [types de données numériques](../../t-sql/data-types/numeric-types.md) valides, citons les suivants :  
 
 |||
@@ -88,7 +88,7 @@ FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

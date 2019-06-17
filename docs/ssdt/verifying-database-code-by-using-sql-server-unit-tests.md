@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101982"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Vérification du code de la base de données à l'aide de tests unitaires SQL Server
@@ -58,6 +58,6 @@ Dans le tableau suivant, vous pouvez trouver des descriptions de tâches courant
 [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md)  
 Les tests unitaires de base de données sont particulièrement efficaces s’ils sont utilisés conjointement avec le développement de projets hors connexion à l’aide de projets de base de données SQL Server.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Outils de données SQL Server](../ssdt/sql-server-data-tools.md)  
   

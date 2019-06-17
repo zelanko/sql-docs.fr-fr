@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6abe725d180b36de3eeea53c59666da1322214bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033541"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DROP REMOTE SERVICE BINDING binding_name
  *binding_name*  
  Nom de la liaison de service distant à supprimer. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, l'autorisation de suppression d'une liaison de service distant est octroyée au propriétaire de cette liaison, aux membres du rôle de base de données fixe db_owner et aux membres du rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  
@@ -58,7 +58,7 @@ DROP REMOTE SERVICE BINDING binding_name
 DROP REMOTE SERVICE BINDING APBinding ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

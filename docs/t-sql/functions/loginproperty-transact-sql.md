@@ -34,10 +34,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949137"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY (Transact-SQL)
@@ -112,7 +112,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   NULL si le compte de connexion n'est pas un compte de connexion SQL Server valide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction intégrée retourne des informations sur les paramètres de stratégie de mot de passe d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Étant donné que les noms des propriétés ne respectent pas la casse, les noms de propriété tels que **BadPasswordCount** et **badpasswordcount** sont équivalents. Les valeurs des propriétés **PasswordHash, PasswordHashAlgorithm** et **PasswordLastSetTime** sont disponibles sur toutes les configurations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prises en charge, mais les autres propriétés ne sont disponibles que si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution sous [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] et que CHECK_POLICY et CHECK_EXPIRATION sont tous les deux activés. Pour plus d'informations, consultez [Password Policy](../../relational-databases/security/password-policy.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -136,7 +136,7 @@ SELECT LOGINPROPERTY('John3', 'IsLocked');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

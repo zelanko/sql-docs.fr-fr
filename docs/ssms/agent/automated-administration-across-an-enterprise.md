@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 905a470c09c1fff750900764134846925d7899b6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095872"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
@@ -85,7 +85,7 @@ Contient des informations concernant le transfert d'événements des serveurs ci
 [Paramétrer l'administration automatisée dans une entreprise](../../ssms/agent/tune-automated-administration-across-an-enterprise.md)  
 Contient des informations décrivant la façon dont l'administration automatisée au sein d'un environnement multiserveur exploite les fonctionnalités d'autoconfiguration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques relatives à la compatibilité descendante pour l’installation du moteur de base de données SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
 [Inscription des serveurs](../register-servers/register-servers.md)  
 [sp_add_targetservergroup](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)  

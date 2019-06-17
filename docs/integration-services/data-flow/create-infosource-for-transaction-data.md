@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 25e07fb354d739d6a8aa1964e50e31e847194471
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727060"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Créer un InfoSource pour les données de transaction
@@ -96,7 +96,7 @@ ms.locfileid: "65727060"
  **Champ d'unité**  
  Spécifiez les unités que l'InfoObject va utiliser.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

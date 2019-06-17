@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665501"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47794577"
   
     -   Si vous ajoutez une nouvelle jointure, sélectionnez **Utiliser le générateur pour créer l'instruction** ou **Créer manuellement l'instruction de jointure**. Si vous créez une jointure manuellement, vous pouvez utiliser le générateur.  
   
-         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
+         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
   
          Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser les colonnes et les déposer dans la zone de texte **Instruction de jointure** .  
   
@@ -64,11 +64,11 @@ ms.locfileid: "47794577"
   
  Après avoir ajouté ou modifié un filtre, cliquez sur **OK** pour enregistrer les modifications et fermer ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou d'autres erreurs, vous recevrez un message et pourrez modifier l'instruction de filtrage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61651a78f741cfddecd232cfde14b54842d0d4d6
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669323"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>Déterminer quelles requêtes détiennent des verrous
 
@@ -156,7 +156,7 @@ ms.locfileid: "58478014"
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

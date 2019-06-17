@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 56683b05b940ce9c11ba41d05659fb94bf26a921
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949207"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID (Transact-SQL)
@@ -49,7 +49,7 @@ Key_ID ( 'Key_Name' )
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le nom d'une clé temporaire doit commencer par le signe #.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -71,7 +71,7 @@ SELECT KEY_ID('ABerglundKey1');
 SELECT KEY_ID('#ABerglundKey2');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [KEY_GUID &#40;Transact-SQL&#41;](../../t-sql/functions/key-guid-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   

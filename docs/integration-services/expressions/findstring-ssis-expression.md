@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cadd3f8fbfee31bc79c4cccc70f270e06229f27d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725413"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (expression SSIS)
@@ -47,7 +47,7 @@ FINDSTRING(character_expression, searchstring, occurrence)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction FINDSTRING n'est opérationnelle qu'avec le type de données DT_WSTR.  Les arguments*character_expression* et *searchstring* qui représentent des littéraux de chaîne ou des colonnes de données du type de données DT_STR sont implicitement convertis dans le type de données DT_WSTR avant que la fonction FINDSTRING soit exécutée. Les autres types de données doivent être explicitement convertis vers le type de données DT_WSTR. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md) et [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  FINDSTRING retourne NULL si *character_expression* ou *searchstring* a la valeur Null.  
@@ -81,7 +81,7 @@ FINDSTRING(Name, "n", 2)
 FINDSTRING(Name,Size,1)   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [REPLACE &#40;expression SSIS&#41;](../../integration-services/expressions/replace-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861217"
 ---
 # <a name="database-snapshots-sql-server"></a>Instantanés de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ ms.locfileid: "51559296"
   
 -   Un instantané hérite des contraintes de sécurité de sa base de données source au moment de la création de l'instantané. Compte tenu que les instantanés sont en lecture seule, les autorisations héritées ne peuvent pas être modifiées, et les modifications d'autorisations apportées à la source ne seront pas répercutées dans les instantanés existants.  
   
--   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
+-   Un instantané reflète toujours l'état de groupes de fichiers au moment de la création de l'instantané : les groupes de fichiers en ligne demeurent en ligne et les groupes de fichiers hors connexion demeurent hors connexion. Pour plus d'informations, consultez « Instantanés de base de données avec des groupes de fichiers hors ligne », plus loin dans cette rubrique.  
   
 -   Si une base de données source se voit affecter l'état RECOVERY_PENDING, ses instantanés peuvent devenir inaccessibles. Toutefois, lorsque le problème affectant la base de données source a été résolu, ses instantanés sont à nouveau accessibles.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "51559296"
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en miroir et instantanés de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   

@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 873a02649eea5fb709f7c61b3c16c4a8141c08ce
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980279"
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
@@ -55,7 +55,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
  @*savepoint_variable*  
  Nom d'une variable définie par l'utilisateur et contenant un nom de point de sauvegarde valide. La variable doit être déclarée avec un type de données **char**, **varchar**, **nchar** ou **nvarchar**. Plus de 32 caractères peuvent être passés à la variable, mais seuls les 32 premiers peuvent être utilisés.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'utilisateur peut placer un point de sauvegarde, ou marqueur, à l'intérieur d'une transaction. Le point de sauvegarde définit un emplacement auquel une transaction peut revenir si une partie de celle-ci est annulée par une condition. Si une transaction est restaurée à un point de sauvegarde, elle doit soit se poursuivre jusqu'à son exécution complète (avec davantage d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] si nécessaire et une instruction COMMIT TRANSACTION), soit être restaurée entièrement (à partir du début). Pour annuler toute une transaction, utilisez la syntaxe ROLLBACK TRANSACTION *transaction_name*. Toutes les instructions ou procédures de la transaction sont ainsi annulées.  
   
  Dans une transaction, les noms de point de sauvegarde dupliqués sont autorisés. Toutefois, une instruction ROLLBACK TRANSACTION contenant le nom d'un point de sauvegarde en double n'effectue la restauration que jusqu'à l'instruction SAVE TRANSACTION la plus récente utilisant ce nom.  
@@ -161,7 +161,7 @@ AS
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

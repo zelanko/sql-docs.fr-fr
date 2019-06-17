@@ -12,10 +12,10 @@ ms.author: janinez
 author: janinezhang
 manager: craigg
 ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720558"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>Charger des données dans SQL Server ou Azure SQL Database avec SSIS (SQL Server Integration Services)
@@ -56,9 +56,9 @@ Pour aller plus vite, vous pouvez utiliser l’Assistant Importation et Exportat
 ## <a name="prerequisites"></a>Conditions préalables requises
 Pour exécuter pas à pas ce tutoriel, vous avez besoin des éléments suivants :
 
-1. **SQL Server Integration Services (SSIS)**. SSIS est un composant de SQL Server et requiert une version sous licence, ou la version de développeur ou d’évaluation, de SQL Server. Pour obtenir une version d’évaluation de SQL Server, consultez [Évaluer SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **SQL Server Integration Services (SSIS)** . SSIS est un composant de SQL Server et requiert une version sous licence, ou la version de développeur ou d’évaluation, de SQL Server. Pour obtenir une version d’évaluation de SQL Server, consultez [Évaluer SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (facultatif). Pour obtenir l’édition gratuite Visual Studio Community Edition, consultez [Visual Studio Community][Visual Studio Community]. Si vous ne souhaitez pas installer Visual Studio, vous pouvez installer uniquement SSDT (SQL Server Data Tools). SSDT installe une version de Visual Studio avec des fonctionnalités limitées.
-3. **SQL Server Data Tools pour Visual Studio (SSDT)**. Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools pour Visual Studio (SSDT)** . Pour obtenir SQL Server Data Tools pour Visual Studio, consultez [Télécharger SSDT (SQL Server Data Tools)][Download SQL Server Data Tools (SSDT)].
 4. Dans ce tutoriel, vous vous connectez à une instance SQL Server ou SQL Database et y chargez des données. Vous devez disposer des autorisations pour vous connecter, créer une table et charger des données sur :
    - **Une base de données Azure SQL Database**. Pour plus d’informations, consultez [Azure SQL Database](/azure/sql-database/).  
       ou Gestionnaire de configuration

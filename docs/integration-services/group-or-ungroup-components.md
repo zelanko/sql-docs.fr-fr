@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ae4716ec1f239cbe939970e8b37f0d733e34106
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724031"
 ---
 # <a name="group-or-ungroup-components"></a>Grouper ou dissocier des composants
@@ -64,7 +64,7 @@ ms.locfileid: "65724031"
   
 5.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Connecter des tâches et des conteneurs à l'aide d'une contrainte de précédence par défaut](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   

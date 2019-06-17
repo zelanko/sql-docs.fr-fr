@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090164"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Procédure pas à pas : création d'un assembly de règle d'analyse statique du code personnalisée pour SQL Server
@@ -495,7 +495,7 @@ Maintenant que vous avez ajouté les classes d'assistance qui seront utilisées 
   
 3.  Cliquez sur **Signer l'assembly**.  
   
-4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>**.  
+4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>** .  
   
 5.  Dans la boîte de dialogue **Créer une clé de nom fort** , dans **Nom du fichier de clé**, tapez MyRefKey.  
   
@@ -541,6 +541,6 @@ Enfin, la nouvelle règle s’affiche dans le projet SQL Server. Pour afficher l
   
 4.  Développez RuleSamples.CategorySamples. Vous devez voir SR1004 : éviter d’utiliser des instructions WAITFOR DELAY dans des procédures stockées, des fonctions et des déclencheurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vue d’ensemble de l’extensibilité pour les règles d’analyse du code de base de données](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   

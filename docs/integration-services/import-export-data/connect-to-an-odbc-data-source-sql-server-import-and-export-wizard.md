@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 22fd8a3e1518c535e61321255fda9c2a3f279ab1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723943"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données ODBC (Assistant Importation et Exportation SQL Server)
@@ -29,7 +29,7 @@ Vous devrez peut-être télécharger le pilote de données dont vous avez besoin
 Vous devrez peut-être également rechercher les informations de connexion requises que vous devez fournir. Ce site tiers ([The Connection Strings Reference](https://www.connectionstrings.com/)) contient des exemples de chaînes de connexion et des renseignements complémentaires sur les fournisseurs de données et les informations de connexion dont ils ont besoin.
 
 ## <a name="make-sure-the-driver-you-want-is-installed"></a>Vérifier que le pilote de votre choix est installé
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous savez que vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)**.
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous savez que vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre.
 3.  Sous l’onglet **Pilotes**, vous trouverez la liste de tous les pilotes ODBC installés sur votre ordinateur. (Les noms de certains pilotes peuvent figurer dans plusieurs langues.)
 
@@ -67,7 +67,7 @@ Si vous fournissez une chaîne de connexion, la page **Choisir une source de don
 
 ## <a name="odbc_dsn"></a> Option 1 : fournir un nom de source de données
 Si vous souhaitez fournir les informations de connexion à l’aide d’un nom de source de données (DSN, data source name), utilisez l’applet **Administrateur de source de données ODBC** pour rechercher le nom de source de données existant ou pour créer un nouveau nom de source de données.
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)**.
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre. L’applet se présente comme ceci.
 
     ![Applet Administrateur ODBC du Panneau de configuration](../../integration-services/import-export-data/media/odbc-administrator-control-panel-applet.png)
@@ -112,7 +112,7 @@ Pour rechercher des chaînes de connexion pour votre pilote ODBC en ligne, consu
 ## <a name="get-the-connection-string-with-an-app"></a>Obtenir la chaîne de connexion en ligne avec une application
 Pour générer et tester la chaîne de connexion pour votre pilote ODBC sur votre ordinateur, vous pouvez utiliser l’applet **Administrateur de source de données ODBC** du Panneau de configuration. Créez un nom de source de données fichier pour votre connexion, puis copiez les paramètres du nom de source de données fichier afin d’assembler la chaîne de connexion. Cela nécessite plusieurs étapes, mais garantit que la chaîne de connexion est valide.
 
-1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)**.
+1.  Recherchez l’applet **Sources de données ODBC (64 bits)** dans le Panneau de configuration. Si vous avez un pilote 32 bits, ou si vous devez utiliser un pilote 32 bits, recherchez l’applet **Sources de données ODBC (32 bits)** .
 2.  Lancez l’applet. La fenêtre **Administrateur de source de données ODBC** s’ouvre.
 3.  Cliquez sur l’onglet **Source de données fichier** de l’applet. Cliquez sur **Ajouter**.
 

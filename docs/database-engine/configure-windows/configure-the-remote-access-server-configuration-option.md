@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: ce926bbfbefce529a5d01607408818676f6d46f5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783816"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurer l'option de configuration du serveur remote access
@@ -45,7 +45,7 @@ ms.locfileid: "66783816"
   
 -   [Connexion à une instance de SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [Guide pratique pour créer des connexions à des bases de données SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [Procédure : créer des connexions à des bases de données SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **Le corps de cette rubrique commence ici.**  
   
@@ -114,7 +114,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option remote access  
  SQL Server doit être redémarré pour que ce paramètre prenne effet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

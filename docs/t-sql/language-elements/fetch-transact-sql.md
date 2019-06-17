@@ -25,10 +25,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e0c93242a047e261ae9d40c7ded9293653f7e287
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982324"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
@@ -83,7 +83,7 @@ FETCH
  INTO @*variable_name*[ ,...*n*]  
  Permet aux données issues des colonnes d'une extraction d'être placées dans des variables locales. Chaque variable de la liste (de gauche à droite) est associée à la colonne correspondante dans le jeu de résultats du curseur. Le type de données de chaque variable doit correspondre ou être une conversion implicite du type de données de la colonne du jeu de résultats correspondante. Le nombre de variables doit correspondre au nombre de colonnes dans la liste de sélection du curseur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si l’option `SCROLL` n’est pas spécifiée dans une instruction `DECLARE CURSOR` de style ISO, `NEXT` est la seule option `FETCH` prise en charge. Si `SCROLL` est spécifié dans un `DECLARE CURSOR` de style ISO, toutes les options `FETCH` sont prises en charge.  
   
  Lorsque les extensions de curseur [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE sont utilisées, les règles suivantes sont respectées :  
@@ -207,7 +207,7 @@ DEALLOCATE contact_cursor;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

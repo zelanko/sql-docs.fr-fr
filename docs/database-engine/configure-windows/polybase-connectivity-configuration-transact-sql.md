@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772225"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuration de la connectivité PolyBase (Transact-SQL)
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@configname=** ] **'**_nom\_option_**'**  
- Nom d'une option de configuration. *option_name* est **varchar(35)**, avec NULL comme valeur par défaut. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
+ [ **@configname=** ] **'** _nom\_option_ **'**  
+ Nom d'une option de configuration. *option_name* est **varchar(35)** , avec NULL comme valeur par défaut. Si ce dernier n'est pas spécifié, la liste complète des options est renvoyée.  
   
- [ **@configvalue=** ] **'**_valeur_**'**  
+ [ **@configvalue=** ] **'** _valeur_ **'**  
  Nouveau paramètre de configuration. *value* est de type **int**, avec NULL comme valeur par défaut. La valeur maximale dépend de l'option individuelle.  
   
  **'connectivité hadoop'**  
@@ -142,7 +142,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   

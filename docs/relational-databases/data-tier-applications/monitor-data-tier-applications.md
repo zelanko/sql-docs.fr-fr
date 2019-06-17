@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588943"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714326"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "53588943"
 ## <a name="monitoring-dac-databases"></a>Analyse des bases de données de la DAC  
  Après le déploiement réussi d'une DAC, la base de données contenue dans la DAC fonctionne de la même façon que toute autre base de données. Utilisez des outils et techniques du [!INCLUDE[ssDE](../../includes/ssde-md.md)] standard pour analyser les performances, le journal, les événements et l'utilisation des ressources de la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
   

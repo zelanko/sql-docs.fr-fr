@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 154e7a7136abe882ddd9ea8d036ab5a8906916e4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945435"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
@@ -48,7 +48,7 @@ REVERSE ( string_expression )
 ## <a name="return-types"></a>Types de retour  
  **varchar** ou **nvarchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  *string_expression* doit appartenir à un type de données pouvant être implicitement converti en **varchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  
@@ -102,7 +102,7 @@ SELECT name, REVERSE(name) FROM sys.databases;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8bc233f7b23d08b9fd697eeddfae683420be33c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726023"
 ---
 # <a name="pivot-transformation"></a>transformation de tableau croisé dynamique
@@ -138,7 +138,7 @@ ms.locfileid: "65726023"
 ## <a name="related-content"></a>Contenu associé  
  Pour plus d’informations sur la définition des propriétés de ce composant, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation Unpivot](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

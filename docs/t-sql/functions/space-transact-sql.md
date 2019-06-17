@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f7f7187a2b7749d9681b0e8ee661b8238576f439
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947696"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
@@ -50,7 +50,7 @@ SPACE ( integer_expression )
 ## <a name="return-types"></a>Types de retour  
  **varchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour insérer des espaces dans des données de type Unicode ou pour retourner plus de 8 000 espaces de caractères, utilisez la fonction REPLICATE à la place de la fonction SPACE.  
   
 ## <a name="examples"></a>Exemples  
@@ -77,7 +77,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
  [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

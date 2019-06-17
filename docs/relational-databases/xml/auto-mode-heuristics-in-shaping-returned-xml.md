@@ -15,10 +15,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
 ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175373"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Heuristique du mode AUTO permettant de définir la forme des données XML renvoyées
@@ -75,7 +75,7 @@ T1.Id  T1.Name  T2.Id
 </T1>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

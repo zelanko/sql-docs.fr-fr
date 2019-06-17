@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea6458989062ef87ed113134c0984cab356f63d0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099869"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Définir des options de chiffrement sur des serveurs cibles
@@ -31,7 +31,7 @@ ms.locfileid: "65099869"
 
 Si vous ne pouvez pas utiliser de certificat pour les communications chiffrées SSL (Secure Sockets Layer) entre des serveurs maîtres et tous ou une partie de vos serveurs cibles, mais que vous souhaitez chiffrer le canal entre ces serveurs, configurez le serveur cible de façon à utiliser le niveau de sécurité requis.  
   
-Pour configurer le niveau de sécurité approprié requis pour un canal de communication spécifique serveur maître/serveur cible, affectez à la sous-clé de Registre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\**\<*nom_instance*>**\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** sur le serveur cible l’une des valeurs suivantes. La valeur de \<*nom_instance*> est **MSSQL.**_n_. Par exemple, **MSSQL.1** ou **MSSQL.3**.  
+Pour configurer le niveau de sécurité approprié requis pour un canal de communication spécifique serveur maître/serveur cible, affectez à la sous-clé de Registre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\** \<*nom_instance*> **\SQLServerAgent\MsxEncryptChannelOptions(REG_DWORD)** sur le serveur cible l’une des valeurs suivantes. La valeur de \<*nom_instance*> est **MSSQL.** _n_. Par exemple, **MSSQL.1** ou **MSSQL.3**.  
   
 |Valeur|Description|  
 |---------|---------------|  
@@ -44,6 +44,6 @@ Si **1** ou **2** est spécifié, le protocole SSL doit être activé sur les se
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : activer des connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server)](https://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)  
   

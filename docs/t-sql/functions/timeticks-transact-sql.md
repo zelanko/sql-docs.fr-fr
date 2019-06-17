@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6af920fc7264e6d75096c1c108be4c44c2f14409
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949037"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65949037"
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La durée du cycle d'horloge varie d'un ordinateur à l'autre. Chaque cycle du système d'exploitation est de 31,25 millisecondes (soit un peu plus d'un trentième de seconde).  
   
 ## <a name="examples"></a>Exemples  
@@ -55,7 +55,7 @@ ms.locfileid: "65949037"
 SELECT @@TIMETICKS AS 'Time Ticks';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

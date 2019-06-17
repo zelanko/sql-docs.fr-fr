@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d24a66ce59b3908a04e3ab7719265fbef3c96f58
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503206"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
@@ -112,9 +112,9 @@ identifier
  *xml_column_name*  
  Nom de la colonne XML qui contient les chemins d'accès à indexer.  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] Liste des espaces de noms utilisés par les chemins à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] Liste des espaces de noms utilisés par les chemins à indexer. Pour plus d’informations sur la syntaxe de la clause WITH XMLNAMESPACES, consultez [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- FOR **(**\<promoted_node_path_list>**)** Liste des chemins à indexer avec des indicateurs d’optimisation facultatifs. Pour plus d’informations sur les chemins et les indicateurs d’optimisation que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+ FOR **(** \<promoted_node_path_list> **)** Liste des chemins à indexer avec des indicateurs d’optimisation facultatifs. Pour plus d’informations sur les chemins et les indicateurs d’optimisation que vous pouvez spécifier dans l’instruction CREATE ou ALTER, consultez [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
  WITH *\<index_options>* Pour plus d’informations sur les options d’index, consultez [CREATE XML INDEX &#40;Index XML sélectifs&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
@@ -157,7 +157,7 @@ WITH XMLNAMESPACES ('https://www.tempuri.org/' as myns)
 FOR ( path1 = '/myns:book/myns:author/text()' );  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [Créer, modifier et supprimer des index XML sélectifs](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Spécifier les chemins d’accès et les indicateurs d’optimisation des index XML sélectifs](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  

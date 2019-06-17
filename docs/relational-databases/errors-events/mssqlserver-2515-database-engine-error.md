@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f98f20faeb291524f6426138000aec8b592b35b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045770"
 ---
 # <a name="mssqlserver2515"></a>MSSQLSERVER_2515
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Si l'exécution de DBCC CHECKDB avec une des clauses REPAIR ne résout pas le pr
 ### <a name="results-of-running-repair-options"></a>Résultats de l'exécution des options REPAIR  
 L'exécution de REPAIR invalidera la bitmap différentielle. Vous ne pouvez pas effectuer de sauvegarde différentielle tant qu'une sauvegarde de base de données complète n'a pas été effectuée. La sauvegarde complète fournit une base pour la reconstruction de la bitmap différentielle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](~/relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
 [MSSQLSERVER_2516](~/relational-databases/errors-events/mssqlserver-2516-database-engine-error.md)  
   

@@ -24,10 +24,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbc4cb3569573b8558edcf7335c0515da16d750c
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500555"
 ---
 # <a name="set-fmtonly-transact-sql"></a>SET FMTONLY (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "66500555"
 SET FMTONLY { ON | OFF }   
 ```  
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Quand `FMTONLY` est `ON`, un ensemble de lignes est retourné avec les noms des colonnes, mais sans ligne de données.
 
@@ -149,7 +149,7 @@ go
 ****/
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

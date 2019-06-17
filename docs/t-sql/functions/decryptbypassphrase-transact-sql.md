@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 55721b2b1f843ee78e8b69e4a1b99e39737ebb64
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948932"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
@@ -82,7 +82,7 @@ Variable contenant les données utilisées comme base pour la génération des a
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DECRYPTBYPASSPHRASE` ne nécessite pas d’autorisations pour son exécution. `DECRYPTBYPASSPHRASE` retourne NULL si elle reçoit la phrase secrète ou les informations de l’authentificateur incorrectes.  
   
 `DECRYPTBYPASSPHRASE` utilise la phrase secrète pour générer une clé de déchiffrement. Cette clé de déchiffrement n’est pas conservée.  
@@ -109,7 +109,7 @@ SELECT CardNumber, CardNumber_EncryptedbyPassphrase
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ENCRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbypassphrase-transact-sql.md)  
   

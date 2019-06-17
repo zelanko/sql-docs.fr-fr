@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503482"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
@@ -296,7 +296,7 @@ Clause OUTPUT
 > [!NOTE]
 >  Une erreur de syntaxe est générée si aucune liste de colonnes n’est fournie.  
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Pour obtenir des informations spécifiques à l’insertion de données dans des tables graphiques SQL, consultez [INSERT (graphe SQL)](../../t-sql/statements/insert-sql-graph.md). 
 
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -1012,7 +1012,7 @@ WHERE g.CountryRegionCode = 'FR'
 OPTION ( LABEL = 'Add French Prospects', HASH JOIN);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

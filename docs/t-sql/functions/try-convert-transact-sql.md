@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c66c7e7d91f754203d4f23b0d7f45a391aaec67
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946881"
 ---
 # <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
@@ -56,7 +56,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne une valeur convertie en type de données spécifié si la conversion aboutit ; sinon, retourne NULL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **TRY_CONVERT** prend la valeur qui lui est transmise et tente de la convertir vers le type *data_type* spécifié. Si le transtypage réussit, **TRY_CONVERT** retourne la valeur dans le type *data_type* spécifié ; si une erreur se produit, la valeur NULL est retournée. Toutefois, si vous demandez une conversion explicitement non autorisée, **TRY_CONVERT** échoue avec une erreur.  
   
  **TRY_CONVERT** est un mot clé réservé avec le niveau de compatibilité 110 et supérieur.  
@@ -138,7 +138,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943272"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
@@ -61,7 +61,7 @@ PWDCOMPARE ( 'clear_text_password'
   
  Renvoie 1 si le hachage de *clear_text_password* correspond au paramètre *password_hash*, et 0 si ce n’est pas le cas.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction PWDCOMPARE ne constitue pas une menace pour la force des hachages de mot de passe car le même test pourrait être effectué en essayant de se connecter à l'aide du mot de passe fourni en tant que premier paramètre.  
   
  **PWDCOMPARE** ne peut pas être utilisé avec les mots de passe des utilisateurs de bases de données autonomes. Il n'existe aucun équivalent de base de données autonome.  
@@ -89,7 +89,7 @@ SELECT name FROM sys.sql_logins
 WHERE PWDCOMPARE('password', password_hash) = 1 ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [PWDENCRYPT &#40;Transact-SQL&#41;](../../t-sql/functions/pwdencrypt-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37539ab0a1d62d5393bff8df94c56c5cffb9ea8f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982605"
 ---
 # <a name="compound-operators-transact-sql"></a>Opérateurs composés (Transact-SQL)
@@ -55,7 +55,7 @@ expression operator expression
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument ayant la priorité la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d'informations, consultez les rubriques relatives à chaque opérateur.  
   
 ## <a name="examples"></a>Exemples  
@@ -96,7 +96,7 @@ SELECT @x8 AS Bitwise_OR;
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Opérateurs au niveau du bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   

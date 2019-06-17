@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 61a95fef0bdc8ae31631c0c86f43f9ca5fa6a98b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725006"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (expression SSIS)
@@ -44,7 +44,7 @@ RIGHT(character_expression,integer_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si *integer_expression* est supérieure à la longueur de *character_expression*, la fonction retourne *character_expression*.  
   
  Si l’argument *integer_expression* a pour valeur zéro, la fonction renvoie une chaîne de longueur nulle.  
@@ -76,7 +76,7 @@ RIGHT(Name, @Times)
 RIGHT(Name, (DT_I2)@Times))  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [LEFT &#40;expression SSIS&#41;](../../integration-services/expressions/left-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

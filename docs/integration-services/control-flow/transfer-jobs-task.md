@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 258c04583f5494e158c9a92fd9ae53dfc501ad9a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727380"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
@@ -148,7 +148,7 @@ ms.locfileid: "65727380"
 |**True**|Active les travaux sur le serveur de destination.|  
 |**False**|Désactive les travaux sur le serveur de destination.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

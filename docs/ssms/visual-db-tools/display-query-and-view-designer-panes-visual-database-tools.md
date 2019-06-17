@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 00ced1379d311c289125cd188db0648c458d410e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088832"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Afficher les volets du Concepteur de requêtes et de vues (Visual Database Tools)
@@ -35,7 +35,7 @@ Le Concepteur de requêtes et de vues est composé de quatre volets distincts : 
   
 2.  Dans le menu **Concepteur de requêtes** , pointez sur **Volet** et cliquez sur le nom du volet à ouvrir.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ouvrir le Concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   

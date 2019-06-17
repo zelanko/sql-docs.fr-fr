@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ff2de68a43fff15b452579c6ecf681ea586772c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726198"
 ---
 # <a name="copy-column-transformation"></a>copie de colonnes (transformation)
@@ -63,7 +63,7 @@ ms.locfileid: "65726198"
  **Alias de sortie**  
  Tapez un alias pour chaque nouvelle colonne de sortie. Le nom par défaut est **Copie de**suivi du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

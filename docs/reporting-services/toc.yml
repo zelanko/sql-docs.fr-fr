@@ -1858,7 +1858,7 @@
       href: ../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md
     - name: Implémentation d'une extension de rendu
       href: ../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md
-    - name: 'Implémentation de l''interface IRenderingExtension '
+    - name: Implémentation de l'interface IRenderingExtension
       href: ../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md
     - name: Suppression d'une extension de rendu
       href: ../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md

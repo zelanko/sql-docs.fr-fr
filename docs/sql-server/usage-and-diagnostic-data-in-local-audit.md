@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372441"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic (CEIP)
@@ -31,7 +31,7 @@ Microsoft SQL Server contient des fonctionnalités Internet capables de collecte
 
 À partir de SQL Server 2016 CU2, possibilité de configuration au niveau de l’instance pour le moteur de base de données SQL Server et Analysis Services (SSAS). Dans SQL Server 2016 CU4 et SQL Server 2016 SP1, l’audit local est également activé pour SQL Server Integration Services (SSIS). Les autres composants SQL Server installés pendant la configuration et les outils SQL Server qui sont téléchargés ou installés après la configuration ne possèdent pas de fonctionnalité d’audit local pour les données d’utilisation et de diagnostic.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
  - La suppression ou la désactivation du service CEIP SQL n’est pas prise en charge. 
  - La suppression des ressources CEIP SQL à partir du groupe de cluster n’est pas prise en charge. 
@@ -65,7 +65,7 @@ Procédez comme suit pour obtenir le compte de connexion de service SQL Server C
  
 1. Lancez la console **Services**. Pour ce faire, utilisez les **touches Windows + R** de votre clavier pour ouvrir la boîte de dialogue **Exécuter**. Ensuite, tapez *services.msc* dans le champ de texte et sélectionnez **OK** pour lancer la console **Services**.  
 
-2. Accédez au service approprié. Par exemple, pour le moteur de base de données, recherchez **Service CEIP SQL Server** **(*Nom-de-votre-instance*)**. Pour Analysis Services, recherchez **CEIP SQL Server Analysis Services** **(*Nom-de-votre-instance*)**. Pour Integration Services, recherchez **Service CEIP SQL Server Integration Services**.
+2. Accédez au service approprié. Par exemple, pour le moteur de base de données, recherchez **Service CEIP SQL Server** **(*Nom-de-votre-instance*)** . Pour Analysis Services, recherchez **CEIP SQL Server Analysis Services** **(*Nom-de-votre-instance*)** . Pour Integration Services, recherchez **Service CEIP SQL Server Integration Services**.
 
 3. Cliquez avec le bouton droit sur le service et sélectionnez **Propriétés**. 
 
@@ -73,7 +73,7 @@ Procédez comme suit pour obtenir le compte de connexion de service SQL Server C
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurez un nouveau dossier pour les fichiers d’audit local.    
 
-Créez un dossier (répertoire d’audit local) où l’audit local écrit les journaux. Par exemple, le chemin complet du répertoire d’audit local pour une instance par défaut du moteur de base de données serait : *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Créez un dossier (répertoire d’audit local) où l’audit local écrit les journaux. Par exemple, le chemin complet du répertoire d’audit local pour une instance par défaut du moteur de base de données serait : *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Configurez le chemin du répertoire pour l’audit local en dehors du chemin d’installation de SQL Server pour éviter que la fonctionnalité d’audit et la correction entraînent des problèmes éventuels avec SQL Server.
@@ -140,7 +140,7 @@ Après avoir effectué les étapes de préconfiguration, vous pouvez activer l�
 
 1. Cliquez avec le bouton droit sur **UserRequestedLocalAuditDirectory**, puis sélectionnez *Modifier*. 
 
-1. Pour activer l’audit local, tapez le chemin de l’audit local, par exemple *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Pour activer l’audit local, tapez le chemin de l’audit local, par exemple *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Pour désactiver l’audit local, effacez la valeur contenue dans **UserRequestedLocalAuditDirectory**.
 
@@ -152,8 +152,8 @@ SQL Server CEIP doit reconnaître le paramètre d’audit local immédiatement s
 
 1. Accédez au service approprié. 
 
-    - Pour le moteur de base de données, utilisez **Service SQL Server CEIP (*Nom-de-votre-instance*)**.     
-    - Pour Analysis Services, utilisez **CEIP SQL Server Analysis Services (*Nom-de-votre-instance*)**.
+    - Pour le moteur de base de données, utilisez **Service SQL Server CEIP (*Nom-de-votre-instance*)** .     
+    - Pour Analysis Services, utilisez **CEIP SQL Server Analysis Services (*Nom-de-votre-instance*)** .
     - Pour Integration Services, 
         - Pour SQL 2016, utilisez *Service CEIP SQL Server Integration Services 13.0*.
         - Pour SQL 2017, utilisez *Service CEIP SQL Server Integration Services 14.0*.

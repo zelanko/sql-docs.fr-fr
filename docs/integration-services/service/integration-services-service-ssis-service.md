@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca71393266c7d88bcdc3dcc43bab5fbfd1a22e2f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718128"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
@@ -166,7 +166,7 @@ ms.locfileid: "65718128"
 
 ### <a name="event-logged-when-permissions-are-missing"></a>Événement journalisé en l’absence d’autorisations
 
-Si le compte de service de l’agent SQL Server n’a pas le modèle DCOM (Distributed Component Object Model) Integration Services **[Autorisations de lancement et d’activation]**, l’événement suivant est ajouté aux journaux des événements système quand l’agent SQL Server exécute les travaux du package SSIS :
+Si le compte de service de l’agent SQL Server n’a pas le modèle DCOM (Distributed Component Object Model) Integration Services **[Autorisations de lancement et d’activation]** , l’événement suivant est ajouté aux journaux des événements système quand l’agent SQL Server exécute les travaux du package SSIS :
 
 ```
 Log Name: System

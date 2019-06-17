@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ed0376a9facde37d5c843e10885efaefaf225577
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033959"
 ---
 # <a name="drop-asymmetric-key-transact-sql"></a>DROP ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  REMOVE PROVIDER KEY  
  Supprime une clé EKM (Gestion de clés extensible) d'un périphérique EKM. Pour plus d’informations sur la gestion de clés extensible, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une clé asymétrique avec laquelle une clé symétrique de la base de données a été chiffrée, ou sur laquelle un utilisateur ou une connexion est mappée, ne peut pas être supprimée. Avant de supprimer une telle clé, vous devez supprimer tout utilisateur ou connexion mappée sur cette clé. Vous devez également supprimer ou modifier toute clé symétrique chiffrée avec la clé asymétrique. Vous pouvez utiliser l’option DROP ENCRYPTION de l’instruction [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md) pour supprimer le chiffrement par une clé asymétrique.  
   
  Les métadonnées des clés asymétriques sont accessibles par le biais de la vue de catalogue [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md). Il n'est pas possible d'afficher les clés elles-mêmes directement à partir de la base de données.  
   
  Si la clé asymétrique est mappée à une clé EKM (Gestion de clés extensible) sur un périphérique EKM et que l'option REMOVE PROVIDER KEY n'est pas spécifiée, la clé sera supprimée de la base de données, mais pas du périphérique. Un avertissement sera émis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -70,7 +70,7 @@ USE AdventureWorks2012;
 DROP ASYMMETRIC KEY MirandaXAsymKey6;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   

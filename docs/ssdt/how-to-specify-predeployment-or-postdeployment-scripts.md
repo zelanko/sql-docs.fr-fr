@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: be518cfacfefa76f380eefab1e45348e037cc0c1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098469"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Procédure : Spécifier des scripts de prédéploiement et de post-déploiement
@@ -59,6 +59,6 @@ Utilisez la syntaxe et les variables SQLCMD dans vos scripts et définissez-les 
   
 Pour plus d’informations sur l’utilisation de SQLCMD dans des scripts, voir [Paramètres des projets de base de données](../ssdt/database-project-settings.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md)  
   

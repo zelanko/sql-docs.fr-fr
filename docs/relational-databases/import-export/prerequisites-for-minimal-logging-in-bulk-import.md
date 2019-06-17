@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946574"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
@@ -70,7 +70,7 @@ ms.locfileid: "64946574"
 -   [Afficher ou modifier le mode de récupération d’une base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   

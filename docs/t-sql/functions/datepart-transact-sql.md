@@ -29,10 +29,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945717"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
@@ -211,7 +211,7 @@ SELECT DATEPART(microsecond, '00:00:01.1234567'); -- Returns 123456
 SELECT DATEPART(nanosecond,  '00:00:01.1234567'); -- Returns 123456700  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DATEPART` peut être utilisé dans la liste de sélection et les clauses WHERE, HAVING, GROUP BY et ORDER BY.
   
 DATEPART caste implicitement des littéraux de chaîne en type **datetime2** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cela signifie que DATENAME ne prend pas en charge le format YDM lorsque la date est transmise en tant que chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.

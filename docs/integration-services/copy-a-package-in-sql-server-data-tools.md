@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 147452998a4ad9501d0a8cf50791d8e12c533a26
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727272"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copier un package dans les outils de données SQL Server
@@ -57,7 +57,7 @@ ms.locfileid: "65727272"
   
 11. Dans le menu **Fichier** , cliquez sur **Enregistrer les éléments sélectionnés** pour enregistrer le nouveau package.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Enregistrer une copie d'un package](https://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)   
  [Packages Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md)  

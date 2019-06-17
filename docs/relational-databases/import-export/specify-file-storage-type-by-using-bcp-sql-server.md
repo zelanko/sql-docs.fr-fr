@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f32cf35670149a42941c91572d25bdd235c503d1
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946125"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Spécifier le type de stockage de fichiers à l'aide de bcp (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946125"
   Le *type de stockage de fichier* décrit la façon dont les données sont stockées dans le fichier de données. Les données peuvent être exportées vers un fichier de données correspondant à son type de table de base de données (format natif), dans sa représentation caractère (format caractère) ou en tant que tout type de données pour lequel la conversion implicite est prise en charge, par exemple, en copiant un type de données **smallint** comme **int**. Les types de données définis par l'utilisateur sont exportés en tant que leurs propres types de base.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Invite bcp pour le type de stockage de fichier  
- Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format ( **-f**) ou sans commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**), la commande demande le type de stockage de fichiers de chaque champ de données, comme suit :  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64946125"
   
      \*L’interaction entre la longueur de champ, la longueur de préfixe et les terminateurs détermine la quantité d’espace de stockage alloué dans un fichier de données pour des données autres que des caractères exportées en tant que type de stockage de fichier **char** .  
   
-     \*\* Les types de données **ntext**, **text**et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)**, **varchar(max)** et **varbinary(max)** .  
+     \*\* Les types de données **ntext**, **text**et **image** seront supprimés dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans un nouveau travail de développement, évitez ces types de données et prévoyez la modification des applications qui les utilisent actuellement. Utilisez plutôt les types de données **nvarchar(max)** , **varchar(max)** et **varbinary(max)** .  
   
 ## <a name="native-file-storage-types"></a>Types de stockage de fichier natifs  
  Chaque type de stockage de fichier natif est enregistré dans le fichier de format comme un type de données du fichier hôte correspondant.  
@@ -128,7 +128,7 @@ ms.locfileid: "64946125"
     > [!NOTE]  
     >  Après avoir indiqué de façon interactive tous les champs d’une commande **bcp**, cette dernière vous demande de sauvegarder vos réponses dans un fichier de format autre que XML pour chacun des champs fournis. Pour plus d’informations sur les fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Spécifier la longueur des champs au moyen de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   

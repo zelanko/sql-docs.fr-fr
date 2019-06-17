@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64a0cf8fb19bd9e89efce96f2e9705eb6b2b9ae1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665575"
 ---
 # <a name="add-non-sql-server-subscriber"></a>Ajouter un Abonné non-SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53202040"
 > [!NOTE]
 >  Le nom de la source de données et la chaîne de connexion ne sont pas validés par [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que l’Agent de distribution n’a pas tenté d’initialiser l’abonnement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  

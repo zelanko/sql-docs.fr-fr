@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 272c072a082f6343aa6ef5cf4e216dc2b9c44f83
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944510"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
@@ -65,7 +65,7 @@ Cette fonction ne prend pas d'arguments.
 ## <a name="return-type"></a>Type de retour  
 **datetime**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire référence à `CURRENT_TIMESTAMP` partout où elles peuvent faire référence à une expression **datetime**.
   
 `CURRENT_TIMESTAMP` est une fonction non déterministe. Les vues et les expressions qui référencent cette colonne ne peuvent pas être indexées.

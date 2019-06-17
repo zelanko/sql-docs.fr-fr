@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047337"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Résolution de conflit pour la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "54129379"
   
     -   Sélectionner une ou plusieurs lignes dans la grille supérieure puis cliquer sur **Supprimer**, ce qui équivaut à cliquer sur le bouton **Soumettre le gagnant** (sans modifier les données).  
   
-    -   Cliquer sur le bouton des propriétés (**…**) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
+    -   Cliquer sur le bouton des propriétés ( **…** ) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
   
     -   Modifier des données dans la colonne **Gagnant du conflit** ou **Perdant du conflit** avant de soumettre les données (les données sont en lecture seule si la colonne est grisée).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54129379"
   
     -   Cliquer sur **Soumettre le perdant** pour substituer la résolution et propager la valeur désignée comme perdante du conflit à tous les nœuds de la topologie.  
   
-    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir (**...**) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+    -   Sélectionner l'option **Consigner les détails de ce conflit** pour enregistrer les données de conflit dans un journal. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** puis cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton Parcourir ( **...** ) pour accéder au fichier approprié. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
 6.  Fermer la Visionneuse des conflits de réplication.  
 
@@ -88,7 +88,7 @@ Lorsqu'un conflit est résolu dans une réplication de fusion, les données de l
         > [!NOTE]  
         >  Le comportement de journalisation des conflits d'une publication de fusion est défini à l'aide du paramètre **@conflict_logging** de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). L'utilisation du paramètre **@centralized_conflicts** est déconseillée.  
   
-     Le tableau suivant décrit les valeurs de ces colonnes en fonction de la valeur spécifiée pour **@conflict_logging**.  
+     Le tableau suivant décrit les valeurs de ces colonnes en fonction de la valeur spécifiée pour **@conflict_logging** .  
   
     |Valeur @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -100,9 +100,9 @@ Lorsqu'un conflit est résolu dans une réplication de fusion, les données de l
   
 3.  (Facultatif) Examinez les lignes présentant des conflits pour les articles qui vous intéressent. Selon la valeur de **centralized_conflicts** et **decentralized_conflicts** obtenues à l'étape 1, effectuez l'une des opérations suivantes :  
   
-    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Spécifiez une table de conflits pour l'article (obtenue à l'étape 1) pour **@conflict_table**. (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Des données de ligne et autres informations sur la ligne perdante sont alors retournées.  
+    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Spécifiez une table de conflits pour l'article (obtenue à l'étape 1) pour **@conflict_table** . (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Des données de ligne et autres informations sur la ligne perdante sont alors retournées.  
   
-    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Spécifiez une table de conflits pour l'article (obtenue à l'étape 1) pour **@conflict_table**. Des données de ligne et autres informations sur la ligne perdante sont alors retournées.  
+    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Spécifiez une table de conflits pour l'article (obtenue à l'étape 1) pour **@conflict_table** . Des données de ligne et autres informations sur la ligne perdante sont alors retournées.  
   
 ## <a name="conflict-where-delete-failed"></a>Conflit où la suppression a échoué   
   
@@ -119,11 +119,11 @@ Lorsqu'un conflit est résolu dans une réplication de fusion, les données de l
   
 3.  (Facultatif) Examinez les informations sur les conflits pour les conflits de suppression. Selon la valeur de **centralized_conflicts** et **decentralized_conflicts** obtenues à l'étape 1, effectuez l'une des opérations suivantes :  
   
-    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Spécifiez le nom de la table source (obtenue à l'étape 1) sur laquelle le conflit s'est produit pour **@source_object**. (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Les informations sur les conflits de suppression stockées sur le serveur de publication sont alors retournées.  
+    -   Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Spécifiez le nom de la table source (obtenue à l'étape 1) sur laquelle le conflit s'est produit pour **@source_object** . (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Les informations sur les conflits de suppression stockées sur le serveur de publication sont alors retournées.  
   
-    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Spécifiez le nom de la table source (obtenue à l'étape 1) sur laquelle le conflit s'est produit pour **@source_object**. (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Les informations sur les conflits de suppression stockées sur l'Abonné sont alors retournées.  
+    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Spécifiez le nom de la table source (obtenue à l'étape 1) sur laquelle le conflit s'est produit pour **@source_object** . (Facultatif) Spécifiez une valeur pour **@publication** afin de limiter à une publication spécifique les informations sur les conflits retournées. Les informations sur les conflits de suppression stockées sur l'Abonné sont alors retournées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Détection et résolution des conflits de réplication de fusion avancée](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Spécifier un programme de résolution d’articles de fusion](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   

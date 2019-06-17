@@ -15,10 +15,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: bd5ea0433b1cbdee6adf97dbab9a2dcdddcb8389
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577469"
 ---
 # <a name="json-functions-transact-sql"></a>Fonctions JSON (Transact-SQL)
@@ -36,7 +36,7 @@ Utilisez les fonctions décrites dans les pages de cette section pour valider ou
 
  Pour plus d’informations sur la prise en charge intégrée de JSON dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Données JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  - [Validate, Query, and Change JSON Data with Built-in Functions &#40;SQL Server&#41; [Valider, interroger et modifier les données JSON avec les fonctions intégrées &#40;SQL Server&#41;]](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
  - [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)

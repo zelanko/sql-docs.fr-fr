@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 80defa93fb82a5a6b451acd00c8336a74a06ba34
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948201"
 ---
 # <a name="susersname-transact-sql"></a>SUSER_SNAME (Transact-SQL)
@@ -56,7 +56,7 @@ SUSER_SNAME ( [ server_user_sid ] )
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction SUSER_SNAME peut être utilisée comme une contrainte DEFAULT dans les fonctions ALTER TABLE ou CREATE TABLE. SUSER_SNAME peut être utilisé dans une liste de sélection, dans une clause WHERE, et dans tous les cas où une expression est autorisée. SUSER_SNAME doit toujours être suivi de parenthèses, même si aucun paramètre n'est spécifié.  
   
  Lorsqu'il est appelé sans argument, SUSER_SNAME retourne le nom du contexte de sécurité actuel. Lorsqu'il est appelé sans argument à l'intérieur d'un traitement qui a changé de contexte en utilisant EXECUTE AS, SUSER_SNAME retourne le nom du contexte qui a fait l'objet d'un emprunt d'identité. Lorsqu'il est appelé à partir d'un contexte faisant l'objet d'un emprunt d'identité, ORIGINAL_LOGIN retourne le nom du contexte d'origine.  
@@ -146,7 +146,7 @@ SELECT SUSER_SNAME() AS CurrentLogin;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   

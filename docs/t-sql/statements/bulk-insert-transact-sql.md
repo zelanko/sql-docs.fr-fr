@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503252"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
@@ -108,7 +108,7 @@ FROM '\\SystemX\DiskZ\Sales\data\orders.dat';
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
 
 
-**'** _data_source_name_ **'**   
+**'** _data_source_name_ **'**    
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier qui sera importé. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [Créer une source de données externes](../../t-sql/statements/create-external-data-source-transact-sql.md).    
  
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  Indique le nombre de lignes contenues dans un lot. Chaque lot est copié sur le serveur comme une transaction unique. En cas d'échec, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide ou annule la transaction pour chaque lot. Par défaut, toutes les données du fichier spécifié constituent un seul lot. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  L'option MAXERRORS ne s'applique pas à la vérification des contraintes.  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  Indique la page de codes des données dans le fichier. CODEPAGE n’est justifié que si les données contiennent des colonnes de type **char**, **varchar**ou **text** dont les valeurs de caractères sont supérieures à **127** ou inférieures à **32**.  
 
 ```sql
@@ -157,7 +157,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|Numéro de la page de codes, par exemple 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Les versions antérieures à la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prennent pas en charge la page de codes 65001 (encodage UTF-8).|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 Spécifie que BULK INSERT réalise l'opération d'importation en utilisant la valeur définie pour le type de fichier de données.  
 
 &nbsp;
@@ -170,7 +170,7 @@ Spécifie que BULK INSERT réalise l'opération d'importation en utilisant la va
 |**widenative**|Types de données (base de données) natif, à l’exception des colonnes de type **char**, **varchar** et **text** dans lesquelles les données sont stockées au format Unicode. Créez le fichier de données **widenative** en important en bloc les données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire **bcp**.<br /><br /> La valeur **widenative** offre de meilleures performances que la valeur **widechar**. Si le fichier de données contient des caractères étendus [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], sélectionnez **widenative**.<br /><br /> Pour plus d’informations, consultez [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.
 
 Le fichier d'erreur est créé lors de l'exécution de la commande. Une erreur se produit si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d'erreur et propose un diagnostic. Dès que les erreurs ont été corrigées, les données peuvent être chargées.  
@@ -216,7 +216,7 @@ Numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à
 > [!NOTE]  
 >  L’option MAX_ERRORS ne s’applique pas aux vérifications de contraintes ni à la conversion des types de données **money** et **bigint**.  
   
- ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] )  
  Indique l'ordre de tri des données dans le fichier. Les performances de l'importation en bloc sont améliorées si les données importées sont triées en fonction de l'index cluster de la table, le cas échéant. Si le fichier de données est trié dans un autre ordre (c'est-à-dire pas dans l'ordre d'une clé d'index cluster) ou s'il n'y a pas d'index cluster dans la table, la clause ORDER est ignorée. Les noms de colonnes fournis doivent être des noms de colonnes valides dans la table de destination. Par défaut, l'opération d'insertion en bloc considère que le fichier de données n'est pas ordonné. Pour une importation en bloc optimisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide également le fait que les données importées sont triées.  
   
  *n*  
@@ -263,10 +263,10 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path peut être dans Stockage Blob Azure.
 
- FIELDTERMINATOR **='**_indicateur_fin_de_champ_**'**  
+ FIELDTERMINATOR **='** _indicateur_fin_de_champ_ **'**  
  Spécifie la marque de fin de champ à utiliser pour les fichiers de données de type **char** et **widechar**. La marque de fin de champ par défaut est le caractère de tabulation (\t). Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='**_indicateur_fin_de_ligne_**'**  
+ ROWTERMINATOR **='** _indicateur_fin_de_ligne_ **'**  
  Spécifie le délimiteur de fin de ligne à utiliser pour les fichiers de données de type **char** et **widechar**. Par défaut, il s’agit de **\r\n** (caractère de nouvelle ligne).  Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   
@@ -447,7 +447,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  En raison de la manière dont Microsoft Windows traite les fichiers texte **(\n**, est remplacé automatiquement par **\r\n)**.  
+>  En raison de la manière dont Microsoft Windows traite les fichiers texte **(\n**, est remplacé automatiquement par **\r\n)** .  
 
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
@@ -555,7 +555,7 @@ Pour obtenir des exemples `BULK INSERT` complets, illustrant notamment la config
   
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

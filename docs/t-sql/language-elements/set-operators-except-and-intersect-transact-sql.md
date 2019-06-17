@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ccad340088f83dc4b5c38445506c74c9aa7e70f4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981752"
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Opérateurs de jeu - EXCEPT et INTERSECT (Transact-SQL)
@@ -70,7 +70,7 @@ Retourne toute valeur distincte de la requête à gauche de l’opérateur EXCEP
 INTERSECT  
 Retourne toute valeur distincte trouvée par les requêtes à gauche et à droite de l'opérateur INTERSECT.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les types de données de colonnes comparables sont retournés par les requêtes à gauche et à droite des opérateurs EXCEPT ou INTERSECT. Ces types de données peuvent inclure des types de données de caractères avec des classements différents. Dans ce cas, la comparaison nécessaire est exécutée selon les règles de [priorité de classement](../../t-sql/statements/collation-precedence-transact-sql.md). Si vous ne pouvez pas exécuter cette conversion, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne une erreur.  
   
 Lors de la comparaison des valeurs de colonnes pour trouver les lignes DISTINCT, deux valeurs NULL sont considérées comme égales.  

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f0edb30919e8fd5f218e5729509cd4d5315dabd
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945795"
 ---
 # <a name="datefromparts-transact-sql"></a>DATEFROMPARTS (Transact-SQL)
@@ -52,7 +52,7 @@ Expression entière qui spécifie un jour.
 ## <a name="return-types"></a>Types de retour
 **date**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DATEFROMPARTS` retourne une valeur **date**, avec la partie date définie sur l’année, le mois et le jour spécifiés, et la partie heure définie avec la valeur par défaut. Pour les arguments non valides, `DATEFROMPARTS` génère une erreur. `DATEFROMPARTS` retourne une valeur Null si au moins un argument obligatoire a une valeur Null.
   
 Cette fonction peut gérer la communication à distance vers des serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Il ne peut pas gérer la communication à distance vers des serveurs avec une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].

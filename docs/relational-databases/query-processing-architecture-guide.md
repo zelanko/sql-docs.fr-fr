@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462715"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
@@ -334,7 +334,7 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
   * Prédicats de la condition de recherche dans la clause WHERE
   * Opérations de jointure
   * Fonctions d'agrégation
-  * Clauses`GROUP BY` 
+  * Clauses`GROUP BY`
   * Références de table
 * Le coût estimé de l'utilisation de l'index est le plus faible de tous les mécanismes d'accès envisagés par l'optimiseur de requête. 
 * Dans la requête, vous devez appliquer le même ensemble d'indicateurs à chaque table que vous référencez, soit directement, soit en développant une vue afin d'accéder à ses tables sous-jacentes, et qui correspond à une référence de table dans la vue indexée.
@@ -1124,7 +1124,7 @@ Pour améliorer les performances des requêtes qui accèdent à une grande quant
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
 * Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
 
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 
 L'exemple suivant crée une base de données de test contenant une table unique avec sept partitions. Utilisez les outils décrits précédemment lors de l'exécution des requêtes dans cet exemple pour afficher des informations de partitionnement pour le plan de compilation et le plan au moment de l'exécution. 
 

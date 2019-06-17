@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099545"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
@@ -625,7 +625,7 @@ Générez ensuite la bibliothèque de classes.
   
 3.  Cliquez sur **Signer l'assembly**.  
   
-4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>**.  
+4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>** .  
   
 5.  Dans la boîte de dialogue **Créer une clé de nom fort** , dans **Nom du fichier de clé**, tapez **MyRefKey**.  
   
@@ -707,7 +707,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
     1.  Ouvrez Visual Studio et ouvrez la solution qui contient votre projet SQL.  
   
-    2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis sélectionnez l’option **Publier...**.  
+    2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, puis sélectionnez l’option **Publier...** .  
   
     3.  Définissez le nom du serveur et le nom de la base de données sur lesquels publier.  
   
@@ -789,7 +789,7 @@ Vous pouvez essayer d'apporter d'autres types de modifications aux plans de dép
   
 -   Ajout ou suppression d'instructions PRINT de diagnostic ou de commentaires supplémentaires dans les scripts de déploiement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle](../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md)  
 [Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  

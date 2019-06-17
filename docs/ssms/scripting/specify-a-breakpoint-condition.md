@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 63043009d9c908ad5edc3771e5d353cf2f66b010
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821929"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Spécifier une condition de point d'arrêt
@@ -44,6 +44,6 @@ ms.locfileid: "65821929"
     > [!NOTE]  
     >  Le débogueur n'évalue l'expression booléenne que lorsque le point d'arrêt est atteint pour la première fois. Si vous choisissez **a changé**, le débogueur ne considère pas la première évaluation comme une modification, donc il ne s’y arrête pas.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Spécifier une action de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)  

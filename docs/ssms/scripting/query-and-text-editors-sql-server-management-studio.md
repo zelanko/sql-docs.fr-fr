@@ -27,10 +27,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d20deb05913d6109bb64b414a5aab8b618a53e69
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65822014"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Éditeurs de texte et de requête (SQL Server Management Studio)
@@ -131,7 +131,7 @@ ms.locfileid: "65822014"
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code et afficher les informations de débogage telles que les valeurs des variables et des paramètres.|[Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Décrit comment définir des couleurs personnalisées pour différentes instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)]et faire en sorte que ces couleurs soient définies comme arrière-plan de la barre d'état dans des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barre d’état &#40;éditeur de requête du moteur de base de données&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Raccourcis clavier dans SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

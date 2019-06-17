@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 73130efac268afb0d80cf144fb3f2bbcbe5efeba
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099256"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Enregistrer des diagrammes de base de données (Visual Database Tools)
@@ -28,7 +28,7 @@ Lorsque vous enregistrez un diagramme de base de données, vous pouvez enregistr
   
 ### <a name="to-save-the-database-diagram"></a>Pour enregistrer le diagramme de base de données  
   
-1.  Dans le menu **Fichier** , choisissez **Enregistrer \<**_nom de la table_**>**.  
+1.  Dans le menu **Fichier** , choisissez **Enregistrer \<** _nom de la table_ **>** .  
   
 2.  S’il s’agit d’un nouveau schéma que vous n’avez encore jamais enregistré, la boîte de dialogue **Enregistrer sous** apparaît. Tapez le nom que vous voulez attribuer au schéma.  
   
@@ -36,6 +36,6 @@ Lorsque vous enregistrez un diagramme de base de données, vous pouvez enregistr
   
 3.  Cliquez sur **Oui** (ou sur **OK** s’il s’agit d’un nouveau schéma) pour mettre à jour la base de données afin qu’elle corresponde à votre schéma.  
   
-## <a name="see-also"></a> Voir aussi  
-[Utiliser des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

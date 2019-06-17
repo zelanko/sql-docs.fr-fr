@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f9d4fecd34be2464947ce3c493b8bd333d2ce0c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724165"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connexion aux sources de données dans le composant Script
@@ -59,7 +59,7 @@ ms.locfileid: "65724165"
   
  Pour plus d’informations sur l’utilisation des gestionnaires de connexions avec le composant Script, consultez [Création d’une source avec le composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) et [Création d’une destination avec le composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

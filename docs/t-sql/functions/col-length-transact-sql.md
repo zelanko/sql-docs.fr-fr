@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdcb4ff647328e4c217831a416ca512a4e957f0b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944023"
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
@@ -56,7 +56,7 @@ Retourne NULL en cas d’erreur ou si un appelant ne dispose pas de l’autorisa
   
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut seulement voir les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d’un droit d’accès. Cela signifie que les fonctions intégrées générant des métadonnées, comme COL_LENGTH, peuvent retourner NULL si l’utilisateur ne dispose pas de l’autorisation appropriée sur l’objet. Pour plus d’informations, consultez [Configuration de la visibilité des métadonnées](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Pour les colonnes **varchar** déclarées avec le spécificateur **max** (**varchar(max)** ), COL_LENGTH retourne la valeur -1.
   
 ## <a name="examples"></a>Exemples  

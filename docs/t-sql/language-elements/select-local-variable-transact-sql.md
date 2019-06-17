@@ -27,10 +27,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 3ea8dffc7256d08788b2a3b12812cd1f6e8f9cbd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981863"
 ---
 # <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
@@ -72,7 +72,7 @@ Opérateur d'assignation composé :
  *expression*  
  Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Cela comprend une sous-requête scalaire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’instruction SELECT @*local_variable* est généralement utilisée pour retourner une valeur unique vers la variable. Toutefois, quand *expression* correspond au nom d’une colonne, plusieurs valeurs peuvent être retournées. Si l'instruction SELECT retourne plusieurs valeurs, la dernière valeur retournée est affectée à la variable.  
   
  Si l'instruction SELECT ne retourne aucune ligne, la variable conserve sa valeur actuelle. Si *expression* est une sous-requête scalaire qui ne retourne aucune valeur, la valeur affectée à la variable est NULL.  
@@ -128,7 +128,7 @@ Company Name
 NULL  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 75cfa4ee4a51e1113537d677c47104be215b6b7b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096620"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>Boîte de dialogue Joindre (Visual Database Tools)
@@ -46,7 +46,7 @@ Lorsque vous sélectionnez une option pour créer une jointure externe, le losan
 > [!NOTE]  
 > Les mots « gauche » et « droite » ne correspondent pas forcément à la position des tables dans le volet Schéma. « Gauche » désigne la table dont le nom apparaît à gauche du mot clé JOIN dans l'instruction SQL et « droite » la table dont le nom apparaît à droite du mot clé JOIN. Si vous déplacez les tables dans le volet **Schéma** , vous ne changez en rien cette désignation.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

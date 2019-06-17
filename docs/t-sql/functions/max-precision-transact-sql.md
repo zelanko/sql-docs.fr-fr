@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a83edf2098f32d56240096da068c5c37c6b83f4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948253"
 ---
 # <a name="x40x40maxprecision-transact-sql"></a>&#x40;&#x40;MAX_PRECISION (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65948253"
 ## <a name="return-types"></a>Types de retour  
  **tinyint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Par défaut, la valeur de précision maximale est de 38.  
   
 ## <a name="examples"></a>Exemples  
@@ -55,7 +55,7 @@ ms.locfileid: "65948253"
 SELECT @@MAX_PRECISION AS 'Max Precision'  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
  [Précision, échelle et longueur &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)  

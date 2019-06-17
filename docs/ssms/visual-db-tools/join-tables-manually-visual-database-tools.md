@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 85ec2d718c6b80b418f417c5199c9e8ba6439050
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096632"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Joindre manuellement des tables (Visual Database Tools)
@@ -44,6 +44,6 @@ Vous pouvez créer des jointures basées sur des comparaisons entre deux colonne
   
 Le Concepteur de requêtes et de vues ajoute une clause INNER JOIN à l’instruction SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md). Vous pouvez changer ce type de jointure en jointure externe. Pour plus d’informations, consultez [Créer des jointures externes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

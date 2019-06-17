@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 07fc18f3a2540fd1316078e7e53326d36964c735
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948676"
 ---
 # <a name="left-transact-sql"></a>LEFT (Transact-SQL)
@@ -56,7 +56,7 @@ LEFT ( character_expression , integer_expression )
   
  Retourne **nvarchar** quand *character_expression* est un type de données caractères Unicode.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lors de l’utilisation de classements SC, le paramètre *integer_expression* compte une paire de substitution UTF-16 comme un caractère. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -117,7 +117,7 @@ SELECT LEFT('abcdefg',2) FROM dbo.DimProduct;
 ab  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  

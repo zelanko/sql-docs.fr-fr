@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716165"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (base de données SSISDB)
@@ -37,13 +37,13 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Arguments  
  [ @source_folder = ] *source_folder*  
- Nom du dossier source, où l'environnement réside avant le déplacement. *source_folder* est de type **nvarchar(128)**.  
+ Nom du dossier source, où l'environnement réside avant le déplacement. *source_folder* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom de l'environnement qui sera supprimé. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement qui sera supprimé. *environment_name* est de type **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nom du dossier de destination, où l'environnement réside après le déplacement. *destination_folder* est de type **nvarchar(128)**.  
+ Nom du dossier de destination, où l'environnement réside après le déplacement. *destination_folder* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -69,7 +69,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les références environnementales des projets ne suivent pas l'environnement pendant le déplacement. Les références environnementales doivent être mises à jour en conséquence. Cette procédure stockée réussira même si les références environnementales sont arrêtées en déplaçant un environnement. Les références environnementales doivent être mises à jour après que cette procédure stockée s'est achevée.  
   
 > [!NOTE]  

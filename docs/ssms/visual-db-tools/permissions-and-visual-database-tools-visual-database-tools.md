@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1f05907ccaf2d5fa16613d89e6bcb50a4e86b376
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098368"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Autorisations et Visual Database Tools (Visual Database Tools)
@@ -26,6 +26,6 @@ Les autorisations, qui autorisent des utilisateurs à accéder à des objets de 
   
 Si vos autorisations d'accès à la base de données vous permettent d'afficher, mais pas de modifier la structure de la base, vous pouvez utiliser des scripts pour concevoir vos modifications sans les transmettre à la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Environnements multi-utilisateurs &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

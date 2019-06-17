@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978815"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716239"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53978815"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Pour créer, modifier ou supprimer un audit du serveur, les principaux requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "53978815"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** .  
   
      Les options suivantes sont disponibles sur la page **Général** de la boîte de dialogue **Créer un audit** .  
   
@@ -90,14 +90,14 @@ ms.locfileid: "53978815"
     > [!IMPORTANT]  
     >  Lorsque l'audit est en état d'échec, la connexion administrateur dédiée peut continuer à exécuter des événements audités.  
   
-     Liste**Destination de l’audit**   
+     Liste**Destination de l’audit**  
      Spécifie la cible pour l'audit des données. Les options disponibles sont un fichier binaire, le journal des applications Windows ou le journal de sécurité Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal de sécurité Windows sans configurer d'autres paramètres dans Windows. Pour plus d’informations, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Chemins d'accès au fichier**  
      Spécifie l’emplacement du dossier dans lequel les données d’audit sont écrites quand la **destination de l’audit** est un fichier.  
   
      **Points de suspension (...)**  
-     Ouvre la boîte de dialogue **Rechercher un dossier -**_nom\_serveur_ qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
+     Ouvre la boîte de dialogue **Rechercher un dossier -** _nom\_serveur_ qui permet de spécifier un chemin de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
   
      **Limites maximales du fichier d'audit :**  
      **Fichiers de substitution maximale**  
@@ -106,16 +106,16 @@ ms.locfileid: "53978815"
      **Nombre maximal de fichiers**  
      Spécifie que, lorsque le nombre maximal de fichiers d'audit est atteint, toute action qui entraîne la génération d'événements d'audit supplémentaires échoue et provoque une erreur.  
   
-     Case à cocher**Illimité**   
+     Case à cocher**Illimité**  
      Lorsque la case **Illimité** sous **Nombre maximal de fichiers de substitution** est cochée, aucune limite n’est imposée sur le nombre de fichiers d’audit qui seront créés. La case à cocher **Illimité** est sélectionnée par défaut et s'applique aux sélections **Nombre maximal de fichiers de substitution** et **Nombre maximal de fichiers** .  
   
-     Zone**Nombre de fichiers**   
+     Zone**Nombre de fichiers**  
      Spécifie le nombre de fichiers d'audit à créer, jusqu'à 2 147 483 647. Cette option est disponible uniquement si **Illimité** est désactivé.  
   
      **Taille de fichier maximale**  
      Spécifie la taille maximale d'un fichier d'audit, en mégaoctets (MB), en gigaoctets (GB) ou en téraoctets (TB). Vous pouvez spécifier une valeur comprise entre 1 024 Mo et 2 147 483 647 To. L'activation de la case à cocher **Illimité** ne fixe pas de limite quant à la taille du fichier. La spécification d'une valeur inférieure à 1 024 Mo échoue et génère une erreur. La case à cocher **Illimité** est sélectionnée par défaut.  
   
-     Case à cocher**Réserver l’espace disque**   
+     Case à cocher**Réserver l’espace disque**  
      Spécifie qu'une quantité d'espace disque égale à la taille de fichier maximale spécifiée doit être pré-allouée. Ce paramètre ne peut être utilisé que si la case à cocher **Illimité** sous **Taille de fichier maximale** n'est pas sélectionnée. Cette case à cocher n'est pas activée par défaut.  
   
 3.  Éventuellement, sur la page **Filtre** , entrez un prédicat, ou la clause `WHERE` , pour l'audit de serveur afin de définir des options supplémentaires qui ne sont pas disponibles sur la page **Général** . Mettez le prédicat entre parenthèses ; par exemple : `(object_name = 'EmployeesTable')`.  
@@ -126,11 +126,11 @@ ms.locfileid: "53978815"
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...** .  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit du serveur** .  
   
-     **Nom**  
+     **Name**  
      Nom de la spécification de l'audit du serveur. Le nom est généré automatiquement lorsque vous créez une spécification d'audit du serveur, mais vous pouvez le modifier.  
   
      **Audit**  

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9e4fee7a2504255b0763cf9cfad708fd341d336d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62712359"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -85,7 +85,7 @@ Nom explicite du type d’information. Les types d’informations sont utilisés
 Il s’agit d’un identificateur associé au type d’information. Il est souvent utilisé par les plateformes de protection des informations centralisées pour identifier les types d’informations dans le système.
 
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 - Seule une classification peut être ajoutée à un objet unique. L’ajout d’une classification à un objet déjà classifié remplacera la classification existante.
 - Plusieurs objets peuvent être classifiés avec une seule instruction `ADD SENSITIVITY CLASSIFICATION`.
@@ -118,7 +118,7 @@ ADD SENSITIVITY CLASSIFICATION TO
     WITH ( LABEL='Confidential', LABEL_ID='643f7acd-776a-438d-890c-79c3f2a520d6' )
 ```  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 

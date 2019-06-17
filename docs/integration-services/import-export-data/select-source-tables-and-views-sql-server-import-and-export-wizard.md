@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e20ae3e7392c01195ecb8cb829976efb3d6ad2c9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723744"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Sélectionner les tables et les vues sources (Assistant Importation et Exportation SQL Server)
@@ -75,16 +75,16 @@ Après avoir affiché un aperçu des données, vous souhaiterez peut-être modif
 
 ### <a name="excel-source-tables"></a>Tables sources Excel
 La liste des tables et des vues sources d’une source de données Excel comprend deux types d’objets Excel.
--   **Feuilles de calcul**. Les noms de feuille de calcul sont suivis du signe dollar ($) : par exemple, **« Sheet1$ »**.
+-   **Feuilles de calcul**. Les noms de feuille de calcul sont suivis du signe dollar ($) : par exemple, **« Sheet1$ »** .
 -   **Plages nommées.** Les plages nommées, le cas échéant, sont répertoriées par nom.
 
-Si vous souhaitez charger des données à partir d’une plage de cellules spécifique, sans nom ou vers celle-ci (par exemple, **[Sheet1$A1:B4]**), vous devez écrire une requête. Retournez dans la page **Spécifier la copie ou l’interrogation de table** et sélectionnez **Écrire une requête pour spécifier les données à transférer**.
+Si vous souhaitez charger des données à partir d’une plage de cellules spécifique, sans nom ou vers celle-ci (par exemple, **[Sheet1$A1:B4]** ), vous devez écrire une requête. Retournez dans la page **Spécifier la copie ou l’interrogation de table** et sélectionnez **Écrire une requête pour spécifier les données à transférer**.
 
 ### <a name="excel-destination-tables"></a>Tables de destination Excel
 Si vous exportez des données vers Excel, vous pouvez spécifier la destination par l’une des trois méthodes suivantes.
--   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajouter le caractère $ à la fin du nom de la feuille et ajouter des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]**.
+-   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajouter le caractère $ à la fin du nom de la feuille et ajouter des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]** .
 -   **Plage nommée.** Pour spécifier une plage nommée, utilisez simplement le nom de la plage. Par exemple, **MyDataRange**.
--   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]**.
+-   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]** .
 
 > [!TIP]
 > Quand vous utilisez Excel comme source ou destination, cliquez sur **Modifier les mappages** et vérifiez les mappages de types de données dans la page **Mappages de colonnes** . 

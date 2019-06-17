@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c2a2a034348df16f7ea1f326d78322f578953757
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982130"
 ---
 # <a name="kill-stats-job-transact-sql"></a>KILL STATS JOB (Transact-SQL)
@@ -48,7 +48,7 @@ KILL STATS JOB job_id
  *job_id*  
  Champ job_id renvoyé par la vue de gestion dynamique sys.dm_exec_background_job_queue du travail.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'argument job_id n'est pas lié à session_id ou à l'unité de travail utilisée dans d'autres formes de l'instruction KILL.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -64,7 +64,7 @@ KILL STATS JOB 53;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)   
  [sys.dm_exec_background_job_queue &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-background-job-queue-transact-sql.md)   

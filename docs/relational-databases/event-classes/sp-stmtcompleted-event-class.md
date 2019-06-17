@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 360e0251a88d0b680334afba040b1fc49de44302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446779"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, classe d'événements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "47844307"
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle la procédure stockée est en cours d'exécution.|35|Oui|  
 |Duration|**bigint**|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |EndTime|**datetime**|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme SQL:BatchStarting ou SP:Starting.|15|Oui|  
-|EventClass|**Int**|Type d’événement = 45.|27|non|  
-|EventSequence|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|**Int**|Type d’événement = 45.|27|Non|  
+|EventSequence|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IntegerData|**Int**|Valeur entière qui dépend de la classe d'événements capturée dans la trace.|25|Oui|  
@@ -55,7 +55,7 @@ ms.locfileid: "47844307"
 |Reads|**bigint**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement.|16|Oui|  
 |RequestID|**Int**|ID de la demande contenant l'instruction.|49|Oui|  
 |RowCounts|**bigint**|Nombre de lignes affectées par un événement.|48|Oui|  
-|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SourceDatabaseID|**Int**|ID de la base de données dans laquelle l'objet existe.|62|Oui|  
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
@@ -65,7 +65,7 @@ ms.locfileid: "47844307"
 |Writes|**bigint**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|17|Oui|  
 |XactSequence|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

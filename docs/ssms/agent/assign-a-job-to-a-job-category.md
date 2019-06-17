@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4947751be0d3ed2c0d10cfce774f1fa9cec35a38
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097560"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Affecter un travail à une catégorie de travaux
@@ -67,7 +67,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 4.  Cliquez avec le bouton droit sur le travail à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom\_travail_, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom\_travail_, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
   
 6.  Cliquez sur **OK**.  
   

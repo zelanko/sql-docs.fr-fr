@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a3b35521c0a387028d442ff77214e910a922ff4a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820815"
 ---
 # <a name="edit-a-breakpoint-location"></a>Modifier un emplacement de point d'arrêt
@@ -40,7 +40,7 @@ ms.locfileid: "65820815"
   
      L’option **Permettre que le code source soit différent de la version d’origine** n’a aucun effet lors du débogage de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)   
  [Spécifier une action de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)   
  [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   

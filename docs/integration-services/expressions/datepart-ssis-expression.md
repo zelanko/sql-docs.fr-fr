@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cf646a6cc26b757b65e0c7c1e561aa7aff26d020
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725498"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expression SSIS)
@@ -45,7 +45,7 @@ DATEPART(datepart, date)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction DATEPART renvoie un résultat NULL si l'argument est NULL.  
   
  Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -85,7 +85,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DATEADD &#40;expression SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expression SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY &#40;expression SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   

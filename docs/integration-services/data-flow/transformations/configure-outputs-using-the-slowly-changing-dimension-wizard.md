@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726211"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
@@ -84,7 +84,7 @@ ms.locfileid: "65726211"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Mise à jour de sorties de dimensions à variation lente  
  Le moyen le plus simple de mettre à jour la configuration des sorties de transformations de dimensions à variation lente consiste à réexécuter l'Assistant Dimension à variation lente et à modifier les propriétés à partir des pages de l'Assistant. Vous pouvez également mettre à jour la transformation de dimension à variation lente par le biais de la boîte de dialogue **Éditeur avancé** ou par programmation.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

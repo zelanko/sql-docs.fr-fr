@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7baf38add82c593cfa6049d71e9c0775eb64674f
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007556"
 ---
 # <a name="delete-a-policy-based-management-policy"></a>Supprimer une stratégie de gestion basée sur des stratégies
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51512814"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 71d0710d479c4654549b6ec579102891c94f900e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947844"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
@@ -58,7 +58,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
 ## <a name="return-types"></a>Types de retour  
  **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Nécessite l'autorisation CONTROL sur la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -80,7 +80,7 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   

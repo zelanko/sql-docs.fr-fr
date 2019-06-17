@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6eb55e8cd2fa2e0dcc402e850530ebb2cf89047e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105372"
 ---
 # <a name="manage-files-with-encoding"></a>Gérer des fichiers avec encodage
@@ -63,7 +63,7 @@ Si vous utilisez Visual SourceSafe pour stocker des fichiers ANSI, UTF-8 ou Unic
   
 -   Les fichiers UTF8 ne fonctionnent pas de façon fiable avec Visual SourceSafe, car les modifications doivent être apportées pendant l'archivage, l'extraction, le contrôle des différences et la fusion, ce qui provoque des problèmes pour les éditeurs de fichier UTF8.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Fichiers gérant les solutions et les projets](../../ssms/solution/files-that-manage-solutions-and-projects.md)  
 [Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   

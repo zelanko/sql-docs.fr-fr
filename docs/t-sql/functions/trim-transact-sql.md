@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7428ea1901f23e5357b12ec4adcc95beac57c06a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946550"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
@@ -54,7 +54,7 @@ L’argument string est une expression de n’importe quel type de caractères (
 
 Renvoie une expression de caractères avec un type d’argument de chaîne dans laquelle le caractère espace `char(32)` ou d’autres caractères spécifiés sont supprimés des deux côtés. Renvoie `NULL` si la chaîne d’entrée est `NULL`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Par défaut, la fonction `TRIM` supprime le caractère espace `char(32)` des deux côtés. Ce comportement est équivalent à `LTRIM(RTRIM(@string))`. Le comportement de la fonction `TRIM` avec des caractères spécifiés est identique au comportement de la fonction `REPLACE` quand les caractères de début ou de fin sont remplacés par des chaînes vides.
 
@@ -83,7 +83,7 @@ SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 `#     test`
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  

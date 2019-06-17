@@ -18,11 +18,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716186"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  L'exemple suivant utilise la clause MOVE dans l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , afin de restaurer une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] nommée `ftdb1`. Les fichiers catalogue, le journal et la base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sont déplacés vers les nouveaux emplacements sur l'instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , comme suit :  
   
 -   Le fichier de base de données, `ftdb1.mdf`, est déplacé vers `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  

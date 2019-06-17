@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2987ac3cb84b2e36fc6e78e7ea0466b30a440f4b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645522"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY - Autorisations de clé asymétrique (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ DENY { permission  [ ,...n ] }
  *permission*  
  Spécifie une autorisation qu'il est possible de refuser sur une clé asymétrique. Voir ci-dessous.  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  Indique la clé asymétrique sur laquelle l'autorisation est refusée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -94,7 +94,7 @@ DENY { permission  [ ,...n ] }
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une clé asymétrique est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus particulières et les plus limitées qu'il est possible d'accorder sur une clé asymétrique sont mentionnées ci-dessous, ainsi que les autorisations plus générales qui les englobent implicitement.  
   
 |Autorisation de clé asymétrique|Impliquée par une autorisation de clé asymétrique|Impliquée par une autorisation de base de données|  
@@ -105,10 +105,10 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur la clé asymétrique. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire de la clé asymétrique.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

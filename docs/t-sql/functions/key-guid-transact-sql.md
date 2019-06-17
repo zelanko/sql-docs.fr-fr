@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b39f2b1898678b06d77c89eed513927d6dfc92b3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949226"
 ---
 # <a name="keyguid-transact-sql"></a>KEY_GUID (Transact-SQL)
@@ -48,7 +48,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>Types de retour  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une valeur d'identité a été spécifiée lors de la création de la clé, le GUID de celle-ci est un hachage MD5 de cette valeur d'identité. Si aucune valeur d'identité n'a été spécifiée, le serveur a généré le GUID.  
   
  Si la clé est une clé temporaire, son nom doit commencer par un signe dièse (#).  
@@ -63,7 +63,7 @@ Key_GUID( 'Key_Name' )
 SELECT Key_GUID('ABerglundKey1');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  

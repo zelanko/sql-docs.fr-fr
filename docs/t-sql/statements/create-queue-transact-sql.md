@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503238"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
@@ -127,7 +127,7 @@ CREATE QUEUE <object>
  ON *filegroup |* [**DEFAULT**]  
  Spécifie le groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur lequel créer cette file d'attente. Vous pouvez utiliser ce paramètre *filegroup* pour identifier un groupe de fichiers ou utiliser l’identificateur DEFAULT pour utiliser le groupe de fichiers par défaut pour la base de données Service Broker. Dans le contexte de cette clause, DEFAULT n'est pas un mot clé et il doit être délimité comme un identificateur. Quand aucun groupe de fichiers n'est spécifié, la file d'attente utilise le groupe de fichiers par défaut pour la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une file d'attente peut être la cible d'une instruction SELECT. Toutefois, le contenu d'une file d'attente est uniquement modifiable par le biais d'instructions s'exécutant sur des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)], par exemple SEND, RECEIVE et END CONVERSATION. Une file d'attente ne peut pas être la cible d'une instruction INSERT, UPDATE, DELETE ou TRUNCATE.  
   
  Une file d'attente ne peut pas être un objet temporaire. Les noms de file d’attente commençant par **#** ne sont donc pas valides.  
@@ -219,7 +219,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

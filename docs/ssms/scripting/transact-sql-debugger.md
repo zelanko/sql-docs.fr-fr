@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1e6999b61169c368a92f4d8f3d9776db6a60694a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821628"
 ---
 # <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
@@ -67,7 +67,7 @@ ms.locfileid: "65821628"
 |Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code.|[Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |Décrit comment utiliser le débogueur pour afficher des données [!INCLUDE[tsql](../../includes/tsql-md.md)] (telles que des paramètres et des variables) et des informations système.|[Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

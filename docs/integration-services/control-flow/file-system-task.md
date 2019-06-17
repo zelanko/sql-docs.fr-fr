@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727694"
 ---
 # <a name="file-system-task"></a>Tâches du système de fichiers
@@ -145,13 +145,13 @@ ms.locfileid: "65727694"
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -159,13 +159,13 @@ ms.locfileid: "65727694"
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez le nom de la variable dans la liste ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
@@ -188,7 +188,7 @@ ms.locfileid: "65727694"
  **UseDirectoryIfExists**  
  Indique si l’option **Créer un répertoire** utilise un répertoire existant portant le nom spécifié au lieu de créer un nouveau répertoire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

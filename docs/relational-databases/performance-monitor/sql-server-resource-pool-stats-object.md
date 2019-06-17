@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 86dcb119efd9c6bb179aae9208f8e8209a5f4671
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649485"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQLServer, objet Statistiques des pools de ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "53380440"
 |**Mémoire utilisée (Ko)**|Quantité de mémoire utilisée, en kilo-octets (Ko), pour le pool de ressources.|  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQLServer, objet Statistiques des groupes de charges de travail](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)  

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943063"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
@@ -47,7 +47,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ## <a name="return-type"></a>Type de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’argument \<column_expression> de GROUPING_ID doit correspondre exactement à l’expression dans la liste GROUP BY. Par exemple, si vous groupez par DATEPART (yyyy, \<*column name*>), utilisez GROUPING_ID (DATEPART (yyyy, \<*column name*>)) ; ou si vous groupez par \<*column name*>, utilisez GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Comparaison de GROUPING_ID () à GROUPING ()  
@@ -416,7 +416,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|NULL|2|144513,3741|011|6|Jour|  
 |NULL|NULL|NULL|9364513,6416|111|7|Total général|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   

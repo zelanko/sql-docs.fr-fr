@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999607"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Déployer une base de données à l'aide d'une DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "53590233"
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier DAC BACPAC sans mot de passe. Lorsque le fichier BACPAC est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorisations  
  L'Assistant a besoin d'autorisations d'exportation DAC dans la base de données source. La connexion nécessite au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.  
   
  L'Assistant a besoin d'autorisations d'exportation DAC sur l'instance ou le serveur de destination. La connexion doit être membre des rôles serveur fixes **sysadmin** ou **serveradmin** , ou du rôle serveur fixe **dbcreator** et disposer d'autorisations ALTER ANY LOGIN. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également importer une DAC. L'importation d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles loginmanager ou serveradmin. L'importation d'une DAC sans connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles dbmanager ou serveradmin.  
@@ -69,7 +69,7 @@ ms.locfileid: "53590233"
   
 3.  Développez le nœud **Bases de données** .  
   
-4.  Cliquez avec le bouton droit sur la base de données que vous voulez déployer, sélectionnez **Tâches**, puis sélectionnez **Déployer la base de données dans SQL Azure...**.  
+4.  Cliquez avec le bouton droit sur la base de données que vous voulez déployer, sélectionnez **Tâches**, puis sélectionnez **Déployer la base de données dans SQL Azure...** .  
   
 5.  Renseignez les boîtes de dialogue de l'Assistant :  
   
@@ -141,7 +141,7 @@ ms.locfileid: "53590233"
   
 6.  Utilisez la méthode **Import** de type **Microsoft.SqlServer.Management.Dac.DacStore** pour importer le fichier BACPAC. Spécifiez le fichier BACPAC créé par l'exportation.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

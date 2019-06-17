@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a4d472077fd80a9637cdf72ba29d5a95b345ba0d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946644"
 ---
 # <a name="x40x40totalwrite-transact-sql"></a>&#x40;&#x40;TOTAL_WRITE (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "65946644"
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les activités de lecture et d’écriture, exécutez **sp_monitor**.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,7 +64,7 @@ Reads       Writes      As of
 7760        97263       12/5/2006 10:23:00 PM   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Fonctions statistiques système &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)   
  [@@TOTAL_READ &#40;Transact-SQL&#41;](../../t-sql/functions/total-read-transact-sql.md)  

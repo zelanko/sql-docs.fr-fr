@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098039"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procédure : Créer un test unitaire SQL Server vide
@@ -45,7 +45,7 @@ Vous avez deux options pour créer un test unitaire SQL Server :
   
 3.  Sous **Nom du test**, entrez un nom pour le test.  
   
-4.  Sous **Ajouter au projet de test**, sélectionnez un projet de test existant auquel ajouter ce test. S'il n'existe aucun projet de test ou si vous souhaitez créer un projet de test, sélectionnez **Créer un nouveau projet de test <language>**.  
+4.  Sous **Ajouter au projet de test**, sélectionnez un projet de test existant auquel ajouter ce test. S'il n'existe aucun projet de test ou si vous souhaitez créer un projet de test, sélectionnez **Créer un nouveau projet de test <language>** .  
   
 5.  Cliquez sur **OK**.  
   
@@ -81,7 +81,7 @@ Vous avez deux options pour créer un test unitaire SQL Server :
   
 1.  Ouvrez une classe de test unitaire SQL Server existante dans le **Concepteur de test unitaire SQL Server**. Pour accéder au **Concepteur de test unitaire SQL Server**, double-cliquez sur le fichier de code source d'un test unitaire dans l'**Explorateur de solutions**.  
   
-2.  Dans la barre de navigation, cliquez sur le signe plus (**+**) pour afficher la boîte de dialogue **Spécifier un nom de test unitaire**.  
+2.  Dans la barre de navigation, cliquez sur le signe plus ( **+** ) pour afficher la boîte de dialogue **Spécifier un nom de test unitaire**.  
   
 3.  Tapez un nom et cliquez sur **OK**.  
   
@@ -98,7 +98,7 @@ Après avoir configuré le projet de test et créé le test unitaire, voici les 
 > [!NOTE]  
 > La condition de test Non concluant est la condition par défaut ajoutée à chaque test. Cette condition de test est incluse pour indiquer que la vérification du test n'a pas été implémentée. Supprimez cette condition de test de votre test après avoir ajouté d'autres conditions de test. Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](https://msdn.microsoft.com/library/aa833242(VS.100).aspx).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : exécuter des tests unitaires SQL Server](../ssdt/how-to-run-sql-server-unit-tests.md)  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Création de tests unitaires](https://msdn.microsoft.com/library/ms182523(VS.90).aspx)  

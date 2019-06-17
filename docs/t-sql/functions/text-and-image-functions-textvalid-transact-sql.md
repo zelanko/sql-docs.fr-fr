@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1ad4bc199c923c488e968740324c5f4d47766b96
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948432"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Fonctions texte et image - TEXTVALID (Transact-SQL)
@@ -60,7 +60,7 @@ TEXTVALID ( 'table.column' ,text_ ptr )
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Retourne 1 si le pointeur est valide et 0 si le pointeur n'est pas valide. Notez que l’identificateur de la colonne **text** doit inclure le nom de la table. Vous ne pouvez pas utiliser UPDATETEXT, WRITETEXT ou READTEXT sans pointeur de texte valide.  
   
  Les fonctions et instructions suivantes sont également utiles lorsque vous travaillez avec des données **text**, **ntext** et **image**.  
@@ -104,7 +104,7 @@ pub_id Valid (if 1) Text data
 (8 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)   

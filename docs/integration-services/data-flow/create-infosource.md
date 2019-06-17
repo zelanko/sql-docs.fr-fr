@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 270f2831b814144f6e053db32509e27ffef02ba2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727047"
 ---
 # <a name="create-infosource"></a>Créer un InfoSource
@@ -51,7 +51,7 @@ ms.locfileid: "65727047"
   
  Si vous sélectionnez cette option, la boîte de dialogue **Créer un InfoSource pour les données maîtres** s’affiche. Utilisez la boîte de dialogue **Créer un InfoSource pour les données maîtres** pour créer l’InfoSource. Pour plus d’informations sur cette boîte de dialogue, consultez [Créer un Infosource pour les données maîtres](../../integration-services/data-flow/create-infosource-for-master-data.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Aide (F1) sur Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

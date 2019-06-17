@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f2597386a3beac94ff1cc5d067299f308a255e9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944065"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
@@ -55,7 +55,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
 ## <a name="return-types"></a>Types de retour  
  **bigint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si le nombre de lignes d’une partition n’est pas divisible par *integer_expression*, vous obtiendrez des groupes de deux tailles différentes qui diffèrent d’un membre. Les groupes plus grands viennent avant les groupes plus petits dans l'ordre spécifié par la clause OVER. Par exemple, si le nombre total de lignes est égal à 53 et qu'il existe 5 groupes, les trois premiers groupes contiendront 11 lignes et les deux derniers, 10 lignes. En revanche, si le nombre total de lignes est divisible par le nombre de groupes, les lignes seront réparties équitablement entre les différents groupes. Par exemple, si le nombre total de lignes est égal à 50 et qu'il existe 5 groupes, chaque compartiment contiendra 10 lignes.  
   
  NTILE n'est pas déterministe. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -236,7 +236,7 @@ Ito               2        2,644,000.00     United States
 Ansman-Wolfe      2        1,183,000.00     United States
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
  [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   

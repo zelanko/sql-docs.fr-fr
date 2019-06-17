@@ -32,10 +32,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 863a35f26cc3c0c5d01537ce5cd5ff71d51fa90d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943131"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
@@ -59,7 +59,7 @@ GETDATE ( )
 ## <a name="return-type"></a>Type de retour  
  **datetime**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire référence à GETDATE partout où elles peuvent faire référence à une expression **datetime**.  
   
  GETDATE est une fonction non déterministe. Les vues et expressions qui référencent cette fonction dans une colonne ne peuvent pas être indexées.  
@@ -173,7 +173,7 @@ SELECT CONVERT (time, SYSDATETIME())
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

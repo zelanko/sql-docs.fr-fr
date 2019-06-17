@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e87cebfac91e8b562c8cc0867d54f38e948ff9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728819"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Générer des tables miroir et des instances de capture de données modifiées
@@ -33,7 +33,7 @@ ms.locfileid: "65728819"
   
  Cliquez sur **Suivant** pour ouvrir la page [Finish](../../integration-services/change-data-capture/finish.md) .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour créer l’instance de base de données de modifications SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

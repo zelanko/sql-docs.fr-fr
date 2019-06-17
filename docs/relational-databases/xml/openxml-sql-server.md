@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935856"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "58512346"
 > [!NOTE]  
 >  OpenXML permet de paramétrer sous forme de variables les modèles XPath de ligne et de colonne. Un tel paramétrage peut mener à des injections d'expressions XPath, si le programmeur expose le paramétrage à des utilisateurs extérieurs (par exemple, si les paramètres sont fournis via une procédure stockée appelée de manière externe). Pour éviter de tels problèmes potentiels de sécurité, il est conseillé de ne jamais exposer les paramètres XPath à des appelants externes.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous montre l'utilisation de `OPENXML` dans une instruction `INSERT` et une instruction `SELECT` . L'exemple de document XML comprend les éléments `<Customers>` et `<Orders>` .  
   
  D'abord, la procédure stockée `sp_xml_preparedocument` analyse le document XML. Le document analysé est une représentation sous forme d'arborescence des différents nœuds du document XML : éléments, attributs, textes, commentaires, et ainsi de suite. `OPENXML` fait ensuite référence à ce document XML analysé et fournit une vue sous forme d'ensemble de lignes de tout ou partie de ce document XML. Une instruction `INSERT` utilisant `OPENXML` peut ainsi insérer des données dans une table de base de données à partir de ce type d'ensemble de lignes. Vous pouvez utiliser plusieurs appels à `OPENXML` pour fournir une vue d'un ensemble de lignes provenant de différentes parties du document XML puis traiter celles-ci en les insérant par exemple dans différentes tables. Cette opération est également qualifiée de fragmentation de données XML dans des tables.  
@@ -166,11 +166,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Vous pouvez spécifier le mappage de deux façons et vous pouvez également spécifier cela :  
   
--   en utilisant le paramètre *flags*   
+-   en utilisant le paramètre *flags*  
   
      Le mappage spécifié par le paramètre *flags* suppose une correspondance de nom dans laquelle les nœuds XML sont mappés avec les colonnes correspondantes du même nom dans l'ensemble de lignes.  
   
--   en utilisant le paramètre *ColPattern*   
+-   en utilisant le paramètre *ColPattern*  
   
      L'expression XPath*ColPattern*est spécifiée dans le paramètre *SchemaDeclaration* de la clause WITH. Le mappage spécifié dans *ColPattern* remplace celui défini par le paramètre *flags* .  
   
@@ -198,7 +198,7 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Pour plusieurs sous-éléments du même nom, le premier nœud est retourné.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

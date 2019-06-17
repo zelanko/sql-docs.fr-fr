@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727566"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
@@ -121,7 +121,7 @@ ms.locfileid: "65727566"
  Indiquez si le format 2000 de Message Queuing (ou MSMQ) doit être utilisé. La valeur par défaut est **False**.  
   
  **MSMQConnection**  
- Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "65727566"
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -276,7 +276,7 @@ ms.locfileid: "65727566"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -300,7 +300,7 @@ ms.locfileid: "65727566"
  Créez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

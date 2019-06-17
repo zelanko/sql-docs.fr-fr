@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098455"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>Procédure : Exécuter des tests unitaires SQL Server
@@ -56,7 +56,7 @@ Les méthodes disponibles dépendent du logiciel installé – voir [Exécuter d
   
 Cette étape exécute tous les tests d'une série de tests active. Dès que vous démarrez une série de tests, la fenêtre **Résultats des tests** apparaît et affiche la progression de la série de tests. Cet affichage comprend les tests en cours d'exécution et les tests qui ont été finalisés. Pour plus d’informations, voir [Interprétation des résultats des tests unitaires SQL Server](../ssdt/interpreting-sql-server-unit-test-results.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 [Procédure : exécuter des tests automatisés à partir de Microsoft Visual Studio 2010](https://msdn.microsoft.com/library/ms182470(VS.100).aspx)  
 [Exécuter des tests automatisés en ligne de commande (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182486(VS.100).aspx)  

@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 5bbe4c8cf9f6084282f37353aede357d5086ddc6
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937679"
 ---
 # <a name="isvaliddetailed-geography-data-type"></a>IsValidDetailed (type de données geography)
@@ -42,7 +42,7 @@ ms.locfileid: "65937679"
   
  Type de retour CLR : **string**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant contient les valeurs de retour possibles :  
   
 |Valeur retournée|Description|  
@@ -74,7 +74,7 @@ SELECT @p.IsValidDetailed()
 --Returns: 24409: Not valid because some portion of polygon ring (1) lies in the interior of a polygon.  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

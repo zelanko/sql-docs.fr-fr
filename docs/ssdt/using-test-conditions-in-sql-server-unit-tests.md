@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101897"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Utilisation de conditions de test dans les tests unitaires SQL Server
@@ -88,7 +88,7 @@ Après avoir ajouté une condition de test Checksum de données à un test unita
   
 3.  (Facultatif) Vous devrez peut-être modifier la propriété **(Nom)** de la condition de test de façon à ce qu'elle soit plus descriptive.  
   
-4.  Dans la propriété **Configuration**, cliquez sur le bouton Parcourir (**...**).  
+4.  Dans la propriété **Configuration**, cliquez sur le bouton Parcourir ( **...** ).  
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
@@ -118,7 +118,7 @@ Après avoir ajouté une condition de test Schéma attendu à un test unitaire S
   
 3.  (Facultatif) Vous devrez peut-être modifier la propriété **(Nom)** de la condition de test de façon à ce qu'elle soit plus descriptive.  
   
-4.  Dans la propriété **Configuration**, cliquez sur le bouton Parcourir (**...**).  
+4.  Dans la propriété **Configuration**, cliquez sur le bouton Parcourir ( **...** ).  
   
     La boîte de dialogue **Configuration de TestConditionName** s'affiche.  
   
@@ -140,7 +140,7 @@ Après avoir ajouté une condition de test Schéma attendu à un test unitaire S
 ## <a name="extensible-test-conditions"></a>Conditions de test extensibles  
 Outre les six conditions de test prédéfinies, vous pouvez écrire de nouvelles conditions de test. Ces conditions de test seront affichées dans le volet Conditions de test du Concepteur de test unitaire SQL Server. Pour plus d’informations, consultez [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [Scripts des tests unitaires SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)  

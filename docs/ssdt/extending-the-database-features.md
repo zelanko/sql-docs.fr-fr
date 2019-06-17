@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c7a0271ff900ced1331308db67fc23d488a83caa
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096934"
 ---
 # <a name="extending-the-database-features"></a>Extension des fonctionnalités de base de données
@@ -29,6 +29,6 @@ Vous pouvez créer des extensions de fonctionnalités qui vous permettent d'éte
   
 -   [Procédure : Installer et gérer des extensions de fonctionnalités](../ssdt/how-to-install-and-manage-feature-extensions.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Outils de données SQL Server](../ssdt/sql-server-data-tools.md)  
   

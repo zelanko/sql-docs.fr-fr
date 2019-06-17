@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102622"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Audit local pour l’utilisation de SSMS et collecte des données d’utilisation et de diagnostic
@@ -29,7 +29,7 @@ Pour voir les données d’utilisation qui sont recueillies par SSMS, effectuez 
 
 1.  Lancez SSMS.
 2.  Cliquez sur **Affichage** et sur **Sortie** dans le menu principal pour afficher la fenêtre **Sortie**. 
-3.  Une fois la fenêtre **Sortie** affichée à l’écran, choisissez **Télémétrie** dans le menu **Afficher la sortie à partir de :**.
+3.  Une fois la fenêtre **Sortie** affichée à l’écran, choisissez **Télémétrie** dans le menu **Afficher la sortie à partir de :** .
 
 Quand vous utilisez SSMS pour interagir avec vos bases de données, la fenêtre **Sortie** indique les données qui sont recueillies.
 

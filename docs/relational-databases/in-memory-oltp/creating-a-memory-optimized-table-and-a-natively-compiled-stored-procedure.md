@@ -12,10 +12,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f905e088d158803f26110356b1dad3cc29f62ab6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090386"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table optimisée en mémoire et d'une procédure stockée compilée en mode natif
@@ -290,7 +290,7 @@ FROM dbo.SalesOrders so
 ORDER BY so.so_id, sod.lineitem_id  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
   
   

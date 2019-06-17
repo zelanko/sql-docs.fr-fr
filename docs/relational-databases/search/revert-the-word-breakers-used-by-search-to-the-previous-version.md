@@ -12,11 +12,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e2d5c2e408b6899520aa3ec1185808ef6b0c2d8
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716636"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ ms.locfileid: "58305867"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées précédent figurant dans le tableau.  
   
-7.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+7.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>** . *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 8.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -195,7 +195,7 @@ ms.locfileid: "58305867"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées actuel figurant dans le tableau.  
   
-5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+5.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>** . *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 6.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   
@@ -287,7 +287,7 @@ ms.locfileid: "58305867"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées précédent figurant dans le tableau.  
   
-4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>** . *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 5.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical actuel.  
   
@@ -311,7 +311,7 @@ ms.locfileid: "58305867"
   
     4.  Si la langue sélectionnée utilise un générateur de formes dérivées, remplacez les données (par défaut) de cette valeur de clé par le nom de fichier du générateur de formes dérivées actuel figurant dans le tableau.  
   
-4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>**. *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
+4.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<racine_instance>\MSSearch\Language\<clé_langue>** . *<clé_langue>* représente l’abréviation de la langue utilisée dans le Registre, par exemple « fra » pour le français et « esn » pour l’espagnol.  
   
 5.  Remplacez la valeur de la clé **WBreakerClass** par la valeur figurant dans le tableau pour l'analyseur lexical précédent.  
   
@@ -378,7 +378,7 @@ ms.locfileid: "58305867"
 |CLSID actuel|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |Nom de fichier actuel|MsWb70804.dll|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais du Royaume-Uni](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [Changements de comportement de la recherche en texte intégral](/sql/database-engine/behavior-changes-to-full-text-search)
  

@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cbe7f38f6132e79f1938936c0914bae236ea5a03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543618"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639246"
 ---
 # <a name="create-synonyms"></a>Créer des synonymes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52543618"
 ###  <a name="Security"></a> Sécurité  
  Pour créer un synonyme dans un schéma donné, un utilisateur doit disposer de l'autorisation CREATE SYNONYM, et il doit posséder le schéma ou bénéficier de l'autorisation ALTER SCHEMA. L'autorisation CREATE SYNONYM est octroyable.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52543618"
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données dans laquelle vous souhaitez créer votre nouvelle vue.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Synonymes**, puis cliquez sur **Nouveau synonyme...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Synonymes**, puis cliquez sur **Nouveau synonyme...** .  
   
 3.  Dans la boîte de dialogue **Ajouter un synonyme** , entrez les informations suivantes.  
   

@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 401d146241bae341db981f207f877c18919eaaa2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728192"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>Gestionnaire de connexions de fichiers plats multiples
@@ -280,7 +280,7 @@ ms.locfileid: "65728192"
  **Aperçu des lignes**  
  Permet d'afficher les données d'exemple dans le premier fichier plat sélectionné, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source du fichier plat](../../integration-services/data-flow/flat-file-source.md)   
  [Destination de fichier plat](../../integration-services/data-flow/flat-file-destination.md)   
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: ea7e2309518a414f662581ac1f5db95976ecaf8b
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937517"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (type de données geometry)
@@ -39,7 +39,7 @@ Retourne le niveau de compatibilité minimal de la base de données pour reconna
   
  Type de retour CLR : **int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez `MinDbCompatibilityLevel()` pour tester la compatibilité d'un objet spatial avant de modifier le niveau de compatibilité sur une base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -66,7 +66,7 @@ Retourne le niveau de compatibilité minimal de la base de données pour reconna
  END
 ``` 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

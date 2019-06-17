@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714428"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (base de données SSISDB)
@@ -42,7 +42,7 @@ ms.locfileid: "65714428"
 |validation_status|**char(1)**|État de validation.|  
 |last_validation_time|**datetimeoffset(7)**|Heure de la dernière validation.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque projet dans le catalogue.  
   
 ## <a name="permissions"></a>Autorisations  

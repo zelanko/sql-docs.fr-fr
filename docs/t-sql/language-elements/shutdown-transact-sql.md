@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9aa0b901424df92a5e223855f066a65c2fcb2234
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981712"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
@@ -47,7 +47,7 @@ SHUTDOWN [ WITH NOWAIT ]
  WITH NOWAIT  
  Facultatif. Arrête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans générer de points de contrôle dans chaque base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'arrête après avoir essayé de mettre un terme à tous les processus utilisateurs. Lorsque le serveur redémarre, il annule et restaure à l'état initial toutes les transactions incomplètes.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  À moins que l’option WITHNOWAIT ne soit utilisée, SHUTDOWN arrête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en procédant ainsi :  
   
 1.  Désactive les connexions (sauf pour les membres des rôles serveur fixes **sysadmin** et **serveradmin**).  
@@ -65,7 +65,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;  
   
--   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$**_nom_instance_ à partir d’une invite de commandes pour une instance nommée.  
+-   En exécutant **net stop mssqlserver** à partir d’une invite de commandes pour une instance par défaut, ou en exécutant **net stop mssql$** _nom_instance_ à partir d’une invite de commandes pour une instance nommée.  
   
 -   à l'aide des Services du Panneau de configuration ;  
   
@@ -77,7 +77,7 @@ SHUTDOWN [ WITH NOWAIT ]
 ## <a name="permissions"></a>Autorisations  
  Les autorisations SHUTDOWN sont attribuées aux membres des rôles serveur fixes **sysadmin** et **serveradmin**, et ne peuvent pas être transférées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

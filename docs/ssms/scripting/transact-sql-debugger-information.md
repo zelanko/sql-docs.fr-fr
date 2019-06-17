@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821831"
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
@@ -97,7 +97,7 @@ ms.locfileid: "65821831"
   
  En mode débogage, les onglets **Résultats** et **Messages** sont toujours actifs dans l’éditeur de requête. L’onglet **Résultats** continue à afficher les jeux de résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées au cours d’une session de débogage. L’onglet **Messages** continue à afficher des messages système, tels que *xx* lignes affectées et la sortie des instructions PRINT et RAISERROR.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Variables locales (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Boîte de dialogue Espion express](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

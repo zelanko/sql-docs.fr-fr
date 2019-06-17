@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac2c26b100f536faf5616e9e6ae590cdf35b202c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729362"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Ajout de la tâche de flux de données par programmation
@@ -84,7 +84,7 @@ End Module
 ## <a name="external-resources"></a>Ressources externes  
  Entrée de blog, [EzAPI - Updated for SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), sur blogs.msdn.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Découverte des composants de flux de données par programmation](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787985"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Réplication, suivi des modifications et capture de données modifiées - groupes de disponibilité Always On
@@ -248,7 +248,7 @@ Si la capture des données modifiées doit être désactivé sur une base de don
   
 -   [Utiliser le suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Abonnés de réplication et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

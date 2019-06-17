@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 327333366b2636bd74d78fb8c2713f5b4c8707f7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724256"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Envoi d'un message électronique HTML à l'aide de la tâche de script
@@ -155,7 +155,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tache Envoyer un message](../../integration-services/control-flow/send-mail-task.md)  
   
   

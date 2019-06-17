@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57daa7a691899cdb9a83c48fe3d242266765b741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63000854"
 ---
 # <a name="set-xactabort-transact-sql"></a>SET XACT_ABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SET XACT_ABORT { ON | OFF }
 ```  
 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque SET XACT_ABORT est défini sur ON et qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] génère une erreur d'exécution, la transaction est interrompue et annulée dans son intégralité.  
   
  Si SET XACT_ABORT est défini sur OFF, dans certains cas seulement, l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui a généré l'erreur est annulée et le traitement de la transaction se poursuit. Selon la gravité de l'erreur, la transaction peut être quand même annulée dans son intégralité lorsque SET XACT_ABORT est défini sur OFF. OFF est le paramètre par défaut.  
@@ -123,7 +123,7 @@ SELECT *
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

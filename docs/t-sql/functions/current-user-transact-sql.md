@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5d3ec1ee3518c4d9f0b66100fff421a5827b353
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947900"
 ---
 # <a name="currentuser-transact-sql"></a>CURRENT_USER (Transact-SQL)
@@ -46,7 +46,7 @@ CURRENT_USER
 ## <a name="return-types"></a>Types de retour
 **sysname**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `CURRENT_USER` retourne le nom du contexte de sécurité actuel. Si `CURRENT_USER` s’exécute après qu’un appel à `EXECUTE AS` change de contexte, `CURRENT_USER` retourne le nom du contexte qui a fait l’objet d’un emprunt d’identité. Si un principal Windows a accédé à la base de données du fait de son appartenance à un groupe, `CURRENT_USER` retourne le nom du principal Windows à la place du nom du groupe.
   
 Pour savoir comment retourner le compte de connexion de l’utilisateur actif, consultez [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) et [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).

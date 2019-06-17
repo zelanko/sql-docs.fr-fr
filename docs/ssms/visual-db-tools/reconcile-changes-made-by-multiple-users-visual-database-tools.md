@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fa50a1a057828c1c215dcebd812b8bbc6e790f37
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098198"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
@@ -60,6 +60,6 @@ Par exemple, supposons qu'une collègue et vous-même exécutiez chacun une requ
   
     Dans ce cas, vous ne pouvez pas valider vos modifications apportées à la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Boîte de dialogue Modifications détectées dans la base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   

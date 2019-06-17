@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20c748e6dea95ae06c2f0c8364b8720ca0d7a36a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62640113"
 ---
 # <a name="advanced-merge-replication-conflict---interactive-resolution"></a>Conflit de réplication de fusion avancée - Résolution interactive
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "54132749"
   
  Pour utiliser le programme de résolution interactif, consultez [Spécifier les options de la réplication de fusion](../../../relational-databases/replication/merge/specify-merge-replication-properties.md) et [Synchroniser un abonnement à l’aide du gestionnaires de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](../../../relational-databases/replication/synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

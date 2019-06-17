@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 47540d82abb349691f63fb9209010b42cefe4e2a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935972"
 ---
 # <a name="collectionaggregate-geometry-data-type"></a>CollectionAggregate (type de données geometry)
@@ -44,7 +44,7 @@ CollectionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Exceptions  
  Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La méthode retourne **null** quand l’entrée est vide ou que ses SRID sont différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  La méthode ignore les entrées **null**.  
@@ -69,7 +69,7 @@ CollectionAggregate ( geometry_operand )
  FROM @Geom;
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   

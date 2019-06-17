@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2e2e04d210900a60d6d6cff432e19a61d6c88fe
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099437"
 ---
 # <a name="alert-properties---new-alert-options-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Options)
@@ -51,6 +51,6 @@ Spécifiez un délai en minutes. Pour répondre chaque fois qu'un événement se
 **Secondes**  
 Spécifiez un délai en secondes. Pour répondre chaque fois qu'un événement se produit, spécifiez 0 minutes et 0 secondes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  
   

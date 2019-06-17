@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d3a2cddd6e77d388076fba0129cfb332297f0fbb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095824"
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propriétés du travail - Nouveau travail (page Cibles)
@@ -36,6 +36,6 @@ Permet d'exécuter le travail sur le serveur local. Si aucun serveur cible n'est
 **Plusieurs serveurs cibles**  
 Permet d'exécuter le travail sur un ou plusieurs serveurs cibles. Une fois cette option sélectionnée, choisissez les serveurs sur lesquels exécuter le travail. Les serveurs cibles disponibles sont répertoriés. Cliquez sur un serveur cible pour le sélectionner.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   

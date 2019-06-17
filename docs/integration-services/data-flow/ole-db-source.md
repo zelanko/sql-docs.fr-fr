@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f666a224c2e41fb50a1a62748e7d8f1666d0beb9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726643"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
@@ -230,7 +230,7 @@ ms.locfileid: "65726643"
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 14c699b186eb99cd3e4f890f87470c907248f428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63453565"
 ---
 # <a name="define-filters"></a>Définir les filtres
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "47833727"
  **Désactiver**  
  Cliquez sur ce bouton pour effacer tous les filtres précédemment définis.  
   
-## <a name="see-also"></a> Voir aussi  
- [Outil de résolution des conflits de réplication de Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
- [Outil de résolution des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Visionneuse des conflits de réplication de Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)   
+ [Visionneuse des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
   
   

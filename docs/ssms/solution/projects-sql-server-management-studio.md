@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 17b95a12462178a887431defa8c465fd4dca1edd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102883"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
@@ -57,7 +57,7 @@ Pour modifier les informations sur une connexion, utilisez la fenêtre Propriét
 |Explique comment modifier les informations de connexion d'une requête.|[Modifier la connexion associée à une requête](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Explique comment modifier les propriétés de connexion.|[Afficher ou modifier les propriétés d'une connexion dans un projet](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/library/ms173879.aspx)  

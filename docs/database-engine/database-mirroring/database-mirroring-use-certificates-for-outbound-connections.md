@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: bc4bb6bbea3f8f6577e79d819317a0a89b5cbdc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795494"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>Mise en miroir de bases de données - Utiliser des certificats pour les connexions sortrantes
@@ -131,7 +131,7 @@ ms.locfileid: "66795494"
   
  Vous devez maintenant effectuer les étapes équivalentes pour configurer des connexions sortantes sur HOST_B. Ces étapes sont illustrées dans la section « Exemple » ci-après.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple ci-dessous illustre la configuration de HOST_B pour la prise en charge des connexions sortantes.  
   
 ```  
@@ -177,7 +177,7 @@ GO
   
  Lors de la copie d'un certificat sur un autre système, utilisez une méthode de copie sécurisée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Préparer une base de données miroir pour la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

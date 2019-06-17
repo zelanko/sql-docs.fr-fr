@@ -18,11 +18,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c2a515ac4cd5b6fc6cd2dce72b6b51cc648f3e8
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446298"
 ---
 # <a name="sql-server-event-class-reference"></a>Référence de classe d'événements SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "58657783"
 |La [Catégorie d’événements TSQL](../../relational-databases/event-classes/tsql-event-category.md) comprend des classes d’événements produites par l’exécution d’instructions Transact-SQL passées à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le client.|[Classe d'événements Exec Prepared SQL](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)<br /><br /> [Classe d'événements Prepare SQL](../../relational-databases/event-classes/prepare-sql-event-class.md)<br /><br /> [Classe d'événements SQL:BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)<br /><br /> [Classe d'événements SQL:BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md)<br /><br /> [Classe d'événements SQL:StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)<br /><br /> [Classe d'événements SQL:StmtRecompile](../../relational-databases/event-classes/sql-stmtrecompile-event-class.md)<br /><br /> [Classe d'événements SQL:StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md)<br /><br /> [Classe d'événements Unprepare SQL](../../relational-databases/event-classes/unprepare-sql-event-class.md)<br /><br /> [XQuery Static Type, classe d’événements](../../relational-databases/event-classes/xquery-static-type-event-class.md)|  
 |La [Catégorie d’événement Configurables par l’utilisateur](../../relational-databases/event-classes/user-configurable-event-category.md) comprend des classes d’événements que vous pouvez définir.|[Classe d'événements configurables par l'utilisateur](../../relational-databases/event-classes/user-configurable-event-class.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

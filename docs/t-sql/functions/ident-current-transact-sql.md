@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: faee4465ed79d064085efc8962de054989ef3b84
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946423"
 ---
 # <a name="identcurrent-transact-sql"></a>IDENT_CURRENT (Transact-SQL)
@@ -54,7 +54,7 @@ IDENT_CURRENT( 'table_name' )
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que IDENT_CURRENT, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  IDENT_CURRENT est similaire aux fonctions d’identité SCOPE_IDENTITY et @@IDENTITY de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Ces trois fonctions renvoient les dernières valeurs d'identité générées. Toutefois, l’étendue et la session dans lesquelles le paramètre *last* est défini diffèrent pour chacune de ces fonctions :  
   
 -   IDENT_CURRENT renvoie la dernière valeur d'identité générée pour une table spécifique dans n'importe quelles session et étendue.  
@@ -138,7 +138,7 @@ SELECT IDENT_CURRENT('t7');
 /* Returns the last value inserted into t7.*/  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   
  [IDENT_INCR &#40;Transact-SQL&#41;](../../t-sql/functions/ident-incr-transact-sql.md)   

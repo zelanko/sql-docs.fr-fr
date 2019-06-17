@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bdd5a0a3b65c941631f2cbeaa83175c1b48f482c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037271"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (Fonction) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ IDENTITY (data_type [ , seed , increment ] ) AS column_name
 ## <a name="return-types"></a>Types de retour  
  Retourne le même type que *data_type*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Étant donné que cette fonction crée une colonne dans une table, vous devez spécifier pour la colonne un nom figurant dans la liste de sélection de l'une des manières suivantes :  
   
 ```  
@@ -102,7 +102,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)   
  [IDENTITY, propriété &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   

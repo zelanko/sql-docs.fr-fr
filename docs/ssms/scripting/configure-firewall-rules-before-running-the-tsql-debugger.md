@@ -24,10 +24,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de04cb10f9ffa52ef2c3eefda894e8928e613070
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820917"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
@@ -165,7 +165,7 @@ Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-m
 
 * Le serveur doit communiquer avec le client par le biais de RPC. Le compte sous lequel le service SQL Server est exécuté doit avoir des autorisations d’authentification pour le client
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
 - [Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)

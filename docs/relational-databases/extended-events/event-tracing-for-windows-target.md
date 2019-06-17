@@ -17,10 +17,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 660244f23151be405bdcf47914c85730e6c5b823
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66198313"
 ---
 # <a name="event-tracing-for-windows-target"></a>suivi d'événements pour cible Windows
@@ -95,7 +95,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Pour plus d’informations et pour obtenir un exemple complet qui montre comment utiliser la cible ETW (et notamment comment afficher les données), consultez [Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Cibles des Événements étendus SQL Server](targets-for-extended-events-in-sql-server.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   

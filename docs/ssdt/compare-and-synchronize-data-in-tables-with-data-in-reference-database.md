@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105811"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence
@@ -67,7 +67,7 @@ Le tableau suivant décrit les cinq colonnes de la fenêtre de **Comparaison de 
 ### <a name="table-and-view-details"></a>Détails des tables et vues  
 Lorsque vous cliquez sur une table ou une vue dans la fenêtre de **Comparaison de données**, le volet d'informations affiche toutes les lignes que la table ou la vue contient. Chaque onglet dans le volet d'informations affiche une autre catégorie (Enregistrements différents, Uniquement dans la source, Uniquement dans la cible, Enregistrements en double). Pour chaque ligne, vous pouvez activer ou désactiver la case à cocher correspondante pour indiquer si vous voulez inclure cette modification du script de mise à jour.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Outils de données SQL Server](../ssdt/sql-server-data-tools.md)  
 [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

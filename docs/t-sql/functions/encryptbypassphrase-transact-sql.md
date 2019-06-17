@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 310c734a8b2bd72c0d2217540ce9fb303a87df77
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948864"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
@@ -72,7 +72,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Types de retour  
  **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une expression relative au mot de passe est un mot de passe qui comporte des espaces. L'avantage d'utiliser une expression relative au mot de passe est qu'il est plus facile de mémoriser une phrase qui a un sens plutôt qu'une longue chaîne de caractères.  
   
  Cette fonction ne vérifie pas la complexité des mots de passe.  
@@ -101,7 +101,7 @@ WHERE CreditCardID = '3681';
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

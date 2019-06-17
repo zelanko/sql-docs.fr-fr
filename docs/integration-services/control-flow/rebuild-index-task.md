@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0dca79322d67e357f4629357367f0ecfb50b03
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805228"
 ---
 # <a name="rebuild-index-task"></a>tâche Reconstruire l'index
@@ -67,7 +67,7 @@ ms.locfileid: "65805228"
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

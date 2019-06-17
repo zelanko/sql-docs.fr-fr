@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c84a35ea40187cc2b40ab9e60d75bb0c9b62620
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725822"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Fractionner un dataset à l'aide de la transformation de fractionnement conditionnel
@@ -64,7 +64,7 @@ ms.locfileid: "65725822"
   
 12. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Chemins Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   

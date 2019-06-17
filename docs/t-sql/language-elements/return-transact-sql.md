@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8620c5d309342b6337027581e5bda6b70459a48f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980357"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
@@ -56,7 +56,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Sauf spécification contraire, toutes les procédures stockées système retournent la valeur 0. Celle-ci indique la réussite d'une procédure ; une valeur différente de zéro indique un échec.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisée avec une procédure stockée, l'instruction RETURN ne peut pas retourner de valeur Null. Si une procédure tente de retourner une valeur Null (par exemple à l'aide de RETURN @status alors que @status est NULL), un avertissement est généré et une valeur de 0 est retournée.  
   
  Il est possible d'inclure la valeur de l'état retourné dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes du lot ou de la procédure ayant exécuté la procédure en cours, mais il convient dans ce cas de respecter la forme suivante : `EXECUTE @return_status = <procedure_name>`.  
@@ -153,7 +153,7 @@ GO
  2
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   

@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e5a491e7c1c152f88b496f4833e43634fc11dde0
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820883"
 ---
 # <a name="drag-and-drop-text"></a>Glisser et déplacer du texte
@@ -46,7 +46,7 @@ ms.locfileid: "65820883"
   
  Le glisser-déplacer déplace le texte, c'est-à-dire que le texte est supprimé de son emplacement d'origine et qu'il est placé à son nouvel emplacement. L'utilisation de la touche CTRL combinée à un glisser-déplacer permet de copier un texte à un nouvel emplacement. Le glisser-déplacer d'un objet à partir de l'Explorateur d'objets constitue une exception à la règle et ne supprime pas le nom de l'objet de l'Explorateur d'objets.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Naviguer dans le code et le texte](../../relational-databases/scripting/navigate-code-and-text.md)  
   
   

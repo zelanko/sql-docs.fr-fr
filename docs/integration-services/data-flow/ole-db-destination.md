@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc2b3a1f77c7d0f2f00c1a08f27c27887cc4b73f
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65802343"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
@@ -96,7 +96,7 @@ ms.locfileid: "65802343"
   
 |Option de chargement rapide|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|Indique la taille à insérer en kilo-octets. L’option a la forme **KILOBYTES_PER_BATCH** = \<valeur entière positive**>**.|  
+|KILOBYTES_PER_BATCH|Indique la taille à insérer en kilo-octets. L’option a la forme **KILOBYTES_PER_BATCH** = \<valeur entière positive **>** .|  
 |FIRE_TRIGGERS|Spécifie si des déclencheurs sont activés sur la table d'insertion. L’option a la forme **FIRE_TRIGGERS**. La présence de l'option indique que des déclencheurs sont activés.|  
 |ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : Les performances peuvent être améliorées si vous utilisez l'option ORDER pour trier des données d'entrée selon l'index cluster de la table.|  
   

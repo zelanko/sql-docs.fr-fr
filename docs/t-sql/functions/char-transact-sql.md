@@ -29,10 +29,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f84a13be4304b6e855c0b85da62532fb61932c8c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947935"
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
@@ -58,7 +58,7 @@ Entier compris entre 0 et 255. `CHAR` renvoie une valeur `NULL` pour les express
 ## <a name="return-types"></a>Types de retour
 **char(1)**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez `CHAR` pour insérer des caractères de contrôle dans des chaînes de caractères. Ce tableau répertorie quelques-uns des caractères de contrôle les plus utilisés.
   
 |Caractère de contrôle|Valeur|  

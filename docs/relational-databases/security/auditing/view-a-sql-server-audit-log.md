@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4c94df2f2857f0657e315d3944eeaf783eef3a20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716056"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Afficher un journal d'audit SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52508290"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l’autorisation **CONTROL SERVER** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -51,13 +51,13 @@ ms.locfileid: "52508290"
   
 2.  Développez le dossier **Audits** .  
   
-3.  Cliquez avec le bouton droit sur le journal d’audit que vous souhaitez afficher et sélectionnez **Afficher les journaux d’audit**. La boîte de dialogue **Visionneuse du fichier journal -**_nom\_serveur_ s’ouvre alors. Pour plus d'informations, consultez [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
+3.  Cliquez avec le bouton droit sur le journal d’audit que vous souhaitez afficher et sélectionnez **Afficher les journaux d’audit**. La boîte de dialogue **Visionneuse du fichier journal -** _nom\_serveur_ s’ouvre alors. Pour plus d'informations, consultez [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 4.  Lorsque vous avez terminé, cliquez sur **Fermer**.  
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommande d'afficher le journal d'audit à l'aide de la visionneuse du fichier journal. Toutefois, si vous créez un système de surveillance automatisé, les informations contenues dans le fichier d’audit peuvent être lues directement à l’aide de la fonction [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md). Si le fichier est lu directement, les données sont retournées dans un format légèrement différent (non traité). Pour plus d’informations, consultez **sys.fn_get_audit_file** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Audit &#40moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Écrire des événements d'audit SQL Server dans le journal de sécurité](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)  
   

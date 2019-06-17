@@ -16,18 +16,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: beda08746db1d0632c237afe1312f84d934b8924
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008467"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-general-page"></a>Créer une stratégie ou Ouvrir une stratégie, boîte de dialogue (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilisez cette boîte de dialogue pour créer une stratégie de la Gestion basée sur des stratégies ou pour modifier une stratégie existante. Utilisez les zones **Par rapport aux cibles** et **Restriction sur le serveur** comme filtre pour limiter les stratégies à un sous-ensemble de toutes les cibles possibles. Pour être utilisées comme filtres cibles, des conditions doivent être définies sur une facette physique, ne doivent pas contenir de fonctions et ne doivent pas contenir l'opérateur LIKE. Lorsque le système calcule le jeu d'objets pour une stratégie, les objets système sont exclus par défaut.  Par exemple, si le jeu d'objets de la stratégie fait référence à toutes les tables, la stratégie ne s'applique pas aux tables système. Si les utilisateurs souhaitent évaluer une stratégie sur les objets système, ils peuvent les ajouter explicitement au jeu d'objets. Toutefois, bien que toutes les stratégies soient prises en charge pour le mode d'évaluation **vérifier la planification** , pour des raisons de performances, toutes les stratégies comportant des jeux d'objets arbitraires ne sont pas prises en charge pour le mode d'évaluation **vérifier la planification** . Pour plus d’informations, consultez [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Pour une nouvelle stratégie, tapez le nom de la nouvelle stratégie. Pour une stratégie existante, le nom est affiché.  
   
  **Activé**  
@@ -71,7 +71,7 @@ ms.locfileid: "52502670"
  **Restriction sur le serveur**  
  Sélectionnez les types de serveurs appropriés pour cette stratégie. Vous pouvez choisir **Aucun** ou sélectionner une condition qui filtre les serveurs possibles.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

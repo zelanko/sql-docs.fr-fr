@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715896"
 ---
 # <a name="create-a-database-schema"></a>Créer un schéma de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53626266"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Nécessite l'autorisation CREATE SCHEMA sur la base de données.  
   

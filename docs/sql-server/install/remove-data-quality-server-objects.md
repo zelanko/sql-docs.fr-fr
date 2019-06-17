@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e286f90ddbe008346f70654ca4d9daa24dccb739
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685194"
 ---
 # <a name="remove-data-quality-server-objects"></a>Supprimer les objets serveur DQS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53215525"
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Désinstaller une instance de SQL Server contenant le serveur Data Quality Services  
  Si vous désinstallez complètement l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui contient le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], vous devez supprimer manuellement les bases de données DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA de votre ordinateur une fois le processus de désinstallation terminé. Pour une installation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les fichiers de bases de données DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA sont disponibles dans C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Désinstaller SQL Server 2016](../../sql-server/install/uninstall-sql-server.md)  
   

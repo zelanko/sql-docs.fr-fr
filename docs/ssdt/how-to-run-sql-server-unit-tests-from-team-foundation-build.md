@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099650"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procédure : exécuter des tests unitaires SQL Server en utilisant Team Foundation Build
@@ -115,7 +115,7 @@ Par défaut, Team Foundation Build crée un fichier de configuration à partir d
   
 3.  Cliquez avec le bouton droit sur le fichier nommé **Copie de app.config**, puis cliquez sur Renommer.  
   
-4.  Tapez _BuildComputer_**.sqlunitttest.config**, puis appuyez sur Entrée, où *BuildComputer* est le nom de l’ordinateur sur lequel l’agent de build s’exécute.  
+4.  Tapez _BuildComputer_ **.sqlunitttest.config**, puis appuyez sur Entrée, où *BuildComputer* est le nom de l’ordinateur sur lequel l’agent de build s’exécute.  
   
 5.  Double-cliquez sur *BuildComputer*.sqlunitttest.config.  
   
@@ -246,7 +246,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 3.  Dans la barre de navigation, cliquez sur **Valeurs par défaut des builds**.  
   
-4.  Dans **Copier la sortie de la génération vers le dossier de dépôt suivant (chemin UNC, tel que \\\server\share)**, spécifiez un dossier qui contiendra la sortie de la génération.  
+4.  Dans **Copier la sortie de la génération vers le dossier de dépôt suivant (chemin UNC, tel que \\\server\share)** , spécifiez un dossier qui contiendra la sortie de la génération.  
   
     Spécifiez un dossier partagé sur votre ordinateur local ou n'importe quel emplacement réseau sur lequel le processus de génération aura des autorisations.  
   
@@ -274,7 +274,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
 1.  Dans Team Explorer, développez le nœud du projet d'équipe, développez le nœud Builds, cliquez avec le bouton droit sur la définition de build à exécuter, puis cliquez sur Mettre en file d'attente une nouvelle build.  
   
-    La boîte de dialogue **Mettre en file d’attente la build {**_TeamProjectName_**}** s’affiche avec la liste de tous les types de build existants.  
+    La boîte de dialogue **Mettre en file d’attente la build {** _TeamProjectName_ **}** s’affiche avec la liste de tous les types de build existants.  
   
 2.  Si nécessaire, dans **Définition de build**, cliquez sur la nouvelle définition de build.  
   
@@ -282,7 +282,7 @@ Dans cette procédure, vous archivez tous les fichiers de la solution. Ces fichi
   
     L'onglet **En attente** de l'**Explorateur de builds** s'affiche. Pour plus d'informations, consultez [Gérer et afficher des builds terminées (Visual Studio 2010)](https://msdn.microsoft.com/library/ms181730(VS.100).aspx) ou [Gérer vos builds dans l'Explorateur de builds (Visual Studio 2012)](https://msdn.microsoft.com/library/ms181732.aspx).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 [Créer une définition de build de base](https://msdn.microsoft.com/library/ms181716(VS.100).aspx)  
 [Mettre une build en file d'attente](https://msdn.microsoft.com/library/ms181722(VS.100).aspx)  

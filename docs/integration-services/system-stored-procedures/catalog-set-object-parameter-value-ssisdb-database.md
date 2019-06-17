@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 592af27fb460f748dcf11b1463583a5d221402d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715821"
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (base de données SSISDB)
@@ -44,22 +44,22 @@ catalog.set_object_parameter_value [@object_type =] object_type
  Type de paramètre. Utilisez la valeur `20` pour indiquer un paramètre du projet ou la valeur `30` pour indiquer un paramètre du package. *object_type* est de type **smallInt**.  
   
  [@folder_name =] *folder_name*  
- Nom du dossier qui contient le paramètre. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le paramètre. *folder_name* est de type **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Nom du projet qui contient le paramètre. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet qui contient le paramètre. *project_name* est de type **nvarchar(128)** .  
   
  [@parameter_name =] *parameter_name*  
- Nom du paramètre. *parameter_name* est de type **nvarchar(128)**.  
+ Nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
   
  [@parameter_value =] *parameter_value*  
  Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
   
  [@object_name =] *object_name*  
- Nom du package. Cet argument est obligatoire lorsque le paramètre est un paramètre du package. *object_name* est de type **nvarchar(260)**.  
+ Nom du package. Cet argument est obligatoire lorsque le paramètre est un paramètre du package. *object_name* est de type **nvarchar(260)** .  
   
  [@value_type =] *value_type*  
- Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui est utilisée par défaut quand aucune autre valeur n’est affectée avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et qu’elle a été définie sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. *value_type* est de type **char(1)**.  
+ Type de valeur du paramètre. Utilisez le caractère `V` pour indiquer que *parameter_value* est une valeur littérale qui est utilisée par défaut quand aucune autre valeur n’est affectée avant l’exécution. Utilisez le caractère `R` pour indiquer que *parameter_value* est une valeur référencée et qu’elle a été définie sur le nom d’une variable d’environnement. Cet argument est facultatif, le caractère `V` est utilisé par défaut. *value_type* est de type **char(1)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -89,7 +89,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 -   Si aucun *value_type* n’est spécifié, une valeur littérale pour *parameter_value* est utilisée par défaut. Quand une valeur littérale est utilisée, le *value_set* dans la vue [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) est défini sur `1`. Une valeur de paramètre NULL n'est pas autorisée.  
   

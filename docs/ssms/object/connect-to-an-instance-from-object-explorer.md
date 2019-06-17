@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fa363c2715057a0f81a691911a7e06b5104c5501
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088757"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Se connecter à SQL Server ou Azure SQL Database
@@ -27,7 +27,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
   
 ## <a name="connecting-to-a-server"></a>Connexion à un serveur  
 
-1. Dans l’**Explorateur d’objets**, cliquez sur **Connexion > Moteur de base de données...**.
+1. Dans l’**Explorateur d’objets**, cliquez sur **Connexion > Moteur de base de données...** .
 
    ![connect](../media/connect-to-server/connect-db-engine.png)
 
@@ -53,7 +53,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 
 [Concevoir, créer et mettre à jour des tables](../visual-db-tools/design-tables-visual-database-tools.md)
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Télécharger SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)

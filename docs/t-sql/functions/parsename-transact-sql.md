@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9867f73e382dbf59290844b0a7597eece7d4399a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944299"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
@@ -64,7 +64,7 @@ PARSENAME ( 'object_name' , object_piece )
 ## <a name="return-types"></a>Types de retour  
  **sysname**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction PARSENAME retourne NULL si l'une des conditions suivantes est vraie :  
   
 -   *object_name* ou *object_piece* a la valeur NULL.  
@@ -113,7 +113,7 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

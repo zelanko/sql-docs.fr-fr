@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1b9fcd20a9915e6f0b0a3c5164b035a2fb5acf54
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105730"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Volet Schéma (Visual Database Tools)
@@ -97,7 +97,7 @@ Les icônes présentes aux extrémités de la ligne de jointure indiquent le typ
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbin.gif "Icône Visual Database Tools")|Jointure Un-à-plusieurs|  
 |![Icône Visual Database Tools](../../ssms/visual-db-tools/media/dv3wbio.gif "Icône Visual Database Tools")|Le Concepteur de requêtes et de vues ne peut pas déterminer le type de jointure|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

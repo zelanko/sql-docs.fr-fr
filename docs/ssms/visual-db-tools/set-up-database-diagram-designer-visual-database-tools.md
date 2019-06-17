@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e8236a18c715451ecb32c5fdcb890d5bf00901c2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099897"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>Configurer le Concepteur de diagrammes de base de données (Visual Database Tools)
@@ -59,8 +59,8 @@ Pour pouvoir utiliser le Concepteur de diagrammes de base de données, il doit d
   
     9. Procédure stockée sp_upgraddiagrams  
   
-## <a name="see-also"></a> Voir aussi  
-[Comprendre la propriété du diagramme de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-[Mettre à niveau des diagrammes de base de données d’éditions antérieures &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Comprendre la propriété du diagramme de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[Mettre à niveau des diagrammes de base de données d’éditions antérieures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
 [ALTER AUTHORIZATION (Transact-SQL)](https://msdn.microsoft.com/8c805ae2-91ed-4133-96f6-9835c908f373)  
   

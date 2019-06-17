@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726803"
 ---
 # <a name="flat-file-source"></a>Source de fichier plat
@@ -135,7 +135,7 @@ ms.locfileid: "65726803"
  **Appliquer**  
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Destination de fichier plat](../../integration-services/data-flow/flat-file-destination.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   

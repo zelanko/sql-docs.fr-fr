@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: jroth
 ms.openlocfilehash: 2f8fb49b90a0da28a4961806c7ace46bcb10f5db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789452"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>Évaluer l’intégrité du groupe de disponibilité Always On à l’aide de stratégies de groupe

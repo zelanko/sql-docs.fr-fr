@@ -26,10 +26,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982535"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
@@ -138,7 +138,7 @@ Spécifie que les mises à jour ou les suppressions positionnées effectuées vi
 FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Définit les colonnes qui peuvent être mises à jour par le curseur. Si `OF <column_name> [, <... n>]` est fourni, seules les colonnes listées permettent les modifications. Si vous spécifiez `UPDATE`sans liste de colonnes, toutes les colonnes peuvent être mises à jour, sauf si l’option de concurrence `READ_ONLY` a été spécifiée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DECLARE CURSOR` définit les attributs d’un curseur de serveur [!INCLUDE[tsql](../../includes/tsql-md.md)], notamment son comportement quant au défilement et la requête utilisée pour créer le jeu de résultats sur lequel le curseur opère. L’instruction `OPEN` remplit le jeu de résultats, et l’instruction `FETCH` retourne une ligne du jeu de résultats. L’instruction `CLOSE` libère le jeu de résultats actuel associé au curseur. L’instruction `DEALLOCATE` libère les ressources utilisées par le curseur.  
   
 Le premier format de l’instruction `DECLARE CURSOR` utilise la syntaxe ISO pour déclarer les comportements du curseur. Le second format de `DECLARE CURSOR` utilise les extensions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui permettent de définir les curseurs en utilisant les mêmes types de curseur que ceux des fonctions de curseur API de base de données ODBC ou ADO.  
@@ -249,7 +249,7 @@ CLOSE vendor_cursor;
 DEALLOCATE vendor_cursor;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)   
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Curseurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   

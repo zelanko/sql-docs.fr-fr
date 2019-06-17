@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1905daf01b919e3e661b4c93302418c418cf7b69
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668362"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -244,7 +244,7 @@ Go
   
  Notez qu'une déclaration explicite dans le prologue XQuery remplace le préfixe d'espace de noms et l'espace de noms d'élément par défaut qui sont définis dans la clause WITH.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   

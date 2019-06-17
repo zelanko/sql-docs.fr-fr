@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b913dc4de858bb8d8bd70cccbd6ed9b7c4143174
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946085"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
@@ -52,7 +52,7 @@ Cette fonction retourne l’état de la dernière instruction FETCH effectuée s
 |-2|La ligne recherchée est manquante.|
 |-9|Le curseur n’effectue pas d’opération de récupération (fetch).|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La fonction `@@FETCH_STATUS` étant commune à tous les curseurs de la connexion, utilisez-la avec précaution. Après l’exécution d’une instruction FETCH, le test `@@FETCH_STATUS` doit avoir lieu avant qu’une autre instruction FETCH ne soit effectuée sur un autre curseur. `@@FETCH_STATUS` n’est pas défini tant qu’aucune récupération ne s’est produite sur la connexion.  
   
 Supposons, par exemple, qu’un utilisateur exécute une instruction FETCH sur un curseur, puis appelle une procédure stockée qui ouvre et traite les résultats sur un autre curseur. Lorsque le contrôle est retourné à partir de cette procédure stockée, `@@FETCH_STATUS` reflète la dernière instruction FETCH exécutée au sein de la procédure stockée et non celle qui avait eu lieu avant l’appel de la procédure stockée.  
@@ -77,7 +77,7 @@ DEALLOCATE Employee_Cursor;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de curseur &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
  [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   

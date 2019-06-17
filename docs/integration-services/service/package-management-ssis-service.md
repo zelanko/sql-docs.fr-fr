@@ -29,10 +29,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805268"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
@@ -131,7 +131,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>** , puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -143,15 +143,15 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Pour importer à partir d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis spécifiez le serveur et le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **OK**.  
   
     -   Pour importer à partir d'un système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **Ouvrir**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **Ouvrir**.  
   
     -   Pour importer à partir du magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** et spécifiez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(...)**, sélectionnez le package à importer, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , sélectionnez le package à importer, puis cliquez sur **OK**.  
   
 7.  Si vous le souhaitez, mettez à jour le nom du package.  
   
@@ -167,7 +167,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Dans la zone **Type de serveur** , sélectionnez **Integration Services**.  
   
-    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>**, puis recherchez le serveur à utiliser.  
+    -   Dans la zone **Nom du serveur**, indiquez le nom du serveur ou cliquez sur **\<Parcourir...>** , puis recherchez le serveur à utiliser.  
   
 3.  Si l'Explorateur d'objets n'est pas ouvert, dans le menu **Affichage** , cliquez sur **Explorateur d'objets**.  
   
@@ -179,7 +179,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Pour exporter un package vers une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sélectionnez l'option **SQL Server** , puis indiquez le serveur et sélectionnez le mode d'authentification. Si vous sélectionnez l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , indiquez un nom d'utilisateur et un mot de passe.  
   
-         Cliquez sur le bouton Parcourir **(...)**, puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
+         Cliquez sur le bouton Parcourir **(...)** , puis développez le dossier **Packages SSIS** pour rechercher le dossier dans lequel enregistrer le package. Si vous le souhaitez, mettez à jour le nom par défaut du package, puis cliquez sur **OK**.  
   
     -   Pour exporter un package vers le système de fichiers, sélectionnez l'option **Système de fichiers** .  
   
@@ -187,7 +187,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
   
     -   Pour exporter un package vers le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] , sélectionnez l'option **Magasin de packages SSIS** , puis indiquez le serveur.  
   
-         Cliquez sur le bouton Parcourir **(...)**, développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Cliquez sur le bouton Parcourir **(...)** , développez le dossier **Packages SSIS**, puis sélectionnez le dossier dans lequel enregistrer le package. Si vous le souhaitez, entrez un nouveau nom pour le package dans la zone de texte **Nom du package** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 7.  Pour mettre à jour le niveau de protection du package, cliquez sur le bouton Parcourir **(...)** et sélectionnez un niveau de protection différent dans la boîte de dialogue **Niveau de protection du package** . Si l'option **Chiffrer les données sensibles avec un mot de passe** ou **Chiffrer toutes les données avec un mot de passe** est sélectionnée, tapez un mot de passe et confirmez-le.  
   
@@ -288,7 +288,7 @@ Pour arrêter un package en cours d’exécution dans le dossier **Exécution de
 ### <a name="packages-stored-in-the-file-system"></a>Packages stockés dans le système de fichiers  
  La sauvegarde des packages enregistrés dans le système de fichiers doit être incluse dans le plan de sauvegarde du système de fichiers du serveur. Le ficher de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , dont le nom par défaut est MsDtsSrvr.ini.xml, donne la liste des dossiers sur le serveur contrôlé par le service. Vous devez vous assurer que ces dossiers sont sauvegardés. En outre, les packages peuvent être stockés dans d'autres dossiers sur le serveur et vous devez vous assurer que ces dossiers sont inclus dans la sauvegarde.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

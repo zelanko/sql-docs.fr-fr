@@ -19,10 +19,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b5732efeaeb6fe33404be49c019eae16d91ab56
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820896"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête
@@ -149,7 +149,7 @@ ms.locfileid: "65820896"
 ## <a name="color-coding-in-sqlcmd-scripts"></a>Codage en couleurs dans les scripts SQLCMD  
  Lorsque les scripts SQLCMD sont activés, les scripts sont codés en couleurs. Le codage en couleurs des mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] reste inchangé. Les commandes SQLCMD sont présentées avec un arrière-plan ombré.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple ci-après utilise une instruction **sqlcmd** pour créer un fichier de sortie nommé testoutput.txt et exécute deux instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] ainsi qu’une commande du système d’exploitation (pour imprimer le répertoire actuel). Le fichier résultant contient la sortie du message provenant de l'instruction `DIR` , suivie des résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ```  
@@ -161,7 +161,7 @@ SELECT @@SERVERNAME AS 'Server Name'
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   
   

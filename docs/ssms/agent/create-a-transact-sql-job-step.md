@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1249027630830b768d5d0a08b539f71d5b4af00d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095543"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
@@ -64,7 +64,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez un **nom d'étape**de travail.  
   
-5.  Dans la liste **Type** , cliquez sur **Script Transact-SQL (TSQL)**.  
+5.  Dans la liste **Type** , cliquez sur **Script Transact-SQL (TSQL)** .  
   
 6.  Dans la zone **Commande** , tapez les traitements de commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou cliquez sur **Ouvrir** pour sélectionner un fichier [!INCLUDE[tsql](../../includes/tsql-md.md)] à utiliser comme commande.  
   

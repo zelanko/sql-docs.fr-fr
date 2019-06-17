@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: b6f5a055861ea2d3f0a7cab91fbab3e01832ffba
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937467"
 ---
 # <a name="ogc-static-geometry-methods"></a>Méthodes géométriques statiques OGC
@@ -67,7 +67,7 @@ ms.locfileid: "65937467"
   
 -   [STGeomCollFromWKB &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

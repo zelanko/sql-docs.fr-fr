@@ -15,10 +15,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65779255"
 ---
 # <a name="best-practice-with-the-query-store"></a>Bonnes pratiques relatives au magasin de requêtes
@@ -344,7 +344,7 @@ Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour amél
 > [!IMPORTANT]
 > Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer les correctifs d’évolutivité des performances dans [KB 4340759](https://support.microsoft.com/help/4340759) dès que possible. 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vues de catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [Utilisation du Magasin des requêtes avec l’OLTP en mémoire](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

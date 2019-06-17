@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3ddd94836db559fe56cf6b7443b7dac69643a5a2
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942808"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
@@ -67,7 +67,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |1|*login* est membre de *role*.|  
 |NULL|*role* ou *login* n’est pas valide, ou vous ne disposez pas de l’autorisation nécessaire pour afficher l’appartenance au rôle.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez IS_SRVROLEMEMBER pour déterminer si l’utilisateur actuel peut réaliser une action nécessitant les autorisations du rôle serveur.  
   
  Si une connexion Windows, telle que Contoso\Mary5, est spécifiée pour *login*, **IS_SRVROLEMEMBER** retourne **NULL** à moins de s’être vu attribuer ou refuser l’accès direct à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -110,7 +110,7 @@ ELSE IF IS_SRVROLEMEMBER ('sysadmin') IS NULL
 SELECT IS_SRVROLEMEMBER('diskadmin', 'Contoso\Pat');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

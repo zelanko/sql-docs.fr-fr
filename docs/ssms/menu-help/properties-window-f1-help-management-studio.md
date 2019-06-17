@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096390"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
@@ -42,7 +42,7 @@ La fenêtre **Propriétés** affiche différents types de champs d’édition, e
 Répertorie les objets actuellement sélectionnés. Seuls les objets de l'éditeur ou du générateur actif sont visibles.  
   
 **Par catégorie**  
-Répertorie l'ensemble des propriétés et des valeurs de propriétés de l'objet sélectionné, par catégorie. Vous pouvez réduire une catégorie afin de diminuer le nombre de propriétés visibles. Quand vous développez ou réduisez une catégorie, un signe plus (**+**) ou moins (**-**) s’affiche à gauche du nom de la catégorie. Les catégories s'affichent par ordre alphabétique.  
+Répertorie l'ensemble des propriétés et des valeurs de propriétés de l'objet sélectionné, par catégorie. Vous pouvez réduire une catégorie afin de diminuer le nombre de propriétés visibles. Quand vous développez ou réduisez une catégorie, un signe plus ( **+** ) ou moins ( **-** ) s’affiche à gauche du nom de la catégorie. Les catégories s'affichent par ordre alphabétique.  
   
 **Alphabétique**  
 Trie par ordre alphabétique l'ensemble des propriétés et des événements des objets sélectionnés en mode conception.  
@@ -53,6 +53,6 @@ Affiche les propriétés d'un objet.
 **Volet Description**  
 Le volet Description apparaît dans la partie inférieure de la fenêtre **Propriétés** et affiche le type de la propriété ainsi qu’une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Propriétés (fenêtre) dans SQL Server Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)  
   

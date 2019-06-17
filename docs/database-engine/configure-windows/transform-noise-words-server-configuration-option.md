@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 57c63cde99dc8319e998277ab1d4c1120c8bf73f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775268"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (option de configuration de serveur)
@@ -58,7 +58,7 @@ ms.locfileid: "66775268"
     |"`the`" AND NOT "`black`"|Aucun résultat|  
     |"`black`" AND NOT "`the`"|Accès à la ligne portant l'ID 1|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant définit **transform noise words** sur `1`.  
   
 ```  
@@ -70,7 +70,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)  
   

@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6b37c60fa27af53949803c2077ba0736bf5de7e1
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981014"
 ---
 # <a name="unary-operators---positive"></a>Opérateurs unaires - Positif
@@ -57,7 +57,7 @@ Retourne la valeur d'une expression numérique (un opérateur unaire). Les opér
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données *numeric_expression*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Bien qu'un plus unaire puisse apparaître avant n'importe quelle expression, il n'effectue aucune opération sur la valeur retournée de l'expression. Plus précisément, il ne retourne pas la valeur positive d'une expression négative. Pour retourner la valeur positive d’une expression négative, utilisez la fonction [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -102,7 +102,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

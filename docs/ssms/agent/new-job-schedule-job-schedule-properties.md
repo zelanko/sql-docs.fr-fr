@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105512"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nouvelle planification du travail - Propriétés de la planification du travail
@@ -102,7 +102,7 @@ Sélectionnez la date d'exécution du travail.
 **Time**  
 Sélectionnez l'heure d'exécution du travail.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des planifications et les attacher à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Planifier un travail](../../ssms/agent/schedule-a-job.md)  
   

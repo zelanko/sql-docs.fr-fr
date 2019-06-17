@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dab606451fc99c70b28999f2d2d8be93d1513a20
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716039"
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap 
@@ -37,7 +37,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Identificateur unique du drainage de données créé à l'aide de la procédure stockée catalog.add_data_tap. *data_tap_id* est de type **bigint**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu'un package contient plusieurs tâches de flux de données du même nom, le drainage de données est ajouté à la première tâche de flux de données avec le nom donné.  
   
 ## <a name="return-codes"></a>Codes de retour  
@@ -48,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
 ## <a name="result-set"></a>Jeu de résultats  
  None  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour supprimer des drainages de données, l’instance d’exécution doit avoir l’état Created (valeur 1 dans la colonne **status** de la vue [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -65,7 +65,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
   
 -   L'utilisateur ne dispose pas des autorisations MODIFY.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)   
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   

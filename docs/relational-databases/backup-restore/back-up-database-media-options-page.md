@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e89089c6f95547f30bc4d99cdecdc38c8fe88957
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66402994"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
@@ -98,7 +98,7 @@ ms.locfileid: "66402994"
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation des périphériques à bandes, consultez, consultez [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- - **Décharger la bande après la sauvegarde** : la bande est déchargée une fois la sauvegarde terminée.  
+ - **Décharger la bande après la sauvegarde** : La bande est déchargée une fois la sauvegarde terminée.  
   
  - **Rembobiner la bande avant de décharger** : la bande est automatiquement libérée et rembobinée avant d’être déchargée. Cette option est activée uniquement si **Décharger la bande après la sauvegarde** est sélectionné.  
   

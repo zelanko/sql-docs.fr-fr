@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a649b3e69286859c0293211b9f0ee3138daf5216
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510846"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704139"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valeurs pour les déclarations &lt;xsd:simpleType&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Le tableau suivant décrit les restrictions appliquées, sur la base de toutes les énumérations de types simples XSD reconnus.  
   
- De plus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur NaN dans les déclarations **\<xsd:simpleType>**. Les schémas incluant cette valeur sont rejetés par le serveur.  
+ De plus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne prend pas en charge l’utilisation de la valeur NaN dans les déclarations **\<xsd:simpleType>** . Les schémas incluant cette valeur sont rejetés par le serveur.  
   
 |Type simple|Limitation|  
 |-----------------|----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "58510846"
 |**chaîne**|Les valeurs de ce type doivent être conformes au format du type **nvarchar(max)** SQL.|  
 |**anyURI**|Les valeurs de ce type ne peuvent excéder 4 000 caractères Unicode.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

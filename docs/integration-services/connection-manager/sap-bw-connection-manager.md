@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 967d46ad2bf63324db45906688a5486b47fd04e7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728149"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
@@ -152,7 +152,7 @@ ms.locfileid: "65728149"
  **Tester la connexion**  
  Testez la connexion à l'aide des valeurs que vous avez fournies. Après avoir cliqué sur **Tester la connexion**, un message apparaît et indique si la connexion a été établie ou si elle a échoué.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

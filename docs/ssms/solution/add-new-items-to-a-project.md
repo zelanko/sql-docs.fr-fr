@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fcb6d5e1a811f13a346a3daf89de459273cd2140
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105350"
 ---
 # <a name="add-new-items-to-a-project"></a>Ajouter de nouveaux éléments à un projet
@@ -53,7 +53,7 @@ Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité
   
 5.  Dans la boîte de dialogue **Se connecter au moteur de base de données** , spécifiez une connexion pour la nouvelle requête, puis cliquez sur **Se connecter**. La nouvelle connexion est ajoutée au dossier **Connexions** du projet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
 [Ajouter des éléments existants à un projet](../../ssms/solution/add-existing-items-to-a-project.md)  

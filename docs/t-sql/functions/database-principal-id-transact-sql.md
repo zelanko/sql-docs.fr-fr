@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3b65c8f0ed4679bcbf35d1e61483346647130ff3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943807"
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
@@ -49,7 +49,7 @@ Expression de type **sysname** qui représente le principal. Quand *principal_na
 **Int**  
 NULL si le principal de la base de données n’existe pas.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez `DATABASE_PRINCIPAL_ID` dans une liste de sélection, une clause WHERE ou n’importe quel emplacement qui autorise une expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Exemples  
