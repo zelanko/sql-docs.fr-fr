@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62878281"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Tutoriel SSIS : Création d’un package ETL simple
@@ -58,7 +58,7 @@ ms.locfileid: "62878281"
  [Leçon 1 : Création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'un seul fichier plat, transforme ces données en utilisant des transformations de recherche et enfin, charge le résultat dans une destination de table de faits.  
   
- [Leçon 2 : Ajout d’un bouclage](lesson-2-adding-looping-with-ssis.md)  
+ [Leçon 2 : Ajout d’un bouclage](lesson-2-adding-looping-with-ssis.md)  
  Au cours de cette leçon, vous allez développer le package créé au cours de la leçon 1 pour pouvoir utiliser les nouvelles fonctionnalités de bouclage et extraire des données de plusieurs fichiers plats en un seul processus de flux de données.  
   
  [Leçon 3 : Ajout de la journalisation](lesson-3-add-logging-with-ssis.md)  

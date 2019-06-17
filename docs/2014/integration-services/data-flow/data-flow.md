@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828009"
 ---
 # <a name="data-flow"></a>Flux de données
@@ -97,7 +97,7 @@ ms.locfileid: "62828009"
 ### <a name="sources-available-for-download"></a>Sources pouvant être téléchargées  
  Le tableau suivant répertorie d'autres sources que vous pouvez télécharger à partir du site Web de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|`Source`|Description|  
 |------------|-----------------|  
 |Source Oracle|La source Oracle est le composant source du Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une destination. Pour plus d’informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)(en anglais).|  
 |Source SAP BI|La source SAP BI est le composant source du Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] for SAP BI inclut aussi un gestionnaire de connexions et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -108,7 +108,7 @@ ms.locfileid: "62828009"
 ## <a name="transformations"></a>Transformations  
  Les fonctionnalités des transformations peuvent être très différentes. Elles peuvent réaliser des tâches comme la mise à jour, la synthèse, le nettoyage, la fusion ou encore la distribution de données. Vous pouvez modifier les valeurs des colonnes, rechercher des valeurs dans des tables, nettoyer des données et agréger les valeurs de colonnes.  
   
- Les entrées et sorties d'une transformation définissent les colonnes des données entrantes et sortantes. En fonction de l'opération réalisée sur les données, certaines transformations comportent une seule entrée et plusieurs sorties, alors que d'autres auront plusieurs entrées et une seule sortie. Transformations peuvent également inclure des sorties d’erreur, qui fournissent des informations sur l’erreur qui s’est produite, ainsi que les données ayant échoué : par exemple, des données de type string qui n’ont pas pu être converties en données de type integer. Le modèle objet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne limite pas le nombre d'entrées, de sorties normales et de sorties d'erreurs des transformations. Vous pouvez créer des transformations personnalisées qui implémentent une combinaison de plusieurs entrées, sorties normales et sorties d'erreurs.  
+ Les entrées et sorties d'une transformation définissent les colonnes des données entrantes et sortantes. En fonction de l'opération réalisée sur les données, certaines transformations comportent une seule entrée et plusieurs sorties, alors que d'autres auront plusieurs entrées et une seule sortie. Les transformations peuvent également inclure des sorties d'erreurs, qui fournissent des informations sur l'erreur qui s'est produite et indiquent les données ayant échoué : par exemple, des données de type string qui n’ont pas pu être converties en données de type integer. Le modèle objet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne limite pas le nombre d'entrées, de sorties normales et de sorties d'erreurs des transformations. Vous pouvez créer des transformations personnalisées qui implémentent une combinaison de plusieurs entrées, sorties normales et sorties d'erreurs.  
   
  L'entrée d'une transformation est définie comme une ou plusieurs colonnes d'entrée. Certaines transformations [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] peuvent aussi avoir comme entrée des colonnes externes référencées. Par exemple, l'entrée de la transformation de commande OLE DB comprend des colonnes externes. Une colonne de sortie est une colonne que la transformation ajoute au flux de données. Les sorties normales et les sorties d'erreurs contiennent des colonnes de sortie. Ces colonnes de sortie sont à leur tour disponibles comme colonnes d'entrées par le composant suivant du flux de données qui peut être une autre transformation ou une destination.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "62828009"
 ### <a name="destinations-available-for-download"></a>Destinations pouvant être téléchargées  
  Le tableau suivant répertorie d’autres destinations que vous pouvez télécharger à partir du site web [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Description|  
+|`Source`|Description|  
 |------------|-----------------|  
 |Destination Oracle|La destination Oracle est le composant de destination du Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour Oracle par Attunity inclut aussi un gestionnaire de connexions et une source. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963)(en anglais).|  
 |Destination SAP BI|La destination SAP BI est le composant de destination du Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] for SAP BI inclut aussi un gestionnaire de connexions et une source. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
@@ -178,13 +178,13 @@ ms.locfileid: "62828009"
  Les sources comportent des sorties, les destinations des entrées et les transformations des entrées et des sorties. Par ailleurs, de nombreux composants de flux de données peuvent être configurés pour utiliser une sortie d'erreur.  
   
 ### <a name="inputs"></a>Entrées  
- Les destinations et les transformations comportent des entrées. Une entrée contient une ou plusieurs colonnes d'entrée qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Entrées peuvent être configurées pour surveiller et contrôler le flux de données : Vous pouvez ainsi spécifier si le composant doit échouer en réponse à une erreur, ignorer les erreurs ou rediriger les lignes d’erreur vers la sortie d’erreur. Vous pouvez également donner une description de l'entrée ou mettre à jour le nom de l'entrée. Dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , les entrées sont configurées via la boîte de dialogue **Éditeur avancé** . Pour plus d’informations sur **l’Éditeur avancé** , consultez [Interface utilisateur d’Integration Services](../integration-services-user-interface.md).  
+ Les destinations et les transformations comportent des entrées. Une entrée contient une ou plusieurs colonnes d'entrée qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les entrées peuvent être configurées pour analyser et contrôler le flux de données : Vous pouvez ainsi spécifier si le composant doit échouer en réponse à une erreur, ignorer les erreurs ou rediriger les lignes d’erreur vers la sortie d’erreur. Vous pouvez également donner une description de l'entrée ou mettre à jour le nom de l'entrée. Dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , les entrées sont configurées via la boîte de dialogue **Éditeur avancé** . Pour plus d’informations sur **l’Éditeur avancé** , consultez [Interface utilisateur d’Integration Services](../integration-services-user-interface.md).  
   
 ### <a name="outputs"></a>Sorties  
  Les sources et les transformations comportent toujours des sorties. Une sortie contient une ou plusieurs colonnes de sortie qui peuvent faire référence à des colonnes externes si le composant de flux de données a été configuré pour cela. Les sorties peuvent être configurées de manière à fournir des informations utiles pour le traitement en aval des données. Par exemple, vous pouvez indiquer si la sortie est triée. Vous pouvez également donner une description de la sortie ou mettre à jour le nom de la sortie. Dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , les sorties sont configurées via la boîte de dialogue **Éditeur avancé** .  
   
 ### <a name="error-outputs"></a>Sorties d'erreurs  
- Les sources, les destinations et les transformations peuvent inclure des sorties d'erreurs. Vous pouvez indiquer de quelle manière le composant de flux de données répond aux erreurs dans chaque entrée ou colonne via la boîte de dialogue **Configurer la sortie d’erreur** . En cas d'erreur ou de troncation des données lors de l'exécution, si le composant du flux de données est configuré pour rediriger les lignes, les lignes de données contenant l'erreur sont envoyées vers la sortie d'erreur. Le sortie d'erreur peut être connectée à des transformations qui appliquent des transformations supplémentaires ou dirigent les données vers une destination différente. Par défaut, une sortie d’erreur contient les colonnes de sortie et deux colonnes d’erreur : **ErrorCode** et **ErrorColumn**. Les colonnes de sortie contiennent les données de la ligne contenant l’erreur, **ErrorCode** indique le code d’erreur et **ErrorColumn** identifie la colonne contenant l’erreur.  
+ Les sources, les destinations et les transformations peuvent inclure des sorties d'erreurs. Vous pouvez indiquer de quelle manière le composant de flux de données répond aux erreurs dans chaque entrée ou colonne via la boîte de dialogue **Configurer la sortie d’erreur** . En cas d'erreur ou de troncation des données lors de l'exécution, si le composant du flux de données est configuré pour rediriger les lignes, les lignes de données contenant l'erreur sont envoyées vers la sortie d'erreur. Le sortie d'erreur peut être connectée à des transformations qui appliquent des transformations supplémentaires ou dirigent les données vers une destination différente. Par défaut, une sortie d'erreur contient les colonnes de sortie et deux colonnes d'erreur : **ErrorCode** et **ErrorColumn**. Les colonnes de sortie contiennent les données de la ligne contenant l’erreur, **ErrorCode** indique le code d’erreur et **ErrorColumn** identifie la colonne contenant l’erreur.  
   
  Pour plus d’informations, consultez [Gestion des erreurs dans les données](error-handling-in-data.md).  
   

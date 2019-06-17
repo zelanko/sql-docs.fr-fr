@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727173"
 ---
 # <a name="write-enabled-partitions"></a>Partitions activées en écriture
   Dans un cube, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une partition. Les partitions activées en écriture permettent aux utilisateurs professionnels d'explorer différents scénarios en changeant les valeurs des cellules et en analysant les effets de ces modifications sur les données de cube. Si vous activez une partition en écriture, les applications clientes peuvent enregistrer les modifications des données de la partition. Ces modifications, qu'il est convenu d'appeler données d'écriture différée, sont stockées dans une table séparée et ne remplacent pas de données existantes d'un groupe de mesures. Toutefois, elles sont incorporées dans les résultats des requêtes comme si elles faisaient partie des données de cube.  
   
- Vous pouvez activer en écriture la totalité d'un cube ou uniquement certaines de ces partitions. Les dimensions activées en écriture sont différentes mais complémentaires. Une partition activée en écriture permet aux utilisateurs de mettre à jour les cellules de partition, tandis qu'une dimension activée en écriture leur permet de mettre à jour les membres de dimension. Vous pouvez également utiliser ces deux fonctionnalités conjointement. Par exemple, un cube activé en écriture ou une partition activée en écriture ne doit pas inclure les dimensions activées en écriture. **Rubrique connexe :**[Write Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
+ Vous pouvez activer en écriture la totalité d'un cube ou uniquement certaines de ces partitions. Les dimensions activées en écriture sont différentes mais complémentaires. Une partition activée en écriture permet aux utilisateurs de mettre à jour les cellules de partition, tandis qu'une dimension activée en écriture leur permet de mettre à jour les membres de dimension. Vous pouvez également utiliser ces deux fonctionnalités conjointement. Par exemple, un cube activé en écriture ou une partition activée en écriture ne doit pas inclure les dimensions activées en écriture. **Rubrique connexe :** [Write Dimensions](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
 > [!NOTE]  
 >  Si vous souhaitez activer en écriture un cube dont la source de données est une base de données Microsoft Access, n'utilisez pas le fournisseur Microsoft OLE DB pour pilotes ODBC dans les définitions de la source de données du cube, ses partitions ou ses dimensions. Utilisez à la place Microsoft Jet 4.0 OLE DB Provider ou n'importe quelle version du Jet Service Pack qui comprend Jet 4.0 OLE. Pour plus d’informations, consultez l’article de la Base de connaissances Microsoft [comment obtenir le dernier service pack pour le moteur de base de données Microsoft Jet 4.0](https://support.microsoft.com/?kbid=239114).  

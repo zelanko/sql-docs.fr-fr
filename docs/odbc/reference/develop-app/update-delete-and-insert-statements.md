@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632477"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instructions UPDATE, DELETE et INSERT
@@ -33,15 +33,15 @@ Applications basées sur SQL apporter des modifications aux tables en exécutant
   
  **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** _identificateur de colonne_ **=** {*expression* &#124; **NULL**}]...  
+ [ **,** _identificateur de colonne_ **=** {*expression* &#124; **NULL**}]...  
   
  [**WHERE** _search-condition_]  
   
  **DELETE FROM** _nom de la table_[**où** _condition de recherche_]  
   
- **INSERT INTO** _nom de la table_[**(** _identificateur de colonne_ [**,** _-identificateur de la colonne_]... **)**]  
+ **INSERT INTO** _nom de la table_[ **(** _identificateur de colonne_ [ **,** _-identificateur de la colonne_]... **)** ]  
   
- {*spécification de requête* &#124; **valeurs (** _-valeur à insérer_ [**,** _-valeur à insérer_]... **)**}  
+ {*spécification de requête* &#124; **valeurs (** _-valeur à insérer_ [ **,** _-valeur à insérer_]... **)** }  
   
  Notez que le *spécification de requête* élément est valide uniquement dans les grammaires Core et SQL étendue et que le *expression* et *condition de recherche* éléments deviennent plus complexes dans les grammaires Core et SQL étendue.  
   

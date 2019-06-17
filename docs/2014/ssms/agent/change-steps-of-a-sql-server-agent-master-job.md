@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017590"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Modifier les étapes d'un travail maître SQL Server Agent
@@ -56,13 +56,13 @@ ms.locfileid: "63017590"
   
 4.  Cliquez avec le bouton droit sur le travail dont vous voulez modifier les étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
   
-6.  Cliquez sur **modifier** pour ouvrir le **propriétés étape du travail -**_nom_étape_de_travail_ boîte de dialogue. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [propriétés étape du travail : Nouvelle étape du travail &#40;Page Général&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) et [propriétés de l’étape du travail : Nouvelle étape du travail &#40;Page avancé&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Cliquez sur **modifier** pour ouvrir le **propriétés étape du travail -** _nom_étape_de_travail_ boîte de dialogue. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [propriétés étape du travail : Nouvelle étape du travail &#40;Page Général&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) et [propriétés de l’étape du travail : Nouvelle étape du travail &#40;Page avancé&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-8.  Dans le **propriétés du travail -**_nom_travail_ boîte de dialogue, cliquez sur **OK**.  
+8.  Dans le **propriétés du travail -** _nom_travail_ boîte de dialogue, cliquez sur **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

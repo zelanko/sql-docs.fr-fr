@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627806"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Identifie les colonnes sur lequel créer la partition verticale. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. *colonne* ne peut pas être NULL lorsque *opération* a la valeur **drop**. Pour exclure des colonnes à partir d’un article, exécutez **sp_mergearticlecolumn** et spécifiez *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer à partir du spécifié *article*.  
   
-`[ @operation = ] 'operation'` Est l’état de réplication. *opération* est **nvarchar (4)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
+`[ @operation = ] 'operation'` Est l’état de réplication. *opération* est **nvarchar (4)** , avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
   
-`[ @schema_replication = ] 'schema_replication'` Spécifie qu’une modification de schéma sera propagée lors de l’Agent de fusion s’exécute. *schema_replication* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
+`[ @schema_replication = ] 'schema_replication'` Spécifie qu’une modification de schéma sera propagée lors de l’Agent de fusion s’exécute. *schema_replication* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
   
 > [!NOTE]  
 >  Uniquement **FALSE** est pris en charge pour *schema_replication*.  

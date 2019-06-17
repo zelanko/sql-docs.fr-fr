@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_7711 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 7711 (Database Engine error)
 ms.assetid: a5c7cd6e-18d6-47ef-902b-db9dd64bba34
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec3bd035f1d8c3998189c819b9fdcf9fa98b1037
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762660"
 ---
 # <a name="mssqlserver7711"></a>MSSQLSERVER_7711
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Détails  
   
 |||  
@@ -34,7 +33,7 @@ ms.locfileid: "62762660"
 |Texte du message|L’option DATA_COMPRESSION a été spécifiée plusieurs fois pour la table, l’index, ou l’une de leurs partitions.|  
   
 ## <a name="explanation"></a>Explication  
-Une erreur s'est produite dans l'option DATA_COMPRESSION dans l'une des instructions suivantes :  
+ Une erreur s'est produite dans l'option DATA_COMPRESSION dans l'une des instructions suivantes :  
   
 -   CREATE TABLE  
   
@@ -44,8 +43,9 @@ Une erreur s'est produite dans l'option DATA_COMPRESSION dans l'une des instruct
   
 -   ALTER INDEX  
   
-Si la table ou l'index cité est partitionné, l'option DATA_COMPRESSION a été répertoriée plusieurs fois pour au moins l'une des partitions. Si la table ou l'index n'est pas partitionné, l'option DATA_COMPRESSION a été citée plusieurs fois.  
+ Si la table ou l'index cité est partitionné, l'option DATA_COMPRESSION a été répertoriée plusieurs fois pour au moins l'une des partitions. Si la table ou l'index n'est pas partitionné, l'option DATA_COMPRESSION a été citée plusieurs fois.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Pour une table partitionnée ou un index, assurez-vous que l'option DATA_COMPRESSION n'est spécifiée qu'une seule fois pour chaque partition. Pour une table ou un index qui n'est pas partitionné, utilisez l'option DATA_COMPRESSION une seule fois dans l'instruction.  
+ Pour une table partitionnée ou un index, assurez-vous que l'option DATA_COMPRESSION n'est spécifiée qu'une seule fois pour chaque partition. Pour une table ou un index qui n'est pas partitionné, utilisez l'option DATA_COMPRESSION une seule fois dans l'instruction.  
+  
   

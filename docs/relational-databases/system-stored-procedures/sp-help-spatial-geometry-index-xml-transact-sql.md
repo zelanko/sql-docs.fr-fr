@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a2834652d7a14199ccc4914091a2c8c8b7a99801
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017783"
 ---
 # <a name="sphelpspatialgeometryindexxml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
  Les propriétés qui contiennent des valeurs NULL ne sont pas incluses dans le jeu de retour XML.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise `sp_help_spatial_geometry_index_xml` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** définie sur la table **geometry_col** pour l’exemple de requête donnée dans **@qs**. Cet exemple retourne les propriétés principales de l'index spécifié dans un fragment XML qui affiche le nom et la valeur des propriétés sélectionnées.  
+ L’exemple suivant utilise `sp_help_spatial_geometry_index_xml` pour étudier l’index spatial **SIndx_SpatialTable_geometry_col2** définie sur la table **geometry_col** pour l’exemple de requête donnée dans **@qs** . Cet exemple retourne les propriétés principales de l'index spécifié dans un fragment XML qui affiche le nom et la valeur des propriétés sélectionnées.  
   
  Un [XQuery](../../xquery/xquery-basics.md) est alors exécutée sur le jeu de résultats, en retournant une propriété spécifique.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790658"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connectivité client Always On (SQL Server)
@@ -37,13 +37,13 @@ ms.locfileid: "62790658"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Oui|Oui|Oui|Oui|Oui|  
 |SQL Native Client 11.0 OLEDB|Non|Oui|Oui|Non|Non|  
-|ADO.NET avec .NET Framework 4.0 et correctif logiciel de connectivité**<sup>*</sup>**|Oui|Oui|Oui|Oui|Oui|  
-|ADO.NET avec .NET Framework 3.5 SP1 et correctif logiciel de connectivité **<sup>**</sup>**|Oui|Oui|Oui|Oui|Oui|  
+|ADO.NET avec .NET Framework 4.0 et correctif logiciel de connectivité **<sup>*</sup>**|Oui|Oui|Oui|Oui|Oui|  
+|ADO.NET avec .NET Framework 3.5 SP1 et correctif logiciel de connectivité **<sup>** </sup>**|Oui|Oui|Oui|Oui|Oui|  
 |Microsoft JDBC Driver 4.0 pour SQL Server|Oui|Oui|Oui|Oui|Oui|  
   
  **<sup>*</sup>**  Télécharger le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 4.0 : [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
   
- **<sup>**</sup>** Téléchargez le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 3.5 SP1 : [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
+ **<sup>** </sup>** Téléchargez le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 3.5 SP1 : [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Pour se connecter à un écouteur de groupe de disponibilité, un client doit utiliser une chaîne de connexion TCP.  

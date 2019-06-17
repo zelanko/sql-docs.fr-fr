@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721318"
 ---
 # <a name="errors-and-events-reference-replication"></a>Guide de référence des erreurs et des événements (réplication)
   Cette section de la documentation contient des informations sur la cause et la résolution de nombreuses erreurs liées à la réplication.  
   
-|Error|Message|  
+|Error|`Message`|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](mssql-eng002601.md)|Impossible d’insérer une ligne de clé en double dans l’objet ' %. * ls' avec un index unique ' %.\*ls.|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Violation de %ls contrainte ' %. * ls'. Impossible d’insérer une clé en double dans l’objet '%.\*ls'.|  

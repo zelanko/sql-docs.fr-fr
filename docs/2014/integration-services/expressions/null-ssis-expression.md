@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768825"
 ---
 # <a name="null-ssis-expression"></a>NULL (expression SSIS)
@@ -52,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|L'expression (DT_TEXT,1252) convertit une valeur vers le type de données DT_TEXT à l'aide de la page de codes 1252.|  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Les exemples ci-après renvoient la valeur null des types de données : DT_STR, DT_DATE et DT_BOOL.  
+ Les exemples ci-après renvoient la valeur Null des types de données suivants : DT_STR, DT_DATE et DT_BOOL.  
   
 ```  
 NULL(DT_STR,10,1252)  

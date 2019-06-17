@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62732471"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
@@ -78,7 +78,7 @@ Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites s
 -   Les valeurs booléennes sont toujours traitées comme des valeurs logiques dans les comparaisons et quand elles sont utilisées avec EXACT, AND, OR, &amp;&amp;||.  
   
 **Conversion d'une chaîne en valeur booléenne**  
-Dans la mémoire et les modèles DirectQuery, les casts sont autorisés en valeurs booléennes de ces chaînes uniquement : **» «** (chaîne vide), **« true »**, **« false »**; où une chaîne vide casts de la valeur false.  
+Dans la mémoire et les modèles DirectQuery, les casts sont autorisés en valeurs booléennes de ces chaînes uniquement : **» «** (chaîne vide), **« true »** , **« false »** ; où une chaîne vide casts de la valeur false.  
   
 Les conversions en type de données booléen d'une autre chaîne génèrent une erreur.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62726115"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
@@ -50,7 +50,7 @@ ms.locfileid: "62726115"
  Contexte de session  
  Pour les objets qui sont basés sur les extensions de personnalisation, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crée un environnement d'exécution pendant la session cliente et génère dynamiquement la plupart de ces objets dans cet environnement. Comme tout autre assembly CLR, cet environnement d'exécution a également accès aux autres fonctions et procédures stockées. Lorsque la session utilisateur se termine, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supprime les objets créés dynamiquement et ferme l’environnement d’exécution.  
   
- Événements  
+ Events  
  La création d'objets est déclenchée par les événements de session `On-Cube-OpenedCubeOpened` et `On-Cube-ClosingCubeClosing`.  
   
  La communication entre le client et le serveur se produit par le biais d'événements spécifiques. Ces événements indiquent au client les situations qui conduisent à la génération des objets du client. L'environnement du client est créé dynamiquement à l'aide de deux ensembles d'événements : événements de session et événements de cube.  
