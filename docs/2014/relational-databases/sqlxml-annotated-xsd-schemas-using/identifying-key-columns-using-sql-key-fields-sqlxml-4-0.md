@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013822"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
@@ -48,7 +48,7 @@ ms.locfileid: "66013822"
   
  Le  **\<SQL : Relationship >** balise est utilisée pour spécifier la relation parent-enfant. Elle identifie CustomerID dans la table Sales.SalesOrderHeader comme clé parente qui fait référence à la clé enfant CustomerID dans la table Sales.Customer. Les informations fournies dans  **\<SQL : Relationship >** n’est pas suffisant pour identifier de manière unique les lignes dans la table parente (Sales.SalesOrderHeader). Par conséquent, sans l'annotation `sql:key-fields`, la hiérarchie générée est inexacte.  
   
- Avec `sql:key-fields` spécifié sur  **\<ordre >**, l’annotation identifie de façon unique les lignes dans le parent (table Sales.SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
+ Avec `sql:key-fields` spécifié sur  **\<ordre >** , l’annotation identifie de façon unique les lignes dans le parent (table Sales.SalesOrderHeader) et ses éléments enfants apparaissent sous son parent.  
   
  Voici le schéma :  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66013822"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Spécification de sql:key-fields afin de produire l'imbrication correcte dans le résultat  
- Dans le schéma suivant, il n’existe aucune hiérarchie spécifiée à l’aide de  **\<SQL : Relationship >**. Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
+ Dans le schéma suivant, il n’existe aucune hiérarchie spécifiée à l’aide de  **\<SQL : Relationship >** . Le schéma requiert encore la spécification de l'annotation `sql:key-fields` afin d'identifier de manière unique les employés dans la table HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

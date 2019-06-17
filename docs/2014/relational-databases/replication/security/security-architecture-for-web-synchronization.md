@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959748"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation web
@@ -34,7 +34,7 @@ ms.locfileid: "62959748"
 |Type de compte|Emplacement de spécification du compte|  
 |---------------------|------------------------------------|  
 |Utilisateur Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@job_login** et **@job_password** de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO (Replication Management Objects) : propriétés <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
@@ -63,7 +63,7 @@ ms.locfileid: "62959748"
 |L'authentification de base est utilisée si l'une des conditions suivantes est spécifiée :<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **0** pour le **@internet_security_mode** paramètre de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Ligne de commande de l’Agent de fusion : valeur **0** pour **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@internet_login** et **@internet_password** de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Objets RMO : <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> et <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Ligne de commande de l'Agent de fusion : **-InternetLogin** et **-InternetPassword**.|  
 |Authentification intégrée\* est utilisé si une des options suivantes est spécifiée :<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: valeur **1** pour le **@internet_security_mode** paramètre de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Objets RMO : valeur <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> pour <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Ligne de commande de l’Agent de fusion : valeur **1** pour **- InternetSecurityMode**.|L'Agent de fusion établit les connexions dans le contexte de l'utilisateur Windows spécifié pour l'Agent de fusion (A).|  
   
- * Authentification intégrée peut être utilisée uniquement si tous les ordinateurs sont dans le même domaine ou dans plusieurs domaines qui ont des relations d’approbation entre eux.  
+ \* Authentification intégrée peut être utilisée uniquement si tous les ordinateurs sont dans le même domaine ou dans plusieurs domaines qui ont des relations d’approbation entre eux.  
   
 > [!NOTE]  
 >  La délégation est nécessaire en cas d'utilisation de l'authentification intégrée. Nous vous recommandons d'utiliser l'authentification de base et SSL pour les connexions de l'Abonné vers IIS.  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056687"
 ---
 # <a name="precedence-constraint-editor"></a>Éditeur de contrainte de précédence
@@ -26,7 +26,7 @@ ms.locfileid: "66056687"
   
 ## <a name="options"></a>Options  
  **Opération d’évaluation**  
- Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
+ Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
   
  **Valeur**  
  Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**.  

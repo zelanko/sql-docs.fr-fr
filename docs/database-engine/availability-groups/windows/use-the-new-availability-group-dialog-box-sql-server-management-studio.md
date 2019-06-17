@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c589ac9755be006f5521f942e6bf1e19ea6e6a6e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 3db09682a58b80d4f0d2d88ad6f65e3d458b36ed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602609"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780148"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,26 +25,12 @@ ms.locfileid: "51602609"
   
 > [!NOTE]  
 >  Pour obtenir une présentation des groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Avant de commencer :**  
-  
-     [Conditions préalables](#PrerequisitesRestrictions)  
-  
-     [Limitations](#Limitations)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour créer un groupe de disponibilité, utilisez :**  [La boîte de dialogue Nouveau groupe de disponibilité](#SSMSProcedure)  
-  
--   **Suivi :**  [Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité](#FollowUp)  
-  
+   
 > [!NOTE]  
 >  Pour plus d’informations sur les autres manières de créer un groupe de disponibilité, consultez [Tâches associées](#RelatedTasks)plus loin dans cette rubrique.  
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
   
-###  <a name="PrerequisitesRestrictions"></a> Conditions préalables  
+##  <a name="PrerequisitesRestrictions"></a> Conditions préalables  
   
 -   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur est activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
@@ -52,20 +38,16 @@ ms.locfileid: "51602609"
   
 -   Pour utiliser la boîte de dialogue **Nouveau groupe de disponibilité** , vous devez connaître les noms des instances de serveur qui hébergeront les réplicas de disponibilité. De plus, vous devez connaître les noms de toutes les bases de données que vous envisagez d’ajouter à votre nouveau groupe de disponibilité, et vous devez vérifier que ces bases de données respectent les conditions préalables requises et les restrictions de base de données de disponibilité décrites dans [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Si vous entrez des valeurs non valides, le nouveau groupe de disponibilité ne fonctionnera pas.  
   
-###  <a name="Limitations"></a> Limitations  
+## <a name="Limitations"></a> Limitations  
  La boîte de dialogue **Nouveau groupe de disponibilité** ne permet pas d'effectuer les opérations suivantes :  
   
--   Créez un écouteur de groupe de disponibilité.  
-  
--   Joindre les réplicas secondaires au groupe de disponibilité.  
-  
+-   Créez un écouteur de groupe de disponibilité.    
+-   Joindre les réplicas secondaires au groupe de disponibilité.    
 -   Effectuer la synchronisation des données initiale.  
   
- Pour plus d'informations sur ces tâches de configuration, consultez [Suivi : Après la création d'un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
+ Pour plus d’informations sur ces tâches de configuration, consultez [Suivi : Après avoir créé un groupe de disponibilité](#FollowUp), plus loin dans cette rubrique.  
   
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  
@@ -88,13 +70,13 @@ ms.locfileid: "51602609"
     > [!TIP]  
     >  Si vous avez ajouté un réplica et ne pouvez pas vous connecter à l'instance de serveur hôte, vous pouvez supprimer le réplica et en ajouter un nouveau. Pour plus d’informations, consultez [Supprimer un réplica secondaire d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) et [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  Dans le volet **Sélectionner une page** de la boîte de dialogue, cliquez sur **Préférences de sauvegarde**. Puis, sur la page **Préférences de sauvegarde** , spécifiez à quel endroit les sauvegardes doivent se produire en fonction du rôle de réplica et attribuez des priorités de sauvegarde à chacune des instances de serveur qui hébergeront un réplica de disponibilité pour ce groupe de disponibilité. Pour plus d’informations, consultez [Propriétés de groupe de disponibilité : nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  Dans le volet **Sélectionner une page** de la boîte de dialogue, cliquez sur **Préférences de sauvegarde**. Puis, sur la page **Préférences de sauvegarde** , spécifiez à quel endroit les sauvegardes doivent se produire en fonction du rôle de réplica et attribuez des priorités de sauvegarde à chacune des instances de serveur qui hébergeront un réplica de disponibilité pour ce groupe de disponibilité. Pour plus d’informations, consultez [Propriétés du groupe de disponibilité : Nouveau groupe de disponibilité &#40;page Préférences de sauvegarde&#41;](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Pour créer le groupe de disponibilité, cliquez sur **OK**. Cette action entraîne la vérification par la boîte de dialogue du respect de la configuration requise par les bases de données spécifiées.  
   
      Pour quitter la boîte de dialogue sans créer le groupe de disponibilité, cliquez sur **Annuler**.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après avoir utilisé la boîte de dialogue Nouveau groupe de disponibilité pour créer un groupe de disponibilité  
   
 -   Vous devez vous connecter en retour à chaque instance de serveur qui héberge un réplica secondaire pour le groupe de disponibilité et procéder comme suit :  
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796643"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Changer le cluster qui gère les métadonnées pour les réplicas dans un groupe de disponibilité Always On
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202128"
   
  Basculez le contexte de cluster HADR uniquement pendant une migration entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] vers une instance de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] sur un nouveau cluster WSFC. La migration entre clusters de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] prend en charge la mise à niveau vers [!INCLUDE[win8](../../../includes/win8-md.md)] ou [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] avec un temps mort minimal des groupes de disponibilité. Pour plus d’informations, consultez [Migration entre clusters de groupes de disponibilité Always On pour la mise à niveau du système d’exploitation](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Recommandations](#Recommendations)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour basculer le contexte de cluster d’un réplica de disponibilité, utilisez :**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Suivi :**  [Après le basculement du contexte de cluster d’un réplica de disponibilité](#FollowUp)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
 > [!CAUTION]  
 >  Basculez le contexte de cluster HADR uniquement lors de la migration entre clusters de déploiements [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+##  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous pouvez basculer le contexte de cluster HADR uniquement du cluster WSFC local vers un cluster distant, puis de nouveau du cluster distant vers le cluster local. Vous ne pouvez pas changer de contexte de cluster HADR d'un cluster distant à un autre.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202128"
   
 -   Un environnement de cluster HADR distant peut être basculé vers le cluster local à tout moment. Toutefois, le contexte ne peut pas être rebasculé tant que l'instance de serveur héberge des réplicas de disponibilité.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
 -   L'instance de serveur sur laquelle vous modifiez le contexte de cluster HADR doit exécuter [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] ou version ultérieure (édition Entreprise ou ultérieure).  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202128"
   
 -   Avant de pouvoir basculer d'un cluster à distance vers un cluster local, tous les réplicas de validation synchrone doivent être dans l'état SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Recommandations  
+##  <a name="Recommendations"></a> Recommandations  
   
 -   Nous vous recommandons de spécifier le nom de domaine complet. Cela est dû au fait que pour rechercher l'adresse IP cible d'un nom court, ALTER SERVER CONFIGURATION utilise la résolution DNS. Dans certaines situations, selon l'ordre de recherche de DNS, l'utilisation d'un nom court peut entraîner quelques confusions. Par exemple, considérez la commande suivante, exécutée sur un nœud dans le domaine `abc` , (`node1.abc.com`). Le cluster de destination attendu est le cluster `CLUS01` dans le domaine `xyz` (`clus01.xyz.com`). Toutefois, le domaine local héberge aussi un cluster nommé `CLUS01` (`clus01.abc.com`).  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202128"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
   
 -   **compte de connexion SQL Server**  
   
@@ -134,7 +113,7 @@ ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com';
 ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = LOCAL;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après le basculement du contexte de cluster d'un réplica de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après le basculement du contexte de cluster d’un réplica de disponibilité  
  Le nouveau contexte de cluster HADR prend effet immédiatement, sans redémarrer l'instance de serveur. Le paramètre de contexte de cluster HADR est un paramètre persistant au niveau de l'instance qui demeure inchangé si l'instance de serveur redémarre.  
   
  Confirmez le nouveau contexte de cluster HADR en interrogeant la vue de gestion dynamique [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md) , comme suit :  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721099"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la Distribution
@@ -31,15 +31,15 @@ ms.locfileid: "62721099"
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Configurer la distribution**.  
   
     > [!NOTE]  
-    >  Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de **localhost** au lieu du nom du serveur réel, un avertissement vous indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter au serveur **'localhost'**. Cliquez sur **OK** dans la boîte de dialogue d'avertissement. Dans la boîte de dialogue **Se connecter au serveur** , remplacez le **Nom du serveur** , qui indique **localhost** , par le nom de votre serveur. Cliquer sur **Se connecter**.  
+    >  Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de **localhost** au lieu du nom du serveur réel, un avertissement vous indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas se connecter au serveur **'localhost'** . Cliquez sur **OK** dans la boîte de dialogue d'avertissement. Dans la boîte de dialogue **Se connecter au serveur** , remplacez le **Nom du serveur** , qui indique **localhost** , par le nom de votre serveur. Cliquer sur **Se connecter**.  
   
      L'Assistant Configuration de la distribution démarre.  
   
-3.  Sur le **distributeur** page, sélectionnez **'**_\<nom_serveur >_**' agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**, puis cliquez sur **suivant**.  
+3.  Sur le **distributeur** page, sélectionnez **'** _\<nom_serveur >_ **' agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**, puis cliquez sur **suivant**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne s’exécute pas, dans la page de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agent**, sélectionnez **Oui**, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour qu’il démarre automatiquement. Cliquer sur **Suivant**.  
   
-5.  Entrez **\\\\**\<_nom_ordinateur>_**\repldata** dans la zone de texte **Dossier d’instantanés**, où \<*nom_ordinateur>* désigne le serveur de publication, puis cliquez sur **Suivant**.  
+5.  Entrez **\\\\** \<_nom_ordinateur>_ **\repldata** dans la zone de texte **Dossier d’instantanés**, où \<*nom_ordinateur>* désigne le serveur de publication, puis cliquez sur **Suivant**.  
   
 6.  Acceptez les valeurs par défaut sur les pages restantes de l'Assistant.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721099"
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.  
   
-2.  Dans la page **Général**, cliquez sur **Rechercher**, entrez \<_nom_ordinateur>_**\repl_snapshot** dans la zone **Entrez le nom de l’objet à sélectionner**, où \<*nom_ordinateur>* désigne le serveur de publication local, cliquez sur **Vérifier les noms**, puis cliquez sur **OK**.  
+2.  Dans la page **Général**, cliquez sur **Rechercher**, entrez \<_nom_ordinateur>_ **\repl_snapshot** dans la zone **Entrez le nom de l’objet à sélectionner**, où \<*nom_ordinateur>* désigne le serveur de publication local, cliquez sur **Vérifier les noms**, puis cliquez sur **OK**.  
   
 3.  Sur la page **Mappage de l'utilisateur** , dans la liste **Utilisateurs mappés à cette connexion** , sélectionnez les bases de données **distribution** et [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

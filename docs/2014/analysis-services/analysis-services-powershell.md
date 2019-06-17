@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3c8eda71783e7211011bd6f67d9acf638c8946a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062519"
 ---
 # <a name="analysis-services-powershell"></a>PowerShell Analysis Services
@@ -61,7 +61,7 @@ Pour plus d’informations sur la syntaxe et des exemples, consultez [Analysis S
 |Bases de données et instances tabulaires|Prise en charge pour l'administration locale et à distance.<br /><br /> Pour plus d’informations, consultez un blog d’août 2011 [gérer PowerShell à l’aide de modèles tabulaires](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Bases de données et instances PowerPivot pour SharePoint|Prise en charge limitée. Vous pouvez utiliser des connexions HTTP et le fournisseur SQLAS pour afficher des informations d'instance et de base de données.<br /><br /> Toutefois, l'utilisation des applets de commande n'est pas prise en charge. Vous ne devez pas utiliser Analysis Services PowerShell pour sauvegarder et restaurer la base de données PowerPivot en mémoire, et vous ne devez pas ajouter ou supprimer des rôles, des données de processus ni exécuter un script XMLA aléatoire.<br /><br /> À des fins de configuration, PowerPivot pour SharePoint a une prise en charge PowerShell intégrée qui est fournie séparément. Pour plus d’informations, consultez [PowerShell référence pour PowerPivot pour SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Connexions natives à des cubes locaux<br /><br /> « Données Source=c:\backup\test.cub »|Non pris en charge.|  
-|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> « Source de données =http://server/shared_docs/name.bism»|Non pris en charge.|  
+|Connexions HTTP aux fichiers de connexion de modèle sémantique BI (.bism) dans SharePoint<br /><br /> « Source de données =http://server/shared_docs/name.bism »|Non pris en charge.|  
 |Connexions incorporées aux bases de données PowerPivot<br /><br /> « Data Source = $Embedded$ »|Non pris en charge.|  
 |Contexte de serveur local dans les procédures stockées Analysis Services<br /><br /> « Source de données = * »|Non pris en charge.|  
   
@@ -203,7 +203,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Les connexions HTTP sont utiles si vous avez configuré votre serveur pour l’accès HTTP en suivant les instructions dans cette rubrique : [Configurer l’accès HTTP à Analysis Services sur Internet Information Services &#40;IIS&#41; 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- En supposant une URL de serveur http://localhost/olap/msmdpump.dll, une connexion peut se présenter comme suit :  
+ En supposant une URL de serveur http://localhost/olap/msmdpump.dll , une connexion peut se présenter comme suit :  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

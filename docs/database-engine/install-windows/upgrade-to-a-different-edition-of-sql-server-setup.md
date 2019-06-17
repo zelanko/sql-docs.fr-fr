@@ -10,13 +10,13 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 51bcd27ee8d2c63103650c8527014716f10bc3f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601949"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794700"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2016 (Installation)
 
@@ -30,7 +30,7 @@ L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pren
 - [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de cluster de basculement :** une mise à niveau de l’édition sur un des nœuds de l’instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est suffisante. Le nœud peut être actif ou passif, et le moteur ne met pas les ressources hors connexion pendant la mise à niveau de l’édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
+> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de cluster de basculement :** exécuter une mise à niveau de l’édition sur l’un des nœuds de l’instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suffit. Le nœud peut être actif ou passif, et le moteur ne met pas les ressources hors connexion pendant la mise à niveau de l’édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
 ## <a name="prerequisites"></a>Conditions préalables requises  
 Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  

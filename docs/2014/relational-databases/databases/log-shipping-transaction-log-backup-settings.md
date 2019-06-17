@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2e1484107e4ee5e7f7f2a10eaa719b5c96c098e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916887"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Paramètres de sauvegarde des journaux de transactions
@@ -46,7 +46,7 @@ ms.locfileid: "62916887"
  Affiche le nom du travail de l'Agent SQL Server servant à créer les sauvegardes des journaux de transactions pour la copie des journaux de transactions. Lors de la création du travail, vous pouvez modifier son nom en tapant un nouveau nom dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle pour la sauvegarde des journaux de transactions de la base de données principale. Avant la création du travail de sauvegarde, vous pouvez modifier cette planification en cliquant sur **Planification...**. Une fois que le travail a été créé, vous pouvez modifier cette planification en cliquant sur **Modifier le travail...**.  
+ Affiche la planification actuelle pour la sauvegarde des journaux de transactions de la base de données principale. Avant la création du travail de sauvegarde, vous pouvez modifier cette planification en cliquant sur **Planification...** . Une fois que le travail a été créé, vous pouvez modifier cette planification en cliquant sur **Modifier le travail...** .  
   
 ### <a name="backup-job"></a>Travail de sauvegarde  
  **Planification...**  

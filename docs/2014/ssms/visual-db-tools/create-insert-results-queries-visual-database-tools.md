@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebffc2246f0940c4643af2267086e727882a0633
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63031967"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Créer des requêtes Insert Results (Visual Database Tools)
@@ -76,7 +76,7 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     >  Le Concepteur de requêtes et de vues ne peut pas déterminer à l'avance les tables et vues qu'il est possible de mettre à jour. Ainsi, la liste **Nom de la table** de la boîte de dialogue **Choisir la table cible pour la requête Insérer les résultats** affiche toutes les tables et vues disponibles dans la connexion de données sur laquelle porte la requête, même celles vers lesquelles il est impossible de copier des lignes.  
   
-4.  Dans le rectangle représentant la table ou l'objet table, choisissez les noms des colonnes dont vous souhaitez copier le contenu. Pour copier des lignes entières, choisissez  **\* (toutes les colonnes)**.  
+4.  Dans le rectangle représentant la table ou l'objet table, choisissez les noms des colonnes dont vous souhaitez copier le contenu. Pour copier des lignes entières, choisissez  **\* (toutes les colonnes)** .  
   
      Le Concepteur de requêtes et de vues ajoute les colonnes sélectionnées à la colonne **Colonne** du volet Critères.  
   

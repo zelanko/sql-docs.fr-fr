@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62897463"
 ---
 # <a name="literals-ssis"></a>Littéraux (SSIS)
@@ -55,11 +55,11 @@ ms.locfileid: "62897463"
 |Expression régulière|Description|  
 |------------------------|-----------------|  
 |{D}+{IS}|Littéral numérique intégral avec au moins un chiffre (D) et éventuellement le suffixe long et/ou le suffixe non signé (IS).  Exemples : 457, 785u, 986L et 7945ul.|  
-|{D}+{E}{FS}|Littéral numérique non intégral avec au moins un chiffre (D), la notation scientifique et le suffixe long ou flottant.  Exemples : 4E8l, 13e-2f et 5E + L.|  
-|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6.45E3f, .89E - 2l et 1.05e + 7F.|  
-|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1 .e-4f, 4.6E6L et 8.365e + 2f.|  
+|{D}+{E}{FS}|Littéral numérique non intégral avec au moins un chiffre (D), la notation scientifique et le suffixe long ou flottant.  Exemples : 4E8l, 13e-2f et 5E+L.|  
+|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6,45E3f, ,89E-2l et 1,05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1,E-4f, 4,6E6L et 8,365E+2f.|  
 |{D}*.{D}+|Littéral numérique non intégral avec précision et échelle. Il a une décimale et une fraction décimale d'au moins un chiffre (D). Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 0,9, 5,8 et 0,346.|  
-|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6., 0,2 et 8,0.|  
+|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6., 0.2 et 8.0.|  
 |#{D}+|Identificateur de lignage. Il est composé du signe dièse ( # ) et d'au moins un chiffre (D). Exemples : #123.|  
 |0[xX]{H}+{uU}|Littéral numérique en notation hexadécimale. Il comprend un zéro, un « x » majuscule ou minuscule, au moins un « H » majuscule et, éventuellement, le suffixe non signé. Exemples : 0xFF0A et 0X000010000U.|  
   

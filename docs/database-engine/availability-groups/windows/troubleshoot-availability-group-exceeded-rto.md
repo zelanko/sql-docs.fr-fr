@@ -1,5 +1,5 @@
 ---
-title: 'Dépanner : dépassement de RTO du groupe de disponibilité (SQL Server) | Microsoft Docs'
+title: 'Résoudre les problèmes : Dépassement de RTO du groupe de disponibilité (SQL Server) | Microsoft Docs'
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c40755122775faa3b67fb0f46f5f13b3a789bb32
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606869"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803481"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>Dépanner : dépassement de RTO du groupe de disponibilité
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>Résoudre les problèmes : Dépassement de RTO du groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Après un basculement automatique ou un basculement manuel planifié sans perte de données sur un groupe de disponibilité, vous constaterez peut-être que le temps de basculement dépasse votre RTO (objectif de temps de récupération). Vous pouvez arriver au même constat quand vous estimez le temps de basculement d’un réplica secondaire avec validation synchrone (par exemple, un partenaire de basculement automatique) à l’aide de la méthode décrite dans [Monitorer les performances des groupes de disponibilité AlwaysOn](monitor-performance-for-always-on-availability-groups.md).  
   

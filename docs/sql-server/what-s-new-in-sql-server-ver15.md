@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ad10f03e426298d3785feeba132979e647cb1a98
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
+ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198196"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810284"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -53,12 +53,14 @@ De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!IN
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
+|Extensions de langage SQL Server - [Extension de langage Java](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)|Le [SDK d’extensibilité Microsoft pour Java pour Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) est désormais open source et [disponible sur GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Inscrire les langages externes|Un nouveau DDL, `CREATE EXTERNAL LANGUAGE`, inscrit les langages externes, tels que Java, dans SQL Server. Consultez [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 |Davantage de types de données pris en charge pour Java|Consultez [Types de données Java](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Stratégie de capture personnalisée pour le Magasin des requêtes|Quand cette fonctionnalité est activée, vous pouvez affiner la collecte de données dans un serveur spécifique au moyen de configurations supplémentaires du Magasin des requêtes disponibles sous un nouveau paramètre de stratégie de capture pour le Magasin des requêtes. Pour plus d’informations, consultez l’article [Options SET d’ALTER DATABASE](../t-sql/statements/alter-database-transact-sql-set-options.md).|
 |La fonctionnalité de [base de données en mémoire](../relational-databases/in-memory-database.md) introduit une nouvelle syntaxe DDL pour le contrôle du pool de mémoires tampons hybride. <sup>2</sup>|Avec le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md), les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire.|
 |Nouvelle fonctionnalité de base de données en mémoire, ajout de métadonnées tempdb à mémoire optimisée.|Consultez [Métadonnées tempdb à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Les serveurs liés prennent en charge le codage de caractères UTF-8. |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
+|Le programme d’installation de SQL Server inclut des recommandations relatives à MaxDOP qui suivent les instructions documentées. |[Configurer l'option de configuration du serveur Degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` retourne plus d’informations sur le degré de parallélisme et les allocations de mémoire pour les plans de requête. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
 
@@ -171,7 +173,7 @@ De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!IN
 |Scalabilité du point de contrôle indirect améliorée. |[Scalabilité du point de contrôle indirect améliorée](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)|
 |il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (`UTF8_BIN2`). |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
 |Définir les actions de suppression en cascade au niveau d’une contrainte d’arête dans une base de données de graphe. |[Contraintes d’arête](../relational-databases/tables/graph-edge-constraints.md) |
-|Activer ou désactiver `LIGHTWEIGHT_QUERY_PROFILING` avec la nouvelle configuration étendue aux bases de données. |[`VERBOSE_TRUNCATION_WARNINGS`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation) |
+|Activer ou désactiver `LIGHTWEIGHT_QUERY_PROFILING` avec la nouvelle configuration étendue aux bases de données. |[`LIGHTWEIGHT_QUERY_PROFILING`](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#lqp) |
 | &nbsp; | &nbsp; |
 
 ### <a name="tools"></a>Outils
@@ -320,7 +322,7 @@ De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!IN
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) prend en charge la connexion et la gestion des clusters Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |[Qu’est-ce qu’Azure Data Studio](../azure-data-studio/what-is.md)|
 |Prend en charge des scénarios utilisant des clusters Big Data SQL Server. |[Extension de SQL Server 2019 (préversion)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
+|[**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
 |Prise en charge d’Always Encrypted avec enclaves sécurisées. |[Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -433,7 +435,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Cette syntaxe n’est pas obligatoire pour tirer parti de cette fonctionnalité dans Azure SQL DB, où elle est [activée sur demande lors de la préversion publique](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Une fois activée, la fonctionnalité est active par défaut.
+> Cette syntaxe n’est pas obligatoire pour tirer parti de cette fonctionnalité dans Azure SQL DB, où elle est [activée sur demande lors de la préversion publique](/azure/sql-database/sql-database-accelerated-database-recovery). Une fois activée, la fonctionnalité est active par défaut.
 
 Si vous avez des bases de données critiques enclines à des transactions volumineuses, essayez cette fonctionnalité dans la préversion. Envoyez vos commentaires à l’[équipe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
@@ -603,7 +605,7 @@ Pour utiliser les fonctionnalités de traitement de requête intelligent, défin
 
 - Les **Contraintes d’arête (CTP 2.0)** sont introduites pour les tables d’arêtes dans Graph SQL. Les tables d’arêtes peuvent connecter n’importe quel nœud à n’importe quel autre nœud dans la base de données. Avec l’introduction des contraintes d’arête, vous pouvez maintenant appliquer certaines restrictions à ce comportement. La nouvelle contrainte `CONNECTION` permet de spécifier le type de nœuds auxquels une table d’arêtes donnée est autorisée à se connecter dans le schéma. 
 
-  **(CTP 2.3)**  En étendant cette fonctionnalité, vous pouvez définir des actions de suppression en cascade sur une contrainte d’arête. Vous pouvez définir les actions effectuées par le moteur de base de données lorsqu’un utilisateur supprime les nœuds, qu’une arête donnée connecte.
+  **(CTP 2.3) ** En étendant cette fonctionnalité, vous pouvez définir des actions de suppression en cascade sur une contrainte d’arête. Vous pouvez définir les actions effectuées par le moteur de base de données lorsqu’un utilisateur supprime les nœuds, qu’une arête donnée connecte.
 
 #### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>Paramètre par défaut au niveau de la base de données pour les opérations DDL en ligne et pouvant être reprises (CTP 2.0)
 
@@ -767,7 +769,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > Pour connaître les dernières améliorations apportées à Azure Data Studio, consultez les [notes de publication Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
-- [**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+- [**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
   - Lancement d’Azure Data Studio à partir de SSMS. (CTP 2.3)
   - Prise en charge d’Always Encrypted avec enclaves sécurisées. (CTP 2.0)

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7364ad7c7de4678926187cb171e62318c884bd2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104837"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104837"
   
 -   **Un chemin d'accès complet à l'élément.**  
   
-    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/**, le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
+    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/** , le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
   
     -   **Sur un site SharePoint :** Vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple, `="http://server/site/library/folder/Report1.rdl"`.  
   

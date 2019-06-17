@@ -1,5 +1,5 @@
 ---
-title: Mettre à niveau des bases de données répliquées | Microsoft Docs
+title: Mettre à niveau ou corriger des bases de données répliquées | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124609"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794719"
 ---
-# <a name="upgrade-replicated-databases"></a>Mettre à niveau des bases de données répliquées
+# <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ Le chemin de mise à niveau vers SQL Server dépend du modèle de déploiement. 
 
 Une approche courante qui a été adoptée pour les mises à niveau côte à côte de topologies de réplication consiste à déplacer des paires éditeur/abonné par lots vers le nouvel environnement côte à côte, au lieu de procéder à un déplacement de la topologie complète. Cette approche par phases aide à maîtriser les temps d’arrêt et, dans une certaine mesure, à réduire l’impact sur les activités qui dépendent de la réplication.  
 
-
-> [!NOTE]  
-> **Pour plus d’informations sur la mise à niveau d’une topologie de réplication vers SQL 2016, consultez le billet de blog [Mise à niveau d’une topologie de réplication vers SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)**. 
+La majeure partie de cet article est axée sur la mise à niveau de la version de SQL Server. Toutefois, le processus de mise à niveau sur place doit également être appliqué lors de la mise à jour corrective de SQL Server avec un Service Pack ou une mise à jour cumulative. 
 
  >[!WARNING]
  > La mise à niveau d’une topologie de réplication est un processus en plusieurs étapes. Nous vous recommandons d’essayer une mise à niveau d’un réplica de votre topologie de réplication dans un environnement de test avant d’exécuter la mise à niveau sur l’environnement de production réel. Cette opération permet d’apporter les dernières touches à toute documentation opérationnelle nécessaire pour gérer la mise à niveau de manière fluide sans entraîner de temps d’arrêt longs et coûteux pendant le processus de mise à niveau réel. Certains de nos clients ont réduit les temps d’arrêt considérablement avec l’utilisation de groupes de disponibilité Always On et/ou d’instances de cluster de basculement SQL Server pour leurs environnements de production pendant la mise à niveau de leur topologie de réplication. En outre, nous vous recommandons, avant de tenter la mise à niveau, d’effectuer des sauvegardes de toutes les bases de données, notamment des bases de données MSDB, Master et de distribution ainsi que des bases de données utilisateur participant à la réplication.

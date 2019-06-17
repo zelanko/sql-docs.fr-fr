@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4601435dcaf7cbc82cb4fb6e6e00ea911ef12f9f
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044386"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749123"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "55044386"
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] ajoute ces nouvelles fonctionnalités.
 
 ### <a name="functional"></a>Fonctionnel
-- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer d’index non cluster sur un index columnstore qui a une colonne calculée. 
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] prend en charge les colonnes calculées non persistantes dans les index columnstore cluster. Les colonnes calculées non persistantes ne sont pas prises en charge dans les index columnstore cluster. Vous ne pouvez pas créer un index non-cluster sur un index columnstore qui comporte une colonne calculée. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ajoute des améliorations clés pour optimiser les performances et la flexibilité des index columnstore. Ces améliorations touchent les scénarios d’entreposage de données et permettent l’analytique opérationnelle en temps réel.  

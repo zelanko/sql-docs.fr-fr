@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : Ajouter et modifier un schéma de base de données | Microsoft Docs'
+title: 'Procédure pas à pas : ajouter et modifier un diagramme de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273734"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajouter et modifier un diagramme de base de données
@@ -44,7 +44,7 @@ ms.locfileid: "63273734"
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant apparaît : **Cette base de données n’a pas une ou plusieurs des objets de prise en charge requis pour utiliser la fonctionnalité de schémas de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
+     Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
   
      La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63273734"
   
 1.  Cliquez avec le bouton droit sur la table `Address` . Dans le menu contextuel, pointez sur **Vue Table**, puis cliquez sur **Standard**.  
   
-     La grille de table affiche trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
+     La grille de table affiche trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
   
 2.  Cliquez avec le bouton droit sur la table `Address` , cliquez sur **Vue Table** et sélectionnez **Clés**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63273734"
   
 2.  Dans le **choisir un nom** boîte de dialogue, cliquez sur **OK** pour accepter le nom par défaut `Table1`.  
   
-     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de colonne**, **Type de données**, et **autoriser les valeurs null**.  
+     Une nouvelle grille de table s’affiche avec trois colonnes : **Nom de la colonne**, **Type de données**, et **Null autorisé**.  
   
 3.  Ajoutez les informations suivantes pour `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63273734"
   
 2.  Faites glisser `T2col1` vers `T1col1`.  
   
-     Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** en arrière-plan et **Tables et colonnes** au premier plan.  
+     Deux boîtes de dialogue apparaissent : **Relation de clé étrangère** en arrière-plan et **Tables et colonnes** au premier plan.  
   
 3.  Cliquez sur **OK** pour enregistrer la nouvelle relation.  
   

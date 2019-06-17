@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0079ca11eb6400b2bce524fd909acbaafd112323
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064707"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
@@ -91,7 +91,7 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Comparaison d'Invoke-Sqlcmd et de l'utilitaire sqlcmd  
  **Invoke-Sqlcmd** peut être utilisé pour exécuter un grand nombre des scripts pris en charge par l’utilitaire **sqlcmd** . Toutefois, **Invoke-Sqlcmd** s’exécute dans un environnement Windows PowerShell différent de l’environnement d’invite de commandes dans lequel **sqlcmd** est exécuté. Le comportement d’ **Invoke-Sqlcmd** a été modifié pour permettre son fonctionnement dans un environnement Windows PowerShell.  
   
- Les commandes **sqlcmd** ne sont pas toutes implémentées dans **Invoke-Sqlcmd**. Les commandes **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**et **:serverlist**, par exemple, ne sont pas prises en charge.  
+ Les commandes **sqlcmd** ne sont pas toutes implémentées dans **Invoke-Sqlcmd**. Les commandes **:!!** , **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**et **:serverlist**, par exemple, ne sont pas prises en charge.  
   
  **Invoke-Sqlcmd** n’initialise pas l’environnement **sqlcmd** ou les variables de script telles que SQLCMDDBNAME ou SQLCMDWORKSTATION.  
   

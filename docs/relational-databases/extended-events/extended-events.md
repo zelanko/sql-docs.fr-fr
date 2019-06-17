@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble de XEvents - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01ec6f0f6a48fd0d19b6bda98b42afe57abd0a07
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 0ea8f2a0202793380d80c09694a2a844e6859af9
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175668"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744014"
 ---
 # <a name="extended-events-overview"></a>Vue d’ensemble des événements étendus
 
@@ -101,14 +101,18 @@ En utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCL
 |Explique comment déterminer quelles requêtes détiennent le verrou, le plan de la requête et la pile [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment où le verrou a été mis.|[Déterminer quelles requêtes détiennent des verrous](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |Explique comment identifier la source des verrous qui gênent les performances de la base de données.|[Trouver les objets comportant le plus de verrous](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Explique comment utiliser les événements étendus avec le suivi d'événements pour Windows pour surveiller l'activité système.|[Surveiller l’activité système à l’aide d’événements étendus](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| Utilisation des affichages catalogue et des vues de gestion dynamique pour les événements étendus | [SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| Utilisation des affichages catalogue et des vues de gestion dynamique pour les événements étendus | [Utilisation de SELECT et JOIN dans les vues système pour les événements étendus dans SQL Server](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 
-  
-## <a name="see-also"></a>Voir aussi  
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Les exemples de code peuvent être différents pour Azure SQL Database
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
+## <a name="see-also"></a> Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Prise en charge DAC pour les objets et versions SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Déployer une application de la couche Données](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [Analyser les applications de la couche Données](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
  [Vues de gestion dynamique des Événements étendus](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Affichages catalogue des événements étendus &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
- [XELite : bibliothèque multiplateforme pour lire des événements XEvent à partir de fichiers XEL ou de flux SQL dynamiques](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), publiée en mai 2019.  
+ [XELite : bibliothèque multiplateforme pour lire des événements XEvent à partir de fichiers XEL ou de flux SQL dynamiques](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), publiée en mai 2019.   
+ [Applet de commande PowerShell Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), publiée en juin 2019.

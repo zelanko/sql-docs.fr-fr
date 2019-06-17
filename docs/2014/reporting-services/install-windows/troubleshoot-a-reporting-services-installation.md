@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5a27cbad6803c2106c0af4cbe4060e72cc8ee970
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108665"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
@@ -140,7 +140,7 @@ ms.locfileid: "66108665"
   
  Cette fonctionnalité SQL Server Reporting Services (SSRS) n'est pas prise en charge. Utilisez l'Administration centrale pour vérifier et résoudre un ou plusieurs des problèmes suivants : • Une URL de serveur de rapports n'est pas configurée. Utilisez la page d'intégration SSRS pour la configurer. • Le proxy d'application de service SSRS n'est pas configuré. Utilisez les pages d'application de service SSRS pour configurer le proxy. • L'application de service SSRS n'est pas mappée à cette application Web. Utilisez les pages d'application de service SSRS pour associer le proxy d'application de service SSRS au Groupe de proxy d'application pour cette application Web.  
   
- **Solution de contournement :** Le message d’erreur contient trois étapes suggérées pour corriger ce problème. La première suggestion dans le message « Un serveur de rapports URL n’est pas configurée... » s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)**.  
+ **Solution de contournement :** Le message d’erreur contient trois étapes suggérées pour corriger ce problème. La première suggestion dans le message « Un serveur de rapports URL n’est pas configurée... » s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)** .  
   
  **Informations supplémentaires :** Vous verrez ce message d’erreur lorsque vous tentez d’utiliser une de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fonctionnalité qui requiert une connexion à la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service. Cela inclut :  
   

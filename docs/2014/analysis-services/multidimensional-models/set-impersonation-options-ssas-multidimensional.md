@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072957"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Définir les options d'emprunt d'identité (SSAS - Multidimensionnel)
@@ -37,7 +37,7 @@ ms.locfileid: "66072957"
 3.  Sélectionnez une option décrite dans la section [Options d’emprunt d’identité](#bkmk_options) de cette rubrique.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Définir les options d'emprunt d'identité dans Management Studio  
- Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez la boîte de dialogue **Informations d’emprunt d’identité** en cliquant sur le bouton représentant des points de suspension (**...**) pour obtenir les propriétés de boîtes de dialogue suivantes :  
+ Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez la boîte de dialogue **Informations d’emprunt d’identité** en cliquant sur le bouton représentant des points de suspension ( **...** ) pour obtenir les propriétés de boîtes de dialogue suivantes :  
   
 -   Boîte de dialogue**Propriétés de la base de données** , via la propriété Informations d’emprunt d’identité de source de données.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66072957"
  Toutes les options sont disponibles dans la boîte de dialogue, mais elles ne sont pertinentes pour tous les scénarios. Utilisez les informations suivantes pour déterminer la meilleure solution pour votre scénario.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format : *\<Nom de domaine >***\\***\<nom de compte d’utilisateur >*.  
+ Sélectionnez cette option pour que le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objet utiliser les informations d’identification de sécurité d’un compte d’utilisateur Windows spécifié dans ce format : *\<Nom de domaine >***\\***\<nom de compte d’utilisateur >* .  
   
  Sélectionnez cette option pour utiliser une identité d'utilisateur Windows dédiée et dotée de privilèges minimaux que vous avez créée spécifiquement à des fins d'accès aux données. Par exemple, si vous créez de manière régulière un compte à usage général pour la récupération de données utilisées dans des rapports, vous pouvez spécifier ce compte ici.  
   

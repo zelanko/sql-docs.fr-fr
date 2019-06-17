@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060815"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurer une sortie d'erreur dans un composant de flux de données
@@ -82,7 +82,7 @@ ms.locfileid: "66060815"
   
 4.  Cliquez avec le bouton droit sur le composant dont vous voulez configurer les colonnes de sortie d’erreur et cliquez sur **Afficher l’éditeur avancé**.  
   
-5.  Cliquez sur l’onglet **Propriétés d’entrée et de sortie** et développez **Sortie d’erreur de \<nom du composant>**, puis **Colonnes de sortie**.  
+5.  Cliquez sur l’onglet **Propriétés d’entrée et de sortie** et développez **Sortie d’erreur de \<nom du composant>** , puis **Colonnes de sortie**.  
   
 6.  Cliquez sur une colonne et mettez à jour ses propriétés.  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047165"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  Nom du schéma auquel appartient l'objet.  
   
  *object_name*  
- Objet de base de données dont les dépendances doivent être analysées. L'objet peut être une table, une vue, une procédure stockée, une fonction définie par l'utilisateur ou un déclencheur. o*bject_name* est **nvarchar(776)**, sans valeur par défaut.  
+ Objet de base de données dont les dépendances doivent être analysées. L'objet peut être une table, une vue, une procédure stockée, une fonction définie par l'utilisateur ou un déclencheur. o*bject_name* est **nvarchar(776)** , sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -74,7 +74,7 @@ sp_depends [ @objname = ] '<object>'
 |**selected**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
 |**column**|**sysname**|Colonne ou paramètre sur lequel repose la dépendance.|  
   
- Le jeu de résultats suivant affiche les objets qui dépendent de  *\<objet >*.  
+ Le jeu de résultats suivant affiche les objets qui dépendent de  *\<objet >* .  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72fadf42bae238fbc656a120e39317ce5211919e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62740309"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Créer une requête singleton de prédiction à partir d'un modèle
@@ -86,7 +86,7 @@ AS [t]
   
 10. Dans le volet de texte de requête, recherchez le tilde rouge sous la virgule et les points de suspension qui indiquent une erreur de syntaxe. Supprimez les points de suspension et ajoutez une condition de requête supplémentaire de votre choix. Si vous n'ajoutez pas d'autres conditions, supprimez la virgule.  
   
-     Dans l’exemple de code présenté au début de cette rubrique, la condition de requête supplémentaire a la valeur **'45' as [Age]**.  
+     Dans l’exemple de code présenté au début de cette rubrique, la condition de requête supplémentaire a la valeur **'45' as [Age]** .  
   
 11. Cliquez sur **Exécuter**.  
   

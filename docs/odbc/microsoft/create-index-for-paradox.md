@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232303"
 ---
 # <a name="create-index-for-paradox"></a>CREATE INDEX pour Paradox
@@ -30,7 +30,7 @@ La syntaxe de l’instruction CREATE INDEX pour le pilote ODBC Paradox est :
   
  **(** *column-identifier* [**ASC**]  
   
- [**,** *identificateur de colonne* [**ASC**]...] **)**  
+ [ **,** *identificateur de colonne* [**ASC**]...] **)**  
   
  Le pilote ODBC Paradox ne prend pas en charge la **DESC** mot clé dans la grammaire SQL ODBC pour l’instruction CREATE INDEX. Le *nom de la table* argument peut spécifier le chemin d’accès complet de la table.  
   

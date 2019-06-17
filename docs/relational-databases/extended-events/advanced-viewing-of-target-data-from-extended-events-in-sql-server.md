@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198346"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744137"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
 
@@ -133,7 +133,7 @@ L’option **Afficher les données cibles** affiche les données qui ont été c
 
 Dans le volet **Explorateur d’objets** , vous pouvez développer les nœuds et cliquer ensuite avec le bouton droit sur :
 
-- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  >  *[votre-nœud-cible]*  > **Afficher les données cibles**.
+- **Gestion** > **Événements étendus** > **Sessions** > *[votre-session]* > *[votre-nœud-cible]* > **Afficher les données cibles**.
 
 
 Les données cibles s’affichent dans un volet à onglets dans SSMS. Ceci est illustré dans la capture d’écran suivante.
@@ -153,7 +153,7 @@ Les données cibles s’affichent dans un volet à onglets dans SSMS. Ceci est i
 Quand votre session d’événements est active, vous pouvez souhaiter surveiller les données d’événements en temps réel, à mesure que la cible les reçoit.
 
 
-- **Gestion** > **Événements étendus** > **Sessions** >  *[votre-session]*  > **Surveiller les données actives**.
+- **Gestion** > **Événements étendus** > **Sessions** > *[votre-session]* > **Surveiller les données actives**.
 
 
 ![votre session > Surveiller les données actives](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Quand votre session d’événements est active, vous pouvez souhaiter surveille
 
 L’affichage des données est mis à jour à intervalles réguliers que vous pouvez spécifier au niveau du paramètre **Latence maximale de répartition** dans :
 
-- **Événements étendus** > **Sessions** >  *[votre-session]*  > **Propriétés** > **Avancé** > **Latence maximale de répartition**
+- **Événements étendus** > **Sessions** > *[votre-session]* > **Propriétés** > **Avancé** > **Latence maximale de répartition**
 
 
 
@@ -321,3 +321,5 @@ L’événement **query_post_execution_showplan** vous permet d’afficher le pl
 ## <a name="see-also"></a>Voir aussi
 
 [XELite : bibliothèque multiplateforme pour lire des événements XEvent à partir de fichiers XEL ou de flux SQL dynamiques](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/), publiée en mai 2019.
+
+[Applet de commande PowerShell Read-SQLXEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent), publiée en juin 2019.

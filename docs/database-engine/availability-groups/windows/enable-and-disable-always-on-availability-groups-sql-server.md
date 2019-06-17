@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527122"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765797"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Activer ou désactiver la fonctionnalité de groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527122"
 > [!IMPORTANT]  
 >  Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergeait un réplica de disponibilité sur le cluster WSFC d'origine.  
   
--   **Avant de commencer :**  
   
-     [Conditions préalables](#Prerequisites)  
-  
-     [Sécurité](#Security)  
-  
--   **Procédure :**  
-  
-    -   [Déterminer si l’option Groupes de disponibilité Always On est activée](#IsEnabled)  
-  
-    -   [Activer les groupes de disponibilité Always On](#EnableAOAG)  
-  
-    -   [Désactiver les groupes de disponibilité Always On](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Prerequisites"></a> Conditions préalables requises à l’activation des groupes de disponibilité Always On  
+##  <a name="Prerequisites"></a> Conditions préalables requises à l’activation des groupes de disponibilité Always On  
   
 -   L'instance de serveur doit résider sur un nœud de Clustering de basculement Windows Server (WSFC).  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527122"
   
  Pour plus d’informations sur les autres conditions requises pour la création et la configuration de groupes de disponibilité, consultez [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sécurité  
+## <a name="Permissions"></a> Autorisations  
  Lorsque les groupes de disponibilité Always On sont activés sur une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’instance de serveur a le contrôle total sur le cluster WSFC.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  Nécessite l'appartenance au groupe **Administrateur** sur l'ordinateur local et le contrôle total sur le cluster WSFC. Pour activer Always On à l’aide de PowerShell, ouvrez la fenêtre d’invite de commandes en utilisant l’option **Exécuter en tant qu’administrateur** .  
   
  Requiert des autorisations de création et de gestion d'objets Active Directory.  
@@ -200,7 +184,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 3.  Dans le **Gestionnaire de configuration SQL Server**, cliquez sur **Services SQL Server**, cliquez avec le bouton droit sur SQL Server (**\<**_nom de l’instance_**)**, où **\<**_nom de l’instance_**>** est le nom d’une instance de serveur local pour laquelle vous voulez désactiver les groupes de disponibilité Always On, puis cliquez sur **Propriétés**.  
   
-4.  Sous l’onglet**Haute disponibilité Always On**, décochez la case **Activer les groupes de disponibilité Always On** , puis cliquez sur **OK**.  
+4.  Sous l’onglet **Haute disponibilité Always On**, décochez la case **Activer les groupes de disponibilité Always On**, puis cliquez sur **OK**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enregistre votre modification et redémarre le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Quand le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] redémarre, Always On est désactivé et la propriété de serveur **IsHadrEnabled** a la valeur 0, pour indiquer que l’option Groupes de disponibilité Always On est désactivée.  
   

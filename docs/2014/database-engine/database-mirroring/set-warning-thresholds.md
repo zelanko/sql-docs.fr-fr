@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805156"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
@@ -30,7 +30,7 @@ ms.locfileid: "65805156"
   
 ## <a name="options"></a>Options  
  *Instance de serveur et état de la connexion*  
- Nom d’une instance de serveur partenaire au format _SYSTÈME_**\\**_NOM_INSTANCE_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
+ Nom d’une instance de serveur partenaire au format _SYSTÈME_ **\\** _NOM_INSTANCE_. Pour une instance de serveur par défaut, seul le nom du système s'affiche.  
   
  Ce champ indique également si le moniteur est actuellement connecté à cette instance de serveur. Les états de connexion possibles sont les suivants :  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65805156"
 -   **Connecté à**  *nom_instance_serveur*  
   
     > [!NOTE]  
-    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)**.  
+    >  Si vous n’êtes pas membre du rôle de serveur fixe **sysadmin** , l’état est **Connecté à** *nom_instance_serveur* **(Autorisations limitées)** .  
   
  Le nom de chaque instance de serveur partenaire est affiché dans un champ d' *instance de serveur et d'état de la connexion* distinct. Le premier champ affiche le serveur principal au démarrage du moniteur.  
   

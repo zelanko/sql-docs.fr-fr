@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85ccb9573cb1a8a283e6deec7a52b0e9c5857da7
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802603"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749190"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,8 +93,14 @@ Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers 
   
 ### <a name="Security"></a> Sécurité  
   
-#### <a name="Permissions"></a> Permissions  
-Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
+#### <a name="Permissions"></a> Autorisations  
+Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre d’au moins l’un des rôles suivants :
+
+* Rôle de base de données **db_ddladmin** <sup>1</sup> 
+* Rôle de base de données **db_owner**
+* Rôle serveur **sysadmin**  
+
+<sup>1</sup> Le rôle de base de données **db_ddladmin** est le [moins privilégié](/windows-server/identity/ad-ds/plan/security-best-practices/implementing-least-privilege-administrative-models).
   
 ## <a name="SSMSProcedureFrag"></a> Vérifier la fragmentation d’un index à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824987"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803437"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Utiliser le volet Détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,21 +30,8 @@ ms.locfileid: "47824987"
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation du volet Détails de l’Explorateur d’objets, consultez [Volet Détails de l’Explorateur d’objets](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
   
--   **Pour surveiller un groupe de disponibilité, à l'aide de :**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Détails de l'Explorateur d'objets :**  
-  
-     [Détails du groupe de disponibilité](#AvGroupsDetails)  
-  
-     [Détails du réplica de disponibilité](#AvReplicaDetails)  
-  
-     [Détails de la base de données de disponibilité](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
  Vous devez être connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instance de serveur) qui héberge le réplica principal ou un réplica secondaire.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -71,7 +58,7 @@ ms.locfileid: "47824987"
 ##  <a name="AvGroupsDetails"></a> Détails du groupe de disponibilité  
  L'écran détaillé **Groupes de disponibilité** affiche les colonnes suivantes :  
   
- **Nom**  
+ **Name**  
  Répertorie les dossiers des écouteurs **Réplicas de disponibilité**, **Bases de données de disponibilité**et **Groupe de disponibilité** du groupe de disponibilité sélectionné.  
   
 ##  <a name="AvReplicaDetails"></a> Détails du réplica de disponibilité  
@@ -109,7 +96,7 @@ ms.locfileid: "47824987"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Non synchronisé**|La base de données n'est pas synchronisée ou n'a pas encore été jointe au groupe de disponibilité.|  
-|**Synchronisé**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : en mode de performances, la base de données n’est jamais dans l’état synchronisé.|  
+|**Synchronisé**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : En mode de performances, la base de données n’est jamais à l’état Synchronisée.|  
 |**NULL**|État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).|  
   
 > [!NOTE]  
@@ -118,7 +105,7 @@ ms.locfileid: "47824987"
 ##  <a name="AvDbDetails"></a> Détails de la base de données de disponibilité  
  L'écran détaillé **Base de données de disponibilité** affiche les propriétés suivantes des bases de données de disponibilité d'un groupe de disponibilité donné :  
   
- **Nom**  
+ **Name**  
  Nom de la base de données de disponibilité.  
   
  **État de synchronisation**  
@@ -128,7 +115,7 @@ ms.locfileid: "47824987"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
+|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
 |||  
   
  **Suspendu**  

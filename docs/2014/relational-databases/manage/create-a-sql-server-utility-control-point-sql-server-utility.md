@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806369"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
@@ -76,7 +76,7 @@ ms.locfileid: "62806369"
   
 -   Cette procédure doit être exécutée par un utilisateur disposant d'autorisations sysadmin, qui sont les mêmes autorisations requises pour créer un UCP.  
   
--   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d’informations, consultez [Comment : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d’informations, consultez [Procédure : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
@@ -131,7 +131,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Instance_name"></a> Spécifier une instance  
  Spécifiez les informations suivantes à propos de l'UCP que vous créez :  
   
--   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…**. Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
+-   **Nom de l’instance** - Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance.  
   
 -   **Nom de l’utilitaire** - Spécifiez un nom qui sera utilisé pour identifier l’utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le réseau.  
   
@@ -143,7 +143,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 > [!NOTE]  
 >  Si la connexion est chiffrée, la connexion chiffrée sera utilisée. Si la connexion n'est pas chiffrée, l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reconnectera à l'aide d'une connexion chiffrée.  
   
- Pour continuer, cliquez sur **Se connecter…**.  
+ Pour continuer, cliquez sur **Se connecter…** .  
   
 ##  <a name="Agent_configuration"></a> Compte du jeu d'éléments de collecte de l'utilitaire  
  Spécifiez un compte de domaine Windows pour exécuter le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce compte est utilisé comme compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le jeu d'éléments de collecte de l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également utiliser le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent existant. Pour satisfaire aux exigences de validation, suivez les indications suivantes pour spécifier le compte.  

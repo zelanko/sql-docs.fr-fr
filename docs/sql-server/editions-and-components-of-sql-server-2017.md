@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560110"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744174"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Faites-nous part de vos commentaires sur la page de hub SQL Docs !](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de SQL Server 2017. 
 
@@ -194,9 +196,9 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |gouverneur de ressources|Oui|Non|Non|Non|Non|  
 |Parallélisme de tables partitionnées|Oui|Non|Non|Non|Non|
 |Plusieurs conteneurs Filestream|Oui|Oui|Oui|Oui|Oui|
-|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|Non|
+|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de mémoires tampons|Oui|Non|Non|Non|Non|
 |Buffer Pool Extension|Oui|Oui|Non|Non|Non|
-|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
+|Gouvernance des ressources d’E/S|Oui|Non|Non|Non|Non|  
 |Lecture anticipée|Oui|Non|Non|Non|Non|
 |Analyse avancée|Oui|Non|Non|Non|Non|
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|

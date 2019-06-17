@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042309"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Téléchargez et appliquez les mises à jour Microsoft pour système de plateforme d’Analytique
@@ -107,7 +107,7 @@ Avant d’effectuer ces étapes, vous devez :
   
 1.  Avant de commencer, ouvrez le [surveiller l’Appliance à l’aide de la Console d’administration &#40;Analytique Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), cliquez sur le **Appliance état** onglet et vérifiez que le  **Cluster** et **réseau** colonnes show vert (ou NA) pour tous les nœuds. Si toutes les alertes existent dans une de ces colonnes, l’appliance ne peut pas être en mesure d’installer les mises à jour correctement. Résoudre toutes les alertes existantes dans le **Cluster** et **réseau** colonnes avant de continuer.  
   
-2.  Ouvrez une session sur le _< nom_domaine >_**-HST01** nœud en tant que l’administrateur de domaine Fabric.  
+2.  Ouvrez une session sur le _< nom_domaine >_ **-HST01** nœud en tant que l’administrateur de domaine Fabric.  
   
 3.  Pour appliquer toutes les mises à jour approuvées pour WSUS, exécutez le programme de mise à jour. Consultez [exécuter le programme de mise à jour](#RunUpdateWizard) ci-dessous pour obtenir des instructions.  
   
@@ -123,7 +123,7 @@ Avant d’effectuer ces étapes, vous devez :
   
 5.  Dans le **état** menu déroulant, sélectionnez **n’importe quel** et cliquez sur **Actualiser**.  
   
-6.  Développez **mettre à jour des Services**, *<appliance name>*- VMM, **mises à jour**, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
+6.  Développez **mettre à jour des Services**, *<appliance name>* - VMM, **mises à jour**, **toutes les mises à jour**, où *<appliance name>* est le nom de votre appliance.  
   
 7.  Dans le **toutes les mises à jour** ensemble de la fenêtre **approbation** à **toutes sauf refusées**.  
   

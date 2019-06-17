@@ -15,18 +15,20 @@ ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1df493defd8a85c6d360dd224cdcec99b5732150
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559378"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506615"
 ---
 # <a name="database-mail"></a>Messagerie de base de données
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La messagerie de base de données est une solution d'entreprise qui permet l'envoi de messages électroniques à partir du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  Database Mail est une solution d’entreprise qui permet l’envoi d’e-mails à partir du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou d’[Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Grâce à la messagerie de base de données, vos applications de bases de données peuvent envoyer des messages électroniques aux utilisateurs. Ces messages peuvent contenir les résultats d'une requête, voire des fichiers de n'importe quelle ressource de votre réseau.  
   
-  
+> [!NOTE] 
+> Database Mail est disponible dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index), mais pas dans les pools Azure SQL Database Singleton et élastiques. 
+
 ##  <a name="Benefits"></a> Avantages liés à l’utilisation de la messagerie de base de données  
  La messagerie de base de données est fiable, évolutive, sûre et facilement prise en charge.  
   
@@ -42,37 +44,37 @@ ms.locfileid: "51559378"
   
 ### <a name="scalability"></a>Extensibilité  
   
--   Remise à l'arrière-plan : la messagerie de base de données assure la remise à l'arrière-plan ou asynchrone du courrier électronique. Lorsque vous appelez **sp_send_dbmail** pour envoyer un message, la messagerie de base de données ajoute une demande dans une file d’attente [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La procédure stockée est immédiatement retournée. Le composant de messagerie externe reçoit la demande et transmet le courrier électronique.  
+-   Remise à l’arrière-plan : Database Mail assure la remise à l’arrière-plan ou asynchrone du courrier électronique. Lorsque vous appelez **sp_send_dbmail** pour envoyer un message, la messagerie de base de données ajoute une demande dans une file d’attente [!INCLUDE[ssSB](../../includes/sssb-md.md)] . La procédure stockée est immédiatement retournée. Le composant de messagerie externe reçoit la demande et transmet le courrier électronique.  
   
--   Plusieurs profils : la messagerie de base de données vous permet de créer plusieurs profils dans une même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également choisir le profil que la messagerie de base de données utilise lorsque vous envoyez un message.  
+-   Plusieurs profils : Database Mail vous permet de créer plusieurs profils dans une même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également choisir le profil que la messagerie de base de données utilise lorsque vous envoyez un message.  
   
--   Plusieurs comptes : chaque profil peut contenir plusieurs comptes de basculement. Vous pouvez configurer différents profils avec différents comptes afin de distribuer le courrier électronique vers plusieurs serveurs de messagerie.  
+-   Plusieurs comptes : chaque profil peut contenir plusieurs comptes de basculement. Vous pouvez configurer différents profils avec différents comptes afin de distribuer le courrier électronique vers plusieurs serveurs de messagerie.  
   
--   Compatibilité 64 bits : la messagerie de base de données est entièrement compatible avec les installations 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Compatibilité 64 bits : Database Mail est entièrement compatible avec les installations 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Sécurité  
   
--   Désactivée par défaut : pour réduire la zone de surface de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées de la messagerie de base de données sont désactivées par défaut.  
+-   Désactivée par défaut : pour réduire la surface d’exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les procédures stockées de Database Mail sont désactivées par défaut.  
   
 -   Sécurité de la messagerie : pour envoyer un message de messagerie de base de données, vous devez être membre du rôle de base de données **DatabaseMailUserRole** de la base de données **msdb** .  
   
--   Sécurité du profil : la messagerie de base de données garantit la sécurité des profils de messagerie. Vous choisissez les utilisateurs ou les groupes de la base de données **msdb** qui ont accès à un profil de messagerie de base de données. Vous pouvez autoriser cet accès à certains utilisateurs en particulier, ou à tous les utilisateurs de **msdb**. Un profil privé limite l'accès à une liste d'utilisateurs. Un profil public autorise l'accès à tous les utilisateurs d'une base de données.  
+-   Sécurité du profil : Database Mail garantit la sécurité des profils de messagerie. Vous choisissez les utilisateurs ou les groupes de la base de données **msdb** qui ont accès à un profil de messagerie de base de données. Vous pouvez autoriser cet accès à certains utilisateurs en particulier, ou à tous les utilisateurs de **msdb**. Un profil privé limite l'accès à une liste d'utilisateurs. Un profil public autorise l'accès à tous les utilisateurs d'une base de données.  
   
--   Administrateur de taille des pièces jointes : la messagerie de base de données limite la taille des fichiers joints (limite configurable). Vous pouvez modifier cette limite en utilisant la procédure stockée [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) .  
+-   Administrateur de taille des pièces jointes : Database Mail limite la taille des fichiers joints (limite configurable). Vous pouvez modifier cette limite en utilisant la procédure stockée [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) .  
   
--   Extensions de fichiers interdites : la messagerie de base de données maintient une liste d'extensions de fichiers interdites. Les utilisateurs ne peuvent pas joindre de fichiers dont l'extension figure dans la liste. Vous pouvez modifier cette liste en utilisant sysmail_configure_sp.  
+-   Extensions de fichiers interdites : Database Mail tient à jour une liste d’extensions de fichiers interdites. Les utilisateurs ne peuvent pas joindre de fichiers dont l'extension figure dans la liste. Vous pouvez modifier cette liste en utilisant sysmail_configure_sp.  
   
 -   La messagerie de base de données s'exécute sous le compte de service du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour attacher un fichier provenant d'un dossier dans un message électronique, le compte du moteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être autorisé à accéder au dossier dans lequel se trouve le fichier.  
   
 ### <a name="supportability"></a>Prise en charge  
   
--   Configuration intégrée : la messagerie de base de données maintient les informations des comptes de messagerie dans le moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il n'est pas nécessaire de gérer un profil de messagerie dans une application cliente externe. L'Assistant Configuration de la messagerie de base de données offre une interface pratique pour la configuration de la messagerie de base de données. Vous pouvez également créer et maintenir vos configurations au moyen de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   Configuration intégrée : Database Mail tient à jour les informations des comptes de messagerie dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il n'est pas nécessaire de gérer un profil de messagerie dans une application cliente externe. L'Assistant Configuration de la messagerie de base de données offre une interface pratique pour la configuration de la messagerie de base de données. Vous pouvez également créer et maintenir vos configurations au moyen de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Journalisation. La messagerie de base de données journalise l’activité de messagerie dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans le journal des événements des applications Microsoft Windows et dans les tables de la base de données **msdb** .  
   
--   Audit : la messagerie de base de données conserve des copies des messages et des pièces jointes envoyés dans la base de données **msdb** . Vous pouvez facilement contrôler l'utilisation de la messagerie et consulter les messages conservés.  
+-   Audit : Database Mail conserve des copies des messages et des pièces jointes envoyés dans la base de données **msdb**. Vous pouvez facilement contrôler l'utilisation de la messagerie et consulter les messages conservés.  
   
--   Prise en charge du HTML : la messagerie de base de données vous permet d'envoyer des messages au format HTML.  
+-   Prise en charge du HTML : Database Mail vous permet d’envoyer des messages au format HTML.  
   
   
 ##  <a name="VisualElement"></a> Architecture de la messagerie de base de données  
@@ -114,7 +116,7 @@ ms.locfileid: "51559378"
 -   Une tâche planifiée, telle qu'une sauvegarde de base de données ou un événement de réplication, réussit ou échoue. Par exemple, vous pouvez utiliser la messagerie de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour notifier à des opérateurs qu'une erreur s'est produite lors d'un traitement de fin de mois.  
   
   
-##  <a name="RelatedContent"></a> Rubriques relatives aux composants de la messagerie de base de données  
+##  <a name="RelatedContent"></a> Voir aussi  
   
 -   [Objets de configuration de la messagerie de base de données](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

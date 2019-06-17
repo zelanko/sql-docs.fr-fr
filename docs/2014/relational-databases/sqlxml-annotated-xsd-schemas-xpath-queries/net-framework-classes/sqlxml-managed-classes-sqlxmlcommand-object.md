@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010737"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objet SqlXmlCommand (classes managées SQLXML)
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  Texte de la commande. Cette propriété est utilisée pour spécifier le texte de la commande que vous souhaitez exécuter. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  CommandStream  
- Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez CommandStream, uniquement **« Modèle »**, **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
+ Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez CommandStream, uniquement **« Modèle »** , **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

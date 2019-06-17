@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664365"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, classe d'événements
@@ -26,7 +26,7 @@ ms.locfileid: "62664365"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Conversation  
   
-|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|`nvarchar`|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne contient des valeurs transmises par l'application à la place du nom affiché du programme.|10|Oui|  
 |**ClientProcessID**|`int`|ID affecté par l'ordinateur hôte au processus dans lequel s'exécute l'application cliente. Cette colonne de données est remplie si l'ID du processus du client est fourni par le client.|9|Oui|  

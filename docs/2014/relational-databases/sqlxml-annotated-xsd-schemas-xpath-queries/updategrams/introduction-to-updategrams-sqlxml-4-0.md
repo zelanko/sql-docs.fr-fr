@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014802"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Présentation des codes de mise à jour (SQLXML 4.0)
@@ -40,10 +40,10 @@ ms.locfileid: "66014802"
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Espace de noms requis dans le code de mise à jour  
- Les mots clés dans une mise à jour, tel que  **\<synchronisation >**,  **\<avant >**, et  **\<après >**, existent dans le `urn:schemas-microsoft-com:xml-updategram`espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le préfixe `updg` dénote l'espace de noms `updategram`.  
+ Les mots clés dans une mise à jour, tel que  **\<synchronisation >** ,  **\<avant >** , et  **\<après >** , existent dans le `urn:schemas-microsoft-com:xml-updategram`espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le préfixe `updg` dénote l'espace de noms `updategram`.  
   
 ## <a name="reviewing-syntax"></a>Vérification de la syntaxe  
- Une mise à jour est un modèle avec  **\<synchronisation >**,  **\<avant >**, et  **\<après >** blocs qui forment la syntaxe de la mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
+ Une mise à jour est un modèle avec  **\<synchronisation >** ,  **\<avant >** , et  **\<après >** blocs qui forment la syntaxe de la mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700937"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803503"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Interrompre une base de données de disponibilité (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47700937"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :** [Comment éviter un journal des transactions plein](#FollowUp)  
+-   **Suivi :** [Comment éviter un journal des transactions plein](#FollowUp)  
   
 -   [Tâches associées](#RelatedTasks)  
   
@@ -69,11 +69,11 @@ ms.locfileid: "47700937"
  Vous devez être connecté à l'instance de serveur qui héberge la base de données que vous souhaitez interrompre. Pour interrompre une base de données primaire et les bases de données secondaires correspondantes, connectez-vous à l'instance de serveur qui héberge le réplica principal. Pour interrompre une base de données secondaire tout en laissant la base de données primaire disponible, connectez-vous au réplica secondaire.  
   
 ###  <a name="Recommendations"></a> Recommandations  
- Lors de goulots d'étranglement, l'interruption d'une ou plusieurs bases de données secondaires, même brièvement, peut être utile pour améliorer les performances temporairement sur le réplica principal. Tant qu'une base de données secondaire reste suspendue, le journal des transactions de la base de données primaire correspondante ne peut pas être tronqué. Cela provoque l'accumulation des enregistrements du journal sur la base de données primaire. Par conséquent, nous vous recommandons de reprendre, ou de supprimer, une base de données secondaire suspendue rapidement. Pour plus d'informations, consultez [Suivi : Comment éviter un journal des transactions plein](#FollowUp), plus loin dans cette rubrique.  
+ Lors de goulots d'étranglement, l'interruption d'une ou plusieurs bases de données secondaires, même brièvement, peut être utile pour améliorer les performances temporairement sur le réplica principal. Tant qu'une base de données secondaire reste suspendue, le journal des transactions de la base de données primaire correspondante ne peut pas être tronqué. Cela provoque l'accumulation des enregistrements du journal sur la base de données primaire. Par conséquent, nous vous recommandons de reprendre, ou de supprimer, une base de données secondaire suspendue rapidement. Pour plus d’informations, consultez [Suivi : Comment éviter un journal des transactions plein](#FollowUp) plus loin dans cette rubrique.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
@@ -126,7 +126,7 @@ ms.locfileid: "47700937"
   
 -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> Suivi : Comment éviter un journal des transactions plein  
  En général, lorsqu'un point de contrôle automatique est effectué sur une base de données, son journal des transactions est tronqué jusqu'à ce point de contrôle après la sauvegarde du journal suivante. Toutefois, pendant qu'une base de données secondaire est interrompue, tous les enregistrements de journal en cours restent actifs sur la base de données primaire. Si le journal des transactions est saturé (soit parce qu'il a atteint sa taille maximale, soit parce que l'instance de serveur manque de place), la base de données ne peut plus effectuer de mises à jour.  
   
  Pour éviter ce problème, vous devez procédez de l'une des manières suivantes :  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cf0478f63ab98bda9bf13a7cc5bad0f98bd1795
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 3a8e5fb1a67059cc92d608e5478be13f610af532
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973118"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782499"
 ---
 # <a name="tools-to-monitor-always-on-availability-groups"></a>Outils pour superviser les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "57973118"
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Le volet **Détails de l'Explorateur d'objets** affiche des informations de base sur les groupes de disponibilité hébergés sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté.<br /><br /> **\*\* Conseil \*\*** Utilisez ce volet pour sélectionner plusieurs groupes de disponibilité, réplicas ou bases de données et effectuer des tâches d’administration courantes sur les objets sélectionnés, comme la suppression de plusieurs réplicas de disponibilité ou bases de données dans un groupe de disponibilité.|[Utiliser les détails de l’Explorateur d’objets pour surveiller les groupes de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)|  
 |[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|Les boîtes de dialogue**Propriétés** vous permettent d'afficher les propriétés des groupes de disponibilité, les réplicas ou les écouteurs et, dans certains cas, de modifier leurs valeurs.|-   [Afficher les propriétés d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)<br />-   [Afficher les propriétés d’un réplica de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)<br />-   [Afficher les propriétés d’écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)|  
 |Moniteur système|L’objet de performance **SQLServer:Availability Replica** intègre des compteurs de performances chargés de fournir des informations sur les réplicas de disponibilité.|[SQL Server, réplica de disponibilité](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)|  
-|Moniteur système|L’objet de performance **SQLServer:Database Replica** contient des compteurs de performances qui signalent des informations concernant les bases de données secondaires sur un réplica secondaire donné.<br /><br /> L'objet **SQLServer:Databases** dans SQL Server contient des compteurs de performances pour surveiller les activités du journal des transactions, entre autres choses. Les compteurs suivants sont particulièrement pertinents pour la surveillance de l'activité du journal des transactions sur les bases de données de disponibilité : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**.|[SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md) et [SQL Server, objet Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
+|Moniteur système|L’objet de performance **SQLServer:Database Replica** contient des compteurs de performances qui signalent des informations concernant les bases de données secondaires sur un réplica secondaire donné.<br /><br /> L'objet **SQLServer:Databases** dans SQL Server contient des compteurs de performances pour surveiller les activités du journal des transactions, entre autres choses. Les compteurs suivants sont particulièrement pertinents pour la supervision de l’activité du journal des transactions sur les bases de données de disponibilité : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**.|[SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md) et [SQL Server, objet Databases](../../../relational-databases/performance-monitor/sql-server-databases-object.md)|  
   
 ##  <a name="RelatedContent"></a> Contenu associé  
   
