@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226245"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -106,7 +106,7 @@ cbValue
   
 -   Longueur de la séquence d'octets de fin facultative  
   
- Chaque appel à **bcp_setcolfmt** Spécifie le format d’une colonne du fichier de l’utilisateur. Par exemple, pour modifier les paramètres par défaut pour les trois colonnes dans un fichier de données utilisateur de cinq colonnes, appelez d’abord [bcp_columns](bcp-columns.md)**(5)**, puis appelez **bcp_setcolfmt** cinq fois, trois de ces appels définissant votre format personnalisé. Les deux appels restants, définissez BCP_FMT_TYPE sur 0 et la valeur BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN et *cbValue* à 0, SQL_VARLEN_DATA et 0 respectivement. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
+ Chaque appel à **bcp_setcolfmt** Spécifie le format d’une colonne du fichier de l’utilisateur. Par exemple, pour modifier les paramètres par défaut pour les trois colonnes dans un fichier de données utilisateur de cinq colonnes, appelez d’abord [bcp_columns](bcp-columns.md) **(5)** , puis appelez **bcp_setcolfmt** cinq fois, trois de ces appels définissant votre format personnalisé. Les deux appels restants, définissez BCP_FMT_TYPE sur 0 et la valeur BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN et *cbValue* à 0, SQL_VARLEN_DATA et 0 respectivement. Cette procédure copie les cinq colonnes, trois avec votre format personnalisé et deux avec le format par défaut.  
   
  Le **bcp_columns** fonction doit être appelée avant d’appeler **bcp_setcolfmt**.  
   

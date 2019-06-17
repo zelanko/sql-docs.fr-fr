@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755583"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Mise en miroir de base de données et instances de cluster de basculement SQL Server
@@ -43,7 +43,7 @@ ms.locfileid: "62755583"
   
  ![Basculement sur un cluster](../media/dbm-and-failover-clustering.gif "Basculement sur un cluster")  
   
- Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B**, et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
+ Les trois instances de serveur dans la session de mise en miroir résident sur trois clusters distincts : **Cluster_A**, **Cluster_B** et **Cluster_C**. Sur chaque cluster, une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute comme instance cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Au début de la session de mise en miroir, l’instance cluster de basculement **Cluster_A** est le serveur principal, celle de **Cluster_B** est le serveur miroir et celle de **Cluster_C** est le témoin de la session. À un moment donné, le nœud actif de **Cluster_A** subit une défaillance, à la suite de quoi le serveur principal devient indisponible.  
   
  Avant que le basculement du cluster ne puisse avoir lieu, la perte du serveur principal est détectée par le serveur miroir avec l'aide du témoin. Le serveur miroir restaure par progression sa base de données et la remet en ligne en tant que nouvelle base de données principale aussi rapidement que possible. Une fois le basculement du **Cluster_A** terminé, le serveur principal initial devient le serveur miroir et synchronise sa base de données avec la base de données principale actuelle sur le **Cluster_B**.  
   

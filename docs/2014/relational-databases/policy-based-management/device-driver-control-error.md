@@ -1,27 +1,25 @@
 ---
 title: Erreur de contrôle du pilote de périphérique | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
-ms.prod: sql
-ms.prod_service: database-engine
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
-author: VanMSFT
-ms.author: vanto
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a5bcf05ccb3876ab22227ea2f5a5e5c9d7bbbbc6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705253"
 ---
 # <a name="device-driver-control-error"></a>Erreur de contrôle du pilote de périphérique
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette règle recherche l’ID d’événement 11 dans le journal des événements système. Cette erreur peut être due à un pilote de périphérique endommagé, un problème matériel, un câblage défaillant ou des problèmes de connectivité.  
   
 ## <a name="best-practices-recommendations"></a>Meilleures pratiques recommandées  

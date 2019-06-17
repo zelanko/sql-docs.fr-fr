@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144595"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
@@ -68,13 +68,13 @@ ms.locfileid: "63144595"
   
      Si vous souhaitez vous connecter à un ordinateur distant, suivez ces étapes :  
   
-    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
+    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
   
     2.  Dans la boîte de dialogue **Changer d'ordinateur géré** , cliquez sur **Un autre ordinateur**.  
   
     3.  Entrez le nom de l'ordinateur distant, puis cliquez sur **OK**.  
   
-3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)**, puis cliquez sur **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)** , puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés du Contrôle WMI** , cliquez sur l'onglet **Sécurité** .  
   

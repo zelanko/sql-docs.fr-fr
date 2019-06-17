@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670690"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace du Générateur de profils SQL Server), .sql (fichier SQL) ou .log (fichier de trace de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
   
  **-it** _workload_trace_table_name_  
- Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Le tableau suivant indique les valeurs par défaut de chaque paramètre :  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Cet argument peut remplacer l’entrée d’une liste de tables à l’invite de commandes (**-TI**). N’utilisez pas un fichier de liste de tables (**-Tf**) si vous employez **-TI**. Si les deux arguments sont employés, **dta** échoue et retourne une erreur.  
+ Cet argument peut remplacer l’entrée d’une liste de tables à l’invite de commandes ( **-TI**). N’utilisez pas un fichier de liste de tables ( **-Tf**) si vous employez **-TI**. Si les deux arguments sont employés, **dta** échoue et retourne une erreur.  
   
  Si les arguments **-Tf** et **-Tl** sont omis, toutes les tables utilisateur dans les bases de données spécifiées sont prises en compte pour le réglage.  
   
  **-TI** _table_list_  
  Spécifie à l'invite de commandes une liste de tables à régler. Placez des virgules entre les noms de table pour les séparer. Si une seule base de données est spécifiée avec l’argument **-D** , les noms de table n’ont pas besoin d’être qualifiés avec un nom de base de données. Sinon, le nom complet au format : *database_name.schema_name.table_name* est obligatoire pour chaque table.  
   
- Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables (**-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
+ Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables ( **-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
   
  **-U** _ID_connexion_  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

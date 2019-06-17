@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144340"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
@@ -107,7 +107,7 @@ ms.locfileid: "63144340"
      **Planifier**  
      Indique pour quelle planification le sous-plan sera exécuté. Cliquez sur **Planification du sous-plan** pour ouvrir la boîte de dialogue **Nouvelle planification du travail** . Cliquez sur **Supprimer la planification** pour supprimer la planification du sous-plan.  
   
-     Liste**Exécuter en tant que**   
+     Liste**Exécuter en tant que**  
      Sélectionnez le compte à utiliser pour exécuter cette sous-tâche.  
   
 6.  Cliquez sur l'icône **Planification du sous-plan** pour entrer les informations de la planification dans la boîte de dialogue **Nouvelle planification du travail** .  
@@ -159,10 +159,10 @@ ms.locfileid: "63144340"
          **Option de contrainte**  
          Définit la manière dont une contrainte fonctionne entre deux tâches.  
   
-         Liste**Opération d’évaluation**    
-         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
+         Liste**Opération d’évaluation**  
+         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
   
-         Liste**Valeur**   
+         Liste**Valeur**  
          Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**. **Réussite** est la valeur par défaut.  
   
         > [!NOTE]  
@@ -215,7 +215,7 @@ ms.locfileid: "63144340"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès au nom de dossier ou un fichier dans le **localiser le dossier -**_nom_serveur_ ou **rechercher les fichiers de base de données -**_nom_serveur_  boîtes de dialogue.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Ou bien, cliquez sur le bouton de sélection **(...)**  et sélectionnez le chemin d’accès au nom de dossier ou un fichier dans le **localiser le dossier -** _nom_serveur_ ou **rechercher les fichiers de base de données -** _nom_serveur_  boîtes de dialogue.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144340"
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
   
-     Les options suivantes sont disponibles sur le **visionneuse du fichier journal -**_nom_serveur_ boîte de dialogue.  
+     Les options suivantes sont disponibles sur le **visionneuse du fichier journal -** _nom_serveur_ boîte de dialogue.  
   
      **Charger le journal**  
      Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

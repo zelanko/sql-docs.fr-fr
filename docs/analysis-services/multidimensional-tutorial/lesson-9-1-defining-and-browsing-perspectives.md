@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7f379b3cbc335da74b4d029d19b8fa3bdab603c9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403501"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Leçon 9-1 : définition et exploration de Perspectives
@@ -53,37 +53,37 @@ Dans les tâches de cette rubrique, vous allez définir plusieurs perspectives d
   
 5.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   Groupe de mesures**Reseller Sales**   
+    -   Groupe de mesures**Reseller Sales**  
   
-    -   Groupe de mesures**Sales Quotas**   
+    -   Groupe de mesures**Sales Quotas**  
   
-    -   Groupe de mesures**Sales Quotas 1**   
+    -   Groupe de mesures**Sales Quotas 1**  
   
-    -   Dimension de cube**Reseller**   
+    -   Dimension de cube**Reseller**  
   
-    -   Dimension de cube**Reseller Geography**   
+    -   Dimension de cube**Reseller Geography**  
   
-    -   Dimension de cube**Sales Territory**   
+    -   Dimension de cube**Sales Territory**  
   
-    -   Dimension de cube**Employee**   
+    -   Dimension de cube**Employee**  
   
-    -   Dimension de cube**Promotion**   
+    -   Dimension de cube**Promotion**  
   
-    -   Indicateur de performance clé**Reseller Revenue**   
+    -   Indicateur de performance clé**Reseller Revenue**  
   
-    -   Jeu nommé**Large Resellers**   
+    -   Jeu nommé**Large Resellers**  
   
-    -   Membre calculé**Total Sales Amount**   
+    -   Membre calculé**Total Sales Amount**  
   
-    -   Membre calculé**Total Product Cost**   
+    -   Membre calculé**Total Product Cost**  
   
-    -   Membre calculé**Reseller GPM**   
+    -   Membre calculé**Reseller GPM**  
   
-    -   Membre calculé**Total GPM**   
+    -   Membre calculé**Total GPM**  
   
-    -   Membre calculé**Reseller Sales Ratio to All Products**   
+    -   Membre calculé**Reseller Sales Ratio to All Products**  
   
-    -   Membre calculé**Total Sales Ratio to All Products**   
+    -   Membre calculé**Total Sales Ratio to All Products**  
   
     Ces objets ne concernent pas les ventes par Internet.  
   
@@ -102,29 +102,29 @@ Dans les tâches de cette rubrique, vous allez définir plusieurs perspectives d
   
 4.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   Groupe de mesures**Internet Sales**   
+    -   Groupe de mesures**Internet Sales**  
   
-    -   Groupe de mesures**Internet Sales Reason**   
+    -   Groupe de mesures**Internet Sales Reason**  
   
-    -   Dimension de cube**Customer**   
+    -   Dimension de cube**Customer**  
   
-    -   Dimension de cube**Internet Sales Order Details**   
+    -   Dimension de cube**Internet Sales Order Details**  
   
-    -   Dimension de cube**Sales Reason**   
+    -   Dimension de cube**Sales Reason**  
   
-    -   Action d’extraction**Internet Sales Details Drillthrough Action**   
+    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
   
-    -   Membre calculé**Total Sales Amount**   
+    -   Membre calculé**Total Sales Amount**  
   
-    -   Membre calculé**Total Product Cost**   
+    -   Membre calculé**Total Product Cost**  
   
-    -   Membre calculé**Internet GPM**   
+    -   Membre calculé**Internet GPM**  
   
-    -   Membre calculé**Total GPM**   
+    -   Membre calculé**Total GPM**  
   
-    -   Membre calculé**Internet Sales Ratio to All Products**   
+    -   Membre calculé**Internet Sales Ratio to All Products**  
   
-    -   Membre calculé**Total Sales Ratio to All Products**   
+    -   Membre calculé**Total Sales Ratio to All Products**  
   
     Ces objets ne concernent pas les ventes de revendeurs.  
   
@@ -139,27 +139,27 @@ Dans les tâches de cette rubrique, vous allez définir plusieurs perspectives d
   
 3.  Désactivez la case à cocher pour les objets suivants :  
   
-    -   Groupe de mesures**Internet Sales**   
+    -   Groupe de mesures**Internet Sales**  
   
-    -   Groupe de mesures**Reseller Sales**   
+    -   Groupe de mesures**Reseller Sales**  
   
-    -   Groupe de mesures**Internet Sales Reason**   
+    -   Groupe de mesures**Internet Sales Reason**  
   
-    -   Groupe de mesures**Sales Quotas**   
+    -   Groupe de mesures**Sales Quotas**  
   
-    -   Groupe de mesures**Sales Quotas1**   
+    -   Groupe de mesures**Sales Quotas1**  
   
-    -   Dimension de cube**Internet Sales Order Details**   
+    -   Dimension de cube**Internet Sales Order Details**  
   
-    -   Dimension de cube**Sales Reason**   
+    -   Dimension de cube**Sales Reason**  
   
-    -   Action d’extraction**Internet Sales Details Drillthrough Action**   
+    -   Action d’extraction**Internet Sales Details Drillthrough Action**  
   
 4.  Activez la case à cocher pour les objets suivants :  
   
-    -   Mesure**Internet Sales Count**   
+    -   Mesure**Internet Sales Count**  
   
-    -   Mesure**Reseller Sales Count**   
+    -   Mesure**Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Exploration du cube à travers chaque perspective  
   

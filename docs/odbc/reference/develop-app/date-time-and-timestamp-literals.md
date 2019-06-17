@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62641027"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Littéraux de date, d’heure et d’horodatage
@@ -31,7 +31,7 @@ La séquence d’échappement pour les littéraux de date, time et timestamp est
 |---------------------|-------------|-----------------------|  
 |**d**|Date|*aaaa*-*mm*-*jj*|  
 |**t**|Heure *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Horodateur|*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...*] [1]|  
+|**ts**|Horodateur|*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...* ] [1]|  
   
  [1] le nombre de chiffres à droite de la virgule décimale dans un intervalle de temps ou timestamp littéral contenant un composant « secondes » dépend de la précision en secondes, comme contenue dans le champ de descripteur SQL_DESC_PRECISION. (Pour plus d’informations, consultez [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

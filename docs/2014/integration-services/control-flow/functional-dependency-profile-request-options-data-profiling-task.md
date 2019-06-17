@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62831545"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Options Demande de profil de dépendance fonctionnelle (tâche de profilage des données)
@@ -32,14 +32,14 @@ ms.locfileid: "62831545"
   
  Du côté déterminant, vous pouvez spécifier une colonne ou un ensemble de colonnes dans la propriété **DeterminantColumns** . Par exemple, imaginez une table qui contient les colonnes A, B et C. Vous effectuez les sélections suivantes pour la propriété **DeterminantColumns** :  
   
--   Quand vous sélectionnez le caractère générique **(\*)**, la tâche de profilage des données teste chaque colonne en tant que côté déterminant de la dépendance.  
+-   Quand vous sélectionnez le caractère générique **(\*)** , la tâche de profilage des données teste chaque colonne en tant que côté déterminant de la dépendance.  
   
 -   Quand vous sélectionnez le caractère générique **(\*)** et une ou plusieurs autres colonnes, la tâche de profilage des données teste chaque combinaison de colonnes en tant que côté déterminant de la dépendance. Par exemple, imaginez une table composée des colonnes A, B et C. Si vous spécifiez **(\*)** et la colonne C comme valeur de la propriété **DeterminantColumns**, la tâche de profilage des données teste les combinaisons (A, C) et (B, C) en tant que côté déterminant de la dépendance.  
   
- Du côté dépendant, vous pouvez spécifier une colonne unique ou le caractère générique **(\*)** dans la propriété **DependentColumn**. Quand vous sélectionnez **(\*)**, la tâche de profilage des données teste la colonne ou l’ensemble de colonnes du côté déterminant avec chaque colonne.  
+ Du côté dépendant, vous pouvez spécifier une colonne unique ou le caractère générique **(\*)** dans la propriété **DependentColumn**. Quand vous sélectionnez **(\*)** , la tâche de profilage des données teste la colonne ou l’ensemble de colonnes du côté déterminant avec chaque colonne.  
   
 > [!NOTE]  
->  Si vous sélectionnez **(\*)**, cette option risque d’occasionner un grand nombre de calculs et de diminuer les performances de la tâche. En revanche, si la tâche détecte un sous-ensemble qui respecte le seuil défini pour une dépendance fonctionnelle, la tâche ne procède pas à l'analyse des combinaisons supplémentaires. Par exemple, dans l'exemple de table décrit ci-dessus, si la tâche détermine que la colonne C est une colonne déterminante, la tâche ne poursuit pas l'analyse des candidats composites.  
+>  Si vous sélectionnez **(\*)** , cette option risque d’occasionner un grand nombre de calculs et de diminuer les performances de la tâche. En revanche, si la tâche détecte un sous-ensemble qui respecte le seuil défini pour une dépendance fonctionnelle, la tâche ne procède pas à l'analyse des combinaisons supplémentaires. Par exemple, dans l'exemple de table décrit ci-dessus, si la tâche détermine que la colonne C est une colonne déterminante, la tâche ne poursuit pas l'analyse des candidats composites.  
   
 ## <a name="request-properties-options"></a>Options Propriétés de la demande  
  Pour une **demande de profil de dépendance fonctionnelle**, le volet **Propriétés de la demande** affiche les groupes d’options suivants :  

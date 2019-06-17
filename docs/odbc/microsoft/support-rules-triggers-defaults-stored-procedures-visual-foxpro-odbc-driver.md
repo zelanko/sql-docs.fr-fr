@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269857"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées (pilote ODBC Visual FoxPro)
@@ -44,7 +44,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
  Si votre application interagit avec les données dont les règles, les déclencheurs, les valeurs par défaut, ou d’appellent de procédures stockées toutes les autres commandes de Visual FoxPro ou fonctions, le pilote génère une erreur. Consultez [non pris en charge les commandes FoxPro Visual et fonctions](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) pour obtenir la liste des commandes et fonctions non prises en charge par le pilote.  
   
 > [!TIP]  
->  Si vous souhaitez insérer du code conditionnel dans les règles, des déclencheurs ou des procédures stockées qui détermine les commandes à exécuter lorsqu’elle est appelée par le pilote, vous pouvez utiliser la **() VERSION** (fonction). Le **() VERSION** fonction retourne " pilote ODBC Visual FoxPro *\<version >*" lorsqu’elle est appelée par le pilote.  
+>  Si vous souhaitez insérer du code conditionnel dans les règles, des déclencheurs ou des procédures stockées qui détermine les commandes à exécuter lorsqu’elle est appelée par le pilote, vous pouvez utiliser la **() VERSION** (fonction). Le **() VERSION** fonction retourne " pilote ODBC Visual FoxPro *\<version >* " lorsqu’elle est appelée par le pilote.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Commandes de Visual FoxPro et fonctions pris en charge dans les règles, les déclencheurs, les valeurs par défaut et les procédures stockées  
   

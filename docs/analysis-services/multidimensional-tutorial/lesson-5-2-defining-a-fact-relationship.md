@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d82ca352c574d02a5b0631df5c9448df12a5acc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404001"
 ---
 # <a name="lesson-5-2---defining-a-fact-relationship"></a>Leçon 5-2 : définition d’une relation de faits
@@ -88,7 +88,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter une nouvelle dimensio
   
     Notez que la dimension de cube **Internet Sales Order Details** est configurée automatiquement avec une relation de faits, comme le montre l’icône unique.  
   
-2.  Cliquez sur le bouton Parcourir (**...** ) dans le **Item Description** cellule, à l’intersection de la **Internet Sales** groupe de mesures et les **Internet Sales Order Details** , une dimension à Passez en revue les propriétés de relation de faits.  
+2.  Cliquez sur le bouton Parcourir ( **...** ) dans le **Item Description** cellule, à l’intersection de la **Internet Sales** groupe de mesures et les **Internet Sales Order Details** , une dimension à Passez en revue les propriétés de relation de faits.  
   
     La boîte de dialogue **Définir une relation** s’affiche. Notez que vous ne pouvez pas configurer les propriétés.  
   

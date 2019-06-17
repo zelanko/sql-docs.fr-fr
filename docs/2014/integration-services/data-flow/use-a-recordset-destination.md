@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899995"
 ---
 # <a name="use-a-recordset-destination"></a>Utiliser une destination de jeu d'enregistrements
@@ -153,7 +153,7 @@ ms.locfileid: "62899995"
   
     5.  Pour **MessageSourceType**, sélectionnez **Entrée directe**.  
   
-5.  Dans la page **Expressions** de **l’Éditeur de tâche Envoyer un message**, cliquez sur le bouton de sélection (**...**) pour ouvrir **l’Éditeur d’expressions de la propriété**.  
+5.  Dans la page **Expressions** de **l’Éditeur de tâche Envoyer un message**, cliquez sur le bouton de sélection ( **...** ) pour ouvrir **l’Éditeur d’expressions de la propriété**.  
   
 6.  Dans l' **Éditeur d'expressions de la propriété**, entrez les informations suivantes :  
   

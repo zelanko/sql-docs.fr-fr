@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284522"
 ---
 # <a name="arithmetic-operators"></a>Opérateurs arithmétiques
@@ -29,7 +29,7 @@ ms.locfileid: "63284522"
 |[/ (Diviser)](../mdx/divide-mdx-operator-reference.md)|Divise un nombre par un autre.|  
 |[* (Multiplier)](../mdx/multiply-mdx.md)|Multiplie deux nombres.|  
 |[- (Soustraire)](../mdx/subtract-mdx.md)|Soustrait deux nombres.|  
-|^ (Puissance) |Élève un nombre à une puissance égale à un autre nombre.|  
+|^ (Puissance)|Élève un nombre à une puissance égale à un autre nombre.|  
   
 > [!NOTE]  
 >  MDX n'inclut pas de fonction pour obtenir la racine carrée d'un nombre. Pour obtenir la racine carrée d'un nombre, élevez-le à la puissance 0.5 à l'aide de l'opérateur ^.  

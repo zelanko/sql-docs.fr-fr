@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667235"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Actualiser des données dans le Moniteur de réplication
@@ -42,7 +42,7 @@ ms.locfileid: "62667235"
   
     3.  Cliquez avec le bouton droit sur un abonnement, puis cliquez sur **Afficher les détails**.  
   
-2.  Dans la fenêtre de détails **Abonnement \<Nom_Abonnement>**, cliquez sur **Action**, puis sur **Actualisation automatique**. La fréquence d'actualisation est déterminée par le paramètre **Fréquence d'actualisation** dans la boîte de dialogue **Paramètres du serveur de publication** .  
+2.  Dans la fenêtre de détails **Abonnement \<Nom_Abonnement>** , cliquez sur **Action**, puis sur **Actualisation automatique**. La fréquence d'actualisation est déterminée par le paramètre **Fréquence d'actualisation** dans la boîte de dialogue **Paramètres du serveur de publication** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../monitoring-replication.md)  

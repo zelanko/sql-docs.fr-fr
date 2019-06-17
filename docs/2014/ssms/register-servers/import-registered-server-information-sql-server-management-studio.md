@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191911"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importer des informations de serveur inscrit (SQL Server Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "63191911"
 3.  Dans la boîte de dialogue **Importer des serveurs inscrits** , sélectionnez le fichier de serveurs inscrits à importer, puis cliquez sur **OK**.  
   
      **Fichier d'importation**  
-     Tapez le nom du fichier d’importation dans la zone de texte ou cliquez sur le bouton Parcourir (**...**) pour rechercher le fichier d’importation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Le fichier d'importation peut être uniquement un fichier de serveur inscrit précédemment exporté. Les fichiers de serveur inscrit ont l'extension .regsrvr.  
+     Tapez le nom du fichier d’importation dans la zone de texte ou cliquez sur le bouton Parcourir ( **...** ) pour rechercher le fichier d’importation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Le fichier d'importation peut être uniquement un fichier de serveur inscrit précédemment exporté. Les fichiers de serveur inscrit ont l'extension .regsrvr.  
   
      **Sélectionnez le groupe de serveurs vers lequel importer**  
      Sélectionnez le nœud racine ou un groupe de serveurs particulier vers lequel seront importées les entrées de serveur inscrit dans le fichier. Vous pouvez importer dans le fichier d'exportation tous les serveurs inscrits, les serveurs inscrits d'un groupe de serveurs particulier ou un serveur inscrit individuel. La fonctionnalité d'importation est récursive ; par exemple, si le groupe de serveurs A contient le groupe de serveurs B, et que le groupe de serveurs B contient les groupes de serveurs C et D, l'importation du groupe de serveur A entraîne l'exportation de toutes les entrées de A, B, C et D.  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810433"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>Modifier le mot de passe des comptes utilisés par SQL Server (Gestionnaire de configuration SQL Server)
@@ -55,9 +55,9 @@ ms.locfileid: "62810433"
   
 2.  Dans le Gestionnaire de configuration SQL Server, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (**\<nom_instance>**)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server (** \<nom_instance> **)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server (**\<nom_instance>**)**, sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server (** \<nom_instance> **)** , sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
   
      Le mot de passe prend effet immédiatement, sans qu'il soit nécessaire de redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62810433"
   
 2.  Dans le Gestionnaire de configuration SQL Server, cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server Agent (**\<nom_instance>**)**, puis cliquez sur **Propriétés**.  
+3.  Dans le volet d’informations, cliquez avec le bouton droit sur **SQL Server Agent (** \<nom_instance> **)** , puis cliquez sur **Propriétés**.  
   
-4.  Dans la boîte de dialogue **Propriétés de SQL Server Agent (**\<nom_instance>**)**, sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
+4.  Dans la boîte de dialogue **Propriétés de SQL Server Agent (** \<nom_instance> **)** , sous l’onglet Ouvrir une session, pour le compte figurant dans la zone **Nom du compte**, tapez le nouveau mot de passe dans les zones **Mot de passe** et **Confirmer le mot de passe**, puis cliquez sur **OK**.  
   
      Sur une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le mot de passe prend effet immédiatement, sans redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sur une instance cluster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut mettre la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion, et nécessite un redémarrage.  
   

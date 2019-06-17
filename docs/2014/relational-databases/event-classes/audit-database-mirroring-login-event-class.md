@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711823"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, classe d'événements
@@ -28,7 +28,7 @@ ms.locfileid: "62711823"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Database Mirroring Login  
   
-|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Inutilisé dans cette classe d'événements.|10|Oui|  
 |**ClientProcessID**|**Int**|Inutilisé dans cette classe d'événements.|9|Oui|  

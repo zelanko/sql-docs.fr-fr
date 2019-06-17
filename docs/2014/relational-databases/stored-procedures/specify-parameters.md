@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736362"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
@@ -63,10 +63,10 @@ GO
  En nommant explicitement les paramètres et en attribuant les valeurs appropriées à chaque paramètre dans un appel de procédure, il est possible de fournir les paramètres dans n'importe quel ordre. Par exemple, si la procédure **my_proc** attend trois paramètres nommés **\@first**, **\@second** et **\@third**, les valeurs qui lui sont transmises peuvent être assignées aux noms de paramètres, par exemple : `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Si une valeur de paramètre est fournie sous la forme **\@paramètre =**_valeur_, tous les paramètres suivants doivent être indiqués de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **\@paramètre =**_valeur_, elles doivent être indiquées dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
+>  Si une valeur de paramètre est fournie sous la forme **\@paramètre =** _valeur_, tous les paramètres suivants doivent être indiqués de cette manière. Si les valeurs des paramètres ne sont pas transmises sous la forme **\@paramètre =** _valeur_, elles doivent être indiquées dans le même ordre (de gauche à droite) que les paramètres répertoriés dans l’instruction CREATE PROCEDURE.  
 > 
 > [!WARNING]
->  Un paramètre transmis sous la forme **\@paramètre =**_valeur_, mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
+>  Un paramètre transmis sous la forme **\@paramètre =** _valeur_, mais mal orthographié, générera une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et empêchera l’exécution de la procédure.  
   
 ## <a name="specifying-parameter-data-types"></a>Spécification des types de données de paramètre  
  Les paramètres doivent être définis avec un type de données lorsqu'ils sont déclarés dans une instruction CREATE PROCEDURE. Le type de données d'un paramètre détermine le type et la plage de valeurs admis pour le paramètre lorsque la procédure est appelée. Par exemple, si vous définissez un paramètre avec le type de données `tinyint`, seules les valeurs numériques comprises entre 0 et 255 sont acceptées lorsqu'elles sont passées à ce paramètre. Une erreur est renvoyée lorsqu'une procédure est exécutée avec une valeur incompatible avec le type de données.  
@@ -126,7 +126,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est précisé, sauf si les paramètres sont transmis sous la forme **\@paramètre =**_valeur_.  
+ Bien que vous puissiez omettre des paramètres ayant des valeurs par défaut, la liste des paramètres peut seulement être tronquée. Par exemple, si une procédure a cinq paramètres, le quatrième et le cinquième peuvent être omis. Toutefois, le quatrième ne peut pas être ignoré tant que le cinquième est précisé, sauf si les paramètres sont transmis sous la forme **\@paramètre =** _valeur_.  
   
 ## <a name="specifying-parameter-direction"></a>Spécification de la direction du paramètre  
  La direction d'un paramètre peut être une entrée (une valeur passée dans le corps de la procédure) ou une sortie (la procédure retourne une valeur au programme appelant). La valeur par défaut est un paramètre d'entrée.  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e89bfac90a0658c8f5ba839632451187ffa9760d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261902"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
@@ -81,7 +81,7 @@ ms.locfileid: "63261902"
   
 -   Le paramètre **@threshold** , qui est utilisé pour déterminer quand une nouvelle plage d'identités est requise pour un abonnement à [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ou à une version antérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Par exemple, vous pouvez spécifier 10 000 pour **@identity_range** et 500 000 pour **@pub_identity_range**. Une plage principale de 10 000 est assignée au serveur de publication et à tous les Abonnés qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure, y compris l'Abonné avec l'abonnement serveur. L'Abonné avec l'abonnement serveur se voit également attribuer une plage principale de 500 000, qui peut être utilisée par les Abonnés qui se synchronisent avec l'Abonné de republication (vous devez également spécifier **@identity_range**, **@pub_identity_range**et **@threshold** pour les articles de la publication sur l'Abonné de republication).  
+ Par exemple, vous pouvez spécifier 10 000 pour **@identity_range** et 500 000 pour **@pub_identity_range** . Une plage principale de 10 000 est assignée au serveur de publication et à tous les Abonnés qui exécutent [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure, y compris l'Abonné avec l'abonnement serveur. L'Abonné avec l'abonnement serveur se voit également attribuer une plage principale de 500 000, qui peut être utilisée par les Abonnés qui se synchronisent avec l'Abonné de republication (vous devez également spécifier **@identity_range** , **@pub_identity_range** et **@threshold** pour les articles de la publication sur l'Abonné de republication).  
   
  Chaque Abonné exécutant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ou une version ultérieure reçoit aussi une plage d'identités secondaire. La plage secondaire a une taille équivalente à celle de la plage principale ; quand la plage principale est épuisée, la plage secondaire est utilisée et l'Agent de fusion attribue une nouvelle plage à l'Abonné. La nouvelle plage devient la plage secondaire et le processus continue tant que l'Abonné utilise des valeurs d'identité.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63261902"
   
 -   Le paramètre **@threshold** , qui est utilisé pour déterminer quand une nouvelle plage d'identités est requise pour un abonnement.  
   
- Par exemple, vous pouvez spécifier 10 000 pour **@pub_identity_range**, 1 000 pour **@identity_range** (en faisant l'hypothèse d'un nombre moins élevé de mises à jour sur l'Abonné) et 80 pour cent pour **@threshold**. Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
+ Par exemple, vous pouvez spécifier 10 000 pour **@pub_identity_range** , 1 000 pour **@identity_range** (en faisant l'hypothèse d'un nombre moins élevé de mises à jour sur l'Abonné) et 80 pour cent pour **@threshold** . Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Attribution de plages pour la gestion manuelle des plages d'identité  
  Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Étant donnés deux Abonnés, l’Abonné A peut utiliser la plage 10 001 à 20 000 et l’Abonné B peut utiliser la plage 20 001 à 30 000.  

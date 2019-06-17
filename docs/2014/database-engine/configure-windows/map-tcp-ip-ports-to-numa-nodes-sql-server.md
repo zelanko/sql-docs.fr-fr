@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781743"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Mapper les ports TCP/IP aux nœuds NUMA (SQL Server)
@@ -48,7 +48,7 @@ ms.locfileid: "62781743"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Pour mapper un port TCP/IP à un nœud NUMA  
   
-1.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** *\<nom_instance>*.  
+1.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** *\<nom_instance>* .  
   
 2.  Dans le volet de détails, double-cliquez sur **TCP/IP**.  
   

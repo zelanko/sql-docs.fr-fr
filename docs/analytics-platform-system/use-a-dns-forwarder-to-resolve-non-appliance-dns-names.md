@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243787"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utiliser un redirecteur DNS pour résoudre les noms DNS de Non-Appliance d’Analytique Platform System
-Un redirecteur DNS peut être configuré sur les nœuds de Services de domaine Active Directory (**_appliance\_domaine_-AD01** et  **_appliance\_ domaine_-AD02**) de votre appliance Analytique Platform System pour autoriser les scripts et les applications logicielles pour accéder aux serveurs externes.  
+Un redirecteur DNS peut être configuré sur les nœuds de Services de domaine Active Directory ( **_appliance\_domaine_-AD01** et  **_appliance\_ domaine_-AD02**) de votre appliance Analytique Platform System pour autoriser les scripts et les applications logicielles pour accéder aux serveurs externes.  
   
 ## <a name="ResolveDNS"></a>À l’aide d’un redirecteur DNS  
 L’appliance Analytique Platform System est configuré pour empêcher la résolution de noms DNS des serveurs qui ne sont pas dans l’appliance. Certains processus, tels que Windows Software Update Services (WSUS), devez accéder aux serveurs en dehors de l’appliance. Pour prendre en charge ce scénario d’utilisation du système de plateforme Analytique DNS peut être configuré pour prendre en charge d’un redirecteur de nom externe qui autorise les hôtes Analytique Platform System et Machines virtuelles (VM) à utiliser les serveurs DNS externes pour résoudre les noms en dehors de l’appliance. Configuration personnalisée de suffixes DNS n’est pas possible, ce qui signifie que vous devez utiliser des noms de domaine complet pour résoudre un nom de serveur non-appliance.  
@@ -66,7 +66,7 @@ Pour les clients que vous choisissez de configurer l’appliance pour rechercher
   
 3.  Dans la liste des connexions, cliquez sur **VMSEthernet**, puis cliquez sur **propriétés**.  
   
-4.  Sélectionnez **Internet Protocol Version 4 (TCP/IPv4)**, puis cliquez sur **propriétés**.  
+4.  Sélectionnez **Internet Protocol Version 4 (TCP/IPv4)** , puis cliquez sur **propriétés**.  
   
 5.  Dans le **serveur DNS auxiliaire** zone, ajoutez l’adresse IP fournie par l’administrateur de réseau client.  
   

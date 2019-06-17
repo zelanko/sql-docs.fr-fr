@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238389"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
@@ -24,7 +24,7 @@ ms.locfileid: "63238389"
   
  Les audits sont constitués de zéro ou plusieurs éléments d'action d'audit, enregistrés dans une *cible*d'audit. La cible d'audit peut être un fichier binaire, le journal des événements d'applications de Windows ou le journal des événements de sécurité de Windows. Les enregistrements envoyés à la cible peuvent contenir les éléments décrits dans le tableau suivant.  
   
-|Nom de colonne|Description|Type|Toujours disponible|  
+|Nom de colonne|Description|type|Toujours disponible|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Date/heure auxquelles l'action pouvant être auditée est déclenchée.|`datetime2`|Oui|  
 |**sequence_no**|Assure le suivi de la séquence d'enregistrements dans un enregistrement d'audit unique qui était trop grand pour la mémoire tampon d'écriture pour audits.|`int`|Oui|  

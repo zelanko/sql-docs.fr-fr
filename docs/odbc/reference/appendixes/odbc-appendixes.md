@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181294"
 ---
 # <a name="odbc-appendixes"></a>Annexes ODBC
 Détails techniques relatifs à l’interface de Microsoft ODBC sont contenus dans les annexes suivantes :  
   
--   [Annexe a : Codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Annexe A : Codes d’erreur ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [Annexe B : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [Annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [Annexe C : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Annexe D : types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
 -   [Annexe e : Fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   

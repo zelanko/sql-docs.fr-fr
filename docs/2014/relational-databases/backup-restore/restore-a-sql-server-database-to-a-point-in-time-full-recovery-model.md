@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921056"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
@@ -74,7 +74,7 @@ ms.locfileid: "62921056"
   
     -   **Unité**  
   
-         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
+         Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Dans la zone **Type du média de sauvegarde** , sélectionnez l'un des types d'unités proposés. Pour sélectionner une ou plusieurs unités pour la zone **Support de sauvegarde** , cliquez sur **Ajouter**.  
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921056"
   
  **Syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] de base**  
   
- RESTORE LOG *database_name* FROM < unité_sauvegarde > WITH STOPAT  **= *`time`*,** récupération...  
+ RESTORE LOG *database_name* FROM < unité_sauvegarde > WITH STOPAT  **= *`time`* ,** récupération...  
   
  Le point de récupération est la dernière validation de transaction qui s’est produite à ou avant la `datetime` valeur spécifiée par *temps*.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62921056"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde de journal de transactions dans l’ordre dans lequel ils ont été créés, en spécifiant l’heure à laquelle vous souhaitez arrêter la restauration du journal (RESTORE DATABASE *database_name* à partir de < appareil_sauvegarde > WITH STOPAT **= *`time`*,** Récupération).  
+4.  Appliquez chaque sauvegarde de journal de transactions dans l’ordre dans lequel ils ont été créés, en spécifiant l’heure à laquelle vous souhaitez arrêter la restauration du journal (RESTORE DATABASE *database_name* à partir de < appareil_sauvegarde > WITH STOPAT **= *`time`* ,** Récupération).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

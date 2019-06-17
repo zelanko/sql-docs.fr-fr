@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161907"
 ---
 # <a name="index-properties-f1-help"></a>Propriétés de l'index – Aide (F1)
@@ -180,7 +180,7 @@ ms.locfileid: "63161907"
 ### <a name="bounding-box"></a>Cadre englobant  
  Le *cadre englobant* est le périmètre de la grille de niveau supérieur d’un plan géométrique. Les paramètres du cadre englobant existent uniquement dans le pavage de la grille géométrique. Ces paramètres sont indisponibles si le **Schéma de pavage** est une **Grille géographique**.  
   
- Le panneau affiche le **(*`X-min`*,*`Y-min`*)** et **(*`X-max`*,*`Y-max`*)** coordonnées du rectangle englobant. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, lorsque vous créez un index spatial sur une colonne de type `geometry`, vous devez spécifier les valeurs des coordonnées.  
+ Le panneau affiche le **( *`X-min`* , *`Y-min`* )** et **( *`X-max`* , *`Y-max`* )** coordonnées du rectangle englobant. Il n'y a pas de valeurs de coordonnées par défaut. Par conséquent, lorsque vous créez un index spatial sur une colonne de type `geometry`, vous devez spécifier les valeurs des coordonnées.  
   
  `X-min`  
  Coordonnée X de l'angle inférieur gauche du cadre englobant.  

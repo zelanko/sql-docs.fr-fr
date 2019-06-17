@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 69ca337b8b4ed4ab0e801cbb510ad533b4558448
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62657478"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>Installer les outils clients sur un cluster de basculement SQL Server
@@ -33,11 +33,11 @@ ms.locfileid: "62657478"
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans le dossier d'installation racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir du partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
-2.  Dans la page **Installation**, cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**. Ne cliquez pas sur **Installation d’un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  Dans la page **Installation**, cliquez sur **Nouvelle installation autonome [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou ajout de fonctionnalités à une installation existante**. Ne cliquez pas sur **Installation d’un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive.  
   
-4.  Dans la page **Type d’installation**, cliquez sur **Effectuer une nouvelle installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]**.  
+4.  Dans la page **Type d’installation**, cliquez sur **Effectuer une nouvelle installation de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** .  
   
 5.  Dans la page **Sélection de composant**, sélectionnez les outils à installer et suivez le reste des étapes du processus d’installation.  
   

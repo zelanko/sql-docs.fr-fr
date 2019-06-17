@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481312"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tâche 1 : Définition d’une stratégie de correspondance
-  Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Nom du fournisseur** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec **similarité** la valeur **30 %**.  
+  Dans cette tâche, vous allez créer une stratégie de correspondance contenant une règle. La règle aura une condition préalable : **ID du fournisseur**, ce qui signifie que les ID des fournisseurs doivent correspondre avant d’utiliser les autres domaines dans la règle. La règle utilise deux autres domaines : **Nom du fournisseur** avec **similarité** la valeur **70 %** et **adresse E-mail de Contact** avec **similarité** la valeur **30 %** .  
   
 1.  Dans la page principale de **Client DQS**, cliquez sur **flèche droite** regard **fournisseurs** connaissances de base, puis sélectionnez **stratégie de correspondance**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481312"
   
 12. Répétez les étapes précédentes pour ajouter **adresse E-mail de Contact** domaine avec **30** pour le **poids**.  
   
-13. Notez que le **min score de correspondance** a la valeur **80 %**, qui est la valeur que vous voyez dans le **général** onglet de la **Configuration** page de **Administration de DQS**. Vous ne pouvez augmenter ce score qu'au-dessus de cette valeur de seuil, ici.  
+13. Notez que le **min score de correspondance** a la valeur **80 %** , qui est la valeur que vous voyez dans le **général** onglet de la **Configuration** page de **Administration de DQS**. Vous ne pouvez augmenter ce score qu'au-dessus de cette valeur de seuil, ici.  
   
 14. Notez que **Clusters qui se chevauchent** option est sélectionnée. Avec cette option, un enregistrement peut apparaître dans plusieurs clusters. Si vous modifiez le paramètre en Clusters qui ne se chevauchent pas, les clusters qui ont des enregistrements communs sont combinés dans un seul cluster.  
   
