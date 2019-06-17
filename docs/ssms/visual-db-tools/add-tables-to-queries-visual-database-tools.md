@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bac26e4bc591867a640fca029e39f94c9ed0a6fe
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099403"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Ajouter des tables à des requêtes (Visual Database Tools)
@@ -58,7 +58,7 @@ Le Concepteur de requêtes et de vues n'affiche pas les colonnes de données d'u
   
 7.  Toujours dans le **volet SQL**, ajoutez un alias à la suite de la parenthèse fermante.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des alias de tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
 [Supprimer des tables des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

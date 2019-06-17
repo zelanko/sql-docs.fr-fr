@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bd09972eaebba893ac92198c9b953392e383f9e4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095722"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Options (Explorateur d’objets SQL Server - Page Script)
@@ -33,7 +33,7 @@ Utilisez cette page pour définir les options de script qui s’appliquent aux c
   
 -   Cette page définit également les valeurs par défaut des options de script de **l’Assistant Génération de scripts SQL Server**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les commandes **Edition** et **Modifier** et peuvent produire des résultats qui sont différents de ceux de la commande **Script <object> en tant** que pour le même paramètre d’option. Les commandes **Edition** et **Modifier** sont conçues pour modifier des objets de la base de données active durant une session de l’Éditeur de requête. La commande **Script <object> en tant que** est conçue pour générer un script pour qu’il puisse être utilisé ultérieurement pour créer des objets.  
   
 ## <a name="options"></a>Options  
@@ -44,7 +44,7 @@ Spécifiez les options de script en les sélectionnant parmi les paramètres dis
 Sépare les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] par un délimiteur de traitement. Pour modifier le délimiteur de traitement par défaut de **l’Éditeur de requête**, sélectionnez **Outils**/**Options**/**Exécution de la requête**/**SQL Server**/**Général**/**Délimiteur de traitement**. La valeur par défaut est FALSE. Pour plus d’informations, consultez [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Inclure des en-têtes descriptifs**  
-Ajoute des commentaires descriptifs au script en séparant le script en sections pour chaque objet. La valeur par défaut est True. Pour plus d’informations, consultez [/*...*/ (Commentaire) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
+Ajoute des commentaires descriptifs au script en séparant le script en sections pour chaque objet. La valeur par défaut est True. Pour plus d’informations, consultez [/ *...* / (Commentaire) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
   
 **Inclure l’activation de la compression de vardecimal**  
 Inclut les options de stockage VarDecimal. La valeur par défaut est FALSE. Pour plus d’informations, consultez [sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542).  

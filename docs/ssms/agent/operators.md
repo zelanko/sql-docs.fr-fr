@@ -26,10 +26,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8d7aef10ba6a593217b4bba1c2cb984b8074b77a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088965"
 ---
 # <a name="operators"></a>Opérateurs
@@ -128,6 +128,6 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
 |Tâches associées à la création d'un opérateur|[Créer un opérateur](../../ssms/agent/create-an-operator.md)<br /><br />[Désigner un opérateur de prévention de défaillance](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
   

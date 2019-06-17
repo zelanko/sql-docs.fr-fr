@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098383"
 ---
 # <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procédure : Mettre à niveau une condition de test personnalisée Visual Studio 2010 d’une version antérieure vers SQL Server Data Tools
@@ -50,7 +50,7 @@ Pour mettre à jour les références de projet :
   
 8.  Dans le menu **Projet**, cliquez sur **Décharger le projet**.  
   
-9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name`**.csproj**.  
+9. Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le **Projet**, puis sélectionnez **Modifier**`project_name` **.csproj**.  
   
 10. Ajoutez l'instruction Import suivante après l'importation de élément `Microsoft.CSharp.targets` :  
   
@@ -142,6 +142,6 @@ Supprimez la référence d'assembly à l'ancienne condition de test.
   
 Ajoutez un test unitaire SQL Server au projet pour créer une référence d'assembly à la condition de test mise à niveau dans le projet. Une classe de test doit être ajoutée pour créer la référence. Supprimez la classe de test après avoir ajouté la référence.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   
