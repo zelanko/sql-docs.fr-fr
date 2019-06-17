@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316328"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analyser des blocages à l'aide de SQL Server Profiler
@@ -31,7 +31,7 @@ ms.locfileid: "63316328"
   
  Pour tracer les événements de blocage, ajoutez la classe d’événements **Deadlock graph** à une trace. Cette classe d’événements remplit la colonne de données **TextData** dans la trace avec des données XML relatives aux processus et objets impliqués dans le blocage. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] peut extraire le document XML dans un fichier XML de blocages (.xdl) que vous pouvez afficher ultérieurement dans SQL Server Management Studio. Vous pouvez configurer le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de manière à extraire les événements **Deadlock graph** vers un fichier unique contenant tous les événements **Deadlock graph** , ou bien vers des fichiers distincts. Cette extraction peut être réalisée de l'une des manières suivantes :  
   
--   Au moment de la configuration de la trace, à l’aide de l’onglet **Paramètres d’extraction des événements** . Cet onglet n’apparaît que si vous sélectionnez l’événement Deadlock graph sous l’onglet **Sélection des événements** .  
+-   Au moment de la configuration de la trace, à l’aide de l’onglet **Paramètres d’extraction des événements** . Cet onglet n’apparaît que si vous sélectionnez l’événement **Deadlock graph** sous l’onglet **Sélection des événements** .  
   
 -   À l’aide de l’option **Extraire les événements SQL Server** du menu **Fichier** .  
   
