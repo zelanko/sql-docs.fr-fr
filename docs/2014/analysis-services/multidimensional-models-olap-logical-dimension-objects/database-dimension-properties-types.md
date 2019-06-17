@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62728555"
 ---
 # <a name="dimension-types"></a>Types de dimensions
@@ -55,7 +55,7 @@ ms.locfileid: "62728555"
 |Scénario|Une dimension dont les attributs représentent des informations de planification ou d'analyse stratégique.|  
 |Quantitative|Une dimension dont les attributs représentent des informations quantitatives.|  
 |Utility|Une dimension dont les attributs représentent des informations diverses.|  
-|Monétaire (Currency)|Ce type de dimension contient des données et des métadonnées monétaires.|  
+|Currency|Ce type de dimension contient des données et des métadonnées monétaires.|  
 |Rates|Une dimension dont les attributs représentent des informations relatives à des taux de devises.|  
 |Channel|Une dimension dont les attributs représentent des informations de canaux.|  
 |Promotion|Une dimension dont les attributs représentent des informations de promotion commerciale.|  

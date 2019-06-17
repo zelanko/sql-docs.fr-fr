@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684289"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Nombre cumulatif d'analyses de plage et de table commencées sur l'index ou le segment de mémoire.|    
 |**singleton_lookup_count**|**bigint**|Nombre cumulatif d'extractions de ligne unique à partir de l'index ou du segment de mémoire.|    
 |**forwarded_fetch_count**|**bigint**|Nombre de lignes extraites via un enregistrement de transfert.<br /><br /> 0 = Index|    
-|**lob_fetch_in_pages**|**bigint**|Nombre cumulatif de pages d'objets volumineux (LOB) extraites de l'unité d'allocation LOB_DATA. Ces pages contiennent des données stockées dans des colonnes de type **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar () max)**, **varbinary (max)**, et **xml**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Nombre cumulatif de pages d'objets volumineux (LOB) extraites de l'unité d'allocation LOB_DATA. Ces pages contiennent des données stockées dans des colonnes de type **texte**, **ntext**, **image**, **varchar (max)** , **nvarchar () max)** , **varbinary (max)** , et **xml**. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Nombre cumulatif d'octets de données LOB extraits.|    
 |**lob_orphan_create_count**|**bigint**|Nombre cumulatif de valeurs LOB orphelines créées pour des opérations en bloc.<br /><br /> 0 = Index non cluster|    
 |**lob_orphan_insert_count**|**bigint**|Nombre cumulatif de valeurs LOB orphelines insérées au cours d'opérations en bloc.<br /><br /> 0 = Index non cluster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Nombre cumulatif de pages de données de dépassement de ligne qui ont été extraites de l'unité d'allocation ROW_OVERFLOW_DATA.<br /><br /> Ces pages contiennent des données stockées dans des colonnes de type **varchar (n)**, **nvarchar (n)**, **varbinary (n)**, et **sql_variant** qui a été envoyées hors ligne.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Nombre cumulatif de pages de données de dépassement de ligne qui ont été extraites de l'unité d'allocation ROW_OVERFLOW_DATA.<br /><br /> Ces pages contiennent des données stockées dans des colonnes de type **varchar (n)** , **nvarchar (n)** , **varbinary (n)** , et **sql_variant** qui a été envoyées hors ligne.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Nombre cumulatif d'octets de données de dépassement de ligne extraits.|    
 |**column_value_push_off_row_count**|**bigint**|Nombre cumulatif de valeurs de colonne correspondant aux données LOB et aux données de dépassement de ligne qui sont envoyées hors ligne pour qu'une ligne insérée ou mise à jour puisse figurer dans une page.|    
 |**column_value_pull_in_row_count**|**bigint**|Nombre cumulatif de valeurs de colonne correspondant aux données LOB et aux données de dépassement de ligne qui sont extraites dans la ligne. Cette situation se produit lorsqu'une opération de mise à jour libère de l'espace dans un enregistrement et permet ainsi d'extraire une ou plusieurs valeurs hors ligne des unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA dans l'unité d'allocation IN_ROW_DATA.|    

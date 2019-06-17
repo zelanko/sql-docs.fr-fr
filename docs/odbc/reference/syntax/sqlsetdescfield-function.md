@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62742255"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField, fonction
@@ -140,7 +140,7 @@ SQLRETURN SQLSetDescField(
   
  L’initialisation de champs d’en-tête est décrite dans le tableau suivant.  
   
-|Nom de champ d’en-tête|Type|R/W (Lecture/écriture)|Par défaut|  
+|Nom de champ d’en-tête|type|R/W (Lecture/écriture)|Par défaut|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD : R APD : R IRD : R IPD : R|ARD : SQL_DESC_ALLOC_AUTO pour implicite ou SQL_DESC_ALLOC_USER pour explicite<br /><br /> APD : SQL_DESC_ALLOC_AUTO pour implicite ou SQL_DESC_ALLOC_USER pour explicite<br /><br /> IRD : SQL_DESC_ALLOC_AUTO<br /><br /> IPD : SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD : R/W APD : R/W IRD : Inutilisé IPD : Inutilisé|ARD : APD [1] : [1] IRD : Inutilisé IPD : Inutilisé|  
@@ -154,7 +154,7 @@ SQLRETURN SQLSetDescField(
   
  L’initialisation de champs d’enregistrement est comme indiqué dans le tableau suivant.  
   
-|Nom de champ d’enregistrement|Type|R/W (Lecture/écriture)|Par défaut|  
+|Nom de champ d’enregistrement|type|R/W (Lecture/écriture)|Par défaut|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD : APD inutilisée : IRD inutilisée : R IPD : Inutilisé|ARD : APD inutilisée : IRD inutilisée : D IPD : Inutilisé|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD : APD inutilisée : IRD inutilisée : R IPD : Inutilisé|ARD : APD inutilisée : IRD inutilisée : D IPD : Inutilisé|  

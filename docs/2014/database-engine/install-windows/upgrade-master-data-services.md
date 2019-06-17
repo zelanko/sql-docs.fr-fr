@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774653"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
@@ -127,7 +127,7 @@ ms.locfileid: "62774653"
   
     4.  Sur le **Type d’Installation** page de l’Assistant, sélectionnez le **ajouter des fonctionnalités à une instance existante** option, puis choisissez l’instance où la base de données MDS est installé.  
   
-    5.  Sur le **sélection des fonctionnalités** page sous **fonctionnalités partagées**, sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  Sur le **sélection des fonctionnalités** page sous **fonctionnalités partagées**, sélectionnez **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Terminez l'Assistant.  
   

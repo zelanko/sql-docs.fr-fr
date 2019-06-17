@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724494"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
@@ -46,7 +46,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Est le nom du repère de plan. Les noms des repères de plan sont limités à la base de données active. *plan_guide_name* doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peut pas commencer par le signe dièse (#). La longueur maximale de *plan_guide_name* est de 124 caractères.  
   
  [ @plan_handle = ] *plan_handle*  
- Identifie un traitement dans le repère de plan. *plan_handle* est **varbinary (64)**. *plan_handle* peut être obtenu à partir de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
+ Identifie un traitement dans le repère de plan. *plan_handle* est **varbinary (64)** . *plan_handle* peut être obtenu à partir de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
   
  [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Identifie la position de départ de l’instruction dans le lot spécifié *plan_handle*. *statement_start_offset* est **int**, avec NULL comme valeur par défaut.  

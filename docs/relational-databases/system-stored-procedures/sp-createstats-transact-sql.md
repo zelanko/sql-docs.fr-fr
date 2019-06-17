@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724454"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
@@ -49,13 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @indexonly = ] 'indexonly'` Crée des statistiques uniquement sur les colonnes qui sont dans un index existant et ne sont pas la première colonne dans une définition d’index. **indexonly** est **char (9)**. La valeur par défaut est NO.  
+`[ @indexonly = ] 'indexonly'` Crée des statistiques uniquement sur les colonnes qui sont dans un index existant et ne sont pas la première colonne dans une définition d’index. **indexonly** est **char (9)** . La valeur par défaut est NO.  
   
-`[ @fullscan = ] 'fullscan'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **FULLSCAN** option. **FULLSCAN** est **char (9)**.  La valeur par défaut est NO.  
+`[ @fullscan = ] 'fullscan'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **FULLSCAN** option. **FULLSCAN** est **char (9)** .  La valeur par défaut est NO.  
   
-`[ @norecompute = ] 'norecompute'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **NORECOMPUTE** option. **NORECOMPUTE** est **char(12)**.  La valeur par défaut est NO.  
+`[ @norecompute = ] 'norecompute'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **NORECOMPUTE** option. **NORECOMPUTE** est **char(12)** .  La valeur par défaut est NO.  
   
-`[ @incremental = ] 'incremental'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **INCREMENTAL = ON** option. **Incrémentielle** est **char(12)**.  La valeur par défaut est NO.  
+`[ @incremental = ] 'incremental'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **INCREMENTAL = ON** option. **Incrémentielle** est **char(12)** .  La valeur par défaut est NO.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

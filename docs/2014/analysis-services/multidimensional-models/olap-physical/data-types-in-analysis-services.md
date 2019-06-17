@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62725383"
 ---
 # <a name="data-types-in-analysis-services"></a>Types de données dans Analysis Services
@@ -27,7 +27,7 @@ ms.locfileid: "62725383"
 |BigInt|Entier signé de 64 bits. Le *BigInt* type valeur représente des entiers avec les valeurs comprises entre 9,223,372,036,854,775,808 négatif et positif 9,223,372,036,854,775,807.|  
 |Binaire|Un flux de données binaires de **octets** type. **Octets** est un type valeur qui représente des entiers non signés avec des valeurs comprises entre 0 et 255.|  
 |Booléen|Les instances de ce type ont des valeurs `true` ou `false`.|  
-|Monétaire (Currency)|Un *devise* valeur comprise entre -922,337,203,685,477.5808 + 922,337,203,685,477.5807 avec une précision d’un dix millième d’unité monétaire (quatre positions décimales).|  
+|Currency|Un *devise* valeur comprise entre -922,337,203,685,477.5808 + 922,337,203,685,477.5807 avec une précision d’un dix millième d’unité monétaire (quatre positions décimales).|  
 |Date|Date et données de temps, stockées comme un double. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 tandis que la partie fractionnaire désigne une fraction d'un jour ou l'heure.|  
 |Double|Nombre à virgule flottante compris entre -1,79769313486232E +308 et 1,79769313486232E +308. Une valeur Double stocke les informations de nombre jusqu'à 15 chiffres décimaux de précision.|  
 |Entier|Entier signé 32 bits représentant des entiers signés avec des valeurs qui varient entre 2 147 483 648 (négatif) et 2 147 483 647 (positif).|  
@@ -57,6 +57,6 @@ ms.locfileid: "62725383"
 ||NameColumn|WChar uniquement|  
 |TableMiningStructureColumn|ForeignKeyColumns|Tous à l'exception de Binary|  
 |MeasureGroupAttribute|KeyColumns|Tous à l'exception de Binary|  
-|Mesure de comptage de valeurs|Source|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
+|Mesure de comptage de valeurs|`Source`|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
   
   

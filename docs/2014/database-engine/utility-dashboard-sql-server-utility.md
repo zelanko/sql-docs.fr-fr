@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62773811"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
@@ -50,7 +50,7 @@ ms.locfileid: "62773811"
   
  Pour créer une vue filtrée d'une instance gérée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou une application de la couche Données, cliquez sur le lien pour une catégorie d'utilisation en regard de son curseur dans le tableau de bord de l'utilitaire. Par exemple, si vous cliquez sur **Processeur des instances surexploité** dans le volet **Contenu de l'Explorateur de l'utilitaire** , SSMS crée une vue de liste filtrée des instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ont l'UCP surexploité selon les paramètres de stratégie actuels.  
   
- Remarquez que lorsque vous cliquez sur un lien pour une catégorie d’utilisation, le nœud correspondant dans le volet de navigation Explorateur de l’utilitaire est ajouté avec **(filtré)** - c’est-à-dire, **Instances gérées** est étiqueté **Instances gérées (filtré)**. Pour consulter des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Paramètres du filtre**. Pour effacer des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Supprimer le filtre**.  
+ Remarquez que lorsque vous cliquez sur un lien pour une catégorie d’utilisation, le nœud correspondant dans le volet de navigation Explorateur de l’utilitaire est ajouté avec **(filtré)** - c’est-à-dire, **Instances gérées** est étiqueté **Instances gérées (filtré)** . Pour consulter des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Paramètres du filtre**. Pour effacer des paramètres de filtre, cliquez avec le bouton droit sur le nœud dans le volet de navigation et sélectionnez **Filtre**, puis cliquez sur **Supprimer le filtre**.  
   
  Pour plus d’informations sur la consultation de l’état d’instances individuelles de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ou pour afficher ou modifier des paramètres de configuration de stratégie, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md).  
   

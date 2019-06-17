@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719987"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "62719987"
      Un chemin d'accès relatif de l'emplacement démarre au nœud de contexte dans le document. Un chemin d'accès d'emplacement consiste en une séquence d'une ou plusieurs étapes d'emplacement séparées par une barre oblique (/). Chaque étape sélectionne un ensemble de nœuds associés au nœud de contexte. La première séquence d'étapes sélectionne un ensemble de nœuds associés à un nœud de contexte. Chaque nœud dans cet ensemble est utilisé comme un nœud de contexte pour l'étape suivante. Les ensembles de nœuds identifiés par cette étape sont joints. Par exemple, **child::Order/child::OrderDetail** sélectionne le  **\<OrderDetail >** éléments enfants de la  **\<ordre >** élément enfants du nœud de contexte.  
   
     > [!NOTE]  
-    >  Dans l'implémentation SQLXML 4.0 de XPath, chaque requête XPath démarre au contexte racine, même si la requête XPath n'est pas explicitement absolue. Par exemple, une requête XPath commençant par « Customer » (Client) est traitée comme « /Customer ». Dans la requête XPath **Customer [Order]**, Customer démarre au contexte racine mais Order démarre au contexte Customer. Pour plus d’informations, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  Dans l'implémentation SQLXML 4.0 de XPath, chaque requête XPath démarre au contexte racine, même si la requête XPath n'est pas explicitement absolue. Par exemple, une requête XPath commençant par « Customer » (Client) est traitée comme « /Customer ». Dans la requête XPath **Customer [Order]** , Customer démarre au contexte racine mais Order démarre au contexte Customer. Pour plus d’informations, consultez [Introduction à l’aide de requêtes XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Étapes d'emplacement  
  Un chemin d'accès d'emplacement (absolu ou relatif) est composé d'étapes d'emplacement contenant trois parties :  
@@ -52,7 +52,7 @@ ms.locfileid: "62719987"
   
 -   **test de nœud**  
   
-     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut**, et **self**) a un type de nœud principal. Pour le **attribut** axe, le type de nœud principal est  **\<attribut >**. Pour le **parent**, **enfant**, et **self** axes, le type de nœud principal est  **\<élément >**.  
+     Un test de nœud spécifie le type de nœud sélectionné par le niveau d'emplacement. Chaque axe (**enfant**, **parent**, **attribut**, et **self**) a un type de nœud principal. Pour le **attribut** axe, le type de nœud principal est  **\<attribut >** . Pour le **parent**, **enfant**, et **self** axes, le type de nœud principal est  **\<élément >** .  
   
      Par exemple, si le chemin d’accès d’emplacement spécifie **child::Customer**, le  **\<client >** éléments enfants du nœud de contexte sont sélectionnés. Étant donné que le **enfant** axe a  **\<élément >** en tant que type de nœud principal, le test de nœud, Customer, a la valeur TRUE si Customer est un  **\<élément >** nœud.  
   

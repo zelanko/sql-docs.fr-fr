@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62756985"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -30,7 +30,7 @@ ms.locfileid: "62756985"
  La méthode d’installation principale `LocalDB` est à l’aide du programme SqlLocalDB.msi. `LocalDB` est une option lors de l’installation d’une référence de [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. Sélectionnez `LocalDB` sur le **sélection des fonctionnalités** page lors de l’installation de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Il peut y avoir qu’une seule installation de la `LocalDB` des fichiers binaires pour chaque version majeure [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] version. Plusieurs processus [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être démarrés et utiliseront tous les mêmes fichiers binaires. Une instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a été lancé sous la `LocalDB` a les mêmes limitations que [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
 ## <a name="description"></a>Description  
- Le `LocalDB` programme d’installation utilise le programme SqlLocalDB.msi pour installer les fichiers nécessaires sur l’ordinateur. Une fois installé, `LocalDB` est une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui peut créer et ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données. Les fichiers de base de données système pour la base de données sont stockés dans le chemin d'accès AppData local de l'utilisateur, qui est normalement masqué. Par exemple, **C:\Users\\<utilisateur\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Les fichiers de la base de données utilisateur sont stockés à l’emplacement indiqué par l’utilisateur, en général dans le dossier **C:\Users\\<utilisateur\>\Documents\\**.  
+ Le `LocalDB` programme d’installation utilise le programme SqlLocalDB.msi pour installer les fichiers nécessaires sur l’ordinateur. Une fois installé, `LocalDB` est une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] qui peut créer et ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données. Les fichiers de base de données système pour la base de données sont stockés dans le chemin d'accès AppData local de l'utilisateur, qui est normalement masqué. Par exemple, **C:\Users\\<utilisateur\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\** . Les fichiers de la base de données utilisateur sont stockés à l’emplacement indiqué par l’utilisateur, en général dans le dossier **C:\Users\\<utilisateur\>\Documents\\** .  
   
  Pour plus d’informations sur l’inclusion de `LocalDB` dans une application, consultez le [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] documentation [vue d’ensemble des données locales](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [procédure pas à pas : Création d’une base de données SQL Server LocalDB](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx), et [procédure pas à pas : Connexion aux données dans une base de données SQL Server LocalDB (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "62756985"
 ## <a name="starting-localdb-and-connecting-to-localdb"></a>Démarrage de LocalDB et connexion à LocalDB  
   
 ### <a name="connecting-to-the-automatic-instance"></a>Se connecter à l'instance automatique  
- Le moyen le plus simple d’utiliser `LocalDB` consiste à se connecter à l’instance automatique détenue par l’utilisateur actuel à l’aide de la chaîne de connexion **« Server = (localdb) \MSSQLLocalDB;Integrated Security = true »**. Pour vous connecter à une base de données spécifique en utilisant le nom de fichier, connectez-vous à l’aide d’une chaîne de connexion semblable à **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"**.  
+ Le moyen le plus simple d’utiliser `LocalDB` consiste à se connecter à l’instance automatique détenue par l’utilisateur actuel à l’aide de la chaîne de connexion **« Server = (localdb) \MSSQLLocalDB;Integrated Security = true »** . Pour vous connecter à une base de données spécifique en utilisant le nom de fichier, connectez-vous à l’aide d’une chaîne de connexion semblable à **"Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf"** .  
   
 > [!NOTE]  
 >  La première fois qu’un utilisateur sur un ordinateur tente de se connecter à `LocalDB`, l’instance automatique doit être créée et démarrée. Le temps supplémentaire requis pour créer l'instance peut entraîner l'échec de la tentative de connexion et l'affichage d'un message de délai de connexion dépassé. Dans ce cas, attendez quelques secondes la fin du processus de création, puis connectez-vous à nouveau.  

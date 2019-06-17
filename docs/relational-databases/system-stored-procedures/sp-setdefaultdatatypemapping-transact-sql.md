@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714336"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
@@ -67,7 +67,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
  Vous devez spécifier ce paramètre si *mapping_id* a la valeur NULL.  
   
-`[ @source_version = ] 'source_version'` Est le numéro de version du SGBD source. *source_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
+`[ @source_version = ] 'source_version'` Est le numéro de version du SGBD source. *source_version* est **varchar (10)** , avec NULL comme valeur par défaut.  
   
 `[ @source_type = ] 'source_type'` Est le type de données dans le SGBD source. *source_type* est **sysname**. Vous devez spécifier ce paramètre si *mapping_id* a la valeur NULL.  
   
@@ -95,7 +95,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 |**SYBASE**|Base de données Sybase de destination.|  
 |NULL (par défaut)||  
   
-`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
+`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version* est **varchar (10)** , avec NULL comme valeur par défaut.  
   
 `[ @destination_type = ] 'destination_type'` Le type de données est répertorié dans le SGBD de destination. *destination_type* est **sysname**, avec NULL comme valeur par défaut.  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767521"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Étape 2 : Ajout et configuration du conteneur de boucles Foreach
@@ -45,7 +45,7 @@ ms.locfileid: "62767521"
   
 4.  Dans le **éditeur de boucle Foreach** boîte de dialogue le **général** page, pour **nom**, entrez `Foreach File in Folder`. Cliquez sur **OK**.  
   
-5.  Cliquez sur le conteneur de boucles Foreach, cliquez sur **propriétés**, puis dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)**.  
+5.  Cliquez sur le conteneur de boucles Foreach, cliquez sur **propriétés**, puis dans la fenêtre Propriétés, vérifiez que le `LocaleID` propriété est définie sur **anglais (États-Unis)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Pour configurer l'énumérateur pour le conteneur de boucles Foreach  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62767521"
   
     2.  Cliquez sur l'onglet **DOWNLOADS** (Téléchargements).  
   
-    3.  Cliquez sur le lien hypertexte « http://msftisprodsamples.codeplex.com/downloads/get/578097» SQL2012. Fichier de Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
+    3.  Cliquez sur le lien hypertexte « http://msftisprodsamples.codeplex.com/downloads/get/578097 » SQL2012. Fichier de Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
 6.  Dans la zone **Fichiers**, tapez **Currency_\*.txt**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767521"
   
 1.  Cliquez sur **Mappages de variables**.  
   
-2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>**.  
+2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>** .  
   
 3.  Dans le **ajouter une Variable** boîte de dialogue pour **nom**, type `varFileName`.  
   

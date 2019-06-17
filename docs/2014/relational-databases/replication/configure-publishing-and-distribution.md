@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721701"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
@@ -31,7 +31,7 @@ ms.locfileid: "62721701"
  Pour plus d’informations, consultez [déploiement sécurisé de réplication](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**. Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes **db_owner** puissent créer des publications, ou parce que vous voulez configurer un serveur distant de distribution qui ne soit pas serveur de publication.  
+ Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** . Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes **db_owner** puissent créer des publications, ou parce que vous voulez configurer un serveur distant de distribution qui ne soit pas serveur de publication.  
   
 #### <a name="to-configure-distribution"></a>Pour configurer la distribution  
   
@@ -62,25 +62,25 @@ ms.locfileid: "62721701"
   
     -   Dans le jeu de résultats, si **installed** a la valeur **0**, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) sur le serveur de distribution, sur la base de données MASTER.  
   
-    -   Dans le jeu de résultats, si **distribution db installed** a la valeur **0**, exécutez [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez le nom de la base de données de distribution pour **@database**. En option, vous pouvez spécifier la période maximale de rétention des transactions pour **@max_distretention** et la période de rétention de l'historique pour **@history_retention**. Si une nouvelle base de données est créée, spécifiez les paramètres de propriété de base de données de votre choix.  
+    -   Dans le jeu de résultats, si **distribution db installed** a la valeur **0**, exécutez [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez le nom de la base de données de distribution pour **@database** . En option, vous pouvez spécifier la période maximale de rétention des transactions pour **@max_distretention** et la période de rétention de l'historique pour **@history_retention** . Si une nouvelle base de données est créée, spécifiez les paramètres de propriété de base de données de votre choix.  
   
 2.  Sur le serveur de distribution, qui est également le serveur de publication, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) en spécifiant pour **@working_directory** le partage UNC qui va être utilisé comme dossier d’instantanés par défaut.  
   
-3.  Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Spécifiez la base de données qui est publié pour **@dbname**, le type de réplication pour **@optname**et la valeur `true` pour **@value**.  
+3.  Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Spécifiez la base de données qui est publié pour **@dbname** , le type de réplication pour **@optname** et la valeur `true` pour **@value** .  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>Pour configurer la publication à l'aide d'un serveur de distribution distant  
   
 1.  Exécutez [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) pour déterminer si le serveur est déjà configuré comme serveur de distribution.  
   
-    -   Dans le jeu de résultats, si **installed** a la valeur **0**, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez un mot de passe fort pour **@password**. Ce mot de passe du compte **distributor_admin** sera utilisé par le serveur de publication lors de la connexion au serveur de distribution.  
+    -   Dans le jeu de résultats, si **installed** a la valeur **0**, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez un mot de passe fort pour **@password** . Ce mot de passe du compte **distributor_admin** sera utilisé par le serveur de publication lors de la connexion au serveur de distribution.  
   
-    -   Dans le jeu de résultats, si **distribution db installed** a la valeur **0**, exécutez [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez le nom de la base de données de distribution pour **@database**. En option, vous pouvez spécifier la période maximale de rétention des transactions pour **@max_distretention** et la période de rétention de l'historique pour **@history_retention**. Si une nouvelle base de données est créée, spécifiez les paramètres de propriété de base de données de votre choix.  
+    -   Dans le jeu de résultats, si **distribution db installed** a la valeur **0**, exécutez [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) sur le serveur de distribution, sur la base de données MASTER. Spécifiez le nom de la base de données de distribution pour **@database** . En option, vous pouvez spécifier la période maximale de rétention des transactions pour **@max_distretention** et la période de rétention de l'historique pour **@history_retention** . Si une nouvelle base de données est créée, spécifiez les paramètres de propriété de base de données de votre choix.  
   
-2.  Sur le serveur de distribution, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), en spécifiant pour **@working_directory** le partage UNC qui va être utilisé comme dossier d’instantanés par défaut. Si le serveur de distribution doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@security_mode** et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@login** et **@password**.  
+2.  Sur le serveur de distribution, exécutez [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), en spécifiant pour **@working_directory** le partage UNC qui va être utilisé comme dossier d’instantanés par défaut. Si le serveur de distribution doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la connexion au serveur de publication, vous devez aussi spécifier la valeur **0** pour **@security_mode** et les informations de connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour **@login** et **@password** .  
   
-3.  Sur le serveur de publication, sur la base de données MASTER, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Spécifiez le mot de passe fort utilisé à l'étape 1 pour **@password**. Ce mot de passe sera utilisé par le serveur de publication lors de la connexion au serveur de distribution.  
+3.  Sur le serveur de publication, sur la base de données MASTER, exécutez [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Spécifiez le mot de passe fort utilisé à l'étape 1 pour **@password** . Ce mot de passe sera utilisé par le serveur de publication lors de la connexion au serveur de distribution.  
   
-4.  Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Spécifiez la base de données qui est publiée pour **@dbname**, le type de réplication pour **@optname**et la valeur true pour **@value**.  
+4.  Sur le serveur de publication, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Spécifiez la base de données qui est publiée pour **@dbname** , le type de réplication pour **@optname** et la valeur true pour **@value** .  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  L'exemple ci-dessous montre comment configurer par programme la publication et la distribution. Dans cet exemple, le nom du serveur configuré comme serveur de publication et serveur de distribution local est fourni au moyen de variables de script. La publication et la distribution de réplication peuvent être configurées par programme à l'aide de procédures stockées de réplication.  
