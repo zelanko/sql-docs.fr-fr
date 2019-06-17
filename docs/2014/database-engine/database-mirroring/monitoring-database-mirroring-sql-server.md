@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755363"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
@@ -293,11 +293,11 @@ ms.locfileid: "62755363"
   
  Les éléments suivants sont disponibles pour la mise en miroir de bases de données :  
   
--   Classe d'événements**Database Mirroring State Change**   
+-   Classe d'événements**Database Mirroring State Change**  
   
      Indique le changement de l'état de mise en miroir d'une base de données mise en miroir. Pour plus d’informations, consultez [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Classe d'événements**Audit Database Mirroring Login**   
+-   Classe d'événements**Audit Database Mirroring Login**  
   
      Retourne les messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Pour plus d’informations, consultez [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   

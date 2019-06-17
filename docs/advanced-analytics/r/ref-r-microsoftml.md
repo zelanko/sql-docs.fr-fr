@@ -3,17 +3,17 @@ title: Bibliothèque de fonctions MicrosoftML R - Services de SQL Server Machine
 description: Introduction à la bibliothèque de fonctions de MicrosoftML dans SQL Server 2016 R Services et SQL Server 2017 Machine Learning Services avec R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641826"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140485"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (bibliothèque R dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 
 Fonctions dans **MicrosoftML** peuvent être appelées dans le code R encapsulé dans des procédures stockées. La plupart des développeurs build **MicrosoftML** solutions localement, puis migrez le code R terminé à des procédures stockées comme un exercice de déploiement.
 
-Le **MicrosoftML** le package pour R est installé « out-of-the-box » dans SQL Server 2017. Il est également disponible pour une utilisation avec SQL Server 2016 si vous mettez à niveau les composants R pour l’instance : [Mise à niveau une instance de SQL Server à l’aide de la liaison](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+Le **MicrosoftML** le package pour R est installé « out-of-the-box » dans SQL Server 2017. Il est également disponible pour une utilisation avec SQL Server 2016 si vous mettez à niveau les composants R pour l’instance : [Mise à niveau une instance de SQL Server à l’aide de la liaison](../install/upgrade-r-and-python.md)
 
 Le package n’est pas chargé par défaut. Dans un premier temps, chargez le **MicrosoftML** du package, puis charger **RevoScaleR** si vous devez utiliser des contextes de calcul distants ou les objets connexes de source des données ou de connectivité. Ensuite, référencez les fonctions individuelles que vous avez besoin.
 

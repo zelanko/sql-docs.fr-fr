@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639955"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Réinitialisation de mot de passe - Analytique Platform System
@@ -40,7 +40,7 @@ Le **sa** connexion dans SQL Server. **sa** est un membre de la **sysadmin** rô
 Les informations d’identification administrateur de domaine et les informations d’identification d’administrateur système conformes aux stratégies de force de mot de passe pour chaque type d’informations d’identification. Lorsque vous modifiez les informations d’identification administrateur de domaine, le nouveau mot de passe est mis à jour au domaine lorsque cela est nécessaire tout au long de SQL Server PDW.  
   
 > [!IMPORTANT]  
-> SQL Server PDW ne prend pas en charge le caractère de signe dollar (**$**) dans l’administrateur de domaine ou les mots de passe d’administrateur local. Les caractères **^ % &** sont autorisés dans les mots de passe, mais PowerShell considère comme des caractères spéciaux. Si aucun de ces caractères sont utilisés dans les mots de passe pour l’administrateur système ou d’un SQL Server**sa** comptes (le **AdminPassword** et **PdwSAPassword** paramètres lors de la le programme d’installation), configurer, y compris installation, mise à niveau, REPLACENODE et une mise à jour corrective, échoue. Pour garantir une mise à niveau lorsque les mots de passe actuels contient des caractères non pris en charge, modifier ces mots de passe afin qu’ils ne contiennent pas ces caractères avant d’exécuter la mise à niveau. Une fois la mise à niveau terminée, vous pouvez définir ces mots de passe à leurs valeurs d’origine. Pour plus d’informations sur les exigences de mot de passe, consultez [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> SQL Server PDW ne prend pas en charge le caractère de signe dollar ( **$** ) dans l’administrateur de domaine ou les mots de passe d’administrateur local. Les caractères **^ % &** sont autorisés dans les mots de passe, mais PowerShell considère comme des caractères spéciaux. Si aucun de ces caractères sont utilisés dans les mots de passe pour l’administrateur système ou d’un SQL Server**sa** comptes (le **AdminPassword** et **PdwSAPassword** paramètres lors de la le programme d’installation), configurer, y compris installation, mise à niveau, REPLACENODE et une mise à jour corrective, échoue. Pour garantir une mise à niveau lorsque les mots de passe actuels contient des caractères non pris en charge, modifier ces mots de passe afin qu’ils ne contiennent pas ces caractères avant d’exécuter la mise à niveau. Une fois la mise à niveau terminée, vous pouvez définir ces mots de passe à leurs valeurs d’origine. Pour plus d’informations sur les exigences de mot de passe, consultez [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Pour réinitialiser un mot de passe  
   

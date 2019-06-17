@@ -42,10 +42,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770723"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
@@ -569,7 +569,7 @@ ms.locfileid: "62770723"
 |NeedRefenceData|Booléen|Valeur qui spécifie si la transformation utilise une liste de termes d'exclusion stockée dans une table de référence. La valeur par défaut de cette propriété est `False`.|  
 |OutTermColumn|String|Nom de la colonne qui contient les termes d'exclusion.|  
 |OutTermTable|String|Nom de la table contenant la colonne qui comporte des termes d'exclusion.|  
-|ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes et Inverse Document Frequency, défini comme : TFIDF d’un terme T = (fréquence de T) \* log((nombre de lignes en entrée) / (nombre de lignes comportant T)). La valeur par défaut de cette propriété est **0**.|  
+|ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes et de la fréquence inverse de documents, défini comme suit : TFIDF d’un terme T = (fréquence de T) \* log((nombre de lignes en entrée) / (nombre de lignes comportant T)). La valeur par défaut de cette propriété est **0**.|  
 |WordOrPhrase|Entier|Valeur qui spécifie le type de terme. Les valeurs valides sont 0 qui indique des mots uniquement, 1 qui désigne des expressions nominales seulement et 2 qui indique des mots et des expressions nominales à la fois. La valeur par défaut de cette propriété est **0**.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation d'extraction de terme ne disposent pas de propriétés personnalisées.  

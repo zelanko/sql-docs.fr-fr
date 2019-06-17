@@ -13,10 +13,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: da64525978a5655df1832d70959929d6221c9a7b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62936310"
 ---
 # <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Azure SQL Database)
@@ -32,7 +32,7 @@ ms.locfileid: "62936310"
 |-----------------|---------------|-----------------|  
 |event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
 |event_id|**Int**|ID de l'événement. Cet ID est unique dans l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
+|name|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. Autorise la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. Autorise la valeur NULL.|  
   

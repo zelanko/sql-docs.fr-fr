@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760179"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "62760179"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifie chaque exécution de jeu d'éléments de collecte. Utilisé pour joindre cette vue à d'autres journaux détaillés. Autorise la valeur NULL.|  
 |parent_log_id|**bigint**|Identifie le package parent ou jeu d'éléments de collecte. N'accepte pas la valeur NULL. Les ID sont chaînés dans la relation parent-enfant, ce qui vous permet de déterminer quel package a été démarré par quel jeu d'éléments de collecte. Cette vue regroupe les entrées de journal par leur chaînage parent-enfant et met en retrait les noms des packages, afin que la chaîne d’appel soit clairement visible.|  
-|NAME|**nvarchar(4000)**|Nom du jeu d'éléments de collecte ou du package que cette entrée de journal représente. Autorise la valeur NULL.|  
+|name|**nvarchar(4000)**|Nom du jeu d'éléments de collecte ou du package que cette entrée de journal représente. Autorise la valeur NULL.|  
 |status|**smallint**|Indique l'état actuel du jeu d'éléments de collecte ou package. Autorise la valeur NULL.<br /><br /> Valeurs possibles :<br /><br /> 0 = En cours d'exécution<br /><br /> 1 = Terminé<br /><br /> 2 = Échec|  
 |runtime_execution_mode|**smallint**|Indique si l'activité du jeu d'éléments de collecte consistait à collecter ou à télécharger des données. Autorise la valeur NULL.|  
 |start_time|**datetime**|Heure de démarrage du jeu d'éléments de collecte ou package. Autorise la valeur NULL.|  

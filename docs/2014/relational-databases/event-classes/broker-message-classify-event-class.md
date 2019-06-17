@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62664048"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify, classe d'événements
@@ -33,7 +33,7 @@ ms.locfileid: "62664048"
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l'instruction USE *database* ou celui de la base de données par défaut si aucune instruction USE *database* n'a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**EventClass**|**Int**|Type de classe d'événements capturée. Renvoie toujours **141** pour **Broker:Message Classify**.|27|Non|  
 |**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
-|**EventSubClass**|**nvarchar**|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> **Local**: La route choisie possède l’adresse LOCAL.<br /><br /> **À distance**: La route choisie possède une adresse autre que LOCAL.<br /><br /> **Retardé**: Le message est retardé, soit parce que le transfert est désactivé, car il n’existe aucun itinéraire correspondant présent.|21|Oui|  
+|**EventSubClass**|**nvarchar**|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> **Local** : la route choisie a l’adresse LOCAL.<br /><br /> **Remote** : la route choisie a une adresse autre que LOCAL.<br /><br /> **Delayed** : le message fait l’objet d’un retard, soit car le transfert est désactivé, soit car aucune route correspondante n’est présente.|21|Oui|  
 |**FileName**|**nvarchar**|Nom du service vers lequel le message est dirigé.|36|Non|  
 |**GUID**|**uniqueidentifier**|ID de conversation du dialogue. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  

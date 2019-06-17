@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62760199"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "62760199"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**Int**|Identificateur local pour le jeu d'éléments de collection. N'accepte pas la valeur NULL.|  
 |collection_set_uid|**uniqueidentifier**|Identificateur global unique du jeu d'éléments de collecte. N'accepte pas la valeur NULL.|  
-|NAME|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
+|name|**nvarchar(4000)**|Nom du jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |target|**nvarchar(max)**|Identifie la cible pour le jeu d'éléments de collecte. Autorise la valeur NULL.|  
 |is_system|**bit**|Activé (1) ou désactivé (0) pour indiquer si le jeu d'éléments de collecte a été inclus avec le collecteur de données ou s'il a été ajouté ultérieurement par le dc_admin. Il peut s'agir d'un jeu d'éléments de collecte personnalisé développé en interne ou par un tiers. N'accepte pas la valeur NULL.|  
 |is_running|**bit**|Indique si le jeu d'éléments de collecte est en cours d'exécution ou non. N'accepte pas la valeur NULL.|  

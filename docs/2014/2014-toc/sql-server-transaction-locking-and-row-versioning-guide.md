@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62513224"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server
@@ -372,7 +372,7 @@ GO
   
  Le tableau suivant répertorie les ressources que le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut verrouiller.  
   
-|Ressource|Description|  
+|Resource|Description|  
 |--------------|-----------------|  
 |RID|Identificateur de ligne utilisé pour verrouiller une seule ligne dans un segment de mémoire.|  
 |KEY|Verrou de ligne dans un index utilisé pour protéger des groupes de clés dans les transactions susceptibles d'être sérialisées.|  
@@ -496,7 +496,7 @@ GO
   
  Le verrouillage d'étendues de clés empêche les lectures fantômes. La protection des étendues de clés entre les lignes permet également d'empêcher les insertions fantômes dans un jeu d'enregistrements auquel une transaction accède.  
   
- Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'**. Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'**, **'** BBD **'** ou **'** CAL **'**.  
+ Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'** . Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'** , **'** BBD **'** ou **'** CAL **'** .  
   
 #### <a name="key-range-lock-modes"></a>Modes de verrouillage d'étendues de clés  
 
@@ -561,7 +561,7 @@ GO
   
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
   
--   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
+-   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’** . Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
 #### <a name="examples"></a>Exemples  
 
@@ -691,7 +691,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Ressources liées à l’exécution de requêtes parallèles**. Les threads de coordination, production ou consommation associées à un port d’échange peuvent se bloquer mutuellement et provoquer un interblocage qui se produit généralement lors de l’introduction d’au moins un autre processus étranger à la requête parallèle. De même, quand commence l'exécution d'une requête parallèle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détermine le degré de parallélisme, ou le nombre de threads de travail, en fonction de la charge de travail en cours. Si la charge de travail change de façon inattendue, par exemple si de nouvelles requêtes commencent à s'exécuter sur le serveur ou que le système se trouve à court de threads de travail, il peut s'ensuivre un blocage.  
   
--   **Ressources MARS (Multiple Active Result Sets)**. Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [Multiple Active Result Sets (MARS) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
+-   **Ressources MARS (Multiple Active Result Sets)** . Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [Multiple Active Result Sets (MARS) dans SQL Server](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx).  
   
     -   **Ressource utilisateur**. Lorsqu'un thread est en attente d'une ressource potentiellement contrôlée par une application d'utilisateur, la ressource est considérée comme étant une ressource externe ou utilisateur et est traitée comme un verrou.  
   
@@ -1021,7 +1021,7 @@ BEGIN TRANSACTION
   
  Session 1 :  
   
- L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.   
+ L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.  
   
 ```  
 SELECT col1  
@@ -1046,7 +1046,7 @@ BEGIN TRANSACTION
   
  Session 2 :  
   
- Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.   
+ Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.  
   
  Sur les ID de partition de 7 à 15 que le verrou X n'a pas encore atteint, d'autres transactions peuvent continuer d'acquérir des verrous.  
   
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION
 
  Les compteurs de performance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournissent des informations sur les performances système affectées par les processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les compteurs de performances suivants contrôlent tempdb et le magasin de versions, ainsi que les transactions utilisant le contrôle de version de ligne. Les compteurs de performances se trouvent dans l'objet de performances SQLServer:Transactions.  
   
- **Espace disponible dans tempdb (Ko)**. Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
+ **Espace disponible dans tempdb (Ko)** . Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
   
  La formule ci-dessous vous donne une estimation grossière de la taille du magasin de versions. Pour estimer la taille du magasin de versions en ce qui concerne les transactions longues, il peut s'avérer utile de contrôler les taux de génération et de nettoyage.  
   
@@ -1275,7 +1275,7 @@ BEGIN TRANSACTION
   
  Le délai le plus long d'exécution de transaction ne doit pas inclure les constructions d'un index en ligne. Étant donné que ces dernières opérations peuvent prendre un certain temps pour les tables volumineuses, elles utilisent un autre magasin de versions. La taille approximative du magasin de versions utilisé pour les constructions d'un index en ligne équivaut à la quantité de données modifiées dans la table, y compris tous les index, pendant toute la durée d'activité de la construction de l'index en ligne.  
   
- **Taille de la banque des versions (Ko)**. Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
+ **Taille de la banque des versions (Ko)** . Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
   
  `Version Generation rate (KB/s)` . Contrôle le taux de génération de version en Ko par seconde pour tous les magasins de versions.  
   

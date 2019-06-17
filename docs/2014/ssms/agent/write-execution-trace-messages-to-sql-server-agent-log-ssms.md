@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fd21f4b08bf53d4715f2b99eefed523f3853c033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245440"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Écrire des messages de trace d'exécution dans le journal des erreurs de SQL Server Agent (SQL Server Management Studio)
@@ -66,7 +66,7 @@ ms.locfileid: "63245440"
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans le **propriétés de l’Agent SQL Server -**_nom_serveur_ boîte de dialogue **journal des erreurs** sur le **général** , sélectionnez le **Inclure les messages de trace d’exécution** case à cocher.  
+3.  Dans le **propriétés de l’Agent SQL Server -** _nom_serveur_ boîte de dialogue **journal des erreurs** sur le **général** , sélectionnez le **Inclure les messages de trace d’exécution** case à cocher.  
   
 4.  Cliquez sur **OK**.  
   

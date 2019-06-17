@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620602"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037841"
 ---
 # <a name="report-builder-in-sql-server"></a>Générateur de rapports dans SQL Server
 
@@ -68,7 +68,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
 > [!NOTE]  
 >  Les rapports publiés sont gérés sur un serveur de rapports ou un serveur de rapports en mode intégré SharePoint par un administrateur de serveur de rapports. Les administrateurs de serveur de rapports peuvent choisir le mode de sécurité, définir des propriétés et planifier des opérations, telles que l'historique de rapport et la remise des rapports par courrier électronique. Ils peuvent créer des planifications partagées et des sources de données partagées afin d'en permettre une utilisation générale. Les administrateurs peuvent également gérer tous les dossiers du serveur de rapports. La possibilité de réaliser des tâches de gestion dépend des autorisations délivrées aux utilisateurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
   [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Installer le générateur de rapports](../../reporting-services/install-windows/install-report-builder.md)
@@ -81,7 +81,7 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Fournit des informations sur les éléments à prendre en considération avant de commencer à créer un rapport.  
   
- [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Concepts de Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)  
  Définit les concepts clés utilisés dans la documentation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Mode Conception de rapport &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  
