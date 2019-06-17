@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069529"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Sélectionner les attributs de la dimension (Assistant Dimension)
@@ -54,7 +54,7 @@ ms.locfileid: "66069529"
 |----------|--------------|  
 |Une dimension contient une hiérarchie parent-enfant et l’option **Permettre la navigation** n’est pas sélectionnée.|L'Assistant conserve la valeur `AttributeHierarchyEnabled` pour la propriété `True` et affecte la valeur `AttributeHierarchyVisible` à l'attribut `False` pour l'attribut de clé.|  
 |Une table dans une dimension contient une clé étrangère à une table qui n'est pas dans la dimension|L'Assistant sélectionne la clé étrangère comme attribut à inclure, mais ne sélectionne pas **Permettre la navigation**. Si vous conservez ces paramètres, la propriété `AttributeHiearchyEnabled` de l'attribut aura la valeur `True` et la propriété `AttributeHieararchyVisible` aura la valeur `False`.|  
-|Une dimension contient des tables en flocon accessibles via des colonnes clés étrangères qui acceptent la valeur NULL<br /><br /> - et -<br /><br /> L'option Permettre la navigation n'est pas sélectionnée pour l'attribut qui est basé sur la clé de la table en flocon|L'Assistant créera le nouvel attribut dont la propriété `AttributeHiearchyEnabled` a la valeur `True` et dont la propriété `AttributeHieararchyVisible` a la valeur `False`.|  
+|Une dimension contient des tables en flocon accessibles via des colonnes clés étrangères qui acceptent la valeur NULL<br /><br /> \- et -<br /><br /> L'option Permettre la navigation n'est pas sélectionnée pour l'attribut qui est basé sur la clé de la table en flocon|L'Assistant créera le nouvel attribut dont la propriété `AttributeHiearchyEnabled` a la valeur `True` et dont la propriété `AttributeHieararchyVisible` a la valeur `False`.|  
   
  **Type d’attribut**  
  (Facultatif) Définissez le type de l'attribut. La valeur par défaut est **Regular**. Le type d'attribut apporte aux applications clientes des indications sur les informations que l'attribut peut contenir.  

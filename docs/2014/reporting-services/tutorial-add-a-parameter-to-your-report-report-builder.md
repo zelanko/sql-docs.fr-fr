@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099087"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports)
@@ -118,7 +118,7 @@ ms.locfileid: "66099087"
   
      Cette requête ne contient pas de paramètres de requête. Vous ajouterez ultérieurement des paramètres de requête dans ce didacticiel.  
   
-11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 11 lignes de données qui montrent la quantité d’articles vendus pour chaque sous-catégorie dans quatre magasins et inclut les colonnes suivantes : StoreID, Subcategory, Quantity.  
+11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 11 lignes de données qui montrent la quantité d’articles vendus pour chaque sous-catégorie dans quatre magasins et inclut les colonnes suivantes : StoreID, Subcategory, Quantity.  
   
 12. Cliquer sur **Suivant**.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "66099087"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     Le `WHERE` clause limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *@StoreID*.  
+     Le `WHERE` clause limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *@StoreID* .  
   
-4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *@StoreID*.  
+4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *@StoreID* .  
   
 5.  Dans **Valeur du paramètre**, tapez **200**.  
   
@@ -186,14 +186,14 @@ ms.locfileid: "66099087"
   
 8.  Dans le volet des données de rapport, développez le dossier **Paramètres** .  
   
- Notez qu’il existe désormais un paramètre de rapport nommé *@StoreID*. Par défaut, le paramètre a type de données **texte**. Dans la mesure où l'identificateur de magasin est un entier, vous devez remplacer le type de données par le type Entier dans la procédure suivante.  
+ Notez qu’il existe désormais un paramètre de rapport nommé *@StoreID* . Par défaut, le paramètre a type de données **texte**. Dans la mesure où l'identificateur de magasin est un entier, vous devez remplacer le type de données par le type Entier dans la procédure suivante.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Modifier le type de données par défaut et d'autres propriétés pour un paramètre de rapport  
  Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs par défaut des propriétés.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Pour modifier le type de données par défaut d'un paramètre de rapport  
   
-1.  Dans le volet données du rapport sous la **paramètres** nœud, avec le bouton droit *@StoreID*, puis cliquez sur **propriétés du paramètre**.  
+1.  Dans le volet données du rapport sous la **paramètres** nœud, avec le bouton droit *@StoreID* , puis cliquez sur **propriétés du paramètre**.  
   
 2.  Dans l’invite de commandes, tapez **identificateur de Store ?** Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66099087"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Affichez l'aperçu du rapport. La visionneuse de rapports affiche l’invite pour *@StoreID*.  
+6.  Affichez l'aperçu du rapport. La visionneuse de rapports affiche l’invite pour *@StoreID* .  
   
 7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200**, puis cliquez sur **Afficher le rapport**.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66099087"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
   
-1.  Dans le volet données du rapport, cliquez sur le paramètre *@StoreID*, puis cliquez sur **propriétés du paramètre**.  
+1.  Dans le volet données du rapport, cliquez sur le paramètre *@StoreID* , puis cliquez sur **propriétés du paramètre**.  
   
 2.  Cliquez sur **Valeurs disponibles**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66099087"
   
 9. Affichez l'aperçu du rapport.  
   
-     Dans la barre d’outils de la visionneuse de rapports, la zone de texte de paramètre est maintenant une liste déroulante qui affiche  **\<sélectionner une valeur >**.  
+     Dans la barre d’outils de la visionneuse de rapports, la zone de texte de paramètre est maintenant une liste déroulante qui affiche  **\<sélectionner une valeur >** .  
   
 10. Dans la liste déroulante, sélectionnez Contoso Catalog Store, puis cliquez sur **afficher le rapport**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "66099087"
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **des valeurs par défaut**, puis cliquez sur **obtenir des valeurs à partir d’une requête**.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "66099087"
   
 7.  Affichez l'aperçu du rapport.  
   
- Pour *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store ». Ceci est la première valeur du jeu de résultats pour le jeu de données **magasins**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
+ Pour *@StoreID* , la visionneuse de rapports affiche la valeur « Contoso North America Online Store ». Ceci est la première valeur du jeu de résultats pour le jeu de données **magasins**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Pour spécifier une valeur par défaut personnalisée  
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **des valeurs par défaut**, puis cliquez sur **spécifier des valeurs**, puis cliquez sur **ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "66099087"
   
 6.  Affichez l'aperçu du rapport.  
   
- Pour *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso Catalog Store ». C’est le nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
+ Pour *@StoreID* , la visionneuse de rapports affiche la valeur « Contoso Catalog Store ». C’est le nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
 ##  <a name="NameValue"></a> 4d. Rechercher une valeur à partir d'un dataset qui contient des paires nom/valeur  
  Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
@@ -326,7 +326,7 @@ ms.locfileid: "66099087"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **<\<Expr >>**.  
+     L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **<\<Expr >>** .  
   
 8.  Affichez l'aperçu du rapport.  
   
@@ -376,7 +376,7 @@ ms.locfileid: "66099087"
   
      La matrice affiche des données uniquement pour « Contoso Catalog Store ».  
   
-9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?**, sélectionnez **Contoso Asia Online Store**, puis cliquez sur **Afficher le rapport**.  
+9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?** , sélectionnez **Contoso Asia Online Store**, puis cliquez sur **Afficher le rapport**.  
   
  La matrice affiche les données qui correspondent au magasin que vous avez sélectionné.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "66099087"
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Sélectionnez **Autoriser les valeurs multiples**.  
   

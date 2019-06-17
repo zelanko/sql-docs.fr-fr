@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6a3084f7b98edc3c9159576ae19323baeaa1b105
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684037"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "62684037"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**Int**|ID du pool de ressources. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Le nom du pool de ressources. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Le nom du pool de ressources. N'accepte pas la valeur NULL.|  
 |statistics_start_time|**datetime**|Heure à laquelle les statistiques ont été réinitialisées pour ce pool. N'accepte pas la valeur NULL.|  
 |total_cpu_usage_ms|**bigint**|L'utilisation cumulative de l'UC, en millisecondes, depuis que les statistiques du gouverneur de ressources ont été réinitialisées. N'accepte pas la valeur NULL.|  
 |cache_memory_kb|**bigint**|Utilisation de la mémoire cache totale actuelle en kilo-octets. N'accepte pas la valeur NULL.|  
