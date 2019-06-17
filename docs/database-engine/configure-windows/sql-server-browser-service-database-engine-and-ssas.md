@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616939"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775438"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Service SQL Server Browser (moteur de base de données et SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52616939"
   
 -   lors de la mise à niveau d'une installation ;  
   
--   lors d'une installation sur un cluster ;  
+-   lors d'une installation sur un cluster ;  
   
 -   lors de l’installation d’une instance nommée de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , notamment toutes les instances de SQL Server Express ;  
   
@@ -127,7 +127,7 @@ ms.locfileid: "52616939"
  Les instances masquées sont des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ne prennent en charge que les connexions de mémoire partagée. Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], définissez l'indicateur `HideInstance` pour indiquer que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser ne doit pas répondre par des informations sur cette instance de serveur.  
   
 ### <a name="using-a-firewall"></a>Utilisation d'un pare-feu  
- Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d'informations sur l'utilisation d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Pour communiquer avec le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser sur un serveur situé derrière un pare-feu, ouvrez le port UDP 1434 en plus du port TCP utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par ex., le port 1433). Pour plus d’informations sur l’utilisation d’un pare-feu, consultez « Guide pratique pour configurer un pare-feu pour accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a> Voir aussi  
  [Protocoles réseau et bibliothèques réseau](../../sql-server/install/network-protocols-and-network-libraries.md)  

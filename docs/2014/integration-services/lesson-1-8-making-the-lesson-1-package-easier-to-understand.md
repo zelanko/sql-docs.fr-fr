@@ -1,5 +1,5 @@
 ---
-title: 'Étape 8 : Rendre le Package de la leçon 1 plus facile à assimiler | Microsoft Docs'
+title: 'Étape 8 : Rendre le Package de la leçon 1 plus facile à assimiler | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767591"
 ---
-# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Étape 8 : Rendre le Package de la leçon 1 plus facile à comprendre
+# <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Étape 8 : Comment rendre le package de la leçon 1 plus facile à assimiler
   Une fois la configuration du package de la leçon 1 terminée; il peut être judicieux de mettre un peu d'ordre dans la disposition du package. Si les formes dans la disposition des flux de contrôle et de données affichent des tailles aléatoires, ou si elles ne sont pas alignées ou groupées, la maîtrise des fonctionnalités du package peut s'avérer plus délicate.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools fournit des outils qui facilitent et accélèrent le processus de mise en forme de la disposition des packages. Les fonctionnalités de mise en forme offrent notamment la possibilité d'attribuer la même taille aux formes, de les aligner et de manipuler l'espace horizontal et vertical entre elles.  

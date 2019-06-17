@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771125"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Traiter les insertions, les mises à jour et les suppressions
@@ -29,7 +29,7 @@ ms.locfileid: "62771125"
  Dans l’exemple de requête qui récupère les données modifiées, la fonction **cdc.fn_cdc_get_net_changes_<capture_instance>** retourne uniquement la colonne de métadonnées nommée **__$operation**. Cette colonne de métadonnées contient une valeur ordinale qui indique l'opération ayant entraîné la modification.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la requête qui utilise la fonction **cdc.fn_cdc_get_net_changes_<capture_instance>**, consultez [Créer la fonction de récupération des données modifiées](create-the-function-to-retrieve-the-change-data.md).  
+>  Pour plus d’informations sur la requête qui utilise la fonction **cdc.fn_cdc_get_net_changes_<capture_instance>** , consultez [Créer la fonction de récupération des données modifiées](create-the-function-to-retrieve-the-change-data.md).  
   
  La mise en correspondance d'une valeur ordinale à son opération associée n'est pas aussi facile que d'utiliser un mnémonique de l'opération. Par exemple, 'D' peut facilement représenter une opération de suppression (Delete) et 'I' une opération d'insertion. L’exemple de requête créé dans la rubrique [Création de la fonction de récupération des données modifiées](create-the-function-to-retrieve-the-change-data.md)effectue cette conversion d’une valeur ordinale en valeur de chaîne conviviale qui est retournée dans une nouvelle colonne. Le segment de code suivant illustre cette conversion :  
   

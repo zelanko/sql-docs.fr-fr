@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204691"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
@@ -65,7 +65,7 @@ ms.locfileid: "63204691"
  Indique si la table est répliquée à un autre emplacement.  
   
  **Catégorie Spécification d'espace de données régulière**  
- Se développe pour afficher des propriétés pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+ Se développe pour afficher des propriétés pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
  **(Type d’espace de données)**  
  Indique si cette table est stockée à l'aide d'un groupe de fichiers ou d'un schéma de partition.  

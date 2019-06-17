@@ -1,7 +1,7 @@
 ---
 title: Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/06/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -15,14 +15,15 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f17c3bb5dcc0cbea13d7f587eb7a72d83995b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033890"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743904"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Mettez les résultats de la requête au format JSON ou exportez les données à partir de SQL Server au format JSON, en ajoutant la clause **FOR JSON** à une instruction **SELECT**. Utilisez la clause **FOR JSON** pour simplifier les applications clientes en déléguant la mise en forme de la sortie JSON produite par l’application à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
@@ -38,7 +39,7 @@ Voici l’exemple d’une instruction **SELECT** avec la clause **FOR JSON** et 
  ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>Option 1 : Vous contrôlez la sortie avec FOR JSON PATH
-En mode **PATH**, vous pouvez utiliser la syntaxe à point (par exemple, `'Item.Price'`) pour mettre en forme la sortie imbriquée.  
+En mode **PATH**, vous pouvez utiliser la syntaxe à point (par exemple, `'Item.UnitPrice'`) pour mettre en forme la sortie imbriquée.  
 
 Voici un exemple de requête qui utilise le mode **PATH** avec la clause **FOR JSON** . L’exemple suivant utilise également l’option **ROOT** pour spécifier un élément racine nommé. 
   
@@ -55,17 +56,15 @@ Dans le mode **AUTO** , la structure de l'instruction SELECT détermine le forma
 Par défaut, les valeurs **Null** ne sont pas incluses dans la sortie. Vous pouvez utiliser **INCLUDE_NULL_VALUES** pour modifier ce comportement.  
 
 Voici un exemple de requête qui utilise le mode **AUTO** avec la clause **FOR JSON** .
- 
-**Requête :**  
-  
+
 ```sql  
 SELECT name, surname  
 FROM emp  
-FOR JSON AUTO  
+FOR JSON AUTO;
 ```  
-  
- **Résultats**  
-  
+
+Et voici le code JSON retourné.
+
 ```json  
 [{
     "name": "John"
@@ -74,8 +73,95 @@ FOR JSON AUTO
     "surname": "Doe"
 }]
 ```
- 
+
+### <a name="2b---example-with-join-and-null"></a>2.b - Exemple avec JOIN et NULL
+
+L’exemple suivant de `SELECT...FOR JSON AUTO` montre à quoi les résultats JSON ressemblent quand il existe une relation un à plusieurs entre les données de tables qui ont été jointes avec `JOIN`.
+
+L’absence de la valeur null dans le JSON retourné est également illustrée. Toutefois, vous pouvez remplacer ce comportement par défaut en utilisant le mot clé `INCLUDE_NULL_VALUES` sur la clause `FOR`.
+
+```sql
+go
+
+DROP TABLE IF EXISTS #tabStudent;
+DROP TABLE IF EXISTS #tabClass;
+
+go
+
+CREATE TABLE #tabClass
+(
+   ClassGuid   uniqueIdentifier  not null  default newid(),
+   ClassName   nvarchar(32)      not null
+);
+
+CREATE TABLE #tabStudent
+(
+   StudentGuid   uniqueIdentifier  not null  default newid(),
+   StudentName   nvarchar(32)      not null,
+   ClassGuid     uniqueIdentifier      null   -- Foreign key.
+);
+
+go
+
+INSERT INTO #tabClass
+      (ClassGuid, ClassName)
+   VALUES
+      ('DE807673-ECFC-4850-930D-A86F921DE438', 'Algebra Math'),
+      ('C55C6819-E744-4797-AC56-FF8A729A7F5C', 'Calculus Math'),
+      ('98509D36-A2C8-4A65-A310-E744F5621C83', 'Art Painting')
+;
+
+INSERT INTO #tabStudent
+      (StudentName, ClassGuid)
+   VALUES
+      ('Alice Apple', 'DE807673-ECFC-4850-930D-A86F921DE438'),
+      ('Alice Apple', 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
+      ('Betty Boot' , 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
+      ('Betty Boot' , '98509D36-A2C8-4A65-A310-E744F5621C83'),
+      ('Carla Cap'  , null)
+;
+
+go
+
+SELECT
+      c.ClassName,
+      s.StudentName
+   from
+                       #tabClass   as c
+      RIGHT OUTER JOIN #tabStudent as s ON s.ClassGuid = c.ClassGuid
+   --where
+   --   c.ClassName LIKE '%Math%'
+   order by
+      c.ClassName,
+      s.StudentName
+   FOR
+      JSON AUTO
+      --, INCLUDE_NULL_VALUES
+;
+
+go
+
+DROP TABLE IF EXISTS #tabStudent;
+DROP TABLE IF EXISTS #tabClass;
+
+go
+```
+
+Et voici le code JSON généré par l’instruction SELECT précédente.
+
+```json
+JSON_F52E2B61-18A1-11d1-B105-00805F49916B
+
+[
+   {"s":[{"StudentName":"Carla Cap"}]},
+   {"ClassName":"Algebra Math","s":[{"StudentName":"Alice Apple"}]},
+   {"ClassName":"Art Painting","s":[{"StudentName":"Betty Boot"}]},
+   {"ClassName":"Calculus Math","s":[{"StudentName":"Alice Apple"},{"StudentName":"Betty Boot"}]}
+]
+```
+
 ### <a name="more-info-about-for-json-auto"></a>Plus d’informations sur FOR JSON AUTO
+
 Pour plus d’informations et pour obtenir des exemples détaillés, consultez [Mettre en forme automatiquement la sortie JSON avec le mode AUTO &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
 
 Pour plus d’informations sur la syntaxe et l’utilisation, consultez [Clause FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
@@ -121,6 +207,7 @@ Voici un exemple qui montre comment la clause **FOR JSON** met en forme la sorti
 |10|11|12|X|  
 |20|21|22|O|  
 |30|31|32|Z|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  **Sortie JSON**  
   

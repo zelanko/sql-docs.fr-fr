@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9a6804b68680600f9db9690929236d9f6128bc9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802897"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47614477"
  Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour la mise en miroir de base de données, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

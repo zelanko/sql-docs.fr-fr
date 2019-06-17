@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017179"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Didacticiel sur l'exploration de données intermédiaire (Analysis Services - Exploration de données)
@@ -47,7 +47,7 @@ ms.locfileid: "63017179"
  [Leçon 1 : Création de la Solution d’exploration de données intermédiaire &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer un projet basé sur la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], afin de prendre en charge plusieurs nouvelles vues des sources de données et de nombreux autres modèles d'exploration de données.  
   
- [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
  Dans cette leçon, vous allez créer un modèle d'exploration de données qu'il sera possible d'utiliser dans un scénario de prévision. Vous allez également découvrir les modèles d'exploration de données créés avec l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series).  
   
  Vous allez générer des modèles pour des régions individuelles, puis générer un modèle général utilisable à des fins de prédiction croisée.  

@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943683"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469643"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ Expression qui peut être résolue en valeur, parmi les suivantes :
 Pour *date*, `DATEADD` accepte une expression de colonne, une expression, un littéral de chaîne ou une variable définie par l’utilisateur. Une valeur de littéral de chaîne doit être résolue en **datetime**. Pour éviter toute ambiguïté, utilisez des années à quatre chiffres. Pour obtenir des informations sur les années à deux chiffres, consultez [Configurer l’option de configuration du serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
 ## <a name="return-types"></a>Types de retour
-Le type de données de l’argument *date* devient le type de données pour la valeur de retour de `DATEADD`, mais pas pour les valeurs *date* d’un littéral de chaîne. Pour un littéral de chaîne, `DATEADD` retourne une valeur **datetime**. `DATEADD` génère une erreur si l’échelle en secondes du littéral de chaîne compte plus de trois décimales (.nnn) ou si le littéral de chaîne contient la partie de décalage du fuseau horaire.
+
+Le type de données de la valeur de retour pour cette méthode est dynamique. Le type de retour dépend de l’argument fourni pour `date`. Si la valeur de `date` est un littéral de chaîne de date, `DATEADD` retourne une valeur **datetime**. Si un autre type de données d’entrée valide est fourni pour `date`, `DATEADD` retourne le même type de données. `DATEADD` lève une erreur si l’échelle en secondes du littéral de chaîne compte plus de trois décimales (.nnn) ou si le littéral de chaîne contient la partie de décalage du fuseau horaire.
   
 ## <a name="return-value"></a>Valeur retournée  
   

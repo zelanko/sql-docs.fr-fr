@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63251444"
 ---
 # <a name="working-with-empty-values"></a>Manipulation de valeurs vides
@@ -129,7 +129,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Ce tableau représente les résultats de l'application d'un opérateur OR à deux opérandes booléens.  
   
-|- ou -|TRUE|FALSE|  
+|\- ou -|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VIDE**|TRUE|TRUE|  

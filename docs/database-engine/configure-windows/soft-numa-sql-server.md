@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605389"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775473"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ Les processeurs modernes ont plusieurs cœurs par socket. Chaque socket est gén
 > Les processeurs ajoutés à chaud ne sont pas pris en charge par le soft-NUMA.  
   
 ## <a name="automatic-soft-numa"></a>Soft-NUMA automatique  
- Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], chaque fois que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] détecte plus de huit cœurs physiques par socket ou nœud NUMA au démarrage, des nœuds soft-NUMA sont créés automatiquement par défaut. Les cœurs des processeurs multithreads ne sont pas différenciés lors du décompte des cœurs physiques dans un nœud.  Quand le nombre de cœurs physiques détectés est supérieur à huit par socket, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée des nœuds soft-NUMA contenant idéalement huit cœurs, ce chiffre pouvant varier de cinq à neuf cœurs logiques par nœud. La taille du nœud matériel peut être limitée par un masque d'affinité de l’UC. Le nombre de nœuds NUMA ne dépasse jamais le nombre maximal de nœuds NUMA pris en charge.  
+Avec [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], chaque fois que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] détecte plus de huit cœurs physiques par socket ou nœud NUMA au démarrage, des nœuds soft-NUMA sont créés automatiquement par défaut. Les cœurs des processeurs multithreads ne sont pas différenciés lors du décompte des cœurs physiques dans un nœud.  Quand le nombre de cœurs physiques détectés est supérieur à huit par socket, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée des nœuds soft-NUMA contenant idéalement huit cœurs, ce chiffre pouvant varier de cinq à neuf cœurs logiques par nœud. La taille du nœud matériel peut être limitée par un masque d'affinité de l’UC. Le nombre de nœuds NUMA ne dépasse jamais le nombre maximal de nœuds NUMA pris en charge.  
   
- Vous pouvez désactiver ou réactiver le soft-NUMA avec l’instruction [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) et l’argument `SET SOFTNUMA`. La modification de ce paramètre requiert le redémarrage du moteur de base de données pour s’appliquer.  
+Vous pouvez désactiver ou réactiver le soft-NUMA avec l’instruction [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) et l’argument `SET SOFTNUMA`. La modification de ce paramètre requiert le redémarrage du moteur de base de données pour s’appliquer.  
   
- La figure ci-dessous montre le type d’informations concernant le soft-NUMA que vous voyez dans le journal des erreurs SQL Server quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte des nœuds NUMA matériels avec plus de huit cœurs physiques par nœud ou socket.  
+La figure ci-dessous montre le type d’informations concernant le soft-NUMA que vous voyez dans le journal des erreurs SQL Server quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte des nœuds NUMA matériels avec plus de huit cœurs physiques par nœud ou socket.  
 
 
 ```
@@ -49,6 +49,9 @@ Les processeurs modernes ont plusieurs cœurs par socket. Chaque socket est gén
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, utilisez l’indicateur de trace 8079 pour autoriser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser le NUMA logiciel automatique. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ce comportement est contrôlé par le moteur. L’indicateur de trace 8079 n’a aucun effet. Pour plus d’informations, consultez [DBCC TRACEON - Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a name="manual-soft-numa"></a>Soft-NUMA manuel  
 Pour configurer manuellement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’utiliser le soft-NUMA, désactivez le soft-NUMA automatique et modifiez le Registre pour ajouter un masque d’affinité de configuration des nœuds. Lorsque cette méthode est utilisée, le masque soft-NUMA peut être établi comme entrée de Registre binaire, DWORD (hexadécimal ou décimal) ou QWORD (hexadécimal ou décimal). Pour configurer davantage que les 32 premiers processeurs, utilisez les valeurs de Registre QWORD ou BINARY (les valeurs QWORD ne peuvent pas être utilisées avant [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Après avoir modifié le Registre, vous devez redémarrer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour que la configuration du soft-NUMA prenne effet.  
@@ -70,10 +73,10 @@ L'instance A du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configurée pou
   
  L’instance A, confrontée à des E/S importantes, a maintenant deux threads d’E/S et un thread d’écriture différée. L’instance B, qui exécute des opérations nécessitant des ressources de processeur importantes, a un seul thread d’E/S et un seul thread d’écriture différée. Vous pouvez affecter des quantités de mémoire différentes aux instances, mais contrairement au NUMA matériel, elles reçoivent toutes deux la mémoire du même bloc mémoire de système d’exploitation et il n’y a pas d’affinité entre la mémoire et le processeur.  
   
- Le thread d’écriture différée est lié à la vue du système d’exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, quel que soit le nombre de nœuds NUMA physiques que le matériel présente, il correspond au nombre de thread d'écriture différée qui sont créés. Pour plus d'informations, consultez [Fonctionnement : soft-NUMA, thread d'achèvement d'E/S, threads de travail d'écriture différée et nœuds de mémoire](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Le thread d’écriture différée est lié à la vue du système d’exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, quel que soit le nombre de nœuds NUMA physiques que le matériel présente, il correspond au nombre de thread d'écriture différée qui sont créés. Pour plus d’informations, consultez [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx) (Fonctionnement : NUMA logiciel, thread d’achèvement d’E/S, threads de travail d’écriture différée et nœuds de mémoire).  
   
 > [!NOTE]
-> Les clés de Registre **Soft-NUMA** ne sont pas copiées lorsque vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Les clés de Registre **NUMA logiciel** ne sont pas copiées quand vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="set-the-cpu-affinity-mask"></a>Définir le masque d'affinité de l'UC  
  Exécutez l'instruction suivante sur l'instance A de façon à la configurer pour qu'elle utilise les UC 0, 1, 2 et 3 en définissant le masque d'affinité de l'UC :  
@@ -128,9 +131,9 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## <a name="metadata"></a>Métadonnées  
  Vous pouvez utiliser les vues de gestion dynamique (DMV) suivantes pour afficher l’état actuel et la configuration du soft-NUMA.  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): affiche la valeur actuelle (40 ou 41) pour SOFTNUMA  
+-   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) : affiche la valeur actuelle (0 ou 1) pour SOFTNUMA  
   
--   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) : Les colonnes *softnuma* et *softnuma_desc* affiche les valeurs de configuration actuelles.  
+-   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) : les colonnes *softnuma* et *softnuma_desc* affichent les valeurs de configuration actuelles.  
   
 > [!NOTE]
 > Même si vous pouvez afficher la valeur d’exécution du soft-NUMA automatique avec [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), vous ne pouvez pas modifier sa valeur avec **sp_configure**. Vous devez utiliser l’instruction [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) avec l’argument `SET SOFTNUMA`.  

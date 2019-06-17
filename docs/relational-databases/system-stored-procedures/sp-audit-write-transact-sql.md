@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996261"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -49,7 +49,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Paramètre passé par l'utilisateur pour indiquer si l'événement a ou non réussi. Il apparaît dans la colonne succeeded du journal d'audit. `@succeeded` est **bits**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. `@user_defined_information` est **nvarchar (4000)**.  
+ Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. `@user_defined_information` est **nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

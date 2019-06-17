@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 97f3e713cc130456c40765ad84678739e7c6e6f3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 57ff486a239436dd8686970052ae73f3fed2ebb6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204211"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774753"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mise en miroir de base de données - Établir une session - Authentification Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53204211"
      Chaque instance de serveur participant à une session de mise en miroir de bases de données requiert un point de terminaison de mise en miroir de bases de données. Si le point de terminaison n'existe pas, vous devez le créer.  
   
     > [!NOTE]  
-    >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : l'authentification Windows ou l'authentification basée sur les certificats. Pour plus d’informations, consultez [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+    >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : l’authentification Windows ou l’authentification basée sur les certificats. Pour plus d’informations, consultez [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires de sessions de mise en miroir, vous pouvez attribuer le rôle de partenaire au point de terminaison (ROLE**=** PARTNER). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
   

@@ -1,7 +1,7 @@
 ---
 title: Données hiérarchiques (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 09/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,15 +19,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cf997219044de427ed968ca39928e1449f73e60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4cca30125bd6b8fb69893332924d18fbb461cd9
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659479"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706914"
 ---
 # <a name="hierarchical-data-sql-server"></a>Données hiérarchiques (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Le type de données **hierarchyid** intégré simplifie le stockage et l’interrogation de données hiérarchiques. **hierarchyid** est optimisé pour représenter les arborescences, qui sont le type le plus courant de données hiérarchiques.  
   
  Les données hiérarchiques sont définies comme un jeu d'éléments de données liés entre eux par des relations hiérarchiques. Des relations hiérarchiques existent dans lesquelles un élément de données est le parent d'un autre élément. Voici quelques exemples de données hiérarchiques communément stockées dans les bases de données :  
@@ -49,7 +51,7 @@ ms.locfileid: "51659479"
   
 -   Extrêmement compact  
   
-     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
+     Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
   
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
   
@@ -82,7 +84,7 @@ ms.locfileid: "51659479"
 ### <a name="parentchild"></a>Parent/enfant  
  Lors de l'utilisation de l'approche de parent/enfant, chaque ligne contient une référence au parent. La table suivante définit une table classique qui est utilisée pour contenir les lignes parent et enfant dans une relation parent/enfant :  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
   
@@ -115,7 +117,7 @@ GO
   
      Si les sous-arborescences qui ne sont pas au niveau du nœud terminal sont fréquemment déplacées et que les performances sont importantes, mais que la plupart des déplacements se font à un niveau bien défini de la hiérarchie, envisagez le fractionnement des niveaux supérieurs et inférieurs en deux hiérarchies. Tous les déplacements se font ainsi dans les niveaux du nœud terminal de la hiérarchie supérieure. Prenons par exemple une hiérarchie de sites Web hébergés par un service. Les sites contiennent de nombreuses pages organisées de façon hiérarchique. Les sites hébergés peuvent être déplacés vers d'autres emplacements dans la hiérarchie de site, mais les pages subordonnées sont rarement réorganisées. Cela peut être représenté de la manière suivante :  
   
-    ```  
+    ```sql
     CREATE TABLE HostedSites   
        (  
         SiteId hierarchyid, PageId hierarchyid  
@@ -137,7 +139,7 @@ GO
   
  Par exemple, si une application effectue le suivi de plusieurs organisations, stocke et extrait toujours la totalité de la hiérarchie d'organisation et que ses requêtes ne portent pas sur une organisation unique, une table se présentant au format suivant peut être appropriée :  
   
-```  
+```sql
 CREATE TABLE XMLOrg   
     (  
     Orgid int,  
@@ -162,14 +164,14 @@ GO
   
      Dans un index à largeur prioritaire, tous les enfants directs d'un nœud sont colocalisés. Les index à largeur prioritaire sont par conséquent efficaces pour répondre aux requêtes sur les enfants immédiats, telle que « Rechercher tous les employés dont ce responsable est le supérieur direct ».  
   
- Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour un exemple détaillé de stratégies d'indexation, consultez [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Le choix entre profondeur prioritaire, largeur prioritaire ou les deux, et la sélection de l'un d'eux comme clé de clustering (si nécessaire) dépend de l'importance relative des types de requêtes ci-dessus et de l'importance relative de SELECT par rapport aux opérations DML. Pour obtenir un exemple détaillé de stratégies d’indexation, consultez [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Création des index  
  Vous pouvez utiliser la méthode GetLevel() pour créer un classement à largeur prioritaire. Dans l'exemple suivant, des index à largeur prioritaire et des index à profondeur prioritaire sont créés :  
   
-```wmimof  
-USE AdventureWorks2012 ;   
+```sql
+USE AdventureWorks2012 ;   -- wmimof
 GO  
   
 CREATE TABLE Organization  
@@ -181,11 +183,11 @@ CREATE TABLE Organization
 GO  
   
 CREATE CLUSTERED INDEX Org_Breadth_First   
-ON Organization(OrgLevel,BusinessEntityID) ;  
+    ON Organization(OrgLevel,BusinessEntityID) ;  
 GO  
   
 CREATE UNIQUE INDEX Org_Depth_First   
-ON Organization(BusinessEntityID) ;  
+    ON Organization(BusinessEntityID) ;  
 GO  
 ```  
   
@@ -195,18 +197,20 @@ GO
 ### <a name="simple-example"></a>Exemple simple  
  L'exemple suivant est intentionnellement très simplifié pour vous aider à démarrer. Créez une table pour contenir des données de type geography.  
   
-```  
+```sql
 CREATE TABLE SimpleDemo  
-(Level hierarchyid NOT NULL,  
-Location nvarchar(30) NOT NULL,  
-LocationType nvarchar(9) NULL);  
+(
+    Level hierarchyid NOT NULL,  
+    Location nvarchar(30) NOT NULL,  
+    LocationType nvarchar(9) NULL
+);
 ```  
   
  Insérez maintenant les données de certains continents, pays, états et villes.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES   
+    VALUES   
 ('/1/', 'Europe', 'Continent'),  
 ('/2/', 'South America', 'Continent'),  
 ('/1/1/', 'France', 'Country'),  
@@ -223,9 +227,9 @@ VALUES
   
  Sélectionnez les données, en ajoutant une colonne qui convertit les données de niveau en une valeur texte facile à comprendre. Cette requête trie également les résultats par le type de données **hierarchyid** .  
   
-```  
+```sql
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], *   
-FROM SimpleDemo ORDER BY Level;  
+    FROM SimpleDemo ORDER BY Level;  
 ```  
   
  [!INCLUDE[ssResult](../includes/ssresult-md.md)]  
@@ -250,9 +254,9 @@ Converted Level  Level     Location         LocationType
   
  Ajoutez une autre ligne et sélectionnez les résultats.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
+    VALUES ('/1/3/1/', 'Kyoto', 'City'), ('/1/3/1/', 'London', 'City');  
 SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDER BY Level;  
 ```  
   
@@ -260,15 +264,15 @@ SELECT CAST(Level AS nvarchar(100)) AS [Converted Level], * FROM SimpleDemo ORDE
   
  En outre, la table n'utilise pas le haut de la hiérarchie `'/'`. Il a été omis, car il n'y a aucun parent commun à tous les continents. Pour en ajouter un, ajoutez la planète entière.  
   
-```  
+```sql
 INSERT SimpleDemo  
-VALUES ('/', 'Earth', 'Planet');  
+    VALUES ('/', 'Earth', 'Planet');  
 ```  
   
 ##  <a name="tasks"></a> Tâches associées  
   
 ###  <a name="migrating"></a> Migration de parent/enfant vers hierarchyid  
- La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d’une structure parent/enfant vers une table à l’aide de **hierarchyid** consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour voir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Didacticiel : utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ La plupart des arborescences sont représentées à l'aide de parent/enfant. La méthode la plus simple pour effectuer une migration d’une structure parent/enfant vers une table à l’aide de **hierarchyid** consiste à utiliser une colonne ou une table temporaire pour conserver une trace du nombre de nœuds à chaque niveau de la hiérarchie. Pour obtenir un exemple de migration de table parent/enfant, consultez la leçon 1 de [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> Gestion d'une arborescence à l'aide de hierarchyid  
@@ -290,7 +294,7 @@ VALUES ('/', 'Earth', 'Planet');
 #### <a name="example-using-error-detection"></a>Exemple utilisant la détection d'erreurs  
  Dans l’exemple suivant, le code calcule la nouvelle valeur enfant **EmployeeId** , puis détecte toute violation de clé et retourne au marqueur **INS_EMP** pour recalculer la valeur **EmployeeId** de la nouvelle ligne :  
   
-```  
+```sql
 USE AdventureWorks ;  
 GO  
   
@@ -302,18 +306,18 @@ CREATE TABLE Org_T1
    ) ;  
 GO  
   
-CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId)  
+CREATE INDEX Org_BreadthFirst ON Org_T1(OrgLevel, EmployeeId);
 GO  
   
 CREATE PROCEDURE AddEmp(@mgrid hierarchyid, @EmpName nvarchar(50) )   
 AS  
 BEGIN  
-    DECLARE @last_child hierarchyid  
+    DECLARE @last_child hierarchyid;
 INS_EMP:   
     SELECT @last_child = MAX(EmployeeId) FROM Org_T1   
-    WHERE EmployeeId.GetAncestor(1) = @mgrid  
-INSERT Org_T1 (EmployeeId, EmployeeName)  
-SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName   
+        WHERE EmployeeId.GetAncestor(1) = @mgrid;
+    INSERT INTO Org_T1 (EmployeeId, EmployeeName)  
+        SELECT @mgrid.GetDescendant(@last_child, NULL), @EmpName;
 -- On error, return to INS_EMP to recompute @last_child  
 IF @@error <> 0 GOTO INS_EMP   
 END ;  
@@ -324,7 +328,7 @@ GO
 #### <a name="example-using-a-serializable-transaction"></a>Exemple utilisant une transaction sérialisable  
  Les limites du type de données **Org_BreadthFirst** garantit que la détermination de **@last_child** utilise une recherche de plage. En plus des autres cas d’erreur qu’une application peut être amenée à vérifier, une violation de clé en double après l’insertion indique une tentative d’ajouter plusieurs employés ayant le même ID. Par conséquent, **@last_child** doit être recalculé. Le code suivant utilise une transaction sérialisable et un index à largeur prioritaire pour calculer la nouvelle valeur de nœud :  
   
-```  
+```sql
 CREATE TABLE Org_T2  
     (  
     EmployeeId hierarchyid PRIMARY KEY,  
@@ -351,7 +355,7 @@ END ;
   
  Le code suivant remplit la table avec trois lignes et retourne les résultats :  
   
-```  
+```sql
 INSERT Org_T2 (EmployeeId, EmployeeName)   
     VALUES(hierarchyid::GetRoot(), 'David') ;  
 GO  
@@ -376,7 +380,7 @@ EmployeeId LastChild EmployeeName
 ###  <a name="BKMK_EnforcingTrees"></a> Application d'une arborescence  
  Les exemples ci-dessus illustrent la manière dont une application peut garantir la conservation d'une arborescence. Pour appliquer une arborescence à l'aide de contraintes, une colonne calculée qui définit le parent de chaque nœud peut être créée avec une contrainte de clé étrangère vers l'ID de clé primaire.  
   
-```  
+```sql
 CREATE TABLE Org_T3  
 (  
    EmployeeId hierarchyid PRIMARY KEY,  
@@ -396,17 +400,17 @@ GO
   
  Utilisez le code CLR suivant pour répertorier les ancêtres et trouver l'ancêtre commun le plus bas :  
   
-```  
+```csharp
 using System;  
 using System.Collections;  
 using System.Text;  
-using Microsoft.SqlServer.Server;  
-using Microsoft.SqlServer.Types;  
+using Microsoft.SqlServer.Server;  // SqlFunction Attribute
+using Microsoft.SqlServer.Types;   // SqlHierarchyId
   
 public partial class HierarchyId_Operations  
 {  
-    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]  
-    public static IEnumerable ListAncestors(SqlHierarchyId h)  
+    [SqlFunction(FillRowMethodName = "FillRow_ListAncestors")]
+    public static IEnumerable ListAncestors(SqlHierarchyId h)
     {  
         while (!h.IsNull)  
         {  
@@ -414,14 +418,20 @@ public partial class HierarchyId_Operations
             h = h.GetAncestor(1);  
         }  
     }  
-    public static void FillRow_ListAncestors(Object obj, out SqlHierarchyId ancestor)  
+    public static void FillRow_ListAncestors(
+        Object obj,
+        out SqlHierarchyId ancestor
+        )
     {  
         ancestor = (SqlHierarchyId)obj;  
     }  
   
-    public static HierarchyId CommonAncestor(SqlHierarchyId h1, HierarchyId h2)  
+    public static HierarchyId CommonAncestor(
+        SqlHierarchyId h1,
+        HierarchyId h2
+        )  
     {  
-        while (!h1.IsDescendant(h2))  
+        while (!h1.IsDescendantOf(h2))  
             h1 = h1.GetAncestor(1);  
   
         return h1;  
@@ -431,9 +441,9 @@ public partial class HierarchyId_Operations
   
  Pour utiliser les méthodes **ListAncestor** et **CommonAncestor** dans les exemples [!INCLUDE[tsql](../includes/tsql-md.md)] suivants, générez la DLL et créez l’assembly **HierarchyId_Operations** dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en exécutant du code semblable à celui-ci :  
   
-```  
+```sql
 CREATE ASSEMBLY HierarchyId_Operations   
-FROM '<path to DLL>\ListAncestors.dll'  
+    FROM '<path to DLL>\ListAncestors.dll';
 GO  
 ```  
   
@@ -443,7 +453,7 @@ GO
   
  Utilisation de [!INCLUDE[tsql](../includes/tsql-md.md)]:  
   
-```  
+```sql
 CREATE FUNCTION ListAncestors (@node hierarchyid)  
 RETURNS TABLE (node hierarchyid)  
 AS  
@@ -453,7 +463,7 @@ GO
   
  Exemple d'utilisation :  
   
-```  
+```sql
 DECLARE @h hierarchyid  
 SELECT @h = OrgNode   
 FROM HumanResources.EmployeeDemo    
@@ -470,7 +480,7 @@ GO
 ###  <a name="lowestcommon"></a> Recherche de l'ancêtre commun le plus bas  
  À l’aide de la classe **HierarchyId_Operations** définie ci-dessus, créez la fonction [!INCLUDE[tsql](../includes/tsql-md.md)] suivante pour rechercher l’ancêtre commun le plus bas impliquant deux nœuds dans une hiérarchie :  
   
-```  
+```sql
 CREATE FUNCTION CommonAncestor (@node1 hierarchyid, @node2 hierarchyid)  
 RETURNS hierarchyid  
 AS  
@@ -480,16 +490,16 @@ GO
   
  Exemple d'utilisation :  
   
-```  
-DECLARE @h1 hierarchyid, @h2 hierarchyid  
+```sql
+DECLARE @h1 hierarchyid, @h2 hierarchyid;
   
 SELECT @h1 = OrgNode   
 FROM  HumanResources.EmployeeDemo   
-WHERE LoginID = 'adventure-works\jossef0' -- Node is /1/1/3/  
+WHERE LoginID = 'adventure-works\jossef0'; -- Node is /1/1/3/  
   
 SELECT @h2 = OrgNode   
 FROM HumanResources.EmployeeDemo    
-WHERE LoginID = 'adventure-works\janice0' -- Node is /1/1/5/2/  
+WHERE LoginID = 'adventure-works\janice0'; -- Node is /1/1/5/2/  
   
 SELECT OrgNode.ToString() AS LogicalNode, LoginID   
 FROM HumanResources.EmployeeDemo    
@@ -502,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
 ###  <a name="BKMK_MovingSubtrees"></a> Déplacement de sous-arborescences  
  Une autre opération courante concerne le déplacement de sous-arborescences. La procédure suivante prend la sous-arborescence de **@oldMgr** pour en faire une sous-arborescence de **@oldMgr**(en y incluant **@newMgr**.  
   
-```  
+```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  
 AS  
 BEGIN  
@@ -520,7 +530,7 @@ UPDATE HumanResources.EmployeeDemo
 SET OrgNode = OrgNode.GetReparentedValue(@nold, @nnew)  
 WHERE OrgNode.IsDescendantOf(@nold) = 1 ;  
   
-COMMIT TRANSACTION  
+COMMIT TRANSACTION;
 END ;  
 GO  
 ```  
@@ -528,7 +538,7 @@ GO
   
 ## <a name="see-also"></a> Voir aussi  
  [Référence de méthodes de type de données hierarchyid](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)   
- [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutoriel : Utilisation du type de données hierarchyid](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   

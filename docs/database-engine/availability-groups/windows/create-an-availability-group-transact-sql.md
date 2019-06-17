@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 30cdbd1624e2fd8cd17ca4d0cf36cb8cb8f93b92
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974418"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793517"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Créer un groupe de disponibilité Always On à l’aide de Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,37 +27,20 @@ ms.locfileid: "57974418"
 > [!NOTE]  
 >  Pour obtenir une présentation des groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Avant de commencer :**  
-  
-     [Conditions préalables](#PrerequisitesRestrictions)  
-  
-     [Sécurité](#Security)  
-  
-     [Résumé des tâches et instructions Transact-SQL correspondantes](#SummaryTsqlStatements)  
-  
--   **Pour créer et configurer un groupe de disponibilité avec :**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Exemple :**  [Configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
--   [Contenu connexe](#RelatedContent)  
-  
 > [!NOTE]  
 >  En guise d'alternative à [!INCLUDE[tsql](../../../includes/tsql-md.md)], vous pouvez utiliser l'Assistant Création d'un groupe de disponibilité ou les applets de commande PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Utiliser l’Assistant Groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Utiliser la boîte de dialogue Nouveau groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
   
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Nous vous recommandons fortement de lire cette section avant d'essayer de créer votre premier groupe de disponibilité.  
-  
-###  <a name="PrerequisitesRestrictions"></a> Conditions préalables requises, restrictions et recommandations  
+## <a name="PrerequisitesRestrictions"></a> Conditions préalables requises, restrictions et recommandations  
   
 -   Avant de créer un groupe de disponibilité, vérifiez que les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité résident sur des nœuds WSFC (Windows Server Failover Clustering) différents au sein du même clustering de basculement WSFC. Vérifiez également que chaque instance du serveur répond à toutes les autres conditions requises relatives à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Pour plus d’informations, nous vous conseillons vivement de lire la rubrique [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
+##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité 
+
 ###  <a name="SummaryTsqlStatements"></a> Résumé des tâches et instructions Transact-SQL correspondantes  
  Le tableau suivant répertorie les tâches de base impliquées dans la création et la configuration d'un groupe de disponibilité et indique les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] à utiliser pour ces tâches. Les tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doivent être effectuées dans la séquence dans laquelle elles sont présentées dans le tableau.  
   
@@ -69,10 +52,9 @@ ms.locfileid: "57974418"
 |Préparer la base de données secondaire|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) et [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide de RESTORE WITH NORECOVERY.|  
 |Démarrer la synchronisation des données en joignant chaque base de données secondaire au groupe de disponibilité|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *nom_base_de_données* SET HADR AVAILABILITY GROUP = *nom_groupe*|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
   
- *Pour effectuer une tâche donnée, connectez-vous aux instances de serveur indiquées.  
-  
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL pour créer et configurer un groupe de disponibilité  
-  
+ *Pour effectuer une tâche donnée, connectez-vous aux instances de serveur indiquées.   
+ 
+### <a name="using-transact-sql"></a>Utilisation de Transact-SQL 
 > [!NOTE]  
 >  Pour avoir un exemple de procédure de configuration contenant des exemples de code de chacune de ces instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)], consultez [Exemple : Configuration d’un groupe de disponibilité qui utilise l’authentification Windows](#ExampleConfigAGWinAuth).  
   
@@ -86,7 +68,7 @@ ms.locfileid: "57974418"
   
 5.  Joignez chaque nouvelle base de données secondaire au groupe de disponibilité. Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Exemple : Configuration d'un groupe de disponibilité qui utilise l'authentification Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Exemple : Configuration d’un groupe de disponibilité qui utilise l’authentification Windows  
  Cet exemple crée un exemple de procédure de configuration [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] qui utilise [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour installer des points de terminaison de mise en miroir de bases de données qui utilisent l'authentification Windows, et créer et configurer un groupe de disponibilité et ses bases de données secondaires.  
   
  Cet exemple contient les sections suivantes :  

@@ -12,12 +12,12 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749037"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462674"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,19 @@ ms.locfileid: "47749037"
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les clés de chiffrement incluent une combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. La clé symétrique est créée pendant l'initialisation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , lorsque vous démarrez pour la première fois l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cette clé est utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour chiffrer les données sensibles stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les clés publique et privée sont créées par le système d'exploitation et servent à protéger la clé symétrique. Une paire de clés privée et publique est créée pour chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui stocke des données sensibles dans une base de données.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Applications pour les clés SQL Server et de base de données  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux applications principales pour les clés : une *clé principale de service* (SMK) générée sur et pour une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et une *clé principale de base de données* (DMK) utilisée pour une base de données.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux applications principales pour les clés : une *clé principale de service* (SMK) générée sur et pour une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et une *clé principale de base de données* (DMK) utilisée pour une base de données.
+
+### <a name="service-master-key"></a>Clé principale du service
   
- La clé SMK est générée automatiquement la première fois que l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarrée et utilisée pour chiffrer un mot de passe de serveur lié, des informations d’identification et la clé principale de base de données. La clé SMK est chiffrée en utilisant la clé de l'ordinateur local à l'aide de l'API de protection des données Windows (DPAPI). L’interface DPAPI utilise une clé dérivée des informations d’identification Windows du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des informations d’identification de l’ordinateur. La clé principale de service peut être déchiffrée uniquement par le compte de service sous lequel elle a été créée ou par un principal qui a accès aux informations d'identification de l'ordinateur.  
+ La clé principale du service représente la racine de la hiérarchie de chiffrement SQL Server. La clé SMK est générée automatiquement la première fois que l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est démarrée et utilisée pour chiffrer un mot de passe de serveur lié, des informations d’identification et la clé principale de base de données. La clé SMK est chiffrée en utilisant la clé de l’ordinateur local à l’aide de l’API de protection des données Windows (DPAPI). L’interface DPAPI utilise une clé dérivée des informations d’identification Windows du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et des informations d’identification de l’ordinateur. La clé principale de service peut être déchiffrée uniquement par le compte de service sous lequel elle a été créée ou par un principal qui a accès aux informations d'identification de l'ordinateur.
+
+La clé principale du service ne peut être ouverte que par le compte de service Windows sous lequel elle a été créée ou par un principal ayant accès au nom du compte de service et à son mot de passe.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé SMK, consultez [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) et [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### <a name="database-master-key"></a>Clé principale de base de données
   
- La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Elle peut également être utilisée pour chiffrer des données, mais elle présente des limitations de longueur qui la rendent moins pratique pour les données que l'utilisation d'une clé symétrique.  
-  
- Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée à la fois dans la base de données où elle est utilisée et dans la base de données système **master** .  
+ La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Elle peut également être utilisée pour chiffrer des données, mais elle présente des limitations de longueur qui la rendent moins pratique pour les données que l'utilisation d'une clé symétrique. Pour activer le déchiffrement automatique de la clé principale de base de données, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée à la fois dans la base de données où elle est utilisée et dans la base de données système **master** .  
   
  La copie de la clé DMK stockée dans la base de données système **master** est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, vous pouvez modifier ce comportement par défaut à l’aide de l’option **DROP ENCRYPTION BY SERVICE MASTER KEY** de l’instruction **ALTER MASTER KEY** . Une DMK qui n’est pas chiffrée par la clé principale de service doit être ouverte à l’aide de l’instruction **OPEN MASTER KEY** et d’un mot de passe.  
   

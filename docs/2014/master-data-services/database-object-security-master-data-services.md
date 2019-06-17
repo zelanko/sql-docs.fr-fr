@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65483151"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
@@ -46,11 +46,11 @@ ms.locfileid: "65483151"
   
 |Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
-|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Feuille dans les tables de base de données MDS appropriées.|stg.udp_name_Leaf|Exécutez|  
-|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Consolidé dans les tables de base de données MDS appropriées.|stg.udp_name_Consolidated|Exécutez|  
-|Charger la feuille et les relations entre eux des membres consolidés dans une hiérarchie explicite dans la table intermédiaire.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
+|Charger la feuille et les relations entre eux des membres consolidés dans une hiérarchie explicite dans la table intermédiaire.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Relation dans les tables MDS appropriées.|stg.udp_name_Relationship|Exécutez|  
 |Affichez les erreurs qui se sont produites lors de l'insertion des données des tables de mise en lots dans les tables de base de données MDS.|stg.udp_name_Relationship|SELECT|  
   

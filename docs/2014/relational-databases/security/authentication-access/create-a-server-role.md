@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011961"
 ---
 # <a name="create-a-server-role"></a>Créer un rôle serveur
@@ -67,9 +67,9 @@ ms.locfileid: "63011961"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Rôles de serveur**, puis sélectionnez **Nouveau rôle de serveur...** .  
   
-4.  Dans le **nouveau rôle de serveur -**_nom_rôle_serveur_ boîte de dialogue le **général** page, entrez un nom pour le nouveau rôle de serveur dans le **nom du rôle serveur**boîte.  
+4.  Dans le **nouveau rôle de serveur -** _nom_rôle_serveur_ boîte de dialogue le **général** page, entrez un nom pour le nouveau rôle de serveur dans le **nom du rôle serveur**boîte.  
   
 5.  Dans la zone **Propriétaire** , entrez le nom du principal de serveur qui détiendra le nouveau rôle. Vous pouvez également cliquer sur les points de suspension **(…)** pour ouvrir la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur**.  
   

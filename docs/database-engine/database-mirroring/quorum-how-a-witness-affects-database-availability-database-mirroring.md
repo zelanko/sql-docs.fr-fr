@@ -1,5 +1,5 @@
 ---
-title: "Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs"
+title: 'Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8dbb81d75413909fe8d205d781cef1ec89640044
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 020825afe9abf5abf121f9521668c1edd1670bbd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533373"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795298"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : effets d'un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum : Effets d’un témoin sur la disponibilité de la base de données (mise en miroir de bases de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Chaque fois qu’un témoin est défini pour une session de mise en miroir de base de données, un *quorum* est nécessaire. Le quorum désigne une relation où deux ou plusieurs instances de serveur dans une session de mise en miroir de base de données sont connectées. En règle générale, le quorum implique trois instances de serveurs interconnectées. Lorsqu'un témoin est défini, un quorum est requis pour rendre la base de données disponible. Conçu pour les sessions en mode haute sécurité avec basculement automatique, un quorum garantit qu'une base de données appartient à un seul partenaire à la fois.  
   

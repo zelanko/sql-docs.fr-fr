@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094798"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procédure : afficher un rapport du Conseiller de mise à niveau
@@ -31,7 +31,7 @@ ms.locfileid: "66094798"
   
 ### <a name="to-view-a-report"></a>Pour afficher un rapport  
   
-1.  Cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, puis cliquez sur  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+1.  Cliquez sur **Démarrer**, cliquez sur **tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , puis cliquez sur  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
 2.  Dans la page de démarrage Upgrade Advisor, cliquez sur **lancer la visionneuse de rapports**.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0767cdbd57a481ebe82993f3be4ae3e8e1738c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ab17d9e60752b1aea747b03947d235b7d5f91605
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683197"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801804"
 ---
 # <a name="national-character-set-support"></a>Prise en charge du jeu de caractères nationaux
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47683197"
   
  Pour envoyer des paramètres String au serveur au format Unicode, les applications doivent soit utiliser les nouvelles méthodes JDBC 4.0 prenant en charge les caractères nationaux, soit affecter la valeur « **true** » à la propriété de connexion **sendStringParametersAsUnicode** lorsqu’elles utilisent les méthodes basées sur des caractères non nationaux. Il est recommandé d'utiliser les nouvelles méthodes JDBC 4.0 prenant en charge les caractères nationaux chaque fois que cela est possible. Pour plus d’informations sur la **sendStringParametersAsUnicode** propriété de connexion, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994308"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent de fusion cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @job_login = ] 'job_login'` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_login = ] 'job_login'` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est **nvarchar (257)** , avec NULL comme valeur par défaut.  
   
-`[ @job_password = ] 'job_password'` Est-ce que le mot de passe pour le compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de la capture instantanée pour un abonnement à l’aide un filtre de lignes paramétrable. *job_password* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_password = ] 'job_password'` Est-ce que le mot de passe pour le compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de la capture instantanée pour un abonnement à l’aide un filtre de lignes paramétrable. *job_password* est **nvarchar (257)** , avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  

@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1940405c6bde86364024e10694f9aaf1da24b06d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768615"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
@@ -70,7 +70,7 @@ ms.locfileid: "62768615"
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables de la page **Script** de l’**Éditeur de transformation de script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur les points de suspension (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur les points de suspension ( **...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété, puis en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   

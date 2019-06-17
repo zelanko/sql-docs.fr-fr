@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737525"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "62737525"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >**, car le  **\< élément >** nœud est le nœud principal pour le **enfant** axe). Pour tous les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont la condition sont retournés.  
+ Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >** , car le  **\< élément >** nœud est le nœud principal pour le **enfant** axe). Pour tous les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont la condition sont retournés.  
   
 > [!NOTE]  
 >  Dans XPath, les nombres sont des nombres à virgule flottante double précision et la comparaison de nombres à virgule flottante comme dans l'exemple entraîne un arrondi.  

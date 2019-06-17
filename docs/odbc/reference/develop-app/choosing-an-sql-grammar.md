@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026583"
 ---
 # <a name="choosing-an-sql-grammar"></a>Choix d’une grammaire SQL
 La première décision à prendre lors de la construction d’instructions SQL est quels grammaire à utiliser. Outre les grammaires disponibles à partir de divers organismes de normalisation, tels que Open Group, ANSI et ISO, pratiquement tous les fournisseurs SGBD définit sa propre syntaxe, chacun d’eux varie légèrement par rapport à la norme.  
   
- [Annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), décrit la grammaire SQL minimale que tous les pilotes ODBC doivent prendre en charge. Cette syntaxe est un sous-ensemble du niveau d’entrée de SQL-92. Pilotes peuvent prendre en charge la grammaire supplémentaire pour le rendre conforme à intermédiaire, complète ou FIPS 127-2 des niveaux transitoires définis par SQL-92. Pour plus d’informations, consultez [SQL Minimum grammaire](../../../odbc/reference/appendixes/sql-minimum-grammar.md) dans l’annexe c : Grammaire SQL et SQL-92.  
+ [Annexe C : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), décrit la grammaire SQL minimale que tous les pilotes ODBC doivent prendre en charge. Cette syntaxe est un sous-ensemble du niveau d’entrée de SQL-92. Pilotes peuvent prendre en charge la grammaire supplémentaire pour le rendre conforme à intermédiaire, complète ou FIPS 127-2 des niveaux transitoires définis par SQL-92. Pour plus d’informations, consultez [SQL Minimum grammaire](../../../odbc/reference/appendixes/sql-minimum-grammar.md) dans l’annexe c : Grammaire SQL et SQL-92.  
   
  Annexe C définit également *séquences d’échappement* contenant une syntaxe standard pour les fonctionnalités de langage généralement disponibles, telles que les jointures externes, qui non couverts par la grammaire SQL-92. Pour plus d’informations, consultez [les séquences d’échappement ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) dans l’annexe c : Grammaire SQL, et [séquences d’échappement](../../../odbc/reference/develop-app/escape-sequences.md), plus loin dans cette section.  
   

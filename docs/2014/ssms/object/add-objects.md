@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63276959"
 ---
 # <a name="add-objects"></a>Ajouter des objets
@@ -29,7 +29,7 @@ ms.locfileid: "63276959"
  **Tous les objets correspondant aux types**  
  Ouvre la boîte de dialogue **Sélectionner les types d’objets** pour vous permettre de spécifier le type d’objets à inclure dans la liste sous-jacente.  
   
- **Le serveur**_\<nom_serveur >_  
+ **Le serveur** _\<nom_serveur >_  
  Ajoute tous les objets appropriés sur le serveur spécifié. Cette option apparaît uniquement quand vous passez par une boîte de dialogue de niveau serveur, par exemple la boîte de dialogue **Nouvelle connexion** .  
   
  **Tous les objets appartenant au schéma**  

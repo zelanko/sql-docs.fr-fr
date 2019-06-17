@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33128 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33128 (Database Engine error)
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a995a68849ed55dbf136191a061ac6f855703a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62914511"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Détails  
   
 |||  
@@ -34,17 +33,17 @@ ms.locfileid: "62914511"
 |Texte du message|Échec du chiffrement. La clé utilise l'algorithme déconseillé « %.*ls » qui n'est plus pris en charge.|  
   
 ## <a name="explanation"></a>Explication  
-Ce message s'affiche pour faire référence à l'algorithme de chiffrement RC4 (ou RC4_128). Les algorithmes RC4 et RC4_128 sont des algorithmes de chiffrement faible et sont déconseillés. Utilisez à la place un algorithme plus fort, tel qu'un des algorithmes AES.  
+ Ce message s'affiche pour faire référence à l'algorithme de chiffrement RC4 (ou RC4_128). Les algorithmes RC4 et RC4_128 sont des algorithmes de chiffrement faible et sont déconseillés. Utilisez à la place un algorithme plus fort, tel qu'un des algorithmes AES.  
   
-Si le niveau de compatibilité de la base de données est 90 ou 100, l'opération réussit, l'événement de dépréciation est déclenché et le message s'affiche uniquement dans la mémoire tampon en anneau.  
+ Si le niveau de compatibilité de la base de données est 90 ou 100, l'opération réussit, l'événement de dépréciation est déclenché et le message s'affiche uniquement dans la mémoire tampon en anneau.  
   
-Si le niveau de compatibilité de la base de données est 110 ou supérieur, les opérations de déchiffrement réussissent, l'événement de dépréciation est déclenché et le message s'affiche uniquement dans la mémoire tampon en anneau. Les opérations de chiffrement échouent, l'événement de dépréciation est déclenché, et le message est affiché pour l'utilisateur, et le message apparaît dans la mémoire tampon en anneau.  
+ Si le niveau de compatibilité de la base de données est 110 ou supérieur, les opérations de déchiffrement réussissent, l'événement de dépréciation est déclenché et le message s'affiche uniquement dans la mémoire tampon en anneau. Les opérations de chiffrement échouent, l'événement de dépréciation est déclenché, et le message est affiché pour l'utilisateur, et le message apparaît dans la mémoire tampon en anneau.  
   
 > [!NOTE]  
-> La mémoire tampon en anneau est un composant interne qui n'est pas entièrement documenté et qui n'est pas conçu pour être utilisé par les clients. Les messages de la mémoire tampon en anneau sont utiles lorsque vous contactez le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pour afficher la mémoire tampon en anneau, interrogez la vue de gestion dynamique sys.dm_os_ring_buffers.  
+>  La mémoire tampon en anneau est un composant interne qui n'est pas entièrement documenté et qui n'est pas conçu pour être utilisé par les clients. Les messages de la mémoire tampon en anneau sont utiles lorsque vous contactez le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Pour afficher la mémoire tampon en anneau, interrogez la vue de gestion dynamique sys.dm_os_ring_buffers.  
   
 |État|Description|  
-|---------|---------------|  
+|-----------|-----------------|  
 |1|Une clé RC4 est utilisée dans la fonction intégrée encryptbykey(). La fonction intégrée retourne NULL. Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
 |2|Une clé RC4 est utilisée par la fonction intégrée decryptbykey(). Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
 |3|Une clé RC4 déconseillée est chiffrée par une clé symétrique. Message visible pour les utilisateurs et dans la mémoire tampon en anneau. Impossible de modifier les clés symétriques RC4 déconseillées avec un niveau de compatibilité de 110. Essayez d'utiliser des clés non-RC4 pour les opérations de chiffrement. Si nécessaire, définissez le niveau de compatibilité descendante à 90 ou 100.|  
@@ -57,7 +56,8 @@ Si le niveau de compatibilité de la base de données est 110 ou supérieur, le
 |10|Une clé RC4 symétrique est déchiffrée par une clé EKM. Ce message apparaît uniquement dans la mémoire tampon en anneau.|  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Utilisez à la place un algorithme plus fort, tel qu'un des algorithmes AES. (Recommandé)  
+ Utilisez à la place un algorithme plus fort, tel qu'un des algorithmes AES. (Recommandé)  
   
-Utilisez ALTER DATABASE SET COMPATIBILITY_LEVEL pour définir le niveau de compatibilité de la base de données à 100. (Non recommandé.)  
+ Utilisez ALTER DATABASE SET COMPATIBILITY_LEVEL pour définir le niveau de compatibilité de la base de données à 100. (Non recommandé.)  
+  
   

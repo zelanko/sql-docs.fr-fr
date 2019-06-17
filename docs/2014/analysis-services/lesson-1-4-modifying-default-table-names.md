@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079230"
 ---
 # <a name="modifying-default-table-names"></a>Modification des noms de tables par défaut
@@ -33,11 +33,11 @@ ms.locfileid: "66079230"
   
      Il est plus facile de modifier les propriétés de chaque table dans la vue de source de données si la fenêtre des propriétés reste ouverte. Si vous n'ouvrez pas la fenêtre en utilisant le bouton **Masquer automatiquement** , elle se ferme lorsque vous cliquez sur un autre objet dans le volet **Diagramme** .  
   
-3.  Modifier le **FriendlyName** propriété pour le **FactInternetSales** objet *`InternetSales`*.  
+3.  Modifier le **FriendlyName** propriété pour le **FactInternetSales** objet *`InternetSales`* .  
   
      Lorsque vous cliquez en dehors de la cellule correspondant à la propriété **FriendlyName** , la modification est appliquée. Dans la leçon suivante, vous définirez un groupe de mesures basé sur cette table de faits. Le nom de la table de faits sera InternetSales au lieu de FactInternetSales à cause de la modification que vous avez apportée dans cette leçon.  
   
-4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la fenêtre Propriétés, modifiez le **FriendlyName** propriété *`Product`*.  
+4.  Cliquez sur **DimProduct** dans le volet **Tables** . Dans la fenêtre Propriétés, modifiez le **FriendlyName** propriété *`Product`* .  
   
 5.  Modifiez la propriété **FriendlyName** de chaque table restante dans la vue de source de données en procédant de la même façon, pour supprimer le préfixe «**Dim**».  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997008"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 |**heartbeat_interval**|Nombre maximal de minutes pendant lesquelles un agent peut s'exécuter sans enregistrer de message de progression.|  
 |NULL (par défaut)|Tous disponibles *propriété* valeurs sont imprimées.|  
   
-`[ @value = ] 'value'` Est la valeur pour la propriété de serveur de distribution donnée. *valeur* est **varchar (255)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la valeur pour la propriété de serveur de distribution donnée. *valeur* est **varchar (255)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

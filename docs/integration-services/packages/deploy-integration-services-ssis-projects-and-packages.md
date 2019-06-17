@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720053"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469651"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720053"
 Pour plus d’informations sur le modèle de déploiement de package hérité, consultez [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Avec ce modèle de déploiement, vous ne pouviez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. Le modèle de déploiement de package, introduit dans [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)], vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.  
+>  Le modèle de déploiement du projet a été présenté pour la première fois dans [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Avec ce modèle de déploiement, vous ne pouviez pas déployer un ou plusieurs packages sans déployer le projet dans son ensemble. La fonctionnalité de déploiement incrémentiel de packages présentée pour la première fois dans [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] vous permet de déployer un ou plusieurs packages sans déployer la totalité du projet.  
 
 > [!NOTE]
 > Cet article décrit comment déployer des packages SSIS de manière générale et comment les déployer au niveau local. Vous pouvez également déployer des packages SSIS sur les plateformes suivantes :
@@ -345,7 +345,7 @@ Lancer l’Assistant en :
 > [!IMPORTANT]  
 >  Pour une exécution données, un package peut s'exécuter uniquement avec les valeurs contenues dans un seul environnement.  
   
- Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d'environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
+ Vous pouvez interroger les affichages afin d'obtenir la liste des environnements serveur, des références environnementales et des variables d'environnement. Vous pouvez également appeler des procédures stockées pour ajouter, supprimer et modifier des environnements, des références environnementales et des variables d’environnement. Pour plus d'informations, consultez la section **Environnements serveur, variables de serveur et références d'environnement serveur** dans [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Pour créer et utiliser un environnement serveur  
   

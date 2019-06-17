@@ -1,5 +1,5 @@
 ---
-title: 'Dépanner : dépassement de RPO du groupe de disponibilité (SQL Server) | Microsoft Docs'
+title: 'Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité (SQL Server) | Microsoft Docs'
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780990"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rpo"></a>Dépanner : dépassement de RPO du groupe de disponibilité
+# <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Après avoir effectué un basculement manuel forcé sur un groupe de disponibilité vers un réplica secondaire avec validation asynchrone, vous pouvez constater que la perte de données est supérieure à votre RPO (objectif de point de récupération). Vous pouvez arriver au même constat quand vous calculez la perte de données potentielle d’un réplica secondaire avec validation asynchrone à l’aide de la méthode décrite dans [Monitorer les performances des groupes de disponibilité AlwaysOn](monitor-performance-for-always-on-availability-groups.md).  
   
@@ -70,7 +70,7 @@ Pour remédier à ce problème, essayez d’augmenter votre bande passante rése
  Le risque de perte de données est éliminé dès que le bloc de journal est renforcé sur le fichier journal. Il est donc impératif d’isoler le fichier journal du fichier de données. Si le fichier journal et le fichier de données sont mappés au même disque dur, la charge de travail de création de rapports caractérisée par des lectures intensives sur le fichier de données consomme les mêmes ressources d’E/S que l’opération de renforcement du journal. Si cette dernière est lente, l’envoi des accusés de réception au réplica principal peut ralentir, ce qui peut entraîner une activation excessive du contrôle de flux et de longs délais d’attente au niveau du contrôle flux.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnostic et résolution  
- Si vous avez déterminé que le réseau n’est pas affecté par une latence élevée ou un débit faible, examinez le réplica secondaire à la recherche de contentions au niveau des E/S. Les requêtes de [SQL Server : Minimiser les E/S disque](https://technet.microsoft.com/magazine/jj643251.aspx) sont utiles pour identifier les contentions. Des exemples dérivés de cet article sont proposés ci-dessous à toutes fins utiles.  
+ Si vous avez déterminé que le réseau n’est pas affecté par une latence élevée ou un débit faible, examinez le réplica secondaire à la recherche de contentions au niveau des E/S. Les requêtes de [SQL Server : Minimiser les E/S disque](https://technet.microsoft.com/magazine/jj643251.aspx) sont utiles pour identifier les contentions. Des exemples dérivés de cet article sont proposés ci-dessous à toutes fins utiles.  
   
  Le script suivant vous permet de voir le nombre de lectures et d’écritures sur chaque fichier de données et de journal pour chaque base de données de disponibilité en cours d’exécution sur une instance de SQL Server. Les résultats sont triés selon le temps moyen de blocage des E/S, en millisecondes. Notez qu’il s’agit d’un cumul des valeurs générées depuis le dernier démarrage de l’instance du serveur. Vous devez donc calculer la différence entre deux mesures après un certain temps.  
   
@@ -116,13 +116,13 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disque physique : Tous les compteurs**  
   
--   **Disque physique : Moyenne disque s/transfert**  
+-   **Disque physique : Nombre moyen disque s/transfert**  
   
--   **SQL Server : Bases de données > Temps d’attente de vidage du journal**  
+-   **SQL Server : Bases de données > Temps d’attente de vidage du journal**  
   
--   **SQL Server : Bases de données > Attentes de vidages du journal/s**  
+-   **SQL Server : Bases de données > Attentes de vidages du journal/s**  
   
--   **SQL Server : Bases de données > Journaliser les lectures du disque/s du pool**  
+-   **SQL Server : Bases de données > Journaliser les lectures du disque/s du pool**  
   
  Si vous identifiez un goulot d’étranglement au niveau des E/S et que vous avez placé le fichier journal et le fichier de données sur le même disque dur, la première chose à faire consiste à placer le fichier de données et le fichier journal sur des disques distincts. Cette pratique empêche la charge de travail de création de rapports de perturber le chemin de transfert du réplica principal au tampon journal et sa capacité à renforcer la transaction sur le réplica secondaire.  
   

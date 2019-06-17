@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860630"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789651"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860630"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Session Alwayson_health](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Événements étendus pour le débogage](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Informations de référence sur les événements étendus des groupes de disponibilité Always On](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Session Alwayson_health  
  La session d’événements étendus alwayson_health est créée automatiquement quand vous créez le groupe de disponibilité. Elle capture un sous-ensemble des événements liés à un groupe de disponibilité. Cette session préconfigurée constitue un outil à la fois utile et pratique pour démarrer rapidement la résolution des problèmes d’un groupe de disponibilité. L’Assistant Création d’un groupe de disponibilité démarre automatiquement la session sur chaque réplica de disponibilité participant configuré dans l’Assistant.  
   
@@ -91,7 +85,7 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
 |colonne|Description|  
 |------------|-----------------|  
 |Créer une vue d’abonnement|availability_replica_state_change|  
-|Catégorie|alwayson|  
+|Catégorie|always on|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
@@ -122,7 +116,7 @@ GO
 |colonne|Description|  
 |------------|-----------------|  
 |Créer une vue d’abonnement|availability_group_lease_expired|  
-|Catégorie|alwayson|  
+|Catégorie|always on|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
@@ -150,7 +144,7 @@ GO
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Catégorie|alwayson|  
+|Catégorie|always on|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
@@ -195,11 +189,11 @@ GO
 |Numéro d’erreur|Description|  
 |------------------|-----------------|  
 |35201|Le délai imparti pour l’établissement de la connexion au réplica de disponibilité « %ls » a été dépassé.|  
-|35202|Une connexion a été établie pour le groupe de disponibilité « %ls » du réplica de disponibilité « %ls » avec l’ID [%ls] à « %ls » avec l’ID [%ls].  Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.|  
+|35202|Une connexion a été établie pour le groupe de disponibilité « %ls » du réplica de disponibilité « %ls » avec l’ID [%ls] à « %ls » avec l’ID [%ls].  Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.|  
 |35206|Un délai de connexion s’est produit sur une connexion préalablement établie au réplica de disponibilité « %ls ».|  
 |35204|La connexion entre l’instance « %ls » et « %ls » a été désactivée en raison de l’arrêt du point de terminaison.|  
 |Délai d’expiration dépassé + connexion|  
-|35207|Échec de la tentative de connexion pour l’ID de groupe de disponibilité « %ls »», de l’ID de réplica « %ls » à l’ID de réplica « %ls » en raison de l’erreur %d. Gravité : %d, état : %d.  Gravité : %d, état : %d. (ceci peut avoir un intérêt limité pour un administrateur de base de données. Vérifier et supprimer le cas échéant.)|  
+|35207|Échec de la tentative de connexion pour l’ID de groupe de disponibilité « %ls » de l’ID de réplica « %ls » à l’ID de réplica « %ls » en raison de l’erreur %d. Gravité : %d, état : %d.  Gravité : %d, état : %d. (ceci peut avoir un intérêt limité pour un administrateur de base de données. Vérifier et supprimer le cas échéant.)|  
 |9642|Une erreur s’est produite dans un point de terminaison de la connexion de transport Service Broker/Mise en miroir de bases de données. Erreur : %i, état : %i. (rôle de point de terminaison à proximité : %S_MSG, adresse du point de terminaison lointain : « %.*hs »). Erreur : %i, état : %i. (rôle de point de terminaison à proximité : %S_MSG, adresse du point de terminaison lointain : « %.\*hs »)|  
 |9666|Le point de terminaison %S_MSG est désactivé ou arrêté.|  
 |9691|Le point de terminaison %S_MSG a cessé d’écouter les connexions.|  
@@ -250,7 +244,7 @@ GO
 |colonne|Description|  
 |------------|-----------------|  
 |Créer une vue d’abonnement|data_movement_suspend_resume|  
-|Catégorie|Alwayson|  
+|Catégorie|Always on|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
@@ -286,14 +280,14 @@ GO
 ```  
   
 ###  <a name="BKMK_alwayson_ddl_executed"></a> alwayson_ddl_executed  
- Se produit quand une instruction DDL (langage de définition de données) de groupe de disponibilité est en cours d’exécution, notamment CREATE, ALTER ou DROP. L’objectif principal de l’événement est d’indiquer un problème avec une action de l’utilisateur sur un réplica de disponibilité ou d’indiquer le point de départ d’une action opérationnelle, celle-ci étant suivie d’un problème de runtime (basculement manuel, basculement forcé, déplacement de données suspendu, déplacement de données repris, etc.).  
+ Se produit quand une instruction DDL (Data Definition Language) de groupe de disponibilité est en cours d’exécution, notamment CREATE, ALTER ou DROP. L’objectif principal de l’événement est d’indiquer un problème avec une action de l’utilisateur sur un réplica de disponibilité ou d’indiquer le point de départ d’une action opérationnelle, celle-ci étant suivie d’un problème de runtime (basculement manuel, basculement forcé, déplacement de données suspendu, déplacement de données repris, etc.).  
   
 #### <a name="event-information"></a>Informations sur l’événement  
   
 |colonne|Description|  
 |------------|-----------------|  
 |Créer une vue d’abonnement|alwayson_ddl_execution|  
-|Catégorie|alwayson|  
+|Catégorie|always on|  
 |Channel|Analytiques|  
   
 #### <a name="event-fields"></a>Champs de l’événement  
@@ -326,7 +320,7 @@ GO
 |colonne|Description|  
 |------------|-----------------|  
 |Créer une vue d’abonnement|availability_replica_manager_state_change|  
-|Catégorie|alwayson|  
+|Catégorie|always on|  
 |Channel|Opérationnels|  
   
 #### <a name="event-fields"></a>Champs de l’événement  

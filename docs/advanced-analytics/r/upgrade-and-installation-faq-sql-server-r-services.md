@@ -3,17 +3,17 @@ title: Mise à niveau et installation Forum aux questions (FAQ) - SQL Server Mac
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642316"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140366"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ d’installation et de mise à niveau pour SQL Server Machine Learning ou R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Selon la version de SQL Server que vous installez, certaines des limitations sui
 
 - Dans les versions antérieures de SQL Server 2016 R Services, la notation 8dot3 était nécessaire sur le lecteur qui contient le répertoire de travail. Si vous avez installé une version préliminaire, la mise à niveau vers SQL Server 2016 Service Pack 1 doit résoudre ce problème. Cette exigence ne s’applique pas aux versions après SP1.
 
-- Actuellement, vous ne pouvez pas installer [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] sur un cluster de basculement. Toutefois, les version préliminaire de SQL Server 2019 ne prend en charge de basculement si vous souhaitez évaluer cette fonction dans un environnement de test. Pour plus d’informations, consultez [What ' s New](../what-s-new-in-sql-server-machine-learning-services.md).
+- Actuellement, vous ne pouvez pas installer [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] sur un cluster de basculement. Toutefois, les version préliminaire de SQL Server 2019 ne prend en charge de basculement si vous souhaitez évaluer cette fonctionnalité dans un environnement de test. Pour plus d’informations, consultez [What ' s New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - Sur une machine virtuelle Azure, une configuration supplémentaire peut être nécessaire. Par exemple, vous devrez peut-être créer une exception de pare-feu pour prendre en charge l’accès à distance.
 
@@ -63,7 +63,7 @@ Vous pouvez mettre à niveau votre version de SQL Server en réexécutant l’As
 + [Mise à niveau SQL Server à l’aide de l’Assistant Installation](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 Vous pouvez mettre à niveau seulement pour la machine learning de composants à l’aide d’un processus appelé liaison : 
-+ [Utiliser SqlBindR pour mettre à niveau les composants d’apprentissage automatique](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Utiliser SqlBindR pour mettre à niveau les composants d’apprentissage automatique](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>Fin de prise en charge des mises à niveau sur place à partir de versions préliminaires
 
@@ -99,7 +99,7 @@ Si vous avez installé une version préliminaire de Microsoft R Server, commence
 
 2.  Dans la boîte de dialogue proposant les options **Ajouter**, **Réparer**ou **Supprimer** les composants, sélectionnez **Supprimer**.
   
-3.  Sur la page **Sélectionner les fonctionnalités** sous **Composants partagés**, sélectionnez **R Server (autonome)**. Cliquez sur **Suivant**, puis sur **Terminer** pour désinstaller les composants sélectionnés uniquement.
+3.  Sur la page **Sélectionner les fonctionnalités** sous **Composants partagés**, sélectionnez **R Server (autonome)** . Cliquez sur **Suivant**, puis sur **Terminer** pour désinstaller les composants sélectionnés uniquement.
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services et les erreurs de côte à côte de R Server (autonome) 
 
@@ -123,7 +123,7 @@ Si cette procédure ne parvient pas à résoudre le problème, essayez la soluti
 
 3. Redémarrez le serveur.
 
-4. Exécutez le programme d’installation de SQL Server et ajouter la fonctionnalité R Services (en base de données) uniquement. Ne sélectionnez pas **R Server (autonome)**.
+4. Exécutez le programme d’installation de SQL Server et ajouter la fonctionnalité R Services (en base de données) uniquement. Ne sélectionnez pas **R Server (autonome)** .
 
 En règle générale, nous vous recommandons de ne pas installer R Services (en base de données) et R Server (autonome) sur le même ordinateur. Toutefois, en supposant que le serveur possède une capacité suffisante, vous constaterez peut-être que r Server autonome peut être utile comme outil de développement. Un autre scénario possible est que vous devez utiliser les fonctionnalités de l’Opérationnalisation de R Server, mais que vous souhaitez également accéder aux données de SQL Server sans déplacement de données.
 

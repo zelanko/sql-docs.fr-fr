@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468190"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
@@ -138,7 +138,7 @@ ms.locfileid: "62468190"
   
         -   Importez et exportez des données. Utilisez l’ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et l’option Copier les données à partir d’une ou plusieurs tables ou vues** . Si la table de destination est une table optimisée en mémoire qui n'existe pas dans la base de données de destination :  
   
-            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
+            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
   
             2.  Cliquez sur **Modifier les mappages**. Sélectionnez ensuite **Créer la table de destination** puis cliquez sur **Modifier SQL**. Entrez la syntaxe CREATE TABLE pour créer une table optimisée en mémoire sur la base de données de destination. Cliquez sur **OK** et suivez les étapes restantes de l’Assistant.  
   

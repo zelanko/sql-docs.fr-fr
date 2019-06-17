@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768849"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
@@ -125,7 +125,7 @@ ms.locfileid: "62768849"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression--> Package : (EmailRowCountPP) Démarré : 3/4/2005 11:06:18 AM durée : 9 secondes.  
+ PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 Durée : 9 secondes.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -138,7 +138,7 @@ ms.locfileid: "62768849"
   
  NASDAQ : 7058  
   
- WALL STREET : 3528  
+ NYSE : 3528  
   
  AMEX : 1102  
   

@@ -3,24 +3,24 @@ title: Didacticiel pour l’analytique en base de données à l’aide de R - SQ
 description: Découvrez comment incorporer le code de langue dans les procédures stockées SQL Server et des fonctions T-SQL de programmation R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511216"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140760"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Didacticiel : Analytique de données R pour les développeurs SQL
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutoriel : Analytique de données R pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans ce didacticiel pour les programmeurs SQL, en savoir plus sur l’intégration de R en création et en déployant une basée sur R d’apprentissage à l’aide de la solution un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Services Machine Learning] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R
 
-Ce didacticiel vous présente les fonctions R utilisées dans un flux de travail de modélisation de données. Étapes comprennent l’exploration de données, création et l’apprentissage d’un modèle de classification binaire et un déploiement de modèle. Le modèle que vous générerez prédit si un voyage est susceptible d’entraîner une info-bulle en fonction de l’heure du jour, la distance parcourue et l’emplacement de la prise en charge. 
+Ce didacticiel vous présente les fonctions R utilisées dans un flux de travail de modélisation de données. Étapes comprennent l’exploration de données, création et l’apprentissage d’un modèle de classification binaire et un déploiement de modèle. Le modèle que vous générerez prédit si un voyage est susceptible d’entraîner une info-bulle en fonction de l’heure du jour, la distance parcourue et d’enlèvement. 
 
 Tout le code R utilisé dans ce didacticiel est encapsulé dans des procédures stockées que vous créez et exécutez dans Management Studio.
 
@@ -39,7 +39,7 @@ L’objectif de ce didacticiel en plusieurs parties est une introduction à un f
 
 - [Leçon 1 : Explorer et visualiser la forme de données et la distribution en appelant des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Leçon 2 : Créer des caractéristiques de données à l’aide de R dans les fonctions T-SQL](sqldev-create-data-features-using-t-sql.md)
+- [Leçon 2 : Créer des caractéristiques de données à l’aide de R dans les fonctions T-SQL](sqldev-create-data-features-using-t-sql.md)
   
 - [Leçon 3 : Former et enregistrer un modèle R à l’aide des fonctions et procédures stockées](sqldev-train-and-save-a-model-using-t-sql.md)
   
@@ -55,7 +55,7 @@ Ce didacticiel suppose que vous êtes familiarisé avec les opérations de base 
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server 2017 Machine Learning Services avec R est activé](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Bibliothèques R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [Bibliothèques R](../package-management/installed-package-information.md)
 
 + [Autorisations](../security/user-permission.md)
 

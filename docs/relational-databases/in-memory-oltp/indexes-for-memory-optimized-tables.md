@@ -1,7 +1,7 @@
 ---
 title: Index pour les tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673018"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462468"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Chaque table à mémoire optimisée doit avoir au moins un index, car l’index permet de lier les lignes de la table entre elles. Sur une table optimisée en mémoire, chaque index est également optimisé en mémoire. Il existe plusieurs différences entre un index sur un index optimisé en mémoire et un index classique sur une table sur disque :  
@@ -35,7 +36,7 @@ Le type d’index doit être l’un des suivants :
 - Index de hachage  
 - Index non-cluster à mémoire optimisée, désignant la structure interne par défaut d’un arbre B (B-tree) 
   
-Les index de *hachage* sont présentés plus en détail dans [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+Les index de *hachage* sont présentés plus en détail dans [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
 Les index *non-cluster* sont présentés plus en détail dans [Index non-cluster pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
 Les index*columnstore* sont abordés dans un [autre article](../../relational-databases/indexes/columnstore-indexes-overview.md).  
 
@@ -57,7 +58,7 @@ Pour être déclarée avec DURABILITY = SCHEMA\_AND_DATA (paramètre par défaut
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], le nombre d’index par table à mémoire optimisée ou type de table est limité à 8. À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le nombre d’index n’est plus limité pour les tables à mémoire optimisée et les types de tables.
@@ -116,11 +117,30 @@ Cette sous-section contient un bloc de code Transact-SQL qui illustre la syntaxe
   
 ## <a name="duplicate-index-key-values"></a>Valeurs de clé d’index dupliquées
 
-Les valeurs de clés d’index dupliquées peuvent affecter les performances des opérations sur les tables optimisées en mémoire. Un nombre élevé de doublons (par exemple, 100 et au-delà) rend inefficace la tâche de maintenance des index, car les chaînes en double doivent être parcourues pour la plupart des opérations d’index. L’impact peut être observé dans les opérations `INSERT`, `UPDATE` et `DELETE` effectuées sur les tables à mémoire optimisée. 
+Les valeurs dupliquées pour une clé d’index peuvent réduire les performances des tables à mémoire optimisée. Les doublons pour le système traversent les chaînes d’entrée pour la plupart des opérations de lecture et d’écriture d’index. Quand une chaîne d’entrées dupliquées dépasse 100 entrées, la dégradation des performances peut devenir mesurable.
 
-Ce problème est plus visible pour les index de hachage, en raison de leur coût par opération inférieur et de l’interférence des chaînes dupliquées volumineuses avec la chaîne de collision de hachage. Pour réduire la duplication dans un index, utilisez un index non cluster et ajoutez des colonnes (par exemple à partir de la clé primaire) à la fin de la clé d’index pour réduire le nombre de doublons. Pour plus d’informations sur les collisions de hachage, consultez [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+### <a name="duplicate-hash-values"></a>Valeurs de hachage dupliquées
 
-Prenons comme exemple une table `Customers` ayant une clé primaire sur `CustomerId` et un index sur la colonne `CustomerCategoryID`. Une catégorie donnée comprend généralement de nombreux clients et, donc, de nombreuses valeurs en double pour une clé donnée dans le CustomerCategoryID. Dans ce scénario, une bonne pratique est d’utiliser un index non-cluster sur `(CustomerCategoryID, CustomerId)`. Cet index peut être utilisé pour les requêtes qui utilisent un prédicat impliquant `CustomerCategoryID`. Il ne contient pas de doublons et n’altère donc pas la maintenance d’index.
+Ce problème est plus visible dans le cas des index de hachage. Les index de hachage souffrent davantage en raison des considérations suivantes :
+
+- Le plus faible coût par opération pour les index de hachage
+- L’interférence des chaînes dupliquées volumineuses avec la chaîne de collision de hachage
+
+Pour réduire la duplication dans un index, essayez les ajustements suivants :
+
+- Utilisez un index non-cluster
+- Ajoutez des colonnes supplémentaires à la fin de la clé d’index pour réduire le nombre de doublons
+  - Par exemple, vous pouvez ajouter des colonnes qui figurent également dans la clé primaire.
+
+Pour plus d’informations sur les collisions de hachage, consultez [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+
+### <a name="example-improvement"></a>Exemple d’amélioration
+
+Voici un exemple illustrant comment éviter la dégradation des performances de votre index.
+
+Prenez une table `Customers` ayant une clé primaire sur `CustomerId` et un index sur la colonne `CustomerCategoryID`. En général, il y aura de nombreux clients dans une catégorie donnée. Ainsi, il y aura de nombreuses valeurs dupliquées pour CustomerCategoryID à l’intérieur d’une clé donnée de l’index.
+
+Dans ce scénario, la bonne pratique consiste à utiliser un index non-cluster sur `(CustomerCategoryID, CustomerId)`. Cet index peut être utilisé pour les requêtes qui utilisent un prédicat impliquant `CustomerCategoryID`, mais la clé d’index ne contient pas de doublon. Par conséquent, aucune dégradation dans la maintenance d’index n’est provoquée par les valeurs CustomerCategoryID dupliquées ou par la colonne supplémentaire dans l’index.
 
 La requête suivante affiche le nombre moyen d’index de doublons de valeurs de clé d’index sur `CustomerCategoryID` dans la table `Sales.Customers`, dans l’exemple de base de données [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
@@ -155,15 +175,11 @@ Dans toutes les instructions SELECT suivantes, un index non cluster est préfér
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,7 +211,7 @@ L’index de hachage doit utiliser une clause `WHERE` pour spécifier un test d�
   
 Aucun de ces types d’index n’est utile si la clause `WHERE` spécifie uniquement la deuxième colonne de la clé d’index.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>Tableau récapitulant les scénarios d’usage des différents index  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>Tableau récapitulant les scénarios d’usage des différents index  
   
 Le tableau suivant répertorie toutes les opérations qui sont prises en charge par les différents types d’index. *Oui* signifie que l’index peut traiter efficacement la demande et *Non* signifie que l’index ne peut pas la traiter efficacement. 
   
@@ -203,9 +219,10 @@ Le tableau suivant répertorie toutes les opérations qui sont prises en charge 
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Analyse d'index, récupère toutes les lignes de la table. | Oui | Oui | Oui |  
 | Recherche d’index sur les prédicats d’égalité (=). | Oui <br/> (Une clé complète est requise.) | Oui  | Oui |  
-| Recherche d’index sur les prédicats d’inégalité et de plage <br/> (>, <, <=, >=, `BETWEEN`). | non <br/> (Résultats dans une analyse d’index) | Oui <sup>1</sup> | Oui |  
-| Récupérer les lignes selon un ordre de tri qui correspond à la définition d’index. | non | Oui | Oui |  
-| Récupérer les lignes selon un ordre de tri inverse par rapport à la définition d’index. | non | non | Oui |  
+| Recherche d’index sur les prédicats d’inégalité et de plage <br/> (>, <, <=, >=, `BETWEEN`). | Non <br/> (Résultats dans une analyse d’index) | Oui <sup>1</sup> | Oui |  
+| Récupérer les lignes selon un ordre de tri qui correspond à la définition d’index. | Non | Oui | Oui |  
+| Récupérer les lignes selon un ordre de tri inverse par rapport à la définition d’index. | Non | Non | Oui |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Pour un index non-cluster à mémoire optimisée, la clé complète n’est pas nécessaire pour effectuer une recherche d’index.  
 

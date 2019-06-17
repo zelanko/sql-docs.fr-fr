@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: 'FROM : JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334786"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462689"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Spécifie les tables, les vues, les tables dérivées et les tables jointes utilisées dans les instructions DELETE, SELECT et UPDATE dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Dans l'instruction SELECT, la clause FROM est obligatoire sauf lorsque la liste de sélection ne contient que des constantes, des variables et des expressions arithmétiques (aucun nom de colonne).  
-  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+Dans Transact-SQL, la clause FROM est disponible sur les instructions suivantes :
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+La clause FROM est généralement obligatoire sur l’instruction SELECT. L’exception est quand aucune colonne de table n’est listée, et que les seuls éléments listés sont des littéraux, des variables ou des expressions arithmétiques.
+
+Cet article aborde également les mots clés suivants qui peuvent être utilisés sur la clause FROM :
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
@@ -441,7 +454,7 @@ L'opérateur APPLY fonctionne de la même façon pour produire la source de tabl
   
  Pour plus d’informations sur les opérateurs PIVOT et UNPIVOT, et obtenir des exemples, consultez [Utilisation des opérateurs PIVOT et UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations appropriées pour l'instruction DELETE, SELECT ou UPDATE.  
   
 ## <a name="examples"></a>Exemples  
@@ -473,7 +486,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Utilisation des indicateurs d'optimiseur TABLOCK et HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Utilisation des indicateurs d'optimiseur TABLOCK et HOLDLOCK  
  La transaction partielle suivante illustre le mode de placement d'un verrou de table partagé explicite sur `Employee` et le mode de lecture de l'index. Le verrou est conservé pendant toute la transaction.  
   
 ```sql    
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a> Voir aussi  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

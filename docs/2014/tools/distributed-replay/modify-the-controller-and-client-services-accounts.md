@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505994"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modifier le compte de contrôleur et les comptes de services clients
@@ -24,7 +24,7 @@ ms.locfileid: "62505994"
   
 1.  Sur l’ordinateur sur lequel les services Distributed Replay sont installés, depuis l’invite de commandes, tapez `dcomcnfg`.  
   
-2.  Double-cliquez sur **Services**, faites défiler et cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>**, puis cliquez sur **Démarrer** ou **Arrêter**.  
+2.  Double-cliquez sur **Services**, faites défiler et cliquez avec le bouton droit sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name>** , puis cliquez sur **Démarrer** ou **Arrêter**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Pour modifier le service Distributed Replay Controller  
   
