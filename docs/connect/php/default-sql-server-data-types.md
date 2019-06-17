@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3ccdf7ffa8b5eaf01108ca0492b9b5db9ecc042
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599861"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801469"
 ---
 # <a name="default-sql-server-data-types"></a>Types de données SQL Server par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +41,7 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |Object|Non pris en charge.|Non pris en charge.|  
 |DateTime (1)|DATETIME|Non pris en charge.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Conversion de types de données](../../connect/php/converting-data-types.md)

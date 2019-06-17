@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107139"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface utilisateur du Concepteur de requêtes relationnelles (Générateur de rapports)
@@ -80,7 +80,7 @@ ms.locfileid: "66107139"
   
      Utilisez le volet des données de rapport pour afficher la collection de champs d'un dataset de rapport. Ces champs représentent les données que vous pouvez afficher dans les tables, graphiques et autres éléments de rapport lorsque vous examinez un rapport.  
   
--   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)**, indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
+-   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)** , indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
   
 -   **Supprimer le champ** Supprime le champ sélectionné.  
   

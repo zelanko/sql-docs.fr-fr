@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718800"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet DataFactory (RDSServer)
@@ -40,7 +40,7 @@ ms.locfileid: "66718800"
 |[Synchronize, méthode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 ou version ultérieure).|  
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.1).|  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

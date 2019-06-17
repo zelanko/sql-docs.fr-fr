@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 96a03a678152c523cdb16b77834863ff920586c8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676107"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801453"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique décrit l’utilisation de l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY pour spécifier l’exécution d’une instruction directe plutôt que le comportement par défaut, qui est l’exécution d’une instruction préparée. À l’aide d’une instruction préparée peut entraîner de meilleures performances si l’instruction est exécutée plusieurs fois à l’aide de la liaison de paramètre.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si vous souhaitez envoyer un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction directement sur le serveur sans préparation de l’instruction par le pilote, vous pouvez définir l’attribut PDO::SQLSRV_ATTR_DIRECT_QUERY avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) (ou comme une option de pilote passée à [PDO::__construct](../../connect/php/pdo-construct.md)) ou lorsque vous appelez [PDO::prepare](../../connect/php/pdo-prepare.md). Par défaut, la valeur de PDO::SQLSRV_ATTR_DIRECT_QUERY est False (utilisez l’exécution d’instruction préparée).  
   
 Si vous utilisez [PDO::query](../../connect/php/pdo-query.md), vous souhaiterez peut-être l’exécution directe. Avant d’appeler [PDO::query](../../connect/php/pdo-query.md), appelez [PDO::setAttribute](../../connect/php/pdo-setattribute.md) et PDO::SQLSRV_ATTR_DIRECT_QUERY la valeur True.  Chaque appel à [PDO::query](../../connect/php/pdo-query.md) peut être exécutée avec un autre paramètre de PDO::SQLSRV_ATTR_DIRECT_QUERY.  
@@ -69,6 +69,6 @@ L’exemple suivant montre que lorsque le contexte à partir d’une instruction
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

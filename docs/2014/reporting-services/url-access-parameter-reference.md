@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098722"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
@@ -68,7 +68,7 @@ ms.locfileid: "66098722"
 |*ShowHideToggle*|Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>Commandes de composant WebPart Visionneuse de rapports (rv:)  
- La table suivante décrit les noms des paramètre de rapport réservés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisés pour cibler le composant WebPart Visionneuse de rapports qui est intégré à SharePoint. Ces noms de paramètre sont préfixés par *rv:*. Le composant WebPart Visionneuse de rapports prend également en charge le paramètre *rs:ParameterLanguage* .  
+ La table suivante décrit les noms des paramètre de rapport réservés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisés pour cibler le composant WebPart Visionneuse de rapports qui est intégré à SharePoint. Ces noms de paramètre sont préfixés par *rv:* . Le composant WebPart Visionneuse de rapports prend également en charge le paramètre *rs:ParameterLanguage* .  
   
 |Paramètre|Action|  
 |---------------|------------|  

@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109157"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Remplissage (Générateur de rapports et SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66109157"
   
 ## <a name="options"></a>Options  
  **Couleur de remplissage**  
- Cliquez sur le bouton de couleur pour sélectionner une couleur de remplissage pour le rectangle. Cliquez sur le bouton **Expression**_(fx)_ pour modifier l’expression, qui peut être une valeur hexadécimale pour la couleur RVB ou l’un des noms de couleur prédéfinis fournis dans la boîte de dialogue **Expression** . Pour afficher la liste des couleurs prédéfinies, sélectionnez **Web** dans le volet **Élément**. Les noms de couleur répertoriés dans le volet **Titre** peuvent être tapés dans le volet de texte de l'expression. N'utilisez pas de signe égal (=) ou de guillemets ("") lorsque vous tapez le nom de couleur.  
+ Cliquez sur le bouton de couleur pour sélectionner une couleur de remplissage pour le rectangle. Cliquez sur le bouton **Expression** _(fx)_ pour modifier l’expression, qui peut être une valeur hexadécimale pour la couleur RVB ou l’un des noms de couleur prédéfinis fournis dans la boîte de dialogue **Expression** . Pour afficher la liste des couleurs prédéfinies, sélectionnez **Web** dans le volet **Élément**. Les noms de couleur répertoriés dans le volet **Titre** peuvent être tapés dans le volet de texte de l'expression. N'utilisez pas de signe égal (=) ou de guillemets ("") lorsque vous tapez le nom de couleur.  
   
  **Sélectionnez la source d’image**  
  Indiquez l'endroit où l'image est stockée afin que lorsque le rapport est rendu, le processeur de rapports puisse l'afficher.  
@@ -47,7 +47,7 @@ ms.locfileid: "66109157"
   
  Si vous incorporez l’image, choisissez dans la liste déroulante l’image à ajouter au rapport. Cliquez sur **Importer** pour ajouter l’image à la liste déroulante. Si vous avez ajouté une image au volet **Données** , vous pouvez la sélectionner en choisissant **Rapport** , puis en sélectionnant l’image dans la liste déroulante.  
   
- Si vous sélectionnez l'option **Externe** , tapez l'URL de l'image. Pour un rapport publié sur un serveur de rapports configuré en mode natif, utilisez un chemin d’accès complet ou relatif (par exemple, http://*\<nom_serveur >*/images/image1.jpg). Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
+ Si vous sélectionnez l'option **Externe** , tapez l'URL de l'image. Pour un rapport publié sur un serveur de rapports configuré en mode natif, utilisez un chemin d’accès complet ou relatif (par exemple, http:// *\<nom_serveur >* /images/image1.jpg). Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http:// *\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
   
  **Importer**  
  Disponible quand vous sélectionnez **Rapport**. Cliquez pour ajouter une image à la liste déroulante **Utiliser cette image** .  

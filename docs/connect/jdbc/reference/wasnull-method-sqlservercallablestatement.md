@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caf975c253ec6765a1b0810cf593787db19fe033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4e92dd2dc10566961dd037b182c9b33f2c564ca6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827807"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802520"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>Méthode wasNull (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean wasNull()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode wasNull est spécifiée par la méthode wasNull dans l’interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

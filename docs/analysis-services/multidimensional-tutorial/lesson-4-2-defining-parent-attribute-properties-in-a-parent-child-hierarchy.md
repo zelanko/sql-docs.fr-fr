@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e88421b166b79f49d87d04a058e09b97bd7033f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403791"
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Leçon 4-2 : définition des propriétés d’attribut Parent dans une hiérarchie Parent-enfant
@@ -70,11 +70,11 @@ Au cours des tâches de la présente rubrique, vous allez créer un modèle de n
   
     Notez l'icône unique de l'attribut. Cette icône signifie que l'attribut est la clé parente dans une hiérarchie parent-enfant. Notez également, dans la fenêtre des propriétés, que la propriété **Usage** de l’attribut est définie comme **Parent**. Cette propriété a été définie par l'Assistant Dimension lors de la conception de la dimension. L'Assistant a détecté automatiquement la relation parent-enfant.  
   
-3.  Dans la fenêtre des propriétés, cliquez sur le bouton (**...**) dans la cellule de la propriété **NamingTemplate** .  
+3.  Dans la fenêtre des propriétés, cliquez sur le bouton ( **...** ) dans la cellule de la propriété **NamingTemplate** .  
   
     Dans la boîte de dialogue **Modèle de nom de niveau**, vous pouvez définir le modèle d’attribution de nom de niveau qui détermine les noms de niveau dans la hiérarchie parent-enfant que les utilisateurs voient quand ils parcourent les cubes.  
   
-4.  Dans la deuxième ligne, la ligne **\***, tapez **Employee Level \*** dans la colonne **Name**, puis sélectionnez la troisième ligne.  
+4.  Dans la deuxième ligne, la ligne **\*** , tapez **Employee Level \*** dans la colonne **Name**, puis sélectionnez la troisième ligne.  
   
     Sous **Résultat**, chaque niveau est maintenant appelé « Employee Level » suivi d’un numéro incrémenté séquentiellement.  
   

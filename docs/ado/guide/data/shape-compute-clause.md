@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700334"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
@@ -80,12 +80,12 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |État|Ville|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|- ou -|Medford|200,000|  
-|- ou -|Portland|400,000|  
+|\- ou -|Medford|200,000|  
+|\- ou -|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|- ou -|Corvallis|300,000|  
+|\- ou -|Corvallis|300,000|  
   
  Maintenant, exécutez cette commande de la forme :  
   
@@ -109,7 +109,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Référence à Enfant1|CA|  
 |1,200,000|Référence à Enfant2|WA|  
-|1,100,000|Référence à enfant 3|- ou -|  
+|1,100,000|Référence à enfant 3|\- ou -|  
   
 ## <a name="child1"></a>Enfant1  
   
@@ -129,9 +129,9 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |État|Ville|Remplissage|  
 |-----------|----------|----------------|  
-|- ou -|Medford|200,000|  
-|- ou -|Portland|400,000|  
-|- ou -|Corvallis|300,000|  
+|\- ou -|Medford|200,000|  
+|\- ou -|Portland|400,000|  
+|\- ou -|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

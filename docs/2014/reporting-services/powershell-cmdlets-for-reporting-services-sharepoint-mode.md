@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e0e2cb6de46a20f185819f42825576ee529e0198
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108057"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
@@ -56,7 +56,7 @@ ms.locfileid: "66108057"
   
 ##  <a name="bkmk_cmdlet_sum"></a> Résumé des applets de commande  
 
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applet de commande, le service application « bases de données » fait référence à toutes les bases de données créées et utilisées par un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)** . Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applet de commande, le service application « bases de données » fait référence à toutes les bases de données créées et utilisées par un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
 
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
@@ -104,7 +104,7 @@ ms.locfileid: "66108057"
 |Applet de commande|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|Obtient un ou plusieurs objets d'application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .|  
-|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : Spécifie si le serveur de rapports utilise le compte de Pool d’applications SSRS ou une connexion SQL Server pour accéder à la base de données de serveur de rapports. Les valeurs possibles sont les suivantes :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2. Compte du pool d'applications (valeur par défaut)|  
+|New-SPRSServiceApplication|Crée une application de service Reporting Services et des bases de données associées.<br /><br /> Paramètre LogonType : Spécifie si le serveur de rapports utilise le compte de Pool d’applications SSRS ou une connexion SQL Server pour accéder à la base de données de serveur de rapports. Les valeurs possibles sont les suivantes :<br /><br /> 0 Authentification Windows<br /><br /> 1 SQL Server<br /><br /> 2\. Compte du pool d'applications (valeur par défaut)|  
 |Remove-SPRSServiceApplication|Supprime l'application de service Reporting Services spécifiée. Cela supprimera également les bases de données associées.|  
 |Set-SPRSServiceApplication|Modifie les propriétés d'une base de données d'application de service Reporting Services existante.|  
 |New-SPRSServiceApplicationProxy|Crée un nouveau proxy d'application de service Reporting Services.|  
@@ -178,7 +178,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Ajout du proxy au groupe de proxy par défaut  
   
-3.  Octroi de l’accès à l’application de service à la base de données de contenu de l’application web sur le port 80. Le script considère que le site « http://sitename» existe déjà.  
+3.  Octroi de l’accès à l’application de service à la base de données de contenu de l’application web sur le port 80. Le script considère que le site « http://sitename » existe déjà.  
   
 ```  
 # Create service application and service application proxy  

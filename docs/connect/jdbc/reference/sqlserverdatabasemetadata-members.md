@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 327ba0bc-438a-494c-b119-1cd4a096bb58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95948680f7bd7bb1766207fa8894d274b5e09daf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: dbbe2bde7b6eba06b865b5cd4fb94e471b626510
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800562"
 ---
 # <a name="sqlserverdatabasemetadata-members"></a>Membres de SQLServerDatabaseMetaData
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +31,13 @@ ms.locfileid: "47788077"
   
 ## <a name="inherited-fields"></a>Champs hérités  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |java.sql.DatabaseMetaData|attributeNoNulls, attributeNullable, attributeNullableUnknown, bestRowNotPseudo, bestRowPseudo, bestRowSession, bestRowTemporary, bestRowTransaction, bestRowUnknown, columnNoNulls, columnNullable, columnNullableUnknown, importedKeyCascade, importedKeyInitiallyDeferred, importedKeyInitiallyImmediate, importedKeyNoAction, importedKeyNotDeferrable, importedKeyRestrict, importedKeySetDefault, importedKeySetNull, procedureColumnIn, procedureColumnInOut, procedureColumnOut, procedureColumnResult, procedureColumnReturn, procedureColumnUnknown, procedureNoNulls, procedureNoResult, procedureNullable, procedureNullableUnknown, procedureResultUnknown, procedureReturnsResult, sqlStateSQL, sqlStateSQL99, sqlStateXOpen, tableIndexClustered, tableIndexHashed, tableIndexOther, tableIndexStatistic, typeNoNulls, typeNullable, typeNullableUnknown, typePredBasic, typePredChar, typePredNone, typeSearchable, versionColumnNotPseudo, versionColumnPseudo, versionColumnUnknown|  
   
 ## <a name="methods"></a>Méthodes  
   
-|Nom   |Description|  
+|Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[allProceduresAreCallable](../../../connect/jdbc/reference/allproceduresarecallable-method-sqlserverdatabasemetadata.md)|Récupère les informations indiquant si l’utilisateur actuel dispose d’autorisations suffisantes pour appeler toutes les procédures retournées par la méthode [getProcedures](../../../connect/jdbc/reference/getprocedures-method-sqlserverdatabasemetadata.md).|  
 |[allTablesAreSelectable](../../../connect/jdbc/reference/alltablesareselectable-method-sqlserverdatabasemetadata.md)|Récupère les informations indiquant si l’utilisateur actuel dispose d’autorisations suffisantes pour utiliser toutes les tables retournées par la méthode [getTables](../../../connect/jdbc/reference/gettables-method-sqlserverdatabasemetadata.md) dans une instruction SELECT.|  
@@ -217,7 +217,7 @@ ms.locfileid: "47788077"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.sql.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   

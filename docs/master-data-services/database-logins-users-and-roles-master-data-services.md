@@ -19,10 +19,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dcf080146f8eee0e03d0c7b22c391fd1ace54e85
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487729"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Connexions, utilisateurs et rôles de base de données (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "65487729"
   
 |Connexion|Description|  
 |-----------|-----------------|  
-|**mds_dlp_login**|Autorise la création d'assemblys UNSAFE. Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> - Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> - Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Pour msdb, mds_clr_user mappe à cette connexion.|  
+|**mds_dlp_login**|Autorise la création d'assemblys UNSAFE. Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> \- Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> \- Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> \- Pour msdb, mds_clr_user mappe à cette connexion.|  
 |**mds_email_login**|Connexion active utilisée pour les notifications.<br /><br /> Pour msdb et la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user mappe à cette connexion.|  
   
 ## <a name="msdb-users"></a>Utilisateurs de msdb  
@@ -43,15 +43,15 @@ ms.locfileid: "65487729"
 |Utilisateur|Description|  
 |----------|-----------------|  
 |**mds_clr_user**|Non utilisé. Mappe à mds_dlp_login.|  
-|**mds_email_user**|Utilisé pour les notifications.<br /><br /> - Mappe à mds_email_login.<br /><br /> - Est membre du rôle : DatabaseMailUserRole.|  
+|**mds_email_user**|Utilisé pour les notifications.<br /><br /> \- Mappe à mds_email_login.<br /><br /> \- Est membre du rôle : DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Utilisateurs de base de données Master Data Services  
   
 |Utilisateur|Description|  
 |----------|-----------------|  
-|**mds_email_user**|Utilisé pour les notifications.<br /><br /> - A l’autorisation SELECT pour le schéma mdm.<br /><br /> - A l’autorisation EXECUTE pour le type de table défini par l’utilisateur mdm.MemberGetCriteria.<br /><br /> - A l’autorisation EXECUTE pour la procédure stockée mdm.udpNotificationQueueActivate.|  
+|**mds_email_user**|Utilisé pour les notifications.<br /><br /> \- A l’autorisation SELECT pour le schéma mdm.<br /><br /> \- A l’autorisation EXECUTE pour le type de table défini par l’utilisateur mdm.MemberGetCriteria.<br /><br /> \- A l’autorisation EXECUTE pour la procédure stockée mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Possède les schémas mdq et mdm. Le schéma par défaut est mdm.<br /><br /> Il n'est mappé à aucune connexion.|  
-|**mds_ssb_user**|Utilisé pour exécuter des tâches Service Broker.<br /><br /> - A les autorisations DELETE, INSERT, REFERENCES, SELECT et UPDATE pour tous les schémas.<br /><br /> - N’est mappé à aucune connexion.|  
+|**mds_ssb_user**|Utilisé pour exécuter des tâches Service Broker.<br /><br /> \- A les autorisations DELETE, INSERT, REFERENCES, SELECT et UPDATE pour tous les schémas.<br /><br /> \- N’est mappé à aucune connexion.|  
   
 ## <a name="master-data-services-database-role"></a>Rôle de base de données Master Data Services  
   

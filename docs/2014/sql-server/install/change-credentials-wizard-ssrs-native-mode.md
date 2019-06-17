@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9dba9988bec98f597a59fe4152b2abdde0d5ccea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096704"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Assistant Modification des informations d'identification (SSRS en mode natif)
@@ -38,7 +38,7 @@ ms.locfileid: "66096704"
  Vous ne pouvez pas spécifier d'autres informations d'identification Windows. Si vous souhaitez vous connecter en tant qu'utilisateur Windows différent, connectez-vous comme cet utilisateur et démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Informations d’identification**  
- Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local (*\<nom_ordinateur >\\< nom d’utilisateur\>*) si le serveur de rapports et de la base de données se trouvent sur le même ordinateur ou un utilisateur de domaine compte (*\<domaine >\\< nom d’utilisateur\>*) s’ils sont sur des ordinateurs différents dans le même domaine.  
+ Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<nom_ordinateur >\\< nom d’utilisateur\>* ) si le serveur de rapports et de la base de données se trouvent sur le même ordinateur ou un utilisateur de domaine compte ( *\<domaine >\\< nom d’utilisateur\>* ) s’ils sont sur des ordinateurs différents dans le même domaine.  
   
  Le serveur de rapports crée alors une connexion de base de données et attribue les autorisations de base de données au compte que vous spécifiez.  
   

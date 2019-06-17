@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a790f3951ce37e714346b8d280547e603cf48c23
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105453"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>Graphiques polaires (Générateur de rapports et SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "66105453"
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre l'utilisation d'un graphique en radar. Le tableau ci-dessous fournit les données d'exemple pour le graphique.  
   
-|Nom|Ventes|  
+|Créer une vue d’abonnement|Ventes|  
 |----------|-----------|  
 |Arbrisseaux|61|  
 |Graines|78|  

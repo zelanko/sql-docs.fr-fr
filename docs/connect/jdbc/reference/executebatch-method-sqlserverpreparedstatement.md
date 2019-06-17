@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8418167e-cbd2-464d-b118-73cdd76080ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a6fac19260ccb09e22e311743ac753937e265dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4c2d9835dd5731ca0464ad81d2384f63571838b2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647607"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802293"
 ---
 # <a name="executebatch-method-sqlserverpreparedstatement"></a>Méthode executeBatch (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,12 +43,12 @@ public int[] executeBatch()
   
  java.sql.BatchUpdateException  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode executeBatch est spécifiée par la méthode executeBatch dans l’interface java.sql.Statement.  
     
  Cette méthode remplace [SQLServerStatement.executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

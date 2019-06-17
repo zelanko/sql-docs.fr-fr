@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503619"
 ---
 # <a name="adventure-works-internet-sales-tutorial-1200"></a>Didacticiel de Adventure Works Internet Sales (1200)
@@ -76,7 +76,7 @@ Ce didacticiel inclut les leçons suivantes :
 |Leçon|Durée estimée|  
 |----------|------------------------------|  
 |[Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
-|[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
+|[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
 |[Leçon 3 : Marquer comme Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
 |[Leçon 4 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
 |[Leçon 5 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|

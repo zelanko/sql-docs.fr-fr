@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108413"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout de regroupement et totaux (Reporting Services)
@@ -40,13 +40,13 @@ ms.locfileid: "66108413"
   
 2.  Si vous ne voyez pas le volet **Groupes de lignes** , cliquez avec le bouton droit sur l'aire de conception, puis sélectionnez **Vue** et cliquez sur **Regroupement**.  
   
-3.  Faites glisser le champ `Date` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)**.  
+3.  Faites glisser le champ `Date` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne appelée **(Details)** .  
   
      Notez que le descripteur de ligne comporte maintenant un crochet, qui indique un groupe. En outre, le tableau présente désormais deux colonnes Date, placées de part et d'autre d'une ligne verticale en pointillé.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Faites glisser le champ `Order` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)**.  
+4.  Faites glisser le champ `Order` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ Date et au-dessus de la ligne **(Details)** .  
   
      Notez que le descripteur de ligne comporte maintenant deux crochets, qui indiquent deux groupes. Le tableau présente désormais deux `Order` colonnes, trop.  
   

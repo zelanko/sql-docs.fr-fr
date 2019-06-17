@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e12aeded73e7534a72f85cdb0a609ad0ab1ac52e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3e2431a61089f2128fa73feea8893a3a1c82bffa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672477"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802511"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>Méthode getNumericFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public java.lang.String getNumericFunctions()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode getNumericFunctions est spécifiée par la méthode getNumericFunctions dans l’interface java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

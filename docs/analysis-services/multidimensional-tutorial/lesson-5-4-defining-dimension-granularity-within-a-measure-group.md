@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404081"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Leçon 5-4 : définition granularité des dimensions dans un groupe de mesures
@@ -127,7 +127,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
     Notez que les dimensions de cube **Employee** et **Date** sont liées aux groupes de mesures **Sales Quotas et Sales Quotas 1** par le biais de relations régulières. Notez également que la dimension de cube **Sales Territory** n’est liée à aucun de ces groupes de mesures.  
   
-4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
+4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas** groupe de mesures, puis cliquez sur le bouton Parcourir ( **...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -141,7 +141,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
 10. Cliquez sur **OK**.  
   
-11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
+11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir ( **...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 12. Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -163,7 +163,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
   
     Remplacer la dimension de cube **Order Date** par **Date** permet aux utilisateurs de comprendre son rôle en tant que dimension de date principale dans ce cube.  
   
-20. Cliquez sur le bouton Parcourir (**...** ) dans la cellule à l’intersection de la **Sales Quotas** groupe de mesures et les **Date** dimension.  
+20. Cliquez sur le bouton Parcourir ( **...** ) dans la cellule à l’intersection de la **Sales Quotas** groupe de mesures et les **Date** dimension.  
   
 21. Dans la boîte de dialogue **Définir une relation** , sélectionnez **Normal** dans la liste **Sélectionnez un type de relation** .  
   

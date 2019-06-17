@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f28175eab5219a6181bf241fc60fec576a6ef50
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+manager: jroth
+ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405719"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801837"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Pilote Microsoft JDBC pour SQL Server
 
@@ -28,9 +28,9 @@ Le pilote Microsoft JDBC pour SQL Server a été testé avec les principaux serv
   
 ## <a name="getting-started"></a>Mise en route  
 
-* [Étape 1 : Configurer l’environnement de développement pour le développement Java](step-1-configure-development-environment-for-java-development.md)  
+* [Étape 1 : Configurer l’environnement de développement pour le développement Java](step-1-configure-development-environment-for-java-development.md)  
 * [Étape 2 : Créer une base de données SQL pour le développement Java](step-2-create-a-sql-database-for-java-development.md)  
-* [Étape 3 : Preuve de concept pour se connecter à SQL à l’aide de Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Documentation  
 

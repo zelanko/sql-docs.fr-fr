@@ -15,13 +15,13 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1b83702dafcd2085acc49f679f844ed1cd9d4416
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: e071e632015bc86e2743f3935ee92d5e1da9c611
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601009"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802950"
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "51601009"
  OLE DB Driver pour SQL Server implémente l’interface **IBCPSession** pour exposer la prise en charge des opérations de copie en bloc basées sur le fichier [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L’interface **IBCPSession** implémente les méthodes [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md), [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md), [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md), [IBCPSession::BCPDone](../../oledb/ole-db-interfaces/ibcpsession-bcpdone-ole-db.md), [IBCPSession::BCPExec](../../oledb/ole-db-interfaces/ibcpsession-bcpexec-ole-db.md), [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md), [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) et [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md).  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Propriétés de la source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

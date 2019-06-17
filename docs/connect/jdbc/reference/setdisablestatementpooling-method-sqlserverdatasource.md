@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4be547e1d5c37a00cd023bc542f3bb6e9f73e048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6076d800c84b25d587eb73120a0e675ee1ae6ee0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611047"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801627"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>setDisableStatementPooling, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,10 +37,10 @@ public void setDisableStatementPooling(boolean disableStatementPooling);
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource, classe](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

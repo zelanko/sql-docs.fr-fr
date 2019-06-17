@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099319"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Guide de référence des erreurs et des événements (Reporting Services)
@@ -32,7 +32,7 @@ ms.locfileid: "66099319"
 ## <a name="report-server-events"></a>Événements du serveur de rapports  
  Les événements suivants du serveur de rapports sont consignés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
-|ID d'événement|Type|Catégorie|`Source`|Description|  
+|ID d'événement|type|Catégorie|`Source`|Description|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Error|Planification|Serveur de rapports|L'Agent SQL Server doit être en cours d'exécution lorsque vous définissez une opération de planification (par exemple, un abonnement à un rapport et une remise).|  
 |[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Error|Démarrage/Fermeture|Serveur de rapports<br /><br /> Processeur de planification et de remise|*\<Source>* ne peut pas se connecter à la base de données du serveur de rapports. Pour plus d’informations, consultez [Service Report Server Windows &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  

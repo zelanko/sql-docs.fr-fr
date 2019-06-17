@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbe4fbfc2cad2df41a1d9bd14fcb2620e2dec5c1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403641"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Leçon 3-2 : modification de la Dimension Customer
@@ -106,7 +106,7 @@ Après avoir créé un calcul nommé dans la vue de la source de données, vous 
   
 4.  Dans le champ de propriété **Name** , tapez **Nom complet**.  
   
-5.  Cliquez dans le **NameColumn** propriété champ du bas, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
+5.  Cliquez dans le **NameColumn** propriété champ du bas, puis cliquez sur le bouton de navigation ( **...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 6.  Sélectionnez **SimpleDate** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   
@@ -178,7 +178,7 @@ La propriété **KeyColumns** contient la colonne ou les colonnes qui représent
   
 2.  Dans le volet **Attributs** , cliquez sur l’attribut **City** .  
   
-3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** en bas, puis cliquez sur le bouton de navigation (**...**).  
+3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** en bas, puis cliquez sur le bouton de navigation ( **...** ).  
   
 4.  Dans la boîte de dialogue **Colonnes clés** , dans la liste **Colonnes disponibles** , sélectionnez la colonne **StateProvinceName**, puis cliquez sur le bouton **>** .  
   
@@ -186,7 +186,7 @@ La propriété **KeyColumns** contient la colonne ou les colonnes qui représent
   
 5.  Cliquez sur **OK**.  
   
-6.  Pour définir la propriété **NameColumn** de l’attribut **City** , cliquez dans le champ **NameColumn** de la fenêtre Propriétés, puis cliquez sur le bouton de navigation (**...**).  
+6.  Pour définir la propriété **NameColumn** de l’attribut **City** , cliquez dans le champ **NameColumn** de la fenêtre Propriétés, puis cliquez sur le bouton de navigation ( **...** ).  
   
 7.  Dans la boîte de dialogue **Colonne de nom** , dans la liste **Colonne source** , sélectionnez **City**, puis cliquez sur **OK**.  
   
@@ -198,7 +198,7 @@ La propriété **KeyColumns** contient la colonne ou les colonnes qui représent
   
 2.  Dans le volet **Attributs** , cliquez sur l’attribut **State-Province** .  
   
-3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton Parcourir (**...**).  
+3.  Dans la fenêtre **Propriétés** , cliquez dans le champ **KeyColumns** , puis cliquez sur le bouton Parcourir ( **...** ).  
   
 4.  Dans la boîte de dialogue **Colonnes clés** , dans la liste **Colonnes disponibles** , sélectionnez la colonne **EnglishCountryRegionName**, puis cliquez sur le bouton **>** .  
   
@@ -206,7 +206,7 @@ La propriété **KeyColumns** contient la colonne ou les colonnes qui représent
   
 5.  Cliquez sur **OK**.  
   
-6.  Pour définir la propriété **NameColumn** de l’attribut **State-Province** , cliquez sur le champ **NameColumn** dans la fenêtre Propriétés, puis cliquez sur le bouton de navigation (**...**).  
+6.  Pour définir la propriété **NameColumn** de l’attribut **State-Province** , cliquez sur le champ **NameColumn** dans la fenêtre Propriétés, puis cliquez sur le bouton de navigation ( **...** ).  
   
 7.  Dans la boîte de dialogue **Colonne de nom** , dans la liste **Colonne source** , sélectionnez **StateProvinceName**, puis cliquez sur **OK**.  
   
