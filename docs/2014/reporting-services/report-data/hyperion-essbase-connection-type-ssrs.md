@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a0c38487f58a6db6e80d48c2b39b09e3ed93106
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107267"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Type de connexion Hyperion Essbase (SSRS)
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>Propriétés de champ prédéfinies  
- Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété prédéfinie de champ dataset du rapport `UniqueName`. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`.UniqueName`.  
+ Propriétés prédéfinies de champ qui sont généralement prises en charge par plusieurs fournisseurs de données et qui apparaissent dans la requête MDX sous-jacente d'un dataset de rapport. Par exemple, la propriété de dimension MDX MEMBER_UNIQUE_NAME est mappée à la propriété prédéfinie de champ dataset du rapport `UniqueName`. Pour inclure la valeur de nom unique dans une zone de texte, utilisez l’expression `=Fields!` *\<FieldName>* `.UniqueName`.  
   
  Le tableau suivant dresse la liste des propriétés de champ prédéfinies que vous pouvez utiliser pour une source de données [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
@@ -93,7 +93,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="custom-properties"></a>Propriétés personnalisées  
- Les propriétés de champ personnalisées qui sont prises en charge par un fournisseur de données et qui apparaissent dans la requête MDX sous-jacente pour un dataset de rapport, n'apparaissent pas dans le volet Datasets comme champs sous ce dataset. Par exemple, **Long Names** est une propriété de membre définie pour un niveau de dimension. Pour inclure la valeur dans une zone de texte, utilisez l’expression `=Fields!`*\<FieldName>*`("Long Names")`. Les noms de champs de l'expression respectent la casse.  
+ Les propriétés de champ personnalisées qui sont prises en charge par un fournisseur de données et qui apparaissent dans la requête MDX sous-jacente pour un dataset de rapport, n'apparaissent pas dans le volet Datasets comme champs sous ce dataset. Par exemple, **Long Names** est une propriété de membre définie pour un niveau de dimension. Pour inclure la valeur dans une zone de texte, utilisez l’expression `=Fields!` *\<FieldName>* `("Long Names")`. Les noms de champs de l'expression respectent la casse.  
   
  Pour faire référence à des propriétés étendues personnalisées dans une expression, vous pouvez utiliser la syntaxe suivante :  
   

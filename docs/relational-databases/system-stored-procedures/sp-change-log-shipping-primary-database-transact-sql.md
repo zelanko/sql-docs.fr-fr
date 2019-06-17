@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994247"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>Arguments  
 `[ @database = ] 'database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
-`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)** , sans valeur par défaut, et ne peut pas être NULL.  
   
-`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)** , sans valeur par défaut, et ne peut pas être NULL.  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` Est la longueur de la durée, en minutes, de conserver le fichier de sauvegarde de journal dans le répertoire de sauvegarde sur le serveur principal. *backup_retention_period* est **int**, sans valeur par défaut, et ne peut pas être NULL.  
   

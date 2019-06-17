@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfiles"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6466eca2be66a20dfcab23f2097b71a2d0fc1cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148947"
 ---
 # <a name="create-roles"></a>Créer les rôles
 
@@ -56,7 +56,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
     ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
-5.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
+5.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   
 #### <a name="to-create-a-sales-analyst-us-user-role"></a>Pour créer un rôle d'utilisateur Sales Analyst US  
   
@@ -75,7 +75,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
     Une formule de filtre de lignes doit être résolue en une valeur booléenne (TRUE/FALSE). Avec cette formule, vous spécifiez que seules les lignes avec la valeur Code pays / région « US » sont visibles par l’utilisateur.  
     ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
-6.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
+6.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   
 #### <a name="to-create-an-administrator-user-role"></a>Pour créer un rôle d’utilisateur administrateur  
   
@@ -85,7 +85,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 3.  Attribuez à ce rôle **administrateur** autorisation.  
   
-4.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle. 
+4.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle. 
   
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245499"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
@@ -24,7 +24,7 @@ ms.locfileid: "63245499"
   
 ## <a name="options"></a>Options  
  **Se connecter à la base de données**  
- Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >**, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >**, vous pouvez parcourir le serveur pour la base de données à laquelle se connecter.  
+ Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >** , vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >** , vous pouvez parcourir le serveur pour la base de données à laquelle se connecter.  
   
  Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   

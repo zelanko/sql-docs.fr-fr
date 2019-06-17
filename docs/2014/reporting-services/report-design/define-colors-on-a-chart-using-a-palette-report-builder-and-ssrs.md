@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59fc4a9e46e0dbe0f88047a2804330ba1c6ba18d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106080"
 ---
 # <a name="define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs"></a>Définir les couleurs d'un graphique à l'aide d'une palette (Générateur de rapports et SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106080"
   
 3.  Dans le **graphique** section, pour le `Palette` propriété, sélectionnez **personnalisé**.  
   
-4.  Dans la propriété CustomPaletteColors, cliquez sur le bouton Modifier la collection (**...**). L' **Éditeur de collection ReportColorExpression** s'ouvre.  
+4.  Dans la propriété CustomPaletteColors, cliquez sur le bouton Modifier la collection ( **...** ). L' **Éditeur de collection ReportColorExpression** s'ouvre.  
   
 5.  Cliquez sur **Ajouter** pour ajouter une couleur. Sélectionnez une couleur dans la liste déroulante ou sélectionnez Expression et spécifiez une valeur hexadécimale correspondant à une couleur spécifique, par exemple ff6600 pour l'orange.  
   

@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017753"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'` Est le nom de n’importe quel objet, dans **sysobjects** ou type de toutes les données définies par l’utilisateur dans le **systypes** table. *nom* est **nvarchar (** 776 **)**, avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
+`[ @objname = ] 'name'` Est le nom de n’importe quel objet, dans **sysobjects** ou type de toutes les données définies par l’utilisateur dans le **systypes** table. *nom* est **nvarchar (** 776 **)** , avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
    
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|Nom de colonne.|  
         |**Type**|**nvarchar(** 128 **)**|Type de données de la colonne.|  
         |**Calculée**|**varchar(** 35 **)**|Indique si les valeurs dans la colonne sont calculées : Oui ou Non.|  
-        |**Longueur**|**Int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), la valeur sera afficher en tant que -1.|  
+        |**Longueur**|**Int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**), la valeur sera afficher en tant que -1.|  
         |**PREC**|**char(** 5 **)**|Précision de la colonne|  
         |**Échelle**|**char(** 5 **)**|Échelle de la colonne|  
         |**Nullable**|**varchar(** 35 **)**|Indique si les valeurs NULL sont autorisées dans la colonne : Oui ou Non.|  

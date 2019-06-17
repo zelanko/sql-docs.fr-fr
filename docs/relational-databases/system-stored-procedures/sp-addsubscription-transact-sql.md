@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998308"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
@@ -89,7 +89,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Nom de la base de données de destination dans laquelle les données répliquées seront placées. *destination_db* est **sysname**, avec NULL comme valeur par défaut. Lorsque la valeur NULL, *destination_db* est défini sur le nom de la base de données de publication. Pour les serveurs de publication Oracle, *destination_db* doit être spécifié. Pour un abonné non SQL Server, spécifiez une valeur (destination par défaut) pour *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- Type de synchronisation d'abonnement. *sync_type* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes :  
+ Type de synchronisation d'abonnement. *sync_type* est **nvarchar (255)** , et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -111,13 +111,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|L'abonnement doit être initialisé. Cette option est définie lorsque la valeur de *sync_type* est automatique.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Est le type d’abonnement. *subscription_type* est **nvarchar (4)**, avec push comme valeur par défaut. Peut avoir la valeur push ou pull (émission ou extraction de données). Les Agents de Distribution des abonnements envoyés et résider sur le serveur de distribution et les Agents de Distribution des abonnements par extraction sur l’abonné. *subscription_type* pull pour créer un abonnement par extraction nommé connu du serveur de publication. Pour plus d’informations, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md).  
+ Est le type d’abonnement. *subscription_type* est **nvarchar (4)** , avec push comme valeur par défaut. Peut avoir la valeur push ou pull (émission ou extraction de données). Les Agents de Distribution des abonnements envoyés et résider sur le serveur de distribution et les Agents de Distribution des abonnements par extraction sur l’abonné. *subscription_type* pull pour créer un abonnement par extraction nommé connu du serveur de publication. Pour plus d’informations, consultez [S’abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Les abonnements anonymes ne doivent pas utiliser cette procédure stockée.  
   
  [ @update_mode=] '*update_mode*'  
- Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
+ Est le type de mise à jour. *update_mode* est **nvarchar (30)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Notez que les valeurs synctran et queued tran ne sont pas autorisés si l’objet d’un abonnement de publication autorise DTS.  
   
  [ @loopback_detection=] '*loopback_detection*'  
- Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
+ Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -197,13 +197,13 @@ sp_addsubscription [ @publication = ] 'publication'
  Date à laquelle l’Agent de distribution cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- Invite de commandes facultative à exécuter. *optional_command_line* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
+ Invite de commandes facultative à exécuter. *optional_command_line* est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
  [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Détermine si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si la valeur est false, l'abonnement n'est pas enregistré par le Gestionnaire de synchronisation Windows. Si la valeur est true, l'abonnement est enregistré par le Gestionnaire de synchronisation Windows et il peut ensuite être synchronisé, sans qu'il soit nécessaire de démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non pris en charge pour les serveurs de publication Oracle.  
+ Détermine si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si la valeur est false, l'abonnement n'est pas enregistré par le Gestionnaire de synchronisation Windows. Si la valeur est true, l'abonnement est enregistré par le Gestionnaire de synchronisation Windows et il peut ensuite être synchronisé, sans qu'il soit nécessaire de démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non pris en charge pour les serveurs de publication Oracle.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
  Indique si l'Agent peut être activé à distance. *remote_agent_activation* est **bits** avec une valeur par défaut 0.  
@@ -224,7 +224,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Vous devez spécifier un mot de passe si *l’argument dts_package_name* est spécifié.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)**, avec une valeur par défaut du serveur de distribution. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
+ Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)** , avec une valeur par défaut du serveur de distribution. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
   
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -236,7 +236,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  *serveur de publication* ne doit pas être spécifié pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
  [ @backupdevicetype=] '*backupdevicetype*'  
- Indique le type d'unité de sauvegarde utilisé lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicetype* est **nvarchar (20)**, et peut prendre l’une des valeurs suivantes :  
+ Indique le type d'unité de sauvegarde utilisé lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicetype* est **nvarchar (20)** , et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -247,7 +247,7 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* est uniquement utilisé lorsque *sync_method*a pour valeur initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*'  
- Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est **nvarchar (1000)**, avec NULL comme valeur par défaut.  
+ Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est **nvarchar (1000)** , avec NULL comme valeur par défaut.  
   
  [ @mediapassword= ] '*mediapassword*'  
  Indique un mot de passe pour le support spécifié, si un mot de passe a été défini lors du formatage du support. *MEDIAPASSWORD* est **sysname**, avec NULL comme valeur par défaut.  
