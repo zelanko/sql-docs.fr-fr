@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273393"
 ---
 # <a name="usage-counting"></a>Nombre d’utilisations
@@ -60,7 +60,7 @@ ms.locfileid: "63273393"
   
  Le format de la valeur de nombre de l’utilisation de fichier est affiché dans le tableau suivant.  
   
-|Nom|Type de données|Données|  
+|Créer une vue d’abonnement|Type de données|Données|  
 |----------|---------------|----------|  
 |*full-path*|REG_DWORD|*nombre*|  
   

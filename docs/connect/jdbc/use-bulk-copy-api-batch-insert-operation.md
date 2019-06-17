@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 347ce28dc28016f95de2795bd2f5e491dd29e2d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737100"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802640"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
 
@@ -69,7 +69,7 @@ Il existe actuellement ces limitations s’appliquent à cette fonctionnalité.
 
 Si la requête échoue en raison de non erreurs concernant les « SQL server », le pilote enregistrera le message d’erreur et de secours à la logique d’origine pour l’insertion de lot.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Voici un exemple de code qui illustre le cas d’utilisation pour une opération d’insertion par lots dans Azure DW un millier de lignes, pour les deux scénarios (régulière vs API de copie en bloc).
 
@@ -140,6 +140,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Amélioration des performances et de la fiabilité avec le pilote JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266820"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planification de la prise en charge des navigateurs pour Reporting Services et Power View (Reporting Services 2014)
@@ -35,7 +35,7 @@ ms.locfileid: "63266820"
   
 ##  <a name="bkmk_powerview"></a> Scénarios de navigateur Power View
 
- La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et "**.rdlx**" fichiers utilisent des composants différents.  
+ La liste des navigateurs pris en charge et des versions de navigateur que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] prend en charge dépend du type de document ouvert. Les classeurs Excel 2013 et " **.rdlx**" fichiers utilisent des composants différents.  
   
 |Type de document|Environnement|Prise en charge des navigateurs|  
 |-------------------|-----------------|---------------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "63266820"
   
  Si l'utilisation de scripts n'est pas activée, vous recevez un message d'erreur similaire au suivant lors de l'ouverture d'un rapport :  
   
-- **Votre navigateur ne prend pas en charge les scripts ou a été configuré pour ne pas autoriser les scripts à exécuter. Cliquez ici pour afficher ce rapport sans les scripts**.  
+- **Votre navigateur ne prend pas en charge les scripts ou est configuré pour ne pas les autoriser. Cliquez ici pour afficher ce rapport sans les scripts**.  
   
  Si vous choisissez de visualiser le rapport sans la prise en charge des scripts, le rapport est rendu en HTML sans fonctionnalités d'afficheur de rapports, telles que la barre d'outils Rapport et l'explorateur de documents.  
   

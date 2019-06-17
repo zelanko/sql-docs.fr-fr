@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2b8e85b4ebfa679dda4e980df54cd11a06b1946d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4f894ae19a421b759870ceb597291b33fc1d2dec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805397"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801094"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Création d'un ensemble de lignes de paramètre table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "47805397"
   
  Le *pTableID* et *pUnkOuter* paramètres doivent être définis comme dans le scénario statique. Le pilote OLE DB pour SQL Server obtient ensuite les informations de type (informations et contraintes de colonne) du serveur et retourne un objet d’ensemble de lignes de paramètre table par le biais du paramètre *ppRowset*. Cette opération nécessite une communication avec le serveur, et par conséquent, ne fonctionne pas aussi bien que le scénario statique. Le scénario dynamique fonctionne uniquement avec des appels de procédure paramétrables.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Utiliser les paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0cc1f42d438c7216cf9b1f6f9ee9167747447e66
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700347"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800703"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et XML comme objets BLOB. La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
+  Le pilote OLE DB pour SQL Server expose l’interface **ISequentialStream** pour prendre en charge l’accès des consommateurs aux types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et XML comme objets BLOB. La méthode **Read** sur **ISequentialStream** permet au consommateur de récupérer un grand nombre de données en blocs maniables.  
   
  Pour obtenir un exemple illustrant cette fonctionnalité, consultez [définir les données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "47700347"
   
  Pour les types de données avec des valeurs volumineuses, le pilote OLE DB pour SQL Server vérifie les hypothèses sur la taille du type dans les interfaces **IRowset** et DDL. Les colonnes avec les types de données **varchar**, **nvarchar** et **varbinary**, et définies avec une taille maximale illimitée, sont représentées en tant que ISLONG dans les ensembles de lignes du schéma et les interfaces qui retournent les types de données des colonnes.  
   
- Le pilote OLE DB pour SQL Server expose les types **varchar(max)**, **varbinary(max)** et **nvarchar(max)** respectivement comme DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR.  
+ Le pilote OLE DB pour SQL Server expose les types **varchar(max)** , **varbinary(max)** et **nvarchar(max)** respectivement comme DBTYPE_STR, DBTYPE_BYTES et DBTYPE_WSTR.  
   
  Pour utiliser ces types, une application dispose des options suivantes :  
   
@@ -67,7 +67,7 @@ ms.locfileid: "47700347"
   
 -   [Prise en charge de la diffusion en continu pour les paramètres de sortie BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Programmation du pilote OLE DB pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
   

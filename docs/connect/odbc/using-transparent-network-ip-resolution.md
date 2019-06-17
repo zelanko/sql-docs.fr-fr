@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 94c7f34ebf66f4bf33acf51e44397a74de2367e0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610741"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801720"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Utilisation de la résolution d’adresses IP réseau transparente
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ TransparentNetworkIPResolution est une révision de la fonctionnalité existante
 * 1 : toutes les adresses IP sont tentées en parallèle
 * 2 : toutes les adresses IP sont tentées une après l’autre
 
-|transparentNetworkIPResolution|MultiSubnetFailover|Comportement|
+|TransparentNetworkIPResolution|MultiSubnetFailover|Comportement|
 |:-:|:-:|:-:|
 |(par défaut)|(par défaut)|0|
 |(par défaut)|Activé|1|
@@ -47,12 +47,12 @@ Mot clé|Valeurs|Valeur par défaut
 
 Le `SQL_COPT_SS_TNIR` attribut de préconnexion permet à une application contrôler ce paramètre par programmation :
 
-Attribut de connexion|   Taille et le Type|  Valeur par défaut| Valeur| Description
+Attribut de connexion|   Taille/Type|  Valeur par défaut| Valeur| Description
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` ou `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|Active ou désactive les TNIR.
 
 <a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recoveryconnectodbclinux-macodbc-driver-on-linux-support-for-high-availability-disaster-recoverymd"></a>Pour plus d’informations sur MultiSubnetFailover, consultez [pilote ODBC sur Linux et macOS - haute disponibilité et récupération d’urgence](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 --------------------------------------------------
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 * [Microsoft ODBC Driver for SQL Server sur Windows](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
 * [Clustering de sous-réseaux multiples SQL Server (SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)

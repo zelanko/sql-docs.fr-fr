@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059718"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Aide F1 de la Visionneuse du profil des données
@@ -31,13 +31,13 @@ ms.locfileid: "66059718"
  **Ouvrir**  
  Cliquez pour accéder au fichier enregistré qui contient la sortie de la tâche de profilage des données.  
   
- Volet**Profils**   
+ Volet**Profils**  
  Développez l’arborescence du volet **Profils** pour consulter les profils inclus dans la sortie. Sélectionnez un profil afin d'afficher les résultats de ce profil.  
   
- Volet**Message**   
+ Volet**Message**  
  Affiche des messages d'état.  
   
- Volet**Exploration vers le bas**   
+ Volet**Exploration vers le bas**  
  Affiche les lignes de données qui correspondent à une valeur dans la sortie, si la source de données utilisée par la tâche de profilage des données est disponible.  
   
  Par exemple, si vous affichez la sortie d’un profil de distribution de valeurs de colonne pour une colonne des états américains, le volet **Distribution de valeurs** peut contenir une ligne pour « WA ». Double-cliquez sur la ligne dans le volet **Distribution de valeurs** pour consulter les lignes de données pour lesquelles la valeur de la colonne d’état est « WA » dans le volet d’exploration.  

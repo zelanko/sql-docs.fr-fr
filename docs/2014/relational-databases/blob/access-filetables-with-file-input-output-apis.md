@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010354"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
@@ -92,7 +92,7 @@ ms.locfileid: "66010354"
   
 -   Ces modifications ne peuvent pas être restaurées.  
   
- Toutefois, il est également possible d’accéder à la colonne FILESTREAM d’un FileTable à l’aide de l’accès transactionnel FILESTREAM en appelant **OpenSqlFileStream()**. Ce type d'accès peut être entièrement transactionnel et respecte tous les niveaux de cohérences transactionnelles actuellement pris en charge.  
+ Toutefois, il est également possible d’accéder à la colonne FILESTREAM d’un FileTable à l’aide de l’accès transactionnel FILESTREAM en appelant **OpenSqlFileStream()** . Ce type d'accès peut être entièrement transactionnel et respecte tous les niveaux de cohérences transactionnelles actuellement pris en charge.  
   
 ###  <a name="concurrency"></a> Contrôle d'accès concurrentiel  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique le contrôle d'accès concurrentiel pour l'accès de FileTable parmi les applications de système de fichiers, ainsi qu'entre applications de système de fichiers et applications [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce contrôle d'accès concurrentiel s'effectue en prenant des verrous appropriés sur les lignes FileTable.  

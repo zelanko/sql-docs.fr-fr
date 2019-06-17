@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63241432"
 ---
 # <a name="c-to-sql-timestamp"></a>C en SQL : Horodateur
@@ -41,6 +41,6 @@ L’identificateur pour le type de données ODBC C timestamp est :
   
  Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TIMESTAMP, consultez [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données timestamp C sont converties en données de caractères SQL, les données de caractères résultant sont dans la «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...*] « format.  
+ Lorsque les données timestamp C sont converties en données de caractères SQL, les données de caractères résultant sont dans la «*aaaa*-*mm*-*jj* *hh*:*mm*:*ss*[.*f...* ] « format.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données à partir du type de données timestamp C et suppose que la taille du tampon de données est la taille du type de données timestamp C. La valeur de longueur / d’indicateur est passée dans le *StrLen_or_Ind* argument dans **SQLPutData** et dans la mémoire tampon spécifiée avec la *StrLen_or_IndPtr* argument dans **SQLBindParameter**. Le tampon de données est spécifié avec la *DataPtr* argument dans **SQLPutData** et *ParameterValuePtr* argument dans **SQLBindParameter**.

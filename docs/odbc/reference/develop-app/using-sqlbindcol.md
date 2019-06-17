@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208477"
 ---
 # <a name="using-sqlbindcol"></a>Utilisation de SQLBindCol
@@ -35,7 +35,7 @@ L’application lie les colonnes en appelant **SQLBindCol**. Cette fonction est 
   
  Par exemple, le code suivant lie les variables aux colonnes vendeur et CustID. Dans les données pour les colonnes seront renvoyées *vendeur* et *CustID*. Étant donné que *vendeur* est une mémoire tampon de caractères, l’application spécifie sa longueur en octets (11) afin que le pilote peut déterminer s’il faut tronquer les données. La longueur d’octet de retourné du titre, ou si sa valeur est NULL, seront retournées dans *SalesPersonLenOrInd*.  
   
- Étant donné que *CustID* est une variable de type entier et a résolu longueur, il est inutile de spécifier sa longueur en octets ; le pilote suppose qu’il est **sizeof (** SQLUINTEGER **)**. La longueur d’octet du client retourné ID des données, ou si sa valeur est NULL, seront retournées dans *CustIDInd*. Notez que l’application est intéressée uniquement si le salaire est NULL, car la longueur d’octet est toujours **sizeof (** SQLUINTEGER **)**.  
+ Étant donné que *CustID* est une variable de type entier et a résolu longueur, il est inutile de spécifier sa longueur en octets ; le pilote suppose qu’il est **sizeof (** SQLUINTEGER **)** . La longueur d’octet du client retourné ID des données, ou si sa valeur est NULL, seront retournées dans *CustIDInd*. Notez que l’application est intéressée uniquement si le salaire est NULL, car la longueur d’octet est toujours **sizeof (** SQLUINTEGER **)** .  
   
 ```  
 SQLCHAR       SalesPerson[11];  

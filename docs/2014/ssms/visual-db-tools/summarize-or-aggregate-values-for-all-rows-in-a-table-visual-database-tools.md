@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204612"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Synthétiser ou regrouper des valeurs de toutes les lignes d'une table (Visual Database Tools)
@@ -57,7 +57,7 @@ FROM titles
   
      Le Concepteur de requêtes et de vues assigne automatiquement un alias de colonne à la colonne que vous agrégez. Il est possible de remplacer cet alias par un autre plus significatif. Pour plus d’informations, consultez [Créer des alias de colonnes &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  Dans le **Group By** colonne de la grille, sélectionnez l’approprié fonction d’agrégation, telles que : **Somme**, **Avg**, **Min**, **Max**, **nombre**. Pour n’agréger que des lignes uniques dans le jeu de résultats, choisissez une fonction d’agrégation avec l’option DISTINCT, telle que **Min Distinct**. Évitez des options comme **Group By**, **Expression**ou **Where**, car ces options ne s’appliquent pas quand vous agrégez toutes les lignes.  
+4.  Dans la colonne de la grille **Group By**, sélectionnez la fonction d’agrégation adéquate, par exemple : **Sum**, **Avg**, **Min**, **Max**, **Count**. Pour n’agréger que des lignes uniques dans le jeu de résultats, choisissez une fonction d’agrégation avec l’option DISTINCT, telle que **Min Distinct**. Évitez des options comme **Group By**, **Expression**ou **Where**, car ces options ne s’appliquent pas quand vous agrégez toutes les lignes.  
   
      Le Concepteur de requêtes et de vues remplace le nom de colonne dans l’instruction figurant dans le [volet SQL](sql-pane-visual-database-tools.md) par le nom de la fonction d’agrégation que vous spécifiez. Par exemple, l'instruction SQL peut se présenter de la manière suivante :  
   

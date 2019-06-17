@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63184247"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Créer manuellement des jointures réflexives (Visual Database Tools)
@@ -116,7 +116,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Cliquez avec le bouton droit sur la ligne de jointure et cliquez sur **Propriétés** dans le menu contextuel.  
   
-4.  Dans la fenêtre Propriétés, cliquez sur **Condition et type de jointure**, puis cliquez sur le bouton de sélection **(…)**, à droite de la propriété.  
+4.  Dans la fenêtre Propriétés, cliquez sur **Condition et type de jointure**, puis cliquez sur le bouton de sélection **(…)** , à droite de la propriété.  
   
 5.  Dans la [boîte de dialogue Joindre](join-dialog-box-visual-database-tools.md) , modifiez éventuellement l’opérateur de comparaison entre les clés primaires. Indiquez par exemple l'opérateur inférieur à (<).  
   

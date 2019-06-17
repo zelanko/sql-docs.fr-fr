@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274346"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -137,7 +137,7 @@ ms.locfileid: "63274346"
   
 -   paramètre de l'Agent de Distribution **-SubscriptionStreams** et paramètre de l'Agent de lecture du journal **-MaxCmdsInTran**;  
   
--   propriétés d'article **@destination_owner** et **@destination_table**.  
+-   propriétés d'article **@destination_owner** et **@destination_table** .  
 
 -   La réplication transactionnelle d’égal à égal ne prend pas en charge la création d’un abonnement transactionnel à sens unique à une publication d’égal à égal.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274346"
   
 -   La propriété d’article **@replicate_ddl** requiert la valeur `true`; **@identityrangemanagementoption** requiert une valeur de `manual`; et **@status** nécessite que l’option **24** est définie.  
   
--   La valeur de propriétés de l’article **@ins_cmd**, **@del_cmd**, et **@upd_cmd** ne peut pas être définie sur `SQL`.  
+-   La valeur de propriétés de l’article **@ins_cmd** , **@del_cmd** , et **@upd_cmd** ne peut pas être définie sur `SQL`.  
   
 -   La propriété d’abonnement **@sync_type** requiert une valeur de `none` ou `automatic`.  
   

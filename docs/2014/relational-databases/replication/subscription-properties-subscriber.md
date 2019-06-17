@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250272"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propriétés de l’abonnement réplication SQL Server 
@@ -39,7 +39,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
 ### <a name="options-for-all-subscriptions"></a>Options pour tous les abonnements  
  **Sécurité**  
- Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés (**...**) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur le serveur de distribution. Pour modifier le compte sous lequel l'Agent de distribution ou de fusion établit les connexions avec l'abonné, cliquez sur **Connexion de l'Abonné**, puis sur le bouton des propriétés (**...**).  
+ Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés ( **...** ) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur le serveur de distribution. Pour modifier le compte sous lequel l'Agent de distribution ou de fusion établit les connexions avec l'abonné, cliquez sur **Connexion de l'Abonné**, puis sur le bouton des propriétés ( **...** ).  
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -52,7 +52,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()** . Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()** , consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -96,11 +96,11 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
  Détermine s'il est possible de synchroniser l'abonnement à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Sécurité**  
- Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés (**...**) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur l'Abonné. Les options de sécurité des connexions dépendent du type d'abonnement :  
+ Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés ( **...** ) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur l'Abonné. Les options de sécurité des connexions dépendent du type d'abonnement :  
   
--   Pour les abonnements à une publication transactionnelle : pour modifier le compte sous lequel l'Agent de distribution établit les connexions au serveur de distribution, cliquez sur **Connexion du serveur de distribution**, puis sur le bouton des propriétés (**...**).    
--   Pour les abonnements avec mise à jour immédiate à une publication transactionnelle : outre la connexion au serveur de distribution décrite ci-dessus, vous pouvez modifier la méthode utilisée pour propager les modifications de l'Abonné au serveur de publication : cliquez sur **Connexion du serveur de publication**, puis sur le bouton des propriétés (**...**).  
--   Pour les abonnements aux publications de fusion, cliquez **Connexion du serveur de publication**, puis sur le bouton des propriétés (**...**).  
+-   Pour les abonnements à une publication transactionnelle : pour modifier le compte sous lequel l'Agent de distribution établit les connexions au serveur de distribution, cliquez sur **Connexion du serveur de distribution**, puis sur le bouton des propriétés ( **...** ).    
+-   Pour les abonnements avec mise à jour immédiate à une publication transactionnelle : outre la connexion au serveur de distribution décrite ci-dessus, vous pouvez modifier la méthode utilisée pour propager les modifications de l'Abonné au serveur de publication : cliquez sur **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **...** ).  
+-   Pour les abonnements aux publications de fusion, cliquez **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **...** ).  
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -110,7 +110,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
   
 ### <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la réplication de fusion évalue une des deux systèmes fonctions (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu’un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()** . Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()** , consultez [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -126,7 +126,7 @@ Cette section fournit des informations sur le **propriétés de l’abonnement**
  Si vous sélectionnez la valeur **True** pour l'option **Utiliser la synchronisation Web**:  
   
 -   Entrez l'adresse complète du serveur IIS dans le champ **Adresse du serveur Web**.   
--   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés (**...**) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.   
+-   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés ( **...** ) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.   
 -   Modifiez la valeur **Délai d'attente du serveur Web** si nécessaire. Ce délai d'attente représente le temps (en secondes) écoulé avant l'expiration d'une demande de synchronisation Web.  
   
  Pour plus d'informations sur la configuration, consultez [Configure Web Synchronization](configure-web-synchronization.md).  

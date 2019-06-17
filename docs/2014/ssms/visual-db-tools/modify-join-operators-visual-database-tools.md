@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232846"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifier des opérateurs de jointure (Visual Database Tools)
@@ -28,7 +28,7 @@ ms.locfileid: "63232846"
   
 1.  Dans le [volet Schéma](diagram-pane-visual-database-tools.md), cliquez avec le bouton droit sur la ligne de jointure à modifier, puis choisissez **Propriétés** dans le menu contextuel.  
   
-2.  Dans la fenêtre Propriété, cliquez sur **Condition et type de jointure** et cliquez sur le bouton de sélection **(...)**, à droite de la propriété.  
+2.  Dans la fenêtre Propriété, cliquez sur **Condition et type de jointure** et cliquez sur le bouton de sélection **(...)** , à droite de la propriété.  
   
 3.  Dans la boîte de dialogue **Joindre** , sélectionnez un nouvel opérateur.  
   

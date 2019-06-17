@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72e004e6fd41ee74643fc05ec9020e6ac1933e09
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63186251"
 ---
 # <a name="affected-odbc-components"></a>Composants ODBC affectés
 Compatibilité descendante décrit comment les applications, le Gestionnaire de pilotes et les pilotes sont affectés par l’introduction d’une nouvelle version du Gestionnaire de pilotes. Cela affecte les applications et le pilote lorsqu’ou pour les deux d'entre eux restent dans l’ancienne version. Il existe, par conséquent, trois types de compatibilité descendante à prendre en compte, comme indiqué dans le tableau suivant.  
   
-|Type|Version de DM|Version de l’application|Version du pilote|  
+|type|Version de DM|Version de l’application|Version du pilote|  
 |----------|-------------------|----------------------------|-----------------------|  
 |Compatibilité descendante du Gestionnaire de pilotes|3 *.x*|2.*x*|2.*x*|  
 |Compatibilité descendante de pilote [1]|3 *.x*|2.*x*|3.*x*|  

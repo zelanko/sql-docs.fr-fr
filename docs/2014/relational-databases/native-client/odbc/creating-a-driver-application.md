@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205266"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Création d'une application de pilote ODBC SQL Server Native Client
@@ -66,7 +66,7 @@ ms.locfileid: "63205266"
   
 -   Effectuer des opérations de copie en bloc  
   
--   Gérer les données de grande taille (**varchar (max)**, **nvarchar (max)**, et **varbinary (max)** colonnes) opérations  
+-   Gérer les données de grande taille (**varchar (max)** , **nvarchar (max)** , et **varbinary (max)** colonnes) opérations  
   
 -   Utiliser la logique de reconnexion pour faciliter le basculement lorsque la mise en miroir de bases de données est configurée  
   

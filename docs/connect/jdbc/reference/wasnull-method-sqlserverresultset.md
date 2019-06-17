@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: d37f80ef-d72c-4429-ada3-1d685bdab6d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8411c007d8ad7fa68836460bbbc436487458568f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4e8ae304208a6b4cf9c76fa26920ea16d45faca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802533"
 ---
 # <a name="wasnull-method-sqlserverresultset"></a>wasNull, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,10 +41,10 @@ public boolean wasNull()
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode wasNull est spécifiée par la méthode wasNull de l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   
