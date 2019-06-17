@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996091"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
@@ -56,7 +56,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Arguments  
 `[ @dbname = ] 'dbname'` Est la chaîne qui spécifie la base de données de destination abonnement par nom. *dbname* est **sysname**, sans valeur par défaut.  
   
-`[ @filename = ] 'filename'` Est le nom et l’emplacement physique du MDF primaire (**master** fichier de données). *nom de fichier* est **nvarchar (260)**, sans valeur par défaut.  
+`[ @filename = ] 'filename'` Est le nom et l’emplacement physique du MDF primaire (**master** fichier de données). *nom de fichier* est **nvarchar (260)** , sans valeur par défaut.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` Est le mode de sécurité de l’abonné à utiliser lors de la connexion à un abonné lors de la synchronisation. *subscriber_security_mode* est **int**, avec NULL comme valeur par défaut.  
   
@@ -91,14 +91,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort. Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
+`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
   
 `[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut. La valeur de *job_password* doit être inférieure à 120 caractères Unicode.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` Est le mot de passe d’une clé de principale définie par l’utilisateur de base de données. *db_master_key_password* est **nvarchar (524)**, avec NULL comme valeur par défaut. Si *db_master_key_password* n’est pas spécifié, une clé principale de base de données existante sera supprimée et recréée.  
+`[ @db_master_key_password = ] 'db_master_key_password'` Est le mot de passe d’une clé de principale définie par l’utilisateur de base de données. *db_master_key_password* est **nvarchar (524)** , avec NULL comme valeur par défaut. Si *db_master_key_password* n’est pas spécifié, une clé principale de base de données existante sera supprimée et recréée.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  

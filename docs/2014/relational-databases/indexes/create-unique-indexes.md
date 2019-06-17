@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162351"
 ---
 # <a name="create-unique-indexes"></a>Créer des index uniques
@@ -110,17 +110,17 @@ ms.locfileid: "63162351"
   
 6.  Sélectionnez le nouvel index dans la zone de texte **Index ou clé unique/primaire sélectionné(e)** .  
   
-7.  Dans la grille principale, sous **(Général)**, sélectionnez **Type** puis choisissez **Index** dans la liste.  
+7.  Dans la grille principale, sous **(Général)** , sélectionnez **Type** puis choisissez **Index** dans la liste.  
   
-8.  Sélectionnez **Colonnes**, puis cliquez sur les points de suspension **(…)**.  
+8.  Sélectionnez **Colonnes**, puis cliquez sur les points de suspension **(…)** .  
   
 9. Dans la boîte de dialogue **Colonnes d'index** , sous **Nom de la colonne**, sélectionnez les colonnes que vous souhaitez indexer. Vous pouvez sélectionner jusqu'à 16 colonnes. Si vous souhaitez que les performances soient optimales, évitez d'en sélectionner plus de deux par index. Pour chaque colonne sélectionnée, vous pouvez indiquer si l'index organise ses valeurs en ordre croissant ou décroissant.  
   
 10. Lorsque toutes les colonnes sont sélectionnées pour l'index, cliquez sur **OK**.  
   
-11. Dans la grille, sous **(Général)**, sélectionnez **Est unique** , puis choisissez **Oui** dans la liste.  
+11. Dans la grille, sous **(Général)** , sélectionnez **Est unique** , puis choisissez **Oui** dans la liste.  
   
-12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **ignorer les clés dupliquées** , puis **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
+12. Facultatif : Dans la grille principale, sous **Concepteur de tables**, sélectionnez **ignorer les clés dupliquées** , puis **Oui** dans la liste. Effectuez cette opération si vous souhaitez ignorer les tentatives d'ajout de données qui créeraient une clé dupliquée dans l'index unique.  
   
 13. Cliquez sur **Fermer**.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "63162351"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index unique.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
 6.  Activez la case à cocher **Unique** .  
   
-7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+7.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 8.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases correspondant à la ou aux colonnes de table à ajouter à l’index unique.  
   

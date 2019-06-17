@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714186"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62714186"
 |**colid**|**smallint**|Identifie une colonne dans un article.|  
 |**is_udt**|**bit**|Indique si la colonne correspond à une colonne de type de données défini par l'utilisateur (UDT, User-defined Data Type). La valeur **1** indique une colonne UDT.|  
 |**is_xml**|**bit**|Indique si la colonne est une **xml** colonne. La valeur **1** indique une colonne xml.|  
-|**is_max**|**bit**|Indique si la colonne est une colonne de type de données de valeur élevée, **varchar (max)**, **nvarchar (max)**, et **varbinary (max)**. La valeur **1** indique une colonne de valeur élevée.|  
+|**is_max**|**bit**|Indique si la colonne est une colonne de type de données de valeur élevée, **varchar (max)** , **nvarchar (max)** , et **varbinary (max)** . La valeur **1** indique une colonne de valeur élevée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

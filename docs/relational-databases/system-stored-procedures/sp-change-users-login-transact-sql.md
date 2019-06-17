@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997083"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
@@ -46,7 +46,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="arguments"></a>Arguments  
  [ @Action= ] '*action*'  
- Décrit l'action à effectuer par la procédure. *action* is **varchar(10)**. *action* peut avoir l’une des valeurs suivantes.  
+ Décrit l'action à effectuer par la procédure. *action* is **varchar(10)** . *action* peut avoir l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

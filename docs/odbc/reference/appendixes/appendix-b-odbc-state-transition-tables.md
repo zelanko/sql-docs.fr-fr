@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026904"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Annexe B : Tableaux des transitions d’état ODBC
@@ -47,7 +47,7 @@ Les tableaux de cette annexe montrent comment les fonctions ODBC provoquent des 
   
 -   **E**  
 
-     **_n_**  , **C_n_**, **S_n_**, ou **D_n_** -l’état de l’environnement, connexion, instruction ou descripteur se déplace vers l’état spécifié.  
+     **_n_**  , **C_n_** , **S_n_** , ou **D_n_** -l’état de l’environnement, connexion, instruction ou descripteur se déplace vers l’état spécifié.  
  
 -   **(IH)**  -Un handle non valide a été passé à la fonction. Si le handle a été un handle null ou un handle valide d’un type incorrect - par exemple, un handle de connexion a été passé lorsqu’un descripteur d’instruction a été nécessaire : la fonction ne retourne SQL_INVALID_HANDLE ; Sinon, le comportement est indéfini et probablement irrécupérable. Cette erreur apparaît uniquement lorsqu’il est le résultat n’est possible de l’appel de la fonction dans l’état spécifié. Cette erreur ne modifie pas l’état et est toujours détectée par le Gestionnaire de pilotes, comme indiqué par les parenthèses.  
   

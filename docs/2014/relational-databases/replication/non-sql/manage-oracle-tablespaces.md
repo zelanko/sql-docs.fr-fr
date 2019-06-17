@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022299"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gérer des espaces disque logiques Oracle
@@ -31,15 +31,15 @@ ms.locfileid: "63022299"
   
 -   Utilisez [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Pour utiliser **sp_changearticle**, spécifiez les éléments suivants :  
   
-    -   Nom du serveur de publication Oracle pour le paramètre **@publisher**.  
+    -   Nom du serveur de publication Oracle pour le paramètre **@publisher** .  
   
-    -   Nom du serveur de publication Oracle pour le paramètre **@publication**.  
+    -   Nom du serveur de publication Oracle pour le paramètre **@publication** .  
   
-    -   Nom de l'article pour le paramètre **@article**.  
+    -   Nom de l'article pour le paramètre **@article** .  
   
-    -   Une valeur d'espace disque logique pour le paramètre **@property**.  
+    -   Une valeur d'espace disque logique pour le paramètre **@property** .  
   
-    -   Le nom de l'espace disque logique pour le paramètre **@value**.  
+    -   Le nom de l'espace disque logique pour le paramètre **@value** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](configure-an-oracle-publisher.md)   

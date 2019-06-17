@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832954"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
@@ -76,7 +76,7 @@ ms.locfileid: "62832954"
  Affiche le nom de la table sélectionnée. Cette option est en lecture seule.  
   
 #### <a name="keycolumns-options"></a>Options KeyColumns  
- Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)**.  
+ Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)** .  
   
  Pour plus d'informations, consultez la section « Fonctionnement de la sélection des colonnes pour la propriété KeyColumns » plus haut dans cette rubrique.  
   
