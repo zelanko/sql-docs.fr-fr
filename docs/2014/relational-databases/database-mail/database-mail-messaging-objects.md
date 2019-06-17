@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917702"
 ---
 # <a name="database-mail-messaging-objects"></a>Objets de messagerie de base de données
@@ -32,7 +32,7 @@ ms.locfileid: "62917702"
   
  Ces objets sont l'interface de la messagerie de base de données au sein de la base de données hôte de messagerie. D'autres objets sont installés pour implémenter les fonctions proposées par les objets répertoriés ci-dessus. Cependant, ces objets sont réservés à une utilisation interne.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|type|Description|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|Liste tous les messages soumis à la messagerie de base de données.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|Liste les messages sur le comportement du [Database Mail External Program](database-mail-external-program.md).|  

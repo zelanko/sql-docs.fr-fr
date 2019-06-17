@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62829462"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
@@ -73,7 +73,7 @@ ms.locfileid: "62829462"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Transférer des objets entre des instances de SQL Server  
  La tâche de transfert d'objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge une source et une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  La tâche génère un événement d'information qui indique l'objet transféré et un événement d'avertissement lorsque qu'un objet est remplacé. Un événement d'information est également généré pour les actions telles que la troncation des tables de base de données.  
   
  La tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’indique pas les stades intermédiaires de l’avancement du transfert des objets : elle signale uniquement la tâche comme réalisée à 0 % ou à 100 %.  

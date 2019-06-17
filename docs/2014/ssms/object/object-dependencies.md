@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032415"
 ---
 # <a name="object-dependencies"></a>Dépendances d'objet
@@ -27,10 +27,10 @@ ms.locfileid: "63032415"
  Utilisez cette boîte de dialogue pour comprendre les dépendances avant de modifier ou de supprimer l'objet sélectionné.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Les objets qui dépendent de**_\<objet sélectionné >_  
+ **Les objets qui dépendent de** _\<objet sélectionné >_  
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et qui dépendent de l'objet sélectionné.  
   
- **Objets dont dépend**_\<objet sélectionné >_**dépend**  
+ **Objets dont dépend** _\<objet sélectionné >_ **dépend**  
  Cliquez sur ce bouton pour afficher la liste des objets dont les dépendances sont suivies et dont dépend l'objet sélectionné.  
   
  **Dépendances**  

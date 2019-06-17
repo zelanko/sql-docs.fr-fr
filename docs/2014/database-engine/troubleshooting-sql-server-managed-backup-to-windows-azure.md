@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842576"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842576"
   
      Si SQL Server ne répond plus, des événements sont consignés dans le canal d'administration.  Exemple du journal des événements :  
   
-     *Erreur SQL (moteur ne répond ne pas ou obtient sqlException : SqlException :*   
-     *trace de la pile, le message et code d’erreur seront affichera dans un événement étendu du canal admin, avec des informations supplémentaires, telles que :*   
+     *Erreur SQL (moteur ne répond ne pas ou obtient sqlException : SqlException :*    
+     *trace de la pile, le message et code d’erreur seront affichera dans un événement étendu du canal admin, avec des informations supplémentaires, telles que :*    
     *« Probablement rencontre des problèmes de connectivité avec SQL Server. Base de données est ignorée dans l’itération actuelle »*  
   
 -   **L’Agent SQL ne répond plus ou cesse de fonctionner lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est en cours d’exécution :**  

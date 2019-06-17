@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997816"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Est une propriété à modifier pour le serveur de publication donné. *propriété* est **sysname** et peut prendre l’une des valeurs suivantes.  
   
-`[ @value = ] 'value'` Est la valeur pour la propriété donnée. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la valeur pour la propriété donnée. *valeur* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` Est requis pour l’instance managée de base de données SQL, doit correspondre à la clé d’accès pour le volume de stockage de base de données SQL Azure. 
 

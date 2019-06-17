@@ -33,10 +33,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872431"
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
@@ -149,7 +149,7 @@ ms.locfileid: "62872431"
   
 ### <a name="security"></a>Sécurité  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Autorise un principal de la base de données à utiliser un profil de messagerie de base de données.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Supprime l'autorisation d'utiliser un profil de messagerie de base de données public ou privé accordée à un utilisateur de base de données.|  

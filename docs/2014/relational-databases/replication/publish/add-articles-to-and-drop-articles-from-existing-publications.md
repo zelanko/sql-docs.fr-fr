@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 064b6e915b2b1fbc7de1ef9b280bc406d7fc92e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020735"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
@@ -33,7 +33,7 @@ ms.locfileid: "63020735"
  L'ajout d'un article se déroule comme suit : ajout de l'article à la publication, création d'un nouvel instantané de la publication, synchronisation de l'abonnement pour appliquer le schéma et les données du nouvel article.  
   
 > [!NOTE]
->  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
+>  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article** . Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
 1.  Ajoutez un ou plusieurs articles à l'aide de l'une des méthodes suivantes :  
   

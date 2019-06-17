@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62902438"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
@@ -222,12 +222,12 @@ ms.locfileid: "62902438"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Monétaire (Currency)||||  
+|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
@@ -237,7 +237,7 @@ ms.locfileid: "62902438"
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Décimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|Unique||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
@@ -255,7 +255,7 @@ ms.locfileid: "62902438"
 ## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Comparaison des performances des différentes techniques de conversion de type de données dans SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), sur blogs.msdn.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données dans des flux de données](data-in-data-flows.md)  
   
   

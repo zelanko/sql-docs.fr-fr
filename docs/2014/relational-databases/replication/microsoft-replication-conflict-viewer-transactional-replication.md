@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62714866"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visionneuse des conflits de réplication de Microsoft (réplication transactionnelle)
@@ -60,11 +60,11 @@ ms.locfileid: "62714866"
  **Afficher les cinq premières colonnes et les autres colonnes qui contiennent des données conflictuelles**  
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
- **Informations sur la colonne** (**…**)  
+ **Informations sur la colonne** ( **…** )  
  Cliquez pour afficher les informations de colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**.  
   
  **Consigner les détails de ce conflit**  
- Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration (**...**) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
+ Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration ( **...** ) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

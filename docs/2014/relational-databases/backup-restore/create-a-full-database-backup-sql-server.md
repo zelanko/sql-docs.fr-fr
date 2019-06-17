@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922260"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
@@ -184,15 +184,15 @@ ms.locfileid: "62922260"
   
      BACKUP DATABASE *database*  
   
-     TO *unité_sauvegarde* [ **,**...*n* ]  
+     TO *unité_sauvegarde* [ **,** ...*n* ]  
   
-     [ WITH *options_with* [ **,**...*o* ] ] ;  
+     [ WITH *options_with* [ **,** ...*o* ] ] ;  
   
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Base de données à sauvegarder|  
-    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=**_nom_unité_sauvegarde_physique_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *options_with* [ **,**...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
+    |*unité_sauvegarde* [ **,** ...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=** _nom_unité_sauvegarde_physique_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *options_with* [ **,** ...*o* ]|Spécifie éventuellement une ou plusieurs options supplémentaires, *o*. Pour obtenir des informations de base sur les options, consultez l'étape 2.|  
   
 2.  Spécifiez éventuellement une ou plusieurs options WITH. Quelques options WITH de base sont décrites ici. Pour plus d’informations sur toutes les options WITH, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -204,10 +204,10 @@ ms.locfileid: "62922260"
          ENCRYPTION (ALGORITHM,  SERVER CERTIFICATE |ASYMMETRIC KEY)  
          Dans SQL Server 2014 ou les versions ultérieures, spécifiez l'algorithme de chiffrement à utiliser, ainsi que le certificat ou la clé asymétrique pour sécuriser le chiffrement.  
   
-         DESCRIPTION **=** { **'*`text`*'** | **@**_text_variable_ }  
+         DESCRIPTION **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          Spécifie le texte au format libre servant à décrire le jeu de sauvegarde. La chaîne peut compter jusqu'à 255 caractères.  
   
-         NAME **=** { *nom_jeu_sauvegarde* | **@**_var_nom_jeu_sauvegarde_ }  
+         NAME **=** { *nom_jeu_sauvegarde* |  **@** _var_nom_jeu_sauvegarde_ }  
          Spécifie le nom du jeu de sauvegarde. Les noms peuvent contenir jusqu'à 128 caractères. Si l'option NAME n'est pas spécifiée, le nom reste vide.  
   
     -   Options WITH de base relatives au jeu de sauvegarde :  
@@ -216,7 +216,7 @@ ms.locfileid: "62922260"
   
          Une autre méthode pour formater le support de sauvegarde consiste à utiliser l'option FORMAT :  
   
-         FORMAT [ **,** MEDIANAME**=** { *nom_support* | **@**_variable_nom_support_ } ] [ **,** MEDIADESCRIPTION **=** { *texte* | **@**_variable_texte_ } ]  
+         FORMAT [ **,** MEDIANAME **=** { *nom_support* |  **@** _variable_nom_support_ } ] [ **,** MEDIADESCRIPTION **=** { *texte* |  **@** _variable_texte_ } ]  
          Utilisez la clause FORMAT si vous utilisez le support pour la première fois ou si vous souhaitez écraser toutes les données existantes. Assignez éventuellement un nom et une description au nouveau support.  
   
         > [!IMPORTANT]  

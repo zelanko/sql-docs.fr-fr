@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022591"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
@@ -41,7 +41,7 @@ ms.locfileid: "63022591"
 > [!NOTE]  
 >  La suppression du synonyme public **MSSQLSERVERDISTRIBUTOR** et de l’utilisateur de réplication Oracle configuré à l’aide de l’option **CASCADE** supprime tous les objets de réplication du serveur de publication Oracle.  
   
- Un exemple de script est fourni pour vous aider à configurer le schéma utilisateur de réplication Oracle. Ce script est disponible dans le répertoire suivant, après l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<lecteur>*:\\\Program Files\Microsoft SQL Server\\*\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Il est également fourni dans la rubrique [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Un exemple de script est fourni pour vous aider à configurer le schéma utilisateur de réplication Oracle. Ce script est disponible dans le répertoire suivant, après l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<lecteur>* :\\\Program Files\Microsoft SQL Server\\ *\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Il est également fourni dans la rubrique [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Connectez-vous à la base de données Oracle à l'aide d'un compte possédant des droits DBA, puis exécutez le script. Ce script vous invite à entrer le nom d'utilisateur et le mot de passe du schéma utilisateur administratif de réplication, ainsi que l'espace de table par défaut dans lequel créer les objets (l'espace de table doit déjà exister dans la base de données Oracle). Pour plus d’informations sur la spécification d’autres espaces de table pour des objets, consultez [Gérer des espaces disque logiques Oracle](manage-oracle-tablespaces.md). Choisissez un nom d'utilisateur et un mot de passe fort et n'oubliez pas de les noter car ces informations vous seront demandées par la suite lorsque vous configurerez la base de données Oracle en tant que serveur de publication. Il est recommandé de n'utiliser le schéma que pour les objets requis par la réplication et de ne pas y créer de tables à publier.  
   

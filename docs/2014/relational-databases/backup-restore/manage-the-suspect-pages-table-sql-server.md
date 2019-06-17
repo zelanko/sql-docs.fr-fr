@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921954"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
@@ -66,7 +66,7 @@ ms.locfileid: "62921954"
   
      La table **suspect_pages** contient une ligne pour chaque page dans laquelle une erreur 824 (avec une limite de 1 000 lignes) s’est produite. Le tableau suivant présente les erreurs consignées dans la colonne **event_type** de la table **suspect_pages** .  
   
-    |Description de l'erreur|Valeur**event_type** |  
+    |Description de l'erreur|Valeur**event_type**|  
     |-----------------------|---------------------------|  
     |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
     |Somme de contrôle incorrecte|2|  

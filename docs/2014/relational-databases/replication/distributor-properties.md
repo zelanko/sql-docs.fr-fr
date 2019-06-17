@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721398"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propriétés du serveur de distribution de réplication SQL Server
@@ -34,7 +34,7 @@ Cette rubrique décrit les propriétés présentes dans le **général**, **édi
  **Bases de données**  
  La grille de propriétés **Bases de données** répertorie le nom et les propriétés de rétention des bases de données de distribution se trouvant sur le serveur de distribution. La**rétention des transactions** est la durée pendant laquelle les transactions sont stockées en vue de leur réplication transactionnelle (la rétention des transactions est également connue sous le nom de rétention de distribution). La**rétention des historiques** est la durée pendant laquelle les métadonnées des historiques sont stockées en vue de leur réplication de quelque type que ce soit. Pour plus d’informations sur la rétention de la distribution, consultez [Expiration et désactivation des abonnements](subscription-expiration-and-deactivation.md).  
   
- Cliquez sur le bouton représenté par des points de suspension (**...**) dans la grille des propriétés **Bases de données** pour ouvrir la boîte de dialogue **Propriétés de la base de données de distribution** .  
+ Cliquez sur le bouton représenté par des points de suspension ( **...** ) dans la grille des propriétés **Bases de données** pour ouvrir la boîte de dialogue **Propriétés de la base de données de distribution** .  
   
  **Nouveau**  
  Permet de créer une base de données de distribution.  

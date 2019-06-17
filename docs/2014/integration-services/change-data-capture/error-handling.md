@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62835646"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
@@ -38,7 +38,7 @@ ms.locfileid: "62835646"
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|L'instance Oracle CDC ne s'exécute pas. Le sous-état ABORTED indique que l'instance Oracle CDC était ACTIVE, puis s'est arrêtée de façon inattendue.<br /><br /> Le sous-état ABORTED est établi par l'instance principale de service de capture de données modifiées Oracle lorsqu'elle détecte que l'instance Oracle CDC ne s'exécute pas alors que son état est ACTIVE.|  
 |d’erreur|0|1|L'instance Oracle CDC ne s'exécute pas. L'état ERROR indique que l'instance de capture de données modifiées était ACTIVE, mais a rencontré une erreur qui n'est pas récupérable et s'est désactivée elle-même. L'état ERROR contient les codes de sous-état suivants :<br /><br /> MISCONFIGURED : Une erreur de configuration irrécupérable a été détectée.<br /><br /> PASSWORD-REQUIRED : Il n'existe aucun mot de passe défini pour le concepteur de capture de données modifiées pour Oracle par Attunity ou le mot de passe configuré n'est pas valide. Cela peut être dû à une modification apportée au mot de passe de la clé asymétrique du service.|  
-|RUNNING|1|0|L'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. L'état RUNNING contient les codes de sous-état suivants :<br /><br /> IDLE : Tous les enregistrements de modification ont été traités et stockés dans les tables de contrôle cibles (**_CT**). Aucune transaction n'est active avec les tables de contrôle.<br /><br /> PROCESSING : Il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de contrôle (**_CT**).|  
+|RUNNING|1|0|L'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. L'état RUNNING contient les codes de sous-état suivants :<br /><br /> IDLE : Tous les enregistrements de modification ont été traités et stockés dans les tables de contrôle cibles ( **_CT**). Aucune transaction n'est active avec les tables de contrôle.<br /><br /> PROCESSING : Il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de contrôle ( **_CT**).|  
 |STOPPED|0|0|L'instance CDC n'est pas en cours d'exécution. Le sous-état STOP indique que l'instance de capture de données modifiées était ACTIVE et a été arrêtée correctement.|  
 |SUSPENDED|1|1|L'instance de capture de données modifiées s'exécute, mais le traitement est interrompu en raison d'une erreur récupérable. L'état SUSPENDED contient les codes de sous-état suivants :<br /><br /> DISCONNECTED : Il est impossible d'établir la connexion à la base de données Oracle source. Le traitement se poursuit une fois la connexion restaurée.<br /><br /> STORAGE : Le stockage est saturé. Le traitement se poursuit une fois le stockage disponible. Dans certains cas, cet état n'apparaît pas, car il est impossible de mettre à jour la table d'état.<br /><br /> LOGGER : Le journal est connecté à Oracle, mais il ne peut pas lire les journaux des transactions Oracle en raison d'un problème temporaire.|  
 |DATAERROR|x|x|Ce code d’état est utilisé uniquement pour la table **xdbcdc_trace** . Il n’apparaît pas dans la table **xdbcdc_state** . Les enregistrements de trace avec cet état indiquent un problème avec un enregistrement de journal Oracle. L’enregistrement de journal incorrect est stocké dans la colonne **data** en tant que BLOB. L'état DATAERROR contient les codes de sous-état suivants :<br /><br /> BADRECORD : Impossible d'analyser l'enregistrement du journal joint.<br /><br /> CONVERT-ERROR : Impossible de convertir les données de certaines colonnes en colonnes cibles dans la table de capture. Cet état apparaît uniquement si la configuration spécifie que les erreurs de conversion doivent produire des enregistrements de trace.|  

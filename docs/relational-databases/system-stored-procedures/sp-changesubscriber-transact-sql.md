@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997808"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de connexion d’authentification. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @password = ] 'password'` Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mot de passe d’authentification. *mot de passe* est **sysname**, avec une valeur par défaut **%**. **%** indique aucune modification n’est à la propriété de mot de passe.  
+`[ @password = ] 'password'` Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mot de passe d’authentification. *mot de passe* est **sysname**, avec une valeur par défaut **%** . **%** indique aucune modification n’est à la propriété de mot de passe.  
   
 `[ @commit_batch_size = ] commit_batch_size` Prise en charge pour la compatibilité descendante uniquement.  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` Date à laquelle la tâche de distribution cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date*est **int**, avec NULL comme valeur par défaut.  
   
-`[ @description = ] 'description'` Est un texte descriptif facultatif. *Description* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est un texte descriptif facultatif. *Description* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 `[ @security_mode = ] security_mode` Est le mode de sécurité implémenté. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes.  
   

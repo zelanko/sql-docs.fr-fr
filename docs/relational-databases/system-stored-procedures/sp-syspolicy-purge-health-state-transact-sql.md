@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000792"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Représente le nœud dans l’Explorateur d’objets dont vous voulez supprimer l’état d’intégrité. *target_tree_root_with_id* est **nvarchar (400)**, avec NULL comme valeur par défaut.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Représente le nœud dans l’Explorateur d’objets dont vous voulez supprimer l’état d’intégrité. *target_tree_root_with_id* est **nvarchar (400)** , avec NULL comme valeur par défaut.  
   
  Vous pouvez spécifier des valeurs de la colonne target_query_expression_with_id de la vue système msdb.dbo.syspolicy_system_health_state.  
   
