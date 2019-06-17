@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810420"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
@@ -43,7 +43,7 @@ ms.locfileid: "62810420"
   
  Seuls les membres du rôle administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent se connecter à l'aide de la connexion DAC.  
   
- La connexion DAC est disponible et prise en charge par le biais de l’utilitaire d’invite de commandes **sqlcmd** , au moyen d’un commutateur d’administrateur spécial (**-A**). Pour plus d’informations sur l’utilisation de **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Vous pouvez également connecter préfixer `admin:`au nom de l’instance au format **sqlcmd - Sadmin :**_< nom_instance >._ Vous pouvez également initier une DAC à partir d’un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de requête en vous connectant à `admin:` \< *nom_instance*>.  
+ La connexion DAC est disponible et prise en charge par le biais de l’utilitaire d’invite de commandes **sqlcmd** , au moyen d’un commutateur d’administrateur spécial ( **-A**). Pour plus d’informations sur l’utilisation de **sqlcmd**, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Vous pouvez également connecter préfixer `admin:`au nom de l’instance au format **sqlcmd - Sadmin :** _< nom_instance >._ Vous pouvez également initier une DAC à partir d’un [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] éditeur de requête en vous connectant à `admin:` \< *nom_instance*>.  
   
 ## <a name="restrictions"></a>Restrictions  
  Comme la connexion DAC n'est prévue que pour diagnostiquer des problèmes de serveur dans de rares circonstances, certaines restrictions sont imposées sur la connexion :  
@@ -76,7 +76,7 @@ ms.locfileid: "62810420"
   
 -   Les commandes DBCC de base telles que DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` et DBCC SQLPERF. Évitez d’exécuter des commandes à utilisation intensive des ressources telles que **DBCC** , CHECKDB, DBCC DBREINDEX ou DBCC SHRINKDATABASE.  
   
--   Commande [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL*\<spid>*. Selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande KILL risque de ne pas toujours aboutir ; dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Voici quelques directives générales :  
+-   Commande [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* . Selon l'état de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la commande KILL risque de ne pas toujours aboutir ; dans ce cas, la seule option consiste à redémarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Voici quelques directives générales :  
   
     -   Vérifiez que le SPID a été supprimé en interrogeant `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. S'il ne retourne aucune ligne, la session a été supprimée.  
   

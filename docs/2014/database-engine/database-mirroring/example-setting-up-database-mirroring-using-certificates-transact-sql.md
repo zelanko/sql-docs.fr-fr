@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806750"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Exemple : Configuration de base de données mise en miroir à l’aide de certificats (Transact-SQL)
@@ -257,7 +257,7 @@ ms.locfileid: "62806750"
     ```  
   
     > [!NOTE]  
-    >  Si vous envisagez d’exécuter en mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie à FULL (valeur par défaut) et ajoutez le témoin dès que possible après l’exécution de la deuxième SET PARTNER **'*`partner_server`*'** instruction. Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
+    >  Si vous envisagez d’exécuter en mode haute sécurité avec basculement automatique, laissez la sécurité des transactions définie à FULL (valeur par défaut) et ajoutez le témoin dès que possible après l’exécution de la deuxième SET PARTNER **' *`partner_server`* '** instruction. Notez que le serveur témoin doit d'abord être configuré pour les connexions sortantes et entrantes.  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

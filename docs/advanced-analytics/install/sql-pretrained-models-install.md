@@ -3,17 +3,17 @@ title: Installer PRÉFORMÉE modèles machine learning - SQL Server Machine Lear
 description: Ajouter des modèles préentraînés pour une caractérisation sentiment analysis et l’image à SQL Server 2017 Machine Learning Services (R ou Python) ou SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62745410"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140752"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +41,7 @@ Scripts externes doivent être activées et le service SQL Server LaunchPad doit
 
 + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) inclut les deux versions de langue de la bibliothèque d’apprentissage, donc cette condition préalable est remplie avec aucune action supplémentaire de votre part. Étant donné que les bibliothèques sont présents, vous pouvez utiliser le script PowerShell décrit dans cet article pour ajouter les modèles préformés à ces bibliothèques.
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêts à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer un [mise à niveau du composant](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). L’un des avantages de la mise à niveau du composant sont que vous pouvez ajouter simultanément les modèles préentraînés, ce qui permet d’exécuter le script PowerShell inutile. Toutefois, si vous avez déjà mis à niveau mais que vous manqué Ajout les modèles préentraînés votre première tentative, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant de procéder, vérifiez que la bibliothèque de MicrosoftML existe à C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md), qui est R uniquement, n’inclut pas [package MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) prêts à l’emploi. Pour ajouter MicrosoftML, vous devez effectuer un [mise à niveau du composant](../install/upgrade-r-and-python.md). L’un des avantages de la mise à niveau du composant sont que vous pouvez ajouter simultanément les modèles préentraînés, ce qui permet d’exécuter le script PowerShell inutile. Toutefois, si vous avez déjà mis à niveau mais que vous manqué Ajout les modèles préentraînés votre première tentative, vous pouvez exécuter le script PowerShell comme décrit dans cet article. Il fonctionne pour les deux versions de SQL Server. Avant de procéder, vérifiez que la bibliothèque de MicrosoftML existe à C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library.
 
 
 <a name="file-location"></a>
@@ -209,6 +209,6 @@ Pour plus d’informations sur les algorithmes utilisés dans ces modèles d’a
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
 + [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
-+ [Mettre à niveau les composants R et Python dans les instances SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Mettre à niveau les composants R et Python dans les instances SQL Server](../install/upgrade-r-and-python.md)
 + [Package MicrosoftML pour R](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [package microsoftml pour Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

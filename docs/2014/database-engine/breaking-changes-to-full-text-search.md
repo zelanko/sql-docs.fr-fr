@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787757"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Modifications importantes apportées à la recherche en texte intégral
@@ -38,7 +38,7 @@ ms.locfileid: "62787757"
   
 |Fonctionnalité|Scénario|SQL Server 2005|SQL Server 2008 et versions ultérieures|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) avec les types définis par l’utilisateur (UDT)|La clé de texte intégral est un type défini par l'utilisateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], par exemple `MyType = char(1)`.|La clé retournée est du type assigné au type défini par l'utilisateur.<br /><br /> Dans l’exemple, il s’agirait **char (1)**.|La clé retournée est du type défini par l'utilisateur. Dans l’exemple, il s’agirait **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) avec les types définis par l’utilisateur (UDT)|La clé de texte intégral est un type défini par l'utilisateur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], par exemple `MyType = char(1)`.|La clé retournée est du type assigné au type défini par l'utilisateur.<br /><br /> Dans l’exemple, il s’agirait **char (1)** .|La clé retournée est du type défini par l'utilisateur. Dans l’exemple, il s’agirait **MyType**.|  
 |*Top_n_by_rank* paramètre (de CONTAINSTABLE et [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] instructions)|*Top_n_by_rank* requêtes à l’aide de 0 comme paramètre.|Échec avec un message d'erreur qui signale que vous devez utiliser une valeur supérieure à zéro.|Réussite, retourne zéro ligne.|  
 |CONTAINSTABLE et **ItemCount**|Suppression de lignes de table de base avant de pousser les modifications vers MSSearch.|CONTAINSTABLE retourne un enregistrement fantôme. **ItemCount** n’est pas modifié.|CONTAINSTABLE ne retourne pas d'enregistrements fantômes.|  
 |**ItemCount**|La table contient des documents ou des colonnes de type Null.|En plus de documents indexés, les documents qui sont null ou qui ont des types null sont comptés dans le **ItemCount** valeur.|Seuls les documents indexés sont comptés le **ItemCount** valeur.|  

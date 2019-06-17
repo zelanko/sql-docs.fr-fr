@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771615"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Appliquer des modifications à la destination
@@ -102,6 +102,6 @@ ms.locfileid: "62771615"
 ## <a name="optimizing-inserts-and-updates-by-using-merge-functionality"></a>Optimisation des insertions et des mises à jour à l'aide de la fonctionnalité MERGE  
  Vous pouvez optimiser le traitement des insertions et des mises à jour en combinant certaines options de capture de données modifiées avec l'utilisation du mot clé MERGE Transact-SQL. Pour plus d’informations sur le mot clé MERGE, consultez [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql).  
   
- Dans l’instruction Transact-SQL qui récupère les données modifiées, vous pouvez spécifier *all with merge* comme valeur du paramètre *row_filter_option* quand vous appelez la fonction **cdc.fn_cdc_get_net_changes_<instance_capture>**. Cette fonction de capture de données modifiées fonctionne plus efficacement lorsqu'elle ne doit pas effectuer le traitement supplémentaire requis pour différencier les insertions des mises à jour. Quand vous spécifiez la valeur de paramètre *all with merge* , la valeur **__$operation** des données modifiées est 1 pour les suppressions ou 5 pour les modifications résultant d’insertions ou de mises à jour. Pour plus d’informations sur la fonction Transact-SQL utilisée pour récupérer les données modifiées, consultez [Récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md). Après avoir extrait les modifications avec la valeur de paramètre *all with merge* , vous pouvez appliquer des suppressions et générer en sortie les lignes restantes dans une table temporaire ou une table de transit. Ensuite, dans une tâche d'exécution SQL en aval, vous pouvez utiliser une instruction MERGE unique pour appliquer toutes les insertions ou mises à jour de la table intermédiaire à la destination.  
+ Dans l’instruction Transact-SQL qui récupère les données modifiées, vous pouvez spécifier *all with merge* comme valeur du paramètre *row_filter_option* quand vous appelez la fonction **cdc.fn_cdc_get_net_changes_<instance_capture>** . Cette fonction de capture de données modifiées fonctionne plus efficacement lorsqu'elle ne doit pas effectuer le traitement supplémentaire requis pour différencier les insertions des mises à jour. Quand vous spécifiez la valeur de paramètre *all with merge* , la valeur **__$operation** des données modifiées est 1 pour les suppressions ou 5 pour les modifications résultant d’insertions ou de mises à jour. Pour plus d’informations sur la fonction Transact-SQL utilisée pour récupérer les données modifiées, consultez [Récupérer et comprendre les données modifiées](retrieve-and-understand-the-change-data.md). Après avoir extrait les modifications avec la valeur de paramètre *all with merge* , vous pouvez appliquer des suppressions et générer en sortie les lignes restantes dans une table temporaire ou une table de transit. Ensuite, dans une tâche d'exécution SQL en aval, vous pouvez utiliser une instruction MERGE unique pour appliquer toutes les insertions ou mises à jour de la table intermédiaire à la destination.  
   
   

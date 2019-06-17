@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9e1ebbf8a6ba8186d30063bd377f95b8e286d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894743"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configuration de la tâche de script dans l'éditeur de tâche de script
@@ -51,7 +51,7 @@ ms.locfileid: "62894743"
 > [!NOTE]  
 >  Les noms de variable respectent la casse.  
   
- Pour sélectionner les variables, cliquez sur le bouton de sélection (**...**) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../control-flow/select-variables-page.md).  
+ Pour sélectionner les variables, cliquez sur le bouton de sélection ( **...** ) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Bouton Modifier le script  
  Le bouton **Modifier le script** lance l’environnement de développement VSTA dans lequel vous écrivez votre script personnalisé. Pour plus d’informations, consultez [Codage et débogage de la tâche de script](coding-and-debugging-the-script-task.md).  

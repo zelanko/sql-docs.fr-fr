@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7700a2d1da4349bd1bc652badc1c2cdd89dc6550
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873266"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Désactiver la compression sur une table ou un index
@@ -57,7 +57,7 @@ ms.locfileid: "62873266"
   
 1.  Dans l'Explorateur d'objets, développez la base de données contenant la table sur laquelle vous souhaitez désactiver la compression, puis développez le dossier **Tables** .  
   
-2.  Cliquez avec le bouton droit sur la table ou l’index sur lequel vous souhaitez désactiver la compression, pointez sur **Stockage** et sélectionnez **Gérer la compression...**.  
+2.  Cliquez avec le bouton droit sur la table ou l’index sur lequel vous souhaitez désactiver la compression, pointez sur **Stockage** et sélectionnez **Gérer la compression...** .  
   
 3.  Pour désactiver la compression sur un index, développez la table contenant l'index puis développez le dossier **Index** .  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62873266"
   
      Les options suivantes sont disponibles dans la page **Sélectionner le type de compression** :  
   
-     Case**Utiliser le même type de compression pour toutes les partitions**   
+     Case**Utiliser le même type de compression pour toutes les partitions**  
      Sélectionnez cette option pour configurer le même paramètre de compression pour toutes les partitions. La zone de sélection est alors activée et la colonne **Type de compression** de la grille est désactivée. Lorsqu'une option est sélectionnée, les options dans la liste adjacente sont **None**, **Row**et **Page**.  
   
      **Numéro de partition**  
@@ -138,7 +138,7 @@ ms.locfileid: "62873266"
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)** . Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   

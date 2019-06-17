@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782313"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Activer les connexions chiffrées dans le moteur de base de données (Gestionnaire de configuration SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62782313"
  Le client doit être en mesure de vérifier la propriété du certificat employé par le serveur. Si le client dispose du certificat de clé publique de l'autorité de certification qui a signé le certificat de serveur, aucune configuration supplémentaire n'est requise. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comprend les certificats de clé publique d'un grand nombre d'autorités de certification. Si le certificat de serveur a été signé par une autorité de certification publique ou privée pour laquelle le client ne dispose pas de certificat de clé publique, vous devez installer le certificat de clé publique de l'autorité de certification ayant signé le certificat de serveur.  
   
 > [!NOTE]  
->  Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Si, par exemple, vous disposez d’un cluster à deux nœuds nommés test1.*\<votre_société>*.com et test2.*\<votre_société>*.com, ainsi que d’un serveur virtuel nommé virtsql, vous devez installer un certificat pour virtsql.*\<votre_société>*.com sur les deux nœuds. Vous pouvez affecter la valeur **ForceEncryption**(Oui) à l’option **ForceEncryption**.  
+>  Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Si, par exemple, vous disposez d’un cluster à deux nœuds nommés test1. *\<votre_société>* .com et test2. *\<votre_société>* .com, ainsi que d’un serveur virtuel nommé virtsql, vous devez installer un certificat pour virtsql. *\<votre_société>* .com sur les deux nœuds. Vous pouvez affecter la valeur **ForceEncryption**(Oui) à l’option **ForceEncryption**.  
   
  **Dans cette rubrique**  
   
@@ -83,9 +83,9 @@ ms.locfileid: "62782313"
   
 ###  <a name="ConfigureServerConnections"></a> Pour configurer le serveur afin qu'il accepte les connexions chiffrées  
   
-1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_, puis sélectionnez **Propriétés**.  
+1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<instance de serveur>_ , puis sélectionnez **Propriétés**.  
   
-2.  Dans le **protocoles pour**_\<nom_instance >_ **propriétés** boîte de dialogue le **certificat** onglet, sélectionnez la souhaité de certificat dans la liste déroulante pour le **certificat** , puis cliquez sur **OK**.  
+2.  Dans le **protocoles pour** _\<nom_instance >_ **propriétés** boîte de dialogue le **certificat** onglet, sélectionnez la souhaité de certificat dans la liste déroulante pour le **certificat** , puis cliquez sur **OK**.  
   
 3.  Sur l'onglet **Indicateurs** , dans la zone **ForceEncryption** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue.  
   

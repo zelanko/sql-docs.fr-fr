@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489249"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Tâche 3 (facultatif) : Examiner les vues d’abonnement
@@ -22,7 +22,7 @@ ms.locfileid: "65489249"
   
 1.  Lancez **SQL Server Management Studio**. Cliquez sur le **Démarrer** bouton, cliquez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, puis cliquez sur **SQL Server Management Studio**.  
   
-2.  Dans le **se connecter au serveur** fenêtre, définissez **Type de serveur** à **moteur de base de données**, type de la **nom du serveur** (ou sélectionnez **() local)**, puis sélectionnez approprié **authentification**, puis cliquez sur **Connect**.  
+2.  Dans le **se connecter au serveur** fenêtre, définissez **Type de serveur** à **moteur de base de données**, type de la **nom du serveur** (ou sélectionnez **() local)** , puis sélectionnez approprié **authentification**, puis cliquez sur **Connect**.  
   
 3.  Dans le **Explorateur d’objets** volet, développez **bases de données**, développez **MDS**, puis développez **vues**.  
   

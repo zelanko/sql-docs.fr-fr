@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921794"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Récupérer une base de données sans restaurer les données (Transact-SQL)
@@ -63,7 +63,7 @@ RESTORE DATABASE AdventureWorks2012
   
  La syntaxe [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) pour une restauration de fichier avec récupération uniquement est la suivante :  
   
- RESTORE DATABASE *nom_base_de_données* { FILE **=**_nom_fichier_logique_ | FILEGROUP **=**_nom_groupe_fichiers_logique_ } [ **,**...*n* ] WITH RECOVERY  
+ RESTORE DATABASE *nom_base_de_données* { FILE **=** _nom_fichier_logique_ | FILEGROUP **=** _nom_groupe_fichiers_logique_ } [ **,** ...*n* ] WITH RECOVERY  
   
  **Exemple**  
   

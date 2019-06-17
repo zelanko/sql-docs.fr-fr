@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806825"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
@@ -26,7 +26,7 @@ La**boîte à outils** affiche divers éléments que vous pouvez utiliser dans l
 **Boîte à outils** icônes peuvent être déplacés et supprimés ou copiées et collées dans des éditeurs de code ou sur la conception des surfaces de la vue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>À l’aide de la boîte à outils  
- La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus (**+**) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins (**-**) en regard de son nom.  
+ La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus ( **+** ) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins ( **-** ) en regard de son nom.  
   
  Chaque fois que vous retournez dans un éditeur ou un concepteur, la **boîte à outils** accède automatiquement à l’onglet et à l’élément récemment sélectionnés. Quand vous basculez vers un autre éditeur ou concepteur, la sélection actuelle dans la **boîte à outils** bascule également.  
   
