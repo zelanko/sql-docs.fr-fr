@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326500"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836351"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Arguments  
  *KEY_NAME*  
- Spécifie le nom unique sous lequel la clé symétrique est connue dans la base de données. Les noms des clés temporaires doivent commencer par un dièse (#). Par exemple, **#temporaryKey900007**. Vous ne pouvez pas créer une clé symétrique dont le nom commence par plusieurs #. Vous ne pouvez pas créer de clé symétrique temporaire à l'aide d'un fournisseur EKM.  
+ Spécifie le nom unique sous lequel la clé symétrique est connue dans la base de données. Des clés temporaires sont désignées lorsque _key_name_ commence par un croisillon (#). Par exemple, **#temporaryKey900007**. Vous ne pouvez pas créer une clé symétrique dont le nom commence par plusieurs #. Vous ne pouvez pas créer de clé symétrique temporaire à l'aide d'un fournisseur EKM.  
   
  AUTHORIZATION *owner_name*  
  Spécifie le nom de l'utilisateur de base de données ou du rôle d'application auquel appartiendra la clé.  
@@ -151,7 +151,7 @@ Spécifiez l’algorithme de chiffrement.
 > [!WARNING]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER ANY SYMMETRIC KEY sur la base de données. Si la clause AUTHORIZATION est spécifiée, l'autorisation IMPERSONATE sur l'utilisateur de base de données ou l'autorisation ALTER sur le rôle d'application est requise. Si le chiffrement s'effectue par certificat ou clé asymétrique, l'autorisation VIEW DEFINITION est requise sur le certificat ou la clé asymétrique. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les rôles d'application sont les seuls à pouvoir posséder des clés symétriques. Les groupes et les rôles ne peuvent pas posséder de clés symétriques.  
   
 ## <a name="examples"></a>Exemples  
@@ -166,7 +166,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>b. Création d'une clé symétrique temporaire  
+### <a name="b-creating-a-temporary-symmetric-key"></a>B. Création d'une clé symétrique temporaire  
  Dans l'exemple ci-dessous, une clé symétrique temporaire nommée `#MarketingXXV` est créée à partir de la phrase secrète : `The square of the hypotenuse is equal to the sum of the squares of the sides`. La clé obtient un GUID généré à partir de la chaîne `Pythagoras` et est chiffrée à l'aide du certificat `Marketing25`.  
   
 ```  

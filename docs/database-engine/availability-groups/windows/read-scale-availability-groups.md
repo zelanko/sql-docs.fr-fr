@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
+ms.sourcegitcommit: acef7bf9f3f4c93920191919992aee2b41c2c8e6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801047"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67131826"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Utiliser une échelle lecture avec des groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Dans [!INCLUDE[sssql15-md](../../../includes/sssql15-md.md)] et antérieur, tous
 Si l’impératif de votre entreprise est de préserver les ressources pour les charges de travail critiques qui s’exécutent sur le réplica principal, vous pouvez désormais utiliser le routage en lecture seule ou vous connecter directement à des réplicas secondaires lisibles. Vous n’avez pas besoin de dépendre de l’intégration à une technologie de clustering. Ces nouvelles fonctionnalités sont disponibles pour SQL Server 2017 exécuté sur les plateformes Windows et Linux.
 
 >[!IMPORTANT]
->Il ne s’agit pas d’une configuration de haute disponibilité. Il n’existe aucune infrastructure pour surveiller et coordonner la détection d’échec et le basculement automatique. Sans cluster, SQL Server ne peut pas offrir l’objectif de temps de récupération faible qu’offre une solution de haute disponibilité automatisée. Si vous avez besoin de fonctionnalités de haute disponibilité, utilisez un gestionnaire de clusters (clustering de basculement Windows Server sur Windows ou Pacemaker sur Linux).
+>Il ne s’agit pas d’une configuration de haute disponibilité. Il n’existe aucune infrastructure pour surveiller et coordonner la détection d’échec et le basculement automatique. Sans cluster, SQL Server ne peut pas offrir l’objectif de temps de récupération faible qu’offre une solution de haute disponibilité automatisée. Si vous avez besoin de fonctionnalités de haute disponibilité, utilisez un gestionnaire de clusters (Gestionnaire du cluster de basculement Windows Server sur Windows ou Pacemaker sur Linux).
 >
 >Le groupe de disponibilité avec échelle lecture peut fournir la fonctionnalité de récupération d’urgence. Quand les réplicas en lecture seule sont en mode de validation synchrone, ils fournissent un objectif de point de récupération égal à zéro. Pour basculer un groupe de disponibilité avec échelle lecture, consultez [Basculer le réplica principal sur un groupe de disponibilité avec échelle lecture](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md#ReadScaleOutOnly).
 

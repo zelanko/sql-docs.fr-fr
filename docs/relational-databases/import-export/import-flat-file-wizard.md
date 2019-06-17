@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012907"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836391"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Pour tout contenu associé à l’Assistant Importation et exportation, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-L’Assistant Importation d’un fichier plat offre un moyen simple de copier des données d’un fichier plat vers une destination. Cette présentation décrit les raisons d’utiliser cet Assistant et où le trouver, puis fournit un exemple simple à suivre.
+L’Assistant Importation de fichier plat permet de copier les données d’un fichier plat (.csv ou .txt) dans une nouvelle table d’une base de données. Cette présentation décrit les raisons d’utiliser cet Assistant et où le trouver, puis fournit un exemple simple à suivre.
 
 ## <a name="why-would-i-use-this-wizard"></a>Pourquoi utiliser cet Assistant ?
 Cet Assistant a été créé pour améliorer l’expérience d’importation actuelle en tirant parti d’un framework intelligent appelé [PROSE](https://microsoft.github.io/prose/) (Program Synthesis using Examples). Pour un utilisateur sans connaissance technique du domaine, l’importation de données peut souvent être une tâche complexe, sujette aux erreurs et fastidieuse. Avec cet Assistant, le processus d’importation se résume simplement à la sélection d’un fichier d’entrée et d’un nom unique de table, le framework PROSE s’occupe du reste.

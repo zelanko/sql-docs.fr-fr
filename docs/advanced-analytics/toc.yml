@@ -1,44 +1,47 @@
 - name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
-- name: Documentation de SQL Server Machine Learning Services
-  href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
-- name: 'Extensions Machine Learning (R, Python)'
+- name: SQL Server Machine Learning Services
+  href: ../advanced-analytics/sql-server-machine-learning-services.md
+- name: Vue d’ensemble
   items:
-    - name: What's New
-      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
-    - name: 'SQL ML Services (R, Python)'
+    - name: 'Machine Learning Services (R, Python)'
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
     - name: R Services
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: Serveur autonome
       href: ../advanced-analytics/r/r-server-standalone.md
+    - name: Nouveautés
+      href: ../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md
 - name: Installation
   items:
     - name: Différences dans SQL Server 2019
-      href: ../advanced-analytics/install/sql-machine-learning-services-ver15.md
-    - name: 'Installer ML Services (R, Python)'
+      href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
+    - name: Installer ML Services sur Windows
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
+    - name: "Installer ML Services sur Linux\_>>"
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc/toc.json
     - name: Installer R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: 'Installer un serveur autonome (R, Python)'
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: Installer des modèles pré-entraînés
       href: ../advanced-analytics/install/sql-pretrained-models-install.md
-    - name: Configuration en mode hors connexion (sans Internet)
-      href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
+    - name: Installation hors connexion (sans Internet)
       items:
-        - name: Téléchargements de CAB (installation hors connexion)
+        - name: Installer sans accès à Internet
+          href: ../advanced-analytics/install/sql-ml-component-install-without-internet-access.md
+        - name: Téléchargements CAB
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: Installation via l’invite de commandes
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
     - name: Mise à niveau de R et Python
-      href: ../advanced-analytics/r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
+      href: ../advanced-analytics/install/upgrade-r-and-python.md
     - name: Configurer un client R
       href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Configurer un client Python
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
-    - name: Configurer un serveur virtuel
-      href: ../advanced-analytics/r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
+    - name: Installer sur une machine virtuelle Azure
+      href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: Démarrages rapides
   items:
     - name: R
@@ -70,8 +73,9 @@
         - name: Entraîner et utiliser votre premier modèle
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: Didacticiels
-  href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
   items:
+    - name: Vue d’ensemble des tutoriels
+      href: ../advanced-analytics/tutorials/machine-learning-services-tutorials.md
     - name: Exemples de données
       items:
         - name: Jeu de données Airline
@@ -81,80 +85,86 @@
         - name: Jeu de données NYC Taxi
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
     - name: R
-      href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
       items:
+        - name: Tutoriels sur R
+          href: ../advanced-analytics/tutorials/sql-server-r-tutorials.md
         - name: Créer des modèles basés sur une partition
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
-        - name: R pour les développeurs SQL
-          href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+        - name: Utiliser R dans T-SQL
           items:
-            - name: 1 - Exploration des données
+            - name: 1. Introduction
+              href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
+            - name: 2. Exploration des données
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
-            - name: 2 - Ingénierie des caractéristiques
+            - name: 3. Ingénierie des caractéristiques
               href: ../advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md
-            - name: 3 - Entraîner et déployer
+            - name: 4. Entraîner et déployer
               href: ../advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
-            - name: 4 - Prédictions
+            - name: 5. Prévisions
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
-        - name: SQL pour les scientifiques de données R
-          href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+        - name: Utiliser SQL ML dans les outils R
           items:
-            - name: 1 - Exploration des données
+            - name: 1. Introduction
+              href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+            - name: 2. Exploration des données
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
-            - name: 2 - Graphes et tracés
+            - name: 3. Graphes et tracés
               href: ../advanced-analytics/tutorials/walkthrough-create-graphs-and-plots-using-r.md
-            - name: 3 - Ingénierie des caractéristiques
+            - name: 4. Ingénierie des caractéristiques
               href: ../advanced-analytics/tutorials/walkthrough-create-data-features.md
-            - name: 4 - Créer et enregistrer le modèle
+            - name: 5. Créer et enregistrer le modèle
               href: ../advanced-analytics/tutorials/walkthrough-build-and-save-the-model.md
-            - name: 5 - Déployer et utiliser le modèle
+            - name: 6. Déployer et utiliser le modèle
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: Présentation approfondie de RevoScaleR
-          href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
           items:
-            - name: Créer une base de données et des autorisations
+            - name: 1. Introduction
+              href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
+            - name: 2. Créer une base de données et des autorisations
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
-            - name: Créer un objet RxSqlServerData
+            - name: 3. Créer un objet RxSqlServerData
               href: ../advanced-analytics/tutorials/deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md
-            - name: Interroger et modifier des données
+            - name: 4. Interroger et modifier des données
               href: ../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md
-            - name: Définir un contexte de calcul
+            - name: 5. Définir un contexte de calcul
               href: ../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md
-            - name: Calculer des statistiques de synthèse
+            - name: 6. Calculer des statistiques de synthèse
               href: ../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md
-            - name: Visualiser les données
+            - name: 7. Visualiser les données
               href: ../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md
-            - name: Créer des modèles
+            - name: 8. Créer des modèles
               href: ../advanced-analytics/tutorials/deepdive-create-models.md
-            - name: Affecter un score à de nouvelles données
+            - name: 9. Affecter un score à de nouvelles données
               href: ../advanced-analytics/tutorials/deepdive-score-new-data.md
-            - name: Transformer des données
+            - name: 10. Transformer des données
               href: ../advanced-analytics/tutorials/deepdive-transform-data-using-r.md
-            - name: Charger des données avec rxImport
+            - name: 11. Charger des données avec rxImport
               href: ../advanced-analytics/tutorials/deepdive-load-data-into-memory-using-rximport.md
-            - name: Créer une table avec rxDataStep
+            - name: 12. Créer une table avec rxDataStep
               href: ../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md
-            - name: Effectuer une analyse de blocs
+            - name: 13. Effectuer une analyse de blocs
               href: ../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md
-            - name: Déplacer des données entre SQL Server et un fichier XDF
+            - name: 14. Déplacer des données entre SQL Server et un fichier XDF
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
-            - name: Envoyer R personnalisé avec rxExec
+            - name: 15. Envoyer R personnalisé avec rxExec
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
     - name: Python
-      href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
       items:
+        - name: Tutoriels sur Python
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
         - name: Créer un modèle Python à l’aide de revoscalepy
           href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: Python pour les développeurs SQL
-          href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
           items:
-            - name: 1 - Exploration des données
+            - name: 1 - Introduction
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2 - Exploration des données
               href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 2 - Ingénierie des caractéristiques
+            - name: 3 - Ingénierie des caractéristiques
               href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 3 - Entraîner et déployer
+            - name: 4 - Entraîner et déployer
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 4 - Prédictions
+            - name: 5 - Prédictions
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: Exemples >
   href: 'https://github.com/Microsoft/sql-server-samples'
@@ -171,50 +181,31 @@
     - name: Sécurité
       href: ../advanced-analytics/concepts/security.md
 - name: Guides pratiques
-  href: ../advanced-analytics/r/sql-server-machine-learning-tasks.md
   items:
-    - name: Gestion des packages
+    - name: Se connecter
       items:
-        - name: Packages par défaut
-          href: ../advanced-analytics/r/installing-and-managing-r-packages.md
-        - name: Obtenir les informations sur le package
-          href: ../advanced-analytics/r/determine-which-packages-are-installed-on-sql-server.md
-        - name: Installer de nouveaux packages R
-          href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+        - name: Se connecter à OLAP à partir de R
           items:
-            - name: Utiliser des gestionnaires de package R
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: Utiliser T-SQL
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: Utiliser RevoScaleR
-              href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-              items:
-                - name: Activer la gestion de packages R à distance
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: Synchroniser des packages R
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
-            - name: Créer un dépôt miniCRAN
-              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
-            - name: Conseils pour l’utilisation de packages R
-              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: Installer de nouveaux packages Python
-          href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+            - name: Utilisation de données de cubes OLAP dans R
+              href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
+            - name: Guide pratique pour créer des requêtes MDX à l’aide d’olapR
+              href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
     - name: Exploration et modélisation des données
       items:
-        - name: "Conversions de types de données\_R en SQL"
+        - name: R
+          items:
+            - name: Charger des objets R à l’aide d’ODBC
+              href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
+            - name: Modélisation prédictive avec R
+              href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
+            - name: Créer plusieurs modèles à l’aide de rxExecBy
+              href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
+    - name: Conversions de type de données
+      items:
+        - name: R vers SQL
           href: ../advanced-analytics/r/r-libraries-and-data-types.md
-        - name: "Conversions de types de données\_Python en SQL"
+        - name: Python vers SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
-        - name: Charger des objets R à l’aide d’ODBC
-          href: ../advanced-analytics/r/save-and-load-r-objects-from-sql-server-using-odbc.md
-        - name: Utilisation de données de cubes OLAP dans R
-          href: ../advanced-analytics/r/using-data-from-olap-cubes-in-r.md
-        - name: Guide pratique pour créer des requêtes MDX à l’aide d’olapR
-          href: ../advanced-analytics/r/how-to-create-mdx-queries-using-olapr.md
-        - name: Modélisation prédictive avec R
-          href: ../advanced-analytics/r/data-exploration-and-predictive-modeling-with-r.md
-        - name: Créer plusieurs modèles à l’aide de rxExecBy
-          href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: Déployer
       items:
         - name: Effectuer des opérations avec des procédures stockées
@@ -233,18 +224,60 @@
           href: ../advanced-analytics/real-time-scoring.md
         - name: Scoring natif avec PREDICT T-SQL
           href: ../advanced-analytics/sql-native-scoring.md
-    - name: Performances
+    - name: Gestion des packages
       items:
-        - name: Vue d’ensemble de l’optimisation des performances dans R
-          href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
-        - name: Optimisation des performances - Configuration du serveur
-          href: ../advanced-analytics/r/sql-server-configuration-r-services.md
-        - name: Optimisation des performances - Optimisation des données dans R
-          href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
-        - name: Optimisation des performances pour les résultats dans R
-          href: ../advanced-analytics/r/performance-case-study-r-services.md
-        - name: Utiliser les fonctions de profilage de code R
-          href: ../advanced-analytics/r/using-r-code-profiling-functions.md
+        - name: Packages par défaut
+          href: ../advanced-analytics/package-management/default-packages.md
+        - name: Obtenir les informations sur le package
+          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: Installer de nouveaux packages R
+          items:
+            - name: Installer le package R
+              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
+            - name: Utiliser T-SQL
+              href: ../advanced-analytics/r/install-r-packages-tsql.md
+            - name: Utiliser des gestionnaires de package
+              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
+            - name: Utiliser RevoScaleR
+              items:
+                - name: Installer à l’aide de RevoScaleR
+                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
+                - name: Activer la gestion de packages R à distance
+                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
+                - name: Synchroniser des packages R
+                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+            - name: Créer un dépôt miniCRAN
+              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+            - name: Conseils pour l’utilisation de packages R
+              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+        - name: Installer de nouveaux packages Python
+          items:
+            - name: Utiliser des gestionnaires de package
+              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
+    - name: Administration
+      items:
+        - name: Gérer l’intégration
+          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
+        - name: Moniteur
+          items:
+            - name: Surveiller en utilisant des rapports SSMS
+              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+            - name: Superviser en utilisant des vues DMV
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
+            - name: Événements étendus
+              items:
+                - name: Événements étendus
+                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
+                - name: Événements étendus PREDICT T-SQL
+                  href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: Mettre à l’échelle l’exécution du script
+          href: ../advanced-analytics/administration/modify-user-account-pool.md
+        - name: Gouverneur de ressources
+          items:
+            - name: Utiliser un gouverneur de ressources
+              href: ../advanced-analytics/administration/resource-governance.md
+            - name: Créer un pool de ressources
+              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
     - name: Sécurité
       items:
         - name: Donner une autorisation à des utilisateurs
@@ -255,24 +288,20 @@
           href: ../advanced-analytics/security/firewall-configuration.md
         - name: Créer un nom de connexion pour SQLRUserGroup
           href: ../advanced-analytics/security/create-a-login-for-sqlrusergroup.md
-    - name: Administration
+    - name: Performances
       items:
-        - name: Gérer l’intégration
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
-        - name: Surveiller en utilisant des rapports SSMS
-          href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
-        - name: Superviser en utilisant des vues DMV
-          href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
-        - name: Mettre à l’échelle l’exécution du script
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
-        - name: Utiliser la gouvernance des ressources
-          href: ../advanced-analytics/administration/resource-governance.md
-        - name: Créer un pool de ressources
-          href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
-        - name: Événements étendus
-          href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-        - name: Événements étendus PREDICT T-SQL
-          href: ../advanced-analytics/xe-event-predict-tsql.md
+        - name: R
+          items:
+            - name: Vue d’ensemble de l’optimisation des performances dans R
+              href: ../advanced-analytics/r/sql-server-r-services-performance-tuning.md
+            - name: Optimisation des performances - Configuration du serveur
+              href: ../advanced-analytics/r/sql-server-configuration-r-services.md
+            - name: Optimisation des performances - Optimisation des données dans R
+              href: ../advanced-analytics/r/r-and-data-optimization-r-services.md
+            - name: Optimisation des performances pour les résultats dans R
+              href: ../advanced-analytics/r/performance-case-study-r-services.md
+            - name: Utiliser les fonctions de profilage de code R
+              href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: Référence
   items:
     - name: Packages R
@@ -296,8 +325,9 @@
     - name: Notes de publication >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: Dépannage
-      href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
       items:
+        - name: Vue d’ensemble de la résolution des problèmes
+          href: ../advanced-analytics/machine-learning-troubleshooting-faq.md
         - name: Problèmes connus
           href: ../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md
         - name: Collecte de données
