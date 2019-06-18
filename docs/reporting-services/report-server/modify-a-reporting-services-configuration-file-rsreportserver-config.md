@@ -9,10 +9,10 @@ ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e97dff2a6d08207d95b28ce2f9a0cedafd9b6fff
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581126"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
@@ -99,7 +99,7 @@ ms.locfileid: "65581126"
   
 6.  Consultez les fichiers journaux des traces pour vous assurer qu'aucune erreur ne s'est produite. Si vous trouvez une erreur, cela signifie qu'un paramètre ou sa valeur ont été spécifiés de manière incorrecte. Consultez l’article [Fichier de configuration RSReportServer](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) pour connaître les valeurs valides du paramètre à l’origine de l’erreur. Pour plus d’informations sur l’affichage du journal des traces, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)(Journal des traces du service Report Server).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Fichier de configuration ReportingServicesService](../../reporting-services/report-server/reportingservicesservice-configuration-file.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   

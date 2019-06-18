@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1dfe62ba964b05f069009b51ddf62f376c12c906
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580532"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Service et applications de service Reporting Services SharePoint
@@ -40,7 +40,7 @@ ms.locfileid: "65580532"
   
 3.  Recherchez et cliquez sur le nom de votre nouvelle application de service Reporting Services. Vous pourriez cliquer également sur la **valeur par défaut** du nom de groupe du proxy de l'application pour ajouter le proxy au groupe par défaut plutôt que compléter les étapes suivantes.  
   
-4.  Sélectionnez **Personnalisé** dans la zone de sélection **Modifier le groupe de connexions suivant :**.  
+4.  Sélectionnez **Personnalisé** dans la zone de sélection **Modifier le groupe de connexions suivant :** .  
   
 5.  Activez la zone pour votre proxy et cliquez sur **OK**.  
   

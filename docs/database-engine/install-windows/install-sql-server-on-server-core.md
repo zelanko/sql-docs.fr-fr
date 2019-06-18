@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 3eb1ff10fbf0af49cd698537af915378cc1ddb87
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794931"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
@@ -59,7 +59,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |Distributed Replay Controller|Non||  
 |Distributed Replay Client|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Kit de développement logiciel (SDK) de l'option Connectivité client de SQL|Oui||  
-|Microsoft Sync Framework|Oui|Microsoft Sync Framework n’est pas inclus dans le package d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Vous pouvez télécharger la version appropriée de Sync Framework à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (page https://go.microsoft.com/fwlink/?LinkId=221788)) et l’installer sur un ordinateur exécutant Server Core.|  
+|Microsoft Sync Framework|Oui|Microsoft Sync Framework n’est pas inclus dans le package d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Vous pouvez télécharger la version appropriée de Sync Framework à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (page https://go.microsoft.com/fwlink/?LinkId=221788) ) et l’installer sur un ordinateur exécutant Server Core.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Non||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Non||  
   

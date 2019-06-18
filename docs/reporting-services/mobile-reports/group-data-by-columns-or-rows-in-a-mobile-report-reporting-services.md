@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f913c1dc1f9bc4df455c64588ea3fd93f3cff328
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200886"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Regrouper des données par colonnes ou par lignes dans un rapport mobile | Reporting Services
 L’ [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]vous permet d’organiser vos données par colonnes ou par lignes dans de nombreux types de graphiques. La procédure détaillée qui suit vous indique la marche à suivre.

@@ -16,10 +16,10 @@ ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d98abc6a17e22afd73cb1c2c14c782fa57b5eaed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581078"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Compteurs de performances - MSRS 2011 en mode SharePoint, objets de performance
@@ -133,7 +133,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
 (get-counter -listset "MSRS 2011 Windows Service SharePoint Mode").paths  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Compteurs de performance du service Web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Compteurs de performances pour des objets de performances ReportServer:Service  et ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  

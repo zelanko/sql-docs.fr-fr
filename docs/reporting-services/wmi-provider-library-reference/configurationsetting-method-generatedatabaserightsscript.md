@@ -16,10 +16,10 @@ ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570969"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Méthode ConfigurationSetting - GenerateDatabaseRightsScript
@@ -61,7 +61,7 @@ out Int32 HRESULT);
 ## <a name="return-value"></a>Valeur retournée  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si *DatabaseName* est vide, *IsRemote* est ignoré et la valeur du fichier de configuration du serveur de rapports est utilisée comme nom de base de données.  
   
  Si *IsWindowsUser* est défini sur **true**, *UserName* doit être au format \<domaine>\\<nom_utilisateur\>.  
@@ -89,7 +89,7 @@ out Int32 HRESULT);
   
  Quand *IsWindowsUser* a la valeur true et qu’il est nécessaire de convertir la valeur indiquée dans *UserName* , le fournisseur WMI détermine si la base de données du serveur de rapports réside sur le même ordinateur ou sur un ordinateur distant. Pour déterminer si l’installation est locale, le fournisseur WMI évalue la propriété DatabaseServerName par rapport à la liste de valeurs suivante. Si une correspondance est trouvée, la base de données est locale. Dans le cas contraire, elle est distante. La casse n'est pas prise en compte lors de la comparaison.  
   
-|Valeur de DatabaseServerName| Exemple|  
+|Valeur de DatabaseServerName|Exemple|  
 |---------------------------------|-------------|  
 |"."||  
 |"(local)"||  
@@ -112,7 +112,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

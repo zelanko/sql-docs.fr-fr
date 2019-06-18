@@ -13,10 +13,10 @@ ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582165"
 ---
 # <a name="preview-view"></a>Vue Aperçu
@@ -82,7 +82,7 @@ Dans le Concepteur de rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsno
  **(18) Rechercher suivant**  
  Choisissez cette option pour rechercher l'instance suivante du texte recherché.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 + [Aperçu des rapports](../../reporting-services/reports/previewing-reports.md)
 + [Aide sur le Concepteur de rapports via la touche F1](../../reporting-services/tools/report-designer-f1-help.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 48e8662f3547e9e483d67cc4af83e67d355ba664
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580414"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
@@ -108,7 +108,7 @@ ms.locfileid: "65580414"
   
 9. Tapez le nom de votre compte d'utilisateur, puis cliquez sur **OK**.  
   
-10. Dans la zone **Autorisations pour \<Utilisateur ou groupe>**, dans la colonne **Autoriser**, sélectionnez **Exécution à distance** et **Activation à distance**, puis cliquez sur **OK**.  
+10. Dans la zone **Autorisations pour \<Utilisateur ou groupe>** , dans la colonne **Autoriser**, sélectionnez **Exécution à distance** et **Activation à distance**, puis cliquez sur **OK**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Pour définir les autorisations sur l'espace de noms WMI du rapport de serveurs pour les non-administrateurs  
   
@@ -138,7 +138,7 @@ ms.locfileid: "65580414"
   
 13. Dans la colonne **Autoriser** , sélectionnez **Activer le compte**, **Appel à distance autorisé**et **Sécurité de lecture**, puis cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

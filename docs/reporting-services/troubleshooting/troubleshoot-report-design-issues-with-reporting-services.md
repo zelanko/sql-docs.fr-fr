@@ -9,10 +9,10 @@ ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b3eb298bc6b359b0df92566f9add8d7011cdc907
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573843"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Résoudre les problèmes de conception de rapports avec Reporting Services
@@ -52,7 +52,7 @@ En général, un rapport s'élargit pour accommoder ses données et met de côt�
   
 Pour grouper plusieurs régions de données ou éléments de rapport, placez-les dans le même conteneur parent. Par exemple, placez un graphique et une table dans un conteneur rectangulaire et alignez leurs bords supérieurs pour les afficher côte par côte. Pour plus d’informations, voir [Comportement de rendu (Générateur de rapports et SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Résoudre les problèmes de récupération des données avec des rapports Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Résolution des problèmes d’abonnements et de remise de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   

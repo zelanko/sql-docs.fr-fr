@@ -16,10 +16,10 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59e78e1c11b18d71e20c054f69979d3f3679bce2
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580300"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
@@ -68,7 +68,7 @@ ms.locfileid: "65580300"
 ## <a name="aligning-horizontal-text-using-general"></a>Alignement du texte horizontal à l'aide de l'option Général  
  Dans la zone **Alignement** de la boîte de dialogue **Propriétés de la zone de texte** , vous pouvez indiquer comment le texte doit être aligné au niveau horizontal. Si vous ne spécifiez pas de valeur d’alignement, la valeur d’alignement appliquée par défaut est **Par défaut**. Cela signifie que le texte sera aligné en fonction du type de champ utilisé pour la valeur de votre espace réservé. Si vous spécifiez une expression dont la valeur n'est pas une chaîne (pas un nombre), le texte est aligné à droite. Si, en revanche, votre expression a une valeur de chaîne (un nombre, par exemple), le texte est aligné à gauche.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
