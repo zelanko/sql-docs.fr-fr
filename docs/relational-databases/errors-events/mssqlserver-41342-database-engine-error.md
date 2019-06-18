@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2e8136363205cf06a210f8a741ed8eb8debaaeb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046324"
 ---
 # <a name="mssqlserver41342"></a>MSSQLSERVER_41342
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ Les tables optimisées en mémoire requièrent un modèle de processeur qui pren
 ## <a name="user-action"></a>Action de l'utilisateur  
 Mettez à niveau votre processeur. Si vous exécutez SQL Server sur une machine virtuelle, modifiez la configuration afin de prendre en charge l’instruction CMPXCHG16B, à condition qu’elle soit gérée par votre processeur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

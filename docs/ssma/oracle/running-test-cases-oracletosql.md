@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625790"
 ---
 # <a name="running-test-cases-oracletosql"></a>Exécution de cas de test (OracleToSQL)
@@ -43,7 +43,7 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 ||||  
 |-|-|-|  
-|Nom|Type|Description|  
+|Nom|type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
 |USER_TABLE$AUD|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AUDID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
@@ -56,14 +56,14 @@ L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCL
   
 ||||  
 |-|-|-|  
-|Nom|Type|Description|  
+|Créer une vue d’abonnement|type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
 Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans la base de données ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|type|Description|  
 |USER_TABLE$ Aud|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$AudID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|vue|Représentation sous forme simplifiée de modifications de la table.|  

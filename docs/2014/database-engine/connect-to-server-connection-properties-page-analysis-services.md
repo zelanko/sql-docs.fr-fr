@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755234"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Se connecter au serveur (page Propriétés de connexion) - Analysis Services
@@ -24,7 +24,7 @@ ms.locfileid: "62755234"
   
 ## <a name="options"></a>Options  
  **Se connecter à la base de données**  
- Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >**, vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >**, vous pouvez parcourir le serveur pour la base de données que vous souhaitez vous connecter à.  
+ Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez  **\<par défaut >** , vous serez connecté à la base de données par défaut pour le serveur. Si vous sélectionnez  **\<parcourir le serveur >** , vous pouvez parcourir le serveur pour la base de données que vous souhaitez vous connecter à.  
   
  **Délai de connexion**  
  Spécifiez le délai d'expiration imparti, en secondes, pour qu'une connexion soit établie. La valeur par défaut est 15 secondes.  

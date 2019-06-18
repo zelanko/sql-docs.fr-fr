@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 37b88f07571029e39080f38c1406ab89ec73b0a3
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62910159"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (Autorisations de schéma) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Spécifie un principal dont le principal qui exécute cette requête dérive son
 -   Utilisateur de base de données mappé à une clé asymétrique  
 -   Utilisateur de base de données mappé à un principal de serveur  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Un schéma est un sécurisable au niveau de la base de données. Il est contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de refuser sur un schéma sont listées dans le tableau suivant. Le tableau présente les autorisations plus générales qui les englobent de manière implicite.  
   
 |Autorisation de schéma|Déduite d'une autorisation de schéma|Impliquée par une autorisation de base de données|  
@@ -94,10 +94,10 @@ Un schéma est un sécurisable au niveau de la base de données. Il est contenu 
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Requiert l'autorisation CONTROL pour le schéma. Si vous utilisez l’option AS, le principal spécifié doit être propriétaire du schéma.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
 [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
 [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721651"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
@@ -88,7 +88,7 @@ La synchronisation web est prise en charge sur IIS à compter de la version 5.0
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Pour augmenter le nombre maximal de processus de travail dans IIS 7  
   
-1.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud du serveur local, puis cliquez sur le nœud **Pool d'applications** .  
+1.  Dans **Gestionnaire des services Internet (IIS)** , développez le nœud du serveur local, puis cliquez sur le nœud **Pool d'applications** .  
   
 2.  Sélectionnez le pool d'applications associé au site de synchronisation Web, puis cliquez sur **Paramètres avancés** dans le volet **Actions** .  
   

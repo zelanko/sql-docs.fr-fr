@@ -18,10 +18,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1970f103825d95e77edffd5d2f6c58e405c9469d
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946614"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importer des données au format natif et caractère à partir de versions antérieures de SQL Server
@@ -50,15 +50,15 @@ ms.locfileid: "64946614"
 |XML|**ntext**|**ntext**|**ntext**|  
 |UDT**|**image**|**image**|**image**|  
   
- * Ce type est pris en charge en natif.  
+ \* Ce type est pris en charge en natif.  
   
  ** UDT indique un type défini par l’utilisateur.  
   
 ## <a name="exporting-using--v-80"></a>Exportation à l’aide de -V 80  
- Quand vous exportez des données en bloc à l’aide du commutateur **-V80**, les données **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML et UDT en mode natif sont stockées avec un préfixe à 4 octets, comme les données **text**, **image**et **ntext**, plutôt qu’avec un préfixe à 8 octets, qui s’utilise par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures.  
+ Quand vous exportez des données en bloc à l’aide du commutateur **-V80**, les données **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , XML et UDT en mode natif sont stockées avec un préfixe à 4 octets, comme les données **text**, **image**et **ntext**, plutôt qu’avec un préfixe à 8 octets, qui s’utilise par défaut pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures.  
   
 ## <a name="copying-date-values"></a>Copie de valeurs de date  
- **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[*.f...*]).  
+ **bcp** utilise l’API de copie en bloc ODBC. Par conséquent, pour importer des valeurs de date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp** utilise le format de date ODBC (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]).  
   
  La commande **bcp** exporte des fichiers de données au format caractère à l’aide du format par défaut ODBC pour les valeurs **datetime** et **smalldatetime** . Par exemple, une colonne **datetime** contenant la date `12 Aug 1998` est copiée en bloc dans un fichier de données en tant que chaîne de caractères `1998-08-12 00:00:00.000`.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "64946614"
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737689"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Spécification d'axes dans les requêtes XPath (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "62737689"
 /child::Customer/child::Order  
 ```  
   
- Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœud ont la valeur TRUE si Customer et Order sont  **\<élément >** nœuds, car le  **\<élément >** nœud est le nœud principal pour le **enfant** axe). Pour chaque nœud correspondant  **\<client >**, les nœuds correspondant  **\<Orders >** sont ajoutés au résultat. Uniquement  **\<ordre >** est retourné dans le jeu de résultats.  
+ Dans la requête, `child` est l’axe et `Customer` et `Order` sont les tests de nœud (ces tests de nœud ont la valeur TRUE si Customer et Order sont  **\<élément >** nœuds, car le  **\<élément >** nœud est le nœud principal pour le **enfant** axe). Pour chaque nœud correspondant  **\<client >** , les nœuds correspondant  **\<Orders >** sont ajoutés au résultat. Uniquement  **\<ordre >** est retourné dans le jeu de résultats.  
   
  Le **enfant** axe est la valeur par défaut. Par conséquent, la requête peut être spécifiée sous la forme :  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62737689"
 </ROOT>  
 ```  
   
- Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail`, à partir de chaque nœud correspondant à  **\<client >** la requête accède à son  **\<ordre >** éléments. Et pour chaque nœud correspondant  **\<ordre >**, la requête ajoute les nœuds  **\<OrderDetail >** au résultat. Uniquement  **\<OrderDetail >** est retourné dans le jeu de résultats.  
+ Si la requête XPath est spécifiée en tant que `Customer/Order/OrderDetail`, à partir de chaque nœud correspondant à  **\<client >** la requête accède à son  **\<ordre >** éléments. Et pour chaque nœud correspondant  **\<ordre >** , la requête ajoute les nœuds  **\<OrderDetail >** au résultat. Uniquement  **\<OrderDetail >** est retourné dans le jeu de résultats.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Utiliser... pour spécifier l'axe parent  
  La requête suivante récupère tous les  **\<ordre >** éléments avec un parent  **\<client >** élément avec un **CustomerID** attribut valeur 1. La requête utilise le **enfant** axe dans le prédicat pour rechercher le parent de la  **\<ordre >** élément.  
@@ -184,7 +184,7 @@ ms.locfileid: "62737689"
 ```  
   
 > [!NOTE]  
->  La requête XPath `/Order[../@CustomerID="1"]` retournera une erreur, car il n’y a aucun parent  **\<ordre >**. Bien qu’il peut y avoir des éléments dans le schéma de mappage qui contiennent  **\<ordre >**, l’expression XPath n’a pas commencé sur un d’eux ; par conséquent,  **\<ordre >** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
+>  La requête XPath `/Order[../@CustomerID="1"]` retournera une erreur, car il n’y a aucun parent  **\<ordre >** . Bien qu’il peut y avoir des éléments dans le schéma de mappage qui contiennent  **\<ordre >** , l’expression XPath n’a pas commencé sur un d’eux ; par conséquent,  **\<ordre >** est considéré comme étant le type d’élément de niveau supérieur dans le document.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   

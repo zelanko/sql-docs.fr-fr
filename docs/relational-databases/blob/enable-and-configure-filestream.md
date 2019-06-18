@@ -9,15 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-manager: craigg
-ms.openlocfilehash: 6c01393866ae90c800afbbc7f55e5cb63bfb7554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jroth
+ms.openlocfilehash: 9c2b248e89b3aa822de79dd26970931fea4aaebd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822811"
 ---
 # <a name="enable-and-configure-filestream"></a>Activer et configurer FILESTREAM
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Pour pouvoir commencer à utiliser FILESTREAM, vous devez l’activer sur l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cette rubrique décrit comment activer FILESTREAM à l'aide du Gestionnaire de configuration SQL Server.  
   
@@ -76,10 +79,11 @@ ms.locfileid: "65094295"
   
 ||||||  
 |-|-|-|-|-|  
-|Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes |  
+|Niveau RAID|Performances en écriture|Performances en lecture|Tolérance de panne|Notes|  
 |RAID 5|Normale|Normale|Excellent|Les performances sont meilleures qu'avec un seul disque ou une simple concaténation de disques, mais elles sont moins bonnes qu'avec le niveau RAID 0 ou le niveau RAID 5 utilisant l'agrégation par bandes.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + agrégation par bandes|Excellent|Excellent|Excellent|Option la plus chère.|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> Conception d’une base de données physique  

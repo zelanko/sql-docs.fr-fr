@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022224"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
@@ -85,7 +85,7 @@ ms.locfileid: "63022224"
   
     -   vous assurer qu'aucune chaîne vide n'est insérée dans la table publiée en tant que valeurs de colonne ;  
   
-    -   utiliser le paramètre **–SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement ; spécifier le code d’erreur Oracle 1400 (**-SkipErrors1400**) ;  
+    -   utiliser le paramètre **–SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement ; spécifier le code d’erreur Oracle 1400 ( **-SkipErrors1400**) ;  
   
     -   modifier le script de création de table généré, en supprimant l'attribut NOT NULL de toutes les colonnes de caractères ayant des chaînes vides associées, et fournir le script modifié en tant que script de création personnalisé pour l'article en utilisant le paramètre @creation_script de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   

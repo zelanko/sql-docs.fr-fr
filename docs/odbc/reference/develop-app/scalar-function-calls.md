@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468796"
 ---
 # <a name="scalar-function-calls"></a>Appels de fonctions scalaires
 Fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire de valeur absolue prend une colonne numérique en tant qu’argument et retourne la valeur absolue de chaque valeur dans la colonne. Est la séquence d’échappement pour appeler une fonction scalaire  
   
- **{fn** _fonction scalaire_ **}**   
+ **{fn** _fonction scalaire_ **}**  
   
  où *fonction scalaire* est une des fonctions répertoriées dans [annexe e : Fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Pour plus d’informations sur la séquence d’échappement de fonction scalaire, consultez [scalaire séquence d’échappement de fonction](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) dans l’annexe c : Grammaire SQL.  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Pour une interopérabilité maximale, les applications doivent utiliser le **convertir** fonction scalaire pour vous assurer que la sortie d’une fonction scalaire est le type requis. Le **convertir** fonction convertit les données à partir d’un type de données SQL vers le type de données SQL spécifié. La syntaxe de la **convertir** est (fonction)  
   
- **CONVERT(** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_ **)**  
   
  où *value_exp* est un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur littérale, et *data_type* est un mot clé qui correspond à la **#define** nom qui est utilisé par un Identificateur de type de données SQL comme défini dans [annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md). Par exemple, l’instruction SQL suivante utilise le **convertir** (fonction) pour vous assurer que la sortie de la **CURDATE** (fonction) est une date, au lieu d’un horodatage ou caractères de données :  
   

@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632015"
 ---
 # <a name="table-properties---ssms"></a>Propriétés de la table - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51676068"
  **Date de création**  
  Date et heure de création de la table.  
   
- **Nom**  
+ **Name**  
  Nom de la table.  
   
  **Schéma**  
@@ -173,7 +173,7 @@ ms.locfileid: "51676068"
   
  Le schéma de partition FILESTREAM doit être symétrique avec le schéma spécifié dans l'option **Schéma de partition** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher la définition de table](../../relational-databases/tables/view-the-table-definition.md)   
  [Modifier des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/modify-columns-database-engine.md)  
   

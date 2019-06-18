@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775218"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
@@ -59,7 +59,7 @@ ms.locfileid: "62775218"
 -   Les versions 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mises à niveau uniquement vers un serveur 64 bits [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Lorsque vous mettez à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choisissez entre Enterprise Edition : Licence par cœur et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences et le nombre maximal de noyaux pris en charge. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Lorsque vous mettez à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choisissez entre Enterprise Edition : licence par cœur et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences et le nombre maximal de noyaux pris en charge. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge la mise à niveau à partir des versions suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   

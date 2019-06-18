@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 1a1218e5d27abd72acef7967e0a71284384fed89
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380300"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629137"
 ---
 # <a name="sql-server-sql-statistics-object"></a>Objet SQLServer:SQL Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53380300"
 |**Recompilations SQL/s**|Nombre de recompilations d'instructions par seconde. Compte le nombre de fois où les recompilations d'instruction sont déclenchées. En général, il faut que le nombre de recompilations soit faible.|  
 |**Nombre d'autoparamétrages non sûrs/s**|Nombre de tentatives d'autoparamétrage non sûres par seconde. Par exemple, la requête possède des caractéristiques qui empêchent le partage du plan mis en cache. Elles sont qualifiées de non sûres. Ce compteur ne tient pas compte du nombre de paramétrages forcés.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server - Objet Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

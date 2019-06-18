@@ -15,11 +15,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fffbb19685087883d9b788e7dc894eb413f4b0b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516091"
 ---
 # <a name="create-foreign-key-relationships"></a>Créer des relations de clé étrangère
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,11 +52,11 @@ ms.locfileid: "56802783"
     
 -   Si une clé étrangère est définie sur une colonne avec le type de données CLR défini par l'utilisateur, l'implémentation du type doit prendre en charge le tri binaire. Pour plus d’informations, consultez [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).    
     
--   Une colonne de type **varchar(max)** ne peut participer à une contrainte FOREIGN KEY que si la clé primaire qu’elle référence est également définie comme étant de type **varchar(max)**.    
+-   Une colonne de type **varchar(max)** ne peut participer à une contrainte FOREIGN KEY que si la clé primaire qu’elle référence est également définie comme étant de type **varchar(max)** .    
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>Autorisations    
  La création d'une nouvelle table avec une clé étrangère nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table a été créée.    
     
  La création d'une clé étrangère dans une table existante nécessite l'autorisation ALTER sur la table.    
@@ -77,7 +77,7 @@ ms.locfileid: "56802783"
     
 4.  Cliquez sur la relation dans la liste **Relation sélectionnée** .    
     
-5.  Cliquez sur **Spécification de tables et colonnes** dans la grille affichée à droite et cliquez sur le bouton de sélection (**...**), à droite de la propriété.    
+5.  Cliquez sur **Spécification de tables et colonnes** dans la grille affichée à droite et cliquez sur le bouton de sélection ( **...** ), à droite de la propriété.    
     
 6.  Dans la liste déroulante **Clé primaire** de la boîte de dialogue **Tables et colonnes** , choisissez la table qui sera du côté clé primaire de la relation.    
     

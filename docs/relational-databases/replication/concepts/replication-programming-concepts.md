@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85759d21668cc0eb5bc5b6f85f946da96de58442
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724632"
 ---
 # <a name="replication-programming-concepts"></a>Concepts de programmation en matière de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "54299898"
   
  Vous pouvez également étendre votre application en associant les fonctionnalités de réplication à d'autres fonctionnalités fournies par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le tableau suivant décrit certaines fonctionnalités étendues que vous pouvez fournir dans votre application de réplication.  
   
-|Fonctionnalité| Exemple|  
+|Fonctionnalité|Exemple|  
 |-------------------|-------------|  
 |Administration de serveur à l'aide de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)|Application qui permet à un administrateur de joindre et de configurer une base de données en tant que serveur de publication dans une topologie de réplication.|  
 |Accès aux données à l'aide d'ADO.NET|Application qui permet aux utilisateurs d'accéder par programme aux données de ventes répliquées et de les modifier dans une base de données d'abonné locale en mode hors connexion, puis de se connecter et de synchroniser l'abonnement par extraction de données (pull) en cliquant sur un bouton.|  
@@ -114,7 +114,7 @@ ms.locfileid: "54299898"
 |[Procédures stockées de réplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Création de scripts|Administration et analyse.|  
 |[Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Création de scripts|Synchronisation.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans le contexte d'[!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)], les données doivent être publiées pour 200 représentants dans le monde. Les représentants voyagent fréquemment ; ils devront donc utiliser des ordinateurs portables ou des assistants numériques personnels (PDA) pour modifier les données client et ajouter de nouvelles commandes. Les modifications devront ensuite être synchronisées avec le serveur de publication lorsque le représentant connectera l'ordinateur portable au réseau.  
   
  Pour cette application, les étapes de la planification peuvent être les suivantes :  

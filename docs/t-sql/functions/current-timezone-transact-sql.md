@@ -26,11 +26,11 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62850367"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
 
@@ -55,11 +55,11 @@ Cette fonction ne prend pas d'arguments.
 
 **varchar**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 `CURRENT_TIMEZONE` est une fonction non déterministe. Les vues et les expressions qui référencent cette colonne ne peuvent pas être indexées.
   
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Notez que la valeur retournée reflète le fuseau horaire réel et les paramètres de langue du serveur ou de l’instance.
 

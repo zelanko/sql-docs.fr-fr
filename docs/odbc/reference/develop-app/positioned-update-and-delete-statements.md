@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312486"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instructions de mise à jour et de suppression positionnées
@@ -34,7 +34,7 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  [**WHERE** *search-condition*]  
   
- **POUR la mise à jour de** [*nom-colonne* [**,** *nom-colonne*]...]  
+ **POUR la mise à jour de** [*nom-colonne* [ **,** *nom-colonne*]...]  
   
  L’application puis place le curseur sur la ligne d’être mis à jour ou supprimées. Il peut le faire en appelant **SQLFetchScroll** pour récupérer un ensemble de lignes contenant la ligne requise et l’appel **SQLSetPos** pour positionner le curseur de jeu de lignes sur cette ligne. L’application exécute ensuite la mise à jour positionnée ou une instruction delete sur une autre instruction que l’instruction utilisée par le jeu de résultats. La syntaxe de ces instructions est :  
   
@@ -42,7 +42,7 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *identificateur de colonne* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nom de curseur*  
   

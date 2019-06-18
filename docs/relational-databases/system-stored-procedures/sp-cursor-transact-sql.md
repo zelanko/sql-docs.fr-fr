@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724204"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Paramètre obligatoire qui désigne quelle opération le curseur effectuera. *optype* requiert l’une des opérations suivantes **int** valeurs d’entrée.  
   
-|Value|Créer une vue d’abonnement|Description|  
+|Value|Nom|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Utilisée pour mettre à jour une ou plusieurs lignes dans le tampon d'extraction.  Les lignes spécifiées dans *rownum* sont accessibles de nouveau et mis à jour.|  
 |0x0002|Suppression|Utilisée pour supprimer une ou plusieurs lignes dans le tampon d'extraction. Les lignes spécifiées dans *rownum* sont de nouveau accès et de suppression.|  

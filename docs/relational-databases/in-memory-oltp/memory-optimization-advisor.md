@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ff483bc665f974c9cea0379291a4feb9a3fe55d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025567"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "52507934"
   
  Une fois le traitement terminé, actualisez l’ **Explorateur d’objets** pour afficher la nouvelle table optimisée en mémoire et l’ancienne table sur disque. Vous pouvez conserver l'ancienne table ou la supprimer, à votre convenance personnelle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

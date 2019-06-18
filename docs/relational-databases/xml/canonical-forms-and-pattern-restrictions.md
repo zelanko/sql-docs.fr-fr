@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a8aab1770d1bcad18f8c144f57a61703d2a4a7b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513196"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652383"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formes canoniques et restrictions de modèle
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "58513196"
   
  Une sérialisation imprécise de valeurs en virgule flottante donne lieu à un problème similaire. Du fait de l'algorithme de sérialisation en virgule flottante utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est possible pour des valeurs similaires de partager la même forme canonique. Quand une valeur en virgule flottante est sérialisée puis réinsérée, sa valeur peut varier légèrement. En de rares occasions, cela peut produire une valeur enfreignant l'une des facettes suivantes propres à son type au moment de sa réinsertion : **enumeration**, **minInclusive**, **minExclusive**, **maxInclusive**ou **maxExclusive**. Pour éviter ce problème, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs des types dérivés de `xs:float` ou de `xs:double` ne pouvant pas être sérialisées et réinsérées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

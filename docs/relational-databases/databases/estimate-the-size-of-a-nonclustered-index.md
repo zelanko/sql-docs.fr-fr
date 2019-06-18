@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6c00b0abcd09d4712b82df1d0d138cb37a390
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653162"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
 
@@ -250,7 +250,7 @@ ms.locfileid: "51559176"
   
 -   Valeurs LOB  
   
-     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**et **image** est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
+     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**et **image** est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
   
 -   Compression  
   
@@ -260,7 +260,7 @@ ms.locfileid: "51559176"
   
      Pour plus d'informations sur l'espace nécessaire pour les colonnes éparses, consultez [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

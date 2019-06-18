@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0fc0c392851ebd91690654ba328eff71712d61c1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089433"
 ---
 # <a name="about-dialog-box"></a>Boîte de dialogue À propos de
@@ -35,6 +35,6 @@ Répertorie la version de chaque composant installé.
 **Copier les informations**  
 Copie les noms et les versions des composants dans le Presse-papiers [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

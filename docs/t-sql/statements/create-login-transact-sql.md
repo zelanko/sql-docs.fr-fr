@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095338"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -51,7 +51,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -88,9 +88,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse (**\\**). Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
+*login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse ( **\\** ). Les connexions Windows peuvent contenir une barre oblique inverse ( **\\** ). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
 
-PASSWORD **=**'*password*' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
+PASSWORD **=** '*password*' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
@@ -100,13 +100,13 @@ HASHED S’applique uniquement aux connexions SQL Server. Spécifie que le mot d
 
 MUST_CHANGE S’applique uniquement aux connexions SQL Server. Si vous incluez cette option, SQL Server demande à l’utilisateur un nouveau mot de passe la première fois que la nouvelle connexion est utilisée.
 
-CREDENTIAL **=**_credential\_name_ Nom des informations d’identification à mapper sur le nouveau compte de connexion SQL Server. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système.
+CREDENTIAL **=** _credential\_name_ Nom des informations d’identification à mapper sur le nouveau compte de connexion SQL Server. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système.
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)**) basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)** ) basée sur un GUID. Par exemple, `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_ Spécifie la base de données par défaut à attribuer à la connexion. Si cette option est omise, la base de données par défaut est master.
+DEFAULT_DATABASE **=** _database_ Spécifie la base de données par défaut à attribuer à la connexion. Si cette option est omise, la base de données par défaut est master.
 
-DEFAULT_LANGUAGE **=**_language_ Spécifie la langue par défaut à attribuer à la connexion. Si cette option est omise, la langue par défaut est la langue par défaut actuellement définie pour le serveur. Si la langue par défaut du serveur est changée par la suite, la langue par défaut de la connexion reste la même.
+DEFAULT_LANGUAGE **=** _language_ Spécifie la langue par défaut à attribuer à la connexion. Si cette option est omise, la langue par défaut est la langue par défaut actuellement définie pour le serveur. Si la langue par défaut du serveur est changée par la suite, la langue par défaut de la connexion reste la même.
 
 CHECK_EXPIRATION **=** { ON | **OFF** } S’applique uniquement aux comptes de connexion SQL Server. Spécifie si les règles d'expiration des mots de passe doivent être imposées sur cette connexion. La valeur par défaut est OFF.
 
@@ -125,7 +125,7 @@ CERTIFICATE *certname* Spécifie le nom d’un certificat à associer à cette c
 
 ASYMMETRIC KEY *asym_key_name* Spécifie le nom d’une clé asymétrique à associer à cette connexion. Cette clé doit déjà se trouver dans la base de données master.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
 - Le hachage préalable des mots de passe est pris en charge uniquement quand vous créez des connexions SQL Server.
@@ -244,7 +244,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -259,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_**|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\* Pool élastique/base de données unique<br />SQL Database \*_ **|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -281,13 +281,13 @@ CREATE LOGIN login_name
 
 *login_name* Spécifie le nom de la connexion créée. Le pool élastique/la base de données unique Azure SQL Database ne prend en charge que les connexions SQL.
 
-PASSWORD **='** password**'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
+PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)**) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
 - Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -301,11 +301,11 @@ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux co
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>*@*\<serveur>*. Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
 Dans SQL Database, vous devez être connecté à la base de données master pour créer une connexion.
 
-Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com**, vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver**.
+Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
 Dans SQL Database, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -364,7 +364,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -379,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instance managée<br />SQL Database \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|** _\* Instance managée<br />SQL Database \*_ **|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -412,9 +412,9 @@ PASSWORD **=** '*password*' Spécifie le mot de passe de la connexion SQL en cou
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
-SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)**) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
 - Une nouvelle syntaxe est introduite pour la création de principaux au niveau du serveur mappés à des comptes Azure AD (**FROM EXTERNAL PROVIDER**)
@@ -545,7 +545,7 @@ FROM sys.server_principals;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -560,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ **|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -582,13 +582,13 @@ CREATE LOGIN login_name
 
 *login_name* Spécifie le nom de la connexion créée. Azure SQL Database prend uniquement en charge les connexions SQL.
 
-PASSWORD **='** password**'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
+PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
- SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Data Warehouse, il s’agit d’un littéral 32 octets (**binary(32)**) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Data Warehouse, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
 - Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
@@ -600,11 +600,11 @@ Les mots de passe respectent la casse. Les mots de passe doivent comporter au mo
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Dans certaines méthodes de connexion à SQL Data Warehouse, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Data Warehouse au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>*@*\<serveur>*. Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database Warehouse est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Dans certaines méthodes de connexion à SQL Data Warehouse, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Data Warehouse au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<connexion>* @ *\<serveur>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database Warehouse est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
 Dans SQL Database Warehouse, vous devez être connecté à la base de données master pour créer une connexion.
 
-Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com**, vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver**.
+Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<nom_connexion>@\<nom_serveur>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
 Dans SQL Database Warehouse, les données de connexion exigées pour authentifier une connexion et les règles de pare-feu de niveau serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -659,7 +659,7 @@ SELECT * FROM sys.sql_logins WHERE name = 'TestLogin';
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)
@@ -674,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 
@@ -697,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse (**\\**). Les connexions Windows peuvent contenir une barre oblique inverse (**\\**). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
+*login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse ( **\\** ). Les connexions Windows peuvent contenir une barre oblique inverse ( **\\** ). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
 
-PASSWORD **='**_password_' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
+PASSWORD **='** _password_' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
 
 Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
 
@@ -718,7 +718,7 @@ Si la stratégie windows requiert des mots de passe forts, les mots de passe doi
 
 WINDOWS Spécifie que la connexion doit être mappée sur une connexion Windows.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
 - Si MUST_CHANGE est spécifié, CHECK_EXPIRATION et CHECK_POLICY doivent prendre la valeur ON. Sans quoi, l'instruction échoue.
@@ -774,7 +774,7 @@ CREATE LOGIN [Contoso\Mary] FROM WINDOWS;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)
 - [Principaux](../../relational-databases/security/authentication-access/principals-database-engine.md)

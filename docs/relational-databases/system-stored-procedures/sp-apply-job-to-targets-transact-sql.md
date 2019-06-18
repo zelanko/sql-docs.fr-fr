@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998024"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
@@ -50,11 +50,11 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Une liste séparée par des virgules de groupes de serveurs cibles auxquels le travail spécifié est à appliquer. *groupes_serveurs_cibles* est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
+`[ @target_server_groups = ] 'target_server_groups'` Une liste séparée par des virgules de groupes de serveurs cibles auxquels le travail spécifié est à appliquer. *groupes_serveurs_cibles* est **nvarchar (2048)** , avec NULL comme valeur par défaut.  
   
-`[ @target_servers = ] 'target_servers'` Une liste séparée par des virgules de serveurs cibles auxquels le travail spécifié est à appliquer. *serveurs_cibles*est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
+`[ @target_servers = ] 'target_servers'` Une liste séparée par des virgules de serveurs cibles auxquels le travail spécifié est à appliquer. *serveurs_cibles*est **nvarchar (2048)** , avec NULL comme valeur par défaut.  
   
-`[ @operation = ] 'operation'` Est si le travail spécifié doit être appliqué ou supprimé à partir des serveurs cibles ou des groupes de serveurs cibles spécifiés. *opération*est **varchar(7)**, avec une valeur par défaut de l’appliquer. Les opérations valides sont **appliquer** et **supprimer**.  
+`[ @operation = ] 'operation'` Est si le travail spécifié doit être appliqué ou supprimé à partir des serveurs cibles ou des groupes de serveurs cibles spécifiés. *opération*est **varchar(7)** , avec une valeur par défaut de l’appliquer. Les opérations valides sont **appliquer** et **supprimer**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

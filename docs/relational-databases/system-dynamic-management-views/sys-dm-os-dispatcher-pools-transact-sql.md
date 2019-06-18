@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a7a03063ad61c380f72e9a52b71f268b06d822d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505999"
 ---
 # <a name="sysdmosdispatcherpools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "62505999"
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8)**|Adresse du pool de répartiteurs. dispatcher_pool_address est unique. N'accepte pas la valeur NULL.|  
 |type|**nvarchar (256)**|Type du pool de répartiteurs. N'accepte pas la valeur NULL. Il existe deux types de pools de répartiteurs :<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Interrogez la DMV pour obtenir la liste complète|  
-|NAME|**nvarchar (256)**|Nom du pool de répartiteurs. N'accepte pas la valeur NULL.|  
+|name|**nvarchar (256)**|Nom du pool de répartiteurs. N'accepte pas la valeur NULL.|  
 |dispatcher_count|**Int**|Nombre de threads de répartiteurs actifs. N'accepte pas la valeur NULL.|  
 |dispatcher_ideal_count|**Int**|Nombre de threads de répartiteurs que le pool de répartiteurs peut être amené à utiliser. N'accepte pas la valeur NULL.|  
 |dispatcher_timeout_ms|**Int**|Durée, en millisecondes, pendant laquelle un répartiteur attend une nouvelle tâche avant de se fermer. N'accepte pas la valeur NULL.|  

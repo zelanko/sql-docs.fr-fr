@@ -1,6 +1,6 @@
 ---
 title: Les groupes de calcul dans les modèles tabulaires Analysis Services | Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6883fac2772e69a0e3939de970f436827f2cdf5d
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822694"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166359"
 ---
 # <a name="calculation-groups-preview"></a>Groupes de calcul (version préliminaire)
  
@@ -407,8 +407,6 @@ Groupes de calcul ne sont pas encore pris en charge dans SQL Server Data Tools, 
 [Sécurité au niveau de l’objet](object-level-security.md) (OLS) défini sur le calcul des tables de groupe n’est pas pris en charge. Toutefois, OLS peuvent être définies sur les autres tables dans le même modèle. Si un élément de calcul fait référence à un objet sécurisé OLS, une erreur générique est retournée.
 
 [Sécurité au niveau des lignes](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) n’est pas pris en charge. Vous pouvez définir des lignes sur les tables dans le même modèle, mais pas sur les groupes de calcul eux-mêmes (directement ou indirectement).
-
-[Décrit en détail les Expressions de lignes](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) ne sont pas pris en charge avec les groupes de calcul.
 
 ## <a name="see-also"></a>Voir aussi  
 

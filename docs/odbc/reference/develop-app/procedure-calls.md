@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284575"
 ---
 # <a name="procedure-calls"></a>Appels de procédure
 Un *procédure* est un objet exécutable stocké sur la source de données. Généralement, il s'agit d'une ou plusieurs instructions SQL qui ont été précompilées. La séquence d’échappement pour appeler une procédure est  
   
- **{**[**? =**]**appeler** *nom de la procédure*[**(**[*paramètre*] [**,**[*paramètre*]]... **)**]**}**  
+ **{** [ **? =** ]**appeler** *nom de la procédure*[ **(** [*paramètre*] [ **,** [*paramètre*]]... **)** ] **}**  
   
  où *nom de la procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure.  
   

@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946159"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
@@ -54,9 +54,9 @@ ms.locfileid: "64946159"
   
   
 ##  <a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
- Si une commande **bcp** interactive contient l’option **in** ou **out** , mais non le commutateur de fichier de format (**-f**) ni le commutateur de format de données (**-n**, **-c**, **-w**ou **-N**), pour chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents. À chaque invite, la commande **bcp** fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif (**-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** , mais non le commutateur de fichier de format ( **-f**) ni le commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**), pour chaque colonne de la table source ou cible, la commande vous invite à fournir chacun des attributs précédents. À chaque invite, la commande **bcp** fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  L’exemple suivant utilise la commande **bcp** pour l’exportation en bloc interactive de données à partir de la table `HumanResources.myTeam` vers le fichier `myTeam.txt` . Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md).  
   
  La commande ne spécifie ni un fichier de format, ni un type de données ; l’utilitaire **bcp** vous invite donc à fournir des informations de format de données. À l'invite de commandes [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, entrez :  
@@ -119,7 +119,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
 ## <a name="related-content"></a>Contenu associé  
  Aucun.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Formats de données pour l’importation ou l’exportation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   

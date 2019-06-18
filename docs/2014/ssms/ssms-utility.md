@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edb7ea682ebef5d99cee7a248681be80fc433312
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127002"
 ---
 # <a name="ssms-utility"></a>Utilitaire Ssms
@@ -51,28 +51,28 @@ ms.locfileid: "63127002"
  *solutionfile*  
  Spécifie une solution à ouvrir. Le paramètre doit contenir le chemin d'accès complet au fichier de solution.  
   
- [**-S** _nom_serveur_]  
+ [ **-S** _nom_serveur_]  
  Nom du serveur  
   
- [**-d** _nom_base_de_données_]  
+ [ **-d** _nom_base_de_données_]  
  Nom de la base de données  
   
- [**-U** _nom_d_utilisateur_]  
+ [ **-U** _nom_d_utilisateur_]  
  Nom d'utilisateur lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [**-P** _mot de passe_]  
+ [ **-P** _mot de passe_]  
  Mot de passe lors d'une connexion avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- [**-E**]  
+ [ **-E**]  
  Connexion avec l'authentification Windows  
   
- [**-nosplash**]  
+ [ **-nosplash**]  
  Empêche [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] d'afficher le graphique de l'écran de démarrage lors de l'ouverture. Utilisez cette option lors d'une connexion à l'ordinateur exécutant [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] au moyen des services Terminal Server sur une connexion dotée d'une bande passante limitée. Cet argument ne respecte pas la casse et peut apparaître avant ou après d'autres arguments  
   
- [**-log**_[nom_fichier]?_]  
+ [ **-log** _[nom_fichier]?_ ]  
  Consigne l'activité de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans le fichier spécifié à des fins de dépannage  
   
- [**-?**]  
+ [ **-?** ]  
  Affiche l'aide de la ligne de commande.  
   
 ## <a name="remarks"></a>Notes  

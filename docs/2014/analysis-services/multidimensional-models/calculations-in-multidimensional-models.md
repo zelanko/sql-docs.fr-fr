@@ -21,12 +21,12 @@ ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b78f2d8fdc34743e4e74d1e27346651c7adc443
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 3ecc0e4c4b2f5fdc1d6cad7ad068d9a1da440393
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66076733"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046625"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Calculs dans les modèles multidimensionnels
   Utilisez l’onglet **Calculs** du Concepteur de cube pour créer des membres calculés, des jeux nommés et d’autres calculs MDX (Multidimensional Expressions).  
@@ -40,7 +40,7 @@ ms.locfileid: "66076733"
 -   Le volet des expressions de calcul prend en charge un mode Formulaire et un mode Script.  
   
 > [!NOTE]  
->  Pour plus d’informations sur l’écriture de scripts MDX, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)et consultez la section ressources supplémentaires sur le [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) page sur le Site Web Microsoft TechNet. Pour plus d’informations sur les problèmes de performance liés à la conception de cubes, consultez le [Guide des performances SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Pour plus d’informations sur l’écriture de scripts MDX, consultez [Introduction aux scripts MDX dans Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892)et consultez la section ressources supplémentaires sur le [SQL Server 2005 - Analysis Services](https://go.microsoft.com/fwlink/?LinkId=80853) page sur le Site Web Microsoft TechNet. Pour plus d’informations sur les problèmes de performance liés à la conception de cubes, consultez le [Guide des performances SQL Server 2005 Analysis Services](http://download.microsoft.com/download/8/5/e/85eea4fa-b3bb-4426-97d0-7f7151b2011c/ssas2005perfguide.doc).  
   
 ## <a name="creating-a-new-calculation"></a>Création d'un nouveau calcul  
  Pour créer un calcul, sous l’onglet **Calculs** du Concepteur de Cube, dans le menu **Cube** , cliquez sur **Nouveau membre calculé**, **Nouveau jeu nommé**ou **Nouvelle commande de script**, en fonction du type de calcul à créer. Vous pouvez également soit cliquer sur l’un des boutons correspondants dans la barre d’outils, soit cliquer avec le bouton droit n’importe où dans le volet **Organisateur de script** et cliquer ensuite sur l’une des commandes du menu contextuel. Cette action ajoute un nouveau calcul au volet **Organisateur de script** et affiche les champs correspondants dans le formulaire de calcul dans le volet des expressions de calcul. Si vous créez un nouveau script, cette action ouvre le mode Script dans le volet des expressions de calcul. Pour plus d’informations sur la création des trois types de calculs, consultez [Créer des membres calculés](create-calculated-members.md), [Créer des jeux nommés](create-named-sets.md)et [Définir des attributions et d’autres commandes de script](define-assignments-and-other-script-commands.md).  

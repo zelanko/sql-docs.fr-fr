@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: c2f2cf71f30848c60a000eaaeefcc1447f2a5a6d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653060"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ L'Assistant Paramétrage du moteur de base de données est conçu pour gérer le
  **Interface graphique utilisateur de l'Assistant Paramétrage du moteur de base de données**  
  Interface simple d'utilisation dans laquelle vous pouvez spécifier la charge de travail et sélectionner plusieurs options de paramétrage.  
   
- Utilitaire**dta**   
+ Utilitaire**dta**  
  Version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  
   
  **charge de travail**  

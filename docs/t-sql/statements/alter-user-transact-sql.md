@@ -27,11 +27,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62648806"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,12 +112,12 @@ ALTER USER userName
  *userName*  
  Spécifie le nom qui identifie l'utilisateur dans cette base de données.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  Remappe un utilisateur à une autre connexion en modifiant l'identificateur de sécurité (SID) de l'utilisateur de manière à ce qu'il corresponde au SID de la connexion.  
   
  Si l'instruction ALTER USER est la seule instruction d'un lot SQL, Microsoft Azure SQL Database prend en charge la clause WITH LOGIN. Si l'instruction ALTER USER n'est pas la seule instruction d'un lot SQL ou est exécutée en SQL dynamique, la clause WITH LOGIN n'est pas prise en charge.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  Spécifie le nouveau nom de cet utilisateur. *newUserName* ne doit pas déjà exister dans la base de données active.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -131,7 +131,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Mot de passe de l’utilisateur actuel qui sera remplacé par '*password*'. Les mots de passe respectent la casse. *OLD_PASSWORD* est obligatoire pour changer un mot de passe, sauf si vous disposez de l’autorisation **ALTER ANY USER**. La spécification obligatoire du paramètre *OLD_PASSWORD* empêche les utilisateurs disposant de l’autorisation **IMPERSONATION** de changer le mot de passe.  
@@ -139,7 +139,7 @@ ALTER USER userName
 > [!NOTE]  
 >  Cette option est uniquement disponible pour les utilisateurs à relation contenant-contenu.  
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie une langue par défaut à affecter à l'utilisateur. Si cette option a la valeur NONE, la langue par défaut est la langue par défaut actuellement définie pour la base de données. Si la langue par défaut de la base de données est modifiée ultérieurement, la langue par défaut de l'utilisateur reste inchangée. *DEFAULT_LANGUAGE* peut être l’ID local (lcid), le nom de la langue ou l’alias de langue.  
@@ -155,7 +155,7 @@ ALTER USER userName
 > [!WARNING]  
 >  Une utilisation incorrecte de cette option peut entraîner une altération des données. Pour plus d’informations, consultez [Migrer des données sensibles protégées par Always Encrypted](../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le schéma par défaut correspond au premier schéma que le serveur doit interroger pour résoudre les noms des objets associés à cet utilisateur de base de données. Sauf spécification contraire, le schéma par défaut sera le propriétaire des objets créés par cet utilisateur de la base de données.  
   
  Si l'utilisateur possède un schéma par défaut, ce schéma par défaut est utilisé. Si l'utilisateur ne possède pas de schéma par défaut, mais qu'il est membre d'un groupe qui dispose d'un schéma par défaut, le schéma par défaut du groupe est utilisé. Si l'utilisateur ne possède pas de schéma par défaut, et qu'il est membre de plus d'un groupe, le schéma par défaut de l'utilisateur sera celui du groupe Windows avec le principal_id le plus bas et un schéma par défaut défini explicite. Si aucun schéma par défaut ne peut être déterminé pour un utilisateur, le schéma **dbo** est utilisé.  
@@ -193,7 +193,7 @@ Le nom d’un utilisateur mappé à un compte de connexion [!INCLUDE[ssNoVersion
 > [!NOTE]  
 >  Un utilisateur bénéficiant de l’autorisation **ALTER ANY USER** peut changer le schéma par défaut de n’importe quel utilisateur. Un utilisateur dont le schéma a été modifié peut, sans le savoir, sélectionner des données dans la mauvaise table ou exécuter du code à partir du mauvais schéma.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Pour changer le nom d’un utilisateur, vous devez disposer de l’autorisation **ALTER ANY USER**.  
   
  Pour changer la connexion cible d’un utilisateur, vous devez disposer de l’autorisation **CONTROL** sur la base de données.  
@@ -214,7 +214,7 @@ ALTER USER Mary5 WITH NAME = Mary51;
 GO  
 ```  
   
-### <a name="b-changing-the-default-schema-of-a-user"></a>b. Modification du schéma par défaut d'un utilisateur  
+### <a name="b-changing-the-default-schema-of-a-user"></a>B. Modification du schéma par défaut d'un utilisateur  
  L'exemple suivant modifie le schéma par défaut de l'utilisateur `Mary51` en `Purchasing`.  
   
 ```  
@@ -237,7 +237,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   

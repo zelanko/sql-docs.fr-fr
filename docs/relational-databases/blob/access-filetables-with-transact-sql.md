@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9a01f23b598e6a8a81122c8a670fadc9f00b6009
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089009"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Accéder aux FileTables avec Transact-SQL
@@ -70,7 +70,7 @@ ms.locfileid: "65089009"
   
 -   La valeur de **last_access_time** ne peut pas être antérieure à **last_write_time** et **creation_time**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](../../relational-databases/blob/load-files-into-filetables.md)   
  [Travailler avec des répertoires et des chemins d'accès dans FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec des API d’entrée-sortie de fichier](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

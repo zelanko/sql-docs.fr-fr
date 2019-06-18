@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd843cfe70aeaaac866398339e35089615eb44a2
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62961221"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,10 +84,10 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Active ou désactive la collecte d'enregistrements d'audit pour cette spécification d'audit. Les modifications de l'état de la spécification d'audit doivent être effectuées à l'extérieur d'une transaction utilisateur et elles ne peuvent pas comporter d'autres modifications dans la même instruction lorsque la transition passe de ON à OFF.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les spécifications d'audit de base de données sont des objets non sécurisables qui résident dans une base de données spécifiée. Vous devez définir l’état d’une spécification d’audit sur OFF pour pouvoir modifier celle d’une base de données. Si ALTER DATABASE AUDIT SPECIFICATION est exécuté alors qu'un audit est activé avec des options autres que STATE=OFF, vous recevez un message d'erreur. Pour plus d'informations, consultez [tempdb Database](../../relational-databases/databases/tempdb-database.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs disposant de l'autorisation ALTER ANY DATABASE AUDIT peuvent modifier des spécifications d'audit de la base de données et les lier à un audit quelconque.  
   
  Une fois qu’une spécification d’audit de la base de données est créée, elle est consultable par des principaux disposant des autorisations CONTROL SERVER ou ALTER ANY DATABASE AUDIT, le compte sysadmin ou des principaux ayant un accès explicite à l’audit.  
@@ -107,7 +107,7 @@ GO
   
  Pour obtenir un exemple complet de création d’audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

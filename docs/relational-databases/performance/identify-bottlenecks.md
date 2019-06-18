@@ -24,11 +24,11 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 213df75d1883de730a0231c009f1d178814ed463
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636302"
 ---
 # <a name="identify-bottlenecks"></a>Identifier les goulots d'étranglement
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53370641"
 ## <a name="analyzing-bottlenecks"></a>Analyse des goulots d'étranglement  
  La durée excessive de divers événements représente un indicateur des goulots d'étranglement susceptibles d'être ajustés.  
   
- Exemple :  
+ Par exemple :  
   
 -   un composant peut empêcher le chargement d'un autre composant, augmentant ainsi le temps nécessaire pour terminer le chargement ;  
   
@@ -63,7 +63,7 @@ ms.locfileid: "53370641"
 |Connexions utilisateur|Un nombre trop important d'utilisateurs peuvent accéder au serveur en même temps, provoquant une dégradation des performances.|  
 |Verrous bloquants|Des applications mal conçues peuvent provoquer des blocages et nuire à la simultanéité, provoquant ainsi des temps de réponse plus longs et des débits de transactions plus faibles.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller l'utilisation de l'UC](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [Surveiller l'utilisation du disque](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [Surveiller l'utilisation de la mémoire](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

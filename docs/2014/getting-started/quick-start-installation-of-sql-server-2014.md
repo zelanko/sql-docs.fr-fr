@@ -15,10 +15,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b06f5248152f8a11bf3e46d222df457f5442b6b4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62837781"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Installation de démarrage rapide de SQL Server 2014
@@ -70,7 +70,7 @@ ms.locfileid: "62837781"
   
      Consultez [installer des fonctionnalités BI SQL Server 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) pour plus d’informations sur l’installation des fonctionnalités qui font partie de la plateforme Microsoft BI, qui incluent [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]et plusieurs applications clientes servant à créer ou utiliser des données analytiques.  
   
--   **Installation d’un cluster de basculement**   
+-   **Installation d’un cluster de basculement**  
   
      Consultez [Installation de Cluster de basculement SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) pour obtenir des informations sur l’installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cluster de basculement.  
   

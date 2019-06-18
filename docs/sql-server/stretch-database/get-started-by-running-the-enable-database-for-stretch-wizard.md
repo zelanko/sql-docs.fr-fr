@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 98c9691f51036b29aa80aa34b1ca8396ab49def2
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240843"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715590"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ Les tables qui contiennent un grand nombre de lignes apparaissent en haut de la 
 |colonne|Description|  
 |------------|-----------------|  
 |(sans titre)|Cochez la case de cette colonne de façon à activer la table sélectionnée pour Stretch.|  
-|**Nom**|Spécifie le nom de la table dans la base de données.|  
+|**Name**|Spécifie le nom de la table dans la base de données.|  
 |(sans titre)|Un symbole dans cette colonne peut représenter un avertissement qui ne vous empêche pas d’activer la table sélectionnée pour Stretch. Il peut également représenter un problème de blocage qui empêche l’activation de la table sélectionnée pour Stretch, par exemple, si la table utilise un type de données non pris en charge. Placez le curseur sur le symbole pour afficher plus d'informations dans une info-bulle. Pour plus d’informations, consultez [Limitations concernant Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md).|  
 |**Étendu**|Indique si la table est déjà activée pour Stretch.|  
 |**Migration**|Vous pouvez migrer une table entière (**Table entière**) ou spécifier un filtre sur une colonne existante de la table. Si vous voulez utiliser une fonction de filtre différente pour sélectionner les lignes à migrer, exécutez l’instruction ALTER TABLE pour spécifier la fonction de filtre lorsque vous quittez l’Assistant. Pour plus d’informations sur la fonction de filtre, consultez [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Pour plus d’informations sur l’application de la fonction, consultez [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) ou [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).|  
@@ -194,7 +194,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
   
 -   [Restaurer des bases de données Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

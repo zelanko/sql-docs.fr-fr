@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662798"
 ---
 # <a name="change-publication-and-article-properties"></a>Modifier les propriétés des publications et des articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "54135719"
 |Activer ou désactiver les abonnements en téléchargement seul (changer d'autres options de chargement ne nécessite pas d'actions particulières).|**sp_changemergearticle**|Changer la valeur ou pour la valeur **2** pour **subscriber_upload_options**|Réinitialiser les abonnements.|  
 |Modifier le propriétaire de la table de destination.|**sp_changemergearticle**|**destination_owner**|Nouvel instantané.<br /><br /> Réinitialiser les abonnements.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Créer et appliquer un instantané](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   

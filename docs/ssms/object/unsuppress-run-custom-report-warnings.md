@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 73deed79daa7ea372085adbecba4ad2a78e9a528
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095697"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Annuler la suppression des avertissements d'exécution de rapports personnalisés
@@ -34,7 +34,7 @@ Par défaut, la boîte de dialogue **Exécuter le rapport personnalisé** appara
   
 2.  Cliquez avec le bouton droit sur le fichier **reports.xml**, puis sélectionnez **Modifier**.  
   
-3.  Remplacez**<SuppressWarning>true\<\/SuppressWarning> par <SuppressWarning>false\<\/SuppressWarning>**.  
+3.  Remplacez **<SuppressWarning>true\<\/SuppressWarning> par <SuppressWarning>false\<\/SuppressWarning>** .  
   
 4.  Redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -44,11 +44,11 @@ Par défaut, la boîte de dialogue **Exécuter le rapport personnalisé** appara
   
 2.  Cliquez avec le bouton droit sur **reports.xml**, puis sélectionnez **Modifier**.  
   
-3.  Remplacez **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> par <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>**.  
+3.  Remplacez **<SuppressDrillthroughWarning>true\<\/SuppressDrillthroughWarning> par <SuppressDrillthroughWarning>false\<\/SuppressDrillthroughWarning>** .  
   
 4.  Redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Ajouter un rapport personnalisé à Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  

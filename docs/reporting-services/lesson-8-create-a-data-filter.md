@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700369"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512391"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
 Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
@@ -39,7 +39,7 @@ Vous devez effectuer les tâches suivantes pour implémenter un filtre de table.
   
 4.  Dans le champ **Expression** , sélectionnez **ProductID** dans la liste déroulante. Il s'agit de la colonne à laquelle vous appliquez le filtre.  
   
-5.  Sélectionnez l’opérateur égal (**=**) dans la liste déroulante **Opérateur** .  
+5.  Sélectionnez l’opérateur égal ( **=** ) dans la liste déroulante **Opérateur** .  
   
 6.  Sélectionnez le bouton d’expression situé en regard du champ **Valeur** , sélectionnez **Paramètres** dans la zone **Catégorie** , puis double-cliquez sur **productid** dans la zone **Valeurs** . Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
   

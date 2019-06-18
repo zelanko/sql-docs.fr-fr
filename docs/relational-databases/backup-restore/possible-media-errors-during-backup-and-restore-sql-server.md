@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9878aaa62eedf9a2468aa02031e3dcf20e6d7df6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706077"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025497"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47706077"
   
  L'instruction BACKUP ne modifie jamais la page source sur le disque, ni le contenu d'une page.  
   
- Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
+ Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
   
 1.  Avant d'écrire une page sur le support de sauvegarde, l'opération de sauvegarde vérifie les informations de niveau page : somme de contrôle de page ou détection de page endommagée, si elles existent. En l'absence d'informations, la sauvegarde ne peut pas vérifier la page. Non vérifiées, les pages sont incluses en l'état, et leur contenu est ajouté à la somme de contrôle de sauvegarde globale.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47706077"
   
 2.  Que la somme de contrôle de la page soit disponible ou non, BACKUP génère une somme de contrôle de sauvegarde séparée pour le flux de sauvegardes. Les opérations de restauration peuvent éventuellement utiliser cette somme de contrôle pour vérifier que la sauvegarde n'est pas endommagée. La somme de contrôle de sauvegarde est stockée sur le support de sauvegardes et non pas dans les pages de base de données. Elle peut en option être utilisée lors de la restauration.  
   
-3.  Le jeu de sauvegarde est signalé comme contenant des sommes de contrôle de sauvegarde (dans la colonne **has_backup_checksums** de **msdb..backupset)**. Pour plus d’informations, consultez [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
+3.  Le jeu de sauvegarde est signalé comme contenant des sommes de contrôle de sauvegarde (dans la colonne **has_backup_checksums** de **msdb..backupset)** . Pour plus d’informations, consultez [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
   
  Au cours d'une opération de restauration, si des sommes de contrôle de sauvegarde sont présentes sur le support de sauvegarde, par défaut, les instructions RESTORE et RESTORE VERIFYONLY vérifient les sommes de contrôle de sauvegarde et les sommes de contrôle de page. En l'absence de somme de contrôle de sauvegarde, les deux opérations de restauration se poursuivent sans vérification ; en effet, sans somme de contrôle de sauvegarde, la restauration ne peut pas vérifier les sommes de contrôle de page de façon fiable.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47706077"
   
 -   [Spécifier si une opération de sauvegarde ou de restauration continue ou s’arrête après la survenue d’une erreur &#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

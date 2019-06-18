@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebe4438e48f14c1adba3b56d30cc772549f9ee7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034846"
 ---
 # <a name="temporal-table-security"></a>Sécurité de la table temporelle
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,13 +65,13 @@ ms.locfileid: "52526442"
   
 ||Créer une nouvelle table d’historique|Réutiliser la table d’historique existante|  
 |-|------------------------------|----------------------------------|  
-|Autorisations requises|Autorisation**CONTROL** dans la base de données<br /><br /> Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels la table d’historique est créée|Autorisation**CONTROL** sur la table d’origine qui est modifiée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **ALTER TABLE** |  
+|Autorisations requises|Autorisation**CONTROL** dans la base de données<br /><br /> Autorisation**CREATE TABLE** dans la base de données<br /><br /> Autorisation**ALTER** sur les schémas dans lesquels la table d’historique est créée|Autorisation**CONTROL** sur la table d’origine qui est modifiée<br /><br /> Autorisation**CONTROL** sur la table d’historique spécifiée dans le cadre de l’instruction **ALTER TABLE**|  
 |Audit|L’audit indique que la table temporelle a été modifiée et que la table d’historique a été créée en même temps. L’opération peut échouer en raison d’autorisations insuffisantes pour créer une table dans la base de données, en raison d’autorisations insuffisantes pour modifier le schéma de la table d’historique, ou en raison d’autorisations insuffisantes pour modifier la table temporelle.|L’audit indique que la table temporelle a été modifiée, mais que l’opération nécessitait l’accès à la table d’historique. L’opération peut échouer en raison d’autorisations insuffisantes sur la table d’historique ou d’autorisations insuffisantes sur la table en cours.|  
   
 ## <a name="security-of-select-statement"></a>Sécurité de l’instruction SELECT  
  L’autorisation**SELECT** reste inchangée pour les instructions **SELECT** qui n’affectent pas la table d’historique. Pour les instructions **SELECT** qui affectent la table d’historique, l’autorisation **SELECT** est nécessaire sur la table en cours et la table d’historique.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

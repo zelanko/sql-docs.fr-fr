@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 328786411c61c5d92d25786b05dacb907b17114a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645492"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Afficher ou modifier des planifications de jeu d'éléments de collecte (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "47777030"
   
  Utilisez cette page pour configurer le mode de collecte et de téléchargement des données, des planifications, ainsi que des périodes de rétention des données dans l'entrepôt de données de gestion. Cette page fournit également des informations sur les jeux d'éléments de collecte, tels que les types de collecteurs et les fréquences de collecte, et les paramètres d'entrée utilisés pour un jeu d'éléments de collecte.  
   
- **Nom**  
+ **Name**  
  Affiche le nom du jeu d'éléments de collecte auquel cette page fait référence.  
   
  **Collecte et téléchargement de données**  
@@ -119,7 +119,7 @@ ms.locfileid: "47777030"
  **Éléments de collecte**  
  Affiche les éléments de collecte dans le jeu d'éléments de collecte. Les informations suivantes sont fournies pour chaque élément de collecte :  
   
--   **Nom**  
+-   **Name**  
   
 -   **Type de collecteur**  
   
@@ -162,7 +162,7 @@ ms.locfileid: "47777030"
   
  Utilisez cette page pour consulter une description du jeu d'éléments de collecte auquel cette page de propriétés fait référence.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer la collecte de données](../../relational-databases/data-collection/manage-data-collection.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   

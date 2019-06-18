@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072370"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
@@ -123,7 +123,7 @@ ms.locfileid: "63072370"
   
  Un collecteur de données peut être configuré sur un SQL Server 2012 ou une version ultérieure de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Comment : Créer une information d’identification (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) pour plus d’informations sur la création d’une information d’identification.  
+ Vous avez besoin d'un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent créé avec des informations d'identification correctes pour qu'un collecteur de données télécharge des données dans une base de données d'entrepôt de données de gestion sur une instance différente de celle où les transactions seront profilées. Pour activer un proxy [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, vous devez d'abord créer des informations d'identification avec un nom de connexion spécifique au domaine. La connexion activée pour le domaine doit être membre du groupe `mdw_admin` pour la base de données de l'entrepôt de données de gestion. Consultez [Procédure : Créer une information d’identification (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) pour plus d’informations sur la création d’une information d’identification.  
   
  Pour configurer la collecte de données à télécharger vers une base de données de l'entrepôt de données de gestion sur une autre instance, procédez comme suit :  
   

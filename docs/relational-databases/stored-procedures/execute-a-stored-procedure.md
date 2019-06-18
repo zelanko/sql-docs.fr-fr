@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0557a0ebec0b742088dc6240022f5622e679d8f8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960013"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
   
 -   Exécution de procédures stockées système  
   
-     Les procédures système commencent par le préfixe **sp_**. Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutées à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
+     Les procédures système commencent par le préfixe **sp_** . Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutées à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -86,7 +86,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     - Ou -  
+     \- Ou -  
   
     ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
@@ -125,7 +125,7 @@ Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE
 ###  <a name="Security"></a> Sécurité  
  Pour plus d’informations, consultez [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) et [Clause EXECUTE AS &#40;Transact-SQL& #41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -207,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier les paramètres](../../relational-databases/stored-procedures/specify-parameters.md)   
  [Configurer l'option de configuration du serveur scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

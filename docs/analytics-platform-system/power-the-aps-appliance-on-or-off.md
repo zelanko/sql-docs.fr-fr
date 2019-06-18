@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678627"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>L’appliance ou désactiver l’alimentation pour l’Analytique Platform System
@@ -39,7 +39,7 @@ Avant la mise hors tension de l’appliance, vous devez terminer la toutes les a
 > [!WARNING]  
 > Toutes les étapes doivent être effectuées dans l’ordre indiqué et chaque étape doit terminer avant l’exécution de l’étape suivante, sauf indication contraire. Les étapes en désordre ou sans attendre que chaque étape pour terminer peuvent engendrer des erreurs lors de l’appliance est sous tension à une date ultérieure.  
   
-1.  Se connecter au nœud de contrôle de PDW (**_PDW_region_-CTL01** ) et connectez-vous avec le compte administrateur de domaine Analytique Platform System appliance.  
+1.  Se connecter au nœud de contrôle de PDW ( **_PDW_region_-CTL01** ) et connectez-vous avec le compte administrateur de domaine Analytique Platform System appliance.  
   
 2.  Exécutez `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwconfig.exe` pour ouvrir le **Configuration Manager**.  
   

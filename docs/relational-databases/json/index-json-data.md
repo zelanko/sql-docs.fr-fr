@@ -15,11 +15,11 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d87675c4feb0ab784f0003143406b3784f7e8a83
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012010"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716668"
 ---
 # <a name="index-json-data"></a>Indexer des données JSON
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Les index de base de données permettent d’améliorer les performances des op�
 ## <a name="index-json-properties-by-using-computed-columns"></a>Indexer les propriétés JSON à l’aide des colonnes calculées  
 Quand vous stockez des données JSON dans SQL Server, cela signifie généralement que vous souhaitez filtrer ou trier les résultats de la requête en fonction d’une ou de plusieurs *propriétés* des documents JSON.  
 
-### <a name="example"></a> Exemple 
+### <a name="example"></a>Exemple 
 Dans cet exemple, supposons que la table `SalesOrderHeader` d’AdventureWorks comporte une colonne `Info` contenant plusieurs informations au format JSON sur des commandes client. Par exemple, elle contient des informations sur le client, le vendeur, les adresses de livraison et de facturation, etc. Vous souhaitez utiliser les valeurs de la colonne `Info` pour filtrer les commandes d’un client particulier.
 
 ### <a name="query-to-optimize"></a>Requête à optimiser

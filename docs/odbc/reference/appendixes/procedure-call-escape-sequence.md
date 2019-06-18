@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188496"
 ---
 # <a name="procedure-call-escape-sequence"></a>Séquence d’échappement d’appel de procédure
 ODBC utilise les séquences d’échappement pour les appels de procédure. La syntaxe de cette séquence d’échappement est comme suit :  
   
- **{**[ ? =]**appeler** *nom de la procédure*[**(**[*paramètre*] [, [*paramètre*]]... **)**]**}**  
+ **{** [ ? =]**appeler** *nom de la procédure*[ **(** [*paramètre*] [, [*paramètre*]]... **)** ] **}**  
   
  Dans la notation BNF, la syntaxe est la suivante :  
   
@@ -39,11 +39,11 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  *nom de la procédure* :: = *identificateur de la procédure*  
   
- &#124;*-nom du propriétaire*. *identificateur de la procédure*  
+ &#124; *-nom du propriétaire*. *identificateur de la procédure*  
   
  &#124; *catalog-name catalog-separator* *procedure-identifier*  
   
- &#124;*nom-catalogue le séparateur de catalogue* [*-nom du propriétaire*]. *identificateur de la procédure*  
+ &#124;*nom-catalogue le séparateur de catalogue* [ *-nom du propriétaire*]. *identificateur de la procédure*  
   
  (La troisième syntaxe est valide uniquement si la source de données ne prend pas en charge les propriétaires.)  
   

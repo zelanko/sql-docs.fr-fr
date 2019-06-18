@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767581"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Étape 1 : Génération de l’utilitaire de déploiement
@@ -48,7 +48,7 @@ ms.locfileid: "62767581"
   
 4.  Dans la fenêtre de sortie, vérifiez les informations suivantes :  
   
-     Build démarrée : Projet SQL Integration Services : Incrémentielle...  
+     Build démarrée : Projet SQL Integration Services : Incrémentiel ...  
   
      Création de l'utilitaire de déploiement...  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62767581"
   
      Fin de la génération -- 0 erreur, 0 avertissement  
   
-     === Build : 0 a réussi, 0 a échoué, 1 mis à jour, 0 a été ignoré ===  
+     ========== Build : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
   
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   

@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724631"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "54299706"
   
 2.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
   
-3.  Dans la boîte de dialogue **Types de projets**, sélectionnez **Projets Visual C#**. Dans le volet **Modèles**, sélectionnez **Application Windows**.  
+3.  Dans la boîte de dialogue **Types de projets**, sélectionnez **Projets Visual C#** . Dans le volet **Modèles**, sélectionnez **Application Windows**.  
   
 4.  (Facultatif) Dans la zone **Nom**, tapez le nom de la nouvelle application.  
   
@@ -186,12 +186,12 @@ ms.locfileid: "54299706"
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Activation de la prise en charge de TLS 1.2 pour les composants RMO 
  Vous pouvez activer la prise en charge de TLS 1.2 pour les composants RMO sur Windows 2012 et versions antérieures en installant la mise à jour [KB 3140245](https://support.microsoft.com/help/3140245) et en créant des clés de Registre, comme indiqué dans l’article. Sur Windows 2012 R2 et versions ultérieures, seules doivent être créées les clés de Registre telles qu’indiquées dans l’article ci-dessus.
  
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple illustre la mise en cache des modifications de propriété. Les modifications apportées aux attributs d'une publication transactionnelle sont mises en cache tant qu'elles n'ont pas été envoyées explicitement au serveur.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Concepts de programmation en matière de réplication](../../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   

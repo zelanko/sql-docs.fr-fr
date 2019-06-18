@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7af060203d044435e364803ace67d35711eb63ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658807"
 ---
 # <a name="reserved-keywords-dmx"></a>Mots clés réservés (DMX)
@@ -31,9 +31,9 @@ ms.locfileid: "62658807"
   
 -   Les mots clés définis dans la spécification OLE DB pour Exploration de données et inclus dans le cadre d'une instruction DMX.  
   
- Lorsque vous nommez des objets dans une base de données, il est conseillé d'utiliser une convention de nom qui ne fasse pas appel à l'utilisation des mots clés réservés.   
+ Lorsque vous nommez des objets dans une base de données, il est conseillé d'utiliser une convention de nom qui ne fasse pas appel à l'utilisation des mots clés réservés.  
   
- Si votre base de données contient des noms qui sont identiques aux mots clés réservés, utilisez des identificateurs délimités pour désigner ces objets.  Pour plus d’informations, consultez [identificateurs &#40;DMX&#41;](../dmx/identifiers-dmx.md).  
+ Si votre base de données contient des noms qui sont identiques aux mots clés réservés, utilisez des identificateurs délimités pour désigner ces objets. Pour plus d’informations, consultez [identificateurs &#40;DMX&#41;](../dmx/identifiers-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
