@@ -12,10 +12,10 @@ ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581341"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>fichier de configuration RSReportDesigner
@@ -65,7 +65,7 @@ ms.locfileid: "65581341"
 |**Designer**|Énumère les générateurs de requêtes accessibles au Concepteur de rapports. Les générateurs de requête fournissent une interface utilisateur pour générer des requêtes permettant d'extraire des données pour les rapports. Ils peuvent varier en fonction des extensions de traitement de données. Par défaut, Reporting Services fournit une interface utilisateur d'outil de données visuelle pour toutes les extensions de traitement de données qui sont incluses dans le produit. Toutefois, si vous développez ou utilisez des extensions de traitement de données tierces, d'autres interfaces de générateurs de requête peuvent être utilisées.|  
 |**PreviewProcessingServiceStartupTimeoutSeconds**|Spécifie la durée d'attente pour le démarrage du service de traitement des aperçus avant l'affichage d'un message d'erreur. La valeur par défaut est 15 secondes.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106055"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
@@ -52,7 +52,7 @@ Pour ce rapport, vous allez ajouter l’exemple de base de données AdventureWor
     >
     > Pour plus d’informations sur les chaînes de connexion, consultez la section `See also` ci-dessous.
 
-6. Sélectionnez l’onglet **Informations d’identification** et, sous la section **Modifiez les informations d’identification utilisées pour se connecter à la source de données**, sélectionnez la case d’option **Utiliser l’authentification Windows (sécurité intégrée)**.
+6. Sélectionnez l’onglet **Informations d’identification** et, sous la section **Modifiez les informations d’identification utilisées pour se connecter à la source de données**, sélectionnez la case d’option **Utiliser l’authentification Windows (sécurité intégrée)** .
 
 7. Sélectionnez **OK** pour terminer le processus.
 

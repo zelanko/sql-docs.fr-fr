@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570696"
 ---
 # <a name="secure-my-reports"></a>Sécuriser Mes Rapports
@@ -32,7 +32,7 @@ ms.locfileid: "65570696"
   
  Une attribution de rôle **Mes Rapports** se compose des éléments suivants :  
   
--   Le dossier Mes rapports de l’utilisateur, qui se trouve dans Dossiers des utilisateurs\\*\<nom_utilisateur>* \Mes Rapports.  
+-   Le dossier Mes rapports de l’utilisateur, qui se trouve dans Dossiers des utilisateurs\\ *\<nom_utilisateur>* \Mes Rapports.  
   
 -   Le compte d'utilisateur, qui est déterminé lors de l'activation du dossier Mes Rapports. Un dossier est activé lorsqu'un utilisateur clique sur un dossier Mes Rapports dans le Gestionnaire de rapports ou lorsqu'il publie un rapport dans un dossier Mes Rapports depuis le Gestionnaire de rapports. Ce dossier est également activé lorsqu'un utilisateur demande des propriétés sur le lien Mes Rapports.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "65570696"
   
  Lorsque vous désactivez Mes Rapports, tout lien vers un dossier Mes Rapports est supprimé du Gestionnaire de rapports. La structure de dossiers sous-jacente qui prend en charge Mes Rapports (c'est-à-dire, le dossier Dossiers des utilisateurs et ses sous-dossiers) reste disponible et l'utilisateur peut y accéder s'il connaît le chemin d'accès au dossier. La suppression de toutes les tâches du rôle **Mes Rapports** garantit le refus de l’accès.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
  [Dossiers sécurisés](../../reporting-services/security/secure-folders.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

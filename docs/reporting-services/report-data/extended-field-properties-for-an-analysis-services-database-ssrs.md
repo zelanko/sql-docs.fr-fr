@@ -9,10 +9,10 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573319"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "65573319"
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Objet**|Précise la valeur de données du champ.|  
 |**IsMissing**|**Booléen**|Indique si le champ figure dans le dataset obtenu.|  
-|**UniqueName**|**String**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]*.|  
+|**UniqueName**|**String**|Retourne le nom complet d'un niveau. Par exemple, la valeur **UniqueName** valeur d’un employé peut être *[Employee].[Employee Department].[Department].&[Sales].&[North American Sales Manager].&[272]* .|  
 |**BackgroundColor**|**String**|Retourne la couleur d'arrière-plan définie dans la base de données pour le champ.|  
 |**Color**|**String**|Retourne la couleur de premier plan définie dans la base de données pour l'élément.|  
 |**FontFamily**|**String**|Retourne le nom de la police définie dans la base de données pour l'élément.|  
@@ -146,7 +146,7 @@ CELL PROPERTIES
   
  Cette expression trie la valeur du champ dans son type de données entier d'origine à partir de la source de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

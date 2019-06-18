@@ -15,10 +15,10 @@ ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619601"
 ---
 # <a name="create-and-manage-role-assignments"></a>Créer et gérer des attributions de rôles
@@ -69,7 +69,7 @@ Vous pouvez uniquement modifier une attribution de rôle à la fois. Vous ne pou
 
 Vous pouvez supprimer des attributions de rôles en cochant les cases en regard de chaque attribution que vous voulez supprimer, puis en cliquant sur **Supprimer**. Vous pouvez également supprimer des attributions de rôles en cliquant sur **Rétablir la sécurité parente**. Quand vous sélectionnez ce bouton, les attributions de rôles existantes pour l’élément sont supprimées et remplacées par les attributions héritées de l’élément parent.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Accorder un accès utilisateur l'accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md)  
 [Attributions de rôles](../../reporting-services/security/role-assignments.md)  

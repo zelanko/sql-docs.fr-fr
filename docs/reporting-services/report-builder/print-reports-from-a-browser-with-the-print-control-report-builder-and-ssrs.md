@@ -9,10 +9,10 @@ ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581171"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimer des rapports à partir d'un navigateur à l'aide du contrôle d'impression (Générateur de rapports et SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65581171"
 ### <a name="adjusting-print-margins"></a>Réglage des marges d'impression  
  Vous pouvez modifier les marges d'impression dans le rendu du rapport EMF avant l'impression de ce dernier. Pour ce faire, cliquez dans la boîte de dialogue **Imprimer** sur le bouton **Aperçu** . En haut de la page d'aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue Marges s'affiche. Configurez la marge supérieure, inférieure, de gauche et de droite selon vos besoins. [!INCLUDE[clickOK](../../includes/clickok-md.md)] La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   

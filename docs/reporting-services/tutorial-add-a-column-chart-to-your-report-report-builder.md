@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : Ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041317"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un histogramme à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
 
 Les histogrammes sont utiles pour :  
@@ -28,9 +28,9 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
   
 ![didacticiel-histogramme-générateur-de-rapports](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -83,7 +83,7 @@ Dans cette section, vous utilisez l’Assistant Graphique pour créer un dataset
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
+8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
 9. Cliquez sur **Suivant**.  
   
@@ -207,7 +207,7 @@ Par défaut, l'axe vertical affiche les valeurs dans un format général qui est
 
 10. Cliquez avec le bouton droit sur le titre de l’axe vertical > **Propriétés du titre de l’axe**.  
   
-10. Remplacez le texte du champ **Texte du titre** par **Total des ventes (en milliers)**. Vous pouvez également spécifier diverses options de mise en forme du titre.  
+10. Remplacez le texte du champ **Texte du titre** par **Total des ventes (en milliers)** . Vous pouvez également spécifier diverses options de mise en forme du titre.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -300,7 +300,7 @@ Le graphique présente une ligne qui indique la moyenne mobile pour le total des
 ## <a name="next-steps"></a>Next Steps  
 Vous avez terminé le didacticiel Ajout d'un histogramme à un rapport. Pour en savoir plus sur les graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) et [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 -    [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md) 
 -    [Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

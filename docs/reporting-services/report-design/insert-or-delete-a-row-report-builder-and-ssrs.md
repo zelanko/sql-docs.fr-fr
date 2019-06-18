@@ -9,10 +9,10 @@ ms.assetid: b9642af3-b3ae-4f78-b0be-8f96b79fc313
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3b20b95586e387484d536ad8005c6f57c1de4698
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580169"
 ---
 # <a name="insert-or-delete-a-row-report-builder-and-ssrs"></a>Insérer ou supprimer une ligne (Générateur de rapports et SSRS)
@@ -55,7 +55,7 @@ Vous pouvez ajouter ou supprimer des lignes dans une région de données de tabl
   
 -   Dans la zone de groupe de lignes d’une région de données de tableau matriciel, cliquez avec le bouton droit sur une cellule de groupe de lignes au niveau de laquelle vous souhaitez supprimer une ligne, puis cliquez sur **Supprimer les lignes**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   

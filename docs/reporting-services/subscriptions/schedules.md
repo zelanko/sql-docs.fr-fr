@@ -16,10 +16,10 @@ ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578095"
 ---
 # <a name="schedules"></a>Planifications
@@ -130,7 +130,7 @@ ms.locfileid: "65578095"
 ###  <a name="bkmk_stoppingservice"></a> Conséquences de l'arrêt du service Report Server  
  Si vous arrêtez le service Report Server, l'Agent SQL Server continue malgré tout d'ajouter des demandes de traitement de rapport à la file d'attente. Les informations d'état de SQL Server Agent indiquent que les travaux ont été correctement effectués. Toutefois, aucun traitement de rapport n'a, en réalité, été réalisé puisque le service Report Server ne fonctionne pas. Les demandes continueront de s'accumuler dans la file d'attente jusqu'à ce que le service Report Server redémarre. Une fois ce service relancé, toutes les demandes de traitement de rapport présentes dans la file d'attente sont traitées dans l'ordre.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

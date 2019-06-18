@@ -13,10 +13,10 @@ ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577879"
 ---
 # <a name="design-view"></a>Vue Design
@@ -53,7 +53,7 @@ Utilisez la boîte à outils pour sélectionner les éléments à placer dans ce
 ## <a name="properties-pane"></a>Volet Propriétés  
  Utilisez le volet Propriétés pour afficher les propriétés de l'élément de rapport sélectionné sur l'aire de conception ou du groupe sélectionné dans le volet Regroupement. Vous pouvez aussi cliquer avec le bouton droit sur un groupe ou un élément de rapport sélectionné, puis cliquer sur **Propriétés** pour ouvrir la boîte de dialogue **Propriétés** correspondant au groupe ou à l’élément de rapport.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Conseils de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   

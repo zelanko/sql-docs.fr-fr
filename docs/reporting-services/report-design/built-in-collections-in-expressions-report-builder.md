@@ -9,10 +9,10 @@ ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 684f8dd2b74597b96018449492abe3786e0acba0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581790"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>Collections intégrées dans les expressions (Générateur de rapports)
@@ -26,7 +26,7 @@ ms.locfileid: "65581790"
 ##  <a name="Collections"></a> Fonctionnement des collections intégrées  
  Le tableau suivant répertorie les collections intégrées disponibles lorsque vous écrivez une expression. Chaque ligne inclut le nom de programmation, sensible à la casse, de la collection, indique si vous pouvez utiliser la boîte de dialogue Expression pour ajouter une référence à la collection de manière interactive, propose un exemple et précise quand les valeurs de la collection sont initialisées et peuvent être utilisées.  
   
-|Collection intégrée|Catégorie dans la boîte de dialogue Expression| Exemple|Description|  
+|Collection intégrée|Catégorie dans la boîte de dialogue Expression|Exemple|Description|  
 |--------------------------|-------------------------------------------|-------------|-----------------|  
 |**Globals**|Champs prédéfinis|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Représente les variables globales utilisables pour des rapports, par exemple le nom du rapport ou le numéro de page. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |**Utilisateur**|Champs prédéfinis|`=User.UserID`<br /><br /> - ou -<br /><br /> `=User.Language`|Représente une collection de données sur l'utilisateur exécutant le rapport, par exemple le paramètre de langue ou l'ID utilisateur. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
@@ -40,7 +40,7 @@ ms.locfileid: "65581790"
 ##  <a name="Syntax"></a> Utilisation de la syntaxe de collection dans une expression  
  Pour faire référence à une collection à partir d’une expression, utilisez la syntaxe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] standard pour un élément au sein d’une collection. Le tableau ci-après propose des exemples de syntaxe de collection.  
   
-|Syntaxe| Exemple|  
+|Syntaxe|Exemple|  
 |------------|-------------|  
 |*Collection!NomObjet.Propriété*|`=Fields!Sales.Value`|  
 |*Collection!NomObjet("Propriété")*|`=Fields!Sales("Value")`|  
@@ -48,7 +48,7 @@ ms.locfileid: "65581790"
 |*Collection("Membre")*|`=User("Language")`|  
 |*Collection.Membre*|`=User.Language`|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   

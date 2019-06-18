@@ -11,10 +11,10 @@ ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9158caf6a1c1e39578bf49bfc3f99e3b37633baf
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570881"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Didacticiels sur Reporting Services (SSRS)
@@ -37,7 +37,7 @@ Suivez les étapes de ce didacticiel pour apprendre à créer un rapport d'extra
 Ces didacticiels présentent les différents types de visualisations que vous pouvez créer dans le Générateur de rapports, telles que les cartes ou les graphiques sparkline, et abordent l’utilisation des paramètres et des expressions.   
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 * [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases)  
 * [Exemples Reporting Services sur le Wiki TechNet](https://go.microsoft.com/fwlink/?LinkId=198283)  
 * [TechNet Wiki : exemples SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  

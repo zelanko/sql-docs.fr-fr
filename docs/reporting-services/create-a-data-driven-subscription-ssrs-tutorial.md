@@ -10,14 +10,14 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baff01bd8bc02af409a37c5cc1ce193e69663387
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194842"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
 Ce tutoriel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vous enseigne les concepts des abonnements pilotés par les données en décrivant un exemple simple qui crée un abonnement piloté par les données pour générer et enregistrer une sortie de rapport filtrée dans un partage de fichiers. 
@@ -33,9 +33,9 @@ Ce didacticiel est divisé en trois leçons :
 
 | Leçon | Commentaires |
 | ------ | -------- |
-| [Leçon 1 : Créer un exemple de base de données d’abonnés](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Au cours de cette leçon, vous allez créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés. les informations Order Numbers à utiliser pour le filtrage et les formats des fichiers de sortie. |
-| [Leçon 2 : Configurer les propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Dans cette leçon, vous allez configurer une source de données de rapport pour que le rapport puisse s’exécuter de manière planifiée et sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné. Ce paramètre sert à filtrer les données de rapport en fonction du numéro de commande. |
-| [Leçon 3 : Définir un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Dans cette leçon, vous allez créer un abonnement piloté par les données. Cette leçon vous guide à travers chaque page de l'Assistant Abonnement piloté par les données. |
+| [Leçon 1 : Créer un exemple de base de données d’abonnés](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Au cours de cette leçon, vous allez créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés. les informations Order Numbers à utiliser pour le filtrage et les formats des fichiers de sortie. |
+| [Leçon 2 : Configurer les propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Dans cette leçon, vous allez configurer une source de données de rapport pour que le rapport puisse s’exécuter de manière planifiée et sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné. Ce paramètre sert à filtrer les données de rapport en fonction du numéro de commande. |
+| [Leçon 3 : Définir un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Dans cette leçon, vous allez créer un abonnement piloté par les données. Cette leçon vous guide à travers chaque page de l'Assistant Abonnement piloté par les données. |
 
 Le diagramme suivant illustre le flux de travail de base du tutoriel :
 
@@ -71,9 +71,9 @@ Pour utiliser ce didacticiel, vous devez avoir installé les éléments suivants
   
 -   Dossier partagé pour lequel vous bénéficiez de droits d'accès en écriture. Le dossier partagé doit être accessible via une connexion réseau.  
   
-**Durée estimée pour effectuer le tutoriel :** 30 minutes. Trente minutes supplémentaires si vous n'avez pas étudié le didacticiel de création d'un rapport de base.  
+**Durée estimée pour effectuer ce didacticiel :** 30 minutes. Trente minutes supplémentaires si vous n'avez pas étudié le didacticiel de création d'un rapport de base.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Abonnements pilotés par les données](../reporting-services/subscriptions/data-driven-subscriptions.md)  
 [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)
  

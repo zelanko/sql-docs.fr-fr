@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041703"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,9 +23,9 @@ Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[
 Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport. 
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 25 minutes.  
+Durée estimée pour effectuer le didacticiel : 25 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -80,9 +80,9 @@ Créez un rapport de matrice, une source de données et un dataset.
   
     Cette requête combine les résultats de plusieurs instructions SELECT [!INCLUDE[tsql_md](../includes/tsql-md.md)] dans une expression de table commune pour spécifier des valeurs basées sur des données simplifiées de ventes d’appareils photo de l’exemple de base de données Contoso. Les sous-catégories sont les appareils photo numériques, les appareils photo numériques reflex à lentille unique (SLR), les caméscopes et les accessoires.  
   
-11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**) pour voir les données.   
+11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ) pour voir les données.   
   
-    Le jeu de résultats se compose de 11 lignes de données indiquant le volume d'articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
+    Le jeu de résultats comprend 11 lignes de données qui montrent le volume d’articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
   
     Cette requête ne contient pas de paramètres de requête. Vous ajouterez ultérieurement des paramètres de requête dans ce didacticiel.   
   
@@ -142,9 +142,9 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
     WHERE StoreID = (@StoreID)  
     ```  
   
-    La boîte de dialogue **WHERE** limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *@StoreID*.  
+    La boîte de dialogue **WHERE** limite les données récupérées à l’identificateur de magasin spécifié par le paramètre de requête *@StoreID* .  
   
-4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *@StoreID*.  
+4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). La boîte de dialogue **Définir les paramètres de la requête** s’ouvre et vous êtes invité à définir une valeur pour le paramètre de requête *@StoreID* .  
   
 5.  Dans **Valeur du paramètre**, tapez **200**.  
   
@@ -156,7 +156,7 @@ Lorsque vous ajoutez un paramètre de requête à une requête, le Générateur 
   
 8.  Dans le volet des données de rapport, développez le dossier **Paramètres** .  
   
-Remarque : Vous disposez désormais d’un paramètre de rapport nommé *@StoreID*, ainsi que d’un volet Paramètres où vous pouvez disposer les paramètres du rapport.   
+Remarque : Vous disposez désormais d’un paramètre de rapport nommé *@StoreID* , ainsi que d’un volet Paramètres où vous pouvez disposer les paramètres du rapport.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,9 +169,9 @@ Après avoir créé un paramètre de rapport, vous pouvez ajuster les valeurs pa
   
 Par défaut, le paramètre que vous avez créé a pour type de données **Texte**. Dans la mesure où l’identificateur de magasin est un entier, vous pouvez remplacer le type de données par le type Entier.  
   
-1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport sous le nœud **Paramètres** , cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
-2.  Dans **Invite**, tapez **Identificateur du magasin ?**. Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
+2.  Dans **Invite**, tapez **Identificateur du magasin ?** . Ce texte s'affiche sur la barre d'outils de la visionneuse de rapports lorsque vous exécutez le rapport.  
   
 3.  Dans **Type de données**, dans la liste déroulante, sélectionnez **Entier**.  
   
@@ -179,7 +179,7 @@ Par défaut, le paramètre que vous avez créé a pour type de données **Texte*
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport. La visionneuse de rapports affiche l’invite **Store Identifier?** pour *@StoreID*.  
+6.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport. La visionneuse de rapports affiche l’invite **Store Identifier?** pour *@StoreID* .  
   
 7.  Dans la barre d’outils de la visionneuse de rapports, en regard de StoreID, tapez **200**, puis cliquez sur **Afficher le rapport**.  
   
@@ -220,7 +220,7 @@ Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifi
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Pour fournir des valeurs disponibles pour un paramètre à partir d'un dataset  
   
-1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+1.  Dans le volet des données de rapport, cliquez avec le bouton droit sur le paramètre *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 2.  Cliquez sur **Valeurs disponibles**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -232,7 +232,7 @@ Après avoir créé un dataset pour fournir des valeurs disponibles, vous modifi
   
 6.  Cliquez sur **Général**.  
   
-7.  Dans **Invite**, remplacez **Identificateur du magasin ?** par **Sparre name?**.  
+7.  Dans **Invite**, remplacez **Identificateur du magasin ?** par **Sparre name?** .  
   
     Les lecteurs du rapport sélectionneront désormais un nom dans une liste de noms de magasins au lieu d’identificateurs de magasin. Notez que le type de données du paramètre reste **Entier** , car le paramètre est basé sur l’identificateur de magasin au lieu du nom de magasin.  
   
@@ -253,7 +253,7 @@ Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **Valeurs par défaut**, puis sur **Obtenir les valeurs à partir d’une requête**.  
   
@@ -265,13 +265,13 @@ Vous pouvez spécifier une valeur par défaut pour chaque paramètre afin que le
   
 7.  Affichez l'aperçu du rapport.  
   
-For *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
+For *@StoreID* , la visionneuse de rapports affiche la valeur « Contoso North America Online Store », car il s’agit de la première valeur du jeu de résultats pour le dataset **Stores**. Le rapport affiche la quantité vendue des articles « Digital Cameras » pour l’identificateur de magasin **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Pour spécifier une valeur par défaut personnalisée  
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Cliquez sur **Valeurs par défaut** > **Spécifier les valeurs** > **Ajouter**. Une nouvelle ligne de valeurs est ajoutée.  
   
@@ -281,7 +281,7 @@ For *@StoreID*, la visionneuse de rapports affiche la valeur « Contoso North Am
   
 6.  Affichez l'aperçu du rapport.  
   
-For *@StoreID*, la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
+For *@StoreID* , la visionneuse de rapports affiche « Contoso Catalog Store », car il s’agir du nom d’affichage pour l’identificateur de magasin **200**. Le rapport affiche les quantités vendues des articles « Accessories », « Camcorders » et « Digital SLR Cameras » pour l’identificateur de magasin **200**.  
   
 ## <a name="NameValue"></a>4d. Rechercher une paire nom/valeur  
 Un dataset peut contenir à la fois l'identificateur et le champ Nom correspondant. Lorsque vous avez seulement un identificateur, vous pouvez rechercher le nom correspondant dans un dataset que vous avez créé et qui inclut des paires nom/valeur.  
@@ -308,7 +308,7 @@ Un dataset peut contenir à la fois l'identificateur et le champ Nom corresponda
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **Expr**.  
+    L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **Expr**.  
   
 8.  Affichez l'aperçu du rapport.  
   
@@ -360,7 +360,7 @@ Les filtres permettent de contrôler les données à utiliser dans un rapport un
   
     La matrice affiche des données uniquement pour « Contoso Catalog Store ».  
   
-9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?**, sélectionnez **Contoso Asia Online Store**, puis cliquez sur **Afficher le rapport**.  
+9. Dans la barre d’outils de la visionneuse de rapports, pour **Nom du magasin ?** , sélectionnez **Contoso Asia Online Store**, puis cliquez sur **Afficher le rapport**.  
   
 La matrice affiche les données qui correspondent au magasin que vous avez sélectionné.  
   
@@ -371,7 +371,7 @@ Pour changer un paramètre à valeur unique en paramètre à valeurs multiples, 
   
 1.  Basculez en mode Conception.  
   
-2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID*, puis cliquez sur **Propriétés du paramètre**.  
+2.  Dans le volet des données de rapport, cliquez avec le bouton droit sur *@StoreID* , puis cliquez sur **Propriétés du paramètre**.  
   
 3.  Sélectionnez **Autoriser les valeurs multiples**.  
   
@@ -499,7 +499,7 @@ Le rapport est enregistré sur le serveur de rapports. Le serveur de rapports au
 ## <a name="next-steps"></a>Next Steps  
 Ceci conclut la procédure pas à pas décrivant comment ajouter un paramètre à votre rapport. Pour en savoir plus sur les paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 *  [Fonction Lookup](../reporting-services/report-design/report-builder-functions-lookup-function.md)   

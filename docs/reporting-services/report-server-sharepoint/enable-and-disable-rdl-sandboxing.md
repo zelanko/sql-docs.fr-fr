@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577771"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Activer et désactiver le sandboxing RDL pour Reporting Services en mode intégré SharePoint
@@ -76,7 +76,7 @@ La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de d�
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
 |**AllowNew**|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Quand **RDLSandboxing** est activé, de nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment de la valeur de **AllowNew**.|  
 |**Value**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
-|**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>**, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
+|**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>** , la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
 |**Refuser**|Nom d'un membre qui n'est pas autorisé dans les expressions RDL. Cette propriété n'est pas sensible à la casse.<br /><br /> Lorsque **Deny** est spécifié pour un membre, tous les membres avec ce nom pour tous les types ne sont pas autorisés.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilisation des expressions lorsque le sandboxing RDL est activé
@@ -158,7 +158,7 @@ Vous pouvez modifier la fonctionnalité Sandboxing RDL afin d'aider à gérer le
   
 ### <a name="working-with-operators-and-new"></a>Utilisation des opérateurs et de New
 
- Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, à l’exception de **New**, sont toujours autorisés. L’opérateur **New** est contrôlé par l’attribut **AllowNew** sur l’élément **\<Allow>**. Les autres opérateurs de langage, comme l’opérateur d’accesseur de collection par défaut **!** et les macros de conversion de type de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, comme **CInt**, sont toujours autorisés.  
+ Par défaut, les opérateurs de langage [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, à l’exception de **New**, sont toujours autorisés. L’opérateur **New** est contrôlé par l’attribut **AllowNew** sur l’élément **\<Allow>** . Les autres opérateurs de langage, comme l’opérateur d’accesseur de collection par défaut **!** et les macros de conversion de type de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, comme **CInt**, sont toujours autorisés.  
   
  L'ajout d'opérateurs à une liste rouge, y compris des opérateurs personnalisés, n'est pas pris en charge. Pour exclure des opérateurs pour un type, vous devez effectuer les opérations suivantes :  
   

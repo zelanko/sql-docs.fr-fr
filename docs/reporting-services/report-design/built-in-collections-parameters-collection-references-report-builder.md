@@ -9,10 +9,10 @@ ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581792"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Collections intégrées - Références à la collection Parameters (Générateur de rapports et SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "65581792"
 ##  <a name="Single"></a> Utilisation d'un paramètre à valeur unique dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeur unique de n'importe quel type de données dans une expression.  
   
-| Exemple|Description|  
+|Exemple|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Nom_paramètre>* `.IsMultiValue`|Retourne **False**.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si **True**, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si **False**, le paramètre est à valeur unique et il s’agit d’un seul objet.|  
 |`=Parameters!` *\<Nom_paramètre>* `.Count`|Retourne la valeur entière 1. Pour un paramètre à valeur unique, le nombre est toujours 1.|  
@@ -42,18 +42,18 @@ ms.locfileid: "65581792"
 ##  <a name="Multi"></a> Utilisation d'un paramètre à valeurs multiples dans une expression  
  Le tableau suivant présente des exemples de la syntaxe à utiliser lorsque vous incluez une référence à un paramètre à valeurs multiples de n'importe quel type de données dans une expression.  
   
-| Exemple|Description|  
+|Exemple|Description|  
 |-------------|-----------------|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.IsMultiValue`|Retourne **True** ou **False**.<br /><br /> Vérifie si un paramètre est à valeurs multiples. Si **True**, le paramètre est à valeurs multiples et il s’agit d’une collection d’objets. Si **False**, le paramètre est à valeur unique et il s’agit d’un seul objet.|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Count`|Retourne une valeur entière.<br /><br /> Fait référence au nombre de valeurs. Pour un paramètre à valeur unique, le nombre est toujours 1. Pour un paramètre à valeurs multiples, le nombre est 0 ou plus.|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value(0)`|Retourne la première valeur dans un paramètre à valeurs multiples.|  
-|`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value(Parameters!`  *\<Nom_paramètre_à_valeurs_multiples>*`.Count-1)`|Retourne la dernière valeur dans un paramètre à valeurs multiples.|  
+|`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value(Parameters!`  *\<Nom_paramètre_à_valeurs_multiples>* `.Count-1)`|Retourne la dernière valeur dans un paramètre à valeurs multiples.|  
 |`=Split("Value1,Value2,Value3",",")`|Retourne un tableau de valeurs.<br /><br /> Permet de créer un tableau de valeurs pour un paramètre de type **String** à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir un fractionnement (Split). Cette expression peut être utilisée pour définir les valeurs par défaut d'un paramètre à valeurs multiples ou pour créer un paramètre à valeurs multiples à envoyer à un rapport d'extraction ou de type sous-rapport.|  
 |`=Join(Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value,", ")`|Retourne une valeur de type **String** qui est composée d’une liste de valeurs délimitées par des virgules dans un paramètre à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir une liaison (Join).|  
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   

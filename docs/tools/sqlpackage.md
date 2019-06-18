@@ -10,11 +10,11 @@ author: pensivebrian
 ms.author: broneill
 manager: craigg
 ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269917"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -36,7 +36,7 @@ ms.locfileid: "58527591"
   
 La ligne de commande de **SqlPackage.exe** vous permet de spécifier ces actions à l’aide de paramètres et de propriétés spécifiques aux actions.  
 
-**[Téléchargez la version la plus récente](sqlpackage-download.md)**. Pour plus d’informations sur la dernière version, consultez le [notes de version](release-notes-sqlpackage.md).
+**[Téléchargez la version la plus récente](sqlpackage-download.md)** . Pour plus d’informations sur la dernière version, consultez les [notes de publication](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Syntaxe de ligne de commande
 

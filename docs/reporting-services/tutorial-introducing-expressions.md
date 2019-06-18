@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : Introduction aux expressions | Microsoft Docs'
+title: 'Didacticiel : introduction aux expressions | Microsoft Docs'
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295634"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux expressions
+# <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
 
 Vous allez écrire des expressions qui concatènent des valeurs de noms, qui recherchent des valeurs dans un autre dataset, qui affichent différentes couleurs en fonction des valeurs de champ, etc.  
@@ -26,7 +26,7 @@ Cette illustration montre un rapport similaire à celui que vous allez créer.
   
 ![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes  
+Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +89,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
     ```  
 
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 23 lignes de données avec les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 23 lignes de données dans les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +147,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Afficher la première initiale et le nom de famille  
-Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
+Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur **Concaténer** ( **&** ) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression** .   
   
 1.  Cliquez avec le bouton droit sur la colonne **StateProvince** , pointez sur **Insérer une colonne**et cliquez sur **Gauche**.  
   
@@ -169,7 +169,7 @@ Dans cette section, vous allez utiliser la fonction **Left** et l’opérateur *
     
     ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 7.  Dans la liste **Valeurs** , double-cliquez sur **FirstName**.  
   
@@ -263,7 +263,7 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
   
 4.  Dans la liste **Élément** , double-cliquez sur **Switch**.  
   
-5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 6.  Dans la liste **Valeurs** , double-cliquez sur **Gender**.  
   
@@ -275,7 +275,7 @@ Pour conserver la couleur que vous avez appliquée dans cette cellule de table l
 
 9. Ajoutez une virgule après « Bleuet ». 
   
-5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis, dans la liste **Valeurs** , double-cliquez de nouveau sur **Gender** .  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis, dans la liste **Valeurs** , double-cliquez de nouveau sur **Gender** .  
   
 7.  Tapez **= « Féminin »,** (y compris la virgule). 
 
@@ -345,7 +345,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Cliquez sur **Exécuter** (**!**) pour exécuter la requête.  
+9. Cliquez sur **Exécuter** ( **!** ) pour exécuter la requête.  
   
     Les résultats de la requête sont les identifiants et les noms des pays/régions.  
   
@@ -357,7 +357,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Pour rechercher des valeurs dans le dataset CountryRegion  
   
-1.  Cliquez sur l’en-tête de la colonne **Country Region ID** et supprimez le texte : **ID**, afin de lire **Country Region**.  
+1.  Cliquez sur l’en-tête de colonne **Country Region ID** , puis supprimez **ID**pour que le nom de l’en-tête devienne **Country Region**.  
   
 2.  Cliquez avec le bouton droit sur la cellule de données pour la colonne **Country Region** et cliquez sur **Expression**.  
   
@@ -367,7 +367,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 4.  Dans la boîte de dialogue **Expression** , développez **Fonctions communes** et cliquez sur **Divers**. Ensuite, dans la liste **Élément** , double-cliquez sur **Lookup**.  
   
-6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **CountryRegionID**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **CountryRegionID**.  
   
 8.  Placez le curseur immédiatement après `CountryRegionID.Value`, puis tapez **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**  
   
@@ -400,7 +400,7 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
   
 7.  Immédiatement après `DateDiff(`, tapez **"d",** (y compris les guillemets "" et la virgule). 
   
-9. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **LastPurchase**.  
+9. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **LastPurchase**.  
   
 11. Immédiatement après `Fields!LastPurchase.Value`, tapez **,** (virgule). 
   
@@ -409,7 +409,7 @@ Dans cette section, vous allez ajouter une colonne, puis utiliser la fonction **
     > [!WARNING]  
     > Dans les rapports de production, vous ne devez pas utiliser la fonction **Now** dans les expressions évaluées plusieurs fois pendant la génération du rapport (par exemple, dans les lignes de détails d’un rapport). La valeur de **Now** change de ligne en ligne et les différentes valeurs affectent les résultats de l’évaluation des expressions, ce qui entraîne des résultats légèrement incohérents. Utilisez à la place la variable globale `ExecutionTime` fournie par [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-15. Supprimez la parenthèse de gauche après `Now(`, puis tapez une parenthèse fermante **)**.  
+15. Supprimez la parenthèse de gauche après `Now(`, puis tapez une parenthèse fermante **)** .  
   
     L’expression complétée est la suivante : `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -454,15 +454,15 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
   
 4.  Dans la liste **Élément** , double-cliquez sur **Round**.  
   
-5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
 7.  Immédiatement après `Fields!YTDPurchase.Value`, tapez  **-** (signe moins). 
   
 9. Développez à nouveau **Fonctions communes** , cliquez sur **Agrégat**, puis dans la liste **Élément** , double-cliquez sur **Avg**.  
   
-11. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
+11. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
-13. Immédiatement après `Fields!YTDPurchase.Value`, tapez **, "Expressions"))**.  
+13. Immédiatement après `Fields!YTDPurchase.Value`, tapez **, "Expressions"))** .  
   
     L’expression complétée est la suivante : `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions"))`  
   
@@ -478,13 +478,13 @@ La configuration de l’indicateur et de ses états s’effectue en plusieurs é
   
 19. Dans la liste **Élément** , double-cliquez sur **Round**.  
   
-20. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
+20. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
 22. Immédiatement après `Fields!YTDPurchase.Value`, tapez  **-** (signe moins). 
   
 24. Développez à nouveau **Fonctions communes** , cliquez sur **Agrégat**, puis dans la liste **Élément** , double-cliquez sur **Avg**.  
   
-26. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**, puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
+26. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** , puis dans la liste **Valeurs** , double-cliquez sur **YTDPurchase**.  
   
 28. Immédiatement après `Fields!YTDPurchase.Value`, tapez **, "Expressions")) < 0**  
   
@@ -654,7 +654,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 ![report-builder-expression-tutorial-final-in-browser](../reporting-services/media/report-builder-expression-tutorial-final-in-browser.png)
 
    
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
 [Indicateurs &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

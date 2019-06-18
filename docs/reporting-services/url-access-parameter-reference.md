@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620598"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
@@ -276,7 +276,7 @@ ms.locfileid: "65620598"
                   Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.  
   
 ##  <a name="bkmk_webpart"></a> Commandes de composant WebPart Visionneuse de rapports (rv:)  
- Les noms des paramètres de rapport réservés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont utilisés pour cibler le composant WebPart Visionneuse de rapports intégré à SharePoint. Ces noms de paramètre sont préfixés par *rv:*. Le composant WebPart Visionneuse de rapports prend également en charge le paramètre *rs:ParameterLanguage* .  
+ Les noms des paramètres de rapport réservés [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont utilisés pour cibler le composant WebPart Visionneuse de rapports intégré à SharePoint. Ces noms de paramètre sont préfixés par *rv:* . Le composant WebPart Visionneuse de rapports prend également en charge le paramètre *rs:ParameterLanguage* .  
   
 -   *Toolbar*: contrôle l’affichage de la barre d’outils pour le composant WebPart Visionneuse de rapports. La valeur par défaut est **Full**. Les valeurs peuvent être les suivantes :  
   
@@ -370,7 +370,7 @@ ms.locfileid: "65620598"
     https://myspsite/_vti_bin/reportserver?https://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accès URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)  
   

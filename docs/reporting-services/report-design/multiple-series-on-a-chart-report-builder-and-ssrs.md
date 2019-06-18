@@ -9,10 +9,10 @@ ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8aedfd50c591f3a8aef4855854eed760ce093a7a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580627"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Plusieurs séries sur un graphique (Générateur de rapports et SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "65580627"
 ## <a name="using-range-charts"></a>Utilisation de graphiques d'étendue  
  Les graphiques d'étendue possèdent deux valeurs par point de données. Si le graphique comporte deux séries qui partagent le même axe des abscisses (x), vous pouvez utiliser un graphique d'étendue pour afficher la différence entre ces deux séries. Les graphiques d'étendue sont particulièrement bien adaptés pour afficher des valeurs minimale et maximale. Par exemple, si votre première série contient la plus forte vente pour chaque jour de janvier et votre deuxième série contient la vente la plus faible pour chaque jour de janvier, vous pouvez utiliser un graphique d'étendue pour afficher la différence entre la vente la plus forte et la vente la plus faible pour chaque jour. Pour plus d’informations, consultez [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Affichage d’une série avec plusieurs plages de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)  

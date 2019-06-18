@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582091"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582091"
   
     2.  Un paramètre de requête par paramètre en cascade. Un paramètre de requête limite les données extraites de la source de données en spécifiant certaines valeurs à inclure dans la requête ou à exclure de la requête. En règle générale, les paramètres de requête se déclenchent dans une clause de restriction dans la requête. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT, les paramètres de requête se déclenchent dans la clause WHERE.  
   
-6.  Cliquez sur **Exécuter** (**!**). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
+6.  Cliquez sur **Exécuter** ( **!** ). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
   
     > [!NOTE]  
     >  L'ordre des paramètres de requête lors de la première exécution d'une requête détermine leur ordre de création dans le rapport. Pour modifier l’ordre, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "65582091"
   
      La commande SELECT DISTINCT supprime les valeurs dupliquées du jeu de résultats, de telle sorte que vous puissiez obtenir chaque valeur unique de la colonne spécifiée dans la table spécifiée.  
   
-     Cliquez sur **Exécuter** (**!**). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
+     Cliquez sur **Exécuter** ( **!** ). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -151,7 +151,7 @@ ms.locfileid: "65582091"
   
 4.  Cliquez sur **Afficher le rapport**. Le rapport actualise l'affichage en fonction des paramètres que vous avez choisis.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   

@@ -26,10 +26,10 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 36eb4aff0571be5eb25115df06df5079a59da75b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575624"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "65575624"
   
  L'échelle des axes est liée par une valeur minimale et une valeur maximale qui définissent la plage de données à afficher le long de l'axe. Le graphique calcule la valeur minimale et la valeur maximale le long de chaque axe en fonction des valeurs de votre jeu de résultats. Sur l'axe des ordonnées, l'échelle sera toujours déterminée par le nombre le plus faible et le nombre le plus élevé du champ de valeur. Sur l'axe des abscisses, les types des valeurs minimale et maximale sont déterminés par le type de votre champ de catégorie. Tout champ d'un dataset peut être classé dans l'un des trois types de champs de catégorie. Le tableau suivant illustre ces trois types de champs de catégorie.  
   
-|Type de champ de catégorie|Description| Exemple|  
+|Type de champ de catégorie|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
 |Numérique|Les catégories sont tracées par ordre numérique le long de l'axe des abscisses.|Un état des ventes par numéro d'identification des employés affiche les numéros d'identification des employés le long de l'axe des abscisses.|  
 |Date/heure|Les catégories sont tracées par ordre chronologique le long de l'axe des abscisses.|Un état des ventes par mois affiche des dates mises en forme le long de l'axe des abscisses.|  
@@ -123,7 +123,7 @@ ms.locfileid: "65575624"
   
  [Spécifier une échelle logarithmique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

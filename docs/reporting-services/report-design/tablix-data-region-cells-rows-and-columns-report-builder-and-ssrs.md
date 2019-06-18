@@ -14,10 +14,10 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 79cfa786930825e28f41ffe38802f4aa1e0ec6f6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574715"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Cellules, lignes et colonnes de région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -104,7 +104,7 @@ ms.locfileid: "65574715"
  Les cellules de la zone du corps de tableau matriciel peuvent afficher des données de détail lorsque la cellule est dans une ligne ou une colonne de détail et des données de groupe agrégées lorsque la cellule est dans une ligne ou une colonne de groupe. L'étendue des données d'une cellule s'étend à l'intersection avec les groupes de lignes et de colonnes les plus internes auxquels la cellule appartient.  
   
 > [!NOTE]  
->  Les données effectives affichées pour chaque cellule sont l'expression évaluée pour l'élément de rapport que la cellule contient, en général une zone de texte. Dans une cellule qui appartient à une ligne ou une colonne de détail, l’expression a comme valeur par défaut les données de détail (par exemple, **[LineTotal])**. Dans une cellule qui n’appartient pas à une ligne ou une colonne de détail, l’expression a pour valeur par défaut une fonction d’agrégation (par exemple, **Sum[LineTotal])**. Si une expression ne spécifie pas de fonction d'agrégation bien que la cellule appartienne à une ligne ou une colonne de groupe, la première valeur dans le groupe est affichée. Pour plus d’informations sur les agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Les données effectives affichées pour chaque cellule sont l'expression évaluée pour l'élément de rapport que la cellule contient, en général une zone de texte. Dans une cellule qui appartient à une ligne ou une colonne de détail, l’expression a comme valeur par défaut les données de détail (par exemple, **[LineTotal])** . Dans une cellule qui n’appartient pas à une ligne ou une colonne de détail, l’expression a pour valeur par défaut une fonction d’agrégation (par exemple, **Sum[LineTotal])** . Si une expression ne spécifie pas de fonction d'agrégation bien que la cellule appartienne à une ligne ou une colonne de groupe, la première valeur dans le groupe est affichée. Pour plus d’informations sur les agrégats, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Fusion et fractionnement de cellules  
  À l’intérieur d’une zone de tableau matriciel, vous pouvez fusionner plusieurs cellules adjacentes. Par exemple, vous pouvez créer des cellules pour les étiquettes qui couvrent plusieurs colonnes ou lignes.  
@@ -117,7 +117,7 @@ ms.locfileid: "65574715"
   
  Vous pouvez fractionner une cellule précédemment fusionnée. Vous pouvez fractionner des cellules horizontalement par colonnes ou verticalement par lignes. Pour fractionner une cellule en un bloc de cellules, commencez par fractionner horizontalement la cellule, puis fractionnez-la verticalement autant de fois que nécessaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   

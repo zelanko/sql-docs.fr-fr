@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7e3f2a66fd4963de77fa3545247f9d81690ddec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734537"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711913"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organiser les colonnes affichées dans une trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47734537"
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
--   Choisissez une seule colonne de regroupement pour grouper et agréger les événements de trace. Lorsque vous ne choisissez qu'une colonne de données pour le regroupement, la fenêtre de trace affiche les événements en les groupant en fonction des valeurs de cette colonne de données et réduit tous les événements sous celle-ci. Un signe positif (**+**) apparaît à gauche de l’événement dans la colonne de données choisie pour le regroupement, tandis que le nombre d’événements réduits sous celle-ci apparaît entre parenthèses à droite de l’événement. L’exemple suivant indique comment la grille de la fenêtre de trace apparaît si vous choisissez uniquement la colonne de données **EventClass** pour le regroupement. Notez que tous les événements sont organisés sous la colonne de données **EventClass** . Pour afficher tous les événements, cliquez sur le signe plus pour développer et afficher toutes les classes d'événements correspondantes.  
+-   Choisissez une seule colonne de regroupement pour grouper et agréger les événements de trace. Lorsque vous ne choisissez qu'une colonne de données pour le regroupement, la fenêtre de trace affiche les événements en les groupant en fonction des valeurs de cette colonne de données et réduit tous les événements sous celle-ci. Un signe positif ( **+** ) apparaît à gauche de l’événement dans la colonne de données choisie pour le regroupement, tandis que le nombre d’événements réduits sous celle-ci apparaît entre parenthèses à droite de l’événement. L’exemple suivant indique comment la grille de la fenêtre de trace apparaît si vous choisissez uniquement la colonne de données **EventClass** pour le regroupement. Notez que tous les événements sont organisés sous la colonne de données **EventClass** . Pour afficher tous les événements, cliquez sur le signe plus pour développer et afficher toutes les classes d'événements correspondantes.  
   
 |EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
@@ -80,11 +80,11 @@ ms.locfileid: "47734537"
   
 6.  Cliquez sur **OK** dans la boîte de dialogue **Organiser les colonnes** , puis sur **OK** dans la boîte de dialogue **Propriétés de la table de trace** ou **Propriétés du fichier de trace** .  
   
-     Une fois que vous avez cliqué sur **OK** dans la boîte de dialogue **Propriétés de la table de trace** ou **Propriétés du fichier de trace** , les colonnes de données sont réorganisées dans la trace affichée. Tous les autres événements de colonne de données sont agrégés sous la colonne de données que vous avez déplacée dans la liste **Groupes** . Cliquez sur le signe plus (**+**) à gauche de l’événement dans la colonne de données que vous avez choisie pour l’agrégation pour le développer et afficher tous les événements de ce type. Le colonne choisie pour l'agrégation occupe une position fixe dans l'affichage, mais vous pouvez faire défiler celui-ci vers la droite ou vers la gauche pour afficher les autres colonnes.  
+     Une fois que vous avez cliqué sur **OK** dans la boîte de dialogue **Propriétés de la table de trace** ou **Propriétés du fichier de trace** , les colonnes de données sont réorganisées dans la trace affichée. Tous les autres événements de colonne de données sont agrégés sous la colonne de données que vous avez déplacée dans la liste **Groupes** . Cliquez sur le signe plus ( **+** ) à gauche de l’événement dans la colonne de données que vous avez choisie pour l’agrégation pour le développer et afficher tous les événements de ce type. Le colonne choisie pour l'agrégation occupe une position fixe dans l'affichage, mais vous pouvez faire défiler celui-ci vers la droite ou vers la gauche pour afficher les autres colonnes.  
   
 7.  Pour revenir à une vue normale des données de trace, cliquez sur **Vue agrégée** dans le menu **Affichage** , pour annuler la sélection. Si vous souhaitez revenir à la vue agrégée, cliquez de nouveau sur **Vue agrégée** dans le menu **Affichage** afin de la sélectionner à nouveau. Vous pouvez également cliquer sur **Vue groupée** dans le menu **Affichage** pour afficher les événements de trace groupés sans les réduire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  

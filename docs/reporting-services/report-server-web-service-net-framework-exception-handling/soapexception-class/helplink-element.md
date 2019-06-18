@@ -9,19 +9,19 @@ helpviewer_keywords:
 - HelpLink element
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c7df237a967b2601667ccf8b4849bfa146c6103
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589577"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991673"
 ---
 # <a name="helplink-element"></a>Élément HelpLink
   L’élément **HelpLink** de la propriété **Detail** est une chaîne d’URL générée par le serveur de rapports. L'URL cible une page Web gérée par le centre d'Aide et de support [!INCLUDE[msCoName](../../../includes/msconame-md.md)] et fournit une aide et des articles de base de connaissances supplémentaires sur les erreurs spécifiques qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La syntaxe de l'URL est la suivante :  
   
- **https://** www.microsoft.com**/** produits**/** ee**/** transform.aspx **?EvtSrc**=v_alue_**&EvtID**=_valeur_**&ProdName**=_valeur_**&ProdVer**=*valeur*  
+ **https://** www.microsoft.com **/** produits **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_valeur_ **&ProdName**=_valeur_ **&ProdVer**=*valeur*  
   
  Le tableau suivant répertorie les arguments de l’URL **HelpLink**.  
   
@@ -63,7 +63,7 @@ catch (SoapException e)
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [SoapException, classe Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
  [Utilisation de la propriété des détails pour gérer des erreurs spécifiques](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  

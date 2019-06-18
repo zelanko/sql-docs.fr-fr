@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651724"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-Dans cette leçon du didacticiel sur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez le portail web pour sélectionner un rapport qui doit être remis à des destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &#40;Didacticiel SSRS &#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
+Dans cette leçon du didacticiel sur [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , vous utilisez le portail web pour sélectionner un rapport qui doit être remis à des destinataires. L’abonnement piloté par les données que vous allez définir distribue le rapport **Sales Order** créé dans le didacticiel [Créer un rapport de tableau de base &#40;Didacticiel SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  Au cours des étapes qui suivent, vous allez modifier les informations de connexion à la source de données utilisée par le rapport pour extraire les données. Seuls les rapports qui utilisent des **informations d’identification stockées** pour accéder à une source de données de rapport peuvent être distribués par le biais d’un abonnement piloté par les données. Les informations d'identification stockées sont nécessaires pour traiter les rapports de façon autonome.  
   
 Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un paramètre permettant de filtrer le rapport sur `[Order]` de sorte que l'abonnement puisse générer plusieurs instances différentes du rapport pour des commandes et des formats de rendu spécifiques.  
   
@@ -24,7 +24,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
   
 1.  Accédez au portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec des privilèges d’administrateur : par exemple, cliquez avec le bouton droit sur l’icône d’Internet Explorer et cliquez sur **Exécuter en tant qu’administrateur**.  
  
-2.    Accédez à l’URL du portail web.  Exemple :   
+2.    Accédez à l’URL du portail web.  Par exemple :   
     `https://<server name>/reports`.  
     `https://localhost/reports`
  **Remarque :** L’URL du *portail* est « Reports », et non « Reportserver », l’URL du *serveur* de rapports.  
@@ -89,7 +89,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
   
 3.  Vérifiez que **l’Invite** est `OrderNumber`.  
   
-4.  Sélectionnez **Autoriser une valeur vide ("")**.  
+4.  Sélectionnez **Autoriser une valeur vide ("")** .  
   
 5.  Sélectionnez **Autoriser les valeurs de type Null**.  
   
@@ -113,7 +113,7 @@ Vous allez également modifier le dataset et le rapport pour qu'ils utilisent un
 + Vous avez correctement configuré le rapport pour extraire les données au moyen des informations d’identification stockées et les données peuvent être filtrées avec un paramètre. 
 + Dans la leçon suivante, vous configurez l’abonnement à l’aide des pages Abonnement piloté par les données du portail web. Consultez la [Leçon 3 : Définition d’un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Gérer des sources de données de rapports](../reporting-services/report-data/manage-report-data-sources.md)  
 [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  

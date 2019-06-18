@@ -8,21 +8,21 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6315362b4c8d308e3be8d812ccfdeadaa1e7de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194145"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Procédure : déployer un élément de rapport personnalisé
   Pour déployer un élément de rapport personnalisé dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous devez d'abord modifier les fichiers de configuration du serveur de rapports, puis copier les assemblys correspondant aux composants de conception et d'exécution dans les dossiers d'application appropriés, et ce à la fois pour le Concepteur de rapports et le serveur de rapports.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Pour déployer un élément de rapport personnalisé  
   
-1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. Notez que l’entrée **ReportItemName** doit correspondre à l’attribut **CustomReportItemAttribute** utilisé dans votre classe **CustomReportItemDesigner**. Exemple :  
+1.  Modifiez le fichier Rsreportdesigner.config afin de configurer les composants de conception et d'exécution de l'élément de rapport personnalisé à utiliser dans le concepteur. Notez que l’entrée **ReportItemName** doit correspondre à l’attribut **CustomReportItemAttribute** utilisé dans votre classe **CustomReportItemDesigner**. Par exemple :  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "47717047"
     </ReportItemConverter>  
     ```  
   
-2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Exemple :  
+2.  Modifiez le fichier Rsreportserver.config pour inscrire le composant d'exécution de l'élément de rapport personnalisé. Par exemple :  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "47717047"
     </ReportItems>  
     ```  
   
-3.  Modifiez le fichier Rssrvpolicy.config pour ajouter un **CodeGroup** octroyant les autorisations adéquates à l’élément de rapport personnalisé. Exemple :  
+3.  Modifiez le fichier Rssrvpolicy.config pour ajouter un **CodeGroup** octroyant les autorisations adéquates à l’élément de rapport personnalisé. Par exemple :  
   
     ```  
     <CodeGroup   
@@ -63,7 +63,7 @@ ms.locfileid: "47717047"
   
 5.  Copiez le fichier DLL correspondant au composant de conception de l'élément de rapport personnalisé dans le répertoire PrivateAssemblies, lequel se trouve à l'emplacement suivant : %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Bibliothèques de classes d'éléments de rapports personnalisés](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   

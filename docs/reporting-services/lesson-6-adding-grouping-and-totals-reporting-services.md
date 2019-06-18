@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089662"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
@@ -23,13 +23,13 @@ Dans la dernière leçon du tutoriel, vous allez ajouter un regroupement et des 
 
 1. Sélectionnez l’onglet **Conception**.
 2. Si vous ne voyez pas le volet **Groupes de lignes**, cliquez avec le bouton droit sur l’aire de conception et sélectionnez **Vue** >**Regroupement**.
-3. Faites glisser le champ `[Date]` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne **= (Details)**.
+3. Faites glisser le champ `[Date]` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessus de la ligne **= (Details)** .
 
     > [!NOTE]
     > Notez que la poignée de ligne comporte maintenant un crochet, qui indique un groupe. De plus, le tableau présente désormais deux colonnes d’expression `[Date]`, placées de part et d’autre d’une ligne verticale en pointillé.
     >
     >![groupe date ajouté](media/rs-basictablegroups1design.png "groupe date ajouté")
-4. Faites glisser le champ `[Order]` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ **Date** et au-dessus de la ligne **= (Details)**.
+4. Faites glisser le champ `[Order]` du volet **Données du rapport** vers le volet **Groupes de lignes**. Placez-le au-dessous du champ **Date** et au-dessus de la ligne **= (Details)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
 

@@ -12,10 +12,10 @@ ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573166"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "65573166"
 |&#124; (barre verticale)|Sépare les éléments de la syntaxe. Vous ne pouvez choisir qu'un seul de ces éléments.|  
 |`[ ]` (crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |**{ }** (accolades)|Délimitent les paramètres des éléments de syntaxe.|  
-|[**,**...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
+|[ **,** ...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +64,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le tableau suivant récapitule les termes du chemin d'accès à l'élément. Les exemples du tableau font référence au document XML d'exemple Customers.xml inclus dans la section Exemples de cette rubrique.  
   
 > [!NOTE]  
@@ -76,7 +76,7 @@ XMLLocalName :: =
 |**ElementNode**|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
 |**XMLName**|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. **XMLName** peut porter comme préfixe un identificateur d’espace de noms qui identifie de façon unique chaque nœud.|  
 |**Encoding**|Indique que **Value** pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
-|**FieldList**|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée (**{}**), aucun champ de ce nœud n’est utilisé.<br /><br /> **FieldList** ne peut pas contenir à la fois **Value** et **Element** ou **ElementNode**.|  
+|**FieldList**|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée ( **{}** ), aucun champ de ce nœud n’est utilisé.<br /><br /> **FieldList** ne peut pas contenir à la fois **Value** et **Element** ou **ElementNode**.|  
 |**Field**|Spécifie les données qui sont extraites en tant que champ de dataset.|  
 |**Attribute**|Paire nom-valeur dans **ElementNode**. Par exemple, dans le nœud d’élément \<Customer ID="1">, **ID** est un attribut et **@ID(Integer)** retourne « 1 » comme type d’entier dans l’élément **ID** du champ de données correspondant.|  
 |**Value**|Valeur de l'élément. **Value** ne peut être utilisé que sur le dernier **ElementNode** dans le chemin de l’élément. Par exemple, étant donné que \<Return> est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de **Return {@}** est **Chair**.|  
@@ -201,7 +201,7 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Type de connexion XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  

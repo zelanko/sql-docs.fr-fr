@@ -13,10 +13,10 @@ ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574950"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Utiliser une connexion de données Office (.odc) avec les rapports
@@ -90,7 +90,7 @@ ms.locfileid: "65574950"
   
 10. Si le rapport utilise des informations de source de données personnalisées, cliquez sur **Partagé**.  
   
-11. Dans **Lien de source de données**, cliquez sur le bouton Parcourir (**...**).  
+11. Dans **Lien de source de données**, cliquez sur le bouton Parcourir ( **...** ).  
   
 12. Sélectionnez le fichier .odc que vous venez de télécharger.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "65574950"
   
      Si vous appliquez cette procédure avec l'exemple de base de données et les exemples de rapports [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , soyez conscient que seul le rapport Company Sales fonctionnera immédiatement avec un fichier .odc. Les autres rapports exemple contiennent des paramètres de requête et des fonctionnalités non compatibles avec le fournisseur OLE DB. Vous pouvez cependant les faire fonctionner avec le fournisseur OLE DB si vous les modifiez au préalable dans le Concepteur de rapports.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

@@ -1,28 +1,28 @@
 ---
-title: 'Didacticiel : Créer un rapport principal et un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294736"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
 Ce didacticiel vous apprend comment créer deux types de rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un rapport d’extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. 
 
 L’illustration suivante montre les rapports que vous allez créer et comment la valeur de champ, Games and Toys, du rapport principal s’affiche dans le titre du rapport d’extraction. Les données du rapport d’extraction se rapportent à la catégorie de produit Games and Toys.  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-Durée estimée pour effectuer ce didacticiel : 30 minutes  
+Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Ce didacticiel nécessite l’accès au cube Contoso Sales pour le rapport d’extraction et le rapport principal. Ce dataset se compose de l’entrepôt de données ContosoDW et de la base de données de traitement analytique en ligne (OLAP) Contoso_Retail. Les rapports que vous allez créer dans ce didacticiel récupèrent des données du cube Contoso Sales. Vous pouvez télécharger la base de données OLAP Contoso_Retail à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkID=191575). Il vous suffit de télécharger le fichier ContosoBIdemoABF.exe. Il contient la base de données OLAP.  
@@ -63,7 +63,7 @@ Une connexion de données contient les informations nécessaires pour se connect
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance d’Analysis Services.  
   
@@ -101,7 +101,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, cliquez sur le bouton **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -120,7 +120,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
   
-    La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
+    La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -161,7 +161,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
 5.  Faites glisser la mesure Sales Amount vers le volet de données, puis placez-la à droite de Product Subcategory Name.  
   
-6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)**.  
+6.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -206,7 +206,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
     Le tableau est ajouté à l'aire de conception.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ## <a name="DFormat"></a>2. Mettre en forme les données en tant que devises  
 Appliquez une mise en forme de devise aux champs de montant des ventes dans le rapport d'extraction.  
@@ -250,7 +250,7 @@ Au lieu d'afficher les ventes et les retours de ventes sous forme de valeurs mon
   
 12. Dans le volet Données du graphique, cliquez sur l’icône **Ajouter un champ** , puis sur Sales_Return_Amount.  
   
-13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+13. Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ## <a name="DReportTitle"></a>4. Ajouter un titre de rapport avec le nom d'une catégorie de produit  
 Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez placer le titre du rapport dans un en-tête de rapport, ou si le rapport n'en utilise pas, dans une zone de texte située en haut du corps du rapport. Dans ce didacticiel, vous allez utiliser la zone de texte placée automatiquement en haut du corps du rapport.  
@@ -261,7 +261,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
   
 2.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-3.  Tapez **Sales and Returns for Category:**.  
+3.  Tapez **Sales and Returns for Category:** .  
   
 4.  Cliquez avec le bouton droit, puis sélectionnez **Créer un espace réservé**.  
   
@@ -275,7 +275,7 @@ Un titre de rapport s'affiche dans la partie supérieure du rapport. Vous pouvez
     =First(Fields!Product_Category_Name.Value, "DataSet1")  
     ```  
   
-7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+7.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 Le titre du rapport inclut le nom de la première catégorie de produit. Par la suite, après avoir exécuté ce rapport en tant que rapport d'extraction, le nom de la catégorie de produit changera de manière dynamique afin de refléter le nom de la catégorie de produit sur lequel l'utilisateur a cliqué dans le rapport principal.  
   
@@ -361,7 +361,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 4.  Dans **Sélectionner un type de connexion**, sélectionnez **Microsoft SQL Server Analysis Services**, puis cliquez sur **Générer**.  
   
-5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  Dans **Source de données**, vérifiez que la source de données est **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  Dans **Nom du serveur**, tapez le nom d’un serveur où est installée une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -392,7 +392,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
   
-1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)**.  
+1.  Dans la page **Créer une requête**, dans le volet Métadonnées, dans la section du cube, cliquez sur le bouton de sélection **(...)** .  
   
 2.  Dans la boîte de dialogue **Sélection de cube** , cliquez sur Sales, puis sur **OK**.  
   
@@ -411,7 +411,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
   
-    La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
+    La requête inclut maintenant un filtre ne comportant que les canaux suivants : Online (en ligne) et Reseller (revendeur).  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -479,7 +479,7 @@ Vous allez ajouter une source de données incorporée au rapport principal.
   
 4.  À partir de Membres calculés, faites glisser Net Sales vers le volet de données, puis placez-le à droite de `Net QTY`.  
   
-5.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)**.  
+5.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter (!)** .  
   
     Passez en revue le jeu de résultats de la requête.  
   
@@ -511,13 +511,13 @@ Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports.
   
 1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
-    Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux en-têtes de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
+    Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne s'affiche de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux titres de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
   
 2.  Cliquez sur **Suivant**.  
   
 3.  Cliquez sur **Terminer**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ## <a name="MGrandTotal"></a>2. Supprimer la ligne de total général  
 Les valeurs de données sont affichées sous forme d'états d'indicateur, avec les totaux des groupes de colonnes. Supprimez la ligne qui affiche le total général.  
@@ -528,7 +528,7 @@ Les valeurs de données sont affichées sous forme d'états d'indicateur, avec l
   
 2.  Cliquez sur la ligne Total (la dernière ligne dans la matrice), cliquez avec le bouton droit, puis cliquez sur **Supprimer les lignes**.  
   
-3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)**.  
+3.  Pour afficher un aperçu du rapport, cliquez sur **Exécuter (!)** .  
   
 ## <a name="MDrillthrough"></a>3. Configurer une action de zone de texte pour l'extraction  
 Pour activer l'extraction, spécifiez une action sur une zone de texte dans le rapport principal.  
@@ -587,7 +587,7 @@ Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour l
   
 4.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_QTY`.  
+5.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_QTY`.  
   
 6.  Répétez les étapes 2 à 5 pour la cellule `[Sum(Net QTY)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
@@ -599,7 +599,7 @@ Utilisez des indicateurs pour afficher l'état de quantités et de ventes pour l
   
 3.  Cliquez sur le type **3 Signes** , puis sur **OK**.  
   
-4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)**. Sélectionnez `Net_Sales`.  
+4.  Cliquez avec le bouton droit sur l’indicateur et, dans le volet Données de la jauge, cliquez sur la flèche vers le bas en regard de **(Non spécifié)** . Sélectionnez `Net_Sales`.  
   
 5.  Répétez les étapes 1 à 4 pour la cellule `[Sum(Net_Sales)]` dans le groupe de lignes `[Product_Category_Name]` dans **Total**.  
   
@@ -627,7 +627,7 @@ Ajoutez un titre au rapport principal.
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Tapez **2009 Product Category Sales: Online and Reseller Category:**.  
+2.  Tapez **2009 Product Category Sales: Online and Reseller Category:** .  
   
 3.  Sélectionnez le texte que vous avez tapé.  
   
@@ -680,6 +680,6 @@ Exécutez le rapport principal, puis cliquez sur des valeurs dans la colonne de 
   
 5.  Explorez éventuellement les autres catégories de produits en cliquant sur leur nom.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
   

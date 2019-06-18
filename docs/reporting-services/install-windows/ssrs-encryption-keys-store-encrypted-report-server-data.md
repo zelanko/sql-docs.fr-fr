@@ -12,14 +12,14 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3eb58910390765607514239a43c6059ebcd5c220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a83f5812347dfc827795de747f9c8119e3ba6245
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513291"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  
@@ -39,7 +39,7 @@ ms.locfileid: "47815367"
   
      Ce compte est utilisé lorsqu'une connexion à un ordinateur distant est requise et qu'aucune autre information d'identification n'est disponible pour établir la connexion. Ce compte est principalement utilisé pour gérer le traitement de rapports sans assistance qui n'utilise pas d'informations d'identification pour accéder à une source de données. Si vous créez des rapports basés sur des sources de données qui ne nécessitent pas ou n'utilisent pas d'informations d'identification lors de l'accès aux données, vous devez configurer ce compte pour permettre son utilisation par le serveur de rapports.  
   
-     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Ce compte se révèle indispensable dans certains cas et seul l’outil de configuration de Reporting Services ou l’utilitaire **rsconfig**peut créer un tel compte. Cette valeur est également stockée dans le fichier rsreportserver.config. Vous devez créer ce compte manuellement. Pour plus d’informations sur ce compte et sur son utilisation, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 -   Clé symétrique utilisée pour un chiffrement.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "47815367"
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge la mise en cache ou l’historique de rapport pour les rapports basés sur l’identité de sécurité de l’utilisateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

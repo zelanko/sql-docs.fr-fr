@@ -14,10 +14,10 @@ ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570559"
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
@@ -40,7 +40,7 @@ ms.locfileid: "65570559"
 |Gérer les sources de données|Ajouter de nouveaux éléments de source de données partagée à un dossier et modifier les sources de données partagées existantes.|  
 |Définir la sécurité au niveau des éléments|Créer et modifier des attributions de rôles qui contrôlent l'accès au dossier. Cette tâche doit être utilisée avec les tâches « Afficher les dossiers » ou « Gérer les dossiers ». Si tel n'est pas le cas, elle n'aura aucun effet car l'utilisateur ne pourra pas sélectionner l'élément.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécuriser des rapports et des ressources](../../reporting-services/security/secure-reports-and-resources.md)   
  [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

@@ -13,11 +13,11 @@ ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 047b201f19275d8bd39b624d6380c99497380135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741565"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriétés de Report Server (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47600497"
  **Host Name**  
  Affiche le nom de l'ordinateur ou du cluster exécutant la recherche en texte intégral.  
   
- **Nom**  
+ **Name**  
  Indique le nom d'affichage du service.  
   
  **ID de processus**  
@@ -57,7 +57,7 @@ ms.locfileid: "47600497"
  **État**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services SQL Server](../../tools/configuration-manager/sql-server-services.md)  
   
   

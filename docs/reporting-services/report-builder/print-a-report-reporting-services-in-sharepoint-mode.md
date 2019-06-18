@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 407d20b06c6dccdb63f5455ffe24a3505d8bd823
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65875204"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Imprimer un rapport (Reporting Services en mode SharePoint)
@@ -47,7 +47,7 @@ ms.locfileid: "65875204"
   
      Pour afficher le rapport avant de l’imprimer, cliquez sur le bouton **Aperçu** . Cela entraîne l’ouverture de la première page du rapport dans une fenêtre d’aperçu distincte. Les pages supplémentaires sont disponibles lors du rendu du rapport sur le serveur de rapports. L'aperçu d'un rapport est rendu au format EMF. Vous pouvez accéder aux pages précédentes ou suivantes tant que la dernière page n'est pas atteinte et que le bouton **Suivant** n'est pas désactivé. Pour modifier les marges d’impression de la page d’aperçu, cliquez sur le bouton **Marges** . La boîte de dialogue **Marges** s’affiche. Configurez les marges supérieure, inférieure, gauche et droite selon vos besoins, puis cliquez sur **OK**. La boîte de dialogue se ferme et les paramètres sont stockés pour l'aperçu ainsi que l'impression du rendu.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer et désactiver l'impression côté client pour Reporting Services](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

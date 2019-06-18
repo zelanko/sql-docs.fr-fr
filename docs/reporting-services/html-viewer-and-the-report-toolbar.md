@@ -12,10 +12,10 @@ ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503075"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
@@ -71,7 +71,7 @@ ms.locfileid: "65503075"
 ## <a name="credentials"></a>Informations d'identification  
  Les informations d'identification sont les valeurs de nom d'utilisateur et de mot de passe qui autorisent l'accès à une source de données. Une fois les informations d'identification spécifiées, cliquez sur **Afficher le rapport** pour obtenir les données. Si un rapport requiert que vous vous connectiez, cela signifie que les données que vous êtes autorisé à afficher peuvent être différentes de celles qu'un autre utilisateur peut afficher. Par conséquent, deux utilisateurs peuvent exécuter le même rapport et obtenir des résultats différents. En outre, certains rapports contiennent des zones masquées qui sont révélées selon les informations d'identification de connexion utilisateur ou les sélections effectuées dans le rapport. Les zones masquées sont exclues des opérations de recherche, ce qui entraîne des résultats de recherche différents de ceux obtenus lorsque toutes les parties du rapport sont visibles.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

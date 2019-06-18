@@ -1,22 +1,22 @@
 ---
-title: 'Didacticiel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : ajout d’un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a19d1fee2e7e9fc1fd5efd8fe2c0007548bcaf2d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ee2333bc6d369bbc9908198d8cfa2fa18ce23065
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041799"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports)
-Dans ce tutoriel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
+Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous ajoutez un indicateur de performance clé (KPI) à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .  
 
 Les indicateurs de performance clés sont des valeurs mesurables qui revêtent une importance significative pour l’entreprise. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L’état actuel de l’indicateur de performance clé est indiqué avec des couleurs, des jauges et des indicateurs.
   
@@ -25,9 +25,9 @@ L’illustration suivante est similaire au rapport que vous allez créer.
 ![report-builder-kpi-report](../reporting-services/media/report-builder-kpi-report.png)
     
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -51,7 +51,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
   
 5.  Cliquez sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d'informations, voir [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquez sur **Suivant**.  
   
@@ -95,7 +95,7 @@ Dans cette section, vous choisissez une source de données partagée, créez un 
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter (**!**).
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter ( **!** ).
 
 11. Cliquez sur **Suivant**.  
   
@@ -136,7 +136,7 @@ L’Assistant Tableau ou matrice propose une conception initiale pour l’affich
   
 11. Cliquez sur **Terminer**.  
   
-      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
+      Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset. Le volet Groupes de colonnes est vide.  
       
       ![report-builder-kpi-row-groups](../reporting-services/media/report-builder-kpi-row-groups.png)
   
@@ -184,7 +184,7 @@ Les couleurs d'arrière-plan peuvent avoir la valeur d'une expression qui est é
     
     ![report-builder-text-box-properties](../reporting-services/media/report-builder-text-box-properties.png)
   
-2.  Sous l’onglet **Remplissage**, cliquez sur le bouton **fx** à côté de **Couleur de remplissage**, puis entrez l’expression suivante dans le champ **Définir l’expression pour : BackgroundColor** :  
+2.  Sous l’onglet **Remplissage** , cliquez sur le bouton **fx** en regard de **Couleur de remplissage** , puis entrez l’expression suivante dans le champ **Définir l’expression pour : BackgroundColor** :  
   
     `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   
@@ -268,7 +268,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
   
 5.  Sous l’onglet **Insérer** > **Visualisations des données** > double-cliquez sur **Indicateur**.  
   
-6.  Dans la boîte de dialogue **Sélectionner un type d’indicateur** , sous **Formes**, sélectionnez le premier type de forme, **3 Indicateurs (sans bordure)**.  
+6.  Dans la boîte de dialogue **Sélectionner un type d’indicateur** , sous **Formes**, sélectionnez le premier type de forme, **3 Indicateurs (sans bordure)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -276,7 +276,7 @@ Les indicateurs sont de petites jauges simples qui permettent d'obtenir en un co
   
 8.  Cliquez avec le bouton droit sur l’indicateur, puis cliquez sur **Propriétés de l’indicateur**.  
   
-9. Sous l’onglet **Valeur et états** , dans la zone **Valeur** , sélectionnez **[SUM (Sales)]**. Ne modifiez pas les autres options.  
+9. Sous l’onglet **Valeur et états** , dans la zone **Valeur** , sélectionnez **[SUM (Sales)]** . Ne modifiez pas les autres options.  
   
     Par défaut, la synchronisation des données se produit au niveau de la région de données et vous voyez s’afficher la valeur **Tablix1**, le nom de la région de données de table dans le rapport, dans la zone **Étendue de synchronisation** .  
   
@@ -340,7 +340,7 @@ Vous avez terminé le didacticiel d'ajout d'un indicateur de performance clé à
 *  [Jauges](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicateurs](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 * [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)
 * [Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

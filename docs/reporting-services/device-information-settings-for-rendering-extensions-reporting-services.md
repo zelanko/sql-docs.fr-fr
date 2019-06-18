@@ -9,10 +9,10 @@ ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cd1fda200aae4a8d5bbc91191fe3b516a6109821
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503989"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Paramètres d'informations de périphérique pour les extensions de rendu (Reporting Services)
@@ -34,7 +34,7 @@ ms.locfileid: "65503989"
 |[Paramètres d'informations de périphérique RGDI](../reporting-services/rgdi-device-information-settings.md)|Décrit les paramètres d'informations de périphérique associés au format de rendu RGDI.|  
 |[Paramètres d’informations de périphérique PPTX](../reporting-services/pptx-device-information-settings.md)|Décrit les paramètres d’informations sur l’appareil associés au format de rendu PPTX.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

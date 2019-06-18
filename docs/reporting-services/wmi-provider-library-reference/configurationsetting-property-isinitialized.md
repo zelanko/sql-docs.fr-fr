@@ -16,10 +16,10 @@ ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1d247dacc79e237f06a513aaa8673d4462151b1b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573794"
 ---
 # <a name="configurationsetting-property---isinitialized"></a>Propriété ConfigurationSetting - IsInitialized
@@ -44,7 +44,7 @@ public Boolean DatabaseLogonName;
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

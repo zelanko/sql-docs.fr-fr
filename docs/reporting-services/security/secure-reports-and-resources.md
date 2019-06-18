@@ -15,10 +15,10 @@ ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570628"
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
@@ -71,7 +71,7 @@ ms.locfileid: "65570628"
 ## <a name="securing-confidential-reports"></a>Sécurisation des rapports confidentiels  
  Les rapports qui contiennent des informations confidentielles doivent être sécurisés au niveau de l'accès aux données, en exigeant des utilisateurs qu'ils s'identifient pour accéder à des données sensibles. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Vous pouvez également sécuriser un dossier pour le rendre inaccessible aux utilisateurs non autorisés. Pour plus d’informations, consultez [Dossiers sécurisés](../../reporting-services/security/secure-folders.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des attributions de rôles](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Sécuriser les éléments de source de données partagée](../../reporting-services/security/secure-shared-data-source-items.md)   

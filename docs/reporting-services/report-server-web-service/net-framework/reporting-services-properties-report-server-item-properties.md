@@ -11,14 +11,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f0a00d57eae7045e8eb06624115d0814ed5a86f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759527"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128825"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - Propriétés d’élément du serveur de rapports
   Les propriétés d'élément sont des propriétés spécifiques à des éléments dans la base de données du serveur de rapports, notamment des rapports, des rapports liés, des dossiers, des ressources, des modèles et des sources de données.  
@@ -37,7 +37,7 @@ ms.locfileid: "47759527"
 |**ID**|ID d'un élément dans la base de données du serveur de rapports.|  
 |**ModifiedBy**|Nom du dernier utilisateur ayant modifié l'élément dans la base de données du serveur de rapports.|  
 |**ModifiedDate**|Date et heure auxquelles le dernier utilisateur a modifié l'élément.|  
-|**Nom**|Nom d'un élément dans la base de données du serveur de rapports.|  
+|**Name**|Nom d'un élément dans la base de données du serveur de rapports.|  
 |**Chemin d'accès**|Nom de chemin d'accès complet de l'élément. Le chemin d'accès à un élément quelconque dans la base de données du serveur de rapports peut comprendre 260 caractères au maximum.|  
 |**Taille**|Taille, en octets, d'un élément dans la base de données du serveur de rapports.|  
 |**Type**|Type d'un élément dans la base de données du serveur de rapports.|  
@@ -71,7 +71,7 @@ ms.locfileid: "47759527"
 |--------------|-----------------|  
 |**MimeType**|Type MIME d'une ressource dans la base de données du serveur de rapports.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)  

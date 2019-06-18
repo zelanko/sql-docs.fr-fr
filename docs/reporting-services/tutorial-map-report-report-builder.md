@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : Rapport cartographique (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : rapport cartographique (Générateur de rapports) | Microsoft Docs'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041572"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
+# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Les cartes sont basées sur des données spatiales qui comportent en général des points, des lignes et des polygones. Par exemple, un polygone peut représenter le contour d'un comté, une ligne peut représenter une route, et un point peut représenter l'emplacement d'une ville. Chaque type de données spatiales est affiché sur une couche séparée sous la forme d'un jeu d'éléments cartographiques.  
@@ -27,9 +27,9 @@ Pour faire varier l'apparence des éléments cartographiques, vous devez spécif
 Dans ce didacticiel, vous créez un rapport cartographique qui affiche les emplacements des magasins dans les comtés de l’État de New York.  
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes  
+Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -166,16 +166,16 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**).  
+9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ).  
   
     Le jeu de résultats contient sept colonnes représentant un ensemble de magasins dans l’état de New York qui vendent des biens de consommation. Voici une liste, avec des explications pour les éléments qui ne sont peut-être pas évidents : 
-    *   **StoreKey** : identificateur de magasin.  
+    *   **StoreKey**: identificateur de magasin.  
     *   **StoreName**.
-    *   **SellingArea** : espace disponible pour la présentation des produits, compris entre 455 et 1 125 pieds carrés.
+    *   **SellingArea**: zone disponible pour l’affichage des produits, comprise entre 455 pieds carrés et 1125 pieds carrés.
     *   **City**.
     *   **County**.
-    *   **Sales** : total des ventes. 
-    *   **SpatialLocation** : emplacement en longitude et latitude. 
+    *   **Sales**: total des ventes. 
+    *   **SpatialLocation**: emplacement en longitude et latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   
@@ -313,7 +313,7 @@ Dans cette section, pour permettre aux éléments d’une couche de laisser tran
   
 3.  Cliquez sur la flèche en regard de PolygonLayer1 > **Données de couche**. La boîte de dialogue **Propriétés des couches de polygones de la carte** s'ouvre.  
   
-4.  Sous l’onglet **Visibilité** , sous **Transparence (pourcentage)**, tapez **30**.  
+4.  Sous l’onglet **Visibilité** , sous **Transparence (pourcentage)** , tapez **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -413,7 +413,7 @@ Par défaut, les données ont un format général. Dans cette section, vous appl
   
 1.  Avec l’échelle de couleurs toujours sélectionnée, dans le volet Propriétés, vous voyez des propriétés pour **MapColorScale**. 
   
-2. Développez la section Titre et, dans la propriété Légende, tapez **Sales (Thousands)**.
+2. Développez la section Titre et, dans la propriété Légende, tapez **Sales (Thousands)** .
 
 3. Changez la propriété TextColor en **Blanc**.  
 
@@ -541,7 +541,7 @@ Ceci conclut la procédure pas à pas décrivant comment ajouter une carte à vo
   
 Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [Assistant Carte et Assistant Couche &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

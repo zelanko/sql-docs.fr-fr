@@ -16,10 +16,10 @@ ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3a769d8c279ef8d024f790157622799c6fbba129
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573434"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>Propriété ConfigurationSetting - IsWindowsServiceEnabled
@@ -44,7 +44,7 @@ public boolean IsWindowsServiceEnabled;
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

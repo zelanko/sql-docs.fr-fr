@@ -9,10 +9,10 @@ ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c3f1e0f0364eebbd0861edb931b0ee7f46954a7d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577160"
 ---
 # <a name="report-builder-functions---union-function"></a>Fonctions du Générateur de rapports - Union
@@ -41,7 +41,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>Return  
  Retourne un objet spatial, **SqlGeometry** ou **SqlGeography**, selon le type d’expression. Pour plus d’informations sur les types de données spatiales **SqlGeometry** et **SqlGeography** , consultez [Présentation des types de données spatiales](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le jeu de données spécifié dans l'expression doit avoir le même type de données.  
   
  La valeur du paramètre *scope* doit être une constante de chaîne et ne peut pas être une expression. Pour les agrégats externes ou les agrégats qui ne spécifient pas d'autres agrégats, le paramètre *scope* doit faire référence à l'étendue actuelle ou à une étendue contenante. Les étendues de dataset ne sont pas prises en charge. Pour les agrégats d'agrégats, les agrégats imbriqués peuvent spécifier une étendue enfant.  
@@ -60,10 +60,10 @@ Union(expression, scope, recursive)
   
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Le tableau suivant montre des exemples d’expressions **SqlGeometry** et d’expressions de résultat de la fonction **Union** , affichés au format de données spatiales WKT (Well-Known Text).  
   
-|Champ avec données spatiales| Exemple|Résultat de la fonction Union|  
+|Champ avec données spatiales|Exemple|Résultat de la fonction Union|  
 |-----------------------------|-------------|------------------|  
 |[PointLocation]|POINT(1 2)<br /><br /> POINT (3 4)|MULTIPOINT((1 2), (3 4))|  
 |[PathDefinition]|LINESTRING(1 2, 3 4)<br /><br /> LINESTRING(5 6, 7 8)|MULTILINESTRING((7 8, 5 6), (3 4, 1 2))|  
@@ -75,7 +75,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

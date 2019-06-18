@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200541"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server
 Découvrez les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , optimisés pour les appareils mobiles et connectés à des données locales, avec un large éventail de visualisations de données. 
@@ -36,10 +36,10 @@ Avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)], vous pou
 Ces articles vous aideront à démarrer.
 -  Téléchargez [l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkID=733527).  
 -  [Créer un rapport mobile Reporting Services](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [End-to-end walkthrough: Create mobile reports and KPIs in SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan)  
-- [Commencer par la conception ou par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md) : Décidez si vous concevez votre rapport d’abord avec des données simulées ou si vous démarrez avec vos propres données.  
-- [Données pour les rapports mobiles Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md) : Utilisez des données de jeux de données partagés ou préparez des données à partir de classeurs Excel pour les utiliser dans vos rapports mobiles.
-- [How data refresh works in mobile reports and KPIs in Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan) : Découvrez plus d’informations sur la configuration de la mise en cache pour les jeux de données partagés afin de contrôler la fréquence à laquelle les données sont actualisées et d’accélérer les performances des rapports.
+-  [Procédure détaillée : créer des rapports mobiles et des indicateurs de performance clés dans SQL Server Reporting Services](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (blog de Christopher Finlan, en anglais)  
+- [Commencer par la conception ou Commencer par les données](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): indiquez si vous souhaitez d’abord concevoir votre rapport avec des données simulées, ou commencer par vos propres données.  
+- [Données de rapports mobiles Reporting Services](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): utilisez des données de jeux de données partagés ou préparez des données à partir de classeurs Excel pour les utiliser dans vos rapports mobiles.
+- [Procédure d’actualisation des données des rapports mobiles et des indicateurs de performance clés dans Reporting Services](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (blog de Christopher Finlan, en anglais) : découvrez comment configurer la mise en cache pour les jeux de données partagés afin de contrôler la fréquence d’actualisation des données et d’accélérer les performances des rapports.
 - [Visualisations dans les rapports mobiles](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [Jauges dans les rapports mobiles](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [Cartes dans les rapports mobiles](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
@@ -50,7 +50,7 @@ Ces articles vous aideront à démarrer.
 -  Afficher [des indicateurs de performance clés et des rapports Reporting Services](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) dans les applications mobiles Power BI pour iOS et Android
 -  Afficher [des indicateurs de performance clés et des rapports Reporting Services](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/) dans l’application Power BI pour les appareils Windows 10   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
   
 -   [Créer, modifier, puis supprimer des sources de données partagées (SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [Gérer des jeux de données partagés](../../reporting-services/report-data/manage-shared-datasets.md)  

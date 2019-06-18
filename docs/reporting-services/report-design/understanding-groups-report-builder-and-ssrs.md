@@ -12,10 +12,10 @@ ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b9d8dda589d5753a406fb46fa848191c1e4793a7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574459"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Fonctionnement des groupes (Générateur de rapports et SSRS)
@@ -96,7 +96,7 @@ ms.locfileid: "65574459"
 #### <a name="understanding-group-membership-for-tablix-cells"></a>Fonctionnement de l'appartenance aux groupes pour les cellules de tableau matriciel  
  Les cellules d'une ligne ou d'une colonne d'une région de données de tableau matriciel peuvent appartenir à plusieurs groupes de lignes et de colonnes. Lorsque vous définissez une expression dans la zone de texte d'une cellule qui utilise une fonction d'agrégation (par exemple, `=Sum(Fields!FieldName.Value`), l'étendue de groupe par défaut pour une cellule est le groupe enfant le plus profond auquel il appartient. Lorsqu'une cellule appartient à la fois à des groupes de lignes et de colonnes, l'étendue correspond aux deux groupes les plus profonds. Vous pouvez également écrire des expressions qui calculent des sous-totaux agrégés étendus à un groupe relatif à un autre groupe de données. Par exemple, vous pouvez calculer le pourcentage d'un groupe par rapport au groupe de colonnes ou à toutes les données de la région de données (par exemple, `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Pour plus d’informations, consultez [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
  [Ajouter un total à un groupe ou à une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

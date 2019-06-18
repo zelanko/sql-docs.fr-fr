@@ -17,10 +17,10 @@ ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8164cf5db0a89d8627c7ff6071594633bcfc082c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580903"
 ---
 # <a name="upload-files-to-a-folder"></a>Télécharger des fichiers dans un dossier
@@ -56,7 +56,7 @@ icône de ressource générique
 |Télécharger un fichier en tant qu'objet binaire|Gérer les ressources|  
 |Afficher le contenu d'un dossier|Afficher les ressources, afficher les rapports|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   

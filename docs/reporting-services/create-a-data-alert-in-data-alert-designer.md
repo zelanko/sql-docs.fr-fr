@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571576"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
@@ -75,7 +75,7 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
 10. Tapez la valeur de comparaison.  
   
-11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)**.  
+11. Vous pouvez éventuellement cliquer à nouveau sur le bouton de sélection **(...)** .  
   
      Les points de suspension **(...)** apparaissent sur la ligne qui contient la première clause.  
   
@@ -114,13 +114,13 @@ Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'al
   
 20. Éventuellement, dans la zone de texte **Objet** , mettez à jour la ligne Objet du message d’alerte.  
   
-     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>**.  
+     L’objet par défaut est **Alerte de données pour \<nom de l’alerte de données>** .  
   
 21. Éventuellement, dans la zone de texte **Description** , tapez une description pour le message d’alerte.  
   
 22. Cliquez sur **Enregistrer**.  
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Concepteur d'alertes de données](../reporting-services/data-alert-designer.md)   
 [Gestionnaire des alertes de données pour les administrateurs d'alertes](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

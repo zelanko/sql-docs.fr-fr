@@ -9,14 +9,14 @@ helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ad67f5a187ae8ef314ee29122f3cefb866185b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284420"
 ---
 # <a name="linked-reports-methods"></a>Méthodes relatives aux rapports liés
   Vous pouvez utiliser ces méthodes pour créer et gérer des éléments liés.  
@@ -28,7 +28,7 @@ ms.locfileid: "47620957"
 |<xref:ReportService2010.ReportingService2010.ListDependentItems%2A>|Retourne une liste des éléments liés à un élément spécifié.|  
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|Spécifie l'élément de catalogue utilisé pour la définition d'élément d'un élément lié existant.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

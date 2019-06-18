@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63001096"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _nom_base_de_données_  
- Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Exemple :  
+ Spécifie la première base de données à laquelle **dta** se connecte lors du paramétrage d’une charge de travail. Une seule base de données peut être spécifiée pour cet argument. Par exemple :  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -227,7 +227,7 @@ dta -d AdventureWorks2012 ...
  Spécifie le chemin d'accès et le nom du fichier de charge de travail à utiliser comme entrée pour le réglage. Le fichier doit être dans l'un de ces formats : .trc (fichier trace SQL Server Profiler), .sql (fichier SQL) ou .log (fichier de trace [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Un fichier de charge de travail ou une table de charge travail doit être spécifié.  
   
  **-it** _workload_trace_table_name_  
- Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Spécifie le nom de la table contenant la trace de charge de travail pour le réglage. Le nom est spécifié selon le format : [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  Le tableau suivant indique les valeurs par défaut de chaque paramètre :  
   
@@ -344,14 +344,14 @@ Dans ce cas, DTA sera utiliser Query Store comme source de la charge de travail 
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Cet argument peut remplacer l’entrée d’une liste de tables à l’invite de commandes (**-TI**). N’utilisez pas un fichier de liste de tables (**-Tf**) si vous employez **-TI**. Si les deux arguments sont employés, **dta** échoue et retourne une erreur.  
+ Cet argument peut remplacer l’entrée d’une liste de tables à l’invite de commandes ( **-TI**). N’utilisez pas un fichier de liste de tables ( **-Tf**) si vous employez **-TI**. Si les deux arguments sont employés, **dta** échoue et retourne une erreur.  
   
  Si les arguments **-Tf** et **-Tl** sont omis, toutes les tables utilisateur dans les bases de données spécifiées sont prises en compte pour le réglage.  
   
  **-TI** _table_list_  
  Spécifie à l'invite de commandes une liste de tables à régler. Placez des virgules entre les noms de table pour les séparer. Si une seule base de données est spécifiée avec l’argument **-D** , les noms de table n’ont pas besoin d’être qualifiés avec un nom de base de données. Sinon, le nom complet au format : *database_name.schema_name.table_name* est obligatoire pour chaque table.  
   
- Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables (**-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
+ Cet argument constitue une alternative à l’utilisation d’un fichier de liste de tables ( **-Tf**). Si les deux arguments **-Tl** et **-Tf** sont employés, **dta** échoue et retourne une erreur.  
   
  **-U** _ID_connexion_  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -362,7 +362,7 @@ Dans ce cas, DTA sera utiliser Query Store comme source de la charge de travail 
  **-x**  
  Démarre une session de réglage et quitte.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Appuyez sur Ctrl+C pour arrêter la session de réglage et générer des recommandations basées sur l’analyse que **dta** a effectuée jusqu’à ce point. Un message vous demande de déterminer si vous souhaitez générer ou non des recommandations. Appuyez de nouveau sur CTRL+C pour arrêter la session de réglage sans générer de recommandations.  
   
 ## <a name="examples"></a>Exemples  
@@ -416,7 +416,7 @@ AdventureWorks2012.Production.Product  2000000
 dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../../tools/command-prompt-utility-reference-database-engine.md)   
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   

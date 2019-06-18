@@ -1,5 +1,5 @@
 ---
-title: 'Rapports mobiles SQL Server : Procédure pas à pas de bout en bout'
+title: 'Rapports mobiles SQL Server : procédure pas à pas de bout en bout'
 description: Découvrez une procédure pas à pas permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec l’Éditeur de rapports mobiles Microsoft SQL Server sur le portail web Reporting Services et de les afficher dans les applications mobiles Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502279"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : Procédure pas à pas de bout en bout
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Rapports mobiles SQL Server : procédure pas à pas de bout en bout
 Étapes permettant de créer des rapports mobiles pour n’importe quelle taille d’écran avec [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] sur le portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] et de les afficher dans les applications mobiles Power BI.
 
 Créez des rapports mobiles sur une aire de conception avec des lignes et des colonnes de grille réglables et des éléments de rapport mobile flexibles. Connectez-vous à diverses sources de données locales ou chargez des classeurs Excel pour créer des rapports mobiles. Enregistrez ensuite vos rapports sur un portail web [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] et affichez-les dans un navigateur ou dans les applications mobiles Power BI.  
@@ -36,7 +36,7 @@ Pour suivre la procédure, vous avez besoin de ces produits :
 * Pour créer des jeux de données partagés, [installez le Générateur de rapports](../install-windows/install-report-builder.md).  
 * Pour créer des rapports mobiles, [installez l’Éditeur de rapports mobiles SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  OU Exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  OU : exemple de base de données World Wide Importers, disponible à partir de la page [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Pour afficher le résultat 
   *   [Inscrivez-vous au service Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) et
   *  [Téléchargez l’application mobile Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) sur votre appareil mobile : iOS, téléphone Android ou appareil Windows 10.  
@@ -79,7 +79,7 @@ Utilisez un outil client [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md
 4. Dans le champ Nom, tapez le nom du serveur où vous avez enregistré votre source de données au format suivant :   
    
    Nom : https://*localhost*/ReportServer  
-   Élément de type : Sources de données (*.rsds)  
+   Éléments de type : Sources de données (*.rsds)  
    
 5. Cliquez sur **Ouvrir**et accédez à la source de données que vous avez créée sur ce serveur.  
    
@@ -105,7 +105,7 @@ Vous créez les indicateurs de performance clés directement sur le portail web 
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Cliquez sur le bouton de sélection (**...**) dans la zone **Sélectionner un champ de jeu de données** et sélectionnez un jeu de données de l’étape précédente.  
+3. Cliquez sur le bouton de sélection ( **...** ) dans la zone **Sélectionner un champ de jeu de données** et sélectionnez un jeu de données de l’étape précédente.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -121,7 +121,7 @@ Vous créez les indicateurs de performance clés directement sur le portail web 
 
 7. Dans la zone **Jeu de tendances** , cliquez sur **Tendance de jeu de données**.  
   
-6. Dans la zone **Sélectionner une tendance de jeu de données** , cliquez sur le bouton de sélection (**...**).  
+6. Dans la zone **Sélectionner une tendance de jeu de données** , cliquez sur le bouton de sélection ( **...** ).  
    
 7. Sélectionnez un champ et cliquez sur **OK**.  
 

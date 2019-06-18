@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574861"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574861"
  Pour un point de terminaison de service web vers lequel pointe une URL de chaîne de connexion, la **requête** XML définit la méthode du service web, l’action SOAP ou les deux. Le fournisseur de données XML crée une demande de service Web qui extrait les données XML à utiliser pour le rapport.  
   
 > [!NOTE]  
->  Quand l’espace de noms d’un service web comporte une barre oblique (**/)** , incluez à la fois la méthode du service web et l’action SOAP de sorte que l’extension de traitement des données XML puisse dériver correctement l’espace de noms.  
+>  Quand l’espace de noms d’un service web comporte une barre oblique ( **/)** , incluez à la fois la méthode du service web et l’action SOAP de sorte que l’extension de traitement des données XML puisse dériver correctement l’espace de noms.  
   
  Pour un document XML incorporé, la **requête** XML définit les données XML incorporées à utiliser, inclut des espaces de noms facultatifs et contient un **ElementPath**XML facultatif.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65574861"
   
 -   Pour les requêtes du service Web, les paramètres de la requête sont passés à la méthode du service Web. Pour définir un paramètre de requête, utilisez la page **Paramètres** de la boîte de dialogue **Propriétés du dataset** . 
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Les exemples fournis dans le tableau ci-dessous illustrent la manière d'extraire des données du service Web Report Server, un document XML et des données XML incorporées.  
   
 |Source de données XML|Exemple de requête|  
@@ -80,7 +80,7 @@ ms.locfileid: "65574861"
   
  Pour spécifier l’espace de noms du fournisseur de données afin que l’espace de noms par défaut reste vide, utilisez **xmldp**. Cela est illustré par l'exemple suivant.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Les exemples suivants utilisent le document XML DPNamespace.xml fourni à titre d'illustration à la suite du tableau ci-après. Ce tableau présente deux exemples de syntaxe ElementPath XML incluant des préfixes d'espaces de noms.  
   
 |Élément de requête XML|Champs obtenus dans le dataset|  
@@ -106,7 +106,7 @@ ms.locfileid: "65574861"
 </Root>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Type de connexion XML &#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

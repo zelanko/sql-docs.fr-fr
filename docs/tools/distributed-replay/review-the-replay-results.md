@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715660"
 ---
 # <a name="review-the-replay-results"></a>Examiner les résultats de la relecture
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "51291755"
 |TextData|**ntext**|Le contenu de TextData dépend de l'EventClass.<br /><br /> Pour Audit Login et ExistingConnection, il s'agit des options définies pour la connexion.<br /><br /> Pour SQL:BatchStarting, il s'agit du corps de la requête de lots.<br /><br /> Pour RPC:Starting, c'est la procédure stockée appelée.<br /><br /> Pour les événements de paramètres de relecture, cette colonne contient les paramètres définis dans le fichier de configuration de relecture.<br /><br /> Pour l'événement de statistiques de relecture, TexData contient les informations suivantes :<br /><br /> -serveur SQL cible de la relecture ;<br /><br /> -nombre total d’événements pouvant être relus ;<br /><br /> -nombre d’erreurs de fournisseur ;<br /><br /> -nombre d’erreurs internes ;<br /><br /> -avertissements internes ;<br /><br /> -nombre total d’erreurs ;<br /><br /> -taux global de réussite ;<br /><br /> -heure de relecture (HH:MM:SS:MMM).<br /><br /> Pour l'événement de jeu de résultats de relecture, il affiche la liste des en-têtes de colonne de résultats retournés.<br /><br /> Pour l'événement de ligne de résultats de relecture, il affiche la valeur de retour de toutes les colonnes de cette ligne.<br /><br /> Pour l'avertissement interne de relecture et l'erreur de fournisseur de relecture, cette colonne contient les avertissements ou les erreurs de fournisseur.|4|  
 |Attention|**bigint**|Durée (en microsecondes) de l'avertissement pour l'événement. Elle est calculée à partir de l'événement d'avertissement de la trace de capture. Si aucun délai de requête n'a été spécifié pour l'événement, cette colonne n'est pas remplie (Null).|5|  
 |SubmitTime|**datetime**|Heure à laquelle l'événement a été soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|6|  
-|IsSuccessful|**Int**|Indicateur booléen qui indique si un événement particulier a été exécuté avec succès et si les jeux de résultats ont été retournés au côté client.<br /><br /> Un événement qui génère un avertissement (comme lorsqu'un événement est annulé en raison d'un événement Attention ou d'un délai d'expiration spécifié par l'utilisateur) est considéré comme réussi.<br /><br /> IsSuccessful peut prendre l'une des valeurs suivantes :<br /><br /> 1 = Réussi<br /><br /> 0 = Échec|7|  
+|IsSuccessful|**Int**|Indicateur booléen qui indique si un événement particulier a été exécuté avec succès et si les jeux de résultats ont été retournés au côté client.<br /><br /> Un événement qui génère un avertissement (comme lorsqu'un événement est annulé en raison d'un événement Attention ou d'un délai d'expiration spécifié par l'utilisateur) est considéré comme réussi.<br /><br /> IsSuccessful peut prendre l'une des valeurs suivantes :<br /><br /> 1 = Réussi<br /><br /> 0 = Échec|7|  
 |Durée [microsec]|**bigint**|Durée de temps de réponse (en microsecondes) pour l'événement. Le temps est mesuré à partir du moment où l'événement d'ouverture de session/de fermeture de session/RPC/Langage a été soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si l'événement réussit, la mesure se termine lorsque le jeu de résultats complet a été consommé.<br /><br /> Si l'événement ne réussit pas, la mesure se termine au moment de l'échec ou de l'annulation de l'événement.|8|  
 |RowCount|**bigint**|Rempli selon la valeur de `<RecordRowCount>` dans le fichier de configuration de relecture :<br /><br /> Si `<RecordRowCount>` est égal à Oui, cette cellule contient le nombre de lignes dans le jeu de résultats retournées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Si `<RecordRowCount>` est égal à Non, cette cellule n'est pas remplie (Null).|9|  
 |CaptureSPID|**Int**|ID de la session de capture de l'événement.|10|  
@@ -78,7 +78,7 @@ ms.locfileid: "51291755"
 |ReplayHostName|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client lors de la relecture.|16|  
 |ApplicationName|**nvarchar**|Nom de l'application cliente qui a créé la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lors de la capture.|17|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   

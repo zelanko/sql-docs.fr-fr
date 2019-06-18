@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52bc9d57540cdf3bd57e77e3da039e5e9c6d8e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512591"
 ---
 # <a name="data-sources-and-connection-methods"></a>Sources de données et méthodes de connexion
   Vous pouvez utiliser les méthodes suivantes pour définir et gérer les connexions et les informations d'identification des sources de données.  
@@ -37,7 +37,7 @@ ms.locfileid: "47838807"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Teste la connexion pour y trouver une source de données. Cette méthode prend en charge le test direct de la source de données.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Teste la connexion pour y trouver une source de données. Cette méthode prend en charge le test des sources de données publiées utilisées par les rapports, les modèles ou les sources de données partagées.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

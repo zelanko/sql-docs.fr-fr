@@ -8,10 +8,10 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
 ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571347"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
@@ -42,7 +42,7 @@ Nombre de jours pendant lesquels conserver les informations sur l'exécution du 
 > [!NOTE]
 > La définition d’une valeur égale à **0** *supprime* toutes les entrées du journal d’exécution. Une valeur **-1** conserve les entrées du journal d’exécution et ne les supprime pas.
 
-Valeur d’expiration du traitement du rapport RDLX **RDLXReportTimetout** *(rapports Power View dans un serveur SharePoint)*, en secondes, pour tous les rapports gérés dans l’espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, les rapports de l’espace de noms ne spécifient pas de délai d’exécution pendant le traitement. La valeur par défaut est **1800**.
+Valeur d’expiration du traitement du rapport RDLX **RDLXReportTimetout** *(rapports Power View dans un serveur SharePoint)* , en secondes, pour tous les rapports gérés dans l’espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, les rapports de l’espace de noms ne spécifient pas de délai d’exécution pendant le traitement. La valeur par défaut est **1800**.
 
 **SessionTimeout** Durée (en secondes) pendant laquelle une session demeure active. La valeur par défaut est **600**.  
 
@@ -155,7 +155,7 @@ Délai d’expiration de l’actualisation des données, en minutes, pour l’ac
 **EnableTestConnectionDetailedErrors**  
 Indique si les messages d’erreur détaillés sont envoyés à l’ordinateur client quand des utilisateurs testent des connexions de la source des données à l’aide du serveur de rapports. La valeur par défaut est **true**. Si l’option est définie sur **false**, seuls les messages d’erreur génériques sont envoyés.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
 [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   

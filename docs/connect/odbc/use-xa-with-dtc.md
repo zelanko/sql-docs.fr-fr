@@ -13,17 +13,17 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190545"
 ---
 # <a name="using-xa-transactions"></a>Utilisation de transactions XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 Le pilote Microsoft ODBC pour SQL Server depuis la version 17.3 prend en charge des transactions XA avec le DTC Distributed Transaction Coordinator () sur Windows, Linux et Mac. L’implémentation XA côté pilote permet à l’application cliente pour envoyer des opérations de série (par exemple, Démarrer, commit, rollback une branche de transaction, etc.) à la Transaction Manager (TM). Et ensuite le Gestionnaire de transactions communiqueront avec Resource Manager (RM) en fonction de ces opérations. Pour plus d’informations sur la spécification XA et l’implémentation Microsoft de DTC (MS DTC), consultez [fonctionnement : SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
 

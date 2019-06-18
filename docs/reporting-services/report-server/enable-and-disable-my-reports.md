@@ -15,10 +15,10 @@ ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577781"
 ---
 # <a name="enable-and-disable-my-reports"></a>Activer et désactiver Mes rapports
@@ -48,7 +48,7 @@ ms.locfileid: "65577781"
   
  Remarque : Si vous activez Mes rapports, le serveur de rapports crée un dossier Mes rapports pour chaque utilisateur doté d'un compte de domaine qui clique sur le lien Mes rapports, même si cet utilisateur ne souhaite pas utiliser un tel dossier, ou n'en a pas besoin. Il n'existe pas de procédure systématique pour déterminer quels sont les dossiers utilisés. Vous devez vérifier les dossiers manuellement pour déterminer s'ils contiennent des informations.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécuriser Mes rapports](../../reporting-services/security/secure-my-reports.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

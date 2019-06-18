@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574246"
 ---
 # <a name="url-access-ssrs"></a>Accès URL (SSRS)
@@ -75,7 +75,7 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Chemin relatif de l’élément dans la base de données du serveur de rapports en mode natif, ou URL complète de l’élément dans un catalogue SharePoint.  
   
- Chemin de l’élément du catalogue. Pour le mode natif, il s’agit du chemin relatif de l’élément dans la base de données du serveur de rapports, commençant par une barre oblique (**/**). Par exemple :  
+ Chemin de l’élément du catalogue. Pour le mode natif, il s’agit du chemin relatif de l’élément dans la base de données du serveur de rapports, commençant par une barre oblique ( **/** ). Par exemple :  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
@@ -116,7 +116,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Ouvrir un rapport et accéder directement à l'emplacement d'une chaîne.|[Rechercher un rapport à l'aide de l'accès URL](../reporting-services/search-a-report-using-url-access.md)|  
 |Effectuer le rendu d'un instantané d'historique de rapport.|[Rendre un instantané d'historique de rapport à l'aide de l'accès URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Passer un paramètre de rapport dans une URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [Référence de paramètre d’accès URL](../reporting-services/url-access-parameter-reference.md)   
  [Intégration de Reporting Services à l’aide de l’accès URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

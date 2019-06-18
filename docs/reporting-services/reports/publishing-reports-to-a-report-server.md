@@ -22,10 +22,10 @@ ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65579978"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publication de rapports sur un serveur de rapports
@@ -50,7 +50,7 @@ L'autorisation est déterminée via la sécurité basée sur les rôles définie
   
 ## <a name="to-publish-all-reports-in-a-project"></a>Pour publier tous les rapports d'un projet  
   
-Dans le menu **Générer**, cliquez sur **Déployer \<nom_projet_rapport>**. Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
+Dans le menu **Générer**, cliquez sur **Déployer \<nom_projet_rapport>** . Vous pouvez également, dans l’Explorateur de solutions, cliquer avec le bouton droit sur le projet de rapport, puis cliquer sur **Déployer**. Vous pouvez consulter l'état du processus de publication dans la fenêtre Sortie.  
   
 Lorsque vous déployez un projet Report Server, les sources de données partagées dans le projet de rapport sont également déployées. Tous les rapports sont déployés à l'aide de la même configuration de projet : sur le même serveur de rapports, le même dossier sur le serveur, et ainsi de suite. Pour publier des rapports sur différents serveurs, publiez-les un par un ou incluez uniquement les rapports que vous souhaitez dans le projet Report Server. Une solution peut inclure plusieurs projets Report Server et l'utilisation de plusieurs projets peut simplifier la gestion du déploiement des rapports, car vous pouvez utiliser une configuration différente pour déployer des projets différents. 
   
@@ -66,7 +66,7 @@ Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le rapport, 
  L'URL de serveur cible du serveur de rapports doit être spécifiée et vous pouvez modifier les dossiers par défaut vers lesquels les rapports et sources de données partagées sont déployés.  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Pages de propriétés du projet, boîte de dialogue](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md)  

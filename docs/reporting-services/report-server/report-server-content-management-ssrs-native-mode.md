@@ -14,10 +14,10 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ea88e6ee9194a6cdc92693326bd156ecc7cec590
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581413"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
@@ -164,7 +164,7 @@ ms.locfileid: "65581413"
   
  Des dossiers ne sont alloués qu'aux utilisateurs dotés de comptes système valides. Si un nom d'utilisateur contient des caractères spéciaux, il est créé avec les caractères d'échappement équivalents. Les caractères d'échappement équivalents sont indiqués dans le tableau suivant.  
   
-|Caractère|Valeur d'échappement| Exemple|  
+|Caractère|Valeur d'échappement|Exemple|  
 |---------------|------------------|-------------|  
 |(espace)|[ ]|*Prénom Nom* devient *Prénom[ ]Nom*|  
 |\ (barre oblique inverse)|Remplacé par une espace|*NomDomaine\nom_utilisateur* devient *NomDomaine nom_utilisateur*|  
@@ -183,7 +183,7 @@ ms.locfileid: "65581413"
   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  
