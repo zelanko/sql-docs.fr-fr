@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62686222"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "62686222"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar (256)**|Nom de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], recherche en texte intégral ou service SQL Server Agent. Ne peut pas avoir la valeur null.|  
-|startup_type|**Int**|Indique le mode de démarrage du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> 0 : Autres<br />1: Autres<br />2: Automatic<br />3: Manuel<br />4: Désactivé<br /><br /> Autorise la valeur NULL.|  
+|startup_type|**Int**|Indique le mode de démarrage du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> 0 : Autres<br />1 : Autres<br />2 : Automatic<br />3 : Manuel<br />4 : Désactivé<br /><br /> Autorise la valeur NULL.|  
 |startup_desc|**nvarchar (256)**|Décrit le mode de démarrage du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Autres : Autre (démarrage)<br />Autres : Autre (démarrage système)<br />Automatique : Démarrage automatique<br />Manuelle : Début de la demande<br />Désactivé : Désactivé<br /><br /> Ne peut pas avoir la valeur null.|  
-|status|**Int**|Indique l'état actuel du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> 1: Arrêté<br />2: Autre (démarrage en attente)<br />3: Autre (arrêt en attente)<br />4: Exécution en cours<br />5: Autre (continuation en attente)<br />6: Autre (suspension en attente)<br />7: Suspendu<br /><br /> Autorise la valeur NULL.|  
+|status|**Int**|Indique l'état actuel du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> 1 : Arrêté<br />2 : Autre (démarrage en attente)<br />3 : Autre (arrêt en attente)<br />4 : Exécution en cours<br />5 : Autre (continuation en attente)<br />6: Autre (suspension en attente)<br />7: Suspendu<br /><br /> Autorise la valeur NULL.|  
 |status_desc|**nvarchar (256)**|Décrit l'état actuel du service. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Arrêté : Le service est arrêté.<br />Autre (démarrage de l’opération en attente) : Le service est en cours de démarrage.<br />Autre (opération d’arrêt en attente) : Le service est en cours d’arrêt.<br />En cours d’exécution : Le service est en cours d'exécution.<br />Autres (continuer les opérations en attente) : Le service est en état d’attente.<br />Autre (suspension en attente) : Le service est en cours de suspension.<br />Suspendu : Le service est suspendu.<br /><br /> Ne peut pas avoir la valeur null.|  
 |process_id|**Int**|ID de processus du service. Ne peut pas avoir la valeur null.|  
 |last_startup_time|**datetimeoffset(7)**|Date et heure du dernier démarrage du service. Autorise la valeur NULL.|  

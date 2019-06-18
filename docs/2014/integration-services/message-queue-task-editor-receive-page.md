@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057671"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Éditeur de tâche MSMQ (page Recevoir)
@@ -31,7 +31,7 @@ ms.locfileid: "66057671"
  Indiquez si vous voulez supprimer le message de la file d'attente après sa réception. Par défaut, cette valeur est définie `False`.  
   
  **ErrorIfMessageTimeOut**  
- Indiquez si la tâche échoue lorsque le message expire, en affichant un message d'erreur. La valeur par défaut est `False`.  
+ Indiquez si la tâche échoue lorsque le message expire, en affichant un message d'erreur. La valeur par défaut est `False`.  
   
  **TimeoutAfter**  
  Si vous choisissez d'afficher un message d'erreur sur l'échec de la tâche, définissez le nombre de secondes qui précèdent le message d'expiration.  
@@ -53,7 +53,7 @@ ms.locfileid: "66057671"
  Tapez le chemin du fichier à utiliser ou cliquez sur le bouton avec des points de suspension **(...)** et recherchez le fichier.  
   
  **Remplacer**  
- Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. La valeur par défaut est `False`.  
+ Indiquez si vous voulez remplacer les données dans un fichier existant lors de l'enregistrement du contenu d'un message de fichiers de données. La valeur par défaut est `False`.  
   
  **Filter**  
  Indiquez si vous voulez appliquer un filtre au message. Cette propriété dispose des options répertoriées dans le tableau suivant.  
@@ -85,7 +85,7 @@ ms.locfileid: "66057671"
 |**À partir du package**|Le message reçoit uniquement les messages du package spécifié. Cette valeur affiche l’option dynamique **Identifier**.|  
   
  **Variable**  
- Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66057671"
  Si l’option **Comparer** n’est pas définie sur **Aucun**, indiquez la chaîne à laquelle le message doit être comparé.  
   
  **Variable**  
- Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
+ Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...** >, puis configurez une nouvelle variable.  
   
  **Rubriques connexes :** [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   

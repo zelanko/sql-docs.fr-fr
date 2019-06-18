@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012465"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs arithmétiques dans des requêtes XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012465"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >**, car le  **\< élément >** nœud est le nœud principal pour le `child` axe). Pour tous les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont la condition sont retournés.  
+ Dans la requête, `child` est l’axe et `OrderDetail` est le test de nœud (TRUE si **OrderDetail** est un  **\<nœud d’élément >** , car le  **\< élément >** nœud est le nœud principal pour le `child` axe). Pour tous les  **\<OrderDetail >** nœuds d’élément, le test dans le prédicat est appliqué, et seuls les nœuds qui satisfont la condition sont retournés.  
   
 > [!NOTE]  
 >  Dans XPath, les nombres sont des nombres à virgule flottante double précision et la comparaison de nombres à virgule flottante comme dans l'exemple entraîne un arrondi.  
