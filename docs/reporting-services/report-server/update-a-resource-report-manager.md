@@ -12,10 +12,10 @@ ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571469"
 ---
 # <a name="update-a-resource-report-manager"></a>mise à jour d'une ressource (Gestionnaire de rapports)
@@ -41,7 +41,7 @@ ms.locfileid: "65571469"
   
  Si la ressource en cours de mise à jour contient une image utilisée dans un rapport, vous devez actualiser le rapport pour afficher l'image mise à jour.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)   

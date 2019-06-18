@@ -12,10 +12,10 @@ ms.assetid: 6d297e1a-ff71-472a-addc-349e863092b5
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 45161e43e405586bb441088b89fc24494eb928df
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573241"
 ---
 # <a name="associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs"></a>Associer un paramètre de requête à un paramètre de rapport (Générateur de rapports et SSRS)
@@ -41,7 +41,7 @@ ms.locfileid: "65573241"
   
 3.  Répétez l'étape 2 pour indiquer des paramètres de requête supplémentaires.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
 
   

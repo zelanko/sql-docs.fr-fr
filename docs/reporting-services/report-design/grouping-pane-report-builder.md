@@ -13,10 +13,10 @@ ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: aad20a916864bb8ed0d281af768989a0a7d9e85a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65572199"
 ---
 # <a name="grouping-pane-report-builder"></a>Volet de regroupement (Générateur de rapports)
@@ -76,7 +76,7 @@ ms.locfileid: "65572199"
   
 -   **(Static)** : indique un membre statique sans cellule d’en-tête, également appelé statique masqué.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

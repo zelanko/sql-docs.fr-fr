@@ -14,10 +14,10 @@ ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 53f5e080a4ce654eb133aed340034e547f247737
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503330"
 ---
 # <a name="pptx-device-information-settings"></a>Paramètres d’informations de périphérique PPTX
@@ -39,7 +39,7 @@ ms.locfileid: "65503330"
 |**StartPage**|Première page du rapport à restituer. Lorsque ce paramètre a pour valeur **0** , cela signifie que toutes les pages sont restituées. La valeur par défaut est **1**.|  
 |**UseReportPageSize**|Si UseReportPageSize =**false**, la taille de diapositive par défaut correspond à la valeur par défaut de PowerPoint, à savoir 13,333” x 7,5” (proportions 16:9). Si UseReportPageSize = true, la taille de diapositive par défaut est la taille de page de définition du rapport.<br /><br /> La valeur par défaut est **false**<br /><br /> Notez que les paramètres PageWidth et PageHeight remplacent les valeurs de largeur et de hauteur par défaut.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Transmission de paramètres d'informations de périphérique aux extensions de rendu](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

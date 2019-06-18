@@ -9,10 +9,10 @@ ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574429"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Dépanner des problèmes de récupération des données avec des rapports Reporting Services
@@ -59,7 +59,7 @@ Pour remplir la collection de champs de dataset, procédez comme suit :
 * Exécutez la requête dans le volet de requêtes de la boîte de dialogue **Propriétés du dataset** . Pour en savoir plus, voir [Ajouter des données à un rapport (Générateur de rapports et SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Ajoutez des champs manuellement. Pour en savoir plus, [Procédure : ajouter, modifier ou actualiser des champs dans le volet des données de rapport (Générateur de rapports version 3.0 et SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

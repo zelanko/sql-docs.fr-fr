@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 709ee04eaaf35501cedae0e61d93cfe6e3b55210
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468146"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option replay (outil d'administration Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
  Lorsque le paramètre **-o** n’est pas spécifié, le fichier de trace de résultats n’est pas généré. La sortie de console retourne les informations de résumé à la fin de la relecture, mais aucune autre statistique de relecture n'est disponible.  
   
  **-s** _target_server_  
- Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]**.  
+ Spécifie l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la charge de travail distribuée doit être relue. Vous devez spécifier ce paramètre au format **nom_serveur[\nom_instance]** .  
   
  Vous ne pouvez pas utiliser «`localhost`» ou «`.`» comme serveur cible.  
   
@@ -91,7 +91,7 @@ dreplay replay [-m controller] -d controller_working_dir [-o]
   
 -   Le paramètre **-d** spécifie l’emplacement du fichier intermédiaire sur le contrôleur, `c:\WorkingDir`.  
   
--   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : L'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
+-   Le paramètre **-o** spécifie que chaque client spécifié capture l’activité de relecture et l’enregistre dans un fichier de trace de résultats. Remarque : l'élément `<ResultTrace>` dans le fichier de configuration peut être utilisé pour spécifier si le nombre de lignes et le jeu de résultats doivent être enregistrés.  
   
 -   Le paramètre **-w** spécifie que les ordinateurs `client1` à `client4` participent en tant que clients à la relecture distribuée.  
   
@@ -151,12 +151,12 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
 </Options>  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous devez exécuter l'outil d'administration en tant qu'utilisateur interactif, comme un utilisateur local ou un compte d'utilisateur de domaine. Pour utiliser un compte d'utilisateur local, l'outil d'administration et le contrôleur doivent s'exécuter sur le même ordinateur.  
   
  Pour plus d’informations, voir [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Relire les données de trace](../../tools/distributed-replay/replay-trace-data.md)   
  [Examiner les résultats de la relecture](../../tools/distributed-replay/review-the-replay-results.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d63575a961455371e25412845f457ed7471f274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67e20d8d0bdcfbb03d0188ac62b4d89bc12b704f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194196"
 ---
 # <a name="data-processing-extensions-overview"></a>Vue d'ensemble des extensions pour le traitement des données
   Les extensions pour le traitement des données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vous permettent de vous connecter à une source de données et de récupérer des données. Elles servent également de pont entre une source de données et un dataset Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont basées sur un sous-ensemble des interfaces de fournisseur de données [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -76,7 +76,7 @@ Flux de traitement pas à pas d'une extension de données appelée par le serveu
   
 -   de l’expérience en développement dans un langage [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tel que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

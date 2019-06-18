@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97f61bdc47645120fab0e8d7f128eb7b2f55aded
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291885"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026139"
 ---
 # <a name="index-element-dta"></a>Index, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ ms.locfileid: "51291885"
 |**Élément parent**|[Create, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/create-element-dta.md)<br /><br /> Élément **Drop**. Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
 |**Éléments enfants**|[Name, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/name-element-for-index-dta.md)<br /><br /> [Column, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/column-element-for-index-dta.md)<br /><br /> Élément**PartitionScheme** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PartitionColumn** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> [Filegroup, élément pour les index &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/filegroup-element-for-index-dta.md)<br /><br /> Élément**NumberOfReferences** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.<br /><br /> Élément**PercentUsage** . Pour plus d'informations, voir le schéma de l'Assistant Paramétrage du moteur de base de données.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05d38729762a3226fa05a3362f5454a604aaf382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193388"
 ---
 # <a name="understanding-security-policies"></a>Présentation des stratégies de sécurité
   Tout code exécuté par un serveur de rapports doit faire partie d'une stratégie de sécurité d'accès du code spécifique. Ces stratégies de sécurité comprennent des groupes de codes qui mappent une preuve à un ensemble de jeux d'autorisations nommés. Souvent, les groupes de codes sont associés à un jeu d'autorisations nommé qui spécifie les autorisations pouvant être accordées au code dans ce groupe. Le runtime utilise la preuve fournie par un hôte approuvé ou par le chargeur pour déterminer les groupes de codes auxquels le code appartient et, par conséquent, les autorisations à accorder au code. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adhère à cette architecture de stratégie de sécurité telle qu’elle est définie par le Common Language Runtime (CLR) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Les sections suivantes décrivent les divers types de codes qui existent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ainsi que les règles de stratégie associées.  
@@ -73,7 +73,7 @@ ms.locfileid: "47839382"
   
  Dans certains cas, vous devrez peut-être effectuer une opération qui requiert des autorisations de code spécifique dans une expression de rapport. En règle générale, cela signifie qu'une expression de rapport doit appeler une méthode de bibliothèque CLR sécurisée (par exemple une méthode de bibliothèque qui accède aux fichiers ou au Registre système). La documentation du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] décrit les autorisations de code requises pour effectuer cet appel sécurisé ; pour exécuter l'appel, le code appelant doit recevoir ces autorisations sécurisées spécifiques. Si vous effectuez l’appel à partir d’une expression de rapport ou de l’élément **Code**, les autorisations appropriées doivent être accordées à l’assembly hôte d’expressions. Cependant, une fois que vous avez accordé les autorisations appropriées à l'hôte d'expressions, tout code s'exécutant dans l'expression d'un rapport reçoit désormais cette autorisation spécifique. Il est beaucoup plus sûr d'effectuer l'appel à partir d'un assembly personnalisé et d'accorder à ce dernier les autorisations spécifiques.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécurité d’accès du code dans Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [Développement sécurisé &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

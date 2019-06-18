@@ -14,10 +14,10 @@ ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570591"
 ---
 # <a name="role-definitions"></a>Définitions de rôles
@@ -52,7 +52,7 @@ ms.locfileid: "65570591"
   
  Vous pouvez supprimer une définition de rôle si vous ne l'utilisez plus. Vous ne pouvez pas supprimer la définition de rôle qui est sélectionnée pour la fonctionnalité Mes Rapports tant que cette dernière est activée. Avant de pouvoir supprimer la définition de rôle utilisée pour Mes Rapports, vous devez désactiver la fonctionnalité ou sélectionner une autre définition de rôle à utiliser avec elle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2aec981adb3f0c1c71130dd1c60769ef89d3c6be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 95427ddaa6d220afe3397a138f9b5baa085f324d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991547"
 ---
 # <a name="soapexception-errors-table"></a>Table d'erreurs SoapException
   Le serveur de rapports génère des erreurs et des messages d'erreur dans l'exception SOAP en fonction des erreurs qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Le tableau suivant indique les erreurs qui sont accessibles à partir de méthodes par le biais d’un **SoapException** dans le service web Report Server. Il est organisé en fonction de la méthode ou des méthodes qui lèvent l'exception.  
@@ -97,7 +97,7 @@ ms.locfileid: "47741407"
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)   
  [SoapException, classe Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], delivery
 - delivery extensions [Reporting Services]
 ms.assetid: 600cd229-efcd-480e-8c95-3c3c39ff4e7a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 62dca2e3df21e95b8f51d4a9261272a7555e3dda
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4c0004f844d6914cea330d3a0c7332de783116c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193753"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implémentation d'une extension de remise
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permet aux utilisateurs de créer et de publier des rapports qui, une fois créés et publiés, peuvent être remis à différents emplacements. De plus, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut plusieurs extensions de remise et une API de remise qui permettent aux développeurs de créer des extensions de remise supplémentaires pour étendre les fonctionnalités de remise proposées dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "50021803"
  [Suppression d'une extension de remise](../../../reporting-services/extensions/delivery-extension/removing-a-delivery-extension.md)  
  Décrit comment supprimer une extension de remise d'un serveur de rapports.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

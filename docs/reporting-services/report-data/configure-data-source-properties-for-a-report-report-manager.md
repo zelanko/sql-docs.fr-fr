@@ -11,10 +11,10 @@ ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573192"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurer les propriétés de la source de données d’un rapport paginé
@@ -26,7 +26,7 @@ ms.locfileid: "65573192"
   
 1.  Dans le portail web, accédez au rapport pour lequel vous souhaitez configurer une source de données spécifique.  
   
-3.  Sélectionnez les points de suspension (**...**) dans le coin supérieur droit > **Gérer**.  
+3.  Sélectionnez les points de suspension ( **...** ) dans le coin supérieur droit > **Gérer**.  
   
 4.  Cliquez sur l'onglet **Sources de données** . Cela entraîne l'affichage de la page de propriétés de la source de données du rapport.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "65573192"
   
  Pour plus d’informations sur la configuration des informations d’identification, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Pour plus d’informations sur le compte d’exécution sans assistance, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [Gérer des sources de données de rapports](../../reporting-services/report-data/manage-report-data-sources.md)
   

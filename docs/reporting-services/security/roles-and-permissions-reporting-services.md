@@ -17,10 +17,10 @@ ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570667"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Rôles et autorisations (Reporting Services)
@@ -41,7 +41,7 @@ ms.locfileid: "65570667"
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
  Explique comment utiliser les groupes SharePoint, les niveaux d'autorisation et les autorisations pour contrôler l'accès à un serveur de rapports.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

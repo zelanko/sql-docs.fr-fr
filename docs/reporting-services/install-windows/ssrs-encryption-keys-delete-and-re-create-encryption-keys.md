@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747197"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513311"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Clés de chiffrement SSRS - Supprimer et recréer des clés de chiffrement
   La suppression et la recréation de clés de chiffrement sont des activités qui dépassent le cadre d'une simple opération de maintenance des clés de chiffrement. Vous effectuez ces tâches en réponse à une menace spécifique pesant sur votre serveur de rapports ou comme ultime recours si vous ne pouvez plus accéder à la base de données du serveur de rapports.  
@@ -112,7 +112,7 @@ ms.locfileid: "47747197"
   
 4.  Pour les abonnements utilisant des données chiffrées (ce qui comprend l'extension de remise dans le partage de fichiers et toute extension de remise créées par d'autres développeurs qui utilisent le chiffrement), ouvrez chaque abonnement et retapez les informations d'identification. Les abonnements utilisant la remise par messagerie électronique du serveur de rapports n'ont pas recours aux données chiffrées, ils ne sont donc pas concernés par les modifications apportées à la clé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

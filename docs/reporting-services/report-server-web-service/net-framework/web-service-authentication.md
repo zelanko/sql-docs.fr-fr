@@ -10,14 +10,14 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], authentication
 - Report Server Web service, authentication
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 30ca6b1aa8c076350a77d27f578c9d3a4c26acf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3ea255c03803f6191d3161d3ef2fa149ef157f56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615427"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63069891"
 ---
 # <a name="web-service-authentication"></a>Authentification du service web
   Vous pouvez utiliser l'authentification Windows ou l'authentification de base pour authentifier les appels effectués auprès du service Web Report Server. Tout client qui effectue des demandes SOAP au serveur de rapports doit implémenter la partie cliente de l'un des protocoles d'authentification pris en charge. Si vous utilisez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser les classes HTTP du code managé pour implémenter l’authentification. L'utilisation de ces API simplifie l'envoi des informations d'authentification et des demandes SOAP.  
@@ -57,7 +57,7 @@ service.Credentials = new System.Net.NetworkCredential("username", "password", "
 ## <a name="custom-authentication"></a>Authentification personnalisée  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut une API de programmation qui permet aux développeurs de concevoir et de développer des extensions d'authentification personnalisées appelées extensions de sécurité. Pour plus d’informations, consultez [Implémentation d’une extension de sécurité](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service Web des serveurs de rapports](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

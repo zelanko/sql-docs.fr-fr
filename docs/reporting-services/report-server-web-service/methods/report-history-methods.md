@@ -10,14 +10,14 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7e6e1f0b01e02c714aa4311e45bcbe6667b3af79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a7690e7d703ad5d7973d276741b40c7765d39b3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284442"
 ---
 # <a name="report-history-methods"></a>Méthodes d'historique de rapport
   Vous pouvez utiliser ces méthodes pour créer et gérer des instantanés d'historique d'éléments.  
@@ -32,7 +32,7 @@ ms.locfileid: "47848067"
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryLimit%2A>|Spécifie le nombre d’instantanés d’un élément conservés par le serveur de rapports.|  
 |<xref:ReportService2010.ReportingService2010.SetItemHistoryOptions%2A>|Définit des options d'historique d'élément qui spécifient à quel moment un instantané d'historique d'élément est créé pour un élément de catalogue spécifié.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

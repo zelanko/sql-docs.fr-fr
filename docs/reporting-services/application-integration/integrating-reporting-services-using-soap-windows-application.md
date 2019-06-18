@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab817b7529bf13e738b3110e5f876b3287f32ec9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9802e3b2c60a345d789a63ec5f2bc2cc9198ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775039"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741766"
 ---
 # <a name="integrating-reporting-services-using-soap---windows-application"></a>Intégration de Reporting Services à l’aide de SOAP - Application Windows
   Vous pouvez accéder aux fonctionnalités complètes du serveur de rapports via l'API SOAP de Reporting Services. L'API SOAP est un service Web et, en tant que tel, est facilement accessible afin de fournir des fonctionnalités de création de rapports d'entreprise à vos applications de gestion personnalisées. Pour accéder au service Web dans une application Windows, il suffit d'écrire un code qui permet d'appeler le service. À l’aide du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], vous pouvez générer une classe proxy qui expose les propriétés et méthodes du service web et vous permet d’utiliser une infrastructure et des outils familiers pour générer des applications métier basées sur la technologie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -89,11 +89,11 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Vous pouvez également utiliser les contrôles Visionneuse de rapports en distribution libre inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Les contrôles Visionneuse de rapports facilitent l'incorporation de fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans les applications personnalisées. Les contrôles Visionneuse de rapports sont destinés aux développeurs qui souhaitent fournir des rapports prédéfinis et entièrement créés dans un ensemble de fonctionnalités d'une application (par exemple, une application de gestion de sites web peut contenir des rapports qui comportent une analyse du parcours des internautes sur les sites web de sociétés). L'incorporation des contrôles dans une application offre une solution plus rationnelle que l'ajout de composants serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le déploiement de votre application. Les contrôles offrent les fonctionnalités des rapports sans la prise en charge de la création, de la publication, de la distribution et de la fourniture qu'offre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Il existe deux versions des contrôles Visionneuse de rapports : une version est destinée aux applications clientes Windows, l'autre aux applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Les contrôles prennent en charge les modes de traitement local et distant. En mode de traitement local, votre application fournit la définition de rapport et les datasets et déclenche le traitement des rapports.  En mode de traitement distant, la récupération des données et le traitement des rapports sont effectués sur le serveur de rapports et le contrôle est utilisé à des fins d'affichage et de navigation dans les rapports. Ce modèle vous permet de créer des applications puissantes à l'échelle d'un Bureau ou d'une entreprise.  
+ Il existe deux versions des contrôles Visionneuse de rapports : une version est destinée aux applications clientes Windows, l'autre aux applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Les contrôles prennent en charge les modes de traitement local et distant. En mode de traitement local, votre application fournit la définition de rapport et les datasets et déclenche le traitement des rapports. En mode de traitement distant, la récupération des données et le traitement des rapports sont effectués sur le serveur de rapports et le contrôle est utilisé à des fins d'affichage et de navigation dans les rapports. Ce modèle vous permet de créer des applications puissantes à l'échelle d'un Bureau ou d'une entreprise.  
   
  Les contrôles Visionneuse de rapports sont décrits dans l'aide en ligne de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pour plus d'informations, consultez la documentation produit de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Intégration de Reporting Services dans des applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [Utilisation de l’API SOAP dans une application web](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  

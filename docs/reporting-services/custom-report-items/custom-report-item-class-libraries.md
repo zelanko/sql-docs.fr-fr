@@ -9,14 +9,14 @@ helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09ffdde2f04c45d02bfd69369c0fbba8bd2fb5ab
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7ed0bd3c53550a21f4a157ee637e7d153d8f2922
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194103"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliothèques de classes d'éléments de rapport personnalisés
   Les éléments de rapport personnalisés utilisent des classes de l’espace de noms **Microsoft.ReportDesigner**. Les classes utilisées pour implémenter un élément de rapport personnalisé peuvent être divisées en deux catégories principales : les classes uniques conçues pour prendre en charge l'infrastructure d'éléments de rapport personnalisés et les classes wrapper managées qui encapsulent les fonctionnalités d'éléments RDL (Report Definition Language) pertinents. Pour un exemple de code montrant comment utiliser ces classes, consultez [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889) (Exemples Reporting Services pour le produit SQL Server).  
@@ -34,7 +34,7 @@ ms.locfileid: "52398882"
   
 |||  
 |-|-|  
-|**Nom**|Nom de l'élément de rapport personnalisé.|  
+|**Name**|Nom de l'élément de rapport personnalisé.|  
 |**Type**|Type de l'élément de rapport personnalisé.|  
 |**CustomData**|Objet <xref:Microsoft.ReportingServices.RdlObjectModel.CustomData> qui encapsule les propriétés des données de l'élément de rapport personnalisé, spécifiées au moment de la conception.|  
 |**CustomProperties**|Collection de propriétés personnalisées destinées à l'élément de rapport personnalisé.|  
@@ -128,7 +128,7 @@ ms.locfileid: "52398882"
 |**DataSetName**|Nom du dataset qui contient les champs à déplacer.|  
 |**Fields**|Collection de champs (**Microsoft.ReportDesigner.Field**) à déplacer.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Langage de définition de rapport &#40;SSRS, Report Definition Language&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
  [Création d’un composant d’exécution d’éléments de rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Création d'un composant au moment de la conception d'éléments de rapport personnalisé](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  

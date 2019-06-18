@@ -9,10 +9,10 @@ ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4a98492ecca7cafebfff34e6438edb39e173d8b8
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571640"
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Ajouter un cadre de bordure à un graphique (Générateur de rapports et SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65571640"
   
 7.  (Facultatif) Si vous choisissez un type de cadre, spécifiez un style et une couleur pour le cadre. La liste **Couleur de remplissage du cadre** contient des couleurs courantes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Ajouter des styles de biseau, de relief et de textures à un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  

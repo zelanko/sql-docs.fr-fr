@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95816785bf328d4f1e7e50d5ce34f854b6c7da15
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9d9be825b53cfab3601dc755b9122039669ce758
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031458"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651359"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : définir une connexion de données et une table de données pour le rapport enfant
 Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données s’établit avec la base de données AdventureWorks2014.  
@@ -56,7 +56,7 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
   
     Vous pouvez également créer la requête en sélectionnant **Générateur de requêtes**, puis vérifier la requête en sélectionnant le bouton **Exécuter la requête** . Si la requête ne retourne pas les données attendues, c'est peut-être que vous utilisez une version antérieure d'AdventureWorks. Pour plus d’informations sur la façon d’obtenir l’exemple de base de données **AdventureWorks2014**, consultez [Exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
-10. Dans la page **Choisir les méthodes à générer** , décochez **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)**, puis sélectionnez **Terminer**.  
+10. Dans la page **Choisir les méthodes à générer** , décochez **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)** , puis sélectionnez **Terminer**.  
   
     > [!WARNING]  
     > Veillez à décocher **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)**  

@@ -16,10 +16,10 @@ ms.assetid: 6b592582-4c35-4029-ab86-982fff47d8d6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 078c430e2300a0b80f85357f9f962e8e2dd72838
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570904"
 ---
 # <a name="configurationsetting-property---databaselogontype"></a>Propriété ConfigurationSetting - DatabaseLogonType
@@ -41,7 +41,7 @@ public int DatabaseLogonType;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Valeurs possibles :  
   
 -   0 pour une connexion Windows  
@@ -59,7 +59,7 @@ public int DatabaseLogonType;
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

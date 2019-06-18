@@ -10,14 +10,14 @@ helpviewer_keywords:
 - security [Reporting Services], development
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 024c3d3fdfb0f756376491e8b85503ffc13d149e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7ead476f8aa6d2565c1865a24c2570a68c2b958d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193803"
 ---
 # <a name="secure-development-reporting-services"></a>Développement sécurisé (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] constitue un système de sécurité fiable qui peut exécuter du code dans des contextes de sécurité soumis à de fortes contraintes et définis par l’administrateur. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilise le système de sécurité du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], appelé sécurité d'accès du code (ou sécurité basée sur les preuves). Sous la sécurité d'accès du code, un utilisateur doit être approuvé pour pouvoir accéder à une ressource, mais si le code qu'il exécute n'est pas approuvé, l'accès à la ressource lui est refusé.  

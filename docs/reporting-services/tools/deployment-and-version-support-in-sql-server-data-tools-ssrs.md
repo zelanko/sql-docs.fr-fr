@@ -9,10 +9,10 @@ ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571492"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Prise en charge des déploiements et des versions dans SQL Server Data Tools (SSDT)
@@ -67,7 +67,7 @@ ms.locfileid: "65571492"
   
  Pour plus d’informations sur l’ouverture de rapports dans une version précédente du schéma de définition de rapport, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md). Pour plus d'informations sur des schémas de définition de rapport spécifiques, consultez la rubrique consacrée à la [spécification RDL (Report Definition Language)](https://go.microsoft.com/fwlink/?linkid=116865).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publication des sources de données et des rapports](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b90ac3252dc0ed8072405064d825424b55aeb102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808707"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128818"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propriétés de Reporting Services - Propriétés système du serveur de rapports
   Les noms de propriétés système suivants sont réservés. Vous ne pouvez pas créer des propriétés définies par l'utilisateur du même nom. Vous pouvez lire ou modifier nombre de ces propriétés à l'aide des méthodes de service Web.  
@@ -33,13 +33,13 @@ ms.locfileid: "47808707"
 |EnableMyReports|Indique si la fonctionnalité Mes rapports est activée. La valeur **true** indique que la fonctionnalité est activée.|  
 |MyReportsRole|Nom du rôle utilisé lors de la création des stratégies de sécurité sur le dossier Mes rapports de l'utilisateur. La valeur par défaut est **Rôle de mes rapports**.|  
 |EnableExecutionLogging|Indique si la journalisation de l'exécution des rapports est activée. La valeur par défaut est **true**.|  
-|ExecutionLogDaysKept|Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **0** et **2****147** **483****647**. Si la valeur est **0**, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.|  
+|ExecutionLogDaysKept|Nombre de jours pendant lesquels conserver les informations sur l'exécution du rapport dans le journal des exécutions. Les valeurs valides pour cette propriété sont comprises entre **0** et **2** **147** **483** **647**. Si la valeur est **0**, les entrées ne sont pas supprimées de la table du journal des exécutions. La valeur par défaut est **60**.|  
 |SnapshotCompression|Définit le mode de compression des instantanés. La valeur par défaut est **SQL**. Les valeurs valides sont les suivantes :<br /><br /> **SQL** = les instantanés sont compressés quand ils sont stockés dans la base de données du serveur de rapports. Il s'agit du comportement actuel.<br /><br /> **None** = les instantanés ne sont pas compressés.<br /><br /> **All** = les instantanés sont compressés pour toutes les options de stockage, qui incluent la base de données du serveur de rapports ou le système de fichiers.|  
 |EnableClientPrinting|Détermine si le contrôle ActiveX RSClientPrint peut être téléchargé à partir du serveur de rapports. Les valeurs valides sont **true** et **false**. La valeur par défaut est **true**. Pour plus d’informations sur les paramètres supplémentaires nécessaires pour ce contrôle, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).|  
 |EnableIntegratedSecurity|Détermine si la sécurité intégrée est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est **True**. Les valeurs valides sont les suivantes :<br /><br /> **True** = la sécurité intégrée est activée.<br /><br /> **False** = la sécurité intégrée n’est pas activée. Les sources de données de rapports qui sont configurées de manière à utiliser la sécurité intégrée ne seront pas exécutées.|  
 |EnableRemoteErrors|Inclut les informations externes sur l'erreur (par exemple, les informations d'erreur relatives aux sources de données de rapport) avec les messages d'erreur retournés pour les utilisateurs qui demandent des rapports à partir d'ordinateurs distants. Les valeurs valides sont **true** et **false**. La valeur par défaut est **false**. Pour plus d’informations, consultez [Activer les erreurs distantes &#40;Reporting Services&#41;](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md).|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   
  <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

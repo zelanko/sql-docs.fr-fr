@@ -9,14 +9,14 @@ helpviewer_keywords:
 - exceptions [Reporting Services], warnings that don't cause
 - warnings [Reporting Services]
 ms.assetid: 475c0713-6265-44e7-9ebc-ebdd1b89e0af
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8f2deedf0f09925832038960ef91db727436f115
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5939d2ea37a36af991ce6dd8edab33036ed24b02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162306"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Gestion des avertissements et des erreurs qui ne lèvent pas d'exceptions
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ne lève pas d'exceptions pour les avertissements et certaines erreurs. Par exemple, lorsque vous utilisez la méthode <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A> pour publier un nouveau rapport sur un serveur de rapports, tous les avertissements qui se produisent sont retournés sous la forme d'un tableau d'objets <xref:ReportService2010.Warning>. Ces avertissements doivent être gérés et affichés afin que les mesures appropriées puisse être prises.  
@@ -63,7 +63,7 @@ catch (SoapException ex)
   
  Les erreurs peuvent également être gérées en évaluant les valeurs de retour de certaines méthodes. Par exemple, la méthode <xref:ReportService2010.ReportingService2010.FindItems%2A> peut être utilisée pour rechercher des éléments spécifiques dans la base de données du serveur de rapports. Si aucun élément correspondant aux critères de recherche n'est trouvé, un tableau null d'objets <xref:ReportService2010.CatalogItem> est retourné. Vous devez évaluer le tableau, vérifier la présence d’éléments **null** et informer l’utilisateur si aucun élément n’a été trouvé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  <xref:ReportService2010.CatalogItem>   
  [Présentation de la gestion des exceptions dans Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Classe SoapException Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  

@@ -16,10 +16,10 @@ ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 966ab7aeaa4d1bb27fdaae8d4f452e6dffc4a269
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65569106"
 ---
 # <a name="msreportserverinstance-properties---instancename"></a>Propriétés MSReportServer_Instance - InstanceName
@@ -44,7 +44,7 @@ public string InstanceName;
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

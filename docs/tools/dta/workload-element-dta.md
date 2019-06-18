@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 063a15a8278fa10e5c72326c7757ad4946b067f7
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033861"
 ---
 # <a name="workload-element-dta"></a>Workload, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "51290725"
 |**Élément parent**|[Démarrer et utiliser l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)|  
 |**Éléments enfants**|[Élément File &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/file-element-dta.md)<br /><br /> [Élément Database &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/database-element-for-workload-dta.md)<br /><br /> [Élément EventString &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/eventstring-element-dta.md)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécute sur une ou plusieurs bases de données que vous souhaitez paramétrer. L'Assistant Paramétrage du moteur de base de données peut utiliser des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , des fichiers de trace et des tables de trace en tant que charges de travail.  
   
  Si vous spécifiez une charge de travail dans un fichier d'entrée XML et une charge de travail dans une ligne de commande avec l'outil **dta** , la charge de travail spécifiée dans la ligne de commande est utilisée pour le paramétrage. Toutes les options de paramétrage de la ligne de commande remplacent celles spécifiées dans un fichier d'entrée XML. Une seule exception : configuration spécifiée par l'utilisateur entrée dans le mode évaluation dans le fichier d'entrée XML. Par exemple, si une configuration est entrée dans l'élément **Configuration** du fichier d'entrée XML et que l'élément **EvaluateConfiguration** est également configuré en tant qu'une des options de paramétrage, les options de paramétrage spécifiées dans le fichier d'entrée remplacent toute option de paramétrage saisie dans la ligne de commande.  
   
  Une charge de travail doit être spécifiée pour chaque session de paramétrage.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple de code suivant spécifie la table de trace **MyDatabase.MyDBOwner.TuningTable001** pour l'élément **Workload** . La table **TuningTable001** a été créée à l'aide du modèle de paramétrage (Tuning) utilisé dans le Générateur de profils SQL Server et dont le résultat de trace a été enregistré comme table.  
   
 ```  
@@ -83,7 +83,7 @@ ms.locfileid: "51290725"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -11,10 +11,10 @@ ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 9e9286363970b568e0690b622fac6d94c2b01f6b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571387"
 ---
 # <a name="server-properties-logging-page"></a>Propriétés du serveur (page Enregistrement)
@@ -33,7 +33,7 @@ ms.locfileid: "65571387"
  **Supprimer les entrées du journal antérieures au nombre de jours suivant**  
  Spécifiez le nombre de jours après lesquels les entrées du journal seront effacées du journal d'exécution des rapports. La valeur par défaut est 60 jours.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   

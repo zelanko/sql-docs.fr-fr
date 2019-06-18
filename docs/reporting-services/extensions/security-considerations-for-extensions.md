@@ -10,14 +10,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d3cd9c1db8b2662d867a7f2885e611192401c2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 73da0b40d845e8e2a692b969a119adb3cfce6ef1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741297"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193367"
 ---
 # <a name="security-considerations-for-extensions"></a>Considérations sur la sécurité pour les extensions
   Toute application qui cible le CLR (Common Language Runtime) doit interagir avec le système de sécurité du CLR. Lorsqu'une application de ce type est exécutée, elle est automatiquement évaluée et reçoit un jeu d'autorisations de la part du CLR. En fonction des autorisations reçues par l'application, elle continue de s'exécuter ou génère une exception de sécurité. Les paramètres et stratégies de sécurité locale définis dans les fichiers de configuration de stratégie de sécurité pour un serveur de rapports particulier définissent les autorisations de code reçues par un assembly.  
@@ -44,7 +44,7 @@ ms.locfileid: "47741297"
 ## <a name="initialization-of-extension-assemblies"></a>Initialisation des assemblys d'extension  
  Lorsque des extensions commencent à être chargées dans la mémoire par le serveur de rapports, elles utilisent les informations d'identification de compte de service car certains assemblys d'extension requièrent des autorisations spécifiques pour accéder aux ressources système, lire des fichiers de configuration et charger d'autres assemblys dépendants. Toutefois, une fois un assembly chargé et initialisé, tous les appels suivants aux assemblys d'extension utilisent les informations d'identification du compte d'utilisateur sous lequel la session a été ouverte.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
   

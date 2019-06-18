@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a248250c1f5584a12bc40444d27c96ccc7e69416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194027"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Déploiement d’une extension pour le traitement des données sur le Concepteur de rapports
   Le Concepteur de rapports utilise des extensions pour le traitement des données afin de récupérer et traiter des données pendant que vous concevez des rapports. Vous devez déployer votre assembly d'extension pour le traitement des données sur le Concepteur de rapports en tant qu'assembly privé. Vous devez également créer une entrée dans le fichier de configuration du Concepteur de rapports (RSReportDesigner.config.)  
@@ -76,7 +76,7 @@ ms.locfileid: "47818687"
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Avant de vérifier le déploiement, vous devez fermer toutes les instances de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] sur votre ordinateur local. Une fois que vous avez clôturé toutes les sessions en cours, vous pouvez vérifier si votre extension pour le traitement des données a été déployée correctement dans le Concepteur de rapports en créant un nouveau projet de rapport dans [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Votre extension doit être incluse dans la liste des types de source de données disponibles lorsque vous créez un nouveau jeu de données pour votre rapport.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déploiement d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implémentation d’une extension pour le traitement des données](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

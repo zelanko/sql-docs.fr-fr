@@ -18,14 +18,14 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1935b8ff2ac78ebd7d926950e6c2d97dbad75a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128853"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Paramètres des extensions de remise de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] propose une extension de remise par e-mail et une extension de remise par partage de fichiers. La remise par messagerie permet d'envoyer un rapport à des utilisateurs individuels ou à des groupes par le biais de la messagerie électronique. La remise par partage de fichiers permet d'envoyer automatiquement des rapports rendus à un partage de votre réseau. Vous pouvez utiliser l'une ou l'autre de ces extensions de remise avec des abonnements standard ou des abonnements piloté par les données. Vous devez transmettre les paramètres de remise qui sont spécifiques au type d'extension de remise chaque fois que vous appelez les méthodes <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>, <xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>, <xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> et <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Pour extraire par programme la liste des paramètres de remise, utilisez la méthode <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -62,7 +62,7 @@ ms.locfileid: "47628487"
 |**PASSWORD**|Mot de passe requis pour accéder à la ressource réseau ou au disque.|  
 |**WRITEMODE**|Mode écriture à utiliser lors de l'accès au disque. Les valeurs valides sont **Aucun**, **Remplacer** et **Auto-incrément**.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations techniques de référence &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [Génération d’applications à l’aide du service web et de .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   

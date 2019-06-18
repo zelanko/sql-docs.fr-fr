@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 68ea91137c584959c53ee8de010dbff92106c119
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 21de137cefcfc61e91739ff33b2a9f0de4c3a05f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194376"
 ---
 # <a name="create-drillthrough-rdlc-report-with-parameters---reportviewer"></a>Créer un rapport d’extraction (RDLC) avec des paramètres - ReportViewer
 Un rapport [d’extraction](https://technet.microsoft.com/library/ff519554.aspx) est un rapport que l’utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Ce didacticiel vous guide tout au long des leçons suivantes pour créer un rapport d’extraction avec des paramètres et une requête, en [mode local](report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md).  
@@ -36,7 +36,7 @@ Utilisez Visual Studio 2015 et l’application web ASP.NET pour créer une page 
 [Leçon 8 : créer un filtre de données](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Leçon 9 : générer et exécuter l'application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)  
 [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   

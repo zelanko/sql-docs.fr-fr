@@ -14,16 +14,16 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637442"
 ---
 # <a name="data-classification"></a>Classification des données
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 Pour les besoins de la gestion des données sensibles, SQL Server et Azure SQL Server a introduit la possibilité de fournir des colonnes de la base de données avec des métadonnées de sensibilité qui permet à l’application cliente pour gérer différents types de données sensibles (telles que le contrôle d’intégrité, financière, etc. ) conformément aux stratégies de protection des données.
 
 Pour plus d’informations sur la façon d’affecter la classification à des colonnes, consultez [découverte de données SQL et la Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
@@ -79,7 +79,7 @@ Lors d’un appel réussi à SQLGetDescField, la mémoire tampon vers laquelle p
 
  `nn nn [n sensitivityprops]`
 
-Pour chaque colonne *(c)*, *n* 4 octets *`sensitivityprops`* sont présents :
+Pour chaque colonne *(c)* , *n* 4 octets *`sensitivityprops`* sont présents :
 
  `ss ss tt tt`
 

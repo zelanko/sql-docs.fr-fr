@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4661104c1254dd7b3cf58a5e8be1dbe7c598fd6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193765"
 ---
 # <a name="deploying-a-delivery-extension"></a>Déploiement d'une extension de remise
   Les extensions de remise fournissent leurs informations de configuration sous la forme d'un fichier de configuration XML. Le fichier XML est conforme au schéma XML défini pour les extensions de remise. Les extensions de remise fournissent l'infrastructure nécessaire pour définir et modifier le fichier de configuration.  
@@ -33,7 +33,7 @@ ms.locfileid: "47768697"
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|**Nom**|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
+|**Name**|Nom unique de l'extension (par exemple, « Messagerie électronique du serveur de rapports » pour l'extension de remise par messagerie ou « Partage de fichiers du serveur de rapports » pour l'extension de remise par partage de fichiers). La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
 |**Visible**|La valeur **false** indique que l’extension de remise ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est **true**.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47768697"
 ## <a name="verifying-the-deployment"></a>Vérification du déploiement  
  Vous pouvez vérifier que votre extension de remise a été correctement déployée sur le serveur de rapports en utilisant la méthode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> du service Web. Vous pouvez également ouvrir le portail web et vérifier que votre extension est effectivement répertoriée dans la liste des extensions de remise disponibles pour un abonnement. Pour plus d’informations sur le portail web et les abonnements, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de remise](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

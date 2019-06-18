@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105925"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Leçon 5: Mise en forme d’un rapport (Reporting Services)
@@ -40,7 +40,7 @@ L’expression de champ LineTotal affiche un nombre général. Vous pouvez appli
     - **Nombre de décimales : 2**
     - **Nombres négatifs : ($12345.00)**
     - **Symbole : $ Anglais (États-Unis)**
-4. Sélectionnez **Utiliser le séparateur de milliers (,)**. Si l’exemple de texte affiché est **$12,345.00**, vos paramètres sont corrects.
+4. Sélectionnez **Utiliser le séparateur de milliers (,)** . Si l’exemple de texte affiché est **$12,345.00**, vos paramètres sont corrects.
 5. Sélectionnez **OK** pour appliquer le format.
 6. Affichez un aperçu du rapport pour voir la modification apportée à la colonne d’expression `[LineTotal]`, puis repassez en mode Conception.  
 
