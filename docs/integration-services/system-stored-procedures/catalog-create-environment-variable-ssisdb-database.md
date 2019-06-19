@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716954"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (base de données SSISDB)
@@ -41,16 +41,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [@folder_name =] *folder_name*  
- Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- Nom de l'environnement. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Nom de la variable d'environnement. *variable_name* est de type **nvarchar(128)**.  
+ Nom de la variable d'environnement. *variable_name* est de type **nvarchar(128)** .  
   
  [@data_type =] *data_type*  
- Type de données de la variable. Les types de données de variable d’environnement pris en charge incluent **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** et **UInt64**. Les types de données de variable d’environnement non pris en charge incluent **Char**, **DBNull**, **Object** et **Sbyte**. Le type de données du paramètre *data_type* est **nvarchar (128)**.  
+ Type de données de la variable. Les types de données de variable d’environnement pris en charge incluent **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** et **UInt64**. Les types de données de variable d’environnement non pris en charge incluent **Char**, **DBNull**, **Object** et **Sbyte**. Le type de données du paramètre *data_type* est **nvarchar (128)** .  
   
  [@sensitive =] *sensitive*  
  Indique si la variable contient une valeur sensible ou pas. Utilisez une valeur de `1` pour indiquer que la valeur de la variable d'environnement est sensible ou une valeur de `0` pour indiquer qu'elle n'est pas sensible. Une valeur sensible est chiffrée lorsqu'elle est stockée. Une valeur qui n’est pas sensible est stockée en texte en clair. *Sensitive* est de type **bit**.  
@@ -59,7 +59,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  Valeur de la variable d'environnement. *value* est de type **sql_variant**.  
   
  [@description =] *description*  
- Description de la variable d'environnement. *value* est de type **nvarchar(1024)**.  
+ Description de la variable d'environnement. *value* est de type **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -85,7 +85,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une variable d'environnement peut être utilisée pour affecter efficacement une valeur à un paramètre du projet ouà  un paramètre du package pour une utilisation dans l'exécution d'un package. Les variables d'environnement permettent d'organiser les valeurs de paramètre. Les noms de variable doivent être uniques dans un environnement.  
   
  La procédure stockée valide le type de données de la variable pour s'assurer qu'elle est prise en charge par le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

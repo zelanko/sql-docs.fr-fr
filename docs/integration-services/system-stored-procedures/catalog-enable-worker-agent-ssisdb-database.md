@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d70e2bc12642df0c07c3f280df7187ef68ab3b02
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716297"
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>catalog.enable_worker_agent (base de données SSISDB)
@@ -35,7 +35,7 @@ catalog.enable_worker_agent [@WorkerAgentId =] WorkerAgentId
 ## <a name="arguments"></a>Arguments
 [@WorkerAgentId =] *WorkerAgentId* ID d’agent de Worker de Scale Out Worker. *WorkerAgentId* est de type **uniqueidentifier**.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 Cet exemple active Scale Out Worker sur MachineA.
 
 ```sql
