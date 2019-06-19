@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca2f92441841168916cb3d50b63376634073456b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079546"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
@@ -69,15 +69,15 @@ ms.locfileid: "66079546"
   
 3.  À l'aide de l' **Explorateur de métadonnées**, faites glisser les champs et mesures suivants dans le modèle de requête :  
   
-    1.  Remplacez \<row_axis, mdx_set > avec **[Product Category]. [ Product Category Name]**.  
+    1.  Remplacez \<row_axis, mdx_set > avec **[Product Category]. [ Product Category Name]** .  
   
     2.  Remplacez \<column_axis, mdx_set > avec **[Date]. [ Calendar Year]. [Calendar Year]** .  
   
-    3.  Remplacez \<from_clause, mdx_name > avec **[Internet Sales]**.  
+    3.  Remplacez \<from_clause, mdx_name > avec **[Internet Sales]** .  
   
-    4.  Remplacez \<where_clause, mdx_set > avec **[Measures]. [ Internet Total Sales]**.  
+    4.  Remplacez \<where_clause, mdx_set > avec **[Measures]. [ Internet Total Sales]** .  
   
-4.  Vous pouvez exécuter la requête en l'état, mais vous souhaiterez probablement apporter certaines modifications, notamment ajouter une fonction pour retourner des membres spécifiques. Par exemple, tapez `.members` après **[Product Category]. [ Product Category Name]**. Pour en savoir plus, voir [Using Member Expressions](/sql/mdx/using-member-expressions).  
+4.  Vous pouvez exécuter la requête en l'état, mais vous souhaiterez probablement apporter certaines modifications, notamment ajouter une fonction pour retourner des membres spécifiques. Par exemple, tapez `.members` après **[Product Category]. [ Product Category Name]** . Pour en savoir plus, voir [Using Member Expressions](/sql/mdx/using-member-expressions).  
   
 ##  <a name="bkmk_backup"></a> Créer un script XMLA à partir d'un modèle  
  Les modèles de commande XMLA fournis dans l'explorateur de modèles peuvent être utilisés pour créer des scripts afin de surveiller et de mettre à jour les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que l'instance soit en mode MDX, en mode d'exploration de données ou en mode tabulaire. Les modèles **XMLA** incluent des exemples pour les types de scripts suivants :  
@@ -167,12 +167,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |Category|Modèle d'élément|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >*. Instruction de contenu pour récupérer le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
+|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >* . Instruction de contenu pour récupérer le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction avec l’instruction DMX `RangeMin` et `RangeMax` fonctions pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction extraire un ensemble complet de valeurs de colonnes discrètes dans un modèle d’exploration de données spécifié.|  
 ||Requête d'extraction|Indique comment utiliser l'instruction DMX SELECT * FROM Model.CASES avec la fonction DMX IsInNode pour exécuter une requête d'extraction|  
 ||Attributs de modèle|Montre comment utiliser la fonction DMX System.GetModelAttributes pour retourner une liste d'attributs utilisés par un modèle.|  
-||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >*. Instruction PMML pour récupérer la représentation sous forme de balisage langage PMML (Predictive Model) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
+||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >* . Instruction PMML pour récupérer la représentation sous forme de balisage langage PMML (Predictive Model) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
 |DMX\Gestion des modèles|Ajouter un modèle|Indique comment utiliser l'instruction DMX ALTER MINING MODEL STRUCTURE pour ajouter un modèle d'exploration de données.|  
 ||Supprimer le modèle|Indique comment utiliser l'instruction DMX DELETE * FROM MINING MODEL pour supprimer le contenu d'un modèle d'exploration de données spécifié.|  
 ||Supprimer les exemples de structure|Indique comment utiliser l'instruction DMX DELETE FROM MINING STRUCTURE pour supprimer les exemples de structure de modèle d'exploration de données.|  
