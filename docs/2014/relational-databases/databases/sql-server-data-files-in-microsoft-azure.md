@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916577"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Fichiers de données SQL Server dans Windows Azure
@@ -99,7 +99,7 @@ ON
   
 -   Dans la version actuelle de cette fonctionnalité, l'enregistrement de données `FileStream` dans le Stockage Microsoft Azure n'est pas pris en charge. Vous pouvez enregistrer des données `Filestream` dans une base de données locale intégrée au Stockage Microsoft Azure, mais vous ne pouvez pas déplacer ces données entre des ordinateurs à l'aide du Stockage Microsoft Azure. Pour les données `FileStream`, nous vous recommandons de continuer à utiliser les méthodes traditionnelles pour déplacer des fichiers (.mdf, .ldf) associés à Filestream entre différents ordinateurs.  
   
--   Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur **5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »**.  
+-   Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur **5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »** .  
   
 -   Seuls les fichiers .mdf, .ldf et .ndf peuvent être enregistrés dans le Stockage Windows Azure à l'aide de la fonctionnalité Fichiers de données SQL Server dans Windows Azure.  
   
@@ -142,13 +142,13 @@ ON
   
  **Erreurs d'authentification**  
   
--   *Impossible de supprimer les informations d’identification « %.\*ls » parce qu’elles sont utilisées par un fichier de base de données actif.*   
+-   *Impossible de supprimer les informations d’identification « %.\*ls » parce qu’elles sont utilisées par un fichier de base de données actif.*    
     Résolution : vous pouvez voir cette erreur lorsque vous tentez de supprimer des informations d'identification encore utilisées par un fichier de base de données actif dans le Stockage Microsoft Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
   
--   *La signature d'accès partagé n'a pas été créée correctement sur le conteneur.*   
+-   *La signature d'accès partagé n'a pas été créée correctement sur le conteneur.*    
      Résolution : Assurez-vous que vous avez créé une Signature d’accès partagé sur le conteneur correctement. Consultez les instructions fournies dans la leçon 2 du [Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *Les informations d'identification de SQL Server n'ont pas été créées correctement.*   
+-   *Les informations d'identification de SQL Server n'ont pas été créées correctement.*    
     Résolution : Vérifiez que vous avez utilisé une « signature d’accès partagé » pour le champ **Identité** et que vous avez créé un secret correctement. Consultez les instructions données dans la leçon 3 du [Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Erreurs de bail d'un objet blob :**  
@@ -163,8 +163,8 @@ ON
 2.  *Erreurs lors de l'exécution de l'instruction Alter*   
     Résolution : Veillez à exécuter l’instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le Stockage Microsoft Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Consultez les instructions fournies dans la leçon 7 du [Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*   
-    Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*.  
+3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*    
+    Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge plusieurs instances SQL Server qui accèdent en même temps aux mêmes fichiers de base de données dans le Stockage Microsoft Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »* .  
   
      Pour résoudre ce problème, déterminez d'abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Windows Azure. Si vous n'en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Windows Azure. Pour cela, procédez comme suit :  
   

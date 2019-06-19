@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: bc07e94db985ce156fdd5cd59620c2e7fddc2d73
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096667"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistant Modification de base de données (SSRS en mode natif)
@@ -62,7 +62,7 @@ ms.locfileid: "66096667"
  Si vous sélectionnez une autre base de données du serveur de rapports, le mode de la base de données courante s'affiche afin que vous sachiez comment celle-ci est utilisée.  
   
  **Informations d’identification**  
- Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local (*\<nom_ordinateur >\\< nom d’utilisateur\>*) si le serveur de rapports et de la base de données se trouvent sur le même ordinateur ou un utilisateur de domaine compte (*\<domaine >\\< nom d’utilisateur\>*) s’ils sont sur des ordinateurs différents dans le même domaine.  
+ Spécifie le compte utilisé par le serveur de rapports pour se connecter à la base de données du serveur de rapports. Les valeurs valides incluent le compte de service du service Web Report Server, une connexion à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie sur l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous utilisez pour héberger le serveur de rapports, ou un compte Windows. Si vous utilisez un compte Windows, vous pouvez spécifier un compte local ( *\<nom_ordinateur >\\< nom d’utilisateur\>* ) si le serveur de rapports et de la base de données se trouvent sur le même ordinateur ou un utilisateur de domaine compte ( *\<domaine >\\< nom d’utilisateur\>* ) s’ils sont sur des ordinateurs différents dans le même domaine.  
   
  Le serveur de rapports crée alors une connexion de base de données et attribue les autorisations de base de données au compte que vous spécifiez.  
   

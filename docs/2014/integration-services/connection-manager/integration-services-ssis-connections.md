@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62833778"
 ---
 # <a name="integration-services-ssis-connections"></a>Connexions Integration Services (SSIS)
@@ -66,7 +66,7 @@ ms.locfileid: "62833778"
 ### <a name="built-in-connection-managers"></a>Gestionnaires de connexions intégrés  
  Le tableau suivant répertorie les types de gestionnaires de connexions fournis par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Type|Description|Rubrique|  
+|type|Description|Rubrique|  
 |----------|-----------------|-----------|  
 |ADO|Établit une connexion à des objets ADO (ActiveX Data Objects).|[Gestionnaire de connexions ADO](ado-connection-manager.md)|  
 |ADO.NET|Établit une connexion à une source de données au moyen d'un fournisseur .NET.|[Gestionnaire de connexions ADO.NET](ado-net-connection-manager.md)|  
@@ -94,7 +94,7 @@ ms.locfileid: "62833778"
 > [!IMPORTANT]  
 >  Les gestionnaires de connexions répertoriés dans le tableau suivant fonctionnent uniquement avec [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] et [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Type|Description|Rubrique|  
+|type|Description|Rubrique|  
 |----------|-----------------|-----------|  
 |ORACLE|Se connecte à Oracle \<informations de version > serveur.|Le gestionnaire de connexions Oracle est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour Oracle par Attunity inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(en anglais).|  
 |SAPBI|Établit une connexion à un système SAP NetWeaver BI version 7.|Le gestionnaire de connexions SAP BI est le composant de gestionnaire de connexions du Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI. Le Connecteur [!INCLUDE[msCoName](../../includes/msconame-md.md)] for SAP BI inclut également une source et une destination. Pour plus d'informations, consultez la page de téléchargement [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  

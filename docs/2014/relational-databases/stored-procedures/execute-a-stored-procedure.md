@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016067"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
@@ -65,7 +65,7 @@ ms.locfileid: "63016067"
   
 -   Exécution de procédures stockées système  
   
-     Les procédures système commencent par le préfixe **sp_**. Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutés à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
+     Les procédures système commencent par le préfixe **sp_** . Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutés à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -83,7 +83,7 @@ ms.locfileid: "63016067"
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
     ```  
   
-     - Ou -  
+     \- Ou -  
   
     ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  

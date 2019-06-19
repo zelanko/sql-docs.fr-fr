@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188803"
 ---
 # <a name="like-escape-sequence"></a>Séquence d’échappement pour l’opérateur LIKE
@@ -34,7 +34,7 @@ ODBC utilise les séquences d’échappement pour la clause LIKE. La syntaxe de 
   
  *Échappement ODBC-like* :: =  
   
- *ODBC-ÉCHAP-initiateur* escape '*-caractère d’échappement*' *ODBC ÉCHAP-marque de fin*  
+ *ODBC-ÉCHAP-initiateur* escape ' *-caractère d’échappement*' *ODBC ÉCHAP-marque de fin*  
   
  *escape-character* ::= *character*  
   

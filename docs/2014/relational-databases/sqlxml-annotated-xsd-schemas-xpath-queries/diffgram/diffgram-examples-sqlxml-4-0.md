@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012973"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Exemples de DiffGrams (SQLXML 4.0)
@@ -99,7 +99,7 @@ ms.locfileid: "66012973"
 </ROOT>  
 ```  
   
- Dans le  **\<avant >** bloquer, il existe un  **\<ordre >** élément (**diffgr : ID = « Order1 »**) et un  **\< Client >** élément (**diffgr : ID = « Customer1 »**). Ces éléments représentent les enregistrements existants de la base de données. Le  **\<DataInstance >** élément n’a pas les enregistrements correspondants (avec le même **diffgr : ID**). Cela indique une opération de suppression.  
+ Dans le  **\<avant >** bloquer, il existe un  **\<ordre >** élément (**diffgr : ID = « Order1 »** ) et un  **\< Client >** élément (**diffgr : ID = « Customer1 »** ). Ces éléments représentent les enregistrements existants de la base de données. Le  **\<DataInstance >** élément n’a pas les enregistrements correspondants (avec le même **diffgr : ID**). Cela indique une opération de suppression.  
   
 #### <a name="to-test-the-diffgram"></a>Pour tester le DiffGram  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66012973"
 </ROOT>  
 ```  
   
- Dans ce DiffGram le  **\<avant >** bloc n’est pas spécifié (aucune base de données existant enregistrements identifiés). Il existe deux instances d’enregistrements (identifié par le  **\<client >** et  **\<ordre >** éléments dans le  **\<DataInstance >** bloc) qui correspondent aux tables Cust et Ord, respectivement. Deux de ces éléments spécifient la **diffgr : HasChanges** attribut (**hasChanges = « inserted »**). Cela indique une opération d'insertion. Dans ce DiffGram, si vous spécifiez **hasChanges = « modified »**, vous indiquez que vous souhaitez modifier un enregistrement qui n’existe pas, ce qui entraîne une erreur.  
+ Dans ce DiffGram le  **\<avant >** bloc n’est pas spécifié (aucune base de données existant enregistrements identifiés). Il existe deux instances d’enregistrements (identifié par le  **\<client >** et  **\<ordre >** éléments dans le  **\<DataInstance >** bloc) qui correspondent aux tables Cust et Ord, respectivement. Deux de ces éléments spécifient la **diffgr : HasChanges** attribut (**hasChanges = « inserted »** ). Cela indique une opération d'insertion. Dans ce DiffGram, si vous spécifiez **hasChanges = « modified »** , vous indiquez que vous souhaitez modifier un enregistrement qui n’existe pas, ce qui entraîne une erreur.  
   
 #### <a name="to-test-the-diffgram"></a>Pour tester le DiffGram  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66012973"
 </ROOT>  
 ```  
   
- Le  **\<avant >** bloc inclut un  **\<client >** élément (**diffgr : ID = « Customer1 »**). Le  **\<DataInstance >** bloc inclut le correspondantes  **\<client >** élément avec même **id**. Le  **\<client >** élément dans le  **\<NewDataSet >** spécifie également **diffgr : HasChanges = « modified »**. Cela indique une opération de mise à jour et l’enregistrement de client dans le **Cust** table est mise à jour en conséquence. Notez que si le **diffgr : HasChanges** attribut n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuées.  
+ Le  **\<avant >** bloc inclut un  **\<client >** élément (**diffgr : ID = « Customer1 »** ). Le  **\<DataInstance >** bloc inclut le correspondantes  **\<client >** élément avec même **id**. Le  **\<client >** élément dans le  **\<NewDataSet >** spécifie également **diffgr : HasChanges = « modified »** . Cela indique une opération de mise à jour et l’enregistrement de client dans le **Cust** table est mise à jour en conséquence. Notez que si le **diffgr : HasChanges** attribut n’est pas spécifié, la logique de traitement DiffGram ignore cet élément et aucune mise à jour n’est effectuées.  
   
 #### <a name="to-test-the-diffgram"></a>Pour tester le DiffGram  
   
@@ -341,13 +341,13 @@ ms.locfileid: "66012973"
   
 -   Conformément à la logique de traitement DiffGram, tous les éléments de niveau supérieur dans le  **\<avant >** bloquer mappés aux tables correspondantes, comme décrit dans le schéma de mappage.  
   
--   Le  **\<avant >** bloc a une  **\<ordre >** élément (**dffgr:id = « Order1 »**) et un  **\<client >** élément (**diffgr : ID = « Customer1 »**) pour lequel il n’existe aucun élément correspondant dans le  **\<DataInstance >** bloc (avec le même ID). Cela indique une opération de suppression et les enregistrements sont supprimés des tables Cust et Ord.  
+-   Le  **\<avant >** bloc a une  **\<ordre >** élément (**dffgr:id = « Order1 »** ) et un  **\<client >** élément (**diffgr : ID = « Customer1 »** ) pour lequel il n’existe aucun élément correspondant dans le  **\<DataInstance >** bloc (avec le même ID). Cela indique une opération de suppression et les enregistrements sont supprimés des tables Cust et Ord.  
   
--   Le  **\<avant >** bloc a un  **\<client >** élément (**diffgr : ID = « Customer2 »**) pour lequel il existe un correspondante **\<Client >** élément dans le  **\<DataInstance >** bloc (avec le même ID). L’élément dans le  **\<DataInstance >** bloc spécifie **diffgr : HasChanges = « modified »**. Il s’agit d’une opération de mise à jour dans lequel client ANATR, les informations CompanyName et ContactName sont mis à jour dans la table Cust à l’aide de valeurs qui sont spécifiées dans le  **\<DataInstance >** bloc.  
+-   Le  **\<avant >** bloc a un  **\<client >** élément (**diffgr : ID = « Customer2 »** ) pour lequel il existe un correspondante **\<Client >** élément dans le  **\<DataInstance >** bloc (avec le même ID). L’élément dans le  **\<DataInstance >** bloc spécifie **diffgr : HasChanges = « modified »** . Il s’agit d’une opération de mise à jour dans lequel client ANATR, les informations CompanyName et ContactName sont mis à jour dans la table Cust à l’aide de valeurs qui sont spécifiées dans le  **\<DataInstance >** bloc.  
   
--   Le  **\<DataInstance >** bloc a un  **\<client >** élément (**diffgr : ID = « Customer3 »**) et un  **\<Ordre >** élément (**diffgr : ID = « Order3 »**). Aucune de ces éléments ne spécifier le **diffgr : HasChanges** attribut. Par conséquent, la logique de traitement du DiffGram ignore ces éléments.  
+-   Le  **\<DataInstance >** bloc a un  **\<client >** élément (**diffgr : ID = « Customer3 »** ) et un  **\<Ordre >** élément (**diffgr : ID = « Order3 »** ). Aucune de ces éléments ne spécifier le **diffgr : HasChanges** attribut. Par conséquent, la logique de traitement du DiffGram ignore ces éléments.  
   
--   Le  **\<DataInstance >** bloc a un  **\<client >** élément (**diffgr : ID = « Client4 »**) et un  **\<Ordre >** élément (**diffgr : ID = « Order4 »**) pour lesquels il n’existe aucun élément correspondant dans le \<avant > bloc. Ces éléments dans le  **\<DataInstance >** bloc spécifier **diffgr : HasChanges = « inserted »**. Par conséquent, un nouvel enregistrement est ajouté dans les tables Cust et Ord.  
+-   Le  **\<DataInstance >** bloc a un  **\<client >** élément (**diffgr : ID = « Client4 »** ) et un  **\<Ordre >** élément (**diffgr : ID = « Order4 »** ) pour lesquels il n’existe aucun élément correspondant dans le \<avant > bloc. Ces éléments dans le  **\<DataInstance >** bloc spécifier **diffgr : HasChanges = « inserted »** . Par conséquent, un nouvel enregistrement est ajouté dans les tables Cust et Ord.  
   
 #### <a name="to-test-the-diffgram"></a>Pour tester le DiffGram  
   

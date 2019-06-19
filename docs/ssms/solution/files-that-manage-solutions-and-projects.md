@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4b7be4d0cc64a72198525f059469f65b0c518a36
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104971"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Fichiers gérant les solutions et les projets
@@ -51,7 +51,7 @@ Par défaut, les fichiers de niveau solution sont créés dans le répertoire ph
  
 Si votre structure de répertoires est identique à la structure logique affichée dans l'Explorateur de solutions, il est plus facile de trouver et de partager les fichiers solutions et projet avec d'autres développeurs.  
    
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Gérer des fichiers avec encodage](../../ssms/solution/manage-files-with-encoding.md)  
 [Fichiers divers](../../ssms/solution/miscellaneous-files.md)  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  

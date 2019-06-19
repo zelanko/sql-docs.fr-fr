@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721092"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Leçon 1 : Publication de données à l’aide de la réplication transactionnelle
@@ -50,7 +50,7 @@ ms.locfileid: "62721092"
   
 10. Dans la page Sécurité de l’agent, décochez la case **Utiliser les paramètres de sécurité de l’Agent d’instantané** .  
   
-11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<_nom_ordinateur>_**\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
+11. Cliquez sur **Paramètres de sécurité** pour l’Agent d’instantané, entrez \<_nom_ordinateur>_ **\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte et cliquez sur **OK**.  
   
 12. Répétez l’étape précédente pour définir repl_logreader comme compte de processus de l’Agent de lecture du journal, puis cliquez sur **Terminer**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62721092"
   
 3.  Sélectionnez la page **Liste d’accès à la publication** , puis cliquez sur **Ajouter**.  
   
-4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez _nom_ordinateur>_**\repl_distribution** et cliquez sur **OK**. Cliquez sur **OK**.  
+4.  \Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez _nom_ordinateur>_ **\repl_distribution** et cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  Vous avez créé avec succès la publication transactionnelle. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la Publication transactionnelle](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  

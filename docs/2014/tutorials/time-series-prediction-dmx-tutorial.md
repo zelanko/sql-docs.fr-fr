@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044180"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Didacticiel DMX sur la prédiction de série chronologique
@@ -43,7 +43,7 @@ ms.locfileid: "63044180"
  [Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE MINING MODEL` pour ajouter un nouveau modèle de prévision et un modèle d'exploration de données associé.  
   
- [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction ALTER MINING STRUCTURE pour ajouter de nouveaux modèles d'exploration de données à la structure de série chronologique. Vous apprendrez également comment personnaliser l'algorithme utilisé pour analyser une série chronologique.  
   
  [Leçon 3 : Traitement de la série chronologique Structure et modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "63044180"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)])  
   
--   Base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
+-   Base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
   
  Pour des raisons de sécurité, les bases de données exemples ne sont pas installées par défaut. Pour installer les bases de données exemples officiels pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], accédez à [ http://www.CodePlex.com/MSFTDBProdSamples ](https://go.microsoft.com/fwlink/?LinkId=88417) ou sur la page d’accueil de Microsoft SQL Server Samples and Community Projects dans la section Microsoft SQL Server Product Samples. Cliquez sur **Databases**, puis cliquez sur l'onglet **Releases** et sélectionnez les bases de données souhaitées.  
   

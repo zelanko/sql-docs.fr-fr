@@ -14,10 +14,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047210"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "63047210"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**Int**|Identificateur unique pour une sauvegarde spécifique, la restauration ou la charge s’exécuter.<br /><br /> Clé pour cette vue.||  
-|NAME|**nvarchar(255)**|NULL pour la charge. Nom facultatif pour la sauvegarde ou de restauration.||  
+|name|**nvarchar(255)**|NULL pour la charge. Nom facultatif pour la sauvegarde ou de restauration.||  
 |submit_time|**datetime**|Heure de que la demande a été soumise.||  
 |start_time|**datetime**|Heure à laquelle l'opération a commencé.||  
 |end_time|**datetime**|Heure de l’opération terminée, a échoué ou a été annulée.||  

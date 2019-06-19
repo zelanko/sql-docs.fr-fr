@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06d2a9417d001e18b9bb8a5f34ce90575510e649
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944003"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Fonctions de classement - COLLATIONPROPERTY (Transact-SQL)
@@ -42,7 +42,7 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Arguments  
 *collation_name*  
-Nom du classement. L’argument *collation_name* a un type de données **nvarchar(128)** , sans valeur par défaut.
+Nom du classement. L’argument *collation_name* a un type de données **nvarchar(128)**, sans valeur par défaut.
   
 *property*  
 Propriété du classement. L’argument *property* a un type de données **varchar(128)** et peut avoir une des valeurs suivantes :
