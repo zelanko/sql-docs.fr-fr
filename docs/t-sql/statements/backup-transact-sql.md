@@ -48,10 +48,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175311"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
@@ -435,7 +435,7 @@ L’espace total utilisé par les mémoires tampons est déterminé par : *buffe
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Lors de la création de sauvegardes à l’aide du service SQL Writer, si la base de données est configurée avec [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md), ou si elle comprend des [groupes de fichiers à mémoire optimisée](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), la valeur de `MAXTRANSFERSIZE` au moment de la restauration doit être supérieure ou égale à celle du `MAXTRANSFERSIZE` qui a été utilisée lors de la création de la sauvegarde.
@@ -1045,7 +1045,7 @@ L’espace total utilisé par les mémoires tampons est déterminé par : *buffe
 > [!NOTE]
 > Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _ **@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
 > [!NOTE]
 > Pour les bases de données comprenant un seul fichier de données et où [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) est activé, la valeur `MAXTRANSFERSIZE` par défaut est 65 536 (64 Ko). Pour les bases de données non chiffrées à l’aide de TDE, la valeur `MAXTRANSFERSIZE` par défaut est 1 048 576 (1 Mo) lors d’une sauvegarde vers DISK, et 65 536 (64 Ko) lors d’une sauvegarde vers VDI ou TAPE.
