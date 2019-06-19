@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 335352fbf9753c2be6e0ddbed3d0f8d8032a3649
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946171"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
@@ -70,12 +70,12 @@ ms.locfileid: "64946171"
   
     -   Utilisation du commutateur **-t** pour préciser l’indicateur de fin de champ pour tous les champs à l’exception du dernier champ de la ligne et utilisation du commutateur **-r** pour préciser un indicateur de fin de ligne.  
   
-    -   Utilisation d’un commutateur de format caractère (**-c** ou **-w**) sans le commutateur **-t** , qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
+    -   Utilisation d’un commutateur de format caractère ( **-c** ou **-w**) sans le commutateur **-t** , qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
   
         > [!NOTE]  
         >  Si vous ajoutez le commutateur **-n** (correspondant aux données natives) ou **-N** (format natif Unicode), les indicateurs de fin ne sont pas insérés.  
   
-    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format (**-f**) ou celui du fichier de données (**-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
+    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format ( **-f**) ou celui du fichier de données ( **-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
   
          `Enter field terminator [none]:`  
   
@@ -187,8 +187,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Option|Attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='** char **'**|Chargement des champs de données en tant que données sous forme de caractères.|  
-|FIELDTERMINATOR **='**`,`**'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
-|ROWTERMINATOR **='**`\n`**'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
+|FIELDTERMINATOR **='** `,` **'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
+|ROWTERMINATOR **='** `\n` **'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
@@ -204,7 +204,7 @@ BULK INSERT myDepartment FROM 'C:\myDepartment-c-t.txt'
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

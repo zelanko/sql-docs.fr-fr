@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489124"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tâche 5 : Exportation des résultats du nettoyage vers un fichier Excel
@@ -42,7 +42,7 @@ ms.locfileid: "65489124"
   
     3.  Recherchez **Los Angeles** et voir que le **état** a la valeur **autorité de certification**.  
   
-    4.  Confirmer qu’il n’y a aucun terme **Co.**, **corp.**, et **Inc.**.  
+    4.  Confirmer qu’il n’y a aucun terme **Co.** , **corp.** , et **Inc.** .  
   
     5.  Supprimer le **Validation d’adresses** colonne à partir de la feuille de calcul et enregistrez le fichier excel. Cette colonne supplémentaire correspond au domaine composite Validation d'adresses.  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6977e5934178ae17ce8d4469728af211ec2ec274
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727356"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
@@ -328,7 +328,7 @@ ms.locfileid: "65727356"
  **XmlSchemaCollectionsList**  
  Cliquez pour ouvrir la boîte de dialogue **Sélectionner les collections du schéma XML** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Éditeur de tâche de transfert d’objets SQL Server &#40;page Général&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   

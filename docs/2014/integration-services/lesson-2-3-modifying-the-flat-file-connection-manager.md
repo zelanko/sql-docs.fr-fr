@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767431"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Étape 3 : Modification du Gestionnaire de connexions de fichiers plats
@@ -26,7 +26,7 @@ ms.locfileid: "62767431"
   
 1.  Dans le volet **Gestionnaires de connexions** , cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Propriétés**.  
   
-2.  Dans la fenêtre Propriétés, pour **Expressions**, cliquez dans la cellule vide, puis sur le bouton **(...)**.  
+2.  Dans la fenêtre Propriétés, pour **Expressions**, cliquez dans la cellule vide, puis sur le bouton **(...)** .  
   
 3.  Dans le **Éditeur d’Expressions de propriété** boîte de dialogue le **propriété** colonne, tapez ou sélectionnez `ConnectionString`.  
   

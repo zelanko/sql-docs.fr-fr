@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 98ee7d7a248d5fd1c9f99189a1bc082e1aec002b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942852"
 ---
 # <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "65942852"
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les paquets envoyés et reçus, exécutez **sp_monitor**.  
   
 ## <a name="examples"></a>Exemples  
@@ -61,7 +61,7 @@ Packets Received
 128  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@PACK_SENT](../../t-sql/functions/pack-sent-transact-sql.md)   
  [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Fonctions statistiques système](../../t-sql/functions/system-statistical-functions-transact-sql.md)  

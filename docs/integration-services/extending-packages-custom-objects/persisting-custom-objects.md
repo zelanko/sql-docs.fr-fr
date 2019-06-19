@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724472"
 ---
 # <a name="persisting-custom-objects"></a>Persistance des objets personnalisés
@@ -32,7 +32,7 @@ ms.locfileid: "65724472"
 > [!IMPORTANT]  
 >  Lorsque vous implémentez une persistance personnalisée, vous devez rendre persistantes toutes les propriétés de l'objet, y compris les propriétés héritées et les propriétés personnalisées que vous avez ajoutées.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Bien que l’exemple de gestionnaire de connexions personnalisé SQL Server ne requière pas de persistance personnalisée pour ses trois propriétés de type **string**, le code suivant présente un exemple du code personnalisé qui serait requis pour rendre persistants le gestionnaire de connexions et ses propriétés. La classe qui contient ce code doit implémenter l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>.  
   
 ```vb  
@@ -157,7 +157,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Développement d’objets personnalisés pour Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

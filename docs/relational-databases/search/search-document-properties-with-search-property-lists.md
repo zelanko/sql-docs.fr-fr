@@ -20,11 +20,11 @@ ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26f5f87c1df8ade01b7e2f24890990f19ee6ab52
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306207"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716204"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ GO
   
     1.  Pour supprimer une propriété de document, cliquez sur l'en-tête de ligne à gauche de la propriété et appuyez sur DEL.  
   
-    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\***, et entrez les valeurs de la nouvelle propriété.  
+    2.  Pour ajouter une propriété de document, cliquez dans la ligne vide en bas de la liste, à droite de **\*** , et entrez les valeurs de la nouvelle propriété.  
   
          Pour plus d'informations sur ces valeurs, consultez [Éditeur de liste de propriétés de recherche](/sql/database-engine/search-property-list-editor). Pour plus d’informations sur la façon d’obtenir ces valeurs pour les propriétés définies par Microsoft, consultez [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). Pour plus d'informations sur les propriétés définies par un éditeur de logiciels indépendant (ISV), consultez la documentation de ce dernier.  
   
@@ -224,7 +224,7 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

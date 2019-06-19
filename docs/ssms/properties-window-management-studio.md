@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 84b7ee124e79e437554d2ddf1dc52be6424a421d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104371"
 ---
 # <a name="properties-window-management-studio"></a>Fenêtre Propriétés (Management Studio)
@@ -39,6 +39,6 @@ La fenêtre Propriétés affiche différents types de champs d'édition, en fonc
 |**Propriétés**|Affiche les propriétés d'un objet.|  
 |**Volet Description**|Le volet Description apparaît dans la partie inférieure de la fenêtre Propriétés et affiche le type de la propriété ainsi qu'une description succincte de celle-ci. Vous pouvez activer et désactiver la description de la propriété via la commande **Description** située dans le menu contextuel.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

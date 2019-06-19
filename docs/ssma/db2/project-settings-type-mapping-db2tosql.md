@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270007"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Paramètres du projet (mappage de Type) (DB2ToSQL)
@@ -64,7 +64,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |binary_float|float [53]|  
 |binary_integer|INT|  
 |objet BLOB|varbinary(max)|  
-|boolean|bit|  
+|booléenne|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
 |caractère|varchar(max)|  
@@ -104,7 +104,7 @@ Le tableau suivant contient le mappage de type de données par défaut pour les 
 |UROWID|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>\*</sup> S’applique pour retourner la valeur le mappage de type uniquement.  
   
@@ -176,7 +176,7 @@ Le tableau suivant contient le mappage de type par défaut pour les colonnes.
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
 |varchar[\*..\*]|varchar[\*]|  
 |varchar2[\*..\*]|varchar[\*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mappage de Type de Variable locale par défaut  
 Le tableau suivant contient le mappage de type par défaut pour les variables locales.  
@@ -263,7 +263,7 @@ Le tableau suivant contient le mappage de type par défaut pour les variables lo
 |varchar[8001..\*]|varchar(max)|  
 |VARCHAR2 [\*... 8000]|varchar[\*]|  
 |varchar2[8001..\*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Référence de l’Interface utilisateur &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

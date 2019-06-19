@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164056"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Exploration du modèle Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
@@ -159,7 +159,7 @@ ms.locfileid: "63164056"
   
      La probabilité de cette transition s'affiche sous la forme d'un pourcentage.  
   
-7.  Dans le **Cluster** liste déroulante, sélectionnez **remplissage (tout)**.  
+7.  Dans le **Cluster** liste déroulante, sélectionnez **remplissage (tout)** .  
   
      La liste des attributs est mise à jour pour afficher les caractéristiques de toutes les commandes utilisées pour créer le modèle. Dans ce modèle d’exploration de données, est la caractéristique la plus importante pour faire la distinction entre les clusters `Region`, avec la valeur **Amérique du Nord**.  
   

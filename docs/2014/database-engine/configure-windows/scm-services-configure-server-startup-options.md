@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 91a48d4acd771c19617bac26c1393f30334768e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810367"
 ---
 # <a name="configure-server-startup-options-sql-server-configuration-manager"></a>Configurer les options de démarrage du serveur (Gestionnaire de configuration SQL Server)
@@ -56,7 +56,7 @@ ms.locfileid: "62810367"
     > -   **Windows 8**:  
     >          Pour ouvrir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, dans le **recherche** icône sous **applications**, type **SQLServerManager\<version > .msc** tels que `SQLServerManager12.msc`, puis appuyez sur **entrée**.  
   
-2.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (***<nom_instance>***)**, puis cliquez sur **Propriétés**.  
+2.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (***<nom_instance>***)** , puis cliquez sur **Propriétés**.  
   
 3.  Sous l'onglet **Paramètres de démarrage** , dans la zone **Spécifiez un paramètre de démarrage** , tapez le paramètre, puis cliquez sur **Ajouter**.  
   

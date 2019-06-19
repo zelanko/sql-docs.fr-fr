@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c3660f7314ce9514b4dc03ee2d6fb1490a4eab7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715261"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (base de données SSISDB)
@@ -37,7 +37,7 @@ ms.locfileid: "65715261"
 |created_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a créé l'environnement.|  
 |created_time|**datetimeoffset**|Date et heure de création de l'environnement.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque environnement dans le catalogue. Les noms d'environnement sont uniques uniquement en ce qui concerne le dossier dans lequel ils se trouvent. Par exemple, un environnement nommé `E1` peut exister dans plusieurs dossiers dans le catalogue, mais chaque dossier peut avoir un seul environnement nommé `E1`.  
   
 ## <a name="permissions"></a>Autorisations  

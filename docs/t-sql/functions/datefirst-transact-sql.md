@@ -34,10 +34,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c748a75fa9264cce7282f2a9af7b5d183c75cdb5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943638"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
@@ -58,7 +58,7 @@ Pour obtenir une vue d’ensemble de tous les types de données et fonctions de 
 ## <a name="return-type"></a>Type de retour  
 **tinyint**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 SET DATEFIRST *n* spécifie le premier jour (DIMANCHE, LUNDI, MARDI, etc.) de la semaine. La valeur de *n* est comprise entre 1 et 7.
 
 ```sql
@@ -101,7 +101,7 @@ First Day         Today
 5                 2  
 ```  
   
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
  [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql

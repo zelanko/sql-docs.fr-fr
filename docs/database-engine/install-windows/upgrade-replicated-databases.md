@@ -18,10 +18,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794719"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
@@ -129,7 +129,7 @@ Si vous envisagez de mettre à niveau votre instance SQL Server vers SQL 2016 (
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Restauration d'une base de données répliquée à partir d'une version antérieure  
  Pour vous assurer que les paramètres de réplication sont conservés lorsque vous restaurez la sauvegarde d'une base de données répliquée à partir d'une version précédente : effectuez la restauration vers un serveur et une base de données du même nom que le serveur et la base de données à l'origine de la sauvegarde.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md)  
  [FAQ sur l’administration de la réplication](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilité descendante de la réplication](../../relational-databases/replication/replication-backward-compatibility.md)   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: ee8d2e4c16987f5cc012f734cdf649cde7f4ebb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288583"
 ---
 # <a name="edit-type-mapping-oracletosql"></a>Modifier le mappage de type (OracleToSQL)
@@ -35,10 +35,10 @@ Sélectionnez le type de données source à mapper à un [!INCLUDE[ssNoVersion](
 Si le type de données est de longueur variable, les champs suivants seront affiche sous **type de Source**:  
   
 **From**  
-Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour spécifier que ce mappage est pour une plage commençant à **nchar(10)**.  
+Spécifiez la longueur minimale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 10 pour spécifier que ce mappage est pour une plage commençant à **nchar(10)** .  
   
 **Pour**  
-Spécifiez la longueur maximale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 20 pour spécifier que ce mappage s’applique à une plage et se termine au **nchar (20)**.  
+Spécifiez la longueur maximale pour ce mappage. Par exemple, pour le **nchar** type de données, vous pouvez entrer 20 pour spécifier que ce mappage s’applique à une plage et se termine au **nchar (20)** .  
   
 **Type de cible**  
 Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données à laquelle le type de données source est mappé. Lorsque SSMA crée la table ou la procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le type de source de données changera à ce type de données.  
@@ -46,5 +46,5 @@ Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type 
 Si le type de données est de longueur variable, le champ suivant apparaît sous **type cible**:  
   
 **Replace with**  
-Spécifier la longueur de la cible pour ce mappage. Par exemple, pour le **nvarchar** type de données, vous pouvez entrer 20 pour spécifier que le type de données source spécifiée doit être mappé à **nvarchar (20)**.  
+Spécifier la longueur de la cible pour ce mappage. Par exemple, pour le **nvarchar** type de données, vous pouvez entrer 20 pour spécifier que le type de données source spécifiée doit être mappé à **nvarchar (20)** .  
   

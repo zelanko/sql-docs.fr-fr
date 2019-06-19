@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939789"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -55,11 +55,11 @@ SET QUOTED_IDENTIFIER { ON | OFF }
 SET QUOTED_IDENTIFIER ON
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Si SET QUOTED_IDENTIFIER a la valeur ON, les identificateurs peuvent être délimités par des guillemets doubles et les valeurs littérales doivent être délimitées par des guillemets simples. Lorsque SET QUOTED_IDENTIFIER a la valeur OFF, les identificateurs ne peuvent pas apparaître entre guillemets et doivent respecter les conventions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Les chaînes littérales peuvent être délimitées par des guillemets simples ou doubles.
 
-Si SET QUOTED_IDENTIFIER a la valeur par défaut ON, toutes les chaînes délimitées par des guillemets doubles sont interprétées comme des identificateurs d'objets. Par conséquent, les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] applicables aux identificateurs. Ils peuvent être des mots clés réservés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les guillemets doubles ne peuvent pas servir à délimiter des expressions littérales ; seuls des guillemets simples peuvent encadrer des chaînes littérales. Si un guillemet simple (**'**) fait partie d’une chaîne littérale, il peut être représenté par deux guillemets simples accolés (**"**). SET QUOTED_IDENTIFIER doit avoir la valeur ON si des mots clés réservés sont utilisés pour des noms d'objets dans la base de données.
+Si SET QUOTED_IDENTIFIER a la valeur par défaut ON, toutes les chaînes délimitées par des guillemets doubles sont interprétées comme des identificateurs d'objets. Par conséquent, les identificateurs entre guillemets n'ont pas à respecter les règles [!INCLUDE[tsql](../../includes/tsql-md.md)] applicables aux identificateurs. Ils peuvent être des mots clés réservés et contenir des caractères généralement interdits dans les identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les guillemets doubles ne peuvent pas servir à délimiter des expressions littérales ; seuls des guillemets simples peuvent encadrer des chaînes littérales. Si un guillemet simple ( **'** ) fait partie d’une chaîne littérale, il peut être représenté par deux guillemets simples accolés ( **"** ). SET QUOTED_IDENTIFIER doit avoir la valeur ON si des mots clés réservés sont utilisés pour des noms d'objets dans la base de données.
 
 Si SET QUOTED_IDENTIFIER a la valeur OFF, les chaînes littérales figurant dans les expressions peuvent être délimitées par des guillemets simples ou doubles. Si une chaîne littérale est délimitée par des guillemets doubles, des apostrophes (guillemets simples) peuvent y être imbriquées.
 
@@ -89,7 +89,7 @@ Le code SQL statique d’une procédure stockée est analysée à l’aide de l�
 
 Pour un lot imbriqué à l’aide de sp_executesql ou exec(), l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la session. Si le lot imbriqué se trouve à l’intérieur d’une procédure stockée, l’analyse commence en utilisant l’option QUOTED_IDENTIFIER de la procédure stockée. Lors de l’analyse du lot imbriqué, toute occurrence de SET QUOTED_IDENTIFIER modifie le comportement de l’analyse à partir de ce point, mais le paramètre QUOTED_IDENTIFIER de la session n’est pas mis à jour.
 
-L’utilisation de crochets, **[** et **]**, pour délimiter des identificateurs n’est pas affectée par le paramètre QUOTED_IDENTIFIER.
+L’utilisation de crochets, **[** et **]** , pour délimiter des identificateurs n’est pas affectée par le paramètre QUOTED_IDENTIFIER.
 
 Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.
 
@@ -100,7 +100,7 @@ SELECT @QUOTED_IDENTIFIER AS QUOTED_IDENTIFIER;
 
 ```
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l'appartenance au rôle public.
 
@@ -137,7 +137,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 ```
 
-### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>b. Utilisation de QUOTED IDENTIFIER avec des guillemets simples et doubles
+### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>B. Utilisation de QUOTED IDENTIFIER avec des guillemets simples et doubles
 
  L'exemple suivant montre comment utiliser les guillemets simples et doubles dans des chaînes, lorsque `SET QUOTED_IDENTIFIER` a la valeur `ON` et `OFF`.
 
@@ -197,7 +197,7 @@ GO
  7           Text with a single ' quote
  ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [CREATE DEFAULT](../../t-sql/statements/create-default-transact-sql.md)

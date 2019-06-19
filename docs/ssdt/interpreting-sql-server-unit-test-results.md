@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1c68ace0ccbd49b63404aaf52419a06dda297f8d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088712"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>Interprétation des résultats des tests unitaires SQL Server
@@ -35,6 +35,6 @@ Si votre équipe utilise un projet d'équipe Visual Studio Team Foundation Serve
   
 Pour plus d’informations sur les méthodes pour enregistrer les résultats des tests, les réutiliser et les partager avec votre équipe, consultez [Procédure : Enregistrer et ouvrir des résultats des tests dans Visual Studio 2010](https://msdn.microsoft.com/library/ms404662(VS.100).aspx) ou [Procédure : Enregistrer et ouvrir des résultats des tests dans Visual Studio 2012](https://msdn.microsoft.com/library/ms404662.aspx).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
   

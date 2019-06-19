@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727941"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
@@ -81,7 +81,7 @@ ms.locfileid: "65727941"
  Affiche le nom de la table sélectionnée. Cette option est en lecture seule.  
   
 #### <a name="keycolumns-options"></a>Options KeyColumns  
- Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)**.  
+ Les options suivantes sont proposées pour chaque colonne sélectionnée à des fins de profilage dans **KeyColumns** ou pour l’option **(\*)** .  
   
  Pour plus d'informations, consultez la section « Fonctionnement de la sélection des colonnes pour la propriété KeyColumns » plus haut dans cette rubrique.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "65727941"
  **MaxNumberOfViolations**  
  Spécifiez le nombre maximal de violations de clé candidate à signaler dans la sortie. La valeur par défaut de cette propriété est 100. Cette option est désactivée quand **Exact** est sélectionné en tant que valeur **KeyStrengthThresholdSetting**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulaire de profil rapide de table simple &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718276"
 ---
 # <a name="troubleshoot-scale-out"></a>Résoudre les problèmes de Scale Out
@@ -66,7 +66,7 @@ Vérifiez les messages d’erreur dans le journal du service Scale Out Worker so
 
 ### <a name="symptoms"></a>Symptômes
 
-*"System.ServiceModel.EndpointNotFoundException: Aucun point de terminaison à l’écoute sur https://*[NomMachine]:[Port]*/ClusterManagement/ pouvant accepter le message. »*
+*"System.ServiceModel.EndpointNotFoundException: Aucun point de terminaison à l’écoute sur https://* [NomMachine]:[Port] */ClusterManagement/ pouvant accepter le message. »*
 
 ### <a name="solution"></a>Solution
 
@@ -177,7 +177,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>Impossible d’ouvrir le magasin de certificats
 
 ### <a name="symptoms"></a>Symptômes
-La validation échoue au moment de la connexion de Scale Out Worker à Scale Out Master dans Scale Out Manager avec le message d’erreur *« Impossible d’ouvrir le magasin de certificats sur l’ordinateur »*.
+La validation échoue au moment de la connexion de Scale Out Worker à Scale Out Master dans Scale Out Manager avec le message d’erreur *« Impossible d’ouvrir le magasin de certificats sur l’ordinateur »* .
 
 ### <a name="solution"></a>Solution
 
@@ -214,7 +214,7 @@ Les messages d’erreur dans le rapport d’exécution des packages ne sont pas 
 ### <a name="solution"></a>Solution
 Des journaux d’exécution supplémentaires sont disponibles sous `TasksRootFolder` configuré dans `WorkerSettings.config`. Par défaut, ce dossier est `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. *[compte]* fait référence au compte exécutant le service Scale Out Worker, avec la valeur par défaut `SSISScaleOutWorker140`.
 
-Pour localiser le journal de l’exécution des packages avec *[ID_exécution]*, exécutez la commande Transact-SQL suivante pour obtenir *[ID_tâche]*. Ensuite, recherchez le nom de sous-dossier contenant *[ID_tâche]* sous `TasksRootFolder`.
+Pour localiser le journal de l’exécution des packages avec *[ID_exécution]* , exécutez la commande Transact-SQL suivante pour obtenir *[ID_tâche]* . Ensuite, recherchez le nom de sous-dossier contenant *[ID_tâche]* sous `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

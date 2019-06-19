@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6ddb6a3b343e89f5f844e54788ce88658a1a76e6
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820743"
 ---
 # <a name="search-text-with-regular-expressions"></a>Rechercher du texte avec des expressions régulières
@@ -36,7 +36,7 @@ Les expressions régulières sont une notation souple et concise pour rechercher
 2.  Le bouton triangulaire **Générateur d'expressions** situé en regard du champ **Rechercher** devient alors disponible. Cliquez sur ce bouton pour afficher la liste des expressions régulières les plus couramment utilisées. Lorsque vous choisissez un élément dans le Générateur d'expressions, il est inséré dans la chaîne **Rechercher** .  
   
 > [!NOTE]  
-> Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ».  En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).   
+> Il existe des différences de syntaxe entre les expressions régulières qui peuvent être utilisées dans les chaînes **Rechercher** et celles qui sont valides dans la programmation avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Par exemple, dans **Rechercher et remplacer**, les accolades {} sont utilisées pour les expressions avec balises. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « zo » suivies de la balise 1, comme dans « Alonzo1 » et « Gonzo1 ». En revanche, dans le .NET Framework, les accolades {} sont utilisées pour les quantificateurs. Ainsi, l'expression « zo{1} » correspond à toutes les occurrences de « z » suivies de la lettre « o », comme dans « zone » (et non « zoo »).  
   
  Le tableau ci-dessous décrit les expressions régulières disponibles dans le **Générateur d'expressions**.  
   
@@ -133,6 +133,6 @@ Les expressions régulières sont une notation souple et concise pour rechercher
 |Katakana|:Ka|Représente les caractères Katakana.|  
 |Idéographique/Han/Kanji|:Id|Représente des caractères idéographiques tels Han et Kanji.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
  [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)  

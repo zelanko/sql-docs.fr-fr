@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d8f2ae773e431e52519409313601175e6f005a56
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944758"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
@@ -46,7 +46,7 @@ ORIGINAL_LOGIN( )
 ## <a name="return-types"></a>Types de retour  
  **sysname**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction peut s'avérer utile pour auditer l'identité du contexte de connexion d'origine. Alors que les fonctions telles que [SESSION_USER](../../t-sql/functions/session-user-transact-sql.md) et [CURRENT_USER](../../t-sql/functions/current-user-transact-sql.md) renvoient le contexte d’exécution actuel, ORIGINAL_LOGIN renvoie l’identité de la première connexion à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la session.  
  
   
@@ -81,7 +81,7 @@ DROP USER user1;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   

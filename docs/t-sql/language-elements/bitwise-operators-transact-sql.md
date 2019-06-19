@@ -19,10 +19,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c16b0ba6f774321346c95a69163fa110ffb196ad
-ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "67046684"
 ---
 # <a name="bitwise-operators-transact-sql"></a>Opérateurs au niveau du bit (Transact-SQL)
@@ -37,7 +37,7 @@ L’entier 75 se convertit en binaire 0100 1011.
 |operator|mathématiques au niveau du bit|
 |---- |---- |
 |AND <br> Si les bits, quel que soit leur emplacement, égalent tous les deux 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
-|- ou - <br> Si l’un ou l’autre des bits, quel que soit son emplacement, égale 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|\- ou - <br> Si l’un ou l’autre des bits, quel que soit son emplacement, égale 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Inverse la valeur de bit à chaque emplacement de bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
 Consultez les rubriques suivantes :   
@@ -61,7 +61,7 @@ Consultez les rubriques suivantes :
 |[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|**int**, **smallint**, **tinyint**, **binary** ou **varbinary**|  
 |[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|**int**, **smallint** ou **tinyint**|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)

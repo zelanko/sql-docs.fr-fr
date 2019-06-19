@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078020"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>Générateur MDX (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Générateur MDX** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour créer une expression MDX (Multidimensional Expressions). Vous pouvez afficher le **Générateur MDX** boîte de dialogue en cliquant sur le **modifier MDX** bouton de sélection (**...** ) pour le **autoriser la lecture du contenu du cube** option, le **autoriser la lecture du contenu de la cellule dépend de la sécurité des cellules** option, ou le **autoriser la lecture et écriture du contenu du cube** option sur le **données des cellules** page de **Concepteur de rôle**.  
+  Utilisez la boîte de dialogue **Générateur MDX** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour créer une expression MDX (Multidimensional Expressions). Vous pouvez afficher le **Générateur MDX** boîte de dialogue en cliquant sur le **modifier MDX** bouton de sélection ( **...** ) pour le **autoriser la lecture du contenu du cube** option, le **autoriser la lecture du contenu de la cellule dépend de la sécurité des cellules** option, ou le **autoriser la lecture et écriture du contenu du cube** option sur le **données des cellules** page de **Concepteur de rôle**.  
   
 ## <a name="options"></a>Options  
   

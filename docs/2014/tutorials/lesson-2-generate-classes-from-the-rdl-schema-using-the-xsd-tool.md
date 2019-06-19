@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62653753"
 ---
 # <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : Générer des classes à partir du schéma RDL à l’aide de l’outil xsd
@@ -32,7 +32,7 @@ ms.locfileid: "62653753"
   
 3.  Accédez à l'emplacement où vous avez créé votre projet [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] et enregistrez le schéma avec le nom de fichier ReportDefinition.xsd.  
   
-4.  Une fois que le fichier a été enregistré, ouvrez une instance de la [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] invite de commandes. Pour ouvrir une instance de l’invite de commandes, cliquez sur le menu Démarrer, pointez sur **tous les programmes**, pointez sur **Microsoft Visual Studio 2010**, pointez sur **Visual Studio Tools** et cliquez sur **Invite de commandes de visual Studio (2010)**.  
+4.  Une fois que le fichier a été enregistré, ouvrez une instance de la [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] invite de commandes. Pour ouvrir une instance de l’invite de commandes, cliquez sur le menu Démarrer, pointez sur **tous les programmes**, pointez sur **Microsoft Visual Studio 2010**, pointez sur **Visual Studio Tools** et cliquez sur **Invite de commandes de visual Studio (2010)** .  
   
 5.  Remplacez le chemin d'accès en cours par l'emplacement où vous avez enregistré le fichier ReportDefinition.xsd :  
   

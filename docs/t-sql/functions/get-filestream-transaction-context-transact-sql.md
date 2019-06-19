@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e0b16a4ff429b6ee029a6b03a0e9bd26d72d375d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946716"
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
@@ -45,7 +45,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Valeur retournée  
  NULL est retourné si la transaction n'a pas été démarrée ou a été annulée ou validée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La transaction doit être explicite. Utilisez BEGIN TRANSACTION suivi de COMMIT TRANSACTION ou ROLLBACK TRANSACTION.  
   
  Lorsque vous appelez GET_FILESTREAM_TRANSACTION_CONTEXT, un accès de système de fichiers à la transaction est accordé à l'appelant pour la durée de la transaction. Pour accorder à un autre utilisateur l'accès à la transaction par le biais du système de fichiers, utilisez EXECUTE AS pour exécuter GET_FILESTREAM_TRANSACTION_CONTEXT en tant qu'autre utilisateur.  
@@ -276,7 +276,7 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   

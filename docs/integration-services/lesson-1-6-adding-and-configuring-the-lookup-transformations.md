@@ -11,10 +11,10 @@ ms.author: janinez
 manager: craigg
 ms.reviewer: ''
 ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723181"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Leçon 1-6 : Ajouter et configurer les transformations de recherche
@@ -97,7 +97,7 @@ Dans les deux cas, la transformation de recherche utilise le gestionnaire de con
   
     1.  Dans la boîte de dialogue **Gestionnaire de connexions OLE DB**, vérifiez que **localhost.AdventureWorksDW2012** est affiché.  
   
-    2.  Dans la zone **Utiliser une table ou une vue**, entrez ou sélectionnez **[dbo].[DimDate]**.  
+    2.  Dans la zone **Utiliser une table ou une vue**, entrez ou sélectionnez **[dbo].[DimDate]** .  
   
 8.  Dans la page **Colonnes** , effectuez les sélections suivantes :  
   

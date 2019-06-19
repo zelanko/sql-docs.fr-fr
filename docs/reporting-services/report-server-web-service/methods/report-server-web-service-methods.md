@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c05f1c21cac109938dcb740e6d0d657324ffe543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284659"
 ---
 # <a name="report-server-web-service-methods"></a>Méthodes des services Web Report Server
   Les services Web Report Server comportent plusieurs catégories de méthodes basées sur les fonctionnalités des composants. Ces méthodes sont fournies à l'aide de plusieurs points de terminaison de service Web (trois permettant de gérer les rapports, un autre de les exécuter), lesquels sont exposés comme membres des classes <xref:ReportService2010.ReportingService2010> et <xref:ReportExecution2005.ReportExecutionService>. Ces classes peuvent être générées à l’aide d’un outil de classe proxy tel que wsdl.exe. Ce dernier est d’ailleurs inclus dans le SDK du [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Pour plus d’informations sur les services web Report Server et le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], consultez [Génération d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "47796017"
 |[Méthodes d'abonnement et de remise](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer des abonnements et générer des remises de rapport, puis gérer ces événements.|  
 |[Méthodes relatives aux rapports liés](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Décrit les méthodes que vous pouvez utiliser pour créer et gérer des rapports liés.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Accès à l’API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

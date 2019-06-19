@@ -23,10 +23,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: dfb60ac381570489fe5fdb5d8ac0b6ec75e15cd0
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096808"
 ---
 # <a name="include-or-exclude-rows-visual-database-tools"></a>Inclure ou exclure des lignes (Visual Database Tools)
@@ -105,7 +105,7 @@ Voici quelques exemples des requêtes utilisant plusieurs opérateurs et critèr
     WHERE sales_price > (prod_cost * 2)  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
 [Requête avec des paramètres &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

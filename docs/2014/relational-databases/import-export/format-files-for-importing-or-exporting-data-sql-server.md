@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011953"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Fichiers de format pour l'importation ou l'exportation de données (SQL Server)
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   Les caractères de fin ou les longueurs de préfixes sont différents dans les colonnes du fichier de données.  
   
 > [!NOTE]  
->  S’il n’existe pas de fichier de format et si une commande **bcp** définit un commutateur de format de données (**-n**, **-c**, **-w**ou **-N**) ou si une opération BULK INSERT définit l’option DATAFILETYPE, le format de données défini est utilisé comme méthode par défaut pour interpréter les champs du fichier de données.  
+>  S’il n’existe pas de fichier de format et si une commande **bcp** définit un commutateur de format de données ( **-n**, **-c**, **-w**ou **-N**) ou si une opération BULK INSERT définit l’option DATAFILETYPE, le format de données défini est utilisé comme méthode par défaut pour interpréter les champs du fichier de données.  
   
  
   

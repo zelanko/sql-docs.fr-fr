@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e107326e5269cfbd0f9e229bb418b83bc9fbfdb8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725776"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guide de référence des erreurs et des événements (Integration Services)
@@ -81,7 +81,7 @@ ms.locfileid: "65725776"
 |SQLISService_273|Indique que le fichier de configuration n'a pas pu être lu ou n'est pas valide.|  
 |SQLISService_274|Indique que l'entrée de Registre qui contient l'emplacement du fichier de configuration n'existe pas ou est vide.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

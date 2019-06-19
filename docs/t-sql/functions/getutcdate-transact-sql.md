@@ -37,10 +37,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 26fe81f211da49cb4fd14def4603ec3ab5557eb7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943067"
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
@@ -64,7 +64,7 @@ GETUTCDATE()
 ## <a name="return-types"></a>Types de retour  
  **datetime**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire référence à GETUTCDATE partout où elles peuvent faire référence à une expression **datetime**.  
   
  GETUTCDATE est une fonction non-déterministe. Les vues et expressions qui référencent cette fonction dans une colonne ne peuvent pas être indexées.  
@@ -130,7 +130,7 @@ GETUTCDATE()             01:25:01.6930000
 */  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
