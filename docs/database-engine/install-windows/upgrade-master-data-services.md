@@ -12,10 +12,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: dc39108ea476947e95f237bdccf1fb64a70bd36a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794727"
 ---
 # <a name="upgrade-master-data-services"></a>Mettre à niveau Master Data Services
@@ -156,7 +156,7 @@ ms.locfileid: "66794727"
   
  Ce problème peut également se produire si vous n'avez pas arrêté puis redémarré le **pool d'applications MDS** dans IIS lors de la mise à niveau du schéma de la base de données MDS. Redémarrez le **pool d'applications MDS** pour corriger le problème.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

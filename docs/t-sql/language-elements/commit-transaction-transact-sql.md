@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 392f5138e580f35f030ce51ce5eed1150f7d0be7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982757"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
@@ -77,7 +77,7 @@ Nom d'une variable définie par l'utilisateur et contenant un nom de transaction
 
  Option qui demande que cette transaction soit validée avec une durabilité différée. La demande est ignorée si la base de données a été modifiée avec `DELAYED_DURABILITY = DISABLED` ou `DELAYED_DURABILITY = FORCED`. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il incombe au programmeur [!INCLUDE[tsql](../../includes/tsql-md.md)] de n’émettre une instruction COMMIT TRANSACTION qu’au moment où toutes les données référencées par la transaction sont logiquement correctes.  
   
  Si la transaction validée est une transaction [!INCLUDE[tsql](../../includes/tsql-md.md)] distribuée, COMMIT TRANSACTION déclenche MS DTC pour utiliser un protocole de validation en deux phases qui valide tous les serveurs concernés par la transaction. Lorsqu’une transaction locale affecte plusieurs bases de données sur une même instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)], celle-ci utilise une validation interne en deux phases pour toutes les bases de données concernées par la transaction.  
@@ -164,7 +164,7 @@ PRINT N'Transaction count after COMMIT OuterTran = '
     + CAST(@@TRANCOUNT AS nvarchar(10));  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT WORK &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

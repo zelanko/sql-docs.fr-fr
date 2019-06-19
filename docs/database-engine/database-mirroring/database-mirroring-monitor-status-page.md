@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 9b4ec2994fe8fdc0e444087dadcf7ab57c01c34e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795538"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Moniteur de mise en miroir de bases de données (Page État)
@@ -47,7 +47,7 @@ ms.locfileid: "66795538"
 |**Historique**|Cliquez sur cette colonne pour afficher l'historique de mise en miroir sur l'instance de serveur. La boîte de dialogue **Historique de la mise en miroir de bases de données** s'ouvre, ce qui affiche l'historique d'état de la mise en miroir ainsi que des statistiques pour une base de données mise en miroir sur une instance de serveur donnée.<br /><br /> Le bouton **Historique** est grisé si le moniteur n'est pas connecté à l'instance de serveur.|  
   
  **Journal principal (** *\<heure>* **)**  
- État du journal sur l’instance de serveur principal à l’heure locale de l’instance de serveur, indiquée par *\<heure>*. Les paramètres suivants s'affichent :  
+ État du journal sur l’instance de serveur principal à l’heure locale de l’instance de serveur, indiquée par *\<heure>* . Les paramètres suivants s'affichent :  
   
  **Journal non envoyé**  
  Quantité de journal en attente dans la file d'attente d'envoi, en Ko.  
@@ -65,7 +65,7 @@ ms.locfileid: "66795538"
  Débit auquel les transactions entrantes sont consignées dans le journal du principal en Kilo-octets par seconde. Pour déterminer si la mise en miroir prend du retard, reste à jour ou rattrape le retard, comparez cette valeur à la valeur **Durée (estimée) d'envoi du journal** .  
   
  **Journal miroir (** *\<heure>* **)**  
- État du journal sur l’instance de serveur miroir à l’heure locale de l’instance de serveur, indiquée par *\<heure>*. Les paramètres suivants s'affichent :  
+ État du journal sur l’instance de serveur miroir à l’heure locale de l’instance de serveur, indiquée par *\<heure>* . Les paramètres suivants s'affichent :  
   
  **Journal non restauré**  
  Quantité de journal en attente dans la file d'attente de restauration par progression, en Ko.  
@@ -94,12 +94,12 @@ ms.locfileid: "66795538"
   
 -   **Haute sécurité avec basculement automatique (synchrone)**  
   
-## <a name="remarks"></a>Notes   
- Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Ils dépendent du **Travail du moniteur de mise en miroir de bases de données**pour la mise à jour de la table d’état à intervalles réguliers. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)**.  
+## <a name="remarks"></a>Notes  
+ Les membres du rôle de base de données fixe **dbm_monitor** peuvent consulter l’état de la mise en miroir existant à l’aide du moniteur de mise en miroir de bases de données ou de la procédure stockée **sp_dbmmonitorresults** . Cependant, ces utilisateurs ne peuvent pas mettre à jour la table d'état. Ils dépendent du **Travail du moniteur de mise en miroir de bases de données**pour la mise à jour de la table d’état à intervalles réguliers. Pour connaître l’ancienneté de l’état affiché, un utilisateur peut observer les heures sur les étiquettes **Journal principal (***\<heure>***)** et **Journal miroir (***\<heure>***)** .  
   
  Si ce travail n'existe pas ou que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est arrêté, l'état devient rapidement obsolète et risque de ne plus refléter la configuration de la session de mise en miroir. Par exemple, après un basculement, les partenaires peuvent sembler partager le même rôle (principal ou miroir), ou le serveur principal actuel peut être affiché comme serveur miroir, alors que le serveur miroir actuel est affiché comme principal.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Démarrer l’Assistant Configuration de la sécurité de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

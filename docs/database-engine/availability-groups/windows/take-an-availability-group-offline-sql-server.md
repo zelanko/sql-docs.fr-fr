@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 7a53e16032d2e90b4072d0f19939e4d9be0e7a78
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803510"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
@@ -51,7 +51,7 @@ ms.locfileid: "66803510"
   
      où *nom_groupe* correspond au nom du groupe de disponibilité.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  L'exemple suivant place le groupe de disponibilité `AccountsAG` hors connexion.  
   
 ```  
@@ -76,7 +76,7 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

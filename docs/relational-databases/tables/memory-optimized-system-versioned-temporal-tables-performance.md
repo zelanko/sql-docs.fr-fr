@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dbbeb9f11b735f461f5901c8cc03d6fff313bf31
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62693386"
 ---
 # <a name="memory-optimized-system-versioned-temporal-tables-performance"></a>Performances des tables temporelles optimisées en mémoire avec gestion de version par le système
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52397232"
   
 -   Envisagez d’utiliser l’index columnstore en cluster comme option de stockage pour la table historique sur disque, notamment si vous prévoyez d’exécuter des requêtes d’analyse sur des données historiques qui utilisent des fonctions d’agrégation ou de fenêtrage. Dans ce cas, l’index columnstore en cluster sera le meilleur choix pour la table historique, car il assure une bonne compression des données et facilite les insertions d’une manière compatible avec le mode de génération des données historiques.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [Création d’une table temporelle de contrôle de version du système à mémoire optimisée](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [Utilisation des tables temporelles optimisées en mémoire avec gestion de version par le système](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07c215c0ae360a5b386909cd64e9f3dfb2893bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809567"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859136"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47809567"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|OS_ERROR|  
-|Texte du message|%ls : erreur du système d'exploitation %ls.|  
+|Texte du message|%ls : Erreur système %ls.|  
   
 ## <a name="explanation"></a>Explication  
 Une erreur générique du système d'exploitation s'est produite.  L'état résultant est indéfini.  

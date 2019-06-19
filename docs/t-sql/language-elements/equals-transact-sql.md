@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f60995e7741dd0ed7f420a07c7cd2aa2199ed3c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982376"
 ---
 # <a name="-equals-transact-sql"></a>= (Equals) (Transact-SQL)
@@ -49,7 +49,7 @@ expression = expression
 ## <a name="result-types"></a>Types des résultats  
  Booléen  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand vous effectuez une comparaison à l’aide d’une expression NULL, le résultat dépend du paramètre `ANSI_NULLS` :  
   
 -   Si `ANSI_NULLS` a la valeur ON, le résultat de toute comparaison avec la valeur NULL est UNKNOWN, conformément à la convention ANSI selon laquelle NULL est une valeur inconnue qui ne peut être comparée à aucune autre valeur, notamment d’autres valeurs NULL.  
@@ -221,7 +221,7 @@ NULL
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  

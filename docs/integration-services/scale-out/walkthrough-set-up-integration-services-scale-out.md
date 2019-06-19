@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: e566c31f03284660456f7a96f2d19adc32bf4404
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012934"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
@@ -183,7 +183,7 @@ Pour activer Scale Out Worker avec une procédure stockée, exécutez la procéd
 
 Obtenez la valeur de **WorkerAgentId** à partir de la vue `[catalog].[worker_agents]` dans SSISDB, une fois que Scale Out Worker est inscrit auprès de Scale Out Master. L’inscription prend plusieurs minutes une fois que les services Scale Out Master et Worker sont démarrés.
 
-#### <a name="example"></a> Exemple
+#### <a name="example"></a>Exemple
 L’exemple suivant active Scale Out Worker sur `computerA`.
 
 ```sql

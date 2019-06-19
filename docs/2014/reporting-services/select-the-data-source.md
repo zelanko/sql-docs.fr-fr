@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101438"
 ---
 # <a name="select-the-data-source"></a>Sélectionner la source de données
@@ -40,7 +40,7 @@ ms.locfileid: "66101438"
   
  Cliquez sur **Modifier** pour spécifier le serveur de source de données dans la boîte de dialogue **Propriétés de connexion** . Vous pouvez spécifier une source de données locale ou distante.  
   
- Cliquez sur **Informations d'identification** pour fournir les informations d'identification à la base de données. Au minimum, les informations d'identification spécifiées doivent être suffisantes pour que vous puissiez vous connecter à la source de données à des fins de génération de rapports. Lorsque le rapport est déployé sur un serveur de rapports, les informations d'identification à la base de données doivent tenir compte de tous les utilisateurs du rapport. Par exemple, si vous souhaitez que tous les utilisateurs du rapport se connectent à la source de données en utilisant leurs informations d’identification, choisissez **Utiliser l’authentification Windows (sécurité intégrée)**. Les informations d'identification que vous spécifiez doivent être valides pour la source de données ; par conséquent, si vous choisissez l'authentification Windows, assurez-vous que la source de données accepte les connexions à partir des comptes de tous les utilisateurs qui exécuteront le rapport. Les informations d'identification à la base de données peuvent être gérées indépendamment du rapport. Pour plus d’informations, consultez [Gérer les sources de données de rapports](report-data/manage-report-data-sources.md).  
+ Cliquez sur **Informations d'identification** pour fournir les informations d'identification à la base de données. Au minimum, les informations d'identification spécifiées doivent être suffisantes pour que vous puissiez vous connecter à la source de données à des fins de génération de rapports. Lorsque le rapport est déployé sur un serveur de rapports, les informations d'identification à la base de données doivent tenir compte de tous les utilisateurs du rapport. Par exemple, si vous souhaitez que tous les utilisateurs du rapport se connectent à la source de données en utilisant leurs informations d’identification, choisissez **Utiliser l’authentification Windows (sécurité intégrée)** . Les informations d'identification que vous spécifiez doivent être valides pour la source de données ; par conséquent, si vous choisissez l'authentification Windows, assurez-vous que la source de données accepte les connexions à partir des comptes de tous les utilisateurs qui exécuteront le rapport. Les informations d'identification à la base de données peuvent être gérées indépendamment du rapport. Pour plus d’informations, consultez [Gérer les sources de données de rapports](report-data/manage-report-data-sources.md).  
   
  **Transformer en une source de données partagée**  
  Sélectionnez cette option pour stocker la source de données dans le projet en tant que source de données partagée et non dans le rapport. De cette façon, vous pouvez l'utiliser comme source de données pour d'autres rapports dans le projet.  

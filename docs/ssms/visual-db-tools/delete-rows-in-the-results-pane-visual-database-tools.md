@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 63f480358f0f6fffea0e63c4c2ff06a3993eee73
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105793"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Supprimer des lignes dans le volet Résultats (Visual Database Tools)
@@ -44,7 +44,7 @@ Supprimez des lignes dans le volet Résultats si vous souhaitez supprimer des en
 > [!NOTE]  
 > Si certaines des lignes sélectionnées ne peuvent pas être supprimées de la base de données, aucune d'elles n'est supprimée et un message s'affiche pour vous indiquer les lignes qui ne peuvent pas être supprimées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des requêtes Delete &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

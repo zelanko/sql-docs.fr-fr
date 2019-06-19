@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015035"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Exécuter des packages dans Integration Services (SSIS) Scale Out
@@ -66,7 +66,7 @@ Après avoir déployé les packages sur le serveur Integration Services, vous po
 
 1.  Créez des exécutions.
 
-    Appelez `[catalog].[create_execution]` pour chaque package. Affectez la valeur `True` au paramètre **@runinscaleout**. Si les ordinateurs Scale Out Worker ne sont pas tous autorisés à exécuter le package, affectez la valeur `False` au paramètre **@useanyworker**. Pour plus d’informations sur cette procédure stockée et sur le paramètre **@useanyworker**, consultez [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Appelez `[catalog].[create_execution]` pour chaque package. Affectez la valeur `True` au paramètre **@runinscaleout** . Si les ordinateurs Scale Out Worker ne sont pas tous autorisés à exécuter le package, affectez la valeur `False` au paramètre **@useanyworker** . Pour plus d’informations sur cette procédure stockée et sur le paramètre **@useanyworker** , consultez [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Définissez les paramètres d’exécution.
 
@@ -80,7 +80,7 @@ Après avoir déployé les packages sur le serveur Integration Services, vous po
 
     Appelez `[catalog].[start_execution]`. Définissez le paramètre **@retry_count** pour indiquer le nombre de nouvelles tentatives d’exécution du package en cas d’échec.
     
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 L’exemple suivant exécute deux packages, `package1.dtsx` et `package2.dtsx`, dans Scale Out avec un Scale Out Worker.  
 
 ```sql

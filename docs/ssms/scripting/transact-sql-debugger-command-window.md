@@ -14,10 +14,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f9ab28bdec31d3be6deabbd2f9188e7e3684139b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821817"
 ---
 # <a name="transact-sql-debugger---command-window"></a>Débogueur Transact-SQL - Fenêtre Commande
@@ -31,7 +31,7 @@ ms.locfileid: "65821817"
   
  **Pour imprimer la valeur d'une variable**  
   
--   Dans la **fenêtre Commande**, tapez **Debug.Print \<nom_variable>**, puis appuyez sur Entrée.  
+-   Dans la **fenêtre Commande**, tapez **Debug.Print \<nom_variable>** , puis appuyez sur Entrée.  
   
  **Pour afficher des informations sur le thread actuel**  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65821817"
   
  **Pour ajouter une variable à la fenêtre Espion express**  
   
--   Dans la **fenêtre Commande**, tapez **Debug.QuickWatch \<nom_variable>**, puis appuyez sur Entrée.  
+-   Dans la **fenêtre Commande**, tapez **Debug.QuickWatch \<nom_variable>** , puis appuyez sur Entrée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  

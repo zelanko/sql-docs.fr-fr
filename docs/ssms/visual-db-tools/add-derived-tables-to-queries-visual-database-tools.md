@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4911b633fb6dcb2b40dc6d22828c0af53b0d2bda
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088768"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Ajouter des tables dérivées à des requêtes (Visual Database Tools)
@@ -35,7 +35,7 @@ Les tables dérivées sont des jeux de résultats utilisés comme sources de tab
   
     Une nouvelle table intitulée derivedtbl_*N* est ajoutée, et l’instruction SELECT de la table dérivée est ajoutée à la clause FROM de la requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Créer des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Ouvrir des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  

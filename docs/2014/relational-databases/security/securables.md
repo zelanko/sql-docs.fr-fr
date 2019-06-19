@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745718"
 ---
 # <a name="securables"></a>Éléments sécurisables
@@ -79,7 +79,7 @@ ms.locfileid: "62745718"
 ## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
--   Type  
+-   type  
   
 -   Collection de schémas XML  
   

@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c25a0cf97c556baad24f475cdf71698e03fa6a25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948046"
 ---
 # <a name="countbig--sql"></a>COUNT_BIG (-SQL)
@@ -67,7 +67,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 ## <a name="return-types"></a>Types de retour
 **bigint**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 COUNT_BIG(\*) renvoie le nombre d'éléments figurant dans un groupe, y compris les valeurs NULL et les doublons.
   
 COUNT_BIG(ALL *expression*) évalue l’argument *expression* pour chaque ligne d’un groupe et retourne le nombre de valeurs non-NULL.

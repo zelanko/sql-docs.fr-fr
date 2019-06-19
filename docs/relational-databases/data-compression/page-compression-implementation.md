@@ -16,11 +16,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665639"
 ---
 # <a name="page-compression-implementation"></a>Implémentation de la compression de page
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "52516760"
   
  Lorsqu'une table existante contenant des données est convertie en compression de page, chaque page est reconstruite et évaluée. La reconstruction de toutes les pages provoque la reconstruction de la table, de l'index ou de la partition.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Compression de données](../../relational-databases/data-compression/data-compression.md)   
  [Implémentation de la compression de ligne](../../relational-databases/data-compression/row-compression-implementation.md)  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f6d9ebe43d45ce16ca4889d08656029cad22dcf
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404031"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Leçon 6-2 : définition de jeux nommés
@@ -33,7 +33,7 @@ Dans les tâches de cette rubrique, vous allez définir deux jeux nommés : un j
   
     Lorsque vous définissez un nouveau calcul sous l'onglet **Calculs** , n'oubliez pas que les calculs sont résolus dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . La partie de ce volet qui est active lorsque vous créez un nouveau calcul détermine l'ordre d'exécution du calcul ; un nouveau calcul est défini immédiatement après le calcul actif.  
   
-3.  Dans la zone **Nom** , changez le nom du nouveau jeu nommé en **[Core Products]**.  
+3.  Dans la zone **Nom** , changez le nom du nouveau jeu nommé en **[Core Products]** .  
   
     Dans le volet **Organisateur de script** , remarquez l'icône unique qui différencie un jeu nommé d'une commande de script ou d'un membre calculé.  
   
@@ -50,9 +50,9 @@ Dans les tâches de cette rubrique, vous allez définir deux jeux nommés : un j
   
 1.  Cliquez avec le bouton droit sur **[Core Products]** dans le volet **Organisateur de script** , puis cliquez sur **Nouveau jeu nommé**.  
   
-2.  Dans la zone **Nom** , changez le nom de ce nouveau jeu nommé en **[Large Resellers]**.  
+2.  Dans la zone **Nom** , changez le nom de ce nouveau jeu nommé en **[Large Resellers]** .  
   
-3.  Dans la zone **Expression** , tapez **Exists()**.  
+3.  Dans la zone **Expression** , tapez **Exists()** .  
   
     Vous allez utiliser la fonction Exists pour retourner le jeu de membres de la hiérarchie d’attribut Reseller Name qui a une intersection avec le jeu de membres de la hiérarchie d’attribut Number of Employees ayant le plus grand nombre d’employés.  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090247"
 ---
 # <a name="how-to-fix-errors"></a>Procédure : Corriger les erreurs
@@ -44,6 +44,6 @@ La volet Liste d'erreurs affiche toutes les erreurs de déploiement ou de build.
   
 7.  Notez que l'avertissement et l'erreur disparaissent de la **Liste d'erreurs** immédiatement après la résolution des problèmes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

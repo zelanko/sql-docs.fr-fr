@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64568272"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
@@ -172,7 +172,7 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
 > En raison d’un éventuel AV aléatoire pendant l’exécution d’une procédure stockée de supervision qui référence [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md), vous devez vérifier que le correctif [KB 4078596](http://support.microsoft.com/help/4078596) est installé dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
@@ -184,7 +184,7 @@ Pour plus d’informations sur la surcharge de performances liée au profilage d
 > [!NOTE]
 > Les événements étendus avec profilage léger utilisent les informations du profilage standard quand l’infrastructure de celui-ci est déjà activée. Par exemple, une session d’événements étendus utilisant `query_post_execution_showplan` est exécutée, et une autre session utilisant `query_post_execution_plan_profile` est démarrée. La deuxième session continuera d’utiliser les informations du profilage standard.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

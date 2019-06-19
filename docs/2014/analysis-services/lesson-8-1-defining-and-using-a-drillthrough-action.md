@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078266"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Définition et utilisation d'une action d'extraction
@@ -106,9 +106,9 @@ ms.locfileid: "66078266"
   
 6.  Modifier le **nom** propriété pour le **Order Date Key** attribut `Order Date` puis, cliquez sur le bouton Parcourir pour le **colonne nom** propriété et dans le **Colonne nom** boîte de dialogue, sélectionnez **Date** comme table source et SimpleDate comme colonne de la source. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Modifier le **nom** propriété pour le **Due Date Key** attribut `Due Date`, puis, en utilisant la même méthode que le **Order Date Key** d’attribut, de modifier le  **Nom de colonne** propriété de cet attribut par **Date.SimpleDate (WChar)**.  
+7.  Modifier le **nom** propriété pour le **Due Date Key** attribut `Due Date`, puis, en utilisant la même méthode que le **Order Date Key** d’attribut, de modifier le  **Nom de colonne** propriété de cet attribut par **Date.SimpleDate (WChar)** .  
   
-8.  Modifier le **nom** propriété pour le **Ship Date Key** attribut `Ship Date`, puis modifiez le **colonne nom** propriété de cet attribut par  **Date.SimpleDate (WChar)**.  
+8.  Modifier le **nom** propriété pour le **Ship Date Key** attribut `Ship Date`, puis modifiez le **colonne nom** propriété de cet attribut par  **Date.SimpleDate (WChar)** .  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

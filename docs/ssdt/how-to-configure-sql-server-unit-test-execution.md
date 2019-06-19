@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090183"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : Configurer l’exécution de test unitaire SQL Server
@@ -50,7 +50,7 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
   
     Cette étape crée la chaîne de connexion `ExecutionContext`, qui permet d'exécuter le script de test dans le test unitaire. Si vous spécifiez également une connexion secondaire, la chaîne de connexion `PrivilegedContext` est également créée. Cette connexion permet de tester les interactions avec la base de données à l'extérieur du script de test dans le test unitaire. Pour plus d’informations, consultez [Vue d’ensemble des chaînes de connexion et des autorisations](../ssdt/overview-of-connection-strings-and-permissions.md).  
   
-3.  Cliquez sur **OK** pour fermer la boîte de dialogue **Configuration de test SQL Server -'« <projectname> »**.  
+3.  Cliquez sur **OK** pour fermer la boîte de dialogue **Configuration de test SQL Server -'« <projectname> »** .  
   
 4.  Régénérez le projet de test pour appliquer les modifications de configuration.  
   
@@ -76,13 +76,13 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
   
     -   Sous **Configuration du déploiement**, cliquez sur la configuration du projet dans lequel vous souhaitez effectuer le déploiement. Les options sont les suivantes : **Débogage**, **Par défaut** ou **Version finale**. Toutefois, si vous créez une configuration pour le test unitaire, cette configuration s'affiche également en tant qu'option.  
   
-5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Configuration de test SQL Server -'« <projectname> »**.  
+5.  Cliquez sur **OK** pour fermer la boîte de dialogue **Configuration de test SQL Server -'« <projectname> »** .  
   
     Au début d'une série de tests, le script Transact\-SQL généré à l'étape 1 s'exécute. Cette action déploie le schéma dans la base de données cible.  
   
 6.  Régénérez le projet de test unitaire pour appliquer les modifications de configuration.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

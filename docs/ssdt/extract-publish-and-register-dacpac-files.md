@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 21b22c1c3f26112cf6232eb314eeb8f8c330ee03
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090132"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extraire, publier et enregistrer des fichiers .dacpac.
@@ -65,6 +65,6 @@ Dans la boîte de dialogue **Enregistrer une application de la couche Données**
 ## <a name="unregister-data-tier-application"></a>Annuler l'inscription de l'application de la couche Données  
 L'annulation de l'enregistrement vous permet de supprimer les métadonnées d'une application de la couche Données enregistrée de l'instance. Cette opération ne supprime pas la base de données enregistrée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Développement de base de données connectée](../ssdt/connected-database-development.md)  
   

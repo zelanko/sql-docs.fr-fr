@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098844"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutoriel : Introduction aux expressions
@@ -123,7 +123,7 @@ ms.locfileid: "66098844"
   
      La requête spécifie les noms de colonne, notamment la date de naissance, le prénom, le nom, l'État ou la province, l'identifiant de pays/région, le sexe et les achats de l'année en cours jusqu'à ce jour.  
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et inclut les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ). Le jeu de résultats affiche 20 lignes de données et inclut les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
   
 11. Cliquer sur **Suivant**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66098844"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. Afficher le prénom, les initiales et le nom  
- Utilisez la fonction **Left** et l’opérateur **Concaténer** (**&**) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression**.  
+ Utilisez la fonction **Left** et l’opérateur **Concaténer** ( **&** ) dans une expression dont la valeur est un nom qui comprend une initiale et un nom. Vous pouvez générer l’expression pas à pas ou avancer dans la procédure et copier/coller l’expression à partir du didacticiel dans la boîte de dialogue **Expression**.  
   
 #### <a name="to-add-the-name-column"></a>Pour ajouter la colonne Name  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66098844"
   
      La fonction **Left** est ajoutée à l’expression.  
   
-6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 7.  Dans la liste **Valeurs** , double-cliquez sur **FirstName**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "66098844"
   
 4.  Dans la liste **Élément** , double-cliquez sur **Switch**.  
   
-5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+5.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 6.  Dans la liste **Valeurs** , double-cliquez sur **Gender**.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098844"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Cliquez sur **Exécuter** (**!**) pour exécuter la requête.  
+9. Cliquez sur **Exécuter** ( **!** ) pour exécuter la requête.  
   
      Les résultats de la requête sont les identifiants et les noms des pays/régions.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098844"
   
 5.  Dans la liste **Élément**, double-cliquez sur **Lookup**.  
   
-6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+6.  Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 7.  Dans le **valeurs** , double-cliquez sur `CountryRegionID`.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "66098844"
   
 8.  Tapez **"d",**  
   
-9. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+9. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 10. Dans la liste **Valeurs**, double-cliquez sur **LastPurchase**.  
   
@@ -449,7 +449,7 @@ ms.locfileid: "66098844"
   
 4.  Dans la liste **Élément**, double-cliquez sur **Round**.  
   
-5.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**.  
+5.  Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)** .  
   
 6.  Dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
   
@@ -461,7 +461,7 @@ ms.locfileid: "66098844"
   
 10. Dans la liste **Élément**, double-cliquez sur **Avg**.  
   
-11. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+11. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 12. Dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "66098844"
   
 19. Dans la liste **Élément**, double-cliquez sur **Round**.  
   
-20. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)**.  
+20. Dans la liste **Catégorie**, cliquez sur **Champs (Expressions)** .  
   
 21. Dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
   
@@ -493,7 +493,7 @@ ms.locfileid: "66098844"
   
 25. Dans la liste **Élément**, double-cliquez sur **Avg**.  
   
-26. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+26. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 27. Dans la liste **Valeurs**, double-cliquez sur **YTDPurchase**.  
   
@@ -588,7 +588,7 @@ ms.locfileid: "66098844"
   
 9. Dans la liste **Élément**, double-cliquez sur **RunningValue**.  
   
-10. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)**.  
+10. Dans la liste **Catégorie** , cliquez sur **Champs (Expressions)** .  
   
 11. Dans la liste **Valeurs**, double-cliquez sur **FirstName**.  
   

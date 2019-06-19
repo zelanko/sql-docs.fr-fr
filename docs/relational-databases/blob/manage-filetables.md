@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ab88dfa27c63607c312b2a3c757b04cd076745a9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65094154"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
@@ -232,6 +232,6 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC et FileTables  
  Vous pouvez utiliser DBCC CHECKCONSTRAINTS pour valider les contraintes sur un FileTable qui inclut des contraintes définies par le système.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Compatibilité de FileTable avec d'autres fonctionnalités SQL Server](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  

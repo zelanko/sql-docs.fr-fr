@@ -16,16 +16,16 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f3afd66abdf75e8464a30140ae4e830aa3b2fa4b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102637"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Navigateur Web SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] héberge une version de [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Ce navigateur Web vous permet de parcourir les URL et d'afficher les rubriques d'aide de la bibliothèque MSDN sans quitter [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour avoir accès au navigateur Web, pointez sur **Navigateur Web** dans le menu **Affichage** , puis cliquez sur **Afficher le navigateur**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Éléments généraux de l’interface utilisateur](../ssms/general-user-interface-elements.md)  
   

@@ -41,11 +41,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c08e29c5d1fba184739e2bb0e33718f766c32655
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62708168"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - Clause ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -223,7 +223,7 @@ WHERE Name LIKE 'Lock Washer%'
 ORDER BY ProductID;  
 ```  
   
-#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>b. Spécification d'une colonne qui n'est pas définie dans la liste de sélection  
+#### <a name="b-specifying-a-column-that-is-not-defined-in-the-select-list"></a>B. Spécification d'une colonne qui n'est pas définie dans la liste de sélection  
  L'exemple suivant classe le jeu de résultats selon une colonne qui n'est pas incluse dans la liste de sélection, mais est définie dans la table spécifiée dans la clause FROM.  
   
 ```sql
@@ -274,7 +274,7 @@ ORDER BY ProductID DESC;
   
 ```  
   
-#### <a name="b-specifying-an-ascending-order"></a>b. Spécification d’un ordre croissant  
+#### <a name="b-specifying-an-ascending-order"></a>B. Spécification d’un ordre croissant  
  L'exemple suivant classe le jeu de résultats selon la colonne `Name` dans l'ordre croissant. Les caractères sont triés par ordre alphabétique, et non par ordre numérique. Autrement dit, 10 arrive avant 2.  
   
 ```sql
@@ -391,7 +391,7 @@ ORDER BY DepartmentID
   
 ```  
   
-#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>b. Spécification de variables pour les valeurs OFFSET et FETCH  
+#### <a name="b-specifying-variables-for-offset-and-fetch-values"></a>B. Spécification de variables pour les valeurs OFFSET et FETCH  
  L'exemple suivant déclare les variables `@StartingRowNumber` et `@FetchRows`, puis spécifie ces variables dans les clauses OFFSET et FETCH.  
   
 ```sql
@@ -550,7 +550,7 @@ WHERE LastName LIKE 'A%'
 ORDER BY LastName, FirstName;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   

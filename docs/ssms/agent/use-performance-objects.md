@@ -23,10 +23,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 316f943091de15857b4654e98b4910061806def6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089363"
 ---
 # <a name="use-performance-objects"></a>Utiliser des objets de performance
@@ -43,8 +43,8 @@ Le tableau suivant décrit la dénomination des objets de performance du service
   
 |Type d’instance|Nom de l'objet|  
 |-----------------|---------------|  
-|Valeur par défaut|**SQLAgent:**_objet_:_compteur_|  
-|Nommé|**SQLAgent$**<br /> **&#42;nom_instance&#42; :**_objet_:_compteur_|  
+|Valeur par défaut|**SQLAgent:** _objet_:_compteur_|  
+|Nommé|**SQLAgent$**<br /> **&#42;nom_instance&#42; :** _objet_:_compteur_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend les objets de performance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent suivants.  
   
@@ -55,7 +55,7 @@ Le tableau suivant décrit la dénomination des objets de performance du service
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Informations relatives au nombre d'alertes et de notifications|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Informations générales sur les performances|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
 [Procédure : Démarrer le moniteur système (Windows)](https://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

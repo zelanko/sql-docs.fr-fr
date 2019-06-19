@@ -25,10 +25,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: df3ae48887370bc7b0339b86e32c31b9ce6d360b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944888"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
@@ -65,7 +65,7 @@ OPENDATASOURCE ( provider_name, init_string )
 |Catalogue|DBPROP_INIT_CATALOG|Nom du catalogue initial ou par défaut lors de la connexion à la source de données|  
 |Sécurité intégrée|DBPROP_AUTH_INTEGRATED|SSPI pour spécifier l'authentification Windows|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  OPENDATASOURCE ne peut être utilisé pour accéder à des données distantes à partir de sources de données OLE DB que si l'option de Registre DisallowAdhocAccess est explicitement définie avec la valeur 0 pour le fournisseur spécifié et que l'option de configuration avancée Ad Hoc Distributed Queries est activée. Lorsque ces options ne sont pas définies, le comportement par défaut n'autorise pas l'accès d'égal à égal.  
   
  La fonction OPENDATASOURCE peut être utilisée dans les mêmes emplacements de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'un nom de serveur lié. OPENDATASOURCE peut donc constituer la première des quatre parties d'un nom qui fait référence à un nom de table ou de vue (dans une instruction SELECT, INSERT, UPDATE ou DELETE) ou à une procédure stockée distante (dans une instruction EXECUTE). Lors de l'exécution de procédures stockées distantes, OPENDATASOURCE doit faire référence à une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. OPENDATASOURCE n'accepte pas de variables pour ses arguments.  
@@ -99,7 +99,7 @@ SELECT * FROM OPENDATASOURCE('Microsoft.Jet.OLEDB.4.0',
 'Data Source=C:\DataFolder\Documents\TestExcel.xls;Extended Properties=EXCEL 5.0')...[Sheet1$] ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
   

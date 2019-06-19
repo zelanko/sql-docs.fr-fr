@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531041"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046713"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*langage*'  
  Indique le langage de script. *langage* est **sysname**.  Selon votre version de SQL Server, les valeurs valides sont R (SQL Server 2016 et versions ultérieur), Python (SQL Server 2017 et versions ultérieur) et Java (version préliminaire de SQL Server 2019). 
   
- **@script** = N'*script*« script de langage externe spécifié en tant qu’une entrée de littérale ou une variable. *script* est **nvarchar (max)**.  
+ **@script** = N'*script*« script de langage externe spécifié en tant qu’une entrée de littérale ou une variable. *script* est **nvarchar (max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Spécifie les données d’entrée utilisées par le script externe sous la forme d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Le type de données de *input_data_1* est **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Spécifie les données d’entrée utilisées par le script externe sous la forme d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Le type de données de *input_data_1* est **nvarchar (max)** .
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Spécifie le nom de la variable utilisée pour représenter la requête définie par @input_data_1. Le type de données de la variable dans le script externe dépend de la langue. En cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être sous forme de tableau. *input_data_1_name* est **sysname**.  Valeur par défaut est *InputDataSet*.  
 
@@ -124,7 +124,7 @@ L’exécution du script d’analyse à l’aide [sys.dm_external_script_request
 
  Dans SQL Server 2019, actuellement en version préliminaire publique, vous pouvez définir deux paramètres supplémentaires qui permettent de modéliser les données partitionnées, où les partitions sont basées sur l’un ou plus les colonnes que vous fournissez naturellement segment un jeu de données en partitions logiques créées et utilisées uniquement pendant l’exécution du script. Les colonnes contenant des valeurs qui se répètent pour âge, sexe, région géographique, date ou heure, sont quelques exemples qui se prêtent à des jeux de données partitionnées.
  
- Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour classer le jeu de résultats. Les paramètres sont passés en tant qu’entrées pour `sp_execute_external_script` avec le script externe exécutant une fois pour chaque partition. Pour plus d’informations et des exemples, consultez [didacticiel : Créer des modèles basés sur une partition](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour classer le jeu de résultats. Les paramètres sont passés en tant qu’entrées pour `sp_execute_external_script` avec le script externe exécutant une fois pour chaque partition. Pour plus d’informations et des exemples, consultez [didacticiel : Créer des modèles basés sur une partition](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  Vous pouvez exécuter le script en parallèle en spécifiant `@parallel=1`. Si la requête d’entrée peut être parallélisée, vous devez définir `@parallel=1` dans le cadre de vos arguments à `sp_execute_external_script`. Par défaut, l’optimiseur de requête fonctionne sous `@parallel=1` sur les tables ayant des lignes plus de 256, mais si vous souhaitez gérer cette situation explicitement, ce script inclut le paramètre comme une démonstration.
 

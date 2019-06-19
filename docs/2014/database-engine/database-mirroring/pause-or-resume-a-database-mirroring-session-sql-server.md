@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754594"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Suspendre ou reprendre une session de mise en miroir de bases de données (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62754594"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir suspendu ou repris la mise en miroir de base de données](#FollowUp)  
+-   **Suivi :**  [Après avoir suspendu ou repris la mise en miroir de bases de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Vous pouvez à tout moment suspendre une session de mise en miroir de bases de données afin d'améliorer les performances pendant les goulots d'étranglement. De même, vous pouvez reprendre une session interrompue à tout moment.  
@@ -108,7 +108,7 @@ ms.locfileid: "62754594"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir suspendu ou repris la mise en miroir de base de données  
+##  <a name="FollowUp"></a> Suivi : Après avoir suspendu ou repris la mise en miroir de bases de données  
   
 -   **Après avoir suspendu la mise en miroir de bases de données**  
   

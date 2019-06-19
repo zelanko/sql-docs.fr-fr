@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860669"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591763"
   
 3.  Une partie de la ligne, connue sous le nom de bitmap NULL, est réservée pour gérer la possibilité de valeur NULL de la colonne. Calculez sa taille :  
   
-     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      Seule la partie entière de l'expression doit être utilisée. Omettez le reste.  
   
@@ -55,30 +55,30 @@ ms.locfileid: "53591763"
   
      En présence de colonnes de longueur variable dans la table, déterminez l'espace utilisé pour stocker les colonnes dans la ligne au moyen de la formule suivante :  
   
-     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_** = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Les octets ajoutés à **_Max_Var_Size_** servent à assurer le suivi de chaque colonne de longueur variable. Il est supposé, lorsque vous utilisez cette formule, que toutes les colonnes de longueur variable sont entièrement remplies. Si vous pensez qu’un pourcentage inférieur de l’espace de stockage des colonnes de longueur variable sera utilisé, vous pouvez ajuster la valeur de **_Max_Var_Size_** en fonction de ce pourcentage pour obtenir une estimation plus précise de la taille globale de la table.  
   
     > [!NOTE]  
     >  Vous pouvez combiner des colonnes **varchar**, **nvarchar**, **varbinary**ou **sql_variant** qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne **varchar**, **nvarchar, varbinary** ou **sql_variant**. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table.  
   
-     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à **_Variable_Data_Size_**.  
+     En l’absence de toute colonne de longueur variable, attribuez la valeur 0 à **_Variable_Data_Size_** .  
   
 5.  Calculez la taille totale de la ligne :  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      La valeur 4 dans la formule correspond à l'espace réservé à l'en-tête de la ligne de données.  
   
 6.  Calculez le nombre de lignes par page (8 096 octets disponibles par page) :  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      Comme les lignes ne peuvent pas être fractionnées sur plusieurs pages de données, arrondissez le nombre de lignes par page à la ligne entière inférieure. La valeur 2 dans la formule correspond à l'entrée de la ligne dans le tableau d'emplacements de la page.  
   
 7.  Calculez ensuite le nombre de pages de données requises pour le stockage de toutes les lignes :  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591763"
   
 -   Valeurs LOB  
   
-     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntextxml**et **image** est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
+     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**et **image** est complexe. Vous pouvez simplement ajouter la taille moyenne des valeurs LOB attendues à la taille totale du segment de mémoire.  
   
 -   Compression  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53591763"
   
      Pour plus d'informations sur l'espace nécessaire pour les colonnes éparses, consultez [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Segments &#40;tables sans index cluster&#41;](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md)   
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

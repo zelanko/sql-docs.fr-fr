@@ -20,12 +20,12 @@ ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55867a7740bd0a37d789a870ef043350b22e5376
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: bea5d805294216b796f36f3f0762b564162924dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64776272"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Spécifie l'ancien mot de passe au moyen duquel la clé privée est actuellement protégée. Cette option n'est pas requise si la clé privée est chiffrée à l'aide de la clé principale de base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si aucune clé principale de base de données n'existe, l'option ENCRYPTION BY PASSWORD est requise et l'opération échouera si aucun mot de passe n'est fourni. Pour plus d’informations sur la création d’une clé principale de base de données, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Vous pouvez utiliser ALTER ASYMMETRIC KEY pour modifier la protection de la clé privée en spécifiant des options PRIVATE KEY, comme l'illustre le tableau ci-dessous.  
@@ -82,7 +82,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
   
  Pour modifier la propriété d’une clé asymétrique, utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé asymétrique si la clé privée doit être supprimée.  
   
 ## <a name="examples"></a>Exemples  
@@ -98,7 +98,7 @@ ALTER ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>b. Suppression de la clé privée d'une clé asymétrique  
+### <a name="b-removing-the-private-key-from-an-asymmetric-key"></a>B. Suppression de la clé privée d'une clé asymétrique  
  Dans l'exemple ci-dessous, la clé privée est supprimée de `PacificSales19` et seule la clé publique demeure.  
   
 ```  
@@ -110,13 +110,13 @@ GO
  Dans l'exemple ci-dessous, la protection par mot de passe d'une clé privée est supprimée et la clé est protégée au moyen de la clé principale de base de données.  
   
 ```  
-OPEN MASTER KEY;  
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<database master key password>';  
 ALTER ASYMMETRIC KEY PacificSales09 WITH PRIVATE KEY (  
     DECRYPTION BY PASSWORD = '<enterStrongPasswordHere>' );  
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729175"
 ---
 # <a name="ssis-catalog"></a>Catalogue SSIS
@@ -126,7 +126,7 @@ ms.locfileid: "65729175"
   
  Vous pouvez mettre à jour ou redéployer un projet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en le déployant avec le même nom dans le même dossier du catalogue. Par défaut, chaque fois que vous redéployez un projet, le catalogue **SSISDB** en conserve la version précédente. Pour limiter la taille des données opérationnelles, le **travail de maintenance de serveur SSIS** est utilisé pour supprimer les anciennes versions des projets.  
  
-Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la connexion SQL Server **##MS_SSISServerCleanupJobLogin##**. Cette connexion est réservée à un usage interne par SSIS.
+Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la connexion SQL Server **##MS_SSISServerCleanupJobLogin##** . Cette connexion est réservée à un usage interne par SSIS.
   
  Les propriétés de catalogue **SSISDB** suivantes définissent le comportement de ce travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez afficher et modifier les propriétés à l’aide de la boîte de dialogue **Propriétés du catalogue** ou à l’aide de [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) et [catalog.configure_catalog &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -422,7 +422,7 @@ Pour exécuter le **travail de maintenance du serveur SSIS**, SSIS crée la conn
   
     1.  Dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud **Sécurité**, puis le nœud **Connexions**.  
   
-    2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##**, puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
+    2.  Cliquez avec le bouton droit sur **##MS_SSISServerCleanupJobLogin##** , puis cliquez sur **Générer un script de la connexion en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   
 5.  Si vous restaurez la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le catalogue SSISDB n’a jamais été créé, générez le script CREATE PROCEDURE pour sp_ssis_startup en effectuant les actions suivantes. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   

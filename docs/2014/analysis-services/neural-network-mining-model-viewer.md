@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072317"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Neural Network (réseau neuronal) (Visionneuse du modèle d'exploration de données)
@@ -39,7 +39,7 @@ ms.locfileid: "66072317"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Attribute**|Choisissez un attribut d'entrée dans la liste. Si vous conservez la sélection par défaut,  **\<tous les >**, le graphique affiche une liste d’attributs de tous les d’entrée, classée selon leur impact sur l’attribut prédictible.|  
+|**Attribute**|Choisissez un attribut d'entrée dans la liste. Si vous conservez la sélection par défaut,  **\<tous les >** , le graphique affiche une liste d’attributs de tous les d’entrée, classée selon leur impact sur l’attribut prédictible.|  
 |**Valeur**|Choisissez la valeur de l'attribut d'entrée.|  
   
  **Output**  

@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2454008a6023289fea354680eeeb2cf8185d009b
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821914"
 ---
 # <a name="step-through-transact-sql-code"></a>Exécuter pas à pas du code Transact-SQL
@@ -59,7 +59,7 @@ ms.locfileid: "65821914"
 |Effectuer un pas à pas sortant dans un module|Cliquez sur **Pas à pas sortant** dans le menu **Déboguer** .<br /><br /> Cliquez sur le bouton **Pas à pas sortant** dans la barre d’outils **Déboguer** .<br /><br /> Appuyez sur Maj+F11.|  
 |Exécuter le code jusqu'à l'emplacement du curseur actuel|Cliquez avec le bouton droit dans la fenêtre de l’éditeur de requête, puis cliquez sur **Exécuter jusqu’au curseur**.<br /><br /> Appuyez sur Ctrl+F10.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

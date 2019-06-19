@@ -1,5 +1,5 @@
 ---
-title: 'Étape 9 : Test du Package de didacticiel de la leçon 1 | Microsoft Docs'
+title: 'Étape 9 : Test du Package de didacticiel de la leçon 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767605"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test de la leçon 1 du Package du didacticiel
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test du package du tutoriel de la leçon 1
   Au cours de cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
@@ -48,7 +48,7 @@ ms.locfileid: "62767605"
 2.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout d’un bouclage](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+ [Leçon 2 : Ajout d’un bouclage](../integration-services/lesson-2-adding-looping-with-ssis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)  

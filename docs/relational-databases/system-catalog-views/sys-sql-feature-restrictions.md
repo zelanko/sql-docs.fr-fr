@@ -18,10 +18,10 @@ ms.author: arib
 manager: tomerw
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: b583afef9f52da7801384d4a7a9c76deaf8d4ee4
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822676"
 ---
 # <a name="syssqlfeaturerestrictions-transact-sql"></a>sys.sql_feature_restrictions (Transact-SQL)
@@ -42,8 +42,8 @@ Actuellement il est possible de limiter les fonctionnalités suivantes :
 
 | Fonctionnalité          | Description |
 |------------------|-------------|
-| N'ErrorMessages' | Lorsque la limitée, toutes les données utilisateur dans le message d’erreur seront masquées. |
-| N'Waitfor'       | Lors de la restriction, la commande retournera immédiatement sans délai. |
+| N’ErrorMessages’ | En cas de restriction, toutes les données utilisateur dans le message d’erreur sont masquées. |
+| N’Waitfor’       | En cas de restriction, la commande retourne immédiatement sans délai. |
   
 ## <a name="permissions"></a>Autorisations
 

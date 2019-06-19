@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 51f08bdc67a47e8cad46a4badfc95f910757c2d4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095732"
 ---
 # <a name="open-and-configure-object-explorer"></a>Ouvrir et configurer l'Explorateur d'objets
@@ -28,7 +28,7 @@ Par défaut, l'Explorateur d'objets est visible dans [!INCLUDE[ssManStudio](../.
 ## <a name="configuring-object-explorer-options"></a>Configuration des options de l'Explorateur d'objets  
 Pour configurer les paramètres de l'Explorateur d'objets, dans le menu **Outils** , cliquez sur **Options**, puis sur **Explorateur d'objets SQL Server**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
 [Se connecter à une instance de l'Explorateur d'objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Gérer les objets à l'aide de l'Explorateur d'objets](../../ssms/object/manage-objects-by-using-object-explorer.md)  

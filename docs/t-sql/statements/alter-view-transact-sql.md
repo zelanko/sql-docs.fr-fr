@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749377"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664688"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ AS select_statement
  Chiffre les entrées dans des [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenant le texte de l’instruction ALTER VIEW. L'utilisation de WITH ENCRYPTION évite la publication de la vue dans le cadre de la réplication SQL Server.  
   
  SCHEMABINDING  
- Lie la vue au schéma des tables sous-jacentes ou des autres tables. Lorsque SCHEMABINDING est spécifié, les tables de base ne peuvent pas être modifiées d'une manière susceptible d'affecter la définition de la vue. La définition de la vue proprement dite doit d'abord être modifiée ou supprimée pour éliminer les dépendances de la table à modifier. Quand vous utilisez l’argument SCHEMABINDING, _select\_statement_ doit comprendre les noms en deux parties (_schema_**.**_object_) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
+ Lie la vue au schéma des tables sous-jacentes ou des autres tables. Lorsque SCHEMABINDING est spécifié, les tables de base ne peuvent pas être modifiées d'une manière susceptible d'affecter la définition de la vue. La définition de la vue proprement dite doit d'abord être modifiée ou supprimée pour éliminer les dépendances de la table à modifier. Quand vous utilisez l’argument SCHEMABINDING, _select\_statement_ doit comprendre les noms en deux parties (_schema_ **.** _object_) des tables, des vues ou des fonctions définies par l’utilisateur référencées. Tous ces objets référencés doivent se trouver dans la même base de données.  
   
  Les vues ou tables impliquées dans une vue créée avec la clause SCHEMABINDING ne peuvent pas être supprimées, sauf si cette vue perd, à la suite de sa suppression ou de sa modification, la liaison au schéma. Dans le cas contraire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] génère une erreur. En outre, les instructions ALTER TABLE portant sur des tables impliquées dans des vues liées au schéma échouent si elles affectent la définition des vues.  
   
@@ -93,7 +93,7 @@ AS select_statement
  WITH CHECK OPTION  
  Oblige toutes les instructions de modification de données exécutées sur la vue à respecter les critères définis dans *select_statement*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d’informations sur ALTER VIEW, consultez la section Notes dans [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
@@ -103,7 +103,7 @@ AS select_statement
   
  L"instruction ALTER VIEW peut être appliquée à des vues indexées, mais elle supprime de manière inconditionnelle tous les index de la vue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter l'instruction ALTER VIEW, il est nécessaire de disposer au minimum de l'autorisation ALTER sur OBJECT.  
   
 ## <a name="examples"></a>Exemples  
@@ -134,7 +134,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   

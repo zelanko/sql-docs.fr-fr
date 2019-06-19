@@ -13,10 +13,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776014"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
@@ -40,7 +40,7 @@ Vous devez tout d’abord avoir quelques notions élémentaires du protocole Ker
 1. Ressource sécurisée (HDFS, MR2, YARN, historique des travaux, etc.)
 1. Centre de distribution de clés (également appelé contrôleur de domaine dans Active Directory)
 
-Chaque ressource sécurisée de Hadoop est inscrite dans le **centre de distribution de clés (KDC)** avec un **nom de principal du service (SPN)** unique lors de la configuration de Kerberos sur le cluster Hadoop. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé **TGT (Ticket Granting Ticket)**, afin de demander un autre ticket temporaire, appelé **ticket de service**, auprès du centre KDC pour le nom de principal du service spécifique auquel il veut accéder.  
+Chaque ressource sécurisée de Hadoop est inscrite dans le **centre de distribution de clés (KDC)** avec un **nom de principal du service (SPN)** unique lors de la configuration de Kerberos sur le cluster Hadoop. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé **TGT (Ticket Granting Ticket)** , afin de demander un autre ticket temporaire, appelé **ticket de service**, auprès du centre KDC pour le nom de principal du service spécifique auquel il veut accéder.  
 
 Dans PolyBase, quand une authentification est demandée pour une ressource sécurisée par Kerberos, la négociation suivante, qui implique quatre allers-retours, se produit :
 
@@ -106,7 +106,7 @@ Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à êtr
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`. |
 | *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```cmd
 java -classpath ".\Hadoop\conf;.\Hadoop\*;.\Hadoop\HDP2_2\*" com.microsoft.polybase.client.HdfsBridge 10.193.27.232 8020 admin_user C:\temp\kerberos_pass.txt

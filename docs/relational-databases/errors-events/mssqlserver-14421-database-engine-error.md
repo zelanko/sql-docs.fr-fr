@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b145b3eb2bc42fbb337fa99bad0bd7ec0b8f2007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859852"
 ---
 # <a name="mssqlserver14421"></a>MSSQLSERVER_14421
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ Pour résoudre le problème qui est à l'origine de ce message :
     > [!NOTE]  
     > Une différence de fuseaux horaires entre les deux instances de serveurs ne pose généralement aucun problème.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)  
 [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](~/database-engine/log-shipping/about-log-shipping-sql-server.md)  
 [sp_help_log_shipping_monitor_secondary &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql.md)  

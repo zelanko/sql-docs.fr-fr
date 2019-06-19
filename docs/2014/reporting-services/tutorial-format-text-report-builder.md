@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098903"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
@@ -128,7 +128,7 @@ ms.locfileid: "66098903"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Cliquez sur Exécuter (**!**) pour exécuter la requête.  
+7.  Cliquez sur Exécuter ( **!** ) pour exécuter la requête.  
   
      Les résultats de la requête sont les données qui peuvent être affichées dans votre rapport.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098903"
   
 1.  Sur le **insérer** menu, cliquez sur **Table**, puis cliquez sur **Assistant Table**.  
   
-2.  Sur le **choisir un dataset** page de l’Assistant nouveau tableau ou matrice, cliquez sur **choisir un dataset existant dans ce rapport ou un dataset partagé**, puis cliquez sur **TextDataset (dans ce rapport)**, puis cliquez sur **suivant**.  
+2.  Sur le **choisir un dataset** page de l’Assistant nouveau tableau ou matrice, cliquez sur **choisir un dataset existant dans ce rapport ou un dataset partagé**, puis cliquez sur **TextDataset (dans ce rapport)** , puis cliquez sur **suivant**.  
   
 3.  Sur le **organiser les champs** page, faites glisser le **Territory**, **LinkText**, et **produit** champs **degroupesdelignes**, faites glisser le **Sales** champ **valeurs**, puis cliquez sur **suivant**.  
   
@@ -233,7 +233,7 @@ ms.locfileid: "66098903"
   
 4.  Cliquez sur **atteindre l’URL**.  
   
-5.  Dans le **sélectionner une URL** , cliquez sur **[URL]**, puis cliquez sur **OK**.  
+5.  Dans le **sélectionner une URL** , cliquez sur **[URL]** , puis cliquez sur **OK**.  
   
 6.  Notez que le texte n'est en aucune manière différent. Vous devez lui donner l'apparence de texte de lien.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098903"
   
 7.  Sur le **accueil** onglet dans le **paragraphe** , cliquez sur le **central** et **Center** boutons pour le texte dans le centre de la cellule verticalement et horizontalement.  
   
-8.  Cliquez sur Exécuter (**!**).  
+8.  Cliquez sur Exécuter ( **!** ).  
   
  Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas en haut des cellules.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098903"
   
 7.  Cliquez sur **OK**.  
   
-8.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
+8.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
   
  Le texte de la zone de texte est affiché sous forme de titre, paragraphe et liste à puce.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098903"
   
 5.  (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.  
   
-6.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
+6.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
   
  Le rapport affiche maintenant les données mises en forme et est plus facile à lire.  
   

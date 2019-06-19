@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d9a981cb1302b8edb1776a5808221eaddd2263b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943835"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
@@ -72,7 +72,7 @@ Nom de la variable de curseur. Une variable de curseur doit être définie à l�
 |-2|Non applicable.|Présente l’une de ces possibilités :<br /><br /> La procédure appelée précédemment n’affectait pas de curseur à cette variable OUTPUT.<br /><br /> La procédure appelée précédemment affectait un curseur à cette variable OUTPUT, mais le curseur était à l’état fermé quand la procédure s’est terminée. C’est la raison pour laquelle le curseur est désaffecté et qu’il n’est pas retourné à la procédure d’appel.<br /><br /> Aucun curseur n’est affecté à la variable de curseur déclarée.|  
 |-3|Il n'existe aucun curseur portant le nom spécifié.|Il n’existe aucune variable de curseur avec le nom spécifié ou, si c’est le cas, aucun curseur ne lui a encore été affecté.|  
   
-* Les curseurs dynamiques ne retournent jamais cette valeur.
+\* Les curseurs dynamiques ne retournent jamais cette valeur.
   
 ## <a name="examples"></a>Exemples  
 Cet exemple utilise la fonction `CURSOR_STATUS` pour afficher l’état d’un curseur, après sa déclaration, après son ouverture et après sa fermeture.

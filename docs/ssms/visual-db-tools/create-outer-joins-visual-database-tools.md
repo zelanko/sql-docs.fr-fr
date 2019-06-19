@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 07f168c018c33d5078dd47b0f8a38d07ddfdcdf5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095653"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Créer des jointures externes (Visual Database Tools)
@@ -31,7 +31,7 @@ Lorsque vous créez une jointure externe, l'ordre d'affichage des tables dans l'
   
 1.  Créez la jointure, soit automatiquement, soit manuellement. Pour plus d’informations, consultez [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) ou [Joindre manuellement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis dans le menu **Concepteur de requêtes**, choisissez **Sélectionner toutes les lignes de <tablename>**, en sélectionnant la commande qui ajoute la table dont vous voulez inclure les lignes supplémentaires.  
+2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis dans le menu **Concepteur de requêtes**, choisissez **Sélectionner toutes les lignes de <tablename>** , en sélectionnant la commande qui ajoute la table dont vous voulez inclure les lignes supplémentaires.  
   
     -   Choisissez la première table pour créer une jointure externe gauche.  
   
@@ -59,7 +59,7 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
 [Boîte de dialogue Joindre &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
