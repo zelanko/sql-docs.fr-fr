@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f46e00be95d751629325a6b7c54160bf00e44be
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948970"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
@@ -61,7 +61,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ANY sur l'objet. Pour spécifier un ID de base de données, l'autorisation CONNECT à la base de données est également nécessaire ou le compte Invité doit être activé.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions](../../t-sql/language-elements/expressions-transact-sql.md) et [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Le jeu de résultats retourné par cette fonction système utilise le classement de la base de données active.  
@@ -112,7 +112,7 @@ FROM sys.dm_db_index_operational_stats(null, null, null, null);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   

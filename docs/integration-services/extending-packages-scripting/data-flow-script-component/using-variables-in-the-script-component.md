@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0860c983b6d00f1ec1199f716cae73140e5b84d5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724174"
 ---
 # <a name="using-variables-in-the-script-component"></a>Utilisation de variables dans le composant Script
@@ -40,7 +40,7 @@ ms.locfileid: "65724174"
   
  Vous pouvez également utiliser la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>, accessible en appelant `Me.VariableDispenser`, pour utiliser des variables dans le composant Script. Dans ce cas, vous n'utilisez pas les propriétés de l'accesseur typé et nommé pour les variables, mais vous accédez directement aux variables. Lorsque vous utilisez la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A>, vous devez gérer à la fois la sémantique de verrouillage et la conversion des types de données pour les valeurs de variables dans votre propre code. Vous devez utiliser la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.VariableDispenser%2A> au lieu des propriétés de l'accesseur nommé et typé si vous souhaitez utiliser une variable qui n'est pas disponible au moment du design mais qui est créée par programme au moment de l'exécution.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   

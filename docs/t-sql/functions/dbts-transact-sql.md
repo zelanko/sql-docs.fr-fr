@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f9fca5c54451d13a8496d20e453d0bd89bf27fed
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945625"
 ---
 # <a name="x40x40dbts-transact-sql"></a>&#x40;&#x40;DBTS (Transact-SQL)
@@ -42,7 +42,7 @@ Cette fonction retourne la valeur du type de données actuel **timestamp** pour 
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 @@DBTS renvoie la dernière valeur timestamp utilisée de la base de données active. L’insertion ou la mise à jour d’une ligne comprenant une colonne **timestamp** génère une nouvelle valeur timestamp.
   
 Les changements apportés aux niveaux d’isolation des transactions n’affectent pas la fonction @@DBTS.

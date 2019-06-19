@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c27111dac0da8d9248bea1b7d7408cd70130d01b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948810"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
@@ -77,7 +77,7 @@ Le type de valeur retournée dépend de la propriété qui est spécifiée dans 
 -   *Cert_Serial_Number*, *Issuer_Name*, *String_SID*, et *Subject* retournent **nvarchar**.  
 -   *SID* renvoie **varbinary**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Ouvrez la vue de catalogue [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) pour consulter les informations relatives aux certificats.
   
 ## <a name="permissions"></a>Autorisations  

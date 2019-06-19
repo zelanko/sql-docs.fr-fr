@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: feacddee000b296e5a0687e63deb1cb75fe1b04c
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727811"
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
@@ -38,24 +38,24 @@ ms.locfileid: "65727811"
   
 -   Cliquez avec le bouton droit sur la tâche de **profilage des données** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , puis cliquez sur **Modifier**. Cliquez sur **Ouvrir la visionneuse de profil** dans la page **Général** de **l’Éditeur de tâche de profilage de données**.  
   
--   Dans le dossier *\<lecteur>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn, exécutez DataProfileViewer.exe.  
+-   Dans le dossier *\<lecteur>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn, exécutez DataProfileViewer.exe.  
   
  La visionneuse utilise plusieurs volets pour afficher les profils demandés et les résultats calculés avec, en option, des détails et une fonction d'exploration vers le bas :  
   
- Volet**Profils**   
+ Volet**Profils**  
  Le volet **Profils** affiche les profils demandés dans la tâche de profilage des données. Pour afficher les résultats calculés pour le profil, sélectionnez le profil dans le volet **Profils** . Les résultats apparaîtront dans les autres volets de la visionneuse.  
   
- Volet**Résultats**   
+ Volet**Résultats**  
  Le volet **Résultats** résume les résultats calculés du profil sur une seule ligne. Par exemple, si vous demandez un **Profil de distribution de longueurs de colonne**, cette ligne inclut la longueur minimale et la longueur maximale, ainsi que le nombre de lignes. Pour la plupart des profils, vous pouvez sélectionner cette ligne dans le volet **Résultats** pour afficher d’autres détails dans le volet **Détails** facultatif.  
   
- Volet**Détails**   
+ Volet**Détails**  
  Pour la plupart des types de profils, le volet **Détails** affiche des informations supplémentaires à propos des résultats du profil sélectionnés dans le volet **Résultats** . Par exemple, si vous demandez un **Profil de distribution de longueurs de colonne**, le volet **Détails** affiche chaque longueur de colonne qui a été trouvée. Le volet affiche aussi le nombre et le pourcentage de lignes dans lesquelles la valeur de colonne est égale à cette longueur de colonne.  
   
  Pour les trois types de profils qui sont calculés sur plusieurs colonnes (Profil de clé candidate, Profil de dépendance fonctionnelle et Profil d’inclusion de valeur), le volet **Détails** affiche les violations de la relation attendue. Par exemple, si vous demandez un Profil de clé candidate, le volet Détails affiche les valeurs dupliquées qui enfreignent l'unicité de la clé candidate.  
   
  Si la source de données utilisée pour calculer le profil est disponible, vous pouvez double-cliquer sur une ligne dans le volet **Détails** pour consulter les lignes correspondantes de données dans le volet **Exploration vers le bas** .  
   
- Volet**Exploration vers le bas**   
+ Volet**Exploration vers le bas**  
  Vous pouvez double-cliquer sur une ligne dans le volet **Détails** pour consulter les lignes correspondantes de données dans le volet **Exploration vers le bas** quand les conditions suivantes sont vérifiées :  
   
 -   La source de données utilisée pour calculer le profil est disponible.  
@@ -80,13 +80,13 @@ ms.locfileid: "65727811"
  **Ouvrir**  
  Cliquez pour accéder au fichier enregistré qui contient la sortie de la tâche de profilage des données.  
   
- Volet**Profils**   
+ Volet**Profils**  
  Développez l’arborescence du volet **Profils** pour consulter les profils inclus dans la sortie. Sélectionnez un profil afin d'afficher les résultats de ce profil.  
   
- Volet**Message**   
+ Volet**Message**  
  Affiche des messages d'état.  
   
- Volet**Exploration vers le bas**   
+ Volet**Exploration vers le bas**  
  Affiche les lignes de données qui correspondent à une valeur dans la sortie, si la source de données utilisée par la tâche de profilage des données est disponible.  
   
  Par exemple, si vous affichez la sortie d’un profil de distribution de valeurs de colonne pour une colonne des états américains, le volet **Distribution de valeurs** peut contenir une ligne pour « WA ». Double-cliquez sur la ligne dans le volet **Distribution de valeurs** pour consulter les lignes de données pour lesquelles la valeur de la colonne d’état est « WA » dans le volet d’exploration.  

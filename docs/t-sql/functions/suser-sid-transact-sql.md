@@ -26,10 +26,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0b8c2dbe2b9129ae52432de1b70079a53a963c27
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948388"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
@@ -60,7 +60,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 ## <a name="return-types"></a>Types de retour  
  **varbinary(85)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction SUSER_SID peut être utilisée comme une contrainte DEFAULT dans les fonctions ALTER TABLE ou CREATE TABLE. SUSER_SID peut être utilisé dans la liste SELECT, dans une clause WHERE, et partout où une expression est autorisée. SUSER_SID doit toujours être suivi de parenthèses, même si aucun paramètre n'est spécifié.  
   
  Lorsque la procédure SUSER_SID est appelée sans argument, elle renvoie l'ID de sécurité (SID) du contexte de sécurité actuel. Lorsqu'elle est appelée sans argument dans un lot qui a changé le contexte à l'aide de l'instruction EXECUTE AS, elle retourne le SID du contexte dont l'identité a été empruntée. Lorsqu'elle est appelée à partir d'un contexte faisant l'objet d'un emprunt d'identité, SUSER_SID(ORIGINAL_LOGIN()) retourne le SID du contexte d'origine.  
@@ -125,7 +125,7 @@ GO
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary et varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   

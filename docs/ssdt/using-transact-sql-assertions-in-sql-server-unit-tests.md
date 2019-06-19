@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102006"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
@@ -81,7 +81,7 @@ où :
   
 Pour plus d'informations, consultez [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Un exemple d’utilisation de l’instruction RAISERROR dans un test unitaire SQL Server est disponible dans la rubrique [Procédure : écrire un test unitaire SQL Server qui s’exécute dans l’étendue d’une seule transaction](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  

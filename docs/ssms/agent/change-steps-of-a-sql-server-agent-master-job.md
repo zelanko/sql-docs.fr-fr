@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 39e43b52575b8f500b68c61eda2cb12c68406db9
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106269"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Modifier les étapes d'un travail maître SQL Server Agent
@@ -63,13 +63,13 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 4.  Cliquez avec le bouton droit sur le travail dont vous voulez modifier les étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom\_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom\_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
   
-6.  Cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés de l’étape du travail -**_nom\_étape\_travail_. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Général&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) et [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Avancé&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Cliquez sur **Modifier** pour ouvrir la boîte de dialogue **Propriétés de l’étape du travail -** _nom\_étape\_travail_. Pour plus d’informations sur les options disponibles dans cette boîte de dialogue, consultez [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Général&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) et [Propriétés de l’étape du travail - Nouvelle étape du travail &#40;page Avancé&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Lorsque vous avez terminé, cliquez sur **OK**.  
   
-8.  Dans la boîte de dialogue **Propriétés du travail -**_nom\_travail_, cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Propriétés du travail -** _nom\_travail_, cliquez sur **OK**.  
   
 ## <a name="TsqlProcedure"></a>Utilisation de Transact-SQL  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728943"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
@@ -61,7 +61,7 @@ ms.locfileid: "65728943"
   
      Vous pouvez utiliser un compte Windows local ou de domaine pour le compte de service. Dans ce cas, vous devez entrer le **Mot de passe** pour ce compte. Ce compte peut correspondre à l'hôte local ou à un compte de domaine. Veillez à mettre à jour le mot de passe lorsqu'il est modifié à l'aide du composant Services locaux dans le Panneau de configuration Windows.  
   
- **Nom du serveur** : sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à laquelle vous connecter (par exemple, **\\\\<computer_name>\\<instance_name>**). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
+ **Nom du serveur** : sélectionnez l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à laquelle vous connecter (par exemple, **\\\\<computer_name>\\<instance_name>** ). La dernière instance de serveur à laquelle une connexion a été établie est affichée par défaut.  
   
  **Authentification**  
  Sélectionnez l'une des options suivantes :  
@@ -92,7 +92,7 @@ ms.locfileid: "65728943"
   
  Le même mot de passe principal doit également être utilisé lorsque d'autres instances du même service sont configurées sur d'autres nœuds sur un cluster dans une configuration haute disponibilité. Si vous perdez ou modifiez le mot de passe principal, tous les mots de passe d'exploration de données de journaux stockés dans des bases de données d'instance Oracle CDC doivent être entrés de nouveau via la console du concepteur CDC.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : créer et modifier un service de capture de données modifiées](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

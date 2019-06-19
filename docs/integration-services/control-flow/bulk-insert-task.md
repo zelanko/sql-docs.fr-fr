@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728010"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
@@ -126,7 +126,7 @@ ms.locfileid: "65728010"
   
 ### <a name="options"></a>Options  
  **Connexion**  
- Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour créer une connexion.  
+ Sélectionnez un gestionnaire de connexions OLE DB dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour créer une connexion.  
   
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "65728010"
 |**Spécifier**|Spécifiez le format. Cette option affiche les options dynamiques **RowDelimiter** et **ColumnDelimiter**.|  
   
  **Fichier**  
- Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour créer une connexion.  
+ Sélectionnez un gestionnaire de connexions de fichiers ou de fichiers plats dans la liste ou cliquez sur \<**Nouvelle connexion...** > pour créer une connexion.  
   
  L'emplacement du fichier dépend du moteur de base de données SQL Server spécifié dans le gestionnaire de connexions pour cette tâche. Le fichier texte doit être accessible au moteur de base de données SQL Server situé sur un disque dur local du serveur ou via un partage ou un lecteur mappé à SQL Server. Le fichier n'est pas accessible au runtime SSIS.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "65728010"
   
 #### <a name="format--specify"></a>Format = Spécifier  
  **RowDelimiter**  
- Spécifiez le délimiteur de ligne dans le fichier source. La valeur par défaut est **{CR}{LF}**.  
+ Spécifiez le délimiteur de ligne dans le fichier source. La valeur par défaut est **{CR}{LF}** .  
   
  **ColumnDelimiter**  
  Spécifiez le délimiteur de colonne dans le fichier source. La valeur par défaut est **Tab**.  

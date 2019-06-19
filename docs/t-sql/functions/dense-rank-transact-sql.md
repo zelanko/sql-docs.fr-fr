@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a37eef1db62c91577fe8afb9851fc189d985681a
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948891"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
@@ -52,7 +52,7 @@ Détermine l’ordre dans lequel la fonction `DENSE_RANK` s’applique aux ligne
 ## <a name="return-types"></a>Types de retour  
  **bigint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si deux lignes, ou plus, ont la même valeur de rang dans la même partition, chacune de ces lignes reçoit le même rang. Par exemple, si les deux meilleurs vendeurs ont la même valeur SalesYTD, ils ont tous les deux la valeur de rang 1. Le vendeur dont la valeur SalesYTD est immédiatement inférieure a la valeur de rang 2. Cette valeur est supérieure de 1 au nombre de lignes distinctes précédant la ligne en question. Par conséquent, les valeurs retournées par la fonction `DENSE_RANK` ne comportent pas de vides et définissent toujours des valeurs de rang consécutives.  
   
 L’ordre de tri utilisé pour l’ensemble de la requête détermine l’ordre des lignes dans le jeu de résultats. Cela implique qu'une ligne ayant le rang numéro un n'est pas nécessairement la première ligne de la partition.  
@@ -211,7 +211,7 @@ Mensa-Annan        2753000.0000  North America        10
 Tsoflias           1687000.0000  Pacific              1 
 ```  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   

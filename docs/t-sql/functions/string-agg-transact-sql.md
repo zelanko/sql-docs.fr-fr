@@ -18,10 +18,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e368b005eaa1f5729f177356f3e06ea5effbd417
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947538"
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
@@ -71,7 +71,7 @@ Le type de retour dépend du premier argument (expression). Si l’argument d’
 |int, bigint, smallint, tinyint, numeric, float, real, bit, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `STRING_AGG` est une fonction d’agrégation qui accepte toutes les expressions à partir des lignes et les concatène en une seule chaîne. Les valeurs d’expression sont implicitement converties en types chaîne, puis concaténées. La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Pour plus d’informations sur les conversions de type de données, consultez [CAST et CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Si l’expression d’entrée est de type `VARCHAR`, le séparateur ne peut pas être de type `NVARCHAR`. 
@@ -178,7 +178,7 @@ GROUP BY town;
 |Seattle |catherine0@adventure-works.com;kim2@adventure-works.com;syed0@adventure-works.com |
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

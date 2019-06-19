@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101898"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts des tests unitaires SQL Server
@@ -61,7 +61,7 @@ Utilisez le script TestInitialize pour préparer la base de données de test, et
 ## <a name="pre-test-and-post-test-scripts"></a>Scripts d'avant test et d'après test  
 Les scripts associés aux actions d'avant test et d'après test sont susceptibles de varier d'un test unitaire au suivant. Utilisez ces scripts pour générer des modifications incrémentielles dans la base de données, puis pour nettoyer ces modifications.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Utilisation de conditions de test dans les tests unitaires SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
   

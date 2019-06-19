@@ -19,10 +19,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18cbb602155c6f3ca8230d6ad4b149979f3b51bc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981553"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (Affectation après concaténation de chaînes) (Transact-SQL)
@@ -46,7 +46,7 @@ expression += expression
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données défini pour la variable.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SET @v1 += 'expression' équivaut à SET @v1 = @v1 + ('expression'). De plus, SET @v1 = @v2 + @v3 + @v4 équivaut à SET @v1 = (@v2 + @v3) + @v4.  
   
  L'opérateur += ne peut pas être utilisé sans une variable. Par exemple, le code suivant génère une erreur :  
@@ -124,7 +124,7 @@ GO
  (1 row(s) affected)
   ```   
    
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [+= &#40;Affectation après addition&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
  [+ &#40;Concaténation de chaînes&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  

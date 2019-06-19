@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727720"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
@@ -149,7 +149,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connexion**  
- Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...**>.  
+ Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...** >.  
   
  **SQLSourceType**  
  Sélectionnez le type de source de l'instruction SQL qui exécute la tâche.  
@@ -191,13 +191,13 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
- Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
+ Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...** > pour en créer un.  
   
  **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
@@ -206,7 +206,7 @@ Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur d
   
 ### <a name="options"></a>Options  
  **Nom de la variable**  
- Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**Nouvelle variable...** > pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
   
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -245,7 +245,7 @@ Utilisez la page **Jeu de résultats** de la boîte de dialogue **Éditeur de t�
  
   
  **Nom de la variable**  
- Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...** > pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
   
  **Ajouter**  
  Ajoute une correspondance de jeu de résultats.  
@@ -348,7 +348,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
   
 -   Un paramètre de **sortie** doté du type de données approprié, tel que répertorié dans le tableau suivant.  
   
-    |Type de paramètre de**sortie** |Type de données Date|  
+    |Type de paramètre de**sortie**|Type de données Date|  
     |-------------------------------|--------------------|  
     |SQL_DATE|**date**|  
     |SQL_SS_TIME2|**time**|  

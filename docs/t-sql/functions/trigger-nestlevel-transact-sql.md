@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b361e91469bb92a1f22b95bcceb28347974807e3
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946622"
 ---
 # <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
@@ -51,7 +51,7 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
  **'** *trigger_event_category* **'**  
  Spécifie si TRIGGER_NESTLEVEL doit s'appliquer aux déclencheurs DML ou DDL. Spécifiez **DML** pour les déclencheurs DML. Spécifiez **DDL** pour les déclencheurs DDL. Si *trigger_event_category* est spécifié, *trigger_type* doit également être spécifié. Notez que seule la valeur **AFTER** peut être spécifiée avec **DDL**, car les déclencheurs DDL ne peuvent être que des déclencheurs AFTER.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si aucun paramètre n'est spécifié, TRIGGER_NESTLEVEL renvoie le nombre total de déclencheurs sur la pile des appels. Elle est comprise elle-même dans ce décompte. Les paramètres peuvent être omis lorsqu'un déclencheur exécute des commandes entraînant l'activation d'un autre déclencheur ou provoque l'activation d'une succession de déclencheurs.  
   
  Pour retourner le nombre total de déclencheurs sur la pile des appels pour un type de déclencheur et une catégorie d’événement déterminés, spécifiez *object_id* = 0.  
@@ -85,7 +85,7 @@ IF ( (SELECT trigger_nestlevel() ) > 5 )
       ('This statement nested over 5 levels of triggers.',16,-1)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

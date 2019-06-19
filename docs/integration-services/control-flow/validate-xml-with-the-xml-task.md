@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 099f6347fa90d034d4517d828bc7e3c095017ade
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65801422"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -123,7 +123,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Requête de regroupement des erreurs XML dans Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Requête de regroupement des erreurs XML dans Management Studio")  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâche XML](../../integration-services/control-flow/xml-task.md)   
  [Éditeur de tâche XML &#40;page Général&#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   

@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b3692f3c0bc1c09a5841fcff146ceb9f4489548c
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945423"
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
@@ -51,7 +51,7 @@ SCHEMA_NAME ( [ schema_id ] )
   
  Renvoie la valeur NULL lorsque *schema_id* n’est pas un ID valide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SCHEMA_NAME retourne des noms de schémas système et de schémas définis par l'utilisateur. Vous pouvez l'appeler dans une liste SELECT, dans une clause WHERE et partout où une expression est autorisée.  
   
 ## <a name="examples"></a>Exemples  
@@ -68,7 +68,7 @@ SELECT SCHEMA_NAME();
 SELECT SCHEMA_NAME(1);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
  [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   

@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7dde93cec99f4293871f83befab023b55b1b4569
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65822026"
 ---
 # <a name="print-code-and-results"></a>Imprimer le code et les résultats
@@ -31,7 +31,7 @@ ms.locfileid: "65822026"
   
  Si la numérotation des lignes est activée dans l’Éditeur, les numéros des lignes ne s’impriment pas, excepté si vous sélectionnez **Inclure les numéros de ligne** dans la boîte de dialogue **Imprimer** accessible à partir du menu **Fichier** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier la couleur, la taille et le style de la police](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   

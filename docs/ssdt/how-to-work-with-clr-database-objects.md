@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e0abe651d44c045f3ab92c5388aa740216cff0b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099583"
 ---
 # <a name="how-to-work-with-clr-database-objects"></a>Procédure : Travailler avec des objets de base de données CLR
@@ -38,7 +38,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 1.  Dans l'**Explorateur de solutions**, cliquez avec le bouton droit sur le projet de base de données **TradeDev**, sélectionnez **Ajouter**, puis **Nouvel élément**.  
   
-2.  Sélectionnez le modèle **CLR SQL C#**, puis **Fonction définie par l'utilisateur CLR SQL**. Acceptez le nom par défaut, puis cliquez sur **Ajouter**.  
+2.  Sélectionnez le modèle **CLR SQL C#** , puis **Fonction définie par l'utilisateur CLR SQL**. Acceptez le nom par défaut, puis cliquez sur **Ajouter**.  
   
 3.  Ajoutez le code suivant au corps de la classe. Cette fonction valide un numéro de téléphone aux États-Unis. Il doit être composé de trois caractères numériques, éventuellement entre parenthèses, suivis par un jeu de trois caractères numériques, puis par un jeu de quatre caractères numériques. Exemples de formats pris en charge : (425) 555-0123, 425-555-0123, 425 555 0123 et 1-425-555-0123.  
   
@@ -101,7 +101,7 @@ Pour plus d'informations sur les conditions de création d'objets de base de don
   
 5.  Remplacez l'entrée par **425 312 1222** et accédez par tabulation à un autre champ. Notez que cette fois-ci, l'entrée est acceptée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Avantages de l'intégration du CLR](../relational-databases/clr-integration/clr-integration-overview.md)  
 [Avantages de l'utilisation du code managé pour créer des objets de base de données](https://msdn.microsoft.com/library/k2e1fb36.aspx)  
 [Création d’objets de base de données avec intégration du Common Language Runtime (CLR)](https://msdn.microsoft.com/library/ms131046.aspx)  

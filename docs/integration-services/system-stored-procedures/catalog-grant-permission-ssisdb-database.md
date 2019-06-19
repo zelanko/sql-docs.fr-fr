@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 865a3c4eab996e41c08477b275b44250d43eb993
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716028"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (base de données SSISDB)
@@ -41,7 +41,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Arguments  
  [ @object_type = ] *object_type*  
- Type d'objet sécurisable. Les types d’objets sécurisables incluent le dossier (`1`), le projet (`2`), l’environnement (`3`) et l’opération (`4`). *object_type* est de type **smallint**_._  
+ Type d'objet sécurisable. Les types d’objets sécurisables incluent le dossier (`1`), le projet (`2`), l’environnement (`3`) et l’opération (`4`). *object_type* est de type **smallint** _._  
   
  [ @object_id = ] *object_id*  
  Identificateur unique (ID) de l'objet sécurisable. *object_id* est de type **bigint**.  
@@ -79,7 +79,7 @@ catalog.grant_permission [ @object_type = ] object_type
 
 Cette procédure ne peut pas être appelée par des connexions authentifiées par SQL Server. Elle ne peut pas être appelée par la connexion sa.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette procédure stockée vous permet d'accorder les types d'autorisation décrits dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  

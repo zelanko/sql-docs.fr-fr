@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7f7449741ac1c29595700c116118598a1b9cedf4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981624"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
@@ -68,7 +68,7 @@ SELECT CAST(@mybin1 AS varchar(5)) + ' '
 ## <a name="result-types"></a>Types des résultats  
  Retourne le type de données de l'argument dont la priorité est la plus élevée. Pour plus d’informations, consultez [Priorités des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'opérateur + (Concaténation de chaîne) se comporte différemment selon qu'il est utilisé avec une chaîne vide et de longueur nulle ou avec des valeurs NULL. Une chaîne de caractères de longueur nulle peut être spécifiée par deux guillemets simples sans caractères à l'intérieur. Une chaîne binaire de longueur nulle peut être spécifiée par 0x sans aucune valeur d'octet dans la constante hexadécimale. La concaténation d'une chaîne de longueur nulle concatène toujours deux chaînes spécifiées. Lorsque vous opérez avec des chaînes dont la valeur est NULL, le résultat de la concaténation est fonction des paramètres de la session. De même que pour les opérations arithmétiques réalisées sur des valeurs NULL, l'ajout d'une valeur NULL à une valeur connue se solde généralement par une valeur inconnue. Une concaténation de chaînes effectuée avec une valeur NULL doit produire un résultat du même type. Vous pouvez toutefois modifier ce comportement en changeant le paramètre de `CONCAT_NULL_YIELDS_NULL` pour la session actuelle. Pour plus d’informations, consultez [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md).  
   
  Si le résultat de la concaténation de chaînes dépasse la limite des 8 000 octets, il sera tronqué. Néanmoins, si au moins une des chaînes concaténées est de type valeur élevée, le résultat n'est pas tronqué.  
@@ -178,7 +178,7 @@ Hamilton, J.       Vice President of Production
 Welcker, B.        Vice President of Sales  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [+= &#40;Affectation après concaténation de chaînes&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/string-concatenation-equal-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

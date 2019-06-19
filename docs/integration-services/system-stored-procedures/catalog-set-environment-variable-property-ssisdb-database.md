@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b57a3ca1893d44cc2ed3fd60e20a39c4e43f473
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715930"
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property (base de données SSISDB)
@@ -39,19 +39,19 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom de l'environnement. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nom de la variable d'environnement. *variable_name* est de type **nvarchar(128)**.  
+ Nom de la variable d'environnement. *variable_name* est de type **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nom de la propriété de variable d'environnement. *property_name* est de type **nvarchar(128)**.  
+ Nom de la propriété de variable d'environnement. *property_name* est de type **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Valeur de la propriété de variable d'environnement. *property_value* est de type **nvarchar(4000)**.  
+ Valeur de la propriété de variable d'environnement. *property_value* est de type **nvarchar(4000)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -81,7 +81,7 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans cette version finale, seule la propriété `Description` peut être définie. La valeur de la propriété `Description` ne peut pas dépasser 4000 caractères.  
   
   

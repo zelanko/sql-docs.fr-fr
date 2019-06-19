@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981669"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instructions d’utilitaires SQL Server - GO
@@ -47,7 +47,7 @@ GO [count]
  *nombre*  
  Entier positif. Le lot qui précède GO sera exécuté le nombre spécifié de fois.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  GO n’est pas une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], mais une commande reconnue par les utilitaires **sqlcmd** et **osql**, ainsi que l’éditeur de code [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Les utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprètent GO comme le signal qu'ils doivent envoyer le lot actuel d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le traitement en cours se compose de toutes les transactions entrées depuis la dernière commande GO ou depuis le début de la session ou du script approprié s'il s'agit de la première commande GO.  

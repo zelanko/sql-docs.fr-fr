@@ -16,10 +16,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f29451dec0707ab23c0d8582ed710f75033841ff
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097527"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Résoudre les problèmes liés aux travaux multiserveurs qui utilisent des proxys
@@ -32,7 +32,7 @@ Les travaux distribués dont les étapes sont associées à un proxy s'exécuten
   
 -   « L'étape du travail nécessite un compte proxy, cependant la mise en correspondance de proxy est désactivée sur le serveur cible. »  
   
-    Pour résoudre cette erreur, affectez la valeur **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**_\<n\>_**\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** <n **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**. Par défaut, la valeur de cette sous-clé est **0** (**false**). La valeur de **MSSQL.**\<*n*> est le nom de l’instance, par exemple, **MSSQL.1** ou **MSSQL.3**.  
+    Pour résoudre cette erreur, affectez la valeur **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** _\<n\>_ **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.** <n **\SQLServerAgent\AllowDownloadedJobsToMatchProxyName**. Par défaut, la valeur de cette sous-clé est **0** (**false**). La valeur de **MSSQL.** \<*n*> est le nom de l’instance, par exemple, **MSSQL.1** ou **MSSQL.3**.  
   
 -   « Proxy introuvable. »  
   
@@ -41,6 +41,6 @@ Les travaux distribués dont les étapes sont associées à un proxy s'exécuten
 > [!CAUTION]  
 > [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer un environnement multi-serveur](../../ssms/agent/create-a-multiserver-environment.md)  
   

@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75522733a4054bd0a827913fee3cca060c2bdbdc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724403"
 ---
 # <a name="developing-a-custom-task"></a>Développement d'une tâche personnalisée
@@ -90,7 +90,7 @@ ms.locfileid: "65724403"
  [Développement d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Explique comment programmer des sources, des transformations et des destinations de flux de données personnalisées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extension du package à l’aide de la tâche de script](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Comparaison des solutions de script et des objets personnalisés](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca43c5b6faaa8aecf24da81e7a587f9c33636ac3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715733"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (base de données SSISDB)
@@ -44,13 +44,13 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient le package. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le package. *folder_name* est de type **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nom du  projet qui contient le package. *project_name* est de type **nvarchar(128)**.  
+ Nom du  projet qui contient le package. *project_name* est de type **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nom du package. *package_name* est de type **nvarchar(260)**.  
+ Nom du package. *package_name* est de type **nvarchar(260)** .  
   
  [ @validation_id = ] *validation_id*  
  Retourne l'identificateur unique (ID) de la validation. *validation_id* est de type **bigint**.  
@@ -59,7 +59,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Indique si l'exécution 32 bits doit être utilisée pour exécuter le package sur un système d'exploitation 64 bits. Utilisez la valeur `1` pour exécuter le package avec l’exécution 32 bits quand un système d’exploitation 64 bits est exécuté. Utilisez la valeur `0` pour exécuter le package avec l'exécution 64 bits lorsqu'un système d'exploitation 64 bits est exécuté. Ce paramètre est facultatif. *use32bitruntime* est de type **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif. Le caractère `D` est utilisé par défaut. *environment_scope* est de type **char(1)**.  
+ Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif. Le caractère `D` est utilisé par défaut. *environment_scope* est de type **char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  ID unique de la référence environnementale. Ce paramètre est obligatoire uniquement quand une référence environnementale unique est incluse dans la validation, quand *environment_scope* est `S`. *reference_id* est de type **bigint**.  
@@ -96,7 +96,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Les variables sont référencées dans les paramètres du package, mais aucun environnement référencé n'a été inclus dans la validation  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La validation aide à identifier les problèmes qui peuvent empêcher le package de s’exécuter avec succès. Utilisez les vues [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) ou [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) pour surveiller l’état de validation.  
   
   

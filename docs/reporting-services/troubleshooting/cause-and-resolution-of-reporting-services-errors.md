@@ -13,10 +13,10 @@ ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575581"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Cause et résolution des erreurs Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "65575581"
 |[rrRenderingError - Erreur Reporting Services](../../reporting-services/troubleshooting/rrrenderingerror-reporting-services-error.md)|Une erreur s'est produite lors du rendu du rapport. (rrRenderingError) %1.|  
 |[Service Windows Report Server &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|Le service Windows Report Server (MSSQLSERVER) ne peut pas se connecter à la base de données du serveur de rapports.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

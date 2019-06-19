@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fb86baacc6fc75aa5e41a5946e1761daa90ebc25
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105626"
 ---
 # <a name="visual-database-tool-designers"></a>Concepteurs Visual Database Tools
@@ -88,8 +88,8 @@ Une fois le concepteur ouvert, le menu **Concepteur de requêtes** apparaît dan
 >   
 > Cette version de Visual Database Tools ne prend pas en charge Microsoft SQL Server versions 7 et antérieures.  
   
-## <a name="see-also"></a> Voir aussi  
-[Créer des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Créer des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
 [Concevoir des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

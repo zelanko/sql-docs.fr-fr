@@ -25,10 +25,10 @@ ms.author: carlrab
 manager: craigg
 monkerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 2ba70fdf917fba3a8dbd730db7e8d9b89cd1b094
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65949019"
 ---
 # <a name="set-identityinsert-transact-sql"></a>SET IDENTITY_INSERT (Transact-SQL)
@@ -55,7 +55,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
  *table_name*  
  Nom de la table comportant une colonne d'identité.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  À n'importe quel moment, seule une table de la session peut avoir la propriété IDENTITY_INSERT activée (ON). Si la propriété d'une table est déjà activée lorsqu'une instruction SET IDENTITY_INSERT ON est émise pour une autre table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur signalant que la propriété SET IDENTITY_INSERT est déjà activée, en spécifiant la table correspondante.  
   
  Si la valeur insérée est supérieure à la valeur d'identité actuelle de la table, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise automatiquement la nouvelle valeur comme valeur d'identité actuelle.  
@@ -115,7 +115,7 @@ DROP TABLE dbo.Tool;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [IDENTITY, propriété &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)   

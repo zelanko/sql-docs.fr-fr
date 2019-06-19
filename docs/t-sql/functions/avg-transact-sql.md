@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945878"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
@@ -70,7 +70,7 @@ Le résultat évalué de l’*expression* détermine le type de retour.
 |Catégorie **money** et **smallmoney**|**money**|  
 |Catégorie **float** et **real**|**float**|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si le type de données d’*expression* est un type de données alias, le type de retour est également du type de données alias. Cependant, si le type de données de base du type de données alias est promu, par exemple de **tinyint** à **int**, la valeur renvoyée prend le type de données promu et non pas le type de données alias.
   
 AVG() calcule la moyenne d'un jeu de valeurs en divisant la somme de ces valeurs par le nombre de valeurs non nulles. Si la somme dépasse la valeur maximale pour le type de données de la valeur renvoyée, AVG() retourne une erreur.

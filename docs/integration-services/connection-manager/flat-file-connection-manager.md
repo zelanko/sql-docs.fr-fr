@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728271"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
@@ -259,7 +259,7 @@ ms.locfileid: "65728271"
 |**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : Les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont PAS qualifiées.|  
 |**Name**|Précisez un nom de colonne descriptif. Si vous n'entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|  
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|  
+|**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** . Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}** . Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}** . Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}** . Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}** . Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}** . Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}** . Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}** . Les colonnes sont séparées par une barre verticale.|  
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur est exprimée en nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|  
   

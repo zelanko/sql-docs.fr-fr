@@ -9,10 +9,10 @@ ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2aaa9b5b26b94bb6eb25b4091e0503591b2dcdba
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581864"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Autoriser l'agrandissement ou la réduction d'une zone de texte (Générateur de rapports et SSRS)
@@ -28,7 +28,7 @@ ms.locfileid: "65581864"
   
     -   Si vous souhaitez autoriser la réduction de la zone de texte en fonction de son contenu, sélectionnez **Autoriser la réduction de la hauteur**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.openlocfilehash: 1c5e56d0ed0d422770311ba8135992c4254370a0
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805397"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
@@ -55,7 +55,7 @@ ms.locfileid: "65805397"
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
  Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
   
--   Exécutez le programme d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et sélectionnez l’option **Mise à niveau de SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+-   Exécutez le programme d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et sélectionnez l’option **Mise à niveau de SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 -   Exécutez le fichier **setup.exe** à l’invite de commandes et spécifiez l’option **/ACTION=upgrade**. Pour plus d’informations, consultez la section, « Scripts d’installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]», dans [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d317902a0eefa2c31d0835fb9b7cf28705d5dde
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945697"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
@@ -67,7 +67,7 @@ Expression entière qui spécifie la précision de la valeur **datetime2** que `
 ## <a name="return-types"></a>Types de retour
 **datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DATETIME2FROMPARTS` retourne une valeur **datetime2** entièrement initialisée. `DATETIME2FROMPARTS` génère une erreur si au moins un argument obligatoire a une valeur non valide. `DATETIME2FROMPARTS` retourne une valeur Null si au moins un argument obligatoire a une valeur Null. Toutefois, si l’argument *precision* a une valeur Null, `DATETIME2FROMPARTS` génère une erreur.
 
 L’argument *fractions* dépend de l’argument *precision*. Par exemple, pour la valeur *precision* 7, chaque fraction représente 100 nanosecondes ; pour la valeur *precision* 3, chaque fraction représente une milliseconde. Pour la valeur *precision* zéro, la valeur de *fractions* doit également être zéro ; sinon, `DATETIME2FROMPARTS` génère une erreur.

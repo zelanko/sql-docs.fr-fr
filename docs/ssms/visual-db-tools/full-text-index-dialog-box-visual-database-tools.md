@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 461a0afd4b77a449f7b398a03113164370061df5
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105160"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
@@ -44,7 +44,7 @@ Supprime l’index de texte intégral sélectionné dans la liste **Index de tex
 Développée, elle affiche les propriétés **Colonnes** et **Nom de catalogue de texte intégral**.  
   
 **Colonnes**  
-Affiche une liste avec la virgule comme séparateur des noms de colonnes pouvant faire l'objet d'une recherche en texte intégral. Pour afficher la liste complète, cliquez sur le bouton de sélection (**...**), à gauche du champ de propriété.  
+Affiche une liste avec la virgule comme séparateur des noms de colonnes pouvant faire l'objet d'une recherche en texte intégral. Pour afficher la liste complète, cliquez sur le bouton de sélection ( **...** ), à gauche du champ de propriété.  
   
 **Full-Text Catalog Name**  
 Affiche le nom du catalogue de texte intégral dans lequel cet index de texte intégral est stocké. Pour stocker l'index dans un autre catalogue, cliquez sur le nom du catalogue et choisissez-en un autre dans la liste déroulante.  
@@ -94,7 +94,7 @@ Affiche le type de l’analyse actuelle ou de la dernière analyse : Complet, In
 **Nom d'index unique**  
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser l'Assistant Indexation de texte intégral](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
 [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
   

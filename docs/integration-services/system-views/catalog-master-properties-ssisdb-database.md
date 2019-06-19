@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97cde3fcfb5effa7c61fde6673a830f67d9fc634
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714557"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (base de données SSISDB)
@@ -32,7 +32,7 @@ Affiche les propriétés d’[!INCLUDE[ssISnoversion](../../includes/ssisnoversi
 |property_name|**nvarchar (256)**|Nom de la propriété de Scale Out Master.|  
 |property_value|**nvarchar(max)**|Valeur de la propriété de Scale Out Master.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Cette vue affiche une ligne pour chaque propriété de Scale Out Master. Les propriétés affichées par cette vue incluent les éléments suivants :
 
 |Nom de la propriété|Description|  

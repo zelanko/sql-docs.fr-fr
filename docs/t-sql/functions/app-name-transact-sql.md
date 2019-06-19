@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 541fda3f87582a700a757efff570f2fc9e57c4f6
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945096"
 ---
 # <a name="appname-transact-sql"></a>APP_NAME (Transact-SQL)
@@ -49,12 +49,12 @@ APP_NAME  ( )
 ## <a name="return-types"></a>Types de retour  
 **nvarchar(128)**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez `APP_NAME` pour faire la distinction entre différentes applications, comme un moyen d’effectuer des actions différentes pour ces applications. Par exemple, `APP_NAME` peut faire la distinction entre les différentes applications, ce qui autorise un format de date différent pour chaque application. Elle peut également autoriser le renvoi d’un message d’information à certaines applications.
   
 Pour définir un nom d’application dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez sur **Options** dans la boîte de dialogue **Se connecter au moteur de base de données**. Sous l’onglet **Paramètres de connexion supplémentaires**, spécifiez un attribut **app** au format `;app='application_name'`
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 Cet exemple vérifie si l’application cliente qui a lancé ce traitement est une session `SQL Server Management Studio`. Il fournit ensuite une valeur de date au format US ou ANSI.
   
 ```sql

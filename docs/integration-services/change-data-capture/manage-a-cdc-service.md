@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa74a85020afdac21fd83178679be6e5db3231ee
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728670"
 ---
 # <a name="manage-a-cdc-service"></a>Gérer un service de capture de données modifiées
@@ -47,7 +47,7 @@ ms.locfileid: "65728670"
   
  Cliquez sur **Arrêter toutes les instances** pour arrêter la capture de données modifiées pour toutes les instances dans le service.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  

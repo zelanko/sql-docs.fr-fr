@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098081"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : Créer une capture instantanée d’un projet
@@ -31,7 +31,7 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
 ### <a name="to-create-a-snapshot"></a>Pour créer un instantané  
   
-1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...**.  
+1.  Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **TradeDev** et sélectionnez**Application de la couche Données (\*.dacpac)...** .  
   
 2.  SSDT tentera de générer le projet en premier. Si aucune erreur de build n'est détectée, un dossier **Instantané** est créé dans l'**Explorateur de solutions**. Dans ce dossier, SSDT crée un fichier .dacpac au format de nom « <Project Name>_YYYYMMDD_HH-MM-SS.dacpac ».  
   
@@ -64,6 +64,6 @@ Si une erreur utilisateur se produit dans un projet de base de données source, 
   
     Vous pouvez facilement rechercher le delta d'autres instantanés à l'aide de Comparaison de schémas. Dans ce cas, vous pouvez découvrir comment votre projet évolue au cours du processus de développement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : utiliser le schéma pour comparer différentes définitions de base de données](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

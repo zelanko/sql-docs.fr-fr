@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 01272dedee424cb50c3c0e8e40c9ac92c95ec070
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943004"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Indique si une expression de colonne spécifiée dans une liste GROUP BY est agrégée ou non. GROUPING retourne 1 pour agrégé ou 0 pour non agrégé dans le jeu de résultats. GROUPING ne peut être utilisé que dans les clauses SELECT \<select list>, HAVING et ORDER BY lorsque GROUP BY est spécifié.   
+  Indique si une expression de colonne spécifiée dans une liste GROUP BY est agrégée ou non. GROUPING retourne 1 pour agrégé ou 0 pour non agrégé dans le jeu de résultats. GROUPING ne peut être utilisé que dans les clauses SELECT \<select list>, HAVING et ORDER BY lorsque GROUP BY est spécifié.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,11 +51,11 @@ GROUPING ( <column_expression> )
 ## <a name="return-types"></a>Types de retour  
  **tinyint**  
   
-## <a name="remarks"></a>Notes   
- GROUPING sert à distinguer les valeurs NULL retournées par CUBE, ROLLUP ou GROUPING SETS des valeurs NULL standard. La valeur NULL retournée comme résultat d'une opération CUBE, ROLLUP ou GROUPING SETS est une utilisation spéciale de NULL. Elle agit comme espace réservé de colonne dans le jeu de résultats et signifie « All » (tout).   
+## <a name="remarks"></a>Notes  
+ GROUPING sert à distinguer les valeurs NULL retournées par CUBE, ROLLUP ou GROUPING SETS des valeurs NULL standard. La valeur NULL retournée comme résultat d'une opération CUBE, ROLLUP ou GROUPING SETS est une utilisation spéciale de NULL. Elle agit comme espace réservé de colonne dans le jeu de résultats et signifie « All » (tout).  
   
 ## <a name="examples"></a>Exemples  
- L'exemple suivant groupe `SalesQuota` et agrège les montants `SaleYTD` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  La fonction `GROUPING` est appliquée à la colonne `SalesQuota`.  
+ L'exemple suivant groupe `SalesQuota` et agrège les montants `SaleYTD` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La fonction `GROUPING` est appliquée à la colonne `SalesQuota`.  
   
 ```  
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  
@@ -64,7 +64,7 @@ GROUP BY SalesQuota WITH ROLLUP;
 GO  
 ```  
   
- Le jeu de résultats indique deux valeurs NULL sous `SalesQuota`. La première valeur `NULL` représente le groupe des valeurs NULL de cette colonne dans la table.  La seconde valeur `NULL` se trouve dans la ligne résumée ajoutée par l'opération ROLLUP.  La ligne du total indique les montants `TotalSalesYTD` pour tous les groupes `SalesQuota` et est indiquée par `1` dans la colonne `Grouping`.   
+ Le jeu de résultats indique deux valeurs NULL sous `SalesQuota`. La première valeur `NULL` représente le groupe des valeurs NULL de cette colonne dans la table. La seconde valeur `NULL` se trouve dans la ligne résumée ajoutée par l'opération ROLLUP. La ligne du total indique les montants `TotalSalesYTD` pour tous les groupes `SalesQuota` et est indiquée par `1` dans la colonne `Grouping`.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -79,7 +79,7 @@ NULL           44294026.1344         1
 (4 row(s) affected)
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GROUPING_ID &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-id-transact-sql.md)   
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   

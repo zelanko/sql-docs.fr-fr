@@ -27,10 +27,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2faec2479ab664d6eaf49c3076b84d42145daf07
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105867"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
@@ -216,7 +216,7 @@ Pour plus d’informations sur la création d’étapes de travail qui exécuten
 |Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)|  
 |Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d'étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  
 [sp_add_job (Transact-SQL)](https://msdn.microsoft.com/6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274)  

@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f12eff6e67392fd433a6b563876912730b9de279
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980165"
 ---
 # <a name="use-transact-sql"></a>USE (Transact-SQL)
@@ -49,7 +49,7 @@ USE { database_name }
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le paramètre database ne peut faire référence qu'à la base de données active. Si une base de données autre que la base de données active est fournie, l’instruction `USE` ne permet pas de basculer entre les bases de données et le code d’erreur 40508 est retourné. Pour changer de bases de données, vous devez vous connecter directement à la base de données. L’instruction USE est marquée comme non applicable à SQL Database en haut de cette page, car même si vous pouvez inclure l’instruction `USE` dans un lot, elle n’a aucun effet.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu'un nom d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il est automatiquement connecté à sa base de données par défaut et acquiert le contexte de sécurité d'un utilisateur de base de données. Si aucun utilisateur de base de données n'a été créé pour le nom d'ouverture de session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], celui-ci se connecte en tant que guest (invité). Si l'utilisateur de base de données ne bénéficie pas de l'autorisation CONNECT sur la base de données, l'instruction USE échoue. Si aucune base de données par défaut n'a été affectée au nom d'ouverture de session, sa base de données par défaut est définie sur master.  
   
  USE est exécutée à la fois au moment de l'exécution et de la compilation, et prend effet immédiatement. C'est pourquoi les instructions apparaissant dans un traitement après l'exécution de USE sont exécutées dans la base de données spécifiée.  
@@ -65,7 +65,7 @@ USE AdventureWorks2012;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

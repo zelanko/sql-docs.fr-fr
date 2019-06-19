@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070294"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action de rapport (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -76,7 +76,7 @@ ms.locfileid: "66070294"
 |colonne|Description|  
 |------------|-----------------|  
 |**Nom du paramètre**|Tapez le nom du paramètre à passer au rapport.|  
-|**Valeur du paramètre**|Tapez la valeur du paramètre à passer au rapport.<br /><br /> Cliquez sur le bouton de sélection (**...**) pour afficher la boîte de dialogue **Générateur MDX** et créer une expression MDX qui fournit la valeur du paramètre du rapport. Pour plus d’informations sur la boîte de dialogue **Générateur MDX**, consultez [Générateur MDX &#40;Analysis Services – Données multidimensionnelles&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Si le paramètre est défini avec une expression MDX, celle-ci est évaluée lorsque l'action est exécutée ; sinon, elle est passée au rapport sans modification.|  
+|**Valeur du paramètre**|Tapez la valeur du paramètre à passer au rapport.<br /><br /> Cliquez sur le bouton de sélection ( **...** ) pour afficher la boîte de dialogue **Générateur MDX** et créer une expression MDX qui fournit la valeur du paramètre du rapport. Pour plus d’informations sur la boîte de dialogue **Générateur MDX**, consultez [Générateur MDX &#40;Analysis Services – Données multidimensionnelles&#41;](mdx-builder-analysis-services-multidimensional-data.md).<br /><br /> Si le paramètre est défini avec une expression MDX, celle-ci est évaluée lorsque l'action est exécutée ; sinon, elle est passée au rapport sans modification.|  
   
  **Propriétés supplémentaires**  
  Développez pour afficher les options **Invocation**, **Application**, **Description**, **Légende**et **La légende est MDX** .  

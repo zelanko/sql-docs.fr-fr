@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722739"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Leçon 2-2 : Ajouter et configurer le conteneur de boucles Foreach
@@ -51,7 +51,7 @@ Une fois ces modifications apportées au package et le package exécuté, le con
   
 4.  Dans la boîte de dialogue **Éditeur de boucle Foreach**, dans la page **Général**, pour **Nom**, entrez **Foreach File in Folder**. Sélectionnez **OK**.  
   
-5.  Cliquez avec le bouton droit sur le conteneur de boucles Foreach, sélectionnez **Propriétés** puis, dans la fenêtre **Propriétés**, vérifiez que la propriété **LocaleID** est définie sur **Anglais (États-Unis)**.  
+5.  Cliquez avec le bouton droit sur le conteneur de boucles Foreach, sélectionnez **Propriétés** puis, dans la fenêtre **Propriétés**, vérifiez que la propriété **LocaleID** est définie sur **Anglais (États-Unis)** .  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>Configurer l'énumérateur pour le conteneur de boucles Foreach  
   
@@ -71,7 +71,7 @@ Une fois ces modifications apportées au package et le package exécuté, le con
   
 1.  Sélectionnez **Mappages de variables**.  
   
-2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>**.  
+2.  Dans la page **Mappages de variables**, dans la colonne **Variable**, cliquez sur la cellule vide et sélectionnez **\<Nouvelle variable>** .  
   
 3.  Dans la boîte de dialogue **Ajouter une variable**, pour **Nom** entrez **varFileName**.  
   

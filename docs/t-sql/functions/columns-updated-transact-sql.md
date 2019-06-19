@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1e436a03125559da522adc9fcc54df0866032698
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943986"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
@@ -44,7 +44,7 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `COLUMNS_UPDATED` effectue un test pour déterminer si des actions UPDATE ou INSERT sont réalisées sur plusieurs colonnes. Pour tester des tentatives UPDATE ou INSERT sur une colonne, utilisez [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 `COLUMNS_UPDATED` retourne un ou plusieurs octets classés de gauche à droite. Le bit le plus à droite dans chaque octet est le bit le moins significatif. Le bit le plus à droite de l’octet le plus à gauche représente la première colonne de la table, le suivant à gauche représente la deuxième colonne, etc. `COLUMNS_UPDATED` retourne plusieurs octets si la table sur laquelle le déclencheur est créé contient plus de huit colonnes, l’octet le moins significatif étant celui le plus à gauche. `COLUMNS_UPDATED` retourne TRUE pour toutes les colonnes des actions INSERT, car les valeurs insérées dans ces colonnes sont explicites ou implicites (NULL).

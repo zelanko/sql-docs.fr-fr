@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0128172fa800cde1dafb0a127a1463e3295ce06f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724989"
 ---
 # <a name="round-ssis-expression"></a>ROUND (expression SSIS)
@@ -45,7 +45,7 @@ ROUND(numeric_expression,length)
 ## <a name="result-types"></a>Types des résultats  
  Type similaire à celui de *numeric*_*expression*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'argument *length* doit avoir une valeur positive entière ou égale à zéro.  
   
  La fonction ROUND renvoie un résultat NULL si l'argument est NULL.  
@@ -58,7 +58,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

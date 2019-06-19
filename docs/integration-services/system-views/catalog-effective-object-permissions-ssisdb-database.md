@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea3adde2571a5c6143f117c998d207c16e08752
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715374"
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (base de données SSISDB)
@@ -36,7 +36,7 @@ ms.locfileid: "65715374"
 |object_id|**bigint**|Identificateur unique (ID) ou clé primaire de l'objet.|  
 |permission_type|**smallint**|Type de l'autorisation.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche les types d'autorisation répertoriés dans le tableau suivant :  
   
 |Valeur permission_type|Nom de l'autorisation|Description de l'autorisation|Types d'objet applicables|  

@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014dee25c2e2237f7c9b72b79f78aa2a0abb4e47
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948149"
 ---
 # <a name="contextinfo--transact-sql"></a>CONTEXT_INFO  (Transact-SQL)
@@ -49,7 +49,7 @@ Si **context_info** n’était pas défini :
 -   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], renvoie la valeur NULL.  
 -   Dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], renvoie un GUID unique spécifique à la session.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La fonctionnalité MARS (Multiple Active Result Sets) permet aux applications d'exécuter simultanément plusieurs traitements ou requêtes sur la même connexion. Lorsqu'un des traitements d’une connexion MARS exécute la procédure SET CONTEXT_INFO, la fonction `CONTEXT_INFO` renvoie la nouvelle valeur de contexte lorsque la fonction `CONTEXT_INFO` est exécutée dans le même traitement que l'instruction SET. Si la fonction `CONTEXT_INFO` s’exécute dans un ou plusieurs autres traitements de la connexion, la fonction `CONTEXT_FUNCTION` ne retourne pas la nouvelle valeur, sauf si ces traitements ont démarré après l’achèvement du traitement qui a exécuté l’instruction SET.
   
 ## <a name="permissions"></a>Autorisations  

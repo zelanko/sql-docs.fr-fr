@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8165479802eefdb9656e4e2d78b3d893c3ce03d5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728555"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Connexion SQL Server pour la création d'une instance
@@ -55,7 +55,7 @@ ms.locfileid: "65728555"
   
      Pour plus d’informations sur la boîte de dialogue Propriétés avancées de connexion, consultez [Propriétés avancées de connexion](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer la base de données de modification SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
  [Autorisations de connexion SQL Server requises pour le concepteur CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 26ff0aa2920072d8c6fd4ef97d9945bf1b365970
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104842"
 ---
 # <a name="external-tools"></a>Outils externes
@@ -64,7 +64,7 @@ Autorise la fenêtre de sortie à accepter le format Unicode.
 **Fermer en quittant**  
 Ferme en même temps que l'outil la fenêtre qu'il a ouverte.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 #### <a name="to-add-sql-server-configuration-manager-to-the-tools-menu"></a>Pour ajouter le Gestionnaire de configuration SQL Server au menu Outils  
   
@@ -74,7 +74,7 @@ Ferme en même temps que l'outil la fenêtre qu'il a ouverte.
   
 3.  Dans la zone **Commande** , tapez le chemin de l'exécutable [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console, tel que **C:\WINNT\system32\mmc.exe**.  
   
-4.  Dans la zone **Arguments** , tapez le chemin du fichier .msc, tel que **« C:\WINNT\system32\SQLServerManager.msc »**.  
+4.  Dans la zone **Arguments** , tapez le chemin du fichier .msc, tel que **« C:\WINNT\system32\SQLServerManager.msc »** .  
   
 > [!NOTE]  
 > Affichez les propriétés du raccourci de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans le menu **Démarrer** pour vérifier l'emplacement des fichiers sur votre ordinateur.  

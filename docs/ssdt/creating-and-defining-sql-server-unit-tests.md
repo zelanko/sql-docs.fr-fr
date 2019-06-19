@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ba48569633363dc7a1714bb036f40abcc0249160
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099336"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Création et définition de tests unitaires SQL Server
@@ -49,6 +49,6 @@ Après avoir créé les tests unitaires SQL Server, exécutez-les dans la fenêt
 [Scénario : définir des conditions de test personnalisées pour les tests unitaires de base de données](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
 Créez une condition de test personnalisée afin de tester un comportement que les conditions de test par défaut ne peuvent pas vérifier.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b9c1ce066768207f7a04d16e2f4c18666eb231d7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943997"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Fonctions de classement - TERTIARY_WEIGHTS (Transact-SQL)
@@ -48,7 +48,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 ## <a name="return-types"></a>Types de retour
 `TERTIARY_WEIGHTS` retourne **varbinary** quand *non_Unicode_character_string_expression* est de type **char** ou **varchar**, et elle retourne **varbinary(max)** quand la valeur *non_Unicode_character_string_expression* est un type de données **varchar(max)** .
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `TERTIARY_WEIGHTS` retourne NULL quand le classement tertiaire SQL ne définit pas la valeur *non_Unicode_character_string_expression*. Le tableau suivant présente les classements tertiaires SQL :
   
 |ID d'ordre de tri|classement SQL|  
@@ -84,7 +84,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |183|SQL_Danish_Pref_CP1_CI_AS|  
 |184|SQL_SwedishPhone_Pref_CP1_CI_AS|  
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
-|186.|SQL_Icelandic_Pref_CP1_CI_AS|  
+|186\.|SQL_Icelandic_Pref_CP1_CI_AS|  
   
 Utilisez `TERTIARY_WEIGHTS` pour la définition d’une colonne calculée définie sur les valeurs d’une colonne de type **char**, **varchar** ou **varchar(max)** . La définition d’index sur la colonne calculée et sur la colonne de type **char**, **varchar** ou **varchar(max)** peut améliorer les performances quand la clause ORDER BY d’une requête spécifie cette colonne de type **char**, **varchar** ou **varchar(max)** .
   

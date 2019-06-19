@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1dcaf8e01a1ebb0f2ed0d7f33988de2aec6327cc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728491"
 ---
 # <a name="the-oracle-cdc-instance"></a>Instance Oracle CDC
@@ -47,7 +47,7 @@ ms.locfileid: "65728491"
   
 -   **Gestion de la récupération** : quand une instance Oracle CDC démarre, son état interne est restauré à partir des tables **xdbcdc_state** et **xdbcdc_staged_transactions**. Une fois l'état restauré, l'instance de capture de données modifiées s'exécute de manière habituelle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../integration-services/change-data-capture/error-handling.md)  
   
   

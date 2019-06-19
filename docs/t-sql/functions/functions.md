@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2ba2ae5f22967530a93def3d888b35cc5847ddb7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946532"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quelles sont les fonctions de base de données SQL ?
@@ -79,7 +79,7 @@ Effectuent des opérations sur une valeur unique et retournent ensuite une valeu
   
  Les fonctions qui acceptent plusieurs entrées sous forme de chaîne de caractères et retournent une chaîne de caractères utilisent les règles de priorité des classements pour définir le classement de la chaîne de sortie. Pour plus d’informations, consultez [Priorité de classement &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Utilisation de procédures stockées &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  

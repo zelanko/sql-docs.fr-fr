@@ -12,10 +12,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 34a8cc218cac621a678ae32ced63166ead9ffef0
-ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66749123"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Index columnstore - Nouveautés
@@ -139,7 +139,7 @@ Ces DMV basées sur OLTP en mémoire contiennent des mises à jour pour columnst
 -   L’index columnstore requiert toujours un stockage supplémentaire, généralement supérieur de 10 % à celui du rowstore, car il stocke une copie des données.  
 -   Le traitement par lots offre des performances de requête au moins deux fois supérieures, mais il est disponible uniquement pour l’exécution de requêtes parallèles.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index columnstore - Guide de conception](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Index columnstore - Conseils en matière de chargement de données](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

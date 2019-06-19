@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c4f21916de6c03c8e592702e58af481ef64cbb6d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944215"
 ---
 # <a name="minactiverowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
@@ -45,7 +45,7 @@ MIN_ACTIVE_ROWVERSION
 ## <a name="return-types"></a>Types de retour  
  Retourne une valeur **binary(8)** .  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  MIN_ACTIVE_ROWVERSION est une fonction non déterministe qui retourne la valeur **rowversion** active la plus basse dans la base de données active. Une nouvelle valeur **rowversion** est générée en règle générale lorsqu'une insertion ou une mise à jour est effectuée sur une table qui contient une colonne de type **rowversion**. S’il n’y a pas de valeurs actives dans la base de données, MIN_ACTIVE_ROWVERSION retourne la même valeur que @@DBTS + 1.  
   
  MIN_ACTIVE_ROWVERSION est utile dans certains scénarios, par exemple dans le cadre de la synchronisation de données qui utilise des valeurs **rowversion** pour grouper des jeux de modifications. Si une application utilise @@DBTS au lieu de MIN_ACTIVE_ROWVERSION, il est possible de manquer des modifications qui sont actives au moment de la synchronisation.  
@@ -135,7 +135,7 @@ GO
 --0x00000000000007E5  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@DBTS &#40;Transact-SQL&#41;](../../t-sql/functions/dbts-transact-sql.md)   
  [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md)  
   

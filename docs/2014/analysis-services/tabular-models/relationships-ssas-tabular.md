@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066698"
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
@@ -56,7 +56,7 @@ ms.locfileid: "66066698"
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Créer une vue d’abonnement|EMail|  
+|[CustomerID]|Nom|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -98,7 +98,7 @@ ms.locfileid: "66066698"
   
  Le tableau ci-dessous indique les relations entre les trois tables :  
   
-|Relation|Type|colonne de recherche|colonne|  
+|Relation|type|colonne de recherche|colonne|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|un-à-un|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|un-à-plusieurs|Customers.CustomerID|Orders.CustomerID|  

@@ -14,10 +14,10 @@ ms.author: vanto
 ms.reviewer: aliceku
 manager: craigg
 ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938190"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Meilleures pratiques de sécurité recommandées avec les bases de données autonomes
@@ -88,7 +88,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Déni de service via AUTO_CLOSE  
  Ne configurez pas de bases de données autonomes pour la fermeture automatique. Si la base de données est fermée, son ouverture pour authentifier un utilisateur consomme des ressources supplémentaires et risque de contribuer à une attaque par déni de service.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Migrer vers une base de données partiellement autonome](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

@@ -9,10 +9,10 @@ ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1038958e969a04531cf790a9254816b24d3b5646
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580701"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Fonctionnalité interactive - Différentes extensions de rendu de rapports
@@ -106,7 +106,7 @@ ms.locfileid: "65580701"
 |Word|Le serveur de rapports exporte le rapport au format Word en utilisant les données filtrées dans le rapport actuel.|  
 |Autres|Le serveur de rapports exporte le rapport à d'autres formats en utilisant les données filtrées dans le rapport actuel.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     

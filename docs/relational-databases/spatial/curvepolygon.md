@@ -12,10 +12,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98d517c4d00d0ed69aa4a04daa4333c65fdf31de
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935260"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
@@ -174,7 +174,7 @@ SELECT @g1.STIsValid() AS G1, @g2.STIsValid() AS G2;
   
  `@g1` et `@g2` utilisent tous les deux le même anneau englobant extérieur (un cercle avec un rayon de 5) et un carré comme anneau intérieur.  Toutefois, l’instance `@g1` est valide, mais l’instance `@g2` n’est pas valide. La raison pour laquelle @g2 n’est pas valide est que l’anneau intérieur fractionne l’espace intérieur englobé par l’anneau extérieur en quatre régions distinctes. Le dessin suivant montre ce qui s'est produit :  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Polygon](../../relational-databases/spatial/polygon.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [CompoundCurve](../../relational-databases/spatial/compoundcurve.md)   

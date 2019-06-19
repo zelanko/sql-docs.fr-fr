@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 898a7e4cea01b37bcb45334a3fc669cb63357d9d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943903"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
@@ -58,7 +58,7 @@ expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL
 ## <a name="return-types"></a>Types de retour
 **varbinary(max)** représentant le contenu compressé de l’entrée.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les données compressées ne peuvent pas être indexées.
   
 La fonction `COMPRESS` compresse les données d’expression d’entrée. Vous devez appeler cette fonction pour chaque section de données à compresser. Consultez [Compression des données](../../relational-databases/data-compression/data-compression.md) pour plus d’informations sur la compression automatique des données pendant le stockage au niveau des lignes ou des pages.

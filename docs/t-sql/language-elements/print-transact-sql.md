@@ -25,10 +25,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 549e5cf693aa72f891fa286fc2ba24ee3c952577
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980424"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
@@ -54,7 +54,7 @@ PRINT msg_str | @local_variable | string_expr
  *string_expr*  
  Expression qui retourne une chaîne. Cet argument peut inclure des valeurs littérales concaténées, des fonctions et des variables. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une chaîne de message peut contenir jusqu'à 8 000 caractères s'il s'agit d'une chaîne non-Unicode, et 4 000 caractères s'il s'agit d'une chaîne Unicode. Les chaînes plus longues sont tronquées. Les types de données **varchar(max)** et **nvarchar(max)** sont tronqués en types de données qui ne dépassent pas **varchar(8000)** et **nvarchar(4000)** .  
   
  L'instruction RAISERROR peut également être utilisée pour retourner des messages. Elle présente trois avantages par rapport à l'instruction PRINT :  
@@ -112,7 +112,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  

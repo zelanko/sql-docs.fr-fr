@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727129"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
@@ -85,7 +85,7 @@ ms.locfileid: "65727129"
   
  La balise de comparaison **FullySensitive** s'affiche dans la boîte de dialogue **Éditeur avancé** pour les transformations de regroupement probable et de recherche floue. Le fait de sélectionner l'indicateur de comparaison **FullySensitive** signifie que toutes les options de comparaison s'appliquent.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données d'Integration Services](../../integration-services/data-flow/integration-services-data-types.md)   
  [Analyse rapide](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   
  [Analyse standard](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)  

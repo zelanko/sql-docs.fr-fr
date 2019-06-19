@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983231"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
@@ -58,7 +58,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
 ## <a name="result-value"></a>Valeur des résultats  
  Retourne la valeur TRUE quand la comparaison spécifiée a la valeur TRUE pour toutes les paires (_scalar_expression_ **,** _x)_ , quand *x* est une valeur du jeu de la colonne. Sinon, retourne la valeur FALSE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ALL requiert que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) a la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE, étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
   
  Pour les instructions qui demandent que l’argument *scalar_expression* corresponde à seulement une des valeurs retournées par la sous-requête, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
@@ -106,7 +106,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  `Some items for this order can't be manufactured in specified number of days or less.`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

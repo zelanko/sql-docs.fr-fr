@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c52996b890529504c304aae2bf1dc41c3a3f4b4b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947563"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
@@ -55,7 +55,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>Types de retour  
  **varchar**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si elles sont spécifiées, les valeurs des paramètres *length* et *decimal* dans STR doivent être positives. Le nombre est arrondi par défaut à un entier ou si le paramètre décimal est 0. La longueur spécifiée doit être supérieure ou égale à la partie du nombre située avant la virgule décimale plus le signe du nombre (le cas échéant). Un argument *float_expression* court est justifié à droite selon la longueur spécifiée, et un argument *float_expression* long est tronqué au nombre spécifié de décimales. Par exemple, STR(12 **,** 10) donne 12 comme résultat. Il est justifié à droite dans le jeu de résultats. Toutefois, STR(1223 **,** 2) tronque le jeu de résultats à **. Il est possible d'imbriquer des fonctions de chaîne.  
   
 > [!NOTE]  
@@ -110,7 +110,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
  [Fonctions de chaîne &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  

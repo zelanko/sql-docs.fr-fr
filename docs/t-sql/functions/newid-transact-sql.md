@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d411af5fe27f012884f44e18fd065091237b394f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942996"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
@@ -44,7 +44,7 @@ NEWID ( )
 ## <a name="return-types"></a>Types de retour  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  `NEWID()` compatible avec RFC4122.  
   
 ## <a name="examples"></a>Exemples  
@@ -119,7 +119,7 @@ SELECT @myid;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [NEWSEQUENTIALID &#40;Transact-SQL&#41;](../../t-sql/functions/newsequentialid-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

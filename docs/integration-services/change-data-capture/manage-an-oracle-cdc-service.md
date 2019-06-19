@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d3941108c9cd8969f4082a4c6aed765f39bb013
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728683"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Gérer un Service de capture de données modifiées Oracle
@@ -62,7 +62,7 @@ ms.locfileid: "65728683"
   
  Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées où vous souhaitez modifier les propriétés et sélectionner **Propriétés**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour gérer un service CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

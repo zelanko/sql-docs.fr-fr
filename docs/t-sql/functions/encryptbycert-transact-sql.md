@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f7e2ca12ccd98b1b8be77e2df2e480036dda70b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948918"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
@@ -61,7 +61,7 @@ Variable de l’un des types suivants, dont les données seront chiffrées avec 
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Cette fonction chiffre des données à l’aide de la clé publique du certificat. Seule la clé privée correspondante peut déchiffrer le texte chiffré. Ces transformations asymétriques sont coûteuses par rapport au chiffrement/déchiffrement avec une clé symétrique. Par conséquent, le chiffrement asymétrique n’est pas recommandé avec des ensembles de données volumineux.
   
 ## <a name="examples"></a>Exemples  
@@ -74,7 +74,7 @@ INSERT INTO [AdventureWorks2012].[ProtectedData04]
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DECRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
 [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   

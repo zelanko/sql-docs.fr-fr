@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6a69b84fb78acaa30800f69783e6117e37e01149
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943852"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
@@ -46,7 +46,7 @@ Expression de tout type.
 ## <a name="return-types"></a>Types de retour
 Valeur de chaîne dont la longueur et le type dépendent de l’entrée.
 
-## <a name="remarks"></a>Notes    
+## <a name="remarks"></a>Notes   
 `CONCAT_WS` accepte un nombre variable d’arguments de chaîne et les concatène (ou les joint) en une seule chaîne. Elle sépare ces valeurs de chaîne concaténées avec le délimiteur spécifié dans le premier argument de la fonction. `CONCAT_WS` nécessite un argument de séparateur et un minimum de deux autres arguments de valeur de chaîne ; sinon, `CONCAT_WS` génère une erreur. `CONCAT_WS` convertit implicitement tous les arguments en types chaîne avant la concaténation. 
 
 La conversion implicite en chaînes respecte les règles existantes de conversion de type de données. Consultez [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md) pour plus d’informations sur le comportement et les conversions de type de données.

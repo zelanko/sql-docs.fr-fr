@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721523"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Leçon 5-2 : Activer et définir les configurations du package
@@ -45,11 +45,11 @@ Au cours de cette tâche, vous convertissez le projet en modèle de déploiement
   
 7.  Réaffichez l’onglet **Flux de contrôle** et double-cliquez sur le conteneur **Foreach File in Folder** .  
   
-8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez **Expressions**, puis le bouton de sélection **(...)**.  
+8.  Dans la page **Collection** de l’**Éditeur de boucle Foreach**, sélectionnez **Expressions**, puis le bouton de sélection **(...)** .  
   
 9. Dans l’**Éditeur d’expressions de la propriété**, sélectionnez la liste **Propriété**, puis **Directory**.  
   
-10. Dans la zone **Expression**, sélectionnez le bouton de sélection **(...)**.  
+10. Dans la zone **Expression**, sélectionnez le bouton de sélection **(...)** .  
   
 11. Dans le **Générateur d’expressions**, développez le dossier **Variables et paramètres** et faites glisser la variable **User::varFolderName** vers la zone **Expression**.  
   
@@ -109,7 +109,7 @@ Au cours de cette tâche, vous convertissez le projet en modèle de déploiement
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Créer et remplir un dossier New Sample Data  
   
-1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, **C:\\**), créez un dossier appelé **New Sample Data**.  
+1.  Dans l’Explorateur Windows, à la racine de votre lecteur (par exemple, **C:\\** ), créez un dossier appelé **New Sample Data**.  
   
 2.  Localisez les fichiers d'exemple sur votre ordinateur et copiez trois des fichiers du dossier.  
   

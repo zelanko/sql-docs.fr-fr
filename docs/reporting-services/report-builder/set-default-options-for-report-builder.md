@@ -11,10 +11,10 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577916"
 ---
 # <a name="set-default-options-for-report-builder"></a>Définir les options par défaut du Générateur de rapports
@@ -45,7 +45,7 @@ ms.locfileid: "65577916"
  **Effacer toutes les listes d'éléments récentes**  
  Effacez les listes actuelles de serveurs et de sites récents, de documents, de datasets partagés et de connexions à des sources de données partagées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)  
   
   

@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6cf5eec621d32ac0454700e6519332b3419c9aa8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102845"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Raccourcis clavier dans SQL Server Management Studio
@@ -461,7 +461,7 @@ ms.locfileid: "65102845"
 |Accède au contrôle précédent dans la page|Maj+Tab|Pas d'équivalent|  
 |Affiche la grille sur l'aire de conception|Entrée|Pas d'équivalent|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Personnaliser des menus et des touches de raccourci](customize-menus-and-shortcut-keys.md)  
   
   

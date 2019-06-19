@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d875024e6f227c6ba0d65ab0346092c02e860385
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945236"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
@@ -51,7 +51,7 @@ SESSION_CONTEXT(N'key')
 ## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut lire le contexte de session pour sa session.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le comportement MARS de SESSION_CONTEXT est similaire à celui de CONTEXT_INFO. Si un lot MARS définit une paire clé-valeur, la nouvelle valeur n’est pas renvoyée dans d’autres lots MARS sur la même connexion, sauf s’ils ont démarré après le lot qui a défini la nouvelle valeur. Si plusieurs lots MARS sont actifs sur une connexion, les valeurs ne peuvent pas être définies en « read_only ». Ceci empêche les conditions de concurrence et le non-déterminisme quant à la valeur qui « gagne ».  
   
 ## <a name="examples"></a>Exemples  
@@ -62,7 +62,7 @@ EXEC sp_set_session_context 'user_id', 4;
 SELECT SESSION_CONTEXT(N'user_id');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)   
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   

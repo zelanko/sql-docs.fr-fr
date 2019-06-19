@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6a0d07bfa9946697c18bcdd4be7186d17f612ccc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948925"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
@@ -70,7 +70,7 @@ Variable contenant des données à partir desquelles un authentificateur est gé
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `DECRYPTBYKEYAUTOCERT` combine les fonctionnalités d’`OPEN SYMMETRIC KEY` et de `DECRYPTBYKEY`. Dans une même opération, il déchiffre d’abord une clé symétrique, puis déchiffre le texte chiffré avec cette clé.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -126,7 +126,7 @@ SELECT NationalIDNumber, EncryptedNationalIDNumber
     FROM HumanResources.Employee;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   

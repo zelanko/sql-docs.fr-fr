@@ -21,10 +21,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ddffd56aae2f1ee2e9e6a550cf3436df1c014be7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942815"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
@@ -57,7 +57,7 @@ et les types définis par l’utilisateur CLR (Common Language Runtime) incompar
 ## <a name="return-types"></a>Types de retour  
  **Int**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `BINARY_CHECKSUM(*)`, calculé sur n’importe quelle ligne d’une table, retourne la même valeur tant que la ligne n’est pas modifiée. `BINARY_CHECKSUM` a les propriétés d'une fonction de hachage : lorsque c’est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Cependant, cette modification n’est pas garantie. Nous conseillons donc d’utiliser `BINARY_CHECKSUM` pour vérifier si des valeurs ont changé, uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible qu’avec `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` peut opérer sur une liste d’expressions et retourne la même valeur pour une liste spécifiée. Lorsque la fonction `BINARY_CHECKSUM` porte sur deux listes d'expressions, elle retourne la même valeur si les éléments correspondants des deux listes sont de type et de représentation en octets identiques. Pour cette définition, les valeurs NULL d'un type spécifié sont considérées comme utilisant la même représentation en octets.

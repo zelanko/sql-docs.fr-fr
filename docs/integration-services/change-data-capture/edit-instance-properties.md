@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5efde857036053b6ff31499a2ea6d889e34dfb25
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728912"
 ---
 # <a name="edit-instance-properties"></a>Modifier les propriétés d'instance
@@ -47,7 +47,7 @@ ms.locfileid: "65728912"
   
      Vous pouvez également cliquer avec le bouton droit sur le service dans le volet gauche et sélectionner **Propriétés**.  
   
-### <a name="or"></a>- ou -  
+### <a name="or"></a>\- ou -  
   
 1.  Dans le volet gauche de la console du concepteur CDC, sélectionnez le service que vous utilisez.  
   

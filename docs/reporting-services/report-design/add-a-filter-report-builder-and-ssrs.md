@@ -9,10 +9,10 @@ ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2d748e302606370152fc0c87ac47c350e11f39e9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574840"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Ajouter un filtre (Générateur de rapports et SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65574840"
   
 1.  Ouvrez un rapport en mode **Conception** .  
   
-2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_. Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
+2.  Sur l’aire de conception, sélectionnez la région de données, puis cliquez avec le bouton droit sur **Properties de** _\<région_de_données>_ . Pour une jauge, sélectionnez **Propriétés du panneau de jauge**. La boîte de dialogue **Propriétés de** _\<région_de_données>_ s’ouvre.  
   
     > [!NOTE]  
     >  Dans une région de données de tableau matriciel, cliquez avec le bouton droit sur la cellule d’angle ou sur une poignée de ligne ou de colonne, puis cliquez sur **Propriétés du tableau matriciel**.  
@@ -124,7 +124,7 @@ ms.locfileid: "65574840"
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   

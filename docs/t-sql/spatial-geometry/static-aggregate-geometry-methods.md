@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 510a62bb5d4727f549f446daec020ed10de645af
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939099"
 ---
 # <a name="static-aggregate-geometry-methods"></a>Méthodes globales statiques Geometry
@@ -48,7 +48,7 @@ ms.locfileid: "65939099"
   
 -   [UnionAggregate &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Méthodes Geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
  [Méthodes OGC sur des instances Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   

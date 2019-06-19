@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc51f5f2d064e5a9cfeeb709cc3649daaaf4c736
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65942778"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
@@ -58,7 +58,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 |1|*database_principal* est un membre de *role*.|  
 |NULL|*database_principal* ou *role* n’est pas valide, ou vous ne disposez pas de l’autorisation nécessaire pour afficher l’appartenance au rôle.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez IS_ROLEMEMBER pour déterminer si l'utilisateur actuel peut réaliser une action nécessitant les autorisations du rôle de base de données.  
   
  Si *database_principal* est basé sur une connexion Windows, telle que Contoso\Mary5, IS_ROLEMEMBER retourne NULL, sauf si *database_principal* s’est vu accorder ou refuser l’accès direct à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,7 +95,7 @@ ELSE IF IS_ROLEMEMBER ('db_datareader') IS NULL
    print 'ERROR: The database role specified is not valid.';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

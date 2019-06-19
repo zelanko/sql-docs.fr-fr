@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9c595bd6d7cce21b9bf3428fadf772c4db4cdc07
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101921"
 ---
 # <a name="sql-server-unit-test-files"></a>Fichiers de tests unitaires SQL Server
@@ -30,7 +30,7 @@ Un test unitaire SQL Server est constitué de plusieurs éléments contenus dans
 |app.config|Ce fichier stocke les chaînes de connexion de base de données pour le projet de test, en plus des autres paramètres de configuration de test unitaire SQL Server, tels que le délai d'attente de commande. Pour plus d'informations, consultez [Scripts des tests unitaires SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).|  
 |SQLDatabaseSetup.cs ou SQLDatabaseSetup.vb|Ce fichier contient une classe qui prépare l'environnement de test de tous les tests unitaires SQL Server du projet de test. Selon les paramètres de configuration dans le fichier app.config, un projet de base de données SQL Server peut être déployé dans la base de données de test.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  

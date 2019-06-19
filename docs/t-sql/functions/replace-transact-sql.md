@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948785"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -60,7 +60,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
   
  Si *string_expression* n’est pas de type **varchar(max)** ou **nvarchar(max), REPLACE** tronque la valeur de retour à 8 000 octets. Pour retourner des valeurs supérieures à 8 000 octets, il est nécessaire d’effectuer explicitement le transtypage de *string_expression* vers un type de données de valeur de grande taille.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  REPLACE effectue des comparaisons basées sur le classement de l'entrée. Pour effectuer une comparaison dans un classement donné, vous pouvez utiliser [COLLATE](~/t-sql/statements/collations.md) pour appliquer à l’entrée un classement explicite.  
   
  0x0000 (**char(0)** ) est un caractère non défini dans les classements Windows et ne peut pas être inclus dans REPLACE.  
@@ -98,7 +98,7 @@ This is a desk
 ```  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

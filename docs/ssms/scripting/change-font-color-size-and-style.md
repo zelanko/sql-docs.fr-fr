@@ -20,10 +20,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0be5634ad5e9a85fde147de7de83f2926582ae52
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65820977"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifier la couleur, la taille et le style de la police
@@ -45,7 +45,7 @@ ms.locfileid: "65820977"
   
  Les paramètres de la couleur du texte et du type de police sont globaux pour tous les types d'éléments de texte, notamment les commentaires, les chaînes, etc.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Imprimer le code et les résultats](../../relational-databases/scripting/print-code-and-results.md)   
  [Codage en couleurs dans les éditeurs de requête](../../relational-databases/scripting/color-coding-in-query-editors.md)  
   

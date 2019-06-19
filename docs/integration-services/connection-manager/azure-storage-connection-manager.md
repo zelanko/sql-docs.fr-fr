@@ -1,5 +1,5 @@
 ---
-title: Azure Storage Connection Manager | Microsoft Docs
+title: Gestionnaire de connexions du Stockage Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -15,19 +15,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66403068"
 ---
-# <a name="azure-storage-connection-manager"></a>Azure Storage Connection Manager
+# <a name="azure-storage-connection-manager"></a>Gestionnaire de connexions Azure Storage
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
   **Azure Storage Connection Manager** permet à un package SSIS de se connecter à un compte Stockage Azure.
    
- **Azure Storage Connection Manager** est un composant du [Feature Pack SQL Server Integration Services (SSIS) pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
+ Le **gestionnaire de connexions du stockage Azure** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
 Dans la boîte de dialogue **Ajout d’un gestionnaire de connexions SSIS** , sélectionnez **AzureStorage**, puis cliquez sur **Ajouter**.  
   

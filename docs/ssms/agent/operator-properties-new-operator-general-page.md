@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 822bb95a67d3e2916a55d904e47ae0ee6ec15690
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105375"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Propriétés de l’opérateur - Nouvel opérateur (page Général)
@@ -57,6 +57,6 @@ Sélectionne l’heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssn
 **Fin de journée**  
 Sélectionne l’heure après laquelle l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’envoie plus de messages à la radiomessagerie.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Opérateurs](../../ssms/agent/operators.md)  
   

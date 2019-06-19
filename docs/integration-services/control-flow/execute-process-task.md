@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727749"
 ---
 # <a name="execute-process-task"></a>Tâche d'exécution de processus
@@ -114,18 +114,18 @@ ms.locfileid: "65727749"
  Fournissez les arguments de l'invite de commandes.  
   
  **WorkingDirectory**  
- Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)**, puis recherchez le dossier.  
+ Tapez le chemin du dossier qui contient l’exécutable ou cliquez sur le bouton Parcourir **(...)** , puis recherchez le dossier.  
   
  **StandardInputVariable**  
- Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une :  
+ Sélectionnez une variable pour fournir l’entrée au processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une :  
   
  **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie du processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **StandardErrorVariable**  
- Sélectionnez une variable pour capturer la sortie d’erreur du processus ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
+ Sélectionnez une variable pour capturer la sortie d’erreur du processus ou cliquez sur \<**Nouvelle variable...** > pour en créer une.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Indiquez si la tâche échoue quand le code de sortie du processus est différent de la valeur spécifiée dans **SuccessValue**.  
@@ -142,7 +142,7 @@ ms.locfileid: "65727749"
  **WindowStyle**  
  Spécifiez le style de la fenêtre dans lequel le processus est exécuté.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
   

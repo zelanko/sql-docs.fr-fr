@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503439"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -75,10 +75,10 @@ ms.locfileid: "65503439"
  TIMEOUT *timeout*  
  Spécifie la durée en millisecondes pendant laquelle Service Broker attend l'arrivée d'un message dans la file d'attente. Cette clause ne peut être utilisée qu’avec la clause WAITFOR. Si une instruction utilisant WAITFOR ne comprend pas cette clause ou si la valeur de *timeout* est -1, le temps d’attente est illimité. Si le délai expire, GET CONVERSATION GROUP affecte à la variable *@conversation_group_id* la valeur NULL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
->  Si l’instruction GET CONVERSATION GROUP n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule (**;**), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Si l’instruction GET CONVERSATION GROUP n’est pas la première d’un lot ou d’une procédure stockée, l’instruction qui précède doit se terminer par un point-virgule ( **;** ), le terminateur d’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Si l'instruction GET CONVERSATION GROUP spécifie une file d'attente indisponible, cette instruction échoue et une erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] se produit.  
   
@@ -135,7 +135,7 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [MOVE CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   

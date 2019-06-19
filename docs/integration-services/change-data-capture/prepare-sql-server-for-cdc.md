@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8e9266e93a48987d2d00207b52760df033a11c97
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728607"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Préparer SQL Server pour la capture de données modifiées
@@ -59,7 +59,7 @@ ms.locfileid: "65728607"
 ### <a name="view-script"></a>Afficher le script  
  Cliquez sur **Afficher le script** pour afficher une version en lecture seule du script d’installation. Un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier ce script dans la console de gestion SQL Server en vue de le modifier et de l'exécuter, si nécessaire. Pour plus d’informations sur le script Préparer SQL Server, consultez [Préparer SQL Server pour Oracle CDC : afficher le script](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : utiliser des services de capture de données modifiées](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Procédure : préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 598738b1352e1010f740dbb3a9e05d02a44d9afe
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945708"
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
@@ -74,7 +74,7 @@ Valeur littérale entière qui spécifie la précision de la valeur **datetimeof
 ## <a name="return-types"></a>Types de retour
 **datetimeoffset(** *precision* **)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 `DATETIMEOFFSETFROMPARTS` retourne un type de données **datetimeoffset** entièrement initialisé. Les arguments offset représentent le décalage de fuseau horaire. S’ils sont omis, `DATETIMEOFFSETFROMPARTS` suppose un décalage de fuseau horaire de `00:00`, soit aucun décalage de fuseau horaire. S’ils sont spécifiés, `DATETIMEOFFSETFROMPARTS` attend des valeurs, toutes deux positives ou négatives, pour les deux arguments. Si *minute_offset* a une valeur et *hour_offset* non, `DATETIMEOFFSETFROMPARTS` génère une erreur. `DATETIMEOFFSETFROMPARTS` génère également une erreur si les autres arguments ont des valeurs non valides. Si au moins un des arguments requis a une valeur `NULL`, `DATETIMEOFFSETFROMPARTS` retourne `NULL`. En revanche, si l’argument *precision* a une valeur `NULL`, `DATETIMEOFFSETFROMPARTS` génère une erreur.  
   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43fcb5b2f4fe3803442b7512112f360f894c4d25
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948796"
 ---
 # <a name="x40x40remserver-transact-sql"></a>&#x40;&#x40;REMSERVER (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "65948796"
 ## <a name="return-types"></a>Types de retour  
  **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  @@REMSERVER permet à une procédure stockée de vérifier le nom du serveur de base de données sur lequel la procédure s’exécute.  
   
 ## <a name="examples"></a>Exemples  
@@ -72,7 +72,7 @@ EXEC SEATTLE1...usp_CheckServer;
 LONDON2  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de configuration &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Serveurs distants](../../database-engine/configure-windows/remote-servers.md)  
   

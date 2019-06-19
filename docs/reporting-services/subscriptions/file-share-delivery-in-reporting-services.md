@@ -12,10 +12,10 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575997"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Remise par partage de fichiers dans Reporting Services
@@ -72,13 +72,13 @@ ms.locfileid: "65575997"
   
  **Remplacer :** vous pouvez spécifier des options de remplacement afin de réutiliser le même nom de fichier pour chaque remise de rapport ou pour créer un nouveau fichier. Pour remplacer le fichier, vous devez utiliser les mêmes nom et extension de fichier.  
   
- Pour créer des noms de fichiers uniques pour la remise de rapport, il existe une autre approche qui consiste à inclure un élément d'horodatage dans le nom de fichier. Pour ce faire, ajoutez la variable **@timestamp** au nom de fichier (par exemple, *CompanySales@timestamp*). Avec cette approche, le nom de fichier est unique par définition : il ne sera jamais remplacé.  
+ Pour créer des noms de fichiers uniques pour la remise de rapport, il existe une autre approche qui consiste à inclure un élément d'horodatage dans le nom de fichier. Pour ce faire, ajoutez la variable **@timestamp** au nom de fichier (par exemple, *CompanySales@timestamp* ). Avec cette approche, le nom de fichier est unique par définition : il ne sera jamais remplacé.  
   
  L’illustration suivante est un exemple de paramètres correspondant à un abonnement configuré pour la remise de partage de fichiers.  
   
  ![abonnement pour partage de fichiers](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "abonnement pour partage de fichiers")  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Paramètres d’abonnement et compte de partage de fichiers &#40;Gestionnaire de configuration&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   

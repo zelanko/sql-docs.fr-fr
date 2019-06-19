@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f00a8330673dc15eed57f770635a251d5aa97e4
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011859"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
@@ -67,12 +67,12 @@ ms.locfileid: "66011859"
   
     -   Utilisation du commutateur **-t** pour préciser l’indicateur de fin de ligne pour tous les champs à l’exception du dernier champ de la ligne et utilisation du commutateur **-r** pour préciser un indicateur de fin de ligne.  
   
-    -   Utilisation d’un commutateur de format caractère (**-c** ou **-w**) sans le commutateur **-t**, qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
+    -   Utilisation d’un commutateur de format caractère ( **-c** ou **-w**) sans le commutateur **-t**, qui définit l’indicateur de fin de champ sur la tabulation, \t. Cette option est équivalente à la spécification de **-t**\t.  
   
         > [!NOTE]  
         >  Si vous ajoutez le commutateur **-n** (correspondant aux données natives) ou **-N** (format natif Unicode), les indicateurs de fin ne sont pas insérés.  
   
-    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format (**-f**) ou celui du fichier de données (**-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
+    -   Si une commande **bcp** interactive contient l’option **in** ou **out** sans le commutateur du fichier de format ( **-f**) ou celui du fichier de données ( **-n**, **-c**, **-w**ou **-N**) mais que vous n’avez pas non plus précisé la longueur du préfixe et la longueur de champ, la commande vous invite à saisir l’indicateur de fin de champ de chaque champ, tout en vous proposant par défaut de ne pas en spécifier :  
   
          `Enter field terminator [none]:`  
   
@@ -127,8 +127,8 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
     |Qualificateur|Description|  
     |---------------|-----------------|  
-    |FIELDTERMINATOR **='*`field_terminator`*'**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
-    |ROWTERMINATOR **='*`row_terminator`*'**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
+    |FIELDTERMINATOR **=' *`field_terminator`* '**|Spécifie l'indicateur de fin de champ à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, c'est le caractère de tabulation (\t).|  
+    |ROWTERMINATOR **=' *`row_terminator`* '**|Spécifie l'indicateur de fin de ligne à utiliser pour les fichiers de données de type caractère et de type caractère Unicode.<br /><br /> Par défaut, il s'agit du caractère de saut de ligne (\n).|  
   
      Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
@@ -170,8 +170,8 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 |Option|Attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='`char`'**|Chargement des champs de données en tant que données sous forme de caractères.|  
-|FIELDTERMINATOR **='**`,`**'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
-|ROWTERMINATOR **='**`\n`**'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
+|FIELDTERMINATOR **='** `,` **'**|Virgule (`,`) servant d'indicateur de fin de champ.|  
+|ROWTERMINATOR **='** `\n` **'**|Indicateur de fin de ligne en tant que caractère de saut de ligne.|  
   
  Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   

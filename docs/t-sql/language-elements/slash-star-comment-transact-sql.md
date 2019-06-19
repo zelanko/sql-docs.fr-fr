@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 662aaa76f7af8a45513219af63c66fe3a65bede6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981650"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>Barre oblique étoile (bloc de commentaire) (Transact-SQL)
@@ -50,7 +50,7 @@ text_of_comment
  *text_of_comment*  
  Texte du commentaire. Correspond à une ou plusieurs chaînes de caractères.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il est possible d'insérer des commentaires sur une ligne distincte ou à l'intérieur d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les commentaires de plusieurs lignes doivent être signalés par /* et \*/. Par convention, les commentaires de plusieurs lignes utilisent souvent /\* au début de la première ligne, \*\* au début des lignes suivantes et \*/ pour signaler la fin du commentaire.  
   
  Il n'y a pas de longueur maximale pour les commentaires.  
@@ -102,7 +102,7 @@ JOIN Person.Address AS a ON ea.AddressID = a.AddressID;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
  [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   

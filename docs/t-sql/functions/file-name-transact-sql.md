@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 358dfa31d1f7701bc2c30c676423355a4f4b57bc
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946036"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
@@ -53,7 +53,7 @@ Numéro d’identification du fichier dont `FILE_NAME` retournera le nom. *file_
 ## <a name="return-types"></a>Types de retour  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 *file_ID* correspond à la colonne file_id tirée de l’affichage catalogue sys.master_files ou sys.database_files.  
   
 ## <a name="examples"></a>Exemples  
@@ -74,7 +74,7 @@ AdventureWorks2012_Data    AdventureWorks2012_Log
 (1 row(s) affected)
 ``` 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa8c7adb49c9106e76528ccea4068ef36b95edcf
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821780"
 ---
 # <a name="transact-sql-code-snippets"></a>Extraits de code Transact-SQL
@@ -31,7 +31,7 @@ ms.locfileid: "65821780"
 |Explique comment terminer la génération d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] complète ou d'un bloc après avoir inséré un extrait de code.|[Compléter des extraits de code Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |Explique comment générer vos propres extraits de code personnalisés et les ajouter à l'ensemble d'extraits de code SQL Server.|[Ajouter des extraits de code Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

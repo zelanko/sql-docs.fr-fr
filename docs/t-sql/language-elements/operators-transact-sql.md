@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 69ce7cfc0949bc97c0e8371615de4930443737f4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980485"
 ---
 # <a name="operators-transact-sql"></a>Opérateurs (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "65980485"
 |[Opérateurs de comparaison](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Opérateur de concaténation de chaînes](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Opérateurs composés](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Opérateurs unaires](https://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Priorité des opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

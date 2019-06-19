@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713315"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -54,7 +54,7 @@ Objet de base de données qui définit comment les lignes d'une table ou d'un in
 Objet de base de données qui mappe les partitions d'une fonction de partition à un ensemble de groupes de fichiers. Le principal motif de placement des partitions sur des groupes de fichiers distincts est la possibilité de réaliser des opérations de sauvegarde indépendantes sur les partitions. En effet, vous pouvez réaliser des sauvegardes sur des groupes de fichiers spécifiques.  
   
 ### <a name="partitioning-column"></a>Colonne de partitionnement  
-Colonne d'une table ou d'un index utilisée par une fonction de partition pour partitionner la table ou l'index. Les colonnes calculées qui font partie d'une fonction de partition doivent présenter l'attribut PERSISTED. Tous les types de données autorisés dans les colonnes d'index peuvent être utilisés dans la colonne de partitionnement, sauf **timestamp**. Les types de données **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiés. Le type défini par l’utilisateur CLR (Common Langage Runtime) Microsoft .NET Framework et les colonnes de type de données alias ne peuvent pas être non plus spécifiés.  
+Colonne d'une table ou d'un index utilisée par une fonction de partition pour partitionner la table ou l'index. Les colonnes calculées qui font partie d'une fonction de partition doivent présenter l'attribut PERSISTED. Tous les types de données autorisés dans les colonnes d'index peuvent être utilisés dans la colonne de partitionnement, sauf **timestamp**. Les types de données **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiés. Le type défini par l’utilisateur CLR (Common Langage Runtime) Microsoft .NET Framework et les colonnes de type de données alias ne peuvent pas être non plus spécifiés.  
   
 ### <a name="aligned-index"></a>Index aligné  
 Index créé sur le même schéma de partition que la table qui lui correspond. Lorsqu'une table et ses index sont alignés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut commuter rapidement et efficacement les partitions tout en préservant leur structure aussi bien dans la table que dans les index. Un index n'a pas besoin de participer à la même fonction de partition nommée pour être aligné avec sa table de base. Toutefois, la fonction de partition de l’index et la table de base doivent être essentiellement les mêmes en ceci :

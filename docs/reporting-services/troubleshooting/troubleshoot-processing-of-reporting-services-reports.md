@@ -9,10 +9,10 @@ ms.assetid: bb309231-68be-4d68-a44c-c098999c67a2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 85486e929683abaf99216a4d4b03c19a146f230c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573869"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Résoudre les problèmes de traitement des rapports Reporting Services
@@ -47,7 +47,7 @@ Pour éliminer le message « #Erreur », vous devez réécrire l'expression à l
 Dans l'aperçu, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull.md)], examinez la fenêtre Sortie. Sur le serveur de rapports, examinez la pile des appels. 
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Erreurs et événements (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b247efb895f037965620c7430a3dc41c33fe550
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013656"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
@@ -59,7 +59,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  Dans ce fragment, l'employé 5 est le subalterne de l'employé 4, l'employé 4 est le subalterne de l'employé 3 et les employés 3 et 2 sont les subalternes de l'employé 1.  
   
- Pour produire ce résultat, vous pouvez utiliser le schéma XSD suivant et spécifier une requête XPath contre lui. Le schéma décrit une  **\<Emp >** élément de type EmployeeType, constitué d’un  **\<Emp >** élément enfant du même type, EmployeeType. Il s'agit d'une relation récursive (l'élément et son ancêtre sont du même type). En outre, le schéma utilise un  **\<SQL : Relationship >** pour décrire la relation parent-enfant entre le responsable et le subalterne. Notez que dans ce  **\<SQL : Relationship >**, Emp est le parent et la table enfant.  
+ Pour produire ce résultat, vous pouvez utiliser le schéma XSD suivant et spécifier une requête XPath contre lui. Le schéma décrit une  **\<Emp >** élément de type EmployeeType, constitué d’un  **\<Emp >** élément enfant du même type, EmployeeType. Il s'agit d'une relation récursive (l'élément et son ancêtre sont du même type). En outre, le schéma utilise un  **\<SQL : Relationship >** pour décrire la relation parent-enfant entre le responsable et le subalterne. Notez que dans ce  **\<SQL : Relationship >** , Emp est le parent et la table enfant.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -283,7 +283,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>Éléments non récursifs  
  Si l'annotation `sql:max-depth` est spécifiée sur un élément dans le schéma qui ne provoque pas de récursivité, elle est ignorée. Dans le schéma suivant, un  **\<Emp >** élément se compose d’un  **\<constante >** élément enfant, qui, à son tour, a une  **\<Emp >** élément enfant.  
   
- Dans ce schéma, le `sql:max-depth` annotation spécifiée sur le  **\<constante >** élément est ignoré, car il n’existe aucune récursivité entre le  **\<Emp >** parent et le  **\<constante >** élément enfant. Mais il existe une récursivité entre le  **\<Emp >** ancêtre et  **\<Emp >** enfant. Le schéma spécifie l'annotation `sql:max-depth` sur les deux. Par conséquent, le `sql:max-depth` annotation est spécifiée sur l’ancêtre (**\<Emp >** dans le rôle superviseur) est prioritaire.  
+ Dans ce schéma, le `sql:max-depth` annotation spécifiée sur le  **\<constante >** élément est ignoré, car il n’existe aucune récursivité entre le  **\<Emp >** parent et le  **\<constante >** élément enfant. Mais il existe une récursivité entre le  **\<Emp >** ancêtre et  **\<Emp >** enfant. Le schéma spécifie l'annotation `sql:max-depth` sur les deux. Par conséquent, le `sql:max-depth` annotation est spécifiée sur l’ancêtre ( **\<Emp >** dans le rôle superviseur) est prioritaire.  
   
 #### <a name="example-c"></a>Exemple C  
   
@@ -327,9 +327,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Pour tester ce schéma, suivez les étapes fournies pour l'Exemple A, plus haut dans cette rubrique.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Types complexes dérivés par restriction  
- Si vous avez une dérivation de type complexe par  **\<restriction >**, éléments de type complexe de base correspondant ne peut pas spécifier le `sql:max-depth` annotation. Dans ces cas-là, l'annotation `sql:max-depth` peut être ajoutée à l'élément du type dérivé.  
+ Si vous avez une dérivation de type complexe par  **\<restriction >** , éléments de type complexe de base correspondant ne peut pas spécifier le `sql:max-depth` annotation. Dans ces cas-là, l'annotation `sql:max-depth` peut être ajoutée à l'élément du type dérivé.  
   
- En revanche, si vous avez une dérivation de type complexe par  **\<extension >**, les éléments de type complexe de base correspondant peuvent spécifier le `sql:max-depth` annotation.  
+ En revanche, si vous avez une dérivation de type complexe par  **\<extension >** , les éléments de type complexe de base correspondant peuvent spécifier le `sql:max-depth` annotation.  
   
  Par exemple, le schéma XSD suivant génère une erreur car l'annotation `sql:max-depth` est spécifiée sur le type de base. Cette annotation n’est pas pris en charge sur un type qui est dérivé par  **\<restriction >** à partir d’un autre type. Pour résoudre ce problème, vous devez modifier le schéma et spécifier l'annotation `sql:max-depth` sur l'élément dans le type dérivé.  
   

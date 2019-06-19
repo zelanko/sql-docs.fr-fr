@@ -31,10 +31,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980432"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -164,7 +164,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
 |NOWAIT|Envoie des messages immédiatement au client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Définit les valeurs @@ERROR et ERROR_NUMBER sur *msg_id* ou sur 50000, quel que soit le niveau de gravité.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les erreurs générées par RAISERROR fonctionnent comme celles générées par le code [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les valeurs spécifiées par RAISERROR sont signalées par les fonctions système ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE et @@ERROR. Lorsque l'instruction RAISERROR est exécutée avec un niveau de gravité de minimum 11 dans un bloc TRY, elle transfère le contrôle au bloc CATCH associé. L'erreur est renvoyée à l'appelant si RAISERROR est exécutée :  
   
 -   en dehors du champ d'un bloc TRY ;  
@@ -282,7 +282,7 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/print-transact-sql.md)   

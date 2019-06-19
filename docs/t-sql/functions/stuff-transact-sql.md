@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 88745cf6d143436dcce84d20a4253266843d6c8e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947465"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
@@ -61,7 +61,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
 ## <a name="return-types"></a>Types de retour  
  Renvoie des données caractères si *character_expression* correspond à l’un des types de données caractères pris en charge. Renvoie des données binaires si *character_expression* correspond à l’un des types de données binaires pris en charge.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la valeur de la position de début ou de la longueur est négative, ou bien si la valeur de la position de début est supérieure à la longueur de la première chaîne, une chaîne NULL est retournée. Si la position de départ est 0, une valeur NULL est retournée. Si la longueur à effacer est supérieure à celle de la première chaîne, tous les caractères de la première chaîne sont effacés à partir du caractère du début.  
 
 Une erreur se produit si la valeur résultante est plus grande que le maximum pris en charge par le type retourné.  
@@ -86,7 +86,7 @@ aijklmnef
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

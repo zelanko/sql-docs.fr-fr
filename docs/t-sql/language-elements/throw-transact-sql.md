@@ -20,10 +20,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e3838b8144baaaa21d1ae5d9d813bded8a161bd6
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981503"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
@@ -52,7 +52,7 @@ THROW [ { error_number | @local_variable },
  *state*  
  Constante ou variable comprise entre 0 et 255 qui indique l'état à associer au message. *state* est **tinyint**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction qui précède l'instruction THROW doit être suivie du terminateur d'instruction, le point-virgule (;).  
   
  Si une construction TRY...CATCH n’est pas disponible, le lot d’instructions se termine. Le numéro de ligne et la procédure où l'exception est levée sont définis. La gravité est définie sur 16.  
@@ -142,7 +142,7 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

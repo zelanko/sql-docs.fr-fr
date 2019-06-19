@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6015de3f6c300e8a96d16ad6b0a322754d882945
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65729429"
 ---
 # <a name="add-copy-of-existing-package"></a>Ajouter une copie des packages existants
@@ -48,7 +48,7 @@ ms.locfileid: "65729429"
  **Chemin d'accès au package**  
  Tapez le chemin du package ou cliquez sur le bouton Parcourir **(...)** pour rechercher le package à copier.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Enregistrer une copie du package](https://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Enregistrer des packages](../integration-services/save-packages.md)   
  [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)
