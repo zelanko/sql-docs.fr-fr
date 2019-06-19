@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716344"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (base de données SSISDB)
@@ -35,10 +35,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nom du projet à supprimer. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet à supprimer. *project_name* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -64,7 +64,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Tous les objets et les références environnementales du projet correspondant sont supprimés avec le projet. Toutefois, les versions du projet et les archives d'exploitation pertinentes sont conservées jusqu'à la prochaine exécution du travail de nettoyage de l'opération.  
   
   

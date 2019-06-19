@@ -26,10 +26,10 @@ ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65626691"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
@@ -89,7 +89,7 @@ Pour déterminer le niveau de compatibilité actuel, interrogez la colonne **com
 SELECT name, compatibility_level FROM sys.databases;
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour toutes les installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le niveau de compatibilité par défaut est défini sur la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Ce niveau est attribué aux bases de données, sauf si la base de données **model** a un niveau de compatibilité inférieur. Quand une base de données est mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données conserve son niveau de compatibilité existant si celui-ci correspond au moins à la valeur minimale autorisée pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La mise à niveau d’une base de données ayant un niveau de compatibilité inférieur à celui autorisé a pour effet de lui attribuer automatiquement le niveau de compatibilité autorisé le plus bas. Cela s'applique aussi bien aux bases de données système qu'aux bases de données utilisateur.
 
@@ -295,7 +295,7 @@ Le paramètre de compatibilité détermine aussi les mots clés réservés par l
 
 Une fois introduit, un mot clé demeure réservé. Le mot clé réservé PIVOT, par exemple, introduit au niveau de compatibilité 90, est également réservé aux niveaux 100 et 110 et 120.
 
-Si une application utilise un identificateur réservé en tant que mot clé pour son niveau de compatibilité, l'application échoue. Pour contourner ce problème, placez l’identificateur entre crochets (**[]**) ou entre guillemets (**""**). Par exemple, pour effectuer la mise à niveau d’une application qui utilise l’identificateur **EXTERNAL** vers le niveau de compatibilité 90, vous pouvez remplacer l’identificateur par **[EXTERNAL]** ou **"EXTERNAL"**.
+Si une application utilise un identificateur réservé en tant que mot clé pour son niveau de compatibilité, l'application échoue. Pour contourner ce problème, placez l’identificateur entre crochets ( **[]** ) ou entre guillemets ( **""** ). Par exemple, pour effectuer la mise à niveau d’une application qui utilise l’identificateur **EXTERNAL** vers le niveau de compatibilité 90, vous pouvez remplacer l’identificateur par **[EXTERNAL]** ou **"EXTERNAL"** .
 
 Pour plus d’informations, consultez [Mots clés réservés](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 

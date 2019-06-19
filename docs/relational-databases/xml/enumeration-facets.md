@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f414c537cf986a259b795fac5dcc2daaf321b72
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636084"
 ---
 # <a name="enumeration-facets"></a>facettes d'énumération
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette les schémas XML avec des types présentant des facettes de modèles ou des énumérations enfreignant ces facettes.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Le schéma serait rejeté car d'une part, la valeur d'énumération comprend une valeur à casse mixte et que, d'autre part, cette valeur enfreint le modèle limitant les valeurs à des lettres minuscules.  
   
 ```  
@@ -45,7 +45,7 @@ CREATE XML SCHEMA COLLECTION MySampleCollection AS '
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

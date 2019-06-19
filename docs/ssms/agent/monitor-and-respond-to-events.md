@@ -24,10 +24,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e2181e094cab0ab6c5047fe4c9a8625d3017f1e6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105530"
 ---
 # <a name="monitor-and-respond-to-events"></a>Surveiller et répondre aux événements
@@ -74,6 +74,6 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] journalise un 
   
 Quelle que soit la source de l'événement, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent répond à l'événement en exécutant les tâches spécifiées dans l'alerte de cet événement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

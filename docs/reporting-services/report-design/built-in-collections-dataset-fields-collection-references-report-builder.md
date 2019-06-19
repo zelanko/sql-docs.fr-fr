@@ -9,10 +9,10 @@ ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581820"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Collections intégrées - Références à la collection Fields d’un dataset (Générateur de rapports)
@@ -88,7 +88,7 @@ End Function
   
  Si vous spécifiez une propriété qui n’est pas prise en charge pour ce champ, l’expression prend la valeur **null** (**Nothing** dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un fournisseur de données ne prend pas en charge les propriétés de champ étendues ou si le champ est introuvable lors de l’exécution de la requête, la valeur de la propriété est **null** (**Nothing** dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) pour les propriétés de type **String** et **Object**, et zéro (0) pour les propriétés de type **Integer**. Une extension pour le traitement des données peut tirer parti des propriétés prédéfinies en optimisant les requêtes qui intègrent cette syntaxe.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

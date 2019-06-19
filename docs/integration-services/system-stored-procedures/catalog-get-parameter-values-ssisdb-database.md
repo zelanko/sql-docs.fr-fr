@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716100"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (base de données SSISDB)
@@ -39,13 +39,13 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nom du projet où les paramètres résident. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet où les paramètres résident. *project_name* est de type **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nom du package. Spécifiez le nom du package pour extraire tous les paramètres du projet et les paramètres d'un package spécifique. Utilisez NULL pour extraire tous les paramètres du projet et les paramètres de tous les packages. *package_name* est de type **nvarchar(260)**.  
+ Nom du package. Spécifiez le nom du package pour extraire tous les paramètres du projet et les paramètres d'un package spécifique. Utilisez NULL pour extraire tous les paramètres du projet et les paramètres de tous les packages. *package_name* est de type **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
  Identificateur unique d’une référence environnementale. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
@@ -62,7 +62,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_data_type|**nvarchar(128)**|Type de données du paramètre.|  
 |parameter_name|**sysname**|Nom du paramètre.|  
 |parameter_value|**sql_variant**|Valeur du paramètre.|  
-| sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
+|sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |required|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
 |value_set|**bit**|Lorsque la valeur est `1`, la valeur de paramètre a été affectée. Lorsque la valeur est `0`, la valeur de paramètre n'a pas été affectée.|  
   

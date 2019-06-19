@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7bb60aac75343a65264c2a87f72957dae336dacb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105741"
 ---
 # <a name="create-and-update-database-tables"></a>Créer et mettre à jour les tables de base de données
@@ -54,7 +54,7 @@ Le Concepteur de tables est un outil visuel où vous concevez et visualisez des 
 
 1. Fermez le concepteur et enregistrez vos modifications.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Tables](../../relational-databases/tables/tables.md)  
 [Propriétés de la table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  

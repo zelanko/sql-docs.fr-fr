@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103639"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
@@ -67,7 +67,7 @@ ms.locfileid: "66103639"
 |`Logon Attempts/sec`|Taux de tentatives d'ouverture de session.|  
 |`Logon Successes Total`|Nombre d'ouvertures de session réussies pour les types d'authentification RSWindows. Les types d'authentification RSWindows incluent RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos et RSWindowsBasic. La valeur zéro (0) représente l'authentification personnalisée.|  
 |`Logon Successes/sec`|Taux d'ouvertures de session réussies.|  
-|`Memory Pressure State`|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1: Aucune sollicitation<br /><br /> 2: Sollicitation faible<br /><br /> 3: Sollicitation moyenne<br /><br /> 4: Sollicitation élevée<br /><br /> 5: Sollicitation dépassée|  
+|`Memory Pressure State`|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3 : Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
 |`Memory Shrink Amount`|Nombre d'octets demandés par le serveur pour réduire la mémoire utilisée.|  
 |`Memory Shrink Notifications/sec`|Nombre de notifications émises par le serveur au cours de la dernière seconde pour réduire la mémoire utilisée. Cette valeur indique la fréquence à laquelle le serveur se trouve en situation de sollicitation de la mémoire.|  
 |`Requests Disconnected`|Nombre de requêtes qui sont déconnectées en raison d'un échec de communication.|  

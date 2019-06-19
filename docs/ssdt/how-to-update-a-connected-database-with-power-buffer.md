@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9663829f679eeb0c829a94be00c86a7f1e0544af
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098417"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>Procédure : Mettre à jour une base de données connectée avec Power Buffer
@@ -62,6 +62,6 @@ Les procédures suivantes utilisent les entités créées dans les procédures p
   
 5.  Cliquez avec le bouton droit sur **Table_1**, puis sélectionnez **Supprimer**. Dans la boîte de dialogue **Aperçu des mises à jour de la base de données**, cliquez sur **Mettre à jour la base de données**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : corriger les erreurs](../ssdt/how-to-fix-errors.md)  
   

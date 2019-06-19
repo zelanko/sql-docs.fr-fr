@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3bb5075ef33ced9cac22a6c92d9068907ca2ec01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048601"
 ---
 # <a name="mssqlserver10519"></a>MSSQLSERVER_10519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,15 +31,15 @@ ms.locfileid: "47790927"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset**. Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
+|Texte du message|Impossible de créer le repère de plan '%.\*ls', car les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset** . Vérifiez que les indicateurs peuvent être appliqués à l'instruction.|  
   
 ## <a name="explanation"></a>Explication  
-Les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset**.  
+Les indicateurs spécifiés dans **@hints** ne peuvent pas être appliqués à l’instruction spécifiée par **@stmt** ou **@statement_start_offset** .  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Spécifiez des indicateurs qui peuvent être appliqués à l'instruction.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sp_create_plan_guide &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
 [Repères de plan](~/relational-databases/performance/plan-guides.md)  
 [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  

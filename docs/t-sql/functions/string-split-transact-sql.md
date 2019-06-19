@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: aab93a133a8dcfeaea96ffa1886ccfcb20936f95
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947477"
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
@@ -58,7 +58,7 @@ STRING_SPLIT ( string , separator )
 
 Retourne une table d’une seule colonne dont les lignes sont les sous-chaînes. Le nom de la colonne est **value**. Retourne **nvarchar** si un des arguments d’entrée est de type **nvarchar** ou **nchar**. Sinon, retourne **varchar**. La longueur du type de retour est identique à la longueur de l’argument de chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 **STRING_SPLIT** prend en entrée une chaîne qui a des sous-chaînes délimitées, et un caractère à utiliser comme délimiteur ou séparateur. STRING_SPLIT produit une table à une seule colonne dont les lignes contiennent les sous-chaînes. Le nom de la colonne de sortie est **value**.
 
@@ -186,7 +186,7 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)<br />
 [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)<br />

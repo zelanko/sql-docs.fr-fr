@@ -15,10 +15,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 96009100820014cd819e3e87bf725716319013f7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095830"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propriétés du travail - Nouveau travail (page Étapes)
@@ -51,6 +51,6 @@ Modifie l'étape de travail sélectionnée.
 **Supprimer**  
 Supprime l'étape de travail sélectionnée. Lorsque des étapes de travail sont supprimées, leur journal de sortie est automatiquement supprimé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
   

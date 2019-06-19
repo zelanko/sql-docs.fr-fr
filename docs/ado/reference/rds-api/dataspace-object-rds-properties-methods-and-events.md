@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: bd734f9cc74a00ac3556f142ec5a6922513429da
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66712594"
 ---
 # <a name="dataspace-object-rds-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet DataSpace (RDS)
@@ -31,7 +31,7 @@ ms.locfileid: "66712594"
 ## <a name="methods"></a>Méthodes  
  [CreateObject, méthode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -11,16 +11,16 @@ ms.assetid: 7c1bc931-d1ec-47fc-8f82-55560ddaf776
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 5f767424e9ec24215e280b49fe1ed6b820b7a3d6
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65576047"
 ---
 # <a name="report-designer-f1-help"></a>Aide sur le Concepteur de rapports via la touche F1
   Cette section décrit l’aide obtenue via la touche F1 pour l’ensemble des Assistants, des vues et des boîtes de dialogue du Concepteur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]. Vous pouvez également ouvrir l'aide via la touche F1 lors de l'utilisation d'une boîte de dialogue en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 + [Installer SQL Server Data Tools - Business Intelligence pour Visual Studio](https://msdn.microsoft.com/library/68ed2924-9104-4c79-974f-0e87212ec2e1)
 + [Références relatives aux fonctionnalités (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)
 + [Rapports Reporting Services (SSRS)](../../reporting-services/reports/reporting-services-reports-ssrs.md) 

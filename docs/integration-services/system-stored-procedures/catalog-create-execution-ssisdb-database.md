@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51be58cd1c486a139486839e39a9ac820d7818b6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716819"
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (base de données SSISDB)
@@ -44,13 +44,13 @@ catalog.create_execution [@folder_name = folder_name
   
 ## <a name="arguments"></a>Arguments  
  [@folder_name =] *folder_name*  
- Nom du dossier qui contient le package qui sera exécuté. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le package qui sera exécuté. *folder_name* est de type **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Nom du projet qui contient le package à exécuter. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet qui contient le package à exécuter. *project_name* est de type **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Nom du package qui sera exécuté. *package_name* est de type **nvarchar(260)**.  
+ Nom du package qui sera exécuté. *package_name* est de type **nvarchar(260)** .  
   
  [@reference_id =] *reference_id*  
  Identificateur unique d'une référence environnementale. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
@@ -74,14 +74,14 @@ Ce paramètre est facultatif. S’il n’est pas spécifié, sa valeur est défi
  Retourne l'identificateur unique d'une instance d'exécution. *execution_id* est de type **bigint**.  
 
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une exécution est utilisée pour spécifier les valeurs de paramètre qui sont utilisées par un package pendant une instance d'exécution unique du package.  
   
  Si une référence environnementale est spécifiée avec le paramètre *reference_id*, la procédure stockée remplit les paramètres du package et du projet avec les valeurs littérales ou les valeurs référencées des variables d’environnement correspondantes. Si la référence environnementale est spécifiée, les valeurs de paramètre par défaut sont utilisées pendant l'exécution du package. Pour déterminer exactement quelles valeurs sont utilisées pour une instance particulière d’exécution, utilisez la valeur du paramètre de sortie *execution_id* de cette procédure stockée et interrogez la vue [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
   
  Seuls les packages marqués comme packages de point d'entrée peuvent être spécifiés dans une exécution. Si un package qui n'est pas un point d'entrée est spécifié, l'exécution échoue.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant appelle catalog.create_execution pour créer une instance d’exécution pour le package Child1.dtsx, qui n’est pas dans Scale Out. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
 ```sql  
@@ -138,7 +138,7 @@ GO
   
 -   Les variables d’environnement référencées ne peuvent pas être trouvées dans l’environnement spécifié par la référence environnementale, *reference_id*.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md)   
  [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  [catalog.add_execution_worker &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)  

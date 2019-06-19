@@ -9,10 +9,10 @@ ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 847e3f6e7e76041749b0588bff510caebed11817
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581885"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Ajout de données à une région de données de tableau matriciel (Générateur de rapports et SSRS)
@@ -48,7 +48,7 @@ Dans les rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Ajout d'une région de données de tableau matriciel existante à partir d'un autre rapport  
  Vous pouvez copier une région de données d'un autre rapport et la coller dans un nouveau rapport ou un rapport existant. Une fois la région de données collée, vous devez vérifier que le dataset utilisé par la région de données est défini et que les champs du dataset portent les mêmes noms et possèdent les mêmes types de données que dans le rapport d'origine. Vous ne pouvez pas copier de datasets d'un rapport vers un autre, mais si vos rapports utilisent des sources de données partagées, vous pouvez dupliquer rapidement le dataset dans l'autre rapport. Vous pouvez également importer le texte des requêtes qui récupèrent les données du dataset, ce qui facilite la duplication des requêtes dans les rapports. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Tri interactif, Explorateurs de documents et liens &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

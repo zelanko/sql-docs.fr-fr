@@ -22,10 +22,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 842ffc62248cce0df516c927f41185f549281dd9
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946128"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
@@ -44,7 +44,7 @@ ms.locfileid: "65946128"
 ## <a name="return-types"></a>Types de retour  
  entier  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Retourne 0 si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] précédente n'a rencontré aucune erreur.  
   
  Retourne un numéro d'erreur si l'instruction précédente a rencontré une erreur. Si l’erreur est l’une des erreurs de la vue de catalogue sys.messages, @@ERROR contient la valeur provenant de la colonne sys.messages.message_id pour cette erreur. Vous pouvez consulter le texte associé à un numéro d’erreur @@ERROR dans sys.messages.  
@@ -167,7 +167,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   

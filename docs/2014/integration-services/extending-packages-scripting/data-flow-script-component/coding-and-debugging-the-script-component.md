@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62894793"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codage et débogage du composant Script
@@ -170,7 +170,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |Variables|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Variables` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Variables` de la classe `ScriptMain`.<br /><br /> La méthode `PreExecute` ne peut accéder qu'à des variables en lecture seule. La méthode `PostExecute` peut accéder à des variables en lecture seule et en lecture/écriture.|  
 |Connexions|Utilisez les propriétés d'accesseur typées et nommées de la classe de collection `Connections` incluse dans l'élément de projet `ComponentWrapper`, exposées via la propriété `Connections` de la classe `ScriptMain`.|  
-|Événements|Déclencher des événements à l’aide de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriété de la `ScriptMain` classe et le **incendie\<X >** méthodes de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
+|Events|Déclencher des événements à l’aide de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propriété de la `ScriptMain` classe et le **incendie\<X >** méthodes de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interface.|  
 |Journalisation|Effectuez la journalisation à l'aide de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la classe `ScriptMain`.|  
   
 ## <a name="debugging-the-script-component"></a>Débogage du composant Script  

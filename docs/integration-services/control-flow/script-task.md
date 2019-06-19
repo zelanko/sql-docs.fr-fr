@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04124a936e333c4821f0e84dcbdae3d1658addc4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727517"
 ---
 # <a name="script-task"></a>Tâche de script
@@ -131,13 +131,13 @@ ms.locfileid: "65727517"
  Si vous modifiez le nom de la méthode dans le projet VSTA, vous devez modifier la valeur de la propriété **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
   
  **ReadWriteVariables**  
- Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  

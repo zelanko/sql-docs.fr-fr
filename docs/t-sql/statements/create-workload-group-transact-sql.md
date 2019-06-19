@@ -21,10 +21,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bac286dc1151c6a0b127a928206505fa047c9ad8
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718293"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
@@ -105,7 +105,7 @@ MAX_DOP = *value* Spécifie le degré maximal de parallélisme (DOP) pour les re
 
 GROUP_MAX_REQUESTS = *value* Spécifie le nombre maximal de requêtes simultanées autorisées à s’exécuter dans le groupe de charges de travail. *value* doit être égal à 0 ou un entier positif. La valeur par défaut de *value* est 0, qui autorise un nombre illimité de demandes. Lorsque le nombre maximal de requêtes est atteint, un utilisateur de ce groupe peut se connecter, mais est placé dans un état d'attente jusqu'à ce que le nombre de requêtes simultanées soit inférieur à la valeur spécifiée.
 
-USING { *pool_name* | **"default"** } Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur identifié par *pool_name*. Cette opération revient en fait à placer le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut Resource Governor prédéfini.
+USING { *pool_name* |  **"default"** } Associe le groupe de charge de travail au pool de ressources défini par l’utilisateur identifié par *pool_name*. Cette opération revient en fait à placer le groupe de charges de travail dans le pool de ressources. Si *pool_name* n’est pas fourni ou si l’argument USING n’est pas utilisé, le groupe de charge de travail est placé dans le pool par défaut Resource Governor prédéfini.
 
 "default" est un mot réservé et doit être placé entre des guillemets doubles ("") ou des crochets ([]) lorsqu'il est utilisé avec l'argument USING.
 
@@ -119,19 +119,19 @@ Le groupe de charge de travail peut spécifier un pool de ressources externes. V
 - Un pool de ressources pour les charges de travail et les requêtes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 - Un pool de ressources externes pour les processus externes. Pour plus d’informations, consultez [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Quand `REQUEST_MEMORY_GRANT_PERCENT` est utilisé, la création d’index est autorisée à utiliser une mémoire d’espace de travail supérieure à celle qui lui a été initialement allouée, afin d’améliorer les performances. Cette gestion spéciale est prise en charge par le gouverneur de ressources dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charges de travail.
 
 ### <a name="index-creation-on-a-partitioned-table"></a>Création d’un index sur une table partitionnée
 
-La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées. Si la mémoire totale requise dépasse la limite par requête (`REQUEST_MAX_MEMORY_GRANT_PERCENT`) imposée par le paramètre du groupe de charges de travail de Resource Governor, cette création d’index peut échouer. Étant donné que le groupe de charges de travail *"default"* permet à une requête de dépasser la limite par requête avec la mémoire minimale, l’utilisateur peut être en mesure d’exécuter la même création d’index dans le groupe de charges de travail *"default"*, si le pool de ressources *"default"* possède assez de mémoire totale configurée pour exécuter cette requête.
+La mémoire consommée par la création d'index sur une table partitionnée non alignée est proportionnelle au nombre de partitions impliquées. Si la mémoire totale requise dépasse la limite par requête (`REQUEST_MAX_MEMORY_GRANT_PERCENT`) imposée par le paramètre du groupe de charges de travail de Resource Governor, cette création d’index peut échouer. Étant donné que le groupe de charges de travail *"default"* permet à une requête de dépasser la limite par requête avec la mémoire minimale, l’utilisateur peut être en mesure d’exécuter la même création d’index dans le groupe de charges de travail *"default"* , si le pool de ressources *"default"* possède assez de mémoire totale configurée pour exécuter cette requête.
 
 ## <a name="permissions"></a>Autorisations
 
 Nécessite l'autorisation `CONTROL SERVER`.
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 - Créer un groupe de charges de travail appelé newReports
 
@@ -143,7 +143,7 @@ CREATE WORKLOAD GROUP newReports
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)
 - [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)

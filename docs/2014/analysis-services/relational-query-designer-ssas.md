@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070460"
 ---
 # <a name="relational-query-designer-ssas"></a>Concepteur de requêtes relationnelles (SSAS)
@@ -71,7 +71,7 @@ ms.locfileid: "66070460"
   
      Utilisez le volet Données du rapport pour afficher la collection de champs d'un dataset.  
   
--   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)**, indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
+-   **Groupe et agrégat** Active/désactive l'utilisation du regroupement et des agrégats dans la requête. Si vous désactivez la fonctionnalité relative au regroupement et aux agrégats après avoir ajouté un regroupement et des agrégats, ces derniers sont supprimés. Le texte, **(aucun)** , indique qu’aucun regroupement ou agrégat n’est utilisé. Si vous réactivez la fonctionnalité relative au regroupement et aux agrégats, le regroupement et les agrégats antérieurs sont restaurés.  
   
 -   **Supprimer le champ** Supprime le champ sélectionné.  
   
@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Cliquez sur le bouton **Exécuter** (**!**). Le tableau suivant fournit un exemple de `uspGetWhereUsedProductID` paramètres pour lesquels vous fournissez des valeurs dans le **définir un paramètre de requête** boîte de dialogue.  
+ Cliquez sur le bouton **Exécuter** ( **!** ). Le tableau suivant fournit un exemple de `uspGetWhereUsedProductID` paramètres pour lesquels vous fournissez des valeurs dans le **définir un paramètre de requête** boîte de dialogue.  
   
 |||  
 |-|-|  

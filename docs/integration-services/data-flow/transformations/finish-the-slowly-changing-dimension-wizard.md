@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6b46ba1015cac981a08c156add837c2fe295e96e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726111"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Fin de l'Assistant Dimension à variation lente
@@ -33,7 +33,7 @@ ms.locfileid: "65726111"
  **Les sorties suivantes seront configurées**  
  Vérifiez si la liste de sorties est conforme à vos besoins.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer les sorties à l'aide de l'Assistant Dimension à variation lente](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

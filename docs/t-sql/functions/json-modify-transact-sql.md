@@ -13,10 +13,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577457"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
@@ -48,7 +48,7 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Modificateur facultatif qui spécifie que la nouvelle valeur doit être ajoutée au tableau référencé par *\<json path>*.  
+    Modificateur facultatif qui spécifie que la nouvelle valeur doit être ajoutée au tableau référencé par *\<json path>* .  
   
 - *lax*  
     Spécifie que la propriété référencée par *\<json path>* ne doit pas nécessairement exister. Si la propriété n’est pas présente, JSON_MODIFY tente d’insérer la nouvelle valeur dans le chemin spécifié. L’insertion peut échouer si la propriété ne peut pas être insérée dans le chemin. Si vous ne spécifiez pas *lax* ou *strict*, *lax* est le mode par défaut.  
@@ -74,7 +74,7 @@ JSON_MODIFY échappe tous les caractères spéciaux dans la nouvelle valeur si l
 
  Retourne la valeur mise à jour de *expression* sous forme de texte JSON correctement formaté.  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
  La fonction JSON_MODIFY vous permet de mettre à jour la valeur d’une propriété existante, d’insérer une nouvelle paire clé-valeur ou de supprimer une clé en fonction d’une combinaison de modes et de valeurs fournies.  
   
@@ -313,7 +313,7 @@ WHERE EmployeeID=17
  
 ```  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  [Expressions de chemin JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
  [Données JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

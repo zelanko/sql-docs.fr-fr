@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 75a1cd07710bb95c041d0de8a00cb23f7354eb91
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722405"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Leçon 3-1 : Copier le package de la leçon 2
@@ -46,7 +46,7 @@ Utilisez cette procédure si vous copiez le package final de la leçon 2.  Pour
 
 7.  Dans la fenêtre **Propriétés**, remplacez la propriété **Name** par **Lesson 3**.
 
-8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>**.
+8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>** .
 
 ## <a name="add-the-completed-lesson-2-package"></a>Ajouter le package final de la leçon 2
 
@@ -56,7 +56,7 @@ Utilisez cette procédure si vous copiez le package final de la leçon 2.  Pour
 
 3.  Dans la boîte de dialogue **Ajouter une copie des packages existants**, sous **Emplacement du package**, sélectionnez **Système de fichiers**.
 
-4.  Sélectionnez le bouton de navigation **(...)**, accédez à **Lesson 2.dtsx** sur votre ordinateur, puis sélectionnez **Ouvrir**.
+4.  Sélectionnez le bouton de navigation **(...)** , accédez à **Lesson 2.dtsx** sur votre ordinateur, puis sélectionnez **Ouvrir**.
 
 5.  Copiez et collez le package de la leçon 3 en effectuant les étapes 3 à 8 décrites dans la section précédente.  
   

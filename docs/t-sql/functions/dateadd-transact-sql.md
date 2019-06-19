@@ -28,10 +28,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
-ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66469643"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -135,7 +135,7 @@ La partie des secondes d’une valeur [smalldatetime](../../t-sql/data-types/sma
 -   Si *datepart* est **millisecond** et que la valeur de *number* est comprise entre -30001 et +29998, `DATEADD` ne change rien.  
 -   Si *datepart* est **millisecond** et que la valeur de *number* est inférieure à -30001 ou supérieure à +29998, `DATEADD` effectue son ajout en commençant à une minute.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez `DATEADD` dans les clauses suivantes :
 
 + GROUP BY

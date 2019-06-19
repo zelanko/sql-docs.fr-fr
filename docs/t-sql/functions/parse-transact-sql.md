@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec595bfcbaa0472c1f8b51c9ca8fd07119041024
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943508"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
@@ -56,7 +56,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne le résultat de l'expression, traduit en type de données demandé.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les valeurs NULL passées comme arguments à PARSE sont traitées de deux façons :  
   
 1.  Si une constante NULL est passée, une erreur est générée. Une valeur NULL ne peut pas être analysée en un type de données différent d'une manière compatible avec la culture.  

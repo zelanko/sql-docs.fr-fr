@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620314ec11154737dc6d35bcf1d3e2587aaab2a1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722987"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>Leçon 1-7 : Ajouter et configurer la destination OLE DB
@@ -42,7 +42,7 @@ Au cours de cette tâche, vous allez ajouter et configurer une destination OLE D
   
 6.  Dans la boîte de dialogue **Éditeur de destination OLE DB**, vérifiez que **localhost.AdventureWorksDW2012** est sélectionné dans la zone **Gestionnaire de connexions OLE DB**.  
   
-7.  Dans la zone **Nom de la table ou de la vue**, entrez ou sélectionnez **[dbo].[FactCurrencyRate]**.  
+7.  Dans la zone **Nom de la table ou de la vue**, entrez ou sélectionnez **[dbo].[FactCurrencyRate]** .  
   
 8.  Sélectionnez le bouton **Nouveau** pour créer une table.  Dans le script, remplacez le nom de la table **Sample OLE DB Destination** par **NewFactCurrencyRate**.  Sélectionnez **OK**.  
   

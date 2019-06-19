@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720476"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
@@ -48,7 +48,7 @@ Les sections suivantes donnent les informations nécessaires pour utiliser effic
 
 Vous pouvez utiliser les outils suivants pour importer des données à partir d’Excel ou exporter des données vers Excel avec SSIS :
 
--   **SQL Server Integration Services (SSIS)**. Créez un package SSIS qui utilise la source Excel ou la destination Excel avec le Gestionnaire de connexions Excel. (Cet article n’explique pas comment créer des packages SSIS.)
+-   **SQL Server Integration Services (SSIS)** . Créez un package SSIS qui utilise la source Excel ou la destination Excel avec le Gestionnaire de connexions Excel. (Cet article n’explique pas comment créer des packages SSIS.)
 
 -   **L’Assistant Importation/exportation SQL Server**, basé sur SSIS. Pour plus d’informations, voir [Importer et exporter des données avec l’Assistant Importation/exportation SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) et [Se connecter à une source de données Excel (Assistant Importation/exportation SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
@@ -125,11 +125,11 @@ Si vous exportez des données à partir d’Excel et que vous activez cette opti
 
 Vous pouvez utiliser trois types d’objets Excel comme source ou destination de vos données : une feuille de calcul, une plage nommée ou une plage de cellules sans nom que vous spécifiez par son adresse.
 
--   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajoutez le caractère `$` à la fin du nom de la feuille et ajoutez des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]**. Vous pouvez aussi rechercher un nom qui se termine par le caractère `$` dans la liste des tables et vues existantes.
+-   **Feuille de calcul.** Pour spécifier une feuille de calcul, ajoutez le caractère `$` à la fin du nom de la feuille et ajoutez des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$]** . Vous pouvez aussi rechercher un nom qui se termine par le caractère `$` dans la liste des tables et vues existantes.
 
 -   **Plage nommée.** Pour spécifier une plage nommée, indiquez simplement le nom de la plage. Par exemple, **MyDataRange**. Vous pouvez aussi rechercher un nom qui ne se termine pas par le caractère `$` dans la liste des tables et vues existantes.
     
--   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]**.
+-   **Plage sans nom.** Pour spécifier une plage de cellules que vous n’avez pas nommée, ajoutez le caractère $ à la fin du nom de la feuille, ajoutez la spécification de plage ainsi que des délimiteurs autour de la chaîne. Par exemple, **[Sheet1$A1:B4]** .
 
 Pour sélectionner ou spécifier le type d’objet Excel que vous souhaitez utiliser comme source ou destination de vos données, effectuez l’une des procédures suivantes :
 

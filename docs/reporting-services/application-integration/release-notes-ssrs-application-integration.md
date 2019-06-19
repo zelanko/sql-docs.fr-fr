@@ -10,11 +10,11 @@ ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226002"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notes de publication pour les contrôles de visionneuse de rapports pour Web Forms et WinForms de SSRS
 
@@ -27,7 +27,7 @@ Pour les notes de publication pour SSRS, consultez [notes de publication pour SQ
 | Description de la modification | Détails |
 | :----------------- | :------ |
 | Correctif d’un bogue empêchant le chargement des rapports sans paramètres via **Server.LoadReportDefinition**. | &nbsp; |
-| Contrôle WebForms Visionneuse de rapports. | Prise en charge de l’incorporation dans les pages de droite à gauche (pages qui changent le flux de texte à l’aide de la propriété CSS *direction:rtl;*).<br/><br/>Prise en charge de la personnalisation du texte de la boîte de dialogue Imprimer via l’interface de localisation *IReportViewerMessages5*.<br/><br/>Amélioration de la prise en charge de l’accessibilité.<br/><br/>&bull; &nbsp; &nbsp; [Package NuGet pour le contrôle de visionneuse de rapports de Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| Contrôle WebForms Visionneuse de rapports. | Prise en charge de l’incorporation dans les pages de droite à gauche (pages qui changent le flux de texte à l’aide de la propriété CSS *direction:rtl;* ).<br/><br/>Prise en charge de la personnalisation du texte de la boîte de dialogue Imprimer via l’interface de localisation *IReportViewerMessages5*.<br/><br/>Amélioration de la prise en charge de l’accessibilité.<br/><br/>&bull; &nbsp; &nbsp; [Package NuGet pour le contrôle de visionneuse de rapports de Web Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | Contrôle WinForms Visionneuse de rapports. | Correctif pour l’impression quand une application s’exécute en mode Haute résolution.<br/><br/>&bull; &nbsp; &nbsp; [Package NuGet pour le contrôle de visionneuse de rapports de WinForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 

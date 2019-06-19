@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723324"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Leçon 1-1 : Créer un projet Integration Services
@@ -26,7 +26,7 @@ ms.locfileid: "65723324"
 
 La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet exemple de projet comprend les modèles des sources de données, vues de source de données et packages qui constituent une solution de transformation de données.  
   
-Les packages que vous créez dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre **Anglais (États-Unis)**, vous devez définir des propriétés supplémentaires dans le package. 
+Les packages que vous créez dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre **Anglais (États-Unis)** , vous devez définir des propriétés supplémentaires dans le package. 
 
 Les packages que vous utilisez dans les leçons 2 à 6 sont copiés à partir du package que vous créez dans cette leçon.  
   
@@ -35,7 +35,7 @@ Les packages que vous utilisez dans les leçons 2 à 6 sont copiés à partir du
 
 ## <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services  
   
-1.  Dans le menu **Démarrer** de Windows, recherchez et sélectionnez **Visual Studio (SSDT)**.  
+1.  Dans le menu **Démarrer** de Windows, recherchez et sélectionnez **Visual Studio (SSDT)** .  
   
 2.  Dans Visual Studio, sélectionnez **Fichier** > **Nouveau** > **Projet** pour créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

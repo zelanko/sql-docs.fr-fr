@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721026"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d’un abonnement à la Publication de fusion
@@ -40,7 +40,7 @@ ms.locfileid: "62721026"
   
 7.  Dans la boîte de dialogue **Nouvelle base de données** , entrez **SalesOrdersReplica** dans la zone **Nom de la base de données** , cliquez sur **OK**, puis cliquez sur **Suivant**.  
   
-8.  Dans la page sécurité de l’Agent de fusion, cliquez sur le bouton de sélection (**...** ), entrez \< _nom_ordinateur >_**\repl_merge** dans le **compte de processus** , fournissez le mot de passe pour ce compte, cliquez sur **OK**, cliquez sur **suivant**, puis cliquez sur **suivant** à nouveau.  
+8.  Dans la page sécurité de l’Agent de fusion, cliquez sur le bouton de sélection ( **...** ), entrez \< _nom_ordinateur >_ **\repl_merge** dans le **compte de processus** , fournissez le mot de passe pour ce compte, cliquez sur **OK**, cliquez sur **suivant**, puis cliquez sur **suivant** à nouveau.  
   
 9. Dans la page Initialiser les abonnements, sélectionnez **Lors de la première synchronisation** dans la liste **À quel moment** , cliquez sur **Suivant**, puis une nouvelle fois sur **Suivant** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721026"
   
 1.  Connectez-vous à l’Abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Bases de données**, **SalesOrdersReplica**et **Sécurité**, cliquez avec le bouton droit sur **Utilisateurs**, puis choisissez **Nouvel utilisateur**.  
   
-2.  Sur le **général** , entrez \< _nom_ordinateur >_**\repl_merge** dans le **nom d’utilisateur** , cliquez sur le bouton de sélection ( **...** ) bouton, cliquez sur **Parcourir**, sélectionnez \< _nom_ordinateur >_**\repl_merge**, cliquez sur **OK**, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
+2.  Sur le **général** , entrez \< _nom_ordinateur >_ **\repl_merge** dans le **nom d’utilisateur** , cliquez sur le bouton de sélection ( **...** ) bouton, cliquez sur **Parcourir**, sélectionnez \< _nom_ordinateur >_ **\repl_merge**, cliquez sur **OK**, cliquez sur **vérifier les noms**, puis cliquez sur **OK**.  
   
 3.  Dans **Appartenance au rôle de base de données**, sélectionnez **db_owner**, puis cliquez sur **OK** pour créer l’utilisateur.  
   

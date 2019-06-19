@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6872ae2fe52e9ea9d30a41fe663a75b5bfe7d4c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107477"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interface utilisateur du Concepteur de requêtes MDX Analysis Services
@@ -42,7 +42,7 @@ ms.locfileid: "66107477"
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Bouton Sélection de cube (**...**)|Affiche le cube actuellement sélectionné.|  
+|Bouton Sélection de cube ( **...** )|Affiche le cube actuellement sélectionné.|  
 |Volet Métadonnées|Affiche une liste hiérarchique des mesures, des indicateurs de performance clés (KPI) et des dimensions définis dans le cube sélectionné.|  
 |Volet Membres calculés|Affiche les membres calculés actuellement définis et disponibles pour être utilisés dans la requête.|  
 |Volet Filtre|Utilisez ce volet pour choisir des dimensions et hiérarchies associées afin de filtrer des données à la source et de limiter la quantité de données retournée dans le rapport.|  
@@ -90,7 +90,7 @@ ms.locfileid: "66107477"
   
 |Volet|Fonction|  
 |----------|--------------|  
-|Bouton Sélection de cube (**...**)|Affiche le cube actuellement sélectionné.|  
+|Bouton Sélection de cube ( **...** )|Affiche le cube actuellement sélectionné.|  
 |Volet Métadonnées/Fonctions/Modèles|Affiche une liste hiérarchique des mesures, des indicateurs de performance clés (KPI) et des dimensions définis dans le cube sélectionné.|  
 |Volet Requête|Affiche le texte de la requête.|  
 |Volet Résultat|Affiche les résultats de l'exécution de la requête.|  

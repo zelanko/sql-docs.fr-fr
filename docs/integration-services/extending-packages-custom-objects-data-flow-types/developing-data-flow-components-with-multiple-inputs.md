@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e93f8c6933769fcce7426df58f67a53113ff6f5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724783"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Développement de composants de flux de données avec plusieurs entrées
@@ -36,7 +36,7 @@ ms.locfileid: "65724783"
 ## <a name="setting-the-supportsbackpressure-property"></a>Définition de la propriété SupportsBackPressure  
  La première étape pour l’implémentation d’une meilleure gestion de la mémoire pour un composant de flux de données personnalisé qui prend en charge plusieurs entrées consiste à définir la valeur de la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> sur **true** dans la classe <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Lorsque la valeur de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> est **true**, le moteur de flux de données appelle la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> et, lorsqu’il y a plus de deux entrées, il appelle également la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> au moment de l’exécution.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Dans l’exemple suivant, l’implémentation de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> définit la valeur de <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> sur **true**.  
   
 ```csharp  
@@ -68,7 +68,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  Vous n'appelez pas les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> dans votre propre code. Le moteur de flux de données appelle ces méthodes, et les autres méthodes de la classe **PipelineComponent** que vous remplacez, lorsque le moteur de flux de données exécute votre composant.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Dans l'exemple suivant, l'implémentation de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> indique qu'une entrée attend pour recevoir plus de données lorsque les conditions suivantes sont remplies :  
   
 -   Plus de données en amont sont disponibles pour l'entrée (`!inputEOR`).  
@@ -105,7 +105,7 @@ public override void IsInputReady(int[] inputIDs, ref bool[] canProcess)
 > [!NOTE]  
 >  Vous n'appelez pas les méthodes <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> ou <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> dans votre propre code. Le moteur de flux de données appelle ces méthodes, et les autres méthodes de la classe **PipelineComponent** que vous remplacez, lorsque le moteur de flux de données exécute votre composant.  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Pour une entrée spécifique bloquée, l'implémentation suivante de la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> retourne une collection des entrées qui attendent de recevoir plus de données et par conséquent bloque l'entrée spécifiée. Le composant identifie les entrées bloquantes en recherchant d'autres entrées que celle qui est bloquée qui n'ont pas actuellement de données disponibles pour traiter dans les mémoires tampon que le composant a déjà reçues (`inputBuffers[i].CurrentRow() == null`). La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.GetDependentInputs%2A> retourne ensuite la collection d'entrées bloquantes comme une collection d'ID d'entrée.  
   
 ```csharp  

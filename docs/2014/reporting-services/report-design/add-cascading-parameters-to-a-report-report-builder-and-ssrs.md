@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106700"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Ajouter des paramètres en cascade à un rapport (Générateur de rapports et SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106700"
   
     2.  Un paramètre de requête par paramètre en cascade. Un paramètre de requête limite les données extraites de la source de données en spécifiant certaines valeurs à inclure dans la requête ou à exclure de la requête. En règle générale, les paramètres de requête se déclenchent dans une clause de restriction dans la requête. Par exemple, dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT, les paramètres de requête se déclenchent dans la clause WHERE. Pour plus d'informations, consultez la rubrique « Filtrage des lignes avec les clauses WHERE et HAVING » dans la documentation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la documentation en ligne [SQL Server](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-6.  Cliquez sur **Exécuter** (**!**). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
+6.  Cliquez sur **Exécuter** ( **!** ). Une fois que vous avez inclus les paramètres de requête et exécuté la requête, les paramètres de rapport qui correspondent aux paramètres de requête sont automatiquement créés.  
   
     > [!NOTE]  
     >  L'ordre des paramètres de requête lors de la première exécution d'une requête détermine leur ordre de création dans le rapport. Pour modifier l’ordre, consultez [Modifier l’ordre d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "66106700"
   
      La commande SELECT DISTINCT supprime les valeurs dupliquées du jeu de résultats, de telle sorte que vous puissiez obtenir chaque valeur unique de la colonne spécifiée dans la table spécifiée.  
   
-     Cliquez sur **Exécuter** (**!**). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
+     Cliquez sur **Exécuter** ( **!** ). Le jeu de résultats indique les valeurs qui sont disponibles pour ce premier paramètre.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 05/29/2019
 ms.openlocfilehash: 3f80cc74cc20c2ed02e32577fadbe13a5bf7dd38
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500339"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Qu’est-ce que SQL Server Management Studio (SSMS) ?
@@ -29,7 +29,7 @@ ms.locfileid: "66500339"
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est un environnement intégré de gestion des infrastructures SQL. Utilisez SSMS pour accéder à, configurer, gérer, administrer et développer tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Azure SQL Database et SQL Data Warehouse. SSMS fournit un utilitaire unique et complet qui associe un vaste ensemble d’outils graphiques à différents éditeurs de script performants, pour permettre aux développeurs et aux administrateurs de base de données de tous niveaux d’avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-- [**Télécharger SQL Server Management Studio (SSMS)**](download-sql-server-management-studio-ssms.md)
+- [**Télécharger SQL Server Management Studio (SSMS)** ](download-sql-server-management-studio-ssms.md)
 - [**Télécharger SQL Server Developer**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Télécharger Visual Studio**](https://www.visualstudio.com/downloads/)
 
@@ -37,7 +37,7 @@ ms.locfileid: "66500339"
   
 |Description|Composant|  
 |---------------|---------|  
-|Utilisez **l’Explorateur d’objets** pour afficher et gérer tous les objets d’une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Explorateur d’objets](../ssms/object/object-explorer.md)|  
+|Utilisez **l’Explorateur d’objets** pour afficher et gérer tous les objets d’une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[l’Explorateur d’objets](../ssms/object/object-explorer.md)|  
 |Comment utiliser l’**Explorateur de modèles** pour créer et gérer des fichiers de texte réutilisable que vous utilisez pour accélérer le développement de requêtes et de scripts.|[l’Explorateur de modèles](../ssms/template/template-explorer.md)|  
 |Comment utiliser **l’Explorateur de solutions** déconseillé pour créer des projets visant à gérer les éléments d’administration, comme les scripts et les requêtes.|[Explorateur de solutions](../ssms/solution/solution-explorer.md)|  
 |Comment utiliser les outils de conception visuelle inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102072"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts
@@ -38,6 +38,6 @@ L'Éditeur Transact\-SQL comprend un volet **T-SQL** principal où vous pouvez �
 |[Procédure : déboguer des procédures stockées](../ssdt/how-to-debug-stored-procedures.md)|Créez et déboguez une procédure stockée Transact\-SQL pas à pas.|  
 |[Analyser les performances de script](../ssdt/analyze-script-performance.md)|Utilisez les plans d'exécution, les statistiques du client et l'analyse du code pour déterminer si vous pouvez améliorer les performances de vos requêtes, procédures stockées ou scripts.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : créer de nouveaux objets de base de données à l’aide de requêtes](../ssdt/how-to-create-new-database-objects-using-queries.md)  
   

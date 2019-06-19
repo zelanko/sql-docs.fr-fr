@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ed5486e9f48bc0f0ca5ab4b6af031571f4f3580d
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945951"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
@@ -57,7 +57,7 @@ Expression de type **varchar(128)** qui retourne le nom de la propriété du gro
 ## <a name="return-types"></a>Types de retour  
 **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 *filegroup_name* correspond à la colonne **name** de la vue de catalogue **sys.filegroups**.  
   
 ## <a name="examples"></a>Exemples  
@@ -77,7 +77,7 @@ Default Filegroup
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
  [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   

@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947210"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE (Transact-SQL)
@@ -63,7 +63,7 @@ ISDATE ( expression )
 ## <a name="return-type"></a>Type de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ISDATE est déterministe uniquement si elle est utilisée avec la fonction [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), lorsque le paramètre de style CONVERT est spécifié et que le style est différent de 0, 100, 9 et 109.  
   
  La valeur de retour d’ISDATE dépend des paramètres définis par [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md), [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et dans la rubrique [Configurer l’option de configuration de serveur default language](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md).  
@@ -153,7 +153,7 @@ ELSE
     SELECT 'INVALID';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

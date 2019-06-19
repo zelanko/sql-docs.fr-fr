@@ -27,10 +27,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 396e9b59f41ae31b7ae2a6f091dd540fa41afdcc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725732"
 ---
 # <a name="dtutil-utility"></a>dtutil (utilitaire)
@@ -67,18 +67,18 @@ ms.locfileid: "65725732"
   
  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installe une version 64 bits de l’utilitaire **dtexec** (dtexec.exe) et de l’utilitaire **dtutil** (dtutil.exe). Pour installer des versions 32 bits de ces outils [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , vous devez sélectionner Outils clients ou [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] lors de l'installation.  
   
- Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>*:\Program Files\Microsoft SQL Server\130\DTS\Binn.)  
+ Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>* :\Program Files\Microsoft SQL Server\130\DTS\Binn.)  
   
 > [!NOTE]  
 >  Si vous utilisez SQL Server Agent pour exécuter l'utilitaire, il utilise automatiquement la version 64 bits de ce dernier. SQL Server Agent utilise le Registre, et non la variable d'environnement PATH, pour localiser le fichier exécutable correct de l'utilitaire.  
   
  Pour vous assurer que vous exécutez la version 64 bits de l'utilitaire à l'invite de commandes, vous pouvez effectuer l'une des actions suivantes :  
   
--   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire *(\<lecteur>*:\Program Files\Microsoft SQL Server\130\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
+-   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire *(\<lecteur>* :\Program Files\Microsoft SQL Server\130\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
   
--   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (*\<lecteur>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) de la version 64 bits de l’utilitaire.  
+-   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<lecteur>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) de la version 64 bits de l’utilitaire.  
   
--   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits (*\<lecteur>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) avant le chemin 32 bits (*\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) dans la variable.  
+-   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits ( *\<lecteur>* :\Program Files\Microsoft SQL Server\130\DTS\Binn) avant le chemin 32 bits ( *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn) dans la variable.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -97,7 +97,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *password*|Spécifie le mot de passe utilisé avec l'option SQL pour se connecter à une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de destination avec l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Une erreur est générée si *DESTPASSWORD* est spécifié dans une ligne de commande qui n'inclut pas l'option *DTSUSER* .<br /><br /> Remarque : [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
 |/DestS[erver] *server_instance*|Spécifie le nom du serveur utilisé avec une action qui entraîne l'enregistrement d'une destination dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette valeur sert à identifier un serveur non local ou autre que le serveur par défaut lors de l’enregistrement d’un package [!INCLUDE[ssIS](../includes/ssis-md.md)] . La spécification de *DESTSERVER* dans une ligne de commande sans action associée à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]constitue une erreur. Des actions telles que *SIGN SQL*, *COPY SQL*ou *MOVE SQL* représentent des commandes appropriées à combiner avec cette option.<br /><br /> Un nom d'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut être spécifié en ajoutant à la suite du nom du serveur une barre oblique et le nom de l'instance.|  
 |/DestU[ser] *username*|Spécifie le nom d’utilisateur qui est employé avec les options *SIGN SQL*, *COPY SQL*et *MOVE SQL* pour se connecter à une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui utilise l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La spécification de *DESTUSER* dans une ligne de commande qui n'inclut pas l'option *SIGN SQL*, *COPY SQL*ou *MOVE SQL* constitue une erreur.|  
-|/Dump *process ID*|(Facultatif) Entraîne la suspension du processus spécifié, de l’utilitaire **dtexec** ou du processus **dtsDebugHost.exe** , ainsi que la création des fichiers de vidage de débogage, .mdmp et .tmp.<br /><br /> Remarque : Pour utiliser l’option **/Dump**, le droit d’utilisateur Déboguer les programmes doit vous être assigné (SeDebugPrivilege).<br /><br /> Pour trouver le *process ID* du processus que vous souhaitez suspendre, utilisez le Gestionnaire des tâches de Windows.<br /><br /> Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Pour plus d’informations sur l’utilitaire **dtexec** et le processus **dtsDebugHost.exe** , consultez [Utilitaire dtexec](../integration-services/packages/dtexec-utility.md) et [Génération, déploiement et débogage d’objets personnalisés](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Pour plus d'informations sur les fichiers de vidage du débogage, consultez [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Remarque : Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint.|  
+|/Dump *process ID*|(Facultatif) Entraîne la suspension du processus spécifié, de l’utilitaire **dtexec** ou du processus **dtsDebugHost.exe** , ainsi que la création des fichiers de vidage de débogage, .mdmp et .tmp.<br /><br /> Remarque : Pour utiliser l’option **/Dump**, le droit d’utilisateur Déboguer les programmes doit vous être assigné (SeDebugPrivilege).<br /><br /> Pour trouver le *process ID* du processus que vous souhaitez suspendre, utilisez le Gestionnaire des tâches de Windows.<br /><br /> Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Pour plus d’informations sur l’utilitaire **dtexec** et le processus **dtsDebugHost.exe** , consultez [Utilitaire dtexec](../integration-services/packages/dtexec-utility.md) et [Génération, déploiement et débogage d’objets personnalisés](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Pour plus d'informations sur les fichiers de vidage du débogage, consultez [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Remarque : Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint.|  
 |/DT[S] *filespec*|Spécifie que le package [!INCLUDE[ssIS](../includes/ssis-md.md)] à traiter se trouve dans le magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] . L’argument *filespec* doit inclure le chemin du dossier en commençant à la racine du magasin de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] . Par défaut, les noms des dossiers racine dans le fichier de configuration sont "MSDB" et "Système de fichiers". Les chemins d'accès qui contiennent un espace doivent être placés entre guillemets.<br /><br /> Si l'option DT[S] est spécifiée sur la même ligne de commande que l'une des options suivantes, une erreur DTEXEC_DTEXECERROR est retournée :<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(Facultatif). Chiffre le package chargé avec le niveau de protection et le mot de passe spécifiés, puis l'enregistre à l'emplacement spécifié dans *Path*. Le *ProtectionLevel* détermine si un mot de passe est requis.<br /><br /> *SQL* - Path est le nom du package de destination.<br /><br /> *FILE* - Path est le chemin complet et le nom de fichier du package.<br /><br /> *DTS* - Cette option n’est actuellement pas prise en charge.<br /><br /> Options*ProtectionLevel* :<br /><br /> Niveau 0 : Retire les informations sensibles.<br /><br /> Niveau 1 : les informations sensibles sont chiffrées en utilisant des informations d'identification de l'utilisateur local.<br /><br /> Niveau 2 : les informations sensibles sont chiffrées à l'aide du mot de passe requis.<br /><br /> Niveau 3 : le package est chiffré à l'aide du mot de passe requis.<br /><br /> Niveau 4 : le package est chiffré à l'aide des informations d'identification de l'utilisateur local.<br /><br /> Un package de niveau 5 utilise le chiffrement de stockage [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |/Ex[ists]|(Facultatif). Sert à déterminer si un package existe. **dtutil** tente de localiser le package spécifié à l'aide des options *SQL*, *DTS* ou *FILE* . Si **dtutil** ne peut pas localiser le package spécifié, une erreur DTEXEC_DTEXECERROR est retournée.|  
@@ -129,7 +129,7 @@ dtutil /option [value] [/option [value]]...
 |5|L'utilitaire ne peut pas charger le package demandé.|  
 |6|L'utilitaire ne peut pas résoudre la ligne de commande car elle comporte des erreurs syntaxiques ou sémantiques.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous ne pouvez pas utiliser de fichiers de commandes ou une redirection avec **dtutil**.  
   
  L'ordre des options dans la ligne de commande n'est pas significatif.  
@@ -277,7 +277,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécuter des packages Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
