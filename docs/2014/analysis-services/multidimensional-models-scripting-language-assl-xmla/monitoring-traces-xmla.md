@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62729068"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
@@ -37,9 +37,9 @@ ms.locfileid: "62729068"
 |------------|---------------|-----------------|  
 |EventClass|Entier|Classe d'événements de l'événement reçu par la trace.|  
 |EventSubclass|Entier long|Sous-classe d'événements de l'événement reçu par la trace.|  
-|CurrentTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|Datetime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
+|CurrentTime|DateTime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|DateTime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|DateTime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
 |Duration|Entier long|Durée totale (en millisecondes) de l'événement.|  
 |CPUTime|Entier long|Temps processeur total (en millisecondes) écoulé pour l'événement.|  
 |JobID|Entier long|Identificateur de travail du processus.|  

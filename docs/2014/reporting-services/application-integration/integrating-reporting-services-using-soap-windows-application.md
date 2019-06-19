@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb34dc31d65c9b0814a348232d0e2405d7676fda
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63218343"
 ---
 # <a name="using-the-soap-api-in-a-windows-application"></a>Utilisation de l'API SOAP dans une application Windows
@@ -91,7 +91,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Vous pouvez également utiliser les contrôles ReportViewer en distribution libre inclus dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Les contrôles ReportViewer facilitent l'incorporation de fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans les applications personnalisées. Les contrôles ReportViewer sont destinés aux développeurs qui souhaitent fournir des rapports prédéfinis et entièrement créés dans un ensemble de fonctionnalités d'une application (par exemple, une application de gestion de sites Web peut contenir des rapports qui comportent une analyse du parcours des internautes sur les sites Web de sociétés). L'incorporation des contrôles dans une application offre une solution plus rationnelle que l'ajout de composants serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans le déploiement de votre application. Les contrôles offrent les fonctionnalités des rapports sans la prise en charge de la création, de la publication, de la distribution et de la fourniture qu'offre [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Il existe deux versions des contrôles ReportViewer : une version est destinée aux applications clientes Windows, l'autre aux applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Les contrôles prennent en charge les modes de traitement local et distant. En mode de traitement local, votre application fournit la définition de rapport et les datasets et déclenche le traitement des rapports.  En mode de traitement distant, la récupération des données et le traitement des rapports sont effectués sur le serveur de rapports et le contrôle est utilisé à des fins d'affichage et de navigation dans les rapports. Ce modèle vous permet de créer des applications puissantes à l'échelle d'un Bureau ou d'une entreprise.  
+ Il existe deux versions des contrôles ReportViewer : une version est destinée aux applications clientes Windows, l'autre aux applications [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Les contrôles prennent en charge les modes de traitement local et distant. En mode de traitement local, votre application fournit la définition de rapport et les datasets et déclenche le traitement des rapports. En mode de traitement distant, la récupération des données et le traitement des rapports sont effectués sur le serveur de rapports et le contrôle est utilisé à des fins d'affichage et de navigation dans les rapports. Ce modèle vous permet de créer des applications puissantes à l'échelle d'un Bureau ou d'une entreprise.  
   
  Les contrôles ReportViewer sont décrits dans l'aide en ligne de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Pour plus d'informations, consultez la documentation produit de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   

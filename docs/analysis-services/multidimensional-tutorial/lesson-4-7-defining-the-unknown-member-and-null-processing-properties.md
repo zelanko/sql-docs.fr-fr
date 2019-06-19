@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0faff73e9b823ab46073137e67c5dfc511404330
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404071"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition du membre inconnu et le traitement des propriétés des valeurs Null
@@ -68,7 +68,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la c
   
     La boîte de dialogue **Ajouter/supprimer des tables** s’affiche.  
   
-2.  Dans la liste **Objets inclus** , sélectionnez **DimProduct (dbo)**, puis cliquez sur **Ajouter des tables associées**.  
+2.  Dans la liste **Objets inclus** , sélectionnez **DimProduct (dbo)** , puis cliquez sur **Ajouter des tables associées**.  
   
     Les tables **DimProductSubcategory (dbo)** et **FactProductInventory (dbo)** sont ajoutées. Supprimez **FactProductInventory (dbo)** pour que seule la table **DimProductSubcategory (dbo)** soit ajoutée à la liste des **Objets inclus** .  
   
@@ -90,7 +90,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter les attributs de la c
   
 9. Dans le volet **Attributs** , nommez ce nouvel attribut **Category**.  
   
-10. Dans la fenêtre Propriétés, cliquez dans le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation (**...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
+10. Dans la fenêtre Propriétés, cliquez dans le **NameColumn** propriété champ, puis cliquez sur le bouton de navigation ( **...** ) pour ouvrir la **colonne nom** boîte de dialogue.  
   
 11. Sélectionnez **EnglishProductCategoryName** dans la liste **Colonne source** , puis cliquez sur **OK**.  
   

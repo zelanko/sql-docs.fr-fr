@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191452"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
@@ -30,7 +30,7 @@ ms.locfileid: "63191452"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Impossible de %1! le %2! '%3!' parce qu'il est utilisé pour la réplication.|  
+|Texte du message|Impossible de % S_MSG % S_MSG ' %. * ls', car il est utilisé pour la réplication.|  
   
 ## <a name="explanation"></a>Explication  
  Lorsque des objets d'une base de données sont répliqués, ils sont marqués comme étant répliqués dans la table système **sysarticles** (publications transactionnelles ou d'instantanés) ou dans la table système **sysmergearticles** (publications de fusion). Si vous tentez de supprimer un objet répliqué, cette erreur est générée.  

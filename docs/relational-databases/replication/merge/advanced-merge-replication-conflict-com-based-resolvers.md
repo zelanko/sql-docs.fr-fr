@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a9994984f833fcfc098a2c27e782bc8c058bc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028911"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Conflit de réplication de fusion avancée - Programmes de résolution COM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47807907"
   
  Le tableau suivant décrit les attributs des programmes de résolution spécifiques.  
   
-|Nom   |Entrée requise|Description|Commentaires|  
+|Créer une vue d’abonnement|Entrée requise|Description|Commentaires|  
 |----------|--------------------|-----------------|--------------|  
 |Outil de résolution des conflits d'addition[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne à totaliser. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs des colonnes spécifiées prennent la valeur représentant la somme des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
 |Outil de résolution des conflits de moyenne[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |Nom de la colonne dont la moyenne doit être établie. Elle doit être d'un type de données arithmétique (tel que **int**, **smallint**, **numeric**, etc.).|Le gagnant du conflit est déterminé à partir de la valeur de priorité. Les valeurs de colonnes résultantes représentent la moyenne des valeurs des colonnes source et de destination. Si l'une des colonnes a la valeur NULL, elles ont la valeur de l'autre colonne.|Prend uniquement en charge les conflits de mise à jour, le suivi de colonnes.|  
@@ -47,7 +47,7 @@ ms.locfileid: "47807907"
 |Programme de résolution des procédures stockées[!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQL Server|Nom de la procédure stockée que le programme de résolution doit appeler pour gérer le conflit.|La résolution du conflit dépend de la logique de la procédure stockée spécifiée.|Prend en charge les conflits de mise à jour. Pour plus d’informations, consultez [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md).|  
   
 ## <a name="see-also"></a> Voir aussi  
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Détection et résolution des conflits de réplication de fusion avancée](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)  
   
   

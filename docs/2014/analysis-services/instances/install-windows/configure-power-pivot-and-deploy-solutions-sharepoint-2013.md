@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23eaa3b9394822399618a99483dfb2b22fe13455
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079954"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurer PowerPivot et déployer des solutions (SharePoint 2013)
@@ -39,7 +39,7 @@ ms.locfileid: "66079954"
 ##  <a name="bkmk_run_configuration_tool"></a> Exécution de PowerPivot pour SharePoint 2013  
  **Remarque :** Le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Assistant Installation installe deux outils de configuration différents pour [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Chacun d'eux prend en charge une version différente de SharePoint.  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |Configuration de PowerPivot pour SharePoint 2013|SharePoint 2013|  
 |Outil de configuration de PowerPivot|SharePoint 2010 avec SharePoint 2010 Service Pack 1 (SP1)|  

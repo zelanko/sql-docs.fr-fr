@@ -18,11 +18,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716080"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ ms.locfileid: "56590474"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|Contient des informations sur les détails (actions) d’une spécification de l’audit du serveur dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|Contient les informations détaillées des magasins à propos du type d'audit de fichier dans un audit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur une instance de serveur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Chaque fonctionnalité et commande pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit a des spécifications d'autorisation individuelles.  
   
  Pour créer, modifier ou supprimer un audit du serveur ou une spécification de l'audit du serveur, les principaux du serveur requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER. Pour créer, modifier ou supprimer une spécification de l'audit de la base de données, les principaux de la base de données requièrent l'autorisation ALTER ANY DATABASE AUDIT, ou l'autorisation ALTER ou CONTROL sur la base de données. De plus, les principaux doivent soit avoir l'autorisation de se connecter à la base de données, soit disposer des autorisations ALTER ANY SERVER AUDIT ou CONTROL SERVER.  

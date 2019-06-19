@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736199"
 ---
 # <a name="create-check-constraints"></a>Créer des contraintes de validation
@@ -51,7 +51,7 @@ ms.locfileid: "62736199"
   
 1.  Dans **l’Explorateur d’objets**, développez la table à laquelle vous souhaitez ajouter une contrainte de validation, cliquez avec le bouton droit sur **Contraintes** , puis cliquez sur **Nouvelle contrainte**.  
   
-2.  Dans la boîte de dialogue **Vérifier les contraintes**, cliquez dans le champ **Expression**, puis sur le bouton de sélection **(...)**.  
+2.  Dans la boîte de dialogue **Vérifier les contraintes**, cliquez dans le champ **Expression**, puis sur le bouton de sélection **(...)** .  
   
 3.  Dans la boîte de dialogue **Expression de contrainte de validation** , tapez l'expression SQL de la contrainte de validation. Par exemple, pour limiter les entrées dans la colonne `SellEndDate` de la table `Product` à une valeur supérieure ou égale à la date de la colonne `SellStartDate` ou à la valeur NULL, tapez :  
   

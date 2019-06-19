@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 631d55e1f8921601f25f2b2d8a14f00d11bd0947
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782004"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Masquer une instance du moteur de base de données SQL Server
@@ -27,7 +27,7 @@ ms.locfileid: "62782004"
   
 #### <a name="to-hide-an-instance-of-the-sql-server-database-engine"></a>Pour masquer une instance du Moteur de base de données SQL Server  
   
-1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<instance de serveur>*, puis sélectionnez **Propriétés**.  
+1.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** *\<instance de serveur>* , puis sélectionnez **Propriétés**.  
   
 2.  Sous l'onglet **Indicateurs** , dans la zone **HideInstance** , sélectionnez **Oui**, puis cliquez sur **OK** pour fermer la boîte de dialogue. La modification prend effet immédiatement pour les nouvelles connexions.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62782004"
  Pour plus d’informations, consultez [Créer ou supprimer un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
  Si vous masquez une instance nommée en cluster, il se peut que le service de cluster ne soit pas en mesure de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si la clé de Registre **LastConnect** (**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI11.0\LastConnect**) a un autre port que le port écouté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le service de cluster ne peut pas établir une connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez recevoir un message d’erreur similaire à ce qui suit :  
-**ID d’événement : 1001: Nom de l’événement : Blocage de la ressource de clustering de basculement.**  
+**ID de l’événement : 1001 : Nom de l’événement : Blocage des ressources du clustering de basculement.**  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration réseau du serveur](server-network-configuration.md)   

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 0b85c75d024edd1e7e53eee08e21683aa7412bbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775738"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Services SCM - Configurer les options de démarrage du serveur
@@ -63,7 +63,7 @@ ms.locfileid: "66775738"
   
 2.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Services SQL Server**.  
   
-3.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (** _<nom_instance>_ **)** , puis cliquez sur **Propriétés**.  
+3.  Dans le volet droit, cliquez avec le bouton droit sur **SQL Server (**_<nom_instance>_**)**, puis cliquez sur **Propriétés**.  
   
 4.  Sous l'onglet **Paramètres de démarrage** , dans la zone **Spécifiez un paramètre de démarrage** , tapez le paramètre, puis cliquez sur **Ajouter**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66775738"
     > [!WARNING]  
     >  Au terme de l’utilisation du mode mono-utilisateur, dans la zone Paramètres de démarrage, sélectionnez le paramètre **-m** dans la zone **Paramètres existants** , puis cliquez sur **Supprimer**. Redémarrez le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour rétablir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode multi-utilisateur habituel.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Démarrer SQL Server en mode mono-utilisateur](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)   
  [Se connecter à SQL Server quand les administrateurs système n’y ont plus accès](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)   
  [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  

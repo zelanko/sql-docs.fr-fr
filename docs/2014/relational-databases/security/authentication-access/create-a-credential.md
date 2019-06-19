@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012006"
 ---
 # <a name="create-a-credential"></a>Create a Credential
@@ -61,7 +61,7 @@ ms.locfileid: "63012006"
   
 1.  Dans l’Explorateur d’objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification...** .  
   
 3.  Dans la boîte de dialogue **Nouvelles informations d'identification** , saisissez le nom des information d'identification dans la zone **Nom d'identification** .  
   

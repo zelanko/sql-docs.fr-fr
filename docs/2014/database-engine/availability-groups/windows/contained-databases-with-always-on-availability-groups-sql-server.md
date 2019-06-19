@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13dd6e87b6442b8c1b908ceb73d1e5c7f135308c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815329"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>Bases de données autonomes avec les groupes de disponibilité Always On (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62815329"
   
 ##  <a name="Prerequisites"></a> Conditions préalables  
   
--   Avant d'ajouter une base de données autonome à un groupe de disponibilité, vérifiez que l'option de serveur `contained database authentication` est définie sur `1` sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour plus d'informations, consultez [Authentification de la base de données autonome (option de configuration de serveur)](../../configure-windows/contained-database-authentication-server-configuration-option.md) et [Server Configuration Options &amp;#40;SQL Server&amp;#41;](../../configure-windows/server-configuration-options-sql-server.md).  
+-   Avant d'ajouter une base de données autonome à un groupe de disponibilité, vérifiez que l'option de serveur `contained database authentication` est définie sur `1` sur chaque instance de serveur qui héberge un réplica de disponibilité pour le groupe de disponibilité. Pour plus d'informations, consultez [Authentification de la base de données autonome (option de configuration de serveur)](../../configure-windows/contained-database-authentication-server-configuration-option.md) et [Server Configuration Options &#40;SQL Server&#41;](../../configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   

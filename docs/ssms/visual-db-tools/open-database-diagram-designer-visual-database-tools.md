@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4e6113e07c712d5bc4d669a518f87ef826fe0a65
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095241"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>ouvrir le Concepteur de diagrammes de base de données (Visual Database Tools)
@@ -50,6 +50,6 @@ Vous pouvez ouvrir le Concepteur de diagrammes de base de données en ouvrant un
   
 3.  Le menu **Diagramme de base de données** est ajouté au menu principal et le diagramme s’ouvre dans le volet de concepteur.  
   
-## <a name="see-also"></a> Voir aussi  
-[Créer des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Créer des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   

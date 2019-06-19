@@ -14,10 +14,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eb3a4c026dc32da21fd3cd8310b15bd72ddd1b1c
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265495"
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Classe d’événements Broker:Message Undeliverable
@@ -58,7 +58,7 @@ ms.locfileid: "66265495"
 |**TextData**|**ntext**|Raison pour laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu remettre le message.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

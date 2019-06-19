@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 65ae2069a41ce6743ae387dff4e5fae429841134
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649824"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, objet General Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53380990"
 |**Transactions**|Nombre d'inscriptions de transactions (locales, du DTC et lie´es).|  
 |**Connexions utilisateur**|Compte le nombre d'utilisateurs actuellement connectés à SQL Server.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

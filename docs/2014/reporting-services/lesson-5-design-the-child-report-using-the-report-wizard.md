@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108439"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Leçon 5 : Concevoir le rapport enfant à l'aide de l'Assistant Rapport
@@ -40,7 +40,7 @@ ms.locfileid: "66108439"
   
     1.  Faites glisser **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**et **StockedQty** depuis **Champs disponibles** vers la zone **Valeurs** .  
   
-    2.  Cliquez sur la flèche en regard **SUM (ProductID)**, **SUM (purchaseorderid)**, **SUM (purchaseorderdetailid)**, **SUM (OrderQty)**,  **SUM (receivedqty)**, **SUM (rejectedqty)**, et **SUM (stockedqty)** et désactivez le **somme** sélection.  
+    2.  Cliquez sur la flèche en regard **SUM (ProductID)** , **SUM (purchaseorderid)** , **SUM (purchaseorderdetailid)** , **SUM (OrderQty)** ,  **SUM (receivedqty)** , **SUM (rejectedqty)** , et **SUM (stockedqty)** et désactivez le **somme** sélection.  
   
 7.  Cliquez sur **suivant** à deux reprises, puis cliquez sur **Terminer** pour fermer la **Assistant rapport**.  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200183"
 ---
 # <a name="data-type-usage"></a>Utilisation des types de données
@@ -42,7 +42,7 @@ ms.locfileid: "63200183"
 |**tinyint**|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** type de données n’est pas signé. Un **tinyint** colonne est liée à une variable du type de données SQL_C_UTINYINT par défaut.|  
 |Types de données alias|Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, le pilote ODBC ajoute la valeur NULL à une définition de colonne qui ne déclare pas explicitement la possibilité de valeur NULL d’une colonne. Par conséquent, la possibilité de valeur NULL stockée dans la définition d'un type de données alias est ignorée.<br /><br /> Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, type de colonnes avec un type de données alias qui a une base de données de **char** ou **binaire** et pour lesquelles aucune possibilité de valeur null déclarée sont créées en tant que type de données **varchar** ou **varbinary**. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md), et [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) retournent SQL_VARCHAR ou SQL_VARBINARY comme données de type pour ces colonnes. Les données qui sont récupérées de ces colonnes ne sont pas complétées. **Remarque :**  Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 et versions antérieures.|  
 |Types de données LONG|*Data-at-execution* paramètres sont limitées pour SQL_LONGVARBINARY et les types de données SQL_LONGVARCHAR.|  
-|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client exposera **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_ WVARCHAR (respectivement) dans API qui acceptent ou retournent des types de données ODBC SQL.|  
+|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client exposera **varchar (max)** , **varbinary (max)** , et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_ WVARCHAR (respectivement) dans API qui acceptent ou retournent des types de données ODBC SQL.|  
 |Type défini par l'utilisateur (UDT)|Les colonnes UDT sont mappées en tant que SQL_SS_UDT. Si une colonne UDT est mappée explicitement à un autre type dans l'instruction SQL à l'aide des méthodes ToString() ou ToXMLString() du type UDT, ou via les fonctions CAST/CONVERT, le type de la colonne dans le jeu de résultats reflète le type réel vers lequel la colonne a été convertie.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne peut se lier à une colonne UDT sous forme binaire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la conversion entre les types de données SQL_SS_UDT et SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le code XML en texte Unicode. Le type XML est mappé en tant que SQL_SS_XML.|  
   

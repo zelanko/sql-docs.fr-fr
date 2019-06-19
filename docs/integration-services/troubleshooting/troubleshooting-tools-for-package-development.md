@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 519bedd5dd014a92239d58a50678df9a54945d52
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713941"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Outils de dépannage pour le développement des packages
@@ -93,7 +93,7 @@ ms.locfileid: "65713941"
 ## <a name="troubleshooting-errors-without-a-description"></a>Dépannage des erreurs sans description  
  Si vous rencontrez un numéro d’erreur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] accompagné d’aucune description lors du développement du package, vous pouvez rechercher la description dans le [Guide de référence des erreurs et des messages propres à Integration Services](../../integration-services/integration-services-error-and-message-reference.md). La liste ne comporte actuellement aucune information de dépannage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour l'exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)   
  [Fonctionnalités de performances de flux de données](../../integration-services/data-flow/data-flow-performance-features.md)  
   

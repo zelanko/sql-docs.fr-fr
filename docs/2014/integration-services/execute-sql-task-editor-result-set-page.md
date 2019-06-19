@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d84f7fe551d83f609b2ffc3da92b51eb36b9a595
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058965"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Éditeur de tâche d'exécution SQL (page Ensemble de résultats)
@@ -37,7 +37,7 @@ ms.locfileid: "66058965"
  **Rubriques connexes :** [Ensembles de résultats dans la tâche d’exécution SQL](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
  **Nom de la variable**  
- Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
+ Mappez le jeu de résultats à une variable en sélectionnant celle-ci, ou cliquez sur \<**Nouvelle variable...** > pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
   
  **Ajouter**  
  Ajoute une correspondance de jeu de résultats.  

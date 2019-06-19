@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775141"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -54,8 +54,9 @@ Considérez la requête suivante :
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (L_EXTENDEDPRICE *(1 - L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE;
 ```
 
@@ -74,8 +75,9 @@ La requête peut alors être modifiée pour appeler cette fonction UDF.
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 ```
 
@@ -180,7 +182,7 @@ Si toutes les conditions préalables sont remplies et que SQL Server décide d�
 
 ## <a name="enabling-scalar-udf-inlining"></a>Activation de l’incorporation des fonctions UDF scalaires
 
-Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :  
+Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Par exemple :  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -202,12 +204,13 @@ Pour réactiver l’incorporation des fonctions UDF scalaires pour la base de do
 ALTER DATABASE SCOPED CONFIGURATION SET TSQL_SCALAR_UDF_INLINING = ON;
 ```
 
-Lorsque l'option est activée (ON), ce paramètre apparaît activé dans [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). Vous pouvez également désactiver l’incorporation des fonctions UDF scalaires pour une requête spécifique en désignant `DISABLE_TSQL_SCALAR_UDF_INLINING` comme indicateur de requête `USE HINT`. Exemple :
+Lorsque l'option est activée (ON), ce paramètre apparaît activé dans [`sys.database_scoped_configurations`](../system-catalog-views/sys-database-scoped-configurations-transact-sql.md). Vous pouvez également désactiver l’incorporation des fonctions UDF scalaires pour une requête spécifique en désignant `DISABLE_TSQL_SCALAR_UDF_INLINING` comme indicateur de requête `USE HINT`. Par exemple :
 
 ```sql
 SELECT L_SHIPDATE, O_SHIPPRIORITY, SUM (dbo.discount_price(L_EXTENDEDPRICE, L_DISCOUNT)) 
-FROM LINEITEM, ORDERS
-WHERE O_ORDERKEY = L_ORDERKEY 
+FROM LINEITEM
+INNER JOIN ORDERS
+  ON O_ORDERKEY = L_ORDERKEY 
 GROUP BY L_SHIPDATE, O_SHIPPRIORITY ORDER BY L_SHIPDATE
 OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 ```
@@ -215,7 +218,7 @@ OPTION (USE HINT('DISABLE_TSQL_SCALAR_UDF_INLINING'));
 Un indicateur de requête `USE HINT` est prioritaire par rapport à la configuration étendue à la base de données et par rapport à un paramètre de niveau de compatibilité.
 
 L’incorporation des fonctions UDF scalaires peut également être désactivée pour une fonction UDF spécifique à l’aide de la clause INLINE dans l’instruction `CREATE FUNCTION` ou `ALTER FUNCTION`.
-Exemple :
+Par exemple :
 
 ```sql
 CREATE OR ALTER FUNCTION dbo.discount_price(@price DECIMAL(12,2), @discount DECIMAL(12,2))

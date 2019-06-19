@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013276"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
@@ -43,7 +43,7 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## <a name="arguments"></a>Arguments  
 *plan_handle*  
-Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. *plan_handle* est **varbinary (64)**.   
+Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. *plan_handle* est **varbinary (64)** .   
 
 Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :
   

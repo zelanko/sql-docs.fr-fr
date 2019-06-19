@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63165187"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Extensions pour SQL Server Reporting Services (SSRS)
@@ -66,7 +66,7 @@ Certaines extensions peuvent également effectuer les tâches suivantes :
   
 - **Extension de rendu XML** L’extension de rendu XML restitue les rapports dans des fichiers XML. Ces fichiers XML peuvent ensuite être stockés ou lus par d'autres programmes. Vous pouvez également utiliser une transformation XSLT pour convertir le rapport dans un autre schéma XML utilisable par une autre application. Le langage XML généré par l'extension de rendu XML respecte la norme d'encodage UTF-8. Pour plus d’informations, consultez [Exportation vers XML &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
--   **Extension de rendu d’image** L’extension de rendu d’image effectue le rendu des rapports dans des fichiers Bitmap ou des métafichiers. L’extension peut afficher les rapports dans les formats suivants : BMP, EMF, GIF, JPEG, PNG, TIFF et WMF. Par défaut, l'image est rendue au format TIFF, lequel est pris en charge par la visionneuse d'images par défaut de votre système d'exploitation (par exemple Aperçu des images et des télécopies Windows). Vous pouvez imprimer l'image à partir du programme ayant servi à l'afficher. L'utilisation de l'extension de rendu de type image permet de s'assurer que le rendu de rapport a une présentation identique sur tous les clients. (Lorsqu’un utilisateur consulte un rapport au format HTML, l’apparence de ce rapport peut varier en fonction de la version du navigateur de l’utilisateur, les paramètres de navigateur de l’utilisateur et les polices qui sont disponibles.) L’extension de rendu Image restitue le rapport sur le serveur, donc tous les utilisateurs voient la même image. Dans la mesure où le rapport est rendu sur le serveur, toutes les polices utilisées dans le rapport doivent être installées sur le serveur. Pour plus d’informations, consultez [Exportation vers un fichier image &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+-   **Extension de rendu d’image** L’extension de rendu d’image effectue le rendu des rapports dans des fichiers Bitmap ou des métafichiers. L’extension peut afficher les rapports dans les formats suivants : BMP, EMF, GIF, JPEG, PNG, TIFF et WMF. Par défaut, l'image est rendue au format TIFF, lequel est pris en charge par la visionneuse d'images par défaut de votre système d'exploitation (par exemple Aperçu des images et des télécopies Windows). Vous pouvez imprimer l'image à partir du programme ayant servi à l'afficher. L'utilisation de l'extension de rendu de type image permet de s'assurer que le rendu de rapport a une présentation identique sur tous les clients. (Quand un utilisateur affiche un rapport au format HTML, l’apparence de ce rapport peut varier en fonction de la version du navigateur utilisé, des paramètres du navigateur et des polices disponibles.) L’extension de rendu de type image effectue le rendu du rapport sur le serveur ; ainsi, tous les utilisateurs voient la même image. Dans la mesure où le rapport est rendu sur le serveur, toutes les polices utilisées dans le rapport doivent être installées sur le serveur. Pour plus d’informations, consultez [Exportation vers un fichier image &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
 - **Extension de rendu PDF** L’extension de rendu PDF effectue le rendu des rapports dans des fichiers PDF qu’il est possible d’ouvrir et d’afficher avec Adobe Acrobat 6.0 ou version ultérieure. Pour plus d’informations, consultez [Exportation vers un fichier PDF &#40;Générateur de rapports et SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   

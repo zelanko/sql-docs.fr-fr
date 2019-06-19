@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 870acddcd825c9c112274d294fa4c97848a85236
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62669654"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>En-tête et informations de version SQL Server Express LocalDB
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL13E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Sous cette clé il existe une liste des clés, une pour chaque version de LocalDB installée sur l'ordinateur. Chacune de ces clés est nommé avec le numéro de version de base de données locale dans le format  *\<version_principale >*. *\<version mineure >* (par exemple, la clé pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] est nommé 13.0). Sous chaque clé de version il existe des paires nom-valeur de `InstanceAPIPath` qui définissent le chemin d'accès complet au fichier de SQLUserInstance.dll installé avec cette version. L’exemple suivant montre les entrées de Registre pour un ordinateur qui a des versions de LocalDB 11.0 et 13.0 installé :  
+ Sous cette clé il existe une liste des clés, une pour chaque version de LocalDB installée sur l'ordinateur. Chacune de ces clés est nommé avec le numéro de version de base de données locale dans le format  *\<version_principale >* . *\<version mineure >* (par exemple, la clé pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] est nommé 13.0). Sous chaque clé de version il existe des paires nom-valeur de `InstanceAPIPath` qui définissent le chemin d'accès complet au fichier de SQLUserInstance.dll installé avec cette version. L’exemple suivant montre les entrées de Registre pour un ordinateur qui a des versions de LocalDB 11.0 et 13.0 installé :  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\13.0]  

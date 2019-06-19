@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094684"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuration initiale (PowerPivot pour SharePoint)
@@ -73,7 +73,7 @@ ms.locfileid: "66094684"
   
 4.  Cliquez sur **déployer la Solution.**  
   
-5.  Dans **déploiement ?**, sélectionnez l’application web SharePoint à laquelle vous souhaitez ajouter la prise en charge des fonctionnalités PowerPivot.  
+5.  Dans **déploiement ?** , sélectionnez l’application web SharePoint à laquelle vous souhaitez ajouter la prise en charge des fonctionnalités PowerPivot.  
   
 6.  Cliquez sur **OK**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66094684"
   
  Si le service Banque d'informations sécurisé n'est pas répertorié, suivez les étapes suivantes pour l'activer maintenant. En activant la Banque d'informations sécurisée, les auteurs de classeurs et les propriétaires de documents peuvent accéder à un choix plus vaste d'options de connexion à la source de données, lorsqu'ils planifient une actualisation des données de leurs classeurs publiés.  
   
-##### <a name="part-1-enable-secure-store-service"></a>Partie 1 : Activer le Service de Store sécurisé  
+##### <a name="part-1-enable-secure-store-service"></a>Première partie : Activer le Service de Store sécurisé  
   
 1.  Dans l'Administration centrale, sous Gestion des applications, cliquez sur **Gérer les applications de service**.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "66094684"
   
 10. Acceptez les valeurs par défaut restantes, puis cliquez sur **OK.** . L'application de service apparaît avec les autres services gérés dans la liste des applications de service de la batterie de serveurs.  
   
-##### <a name="part-2-generate-the-master-key"></a>Partie 2 : Générer la clé principale  
+##### <a name="part-2-generate-the-master-key"></a>Deuxième partie : Générer la clé principale  
   
 1.  Cliquez sur l'application de service Banque d'informations sécurisé dans la liste.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66094684"
   
 5.  Cliquez sur **OK**.  
   
-##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Partie 3 : Configurer le compte d’actualisation des données PowerPivot sans assistance  
+##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Troisième partie : Configurer le compte d’actualisation des données PowerPivot sans assistance  
  La création d'un compte d'actualisation des données sans assistance pour l'accès aux données PowerPivot est souvent requise pour l'accès aux données externes pendant l'actualisation des données. Par exemple, si Kerberos n'est pas activé, vous devez créer un compte sans assistance que le service PowerPivot peut utiliser pour se connecter aux sources de données externes.  
   
  Pour obtenir des instructions sur la façon de créer les données PowerPivot sans assistance compte d’actualisation ou autres informations d’identification stockées utilisées dans actualisation des données, consultez [configurer le compte d’actualisation des données PowerPivot sans assistance &#40;PowerPivot pour SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) et [configurer les informations d’identification stockées pour l’actualisation des données PowerPivot &#40;PowerPivot pour SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  

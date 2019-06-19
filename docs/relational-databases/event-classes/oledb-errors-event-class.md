@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f80b2f656cd640c61e3a9a41229c374fd7ef19c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665720"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "47851127"
 |DatabaseID|**Int**|ID de la base de données spécifiée par l’instruction USE *base de données* ou celui de la *base de données* par défaut si aucune instruction USE n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |Error|**Int**|HRESULT retourné par le fournisseur.|31|Oui|  
-|EventClass|**Int**|Type d’événement = 61.|27|non|  
-|EventSequence|**Int**|Séquence de la classe d'événements OLE DB dans le lot.|51|non|  
+|EventClass|**Int**|Type d’événement = 61.|27|Non|  
+|EventSequence|**Int**|Séquence de la classe d'événements OLE DB dans le lot.|51|Non|  
 |GroupID|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. La colonne de données est remplie si le client fournit le nom de l'hôte. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Oui|  
@@ -51,7 +51,7 @@ ms.locfileid: "47851127"
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
-|TextData|**nvarchar**|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|non|  
+|TextData|**nvarchar**|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|Non|  
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
   
 ## <a name="see-also"></a> Voir aussi  

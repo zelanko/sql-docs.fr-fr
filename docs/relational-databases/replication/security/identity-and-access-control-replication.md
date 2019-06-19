@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c43cd13760808822b2c0332584799383eab5e39
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776261"
 ---
 # <a name="identity-and-access-control-replication"></a>Identité et contrôle d'accès (réplication)
@@ -53,7 +53,7 @@ Spécifiez les connexions et les mots de passe des agents de réplication lors d
 
 Le support pour l’utilisation de MSA de groupe (gMSA) est introduit dans SQL Server 2014. Pour plus d’informations, consultez [Replication and group Managed Service Accounts](https://repltalk.com/2019/03/26/replication-and-group-managed-service-accounts/) (Réplication et comptes de service administrés de groupe).
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Atténuation des menaces et des vulnérabilités &#40;réplication&#41; ](../../../relational-databases/replication/security/threat-and-vulnerability-mitigation-replication.md) [Modèle de sécurité de l’agent de réplication](../../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../../relational-databases/replication/security/replication-security-best-practices.md)   
 

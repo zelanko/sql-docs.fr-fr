@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035661"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Dépanner des utilisateurs orphelins (SQL Server)
@@ -63,7 +63,7 @@ GO;
 ## <a name="to-resolve-an-orphaned-user"></a>Pour résoudre le cas d'un utilisateur orphelin  
  Pour résoudre le cas d'un orphelin, utilisez la procédure suivante :  
   
-1.  La commande suivante rétablit le lien entre le compte de connexion serveur spécifié par *< login_name >* avec l’utilisateur de base de données spécifié par *< database_user >*.  
+1.  La commande suivante rétablit le lien entre le compte de connexion serveur spécifié par *< login_name >* avec l’utilisateur de base de données spécifié par *< database_user >* .  
   
     ```  
     USE <database_name>;  

@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35ea86d2e03c903736a5900da3da5c10986a3f9f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106357"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Modifier les légendes de carte, l'échelle de couleurs et les règles associées (Générateur de rapports et SSRS)
@@ -60,7 +60,7 @@ ms.locfileid: "66106357"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Pour modifier la position d'une légende par rapport à la fenêtre d'affichage  
   
-1.  En mode conception, cliquez sur la légende et ouvrez le  _\<rapport élément ->_**propriétés** page.  
+1.  En mode conception, cliquez sur la légende et ouvrez le  _\<rapport élément ->_ **propriétés** page.  
   
 2.  Dans **Position**, cliquez sur l'emplacement qui spécifie où afficher la légende par rapport à la fenêtre d'affichage.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Cliquez sur **Légende**.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Cliquez sur **Appliquer le style du modèle**.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de la palette de couleurs**.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de plages de couleurs**.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Cliquez sur **Visualiser les données à l'aide de couleurs personnalisées**.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Sélectionnez le **visualiser les données à l’aide de** \<type de règle\> option. Pour utiliser des options de distribution, vous devez créer des plages dans la page **Distribution** en fonction des données analytiques associées à la couche.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle**.  
   
 3.  Vérifiez que l’option **Visualiser les données à l’aide de** \<*type de règle*> est sélectionnée.  
   
@@ -267,7 +267,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle de couleur**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle de couleur**.  
   
 3.  Sélectionnez l'option de règle de couleur à utiliser. Pour afficher des éléments dans une légende de carte ou une échelle de couleurs, vous devez sélectionner l’une des options **Visualiser les données à l’aide de** \<type de règle>.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle**.  
   
 3.  Cliquez sur **Légende**.  
   
@@ -305,7 +305,7 @@ ms.locfileid: "66106357"
   
 1.  En mode Conception, cliquez sur la carte jusqu'à ce que le volet Carte s'affiche.  
   
-2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_**règle**.  
+2.  Avec le bouton droit de la couche qui contient les données que vous souhaitez, puis cliquez sur  _\<type d’élément cartographique\>_ **règle**.  
   
 3.  Cliquez sur **Légende**.  
   

@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd97b67974f248d002255c1977feebe4551e691f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013680"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
@@ -35,7 +35,7 @@ ms.locfileid: "66013680"
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Spécification d'un espace de noms cible  
- Le schéma XSD suivant spécifie un espace de noms cible à l’aide de la **xsd : targetNamespace** attribut. Le schéma définit également la **elementFormDefault** et **attributeFormDefault** pour les valeurs d’attribut **« unqualified »** (la valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale et affecte tous les éléments locaux (**\<ordre >** dans le schéma) et les attributs (**CustomerID**, **ContactName**et  **OrderID** dans le schéma).  
+ Le schéma XSD suivant spécifie un espace de noms cible à l’aide de la **xsd : targetNamespace** attribut. Le schéma définit également la **elementFormDefault** et **attributeFormDefault** pour les valeurs d’attribut **« unqualified »** (la valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale et affecte tous les éléments locaux ( **\<ordre >** dans le schéma) et les attributs (**CustomerID**, **ContactName**et  **OrderID** dans le schéma).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -129,7 +129,7 @@ ms.locfileid: "66013680"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Si le schéma spécifie **elementFormDefault** et **attributeFormDefault** attributs avec la valeur **« qualified »**, le document d’instance aura tous de la variable locale éléments et attributs qualifiés. Vous pouvez modifier le schéma précédent pour inclure ces attributs dans le  **\<xsd : Schema >** élément et exécutez de nouveau le modèle. Dans la mesure où les attributs sont désormais également qualifiés dans l'instance, la requête XPath sera modifiée pour inclure le préfixe d'espace de noms.  
+ Si le schéma spécifie **elementFormDefault** et **attributeFormDefault** attributs avec la valeur **« qualified »** , le document d’instance aura tous de la variable locale éléments et attributs qualifiés. Vous pouvez modifier le schéma précédent pour inclure ces attributs dans le  **\<xsd : Schema >** élément et exécutez de nouveau le modèle. Dans la mesure où les attributs sont désormais également qualifiés dans l'instance, la requête XPath sera modifiée pour inclure le préfixe d'espace de noms.  
   
  La requête XPath modifiée est présentée ci-dessous :  
   

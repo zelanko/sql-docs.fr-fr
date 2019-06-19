@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668969"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -50,11 +50,11 @@ ms.locfileid: "62668969"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**Int**|Identificateur de l'objet auquel appartient cette colonne.|  
-|NAME|**sysname**|Nom de la colonne. Unique dans l'objet.|  
+|name|**sysname**|Nom de la colonne. Unique dans l'objet.|  
 |column_id|**Int**|ID de la colonne. Unique dans l'objet.<br /><br /> Les ID de colonnes peuvent ne pas être séquentiels.|  
 |system_type_id|**tinyint**|ID du type de système de la colonne.|  
 |user_type_id|**Int**|ID du type de colonne tel que défini par l'utilisateur.<br /><br /> Pour retourner le nom du type, joindre à la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vue sur cette colonne de catalogue.|  
-|max_length|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, la valeur max_length sera 16 ou la valeur définie par l’option sp_tableoption 'text in row'.|  
+|max_length|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.<br /><br /> Pour **texte** colonnes, la valeur max_length sera 16 ou la valeur définie par l’option sp_tableoption 'text in row'.|  
 |precision|**tinyint**|Précision de la colonne si elle est numérique ; Sinon, 0.|  
 |scale|**tinyint**|Échelle de la colonne si elle est numérique ; sinon, la valeur est 0.|  
 |collation_name|**sysname**|Nom du classement de la colonne si elle est basée sur des caractères ; Sinon, NULL.|  

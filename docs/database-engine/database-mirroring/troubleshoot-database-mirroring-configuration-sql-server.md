@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 1655124738d88ecfd154d934bceef9c1b0236dcf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795119"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
@@ -39,7 +39,7 @@ ms.locfileid: "66795119"
 |[Accès réseau](#NetworkAccess)|Traite de l'exigence selon laquelle chaque instance de serveur doit être autorisée à accéder aux ports de l'autre instance ou des autres instances de serveur par le biais du protocole TCP.|  
 |[Préparation de la base de données miroir](#MirrorDbPrep)|Résume les conditions requises pour la préparation de la base de données miroir afin de permettre le démarrage de la mise en miroir.|  
 |[Échec d'opération de création de fichier](#FailedCreateFileOp)|Décrit comment réagir à un échec d'opération de création de fichier.|  
-|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='** _serveur_partenaire_ **'** .|  
+|[Démarrage de la mise en miroir à l'aide de Transact-SQL](#StartDbm)|Décrit l’ordre requis pour les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='**_serveur_partenaire_**'** .|  
 |[Transactions entre bases de données](#CrossDbTxns)|Un basculement automatique peut entraîner une résolution automatique et éventuellement incorrecte des transactions incertaines. Pour cette raison, la mise en miroir de bases de données ne prend pas en charge les transactions entre bases de données.|  
   
 ##  <a name="Accounts"></a> Accounts  
@@ -144,7 +144,7 @@ ms.locfileid: "66795119"
  Pour plus d’informations, consultez [Suppression de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md), [Préparer une base de données miroir pour la mise en miroir&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md), [Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md) ou [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ##  <a name="StartDbm"></a> Démarrage de la mise en miroir à l'aide de Transact-SQL  
- L’ordre dans lequel les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='** _serveur_partenaire_ **'** sont émises est très important.  
+ L’ordre dans lequel les instructions ALTER DATABASE *nom_base_de_données* SET PARTNER **='**_serveur_partenaire_**'** sont émises est très important.  
   
 1.  La première instruction doit être exécutée sur le serveur miroir. Lorsque cette instruction est exécutée, le serveur miroir n'essaie pas de contacter d'autre instance de serveur. Au lieu de cela, le serveur miroir indique à sa base de données de patienter que le serveur miroir soit contacté par le serveur principal.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66795119"
   
  Pour plus d’informations, consultez [Transactions entre bases de données et transactions distribuées pour des groupes de disponibilité Always On et la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Sécurité du transport pour la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097442"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Procédure pas à pas : Utiliser une condition de test personnalisée pour vérifier les résultats d’une procédure stockée
@@ -54,7 +54,7 @@ Ensuite, signez le projet.
   
 2.  Sous l'onglet **Signature**, activez la case à cocher **Signer l'assembly**.  
   
-3.  Dans la zone **Choisir un fichier de clé de nom fort**, cliquez sur **\<Nouveau...>**.  
+3.  Dans la zone **Choisir un fichier de clé de nom fort**, cliquez sur **\<Nouveau...>** .  
   
     La boîte de dialogue **Créer une clé de nom fort** s'affiche.  
   
@@ -375,7 +375,7 @@ Vous devez ensuite créer un test unitaire. Pour créer un test unitaire SQL Ser
   
 3.  Dans **Nom du test**, tapez **SampleUnitTest**.  
   
-4.  Dans **Ajouter au projet de test**, cliquez sur **Créer un nouveau projet de test Visual C\#**. Ensuite, cliquez sur **OK** pour afficher la boîte de dialogue **Nouveau projet de test**.  
+4.  Dans **Ajouter au projet de test**, cliquez sur **Créer un nouveau projet de test Visual C\#** . Ensuite, cliquez sur **OK** pour afficher la boîte de dialogue **Nouveau projet de test**.  
   
 5.  Tapez **SampleUnitTest** comme nom du projet.  
   
@@ -402,6 +402,6 @@ Pour afficher la nouvelle condition de test :
   
     Pour plus d’informations, consultez [Procédure : ajouter des conditions de test à des tests unitaires SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

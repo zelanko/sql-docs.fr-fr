@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 992784658a97e938b7793c612d32dfa7fc2a5574
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62734710"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
  Cette instruction active ou désactive les mêmes modes que l’instruction SET AUTOCOMMIT. Si sa valeur est ON, SET IMPLICIT_TRANSACTIONS met la connexion en mode de transaction implicite. Si la valeur est OFF, la connexion est remise en mode de validation automatique.  Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Aucune autorisation spécifique n’est nécessaire pour exécuter les instructions relatives aux transactions. En revanche, des autorisations sont nécessaires pour exécuter les instructions au sein de la transaction.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
@@ -145,7 +145,7 @@ INSERT INTO ValueTable VALUES(2);
 COMMIT;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

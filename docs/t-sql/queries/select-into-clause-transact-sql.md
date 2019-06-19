@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705653"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -102,7 +102,7 @@ L’instruction `SELECT...INTO` s’exécute en deux temps : la nouvelle table 
 ## <a name="logging-behavior"></a>Comportement de journalisation  
  La quantité d’informations journalisées pour `SELECT...INTO` dépend du mode de récupération en vigueur pour la base de données. En mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, les opérations de chargement en masse font l'objet d'une journalisation minimale. Avec une journalisation minimale, l’utilisation de l’instruction `SELECT...INTO` peut s’avérer plus efficace que la création d’une table et son remplissage avec une instruction INSERT. Pour plus d'informations, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  
   
 ## <a name="examples"></a>Exemples  
@@ -126,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>b. Insertion de lignes en utilisant une journalisation minimale  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertion de lignes en utilisant une journalisation minimale  
  L'exemple suivant crée la table `dbo.NewProducts` et insère des lignes provenant de la table `Production.Product`. L'exemple suppose que le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur FULL. Pour garantir une journalisation minimale, le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur BULK_LOGGED avant l'insertion des lignes ; il reprend ensuite la valeur FULL après l'utilisation de l'instruction SELECT...INTO. Ce processus permet de garantir que l'instruction SELECT...INTO utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
   
 ```sql  

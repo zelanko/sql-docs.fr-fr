@@ -14,11 +14,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 9039285fa2911d87e19d4a22ec952eaf78811a0b
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649539"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>Objet SQL Server, LogPool FreePool
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,6 +33,6 @@ Le tableau suivant décrit les objets de performance SQL Server **LogPool FreePo
 
 Il existe une instance du compteur pour chaque catégorie de pool de journal.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Analyser l'utilisation des ressources (Moniteur système)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
 

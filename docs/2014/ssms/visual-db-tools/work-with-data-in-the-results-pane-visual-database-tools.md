@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313769"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
@@ -117,7 +117,7 @@ ms.locfileid: "63313769"
   
 -   Les types de données binary sont souvent inutiles pour ceux qui travaillent dans le volet Résultats, et leur téléchargement peut être très long. Ils sont donc représentés par  *\<données binaires >* ou *Null*.  
   
--   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou représentées par  *\<Impossible de lire des données >*.  
+-   Les valeurs Precision et Scale ne peuvent pas toujours être conservées. Par exemple, le volet Résultats prend en charge une précision de 27. Si les données sont d’un type de données avec une précision supérieure, les données peuvent être tronquées ou représentées par  *\<Impossible de lire des données >* .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Effectuer des opérations de base avec des requêtes &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

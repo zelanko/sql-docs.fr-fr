@@ -20,10 +20,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 33ef95759817ac7a6e32907a1afad837282bf7cf
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938651"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (type de données geometry)
@@ -40,7 +40,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_linestring*  
- Représentation WKB de l’instance **geometryLineString** à retourner. *WKB_linestring* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geometryLineString** à retourner. *WKB_linestring* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryLineString** à retourner.  
@@ -52,7 +52,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
  Type OGC : **LineString**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,7 +64,7 @@ SET @g = geometry::STLineFromWKB(0x010200000002000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

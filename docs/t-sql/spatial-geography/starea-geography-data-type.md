@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 49919caaf30bb425e90b286cb3c8e7877067ae6d
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936240"
 ---
 # <a name="starea-geography-data-type"></a>STArea (type de données geography)
@@ -42,7 +42,7 @@ Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **fl
   
 Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
 STArea() retourne 0 si l’instance **geography** est vide ou contient uniquement des figures à zéro et une dimension.  
   
 > [!NOTE]  
@@ -57,6 +57,6 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STArea();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

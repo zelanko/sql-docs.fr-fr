@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e5e6d6b8e7b8fb62c3e7e8948bad8ecf5b0af2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716486"
 ---
 # <a name="mssqlserver41333"></a>MSSQLSERVER_41333
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47703467"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|CROSS_CONTAINER_ISOLATION_FAILURE|  
-|Texte du message|Les transactions suivantes doivent accéder aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif selon isolement Snapshot : les transactions RepeatableRead, les transactions Serializable et les transactions qui accèdent aux tables qui ne sont pas optimisées en mémoire selon l'isolement RepeatableRead ou Serializable.|  
+|Texte du message|Les transactions suivantes doivent accéder à des tables mémoire optimisées et à des procédures stockées compilées en mode natif dans un isolement d’instantané : transactions RepeatableRead, transactions Serializable et transactions qui accèdent aux tables non mémoire optimisées dans l’isolement RepeatableRead ou Serializable.|  
   
 ## <a name="explanation"></a>Explication  
 Des restrictions s'appliquent à l'utilisateur pour des niveaux d'isolement plus élevés, entre des transactions sur disque et des transactions XTP.  
@@ -41,6 +41,6 @@ Ne tentez pas des opérations de haut niveau d'isolement sur les tables optimis�
   
 Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

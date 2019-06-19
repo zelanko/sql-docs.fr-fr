@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980253"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="c-determining-whether-a-specific-word-breaker-is-registered"></a>C. Détermination de si un analyseur lexical spécifique est inscrit  
- L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms de paramètres, **@component_type** et **@param**.  
+ L'exemple suivant répertorie l'analyseur lexical pour la langue turque (LCID = 1055) si celle-ci a été installée sur le système et enregistrée sur l'instance du service. Cet exemple spécifie les noms de paramètres, **@component_type** et **@param** .  
   
 ```  
 EXEC sp_help_fulltext_system_components @component_type = 'wordbreaker', @param = 1055;  
