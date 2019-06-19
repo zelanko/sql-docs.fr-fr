@@ -22,10 +22,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
 ms.openlocfilehash: 67909db180af056add12324622cfd6094d8729fe
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105832"
 ---
 # <a name="drop-workload-classifier-transact-sql"></a>DROP WORKLOAD CLASSIFIER (Transact-SQL)
@@ -47,7 +47,7 @@ DROP WORKLOAD CLASSIFIER classifier_name;
 *classifier_name*  
 Spécifie le nom qui identifie le classifieur de charge de travail.  classifier_name est de type sysname.  Il peut comporter jusqu’à 128 caractères et doit être unique dans l’instance.
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L’instruction DROP WORKLOAD CLASSIFIER n’est pas autorisée sur les classifieurs de charge de travail système.
 
@@ -68,7 +68,7 @@ DROP WORKLOAD CLASSIFIER wgcELTRole;
 > [!NOTE]
 > Une requête envoyée sans classifieur correspondant est classifiée dans le groupe de charge de travail par défaut.  Le groupe de charge de travail par défaut est la classe de ressources smallrc.
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [CREATE WORKLOAD CLASSIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-classifier-transact-sql.md)</br>
 [Classification de charge de travail SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

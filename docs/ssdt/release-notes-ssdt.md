@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101912"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notes de publication pour SQL Server Data Tools (SSDT)
@@ -543,7 +543,7 @@ _SSDT pour Visual Studio 2015._
 - Correction d’un problème où les modifications apportées à la mise en forme de l’indicateur de performance clé n’étaient pas persistantes dans certains cas.
 - Correction d’un problème de l’interface utilisateur de PowerQuery qui affichait un état activé incorrect pour le menu permettant de choisir d’afficher ou non la barre de formule.
 - Correction d’un problème dans les projets de modèle tabulaire AS de niveau de compatibilité 1400 avec les sources de données PowerQuery qui pouvait bloquer Visual Studio lors de la sélection du menu Changer la source de données à partir de l’Explorateur de modèles tabulaires.
-- Correction d’un problème intermittent où le chargement d’un modèle tabulaire 1400 pouvait afficher l’erreur *Impossible de charger le fichier ou l’assembly ’Microsoft.ProBI.MashupLibrary’*.
+- Correction d’un problème intermittent où le chargement d’un modèle tabulaire 1400 pouvait afficher l’erreur *Impossible de charger le fichier ou l’assembly ’Microsoft.ProBI.MashupLibrary’* .
 
 **Projets RS**
 - Les préférences utilisateur concernant l’état de sélection des paramètres des zones Règle et Paramètre de RS sont correctement mémorisées entre les sessions.

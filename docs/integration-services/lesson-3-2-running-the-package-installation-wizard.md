@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 534daee6995cd5429878cfb3fca4ac5aea33e2fe
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721973"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
@@ -51,7 +51,7 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
 9. Dans la page Sélectionner le dossier d’installation, cliquez sur **Parcourir**.  
   
-10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)**.  
+10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)** .  
   
 11. Cliquez sur **Créer un nouveau dossier** et remplacez le nom par défaut du nouveau dossier, **Nouveau dossier**, par **DeploymentTutorialInstall**.  
   
@@ -106,5 +106,5 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

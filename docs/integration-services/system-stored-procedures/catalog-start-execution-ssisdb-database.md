@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 733e71edda284d8051cc1f641ae94a3518e6b0d1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715743"
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (base de données SSISDB)
@@ -40,13 +40,13 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Nombre de nouvelles tentatives en cas d’échec de l’exécution. Il prend effet uniquement si l’exécution a lieu dans Scale Out. Ce paramètre est facultatif. S’il n’est pas spécifié, sa valeur est définie sur 0. *retry_count* est de type **int**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une exécution est utilisée pour spécifier les valeurs de paramètre qui sont utilisées par un package pendant une instance d’exécution unique du package. Le projet correspondant peut être redéployé une fois une instance d'exécution créée et avant son démarrage. Dans ce cas, l’instance d’exécution référence un projet obsolète. Cette référence non valide provoque l’échec de la procédure stockée.  
   
 > [!NOTE]  
 >  Les exécutions peuvent être démarrées uniquement une fois. Pour démarrer une instance d’exécution, elle doit avoir l’état Created (valeur `1` dans la colonne **status** de la vue [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant appelle catalog.create_execution pour créer une instance d'exécution pour le package Child1.dtsx. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
 ```sql

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a1a41df41528d3b9e76fd55404ae8ab544646a5d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715888"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de données SSISDB)
@@ -66,12 +66,12 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  *object_type* est de type **smallint**.  
   
  [ @parameter_name = ] *parameter_name*  
- Nom du paramètre. *parameter_name* est de type **nvarchar(128)**.  
+ Nom du paramètre. *parameter_name* est de type **nvarchar(128)** .  
   
  [ @parameter_value = ] *parameter_value*  
  Valeur du paramètre. *parameter_value* est de type **sql_variant**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour découvrir les valeurs de paramètre utilisées pour une exécution donnée, interrogez la vue catalog.execution_parameter_values.  
   
  Pour spécifier l’étendue des informations enregistrées durant une exécution de package, attribuez au paramètre *parameter_name* la valeur LOGGING_LEVEL et au paramètre *parameter_value* l’une des valeurs suivantes.  
@@ -114,7 +114,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
 |*parameter_name*|DUMP_EVENT_CODE|  
 |*parameter_value*|Un ou plusieurs codes d'événement|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsqu'une erreur se produit pendant une exécution de package.  
   
 ```sql
@@ -122,7 +122,7 @@ exec catalog.create_execution  'TR2','Recurring ETL', 'Dim_DCVendor.dtsx',NULL, 
 exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_ON_ERROR',1  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant spécifie que le serveur Integration Services doit générer des fichiers de vidage lorsque des événements se produisent pendant une exécution de package, et identifie l'événement qui provoque la génération des fichiers par le serveur.  
   
 ```sql
@@ -160,7 +160,7 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
   
 -   Le type de données de la valeur de paramètre ne correspond pas au type du paramètre.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.execution_parameter_values &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)   
  [Générer de fichiers de vidage pour l’exécution des packages](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   

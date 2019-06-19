@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102037"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle
@@ -438,7 +438,7 @@ Pour créer un contributeur de génération, vous devez effectuer les tâches su
   
 3.  Cliquez sur **Signer l'assembly**.  
   
-4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>**.  
+4.  Dans **Choisir un fichier de clé de nom fort**, cliquez sur **<New>** .  
   
 5.  Dans la boîte de dialogue **Créer une clé de nom fort** , dans **Nom du fichier de clé**, tapez **MyRefKey**.  
   
@@ -525,7 +525,7 @@ Après avoir suivi une de ces approches, vous pouvez utiliser Msbuild pour trans
   
 1.  Dans Visual Studio, cliquez avec le bouton droit sur le projet et sélectionnez « Regénérer ». Cela reconstruit le projet, puis les statistiques du modèle sont générées, et la sortie comprise dans la sortie de la génération et enregistrée dans ModelStatistics.xml. Notez que vous pouvez être amené à sélectionner « Afficher tous les fichiers » dans l’Explorateur de solutions pour visualiser le fichier XML.  
   
-2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>**, cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)**.  
+2.  Ouvrez une invite de commandes Visual Studio : dans le menu **Démarrer**, cliquez sur **Tous les programmes**, sur **Microsoft Visual Studio <Visual Studio Version>** , cliquez sur **Outils Visual Studio**, puis sur **Invite de commandes Visual Studio (<Visual Studio Version>)** .  
   
 3.  À l'invite de commandes, accédez au dossier qui contient votre projet SQL.  
   
@@ -591,7 +591,7 @@ Relationships
 ## <a name="next-steps"></a>Next Steps  
 Vous pouvez créer des outils supplémentaires pour effectuer le traitement du fichier XML en sortie. Il s'agit d'un exemple de contributeur de génération. Vous pouvez, par exemple, créer un contributeur de génération pour générer un fichier de dictionnaire de données dans le cadre de la génération.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
 [Procédure pas à pas : étendre le déploiement du projet de base de données pour analyser le plan de déploiement](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

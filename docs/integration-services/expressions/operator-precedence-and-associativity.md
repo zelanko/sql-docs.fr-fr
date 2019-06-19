@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc91daa648b460211327c72168e115a5c9418694
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725112"
 ---
 # <a name="operator-precedence-and-associativity"></a>Priorités et associativité des opérateurs
@@ -46,7 +46,7 @@ ms.locfileid: "65725112"
 |&#124;&#124;|OU logique|De gauche à droite|  
 |? :|Expression conditionnelle|De droite à gauche|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

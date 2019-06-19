@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717198"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
@@ -50,10 +50,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Pour rechercher la chaîne d’identification, dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] cliquez avec le bouton droit sur le chemin d’accès entre deux composants de flux de données, puis cliquez sur **Propriétés**. La propriété **IdentificationString** s’affiche dans la fenêtre **Propriétés**.  
   
- *dataflow_path_id_string* est de type **nvarchar(4000)**.  
+ *dataflow_path_id_string* est de type **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération. Les fichiers de drainage de données sont écrits dans le dossier « *\<dossier d’installation de SQL Server>* \130\DTS\\ ». *data_filename* est de type **nvarchar(4000)**.  
+ Nom du fichier qui stocke les données drainées. Si la tâche de flux de données s'exécute à l'intérieur d'un conteneur de boucles Foreach ou For, des fichiers distincts stockent les données drainées pour chaque itération de la boucle. Chaque fichier a pour préfixe un nombre qui correspond à une itération. Les fichiers de drainage de données sont écrits dans le dossier « *\<dossier d’installation de SQL Server>* \130\DTS\\ ». *data_filename* est de type **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Nombre de lignes capturées pendant le drainage de données. Si cette valeur n'est pas spécifiée, toutes les lignes sont capturées. max_rows est de type **int**.  
@@ -61,7 +61,7 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @data_tap_id = ] *data_tap_id*  
  ID de la collecte de données. *data_tap_id* est de type **bigint**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans l’exemple suivant, un drainage de données est créé sur le chemin d’accès de flux de données, `Paths[SRC DimDCVentor.OLE DB Source Output]`, dans la tâche de flux de données `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Les données drainées sont stockées dans le fichier DCVendorOutput.csv.  
   
 ```sql
@@ -71,7 +71,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour ajouter des drainages de données, l’instance d’exécution doit avoir l’état Created (valeur 1 dans la colonne **status** de la vue [catalog.operations &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). La valeur d'état change lorsque vous exécutez l'exécution. Vous pouvez créer une exécution en appelant [catalog.create_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Les considérations suivantes sont à prendre en compte pour la procédure stockée add_data_tap_by_guid.  
@@ -112,7 +112,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 ## <a name="requirements"></a>Spécifications  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
   
   

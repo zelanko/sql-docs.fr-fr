@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f16743d37342f696241b6f46ac1d88fc1b85e28
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099857"
 ---
 # <a name="save-queries-visual-database-tools"></a>Enregistrer des requêtes (Visual Database Tools)
@@ -29,14 +29,14 @@ Enregistrez votre requête si vous souhaitez l'utiliser ultérieurement. Notez q
   
 1.  Créez votre requête.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Enregistrer <nom_requête>**.  
+2.  Dans le menu **Fichier**, cliquez sur **Enregistrer <nom_requête>** .  
   
     > [!NOTE]  
     > Un nom de système est donné à une requête nouvellement créée. Pour choisir votre nom pour la requête, choisissez **Enregistrer <nom_requête> sous**.  
   
 3.  La requête est enregistrée dans le dossier Requête du projet dans l'Explorateur de solutions.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
 [Exécuter des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Abandonner les modifications apportées aux requêtes (Visual Database Tools)](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  

@@ -24,11 +24,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62985167"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
 ##  <a name="Basics"></a> Notions de base de la conception d'index  
  Un index est une structure sur disque ou en mémoire associée à une table ou à une vue qui accélère l’extraction des lignes de la table ou de la vue. Il contient des clés créées à partir d'une ou plusieurs colonnes de la table ou de la vue. Pour les index sur disque, ces clés sont stockées dans une structure d’arbre B (B-tree) qui permet à SQL Server de trouver rapidement et efficacement la ou les lignes associées aux valeurs de clé.  
 
- Un index stocke des données organisées logiquement dans une table composée de lignes et de colonnes, et stockées physiquement dans un format de données en ligne appelé *rowstore* <sup>1</sup> ou dans un format de données en colonne appelé *[columnstore](#columnstore_index)*.  
+ Un index stocke des données organisées logiquement dans une table composée de lignes et de colonnes, et stockées physiquement dans un format de données en ligne appelé *rowstore* <sup>1</sup> ou dans un format de données en colonne appelé *[columnstore](#columnstore_index)* .  
     
  Le choix d'index adaptés à une base de données et à sa charge de travail est une opération complexe qui vise à trouver un compromis entre vitesse des requêtes et coûts de mise à jour. Les index étroits, c'est-à-dire les index ne comportant que quelques colonnes dans la clé d'index, requièrent moins d'espace disque et de besoins de maintenance. En revanche, les index larges couvrent plus de requêtes. Vous devrez éventuellement essayer plusieurs conceptions différentes avant de trouver l'index le plus performant. Il est possible d'ajouter, de modifier et de supprimer des index sans affecter le schéma de la base de données ou la conception des applications. Par conséquent, n'hésitez à faire des essais avec différents index.  
   
@@ -123,7 +123,7 @@ Pour plus d’informations sur les index de recherche en texte intégral, consul
   
 -   Veillez à ce que la clé d'index des index cluster soit courte. En outre, les index cluster bénéficient du fait d'être créés sur des colonnes uniques ou non NULL.  
   
--   Les colonnes dont le type de données est **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
+-   Les colonnes dont le type de données est **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** ne peuvent pas être spécifiées en tant que colonnes de clés d’index. Cependant, les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent participer à des index non-cluster en tant que colonnes d’index non-clés. Pour plus d'informations, consultez la section [Index avec colonnes incluses](#Included_Columns)dans ce guide.  
   
 -   Un type de données **xml** ne peut être qu'une colonne clé dans un index XML. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 introduit un nouveau type d'index XML appelé index XML sélectif. Ce nouvel index améliore les performances de requête sur les données stockées en XML dans SQL Server, permettant ainsi d'indexer plus rapidement les charges de travail comportant beaucoup de données XML et améliorant l'évolutivité en réduisant les coûts de stockage de l'index en lui-même. Pour plus d’informations, consultez [Index XML sélectifs &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -464,7 +464,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Le nombre de lignes d'index contenues sur une page sera moindre. Ceci pourrait augmenter les E/S et réduire l'efficacité de la mémoire cache.  
   
--   L'espace disque requis pour stocker l'index sera supérieur. En particulier, l’ajout des types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** en tant que colonnes d’index non-clés peut accroître considérablement l’espace disque nécessaire. En effet, les valeurs des colonnes sont copiées dans le niveau feuille de l'index. Par conséquent, elles résident à la fois dans l'index et dans la table de base.  
+-   L'espace disque requis pour stocker l'index sera supérieur. En particulier, l’ajout des types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** en tant que colonnes d’index non-clés peut accroître considérablement l’espace disque nécessaire. En effet, les valeurs des colonnes sont copiées dans le niveau feuille de l'index. Par conséquent, elles résident à la fois dans l'index et dans la table de base.  
   
 -   La maintenance d'un index peut accroître la durée nécessaire pour effectuer des modifications, des insertions, des mises à jour ou des suppressions à la table sous-jacente ou à la vue indexée.  
   

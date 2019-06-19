@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42d83c5adf9afa268bb7ec6e069731d6f8a05219
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715997"
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (base de données SSISDB)
@@ -37,13 +37,13 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom d'origine de l'environnement. *environment_name* est de type **nvarchar(128)**.  
+ Nom d'origine de l'environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [ @new_environment_name = ] *new_environment_name*  
- Nouveau nom de l'environnement. *new_environment_name* est de type **nvarchar(128)**.  
+ Nouveau nom de l'environnement. *new_environment_name* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -67,7 +67,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Le nouveau nom a déjà été utilisé dans un environnement existant  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les références environnementales des projets ne sont pas mises à jour automatiquement lorsque vous renommez l'environnement. Les références environnementales doivent être mises à jour en conséquence. Cette procédure stockée réussira même si les références environnementales sont arrêtées en modifiant le nom d'un environnement. Les références environnementales doivent être mises à jour après que cette procédure stockée s'est achevée.  
   
 > [!NOTE]  

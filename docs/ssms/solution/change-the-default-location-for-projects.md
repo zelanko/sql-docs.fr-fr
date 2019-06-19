@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f2787800e3dbb128f0382d63a1b645ce70035c42
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105148"
 ---
 # <a name="change-the-default-location-for-projects"></a>Modifier l'emplacement par défaut des projets
@@ -29,6 +29,6 @@ L'emplacement par défaut des fichiers et des projets est le dossier Projets [!I
   
 1.  Modifiez l'emplacement par défaut en ouvrant ou en enregistrant un fichier ou un projet à partir d'un autre emplacement. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] enregistre l’emplacement du projet ouvert et l’utilise pour la prochaine ouverture ou le prochain enregistrement d’un projet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
   

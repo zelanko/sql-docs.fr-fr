@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489717"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Leçon 4 : Stockage des données sur les fournisseurs dans MDS
@@ -49,6 +49,6 @@ ms.locfileid: "65489717"
 8.  Créer et utiliser une hiérarchie dérivée à l'aide de la relation d'attribut basé sur un domaine entre l'entité **Fournisseur** et l'entité **État** (l'attribut État de l'entité Fournisseur est un type d'entité État) à l'aide de **Master Data Manager**.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 1 : Créer un modèle fournisseurs à l’aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tâche 1 : Créer un modèle fournisseurs à l’aide de Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

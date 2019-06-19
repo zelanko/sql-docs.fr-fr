@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fd2e27d4e7d9649b94c85a45c2fb3b67ef12756c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105061"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
@@ -41,7 +41,7 @@ Pour supprimer un programme, sélectionnez-le, puis cliquez sur **Supprimer**.
 Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’encodage linguistique) pour le type de fichier sélectionné, choisissez un programme dans la liste **Sélectionnez le programme à ouvrir** , puis cliquez sur **Par défaut**. La prochaine fois que vous allez ouvrir ce type de fichier dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le document s'ouvrira dans l'éditeur par défaut spécifié.  
   
 > [!NOTE]  
-> Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
+> Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

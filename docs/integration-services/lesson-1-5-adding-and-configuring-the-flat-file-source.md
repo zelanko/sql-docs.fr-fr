@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723078"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Leçon 1-5 : Ajouter et configurer la source du fichier plat
@@ -45,7 +45,7 @@ Au cours de cette tâche, vous configurez la source de fichier plat pour qu’el
   
 8.  Cliquez avec le bouton droit sur la source de fichier plat, puis sélectionnez **Propriétés**.  
   
-9. Dans la fenêtre **Propriétés**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)**.  
+9. Dans la fenêtre **Propriétés**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)** .  
   
 ## <a name="go-to-next-task"></a>Passer à la tâche suivante
 [Étape 6 : Ajouter et configurer les transformations de recherche](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

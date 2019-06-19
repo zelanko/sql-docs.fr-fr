@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721796"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Leçon 4-3 : Ajouter une redirection de flux d’erreurs
@@ -52,9 +52,9 @@ Par défaut, les deux colonnes supplémentaires d’une sortie d’erreur [!INCL
   
 8.  Dans la page **Entrées et sorties**, développez **Sortie 0**, sélectionnez **Colonnes de sortie**, puis **Ajouter une colonne**.  
   
-9. Dans la propriété **Name**, entrez *ErrorDescription* et attribuez à la propriété **DataType** la valeur **Unicode string [DT_WSTR]**.  
+9. Dans la propriété **Name**, entrez *ErrorDescription* et attribuez à la propriété **DataType** la valeur **Unicode string [DT_WSTR]** .  
   
-10. Dans la page **Script**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)**.
+10. Dans la page **Script**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)** .
   
 11. Sélectionnez **Modifier le script** pour ouvrir [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA). Dans la méthode **Input0_ProcessInputRow**, entrez ou collez le code suivant :  
   

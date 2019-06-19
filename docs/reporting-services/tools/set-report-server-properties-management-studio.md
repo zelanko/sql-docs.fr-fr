@@ -11,10 +11,10 @@ ms.assetid: 1ed0f84b-b12a-4e49-b65c-a11a99f9093f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: e2632e93cf325a560434e0833e3bb5a7288f83ef
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65578997"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Définir les propriétés du serveur de rapports (Management Studio)
@@ -26,7 +26,7 @@ ms.locfileid: "65578997"
   
 2.  Cliquez avec le bouton droit sur le nœud du serveur de rapports, puis sélectionnez **Propriétés**. Cliquez sur **Avancé** pour ouvrir la page de propriétés. Consultez [Propriétés du serveur &#40;page Avancé&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) pour obtenir une description de chaque propriété.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   

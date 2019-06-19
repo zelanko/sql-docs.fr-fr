@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479755"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Connexions, utilisateurs et rôles de base de données (Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "65479755"
   
 |Connexion|Description|  
 |-----------|-----------------|  
-|`mds_dlp_login`|Autorise la création d'assemblys UNSAFE.<br /><br /> - Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> - Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> - Pour msdb, mds_clr_user mappe à cette connexion.<br /><br /> <br /><br /> Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
+|`mds_dlp_login`|Autorise la création d'assemblys UNSAFE.<br /><br /> \- Connexion désactivée avec mot de passe généré aléatoirement.<br /><br /> \- Mappé à dbo pour la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> \- Pour msdb, mds_clr_user mappe à cette connexion.<br /><br /> <br /><br /> Pour plus d’informations, consultez [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).|  
 |`mds_email_login`|Connexion active utilisée pour les notifications.<br /><br /> Pour msdb et la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user mappe à cette connexion.|  
   
 ## <a name="msdb-users"></a>Utilisateurs de msdb  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484138"
 ---
 # <a name="run-the-data-quality-client-application"></a>Exécuter l'application Data Quality Client
@@ -36,7 +36,7 @@ ms.locfileid: "65484138"
 ##  <a name="Run"></a> Exécuter Data Quality Client  
  Pour exécuter [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] sur l'ordinateur où vous l'avez installé, opérez comme suit :  
   
-1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, cliquez sur **Data Quality Services**, puis sur **Data Quality Client**.  
+1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, cliquez sur **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]** , cliquez sur **Data Quality Services**, puis sur **Data Quality Client**.  
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** :  
   

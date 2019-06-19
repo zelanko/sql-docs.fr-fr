@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109559"
 ---
 # <a name="data-alert-designer"></a>Concepteur d’alertes de données
@@ -164,7 +164,7 @@ ms.locfileid: "66109559"
 ### <a name="email-settings"></a>Paramètres de messagerie  
  Utilisez l’option **Destinataire(s)** pour spécifier les adresses e-mail des destinataires à qui envoyer les messages d’alerte de données par e-mail. Séparez les adresses de messagerie par des points-virgules, comme vous le feriez dans un courrier électronique Microsoft Office Outlook. Vous pouvez également spécifier des groupes de distribution comme destinataires, pour simplifier et accélérer la gestion de la liste des destinataires. Si SharePoint peut déterminer votre adresse de messagerie lorsque vous créez une définition d'alerte, celle-ci est ajoutée automatiquement aux destinataires répertoriés ; sinon, vous devez vous ajouter explicitement comme destinataire.  
   
- L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>**. Vous pouvez changer l'objet selon vos besoins.  
+ L’objet par défaut de l’e-mail est **Alerte de données pour \<nom_alerte>** . Vous pouvez changer l'objet selon vos besoins.  
   
  Vous pouvez aussi fournir une description à l’aide de l’option **Description** . Cette description sera incluse dans le message d’alerte de données. En incluant une description, surtout si vous avez créé des alertes de données similaires, vous aidera à différencier rapidement les messages d'alerte et à mieux les comprendre. En plus du message d'alerte envoyé lorsque les données du rapport suivent les règles spécifiées, un message d'alerte est envoyé à tous les destinataires lorsqu'une erreur se produit. Pour plus d’informations, consultez [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md).  
   

@@ -24,11 +24,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 784d3f707bf57338a8385a1c4837e9b77fd43f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942811"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -46,15 +46,15 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**N**]**'**_language_**'** | **@**_language\_var_  
- Nom de la langue tel qu’il est stocké dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Cet argument peut être au format Unicode ou DBCS converti en Unicode. Pour spécifier une langue au format Unicode, utilisez **N’**_langage_**’**. Si elle est spécifiée sous la forme d’une variable, cette dernière doit être de type **sysname**.  
+ [**N**] **'** _language_ **'**  |  **@** _language\_var_  
+ Nom de la langue tel qu’il est stocké dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Cet argument peut être au format Unicode ou DBCS converti en Unicode. Pour spécifier une langue au format Unicode, utilisez **N’** _langage_ **’** . Si elle est spécifiée sous la forme d’une variable, cette dernière doit être de type **sysname**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La définition de SET LANGUAGE s'effectue lors de l'exécution, et non durant l'analyse.  
   
  SET LANGUAGE définit implicitement le paramètre de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -72,7 +72,7 @@ SELECT DATENAME(month, @Today) AS 'Month Name' ;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723525"
 ---
 # <a name="integration-services-user-interface"></a>Interface utilisateur d'Integration Services
@@ -47,12 +47,12 @@ ms.locfileid: "65723525"
 |Boîte de dialogue|Fonction|Accès|  
 |----------------|-------------|------------|  
 |**Mise en route**|Accédez aux exemples, didacticiels et vidéos.|Sur l’aire de conception de l’onglet **Flux de contrôle** ou de l’onglet **Flux de données** , cliquez avec le bouton droit, puis cliquez sur **Prise en main**.<br /><br /> Pour afficher automatiquement la fenêtre **Mise en route** lorsque vous créez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , sélectionnez **Afficher toujours dans un nouveau projet** en bas de la fenêtre.|  
-|**Configurer les journaux SSIS**|Configuration de la journalisation pour un package et ses tâches en ajoutant des journaux et en définissant des détails de journalisation.|Dans le menu **SSIS** , cliquez sur **Enregistrement**.<br /><br /> - ou -<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Journalisation**.|  
+|**Configurer les journaux SSIS**|Configuration de la journalisation pour un package et ses tâches en ajoutant des journaux et en définissant des détails de journalisation.|Dans le menu **SSIS** , cliquez sur **Enregistrement**.<br /><br /> \- ou -<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Journalisation**.|  
 |**Bibliothèque des configurations du package**|Ajout et modification de configurations de package. L'exécution de l'Assistant Configuration de package s'effectue à partir de cette boîte de dialogue.|Dans le menu **SSIS** , cliquez sur **Configurations du package**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Configurations du package**.|  
 |**Signature numérique**|Signature d'un package ou suppression de la signature d'un package.|Dans le menu **SSIS** , cliquez sur **Signature numérique**.<br /><br /> -ou-<br /><br /> Cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Signature numérique**.|  
 |**Définir des points d'arrêt**|Activation des points d'arrêt sur des tâches et définition des propriétés des points d'arrêt.|Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur une tâche ou un conteneur, puis cliquez sur **Modifier les points d’arrêt**. Pour définir un point d’arrêt sur le package, cliquez n’importe où sur l’aire de conception de l’onglet **Flux de contrôle** , puis cliquez sur **Modifier les points d’arrêt**.|  
   
- La fenêtre **Mise en route** fournit des liens vers des exemples, des didacticiels et des vidéos. Pour ajouter des liens à des contenus supplémentaires, modifiez le fichier SamplesSites.xml inclus avec la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Nous vous recommandons de ne pas modifier la valeur de l’élément \<GettingStartedSamples> qui spécifie l’URL du flux RSS. Le fichier se trouve dans le dossier *\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn. Sur un ordinateur 64 bits, le fichier se trouve dans le dossier *\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn  
+ La fenêtre **Mise en route** fournit des liens vers des exemples, des didacticiels et des vidéos. Pour ajouter des liens à des contenus supplémentaires, modifiez le fichier SamplesSites.xml inclus avec la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Nous vous recommandons de ne pas modifier la valeur de l’élément \<GettingStartedSamples> qui spécifie l’URL du flux RSS. Le fichier se trouve dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn. Sur un ordinateur 64 bits, le fichier se trouve dans le dossier *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn  
   
  Si le fichier SamplesSites.xml est endommagé, remplacez le xml dans le fichier par le xml par défaut suivant.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65723525"
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d’informations sur la création de packages dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], consultez [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepteur SSIS](../integration-services/ssis-designer.md)  
   
   

@@ -22,15 +22,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 931ecdb787e5dc3aeb62dd81d19357048987e82e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102899"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personnaliser des menus et des touches de raccourci
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+*\<une lettre>*. Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
+Une touche d’accès rapide vous permet de sélectionner une commande de menu ou un bouton en appuyant sur Alt+ *\<une lettre>* . Par exemple, pour ouvrir le menu **Edition** , appuyez sur Alt+E. Vous pouvez réorganiser et modifier les boutons des barres d’outils, les menus et les commandes de menu dans la boîte de dialogue **Personnaliser** . Les instructions fournies dans cette rubrique permettent de modifier les paramètres à l'aide de la souris ou du clavier uniquement.  
   
 Les touches d’accès rapides pour les procédures stockées qui utilisent la touche Ctrl peuvent être créées dans la page **Clavier** de la boîte de dialogue **Outils**/**Options** .  
   
@@ -162,6 +162,6 @@ Les touches d’accès rapides pour les procédures stockées qui utilisent la t
 > [!NOTE]  
 > Certaines commandes sont disponibles uniquement lorsque [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] affiche le contenu pertinent. Si aucune commande du menu n'est disponible, l'élément de menu ne le sera pas non plus.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Fonctionnalités de SQL Server Management Studio](../ssms/features-in-sql-server-management-studio.md)  
   

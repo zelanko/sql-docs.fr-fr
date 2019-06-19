@@ -9,10 +9,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582123"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Ajouter une action Développer ou Réduire à un élément (Générateur de rapports et SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "65582123"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Pour ajouter une action Développer/Réduire à un élément de rapport  
   
-1.  Dans la vue Création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **Propriétés** de *\<élément_de_rapport>*. La boîte de dialogue **Propriétés** de *\<élément de rapport>* correspondant à l’élément de rapport s’ouvre.  
+1.  Dans la vue Création de rapport, cliquez avec le bouton droit sur l’élément de rapport à afficher ou à masquer, puis cliquez sur **Propriétés** de *\<élément_de_rapport>* . La boîte de dialogue **Propriétés** de *\<élément de rapport>* correspondant à l’élément de rapport s’ouvre.  
   
 2.  Cliquez sur **Visibilité**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "65582123"
   
      ![Exécution du rapport avec développement d’une table](../../reporting-services/report-design/media/expandcollapse-runreport-reporttable.png "Rapport en cours d’exécution avec développement d’une table")  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
  [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   

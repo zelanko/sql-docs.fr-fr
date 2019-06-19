@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098128"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
@@ -67,7 +67,7 @@ Indique si la table peut être indexée. Si la table n'est pas indexable, cela p
 Indique si la table est répliquée à un autre emplacement.  
   
 **Catégorie Spécification d'espace de données régulière**  
-Se développe pour afficher des propriétés pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+Se développe pour afficher des propriétés pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
 **(Type d’espace de données)**  
 Indique si cette table est stockée à l'aide d'un groupe de fichiers ou d'un schéma de partition.  
@@ -84,6 +84,6 @@ Affiche la colonne utilisée par Microsoft SQL Server comme colonne ROWGUID de l
 **Groupe de fichiers Text/Image**  
 Fournit une liste déroulante dans laquelle vous pouvez choisir le groupe de fichiers des colonnes possédant des types de données texte ou image. Si la table est stockée à l'aide d'un schéma de partition, laissez ce champ vierge.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Concevoir des tables (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

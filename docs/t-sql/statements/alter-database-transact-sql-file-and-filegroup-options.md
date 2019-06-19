@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201706"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Options de fichiers et de groupes de fichiers ALTER DATABASE (Transact-SQL)
 
@@ -64,7 +64,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -144,13 +144,13 @@ REMOVE FILE *logical_file_name* Supprime la description du fichier logique d’u
 
 MODIFY FILE Spécifie le fichier à modifier. Vous pouvez modifier une seule propriété \<filespec> à la fois. La clause NAME doit toujours être spécifiée dans \<filespec> pour identifier le fichier à modifier. Si vous définissez l'option SIZE, la nouvelle taille doit être supérieure à la taille actuelle du fichier.
 
-Pour modifier le nom logique d'un fichier de données ou d'un fichier journal, spécifiez le nom logique du fichier à renommer dans la clause `NAME` et indiquez le nouveau nom logique à appliquer dans la clause `NEWNAME`. Exemple :
+Pour modifier le nom logique d'un fichier de données ou d'un fichier journal, spécifiez le nom logique du fichier à renommer dans la clause `NAME` et indiquez le nouveau nom logique à appliquer dans la clause `NEWNAME`. Par exemple :
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )
 ```
 
-Pour déplacer un fichier de données ou un fichier journal vers un nouvel emplacement, spécifiez le nom de fichier logique actuel dans la clause `NAME` et les nouveaux chemin d'accès et nom de fichier de système d'exploitation dans la clause `FILENAME`. Exemple :
+Pour déplacer un fichier de données ou un fichier journal vers un nouvel emplacement, spécifiez le nom de fichier logique actuel dans la clause `NAME` et les nouveaux chemin d'accès et nom de fichier de système d'exploitation dans la clause `FILENAME`. Par exemple :
 
 ```sql
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* Spécifie un nouveau nom logique pour le fichier
 
 *new_logical_file_name* Spécifie le nom remplaçant le nom de fichier logique existant. Le nom doit être unique dans la base de données et doit respecter les règles relatives aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Il peut s'agir d'une constante de type caractère ou Unicode, d'un identificateur régulier ou d'un identificateur délimité.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** | **'**_memory\_optimized\_data\_path_**'**} Spécifie le nom de fichier (physique) du système d’exploitation.
+FILENAME { **'** _os\_file\_name_ **'** | **'** _filestream\_path_ **'** | **'** _memory\_optimized\_data\_path_ **'** } Spécifie le nom de fichier (physique) du système d’exploitation.
 
 ' *os_file_name* ' Pour un groupe de fichiers standard (ROWS), il s’agit du chemin d’accès et du nom de fichier utilisés par le système d’exploitation lorsque vous créez le fichier. Le fichier doit résider sur le serveur hébergeant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le chemin d'accès spécifié doit exister avant l'exécution de l'instruction ALTER DATABASE.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP *filegroup_name* Supprime un groupe de fichiers de la base de d
 > [!NOTE]
 > Sauf dans le cas où le garbage collector FILESTREAM a supprimé tous les fichiers d’un conteneur FILESTREAM, l’opération `ALTER DATABASE REMOVE FILE` pour supprimer un conteneur FILESTREAM échoue et retourne une erreur. Consultez la section [Supprimer un conteneur FILESTREAM](#removing-a-filestream-container) plus loin dans cette rubrique.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
 
 \<filegroup_updatability_option> Définit la propriété de lecture seule ou de lecture/écriture du groupe de fichiers.
 
@@ -322,7 +322,7 @@ READ_WRITE | READWRITE Spécifie que le groupe est en lecture/écriture. Les obj
 > [!TIP]
 > Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -397,7 +397,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Ajout d'un groupe de deux fichiers à une base de données
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données
 
 L'exemple suivant crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.
 
@@ -663,7 +663,7 @@ END;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Instance managée<br />SQL Database \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* Instance managée<br />SQL Database \*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP *filegroup_name* Supprime un groupe de fichiers de la base de données. Le groupe de fichiers ne peut pas être supprimé s'il n'est pas vide. Commencez par supprimer tous les fichiers du groupe. Pour plus d’informations, consultez « REMOVE FILE *logical_file_name* », plus haut dans cette rubrique.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifie le groupe de fichiers en définissant l’état sur READ_ONLY ou READ_WRITE, en définissant le groupe de fichiers comme groupe par défaut pour la base de données ou en changeant le nom du groupe de fichiers.
 
 \<filegroup_updatability_option> Définit la propriété de lecture seule ou de lecture/écriture du groupe de fichiers.
 
@@ -850,7 +850,7 @@ READ_WRITE | READWRITE Spécifie que le groupe est en lecture/écriture. Les obj
 
 Vous pouvez déterminer l’état de ces options en consultant la colonne **is_read_only** de la vue de catalogue **sys.databases** ou la propriété **Updateability** de la fonction `DATABASEPROPERTYEX`.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour diminuer la taille d'une base de données, utilisez [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
@@ -878,7 +878,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Ajout d'un groupe de deux fichiers à une base de données
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Ajout d'un groupe de deux fichiers à une base de données
 
 L'exemple suivant crée le groupe de fichiers `Test1FG1` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et ajoute deux fichiers de 5 Mo au groupe de fichiers.
 
@@ -1039,7 +1039,7 @@ END;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=azuresqldb-mi-current)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)

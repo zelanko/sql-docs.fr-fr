@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5094f1fc42715dfed74aee022d8ebe2bd36d8b1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726609"
 ---
 # <a name="odbc-source-custom-properties"></a>Propriétés personnalisées des sources ODBC
@@ -41,7 +41,7 @@ ms.locfileid: "65726609"
 |LobChunckSize|Entier|Taille de segment allouée pour les colonnes LOB.|  
 ||||  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source ODBC](../../integration-services/data-flow/odbc-source.md)   
  [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   

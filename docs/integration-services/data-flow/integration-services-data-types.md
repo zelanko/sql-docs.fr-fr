@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726884"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
@@ -260,7 +260,7 @@ ms.locfileid: "65726884"
 ## <a name="related-content"></a>Contenu associé  
  Entrée de blog, [Comparaison des performances des différentes techniques de conversion de type de données dans SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), sur blogs.msdn.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Données dans des flux de données](../../integration-services/data-flow/data-in-data-flows.md)  
   
   

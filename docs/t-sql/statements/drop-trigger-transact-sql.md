@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202958"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62684367"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ON ALL SERVER
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez éliminer un déclencheur DML en le supprimant ou en supprimant sa table. Lorsqu'une table est supprimée, tous les déclencheurs associés sont également supprimés.  
   
  Quand un déclencheur est supprimé, les informations le concernant sont supprimées des vues de catalogue **sys.objects**, **sys.triggers** et **sys.sql_modules**.  
@@ -97,7 +97,7 @@ ON ALL SERVER
   
  Pour plus d’informations sur l’affichage d’une liste des déclencheurs existants, consultez [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) et [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La suppression d’un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
  La suppression d'un déclencheur DDL défini avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. La suppression d'un déclencheur DDL défini avec une étendue de base de données (ON DATABASE) nécessite une autorisation ALTER ANY DATABASE DDL TRIGGER sur la base de données active.  
@@ -112,7 +112,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
    DROP TRIGGER employee_insupd;  
 ```  
   
-### <a name="b-dropping-a-ddl-trigger"></a>b. Suppression d'un déclencheur DDL  
+### <a name="b-dropping-a-ddl-trigger"></a>B. Suppression d'un déclencheur DDL  
  L'exemple suivant supprime le déclencheur DDL `safety`.  
   
 > [!IMPORTANT]  
@@ -123,7 +123,7 @@ DROP TRIGGER safety
 ON DATABASE;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

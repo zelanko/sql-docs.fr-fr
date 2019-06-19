@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d22165af735fe807149dffb6f5e60a35fc33184
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717026"
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (base de données SSISDB)
@@ -35,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>Arguments  
  [ @property_name = ] *property_name*  
- Nom de la propriété de catalogue. *property_name* est de type **nvarchar(255)**. Pour plus d’informations sur les propriétés disponibles, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Nom de la propriété de catalogue. *property_name* est de type **nvarchar(255)** . Pour plus d’informations sur les propriétés disponibles, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
  [ @property_value = ] *property_value*  
- Valeur de la propriété de catalogue. *property_value* est de type **nvarchar(255)**. Pour plus d’informations sur les valeurs de propriété, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Valeur de la propriété de catalogue. *property_value* est de type **nvarchar(255)** . Pour plus d’informations sur les valeurs de propriété, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -46,7 +46,7 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette procédure stockée détermine si le *property_value* est valide pour chaque *property_name*.  
   
  Cette procédure stockée peut être effectuée uniquement lorsqu'il n'y a pas d'exécution active, c'est-à-dire pas d'exécutions en attente, en file d'attente, en cours d'exécution ou suspendues.  

@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65461816"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
@@ -91,9 +91,9 @@ ms.locfileid: "65461816"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Récupération de données|Récupération complète (si le journal est disponible).|Risque de perte de données.|Les données postérieures à la dernière sauvegarde différentielle ou complète sont perdues.|  
 |Restauration dans le temps|Toute heure couverte par les sauvegardes de fichiers journaux.|Non autorisé si la sauvegarde de fichier journal contient des modifications journalisées en bloc.|Non pris en charge.|  
-|File restore **\***|Prise en charge complète.|Parfois.**\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
-|Page restore **\***|Prise en charge complète.|Parfois.**\*\***|Aucun.|  
-|Restauration fragmentaire (niveau groupe de fichiers) **\***|Prise en charge complète.|Parfois.**\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|File restore **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
+|Page restore **\***|Prise en charge complète.|Parfois. **\*\***|Aucun.|  
+|Restauration fragmentaire (niveau groupe de fichiers) **\***|Prise en charge complète.|Parfois. **\*\***|Disponible uniquement pour les fichiers secondaires en lecture seule.|  
   
  **\*** Disponible uniquement dans l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -174,7 +174,7 @@ Si vous avez des bases de données critiques enclines à des transactions volumi
 ##  <a name="RelatedContent"></a> Contenu associé  
  Aucun.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

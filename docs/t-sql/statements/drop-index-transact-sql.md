@@ -34,10 +34,10 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 60d44f92bc039914ed2fd983c65d53f9d7865fb6
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503452"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
@@ -174,7 +174,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]  
 >  Les opérations d'index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] prend en charge « default » comme nom de groupe de fichiers.  
   
  Spécifie un emplacement pour déplacer les lignes de données qui se trouvent actuellement au niveau feuille de l'index cluster. Les données sont déplacées vers le nouvel emplacement sous la forme d'un segment de mémoire. Vous pouvez spécifier un schéma de partition ou un groupe de fichiers déjà existants comme nouvel emplacement. MOVE TO n'est pas valide pour les vues non indexées ou les index non cluster. Si aucun schéma de partition ou groupe de fichiers n'est spécifié, la table résultante sera située sur le même schéma de partition ou groupe de fichiers que celui défini pour l'index cluster.  
@@ -197,9 +197,9 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Spécifie l'emplacement par défaut de la table résultante.  
   
 > [!NOTE]
->  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]**. Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]** . Si **"** default **"** est spécifié, l’option QUOTED_IDENTIFIER doit être ON pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Spécifie un emplacement pour déplacer la table FILESTREAM qui se trouve actuellement au niveau feuille de l'index cluster. Les données sont déplacées vers le nouvel emplacement sous la forme d'un segment de mémoire. Vous pouvez spécifier un schéma de partition ou un groupe de fichiers déjà existants comme nouvel emplacement. FILESTREAM ON n'est pas valide pour les vues indexées ou les index non cluster. Si aucun schéma de partition n'est spécifié, les données sont placées dans le même schéma de partition que celui qui a été défini pour l'index cluster.  
@@ -216,16 +216,16 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
  Spécifie l'emplacement par défaut des données FILESTREAM.  
   
 > [!NOTE]
->  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  L'élément « default » n'est pas un mot clé dans ce contexte. Il s’agit d’un identificateur du groupe de fichiers par défaut qui doit être délimité, comme dans MOVE TO **"** default **"** or MOVE TO **[** default **]** . Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu'un index non cluster est supprimé, la définition d'index est supprimée des métadonnées et les pages de données d'index (l'arborescence binaire ou arbre B) sont supprimées des fichiers de base de données. Lorsqu'un index cluster est supprimé, la définition d'index est supprimée des métadonnées et les lignes de données qui étaient stockées au niveau feuille de l'index cluster sont stockées dans la table non triée résultante, un segment de mémoire. Tout l'espace précédemment occupé par l'index est récupéré. Cet espace peut ensuite être réaffecté à n'importe quel objet de la base de données.  
   
  Un index ne peut pas être supprimé si le groupe de fichiers dans lequel il se trouve est hors connexion ou défini comme étant en lecture seule.  
   
  Lorsque l'index cluster d'une vue indexée est supprimé, tous les index non cluster et les statistiques créées automatiquement sur la même vue sont automatiquement supprimés. Les statistiques créées manuellement ne sont pas supprimées.  
   
- La syntaxe _table\_or\_view\_name_**.**_index\_name_ est conservée à des fins de compatibilité descendante. Un index XML ou index spatial ne peut pas être supprimé à l'aide de la syntaxe à compatibilité descendante.  
+ La syntaxe _table\_or\_view\_name_ **.** _index\_name_ est conservée à des fins de compatibilité descendante. Un index XML ou index spatial ne peut pas être supprimé à l'aide de la syntaxe à compatibilité descendante.  
   
  Lors de la suppression d'index contenant au moins 128 étendues, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations de pages ainsi que les verrous qui y sont associés jusqu'à ce que la transaction soit validée.  
   
@@ -238,7 +238,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  Lorsque vous spécifiez ONLINE = ON, les requêtes et modifications portant sur les données sous-jacentes et index non cluster associés ne sont pas bloqués par la transaction DROP INDEX. Vous pouvez modifier un seul index cluster en ligne à la fois. Pour obtenir une description complète de l’option ONLINE, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
- Vous ne pouvez pas supprimer un index cluster en ligne s’il est désactivé sur une vue ou contient les colonnes **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou **xml** sur les lignes de données de niveau feuille.  
+ Vous ne pouvez pas supprimer un index cluster en ligne s’il est désactivé sur une vue ou contient les colonnes **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou **xml** sur les lignes de données de niveau feuille.  
   
  L'utilisation des options ONLINE = ON et MOVE TO nécessite une espace disque temporaire supplémentaire.  
   
@@ -255,10 +255,10 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérieurs des index clusters sont supprimés ; cette opération est donc très rapide. Quand un index cluster est supprimé EN LIGNE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reconstruit le segment de mémoire deux fois, une fois pour l’étape 1 et une fois pour l’étape 2. Pour plus d’informations sur la compression de données, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>Index XML  
- Les options ne peuvent pas être spécifiées quand vous supprimez un index XML. En outre, vous ne pouvez pas utiliser la syntaxe _table\_or\_view\_name_**.**_index\_name_. Lorsqu'un index XML primaire est supprimé, tous les index XML secondaires associés sont également supprimés. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Les options ne peuvent pas être spécifiées quand vous supprimez un index XML. En outre, vous ne pouvez pas utiliser la syntaxe _table\_or\_view\_name_ **.** _index\_name_. Lorsqu'un index XML primaire est supprimé, tous les index XML secondaires associés sont également supprimés. Pour plus d’informations, consultez [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Index spatiaux  
- Les index spatiaux sont pris en charge uniquement dans les tables. Quand vous supprimez un index spatial, vous ne pouvez pas spécifier d’options ni utiliser **.**_index\_name_. La syntaxe correcte est la suivante :  
+ Les index spatiaux sont pris en charge uniquement dans les tables. Quand vous supprimez un index spatial, vous ne pouvez pas spécifier d’options ni utiliser **.** _index\_name_. La syntaxe correcte est la suivante :  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   
@@ -386,7 +386,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096864"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : Utiliser le Concepteur de tables pour gérer les tables et les relations
@@ -56,6 +56,6 @@ Le concepteur comprend la Grille Colonnes, un volet de script et un volet contex
   
     Notez que l'expérience de création et modification d'entités de base de données pour un projet en mode hors connexion est identique à celle d'exécution des tâches avec une base de données connectée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Procédure : créer des objets de base de données à l’aide du Concepteur de tables](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

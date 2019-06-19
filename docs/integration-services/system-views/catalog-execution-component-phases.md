@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 718605c140bcf6e44cd78c9b07b8b649e0f593bf
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714795"
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases 
@@ -39,10 +39,10 @@ ms.locfileid: "65714795"
 |end_time|**datetimeoffset(7)**|Heure de fin de la phase.|  
 |execution_path|**nvarchar(max)**|Chemin d'exécution de la tâche de flux de données.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque phase d'exécution d'un composant de flux de données, par exemple Validate, Pre-Execute, Post-Execute, PrimeOutput et ProcessInput. Chaque ligne affiche l'heure de début et de fin d'une phase d'exécution spécifique.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant utilise la vue catalog.execution_component_phases pour déterminer le temps total d’exécution d’un package spécifique au cours de toutes les phases (**active_time**), ainsi que le temps total écoulé pour le package (**total_time**).  
   
 > [!WARNING]  

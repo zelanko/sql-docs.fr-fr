@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c99f34b46a6f809cee76985b3db99a88e46326f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284479"
 ---
 # <a name="subscription-and-delivery-methods"></a>Méthodes d'abonnement et de remise
   Vous pouvez utiliser ces méthodes pour créer et générer des abonnements et des éléments de catalogue.  
@@ -36,7 +36,7 @@ ms.locfileid: "47785217"
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|Définit les valeurs de propriétés d'un abonnement piloté par les données.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|Définit les valeurs de propriétés d'un abonnement.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’applications à l’aide du service web et du .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Service web Report Server](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Méthodes du service web Report Server](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

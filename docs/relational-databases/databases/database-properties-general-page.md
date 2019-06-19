@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e99e5a97b9d15702c0b1040ffade4a91528cbbf8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62861167"
 ---
 # <a name="database-properties-general-page"></a>Propriétés de base de données (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "56028700"
  **Dernière sauvegarde du journal de la base de données**  
  Affiche la date à laquelle le journal des transactions de la base de données a été sauvegardé pour la dernière fois.  
   
- **Nom**  
+ **Name**  
  Affiche le nom de la base de données.  
   
  **État**  
@@ -55,7 +55,7 @@ ms.locfileid: "56028700"
  **Nom du classement**  
  Affiche le classement utilisé pour la base de données. Le classement peut être modifié à la page **Options** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER DATABASE (Base de données Azure SQL)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

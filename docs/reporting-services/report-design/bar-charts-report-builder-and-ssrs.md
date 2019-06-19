@@ -9,10 +9,10 @@ ms.assetid: db0cf6a0-2114-41d0-ab27-0319e52dee76
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1ed33d00286119c63042680cfd6d2bd414d58098
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581838"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>Graphiques à barres (Générateur de rapports et SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "65581838"
   
 -   **Empilé**. Graphique à barres où plusieurs séries sont empilées verticalement. Si votre graphique ne représente qu'une seule série, le graphique à barres empilées affichera la même chose qu'un graphique à barres.  
   
--   **Empilé 100 %**. Graphique à barres où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
+-   **Empilé 100 %** . Graphique à barres où plusieurs séries sont empilées verticalement pour occuper 100 % de la zone de graphique. Si le graphique ne comporte qu'une seule série, toutes les barres s'ajusteront à 100 % de la zone de graphique.  
   
 -   **Groupé 3D**. Graphiques à barres qui affiche les séries individuelles en lignes séparées sur un graphique 3D.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65581838"
   
 -   Par exemple, si votre dataset contient de nombreux points de données par rapport à la taille du graphique, la taille des colonnes ou barres et l'espacement entre ces éléments seront alors réduits. Pour définir manuellement la largeur des colonnes dans un graphique, modifiez leur largeur, en pixels, en changeant la valeur de la propriété **PointWidth** . Par défaut, la valeur de cette propriété est 0,8. Lorsque vous augmentez la largeur des colonnes ou barres dans un graphique, l'espace entre chaque colonne ou barre diminue.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

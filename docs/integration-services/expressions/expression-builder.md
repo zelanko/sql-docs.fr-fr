@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 04457acc8bd47f3802ba7ad68797d1745117871d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725423"
 ---
 # <a name="expression-builder"></a>Générateur d'expressions
@@ -51,7 +51,7 @@ ms.locfileid: "65725423"
 |**Valeur évaluée**|Donne le résultat de l'évaluation de l'expression.|  
 |**Évaluer l'expression**|Cliquez sur **Évaluer l'expression** pour afficher le résultat de l'évaluation de l'expression|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Page Expressions](../../integration-services/expressions/expressions-page.md)   
  [Éditeur d'expressions de la propriété](../../integration-services/expressions/property-expressions-editor.md)   
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   

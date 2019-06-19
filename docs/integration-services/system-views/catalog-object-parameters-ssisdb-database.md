@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 20253a1bb82bba8b11b24eafbc1c26010abdeb27
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714678"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (base de données SSISDB)
@@ -36,7 +36,7 @@ ms.locfileid: "65714678"
 |parameter_name|**sysname(nvarchar(128))**|Nom du paramètre.|  
 |data_type|**nvarchar(128)**|Type de données du paramètre.|  
 |required|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
-| sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
+|sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |description|**nvarchar(1024)**|Description facultative du package.|  
 |design_default_value|**sql_variant**|Valeur par défaut du paramètre qui a été affecté pendant la conception du projet ou du package.|  
 |default_value|**sql_variant**|Valeur par défaut utilisée actuellement sur le serveur.|  

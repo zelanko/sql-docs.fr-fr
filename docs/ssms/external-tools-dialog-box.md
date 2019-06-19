@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a3440b7dd15b95c8ef890c7d2827f72cbe43d118
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102893"
 ---
 # <a name="external-tools-dialog-box"></a>Boîte de dialogue Outils externes
@@ -66,7 +66,7 @@ Affiche la boîte de dialogue **Arguments** pour vous permettre d'entrer ou de m
 **Fermer en quittant**  
 Ferme en même temps que l'outil la fenêtre qu'il a ouverte.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 La saisie des valeurs suivantes dans la boîte de dialogue **Outils externes** crée un élément de menu libellé « DAC » qui, une fois sélectionné, ouvre une invite de commandes et exécute l'utilitaire **sqlcmd** à l'aide de la connexion administrateur dédiée.  
   
 |Zone|Valeur|  
@@ -75,7 +75,7 @@ La saisie des valeurs suivantes dans la boîte de dialogue **Outils externes** c
 |**Commande**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Arguments**|-A|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Arguments des outils externes](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Éléments généraux relatifs à l'interface utilisateur](../ssms/general-user-interface-elements.md)  
   

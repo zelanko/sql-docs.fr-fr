@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4a12576e083a30a939964803687198ae0842fb73
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715851"
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value 
@@ -41,15 +41,15 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Identificateur unique de l'instance d'exécution. *execution_id* est de type **bigint**.  
   
  [ @property_path = ] *property_path*  
- Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)**.  
+ Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)** .  
   
  [ @property_value = ] *property_value*  
- Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)**.  
+ Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair. L’argument *sensitive* est de type **bit**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette procédure remplit la même fonction que la section **Substitutions de propriété** sous l’onglet **Avancé** de la boîte de dialogue **Exécuter le package**. Le chemin d’accès de la propriété est dérivé de la propriété **Chemin d’accès au package** de la tâche du package.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
@@ -69,7 +69,7 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
   
 -   Le type de données de la valeur de propriété ne correspond pas au type de propriété.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.set_execution_parameter_value &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
   
   

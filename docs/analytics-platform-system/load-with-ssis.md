@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63213372"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec Integration Services à Parallel Data Warehouse
@@ -222,11 +222,11 @@ Spécifiez la destination pour le flux de données.
   
     Pour les connexions Ethernet, **nom du serveur**: Entrez l’adresse IP du cluster de nœud de contrôle, virgules, le port 17001. Par exemple, 10.192.63.134,17001.  
   
-    **Utilisateur :**`user1`  
+    **Utilisateur :** `user1`  
   
-    **Mot de passe :**`password1`  
+    **Mot de passe :** `password1`  
   
-    **Base de données de destination :**`LoadExampleDB`  
+    **Base de données de destination :** `LoadExampleDB`  
   
 6.  Sélectionnez la table de destination : `Orders`.  
   

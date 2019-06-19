@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7cd01f1a3c98bcf0d67ab0224772538a7a82514d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922194"
 ---
 # <a name="backup-devices-sql-server"></a>Unités de sauvegarde (SQL Server)
@@ -86,7 +86,7 @@ ms.locfileid: "62922194"
   
  BACKUP DATABASE *nom_base_de_données*  
   
- TO DISK **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
+ TO DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Exemple :  
   
@@ -100,7 +100,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM DISK **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
+ FROM DISK **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Par exemple,  
   
@@ -136,7 +136,7 @@ GO
     >  La sauvegarde de données sur un réseau peut être sujette à des erreurs du réseau ; c'est pourquoi nous vous conseillons de vérifier l'opération de sauvegarde après l'avoir menée à terme si vous utilisez un disque distant. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>Définition d'un nom UNC (Universal Naming Convention)  
- Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, vous devez utiliser le nom UNC (Universal Naming Convention) complet du fichier de l'unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\**_nom_système_**\\**_nom_partage_**\\**_chemin_**\\**_nom_fichier_.  
+ Pour préciser un partage réseau dans une opération de sauvegarde ou de restauration, vous devez utiliser le nom UNC (Universal Naming Convention) complet du fichier de l'unité de sauvegarde. Un nom UNC se présente sous la forme **\\\\** _nom_système_ **\\** _nom_partage_ **\\** _chemin_ **\\** _nom_fichier_.  
   
  Exemple :  
   
@@ -174,7 +174,7 @@ GO
   
  BACKUP { DATABASE | LOG } *nom_base_de_données*  
   
- TO TAPE **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_var_ }  
+ TO TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_var_ }  
   
  Exemple :  
   
@@ -188,7 +188,7 @@ GO
   
  RESTORE { DATABASE | LOG } *nom_base_de_données*  
   
- FROM TAPE **=** { **’**_nom_unité_sauvegarde_physique_**’** | **@**_nom_unité_sauvegarde_physique_ }  
+ FROM TAPE **=** { **’** _nom_unité_sauvegarde_physique_ **’**  |  **@** _nom_unité_sauvegarde_physique_ }  
   
 ###  <a name="TapeOptions"></a> Spécifiques aux bandes Options BACKUP et RESTORE (Transact-SQL)  
  Pour faciliter la gestion des bandes, l'instruction BACKUP fournit les options de bande suivantes :  

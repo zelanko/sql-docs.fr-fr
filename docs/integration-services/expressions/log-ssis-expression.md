@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77e50116aee1dfc144e5175de7cc56077d205e86
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725240"
 ---
 # <a name="log-ssis-expression"></a>LOG (expression SSIS)
@@ -42,7 +42,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  *L’expression numérique* est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est NULL.  
@@ -66,7 +66,7 @@ LOG(Length)
 LOG(@Length)   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [EXP &#40;expression SSIS&#41;](../../integration-services/expressions/exp-ssis-expression.md)   
  [LN &#40;expression SSIS&#41;](../../integration-services/expressions/ln-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

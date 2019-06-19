@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 51c1bbf529bf38e7efbadfe5e85d87fa49741b7e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102834"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Solutions (SQL Server Management Studio)
@@ -54,7 +54,7 @@ Les solutions et projets peuvent être intégrés dans une base de données [!IN
 |Décrit comment déplacer des éléments entre des projets dans une solution.|[Déplacer des éléments dans une solution](../../ssms/solution/move-items-in-a-solution.md)|  
 |Décrit comment renommer une solution ou les éléments de la solution.|[Renommer des solutions et des éléments de projet](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/library/ms173879.aspx)  

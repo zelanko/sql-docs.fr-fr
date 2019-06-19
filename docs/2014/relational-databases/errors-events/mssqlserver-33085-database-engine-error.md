@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33085 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33085 (Database Engine error)
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f3692ab986f3648bd1ab5b411207fe4948ca216
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868513"
 ---
 # <a name="mssqlserver33085"></a>MSSQLSERVER_33085
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Détails  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62868513"
 |Texte du message|Une ou plusieurs méthodes restent introuvables dans la bibliothèque du fournisseur de services de chiffrement '%.*ls'.|  
   
 ## <a name="explanation"></a>Explication  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu utiliser le fournisseur de services de chiffrement répertorié dans le message d’erreur. Le fournisseur de services de chiffrement n'a pas pris en charge une méthode requise. L'état de l'erreur indique quelle méthode était introuvable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu utiliser le fournisseur de services de chiffrement répertorié dans le message d’erreur. Le fournisseur de services de chiffrement n'a pas pris en charge une méthode requise. L'état de l'erreur indique quelle méthode était introuvable.  
   
 |État|Description|  
-|---------|---------------|  
+|-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  
 |3|SqlCryptOpenSession|  
@@ -57,5 +56,6 @@ ms.locfileid: "62868513"
 |17|SqlCryptDecrypt|  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Contactez le fournisseur de services de chiffrement pour plus d'informations.  
+ Contactez le fournisseur de services de chiffrement pour plus d'informations.  
+  
   

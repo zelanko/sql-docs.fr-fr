@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fcc0232a9556ae62888c631bd1961dc7c4c03822
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099888"
 ---
 # <a name="run-queries-visual-database-tools"></a>Exécuter des requêtes (Visual Database Tools)
@@ -41,7 +41,7 @@ Le Concepteur de requêtes et de vues retourne les résultats à votre ordinateu
   
 En cas de création d'une requête Update, Insert From, Insert Into, Delete ou Make Table, le Concepteur de requêtes et de vues affiche un message indiquant le nombre de lignes concernées par la requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

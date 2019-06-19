@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5f048ff41461e719a06c20ddd08bb62ca58ca974
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715984"
 ---
 # <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (base de données SSISDB)
@@ -35,10 +35,10 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
   
 ## <a name="arguments"></a>Arguments  
  [ @old_name = ] *old_name*  
- Nom d'origine du dossier. *old_name* est de type **nvarchar(128)**.  
+ Nom d'origine du dossier. *old_name* est de type **nvarchar(128)** .  
   
  [ @new_name = ] *new_name*  
- Nouveau nom du dossier. *new_name* est de type **nvarchar(128)**.  
+ Nouveau nom du dossier. *new_name* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  None  

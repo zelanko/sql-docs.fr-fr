@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fc276c25c9a30af485aab6fc29c3b56f3a8a14f3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099413"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Réorganiser des tables dans des schémas (Visual Database Tools)
@@ -32,6 +32,6 @@ Vous pouvez réorganiser rapidement les tables dans un diagramme de base de donn
   
 2.  Dans le menu contextuel, cliquez sur **Réorganiser les tables**.  
   
-## <a name="see-also"></a> Voir aussi  
-[Utiliser des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

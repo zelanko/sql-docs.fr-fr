@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7427a85fa3e8b6f65bb899d008a13f48008e4c0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715788"
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (base de données SSISDB)
@@ -61,7 +61,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   L'opération a déjà été arrêtée  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un seul utilisateur à la fois doit arrêter une opération dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si plusieurs utilisateurs essaient d'arrêter l'opération, la procédure stockée réussira (valeur `0`) à la première tentative, mais les tentatives suivantes généreront une erreur.  
   
   

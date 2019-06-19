@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701328"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
@@ -222,7 +222,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Update](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
 
- * Non pris en charge pour les bases de données Microsoft Access.
+ \* Non pris en charge pour les bases de données Microsoft Access.
 
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
  Le fournisseur Microsoft OLE DB pour ODBC insère plusieurs propriétés dynamiques dans le **propriétés** collection de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et [Commande](../../../ado/reference/ado-api/command-object-ado.md) objets.

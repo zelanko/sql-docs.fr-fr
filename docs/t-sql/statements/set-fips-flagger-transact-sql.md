@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4dd2c65a885e7619c9ddcd92ed7849981453e838
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939729"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,15 +55,15 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
 |INTERMEDIATE|Vérification des normes pour la conformité ISO de niveau intermédiaire.|  
 |OFF|Pas de vérification des normes.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’option `SET FIPS_FLAGGER` est appliquée lors de l’analyse, et non lors de l’exécution. Par conséquent, si l’instruction SET est présente dans la procédure stockée ou le traitement d’instructions, elle devient effective, que l’exécution du code ait réellement atteint ou non ce point ; l’instruction `SET` devient effective avant l’exécution de toute autre instruction. Par exemple, même si le `SET` instruction se trouve dans un `IF...ELSE` bloc d’instructions qui n’est jamais atteint pendant l’exécution, le `SET` prend quand même effet parce que le `IF...ELSE` bloc d’instructions est analysé.  
   
  Si `SET FIPS_FLAGGER` est définie dans une procédure stockée, la valeur de `SET FIPS_FLAGGER` est restauré une fois le contrôle est retourné à partir de la procédure stockée. Par conséquent, une instruction dynamique `SET FIPS_FLAGGER` n’a aucun effet sur les instructions exécutées après celle-ci.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

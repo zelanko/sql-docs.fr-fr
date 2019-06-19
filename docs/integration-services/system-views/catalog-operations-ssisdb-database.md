@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3692261ca636f85b7e0ebb03812eb31bdd2164b9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714414"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de données SSISDB)
@@ -49,7 +49,7 @@ ms.locfileid: "65714414"
 |server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque opération dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Elle permet à l'administrateur d'énumérer toutes les opérations logiques effectuées sur le serveur, telles que le déploiement d'un projet ou l'exécution d'un package.  
   
  Cette vue affiche les types d’opération suivants, répertoriés dans la colonne **operation_type** :  

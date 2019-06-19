@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715203"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages 
@@ -46,7 +46,7 @@ ms.locfileid: "65715203"
 |threadID|INT|ID du thread qui s'exécute lorsque le message est enregistré.|  
 |Message_code|INT|Code associée au message.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche les types de source de message suivants.  
   
 |**message_source_type**|Description|  
@@ -67,7 +67,7 @@ ms.locfileid: "65715203"
   
 -   Appartenance au rôle serveur **sysadmin**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [catalog.event_message_context](../../integration-services/system-views/catalog-event-message-context.md)  
   
   

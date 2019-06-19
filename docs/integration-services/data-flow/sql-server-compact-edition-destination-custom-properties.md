@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1eaa38203d81cab931ab4ae1aa4ab120ae55bb83
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726333"
 ---
 # <a name="sql-server-compact-edition-destination-custom-properties"></a>Propriétés personnalisées de la destination SQL Server Compact Edition
@@ -35,7 +35,7 @@ ms.locfileid: "65726333"
   
  Pour plus d’informations, consultez [Destination SQL Server Compact Edition](../../integration-services/data-flow/sql-server-compact-edition-destination.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

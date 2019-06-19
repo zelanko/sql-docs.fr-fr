@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c79d078e8a9e2a8928c98c9d7ca56e220e86051
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099988"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
@@ -92,7 +92,7 @@ ms.locfileid: "66099988"
   
  Utilisez le volet Propriétés pour :  
   
--   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)**. La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur **\<Expression>**. Cliquez sur **\<Expression>** pour ouvrir la boîte de dialogue **Expression**. Pour plus d'informations, consultez [Expression Dialog Box](../expression-dialog-box.md).  
+-   définir les propriétés pour l'élément actuellement sélectionné dans l'aire de conception. Certaines propriétés affichent une liste déroulante de valeurs. Vous pouvez aussi taper la valeur directement dans la cellule. Certaines propriétés contiennent une collection de valeurs désignée par la valeur **(Collection)** . La plupart des propriétés peuvent accepter une expression ; les expressions complexes sont signalées par la valeur **\<Expression>** . Cliquez sur **\<Expression>** pour ouvrir la boîte de dialogue **Expression**. Pour plus d'informations, consultez [Expression Dialog Box](../expression-dialog-box.md).  
   
 -   Utilisez les boutons de la barre d'outils du volet Propriétés pour modifier la grille et la faire basculer de l'affichage des catégories vers un affichage alphabétique. En affichage des catégories, vous devrez peut-être développer une catégorie pour afficher toutes ses propriétés en dessous. Pour ouvrir la boîte de dialogue Propriétés d’un élément, cliquez sur le bouton **Pages de propriétés** de la barre d’outils, ou cliquez avec le bouton droit sur l’élément, puis cliquez sur **Propriétés**.  
   

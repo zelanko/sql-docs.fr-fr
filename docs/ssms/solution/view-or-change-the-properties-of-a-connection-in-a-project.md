@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 894b6afff739d3d6bf5625bfc3a14482bfe32b09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102950"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>Afficher ou modifier les propriétés d'une connexion dans un projet
@@ -34,7 +34,7 @@ Les propriétés d'une connexion enregistrées dans un projet peuvent être affi
   
 2.  Affichez les propriétés de la connexion dans la fenêtre Propriétés. Vous pouvez modifier les propriétés **Délai d’exécution**, **Base de données**et **Délai de connexion dépassé** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)  
 [Modifier la connexion associée à une requête](../../ssms/solution/change-the-connection-associated-with-a-query.md)  

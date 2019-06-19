@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721449"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Leçon 4-4 : Ajouter une destination de fichier plat
@@ -48,7 +48,7 @@ Au cours de cette tâche, vous enregistrez toutes ces informations sur les ligne
   
 9. Dans la boîte de dialogue **Ouvrir**, dans la zone **Nom de fichier**, entrez *SortieErreur.txt*, puis sélectionnez **Ouvrir**.  
   
-10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, vérifiez que **Paramètres régionaux** a pour valeur **Anglais (États-Unis)** et que la zone **Page de codes** a pour valeur **1252 (ANSI-Latin I)**.  
+10. Dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**, vérifiez que **Paramètres régionaux** a pour valeur **Anglais (États-Unis)** et que la zone **Page de codes** a pour valeur **1252 (ANSI-Latin I)** .  
   
 11. Dans le volet Options, sélectionnez **Colonnes**.  
   

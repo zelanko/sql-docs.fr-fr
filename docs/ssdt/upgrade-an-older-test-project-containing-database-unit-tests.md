@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d1b91df1ecce9749ebdec3515a339ac31f2507b7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101980"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
@@ -39,6 +39,6 @@ Si vous avez un projet test de base de données qui a été créé dans une vers
   
 -   Après conversion, les tests unitaires de base de données existants créés avec le modèle antérieur utiliseront les types de l'assembly d'adaptateur pour accéder à la nouvelle infrastructure. L'utilisation d'un assembly d'adaptateur signifie que la procédure de mise à niveau n'a pas modifié les scripts de test et le code. Si vous ajoutez un test unitaire SQL Server au projet, le nouveau test référencera directement la nouvelle infrastructure et non pas au moyen d'un adaptateur. Vous pouvez choisir de mettre à jour manuellement le code existant de façon à utiliser la nouvelle infrastructure pour des raisons de cohérence avec les nouveaux tests, mais cela n'est pas nécessaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

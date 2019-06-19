@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917083"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
@@ -30,7 +30,7 @@ ms.locfileid: "62917083"
  Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc** ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
- Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Les valeurs possibles sont  **SQL Server 2014 (120)**,  **SQL Server 2012 (110)** et **SQL Server 2008 (100)**. Lorsqu'une base de données SQL Server 2005 est mise à niveau vers SQL Server 2014, le niveau de compatibilité de cette base de données passe de 90 à 100.  Le niveau de compatibilité 90 n'est pas pris en charge dans SQL Server 2014. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
+ Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Les valeurs possibles sont  **SQL Server 2014 (120)** ,  **SQL Server 2012 (110)** et **SQL Server 2008 (100)** . Lorsqu'une base de données SQL Server 2005 est mise à niveau vers SQL Server 2014, le niveau de compatibilité de cette base de données passe de 90 à 100.  Le niveau de compatibilité 90 n'est pas pris en charge dans SQL Server 2014. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
  **Type de relation contenant-contenu**  
  Spécifiez aucun ou partiel pour indiquer s'il s'agit d'une base de données autonome. Pour plus d'informations sur les bases de données autonomes, consultez [Bases de données autonomes](contained-databases.md). La propriété de serveur **Activer les bases de données autonomes** doit être définie sur **TRUE** pour qu'une base de données puisse être configurée comme étant autonome.  

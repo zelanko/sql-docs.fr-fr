@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f8253108732aab7379e319156abf4af8f4114fc3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724108"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configuration de la tâche de script dans l'éditeur de tâche de script
@@ -56,7 +56,7 @@ ms.locfileid: "65724108"
 > [!NOTE]  
 >  Les noms de variable respectent la casse.  
   
- Pour sélectionner les variables, cliquez sur le bouton de sélection (**...**) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../../integration-services/control-flow/select-variables-page.md).  
+ Pour sélectionner les variables, cliquez sur le bouton de sélection ( **...** ) situé en regard du champ de propriété. Pour plus d’informations, consultez [Sélectionner des variables, page](../../../integration-services/control-flow/select-variables-page.md).  
   
 ### <a name="edit-script-button"></a>Bouton Modifier le script  
  Le bouton **Modifier le script** lance l’environnement de développement VSTA dans lequel vous écrivez votre script personnalisé. Pour plus d’informations, consultez [Codage et débogage de la tâche de script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "65724108"
 ## <a name="expressions-page-of-the-script-task-editor"></a>Page Expressions de l'éditeur de tâche de script  
  La page **Expressions** de l’**éditeur de tâche de script** vous permet d’utiliser des expressions pour fournir les valeurs des propriétés de la tâche de script répertoriées ci-dessus et de nombreuses autres propriétés de tâche. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Codage et débogage de la tâche de script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   

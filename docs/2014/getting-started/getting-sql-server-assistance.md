@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66088559"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "66088559"
   
  Si vous ne trouvez pas les informations que vous recherchez dans ces sources, vous pouvez poser des questions sur les forums et groupes de discussion de la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou présenter un cas de support à [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentation en ligne[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]   
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>Documentation en ligne[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  La documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aborde les concepts et les procédures requis pour l'utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La documentation en ligne inclut également des documents de référence sur les langages et les interfaces de programmation pour le stockage et l'extraction de données, la création de rapports et la modification de données à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Vous pouvez accéder à la documentation en ligne des façons suivantes :  

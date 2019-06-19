@@ -24,10 +24,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503222"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
@@ -451,7 +451,7 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  PAGE  
  Une compression de page est utilisée sur les données selon l'index  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
  Chaque option ne peut être spécifiée qu'une fois par instruction CREATE SPATIAL INDEX. La spécification d'un doublon de toute option génère une erreur.  
   

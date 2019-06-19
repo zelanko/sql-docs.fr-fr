@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ba323521f67bf7d7bc92e9387bc8758606a0e202
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716548"
 ---
 # <a name="catalogdeleteenvironmentvariable-ssisdb-database"></a>catalog.delete_environment_variable (base de données SSISDB)
@@ -37,13 +37,13 @@ delete_environment_variable [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom de l'environnement qui contient la variable. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement qui contient la variable. *environment_name* est de type **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nom de la variable qui sera supprimée. *variable_name* est de type **nvarchar(128)**.  
+ Nom de la variable qui sera supprimée. *variable_name* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  

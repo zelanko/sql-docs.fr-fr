@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64c54d20ce6274ae0bb8bbf194cf12324e344d2f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723044"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 : Ajout de configurations au package
@@ -138,7 +138,7 @@ Vérifiez le modèle de déploiement actuel du projet et définissez-le si néce
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Configurations du package](../integration-services/packages/package-configurations.md)  
 [Créer des configurations de package](../integration-services/packages/create-package-configurations.md)  
 [Accéder aux fichiers utilisés par des packages](../integration-services/security/security-overview-integration-services.md#files)  

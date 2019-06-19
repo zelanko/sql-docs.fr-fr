@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 948749635ebec1106d6b950a65c9f6429d01888a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103244"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>Procédure : Parcourir les objets d’un projet de base de données SQL Server
@@ -29,6 +29,6 @@ L’Explorateur d’objets SQL Server dans Visual Studio contient à présent un
   
 3.  Dans **l’Explorateur d’objets SQL Server**, développez le nœud **Projets** pour afficher tous les projets de base de données SQL Server actifs de votre solution sous le nœud **Projets**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Développement de base de données connectée](../ssdt/connected-database-development.md)  
   

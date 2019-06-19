@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a336b58ed148fa135835f4d991d73644c5f1799e
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503229"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -158,7 +158,7 @@ Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file 
   
  Une file d'attente dont la gestion des messages incohérents a la valeur OFF ne sera pas désactivée après cinq restaurations de transactions consécutives. L'application peut ainsi définir un système personnalisé de gestion des messages incohérents.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une file d'attente dotée d'une procédure stockée d'activation spécifiée contient des messages, le fait de basculer l'état d'activation de OFF (désactivé) en ON (activé) déclenche immédiatement la procédure stockée d'activation. Le fait de repasser l'état d'activation de ON à OFF arrête l'activation d'instances de la procédure stockée par le broker, mais n'arrête pas les instances de la procédure stockée en cours d'exécution à ce moment-là.  
   
  La modification d'une file d'attente pour ajouter une procédure stockée d'activation ne change pas l'état d'activation de la file d'attente. La modification de la procédure stockée d'activation pour la file d'attente n'a pas d'incidence sur les instances de la procédure stockée en cours d'exécution à ce moment-là.  
@@ -250,7 +250,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/create-queue-transact-sql.md)   
  [DROP QUEUE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a54e6ef3c7ede32f9a9d04a841e40d06667b5b0
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726584"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriétés personnalisées de la destination de traitement de partition
@@ -45,7 +45,7 @@ ms.locfileid: "65726584"
   
  Pour plus d’informations, consultez [Destination de traitement de partition](../../integration-services/data-flow/partition-processing-destination.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

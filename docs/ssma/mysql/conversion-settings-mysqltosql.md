@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253258"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Paramètres de conversion (MySQLToSQL)
@@ -71,7 +71,7 @@ Ces paramètres seront disponibles sur le type de nœud de la métabase. Par exe
   
         -   Convertir en fonction des paramètres de projet  
   
-    2.  Si **'Yes'**, ce paramètre interdit la création de la création de colonne auxiliaire ROWID sur les tables cibles.  
+    2.  Si **'Yes'** , ce paramètre interdit la création de la création de colonne auxiliaire ROWID sur les tables cibles.  
   
     3.  Les paramètres définis par l’utilisateur sont enregistrés dans le fichier de préférences en cascade lorsque vous cliquez sur **appliquer** bouton.  
   

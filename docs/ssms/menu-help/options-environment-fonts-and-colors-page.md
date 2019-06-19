@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 755cc08f8e431e062ce9fdf3049d99453d724be6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098379"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Options (Environnement - Page Polices et couleurs)
@@ -82,7 +82,7 @@ Cochez cette case pour afficher le texte des éléments affichés sélectionnés
 **Exemple**  
 Affiche un aperçu du modèle de style, de taille et de couleur des polices correspondant aux valeurs sélectionnées dans **Afficher les paramètres de** et **Éléments affichés**. Vous pouvez utiliser cette zone pour afficher un aperçu des résultats obtenus lorsque vous essayez différentes options de mise en forme.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Codage en couleurs dans les éditeurs de code](../../relational-databases/scripting/color-coding-in-query-editors.md)  
 [Options (Éditeur de texte/onglet Éditeur et page Barre d'état)](https://msdn.microsoft.com/e4815678-7885-4631-878f-c6a2b857ee05)  
   

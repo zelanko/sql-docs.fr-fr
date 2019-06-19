@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c9fa2d8fc9a68fbb1c165ddc0f684586db9a1492
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097647"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Afficher les propriétés d'une jointure (Visual Database Tools)
@@ -34,6 +34,6 @@ Vous pouvez consulter une collection de propriétés pour une vue dans la fenêt
   
     Les propriétés de la jointure s'affichent dans la fenêtre Propriétés.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

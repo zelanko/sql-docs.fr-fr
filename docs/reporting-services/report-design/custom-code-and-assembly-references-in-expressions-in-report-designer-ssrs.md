@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581499"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65581499"
 ##  <a name="Common"></a> Intégration de références aux fonctions couramment utilisées  
  Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes provenant des espaces de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> et <xref:System.Convert> ainsi que des fonctions de la bibliothèque d’exécutables [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Pour plus de commodité, vous pouvez consulter les fonctions le plus communément utilisées dans la boîte de dialogue **Expression** , où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, Flux de programme, Agrégat, Financier, Conversion et Divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
   
- Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet du code, quand vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(**, l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de la fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
+ Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet du code, quand vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(** , l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de la fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
   
  Pour plus d’informations sur chaque fonction, consultez <xref:System.Math>, <xref:System.Convert>et [Membres de la bibliothèque runtime Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) sur MSDN.  
   
@@ -188,7 +188,7 @@ End Function
   
  Comme le contenu des collections *Fields* et *ReportItems* peut changer dynamiquement pendant l’exécution, vous ne devriez pas les conserver entre les appels à l’assembly personnalisé (par exemple, dans une variable membre). La même recommandation s'applique généralement à toutes les collections intégrées.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter du code à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Utilisation d’assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8c9a1ab29b09722882394e323d63666eb1b1b7fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106319"
 ---
 # <a name="save-as"></a>Enregistrer sous
@@ -52,7 +52,7 @@ Affiche les fichiers et les dossiers contenus dans **Mes Projets** ou à l’emp
 **Poste de travail**  
 Affiche l’emplacement **Poste de travail** sur votre ordinateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Options d'enregistrement avancées](../../ssms/menu-help/advanced-save-options.md)  
 [Gérer des fichiers avec encodage](../../ssms/solution/manage-files-with-encoding.md)  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72bdab9edf0dc920ed5e8b5801cbdec4868a047a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720142"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
@@ -69,22 +69,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> Considérations concernant l'installation sur les ordinateurs 64 bits  
  Sur un ordinateur 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe une version 64 bits de l’utilitaire **dtexec** (dtexec.exe). Si vous devez exécuter certains packages en mode 32 bits, installez la version 32 bits de l’utilitaire **dtexec** . Pour installer la version 32 bits de l’utilitaire **dtexec** , vous devez sélectionner Outils clients ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pendant l’installation.  
   
- Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ Par défaut, un ordinateur 64 bits qui dispose à la fois des versions 64 bits et 32 bits d'une invite de commandes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] doit pouvoir exécuter la version 32 bits. La version 32 bits s'exécute car le chemin d'accès au répertoire de la version 32 bits apparaît dans la variable d'environnement PATH avant le chemin d'accès au répertoire de la version 64 bits. (En général, le chemin du répertoire 32 bits est *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, tandis que le chemin du répertoire 64 bits est *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **REMARQUE :** Si vous utilisez SQL Server Agent pour exécuter l'utilitaire, il utilise automatiquement la version 64 bits de ce dernier. SQL Server Agent utilise le Registre, et non la variable d'environnement PATH, pour localiser le fichier exécutable correct de l'utilitaire.  
   
  Pour vous assurer que vous exécutez la version 64 bits de l'utilitaire à l'invite de commandes, vous pouvez effectuer l'une des actions suivantes :  
   
--   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
+-   Ouvrez une fenêtre d’invite de commandes, indiquez le répertoire qui contient la version 64 bits de l’utilitaire ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn), puis exécutez celui-ci à partir de cet emplacement.  
   
--   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) de la version 64 bits de l’utilitaire.  
+-   À l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) de la version 64 bits de l’utilitaire.  
   
--   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits (*\<lecteur>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin 32 bits (*\<lecteur>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) dans la variable.  
+-   Modifiez de manière définitive l’ordre des chemins dans la variable d’environnement PATH en plaçant le chemin 64 bits ( *\<lecteur>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) avant le chemin 32 bits ( *\<lecteur>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) dans la variable.  
   
 ##  <a name="side"></a> Remarques concernant les ordinateurs dotés d'installations côte à côte  
  Lousque [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] est installé sur un oudinateur sur lequel [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] est installé, plusieurs versions de l'utilitaire **dtexec** sont installées.  
   
- Pour être certain d’exécuter la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet (*\<lecteur>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
+ Pour être certain d’exécuter la version appropriée de l’utilitaire, à l’invite de commandes, exécutez l’utilitaire en entrant le chemin complet ( *\<lecteur>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
 ##  <a name="phases"></a> Phases d'exécution  
  L'utilitaire s'exécute en quatre phases. Ces phases sont les suivantes :  
@@ -244,7 +244,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _code d’erreur_ : Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _code d’erreur_ : Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -256,7 +256,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError** : (Facultatif) Crée les fichiers de vidage du débogage, .mdmp et .tmp, lorsqu'une erreur se produit pendant l'exécution du package.  
   
-     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier, *\<lecteur>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     Par défaut, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stocke les fichiers de vidage du débogage dans le dossier, *\<lecteur>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **REMARQUE :** Les fichiers de vidage du débogage peuvent contenir des informations sensibles. Utilisez une liste de contrôle d'accès (ACL, Access Control List) pour restreindre l'accès aux fichiers ou copiez ces derniers dans un dossier avec accès restreint. Par exemple, nous vous recommandons de supprimer toutes les informations sensibles ou confidentielles avant d'envoyer vos fichiers de débogage aux services de support technique de Microsoft.  
   
@@ -273,7 +273,7 @@ dtexec /option [value] [/option [value]]...
      L’option **/Env[Reference]** s’utilise avec les options **/ISServer** et **/Server** .  
   
      Ce paramètre est utilisé par SQL Server Agent.  
-  --   **/F[ile]** _filespec_ : (Facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+  --    **/F[ile]** _filespec_ : (Facultatif). Charge un package qui est enregistré dans le système de fichiers. Les packages enregistrés dans le système de fichiers sont déployés à l'aide du modèle de déploiement de package hérité. Pour exécuter les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide du modèle de déploiement de projet, utilisez l’option **/ISServer** . Pour plus d'informations sur les modèles de déploiement de package et de projet, consultez [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
 
   L'argument *filespec* spécifie le chemin d'accès et le nom de fichier du package. Vous pouvez spécifier le chemin d'accès en tant que chemin UNC (Universal Naming Convention) ou chemin d'accès local. Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *filespec* contient un espace, vous devez placer l'argument *filespec* entre guillemets.  
   
@@ -367,7 +367,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Rem** _comment_ : (Facultatif). Inclut des commentaires sur l'invite de commandes ou dans des fichiers de commandes. Cet argument est facultatif. La valeur *comment* est une chaîne à mettre entre guillemets, ou qui ne contient aucun espace. Si aucun argument n'est spécifié, une ligne vide est insérée. Les valeurs*comment* sont rejetées pendant la phase source de la commande.  
   
--   **/Rep[orting]** _level_ [*;event_guid_or_name*[*;event_guid_or_name*[...]] : (Facultatif). Spécifie les types de message à produire. Les options de rapport disponibles pour *level* sont les suivantes :  
+-   **/Rep[orting]** _level_ [ *;event_guid_or_name*[ *;event_guid_or_name*[...]] : (Facultatif). Spécifie les types de message à produire. Les options de rapport disponibles pour *level* sont les suivantes :  
   
      **N** : pas de rapport.  
   
@@ -447,7 +447,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Va[lidate]**  : (Facultatif). Arrête l'exécution du package après la phase de validation, sans exécuter le package. Pendant la validation, l’utilisation de l’option **/WarnAsError** amène **dtexec** à traiter un avertissement comme une erreur. Par conséquent, le package échoue si un avertissement se produit pendant la validation.  
   
--   **/VerifyB[uild]** _major_[*;minor*[*;build*]] : (Facultatif). Vérifie le numéro de build d'un package par rapport aux numéros de build qui ont été spécifiés pendant la phase de vérification dans les arguments *major*, *minor*et *build* . En cas de non-concordance, le package ne s'exécute pas.  
+-   **/VerifyB[uild]** _major_[ *;minor*[ *;build*]] : (Facultatif). Vérifie le numéro de build d'un package par rapport aux numéros de build qui ont été spécifiés pendant la phase de vérification dans les arguments *major*, *minor*et *build* . En cas de non-concordance, le package ne s'exécute pas.  
   
      Les valeurs sont des entiers longs. L'argument peut prendre trois formes, avec une valeur toujours obligatoire pour *major* :  
   
