@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205105"
 ---
 # <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Dans la mesure où les éléments <`Customer`> n’ont pas de sous-éléments, si la même instruction SELECT s’exécute avec une valeur *flags* de **2**, pour indiquer qu’il s’agit d’un mappage centré sur l’élément, les valeurs de **CustomerID** et de **ContactName** pour les deux clients sont renvoyées comme NULL.  
   
- @xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)**.  
+ @xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)** .  
   
  Si, dans le document XML, les éléments <`CustomerID`> et <`ContactName`> sont des sous-éléments, le mappage centré sur l'élément extrait les valeurs.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Dans *SchemaDeclaration* (dans la clause WITH), le paramètre *ColPattern* est également spécifié avec les paramètres *ColName* et *ColType* . Le paramètre facultatif *ColPattern* correspond au modèle XPath spécifié pour définir les éléments suivants :  
   
--   Le modèle XPath (**.**) spécifié pour le paramètre *ColPattern* de la colonne **ProdID** de l’ensemble de lignes identifie le nœud de contexte (nœud actuel). Comme pour le paramètre *rowpattern* spécifié, il s’agit de l’attribut **ProductID** de l’élément <`OrderDetail`>.  
+-   Le modèle XPath ( **.** ) spécifié pour le paramètre *ColPattern* de la colonne **ProdID** de l’ensemble de lignes identifie le nœud de contexte (nœud actuel). Comme pour le paramètre *rowpattern* spécifié, il s’agit de l’attribut **ProductID** de l’élément <`OrderDetail`>.  
   
 -   Le paramètre *ColPattern* **../\@Quantity**, spécifié pour la colonne **Qty** de l’ensemble de lignes, identifie l’attribut **Quantity** du parent <`OrderDetail`>, nœud du nœud de contexte\<ProductID>.  
   
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Il s’agit plus précisément de transmettre une variable de type **xml** (\@x) à la fonction **sp_xml_preparedocument()**.  
+ Il s’agit plus précisément de transmettre une variable de type **xml** (\@x) à la fonction **sp_xml_preparedocument()** .  
   
  Voici le résultat obtenu :  
   
@@ -595,7 +595,7 @@ id  lname   xmlname                   OverFlow
   
  Notez les points suivants par rapport au résultat obtenu :  
   
--   Pour la colonne **lname** de type **varchar(30)**, la valeur est récupérée à partir de l’élément <`lname`> correspondant.  
+-   Pour la colonne **lname** de type **varchar(30)** , la valeur est récupérée à partir de l’élément <`lname`> correspondant.  
   
 -   Pour la colonne **xmlname** de type **xml**, le même élément name est renvoyé en tant que valeur.  
   

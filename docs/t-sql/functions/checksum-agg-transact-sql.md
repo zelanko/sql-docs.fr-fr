@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b744bf63f2b001c0f2529d6430d2ec335202abfe
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946525"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
@@ -53,7 +53,7 @@ Spécifie que `CHECKSUM_AGG` retourne la somme de contrôle de valeurs uniques.
 ## <a name="return-types"></a>Types de retour
 Renvoie la somme de contrôle de toutes les valeurs d’*expression* en tant que **int**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `CHECKSUM_AGG` peut détecter les modifications effectuées dans une table.
   
 L’ordre des lignes dans la table n’influe pas sur le résultat de `CHECKSUM_AGG`. En outre, les fonctions `CHECKSUM_AGG` permettent d’utiliser le mot clé `DISTINCT` et la clause `GROUP BY`.

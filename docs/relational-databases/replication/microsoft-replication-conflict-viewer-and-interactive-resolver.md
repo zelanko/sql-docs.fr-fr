@@ -15,25 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e02c3ba6176e6f35bbcc8ba59f6d5fb97a4adacb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051585"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Visionneuse des conflits de réplication de Microsoft et Résolveur interactif
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette section contient des informations sur la Visionneuse des conflits de réplication pour la réplication de fusion et la réplication transactionnelle, et sur le Résolveur interactif pour la réplication de fusion :  
   
--   [Outil de résolution des conflits de réplication Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
+-   [Visionneuse des conflits de réplication Microsoft &#40;réplication de fusion&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  
   
--   [Outil de résolution des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
+-   [Visionneuse des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](../../relational-databases/replication/microsoft-replication-conflict-viewer-transactional-replication.md)  
   
 -   [Outil de résolution des conflits de réplication Microsoft interactif](../../relational-databases/replication/microsoft-replication-interactive-conflict-resolver.md)  
   
 -   [Définir les filtres](../../relational-databases/replication/define-filters.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

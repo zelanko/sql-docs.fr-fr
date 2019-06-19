@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042961"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
 
@@ -111,7 +111,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Cliquez sur Exécuter (**!**) pour exécuter la requête.  
+7.  Cliquez sur Exécuter ( **!** ) pour exécuter la requête.  
   
     Les résultats de la requête sont les données qui peuvent être affichées dans votre rapport.  
   
@@ -179,7 +179,7 @@ Créez ce tableau dans lequel vous pourrez placer les liens hypertexte et le tex
   
 1.  Sous l’onglet **Insertion** > **Table** > **Assistant Tableau**.  
   
-2.  Dans la page **Choisir un dataset** de l’Assistant Nouveau tableau ou nouvelle matrice, cliquez sur **Choisir un dataset existant dans ce rapport ou un dataset partagé** > **TextDataset (dans ce rapport)** > **Suivant**.  
+2.  Dans la page **Choisir un dataset** de l’Assistant Nouveau tableau ou nouvelle matrice, cliquez sur **Choisir un dataset existant dans ce rapport ou un dataset partagé** > **TextDataset (dans ce rapport)**  > **Suivant**.  
   
 3.  Dans la page **Organiser les champs** , faites glisser les champs **Territory**, **LinkText**et **Product** vers **Groupes de lignes**, faites glisser le champ **Sales** vers **Valeurs**, puis cliquez sur **Suivant**.  
 
@@ -218,7 +218,7 @@ Dans cette section, vous allez ajouter un lien hypertexte au texte du tableau de
   
 3.  Sous l’onglet **Action** , cliquez sur **Atteindre l’URL**.  
   
-5.  Dans la zone **Sélectionner une URL** , cliquez sur **[URL]**, puis sur **OK**.  
+5.  Dans la zone **Sélectionner une URL** , cliquez sur **[URL]** , puis sur **OK**.  
   
 6.  Notez que le texte n'est en aucune manière différent. Vous devez lui donner l'apparence de texte de lien.  
   
@@ -254,7 +254,7 @@ Dans cette section, vous allez faire pivoter une partie du texte du tableau des 
    
 6.  Sous l’onglet **Accueil** > section **Paragraphe**, sélectionnez **Milieu** et **Centre** pour centrer verticalement et horizontalement le texte dans la cellule.  
   
-8.  Cliquez sur Exécuter (**!**).  
+8.  Cliquez sur Exécuter ( **!** ).  
   
 Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas en haut des cellules.  
 
@@ -268,13 +268,13 @@ Le texte de la cellule `[Territory]` s'exécute maintenant verticalement de bas 
   
 3.  Sous l’onglet **Accueil** > groupe **Nombre** > bouton **Devise**.  
   
-4.  (Facultatif)     Si votre paramètre régional est Anglais (États-Unis), l’exemple de texte par défaut est [**$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+4.  (Facultatif)     Si votre paramètre régional est Anglais (États-Unis), l’exemple de texte par défaut est [ **$12,345.00**]. Si vous ne voyez pas s’afficher d’exemple de valeur monétaire, dans le groupe **Nombres** , cliquez sur **Styles des espaces réservés** > **Valeurs d’aperçu**.  
 
     ![report-builder-placeholder-value-button](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Facultatif) Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Réduire les décimales** à deux reprises, pour afficher les valeurs en dollars sans indication de centimes.  
   
-6.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
+6.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
   
 Le rapport affiche maintenant les données mises en forme et est plus facile à lire.  
 
@@ -316,7 +316,7 @@ Le rapport affiche maintenant les données mises en forme et est plus facile à 
   
 7.  Cliquez sur **OK**.  
   
-8.  Cliquez sur Exécuter (**!**) pour afficher un aperçu du rapport.  
+8.  Cliquez sur Exécuter ( **!** ) pour afficher un aperçu du rapport.  
   
 Le texte de la zone de texte est affiché sous forme de titre, paragraphe et liste à puce.  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80445ce66d9b6333e5fd8f6856af251eda2ac5ca
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727254"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>Ajouter ou supprimer un composant dans un flux de données
@@ -56,7 +56,7 @@ ms.locfileid: "65727254"
   
 6.  Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connecter des composants dans un flux de données](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
  [Débogage d’un flux de données](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  

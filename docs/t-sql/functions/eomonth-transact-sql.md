@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7fd4ca761d87df2a98a8c88ab0848ddff2e4faa
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948844"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
@@ -51,7 +51,7 @@ Si l’argument *month_to_add* a une valeur, `EOMONTH` ajoute le nombre spécifi
 ## <a name="return-type"></a>Type de retour  
  **date**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La fonction `EOMONTH` peut être exécutée à distance sur les serveurs [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Elle ne peut pas être exécutée à distance sur des serveurs dotés d’une version antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Exemples  

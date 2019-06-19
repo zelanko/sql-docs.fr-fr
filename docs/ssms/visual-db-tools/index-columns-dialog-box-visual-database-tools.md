@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 297be1b91be99ba77f5d0d85cb9bd43502b12554
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096838"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Boîte de dialogue Colonnes d'index (Visual Database Tools)
@@ -31,7 +31,7 @@ Choisissez les colonnes qui participent à cet index. Sélectionnez **<None>** p
 **Ordre de tri**  
 Sélectionnez un ordre de tri pour la colonne spécifiée. Les options disponibles sont **Croissant** ou **Décroissant**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)  
 [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md)  
 [Boîte de dialogue Index/Clés &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  

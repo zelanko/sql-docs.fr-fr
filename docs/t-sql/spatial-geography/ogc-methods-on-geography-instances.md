@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 2938e8d6c8bf0f3aebfbbadc0bbaa4f8ded57161
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935885"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>Méthodes OGC sur les instances geography
@@ -89,7 +89,7 @@ ms.locfileid: "65935885"
   
 -   [STUnion](../../t-sql/spatial-geography/stunion-geography-data-type.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Méthodes Geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  

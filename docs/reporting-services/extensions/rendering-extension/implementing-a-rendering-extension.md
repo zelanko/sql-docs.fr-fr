@@ -12,14 +12,14 @@ helpviewer_keywords:
 - extensions [Reporting Services], rendering
 - rendering extensions [Reporting Services], implementing
 ms.assetid: 4a5c64f5-2391-4597-ba3f-81d265b23703
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 56a8294775ccb51cd216c2cd72c955bd9379c004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a72144df0f560feb6da0b954cbd7053832d46c87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193704"
 ---
 # <a name="implementing-a-rendering-extension"></a>Implémentation d'une extension de rendu
   Une extension de rendu est un composant ou un module d'un serveur de rapports qui transforme les données de rapport et les informations de disposition dans un format spécifique au périphérique. SQL Server Reporting Services incluent six extensions de rendu : HTML, Excel, Word, CSV ou Texte, XML, Image et PDF. Vous pouvez créer des extensions de rendu supplémentaires pour créer des rapports dans d'autres formats.  
@@ -40,7 +40,7 @@ ms.locfileid: "47643747"
  [Suppression d'une extension de rendu](../../../reporting-services/extensions/rendering-extension/removing-a-rendering-extension.md)  
  Décrit comment supprimer une extension de rendu d'un serveur de rapports.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Bibliothèque d'extensions Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

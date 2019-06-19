@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3da927ec00fe6402a9c7612beae90453e30c4e26
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661365"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Ajouter et supprimer des articles de publications existantes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "53210398"
  L'ajout d'un article se déroule comme suit : ajout de l'article à la publication, création d'un nouvel instantané de la publication, synchronisation de l'abonnement pour appliquer le schéma et les données du nouvel article.  
   
 > [!NOTE]
->  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) et [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
+>  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) et [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article** . Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
 1.  Ajoutez un ou plusieurs articles à l'aide de l'une des méthodes suivantes :  
   
@@ -86,7 +86,7 @@ ms.locfileid: "53210398"
  > **[!INCLUDE[ssSQL15](../../../includes/sssql14-md.md)] Service Pack 2** ou version ultérieure et **[!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] Service Pack 1** ou version ultérieure prennent en charge la suppression d’une table à l’aide de la commande DLL **DROP TABLE** pour les articles participant à une réplication transactionnelle. Si une DLL TABLE DROP est prise en charge par les publications, l’opération DROP TABLE supprime la table de la publication et de la base de données. L’Agent de lecture du journal publiera une commande de nettoyage pour la base de données de distribution de la table supprimée et effectuera le nettoyage des métadonnées du serveur de publication. Si l’Agent de lecture du journal n’a pas traité tous les enregistrements de journal qui font référence à la table supprimée, il ignore alors les nouvelles commandes qui sont associés à la table supprimée. Les enregistrements déjà traités seront remis à la base de données de distribution. Ils peuvent être appliqués sur la base de données de l’abonné si l’Agent de distribution les traite avant que l’agent de lecture du journal ne nettoie les articles obsolètes (supprimées) . **Par défaut**, les publications de réplication transactionnelle ne prennent pas en charge la DLL TABLE DROP. Pour plus d’informations sur cette amélioration, consultez l’article [3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1) de la Base de connaissances.
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Réinitialiser des abonnements](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Modifier le schéma dans les bases de données de publication](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  

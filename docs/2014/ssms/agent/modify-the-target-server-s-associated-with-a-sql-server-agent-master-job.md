@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62654066"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modifier les serveurs cibles associés à un travail maître SQL Server Agent
@@ -56,7 +56,7 @@ ms.locfileid: "62654066"
   
 4.  Cliquez avec le bouton droit sur le travail dans lequel vous voulez modifier le serveur cible, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Cibles**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : Nouveau travail &#40;cible Page&#41;](job-properties-new-job-targets-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Cibles**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : Nouveau travail &#40;cible Page&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

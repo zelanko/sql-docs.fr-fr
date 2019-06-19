@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5fc2a41f4f1cb24e6b8bc467d886138f7d95c12
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982166"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
@@ -54,12 +54,12 @@ IF Boolean_expression
   
  Pour définir un bloc d'instructions, utilisez les mots clés de contrôle de flux BEGIN et END.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une construction IF...ELSE peut être utilisée dans des traitements d'instructions, des procédures stockées et des requêtes ad hoc. Lorsque cette construction est utilisée dans une procédure stockée, elle est souvent utilisée pour rechercher la présence de certains paramètres.  
   
  Les tests de la condition IF peuvent être imbriqués après une autre condition IF ou après une condition ELSE. La limite concernant le nombre de niveaux imbriqués dépend de la mémoire disponible.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
@@ -92,7 +92,7 @@ ELSE
     FROM DimProduct WHERE ProductKey = @productKey);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

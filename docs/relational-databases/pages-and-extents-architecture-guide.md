@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974368"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027016"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ Les structures de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise deux types de tables d’allocation pour enregistrer l’allocation des extensions : 
 
-- **Pages GAM (Global Allocation Map)**   
+- **Pages GAM (Global Allocation Map)**    
   Les pages GAM enregistrent les extensions qui ont été allouées. Chaque page GAM couvre 64 000 extensions, soit près de 4 gigaoctets (Go) de données. La page GAM compte un bit pour chaque extension dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est libre. En revanche, si sa valeur est 0, l'extension est allouée. 
 
-- **Pages SGAM (Shared Global Allocation Map)**   
+- **Pages SGAM (Shared Global Allocation Map)**    
   Les pages SGAM enregistrent les extensions actuellement utilisées comme extensions mixtes et possédant au moins une page inutilisée. Chaque page SGAM couvre 64 000 étendues, soit près de 4 Go de données. La page SGAM compte un bit pour chaque extension dans l'intervalle couvert. Si la valeur du bit est 1, l'extension est utilisée comme extension mixte et possède une page libre. Si la valeur du bit est 0, l'extension n'est pas utilisée comme extension mixte ou correspond à une extension mixte dont toutes les pages sont utilisées. 
 
 Chaque extension possède les schémas de bits suivants dans les tables GAM et SGAM, en fonction de son utilisation actuelle. 
@@ -177,17 +177,17 @@ Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] n’alloue une nou
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise deux structures de données internes pour suivre les extensions modifiées par les opérations de copie en bloc et les extensions modifiées depuis la dernière sauvegarde complète. Ces structures de données accélèrent considérablement les sauvegardes différentielles. Elles accélèrent également l'enregistrement des opérations de copie en bloc dans le journal lorsqu'une base de données utilise le mode de récupération utilisant les journaux de transactions. À l'instar des pages GAM (Global Allocation Map) et SGAM (Shared Global Allocation Map), ces structures sont des bitmaps où chaque bit représente une extension unique. 
 
-- **DCM (Differential Changed Map)**   
+- **DCM (Differential Changed Map)**    
    Ces pages suivent les extensions qui ont été modifiées depuis la dernière instruction `BACKUP DATABASE`. Si le bit d’une extension est à 1, l’extension a été modifiée depuis la dernière instruction `BACKUP DATABASE`. Si le bit est à 0, l'extension n'a pas été modifiée. Les sauvegardes différentielles lisent uniquement les pages DCM pour déterminer les extensions qui ont été modifiées. Cela réduit considérablement le nombre de pages qu'une sauvegarde différentielle doit analyser. La durée d'exécution d'une sauvegarde différentielle est proportionnelle au nombre d'extensions modifiées depuis la dernière instruction BACKUP DATABASE, et non à la taille globale de la base de données. 
 
-- **BCM (Bulk Changed Map)**   
+- **BCM (Bulk Changed Map)**    
    Ces pages suivent les extensions qui ont été modifiées par des opérations journalisées en bloc depuis la dernière instruction `BACKUP LOG`. Si le bit d’une extension est à 1, l’extension a été modifiée par une opération journalisée en bloc après la dernière instruction `BACKUP LOG`. Si le bit est à 0, l'extension n'a pas été modifiée par les opérations journalisées en bloc. Bien que les pages BCM existent dans toutes les bases de données, elles sont uniquement significatives lorsque la base de données emploie le mode de récupération utilisant les journaux de transactions. Dans ce mode de récupération, quand une procédure `BACKUP LOG` est effectuée, le processus de sauvegarde analyse les pages BCM pour identifier les extensions qui ont été modifiées. Il inclut ensuite ces extensions dans la sauvegarde du journal. Ceci permet de récupérer les opérations journalisées en bloc si la base de données est restaurée à partir d'une sauvegarde de la base de données et d'une séquence de sauvegardes de journaux de transactions. Les pages BCM ne sont pas significatives dans une base de données qui utilise le mode de récupération simple, car aucune opération journalisée en bloc n'est enregistrée dans le journal. Elles ne sont pas significatives dans une base de données utilisant le mode de récupération complet puisque ce dernier traite les opérations journalisées en bloc comme des opérations entièrement enregistrées dans le journal. 
 
 L'intervalle entre les pages DCM et les pages BCM est le même que l'intervalle entre les pages GAM et SGAM : 64 000 extensions. Les pages DCM et BCM sont situées juste derrière les pages GAM et SGAM dans un fichier physique :
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
 [Lecture de pages](../relational-databases/reading-pages.md)   

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715876"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Écrire des événements d'audit SQL Server dans le journal de sécurité  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../..
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
- Les administrateurs de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent savoir que les paramètres locaux du journal de sécurité peuvent être remplacés par une stratégie de domaine. Dans ce cas, la stratégie de domaine peut remplacer le paramètre de sous-catégorie (**auditpol /get /subcategory:"généré par application"**). Cela peut affecter la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à consigner des événements sans avoir aucun moyen de détecter que les événements que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essaie d'auditer ne vont pas être consignés.  
+ Les administrateurs de l'ordinateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent savoir que les paramètres locaux du journal de sécurité peuvent être remplacés par une stratégie de domaine. Dans ce cas, la stratégie de domaine peut remplacer le paramètre de sous-catégorie (**auditpol /get /subcategory:"généré par application"** ). Cela peut affecter la capacité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à consigner des événements sans avoir aucun moyen de détecter que les événements que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] essaie d'auditer ne vont pas être consignés.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez être un administrateur Windows pour configurer ces paramètres.  
   
 ##  <a name="auditpolAccess"></a> Pour configurer le paramètre Auditer l'accès aux objets dans Windows à l'aide de l'outil auditpol  
@@ -104,7 +104,7 @@ La stratégie d'audit Windows peut affecter l'audit [!INCLUDE[ssNoVersion](../..
   
 7.  Fermez l'outil Stratégie de sécurité locale.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Audit &#40Moteur de base de données&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

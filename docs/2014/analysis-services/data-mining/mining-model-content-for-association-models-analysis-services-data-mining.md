@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083689"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles d'association (Analysis Services - Exploration de données)
@@ -60,7 +60,7 @@ ms.locfileid: "66083689"
  NODE_TYPE  
  Un modèle d'association génère uniquement en sortie les types de nœuds suivants :  
   
-|ID du type de nœud|Type|  
+|ID du type de nœud|type|  
 |------------------|----------|  
 |1 (Modèle)|Nœud racine ou parent.|  
 |7 (Jeu d'éléments)|Jeu d'éléments ou collection de paires attribut/valeur. Exemples :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou Gestionnaire de configuration<br /><br /> `Gender = Male`.|  

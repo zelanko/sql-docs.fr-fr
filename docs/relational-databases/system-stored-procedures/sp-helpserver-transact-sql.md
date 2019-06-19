@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635886"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>Arguments  
 `[ @server = ] 'server'` Est le serveur sur lequel les informations sont signalées. Lorsque *server* n’est pas spécifié, des rapports sur tous les serveurs de **master.sys.servers**. *serveur* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @optname = ] 'option'` Est l’option qui décrit le serveur. *option* est **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
+`[ @optname = ] 'option'` Est l’option qui décrit le serveur. *option* est **varchar (** 35 **)** , avec NULL comme valeur par défaut et doit être une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
-`[ @show_topology = ] 'show_topology'` Est la relation entre le serveur spécifié à d’autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou est NULL, **sp_helpserver** renvoie les colonnes figurant dans la section jeux de résultats. Si *afficher_la_topologie* est égal à **t**, outre les colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **topy** plus d’informations.  
+`[ @show_topology = ] 'show_topology'` Est la relation entre le serveur spécifié à d’autres serveurs. *afficher_la_topologie* est **varchar (** 1 **)** , avec NULL comme valeur par défaut. Si *afficher_la_topologie* n’est pas égal à **t** ou est NULL, **sp_helpserver** renvoie les colonnes figurant dans la section jeux de résultats. Si *afficher_la_topologie* est égal à **t**, outre les colonnes répertoriées dans les jeux de résultats, **sp_helpserver** retourne également **topy** et **topy** plus d’informations.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec).  

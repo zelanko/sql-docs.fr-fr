@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946891"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
@@ -56,7 +56,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne le résultat de l'expression, traduit en type de données demandé, ou NULL si la conversion échoue.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez TRY_PARSE uniquement pour effectuer une conversion d'une chaîne en un type date/heure ou numérique. Pour les conversions de type général, continuez à utiliser CAST ou CONVERT. N'oubliez pas qu'il existe une certaine surcharge des performances lors de l'analyse de la valeur de chaîne.  
   
  TRY_PARSE repose sur la présence du CLR (Common Langage Runtime) .NET Framework.  
@@ -183,7 +183,7 @@ False
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)   
  [Fonctions de conversion &#40;Transact-SQL&#41;](../../t-sql/functions/conversion-functions-transact-sql.md)   
  [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   

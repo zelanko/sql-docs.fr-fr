@@ -25,11 +25,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051691"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  Indique le nom du rôle d'application. Ce nom ne doit pas être déjà utilisé pour référencer un principal dans la base de données.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Spécifie le mot de passe que les utilisateurs de base de données doivent utiliser pour activer le rôle d'application. Vous devez toujours utiliser des mots de passe forts. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA **=**_schéma\_nom_  
+ DEFAULT_SCHEMA **=** _schéma\_nom_  
  Indique le premier schéma dans lequel le serveur doit effectuer des recherches lorsqu'il résout les noms des objets pour ce rôle. Si DEFAULT_SCHEMA n'est pas défini, le rôle d'application utilise DBO comme schéma par défaut. *schema_name* peut être un schéma qui n’existe pas dans la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  La complexité des mots de passe est vérifiée lors de la définition des mots de passe des rôles d'application. Les applications qui appellent des rôles d'application doivent stocker leurs mots de passe. Les mots de passe des rôles d'application doivent toujours être stockés sous forme chiffrée.  
@@ -68,7 +68,7 @@ CREATE APPLICATION ROLE application_role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -81,7 +81,7 @@ CREATE APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles d’application](../../relational-databases/security/authentication-access/application-roles.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   

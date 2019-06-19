@@ -12,17 +12,17 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794882"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Installer SQL Server à l’aide de SysPrep
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d'informations, consultez [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d'informations, consultez [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 Vous pouvez également préparer et finaliser une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de l'invite de commandes ou d'un fichier de configuration. Pour plus d'informations, consultez :  
   
@@ -88,13 +88,13 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 3. L'Outil d'analyse de configuration système effectue une opération de découverte sur votre ordinateur. Pour continuer, cliquez sur **OK**. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
-4. Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** . 
+4. Dans la page Mises à jour du produit, les dernières mises à jour disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'affichent. Si vous ne souhaitez pas inclure les mises à jour, décochez la case **Inclure les mises à jour du produit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si aucune mise à jour du produit n'est découverte, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'affiche pas cette page et passe automatiquement à la page **Installer les fichiers d'installation** . 
   
 5. Sur la page Installer les fichiers d'installation, le programme d'installation fournit la progression du téléchargement, de l'extraction et de l'installation des fichiers d'installation. Si une mise à jour de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est trouvée, et est spécifiée pour être incluse, cette mise à jour est également installée. 
   
 6. L'outil d'analyse de configuration système vérifie l'état système de votre ordinateur avant que le programme d'installation ne se poursuive. Vous pouvez afficher les détails à l'écran en cliquant sur **Afficher les détails**ou sous la forme d'un rapport HTML en cliquant sur **Afficher le rapport détaillé**. 
   
-7. Dans la page **Préparer le type d’image**, sélectionnez **Préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. 
+7. Dans la page **Préparer le type d’image**, sélectionnez **Préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
      La page **Préparer le type d’image** est affichée uniquement quand vous avez une instance existante, préparée et non configurée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur. Vous pouvez choisir de préparer une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'ajouter des fonctionnalités prises en charge par sys prep à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l'ordinateur. Pour plus d'informations sur l'ajout de fonctionnalités à une instance préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consultez [Ajouter des fonctionnalités à une instance préparée](#AddFeatures). 
   
@@ -232,7 +232,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 4. Sur la page Fichiers de support du programme d'installation, cliquez sur **Installer** pour installer les fichiers de support du programme d'installation. 
   
-5. Dans la page **Préparer le type d’image**, sélectionnez l’option **Ajouter des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Sélectionnez l'instance préparée spécifique à laquelle vous souhaitez ajouter des fonctionnalités dans la zone de liste déroulante d'instances préparées disponibles. 
+5. Dans la page **Préparer le type d’image**, sélectionnez l’option **Ajouter des fonctionnalités à une instance préparée existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Sélectionnez l'instance préparée spécifique à laquelle vous souhaitez ajouter des fonctionnalités dans la zone de liste déroulante d'instances préparées disponibles. 
   
 6. Dans la page **Sélection de composant** , spécifiez les fonctionnalités que vous souhaitez ajouter à l'instance préparée spécifiée. 
   
@@ -305,7 +305,7 @@ Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../inc
   
 - [Désinstaller une instance existante de SQL Server &#40;programme d’installation&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Qu'est-ce que Sysprep ?](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Fonctionnement de Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
   

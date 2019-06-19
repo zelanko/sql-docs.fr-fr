@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62659992"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de point de terminaison (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être accordée sur un point de terminaison. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- ON ENDPOINT **::**_endpoint_name_  
- Spécifie le point de terminaison sur lequel l'autorisation est accordée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ ON ENDPOINT **::** _endpoint_name_  
+ Spécifie le point de terminaison sur lequel l'autorisation est accordée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  { FROM | TO } \<server_principal> spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de laquelle l’autorisation est révoquée.  
   
@@ -84,7 +84,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit de révoquer l'autorisation.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les autorisations dans l’étendue du serveur peuvent être révoquées seulement quand la base de données active est **master**.  
   
  Des informations sur les points de terminaison sont consultables dans la vue de catalogue [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Des informations sur les autorisations de serveur sont consultables dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), et des informations sur les principaux de serveur sont consultables dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -99,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le point de terminaison ou l'autorisation ALTER ANY ENDPOINT sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -113,7 +113,7 @@ REVOKE VIEW DEFINITION ON ENDPOINT::Mirror7 FROM ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>b. Révocation d'une autorisation TAKE OWNERSHIP avec l'option CASCADE  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Révocation d'une autorisation TAKE OWNERSHIP avec l'option CASCADE  
  Dans l’exemple ci-dessous, l’autorisation `TAKE OWNERSHIP` sur le point de terminaison `Shipping83` est révoquée pour l’utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `PKomosinski` et pour tous les principaux auxquels `PKomosinski` a accordé l’autorisation `TAKE OWNERSHIP` sur `Shipping83`.  
   
 ```  
@@ -123,7 +123,7 @@ REVOKE TAKE OWNERSHIP ON ENDPOINT::Shipping83 FROM PKomosinski
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Autorisations GRANT sur point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [DENY - Refuser des autorisations sur un point de terminaison &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   

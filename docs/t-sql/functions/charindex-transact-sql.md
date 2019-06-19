@@ -23,10 +23,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: adfc98d7502f41b2408117ff0482e208d27834a8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947075"
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
@@ -55,7 +55,7 @@ Expression de type **integer** ou **bigint** à laquelle la recherche commence. 
 ## <a name="return-types"></a>Types de retour
 **bigint** si *expressionToSearch* a un type de données **nvarchar(max)** , **varbinary(max)** ou **varchar(max)** ; sinon, **int**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si l’expression *expressionToFind* ou *expressionToSearch* a un type de données Unicode (**nchar** ou **nvarchar**) et que ce n’est pas le cas de l’autre expression, la fonction CHARINDEX convertit cette autre expression en un type de données Unicode. Vous ne pouvez pas utiliser CHARINDEX avec les types de données **text**, **ntext** ou **image**.
   
 Si l’expression *expressionToFind* ou *expressionToSearch* a une valeur NULL, CHARINDEX retourne NULL.

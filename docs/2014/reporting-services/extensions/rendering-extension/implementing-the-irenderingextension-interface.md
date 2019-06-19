@@ -14,13 +14,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62987148"
 ---
-# <a name="implementing-the-irenderingextension-interface"></a>Implémentation de l'interface IRenderingExtension 
+# <a name="implementing-the-irenderingextension-interface"></a>Implémentation de l'interface IRenderingExtension
   L'extension de rendu prend les résultats d'une définition de rapport qui est combinée aux données réelles et restitue les données résultantes dans un format utilisable. La transformation de la combinaison des données et de la mise en forme s'effectue par le biais d'une classe CLR (Common Language Runtime) qui implémente <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Cela transforme le modèle objet en un format de sortie qui est consommable par une visionneuse, une imprimante ou une autre cible de sortie.  
   
  <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> a trois méthodes qui doivent être codées :  
@@ -72,7 +72,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
  La méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.RenderStream%2A> restitue un flux particulier à partir du rapport. Tous les flux sont créés pendant l'appel <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.Render%2A> initial, mais les flux ne sont pas renvoyés initialement au client. Cette méthode est utilisée pour des flux secondaires (par exemple, des images dans le rendu HTML) ou des pages supplémentaires d'une extension de rendu multi-page (par exemple, Image/EMF).  
   
 ## <a name="getrenderingresource-method"></a>Méthode GetRenderingResource  
- La méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> extrait les informations sans exécuter un rendu entier du rapport. Il arrive que le rapport requière des informations qui ne nécessitent pas le rendu du rapport lui-même. Par exemple, si vous avez besoin de l’icône associée à l’extension de rendu, utilisez le paramètre *deviceInfo* qui contient la balise unique **\<Icon>**. Utilisez, dans ce cas, la méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
+ La méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> extrait les informations sans exécuter un rendu entier du rapport. Il arrive que le rapport requière des informations qui ne nécessitent pas le rendu du rapport lui-même. Par exemple, si vous avez besoin de l’icône associée à l’extension de rendu, utilisez le paramètre *deviceInfo* qui contient la balise unique **\<Icon>** . Utilisez, dans ce cas, la méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Implémentation d’une extension de rendu](implementing-a-rendering-extension.md)   

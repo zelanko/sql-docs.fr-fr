@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf6238ae842b07309e8404e4a12537c9245f56f9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62635876"
 ---
 # <a name="example-querying-xmltype-columns"></a>Exemple : interrogation de colonnes de type XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La requête ci-dessous inclut des colonnes de type **xml** . Elle extrait l’ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type **xml** .  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 USE AdventureWorks2012;  
@@ -115,7 +115,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

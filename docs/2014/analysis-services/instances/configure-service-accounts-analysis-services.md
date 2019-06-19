@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080187"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurer les comptes de service (Analysis Services)
@@ -38,7 +38,7 @@ ms.locfileid: "66080187"
 ## <a name="logon-account-recommendations"></a>Recommandations relatives aux comptes d'ouverture de session  
  Dans un cluster de basculement, toutes les instances d'Analysis Services doivent être configurées pour utiliser un compte d'utilisateur de domaine Windows. Veuillez assigner le même compte à toutes les instances. Pour plus d'informations, consultez [Procédure de mise en cluster d'Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx) .  
   
- Les instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$**_nom-instance_ pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
+ Les instances autonomes doivent utiliser le compte virtuel par défaut, **NT Service\MSSQLServerOLAPService** pour l’instance par défaut, ou **NT Service\MSOLAP$** _nom-instance_ pour une instance nommée. Cette recommandation s'applique aux instances d'Analysis Services dans tous les modes de serveur, en partant du principe que la version du système d'exploitation est Windows Server 2008 R2 et versions ultérieures, et que celle d'Analysis Services est SQL Server 2012 et versions ultérieures.  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Octroi d'autorisations à Analysis Services  
  Cette section présente les autorisations requises par Analysis Services pour les opérations locales et internes telles que le démarrage d'un exécutable, la lecture d'un fichier de configuration et le chargement de bases de données à partir du répertoire des données. Si vous recherchez plutôt des conseils sur la configuration des autorisations pour l'accès aux données externes et l'interopérabilité avec d'autres services et applications, consultez [Octroi d'autorisations supplémentaires pour des opérations de serveur spécifiques](#bkmk_tasks) plus loin dans cette rubrique.  

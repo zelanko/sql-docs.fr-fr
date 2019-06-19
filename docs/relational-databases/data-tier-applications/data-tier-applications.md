@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999691"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "53591473"
   
  Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : SQL Server Management Studio, le portail Azure et l’API DACFx.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **CREATE DATABASE** pour pouvoir créer une base de données, notamment en déployant un package DAC. Vous devez être membre du rôle **dbmanager** ou disposer d'autorisations **DROP DATABASE** pour pouvoir supprimer une base de données.  
   
 ## <a name="data-tier-application-tasks"></a>Tâches de l'application de la couche Données  

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 19c9caf543f7db84cbf71f76832176118d262f60
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65944172"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
@@ -51,7 +51,7 @@ NEWSEQUENTIALID ( )
 ## <a name="return-type"></a>Type de retour  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  NEWSEQUENTIALID() peut être utilisé uniquement avec des contraintes DEFAULT sur des colonnes de table de type **uniqueidentifier**. Par exemple :  
   
 ```  
@@ -72,7 +72,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  Chaque GUID généré à l'aide de NEWSEQUENTIALID est unique sur cet ordinateur. Les GUID générés à l'aide de la fonction NEWSEQUENTIALID sont uniques sur plusieurs ordinateurs seulement si l'ordinateur source possède une carte réseau.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   

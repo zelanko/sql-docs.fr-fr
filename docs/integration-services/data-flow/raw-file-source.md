@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0420f900a12ee100a8558cacec3c904d7450da68
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726520"
 ---
 # <a name="raw-file-source"></a>source de fichier brut
@@ -64,7 +64,7 @@ ms.locfileid: "65726520"
   La source de fichier brut lit des données brutes dans un fichier. La représentation des données étant native pour la source, celles-ci ne nécessitent aucune traduction et pratiquement aucune analyse.   
 ## <a name="raw-file-source-editor-columns-page"></a>Éditeur de source de fichier brut (page Colonnes)
   La source de fichier brut lit des données brutes dans un fichier. La représentation des données étant native pour la source, celles-ci ne nécessitent aucune traduction et pratiquement aucune analyse.   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Destination de fichier brut](../../integration-services/data-flow/raw-file-destination.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
   

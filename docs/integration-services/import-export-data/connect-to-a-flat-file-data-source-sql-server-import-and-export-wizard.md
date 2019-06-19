@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1c2789d8d10928bcbe576fc57f630675fdbd405
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723901"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
@@ -208,7 +208,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
 |Propriété|Description|  
 |--------------|-----------------|  
 |**Name**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
-|**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}**. Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}**. Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}**. Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}**. Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}**. Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}**. Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}**. Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}**. Les colonnes sont séparées par une barre verticale.|
+|**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** . Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}** . Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}** . Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}** . Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}** . Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}** . Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}** . Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}** . Les colonnes sont séparées par une barre verticale.|
 |**ColumnType**|Indique si la colonne est délimitée, si elle a une largeur fixe ou si elle présente un format en drapeau à droite. Cette propriété est en lecture seule. Les fichiers en drapeau à droite sont des fichiers dans lesquels chaque colonne a une largeur fixe, à l'exception de la dernière colonne. Un séparateur de lignes s'applique.|  
 |**InputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne à conserver en nombre d’octets. Pour les fichiers Unicode, cette valeur est un nombre de caractères. Cette valeur est ignorée dans le cas des colonnes délimitées.<br /><br /> **Remarque** : Dans le modèle objet, le nom de cette propriété est ColumnWidth.|
 |**DataPrecision**|Spécifiez la précision des données numériques. La précision indique le nombre total de chiffres.|

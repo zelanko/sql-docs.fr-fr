@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726468"
 ---
 # <a name="resolve-column-reference-editor"></a>Éditeur de restauration de références de colonnes
@@ -34,16 +34,16 @@ ms.locfileid: "65726468"
  Une fois toutes les références de colonnes résolues, s'il n'y a pas d'autres erreurs de chemin d'accès aux données, aucune icône d'erreur ne s'affiche en regard des chemins d'accès aux données.  
   
 ## <a name="options"></a>Options  
- **Colonnes de sortie non mappées (source)**    
+ **Colonnes de sortie non mappées (source)**     
  Colonnes du chemin d'accès en amont qui ne sont pas mappées  
   
-**Colonnes mappées (source)**    
+**Colonnes mappées (source)**     
  Colonnes du chemin d'accès en amont qui sont mappées à des colonnes du chemin d'accès en aval  
   
-**Colonnes mappées (destination)**    
+**Colonnes mappées (destination)**     
  Colonnes du chemin d'accès en amont qui sont mappées à des colonnes du chemin d'accès en aval  
   
-**Colonnes d’entrée non mappées (destination)**    
+**Colonnes d’entrée non mappées (destination)**     
  Colonnes du chemin d'accès en aval qui ne sont pas mappées  
   
 **Supprimer les colonnes d'entrée non mappées**  

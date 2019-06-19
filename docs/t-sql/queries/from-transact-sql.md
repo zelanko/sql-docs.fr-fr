@@ -36,10 +36,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462689"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)
@@ -365,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  Colonne de valeur de l'opérateur PIVOT. Quand UNPIVOT est utilisé, *value_column* ne peut pas avoir le même nom qu’une colonne existante dans la source d’entrée *table_source*.  
   
  FOR *pivot_column*  
- Colonne de tableau croisé dynamique de l'opérateur PIVOT. *pivot_column* doit être d’un type de données implicitement ou explicitement convertible en **nvarchar()**. Cette colonne ne peut pas être de type **image** ou **rowversion**.  
+ Colonne de tableau croisé dynamique de l'opérateur PIVOT. *pivot_column* doit être d’un type de données implicitement ou explicitement convertible en **nvarchar()** . Cette colonne ne peut pas être de type **image** ou **rowversion**.  
   
  Quand UNPIVOT est utilisé, *pivot_column* correspond au nom de la colonne de sortie qui est réduite à partir de *table_source*. *table_source* ne peut pas contenir de colonne portant ce nom.  
   
@@ -385,7 +385,7 @@ ON (p.ProductID = v.ProductID);
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés pour retourner les valeurs de la ligne qui était valide au moment spécifié par le paramètre *\<date_time>*. La valeur d’une ligne est considérée comme valide si *system_start_time_column_name* a une valeur inférieure ou égale à celle du paramètre *\<date_time>* et si *system_end_time_column_name* a une valeur supérieure à celle du paramètre *\<date_time>*.   
+ Renvoie une table avec un seul enregistrement par ligne contenant les valeurs qui étaient réelles (actuelles) au moment dans le passé spécifié. En interne, une union est effectuée entre la table temporelle et sa table d’historique. Les résultats sont filtrés pour retourner les valeurs de la ligne qui était valide au moment spécifié par le paramètre *\<date_time>* . La valeur d’une ligne est considérée comme valide si *system_start_time_column_name* a une valeur inférieure ou égale à celle du paramètre *\<date_time>* et si *system_end_time_column_name* a une valeur supérieure à celle du paramètre *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
@@ -410,7 +410,7 @@ ON (p.ProductID = v.ProductID);
  ALL  
  Retourne une table contenant les valeurs de toutes les lignes de la table actuelle et la table d’historique.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clause FROM prend en charge la syntaxe SQL-92 pour les tables jointes et les tables dérivées. La syntaxe SQL-92 fournit les opérateurs de jointure INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER et CROSS.  
   
  UNION et JOIN à l'intérieur d'une clause FROM sont pris en charge aussi bien dans les vues que dans les tables dérivées et les sous-requêtes.  
@@ -891,7 +891,7 @@ SELECT *
 FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

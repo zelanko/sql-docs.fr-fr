@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 0e9ac1c3e0ff2298acf3b155d5b99189a80e30f5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62719396"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,14 +53,14 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 > [!WARNING]
 >  La valeur de clé SAP peut commencer par un point d’interrogation (« ? »). Quand vous utilisez la clé SAP, vous devez supprimer le caractère « ? » initial. Sinon, vos efforts risquent d’être vains.    
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand des informations d’identification délimitées à la base de données sont modifiées, les valeurs *identity_name* et *secret* sont réinitialisées. Si l'argument facultatif SECRET n'est pas spécifié, sa valeur stockée est NULL.  
   
  Le secret est chiffré au moyen de la clé principale du service. Si cette clé est regénérée, le secret est à nouveau chiffré à l'aide de la nouvelle clé principale du service.  
   
  Des détails sur les informations d’identification délimitées à la base de données sont consultables dans la vue de catalogue [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exige l’autorisation `ALTER` sur les informations d’identification.  
   
 ## <a name="examples"></a>Exemples  
@@ -74,7 +74,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>b. Suppression du mot de passe d'une information d'identification  
+### <a name="b-removing-the-password-from-a-credential"></a>B. Suppression du mot de passe d'une information d'identification  
  Le code exemple suivant supprime le mot de passe des informations d’identification délimitées à la base de données nommées `Frames`. Les informations d’identification délimitées à la base de données contiennent la connexion Windows `Aboulrus8` et un mot de passe. Après l’exécution de l’instruction, le mot de passe des informations d’identification délimitées à la base de données a la valeur NULL car l’option SECRET n’est pas spécifiée.  
   
 ```  
@@ -82,7 +82,7 @@ ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
  [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   

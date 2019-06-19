@@ -16,10 +16,10 @@ ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 869967e3f8797aa9af4bf59f128730a9fc39641d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570822"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>Méthode ConfigurationSetting - BackupEncryptionKey
@@ -61,7 +61,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ## <a name="requirements"></a>Spécifications  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Membres MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

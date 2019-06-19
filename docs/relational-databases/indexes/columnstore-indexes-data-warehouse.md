@@ -13,10 +13,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ceade7d44b5ec708db5355853065ebb1f253166
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581302"
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Index columnstore - Entrepôt de données
@@ -127,7 +127,7 @@ END TRAN
 ### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>Isolement d'instantané et isolements d’instantanés de lecture validée  
  Utilisez l’isolement d’instantané (SI) pour garantir la cohérence transactionnelle et les isolements d’instantanés de lecture validée (RCSI) pour garantir la cohérence au niveau de l’instruction des requêtes sur les index columnstore. Ainsi, les requêtes s’exécutent sans bloquer les enregistreurs de données. Ce comportement non bloquant réduit également sensiblement la probabilité de blocages pour les transactions complexes. Pour plus d’informations, consultez [Isolement d’instantané dans SQL Server](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) sur MSDN.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index columnstore - Guide de conception](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Index columnstore - Conseils en matière de chargement de données](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109760"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparer les fonctionnalités de Business Intelligence dans différents environnements Microsoft
@@ -39,9 +39,9 @@ Pour plus d'informations sur la comparaison de SharePoint Server avec SharePoint
 |Surveillance de l'utilisation|Oui|Non|Oui|  
 |Tirer parti de la sécurité de niveau ligne des cubes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Oui|Non|Non|  
   
- **<sup>1</sup>**[compréhension du rôle des gestionnaires de données dans la gestion des données](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) et [vidéo : Gestion des informations de BI et gestion des données Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
+ **<sup>1</sup>** [compréhension du rôle des gestionnaires de données dans la gestion des données](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) et [vidéo : Gestion des informations de BI et gestion des données Power](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
- **<sup>2</sup>**[power BI Q & r : Optimiser un classeur Power BI (modélisation cloud)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
+ **<sup>2</sup>** [power BI Q & r : Optimiser un classeur Power BI (modélisation cloud)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
  **<sup>3</sup>**  [Présentation des nouvelles capacités de prévision de Power View pour Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
   
@@ -59,7 +59,7 @@ Pour plus d'informations sur la comparaison de SharePoint Server avec SharePoint
   
  **<sup>2</sup>**  [Classeurs PowerPivot comme source de données](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[prise en charge mobile sur les outils d’analyse décisionnelle (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) et [planification pour Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
+ **<sup>3</sup>** [prise en charge mobile sur les outils d’analyse décisionnelle (BI)](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) et [planification pour Reporting Services et la prise en charge de navigateur Power View (Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
 ## <a name="more-information"></a>Informations complémentaires  
   

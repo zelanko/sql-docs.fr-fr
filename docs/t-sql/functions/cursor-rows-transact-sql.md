@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ad753fbdd529cbe9bc53906479aa134029fcc45e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947862"
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
@@ -53,7 +53,7 @@ Cette fonction retourne le nombre de lignes éligibles se trouvant actuellement 
 |0|Aucun curseur n'a été ouvert, aucune ligne n'a été qualifiée pour le dernier curseur ouvert ou le dernier curseur ouvert est fermé ou désalloué.|  
 |*n*|Le curseur est totalement rempli. La valeur retournée (*n*) correspond au nombre total de lignes du curseur.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `@@CURSOR_ROWS` retourne un nombre négatif si le dernier curseur s’est ouvert de façon asynchrone. Les curseurs de jeu de clés ou les curseurs statiques s’ouvrent de façon asynchrone si la valeur du seuil de curseur sp_configure est supérieure à 0 et si le nombre de lignes contenues dans le jeu de résultats du curseur est supérieur au seuil du curseur.
   
 ## <a name="examples"></a>Exemples  

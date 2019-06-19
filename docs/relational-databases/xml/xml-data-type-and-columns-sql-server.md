@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
-ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65836158"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
@@ -55,12 +55,12 @@ ms.locfileid: "65836158"
   
 -   Vous voulez profiter des fonctions d'administration du serveur de base de données pour gérer vos données XML, en cas de sauvegarde, de récupération et de réplication par exemple.  
   
- Si aucune de ces conditions n’est remplie, vous avez intérêt à stocker vos données dans un type d’objet volumineux non-XML, tel que **[n]varchar(max)** ou **varbinary(max)**.  
+ Si aucune de ces conditions n’est remplie, vous avez intérêt à stocker vos données dans un type d’objet volumineux non-XML, tel que **[n]varchar(max)** ou **varbinary(max)** .  
   
 ## <a name="xml-storage-options"></a>Options de stockage XML  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous disposez des options de stockage XML suivantes :  
   
--   Stockage en mode natif dans le type de données **xml**   
+-   Stockage en mode natif dans le type de données **xml**  
   
      Les données sont stockées dans une représentation interne qui conserve le contenu XML des données. Cette représentation interne inclut des informations à propos de la hiérarchie de relations contenant-contenu, l'ordre des documents et les valeurs d'éléments et d'attributs. Plus précisément, le contenu InfoSet des données XML est préservé. Pour plus d’informations sur InfoSet, consultez [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). Le contenu InfoSet n'est pas une copie conforme du texte XML puisque les éléments suivants ne sont pas conservés : espaces non significatifs, ordre des attributs, préfixes d'espace de noms et déclaration XML.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "65836158"
 
 - Les éléments XML peuvent avoir jusqu’à 128 niveaux d'imbrication.
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   
