@@ -30,10 +30,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981452"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
@@ -117,7 +117,7 @@ En haut de chaque article se trouve une section indiquant les produits qui prenn
   
 Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données autonome ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Utilisez l’instruction **CREATE USER** dans tous les produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la syntaxe **WITH PASSWORD** ne peut pas être utilisée avec les versions plus anciennes. Des sections **S’applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md)    
 [Mots clés réservés &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)      
 [Problèmes de conception de Transact-SQL](https://msdn.microsoft.com/library/dd193411.aspx)    

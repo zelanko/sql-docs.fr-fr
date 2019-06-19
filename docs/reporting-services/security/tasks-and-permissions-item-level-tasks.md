@@ -11,10 +11,10 @@ ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570277"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Tâches et autorisations - Tâches au niveau élément
@@ -56,7 +56,7 @@ ms.locfileid: "65570277"
 |Afficher les ressources|Ressources|Lire le contenu<br /><br /> Lire les propriétés|  
 |Afficher les ressources|Parties de rapports|Lire le contenu<br /><br /> Lire les propriétés|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

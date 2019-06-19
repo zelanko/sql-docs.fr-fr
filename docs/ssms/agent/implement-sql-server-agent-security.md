@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f7ff348c6e2d01683c59f30b7f89affe833955c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096465"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implémenter la sécurité de l'Agent SQL Server
@@ -80,7 +80,7 @@ Pour améliorer la sécurité de votre implémentation de [!INCLUDE[ssNoVersion]
   
     -   **Extension** - Microsoft.SqlServer.Configuration.ConfigExtension.dll  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utilisation de rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md)  
 [sp_addrolemember (Transact-SQL)](https://msdn.microsoft.com/a583c087-bdb3-46d2-b9e5-3921b3e6d10b)  
 [sp_droprolemember (Transact-SQL)](https://msdn.microsoft.com/c2f19ab1-e742-4d56-ba8e-8ffd40cf4925)  

@@ -26,10 +26,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 429be4403d1df512b43a049b0014afcafea15740
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947492"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
@@ -64,7 +64,7 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les valeurs de *start* et *length* doivent être spécifiées en nombre de caractères pour les types de données **ntext**, **char** ou **varchar** et en octets pour les types de données **text**, **image**, **binary** ou **varbinary**.  
   
  *expression* doit être de type **varchar(max)** ou **varbinary(max)** lorsque *start* ou *length* contient une valeur supérieure à 2147483647.  
@@ -218,7 +218,7 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RIGHT &#40;Transact-SQL&#41;](../../t-sql/functions/right-transact-sql.md)  

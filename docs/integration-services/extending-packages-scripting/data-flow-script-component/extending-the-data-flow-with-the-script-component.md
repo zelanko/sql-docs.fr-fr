@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d1688210ac2813ec48ff5c6ceddde853e07b2c8
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724289"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extension du flux de données avec le composant Script
@@ -75,7 +75,7 @@ ms.locfileid: "65724289"
  [Exemples supplémentaires du composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
  Ces exemples simples expliquent et montrent quelques utilisations possibles du composant Script.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Composant Script](../../../integration-services/data-flow/transformations/script-component.md)   
  [Comparaison de la tâche de script et du composant Script](../../../integration-services/extending-packages-scripting/comparing-the-script-task-and-the-script-component.md)  
   

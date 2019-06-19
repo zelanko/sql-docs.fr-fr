@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3510c94a80f0ba7cf06817afd62d6d29e1878f1e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948906"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
@@ -77,7 +77,7 @@ ou Gestionnaire de configuration
 ## <a name="return-types"></a>Types de retour  
 **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les opérations de chiffrement et de déchiffrement qui utilisent des clés asymétriques consomment une grande quantité de ressources. Elles deviennent donc coûteuses par rapport au chiffrement et au déchiffrement à clé symétrique. Nous recommandons aux développeurs d’éviter les opérations de chiffrement et de déchiffrement à clé asymétrique sur les jeux de données volumineux (par exemple, les jeux de données utilisateur stockés dans des tables de base de données). Au lieu de cela, nous recommandons donc aux développeurs de commencer par chiffrer ces données avec une clé symétrique forte, puis de chiffrer cette clé symétrique avec une clé asymétrique.  
   
 En fonction de l’algorithme, `ENCRYPTBYASYMKEY` retourne **NULL** si l’entrée dépasse un certain nombre d’octets. Les limites spécifiques sont les suivantes :
@@ -98,7 +98,7 @@ INSERT INTO AdventureWorks2012.Sales.ProtectedData04
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  

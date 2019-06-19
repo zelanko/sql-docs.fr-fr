@@ -14,10 +14,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71f3b7d8dd6f5e52cf37582c1a6d1fc974c48c48
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265577"
 ---
 # <a name="brokeractivation-event-class"></a>Broker:Activation, classe d'événement
@@ -34,7 +34,7 @@ ms.locfileid: "66265577"
 |**DatabaseID**|**Int**|ID de la base de données spécifiée par l’instruction USE *base_de_données* ou celui de la base de données par défaut si aucune instruction USE *base_de_données*n’a été spécifiée pour une instance donnée. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données **ServerName** du serveur est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |**EventClass**|**Int**|Type de classe d'événements capturée. Toujours **163** pour **Broker:Activation**.|27|Non|  
 |**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
-|**EventSubClass**|**nvarchar**|Action spécifique que cet événement signale. Une des valeurs suivantes :<br /><br /> **start** :   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a démarré une procédure stockée d’activation.<br /><br /> **ended** :  la procédure stockée d’activation s’est terminée normalement.<br /><br /> **aborted** :   la procédure stockée d’activation a été interrompue suite à une erreur.|21|Non|  
+|**EventSubClass**|**nvarchar**|Action spécifique que cet événement signale. Une des valeurs suivantes :<br /><br /> **démarré**:   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a démarré une procédure stockée d’activation.<br /><br /> **ended** :  la procédure stockée d’activation s’est terminée normalement.<br /><br /> **aborted** :   la procédure stockée d’activation a été interrompue suite à une erreur.|21|Non|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData**|**Int**|Nombre de tâches actives dans cette file d'attente.|25|Non|  
 |**IsSystem**|**Int**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur. 1 = système, 0 = utilisateur.|60|Non|  

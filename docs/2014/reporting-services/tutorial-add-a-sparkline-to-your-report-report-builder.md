@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099043"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
@@ -146,7 +146,7 @@ ms.locfileid: "66099043"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter (**!**).  
+4.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur Exécuter ( **!** ).  
   
      La requête s’exécute et affiche le jeu de résultats pour les champs **SalesDate**, **Subcategory**, **Product**, **Sales**et **Quantity**.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "66099043"
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
+     Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas un exemple de valeur monétaire, cliquez sur **Styles des espaces réservés** dans le **numéros** de groupe, puis cliquez sur **exemples de valeurs**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "66099043"
   
 3.  Dans le ruban, sur le **accueil** sous l’onglet le **nombre** groupe, dans la liste déroulante, sélectionnez **Date**.  
   
-     La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
+     La cellule affiche la date d’exemple **[1/31/2000]** . Si vous ne voyez pas s’afficher d’exemple de date, cliquez sur **Styles des espaces réservés** dans le groupe **Nombres** , puis cliquez sur **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099549"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099549"
     > [!NOTE]  
     >  Pour un serveur de rapports qui s’exécute en mode natif, vous devez disposer des autorisations de **publication** sur le dossier cible pour publier les rapports dans ce dossier. Ces autorisations sont fournies par l'intermédiaire d'une attribution de rôle qui associe votre compte d'utilisateur à un rôle qui inclut des opérations de publication. Pour plus d’informations, consultez [Créer et gérer des attributions de rôles](../security/create-and-manage-role-assignments.md). Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, vous devez disposer de l'autorisation **Membre** ou **Propriétaire** sur le site SharePoint. Pour plus d’informations, consultez [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. Dans la zone de texte **TargetServerURL** , tapez l'URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide. Quand vous publiez sur un serveur de rapports qui s’exécute en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports (par exemple, http:*//serveur/serveur_rapports* ou https:*//serveur/serveur_rapports)*. Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports.  
+10. Dans la zone de texte **TargetServerURL** , tapez l'URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide. Quand vous publiez sur un serveur de rapports qui s’exécute en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports (par exemple, http: *//serveur/serveur_rapports* ou https: *//serveur/serveur_rapports)* . Il s'agit du répertoire virtuel du serveur de rapports et non du Gestionnaire de rapports.  
   
      Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, http://*nom_serveur*, http://*nom_serveur*/*site* ou http://*nom_serveur*/*site*/*sous-site*).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66099549"
   
 2.  Dans la boîte de dialogue **Pages de propriétés** du projet, cliquez sur **Gestionnaire de configuration**.  
   
-3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active apparaît de la façon suivante : **Active(***\<configuration>***)**.  
+3.  Dans la boîte de dialogue **Gestionnaire de configuration** , sélectionnez la configuration à modifier. La configuration actuellement active apparaît de la façon suivante : **Active(***\<configuration>***)** .  
   
 4.  Dans **Contextes des projets**, pour chaque projet de la solution, sélectionnez ou désélectionnez **Générer** ou **Déployer**.  
   

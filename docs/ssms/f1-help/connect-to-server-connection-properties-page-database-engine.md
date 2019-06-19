@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: be88a3a8abd377055c5b6168fe517b5d84eaebf4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102823"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
@@ -26,7 +26,7 @@ ms.locfileid: "65102823"
 Utilisez cet onglet pour afficher ou spécifier les options de connexion à une dansstance du [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou d’dansscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
 **Se connecter à la base de données**  
-Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez **<default>**, vous vous connectez à la base de données par défaut du serveur. Si vous sélectionnez **<Browse server>**, vous pouvez parcourir l’arborescence du serveur à la recherche de la base de données à laquelle vous souhaitez vous connecter.  
+Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez **<default>** , vous vous connectez à la base de données par défaut du serveur. Si vous sélectionnez **<Browse server>** , vous pouvez parcourir l’arborescence du serveur à la recherche de la base de données à laquelle vous souhaitez vous connecter.  
   
 Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
   
@@ -74,6 +74,6 @@ Quand vous inscrivez [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs
 **Enregistrer**  
 Enregistre les paramètres dans **Serveurs inscrits**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Boîte de dialogue Propriétés de la connexion](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c03218101637767dbaf6e5abe2132eb3c0f332da
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717922"
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
@@ -189,7 +189,7 @@ Les packages utilisent des gestionnaires de connexion pour se connecter aux sour
   
 -   [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Interface utilisateur d’Integration Services](../integration-services/integration-services-user-interface.md)  
   
   

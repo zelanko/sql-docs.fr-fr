@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a45ce170d7965ca8358dd6a442a25a67190651cb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65714378"
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (base de données SSISDB)
@@ -40,7 +40,7 @@ ms.locfileid: "65714378"
 |message|**nvarchar(max)**|Texte du message.|  
 |extended_info_id|**bigint**|ID des informations supplémentaires relatives au message d’opération, trouvé dans la vue [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque message entré pendant une opération dans le catalogue. Le message peut être généré par le serveur, par le processus d'exécution du package ou par le moteur d'exécution.  
   
  Cette vue affiche les types de message suivants :  

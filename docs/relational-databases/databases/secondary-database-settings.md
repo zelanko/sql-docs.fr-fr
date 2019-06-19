@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c98f7a5714d7cd0813d5a4a7df6cf23c7b661414
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652543"
 ---
 # <a name="secondary-database-settings"></a>Paramètres de base de données secondaire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "51560486"
  Affiche le nom du travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle du travail Agent SQL Server utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
+ Affiche la planification actuelle du travail Agent SQL Server utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Vous pouvez la modifier en cliquant sur **Planification…** .  
   
  **Planification…**  
  Modifiez les paramètres du travail Agent SQL Server utilisé pour copier les sauvegardes du journal des transactions du serveur primaire vers le serveur secondaire.  
@@ -109,7 +109,7 @@ ms.locfileid: "51560486"
  Affiche le nom du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
+ Affiche la planification actuelle du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Vous pouvez la modifier en cliquant sur **Planification…** .  
   
  **Planification…**  
  Modifiez les paramètres de planification associés au travail de restauration de l'Agent SQL Server.  
@@ -117,7 +117,7 @@ ms.locfileid: "51560486"
  **Désactiver ce travail**  
  Interrompt les opérations de restauration dans la base de données secondaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

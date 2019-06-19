@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4182a358c422e3c9a11f76cb824f5386b88b350f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725130"
 ---
 # <a name="-multiply-ssis-expression"></a>* (Multiplication) (expression SSIS)
@@ -43,7 +43,7 @@ numeric_expression1 * numeric_expression2
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si l'un des opérandes est NULL, le résultat est NULL.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
@@ -65,7 +65,7 @@ ListPrice * .10
 ListPrice - (ListPrice * @[Discount%])  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

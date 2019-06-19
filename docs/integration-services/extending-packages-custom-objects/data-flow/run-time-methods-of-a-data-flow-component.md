@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b02552c4fae1e2266d8a98f1d71457b6e2709fc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724658"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Méthodes d'exécution d'un composant de flux de données
@@ -213,7 +213,7 @@ End Sub
   
  Pour plus d’informations sur le développement de composants qui reçoivent des lignes dans les mémoires tampons d’entrée, consultez [Développement d’un composant de destination personnalisé](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) et [Développement d’un composant de transformation personnalisé à sorties asynchrones](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes de conception d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   

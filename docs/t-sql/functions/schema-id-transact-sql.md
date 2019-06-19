@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eefc84ea48372824ecec0617513262998bcc5ad1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65945349"
 ---
 # <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
@@ -54,7 +54,7 @@ SCHEMA_ID ( [ schema_name ] )
   
  La valeur NULL est renvoyée si *schema_name* n’est pas un schéma valide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SCHEMA_ID renvoie les ID des schémas système et des schémas définis par l'utilisateur. SCHEMA_ID peut être appelé dans une liste de sélection, dans une clause WHERE et partout où une expression est autorisée.  
   
 ## <a name="examples"></a>Exemples  
@@ -71,7 +71,7 @@ SELECT SCHEMA_ID();
 SELECT SCHEMA_ID('dbo');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
  [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  

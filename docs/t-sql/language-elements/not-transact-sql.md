@@ -23,10 +23,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b02921579adbdf7376da405c99f3f0893c5156ad
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981847"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
@@ -52,7 +52,7 @@ ms.locfileid: "65981847"
 ## <a name="result-value"></a>Valeur des résultats  
  NOT inverse la valeur d'une expression booléenne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  NOT inverse une expression.  
   
  Le tableau suivant indique le résultat de la comparaison des valeurs TRUE et FALSE avec l'opérateur NOT.  
@@ -99,7 +99,7 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

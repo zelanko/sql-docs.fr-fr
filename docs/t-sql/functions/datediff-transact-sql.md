@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943647"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
@@ -124,7 +124,7 @@ SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Utilisez `DATEDIFF` dans les clauses `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` et `ORDER BY`.
   
 `DATEDIFF` caste implicitement les littéraux de chaîne en type **datetime2**. Cela signifie que `DATEDIFF` ne prend pas en charge le format YDM quand la date est passée comme chaîne. Vous devez caster explicitement la chaîne en type **datetime** ou **smalldatetime** pour utiliser le format AJM.

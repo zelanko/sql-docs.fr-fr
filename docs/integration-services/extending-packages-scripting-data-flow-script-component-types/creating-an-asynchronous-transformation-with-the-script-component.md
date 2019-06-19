@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71370adeca366b2002244c7f0aabfbca639579c7
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805206"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
@@ -75,7 +75,7 @@ ms.locfileid: "65805206"
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables de la page **Script** de l’**Éditeur de transformation de script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...**) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection ( **...** ) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "65805206"
 > [!NOTE]  
 >  Si vous développez un composant de flux de données personnalisé entièrement nouveau, il est important de remplacer la méthode PrimeOutput pour mettre en cache les références aux mémoires tampons de sortie afin de pouvoir ajouter des lignes de données aux mémoires tampons ultérieurement. Dans le composant Script, cette opération n’est pas nécessaire car vous disposez d’une classe générée automatiquement qui représente chaque mémoire tampon de sortie dans l’élément de projet **BufferWrapper**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Cet exemple présente le code personnalisé requis dans la classe ScriptMain pour créer un composant de transformation asynchrone.  
   
 > [!NOTE]  
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  

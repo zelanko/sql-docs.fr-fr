@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900200"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Transformation de dimension à variation lente
@@ -46,7 +46,7 @@ ms.locfileid: "62900200"
   
 -   Les modifications « modification d'attribut » remplacent les enregistrements existants. Ce type de modification est équivalent à une modification de Type 1. La transformation de dimension à variation lente dirige ces lignes vers une sortie nommée **Sortie de mises à jour d’attribut de validation**.  
   
--   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de Dimension à variation lente dirige ces lignes vers deux sorties : **Sortie d'insertions d'attribut d'historique** et **Nouvelle sortie**.  
+-   Les modifications « attribut d'historique » créent des enregistrements au lieu de mettre à jour les enregistrements existants. La seule modification autorisée dans un enregistrement existant est une mise à jour d'une colonne qui indique si l'enregistrement est actif ou expiré. Ce type de modification est équivalent à une modification de Type 2. La transformation de dimension variable lente dirige ces lignes vers deux sorties : **Sortie d'insertions d'attribut d'historique** et **Nouvelle sortie**.  
   
 -   Les modifications « attribut fixe » indiquent que la valeur de colonne ne doit pas changer. La transformation de dimension à variation lente détecte les modifications et peut diriger les lignes modifiées vers une sortie nommée **Sortie d’attribut fixe**.  
   

@@ -16,10 +16,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66743904"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server)
@@ -196,7 +196,7 @@ La sortie de la clause **FOR JSON** présente les caractéristiques suivantes :
   
 3.  Le nom et la valeur des colonnes sont échappés selon la syntaxe JSON. Pour plus d’informations, consultez [Comment FOR JSON place dans une séquence d’échappement les caractères spéciaux et les caractères de contrôle &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
   
-### <a name="example"></a> Exemple
+### <a name="example"></a>Exemple
 Voici un exemple qui montre comment la clause **FOR JSON** met en forme la sortie JSON.  
   
 **Résultats de la requête**  
@@ -250,7 +250,7 @@ Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON
 
 -   [JSON : un pont entre les mondes relationnel et NoSQL](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Clause FOR &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   
  [Utiliser la sortie de FOR JSON dans SQL Server et les applications clientes &#40;SQL Server&#41;](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   

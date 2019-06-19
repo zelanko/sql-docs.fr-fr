@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711444"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
@@ -116,7 +116,7 @@ ms.locfileid: "62711444"
 |Fichiers journaux par base de données|1|1|  
 |Volumes par ordinateur|3|3|  
   
- * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitaire peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Le point de contrôle de l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ \* Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pris en charge par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilitaire peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). Le point de contrôle de l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets d’application de la couche Données  
  Le tableau suivant spécifie la taille maximale et le nombre maximum des différents objets testés dans les applications de la couche Données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (DAC).  
@@ -126,7 +126,7 @@ ms.locfileid: "62711444"
 |Bases de données par DAC|1|1|  
 |Objets par DAC*|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
   
- * Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
+ \* Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
   
 ##  <a name="Replication"></a> Objets de réplication  
  Le tableau suivant présente la taille maximale et le nombre maximal des différents objets définis dans Réplication [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -141,7 +141,7 @@ ms.locfileid: "62711444"
 |Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)|1,024|1,024|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication d'instantané ou transactionnelle)|8,000|8,000|  
   
- * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
+ \* Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  
   

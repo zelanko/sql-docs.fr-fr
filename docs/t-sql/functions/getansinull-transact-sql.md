@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb776fcd58d77bcba803e4c461ce3433ee5e66f7
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946742"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
@@ -49,7 +49,7 @@ GETANSINULL ( [ 'database' ] )
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 GETANSINULL retourne 1 si la possibilité de valeur Null de la base de données autorise les valeurs Null. Cette valeur renvoyée nécessite également que la possibilité de valeur Null de la colonne ou du type données ne soit pas explicitement définie. La valeur ANSI NULL par défaut est 1. 
   
  Pour activer le comportement par défaut de ANSI NULL, l'une des conditions suivantes doit être définie :  
@@ -79,7 +79,7 @@ GO
 (1 row(s) affected)
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

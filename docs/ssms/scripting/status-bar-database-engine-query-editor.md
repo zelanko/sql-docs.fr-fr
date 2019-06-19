@@ -12,10 +12,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1c93fcf0c19f41f1dfbb3f2e44a95b623836ebca
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65821857"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barre d'état (éditeur de requête du moteur de base de données)
@@ -36,13 +36,13 @@ ms.locfileid: "65821857"
 ##  <a name="SetOEServerColor"></a> Définir la couleur d'état pour un serveur dans l'Explorateur d'objets  
  **Pour définir une couleur d'état de serveur dans l'Explorateur d'objets**  
   
-1.  Dans l’**Explorateur d’objets**, sélectionnez **Se connecter**, puis **Moteur de base de données...**.  
+1.  Dans l’**Explorateur d’objets**, sélectionnez **Se connecter**, puis **Moteur de base de données...** .  
   
-2.  Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>**.  
+2.  Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>** .  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...** .  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "65821857"
 ##  <a name="SetRegServerColor"></a> Définir la couleur d'état pour un serveur inscrit  
  **Pour définir une couleur de serveur pour un serveur inscrit**  
   
-1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés...**.  
+1.  Dans **Serveurs inscrits**, cliquez avec le bouton droit sur le nœud de serveur, puis sélectionnez **Propriétés...** .  
   
 2.  Dans la boîte de dialogue **Modifier les propriétés d'inscription du serveur** , sélectionnez l'onglet **Propriétés de connexion** .  
   
 3.  Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
-4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
+4.  Pour choisir la couleur, sélectionnez le bouton **Sélectionner...** .  
   
 5.  Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
@@ -77,17 +77,17 @@ ms.locfileid: "65821857"
   
 -   Ouvrez le menu **Fichier** , sélectionnez **Nouveau**, puis **Requête de moteur de base de données**.  
   
--   Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>**.  
+-   Dans la boîte de dialogue **Se connecter au serveur**, sélectionnez **Options >>** .  
   
 -   Activez la case à cocher **Utiliser une couleur personnalisée** .  
   
--   Pour choisir la couleur, sélectionnez le bouton **Sélectionner...**.  
+-   Pour choisir la couleur, sélectionnez le bouton **Sélectionner...** .  
   
 -   Sélectionnez une couleur de base ou personnalisée, puis cliquez sur OK.  
   
 -   Remplissez le reste des informations de connexion, puis cliquez sur le bouton **Se connecter** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095272"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
@@ -99,6 +99,6 @@ Jeux volumineux
   
 -   Les recherches portant sur des jeux d'objets volumineux peut prendre du temps et nuire aux performances du serveur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur d'objets](../../ssms/object/object-explorer.md)  
   

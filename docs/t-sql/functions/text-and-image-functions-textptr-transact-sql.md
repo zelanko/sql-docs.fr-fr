@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948493"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
@@ -52,7 +52,7 @@ TEXTPTR ( column )
 ## <a name="return-types"></a>Types de retour  
  **varbinary**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour les tables avec du texte en ligne, TEXTPTR renvoie un descripteur pour le texte à traiter. Vous pouvez obtenir un pointeur de texte valide même lorsque la valeur du texte est nulle.  
   
  Vous ne pouvez pas utiliser la fonction TEXTPTR sur des colonnes de vues. Vous ne pouvez l'utiliser que sur des colonnes de tables. Pour utiliser la fonction TEXTPTR sur une colonne de vue, vous devez spécifier un niveau de compatibilité égal à 80 à l’aide du [niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Si la table ne possède pas de texte en ligne et si aucune colonne **text**, **ntext** ni **image** n’a été initialisée par une instruction UPDATETEXT, la fonction TEXTPTR retourne un pointeur null.  
@@ -186,7 +186,7 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   

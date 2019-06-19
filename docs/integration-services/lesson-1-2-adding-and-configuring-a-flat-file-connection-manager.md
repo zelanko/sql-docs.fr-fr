@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723430"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats
@@ -35,7 +35,7 @@ Dans cette leçon, vous configurez les propriétés suivantes dans votre gestion
 -   **Mappages des données :** les mappages des types de données que vous spécifiez pour le gestionnaire de connexions de fichiers plats sont utilisés par tous les composants des sources de données de fichiers plats qui référencent ce gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans cette tâche, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes**, puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
   
 > [!NOTE]
-> Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux **Anglais (États-Unis)**, vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
+> Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux **Anglais (États-Unis)** , vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Ajouter un gestionnaire de connexions de fichiers plats au package SSIS  
   

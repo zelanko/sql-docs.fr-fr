@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jroth
 ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775473"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
@@ -138,7 +138,7 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 > [!NOTE]
 > Même si vous pouvez afficher la valeur d’exécution du soft-NUMA automatique avec [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), vous ne pouvez pas modifier sa valeur avec **sp_configure**. Vous devez utiliser l’instruction [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) avec l’argument `SET SOFTNUMA`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Mapper les ports TCP/IP aux nœuds NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)    
 [affinity mask (option de configuration de serveur)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)    
 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)     

@@ -18,10 +18,10 @@ ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948829"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
@@ -58,7 +58,7 @@ Mot de passe utilisé pour déchiffrer la valeur binaire retournée.
 ## <a name="return-types"></a>Types de retour
 **varbinary**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les fonctions **CERTENCODED** et **CERTPRIVATEKEY** sont utilisées ensemble pour retourner les différentes parties d’un certificat sous forme binaire.
   
 ## <a name="permissions"></a>Autorisations  

@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5fff3b17c2594c48653b7ad24ec988e40b6b1d4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639336"
 ---
 # <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47650817"
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque SET CURSOR_CLOSE_ON_COMMIT a la valeur ON, ce paramètre ferme tous les curseurs ouverts lors de la validation ou de l'annulation conformément à ISO. Lorsque SET CURSOR_CLOSE_ON_COMMIT a la valeur OFF, le curseur n'est pas fermé lorsqu'une transaction est validée.  
   
 > [!NOTE]  
@@ -69,7 +69,7 @@ IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -125,7 +125,7 @@ DROP TABLE t1;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   

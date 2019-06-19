@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699585"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modèle de programmation RDS en détail
@@ -65,7 +65,7 @@ Les éléments clés du modèle de programmation RDS sont les suivantes :
   
  Le **RDS. DataControl** objet possède également ses propres méthodes de navigation, de tri et filtrage des lignes d’associé **Recordset** objet. Ces méthodes sont similaires, mais que les méthodes sur l’ADO **Recordset** objet.  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  Services Bureau à distance prend en charge deux de ses propres événements, qui sont indépendantes du modèle d’événements ADO. Le [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) événement est appelé chaque fois que le **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) propriété change, vous avertissant ainsi quand une opération asynchrone est terminée avec succès, arrêtée ou a rencontré une erreur. Le [onError](../../../ado/reference/rds-api/onerror-event-rds.md) événement est appelé chaque fois qu’une erreur se produit, même si l’erreur se produit pendant une opération asynchrone.  
   
 > [!NOTE]

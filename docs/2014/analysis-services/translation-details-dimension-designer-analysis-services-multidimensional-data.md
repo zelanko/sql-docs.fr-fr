@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065853"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Détails des traductions (onglet Traductions, Concepteur de dimensions) (Analysis Services - données multidimensionnelles)
@@ -55,7 +55,7 @@ ms.locfileid: "66065853"
      Propriété `Caption`  
   
  **\<Language>**  
- Tapez ou sélectionnez la valeur de propriété de l'objet de dimension dans la langue sélectionnée. Des boîtes de dialogue supplémentaires s’ouvrent quand vous cliquez sur le bouton de sélection (**...**), en fonction de la propriété en cours de modification :  
+ Tapez ou sélectionnez la valeur de propriété de l'objet de dimension dans la langue sélectionnée. Des boîtes de dialogue supplémentaires s’ouvrent quand vous cliquez sur le bouton de sélection ( **...** ), en fonction de la propriété en cours de modification :  
   
 -   Propriété `NamingTemplate`  
   
