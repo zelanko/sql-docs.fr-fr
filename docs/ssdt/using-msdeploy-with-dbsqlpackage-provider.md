@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101968"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
@@ -47,15 +47,15 @@ Vous devez spécifier les verbes MS-Deploy à l’aide du commutateur **-verb** 
   
 |Verbe|Description|  
 |--------|---------------|  
-|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
-|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
+|dump|Fournit les informations (y compris le nom, le numéro de version et la description) relatives à une base de données source contenue dans un fichier .dacpac. Spécifiez la base de données source depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _.dacpac-file-path_ **"**|  
+|sync|Spécifie les actions dbSqlPackage depuis la ligne de commande en utilisant le format suivant :<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_ **dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />Pour obtenir les paramètres source et de destination valide pour le verbe sync, consultez les sections ci-dessous.|  
   
 ## <a name="dbsqlpackage-source"></a>Source dbSqlPackage  
 Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîne de connexion SQL Server/SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.  La syntaxe de spécification de la source d'entrée pour le fournisseur est la suivante :  
   
 |Entrée|Valeur par défaut|Description|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** Les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d’entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** Les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d’entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
   
 Si votre source d'entrée correspond à une chaîne de connexion à une base de données SQL Server/SQL Azure active, **dbSqlPackage** extrait un instantané de base de données au format de fichier .dacpac à partir d'une base de données SQL Server/Azure active.  
   

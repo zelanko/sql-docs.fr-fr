@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109229"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
@@ -70,7 +70,7 @@ ms.locfileid: "66109229"
 |**Espace de noms**|Attribut pour **Allow** qui est l’espace de noms contenant un ou plusieurs types qui s’appliquent à Valeur. Cette propriété n'est pas sensible à la casse.|  
 |`AllowNew`|Attribut booléen pour **Allow** qui contrôle si la création de nouvelles instances du type est autorisée dans les expressions RDL ou dans un élément **\<Class>** RDL.<br /><br /> Remarque : Lorsque `RDLSandboxing` est activé, nouveaux tableaux ne peuvent pas être créés dans les expressions RDL, indépendamment du paramètre de `AllowNew`.|  
 |**Valeur**|Valeur pour **Allow** qui est le nom du type à autoriser dans les expressions RDL. La valeur **\*** indique que tous les types dans l’espace de noms sont autorisés. Cette propriété n'est pas sensible à la casse.|  
-|**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>**, la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
+|**Membres**|Pour la liste des types qui sont inclus dans l’élément **\<Types>** , la liste des noms de membres qui ne sont pas autorisés dans les expressions RDL.|  
 |**Refuser**|Nom d'un membre qui n'est pas autorisé dans les expressions RDL. Cette propriété n'est pas sensible à la casse.<br /><br /> Remarque : Lorsque **Deny** est spécifié pour un membre, tous les membres avec ce nom pour tous les types ne sont pas autorisés.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Utilisation des expressions lorsque le Sandboxing RDL est activé  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716025"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - base de données SSISDB
@@ -37,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Arguments  
  [ @source_folder = ] *source_folder*  
- Nom du dossier source, où le projet réside avant le déplacement. *source_folder* est de type **nvarchar(128)**.  
+ Nom du dossier source, où le projet réside avant le déplacement. *source_folder* est de type **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nom du projet qui sera supprimé. *project_name* est de type **nvarchar(128)**.  
+ Nom du projet qui sera supprimé. *project_name* est de type **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nom du dossier de destination, où le projet réside après le déplacement. *destination_folder* est de type **nvarchar(128)**.  
+ Nom du dossier de destination, où le projet réside après le déplacement. *destination_folder* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -71,7 +71,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   L’utilisateur n’a pas les autorisations appropriées  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsqu'un projet est déplacé d'un dossier source vers un dossier de destination, le projet dans le dossier source et les références environnementales correspondantes sont supprimés. Dans le dossier de destination, un projet et des références environnementales identiques sont créés. Les références environnementales relatives seront résolues dans un dossier différent après le déplacement. Les références absolues seront résolues dans le même dossier après le déplacement.  
   
 > [!NOTE]  

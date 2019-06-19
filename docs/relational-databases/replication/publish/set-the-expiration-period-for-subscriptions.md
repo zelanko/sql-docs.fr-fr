@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7edca09192abc207ef4879c8d8275777451d51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649205"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Définir la période d'expiration des abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47618127"
   
     -   La réplication ne peut pas nettoyer les métadonnées dans les bases de données de publication et d'abonnement tant que la période de rétention n'est pas achevée. Soyez prudent si vous spécifiez une longue période de rétention, car cela peut affecter négativement les performances de réplication. Vous avez intérêt à spécifier une valeur faible si vous êtes certain que tous les Abonnés procéderont régulièrement à la synchronisation dans ce délai.  
   
-         La période de rétention pour les publications de fusion offre un délai de grâce de 24 heures pour tenir compte des Abonnés situés dans différents fuseaux horaires. Si, par exemple, vous définissez une période de rétention d'un jour, la période de rétention réelle est de 48 heures.  
+         La période de rétention pour les publications de fusion offre un délai de grâce de 24 heures pour tenir compte des Abonnés situés dans différents fuseaux horaires. Si, par exemple, vous définissez une période de rétention d'un jour, la période de rétention réelle est de 48 heures.  
   
     -   Il est possible de spécifier que les abonnements n'expirent jamais, mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47618127"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication transactionnelle ou d'instantané  
   
-1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez la période de l'expiration de l'abonnement souhaitée, en heures, pour **@retention**. La période d'expiration par défaut est de 336 heures. Pour plus d’informations, consultez [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez la période de l'expiration de l'abonnement souhaitée, en heures, pour **@retention**. La période d'expiration par défaut est de 336 heures. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication de fusion  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47618127"
 3.  (Facultatif) Sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez **retention_period_unit** pour **@property** et une nouvelle unité pour la période d'expiration de l'abonnement pour **@value**.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
+ [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

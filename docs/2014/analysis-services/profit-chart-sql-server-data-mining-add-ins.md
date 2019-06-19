@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32ee1539c734c549f89d5b3db8ec4add467a72b2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070590"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>Graphique des bénéfices (Compléments d'exploration de données SQL Server)
@@ -28,7 +28,7 @@ ms.locfileid: "66070590"
  Un graphique des bénéfices représente l'augmentation de bénéfices estimée qui est associée à l'utilisation d'un modèle d'exploration de données pour déterminer les clients qu'une entreprise doit contacter dans un scénario professionnel. L'axe Y du graphique représente les bénéfices, tandis que l'axe X représente le pourcentage de la population que l'entreprise a contactée. Un graphique des bénéfices classique montre une augmentation des bénéfices jusqu'à un certain point, après lequel les bénéfices diminuent plus le nombre d'individus contactés augmente.  
   
 ## <a name="configuring-the-profit-chart"></a>Configuration du graphique des bénéfices  
- Si le graphique d'analyse évalue uniquement la probabilité de la validité ou non des prédictions, le graphique des bénéfices intègre des données concrètes sur les conséquences liées à la mise en œuvre d'une prédiction. Cette opération est possible en prenant en compte les facteurs suivants que vous spécifiez lors de l'exécution de l'Assistant :   
+ Si le graphique d'analyse évalue uniquement la probabilité de la validité ou non des prédictions, le graphique des bénéfices intègre des données concrètes sur les conséquences liées à la mise en œuvre d'une prédiction. Cette opération est possible en prenant en compte les facteurs suivants que vous spécifiez lors de l'exécution de l'Assistant :  
   
 -   **Remplissage**  
   

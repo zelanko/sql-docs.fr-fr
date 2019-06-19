@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d0ca85d39df85fc48a9aad779414db1dcc1b4de6
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936911"
 ---
 # <a name="stgeomfromwkb-geography-data-type"></a>STGeomFromWKB (type de données geography)
@@ -41,7 +41,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_geography*  
- Représentation WKB de l’instance **geography** à retourner. *WKB_geography* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geography** à retourner. *WKB_geography* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geography** à retourner.  
@@ -51,7 +51,7 @@ STGeomFromWKB ( 'WKB_geography' , SRID )
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Le type OGC de l’instance **geography** retournée par `STGeomFromText()` a comme valeur l’entrée WKB correspondante.  
   
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
@@ -67,7 +67,7 @@ SET @g = geography::STGeomFromWKB(0x010200000002000000D7A3703D0A975EC08716D9CEF7
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

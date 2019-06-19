@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8614217f7b8b081d43468d25707aa394c917b1ff
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725759"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : Publication d’un package SSIS sous la forme d’une vue SQL
@@ -270,7 +270,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Barre oblique (\\) - Chaque caractère \ utilisé dans la clause de la requête doit être précédé du caractère d’échappement. Par exemple, \\\ est évalué comme \ dans la clause de la requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
  [Configurer Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
   

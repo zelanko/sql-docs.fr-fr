@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664583"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Si la collection de schémas contient déjà un caractère générique de validation lax ou un élément de type **xs:anyType**, l’ajout d’un nouvel élément global, d’un nouveau type ou d’une nouvelle déclaration d’attribut à la collection de schémas entraîne la revalidation de toutes les données stockées qui sont conditionnées par la collection de schémas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La modification d'une collection de schémas XML nécessite l'autorisation ALTER sur la collection.  
   
 ## <a name="examples"></a>Exemples  
@@ -187,8 +187,8 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
   
  L'instruction CREATE XML SCHEMA COLLECTION stocke uniquement les composants de schéma que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut interpréter ; tous les éléments du schéma XML ne sont pas stockés dans la base de données. Par conséquent, si vous voulez récupérer la collection de schémas XML exactement comme elle a été fournie, il est recommandé d'enregistrer vos schémas XML dans une colonne de la base de données ou dans un autre dossier de votre ordinateur.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>b. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
- Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Exemple :  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
+ Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Par exemple :  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

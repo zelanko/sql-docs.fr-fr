@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 6aa5b37955db2aace7785f7a39b768807e7b0e3d
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937141"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (type de données geography)
@@ -43,7 +43,7 @@ ms.locfileid: "65937141"
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Retourne 1 si l’instance **geography** appelante contient spatialement l’instance **geography** passée à la méthode, et retourne 0 si ce n’est pas le cas. Retourne **null** si le SRID des deux instances **geography** n’est pas le même.  
   
 ## <a name="examples"></a>Exemples  

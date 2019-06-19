@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681484"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié 
 ## <a name="remarks"></a>Notes   
 Un déclencheur n'est pas recréé par son activation. Un déclencheur désactivé continue d'exister en tant qu'objet de la base de données active, mais il ne s'exécute pas. Une fois activé, un déclencheur s'exécute dès lors qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans laquelle il était initialement programmé est exécuté. Les déclencheurs sont désactivés à l’aide de [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Il est également possible d’activer ou de désactiver les déclencheurs DML définis sur des tables au moyen de la commande [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Pour activer un déclencheur DML, un utilisateur doit disposer au minimum d'une autorisation ALTER sur la table ou sur la vue sur laquelle le déclencheur a été créé.  
   
 L'activation d'un déclencheur DDL avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion défini nécessite l'autorisation CONTROL SERVER sur le serveur. Pour activer un déclencheur DDL dans l'étendue de la base de données (ON DATABASE), un utilisateur doit au minimum disposer d'une autorisation ALTER ANY DATABASE DDL TRIGGER dans la base de données active.  
@@ -88,7 +88,7 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>b. Activation d'un déclencheur DDL  
+### <a name="b-enabling-a-ddl-trigger"></a>B. Activation d'un déclencheur DDL  
 L’exemple suivant crée un déclencheur DDL `safety` sur l’étendue de la base de données, puis le désactive et l’active.  
   
 ```  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 1a3fe37e1cae0e7be61d6244307eb7589ca6d5f4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66761805"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>Propriétés d’un groupe de disponibilité : Nouveau groupe de disponibilité (page Général)
@@ -112,7 +112,7 @@ ms.locfileid: "66761805"
  **Supprimer**  
  Cliquez pour supprimer un réplica secondaire du groupe de disponibilité.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703959"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510146"
   
 -   écrire des requêtes Transact-SQL sur les affichages catalogue appropriés pour les collections de schémas XML ;  
   
--   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()**. Vous pouvez appliquer les méthodes du type de données **xml** sur le résultat de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
+-   utiliser la fonction intégrée **XML_SCHEMA_NAMESPACE()** . Vous pouvez appliquer les méthodes du type de données **xml** sur le résultat de cette fonction. En revanche, vous ne pouvez pas modifier les schémas XML sous-jacents.  
   
  Ces méthodes sont illustrées dans les exemples ci-après.  
   
@@ -191,7 +191,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Les schémas XML individuels de la collection peuvent être obtenus sous forme d’instances de type **xml** en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
+ Les schémas XML individuels de la collection peuvent être obtenus sous forme d’instances de type **xml** en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()** . Cela est illustré par l'exemple suivant.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : Extraction d’un schéma spécifique d’une collection de schémas XML  
  L’instruction suivante retourne le schéma XML dont l’espace de noms cible _prétendu_ est https/\/www.microsoft.com/was-books de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
@@ -208,7 +208,7 @@ N'https://www.microsoft.com/was-books')
   
 -   Créez une table qui contient une colonne de type **xml** pour stocker vos schémas XML et aussi les charger dans le système de type XML. Vous pouvez interroger la colonne XML à l'aide des méthodes de type de données **xml** . Vous pouvez aussi placer un index XML sur cette colonne. Toutefois, dans ce cas, l'application doit assurer la cohérence entre les schémas XML stockés dans la colonne XML et le système de type XML. Par exemple, si vous supprimez l'espace de noms du schéma XML du système de type XML, vous devez aussi le supprimer de la table pour garantir la cohérence.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Prétraiter un schéma pour fusionner des schémas inclus](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

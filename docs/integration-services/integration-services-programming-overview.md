@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 85f77404989b1f088ef780b0cbfcdd7d5450f8d9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723652"
 ---
 # <a name="integration-services-programming-overview"></a>Vue d'ensemble de la programmation Integration Services
@@ -63,9 +63,9 @@ ms.locfileid: "65723652"
 >  Les interfaces de programmation d'applications [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont incompatibles avec les langages de script COM, tels que VBScript.  
   
 ## <a name="locating-assemblies"></a>Recherche d'assemblys  
- Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour le .NET 4, situé dans *\<lecteur>*:\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
+ Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour le .NET 4, situé dans *\<lecteur>* :\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
   
- Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les principaux fichiers .dll d’extensibilité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se trouvent également dans *\<lecteur>*:\Program files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les principaux fichiers .dll d’extensibilité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se trouvent également dans *\<lecteur>* :\Program files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Assemblys couramment utilisés  
  Le tableau suivant répertorie les assemblys fréquemment utilisés lors de la programmation [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l'aide du [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

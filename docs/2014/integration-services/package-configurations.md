@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056893"
 ---
 # <a name="package-configurations"></a>Configurations du package
@@ -84,7 +84,7 @@ ms.locfileid: "66056893"
 ## <a name="package-configuration-types"></a>Types de configuration de package  
  Le tableau suivant décrit les types de configuration de package.  
   
-|Type|Description|  
+|type|Description|  
 |----------|-----------------|  
 |Fichier de configuration XML|Un fichier XML contient les configurations. Le fichier XML peut inclure plusieurs configurations.|  
 |Variable d'environnement|Une variable d'environnement contient la configuration.|  

@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 1a5cf36976538bc264ec96ea7a3f5835dc9ad9bf
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935728"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (type de données geography)
@@ -42,7 +42,7 @@ ms.locfileid: "65935728"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode retourne 1 si l’instance **geography** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, ou 0 si l’instance **geography** est vide.  
   
 ## <a name="examples"></a>Exemples  
@@ -54,7 +54,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

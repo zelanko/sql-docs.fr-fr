@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98e995a89f9993a54736c4966639fd583e2391b6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403721"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modélisation multidimensionnelles (didacticiel Adventure Works)
@@ -49,7 +49,7 @@ Ce didacticiel inclut les leçons suivantes.
 |Leçon|Durée estimée|  
 |----------|------------------------------|  
 |[Leçon 1 : Définition d’une vue de Source de données au sein d’une analyse projet Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutes|  
-|[Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)|30 minutes|  
+|[Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)|30 minutes|  
 |[Leçon 3 : Modification des mesures, attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutes|  
 |[Leçon 4 : Définition des attributs avancés et des propriétés de Dimension](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutes|  
 |[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutes|  

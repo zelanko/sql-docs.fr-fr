@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62671718"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47599947"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>**, puis double-cliquez sur **TCP/IP**.  
+2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>** , puis double-cliquez sur **TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47599947"
   
 9. Pour configurer les autres adresses IP sur un ordinateur multirésident, répétez cette procédure en utilisant une autre adresse IP et une autre règle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Service SQL Server Browser &#40;moteur de base de données et SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Se connecter à SQL Server par le biais d’un serveur proxy &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   

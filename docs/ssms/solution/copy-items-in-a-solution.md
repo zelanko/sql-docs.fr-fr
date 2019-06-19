@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e4863fa4b59c167728b831b6ff866279a6bf4d55
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105230"
 ---
 # <a name="copy-items-in-a-solution"></a>Copier des éléments d'une solution
@@ -39,7 +39,7 @@ Vous pouvez copier des éléments à l'aide de l'Explorateur de solutions ou de 
 > [!NOTE]  
 > Les connexions ne peuvent pas être copiées entre projets. Lorsque vous copiez une requête avec une connexion associée dans un autre projet, la connexion associée n'est pas copiée dans le projet cible. Vous devez la créer manuellement dans le projet cible.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Déplacer des éléments dans une solution](../../ssms/solution/move-items-in-a-solution.md)  
   

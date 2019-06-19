@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cb534e6306d590c6a1c407ef92fdcd2ae729415
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727555"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
@@ -98,7 +98,7 @@ ms.locfileid: "65727555"
   
 9. Dans le conteneur de boucles Foreach, créez des tâches qui utilisent le gestionnaire de connexions Excel pour effectuer les mêmes opérations sur chaque tableau Excel du classeur spécifié. Si vous utilisez une tâche de script dans le but d’examiner le nom de tableau énuméré ou pour utiliser chaque tableau, pensez à ajouter la variable chaîne à la propriété ReadOnlyVariables de la tâche de script.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Charger des données depuis ou vers Excel avec SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Ajouter ou modifier une expression de propriété](../../integration-services/expressions/add-or-change-a-property-expression.md)   

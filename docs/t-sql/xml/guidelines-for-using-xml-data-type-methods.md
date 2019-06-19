@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928979"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Instructions pour l'utilisation des méthodes de type de données XML
 
@@ -61,7 +61,7 @@ Msg errorNumber, Level levelNumber, State stateNumber:
 XQuery [database.table.method]: description_of_error
 ```
 
-Exemple :
+Par exemple :
 
 ```
 Msg 2396, Level 16, State 1:
@@ -70,7 +70,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Vérifications des singletons
 
-Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui réclament des singletons renverront une erreur lorsque le compilateur n'arrive pas à savoir si la présence d'un singleton est garantie lors de l'exécution. Ce problème se produit souvent avec des données non typées. Par exemple, la recherche d'un attribut exige un élément parent unique. Un nombre ordinal qui sélectionne un nœud parent unique suffit. L’évaluation d’une combinaison **node()**-**value()** pour extraire des valeurs d’attribut ne nécessite pas de spécification ordinale. comme le montre l'exemple suivant.
+Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui réclament des singletons renverront une erreur lorsque le compilateur n'arrive pas à savoir si la présence d'un singleton est garantie lors de l'exécution. Ce problème se produit souvent avec des données non typées. Par exemple, la recherche d'un attribut exige un élément parent unique. Un nombre ordinal qui sélectionne un nœud parent unique suffit. L’évaluation d’une combinaison **node()** -**value()** pour extraire des valeurs d’attribut ne nécessite pas de spécification ordinale. comme le montre l'exemple suivant.
 
 ### <a name="example-known-singleton"></a>Exemple : Singleton connu
 
@@ -110,6 +110,6 @@ FROM   T
 
 Cette requête renvoie la valeur du premier élément `<last-name>` de chaque instance XML.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)

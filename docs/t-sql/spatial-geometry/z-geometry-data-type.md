@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 3354d243b7a49e7fc34041e7912e8ac337476917
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65935408"
 ---
 # <a name="z-geometry-data-type"></a>Z (type de données geometry)
@@ -42,7 +42,7 @@ Valeur Z (élévation) de l'instance. La sémantique de la valeur d'élévation 
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  La valeur de cette propriété est Null si l’instance geometry n’est pas un point, ainsi que pour toute instance **Point** pour laquelle elle n’est pas définie.  
   
  Cette propriété est en lecture seule.  
@@ -58,7 +58,7 @@ SET @g = geometry::STGeomFromText('POINT(1 2 3 4)', 0);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [M &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [AsTextZM &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  

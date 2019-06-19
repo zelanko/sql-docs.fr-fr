@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 94613e42940b340a02ab67bf7c92e0e81d1d1fcf
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099565"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Redimensionner automatiquement des tables sélectionnées dans des schémas (Visual Database Tools)
@@ -33,6 +33,6 @@ Vous pouvez insérer rapidement des tables dans votre schéma en appliquant la p
   
 2.  Cliquez avec le bouton droit sur une table sélectionnée et choisissez **Redimensionner automatiquement les tables sélectionnées**dans le menu contextuel.  
   
-## <a name="see-also"></a> Voir aussi  
-[Utiliser des diagrammes de base de données &amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+## <a name="see-also"></a>Voir aussi  
+[Utiliser des diagrammes de base de données &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

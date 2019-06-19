@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: d6d18a4654fc14aa5c0997734184ec700fad3162
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095509"
 ---
 # <a name="set-up-the-job-history-log"></a>Configurer le journal d'historique des travaux
@@ -56,7 +56,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
     2.  Activez la case à cocher **Supprimer automatiquement l'historique de l'agent**, puis spécifiez une période de temps, de telle façon que l'historique antérieur à cette période soit purgé du journal.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Implémenter des travaux](../../ssms/agent/implement-jobs.md)  
 [Surveiller l'activité des travaux](../../ssms/agent/monitor-job-activity.md)  
 [Créer des travaux](../../ssms/agent/create-jobs.md)  

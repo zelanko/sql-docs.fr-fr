@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948872"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
@@ -73,7 +73,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Retourne NULL si la valeur *cleartext* est NULL.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  EncryptByKey utilise une clé symétrique. Cette clé doit être ouverte. Si la clé symétrique est déjà ouverte dans la session en cours, il n'est pas nécessaire de l'ouvrir à nouveau dans le contexte de la requête.  
   
  L'authentificateur vous permet d'empêcher la substitution en valeurs entières des champs chiffrés. Par exemple, considérons la table suivante des données de salaires du personnel :  
@@ -145,7 +145,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a7f1437346baa2c54801af591a5f23a208d42c2
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723453"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Leçon 1-1 : Création des variables d’environnement et des dossiers de travail
@@ -37,7 +37,7 @@ Si vous envisagez de déployer les packages sur un autre ordinateur, vous devez 
   
 1.  Cliquez avec le bouton droit sur le menu Démarrer et cliquez sur Explorer.  
   
-2.  Cliquez sur **Disque local (C:)**.  
+2.  Cliquez sur **Disque local (C:)** .  
   
 3.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Dossier**.  
   

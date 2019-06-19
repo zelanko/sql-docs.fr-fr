@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 14a29f7bfd5d55a634c5ab8be89a1f5e14dd2ccd
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936315"
 ---
 # <a name="ringn-geography-data-type"></a>RingN (type de données geography)
@@ -46,7 +46,7 @@ ms.locfileid: "65936315"
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Si la valeur de l’index de l’anneau **n** est inférieure à 1, cette méthode lève **ArgumentOutOfRangeException**. La valeur de l’index de l’anneau doit être supérieure ou égale à 1, et doit être inférieure ou égale au nombre retourné par `NumRings()`.  
   
 ## <a name="examples"></a>Exemples  
@@ -58,7 +58,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.RingN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [NumRings &#40;type de données geography&#41;](../../t-sql/spatial-geography/numrings-geography-data-type.md)  
   

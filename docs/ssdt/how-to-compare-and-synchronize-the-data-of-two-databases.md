@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0a7c0599cf45e822dfca7cef48414512fffa4a74
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090126"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
@@ -166,6 +166,6 @@ Après avoir comparé les données dans deux bases de données, vous pouvez les 
   
     Les données des enregistrements sélectionnés dans la cible sont mises à jour avec les données des enregistrements correspondants dans la source.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
   

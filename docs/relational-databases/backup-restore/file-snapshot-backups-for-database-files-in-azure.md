@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f189af664a634d362485e97044ba6d19cae8275b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015046"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure
@@ -26,7 +26,7 @@ ms.locfileid: "66015046"
   
  **Télécharger**  
   
--   Pour télécharger [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Pour télécharger [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], accédez au  **[Centre d’évaluation](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
 -   Vous avez un compte Azure ?  Cliquez **[ici](https://azure.microsoft.com/services/virtual-machines/sql-server/)** pour lancer une machine virtuelle déjà équipée de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
@@ -176,7 +176,7 @@ sys.sp_delete_backup_file_snapshot N'adventureworks2016', N'https://<mystorageac
 GO  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

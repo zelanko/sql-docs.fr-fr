@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 99e8dd51d546a7f65771a23fd8748d9d0b17d6fb
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938520"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (type de données geometry)
@@ -42,7 +42,7 @@ Retourne le nombre de géométries qui composent une instance **geometry**.
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode retourne 1 si l’instance **geometry** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, et 0 si l’instance **geometry** est vide.  
   
 > [!NOTE]  

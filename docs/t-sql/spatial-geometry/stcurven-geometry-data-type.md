@@ -16,10 +16,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939010"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (type de données geometry)
@@ -46,7 +46,7 @@ Retourne la courbe spécifiée à partir d’une instance **geometry** qui est *
 ## <a name="exceptions"></a>Exceptions  
  Si *curve_index* < 1, `ArgumentOutOfRangeException` est levé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  **NULL** est retourné dans l’une des situations suivantes :  
   
 -   L’instance **geometry** est déclarée, mais pas instanciée  
@@ -111,7 +111,7 @@ Retourne la courbe spécifiée à partir d’une instance **geometry** qui est *
  END
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [STNumCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

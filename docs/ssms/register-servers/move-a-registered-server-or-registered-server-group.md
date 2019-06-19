@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 4f7844f0d707784e82bdbe4058e5fd7b00999a7c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104758"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Déplacer un serveur inscrit ou un groupe de serveurs inscrits
@@ -36,7 +36,7 @@ ms.locfileid: "65104758"
   
 2.  Dans la boîte de dialogue **Déplacer l’inscription du serveur** , développez la liste des groupes de serveurs, cliquez sur le nœud où doit apparaître le serveur ou le groupe de serveurs, puis cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Inscrire des serveurs](../../tools/sql-server-management-studio/register-servers.md)   
  [Créer ou modifier un groupe de serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   

@@ -30,10 +30,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: acfa92d36166968f4b82b73b5e2d63dcf2dd6370
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65725815"
 ---
 # <a name="term-extraction-transformation"></a>Transformation d'extraction de terme
@@ -256,7 +256,7 @@ ms.locfileid: "65725815"
  **Configurer la sortie d'erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) pour spécifier la gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

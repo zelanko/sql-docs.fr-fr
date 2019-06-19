@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101941"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Procédure pas à pas : création et exécution d’un test unitaire SQL Server
@@ -242,7 +242,7 @@ Pour effectuer cette procédure pas à pas, vous devez être en mesure de vous c
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>Pour importer un schéma de la base de données d'un script  
   
-1.  Dans le menu **Projet**, cliquez sur **Importer**, puis sur **Script (\*.sql)**.  
+1.  Dans le menu **Projet**, cliquez sur **Importer**, puis sur **Script (\*.sql)** .  
   
 2.  Cliquez sur **Suivant** après avoir lu la page d'accueil.  
   
@@ -276,7 +276,7 @@ Par défaut, lorsque vous appuyez sur F5, vous déployez (ou publiez) la base de
   
 3.  Cochez les cases des cinq procédures stockées : **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** et **Sales.uspShowOrderDetails**.  
   
-4.  Dans la liste déroulante **Projet**, sélectionnez **Créer un nouveau projet de test Visual C#**.  
+4.  Dans la liste déroulante **Projet**, sélectionnez **Créer un nouveau projet de test Visual C#** .  
   
 5.  Acceptez les noms par défaut de nom de projet et nom de classe, puis cliquez sur **OK**.  
   
@@ -987,7 +987,7 @@ Dans un projet standard, vous définissez des tests unitaires supplémentaires p
   
 Après avoir généré une ligne de base, créez et modifiez les objets de base de données, puis créez des tests associés pour vérifier si une modification va interrompre le comportement attendu.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
 [Procédure : créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  

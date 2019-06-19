@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099971"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
@@ -181,7 +181,7 @@ Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 Lorsque vous appliquez des mises à jour cumulatives ou des Service Pack à une instance, au redémarrage, l’instance peut entrer en mode de mise à niveau du script. Dans ce mode, SQL Server peut procéder à une analyse et mise à niveau des tables internes de capture des changements de données, ce qui pourrait entraîner la recréation d’objets tels que les index sur les tables de capture. Selon la quantité de données impliquées, cette étape peut prendre un certain temps ou provoquer une forte utilisation du journal des transactions pour les bases de données où la capture des changements de données est activée.
 
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)
 - [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)

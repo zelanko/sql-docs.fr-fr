@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 819601e12f2e9b4179ffa966fb8e54962c9f31d4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65943871"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
@@ -55,9 +55,9 @@ Le type de retour dépend du type des arguments. Ce tableau illustre le mappage 
 |Type d'entrée|Type de sortie et longueur|  
 |---|---|
 |1. N’importe quel argument de<br><br />un type système SQL-CLR<br><br />un type défini par l’utilisateur SQL-CLR<br><br />ou Gestionnaire de configuration<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2. Sinon, n’importe quel argument de type<br><br />**varbinary(max)**<br><br />ou Gestionnaire de configuration<br><br />**varchar(max)**|**varchar(max)** , à moins qu’un des paramètres soit de type **nvarchar** d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)** .|  
+|2. Sinon, n’importe quel argument de type<br><br />**varbinary(max)**<br><br />ou Gestionnaire de configuration<br><br />**varchar(max)**|**varchar(max)**, à moins qu’un des paramètres soit de type **nvarchar** d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)**.|  
 |3. Sinon, n’importe quel argument de type **nvarchar** d’un maximum de 4 000 caractères.<br><br />(**nvarchar**(<= 4000))|**nvarchar**(<= 4000)|  
-|4. Dans tous les autres cas|**varchar**(<= 8 000) (un **varchar** d’au plus 8 000 caractères), à moins qu’un des paramètres soit un nvarchar d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)** .|  
+|4. Dans tous les autres cas|**varchar**(<= 8 000) (un **varchar** d’au plus 8 000 caractères), à moins qu’un des paramètres soit un nvarchar d’une longueur quelconque. Dans ce cas, `CONCAT` retourne un résultat de type **nvarchar(max)**.|  
   
 Quand `CONCAT` reçoit des arguments d’entrée **nvarchar** d’une longueur <= 4 000 caractères ou des arguments d’entrée **varchar** d’une longueur <= 8 000 caractères, les conversions implicites peuvent affecter la longueur du résultat. Les autres types de données ont des longueurs différentes quand ils sont convertis implicitement en chaînes. Par exemple, une valeur **int** (14) a une longueur de chaîne de 12, alors qu’une valeur **float** a une longueur de 32. Par conséquent, une concaténation de deux entiers retourne un résultat d’une longueur au moins égale à 24.
   

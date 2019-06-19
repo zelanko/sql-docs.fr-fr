@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 90732e16e94aa8c64602a3ad21f2ad59f35ef9fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098888"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Spécifier plusieurs conditions de recherche pour une colonne (Visual Database Tools)
@@ -84,7 +84,7 @@ WHERE (title LIKE '%Cook%') AND
   (title LIKE '%Recipe%')  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Conventions pour la combinaison de conditions de recherche dans le volet Critères &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

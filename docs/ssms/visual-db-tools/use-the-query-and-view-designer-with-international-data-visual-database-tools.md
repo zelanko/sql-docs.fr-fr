@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ddb0112fd671f939f3b217e31f299814a3f59f1a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098567"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utiliser le Concepteur de requêtes et de vues avec des données internationales (Visual Database Tools)
@@ -58,6 +58,6 @@ L'ordre de tri des données d'une requête est déterminé par la base de donné
 ## <a name="using-double-byte-characters"></a>Utilisation de caractères codés sur deux octets  
 Les caractères codés sur deux octets, ou caractères DBCS (Double Byte Character Set), peuvent être utilisés pour des noms d'objets de bases de données tels que des noms de tables et de vues ou d'alias. Vous pouvez également les utiliser pour des noms de paramètres et des marqueurs de paramètres. Cependant, vous ne pouvez pas les utiliser dans des éléments du langage SQL tels que des noms de fonctions ou des mots clés SQL.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

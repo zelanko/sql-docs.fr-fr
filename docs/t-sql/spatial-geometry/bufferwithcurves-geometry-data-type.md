@@ -17,10 +17,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65936159"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (type de données geometry)
@@ -53,7 +53,7 @@ Type de retour SQL Server : **geometry**
   
 -   **NULL** est passé à la méthode, par exemple `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  L'illustration suivante montre un exemple d'une instance géométrique retournée par cette méthode.  
   
  ![BufferedCurve](../../t-sql/spatial-geometry/media/bufferedcurve.gif)
@@ -157,6 +157,6 @@ Type de retour SQL Server : **geometry**
   
  Les deux premières instructions **SELECT** retournent une instance `GeometryCollection`, car le paramètre *distance* est inférieur ou égal à 1/2 de la distance entre les deux points (1 1) et (1 4). La troisième instruction **SELECT** retourne une instance `CurvePolygon`, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

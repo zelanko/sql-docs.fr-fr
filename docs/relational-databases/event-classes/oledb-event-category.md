@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f67ec37ff1eaa83529d88ff3e00d19ae071359e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648267"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665486"
 ---
 # <a name="oledb-event-category"></a>catégorie d'événements OLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47648267"
 |[Classe d'événements OLEDB Provider Information](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indique qu'une requête distribuée s'est exécutée et a recueilli des informations qui correspondent à la connexion du fournisseur.|  
 |[Classe d'événements OLEDB QueryInterface](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indique que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a émis un appel OLE DB **QueryInterface** pour des requêtes distribuées et des procédures stockées distantes.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)  
   
   

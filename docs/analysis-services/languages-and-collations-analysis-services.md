@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a66d4665af9980822f5ce4c41ed0b94964fa8c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62634924"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
@@ -66,7 +66,7 @@ ms.locfileid: "62634924"
   
 -   0x0407 ou 1031 pour **Allemand (Allemagne)**  
   
--   0x0416 ou 1046 pour **Portugais (Brésil)**.  
+-   0x0416 ou 1046 pour **Portugais (Brésil)** .  
   
  Pour afficher une liste plus longue, consultez [ID de paramètres régionaux assignés par Microsoft](http://msdn.microsoft.com/goglobal/bb964664.aspx). Pour plus d'informations, consultez [Codage et pages de codes](/globalization/encoding/encoding-overview).  
   

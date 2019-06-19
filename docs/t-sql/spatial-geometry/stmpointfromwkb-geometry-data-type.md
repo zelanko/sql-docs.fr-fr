@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938581"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (type de données geometry)
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *WKB_multipoint*  
- Représentation WKB de l’instance **geometryMultiPoint** à retourner. *WKB_multipoint* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geometryMultiPoint** à retourner. *WKB_multipoint* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryMultiPoint** à retourner.  
@@ -51,7 +51,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Type OGC : **MultiPoint**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +63,7 @@ SET @g = geometry::STMPointFromWKB(0x0104000000020000000101000000000000000000594
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

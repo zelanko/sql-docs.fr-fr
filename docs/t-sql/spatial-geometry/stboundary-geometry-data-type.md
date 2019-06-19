@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 671e27f0e35e450b89c3eaaadc3b31612114348a
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939094"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (type de données geometry)
@@ -42,7 +42,7 @@ ms.locfileid: "65939094"
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  `STBoundary()` retourne un **GeometryCollection** vide quand les points de terminaison d’une instance **LineString**, **CircularString** ou **CompoundCurve** sont identiques.  
   
 ## <a name="examples"></a>Exemples  
@@ -74,7 +74,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

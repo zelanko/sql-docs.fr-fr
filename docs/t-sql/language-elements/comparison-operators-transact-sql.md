@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 49b8dbf08dc6611666f90d4127260e49761b7fdb
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982610"
 ---
 # <a name="comparison-operators-transact-sql"></a>Opérateurs de comparaison (Transact-SQL)
@@ -65,7 +65,7 @@ IF (@MyProduct <> 0)
    WHERE ProductID = @MyProduct;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

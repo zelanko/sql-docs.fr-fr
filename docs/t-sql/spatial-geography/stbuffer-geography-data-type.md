@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 72e7f25c0bdc3ba77e90e8d9384537948efe4b3f
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65937151"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (type de données geography)
@@ -50,7 +50,7 @@ ms.locfileid: "65937151"
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  STBuffer() calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), en spécifiant *tolerance* = abs(distance) \* 0,001 et *relative* = **false**.  
   
  Une mémoire tampon négative supprime tous les points dans la distance donnée de la limite de l’instance **geography**.  
@@ -74,7 +74,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [BufferWithTolerance &#40;type de données geography&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
