@@ -24,10 +24,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 54483ab73390be5f35a30951b7b093ed1766018c
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980401"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
@@ -53,7 +53,7 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Presque toute option de configuration peut être reconfigurée en utilisant l’option WITH OVERRIDE, à l’exception toutefois de certaines erreurs irrécupérables. Par exemple, vous ne pouvez pas configurer l’option de configuration **min server memory** avec une valeur supérieure à celle spécifiée dans l’option de configuration **max server memory**.
       
-## <a name="remarks"></a>Notes     
+## <a name="remarks"></a>Notes    
  **sp_configure** n’accepte pas de nouvelles valeurs n’appartenant pas à la plage des valeurs autorisées pour chaque option de configuration.    
     
  RECONFIGURE n'est pas autorisée dans une transaction explicite ou implicite. Lorsque vous reconfigurez plusieurs options simultanément, si l'une des opérations de reconfiguration échoue, aucune des opérations de reconfiguration ne prend effet.    
@@ -72,7 +72,7 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     

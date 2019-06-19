@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540301"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025310"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Récupérer un numéro séquentiel dans le journal (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52540301"
   
  Chaque enregistrement du journal de transactions est identifié de manière unique par un numéro séquentiel dans le journal (LSN). Les numéros de séquence d'enregistrement sont ordonnés de sorte que si LSN2 est supérieur à LSN1, la modification décrite par l'enregistrement de journal référencé par LSN2 se produit après la modification décrite par le numéro LSN d'enregistrement de journal.  
   
- Le numéro LSN d'un enregistrement de journal qui correspond à l'occurrence d'un événement significatif peut s'avérer utile pour créer les séquences de restauration appropriées. Du fait que les numéros LSN sont ordonnés, il est possible de comparer leur égalité et leur inégalité (à savoir, **\<**, **>**, **=**, **\<=**, **>=**). Ces comparaisons sont utiles pour créer des séquences de restauration.  
+ Le numéro LSN d'un enregistrement de journal qui correspond à l'occurrence d'un événement significatif peut s'avérer utile pour créer les séquences de restauration appropriées. Du fait que les numéros LSN sont ordonnés, il est possible de comparer leur égalité et leur inégalité (à savoir, **\<** , **>** , **=** , **\<=** , **>=** ). Ces comparaisons sont utiles pour créer des séquences de restauration.  
   
 > [!NOTE]  
 >  Les numéros LSN sont des valeurs de type données **numeric**(25,0). Les opérations arithmétiques (addition ou soustraction, par exemple) ne sont pas significatives et ne doivent pas être utilisées avec les numéros LSN.  
@@ -65,11 +65,11 @@ ms.locfileid: "52540301"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Syntaxe Transact-SQL relative à la restauration d'après un LSN  
  Grâce à l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , vous pouvez vous arrêter à un LSN ou immédiatement avant ce point de la façon suivante :  
   
--   Utilisez la clause WITH STOPATMARK **='** lsn:_<numéro_lsn>_**'**, où lsn:*\<numéro_lsn* correspond à une chaîne précisant que l’enregistrement du journal qui contient le LSN spécifié équivaut au point de récupération.  
+-   Utilisez la clause WITH STOPATMARK **='** lsn: _<numéro_lsn>_ **'** , où lsn: *\<numéro_lsn* correspond à une chaîne précisant que l’enregistrement du journal qui contient le LSN spécifié équivaut au point de récupération.  
   
      STOPATMARK permet la restauration par progression jusqu'au NSE et inclut l'enregistrement correspondant issu du journal, dans la restauration.  
   
--   Utilisez la clause WITH STOPBEFOREMARK **='** lsn:_<numéro_lsn>_**'**, où lsn:*\<numéro_lsn>* correspond à une chaîne précisant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le NSE précisé équivaut au point de récupération.  
+-   Utilisez la clause WITH STOPBEFOREMARK **='** lsn: _<numéro_lsn>_ **'** , où lsn: *\<numéro_lsn>* correspond à une chaîne précisant que l’entrée se trouvant dans le journal immédiatement avant celle qui contient le NSE précisé équivaut au point de récupération.  
   
      STOPBEFOREMARK permet la restauration par progression jusqu'au NSE mais exclut l'enregistrement correspondant, se trouvant dans le journal, de la restauration par progression.  
   
@@ -98,7 +98,7 @@ GO
   
 -   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  

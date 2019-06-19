@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37f635820ea402c28cf35338d4575a6e8a2e7376
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012981"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.locfileid: "47825313"
   
 6.  Utilisez l'Explorateur d'objets pour modifier les propriétés de SPROC_CollectionSet, tel que le mode de collecte et la planification de téléchargement. Procédez de la même manière que pour les jeux d'éléments de collecte de données système fournis avec le collecteur de données.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple de code suivant est le script final obtenu après l'exécution des étapes documentées dans les procédures précédentes.  
   
 ```  

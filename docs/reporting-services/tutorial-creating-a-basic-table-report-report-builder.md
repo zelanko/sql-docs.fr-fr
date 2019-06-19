@@ -1,27 +1,27 @@
 ---
-title: 'Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041199"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : Création d'un rapport de tableau de base (Générateur de rapports)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
 Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+Durée estimée pour effectuer le didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -124,7 +124,7 @@ Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requ�
   
     ```  
   
-3.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**).  
+3.  Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** ( **!** ).  
   
     La requête s'exécute et affiche le jeu de résultats pour les champs SalesDate, Subcategory, Product, Sales et Quantity.  
   
@@ -184,7 +184,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 4.  Cliquez sur **Suivant** pour afficher un aperçu de la table, puis sur **Terminer**.  
   
-Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 ## <a name="FormatCurrency"></a>2. Mettre en forme les données en tant que devises  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire.   
@@ -197,7 +197,7 @@ Par défaut, les données de synthèse du champ Sales affichent un nombre géné
   
 3.  Sous l’onglet **Accueil** , dans le groupe **Nombre** , cliquez sur le bouton **Devise** . Les cellules changent pour afficher le format de devise.  
   
-    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [**$12,345.00**]. Si vous ne voyez pas d’exemple de valeur monétaire sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    Si votre paramètre régional est Anglais (États-Unis), le texte d’exemple par défaut est [ **$12,345.00**]. Si vous ne voyez pas d’exemple de valeur monétaire sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -214,7 +214,7 @@ Par défaut, le champ SalesDate affiche les informations de date et d’heure. V
   
 3.  Dans le ruban, sous l’onglet **Accueil** , dans le groupe **Nombre** cliquez sur la flèche et sélectionnez **Date**.  
   
-    La cellule affiche la date d’exemple **[1/31/2000]**. Si vous ne voyez pas d’exemple de date, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
+    La cellule affiche la date d’exemple **[1/31/2000]** . Si vous ne voyez pas d’exemple de date, sous l’onglet **Accueil**, dans le groupe **Nombre**, cliquez sur la flèche à côté de l’icône **Styles des espaces réservés** > **Valeurs d’aperçu**.  
   
 4.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -236,7 +236,7 @@ Les valeurs de SalesDate s'affichent dans le format de date par défaut.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    La cellule affiche l’exemple de date **[January 31, 2000]**.  
+    La cellule affiche l’exemple de date **[January 31, 2000]** .  
   
 7.  Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -340,7 +340,7 @@ Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une p
   
 4.  Dans la zone **Nom de fichier** , tapez **Product_Sales_Excel**.  
   
-5.  Vérifiez que le type de fichier est **Excel (\*.xlsx)**.  
+5.  Vérifiez que le type de fichier est **Excel (\*.xlsx)** .  
   
 6.  Cliquez sur **Enregistrer**.  
   
@@ -353,7 +353,7 @@ Dans ce didacticiel, vous allez exporter le rapport vers Excel et définir une p
 ## <a name="next-steps"></a>Next Steps  
 Ceci conclut la procédure pas à pas décrivant comment créer un rapport de tableau de base. Pour plus d’informations sur les tables, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Didacticiels du Générateur de rapports](../reporting-services/report-builder-tutorials.md)  
 [Générateur de rapports dans SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   

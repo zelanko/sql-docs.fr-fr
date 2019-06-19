@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110080"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110080"
   
  Pour un rapport publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif sans l'extension de nom de fichier. Si le rapport se trouve dans le même dossier que le rapport actuel, utilisez uniquement le nom du rapport. Si le rapport se trouve dans un dossier différent sur le même serveur de rapports, utilisez un chemin d'accès relatif ou un chemin d'accès complet. Un chemin d'accès relatif commence à partir du dossier actif et remonte dans l'arborescence des dossiers, par exemple ../Dossier2/Rapport1. Un chemin d'accès complet démarre à partir de /, le dossier de base. Par exemple, /Rapports/Rapport1.  
   
- Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète incluant l'extension de nom de fichier (.rdl). Par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /documents/rapport1.rdl. Les chemins d'accès relatifs ne sont pas pris en charge.  
+ Pour un rapport publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL complète incluant l'extension de nom de fichier (.rdl). Par exemple, http:// *\<Nom_serveur_sharepoint > /\<site >*  /documents/rapport1.rdl. Les chemins d'accès relatifs ne sont pas pris en charge.  
   
  Pour plus d’informations, consultez [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) dans la [documentation du Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=154494) sur msdn.microsoft.com.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110080"
  Choisissez cette option pour définir un lien vers une page Web. Tapez ou sélectionnez l'URL d'une page Web, ou une expression qui prend la valeur de l'URL d'une page Web. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression. Cette expression peut inclure un champ qui contient une URL. L’option supplémentaire suivante s’affiche quand vous sélectionnez **Atteindre l’URL**.  
   
  **Sélectionner une URL**  
- Tapez ou entrez l'URL de l'élément. Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, http://*\<nom_serveur >*  /images/image1.jpg. Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http://*\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
+ Tapez ou entrez l'URL de l'élément. Pour un élément publié sur un serveur de rapports configuré pour le mode natif, utilisez un chemin d'accès complet ou relatif. Par exemple, http:// *\<nom_serveur >*  /images/image1.jpg. Pour un élément publié sur un serveur de rapports configuré en mode intégré SharePoint, utilisez une URL qualifiée complète (par exemple, http:// *\<Nom_serveur_sharepoint > /\<site >*  /Documents/images / Image1.jpg).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

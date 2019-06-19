@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e1216209628d78978752740fd97506010ec30002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939617"
 ---
 # <a name="set-deadlockpriority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  **@** *deadlock_intvar*  
  Variable de type entier spécifiant la priorité du blocage. Elle doit être définie sur une valeur entière comprise dans la plage (-10 - 10)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un blocage se produit lorsque deux sessions sont en attente d'un accès aux ressources verrouillées par l'autre session. Si une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détecte le blocage de deux sessions, l'une des sessions est choisie comme victime du blocage afin de résoudre ce problème. La transaction active de la victime est annulée et le message d'erreur 1205 est retourné au client. Tous les verrous détenus par cette session sont libérés et le traitement des autres sessions peut se poursuivre.  
   
  La session choisie comme victime du blocage varie en fonction de la priorité de blocage des deux sessions :  
@@ -78,7 +78,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
   
  L'option SET DEADLOCK_PRIORITY est définie lors de l'exécution, et non pas durant l'analyse.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -99,7 +99,7 @@ SET DEADLOCK_PRIORITY NORMAL;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  

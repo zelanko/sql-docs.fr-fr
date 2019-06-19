@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: ea975f49b5333c2ada88569d6ae3e6d84fac64e8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981106"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836355"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Valeur retournée  
  Valeur **datetimeoffset** dans le fuseau horaire cible.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **AT TIME ZONE** applique des règles spécifiques pour la conversion des valeurs d’entrée de types **smalldatetime**, **datetime** et **datetime2** qui se trouvent dans un intervalle de temps impacté par le passage à l’heure d’été (DST) :  
   
 -   Quand l’horloge est avancée, il y a un écart avec l’heure locale égal à la durée de l’ajustement de l’horloge. Cette durée est généralement d’une heure, mais elle peut être de 30 ou 45 minutes selon le fuseau horaire. Les heures comprises dans cet intervalle sont converties avec le décalage *après* le passage à l’heure d’été.  
@@ -125,7 +125,7 @@ inputdate AT TIME ZONE timezone
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Ajouter un décalage de fuseau horaire cible à la valeur datetime sans informations sur le décalage  
  Utilisez **AT TIME ZONE** pour ajouter un décalage basé sur les règles de fuseau horaire quand vous savez que les valeurs **datetime** initiales sont fournies dans le même fuseau horaire :  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -137,21 +137,20 @@ FROM Sales.SalesOrderHeader;
 ### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir des valeurs entre des fuseaux horaires différents  
  L’exemple suivant convertit les valeurs entre des fuseaux horaires différents :  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Interroger des tables temporelles en utilisant le fuseau horaire local  
  L’exemple suivant sélectionne des données d’une table temporelle.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -167,7 +166,7 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de date et d’heure](../../t-sql/data-types/date-and-time-types.md)   
  [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   

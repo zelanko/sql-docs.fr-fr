@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fb27a109ec361b0287adfff4ba3e7abcaac062
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011827"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>Spécifier des formats de données pour la compatibilité lors de l'utilisation de bcp (SQL Server)
@@ -59,7 +59,7 @@ ms.locfileid: "66011827"
      Pour les champs de données caractères, des caractères de fin facultatifs vous permettent de marquer la fin de chaque champ dans un fichier de données (à l’aide d’une *marque de fin de champ*), ainsi que la fin de chaque ligne (avec une *marque de fin de ligne*). Les caractères de fin constituent un moyen d'indiquer aux programmes lisant le fichier de données la fin d'un champ ou d'une ligne et le début du suivant. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ##  <a name="FieldSpecificPrompts"></a> Vue d'ensemble des invites spécifiques aux champs  
- Si un interactive `bcp` commande contient le **dans** ou **out** option mais ne contient pas le commutateur de fichier de format (**-f**) ou un format de données basculer () **- n**, **- c**, **-w**, ou **-N**), chaque colonne dans la table source ou cible, la commande vous invite à entrer pour chacune des précédentes attributs, à son tour. À chaque invite, la commande `bcp` fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif (**-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
+ Si un interactive `bcp` commande contient le **dans** ou **out** option mais ne contient pas le commutateur de fichier de format ( **-f**) ou un format de données basculer () **- n**, **- c**, **-w**, ou **-N**), chaque colonne dans la table source ou cible, la commande vous invite à entrer pour chacune des précédentes attributs, à son tour. À chaque invite, la commande `bcp` fournit une valeur par défaut basée sur le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne de table. L’acceptation de la valeur par défaut pour toutes les invites produit le même résultat que la spécification du format natif ( **-n**) sur la ligne de commande. Chaque invite affiche une valeur par défaut entre crochets : [*valeur par défaut*]. En appuyant sur la touche Entrée, vous acceptez les valeurs par défaut affichées. Pour spécifier une valeur différente de celle par défaut, entrez cette nouvelle valeur à l'invite.  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant utilise la commande `bcp` pour l'exportation en bloc interactive de données à partir de la table `HumanResources.myTeam` vers le fichier `myTeam.txt`. Avant de pouvoir exécuter cet exemple, vous devez créer cette table. Pour plus d’informations sur la table et la manière de la créer, consultez [Exemple de table HumanResources.myTeam &#40;SQL Server&#41;](humanresources-myteam-sample-table-sql-server.md).  
