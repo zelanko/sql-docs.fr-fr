@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200359"
 ---
 # <a name="log-long-running-queries-odbc"></a>Enregistrer des requêtes longues (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200359"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Pour enregistrer des requêtes longues à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, double-cliquez sur **outils d’administration** , puis double-cliquez sur **Sources de données (ODBC)**. (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
+1.  Dans **le panneau de configuration**, double-cliquez sur **outils d’administration** , puis double-cliquez sur **Sources de données (ODBC)** . (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
   
 2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet.  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63268371"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Tutoriel : Assistant Paramétrage du moteur de base de données
@@ -31,7 +31,7 @@ ms.locfileid: "63268371"
  [Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  Au cours de cette leçon, vous allez vous familiariser avec la nouvelle interface de l'Assistant Paramétrage du moteur de base de données et apprendrez comment définir les options d'affichage et la disposition.  
   
- [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](lesson-2-using-database-engine-tuning-advisor.md)  
  Au cours de cette leçon, vous allez apprendre à effectuer des tâches de paramétrage de base en utilisant l'interface utilisateur de l'Assistant Paramétrage du moteur de base de données.  
   
  [Leçon 3 : À l’aide de l’utilitaire d’invite de commandes dta](lesson-3-using-the-dta-command-prompt-utility.md)  

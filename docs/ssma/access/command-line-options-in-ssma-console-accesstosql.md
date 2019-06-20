@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62650763"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Options de ligne de commande dans la Console SSMA (AccessToSQL)
@@ -25,7 +25,7 @@ Décrites dans ce document est la console options de commande.
   
 Pour les besoins de cette section, le terme « option » est également appelé 'switch'.  
   
-Options ne respectent pas la casse et peut commencer par la «**-**'ou'**/**' caractères.  
+Options ne respectent pas la casse et peut commencer par la « **-** 'ou' **/** ' caractères.  
   
 Si les options sont spécifiées, il est obligatoire que vous spécifiez les paramètres d’option correspondante.  
   

@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 31d482f5972358900da30816f88d7225c863c15c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063625"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barre d'état (éditeur de requête du moteur de base de données)
   La barre d'état des fenêtres de l'éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être codée par couleur pour indiquer l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel chaque fenêtre est connectée.  
   
-1.  **Avant de commencer :**  [Couleurs de la barre d’état](#StatusBarColors)  
+1.  **Avant de commencer :**  [Couleurs de la barre d'état](#StatusBarColors)  
   
-2.  **Pour définir une couleur d’état de serveur :**  [Explorateur d’objets](#SetOEServerColor), [serveur inscrit](#SetRegServerColor)  
+2.  **Pour définir une couleur d'état de serveur dans :**  [Explorateur d’objets](#SetOEServerColor), [Serveur inscrit](#SetRegServerColor)  
   
-3.  **Pour utiliser une couleur d’état :**  [Ouvrez l’éditeur de requête à l’aide d’une couleur de serveur](#OpenServerColor), [ouvrir un éditeur de requête en spécifiant une couleur d’état](#OpenSpecColor)  
+3.  **Pour utiliser une couleur d’état :**  [Ouvrir un Éditeur de requête à l'aide d'une couleur de serveur](#OpenServerColor), [Ouvrir un Éditeur de requête en spécifiant une couleur d'état](#OpenSpecColor)  
   
 ##  <a name="StatusBarColors"></a> Couleurs de la barre d'état  
  Vous pouvez associer une couleur de barre d'état à un nœud serveur spécifique dans l' **Explorateur d'objets** ou dans **Serveurs inscrits**. Les couleurs peuvent être spécifiées uniquement pour des nœuds serveurs connectés à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)], et non pour des nœuds serveurs pour d'autres technologies SQL Server. Vous pouvez également spécifier une couleur de barre d'état personnalisée chaque fois que vous connectez une nouvelle fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous pouvez ensuite ouvrir une fenêtre d'Éditeur de requête soit en utilisant la couleur d'état définie pour le nœud serveur, soit en spécifiant une couleur unique pour cette fenêtre d'éditeur.  

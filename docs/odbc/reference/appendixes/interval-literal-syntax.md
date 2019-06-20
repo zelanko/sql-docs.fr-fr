@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63188817"
 ---
 # <a name="interval-literal-syntax"></a>Syntaxe des littéraux d’intervalle
@@ -65,7 +65,7 @@ La syntaxe suivante est utilisée pour les littéraux d’intervalle dans ODBC.
   
  *champ de fin* :: = *non-seconde--champ datetime* &#124; deuxième [(*intervalle--secondes-précision fractionnelle*)]  
   
- *champ d’horodatage unique* :: = *non-seconde--champ datetime* [(*intervalle pointe champ précision*)] &#124; deuxième [(*-début-champ-précision de l’intervalle*  [, (*intervalle--secondes-précision fractionnelle*)]  
+ *champ d’horodatage unique* :: = *non-seconde--champ datetime* [(*intervalle pointe champ précision*)] &#124; deuxième [(*-début-champ-précision de l’intervalle * [, (*intervalle--secondes-précision fractionnelle*)]  
   
  *champ d’horodatage* :: = *non-seconde--champ datetime* &#124; deuxième  
   

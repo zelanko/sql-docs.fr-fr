@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796072"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
@@ -42,9 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'table'` Est la table sur les contraintes les informations sont retournées. La table spécifiée doit être locale par rapport à la base de données active. *table* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @objname = ] 'table'` Est la table sur les contraintes les informations sont retournées. La table spécifiée doit être locale par rapport à la base de données active. *table* est **nvarchar(776)** , sans valeur par défaut.  
   
-`[ @nomsg = ] 'no_message'` Est un paramètre optionnel qui imprime le nom de table. *pas_de_message* est **varchar (5)**, avec une valeur par défaut **msg**. **nomsg** supprime l’impression.  
+`[ @nomsg = ] 'no_message'` Est un paramètre optionnel qui imprime le nom de table. *pas_de_message* est **varchar (5)** , avec une valeur par défaut **msg**. **nomsg** supprime l’impression.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

@@ -34,10 +34,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62631362"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
@@ -97,7 +97,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   
- - ou -  
+ \- ou -  
   
 -   `/Book/*/Title` où le caractère générique (`*`) est mentionné au milieu de l’expression.  
   
@@ -141,7 +141,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` , n'indiquant que son chemin d'accès ;  
   
- - ou -  
+ \- ou -  
   
 -   `/root/Location/@LocationID[.="10"]` , où le chemin et la valeur du nœud sont précisés.  
   

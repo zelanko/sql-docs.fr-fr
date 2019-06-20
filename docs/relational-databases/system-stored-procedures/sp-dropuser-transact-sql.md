@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62723876"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
@@ -55,7 +55,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Lorsqu'un utilisateur de base de données est supprimé, les alias affectés à cet utilisateur sont également supprimés. Si l'utilisateur possède un schéma vide dont le nom est identique à celui de l'utilisateur, le schéma est supprimé. Si l'utilisateur possède d'autres éléments sécurisables dans la base de données, il n'est pas supprimé. La propriété des objets doit être auparavant transmise à un autre principal. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). La suppression d'un utilisateur de base de données entraîne également la suppression automatique des autorisations associées à cet utilisateur ainsi que tous les rôles de base de données dont l'utilisateur est membre.  
   
- **sp_dropuser** ne peut pas être utilisé pour supprimer le propriétaire de la base de données (**dbo**) **INFORMATION_SCHEMA** les utilisateurs, ou le **invité** utilisateur à partir de la **maître**  ou **tempdb** bases de données. Dans les bases de données non système, `EXEC sp_dropuser 'guest'` révoquer l’autorisation de se connecter à partir de l’utilisateur **invité**. Cependant, l'utilisateur lui-même n'est pas supprimé.  
+ **sp_dropuser** ne peut pas être utilisé pour supprimer le propriétaire de la base de données (**dbo**) **INFORMATION_SCHEMA** les utilisateurs, ou le **invité** utilisateur à partir de la **maître ** ou **tempdb** bases de données. Dans les bases de données non système, `EXEC sp_dropuser 'guest'` révoquer l’autorisation de se connecter à partir de l’utilisateur **invité**. Cependant, l'utilisateur lui-même n'est pas supprimé.  
   
  **sp_dropuser** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012708"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "66012708"
   
  Dans ce document,  **\<client >** est un nœud element, **cid** est un nœud d’attribut, et **« Important »** est un nœud de texte.  
   
- XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, étant donné un ensemble de  **\<client >** nœuds, XPath peuvent sélectionner tout  **\<ordre >** nœuds avec le **date** attribut la valeur de **« 7/14/1999 »**. L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
+ XPath est un langage de navigation graphique utilisé pour sélectionner une collection de nœuds à partir d'un document XML. Chaque opérateur XPath sélectionne un élément node-set sur la base d'un élément node-set sélectionné par un opérateur XPath précédent. Par exemple, étant donné un ensemble de  **\<client >** nœuds, XPath peuvent sélectionner tout  **\<ordre >** nœuds avec le **date** attribut la valeur de **« 7/14/1999 »** . L'élément node-set résultant contient toutes les commandes avec la date de commande 7/14/1999.  
   
  Le langage XPath est défini par le W3C (World Wide Web Consortium) en tant que langage de navigation standard. SQLXML 4.0 implémente un sous-ensemble de la spécification W3C XPath, qui se trouve dans http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   

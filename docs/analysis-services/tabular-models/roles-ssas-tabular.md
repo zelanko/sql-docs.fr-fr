@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d6c42615115ae486d14112a1a1dbd7f05d6328eb
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472132"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263295"
 ---
 # <a name="roles"></a>Rôles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -84,8 +84,8 @@ ms.locfileid: "62472132"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)|Retourne le domaine\nom d'utilisateur de l'utilisateur actuellement connecté.|  
-|[Fonction CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)|Retourne la propriété CustomData dans une chaîne de connexion.|  
+|[Fonction USERNAME (DAX)](/dax/username-function-dax)|Retourne le domaine\nom d'utilisateur de l'utilisateur actuellement connecté.|  
+|[Fonction CUSTOMDATA (DAX)](/dax/customdata-function-dax)|Retourne la propriété CustomData dans une chaîne de connexion.|  
   
  Vous pouvez utiliser la fonction LOOKUPVALUE pour retourner les valeurs d'une colonne dans laquelle le nom d'utilisateur Windows est le même que le nom d'utilisateur retourné par la fonction USERNAME ou une chaîne retournée par la fonction CustomData. Les requêtes peuvent ensuite être restreintes de sorte que les valeurs retournées par LOOKUPVALUE correspondent aux valeurs de la même table ou de la table associée.  
   
@@ -128,8 +128,8 @@ ms.locfileid: "62472132"
 ## <a name="see-also"></a>Voir aussi  
  [Perspectives](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analyser dans Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)   
- [Fonction CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Fonction USERNAME (DAX)](/dax/username-function-dax)   
+ [LOOKUPVALUE, fonction (DAX)](/dax/lookupvalue-function-dax)   
+ [Fonction CUSTOMDATA (DAX)](/dax/customdata-function-dax)  
   
   

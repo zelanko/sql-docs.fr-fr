@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62638744"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62638744"
   
  Un package peut contenir l'ensemble ou une partie des objets suivants, présentés plus en détails ultérieurement dans cette rubrique :  
   
--   Événements  
+-   Events  
   
 -   Cibles  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638744"
   
  ![Relation d’un module, de packages et d’objets](../../database-engine/media/xepackagesobjects.gif "Relation d’un module, de packages et d’objets")  
   
-### <a name="events"></a>Événements  
+### <a name="events"></a>Events  
  Les événements surveillent les détails intéressants dans le chemin d'exécution d'un programme, tel que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le déclenchement d'un événement indique que le détail intéressant s'est manifesté et fournit les informations d'état correspondant au moment du déclenchement de l'événement.  
   
  Les événements peuvent être utilisés uniquement à des fins de suivi ou pour déclencher des actions. Ces actions peuvent être synchrones ou asynchrones.  

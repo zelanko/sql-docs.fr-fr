@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663910"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, classe d'événements
@@ -26,7 +26,7 @@ ms.locfileid: "62663910"
   
 ## <a name="brokerremote-message-ack-event-class-data-columns"></a>Colonnes de données de la classe d'événements Broker:Remote Message Ack  
   
-|Colonne de données|Type|Description|Numéro de colonne|Filtrable|  
+|Colonne de données|type|Description|Numéro de colonne|Filtrable|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Nom de l'application cliente qui a créé la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette colonne est remplie avec les valeurs transmises par l'application au lieu de l'affichage du nom de programme.|10|Oui|  
 |**BigintData1**|**bigint**|Numéro de séquence du message qui contient l'accusé de réception.|52|Non|  
@@ -37,7 +37,7 @@ ms.locfileid: "62663910"
 |**EventSequence**|**Int**|Numéro de séquence de cet événement.|51|Non|  
 |**EventSubClass**|**nvarchar**|Type de sous-classe d'événements qui fournit des informations complémentaires sur chaque classe d'événements. Cette colonne peut contenir les valeurs ci-dessous :<br /><br /> **Message d’accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception envoyé**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a envoyé un accusé de réception en dehors d’un message séquencé normal.<br /><br /> **Message d’accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception dans le cadre d’un message séquencé normal.<br /><br /> **Accusé de réception reçu**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] a reçu un accusé de réception en dehors d'un message séquencé.|21|Oui|  
 |**GUID**|**uniqueidentifier**|ID de conversation du dialogue. Cet identifiant est transmis en tant que partie intégrante du message et est partagé par les deux intervenants de la conversation.|54|Non|  
-|**HonorBrokerPriority**|**Int**|La valeur actuelle de l’option HONOR_BROKER_PRIORITY de la base de données : 0 = DÉSACTIVÉ, 1 = ON.|32|Oui|  
+|**HonorBrokerPriority**|**Int**|Valeur actuelle de l’option de base de données HONOR_BROKER_PRIORITY : 0 = OFF, 1 = ON.|32|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IntegerData**|**Int**|Numéro de fragment du message qui contient l'accusé de réception.|25|Non|  
 |**IntegerData2**|**Int**|Numéro de fragment du message dont la réception est accusée.|55|Non|  
@@ -50,7 +50,7 @@ ms.locfileid: "62663910"
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SPID**|**Int**|ID de processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus qui est associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
-|**StarvationElevation**|**Int**|Le message a été envoyé avec une priorité plus élevée que la priorité qui a été configurée pour la conversation : 0 = Faux, 1 = true.|33|Oui|  
+|**StarvationElevation**|**Int**|Le message a été envoyé avec une priorité plus élevée que la priorité configurée pour la conversation : 0 = faux, 1 = true.|33|Oui|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
   

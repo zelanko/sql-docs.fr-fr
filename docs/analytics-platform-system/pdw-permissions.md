@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639515"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>La gestion des autorisations dans Parallel Data Warehouse
@@ -62,7 +62,7 @@ La liste suivante décrit les autorisations par défaut :
   
 -   Création d’un compte de connexion par les instructions using **CREATE LOGIN** instruction, la connexion reçoit le **CONNECT SQL** autorisation permettant la connexion pour se connecter à l’ordinateur SQL Server PDW.  
   
--   Lorsqu’un utilisateur de base de données est créé à l’aide de la **CREATE USER** instruction, l’utilisateur reçoit le **connecter ON DATABASE ::**_< nom_base_de_données >_ autorisation, ce qui permet le connexion pour se connecter à cette base de données en tant qu’utilisateur.  
+-   Lorsqu’un utilisateur de base de données est créé à l’aide de la **CREATE USER** instruction, l’utilisateur reçoit le **connecter ON DATABASE ::** _< nom_base_de_données >_ autorisation, ce qui permet le connexion pour se connecter à cette base de données en tant qu’utilisateur.  
   
 -   Tous les principaux, y compris le rôle PUBLIC, aucune autorisation explicite ou implicite par défaut ont l’héritage des autorisations implicites des autorisations explicites. Par conséquent, lorsque aucune autorisation explicite n’est présente, il ne peut également être aucune autorisation implicite.  
   

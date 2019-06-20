@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035398"
 ---
 # <a name="sqllocaldb-utility"></a>Utilitaire SqlLocalDB
@@ -43,7 +43,7 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
  Crée une instance de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB` utilise la version de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] binaires spécifiés par  *\<version_instance >* argument. Le numéro de version est spécifié au format numérique avec au moins une décimale. Les numéros de version secondaire (Service Packs) sont facultatifs. Par exemple les numéros de version deux suivantes sont acceptables : 11.0 et 11.0.1186. La version spécifiée doit être installée sur l'ordinateur. Si non spécifié, le numéro de version par défaut est la version de la `SqlLocalDB` utilitaire. Ajout de **-s** démarre la nouvelle instance de **LocalDB**.  
   
  [ **share** | **h** ]  
@@ -55,10 +55,10 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  Supprime l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Démarre l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. En cas de réussite de l'opération, l'instruction retourne l'adresse du canal nommé de **LocalDB**.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Arrête l’instance spécifiée de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Ajout de **-i** demande l’arrêt de l’instance avec le `NOWAIT` option. Ajout de **-k** arrête le processus d’instance sans le contacter.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  

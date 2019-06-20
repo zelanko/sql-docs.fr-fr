@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62515484"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
@@ -47,7 +47,7 @@ class SQLErrorLogEvent
 |FileName|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Nom du fichier journal des erreurs.|  
 |InstanceName|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
 |LogDate|Type de données : **datetime**<br /><br /> Type d’accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> <br /><br /> Date et heure auxquelles l'événement a été enregistré dans le fichier journal.|  
-|Message|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Message d'événement.|  
+|`Message`|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Message d'événement.|  
 |ProcessInfo|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Informations sur l'ID du processus du serveur source (SPID) pour l'événement.|  
   
 ## <a name="remarks"></a>Notes  

@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025530"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025530"
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Traitement des types de données  
- Si le schéma spécifie le **image**, **binaire**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données (à l’aide de **SQL : DataType**) et ne pas Spécifiez un type de données XML, la mise à jour part du principe que le type de données XML est **binaire base 64**. Si vos données sont **bin.base** type, vous devez spécifier explicitement le type (**dt:type=bin.base** ou **type = « xsd : hexBinary »**).  
+ Si le schéma spécifie le **image**, **binaire**, ou **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données (à l’aide de **SQL : DataType**) et ne pas Spécifiez un type de données XML, la mise à jour part du principe que le type de données XML est **binaire base 64**. Si vos données sont **bin.base** type, vous devez spécifier explicitement le type (**dt:type=bin.base** ou **type = « xsd : hexBinary »** ).  
   
- Si le schéma spécifie le **dateTime**, **date**, ou **temps** type de données XSD, vous devez également spécifier le correspondantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données à l’aide de  **SQL : DataType = « dateTime »**.  
+ Si le schéma spécifie le **dateTime**, **date**, ou **temps** type de données XSD, vous devez également spécifier le correspondantes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] type de données à l’aide de  **SQL : DataType = « dateTime »** .  
   
  Lors de la gestion des paramètres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money** type, vous devez spécifier explicitement **SQL : DataType = « argent »** sur le nœud approprié dans le schéma de mappage.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025530"
 </xsd:schema>  
 ```  
   
- Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >**, tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
+ Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >** , tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025530"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
  Les éléments du schéma peuvent être liés. Le  **\<SQL : Relationship >** élément spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
   
- Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >**:  
+ Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

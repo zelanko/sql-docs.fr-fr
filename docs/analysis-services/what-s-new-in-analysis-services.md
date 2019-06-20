@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 873fd4bc1e010b2f7e2795368f8f209dfee23ea0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de2ac80a10e66ed7673a65428c4bfa011d31b534
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210188"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263283"
 ---
 # <a name="what39s-new-in-analysis-services"></a>Ce que&#39;nouveauté d’Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -133,9 +133,9 @@ refresh|Traite l'objet. L’équivalent ASSL est PROCESS.
 La barre de formule mise à jour facilite l’écriture de formules grâce aux améliorations suivantes : des couleurs de syntaxe pour différencier les fonctions, les champs et les mesures, un mode intelligent de suggestions des fonctions et champs, et l’affichage de *tildes*d’erreur pour indiquer une syntaxe incorrecte dans votre expression DAX. Vous pouvez également insérer plusieurs lignes (Alt+Entrée) et des retraits (Tab) dans vos formules. La barre de formule maintenant vous permet également d’écrire des commentaires dans le cadre de vos mesures, il suffit de taper « / / » et tout le texte suivant ces caractères sur la même ligne seront considérée comme un commentaire.
 
 ### <a name="dax-variables"></a>Variables DAX    
-Cette version inclut désormais la prise en charge des variables DAX. Les variables peuvent maintenant stocker le résultat d’une expression comme une variable nommée, qui peut ensuite être passée en tant qu’argument à d’autres expressions de mesure. Une fois que les valeurs résultantes ont été calculées pour une expression de variable, ces valeurs ne changent pas, même si la variable est référencée dans une autre expression. Pour plus d’informations, consultez [Fonction VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
+Cette version inclut désormais la prise en charge des variables DAX. Les variables peuvent maintenant stocker le résultat d’une expression comme une variable nommée, qui peut ensuite être passée en tant qu’argument à d’autres expressions de mesure. Une fois que les valeurs résultantes ont été calculées pour une expression de variable, ces valeurs ne changent pas, même si la variable est référencée dans une autre expression. Pour plus d’informations, consultez [Fonction VAR](/dax/var-dax).    
 ### <a name="new-dax-functions"></a>Nouvelles fonctions DAX
-Avec cette version, DAX introduit plus de cinquante nouvelles fonctions, qui accélèrent les calculs et améliorent les visualisations dans Power BI. Pour plus d’informations, consultez [New DAX Functions](http://msdn.microsoft.com/library/mt704075.aspx)(Nouvelles fonctions DAX).
+Avec cette version, DAX introduit plus de cinquante nouvelles fonctions, qui accélèrent les calculs et améliorent les visualisations dans Power BI. Pour plus d’informations, consultez [New DAX Functions](/dax/new-dax-functions)(Nouvelles fonctions DAX).
 ### <a name="save-incomplete-measures"></a>Enregistrement des mesures incomplètes
 Vous pouvez maintenant enregistrer les mesures DAX incomplètes directement dans un projet de modèle 1200 tabulaire et les terminer plus tard.
 ### <a name="additional-dax-enhancements"></a>Autres améliorations DAX

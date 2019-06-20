@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917715"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Ajouter des fichiers de données ou journaux à une base de données
@@ -75,7 +75,7 @@ ms.locfileid: "62917715"
   
 8.  Spécifiez la taille initiale du fichier. Attribuez aux fichiers de données un maximum d'espace en tenant compte du volume maximal de données qu'est censée contenir la base de données.  
   
-9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur (**...**) dans la colonne **Croissance automatique**. Sélectionnez l'une des options suivantes :  
+9. Pour spécifier la manière dont la taille du fichier doit augmenter, cliquez sur ( **...** ) dans la colonne **Croissance automatique**. Sélectionnez l'une des options suivantes :  
   
     1.  Pour autoriser la croissance du fichier sélectionné au fur et à mesure que l'espace requis pour les données augmente, activez la case à cocher **Activer la croissance automatique** , puis sélectionnez l'une des options suivantes :  
   
