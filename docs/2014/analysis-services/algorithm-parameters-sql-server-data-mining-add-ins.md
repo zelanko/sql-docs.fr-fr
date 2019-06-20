@@ -48,10 +48,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062597"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Paramètres d'algorithme (Compléments d'exploration de données SQL Server)
@@ -105,7 +105,7 @@ ms.locfileid: "66062597"
 |MINIMUM_SUPPORT|Algorithme MTS (Microsoft Time Series)|Spécifie le nombre minimal de tranches de temps qui sont requises pour générer un fractionnement dans chaque arbre de série chronologique.<br /><br /> La valeur par défaut est 10.|  
 |MISSING_VALUE_SUBSTITUTION|Algorithme MTS (Microsoft Time Series)|Spécifie la méthode employée pour combler les vides dans les données d'historique. Par défaut, les vides et les extrémités irréguliers ne sont pas autorisés dans les données. Les méthodes suivantes peuvent être utilisées pour combler les extrémités ou vides irréguliers : utiliser la valeur précédente, utiliser la valeur moyenne ou utiliser une constante numérique spécifique.|  
 |MODELLING_CARDINALITY|Algorithme de clustering Microsoft|Spécifie le nombre d'exemples de modèles générés pendant le processus de clustering.<br /><br /> La valeur par défaut est 10.|  
-|PERIODICITY_HINT|Algorithme MTS (Microsoft Time Series)|Fournit à l'algorithme une indication de la périodicité des données. Par exemple, si les ventes varient chaque année, et que l'unité de mesure de la série est le mois, la périodicité est égale à 12. Ce paramètre s'affiche sous la forme {n [, n]}, où n est un nombre positif. Le n entre crochets [] est facultatif et peut être répété aussi souvent que nécessaire.<br /><br /> La valeur par défaut est {1}.|  
+|PERIODICITY_HINT|Algorithme MTS (Microsoft Time Series)|Fournit à l'algorithme une indication de la périodicité des données. Par exemple, si les ventes varient chaque année, et que l'unité de mesure de la série est le mois, la périodicité est égale à 12. Ce paramètre s'affiche sous la forme {n [, n]}, où n est un nombre positif. Le n entre crochets [] est facultatif et peut être répété aussi souvent que nécessaire.<br /><br /> La valeur par défaut est {1}.|  
 |PREDICTION_SMOOTHING|Algorithme MTS (Microsoft Time Series)|Contrôle la fusion entre les algorithmes de série chronologique ARTXP et ARIMA. La valeur spécifiée n'est valide que lorsque le paramètre FORECAST_METHOD a la valeur MIXED. Les valeurs doivent être comprises entre 0 et 1. Si la valeur est 0, le modèle utilise uniquement ARTXP. Si la valeur est 1, le modèle utilise uniquement ARIMA. Une valeur plus proche à 0 indique une pondération plus importante pour ARTXP. Une valeur plus proche à 1 indique une pondération plus importante pour ARIMA.|  
 |SAMPLE_SIZE|Algorithme de clustering Microsoft|Spécifie le nombre de cas que l'algorithme utilise à chaque passage si l'une des méthodes de clustering évolutif est définie pour le paramètre CLUSTERING_METHOD. Si la valeur 0 est attribuée au paramètre SAMPLE_SIZE, le jeu de données complet est organisé en clusters en un seul passage. Cela risque de créer des problèmes de mémoire et de performances.<br /><br /> La valeur par défaut est 50000.|  
 |SAMPLE_SIZE|Algorithme MLR (Microsoft Logistic Regression)<br /><br /> Microsoft Neural Network Algorithm|Spécifie le nombre de cas à utiliser pour effectuer l'apprentissage du modèle. Le fournisseur d'algorithme utilise soit ce nombre, soit le pourcentage du nombre total de cas qui ne sont pas inclus dans le pourcentage d'exclusion conformément au paramètre HOLDOUT_PERCENTAGE : c'est la valeur la plus faible qui est retenue.<br /><br /> En d’autres termes, si HOLDOUT_PERCENTAGE a la valeur 30, l’algorithme utilise la valeur de ce paramètre ou une valeur égale à 70 % du nombre total de cas, en prenant la plus petite valeur des deux.<br /><br /> La valeur par défaut est 10000.|  

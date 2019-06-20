@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7b82b3450727d36a36186453e366625ebecbde2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721392"
 ---
 # <a name="define-filters"></a>Définir les filtres
@@ -35,7 +35,7 @@ ms.locfileid: "62721392"
  Cliquez sur ce bouton pour effacer tous les filtres précédemment définis.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outil de résolution des conflits de réplication de Microsoft &#40;réplication de fusion&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
- [Outil de résolution des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
+ [Visionneuse des conflits de réplication de Microsoft &#40;réplication de fusion&#41;](microsoft-replication-conflict-viewer-merge-replication.md)   
+ [Visionneuse des conflits de réplication de Microsoft &#40;réplication transactionnelle&#41;](microsoft-replication-conflict-viewer-transactional-replication.md)  
   
   

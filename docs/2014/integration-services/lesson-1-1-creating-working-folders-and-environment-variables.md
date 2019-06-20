@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767651"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Étape 1 : Création de dossiers et des Variables d’environnement de travail
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Étape 1 : Création des variables d’environnement et des dossiers de travail
   Dans cette tâche, vous allez créer le dossier de travail (C:\DeploymentTutorial) et les nouvelles variables d'environnement système (`DataTransfer` et `LoadXMLData`) que vous utiliserez dans les tâches de didacticiel ultérieures.  
   
  Le dossier de travail se trouve à la racine du lecteur C. Vous pouvez utiliser un lecteur ou un emplacement différent si vous le souhaitez. Cependant, vous devez prendre note de cet emplacement et vous en servir lorsque le didacticiel vous renvoie à l'emplacement du dossier de travail DeploymentTutorial.  
@@ -32,7 +32,7 @@ ms.locfileid: "62767651"
   
 1.  Cliquez avec le bouton droit sur le menu Démarrer et cliquez sur Explorer.  
   
-2.  Cliquez sur **Disque local (C:)**.  
+2.  Cliquez sur **Disque local (C:)** .  
   
 3.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Dossier**.  
   

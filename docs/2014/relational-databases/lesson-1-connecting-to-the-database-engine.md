@@ -11,28 +11,28 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145481"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
-  Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
+  Les outils installés lors de l'installation du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] dépendent de l'édition du produit et de la configuration choisies. Cette leçon passe en revue les outils principaux et décrit comment faire pour se connecter et exécuter une fonction de base (autorisation de plusieurs utilisateurs).  
   
   
   
 ##  <a name="tools"></a> Outils de mise en route  
- Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d'outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l'outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer** . Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu'éléments inhérents aux composants clients lors de l'installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] est fourni avec un éventail d’outils. Cette rubrique décrit les premiers outils dont vous aurez besoin et vous aide à choisir l’outil adapté à votre travail. Vous pouvez accéder à tous les outils à partir du menu **Démarrer**. Certains outils, comme [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ne sont pas installés par défaut. Vous devez sélectionner les outils en tant qu’éléments inhérents aux composants clients lors de l’installation. Pour obtenir une description complète des outils décrits ci-dessous, recherchez-les dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] contient uniquement un sous-ensemble des outils.  
   
 ### <a name="basic-tools"></a>Outils de base  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est l’outil principal pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l’écriture [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] . Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] est l’outil principal pour administrer le [!INCLUDE[ssDE](../includes/ssde-md.md)] et l’écriture [!INCLUDE[tsql](../includes/tsql-md.md)] code. Il est hébergé dans le shell [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]. Il n'est pas inclus dans [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] , mais est disponible en tant que téléchargement distinct à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=144346).  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les outils clients. Il vous permet d'activer les protocoles serveur, configurer des options de protocole (notamment les ports TCP), configurer le démarrage automatique de services serveur et configurer des ordinateurs clients pour définir leur mode de connexion selon vos préférences. Cet outil configure les éléments de connectivité les plus avancés mais n'active pas les fonctionnalités.  
   
 ### <a name="sample-database"></a>Base de données exemple  
- Les exemples de bases de données et les exemples ne sont pas fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La plupart des exemples décrits dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] .  
+ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La plupart des exemples décrits dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
   
 ##### <a name="to-start-sql-server-management-studio"></a>Pour démarrer SQL Server Management Studio  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63145481"
   
      La boîte de dialogue **Nouvelle connexion** apparaît.  
   
-2.  Sur le **général** page, dans le **nom de connexion** , tapez un compte de connexion Windows au format  *\<domaine >\\< connexion\>*.  
+2.  Sur le **général** page, dans le **nom de connexion** , tapez un compte de connexion Windows au format  *\<domaine >\\< connexion\>* .  
   
 3.  Dans la zone **Base de données par défaut** , sélectionnez [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] (si disponible). Sinon, sélectionnez **master**.  
   
@@ -101,6 +101,6 @@ ms.locfileid: "63145481"
 >  Ces informations sont des notions de base destinées à vous aider au démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un environnement de sécurité de qualité. La sécurité est à l'évidence un aspect primordial des opérations de base de données.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Connexion à partir d’un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
+ [Leçon 2 : Connexion à partir d’un autre ordinateur](lesson-2-connecting-from-another-computer.md)  
   
   

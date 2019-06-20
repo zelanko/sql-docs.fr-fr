@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102495"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
@@ -59,11 +59,11 @@ ms.locfileid: "66102495"
 ##  <a name="bkmk_RDL_Types"></a> Types RDL  
  La table suivante répertorie les types utilisés dans des éléments et des attributs RDL.  
   
-|Type|Description|  
+|type|Description|  
 |----------|-----------------|  
 |`Binary`|Propriété dotée d'une valeur binaire encodée en base 64.|  
 |`Boolean`|Propriété de l'objet ayant pour valeur `true` ou `false`. Sauf indication contraire, la valeur d'un objet Boolean omis facultatif est `False`.|  
-|`Date`|Une propriété avec une valeur de date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ [THH [ : SS . [S]]].|  
+|`Date`|Une propriété avec une valeur de date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ [THH [ : SS [. [S]]].|  
 |`Enum`|Propriété dont la valeur est le texte d'une chaîne, qui doit appartenir à une liste de valeurs désignées.|  
 |`Float`|Propriété dotée d'une valeur flottante (Float). Une virgule (,) est utilisée comme séparateur décimal facultatif.|  
 |`Integer`|Propriété dotée d'une valeur entière (int32).|  

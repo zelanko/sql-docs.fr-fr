@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109931"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifications importantes de SQL Server Reporting Services dans SQL Server 2014
@@ -47,7 +47,7 @@ ms.locfileid: "66109931"
  `http://<Server Name>/sites/videos/_vti_bin/ReportServer`  
   
 ### <a name="changes-to-sharepoint-mode-command-line-installation"></a>Modifications à l'installation de ligne de commande en mode SharePoint  
- Le paramètre d'entrée **/RSINSTALLMODE** fonctionne uniquement avec les installations en mode natif, et non pour les installations en mode SharePoint. Par exemple, ce qui suit n’est pas pris en charge dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/rsinstallmode = « DefaultSharePointMode »**. Au lieu de ce paramètre d'entrée, utilisez **/RSSHPINSTALLMODE="DefaultSharePointMode"**.  
+ Le paramètre d'entrée **/RSINSTALLMODE** fonctionne uniquement avec les installations en mode natif, et non pour les installations en mode SharePoint. Par exemple, ce qui suit n’est pas pris en charge dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]: **/rsinstallmode = « DefaultSharePointMode »** . Au lieu de ce paramètre d'entrée, utilisez **/RSSHPINSTALLMODE="DefaultSharePointMode"** .  
   
  L’instruction suivante est un exemple d’un ensemble de commande et paramètre de terminer l’installation : **setup/action = install/Features = SQL, RS/InstanceName = Denali_INST1 … / rsshpinstallmode = « DefaultSharePointMode »**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109931"
   
 -   Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe et rsconfig.exe. Au lieu d'utiliser ces utilitaires pour la configuration du mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , utilisez l'Administration centrale de SharePoint et PowerShell.  
   
--   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec une syntaxe semblable à < nom_ordinateur > / < nom_instance >. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;**. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
+-   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec une syntaxe semblable à < nom_ordinateur > / < nom_instance >. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;** . À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Le générateur de modèles de rapport est disponible dans les outils de données SQL Server  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ne prend plus en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ni ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le concepteur de requêtes que vous utilisez pour créer des requêtes et extraire des données de rapport à partir de modèles de rapport est toujours disponible dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755032"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
@@ -64,9 +64,9 @@ ms.locfileid: "62755032"
  *<PRINCIPAL_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur principal. Ce nom respecte le format suivant :  
   
- *<NOM_SYSTÈME>*[**\\**_<nom_instance>_]  
+ *<NOM_SYSTÈME>* [ **\\** _<nom_instance>_ ]  
   
- où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : _<NOM_SYSTÈME>_**\\**_<nom_instance>_.  
+ où *<NOM_SYSTÈME>* est le nom du système sur lequel l’instance de serveur réside. Pour une instance de serveur autre que l’instance par défaut, le nom de l’instance s’affiche également : _<NOM_SYSTÈME>_ **\\** _<nom_instance>_ .  
   
  *<MIRROR_SERVER>*  
  Nom du partenaire qui est actuellement l'instance de serveur miroir. Le format est identique à celui du serveur principal.  
@@ -81,7 +81,7 @@ ms.locfileid: "62755032"
   
  Un administrateur système peut afficher la configuration actuelle des avertissements pour la base de données en sélectionnant la page à onglets **Avertissements** . À partir de là, l’administrateur peut lancer la boîte de dialogue **Définir les seuils d’avertissement** pour activer et configurer un ou plusieurs seuils d’avertissement.  
   
- Dans la bannière située au-dessus des onglets, le volet d’informations affiche l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :**_\<date>_*\<heure>*. En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
+ Dans la bannière située au-dessus des onglets, le volet d’informations affiche l’heure de la dernière actualisation des informations d’état par le moniteur dans le champ **Dernière actualisation :** _\<date>_ *\<heure>* . En général, le moniteur de mise en miroir de bases de données extrait des informations d'état des instances de principal et de serveur miroir à des moments différents. L'heure d'actualisation la plus ancienne s'affiche.  
   
 ## <a name="action-menu"></a>Menu Action  
  Le menu **Action** comprend toujours les commandes suivantes :  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b90fb6d2a85d30179e630d292f8fc11250958344
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261773"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Spécifier les types d'articles (programmation Transact-SQL de la réplication)
@@ -36,11 +36,11 @@ ms.locfileid: "63261773"
   
     -   **logbased** – article de table basé sur le journal, utilisé par défaut pour la réplication transactionnelle et d'instantané. La réplication génère automatiquement la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit un article filtré verticalement.  
   
-    -   **logbased manualfilter** – article basé sur un journal, filtré horizontalement pour lequel la procédure stockée utilisée pour le filtrage horizontal est créée et définie manuellement par l'utilisateur et spécifiée pour **@filter**sur la base de données de publication du serveur de publication. Pour plus d’informations, voir [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** – article basé sur un journal, filtré horizontalement pour lequel la procédure stockée utilisée pour le filtrage horizontal est créée et définie manuellement par l'utilisateur et spécifiée pour **@filter** sur la base de données de publication du serveur de publication. Pour plus d’informations, voir [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** – article basé sur un journal, filtré verticalement pour lequel la vue qui définit l'article filtré verticalement est créée et définie par l'utilisateur et spécifiée pour **@sync_object**sur la base de données de publication du serveur de publication. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** – article basé sur un journal, filtré verticalement pour lequel la vue qui définit l'article filtré verticalement est créée et définie par l'utilisateur et spécifiée pour **@sync_object** sur la base de données de publication du serveur de publication. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** – article basé sur journal, filtré horizontalement et verticalement pour lequel la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit l'article filtré verticalement sont créées et définies par l'utilisateur et spécifiées pour **@filter** et **@sync_object**, respectivement. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** – article basé sur journal, filtré horizontalement et verticalement pour lequel la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit l'article filtré verticalement sont créées et définies par l'utilisateur et spécifiées pour **@filter** et **@sync_object** , respectivement. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Cela définit un nouvel article pour la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
   
@@ -58,11 +58,11 @@ ms.locfileid: "63261773"
   
     -   **indexed view schema only** – article de vue indexée de schéma uniquement. La table de base doit également être répliquée.  
   
-    -   **indexed view logbased manualfilter** – article de vue indexée basé sur un journal et filtré horizontalement pour lequel la procédure stockée utilisée pour le filtrage horizontal est créée et définie manuellement par l'utilisateur et spécifiée pour **@filter**sur la base de données de publication du serveur de publication. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** – article de vue indexée basé sur un journal et filtré horizontalement pour lequel la procédure stockée utilisée pour le filtrage horizontal est créée et définie manuellement par l'utilisateur et spécifiée pour **@filter** sur la base de données de publication du serveur de publication. Pour plus d'informations, voir [Définir et modifier un filtre de lignes statiques](define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** – article de vue indexée basé sur un journal et filtré pour lequel la vue qui définit un article filtré verticalement est créée et définie par l'utilisateur et spécifiée pour **@sync_object**sur la base de données de publication du serveur de publication. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** – article de vue indexée basé sur un journal et filtré pour lequel la vue qui définit un article filtré verticalement est créée et définie par l'utilisateur et spécifiée pour **@sync_object** sur la base de données de publication du serveur de publication. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** – article de vue indexée basé sur journal et filtré pour lequel la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit un article filtré verticalement sont créées et définies par l'utilisateur et spécifiées pour **@filter** et **@sync_object**, respectivement. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** – article de vue indexée basé sur journal et filtré pour lequel la procédure stockée utilisée pour le filtrage horizontal et la vue qui définit un article filtré verticalement sont créées et définies par l'utilisateur et spécifiées pour **@filter** et **@sync_object** , respectivement. Pour plus d'informations, consultez [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md) et [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
      Cela définit un nouvel article pour la publication. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
   

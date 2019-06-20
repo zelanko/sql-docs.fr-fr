@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824501"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accès au service Web Report Server avec Visual Basic ou Visual C# (didacticiel SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "62824501"
 ## <a name="tasks"></a>Tâches  
  [Leçon 1 : Création du projet de Client de Service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
- [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
+ [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
  [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127906"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*ColumnName*|Le nom de texte de la colonne. Si le nom de colonne contienne des espaces incorporés, vous devez le placer entre guillemets doubles.|  
-|*type*|Types de données sont les suivantes :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Monétaire (Currency)<br /><br /> Unique<br /><br /> Double<br /><br /> Datetime<br /><br /> Text<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (sous forme de texte)<br /><br /> Float (comme Double)<br /><br /> Integer (comme court)<br /><br /> LongChar (comme Mémo)<br /><br /> Date *format de date*|  
+|*type*|Types de données sont les suivantes :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Unique<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (sous forme de texte)<br /><br /> Float (comme Double)<br /><br /> Integer (comme court)<br /><br /> LongChar (comme Mémo)<br /><br /> Date *format de date*|  
 |**Width**|La valeur de chaîne littérale `Width`. Indique que le nombre suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par des caractères ; obligatoire pour les fichiers de longueur fixe).|  
 |*#*|La valeur entière qui désigne la largeur de la colonne (obligatoire si **largeur** est spécifié).|  
   

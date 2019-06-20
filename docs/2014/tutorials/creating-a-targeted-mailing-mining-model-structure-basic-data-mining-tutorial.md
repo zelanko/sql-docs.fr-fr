@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856164"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données pour le publipostage ciblé (Didacticiel sur l'exploration de données de base)
@@ -30,7 +30,7 @@ ms.locfileid: "62856164"
   
 3.  Sur le **sélectionner la méthode de définition** page, vérifiez que **à partir de l’entrepôt de données ou de la base de données relationnelle existant** est sélectionnée, puis cliquez sur **suivant**.  
   
-4.  Sur le **créer la Structure d’exploration de données** page sous **quelle technique d’exploration de données voulez-vous utiliser ?**, sélectionnez **Microsoft Decision Trees**.  
+4.  Sur le **créer la Structure d’exploration de données** page sous **quelle technique d’exploration de données voulez-vous utiliser ?** , sélectionnez **Microsoft Decision Trees**.  
   
     > [!NOTE]  
     >  Si vous obtenez un avertissement indiquant qu'aucun algorithme d'exploration de données n'a été trouvé, les propriétés du projet ne sont peut-être pas configurées correctement. Cet avertissement se produit lorsque le projet tente d'extraire une liste d'algorithmes d'exploration de données du serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et ne trouve pas le serveur. Par défaut, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] utilisera **localhost** que le serveur. Si vous utilisez une instance différente ou une instance nommée, vous devez modifier les propriétés du projet. Pour plus d’informations, consultez [création d’un projet Analysis Services &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  

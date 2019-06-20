@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997070"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
@@ -46,7 +46,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object'` Est le nom ou une table existante, vue, fonction définie par l’utilisateur, ou une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)**, sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme _propriétaire_existant.objet_**.** _objet_ si le schéma et son propriétaire ont le même nom.  
+`[ @objname = ] 'object'` Est le nom ou une table existante, vue, fonction définie par l’utilisateur, ou une procédure stockée dans la base de données actuelle. *objet* est un **nvarchar(776)** , sans valeur par défaut. *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme _propriétaire_existant.objet_ **.** _objet_ si le schéma et son propriétaire ont le même nom.  
   
 `[ @newowner = ] 'owner_ '` Est le nom du compte de sécurité qui sera le nouveau propriétaire de l’objet. *propriétaire* est **sysname**, sans valeur par défaut. *propriétaire* doit être un utilisateur de base de données valide, le rôle de serveur, [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion de Windows, ou un groupe Windows ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
   
