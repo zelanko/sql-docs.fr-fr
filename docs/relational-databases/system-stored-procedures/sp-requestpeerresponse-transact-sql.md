@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047778"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
@@ -42,7 +42,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'` Est le nom de la publication dans une topologie de peer-to-peer pour lequel l’état est vérifié. *publication* est **sysname**, sans valeur par défaut.  
   
-`[ @description = ] 'description'` Informations définies par l’utilisateur qui peuvent être utilisées pour identifier les demandes d’état individuelles. *Description* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Informations définies par l’utilisateur qui peuvent être utilisées pour identifier les demandes d’état individuelles. *Description* est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
 `[ @request_id = ] request_id` Retourne l’ID de la nouvelle requête. *request_id* est **int** et est un paramètre de sortie. Cette valeur peut être utilisée lors de l’exécution [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) pour afficher toutes les réponses à une demande d’état.  
   

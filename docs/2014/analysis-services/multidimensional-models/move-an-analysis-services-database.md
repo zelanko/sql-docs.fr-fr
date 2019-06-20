@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073597"
 ---
 # <a name="move-an-analysis-services-database"></a>Déplacer une base de données Analysis Services
@@ -53,7 +53,7 @@ ms.locfileid: "66073597"
   
 6.  Avec le bouton droit sur le **bases de données** dossier et sélectionnez **attacher...**  
   
-7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir (**...** ) pour rechercher le dossier de base de données.  
+7.  Dans la zone de texte **dossier** , tapez le nouvel emplacement du dossier de base de données. Vous pouvez également utiliser le bouton Parcourir ( **...** ) pour rechercher le dossier de base de données.  
   
 8.  Sélectionnez le `ReadWrite` mode pour la base de données.  
   

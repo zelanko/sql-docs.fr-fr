@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9981a3ebeb1b67bda67509e2a08995fadb195abb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107297"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107297"
 |&#124; (barre verticale)|Sépare les éléments de la syntaxe. Vous ne pouvez choisir qu'un seul de ces éléments.|  
 |`[ ] (brackets)`|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |**{ }** (accolades)|Délimitent les paramètres des éléments de syntaxe.|  
-|[**,**...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
+|[ **,** ...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ XMLLocalName :: =
 |`ElementNode`|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
 |`XMLName`|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. Un `XMLName` peut porter comme préfixe un identificateur d'espace de noms qui identifie de façon unique chaque nœud.|  
 |`Encoding`|Indique que `Value` pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
-|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée (**{}**), aucun champ de ce nœud n’est utilisé.<br /><br /> `FieldList` ne peut pas contenir à la fois `Value` et `Element` ou `ElementNode`.|  
+|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée ( **{}** ), aucun champ de ce nœud n’est utilisé.<br /><br /> `FieldList` ne peut pas contenir à la fois `Value` et `Element` ou `ElementNode`.|  
 |`Field`|Spécifie les données qui sont extraites en tant que champ de dataset.|  
 |`Attribute`|Paire nom-valeur dans `ElementNode`. Par exemple, dans le nœud d’élément \<Customer ID = « 1 » >, `ID` est un attribut et `@ID(Integer)` retourne « 1 » comme type d’entier dans le champ de données correspondant `ID`.|  
 |`Value`|Valeur de l'élément. `Value` ne peut être utilisé que sur le dernier `ElementNode` dans le chemin de l'élément. Par exemple, étant donné que \<retourner > est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de `Return {@}` est `Chair`.|  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997098"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
@@ -51,7 +51,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Est la propriété à modifier. *propriété* est **sysname**.  
   
-`[ @value = ] 'value'` Est la nouvelle valeur de la propriété. *valeur* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur de la propriété. *valeur* est **nvarchar (1000)** , sans valeur par défaut.  
   
 `[ @publication_type = ] publication_type` Spécifie le type de réplication de la publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   

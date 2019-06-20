@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33028 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868662"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Détails  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62868662"
 |Texte du message|Impossible d'ouvrir la session pour %S_MSG '%.*ls'. Code d'erreur du fournisseur : %d.|  
   
 ## <a name="explanation"></a>Explication  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu ouvrir le fournisseur de services de chiffrement répertorié dans le message d’erreur. Le fournisseur de services de chiffrement a fourni le code d'erreur répertorié. Il peut s'avérer nécessaire de contacter votre fournisseur de services de chiffrement pour plus d'informations sur l'erreur.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu ouvrir le fournisseur de services de chiffrement répertorié dans le message d’erreur. Le fournisseur de services de chiffrement a fourni le code d'erreur répertorié. Il peut s'avérer nécessaire de contacter votre fournisseur de services de chiffrement pour plus d'informations sur l'erreur.  
   
 |Code d'erreur|Description|  
-|--------------|---------------|  
+|----------------|-----------------|  
 |0|Réussite. Aucune erreur.|  
 |1|Échec. Une erreur non spécifiée ou inattendue s'est produite. Aucune information supplémentaire n'est disponible.|  
 |2|Mémoire tampon insuffisante. Impossible d'allouer de l'espace au fournisseur de services de chiffrement.|  
@@ -47,5 +46,6 @@ ms.locfileid: "62868662"
 |6|Argument non valide. Un argument non valide a été transmis au fournisseur de services de chiffrement.|  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
-Corrigez l'erreur ou contactez le fournisseur de services de chiffrement pour plus d'informations.  
+ Corrigez l'erreur ou contactez le fournisseur de services de chiffrement pour plus d'informations.  
+  
   

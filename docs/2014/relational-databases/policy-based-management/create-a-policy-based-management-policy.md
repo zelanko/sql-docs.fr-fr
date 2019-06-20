@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b81fb13b8b8635bd5e5cecde801b4123fc74c99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253527"
 ---
 # <a name="create-a-policy-based-management-policy"></a>Créer une stratégie de gestion basée sur des stratégies
@@ -55,7 +55,7 @@ ms.locfileid: "63253527"
   
 6.  Si vous souhaitez que la stratégie soit activée dès sa création, activez la case à cocher **Activé** . Si le mode d'évaluation est **À la demande**, la case à cocher **Activé** n'est pas disponible.  
   
-7.  Dans la liste **Vérifier la condition** , sélectionnez l'une des conditions existantes ou sélectionnez **Nouvelle condition**. Pour modifier une condition, sélectionnez-la, puis cliquez sur le bouton de sélection (**...**). Pour plus d’informations, consultez [Créer une condition de gestion basée sur des stratégies.](create-a-new-policy-based-management-condition.md) ou [Afficher ou modifier les propriétés d’une condition de gestion basée sur des stratégies](view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
+7.  Dans la liste **Vérifier la condition** , sélectionnez l'une des conditions existantes ou sélectionnez **Nouvelle condition**. Pour modifier une condition, sélectionnez-la, puis cliquez sur le bouton de sélection ( **...** ). Pour plus d’informations, consultez [Créer une condition de gestion basée sur des stratégies.](create-a-new-policy-based-management-condition.md) ou [Afficher ou modifier les propriétés d’une condition de gestion basée sur des stratégies](view-or-modify-the-properties-of-a-policy-based-management-condition.md).  
   
 8.  Dans la zone **Par rapport aux cibles** , sélectionnez un ou plusieurs types de cibles pour cette stratégie. Certaines conditions et facettes peuvent être appliquées uniquement à certains types de cibles. Les jeux de cibles disponibles apparaissent dans la zone associée. Développez **Toutes les** pour sélectionner une condition de filtrage pour certains types des cibles. Si aucune cible n'apparaît dans cette zone, la portée de la condition de vérification est le niveau serveur.  
   

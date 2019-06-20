@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3991618e6f77eab9ae96b2879098f91dab5a748a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099657"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
@@ -77,7 +77,7 @@ ms.locfileid: "66099657"
  Nombre maximal d'instantanés stockées pour un rapport. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est égale à `-1`, il n'existe aucune limite sur le nombre d'instantanés.  
   
  **EnableIntegratedSecurity**  
- Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :  
+ Détermine si la sécurité intégrée de Windows est prise en charge pour les connexions à la source de données de rapports. La valeur par défaut est `True`. Les valeurs valides sont les suivantes :  
   
  `True` = la sécurité intégrée de Windows est activée.  
   

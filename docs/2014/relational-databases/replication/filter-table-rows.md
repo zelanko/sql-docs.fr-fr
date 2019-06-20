@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721219"
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
@@ -72,7 +72,7 @@ ms.locfileid: "62721219"
  **Rechercher une table**  
  Fusionnez les publications uniquement avec des filtres de jointure. Cliquez sur **Rechercher une table** pour trouver une table dans une arborescence de filtres complexe. Dans une base de données comportant des relations complexes, une table peut être jointe à plusieurs tables et apparaître dès lors à plusieurs endroits dans l'arborescence des filtres.  
   
- La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>**.  
+ La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>** .  
   
  Choisissez un nœud de raccourci dans le volet et cliquez sur **Rechercher une table**. Ce volet est développé et la table est mise en surbrillance. Si vous cliquez sur **Rechercher une table** sans sélectionner un nœud de raccourci, une boîte de dialogue **Rechercher une table** s'ouvre.  
   

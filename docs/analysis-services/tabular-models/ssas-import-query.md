@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67466abfccb03a689d5f717159e833143fcfafb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c90192e8dc652f28d70298dd7d24215c7ee869f6
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472044"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263292"
 ---
 # <a name="import-data-by-using-a-native-query"></a>Importer des données à l’aide d’une requête native
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
@@ -58,7 +58,7 @@ Après avoir importé, une table nommée Employees est créée dans le modèle.
 
 
 ## <a name="see-also"></a>Voir aussi  
- [Value.NativeQuery](https://msdn.microsoft.com/library/mt736917.aspx)   
+ [Value.NativeQuery](/powerquery-m/value-nativequery)   
  [Emprunt d’identité](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
 
   

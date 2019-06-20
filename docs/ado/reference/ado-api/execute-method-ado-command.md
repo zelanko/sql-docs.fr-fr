@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66697925"
 ---
 # <a name="execute-method-ado-command"></a>Execute, méthode (commande ADO)
@@ -53,11 +53,11 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Notes  
  À l’aide de la **Execute** méthode sur un **commande** objet exécute la requête spécifiée dans le **CommandText** propriété ou **CommandStream** propriété de l’objet.  
   
- Résultats sont retournés dans un **Recordset** (par défaut) ou en tant que flux d’informations binaires. Pour obtenir un flux binaire, spécifiez **adExecuteStream** dans *Options*, puis fournir un flux de données en définissant **Command.Properties (« sortie Stream »)** . ADO **Stream** objet peut être spécifié pour recevoir les résultats, ou un autre objet de flux tels que l’objet de réponse de IIS peut être spécifié. Si aucun flux n’a été spécifié avant d’appeler **Execute** avec **adExecuteStream**, une erreur se produit. La position du flux de données lors du retour de **Execute** est fournisseur spécifique.  
+ Résultats sont retournés dans un **Recordset** (par défaut) ou en tant que flux d’informations binaires. Pour obtenir un flux binaire, spécifiez **adExecuteStream** dans *Options*, puis fournir un flux de données en définissant **Command.Properties (« sortie Stream »)**. ADO **Stream** objet peut être spécifié pour recevoir les résultats, ou un autre objet de flux tels que l’objet de réponse de IIS peut être spécifié. Si aucun flux n’a été spécifié avant d’appeler **Execute** avec **adExecuteStream**, une erreur se produit. La position du flux de données lors du retour de **Execute** est fournisseur spécifique.  
   
  Si la commande ne vise pas à retourner des résultats (par exemple, une requête SQL UPDATE) le fournisseur retourne **rien** aussi longtemps que l’option **adExecuteStream** est spécifié ; sinon exécutez retourne un fermé **Recordset**. Certains langages d’application vous permettent d’ignorer cette valeur de retour si aucun **Recordset** est souhaitée.  
   
- **Exécutez** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lorsque le **CommandType** est **valeur adCmdStoredProc**,  **adCmdTable**, ou **adCmdTableDirect**.  
+ **Exécutez** génère une erreur si l’utilisateur spécifie une valeur pour **CommandStream** lorsque le **CommandType** est **valeur adCmdStoredProc**, ** adCmdTable**, ou **adCmdTableDirect**.  
   
  Si la requête possède des paramètres, les valeurs en cours pour le **commande** les paramètres de l’objet sont utilisées, sauf si vous remplacez par les valeurs de paramètre passées avec le **Execute** appeler. Vous pouvez remplacer un sous-ensemble des paramètres en omettant les nouvelles valeurs pour certains des paramètres lors de l’appel le **Execute** (méthode). L’ordre dans lequel vous spécifiez les paramètres est le même ordre que celui dans lequel la méthode les passe. Par exemple, si les paramètres de quatre (ou plus) et que vous souhaitez passer de nouvelles valeurs uniquement pour les première et quatrième paramètres, vous transmettriez `Array(var1,,,var4)` en tant que le *paramètres* argument.  
   

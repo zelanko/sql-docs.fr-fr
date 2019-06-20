@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676863"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Afficher les propriétés d'une facette de gestion basée sur des stratégies
@@ -51,7 +51,7 @@ ms.locfileid: "62676863"
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Facettes** .  
   
-5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **Propriétés de la facette -**_nom_facette_, consultez [Boîte de dialogue Propriétés de la facette, page Général](../../integration-services/general-page-of-integration-services-designers-options.md), [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](facet-properties-dialog-box-dependent-policies-page.md) et [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **Propriétés de la facette -** _nom_facette_, consultez [Boîte de dialogue Propriétés de la facette, page Général](../../integration-services/general-page-of-integration-services-designers-options.md), [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](facet-properties-dialog-box-dependent-policies-page.md) et [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **Fermer**.  
   

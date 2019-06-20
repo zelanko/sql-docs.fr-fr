@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086997"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Créer une formule de membre personnalisée (Assistant Business Intelligence)
@@ -27,7 +27,7 @@ ms.locfileid: "66086997"
  Sélectionnez l'attribut à associer à une formule de membre personnalisée.  
   
  **Colonne source**  
- Cliquez sur le bouton de navigation (**...** ) pour ouvrir la **sélectionner une colonne** boîte de dialogue et sélectionnez la colonne de formule de membre personnalisée à associer à l’attribut.  
+ Cliquez sur le bouton de navigation ( **...** ) pour ouvrir la **sélectionner une colonne** boîte de dialogue et sélectionnez la colonne de formule de membre personnalisée à associer à l’attribut.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   

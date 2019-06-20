@@ -20,17 +20,17 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
-ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
+monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719429"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263252"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Retourne une liste de tous les classements pris en charge.  
   
@@ -48,14 +48,17 @@ fn_helpcollations ()
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Créer une vue d’abonnement|**sysname**|Nom de classement standard|  
+|Nom|**sysname**|Nom de classement standard|  
 |Description|**nvarchar(1000)**|Description du classement|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge un nombre limité (< 80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements, qui ont été développés avant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doit pas être utilisés pour les nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples
 
- L'exemple suivant retourne le nom de tous les classements commençant par la lettre `L` et correspondant à des classements de tri binaire.  
+ L'exemple suivant retourne le nom de tous les classements commençant par la lettre `L` et correspondant à des classements de tri binaire.
+
+> [!Note]
+> Requêtes d’entrepôt de données SQL Azure contre fn_helpcollations() doivent être exécutées dans la base de données master.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

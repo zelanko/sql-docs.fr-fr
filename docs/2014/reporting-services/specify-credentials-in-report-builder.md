@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101137"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Spécifier des informations d’identification dans le Générateur de rapports
@@ -62,7 +62,7 @@ ms.locfileid: "66101137"
 -   Aucune information d'identification n'est requise.  
   
 ### <a name="windows-integrated-security"></a>Sécurité intégrée de Windows  
- Lorsque vous sélectionnez **Utiliser l'authentification Windows (sécurité intégrée)**, le jeton de sécurité de l'utilisateur actuel est passé à la source de données. Dans ce cas, l'utilisateur n'est pas invité à taper son nom d'utilisateur ou son mot de passe. En règle générale, cette option requiert l'activation des fonctionnalités de délégation. Si ces fonctionnalités ne sont pas activées, vous ne pouvez utiliser cette option que pour accéder à une source de données située sur le même ordinateur.  
+ Lorsque vous sélectionnez **Utiliser l'authentification Windows (sécurité intégrée)** , le jeton de sécurité de l'utilisateur actuel est passé à la source de données. Dans ce cas, l'utilisateur n'est pas invité à taper son nom d'utilisateur ou son mot de passe. En règle générale, cette option requiert l'activation des fonctionnalités de délégation. Si ces fonctionnalités ne sont pas activées, vous ne pouvez utiliser cette option que pour accéder à une source de données située sur le même ordinateur.  
   
 ### <a name="user-name-and-password-login"></a>Connexion à l'aide d'un nom d'utilisateur et d'un mot de passe  
  Lorsque vous sélectionnez **Utiliser ce nom d'utilisateur et ce mot de passe**, un nom d'utilisateur et un mot de passe doivent être fournis pour permettre l'accès à la source de données. Pour une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , les informations d'identification peuvent correspondre à une connexion de base de données. Les informations d'identification sont passées à la source de données pour authentification.  

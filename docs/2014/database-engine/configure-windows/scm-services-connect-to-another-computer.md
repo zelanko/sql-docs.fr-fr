@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810347"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Se connecter à un autre ordinateur (Gestionnaire de configuration SQL Server)
@@ -33,7 +33,7 @@ ms.locfileid: "62810347"
   
 1.  Dans le menu **Démarrer** , cliquez avec le bouton droit sur **Poste de travail**, puis cliquez sur **Gérer**.  
   
-2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
+2.  Dans **Gestion de l’ordinateur**, cliquez avec le bouton droit sur **Gestion de l’ordinateur (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
   
 3.  Dans la boîte de dialogue **Sélectionner un ordinateur** , dans la zone de texte **Un autre ordinateur** , tapez le nom de l'ordinateur que vous voulez gérer et cliquez sur **OK**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62810347"
   
 8.  Dans la fenêtre **Ajouter/Supprimer un composant logiciel enfichable** , cliquez sur **OK**.  
   
-9. Développez **Gestion de l’ordinateur (***\<nom_ordinateur>***)**, puis **Services et applications**.  
+9. Développez **Gestion de l’ordinateur (***\<nom_ordinateur>***)** , puis **Services et applications**.  
   
 10. Cliquez avec le bouton droit sur **Gestionnaire de configuration SQL Server**, puis cliquez sur **Nouvelle fenêtre à partir d’ici**.  
   

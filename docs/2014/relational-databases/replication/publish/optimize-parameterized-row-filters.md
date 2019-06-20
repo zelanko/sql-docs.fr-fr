@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17edc0c7156513befd584f411c2598fc9fc70bcd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046220"
 ---
 # <a name="optimize-parameterized-row-filters"></a>Optimiser les filtres de lignes paramétrables
@@ -49,19 +49,19 @@ ms.locfileid: "63046220"
  Les paramètres suivants permettent d'optimiser les filtres de lignes paramétrés :  
   
  **Partition Options**  
- Définissez cette option dans la page **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, ou dans la boîte de dialogue **Ajouter un filtre**. Ces deux boîtes de dialogue sont disponibles dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. La boîte de dialogue **Propriétés de l’article - \<Article>** permet de spécifier pour cette option des valeurs supplémentaires qui ne sont pas disponibles dans la boîte de dialogue **Ajouter un filtre**.  
+ Définissez cette option dans la page **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , ou dans la boîte de dialogue **Ajouter un filtre**. Ces deux boîtes de dialogue sont disponibles dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . La boîte de dialogue **Propriétés de l’article - \<Article>** permet de spécifier pour cette option des valeurs supplémentaires qui ne sont pas disponibles dans la boîte de dialogue **Ajouter un filtre**.  
   
  **Précalculer les partitions**  
- Par défaut, cette option est définie à **True** si les articles de votre publication satisfont à un ensemble de conditions. Pour plus d’informations sur ces exigences, consultez [Optimiser les performances des filtres paramétrables avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifiez cette option dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
+ Par défaut, cette option est définie à **True** si les articles de votre publication satisfont à un ensemble de conditions. Pour plus d’informations sur ces exigences, consultez [Optimiser les performances des filtres paramétrables avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md). Modifiez cette option dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
  **Optimiser la synchronisation**  
- Cette option ne doit être définie à **True** que si **Précalculer les partitions** est défini à **False**. Définissez cette option dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
+ Cette option ne doit être définie à **True** que si **Précalculer les partitions** est défini à **False**. Définissez cette option dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
- Pour plus d’informations sur l’utilisation de l’Assistant Nouvelle publication et sur l’accès à la boîte de dialogue **Propriétés de la publication- \<Publication>**, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+ Pour plus d’informations sur l’utilisation de l’Assistant Nouvelle publication et sur l’accès à la boîte de dialogue **Propriétés de la publication- \<Publication>** , consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>Pour définir les options de la partition dans la boîte de dialogue Ajouter un filtre ou Modifier le filtre  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la Publication - \<Publication>**, cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la Publication - \<Publication>** , cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
   
 2.  Créer un filtre paramétrable. Pour plus d'informations, consultez [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
@@ -75,15 +75,15 @@ ms.locfileid: "63046220"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-set-partition-options-in-the-article-properties---article-dialog-box"></a>Pour définir Options de la partition dans la boîte de dialogue Propriétés de l’article - \<Article>  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de la table en surbrillance** ou **Définir les propriétés de tous les articles de la table**.  
   
-3.  Dans la section **Objet de destination** de l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>**, spécifiez l’une des valeurs suivantes pour **Options de la partition** :  
+3.  Dans la section **Objet de destination** de l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article - \<Article>** , spécifiez l’une des valeurs suivantes pour **Options de la partition** :  
   
     -   **Chevauchement**  
   
@@ -97,11 +97,11 @@ ms.locfileid: "63046220"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+5.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-set-precompute-partitions"></a>Pour définir Précalculer les partitions  
   
-1.  Dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une valeur pour l’option **Précalculer les partitions**. Cette propriété est en lecture seule si :  
+1.  Dans la page **Options d’abonnement** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une valeur pour l’option **Précalculer les partitions**. Cette propriété est en lecture seule si :  
   
     -   La publication ne satisfait pas aux conditions requises pour les partitions précalculées.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "63046220"
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
- Pour connaître la définition des options de filtrage **@keep_partition_changes** et **@use_partition_groups**, consultez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+ Pour connaître la définition des options de filtrage **@keep_partition_changes** et **@use_partition_groups** , consultez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>Pour spécifier des optimisations du filtre de fusion au moment de la création d'une publication  
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Spécifiez **@publication** et la valeur `true` pour l’une les paramètres suivants :  
   
-    -   **@use_partition_groups**- optimisation maximale des performances, à condition que les articles soient conformes aux spécifications pour les partitions précalculées. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
+    -   **@use_partition_groups** - optimisation maximale des performances, à condition que les articles soient conformes aux spécifications pour les partitions précalculées. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
     -   **@keep_partition_changes** - utilisez cette optimisation si les partitions précalculées ne peuvent pas être utilisées.  
   
@@ -146,16 +146,16 @@ ms.locfileid: "63046220"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>Pour afficher et modifier les comportements de filtre de fusion d'une publication existante  
   
-1.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant **@publication**. Notez la valeur de **keep_partition_changes** et **use_partition_groups** dans le jeu de résultats.  
+1.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant **@publication** . Notez la valeur de **keep_partition_changes** et **use_partition_groups** dans le jeu de résultats.  
   
-2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Spécifiez la valeur **use_partition_groups** pour **@property** et `true` ou `false` pour **@value**.  
+2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Spécifiez la valeur **use_partition_groups** pour **@property** et `true` ou `false` pour **@value** .  
   
-3.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Spécifiez la valeur **keep_partition_changes** pour **@property** et `true` ou `false` pour **@value**.  
+3.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Spécifiez la valeur **keep_partition_changes** pour **@property** et `true` ou `false` pour **@value** .  
   
     > [!NOTE]  
-    >  Si vous activez **keep_partition_changes**, vous devez commencer par désactiver **use_partition_groups** et affecter la valeur **1** à **@force_reinit_subscription**.  
+    >  Si vous activez **keep_partition_changes**, vous devez commencer par désactiver **use_partition_groups** et affecter la valeur **1** à **@force_reinit_subscription** .  
   
-4.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **partition_options** à **@property** et la valeur appropriée à **@value**. Pour connaître la définition de ces options de filtrage, consultez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
+4.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **partition_options** à **@property** et la valeur appropriée à **@value** . Pour connaître la définition de ces options de filtrage, consultez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) .  
   
 5.  (Facultatif) Lancez l'Agent d'instantané afin de régénérer l'instantané si nécessaire. Pour plus d’informations sur les modifications qui requièrent un nouvel instantané, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
