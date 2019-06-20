@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d84f208fc36c0bb647537aa174b86e06ba70abc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfc217b3a4e5fa58b171677c2acedc313a090285
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65403381"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263358"
 ---
 # <a name="supplemental-lesson---implement-dynamic-security-by-using-row-filters"></a>Leçon supplémentaire - implémenter la sécurité dynamique à l’aide de filtres de lignes
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,7 +23,7 @@ Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qu
   
 Pour implémenter la sécurité dynamique, vous devez ajouter une table à votre modèle qui contient les noms des utilisateurs Windows qui peuvent créer une connexion au modèle comme source de données et parcourir les objets de modèle et les données. Le modèle que vous allez créer à l'aide de ce didacticiel est dans le contexte d'Adventure Works Corp. Toutefois, pour pouvoir effectuer cette leçon, vous devez ajouter une table qui contient les utilisateurs de votre propre domaine. Vous n'aurez pas besoin de mots de passe pour les noms d'utilisateurs qui seront ajoutés. Pour créer une table EmployeeSecurity, avec un petit groupe d’utilisateurs de votre propre domaine, vous allez utiliser la fonctionnalité Coller, le collage des données d’employé à partir d’une feuille de calcul Excel. Dans la réalité, la table contenant les noms d'utilisateurs à ajouter à un modèle utiliserait une table provenant d'une base de données actuelle comme source de données (une table dimEmployee réelle, par exemple).  
   
-Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity, puis passe cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
+Pour implémenter la sécurité dynamique, vous allez utiliser deux nouvelles fonctions DAX : [Fonction USERNAME (DAX)](/dax/username-function-dax) et [LOOKUPVALUE, fonction (DAX)](/dax/lookupvalue-function-dax). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity, puis passe cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous allez spécifier que les commerciaux peuvent uniquement parcourir les données de ventes Internet pour les secteurs de vente dont ils sont membres.  
   
 Pour pouvoir effectuer cette leçon supplémentaire, vous allez accomplir une succession de tâches. Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
@@ -186,6 +186,6 @@ Dans cette tâche, vous utiliserez l’analyser dans la fonctionnalité d’Exce
     Cet utilisateur ne peut pas parcourir ou interroger les données des ventes Internet pour les secteurs autres que celui auquel il appartient, car le filtre de lignes défini pour la table Sales Territory dans le rôle d'utilisateur Sales Employees by Territory sécurise efficacement toutes les données associées à d'autres secteurs de vente.  
   
 ## <a name="see-also"></a>Voir aussi  
-[fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f)  
-[fonction LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab)  
-[Fonction CUSTOMDATA (DAX)](http://msdn.microsoft.com/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+[fonction USERNAME (DAX)](/dax/username-function-dax)  
+[fonction LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax)  
+[Fonction CUSTOMDATA (DAX)](/dax/customdata-function-dax)  

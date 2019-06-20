@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbb8490c7b60a65e909ed6905003a4ec61f80e59
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403851"
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>Leçon 1-4 : modification des noms de Table par défaut
@@ -47,7 +47,7 @@ Au cours de la tâche suivante, vous allez modifier le nom de chaque table dans 
 7.  Dans le menu **Fichier** , ou dans la barre d'outils de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], cliquez sur **Enregistrer tout** pour enregistrer les modifications vous avez faites à ce stade dans le projet Didacticiel [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Vous pouvez arrêter le didacticiel ici si vous le souhaitez et le reprendre ultérieurement.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)  
+[Leçon 2 : Définition et déploiement d’un Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md)  
