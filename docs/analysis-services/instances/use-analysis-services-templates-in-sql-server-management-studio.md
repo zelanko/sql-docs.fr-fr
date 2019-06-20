@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148134"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263158"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Utiliser des modèles Analysis Services dans SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148134"
  Cet exemple montre comment créer une requête MDX dans SQL Server Management Studio en utilisant une base de données model tabulaire comme source de données. Pour répéter cet exemple sur votre ordinateur, vous pouvez [télécharger l'exemple de projet de modèle tabulaire Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  Vous ne pouvez pas utiliser de requêtes MDX sur les modèles tabulaires qui ont été déployés en mode Requête directe. En revanche, vous pouvez envoyer des requêtes équivalentes à l'aide de requêtes de table DAX avec la commande EVALUATE. Pour en savoir plus, voir [Paramètres des requêtes DAX](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
+>  Vous ne pouvez pas utiliser de requêtes MDX sur les modèles tabulaires qui ont été déployés en mode Requête directe. En revanche, vous pouvez envoyer des requêtes équivalentes à l'aide de requêtes de table DAX avec la commande EVALUATE. Pour en savoir plus, voir [Paramètres des requêtes DAX](/dax/dax-queries#parameters-in-dax-queries).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Créer une requête MDX à partir d'un modèle  
   
@@ -58,15 +58,15 @@ ms.locfileid: "50148134"
   
 3.  À l'aide de l' **Explorateur de métadonnées**, faites glisser les champs et mesures suivants dans le modèle de requête :  
   
-    1.  Remplacez \<row_axis, mdx_set > avec **[Product Category]. [ Product Category Name]**.  
+    1.  Remplacez \<row_axis, mdx_set > avec **[Product Category]. [ Product Category Name]** .  
   
     2.  Remplacez \<column_axis, mdx_set > avec **[Date]. [ Calendar Year]. [Calendar Year]** .  
   
-    3.  Remplacez \<from_clause, mdx_name > avec **[Internet Sales]**.  
+    3.  Remplacez \<from_clause, mdx_name > avec **[Internet Sales]** .  
   
-    4.  Remplacez \<where_clause, mdx_set > avec **[Measures]. [ Internet Total Sales]**.  
+    4.  Remplacez \<where_clause, mdx_set > avec **[Measures]. [ Internet Total Sales]** .  
   
-4.  Vous pouvez exécuter la requête en l'état, mais vous souhaiterez probablement apporter certaines modifications, notamment ajouter une fonction pour retourner des membres spécifiques. Par exemple, tapez **.members** après **[Product Category].[Product Category Name]**. Pour en savoir plus, voir [Using Member Expressions](../../mdx/using-member-expressions.md).  
+4.  Vous pouvez exécuter la requête en l'état, mais vous souhaiterez probablement apporter certaines modifications, notamment ajouter une fonction pour retourner des membres spécifiques. Par exemple, tapez **.members** après **[Product Category].[Product Category Name]** . Pour en savoir plus, voir [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
 ##  <a name="bkmk_backup"></a> Créer un script XMLA à partir d'un modèle  
  Les modèles de commande XMLA fournis dans l'explorateur de modèles peuvent être utilisés pour créer des scripts afin de surveiller et de mettre à jour les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que l'instance soit en mode MDX, en mode d'exploration de données ou en mode tabulaire. Les modèles **XMLA** incluent des exemples pour les types de scripts suivants :  
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Référence du modèle Analysis Services  
  Les modèles suivants sont fournis pour travailler avec les bases de données Analysis Services et les objets qu'elles contiennent, notamment les structures et les modèles d'exploration de données, les cubes et les modèles tabulaires :  
   
-|Catégorie|Modèle d'élément|Description|  
+|Category|Modèle d'élément|Description|  
 |--------------|-------------------|-----------------|  
-|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >*. Instruction de contenu pour récupérer le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
+|DMX\Contenu des modèles|Requête de contenu|Montre comment utiliser l’instruction DMX SELECT FROM  *\<modèle >* . Instruction de contenu pour récupérer le contenu de jeu de lignes du schéma de modèle d’exploration de données pour un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes continues|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction avec l’instruction DMX **RangeMin** et **RangeMax** fonctions pour récupérer un ensemble de valeurs dans une plage spécifiée à partir de colonnes continues dans un modèle d’exploration de données spécifié.|  
 ||Valeurs des colonnes discrètes|Montre comment utiliser l’instruction DMX SELECT DISTINCT FROM  *\<modèle >* instruction extraire un ensemble complet de valeurs de colonnes discrètes dans un modèle d’exploration de données spécifié.|  
 ||Requête d'extraction|Indique comment utiliser l'instruction DMX SELECT * FROM Model.CASES avec la fonction DMX IsInNode pour exécuter une requête d'extraction|  
 ||Attributs de modèle|Montre comment utiliser la fonction DMX System.GetModelAttributes pour retourner une liste d'attributs utilisés par un modèle.|  
-||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >*. Instruction PMML pour récupérer la représentation sous forme de balisage langage PMML (Predictive Model) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
+||Contenu PMML|Montre comment utiliser l’instruction DMX SELECT \* FROM  *\<modèle >* . Instruction PMML pour récupérer la représentation sous forme de balisage langage PMML (Predictive Model) du modèle d’exploration de données, pour les algorithmes qui prennent en charge cette fonctionnalité.|  
 |DMX\Gestion des modèles|Ajouter un modèle|Indique comment utiliser l'instruction DMX ALTER MINING MODEL STRUCTURE pour ajouter un modèle d'exploration de données.|  
 ||Supprimer le modèle|Indique comment utiliser l'instruction DMX DELETE * FROM MINING MODEL pour supprimer le contenu d'un modèle d'exploration de données spécifié.|  
 ||Supprimer les exemples de structure|Indique comment utiliser l'instruction DMX DELETE FROM MINING STRUCTURE pour supprimer les exemples de structure de modèle d'exploration de données.|  

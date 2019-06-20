@@ -10,16 +10,16 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62747071"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installer Machine Learning Server (autonome) ou R Server (autonome) à l’aide du programme d’installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Le programme d’installation de SQL Server inclut un **fonctionnalité partagée** option pour installer une instance prenant, autonome machine learning serveur qui s’exécute en dehors de SQL Server. Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)**. Dans SQL Server 2017, elle est appelée **Machine Learning Server (autonome)** et inclut R et Python. 
+Le programme d’installation de SQL Server inclut un **fonctionnalité partagée** option pour installer une instance prenant, autonome machine learning serveur qui s’exécute en dehors de SQL Server. Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)** . Dans SQL Server 2017, elle est appelée **Machine Learning Server (autonome)** et inclut R et Python. 
 
 Un serveur autonome, telle qu’installée par le programme d’installation de SQL Server est fonctionnellement équivalent pour les versions non SQL personnalisée de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), prenant en charge les mêmes cas d’usage et scénarios, notamment :
 
@@ -61,7 +61,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 1. Démarrer l’Assistant installation.
 
-2. Cliquez sur le **Installation** et sélectionnez **installation de la nouvelle Machine Learning Server (autonome)**.
+2. Cliquez sur le **Installation** et sélectionnez **installation de la nouvelle Machine Learning Server (autonome)** .
     
      ![Installer Machine Learning Server (autonome)](media/2017setup-installation-page-mlsvr.png "démarrer l’installation de Machine Learning Server (autonome)")
 
@@ -100,7 +100,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 1. Démarrer l’Assistant installation.
 
-2. Sur le **Installation** , cliquez sur **installation nouvelle R Server (autonome)**.
+2. Sur le **Installation** , cliquez sur **installation nouvelle R Server (autonome)** .
     
      ![Démarrer le programme d’installation de R Server (autonome)](media/2016-setup-installation-rsvr.png "démarrer le programme d’installation de R Server (autonome)")
 

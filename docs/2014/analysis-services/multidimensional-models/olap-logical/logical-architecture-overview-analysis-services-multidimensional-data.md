@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699208"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
@@ -89,7 +89,7 @@ ms.locfileid: "62699208"
 |||3rd quarter|6119|1444|4675|Sep-30-99|SEP-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :**[agrégations et conceptions d’agrégation](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :** [agrégations et conceptions d’agrégation](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Mappage de mesures, d'attributs et de hiérarchies  
  Les mesures, les attributs et les hiérarchies dans l'exemple de cube sont dérivés des colonnes suivantes des tables de faits et de dimension du cube.  
@@ -119,9 +119,9 @@ ms.locfileid: "62699208"
   
  Dans le tableau précédent, chaque ligne a les mêmes valeurs pour le **RouteKey**, **SourceKey**, et **TimeKey** colonnes, indiquant que ces lignes participent à la même cellule de cube.  
   
- L'exemple présenté ici concerne un cube très simple, qui n'a qu'un seul groupe de mesures et auquel toutes les tables de dimension sont jointes à la table de faits dans un schéma en étoile. Dans un autre schéma commun, appelé schéma en flocons, une ou plusieurs tables de dimension sont jointes à une autre table de dimension au lieu d'être jointes directement à la table de faits. **Rubrique connexe :**[Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ L'exemple présenté ici concerne un cube très simple, qui n'a qu'un seul groupe de mesures et auquel toutes les tables de dimension sont jointes à la table de faits dans un schéma en étoile. Dans un autre schéma commun, appelé schéma en flocons, une ou plusieurs tables de dimension sont jointes à une autre table de dimension au lieu d'être jointes directement à la table de faits. **Rubrique connexe :** [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :**[relations de Dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :** [relations de Dimension](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

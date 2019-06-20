@@ -1,32 +1,20 @@
 ---
 title: Le Gestionnaire de rapports (SSRS en Mode natif) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568385"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Report Manager  (SSRS Native Mode)
   Le Gestionnaire de rapports est un outil permettant d'accéder aux rapports et de les gérer via une interface Web. Vous l'utilisez pour administrer à partir d'un emplacement distant une instance de serveur de rapports unique par le biais d'une connexion HTTP. Cet outil met également à votre disposition une visionneuse de rapports et des fonctionnalités de navigation. Dans cette rubrique :  
@@ -109,17 +97,15 @@ ms.locfileid: "59940665"
 |![Icône Dossier](media/hlp-16folder.gif "Icône Dossier")|Dossier|Cliquez sur l'icône ou le nom du dossier pour ouvrir le dossier.|  
 |![Icône abonnement](media/hlp-16subscription.gif "icône abonnement")|Abonnement|Cliquez sur l'icône ou sur la description d'un abonnement pour le modifier.|  
 |![Icône abonnement piloté par les données](media/hlp-16subscriptiondd.gif "icône abonnement piloté par les données")|Abonnement piloté par les données|Cliquez sur l'icône ou sur la description d'un abonnement piloté par les données pour le modifier.|  
-|![Icône Ressource générique](media/hlp-16file.gif "Icône Ressource générique")|Ressource|Cliquez sur l'icône ou le nom de la ressource pour ouvrir la ressource. La ressource s'ouvre dans une fenêtre distincte.|  
+|![Icône Ressource générique](media/hlp-16file.gif "Icône Ressource générique")|Resource|Cliquez sur l'icône ou le nom de la ressource pour ouvrir la ressource. La ressource s'ouvre dans une fenêtre distincte.|  
 |![Icône Source de données partagée](media/hlp-16datasource.png "Icône Source de données partagée")|Élément de source de données partagée|Cliquez sur l'icône d'une source de données partagée pour ouvrir la page des propriétés, la liste des rapports et la liste des abonnements de cette source de données.|  
 |![Icône Page de propriétés](media/hlp-16prop.gif "icône Page de propriétés")|Page des propriétés|Cliquez sur l'icône d'une propriété pour accéder aux pages supplémentaires afin de pouvoir définir des propriétés et des niveaux de sécurité.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [Générateur de rapports &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Outils de Reporting Services](tools/reporting-services-tools.md)   
- [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [Afficher et Explorer des rapports en Mode natif à l’aide de composants WebPart SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [Générateur de rapports &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Outils de Reporting Services](tools/reporting-services-tools.md)
+- [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)

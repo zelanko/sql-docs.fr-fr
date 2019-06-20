@@ -6,21 +6,18 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
+ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63460136"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197591"
 ---
 # <a name="create-a-project"></a>Créer un projet
   Vous pouvez créer un ou plusieurs projets à l'intérieur d'une solution existante.  
@@ -94,7 +91,7 @@ ms.locfileid: "63460136"
   
 4.  Cliquez sur **OK**.  
   
- Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut pour les dossiers de projet de scripts est : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
+ Vous pouvez attribuer un nom au projet de script mais vous ne pouvez pas modifier les noms de dossiers qui sont attribués par [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Vous pouvez configurer la spécification de lecteur et de chemin d’accès pour l’ensemble commun des dossiers à l’aide de la boîte de dialogue **Ajouter un nouveau projet** . Cliquez avec le bouton droit sur l’icône de la solution dans **l’Explorateur de solutions**, puis cliquez sur **Ajouter**. L’emplacement par défaut des dossiers de projets de scripts est le suivant : C:\Documents and Settings\\*nom_utilisateur*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Explorateur de solutions](solution-explorer.md)   

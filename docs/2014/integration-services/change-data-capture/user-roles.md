@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771085"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Rôles d'utilisateur du service de capture de données modifiées pour Oracle par Attunity
@@ -23,7 +23,7 @@ ms.locfileid: "62771085"
 ## <a name="windows-user-roles"></a>Rôles d'utilisateur Windows  
  La section suivante décrit les rôles d'utilisateur Windows utilisés par le service de capture de données modifiées Oracle.  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>Administrateur de l’ordinateur : Service de capture de données modifiées Oracle  
+### <a name="computer-administrator-oracle-cdc-service"></a>Administrateur d'ordinateur : Service de capture des changements de données Oracle  
  L'administrateur de l'ordinateur est un utilisateur Windows chargé de créer et de gérer le service de capture de données modifiées sur l'ordinateur. Cet utilisateur doit appartenir au groupe des administrateurs de l'ordinateur local.  
   
  Les tâches effectuées par l'administrateur de l'ordinateur de service de capture de données modifiées Oracle sont les suivantes :  
@@ -52,7 +52,7 @@ ms.locfileid: "62771085"
   
 -   Agir en tant qu'administrateur de l'ordinateur autorisé en tant qu'administrateur sur l'ordinateur où le service de capture de données modifiées pour Oracle est installé. Cette personne installe le service de capture de données modifiées pour Oracle et utilise la console de configuration du service de capture de données modifiées pour configurer un service de capture de données modifiées pour Oracle sur un ordinateur local.  
   
-### <a name="service-account-oracle-cdc-service"></a>Compte de service : Service de capture de données modifiées Oracle  
+### <a name="service-account-oracle-cdc-service"></a>Compte de service : Service de capture des changements de données Oracle  
  Il s'agit d'un compte de service Windows de capture de données modifiées Oracle utilisé pour exécuter le service de capture de données modifiées Oracle (le compte de service).  
   
  Le seul privilège obligatoire nécessaire pour le compte de service est de pouvoir utiliser le client Oracle et le fournisseur ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Ce compte n’a pas besoin d’accéder aux fichiers à moins que cela ne soit requis par des fournisseurs spécifiques (par exemple, si la chaîne de connexion du client Oracle référence des instances de base de données Oracle dans un fichier **tnsnames.ora** , puis ce fichier doit être accessible en lecture au compte de service).  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62815362"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Créer un groupe de disponibilité (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "62815362"
 ###  <a name="SummaryTsqlStatements"></a> Résumé des tâches et instructions Transact-SQL correspondantes  
  Le tableau suivant répertorie les tâches de base impliquées dans la création et la configuration d'un groupe de disponibilité et indique les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] à utiliser pour ces tâches. Les tâches [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] doivent être effectuées dans la séquence dans laquelle elles sont présentées dans le tableau.  
   
-|Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
+|Tâche|Instruction(s) Transact-SQL|Où effectuer la tâche **<sup>*</sup>**|  
 |----------|----------------------------------|-------------------------------------------|  
 |Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql) *endpointName*... FOR DATABASE_MIRRORING|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.|  
 |Créer un groupe de disponibilité|[CREATE AVAILABILITY GROUP](/sql/t-sql/statements/create-availability-group-transact-sql)|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  

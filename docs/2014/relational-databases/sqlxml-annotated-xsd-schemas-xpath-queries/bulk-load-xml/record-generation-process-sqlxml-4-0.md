@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013337"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
@@ -146,7 +146,7 @@ ms.locfileid: "66013337"
   
  L'exemple de données XML et les étapes de création d'un exemple fonctionnel sont fournis ci-dessous.  
   
--   Quand un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >**,  **\<CompanyName >** et le  **\<Ville >** éléments enfants en tant que ces éléments entrent dans l’étendue.  
+-   Quand un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >** ,  **\<CompanyName >** et le  **\<Ville >** éléments enfants en tant que ces éléments entrent dans l’étendue.  
   
 -   Quand un  **\<ordre >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Chargement en masse XML copie la valeur de la **OrderID** à cet enregistrement d’attribut. La valeur requise pour la colonne CustomerID est obtenue à partir de la  **\<CustomerID >** élément enfant de le  **\<client >** élément. Chargement en masse XML utilise les informations qui sont spécifiées dans `<sql:relationship>` pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, sauf si le **CustomerID** attribut a été spécifié dans le  **\<ordre >** élément. La règle générale est que si l'élément enfant spécifie explicitement une valeur pour l'attribut de clé étrangère, le chargement en masse XML utilise cette valeur et n'obtient pas la valeur à partir de l'élément parent en utilisant le `<sql:relationship>` spécifié. Que ce  **\<ordre >** nœud d’élément est hors de portée, le chargement en masse XML envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et traite ensuite tous les subséquent  **\<ordre >** nœuds d’élément de la même manière.  
   

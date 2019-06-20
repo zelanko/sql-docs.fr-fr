@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472198"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263415"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Types de données pris en charge dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 |Booléen|Booléen|Valeur True ou valeur False.|  
 |Text|String|Chaîne de données caractères au format Unicode. Peut être des chaînes, nombres ou dates représentés dans un format de texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
-|Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
+|Currency|Currency|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
   
  \* Si vous tentez d’importer des données qui a de grandes valeurs numériques, l’importation peut échouer avec l’erreur suivante :  
@@ -59,7 +59,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 >  Vous ne pouvez pas importer à partir d’une colonne **varchar(max)** qui contient une chaîne de plus de 131 072 caractères.  
   
 ### <a name="table-data-type"></a>Type de données de table  
- En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Conversion de types de données implicites et explicites dans les formules DAX
   
@@ -136,7 +136,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
  Par exemple, si un entier est combiné avec une valeur de devise dans une opération de division, les deux valeurs sont converties en nombres réels et le résultat est également un nombre réel.  
   
 #### <a name="comparison-operators"></a>Opérateurs de comparaison  
-Seul un jeu limité de combinaisons de type de données mixte pour les opérations de comparaison est pris en charge. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
+Seul un jeu limité de combinaisons de type de données mixte pour les opérations de comparaison est pris en charge. Pour plus d’informations, consultez [Référence des opérateurs DAX](/dax/dax-operator-reference).  
   
 ## <a name="bkmk_hand_blanks"></a> Gestion des espaces, des chaînes vides et des valeurs zéro  
  Le tableau suivant récapitule les différences entre DAX et dans Microsoft Excel, dans la façon dont les valeurs vides sont traitées :  
@@ -157,5 +157,5 @@ Seul un jeu limité de combinaisons de type de données mixte pour les opératio
 |BLANK OR BLANK|Vide|Error|  
 |BLANK AND BLANK|Vide|Error|  
   
- Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](/dax/dax-function-reference).  
   

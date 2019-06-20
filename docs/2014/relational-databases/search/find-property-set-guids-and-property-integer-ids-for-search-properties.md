@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f07428a87b7a10640c50c73fc2b551fef66c70f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011327"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche
@@ -42,7 +42,7 @@ ms.locfileid: "66011327"
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Auteurs|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Auteur ou auteurs d'un élément donné.|  
 |Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Ensemble de mots clés (également appelé balises) affecté à l'élément.|  
-|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
+|type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
 |Titre|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
   
  Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](https://go.microsoft.com/fwlink/?LinkId=144336) dans la documentation Windows Search.  

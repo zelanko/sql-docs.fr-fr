@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0b42e3d5b74b730a197b4c8cb595e871a247c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403511"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Leçon 8-1 : définition et utilisation d’une Action d’extraction
@@ -107,9 +107,9 @@ Dans les tâches de cette rubrique, vous définissez une action d'extraction pou
   
 6.  Remplacez la propriété **Name** de l’attribut **Order Date Key** par **Order Date** . Cliquez ensuite sur le bouton Parcourir pour rechercher la propriété **Name Column** et, dans la boîte de dialogue **Name Column** , sélectionnez **Date** comme table source et SimpleDate comme colonne source. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Remplacez la propriété **Name** de l’attribut **Due Date Key** par **Due Date**, puis, en utilisant la même méthode que pour l’attribut **Order Date Key** , remplacez la propriété **Name Column** de cet attribut par **Date.SimpleDate (WChar)**.  
+7.  Remplacez la propriété **Name** de l’attribut **Due Date Key** par **Due Date**, puis, en utilisant la même méthode que pour l’attribut **Order Date Key** , remplacez la propriété **Name Column** de cet attribut par **Date.SimpleDate (WChar)** .  
   
-8.  Remplacez la propriété **Name** de l’attribut **Ship Date Key** par **Ship Date**, puis remplacez la propriété **Name Column** de cet attribut par **Date.SimpleDate (WChar)**.  
+8.  Remplacez la propriété **Name** de l’attribut **Ship Date Key** par **Ship Date**, puis remplacez la propriété **Name Column** de cet attribut par **Date.SimpleDate (WChar)** .  
   
 9. Sélectionnez l’onglet **Actions** du Concepteur de cube pour le cube du didacticiel de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

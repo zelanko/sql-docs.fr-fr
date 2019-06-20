@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66704896"
 ---
 # <a name="shape-commands-in-general"></a>Généralités sur les commandes SHAPE
@@ -28,7 +28,7 @@ Mise en forme des données définit les colonnes d’une forme **Recordset**, le
   
 |Type de colonne|Description|  
 |-----------------|-----------------|  
-|données|Champs à partir d’un **Recordset** retournées par une commande de requête à un fournisseur de données, table, précédemment en forme ou **Recordset**.|  
+|data|Champs à partir d’un **Recordset** retournées par une commande de requête à un fournisseur de données, table, précédemment en forme ou **Recordset**.|  
 |Chapitre|Une référence à un autre **Recordset**, appelée un *chapitre*. Colonnes de chapitres rendent possible de définir un *parent-enfant* relation où la *parent* est la **Recordset** qui contient la colonne de chapitre et la *enfant* est la **Recordset** représenté par le chapitre.|  
 |agrégat|La valeur de la colonne est dérivée en exécutant un *fonction d’agrégation* sur toutes les lignes ou une colonne de toutes les lignes d’un enfant **Recordset**. (Consultez les fonctions d’agrégation dans la rubrique suivante, [fonctions d’agrégation, fonction CALC et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |expression calculée|La valeur de la colonne est obtenue par le calcul d’une expression Visual Basic pour Applications sur les colonnes dans la même ligne de la **Recordset**. L’expression est l’argument de la fonction CALC. (Consultez Expression calculée dans la rubrique suivante, [fonctions d’agrégation, fonction CALC et le mot clé NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) et dans [Visual Basic pour Applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

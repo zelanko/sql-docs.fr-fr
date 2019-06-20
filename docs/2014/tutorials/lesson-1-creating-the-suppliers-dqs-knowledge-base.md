@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485591"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Leçon 1 : Création d’une base de connaissances DQS nommée Fournisseurs
@@ -43,6 +43,6 @@ ms.locfileid: "65485591"
 -   Publiez la base de connaissances afin qu'elle puisse être utilisée pour les activités de nettoyage et de correspondance.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 1 : Création d’une Base de connaissances et domaines](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Tâche 1 : Création d’une Base de connaissances et domaines](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

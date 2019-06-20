@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980042"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
@@ -72,7 +72,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte : **char**, **nchar**, **varchar**, **nvarchar**, **texte**, **ntext** ou **xml**.  
   
- La valeur par défaut est  **\<racine xmlns:mp = "urn : schemas-microsoft-com-metaprop" >**. *xpath_namespaces* fournit l’URI d’espace de noms pour les préfixes utilisés dans les expressions XPath sous OPENXML au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com-metaprop**; fournit les métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **mp** est toujours valide pour **urn : schemas-microsoft-com-metaprop** même si *xpath_namespaces* ne contient aucun une telle déclaration.  
+ La valeur par défaut est  **\<racine xmlns:mp = "urn : schemas-microsoft-com-metaprop" >** . *xpath_namespaces* fournit l’URI d’espace de noms pour les préfixes utilisés dans les expressions XPath sous OPENXML au moyen d’un document XML bien formé. *xpath_namespaces* déclare le préfixe doit être utilisé pour faire référence à l’espace de noms **urn : schemas-microsoft-com-metaprop**; fournit les métadonnées sur les éléments XML analysés. Bien que cette technique vous permette de redéfinir le préfixe de l'espace de noms des métapropriétés, cet espace de noms n'est pas perdu. Le préfixe **mp** est toujours valide pour **urn : schemas-microsoft-com-metaprop** même si *xpath_namespaces* ne contient aucun une telle déclaration.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou > 0 (échec)  

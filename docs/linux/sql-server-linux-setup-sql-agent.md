@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.openlocfilehash: 1cb2a630dab67875db8a9731fe98895599f3290a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705060"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Installer l’Agent SQL Server sur Linux
@@ -66,11 +66,11 @@ sudo yum update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md).  Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="ubuntu">Installer sur Ubuntu</a>
 
-Utilisez les étapes suivantes pour installer le package **mssql-server-agent** sur Ubuntu. 
+Utilisez les étapes suivantes pour installer le package **mssql-server-agent** sur Ubuntu.  
 
 ```bash
 sudo apt-get update 
@@ -86,7 +86,7 @@ sudo apt-get install mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md).  Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ### <a name="SLES">Installer sur SLES</a>
 
@@ -107,7 +107,7 @@ sudo zypper update mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md). Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
+Si vous avez besoin d’une installation hors connexion, recherchez le téléchargement du package de l’Agent SQL Server dans les [notes de publication](sql-server-linux-release-notes.md).  Puis utilisez les étapes d’installation hors connexion qui sont décrites dans la rubrique [installer SQL Server](sql-server-linux-setup.md#offline).
 
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d’informations sur l’utilisation de l’Agent SQL Server pour créer, planifier et exécuter des tâches, consultez [exécuter un travail de l’Agent SQL Server sur Linux](sql-server-linux-run-sql-server-agent-job.md).

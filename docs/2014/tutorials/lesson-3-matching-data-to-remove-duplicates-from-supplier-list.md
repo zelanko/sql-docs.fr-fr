@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484651"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Leçon 3 : Faire correspondre les données pour supprimer les doublons de la liste des fournisseurs
@@ -25,6 +25,6 @@ ms.locfileid: "65484651"
  Dans cette leçon, vous allez effectuer une activité de correspondance pour supprimer les doublons de la liste des fournisseurs. D'abord, vous allez créer une stratégie de correspondance avec une règle pour identifier les doublons dans la liste des fournisseurs, puis vous allez publier la stratégie dans la base de connaissances. Ensuite, vous allez créer et exécuter un projet de qualité des données pour la correspondance. Enfin, vous allez exporter les résultats de l'activité de correspondance dans un fichier Excel que vous utiliserez plus tard lors du téléchargement des données dans Master Data Services (MDS).  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 1 : Définir une stratégie de correspondance](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
+ [Tâche 1 : Définir une stratégie de correspondance](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

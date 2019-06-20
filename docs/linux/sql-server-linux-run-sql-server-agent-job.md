@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.openlocfilehash: d7df0ed46d9ded592a8cebc6571c5ec1e1b1f486
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66705116"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des travaux de SQL Server Agent sur Linux
@@ -61,7 +61,7 @@ Pour utiliser l’Agent SQL Server sur Linux, vous devez d’abord activer l’A
 
 ## <a name="create-a-sample-database"></a>Créer un exemple de base de données
 
-Procédez comme suit pour créer une base de données exemple nommée **SampleDB**. Cette base de données est utilisée pour le travail de sauvegarde quotidienne.
+Procédez comme suit pour créer une base de données exemple nommée **SampleDB**. Cette base de données est utilisée pour le travail de sauvegarde quotidienne. 
 
 1. Sur votre ordinateur Linux, ouvrez une session de terminal bash.
 

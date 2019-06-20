@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072396"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263378"
 ---
 # <a name="calculated-columns"></a>Colonnes calculées
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072396"
   
 -   Lorsque vous renommez une colonne calculée, toutes les formules qui s'appuient sur la colonne doivent être mises à jour manuellement. À moins que vous ne soyez en mode de mise à jour manuel, la mise à jour des résultats des formules a lieu automatiquement. Toutefois, cette opération peut prendre quelque temps.  
   
--   Certains caractères ne peuvent pas être utilisés dans les noms de colonnes. Pour plus d’informations, consultez « Exigences concernant l’affectation des noms » dans [Référence syntaxique de DAX](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5).  
+-   Certains caractères ne peuvent pas être utilisés dans les noms de colonnes. Pour plus d’informations, consultez « Exigences concernant l’affectation des noms » dans [Référence syntaxique de DAX](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  La formule d'une colonne calculée peut solliciter beaucoup plus de ressources que la formule utilisée pour une mesure. L'une des raisons en est que le résultat d'une colonne calculée est toujours calculé pour chaque ligne d'une table, alors qu'une mesure est calculée uniquement pour les cellules définies par le filtre utilisé dans le rapport, le tableau croisé dynamique ou le graphique croisé dynamique. Par exemple, une table d'un million de lignes aura toujours une colonne calculée avec un million de résultats et les conséquences que cela implique en termes de performances. Toutefois, un tableau croisé dynamique filtre généralement les données en appliquant des titres de lignes et de colonnes ; par conséquent, une mesure est calculée uniquement pour le sous-ensemble de données dans chaque cellule du tableau croisé dynamique.  

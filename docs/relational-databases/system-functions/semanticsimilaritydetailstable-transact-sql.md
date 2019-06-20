@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65103271"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -72,7 +72,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Table retournée  
  Le tableau suivant décrit les informations sur les expressions clés renvoyées par cette fonction d'ensemble de lignes.  
   
-|Column_name|Type|Description|  
+|Column_name|type|Description|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Expression clé qui contribue à la similarité entre le document source et le document correspondant.|  
 |**score**|**REAL**|Valeur relative de cette expression clé dans sa relation à toutes les autres expressions clés qui sont semblables dans les deux documents.<br /><br /> La valeur est une valeur décimale fractionnaire comprise dans la plage de [0.0, 1.0] dans laquelle un score élevé représente une pondération plus élevée, 1.0 étant le score parfait.|  

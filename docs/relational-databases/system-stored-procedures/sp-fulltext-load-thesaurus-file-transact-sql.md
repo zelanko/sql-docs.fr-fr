@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822763"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Entier de mappage de l’identificateur de paramètres régionaux (LCID) de la langue pour laquelle vous souhaitez lade la définition XML du dictionnaire des synonymes. Pour obtenir les LCID des langues qui sont disponibles sur une instance de serveur, utilisez le [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vue de catalogue.  
   
- **@loadOnlyIfNotLoaded**  = *action*  
+ **@loadOnlyIfNotLoaded** = *action*  
  Spécifie si le fichier de dictionnaire des synonymes doit être chargé dans les tables internes du dictionnaire des synonymes même s'il a déjà été chargé. *action* est une des :  
   
 |Value|Définition|  

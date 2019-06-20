@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24d605c3ca3374a41fa080a861b64001c36f3ef2
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019232"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263334"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilité des formules DAX en mode DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ Ce sont des fonctions qui retournent principalement des résultats scalaires ou 
 
 | Prises en charge dans toutes les formules DAX                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Prises en charge seulement dans les formules de mesure et de requête                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  \- ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  AND</br>  ASIN</br>  ATAN</br>  Vide</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  Monétaire (Currency)</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  - ou -</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  Value</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
@@ -45,10 +45,10 @@ Ces fonctions n’ont pas été optimisées pour fonctionner avec DirectQuery. C
 
 Les raisons pour lesquelles une fonction particulière n’est pas optimisée pour DirectQuery sont que le moteur relationnel sous-jacent ne peut pas effectuer de calculs équivalents à ceux effectués par le moteur xVelocity, ou que la formule ne peut pas être convertie en une expression SQL équivalente. Dans d’autres cas, les performances de l’expression convertie et des calculs résultants peuvent ne pas être acceptables.
 
-Pour en savoir plus sur toutes les fonctions DAX, consultez la [référence des fonctions DAX]. (https://msdn.microsoft.com/library/ee634396.aspx)
+Pour en savoir plus sur toutes les fonctions DAX, consultez le [référence des fonctions DAX](/dax/dax-function-reference).
 
 ## <a name="dax-operators-in-directquery-mode"></a>Opérateurs DAX en mode DirectQuery
-Tous les opérateurs de comparaison et arithmétiques DAX sont entièrement pris en charge en mode DirectQuery. Pour plus d’informations, consultez [Référence des opérateurs DAX](https://msdn.microsoft.com/library/ee634237.aspx).
+Tous les opérateurs de comparaison et arithmétiques DAX sont entièrement pris en charge en mode DirectQuery. Pour plus d’informations, consultez [Référence des opérateurs DAX](/dax/dax-operator-reference).
 
 
  
@@ -107,7 +107,7 @@ Il n'existe aucune fonction cast telle que dans DAX, mais les casts implicites s
 -   Les valeurs booléennes sont toujours traitées comme des valeurs logiques dans les comparaisons et quand elles sont utilisées avec EXACT, AND, OR, &amp;&amp;||.  
   
 **Conversion d'une chaîne en valeur booléenne**  
-Dans la mémoire et les modèles DirectQuery, les casts sont autorisés en valeurs booléennes de ces chaînes uniquement : **» «** (chaîne vide), **« true »** , **« false »** ; où une chaîne vide casts de la valeur false.  
+Dans la mémoire et les modèles DirectQuery, les casts sont autorisés en valeurs booléennes de ces chaînes uniquement : **» «** (chaîne vide), **« true »**, **« false »**; où une chaîne vide casts de la valeur false.  
   
 Les conversions en type de données booléen d'une autre chaîne génèrent une erreur.  
   
@@ -160,7 +160,7 @@ SQL Server gère les valeurs Null et les espaces différemment du moteur xVeloci
   
 Les mêmes limitations s’appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
   
-Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](/dax/dax-syntax-reference).  
   
 **Division par 0 et division par un espace**  
 En mode DirectQuery, la division par zéro (0) ou la division par BLANK aura toujours pour résultat une erreur. SQL Server ne prend pas en charge la notion d'infini, et comme le résultat naturel de toute division par 0 est l'infini, le résultat est une erreur. Toutefois, SQL Server prend en charge la division par des valeurs Null, et le résultat doit toujours être égal à une valeur Null.  

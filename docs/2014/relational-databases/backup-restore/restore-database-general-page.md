@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921174"
 ---
 # <a name="restore-database-general-page"></a>Restaurer la base de données (page Général)
@@ -40,7 +40,7 @@ ms.locfileid: "62921174"
   
 ## <a name="options"></a>Options  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  Les options du volet **Restaurer à partir de**identifient l’emplacement des jeux de sauvegarde pour la base de données ainsi que les jeux de sauvegarde que vous souhaitez restaurer.  
   
 |Terme|Définition|  

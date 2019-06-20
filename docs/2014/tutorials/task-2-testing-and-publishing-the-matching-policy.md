@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484730"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tâche 2 : Test et publication de la stratégie de correspondance
@@ -24,7 +24,7 @@ ms.locfileid: "65484730"
   
 2.  Examinez tous les enregistrements correspondants et leur score de correspondance dans la zone de liste. Un enregistrement qui a un **vert** icône associé est un doublon de l’enregistrement pivot qui le précède. Voici deux exemples :  
   
-    1.  L’enregistrement avec **ID d’enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)**, **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
+    1.  L’enregistrement avec **ID d’enregistrement : 1000005** est une correspondance de l’enregistrement avec **Id d’enregistrement : 1000004** avec **Score : 100 %** , car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** , **Supplier Name**, et **les colonnes ContactEmailAddress**. DQS choisit de façon aléatoire un enregistrement comme enregistrement pivot pour un cluster.  
   
     2.  L’enregistrement **1000023** est une correspondance de l’enregistrement **1000022** avec le score de correspondance : 93 % car les deux enregistrements ont les mêmes valeurs pour **SupplierID (condition préalable)** et **Supplier Name** colonnes, mais des valeurs différentes pour le **ContactEmailAddress** colonne.  
   
