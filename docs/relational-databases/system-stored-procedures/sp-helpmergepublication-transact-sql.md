@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660800"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @publication**=** ] **'**_publication_**'**  
- Nom de la publication. *publication*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur toutes les publications de fusion dans la base de données actuelle.  
+ [ @publication **=** ] **'** _publication_ **'**  
+ Nom de la publication. *publication*est **sysname**, avec une valeur par défaut **%** , qui retourne des informations sur toutes les publications de fusion dans la base de données actuelle.  
   
  [ @found **=** ] **'***trouvé***'** sortie  
  Indicateur désignant les lignes retournées. *trouvé*est **int** d’un paramètre OUTPUT, avec NULL comme valeur par défaut. **1** indique la publication a été trouvée. **0** indique que la publication est introuvable.  
   
- [ @publication_id**=**] **'***publication_id***'** OUTPUT  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  Numéro d'identification de la publication. *id_de_la_publication* est **uniqueidentifier** d’un paramètre OUTPUT, avec NULL comme valeur par défaut.  
   
- [ @reserved**=**] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *réservé* est **nvarchar (20)**, avec NULL comme valeur par défaut.  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *réservé* est **nvarchar (20)** , avec NULL comme valeur par défaut.  
   
  [ @publisher **=** ] **'***publisher***'**  
  Le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  Le nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -66,7 +66,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**Int**|Numéro séquentiel de la publication dans la liste de l'ensemble de résultats.|  
-|NAME|**sysname**|Nom de la publication.|  
+|name|**sysname**|Nom de la publication.|  
 |description|**nvarchar(255)**|Description de la publication.|  
 |status|**tinyint**|Indique quand les données de publication sont disponibles.|  
 |retention|**Int**|Temps nécessaire pour enregistrer les métadonnées relatives aux modifications des articles dans la publication. Les unités utilisées pour cette période peuvent être des jours, des semaines, des mois ou des années. Pour plus d'informations sur ces unités, consultez la colonne retention_period_unit.|  

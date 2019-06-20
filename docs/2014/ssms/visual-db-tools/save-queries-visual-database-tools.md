@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284470"
 ---
 # <a name="save-queries-visual-database-tools"></a>Enregistrer des requêtes (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63284470"
   
 1.  Créez votre requête.  
   
-2.  Dans le menu **Fichier**, cliquez sur **Enregistrer <nom_requête>**.  
+2.  Dans le menu **Fichier**, cliquez sur **Enregistrer <nom_requête>** .  
   
     > [!NOTE]  
     >  Un nom de système est donné à une requête nouvellement créée. Pour choisir votre nom pour la requête, choisissez **Enregistrer <nom_requête> sous**.  

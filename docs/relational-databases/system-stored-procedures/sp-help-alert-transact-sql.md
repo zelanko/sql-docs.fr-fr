@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bca9c53780bb3258f73a274240c0bb5e63e126c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796565"
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @alert_name = ] 'alert_name'` Le nom de l’alerte. *nom_alerte* est **nvarchar (128)**. Si *nom_alerte* est ne pas spécifié, les informations sur toutes les alertes sont renvoyées.  
+`[ @alert_name = ] 'alert_name'` Le nom de l’alerte. *nom_alerte* est **nvarchar (128)** . Si *nom_alerte* est ne pas spécifié, les informations sur toutes les alertes sont renvoyées.  
   
 `[ @order_by = ] 'order_by'` L’ordre de tri à appliquer pour obtenir les résultats. *Trier par*est **sysname**, avec une valeur par défaut de N '*nom*».  
   
@@ -121,7 +121,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**has_notification**|**Int**|Différent de zéro si un ou plusieurs opérateurs sont notifiés pour cette alerte. Le paramètre peut avoir une ou plusieurs des valeurs suivantes (combinées avec OR) :<br /><br /> **1**=has e-mail notification<br /><br /> **2**= notification par radiomessagerie<br /><br /> **4**= a **net send** notification.|  
 |**flags**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] .|  
 |**performance_condition**|**nvarchar(512)**|Si **type** est **2**, cette colonne indique la définition de la condition de performances. Si **type** est **3**, cette colonne affiche la requête pour l’événement WMI. Dans les autres cas, cette colonne est NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sera toujours '**[Uncategorized]**' pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Sera toujours ' **[Uncategorized]** ' pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**Int**|Type d'alerte :<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte d’événement<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerte de performances<br /><br /> **3** = alerte d’événement WMI|  
   
 ## <a name="remarks"></a>Notes  

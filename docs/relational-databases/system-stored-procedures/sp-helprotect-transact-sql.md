@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635866"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'object_statement'` Est le nom de l’objet dans la base de données actuelle ou une instruction, qui dispose des autorisations pour le rapport. *object_statement* est **nvarchar(776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_**.** _objet_.  
+`[ @name = ] 'object_statement'` Est le nom de l’objet dans la base de données actuelle ou une instruction, qui dispose des autorisations pour le rapport. *object_statement* est **nvarchar(776)** , avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_ **.** _objet_.  
   
  Si *object_statement* est une instruction, il peut être une instruction CREATE.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` Est le nom de principal ayant accordé les autorisations. *fournisseur d’autorisations* est **sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations sur les autorisations accordées par un principal dans la base de données.  
   
-`[ @permissionarea = ] 'type'` Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)**, avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
+`[ @permissionarea = ] 'type'` Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)** , avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

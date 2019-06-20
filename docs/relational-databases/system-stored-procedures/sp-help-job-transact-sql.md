@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660785"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Pour afficher un travail spécifique, soit *job_id* ou *nom_travail* doit être spécifié.  Omettre les deux *job_id* et *nom_travail* pour retourner des informations sur tous les travaux.
   
-`[ @job_aspect = ] 'job_aspect'` L’attribut du travail à afficher. *aspect_du_travail* est **varchar (9)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @job_aspect = ] 'job_aspect'` L’attribut du travail à afficher. *aspect_du_travail* est **varchar (9)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**ÉTAPES**|Informations sur l'étape du travail|  
 |**CIBLES**|Informations sur la cible|  
   
-`[ @job_type = ] 'job_type'` Le type des travaux à inclure dans le rapport. *type_du_travail* est **varchar(12)**, avec NULL comme valeur par défaut. *type_du_travail* peut être **LOCAL** ou **multiserveur**.  
+`[ @job_type = ] 'job_type'` Le type des travaux à inclure dans le rapport. *type_du_travail* est **varchar(12)** , avec NULL comme valeur par défaut. *type_du_travail* peut être **LOCAL** ou **multiserveur**.  
   
 `[ @owner_login_name = ] 'login_name'` Le nom de connexion du propriétaire de la tâche. *login_name* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'` Le nom du sous-système. *sous-système* est **nvarchar (40)**, avec NULL comme valeur par défaut.  
+`[ @subsystem = ] 'subsystem'` Le nom du sous-système. *sous-système* est **nvarchar (40)** , avec NULL comme valeur par défaut.  
   
 `[ @category_name = ] 'category'` Le nom de la catégorie. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
@@ -98,7 +98,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_last_modified = ] date_modified` Date de que dernière modification de la tâche. *date_de_modification* est **datetime**, avec NULL comme valeur par défaut.  
   
-`[ @description = ] 'description_pattern'` Description du travail. *Description* est **nvarchar (512)**, avec NULL comme valeur par défaut. *Description* peut inclure les caractères génériques de SQL Server pour la correspondance de modèle.  
+`[ @description = ] 'description_pattern'` Description du travail. *Description* est **nvarchar (512)** , avec NULL comme valeur par défaut. *Description* peut inclure les caractères génériques de SQL Server pour la correspondance de modèle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

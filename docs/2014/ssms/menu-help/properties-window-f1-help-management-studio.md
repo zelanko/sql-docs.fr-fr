@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661756"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "62661756"
  Répertorie les objets actuellement sélectionnés. Seuls les objets de l'éditeur ou du générateur actif sont visibles.  
   
  **Par catégorie**  
- Répertorie l'ensemble des propriétés et des valeurs de propriétés de l'objet sélectionné, par catégorie. Vous pouvez réduire une catégorie afin de diminuer le nombre de propriétés visibles. Quand vous développez ou réduisez une catégorie, un signe plus (**+**) ou moins (**-**) s’affiche à gauche du nom de la catégorie. Les catégories s'affichent par ordre alphabétique.  
+ Répertorie l'ensemble des propriétés et des valeurs de propriétés de l'objet sélectionné, par catégorie. Vous pouvez réduire une catégorie afin de diminuer le nombre de propriétés visibles. Quand vous développez ou réduisez une catégorie, un signe plus ( **+** ) ou moins ( **-** ) s’affiche à gauche du nom de la catégorie. Les catégories s'affichent par ordre alphabétique.  
   
  **Alphabétique**  
  Trie par ordre alphabétique l'ensemble des propriétés et des événements des objets sélectionnés en mode conception.  

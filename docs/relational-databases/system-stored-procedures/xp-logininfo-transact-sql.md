@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099957"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -44,10 +44,10 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ## <a name="arguments"></a>Arguments  
 `[ @acctname = ] 'account_name'` Est le nom d’un utilisateur de Windows ou d’un groupe accordé l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes de Windows et les utilisateurs Windows qui ont été explicitement accordé l’autorisation de se connecter sont signalés. *nom_compte* doivent être qualifiés complets. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
   
- **'all'** | **'members'**  
- Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. **@option** est **varchar (10)**, avec NULL comme valeur par défaut. À moins que **tous les** est spécifié, seul le chemin de la première autorisation s’affiche.  
+ **'all'**  |  **'members'**  
+ Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. **@option** est **varchar (10)** , avec NULL comme valeur par défaut. À moins que **tous les** est spécifié, seul le chemin de la première autorisation s’affiche.  
   
-`[ @privilege = ] variable_name` Est un paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *nom_variable* est **varchar (10)**, avec une valeur par défaut « Not wanted ». Le niveau de privilège renvoyé est **utilisateur**, **administrateur**, ou **null**.  
+`[ @privilege = ] variable_name` Est un paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *nom_variable* est **varchar (10)** , avec une valeur par défaut « Not wanted ». Le niveau de privilège renvoyé est **utilisateur**, **administrateur**, ou **null**.  
   
  OUTPUT  
  Lorsqu’elle est spécifiée, place *nom_variable* dans le paramètre de sortie.  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 60c44d2771033c86814cb9dbc0a18aab7c79c483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261628"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
@@ -31,9 +31,9 @@ ms.locfileid: "63261628"
 |------------|---------------|-----------------|  
 |EventClass|Entier|Classe d'événements de l'événement reçu par la trace.|  
 |EventSubclass|Entier long|Sous-classe d'événements de l'événement reçu par la trace.|  
-|CurrentTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|Datetime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
+|CurrentTime|DateTime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|DateTime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|DateTime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
 |Duration|Entier long|Durée totale (en millisecondes) de l'événement.|  
 |CPUTime|Entier long|Temps processeur total (en millisecondes) écoulé pour l'événement.|  
 |JobID|Entier long|Identificateur de travail du processus.|  
@@ -48,7 +48,7 @@ ms.locfileid: "63261628"
 |ObjectReference|String|Représentation XML de la référence de l'objet spécifié dans ObjectName.|  
 |NestLevel|Entier|Niveau de la transaction pour laquelle l'événement s'est produit.|  
 |NumSegments|Entier long|Nombre de segments de données affectés ou atteints par la commande pour laquelle l'événement s'est produit.|  
-|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> <br /><br /> 0 : Opération réussie<br /><br /> <br /><br /> 1: Informations<br /><br /> <br /><br /> 2: Warning<br /><br /> <br /><br /> 3: Error|  
+|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> <br /><br /> 0 : Opération réussie<br /><br /> <br /><br /> 1 : Informations<br /><br /> <br /><br /> 2 : Warning<br /><br /> <br /><br /> 3 : Error|  
 |Opération réussie|Booléen|Indique si une commande a abouti ou échoué.|  
 |Error|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
 |ConnectionID|String|Identificateur de la connexion pour laquelle l'événement s'est produit.|  

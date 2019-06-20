@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789865"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn (SQL Server)
@@ -53,7 +53,7 @@ ms.locfileid: "62789865"
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que chaque ordinateur exécute soit x86 (non-WOW64), soit x64 Windows Server 2008 ou versions ultérieures.|WOW64 (Windows 32 bits sur Windows 64 bits) ne prend pas en charge [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que chaque ordinateur est un nœud d'un cluster WSFC (clustering de basculement Windows Server).|[Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que le cluster WSFC contient suffisamment de nœuds pour prendre en charge les groupes de disponibilité que vous avez configurés.|Un nœud WSFC ne peut héberger qu'un seul réplica de disponibilité pour un groupe de disponibilité donné. Sur un nœud WSFC donné, une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent héberger des réplicas de disponibilité pour de nombreux groupes de disponibilité.<br /><br /> Demandez à vos administrateurs de base de données combien de nœuds WSFC sont requis pour prendre en charge les réplicas de disponibilité des groupes de disponibilité planifiés.<br /><br /> [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que tous les correctifs logiciels Windows applicables ont été installés sur chaque nœud du cluster WSFC.|**\*\* Important \* \***  plusieurs correctifs logiciels sont requis ou recommandés pour les nœuds d’un cluster WSFC sur lequel [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est déployé. Pour plus d'informations, consultez [Correctifs logiciels Windows qui prennent en charge les groupes de disponibilité AlwaysOn (système Windows)](#WinHotfixes), plus loin dans cette section.|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Vérifiez que tous les correctifs logiciels Windows applicables ont été installés sur chaque nœud du cluster WSFC.|**\*\* Important \* \* ** plusieurs correctifs logiciels sont requis ou recommandés pour les nœuds d’un cluster WSFC sur lequel [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est déployé. Pour plus d'informations, consultez [Correctifs logiciels Windows qui prennent en charge les groupes de disponibilité AlwaysOn (système Windows)](#WinHotfixes), plus loin dans cette section.|  
   
 > [!IMPORTANT]  
 >  Vérifiez que votre environnement est correctement configuré pour se connecter à un groupe de disponibilité. Pour plus d’informations, consultez [connectivité du Client AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md).  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099452"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Exemples d'URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099452"
   
 |Object|Description|  
 |------------|-----------------|  
-|Application web SharePoint|Une application web SharePoint peut être installée comme serveur autonome ou dans une batterie de serveurs contenant une collection de serveurs virtuels. Une application web a une URL (par exemple, http:*//nom_serveur*) et peut contenir plusieurs sites.|  
+|Application web SharePoint|Une application web SharePoint peut être installée comme serveur autonome ou dans une batterie de serveurs contenant une collection de serveurs virtuels. Une application web a une URL (par exemple, http: *//nom_serveur*) et peut contenir plusieurs sites.|  
 |Site|Un site peut être un site parent d'une application web ou un sous-site.|  
 |Bibliothèque SharePoint|Une bibliothèque contient des documents ou des dossiers. Une bibliothèque ou un dossier de bibliothèque représente le seul objet de site qui peut stocker des rapports, des modèles de rapport, des sources de données partagées et des images externes.|  
 |Élément|Les éléments de serveur de rapports auxquels vous pouvez faire référence dans une URL incluent une définition de rapport pour un rapport ou un sous-rapport, un modèle de rapport, une source de données partagée ou une image externe.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099452"
 ### <a name="url-for-a-sharepoint-server"></a>URL d'un serveur SharePoint  
  Vous devez utiliser une URL vers le serveur SharePoint lorsque vous déployez un projet de serveur de rapports ou de modèle de rapport dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sur le serveur de rapports.  
   
- Pour trouver le nom du serveur à utiliser, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier un rapport. Le nom du serveur apparaît juste après le préfixe du protocole, par exemple, http:*//nom_serveur*.  
+ Pour trouver le nom du serveur à utiliser, ouvrez un navigateur et localisez la bibliothèque SharePoint où vous souhaitez publier un rapport. Le nom du serveur apparaît juste après le préfixe du protocole, par exemple, http: *//nom_serveur*.  
   
- L'utilisation du point de terminaison du proxy URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas prise en charge. Un point de terminaison de proxy inclut un numéro de port, par exemple, http:*//nom_serveur:8080/reportserver*.  
+ L'utilisation du point de terminaison du proxy URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas prise en charge. Un point de terminaison de proxy inclut un numéro de port, par exemple, http: *//nom_serveur:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL d'un site ou sous-site de serveur SharePoint  
  Lorsque vous déployez un rapport ou une source de données de rapport, vous devez utiliser une URL vers un site et un sous-site SharePoint, le cas échéant. Dans l’URL, le nom du site apparaît juste après celui du serveur, par exemple, http://*nom_serveur/site* ou http://*nom_serveur/site/sous-site*.  

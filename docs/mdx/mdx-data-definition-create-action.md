@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63233627"
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - CREATE ACTION
@@ -100,7 +100,7 @@ FOR
 |**ON_OPEN**|Cette action doit être appelée par l'application cliente lors de l'ouverture de l'objet cible. Ce type d'invocation n'est actuellement pas implémenté.|  
 |**TRAITEMENT PAR LOTS**|Cette action doit être appelée par l'application cliente lorsque l'objet cible est impliqué dans une opération de traitement, comme déterminé par l'application cliente. Ce type d'invocation n'est actuellement pas implémenté.|  
   
-### <a name="scope"></a>Portée  
+### <a name="scope"></a>`Scope`  
  Chaque action est définie pour un cube spécifique et possède un nom unique dans ce cube. Une action peut avoir l'une des étendues répertoriées dans le tableau ci-après.  
   
  Étendue de cube   

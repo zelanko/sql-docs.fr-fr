@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6598781301ad6e7483a3cea6b45949c1cd39cf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100806"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement
@@ -57,7 +57,7 @@ ms.locfileid: "66100806"
   
  **Mode natif :**  
   
--   Liste des abonnements : (Lien hypertexte « https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
+-   Liste des abonnements : (Lien hypertexte « https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx » ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
   
 -   Modifier des abonnements : L’utilisateur doit être membre du groupe BUILTIN\Administrators  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66100806"
   
  **Mode SharePoint :**  
   
--   Liste des abonnements : ManageAlerts ou (lien hypertexte « https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
+-   Liste des abonnements : ManageAlerts ou (lien hypertexte « https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx » CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
   
 -   Modifier des abonnements : ManageWeb  
   

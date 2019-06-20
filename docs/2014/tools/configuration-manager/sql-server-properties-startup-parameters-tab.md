@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679160"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
@@ -51,7 +51,7 @@ ms.locfileid: "62679160"
  Pour plus d'informations sur le déplacement de la base de données master, consultez la rubrique « Déplacement des bases de données système » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Paramètres facultatifs  
- Tous les paramètres de démarrage pris en charge sont décrits dans la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] », dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un paramètre de démarrage de -T*trace#* indique qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace déterminé (*trace#*) activé. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations sur les indicateurs de trace, consultez la rubrique « Indicateurs de trace ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Tous les paramètres de démarrage pris en charge sont décrits dans la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] », dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un paramètre de démarrage de -T*trace#* indique qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace déterminé (*trace#* ) activé. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations sur les indicateurs de trace, consultez la rubrique « Indicateurs de trace ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!CAUTION]  
 >  Vous pouvez consulter des paramètres de démarrage et des indicateurs de trace supplémentaires non documentés, décrits sur Internet. Les paramètres de démarrage et les indicateurs de trace non documentés sont créés pour résoudre des problèmes rares ou imposer des conditions obligatoires à des fins de test. L'utilisation de paramètres de démarrage non documentés peut produire des résultats inattendus. N'utilisez pas de paramètres non documentés, sauf sur indication du support technique de Microsoft.  

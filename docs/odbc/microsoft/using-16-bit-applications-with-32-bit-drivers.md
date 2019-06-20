@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209963"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Utilisation d’applications 16 bits avec des pilotes 32 bits
@@ -36,7 +36,7 @@ ms.locfileid: "63209963"
 >  Chaque fois qu’une application 16 bits interagit avec un pilote 32 bits, le Gestionnaire de pilotes 32 bits retourne toujours « 2.0 » en tant que version d’ODBC pris en charge par le pilote.  
   
 ## <a name="administration"></a>Administration  
- Vous pouvez gérer les sources de données pour les pilotes 32 bits à l’aide de l’administrateur de sources de données ODBC. Pour ouvrir l’administrateur ODBC sur les ordinateurs exécutant Microsoft® Windows® 2000, ouvrez le panneau de configuration Windows, double-cliquez sur **outils d’administration**, puis double-cliquez sur **Sources de données (ODBC)**. Sur les ordinateurs exécutant des versions antérieures de Microsoft Windows, l’icône est nommée **ODBC 32 bits** ou simplement **ODBC**.  
+ Vous pouvez gérer les sources de données pour les pilotes 32 bits à l’aide de l’administrateur de sources de données ODBC. Pour ouvrir l’administrateur ODBC sur les ordinateurs exécutant Microsoft® Windows® 2000, ouvrez le panneau de configuration Windows, double-cliquez sur **outils d’administration**, puis double-cliquez sur **Sources de données (ODBC)** . Sur les ordinateurs exécutant des versions antérieures de Microsoft Windows, l’icône est nommée **ODBC 32 bits** ou simplement **ODBC**.  
   
  L’illustration suivante montre comment une application 16 bits appelle une DLL d’installation du pilote 32 bits. Entre le programme d’installation 16 bits DLL et le pilote 32 bits DLL d’installation est une DLL thunking générique qui convertit les appels DLL de programme d’installation 16 bits aux appels DLL de programme d’installation 32 bits.  
   

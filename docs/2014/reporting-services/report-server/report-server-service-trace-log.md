@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103408"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Le journal des traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est un fichier texte ASCII qui contient des informations détaillées sur les opérations du service Report Server, y compris celles effectuées par le service web Report Server, le Gestionnaire de rapports et les traitements en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions.  
   
 > [!NOTE]  
->  Dans les versions antérieures, il existait plusieurs fichiers journaux des traces, un pour chaque application. Les fichiers suivants sont obsolètes et ne sont plus créés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures : ReportServerWebApp_*\<timestamp >*.log, ReportServer_*\<timestamp >*.log et ReportServerService_main_ *\< horodatage >*. journal.  
+>  Dans les versions antérieures, il existait plusieurs fichiers journaux des traces, un pour chaque application. Les fichiers suivants sont obsolètes et ne sont plus créés dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures : ReportServerWebApp_ *\<timestamp >* .log, ReportServer_ *\<timestamp >* .log et ReportServerService_main_ *\< horodatage >* . journal.  
   
  **Dans cette rubrique :**  
   

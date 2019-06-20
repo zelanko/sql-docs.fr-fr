@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768665"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Création d'une source à l'aide du composant Script
@@ -71,7 +71,7 @@ ms.locfileid: "62768665"
 ### <a name="adding-variables"></a>Ajout de variables  
  S’il existe des variables les valeurs dont vous souhaitez utiliser dans votre script, vous pouvez les ajouter dans le `ReadOnlyVariables` et `ReadWriteVariables` des champs de propriété sur le **Script** page de la **éditeur de Transformation de Script**.  
   
- Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur les points de suspension (**...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété et en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
+ Lorsque vous entrez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également entrer plusieurs variables en cliquant sur les points de suspension ( **...** ) situé en regard du `ReadOnlyVariables` et `ReadWriteVariables` champs de propriété et en sélectionnant les variables dans le **sélectionner des variables** boîte de dialogue.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62768665"
   
 5.  Dans la page **Script** , cliquez sur **Modifier le script** , puis entrez le script suivant. Ensuite, fermez l'environnement de développement de script et l' **Éditeur de transformation de script**.  
   
-6.  Créez et configurez un composant de destination, tel qu'une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou l'exemple de composant de destination présenté dans [Création d'une destination à l'aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), qui attend les colonnes **AddressID** et **City** . Puis, connectez le composant source à la destination. (Vous pouvez vous connecter une source directement vers une destination sans transformation.) Vous pouvez créer une table de destination en exécutant la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans la base de données `AdventureWorks` :  
+6.  Créez et configurez un composant de destination, tel qu'une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou l'exemple de composant de destination présenté dans [Création d'une destination à l'aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), qui attend les colonnes **AddressID** et **City** . Puis, connectez le composant source à la destination. (Vous pouvez connecter directement une source à une destination sans transformation.) Vous pouvez créer une table de destination en exécutant la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans la base de données `AdventureWorks` :  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -267,7 +267,7 @@ ms.locfileid: "62768665"
   
 6.  Dans la page **Script** , cliquez sur **Modifier le script** , puis entrez le script suivant. Ensuite, fermez l'environnement de développement de script et l' **Éditeur de transformation de script**.  
   
-7.  Créez et configurez un composant de destination, tel qu'une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou l'exemple de composant de destination présenté dans [Création d'une destination à l'aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Puis, connectez le composant source à la destination. (Vous pouvez vous connecter une source directement vers une destination sans transformation.) Vous pouvez créer une table de destination en exécutant la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans la base de données `AdventureWorks` :  
+7.  Créez et configurez un composant de destination, tel qu'une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou l'exemple de composant de destination présenté dans [Création d'une destination à l'aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Puis, connectez le composant source à la destination. (Vous pouvez connecter directement une source à une destination sans transformation.) Vous pouvez créer une table de destination en exécutant la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante dans la base de données `AdventureWorks` :  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

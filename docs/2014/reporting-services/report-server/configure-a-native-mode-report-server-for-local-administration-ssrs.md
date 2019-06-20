@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104190"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
@@ -139,7 +139,7 @@ ms.locfileid: "66104190"
   
  **Pour configurer les propriétés et attributions de rôles [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , vous n'avez donc pas besoin de démarrer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] avec des autorisations élevées chaque fois :  
   
--   Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, sur **SQL Server 2014**, cliquez avec le bouton droit sur **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, puis cliquez sur **Exécuter en tant qu’administrateur**.  
+-   Dans le menu **Démarrer** , cliquez sur **Tous les programmes**, sur **SQL Server 2014**, cliquez avec le bouton droit sur **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]** , puis cliquez sur **Exécuter en tant qu’administrateur**.  
   
 -   Connectez-vous à votre serveur local [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
