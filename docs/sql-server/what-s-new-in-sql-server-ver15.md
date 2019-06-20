@@ -1,7 +1,7 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
 ms.date: 05/28/2019
-ms.prod: sql-server-2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
-ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
+ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836310"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] s’appuie sur les versions précédentes pour faire de SQL Server une plateforme compatible avec de nombreux langages de développement, types de données et systèmes d’exploitation, localement ou dans le cloud. Cet article résume les nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -60,6 +60,7 @@ De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!IN
 |La fonctionnalité de [base de données en mémoire](../relational-databases/in-memory-database.md) introduit une nouvelle syntaxe DDL pour le contrôle du pool de mémoires tampons hybride. <sup>2</sup>|Avec le [pool de mémoires tampons hybride](../database-engine/configure-windows/hybrid-buffer-pool.md), les pages de base de données qui se trouvent sur des fichiers de base de données placés sur un appareil à mémoire persistante (PMEM) sont directement accessibles si nécessaire.|
 |Nouvelle fonctionnalité de base de données en mémoire, ajout de métadonnées tempdb à mémoire optimisée.|Consultez [Métadonnées tempdb à mémoire optimisée](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Les serveurs liés prennent en charge le codage de caractères UTF-8. |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
+|Nom du classement BIN2_UTF8 modifié en Latin1_General_100_BIN2_UTF8. |[Prise en charge d'Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md) |
 |Le programme d’installation de SQL Server inclut des recommandations relatives à MaxDOP qui suivent les instructions documentées. |[Configurer l'option de configuration du serveur Degré maximal de parallélisme](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` retourne plus d’informations sur le degré de parallélisme et les allocations de mémoire pour les plans de requête. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |
@@ -322,7 +323,7 @@ De plus, les fonctionnalités suivantes sont ajoutées ou améliorées pour [!IN
 |:-----|:-----|
 |[Azure Data Studio](../azure-data-studio/what-is.md) prend en charge la connexion et la gestion des clusters Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |[Qu’est-ce qu’Azure Data Studio](../azure-data-studio/what-is.md)|
 |Prend en charge des scénarios utilisant des clusters Big Data SQL Server. |[Extension de SQL Server 2019 (préversion)](../azure-data-studio/sql-server-2019-extension.md)|
-|[**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
+|[**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].| |
 |Prise en charge d’Always Encrypted avec enclaves sécurisées. |[Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md)|
 | &nbsp; | &nbsp; |
 
@@ -605,7 +606,7 @@ Pour utiliser les fonctionnalités de traitement de requête intelligent, défin
 
 - Les **Contraintes d’arête (CTP 2.0)** sont introduites pour les tables d’arêtes dans Graph SQL. Les tables d’arêtes peuvent connecter n’importe quel nœud à n’importe quel autre nœud dans la base de données. Avec l’introduction des contraintes d’arête, vous pouvez maintenant appliquer certaines restrictions à ce comportement. La nouvelle contrainte `CONNECTION` permet de spécifier le type de nœuds auxquels une table d’arêtes donnée est autorisée à se connecter dans le schéma. 
 
-  **(CTP 2.3) ** En étendant cette fonctionnalité, vous pouvez définir des actions de suppression en cascade sur une contrainte d’arête. Vous pouvez définir les actions effectuées par le moteur de base de données lorsqu’un utilisateur supprime les nœuds, qu’une arête donnée connecte.
+  **(CTP 2.3)**  En étendant cette fonctionnalité, vous pouvez définir des actions de suppression en cascade sur une contrainte d’arête. Vous pouvez définir les actions effectuées par le moteur de base de données lorsqu’un utilisateur supprime les nœuds, qu’une arête donnée connecte.
 
 #### <a name="database-scoped-default-setting-for-online-and-resumable-ddl-operations-ctp-20"></a>Paramètre par défaut au niveau de la base de données pour les opérations DDL en ligne et pouvant être reprises (CTP 2.0)
 
@@ -769,7 +770,7 @@ FROM sys.dm_exec_requests AS d
   > [!TIP]
   > Pour connaître les dernières améliorations apportées à Azure Data Studio, consultez les [notes de publication Azure Data Studio](../azure-data-studio/release-notes-azure-data-studio.md).
 
-- [**SQL Server Management Studio (SSMS) 18.0 (préversion)**](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+- [**SQL Server Management Studio (SSMS) 18.0 (préversion)** ](../ssms/sql-server-management-studio-ssms.md) : Prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
   - Lancement d’Azure Data Studio à partir de SSMS. (CTP 2.3)
   - Prise en charge d’Always Encrypted avec enclaves sécurisées. (CTP 2.0)

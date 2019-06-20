@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776089"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263342"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Leçon supplémentaire - Sécurité dynamique
 
@@ -25,7 +25,7 @@ Dans cette leçon supplémentaire, vous créez un rôle supplémentaire qui impl
   
 Pour implémenter la sécurité dynamique, vous ajoutez une table à votre modèle contenant les noms d’utilisateur des utilisateurs qui peuvent se connecter au modèle et parcourir les données et les objets de modèle. Le modèle que vous créez à l’aide de ce didacticiel est dans le contexte d’Adventure Works ; Toutefois, pour suivre cette leçon, vous devez ajouter une table contenant les utilisateurs de votre propre domaine. Il est inutile les mots de passe pour les noms d’utilisateur qui sont ajoutés. Pour créer une table EmployeeSecurity, avec un petit groupe d’utilisateurs de votre propre domaine, vous utilisez la fonctionnalité Coller, le collage des données d’employé à partir d’une feuille de calcul Excel. Dans un scénario réel, la table contenant les noms d’utilisateur serait généralement une table à partir d’une base de données en tant que source de données. par exemple, il s’agit d’une table DimEmployee réelle.  
   
-Pour implémenter la sécurité dynamique, vous utilisez deux fonctions DAX : [Fonction USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) et [LOOKUPVALUE, fonction (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity. La formule transmet ensuite cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous spécifiez que les commerciaux peuvent parcourir uniquement les données de ventes Internet pour les secteurs de vente dans lequel ils sont membres.  
+Pour implémenter la sécurité dynamique, vous utilisez deux fonctions DAX : [Fonction USERNAME (DAX)](/dax/username-function-dax) et [LOOKUPVALUE, fonction (DAX)](/dax/lookupvalue-function-dax). Ces fonctions, appliquées dans une formule de filtre de lignes, sont définies dans un nouveau rôle. À l’aide de la fonction LOOKUPVALUE, la formule spécifie une valeur à partir de la table EmployeeSecurity. La formule transmet ensuite cette valeur à la fonction USERNAME, qui spécifie le nom d’utilisateur de l’utilisateur connecté appartient à ce rôle. L’utilisateur peut alors parcourir uniquement les données spécifiées par les filtres de lignes du rôle. Dans ce scénario, vous spécifiez que les commerciaux peuvent parcourir uniquement les données de ventes Internet pour les secteurs de vente dans lequel ils sont membres.  
   
 Les tâches qui sont propres à ce scénario de modèle tabulaire Adventure Works, et qui ne s'appliqueraient pas forcément à un scénario réel, sont identifiées en conséquence. Chaque tâche inclut des informations supplémentaires qui en décrivent l'objectif.  
   
@@ -188,6 +188,6 @@ Dans cette tâche, vous utilisez la fonctionnalité analyser dans Excel dans SSD
   
 ## <a name="see-also"></a>Voir aussi  
 
-[fonction USERNAME (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[fonction LOOKUPVALUE (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[Fonction CUSTOMDATA (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[fonction USERNAME (DAX)](/dax/username-function-dax)  
+[fonction LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax)  
+[Fonction CUSTOMDATA (DAX)](/dax/customdata-function-dax)  

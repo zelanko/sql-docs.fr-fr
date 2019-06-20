@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022454"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Propriétés de Publication de réplication SQL Server 
@@ -47,7 +47,7 @@ ms.locfileid: "63022454"
  Type de la publication (en lecture seule).  
   
  **Expiration de l'abonnement**  
- Sélectionnez une des options d’expiration d’abonnement : **Les abonnements n’expirent jamais** ou **Les abonnements expirent** avec une période explicite (**Intervalle**).  
+ Sélectionnez l'une des options d'expiration d'abonnement : **Les abonnements n’expirent jamais** ou **Les abonnements expirent** avec une période explicite (**Intervalle**).  
   
  Pour les publications d'instantané et transactionnelles, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'accepter la valeur par défaut **Les abonnements n'expirent jamais**.  
   

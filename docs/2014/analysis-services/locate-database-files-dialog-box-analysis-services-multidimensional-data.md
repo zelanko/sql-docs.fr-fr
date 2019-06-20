@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078027"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher les fichiers de base de données (Analysis Services - Données multidimensionnelles)
@@ -24,7 +24,7 @@ ms.locfileid: "66078027"
   
 -   Cliquez sur **Parcourir** dans la page **Général** de la boîte de dialogue **Restaurer la base de données** .  
   
--   Cliquez sur le bouton de sélection (**...**) dans la colonne **Fichier de sauvegarde** de la grille d’options de **restauration de partitions de sauvegarde** dans la page **Partitions** de la boîte de dialogue **Restaurer la base de données** .  
+-   Cliquez sur le bouton de sélection ( **...** ) dans la colonne **Fichier de sauvegarde** de la grille d’options de **restauration de partitions de sauvegarde** dans la page **Partitions** de la boîte de dialogue **Restaurer la base de données** .  
   
 ## <a name="options"></a>Options  
  **Sélectionnez le dossier**  

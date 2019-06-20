@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62890201"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> Phases d'exécution  
  L'utilitaire s'exécute en quatre phases. Ces phases sont les suivantes :  
   
-1.  Phase de source de commande : L’invite de commandes lit la liste des options et les arguments qui ont été spécifiés. Toutes les phases suivantes sont ignorées si une option **/?** ou **/HELP** est rencontrée.  
+1.  Phase de source de commande : L'invite de commandes lit la liste d'options et d'arguments spécifiés. Toutes les phases suivantes sont ignorées si une option **/?** ou **/HELP** est rencontrée.  
   
 2.  Phase de chargement de package : Le package spécifié par le `/SQL`, **/fichier**, ou `/DTS` option est chargée.  
   
-3.  Phase de configuration : Les options sont traitées dans cet ordre :  
+3.  Phase de configuration : Les options sont traitées dans l'ordre suivant :  
   
     -   Les options qui définissent les indicateurs, les variables et les propriétés de package.  
   
@@ -96,7 +96,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   Les options qui configurent le comportement de l'utilitaire au moment de l'exécution, par exemple la génération de rapports.  
   
-4.  Phase de validation et d’exécution : Le package est exécuté ou validé sans exécution si l’option **/VALIDATE** a été spécifiée.  
+4.  Phase de validation et d'exécution : Le package est exécuté ou validé sans exécution si l’option **/VALIDATE** a été spécifiée.  
   
 ##  <a name="exit"></a> Codes de sortie retournés  
  **Code de sortie retourné par l'utilitaire dtexec**  

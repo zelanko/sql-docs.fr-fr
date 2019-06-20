@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011720"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
@@ -87,7 +87,7 @@ ms.locfileid: "63011720"
 ## <a name="working-with-database-level-roles"></a>Utilisation des rôles au niveau de la base de données  
  Le tableau ci-dessous explique les commandes, vues et fonctions permettant d'utiliser les rôles au niveau de la base de données.  
   
-|Fonctionnalité|Type|Description|  
+|Fonctionnalité|type|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Métadonnées|Retourne une liste des rôles de base de données fixes.|  
 |[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Métadonnées|Affiche les autorisations d'un rôle de base de données fixe.|  

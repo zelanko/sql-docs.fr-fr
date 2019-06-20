@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245993"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
@@ -123,9 +123,9 @@ ms.locfileid: "63245993"
   
  <sup>2</sup> ne pouvez pas modifier l’appartenance des travaux.  
   
- <sup>3</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_job** et en spécifiant des valeurs pour le **@enabled** et **@job_id** (ou **@job_name**) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
+ <sup>3</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_job** et en spécifiant des valeurs pour le ** @enabled ** et ** @job_id ** (ou ** @job_name **) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
   
- <sup>4</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les planifications à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_schedule** et en spécifiant des valeurs pour le **@enabled** et **@schedule_id** (ou **@name**) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
+ <sup>4</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les planifications à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_schedule** et en spécifiant des valeurs pour le ** @enabled ** et ** @schedule_id ** (ou ** @name **) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
   
 ## <a name="assigning-users-multiple-roles"></a>Assignation de plusieurs rôles aux utilisateurs  
  Les membres du rôle serveur fixe **sysadmin** ont accès à toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Si un utilisateur n’est pas membre du rôle **sysadmin** , mais qu’il est membre de plusieurs rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, il est important de prendre en compte le modèle concentrique des autorisations de ces rôles. Étant donné que les rôles plus privilégiés contiennent toujours toutes les autorisations des rôles moins privilégiés, un utilisateur qui est membre de plusieurs rôles a automatiquement les autorisations associées au rôle le plus privilégié dont il est membre.  

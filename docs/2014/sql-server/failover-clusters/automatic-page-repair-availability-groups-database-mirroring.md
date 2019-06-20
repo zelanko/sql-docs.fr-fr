@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137516"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Réparation de page automatique (pour les groupes de disponibilité et la mise en miroir de bases de données)
@@ -88,7 +88,7 @@ ms.locfileid: "63137516"
   
 
   
-##  <a name="ViewAPRattempts"></a> Comment : Afficher les tentatives de réparation de Page automatique  
+##  <a name="ViewAPRattempts"></a> Procédure : Afficher les tentatives de réparation de Page automatique  
  Les vues de gestion dynamique suivantes retournent les lignes correspondant aux dernières tentatives de réparation de page automatique sur une base de données de disponibilité ou une base de données mise en miroir spécifique, avec un maximum de 100 lignes par base de données.  
   
 -   **Groupes de disponibilité AlwaysOn :**  

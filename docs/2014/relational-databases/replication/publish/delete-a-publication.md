@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865019"
 ---
 # <a name="delete-a-publication"></a>Supprimer une publication
@@ -58,7 +58,7 @@ ms.locfileid: "62865019"
   
     -   Pour supprimer une publication unique, exécutez [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) sur la base de données de publication du serveur de publication.  
   
-    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `tran` pour **@type**. (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force**. (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
+    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `tran` pour **@type** . (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force** . (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
   
         > [!NOTE]  
         >  Spécifier la valeur **1** pour **@force** peut laisser des objets de publication liés à la réplication dans la base de données.  
@@ -73,7 +73,7 @@ ms.locfileid: "62865019"
   
     -   Pour supprimer une publication unique, exécutez [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql) sur la base de données de publication du serveur de publication.  
   
-    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `merge` pour **@type**. (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force**. (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
+    -   Pour supprimer toutes les publications et tous les objets de réplication d'une base de données publiée, exécutez [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) sur le serveur de publication. Spécifiez la valeur `merge` pour **@type** . (Facultatif) Si le serveur de distribution est inaccessible ou si l'état de la base de données est suspect ou hors connexion, spécifiez la valeur **1** pour **@force** . (Facultatif) Spécifiez le nom de la base de données pour **@dbname** si [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) n'est pas exécuté sur la base de données de publication.  
   
         > [!NOTE]  
         >  Spécifier la valeur **1** pour **@force** peut laisser des objets de publication liés à la réplication dans la base de données.  

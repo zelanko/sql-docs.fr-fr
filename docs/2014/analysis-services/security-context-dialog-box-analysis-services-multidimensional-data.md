@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c775bc01f78af7d5d5f0dad39eb93c77348ea31d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069848"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Contexte de sécurité (Analysis Services - Données multidimensionnelles)
@@ -31,7 +31,7 @@ ms.locfileid: "66069848"
   
  Le domaine et nom de l'utilisateur ou groupe arborent le format suivant :  
   
- *\<Nom de domaine >* **\\**  *\<nom de compte d’utilisateur >*  
+ *\<Nom de domaine >* ** \\ ** * \<nom de compte d’utilisateur >*  
   
  **Roles**  
  Permet d'utiliser un ou plusieurs rôles spécifiés lors de l'affichage des données et métadonnées de l'objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez sélectionner les rôles à utiliser si plusieurs rôles sont définis dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

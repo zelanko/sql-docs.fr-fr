@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192897"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Afficher et modifier des paramètres d'invite de commandes d'un Agent de réplication (SQL Server Management Studio)
-  Les Agents de réplication sont des fichiers exécutables qui acceptent des paramètres de ligne de commande. Par défaut, les agents s’exécutent dans des étapes de travail de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, et ces paramètres peuvent être affichés et modifiés à l’aide de la boîte de dialogue **Propriétés du travail - \<travail>**. Cette boîte de dialogue est disponible dans le dossier **Travaux** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et sous l'onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
+  Les Agents de réplication sont des fichiers exécutables qui acceptent des paramètres de ligne de commande. Par défaut, les agents s’exécutent dans des étapes de travail de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, et ces paramètres peuvent être affichés et modifiés à l’aide de la boîte de dialogue **Propriétés du travail - \<travail>** . Cette boîte de dialogue est disponible dans le dossier **Travaux** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et sous l'onglet **Agents** du moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Les modifications apportées aux paramètres prennent effet au prochain démarrage de l'Agent. Si l'Agent fonctionne en continu, vous devez l'arrêter, puis le redémarrer.  
@@ -57,7 +57,7 @@ ms.locfileid: "63192897"
   
 3.  Cliquez avec le bouton droit sur un travail, puis sélectionnez **Propriétés**.  
   
-4.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>**, sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
+4.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>** , sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
   
 5.  Dans la boîte de dialogue **Propriétés de l'étape du travail - Exécution de l'Agent** , modifiez le champ **Commande** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63192897"
   
 4.  Dans le **abonnement \< SubscriptionName >** fenêtre, cliquez sur **Action**, puis cliquez sur  **\<Nom_agent > Propriétés du travail**.  
   
-5.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>**, sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
+5.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>** , sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
   
 6.  Dans la boîte de dialogue **Propriétés de l'étape du travail - Exécution de l'Agent** , modifiez le champ **Commande** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63192897"
   
 3.  Cliquez avec le bouton droit sur un Agent dans la grille puis cliquez sur **Propriétés**.  
   
-4.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>**, sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
+4.  Dans la page **Étapes** de la boîte de dialogue **Propriétés du travail - \<travail>** , sélectionnez l’étape **Exécution de l’Agent**, puis cliquez sur **Modifier**.  
   
 5.  Dans la boîte de dialogue **Propriétés de l'étape du travail - Exécution de l'Agent** , modifiez le champ **Commande** .  
   
