@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019044"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Appliquer des correctifs logiciels Analytics Platform System
@@ -32,7 +32,7 @@ Pour effectuer ces étapes, vous devez :
   
 -   Une connexion de système de plateforme d’Analytique avec des autorisations pour accéder à la Console d’administration pour surveiller l’état de l’appliance. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Base de connaissances du compte d’administrateur de domaine Fabric pour vous connecter à la _< nom_domaine >_**-HST01** nœud.  
+-   Base de connaissances du compte d’administrateur de domaine Fabric pour vous connecter à la _< nom_domaine >_ **-HST01** nœud.  
   
 ## <a name="HowToInstallPDW"></a>Pour appliquer un correctif logiciel Analytique Platform System  
 Contrairement aux mises à jour Microsoft, les correctifs logiciels pour le logiciel de système de plateforme d’Analytique ne sont pas gérées via WSUS. Ils ont un flux de travail différent et sont installés en exécutant un package de correctif logiciel.  

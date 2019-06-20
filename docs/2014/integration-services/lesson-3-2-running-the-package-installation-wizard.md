@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891577"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : Exécution de l’Assistant Installation de package
@@ -46,7 +46,7 @@ ms.locfileid: "62891577"
   
 9. Dans la page Sélectionner le dossier d’installation, cliquez sur **Parcourir**.  
   
-10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)**.  
+10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)** .  
   
 11. Cliquez sur **Créer un nouveau dossier** et remplacez le nom par défaut du nouveau dossier, **Nouveau dossier**, par **DeploymentTutorialInstall**.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "62891577"
   
      Étant donné que les valeurs des variables d'environnement sur l'ordinateur de destination sont différentes des valeurs des variables d'environnement sur l'ordinateur de développement, plusieurs avertissements s'affichent dans la page Validation des packages. Attendez-vous à quatre avertissements :  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n’est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig n’est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   

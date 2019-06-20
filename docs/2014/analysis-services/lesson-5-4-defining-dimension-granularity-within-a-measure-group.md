@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078455"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Définition de la granularité des dimensions dans un groupe de mesures
@@ -126,7 +126,7 @@ ms.locfileid: "66078455"
   
      Notez que le **employé** et `Date` dimensions de cube sont liées à la **Sales quotas et Sales Quotas 1** groupes de mesures via des relations régulières. Notez également que la dimension de cube **Sales Territory** n’est liée à aucun de ces groupes de mesures.  
   
-4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le `Sales Quotas` groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
+4.  Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le `Sales Quotas` groupe de mesures, puis cliquez sur le bouton Parcourir ( **...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66078455"
   
 10. Cliquez sur **OK**.  
   
-11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir (**...** ). La boîte de dialogue **Définir une relation** s’affiche.  
+11. Cliquez sur la cellule à l’intersection de la **Sales Territory** dimension et le **Sales Quotas 1** groupe de mesures, puis cliquez sur le bouton Parcourir ( **...** ). La boîte de dialogue **Définir une relation** s’affiche.  
   
 12. Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078455"
   
      Renommer le **Order Date** dimension de cube pour `Date` plus facilement les utilisateurs à comprendre son rôle en tant que dimension de date principale dans ce cube.  
   
-20. Cliquez sur le bouton Parcourir (**...** ) dans la cellule à l’intersection de la `Sales Quotas` groupe de mesures et les `Date` dimension.  
+20. Cliquez sur le bouton Parcourir ( **...** ) dans la cellule à l’intersection de la `Sales Quotas` groupe de mesures et les `Date` dimension.  
   
 21. Dans la boîte de dialogue **Définir une relation** , sélectionnez **Normal** dans la liste **Sélectionnez un type de relation** .  
   

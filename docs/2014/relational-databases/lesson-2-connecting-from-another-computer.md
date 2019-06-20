@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144807"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
@@ -44,7 +44,7 @@ ms.locfileid: "63144807"
     > [!NOTE]  
     >  Il est possible que les options 32 bits et 64 bits soient toutes deux disponibles.  
   
-2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  _\<InstanceName >_.  
+2.  Dans **Gestionnaire de Configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **protocoles pour**  _\<InstanceName >_ .  
   
      L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63144807"
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , confirmez **Moteur de base de données** dans la zone **Type de serveur** .  
   
-3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:**_<nom_ordinateur>_. Dans notre exemple d’instance nommée, tapez **tcp:**_<nom_ordinateur>_**,49172**.  
+3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:** _<nom_ordinateur>_ . Dans notre exemple d’instance nommée, tapez **tcp:** _<nom_ordinateur>_ **,49172**.  
   
     > [!NOTE]  
     >  Si vous omettez **tcp:** dans la zone **Nom du serveur** , le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  

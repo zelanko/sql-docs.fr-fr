@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079401"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organisateur d'indicateur de performance clé (KPI) (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
@@ -37,8 +37,8 @@ ms.locfileid: "66079401"
 |Option|Définition|  
 |------------|----------------|  
 |**Indicateur de performance clé**|Permet d’afficher **l’Éditeur de formulaire d’indicateur de performance clé** pour créer un indicateur. Pour plus d’informations sur **l’Éditeur de formulaire d’indicateur de performance clé**, consultez [l’Éditeur de formulaire d’indicateur de performance clé &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Monter**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le haut dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)**.<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
-|**Descendre**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le bas dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)**.<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
+|**Monter**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le haut dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)** .<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
+|**Descendre**|Permet de déplacer l’indicateur de performance clé sélectionné d’une position vers le bas dans **l’Organisateur d’indicateur de performance clé (KPI)** et de déterminer ainsi l’ordre d’affichage des indicateurs dans le **Navigateur d’indicateur de performance clé (KPI)** .<br /><br /> Remarque : Cette option est désactivée si l’indicateur sélectionné ne peut pas être déplacé.|  
 |**Supprimer**|Permet de supprimer l'indicateur sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  

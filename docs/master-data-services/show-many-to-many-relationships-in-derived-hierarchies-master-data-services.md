@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65488064"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Afficher les relations plusieurs à plusieurs dans des hiérarchies dérivées (Master Data Services)
@@ -43,17 +43,17 @@ ms.locfileid: "65488064"
   
  Dans la capture d’écran ci-dessus, notez que l’entité **employé** apparaît sous **Niveaux actuels** , au milieu, comme le seul niveau. L’ **aperçu** de la hiérarchie dérivée à droite affiche simplement la liste de tous les membres de l’entité **Employee** . La section **Entités et hiérarchies disponibles** à gauche montre les niveaux qui peuvent être ajoutés en plus du niveau supérieur en cours (**Employee**). La plupart d’entre eux sont des attributs basés sur un domaine (DBA) sur l’entité **Employee** , y compris le DBA **Department** .  
   
- À partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], un nouveau type de niveau modélise les relations plusieurs à plusieurs, par exemple : **Classe (mappé via ClassRegistration.Student)**. Le nom du niveau est plus détaillé que les autres afin de refléter les informations supplémentaires nécessaires pour décrire clairement la relation de mappage. Faites glisser ce niveau vers le niveau **Employee** dans la section **Niveaux actuels** :  
+ À partir de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], un nouveau type de niveau modélise les relations plusieurs à plusieurs, par exemple : **Classe (mappé via ClassRegistration.Student)** . Le nom du niveau est plus détaillé que les autres afin de refléter les informations supplémentaires nécessaires pour décrire clairement la relation de mappage. Faites glisser ce niveau vers le niveau **Employee** dans la section **Niveaux actuels** :  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- L’aperçu affiche à présent les employés regroupés en fonction des classes de formation auxquelles ils sont inscrits. Dans la mesure où il s’agit d’une relation plusieurs à plusieurs, chaque membre enfant peut avoir plusieurs parents. Dans l’exemple ci-dessus, l’employé **6 {Hillman, Reinout N}** est enregistré en tant qu’étudiant dans deux classes, **1 {Master Data Services 101}** et **4 {Career-Limiting Moves}**.  
+ L’aperçu affiche à présent les employés regroupés en fonction des classes de formation auxquelles ils sont inscrits. Dans la mesure où il s’agit d’une relation plusieurs à plusieurs, chaque membre enfant peut avoir plusieurs parents. Dans l’exemple ci-dessus, l’employé **6 {Hillman, Reinout N}** est enregistré en tant qu’étudiant dans deux classes, **1 {Master Data Services 101}** et **4 {Career-Limiting Moves}** .  
   
  Cette relation de mappage peut également être affichée de façon inversée, en regroupant les classes par étudiant :  
   
  ![mds_hierarchies_available_entities_and_hierarchies](../master-data-services/media/mds-hierarchies-available-entities-and-hierarchies.PNG "mds_hierarchies_available_entities_and_hierarchies")  
   
- Là encore, nous voyons comment un enfant peut apparaître sous plusieurs parents : la classe de formation **1 {Master Data Services 101}** s’affiche sous **6 {Hillman, Reinout N}** et **40 {Ford, Jeffrey L}**.  
+ Là encore, nous voyons comment un enfant peut apparaître sous plusieurs parents : la classe de formation **1 {Master Data Services 101}** s’affiche sous **6 {Hillman, Reinout N}** et **40 {Ford, Jeffrey L}** .  
   
  Les membres de l’entité de mappage **ClassRegistration** n’apparaissent nulle part dans la hiérarchie dérivée. Ils servent simplement à définir les relations entre les membres parents et enfants dans la hiérarchie.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "65488064"
 ### <a name="M2MSample"></a> Relation plusieurs à plusieurs dans l’exemple de modèle  
 La hiérarchie dérivée Region Climate de l’exemple de modèle Customer fournie avec [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]vous permet de visualiser une démonstration d’une relation plusieurs à plusieurs.   
   
-Comme illustré dans l’image ci-dessous, le nom du niveau qui modélise cette relation est ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**. La section ![mds_Number2](../master-data-services/media/mds-number2.png)**Aperçu** montre les régions regroupées selon les types de climats auxquels elles sont associées. Il s’agit d’une relation plusieurs à plusieurs car certaines régions (membres enfants) sont associées à plusieurs climats (parents). Par exemple, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** est associé à ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** et ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Comme illustré dans l’image ci-dessous, le nom du niveau qui modélise cette relation est ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)** . La section ![mds_Number2](../master-data-services/media/mds-number2.png)**Aperçu** montre les régions regroupées selon les types de climats auxquels elles sont associées. Il s’agit d’une relation plusieurs à plusieurs car certaines régions (membres enfants) sont associées à plusieurs climats (parents). Par exemple, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** est associé à ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** et ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** .  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   

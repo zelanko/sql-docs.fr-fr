@@ -20,10 +20,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983117"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -48,7 +48,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>Arguments  
 `[ @ftcat = ] 'fulltext_catalog_name'` Est le nom du catalogue de texte intégral. Les noms de catalogues doivent être uniques dans chaque base de données. *fulltext_catalog_name* est **sysname**.  
   
-`[ @action = ] 'action'` Est l’action à effectuer. *action* est **varchar (20)**, et peut prendre l’une des valeurs suivantes.  
+`[ @action = ] 'action'` Est l’action à effectuer. *action* est **varchar (20)** , et peut prendre l’une des valeurs suivantes.  
   
 > [!NOTE]  
 >  En fonction de vos besoins, vous pouvez créer, supprimer et modifier des catalogues de texte intégral. Toutefois, il vaut mieux éviter de procéder à des modifications de schéma sur plusieurs catalogues à la fois. Ces actions peuvent être effectuées à l’aide de la **sp_fulltext_table** procédure stockée, qui est la méthode recommandée.  

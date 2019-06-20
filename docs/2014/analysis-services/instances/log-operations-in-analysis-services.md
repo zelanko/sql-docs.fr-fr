@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079762"
 ---
 # <a name="log-operations-in-analysis-services"></a>Enregistrer les opérations dans Analysis Services
@@ -42,7 +42,7 @@ ms.locfileid: "66079762"
 ##  <a name="bkmk_location"></a> Emplacement et types de journaux  
  Analysis Services fournit les journaux décrits ci-dessous.  
   
-|Nom de fichier ou emplacement|Type|Utilisé pour|Activé par défaut|  
+|Nom de fichier ou emplacement|type|Utilisé pour|Activé par défaut|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Journal des erreurs|Surveillance de routine et dépannage de base|Oui|  
 |Table OlapQueryLog dans une base de données relationnelle|Journal des requêtes|Recueillir les entrées de l'Assistant Optimisation de l'utilisation|Non|  

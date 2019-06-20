@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982878"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  L’adresse complète du serveur Azure.  
   
--   Si vous fournissez une valeur pour **@database_name**, mais la base de données spécifié n’est pas compatible avec Stretch, puis vous devez fournir une valeur pour **@server_address**.  
+-   Si vous fournissez une valeur pour **@database_name** , mais la base de données spécifié n’est pas compatible avec Stretch, puis vous devez fournir une valeur pour **@server_address** .  
   
--   Si vous fournissez une valeur pour **@database_name**et la base de données spécifié est compatible avec Stretch, alors que vous n’êtes pas obligé de fournir une valeur pour **@server_address**. Si vous fournissez une valeur pour **@server_address**, la procédure stockée ignore et utilise les serveurs Azure déjà associé à la base de données compatibles avec Stretch.  
+-   Si vous fournissez une valeur pour **@database_name** et la base de données spécifié est compatible avec Stretch, alors que vous n’êtes pas obligé de fournir une valeur pour **@server_address** . Si vous fournissez une valeur pour **@server_address** , la procédure stockée ignore et utilise les serveurs Azure déjà associé à la base de données compatibles avec Stretch.  
   
  @azure_username = N'*azure_username*  
  Le nom d’utilisateur pour le serveur Azure distant.  

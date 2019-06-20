@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086830"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête d'interrogation (Analysis Services - Données multidimensionnelles)
-  Utilisez la boîte de dialogue **Créer la requête d’interrogation** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête d’interrogation sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. En règle générale, une requête d'interrogation est une requête singleton qui retourne une valeur que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser pour déterminer si les modifications ont été apportées à une table ou à un autre objet relationnel. Vous pouvez afficher la boîte de dialogue **Créer la requête d’interrogation** en cliquant sur le bouton de sélection (**...**) dans la colonne **Requête d’interrogation** de la grille de l’option **Interrogation planifiée** sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. Pour plus d’informations sur l’onglet **Notifications**la boîte de dialogue **Options de stockage**, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
+  Utilisez la boîte de dialogue **Créer la requête d’interrogation** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête d’interrogation sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. En règle générale, une requête d'interrogation est une requête singleton qui retourne une valeur que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut utiliser pour déterminer si les modifications ont été apportées à une table ou à un autre objet relationnel. Vous pouvez afficher la boîte de dialogue **Créer la requête d’interrogation** en cliquant sur le bouton de sélection ( **...** ) dans la colonne **Requête d’interrogation** de la grille de l’option **Interrogation planifiée** sous l’onglet **Notifications** de la boîte de dialogue **Options de stockage**. Pour plus d’informations sur l’onglet **Notifications**la boîte de dialogue **Options de stockage**, consultez [Notifications &#40;boîte de dialogue Options de stockage&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md).  
   
  Le type de valeur qui doit être retourné par la requête d'interrogation dépend du type de mises à jour planifiées pour le cache MOLAP de l'objet selon la table interrogée :  
   

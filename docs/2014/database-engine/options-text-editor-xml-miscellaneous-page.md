@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089207"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Options (Éditeur de texte - XML - Page Divers)
@@ -26,7 +26,7 @@ La boîte de dialogue **Options** vous permet de modifier les paramètres de sai
  L'Éditeur de texte ajoute des balises de fin lors de la création d'éléments XML. Si la balise de début d'un élément est sélectionnée, l'Éditeur insère la balise de fin correspondante avec un préfixe d'espace de noms équivalent. Cette case à cocher est activée par défaut.  
   
  **Guillemets d’attribut**  
- Lors de la création d’attributs XML, l’Éditeur insère les caractères `="``"` et place le signe insertion (**^)** à l’intérieur des guillemets. Cette case à cocher est activée par défaut.  
+ Lors de la création d’attributs XML, l’Éditeur insère les caractères `="``"` et place le signe insertion ( **^)** à l’intérieur des guillemets. Cette case à cocher est activée par défaut.  
   
  **Déclarations de Namespace**  
  L'Éditeur insère automatiquement les déclarations d'espace de noms là où elles sont requises. Cette case à cocher est activée par défaut.  

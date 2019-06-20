@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489457"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tâche 4 : Gestion et affichage des résultats
@@ -72,7 +72,7 @@ ms.locfileid: "65489457"
   
 20. Basculez vers le **corrigés** onglet.  
   
-21. Notez que **état** pour l’enregistrement a **Ville** comme **Los Angeles** a la valeur **autorité de certification** maintenant. Notez que, dans le **raison** champ **corrigé par la règle 'Ville-état de règle'**.  
+21. Notez que **état** pour l’enregistrement a **Ville** comme **Los Angeles** a la valeur **autorité de certification** maintenant. Notez que, dans le **raison** champ **corrigé par la règle 'Ville-état de règle'** .  
   
      ![Correction de la règle ville-état](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Correction de la règle ville-état")  
   

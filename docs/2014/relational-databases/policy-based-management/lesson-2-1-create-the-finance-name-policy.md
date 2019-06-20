@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090617"
 ---
 # <a name="create-the-finance-name-policy"></a>Créer la stratégie Nom financier
@@ -39,7 +39,7 @@ ms.locfileid: "66090617"
   
 3.  Dans la liste **Facette** , sélectionnez **Nom en plusieurs parties**.  
   
-4.  Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@Name**, dans la zone **Opérateur** , sélectionnez **Comme**et dans la zone **Valeur** , tapez **'fintbl%'** pour forcer tous les noms de tables à commencer par les lettres **fintbl**.  
+4.  Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@Name** , dans la zone **Opérateur** , sélectionnez **Comme**et dans la zone **Valeur** , tapez **'fintbl%'** pour forcer tous les noms de tables à commencer par les lettres **fintbl**.  
   
 5.  Dans la page **Description** , tapez **Les noms des tables de finance doivent commencer par fintbl**, puis cliquez sur **OK** pour créer la condition.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090617"
   
 6.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Base de données de finance**.  
   
-7.  Dans la zone **Expression**, complétez l’expression de façon à inclure **@Name = 'Finance'**, puis cliquez sur **OK** pour fermer la page de condition.  
+7.  Dans la zone **Expression**, complétez l’expression de façon à inclure **@Name = 'Finance'** , puis cliquez sur **OK** pour fermer la page de condition.  
   
     > [!NOTE]  
     >  Vous devrez peut-être quitter la zone **Valeur** pour activer le bouton **OK** .  

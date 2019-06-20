@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 21dc355570d5a2778e553924a189ce985513a7cc
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65981037"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Forçages de type de données et annotation sql:datatype (SQLXML 4.0)
@@ -89,9 +89,9 @@ ms.locfileid: "65981037"
 ## <a name="sqldatatype-annotation"></a>Annotation sql:datatype  
  Le **SQL : DataType** annotation est utilisée pour spécifier le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données ; cette annotation doit être spécifié lorsque :  
   
--   Vous effectuez un chargement en bloc dans un **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne à partir d’un fichier XSD **dateTime**, **date**, ou **temps** type. Dans ce cas, vous devez identifier le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données de la colonne à l’aide de **SQL : DataType = « dateTime »**. Cette règle s'applique également aux codes de mise à jour.  
+-   Vous effectuez un chargement en bloc dans un **dateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colonne à partir d’un fichier XSD **dateTime**, **date**, ou **temps** type. Dans ce cas, vous devez identifier le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données de la colonne à l’aide de **SQL : DataType = « dateTime »** . Cette règle s'applique également aux codes de mise à jour.  
   
--   Vous effectuez un chargement en bloc dans une colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** type et la valeur XSD est un GUID qui inclut des accolades ({et}). Lorsque vous spécifiez **SQL : DataType = « uniqueidentifier »**, les accolades sont supprimées de la valeur avant son insertion dans la colonne. Si **SQL : DataType** n’est pas spécifié, la valeur est envoyée avec les accolades et l’insertion ou la mise à jour échoue.  
+-   Vous effectuez un chargement en bloc dans une colonne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **uniqueidentifier** type et la valeur XSD est un GUID qui inclut des accolades ({et}). Lorsque vous spécifiez **SQL : DataType = « uniqueidentifier »** , les accolades sont supprimées de la valeur avant son insertion dans la colonne. Si **SQL : DataType** n’est pas spécifié, la valeur est envoyée avec les accolades et l’insertion ou la mise à jour échoue.  
   
 -   Le type de données XML **base64Binary** est mappé à différents [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données (**binaire**, **image**, ou **varbinary**). Pour mapper le type de données XML **base64Binary** à un spécifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données, utilisez le **SQL : DataType** annotation. Cette annotation spécifie le type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explicite de la colonne à laquelle l'attribut est mappé. Ceci est utile lorsque les données sont stockées dans les bases de données. En spécifiant le **SQL : DataType** annotation, vous pouvez identifier l’explicite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données.  
   

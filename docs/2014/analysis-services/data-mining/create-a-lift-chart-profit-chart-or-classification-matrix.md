@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 033965a6152edaf3d62fcd8c29476651648c1697
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085408"
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification
@@ -69,7 +69,7 @@ ms.locfileid: "66085408"
   
     -   Sélectionnez l'option **Utiliser des scénarios de test de structure d'exploration de données**, pour utiliser le jeu complet de scénarios de test définis dans le jeu de données d'exclusion des structures d'exploration de données.  
   
-    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton de navigation (**...** ) pour choisir les tables de données à utiliser pour le graphique de précision. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
+    -   Sélectionnez l’option **Spécifier un autre jeu de données**si vous souhaitez utiliser des données externes.  Le jeu de données doit être disponible comme vue de source de données.   Cliquez sur le bouton de navigation ( **...** ) pour choisir les tables de données à utiliser pour le graphique de précision. Pour plus d’informations, consultez [Choose and Map Model Testing Data](choose-and-map-model-testing-data.md).  
   
          Si vous utilisez un jeu de données externes, vous pouvez éventuellement filtrer le jeu de données d'entrée. Pour plus d’informations, consultez [Appliquer des filtres aux données de test du modèle](apply-filters-to-model-testing-data.md).  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62961057"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
@@ -47,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @IndexNamePattern = ] 'table_or_index_name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou un index. *table_or_index_name* est **nvarchar(1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou un index. *table_or_index_name* est **nvarchar(1035)** , sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
   
-`[ @OptionName = ] 'option_name'` Est le nom d’une option d’index. *option_name* est **varchar (35)**, sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
+`[ @OptionName = ] 'option_name'` Est le nom d’une option d’index. *option_name* est **varchar (35)** , sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Si la valeur est TRUE, les verrous de ligne ne sont pas utilisés. Si la valeur est FALSE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.|  
 |**DisAllowPageLocks**|Si la valeur est TRUE, les verrous de page ne sont pas utilisés. Si la valeur est FALSE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.|  
   
-`[ @OptionValue = ] 'value'` Spécifie si le *option_name* paramètre est activé (TRUE, ON, yes ou 1) ou désactivé (FALSE, OFF, no ou 0). *valeur* est **varchar(12)**, sans valeur par défaut.  
+`[ @OptionValue = ] 'value'` Spécifie si le *option_name* paramètre est activé (TRUE, ON, yes ou 1) ou désactivé (FALSE, OFF, no ou 0). *valeur* est **varchar(12)** , sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou supérieur à 0 (échec)  
