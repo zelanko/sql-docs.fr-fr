@@ -1,5 +1,5 @@
 ---
-title: 'Mise en miroir de base de données : Interopérabilité et Coexistence (SQL Server) | Microsoft Docs'
+title: 'Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807305"
 ---
-# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mise en miroir de base de données : Interopérabilité et Coexistence (SQL Server)
+# <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>Mise en miroir de bases de données : interopérabilité et coexistence (SQL Server)
   Vous pouvez utiliser la mise en miroir de bases de données avec les fonctionnalités et les composants suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   [Instances de Cluster de basculement AlwaysOn (SQL Server Clustering de basculement)](database-mirroring-and-sql-server-failover-cluster-instances.md)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683983"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` Si l’Agent de Distribution est en cours d’exécution **sp_table_validation**, spécifie si l’Agent de Distribution doit être fermé immédiatement à l’achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’erreur 20578 est déclenchée et l’agent de réplication est signalé à arrêter. Ce paramètre est ignoré lorsque **sp_table_validation** exécuté directement par un utilisateur.  
   
-`[ @table_name = ] table_name` Est le nom de la table de la vue utilisée pour les messages de sortie. *table_name* est **sysname**, avec une valeur par défaut **@table**.  
+`[ @table_name = ] table_name` Est le nom de la table de la vue utilisée pour les messages de sortie. *table_name* est **sysname**, avec une valeur par défaut **@table** .  
   
-`[ @column_list = ] 'column_list'` Est la liste des colonnes qui doivent être utilisées dans la fonction de somme de contrôle. *column_list* est **nvarchar (4000)**, avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
+`[ @column_list = ] 'column_list'` Est la liste des colonnes qui doivent être utilisées dans la fonction de somme de contrôle. *column_list* est **nvarchar (4000)** , avec NULL comme valeur par défaut. Active la validation d'articles de fusion pour spécifier une liste de colonnes excluant les colonnes calculées et les colonnes timestamp.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Si une validation de somme de contrôle et de la somme de contrôle attendue est égal la somme de contrôle dans la table, **sp_table_validation** retourne un message que le tableau passé la validation de somme de contrôle. Sinon, elle retourne un message indiquant que la table peut ne plus être synchronisée et indique la différence entre le nombre de lignes attendu et le nombre réel.  
