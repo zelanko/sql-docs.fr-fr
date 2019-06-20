@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071890"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Référence de paramètre de configuration (PowerPivot pour SharePoint)
@@ -41,7 +41,7 @@ ms.locfileid: "66071890"
 ##  <a name="LoadingData"></a> Délai d'attente du chargement de données  
  Les données PowerPivot sont récupérées et chargées par les instances du serveur Analysis Services de la batterie. Selon le moment où le dernier accès aux données s'est produit et la façon dont il s'est produit, les données seront chargées à partir d'une bibliothèque de contenu ou d'un cache de fichiers local. Les données sont chargées en mémoire à chaque réception d'une requête ou d'une demande de traitement. Pour optimiser la disponibilité globale du serveur, vous pouvez définir une valeur de délai d'attente qui indique au serveur d'interrompre une demande de chargement de données si elle ne peut pas être exécutée dans le délai imparti.  
   
-|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Délai d'attente du chargement de données|1800 (en secondes)|1 à 3600|Spécifie la durée pendant laquelle une application de service PowerPivot attend une réponse d'une instance spécifique du serveur Analysis Services.<br /><br /> Par défaut, l'application de service attendra 30 minutes une charge utile de données en provenance de l'instance du service de moteur à laquelle elle a transféré une requête spécifique.<br /><br /> Si la source de données PowerPivot ne peut pas être chargée dans ce laps de temps, le thread sera arrêté et un nouveau sera démarré.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071890"
 ##  <a name="DataRefresh"></a> Actualisation des données  
  Spécifiez la plage horaire qui définit la journée de travail normale ou classique dans votre organisation. Ces paramètres de configuration déterminent quand, après les heures d'ouverture, le traitement des données intervient pour les opérations d'actualisation des données. Le traitement après les heures d'ouverture peut commencer à l'heure où se termine la journée de travail. Le traitement après les heures d'ouverture est une option de planification pour les propriétaires de documents qui souhaitent actualiser une source de données PowerPivot avec les données transactionnelles qui ont été générées pendant les heures d'ouverture normales.  
   
-|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
+|Nom|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Heure de début|4h00|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite inférieure d'une plage d'heures d'ouverture.|  
 |Heure de fin|08:00 PM|1 à 12 heures, où la valeur est un entier valide appartenant à cette plage.<br /><br /> Le type est Time.|Définit la limite supérieure d'une plage d'heures d'ouverture.|  
@@ -83,7 +83,7 @@ ms.locfileid: "66071890"
 ##  <a name="UsageData"></a> Collecte des données d'utilisation  
  Les rapports d'utilisation qui s'affichent dans le Tableau de bord de gestion PowerPivot peuvent fournir des informations importantes à propos de l'utilisation des classeurs compatibles PowerPivot. Les paramètres de configuration suivants contrôlent les aspects de la collecte des données d'utilisation pour les événements de serveur PowerPivot présentés par la suite dans des rapports d'utilisation ou d'activité.  
   
-|Nom|Par défaut|Valeurs valides|Description|  
+|Créer une vue d’abonnement|Par défaut|Valeurs valides|Description|  
 |----------|-------------|------------------|-----------------|  
 |Intervalle de consignation des requêtes|300 (en secondes)|1 à n secondes, où n est un entier valide.|Pour faire en sorte que cette collecte des données d'utilisation ne consomme pas une part trop importante de la capacité de transfert de données de la batterie de serveurs, les statistiques sur les requêtes sont collectées sur chaque connexion et consignées dans les rapports comme un événement unique. L'intervalle de consignation des requêtes détermine la fréquence à laquelle un événement est signalé. Par défaut, les statistiques de requêtes font l'objet d'un rapport toutes les 5 minutes.<br /><br /> Parce que les connexions sont fermées immédiatement après l'envoi d'une requête, le système génère un grand nombre de connexions, même pour un seul utilisateur accédant à une seule source de données PowerPivot. De ce fait, les pools de connexions sont créés pour chaque combinaison utilisateur/source de données PowerPivot afin qu'une connexion, une fois créée, puisse être réutilisée par le même utilisateur pour les mêmes données. Régulièrement, selon l'intervalle spécifié par le biais de ce paramètre de configuration, l'application de service PowerPivot crée un rapport des données d'utilisation de chaque connexion du pool.<br /><br /> Plus la valeur de cet intervalle est élevée, moins le nombre d'événements journalisés est important. Toutefois, si vous choisissez une valeur trop élevée, vous risquez de perdre les données d'événement en cas de redémarrage du serveur ou de fermeture d'une connexion.<br /><br /> Abaisser cette valeur entraîne la journalisation d'un plus grand nombre d'événements, à une fréquence plus élevée, ce qui se traduit par l'ajout de davantage de données d'utilisation relatives à PowerPivot au système de collecte de données de la base de données d'utilisation SharePoint.<br /><br /> Il est par conséquent généralement recommandé de ne pas modifier ce paramètre de configuration, hormis pour résoudre un problème spécifique (par exemple, si la base de données d'utilisation croît trop rapidement en raison des données d'utilisation PowerPivot).|  
 |Historique des données d'utilisation|365 (en jours)|0 ou 1 à n jours, où n est un entier valide.<br /><br /> 0 signifie que l'historique est conservé indéfiniment, jamais supprimé.|Par défaut, les données d'utilisation sont conservées pendant un an dans la base de données d'application de service PowerPivot. Les enregistrements datant de plus d'un an sont supprimés de la base de données.<br /><br /> Un contrôle des données d'historique ayant expiré est effectué quotidiennement, lors de l'exécution du travail Traitement des données d'utilisation de Microsoft SharePoint Foundation. Le travail du minuteur lit ce paramètre et déclenche une commande de suppression des données de l'historique expiré dans la base de données d'application de service PowerPivot.|  
